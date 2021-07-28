@@ -1,23 +1,48 @@
 {{ define "main" }}
-<header class="navbar navbar-expand-md navbar-dark bd-navbar py-3 mb-0 pb-0">
-  <nav class="container" aria-label="Main navigation">
-    <div class="row w-100">
-      <div class="col-12 d-flex justify-content-between">
-        <a class="navbar-brand p-0 me-2" href="/" aria-label="Bootstrap">
-          <img class="navbar-brand-dark" height="35" src="/img/brand/dark.png" alt="Logo light">
+<header>
+  <nav className="py-4 w-full bg-white transition">
+    <div class="container px-4 lg:px-12 mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-center">
+      <div class="flex justify-between">
+        <a href="/" class="flex">
+          <img class="h-10 mr-4" alt="FlowBite Logo" />
+          <span class="self-center text-lg font-semibold whitespace-nowrap">FlowBite</span>
         </a>
-        <div>
-          <a class="btn btn-dark d-lg-inline-block" href="docs/getting-started/introduction"><i
-              class="fas fa-book me-2"></i> Docs</a>
-          <a class="btn btn-primary d-lg-inline-block" href="#"><i class="fas fa-rocket me-2"></i> Upgrade to Pro</a>
-        </div>
+        <button class="lg:hidden"><svg class="w-6 h-6 text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg></button>
+      </div>
+      <ul className="flex flex-col lg:flex-row lg:self-center py-6 lg:py-0 collapse">
+        <li class="lg:px-6 mb-3 lg:mb-0">
+          <Link to="/#tailwind" class="font-medium text-gray-900">How it works</Link>
+        </li>
+        <li class="lg:px-6 mb-3 lg:mb-0">
+          <Link to="/#features" class="font-medium text-gray-900">Features</Link>
+        </li>
+        <li class="lg:px-6 mb-3 lg:mb-0">
+          <Link to="/#roadmap" class="font-medium text-gray-900">Roadmap</Link>
+        </li>
+        <li class="lg:px-6 mb-3 lg:mb-0">
+          <Link to="/license" class="font-medium text-gray-900">License</Link>
+        </li>
+      </ul>
+      <div className="lg:self-center mb-4 lg:mb-0 collapse">
+        <a href="/#pricing" class="text-white bg-gray-800 hover:bg-gray-900 font-semibold rounded-xl text-base px-6 py-3">Pricing & FAQ</a>
       </div>
     </div>
   </nav>
 </header>
 <main>
-  {{ partial "home/masthead" . }}
-  {{ partial "home/masthead-followup" . }}
+  {{ partial "home/hero" . }}
+  {{ partial "home/testimonials" . }}
+  {{ partial "home/pages" . }}
+  {{ partial "home/devices" . }}
+  {{ partial "home/style-guideline" . }}
+  {{ partial "home/variants" . }}
+  {{ partial "home/auto-layout" . }}
+  {{ partial "home/roadmap" . }}
+  {{ partial "home/changelog" . }}
+  {{ partial "home/pricing" . }}
+  {{ partial "home/faq" . }}
+  {{ partial "home/subscribe" . }}
+  {{ partial "home/footer" . }}
 </main>
 
 {{ .Content }}

@@ -1,6 +1,6 @@
 languageCode:           "en"
-title:                  "Glass UI"
-baseURL:                "http://localhost:9001"
+title:                  "FlowBite"
+baseURL:                "http://localhost:1313/"
 enableInlineShortcodes: true
 
 markup:

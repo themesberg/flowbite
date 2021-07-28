@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom CSS */
+
+.style-guideline-image,
+.figma-variants-image,
+.auto-layout-image {
+    max-height: 42rem;
+}
+
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.navbar-top {
+    animation: smoothScroll 0.5s forwards;
+}
+
+@media only screen and (max-width: 1024px) {
+    .collapse.collapsed {
+        display: none;
+    }
+}
+
+.prism-code {
+    background-color: transparent !important;
+}
+
+.yt-video {
+    height: 250px;
+}
+
+@media only screen and (min-width: 768px) {
+    .yt-video {
+        height: 350px;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .yt-video {
+        height: 500px;
+    }
+}
+
+.ytp-impression-link,
+.ytp-chrome-top-buttons {
+    display: none !important;
+}

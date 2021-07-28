@@ -1,0 +1,107 @@
+//
+// Bootstrap docs content theming
+//
+
+// Offset for the sticky header
+@include media-breakpoint-up(md) {
+  :root {
+    scroll-padding-top: 4rem;
+  }
+}
+
+.bd-content {
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6 {
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  & > h2 {
+    font-size: 1.5rem;
+  }
+
+  & > h3 {
+    font-size: 1.25rem;
+    font-weight: $font-weight-semibold;
+  }
+
+  & > p {
+    font-weight: $font-weight-light;
+    font-size: $font-size-base;
+    margin-bottom: 1rem;
+  }
+
+  padding-bottom: 25px;
+
+  > h2:not(:first-child) {
+    margin-top: 3rem;
+  }
+
+  > h3 {
+    margin-top: 2rem;
+  }
+
+  > ul,
+  > ol {
+    margin: 2rem 0;
+  }
+
+  > ul li,
+  > ol li {
+    margin-bottom: 0.25rem;
+  }
+
+  // Override Bootstrap defaults
+  > .table {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    @include font-size(0.875rem);
+
+    @include media-breakpoint-down(lg) {
+      display: block;
+      overflow-x: auto;
+
+      &.table-bordered {
+        border: 0;
+      }
+    }
+
+    th,
+    td {
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:not(:last-child) {
+        padding-right: 1.5rem;
+      }
+    }
+
+    // Prevent breaking of code
+    td:first-child > code {
+      white-space: nowrap;
+    }
+  }
+}
+
+.bd-title {
+  font-size: 1.875rem;
+  font-weight: $font-weight-bold;
+}
+
+.bd-lead {
+  font-size: 1.125rem;
+  font-weight: $font-weight-regular;
+  color: $gray-600;
+}
+
+.bd-text-purple-bright {
+  color: $bd-purple-bright;
+}
+
+.bd-bg-purple-bright {
+  background-color: $bd-purple-bright;
+}

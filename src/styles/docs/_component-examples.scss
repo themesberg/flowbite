@@ -1,0 +1,330 @@
+//
+// Grid examples
+//
+
+.bd-example-row {
+  .row {
+    > .col,
+    > [class^="col-"] {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      background-color: rgba(39, 41, 43, 0.03);
+      border: 1px solid rgba(39, 41, 43, 0.1);
+    }
+  }
+
+  .row + .row {
+    margin-top: 1rem;
+  }
+}
+
+.bd-example-row-flex-cols .row {
+  min-height: 10rem;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.bd-highlight {
+  background-color: rgba($bd-purple, 0.15);
+  border: 1px solid rgba($bd-purple, 0.15);
+}
+
+// Grid mixins
+.example-container {
+  width: 800px;
+  @include make-container();
+}
+
+.example-row {
+  @include make-row();
+}
+
+.example-content-main {
+  @include make-col-ready();
+
+  @include media-breakpoint-up(sm) {
+    @include make-col(6);
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include make-col(8);
+  }
+}
+
+.example-content-secondary {
+  @include make-col-ready();
+
+  @include media-breakpoint-up(sm) {
+    @include make-col(6);
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include make-col(4);
+  }
+}
+
+//
+// Docs examples
+//
+
+.bd-example {
+  position: relative;
+  // padding: 1rem;
+  // margin: 1rem (-$grid-gutter-width / 2) 0;
+  // border: solid $gray-300;
+  // border-width: 1px 0 0;
+  margin: 2rem 0 3rem 0;
+  @include clearfix();
+
+  + p {
+    margin-top: 2rem;
+  }
+
+  > .form-control {
+    + .form-control {
+      margin-top: 0.5rem;
+    }
+  }
+
+  > .nav + .nav,
+  > .alert + .alert,
+  > .navbar + .navbar,
+  > .progress + .progress {
+    margin-top: 1rem;
+  }
+
+  > .dropdown-menu {
+    position: static;
+    display: block;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  // Images
+  > svg + svg,
+  > img + img {
+    margin-left: 0.5rem;
+  }
+
+  // Buttons
+  > .btn,
+  > .btn-group {
+    margin: 0.25rem 0.125rem;
+  }
+
+  > .btn-toolbar + .btn-toolbar {
+    margin-top: 0.5rem;
+  }
+
+  // List groups
+  > .list-group {
+    max-width: 400px;
+  }
+
+  > [class*="list-group-horizontal"] {
+    max-width: 100%;
+  }
+
+  // Navbars
+  .fixed-top,
+  .sticky-top {
+    position: static;
+    margin: -1rem -1rem 1rem;
+  }
+
+  .fixed-bottom {
+    position: static;
+    margin: 1rem -1rem -1rem;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .fixed-top,
+    .sticky-top {
+      margin: -1.5rem -1.5rem 1rem;
+    }
+
+    .fixed-bottom {
+      margin: 1rem -1.5rem -1.5rem;
+    }
+  }
+
+  // Pagination
+  .pagination {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  background-color: $white;
+  border: 2px solid $gray-300;
+  border-bottom: 0;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  margin: 2rem 0 0 0;
+
+  + {
+    .bd-clipboard {
+      + {
+        .highlight {
+          background-color: rgba(255, 255, 255, 0.4);
+          border: $border-width solid rgba($white, 0.25);
+          border-top: 0;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          border-bottom-left-radius: $border-radius;
+          border-bottom-right-radius: $border-radius;
+        }
+      }
+    }
+  }
+}
+
+.bg-example-image {
+  background-image: url(https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100);
+  border: 0;
+}
+
+// Ratio helpers
+.bd-example-ratios {
+  .ratio {
+    display: inline-block;
+    width: 10rem;
+    color: $gray-600;
+    background-color: $gray-100;
+    border: $border-width solid $border-color;
+
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.bd-example-ratios-breakpoint {
+  .ratio-4x3 {
+    width: 16rem;
+
+    @include media-breakpoint-up(md) {
+      --bs-aspect-ratio: 50%; // 2x1
+    }
+  }
+}
+
+.bd-example-modal {
+  background-color: #fafafa;
+
+  .modal {
+    position: static;
+    display: block;
+  }
+}
+
+// Tooltips
+.tooltip-demo a {
+  white-space: nowrap;
+}
+
+// Scrollspy demo on fixed height div
+.scrollspy-example {
+  position: relative;
+  height: 200px;
+  margin-top: 0.5rem;
+  overflow: auto;
+}
+
+.scrollspy-example-2 {
+  position: relative;
+  height: 350px;
+  overflow: auto;
+}
+
+.bd-example-border-utils {
+  [class^="border"] {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    margin: 0.25rem;
+    background-color: #f5f5f5;
+  }
+}
+
+.bd-example-border-utils-0 {
+  [class^="border"] {
+    border: 1px solid $border-color;
+  }
+}
+
+.bd-example-rounded-utils {
+  [class*="rounded"] {
+    margin: 0.25rem;
+  }
+}
+
+.bd-example-position-utils {
+  position: relative;
+  padding: 3em;
+
+  .position-relative {
+    height: 200px;
+    background-color: #f5f5f5;
+  }
+
+  .position-absolute {
+    width: 2em;
+    height: 2em;
+    background-color: $dark;
+    @include border-radius();
+  }
+}
+
+.bd-example-position-examples {
+  &::after {
+    content: none;
+  }
+}
+
+// Toasts
+.bd-example-toasts {
+  min-height: 240px;
+}
+
+//
+// Code snippets
+//
+
+.highlight {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: $gray-100;
+
+  @include media-breakpoint-up(sm) {
+    padding: 1rem 1.5rem;
+  }
+
+  pre {
+    padding: 0;
+    margin-top: 0.65rem;
+    margin-bottom: 0.65rem;
+    white-space: pre;
+    background-color: transparent;
+    border: 0;
+  }
+
+  pre code {
+    @include font-size(inherit);
+    color: $gray-200; // Effectively the base text color
+    word-wrap: normal;
+  }
+}
+
+.bd-content .highlight {
+  margin-right: (-$grid-gutter-width / 2);
+  margin-left: (-$grid-gutter-width / 2);
+  margin-bottom: 3rem;
+
+  @include media-breakpoint-up(sm) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

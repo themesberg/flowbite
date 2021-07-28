@@ -1,0 +1,49 @@
+// stylelint-disable selector-max-type
+
+.bd-toc {
+  padding-top: 0.25rem;
+
+  @include media-breakpoint-up(lg) {
+    width: 100%;
+    max-width: 231px;
+    position: sticky;
+    top: 85px;
+    z-index: 2;
+    padding-left: 1rem;
+    height: subtract(100vh, 7rem);
+    overflow-y: auto;
+  }
+
+  nav {
+    @include font-size(0.875rem);
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+
+      ul {
+        padding-left: 1rem;
+        margin-top: 0.75rem;
+      }
+    }
+
+    li  {
+      margin-bottom: .75rem;
+    }
+
+    a {
+      color: $gray-500;
+      font-size: 0.875rem;
+      text-decoration: none;;
+
+      &:hover {
+        color: $primary;
+        text-decoration: none;
+      }
+
+      code {
+        font: inherit;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+//
+// Callouts
+//
+
+.bd-callout {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid $gray-200;
+  border-left-width: .25rem;
+  @include border-radius();
+
+  h4 {
+    margin-bottom: .25rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  code {
+    @include border-radius();
+  }
+
+  + .bd-callout {
+    margin-top: -.25rem;
+  }
+}
+
+// Variations
+.bd-callout-info {
+  border-left-color: $bd-info;
+}
+
+.bd-callout-warning {
+  border-left-color: $bd-warning;
+}
+
+.bd-callout-danger {
+  border-left-color: $bd-danger;
+}

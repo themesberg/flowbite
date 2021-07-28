@@ -1,0 +1,62 @@
+# This file holds all sidebar menu's entries.
+# The logic for the sidebar generation is in "site/layouts/partials/docs-sidebar.html".
+
+- title: Getting started
+  pages:
+    - title: Introduction
+    - title: Quickstart
+    - title: Folder structure
+    - title: Build tools
+    - title: Browser support
+    - title: Changelog
+
+- title: Customize
+  pages:
+    - title: Configuration
+    - title: Sass
+    - title: Color
+    - title: Options
+    - title: Components
+    - title: CSS variables
+    - title: Icons
+    - title: Optimize
+
+- title: Components
+  pages:
+    - title: Accordion
+    - title: Alerts
+    - title: Badge
+    - title: Breadcrumb
+    - title: Buttons
+    - title: Button group
+    - title: Card
+    - title: Carousel
+    - title: Dropdowns
+    - title: Forms
+    - title: Typography
+    - title: List group
+    - title: Modal
+    - title: Navs & tabs
+    - title: Navbar
+    - title: Pagination
+    - title: Popovers
+    - title: Progress
+    - title: Spinners
+    - title: Toasts
+    - title: Tooltips
+
+- title: Utilities
+  pages:
+    - title: Background
+    - title: Border
+    - title: Colors
+    - title: Display
+    - title: Spacing
+    - title: Sizing
+
+- title: About
+  pages:
+    - title: Overview
+    - title: Team
+    - title: Brand
+    - title: License

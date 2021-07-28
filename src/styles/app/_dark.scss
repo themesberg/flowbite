@@ -1,0 +1,330 @@
+@mixin dark-mode-styles() {
+
+    // start variables
+
+    // tables
+    $table-color:                 $white !default;
+    // end variables
+
+
+
+    body {
+        background-color: $gray-900;
+        color           : $gray-400;
+    }
+
+    .text-highlight {
+        color: $white;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $white;
+    }
+
+    //Forms
+    .form-control {
+        color           : $white;
+        background-color: $gray-800;
+        border          : 1px solid $gray-600;
+
+        &:focus {
+            background-color: $gray-700;
+            border-color    : $gray-600;
+        }
+    }
+
+    .input-group-text {
+        color           : $white;
+        background-color: $gray-800;
+        border          : 1px solid $gray-600;
+    }
+
+    .form-check-input {
+        background-color: $gray-800;
+        border          : 1px solid $gray-600;
+        cursor          : pointer;
+
+        &:hover {
+            background-color: $gray-700;
+        }
+    }
+
+    // Placeholder
+
+    ::-webkit-input-placeholder {
+        /* Edge */
+        color: $gray-400;
+    }
+
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: $gray-400;
+    }
+
+    ::placeholder {
+        color: $gray-400;
+    }
+
+    // Homepage shapes
+    .presentation-shape {
+        background-color: $gray-800;
+    }
+
+    .flexbox-fix:last-of-type {
+        border-top: 1px solid rgb(22 29 37) !important;
+    }
+
+    // Type
+
+    .text-muted {
+        color: $gray-400 !important;
+    }
+
+    // Card
+    .card {
+        background: rgba($gray-900, 0.7);
+        border    : $border-width solid rgba($white, 0.125);
+        color     : $white;
+
+        @-moz-document url-prefix() {
+            background-color: rgba($gray-900, 0.95);
+        }
+
+        .card-header {
+            border-bottom: $border-width solid rgba($white, 0.1);
+        }
+
+        .card-footer {
+            border-top: $border-width solid rgba($white, 0.1);
+        }
+
+        &.highlighted-card {
+            background-color: rgba($gray-800, 0.7);
+        }
+    }
+
+    // Borders
+
+    .border-bottom {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    // Backgrounds
+
+    .bg-soft {
+        background-color: lighten($gray-900, 2%);
+    }
+
+    //List
+
+    .list-group-item {
+        color: $white;
+    }
+
+    // Prism
+
+    .token.string,
+    .token.char,
+    .token.attr-value,
+    .token.regex,
+    .token.variable {
+        color: #7fe2a3;
+    }
+
+    .token.attr-name,
+    .token.namespace,
+    .token.deleted {
+        color: #c085fc;
+    }
+
+    .token.tag,
+    .token.namespace,
+    .token.deleted {
+        color: #39bcf8;
+    }
+
+    .token {
+        &.selector {
+            color: #ffaa50;
+        }
+
+        &.punctuation {
+            color: $gray-400 !important;
+        }
+
+        &.plain {
+            color: $gray-100;
+        }
+
+        &.color {
+            color: $gray-100;
+        }
+
+        &.property {
+            color: #e4e7eb;
+        }
+
+        &.comment {
+            color: #858e9a !important;
+        }
+
+        &.url {
+            &.string.url {
+                color: #f2545b !important;
+            }
+
+            &.function {
+                color: #07a7fd !important;
+            }
+        }
+
+        &.hexcode {
+            &.color {
+                color: #f2545b !important;
+            }
+        }
+
+        &.unit {
+            color: #41b964;
+        }
+
+        &.number {
+            color: #41b964 !important;
+        }
+    }
+
+    .token-line {
+        .token {
+            &.function {
+                color: #07a7fd !important;
+            }
+        }
+    }
+
+    //Footer
+
+    footer {
+        background-color: $gray-900;
+    }
+
+    .navbar-brand,
+    .footer-brand {
+        color: $white;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    // Carbon Ads
+
+    #carbonads {
+        background-color: $gray-800 !important;
+        color           : $gray-300 !important;
+        border          : 1px solid $gray-700 !important;
+    }
+
+    #carbonads .carbon-poweredby {
+        background-color: $gray-700 !important;
+    }
+
+    #carbonads .carbon-text {
+        color: $white !important;
+    }
+
+    .icon-action {
+        background: $gray-600;
+
+        .icon {
+            color: $gray-200;
+        }
+
+        &:hover {
+            background: lighten($gray-600, 5%);
+        }
+    }
+
+    // Custom switch button
+
+    .switch-button {
+        background   : $gray-600;
+        border-radius: $border-radius;
+        color        : $white;
+
+        &-checkbox {
+            &+.switch-button-label {
+                &:before {
+                    background: $gray-800;
+                    border    : 1px solid $gray-600;
+                }
+            }
+        }
+
+        &:hover {
+            background: lighten($gray-600, 4%);
+        }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+        color           : $gray-200 !important;
+        background-color: $gray-800 !important;
+    }
+
+    //Footer links
+
+    .nav-link {
+        color: $white;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    //Custom switch dark/light
+
+    .toggle {
+        label {
+            &:after {
+                background: $primary;
+                border    : $border-width solid $primary;
+            }
+        }
+
+        &.theme-switch {
+            label {
+                background: $gray-600;
+                border    : $border-width solid $gray-600;
+            }
+
+            &:hover {
+                label {
+                    background-color: lighten($gray-600, 5%);
+                }
+            }
+
+        }
+    }
+
+}
+
+html {
+
+    // manual dark mode override when there's no OS preference
+    &.dark {
+        @include dark-mode-styles();
+    }
+
+    // native dark mode preference to prevent screen flickering
+    @media (prefers-color-scheme: dark) {
+        &:not(&.light) {
+            @include dark-mode-styles();
+        }
+
+    }
+}

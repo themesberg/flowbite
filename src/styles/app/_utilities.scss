@@ -1,0 +1,172 @@
+// check docs https://v5.getbootstrap.com/docs/5.0/utilities/api/
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-weight": (
+      property: font-weight,
+      class: fw,
+      values: (
+        "lighter": $font-weight-lighter,
+        "thin": $font-weight-thin,
+        "extralight": $font-weight-extralight,
+        "light": $font-weight-light,
+        "regular": $font-weight-regular,
+        "medium": $font-weight-medium,
+        "semibold": $font-weight-semibold,
+        "bold": $font-weight-bold,
+        "extrabold": $font-weight-extrabold,
+        "black": $font-weight-black,
+        "bolder": $font-weight-bolder,
+      ),
+    ),
+    // sizing for widths and heights are the same
+    "width":
+      (
+        property: width,
+        responsive: true,
+        class: w,
+        values: $sizings,
+      ),
+    "height": (
+      property: height,
+      responsive: true,
+      class: h,
+      values: $sizings,
+    ),
+    "min-width": (
+      property: min-width,
+      responsive: true,
+      class: min-w,
+      values: (
+        0: 0px,
+        "full": 100%,
+        "min": min-content,
+        "max": max-content,
+      ),
+    ),
+    "min-height": (
+      property: min-height,
+      responsive: true,
+      class: min-h,
+      values: (
+        0: 0px,
+        "full": 100%,
+        "screen": 100vh,
+      ),
+    ),
+    "max-width": (
+      property: max-width,
+      responsive: true,
+      class: max-w,
+      values: $max-widths,
+    ),
+    "max-height": (
+      property: max-height,
+      responsive: true,
+      class: max-h,
+      values: $sizings,
+    ),
+    "background-color": (
+      property: background-color,
+      class: bg,
+      values:
+        map-merge(
+          $bg-colors,
+          (
+            "body": $body-bg,
+            "white": $white,
+            "transparent": transparent,
+          )
+        ),
+    ),
+    "background-blur": (
+      property: backdrop-filter,
+      class: bg-blur,
+      values: (
+        0: blur(0),
+        1: blur(1px),
+        2: blur(2px),
+        3: blur(3px),
+        4: blur(4px),
+        5: blur(5px),
+        6: blur(6px),
+        7: blur(7px),
+        8: blur(8px),
+        9: blur(9px),
+        10: blur(10px),
+        12: blur(12px),
+        14: blur(14px),
+        15: blur(15px),
+        16: blur(16px),
+        18: blur(18px),
+        20: blur(20px),
+        22: blur(22px),
+        24: blur(24px),
+        25: blur(25px),
+      ),
+    ),
+    "bg-opacity": (
+      property: --gl-bg-opacity,
+      class: "bg-opacity",
+      values: $opacities,
+    ),
+    "opacity": (
+      property: opacity,
+      class: o,
+      values: $opacities,
+    ),
+    "z-index": (
+      property: z-index,
+      class: z,
+      values: (
+        0: 0,
+        10: 10,
+        20: 20,
+        30: 30,
+        40: 40,
+        50: 50,
+        "z-auto": auto,
+      ),
+    ),
+    "border-color": (
+      property: border-color,
+      class: border,
+      values: map-merge($theme-colors, $grays),
+    ),
+    "rounded": (
+      property: border-radius,
+      class: rounded,
+      values: (
+        null: $border-radius,
+        0: 0,
+        "sm": $border-radius-sm,
+        "md": $border-radius-md,
+        "lg": $border-radius-lg,
+        "xl": $border-radius-xl,
+        "2xl": $border-radius-2xl,
+        "3xl": $border-radius-3xl,
+        circle: 50%,
+        pill: $border-radius-pill,
+      ),
+    ),
+    "color": (
+      property: color,
+      class: text,
+      values:
+        map-merge(
+          $theme-colors,
+          map-merge(
+            $grays,
+            (
+              "body": $body-color,
+              "muted": $text-muted,
+              "black-50": rgba($black, 0.5),
+              "white-50": rgba($white, 0.5),
+              "reset": inherit,
+            )
+          )
+        ),
+    ),
+  )
+);

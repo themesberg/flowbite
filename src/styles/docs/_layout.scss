@@ -1,0 +1,59 @@
+.bd-layout {
+  @include media-breakpoint-up(lg) {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: "sidebar main toc";
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+}
+
+.nav-layout {
+  width: 100%;
+  display: grid;
+  gap: 2rem;
+  grid-template-areas: "logo menu actions";
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+.nav-logo-area {
+  grid-area: logo;
+}
+
+.nav-menu-area {
+  grid-area: menu;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.nav-actions-area {
+  grid-area: actions;
+}
+
+.bd-sidebar {
+  grid-area: sidebar;
+}
+
+.bd-main {
+  grid-area: main;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.highlight:last-child {
+  margin-bottom: 0 !important;
+}
+
+.bd-intro {
+  grid-area: intro;
+}
+
+.bd-toc {
+  grid-area: toc;
+}
+
+.bd-content {
+  grid-area: content;
+  min-width: 1px; // Fix width when bd-content contains a `<pre>` https://github.com/twbs/bootstrap/issues/25410
+}

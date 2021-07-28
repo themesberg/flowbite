@@ -1,0 +1,24 @@
+{{ define "main" }}
+<header class="navbar navbar-expand-md navbar-dark bd-navbar py-3 mb-0 pb-0">
+  <nav class="container" aria-label="Main navigation">
+    <div class="row w-100">
+      <div class="col-12 d-flex justify-content-between">
+        <a class="navbar-brand p-0 me-2" href="/" aria-label="Bootstrap">
+          <img class="navbar-brand-dark" height="35" src="/img/brand/dark.png" alt="Logo light">
+        </a>
+        <div>
+          <a class="btn btn-dark d-lg-inline-block" href="docs/getting-started/introduction"><i
+              class="fas fa-book me-2"></i> Docs</a>
+          <a class="btn btn-primary d-lg-inline-block" href="#"><i class="fas fa-rocket me-2"></i> Upgrade to Pro</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  {{ partial "home/masthead" . }}
+  {{ partial "home/masthead-followup" . }}
+</main>
+
+{{ .Content }}
+{{ end }}

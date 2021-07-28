@@ -1,0 +1,91 @@
+.bd-navbar {
+  padding         : 1rem 0;
+  background-color: rgba($white, 0.75);
+  top             : 0;
+  width           : 100%;
+  z-index         : 99;
+  position        : sticky;
+  border-bottom: 1px solid rgb(158 158 158 / 15%);
+
+  .nav-link {
+    font-size: .9rem;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .navbar-brand {
+    margin: 0;
+  }
+
+  .navbar-toggler {
+    padding: 0;
+    border : 0;
+  }
+
+  .navbar-nav {
+    .nav-link {
+      padding-right: $spacer / 4;
+      padding-left : $spacer / 4;
+      color        : $gray-900;
+
+      &:hover,
+      &:focus {
+        color: $gray-400;
+      }
+
+      &.active {
+        font-weight: 600;
+        color      : $primary;
+      }
+    }
+  }
+
+  .navbar-nav-svg {
+    width : 1rem;
+    height: 1rem;
+  }
+
+  .icon-navbar {
+    width : 1.4rem;
+    height: 1.4rem;
+    color : $gray-400;
+
+    &:hover {
+      color: $gray-500;
+    }
+  }
+
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+
+  .nav-search {
+
+    cursor: pointer;
+
+    .form-control {
+      font-size: .9rem;
+      color    : $gray-400;
+      padding  : 0.5rem 0.1rem;
+      border   : 0;
+
+      &:focus {
+        background-color: transparent;
+      }
+    }
+
+    .input-group-text {
+      border          : 0;
+      padding-bottom  : .7rem;
+      background-color: transparent;
+    }
+
+    &:hover {
+      .form-control {
+        color: $gray-500;
+      }
+    }
+  }
+}

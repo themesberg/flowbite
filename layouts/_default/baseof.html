@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ partial "header" . }}
+  </head>
+  {{ block "body_override" . }}<body>{{ end }}
+    {{ partial "skippy" . }}
+
+    {{ block "main" . }}
+    {{ end }}
+
+    {{ partial "footer" . }}
+    {{ partial "scripts" . }}
+
+    {{ block "footer" . }}
+    {{ end }}
+  </body>
+</html>

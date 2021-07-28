@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ partial "header" . }}
+  </head>
+  {{ block "body_override" . }}<body>{{ end }}
+
+    {{ partial "dashboard/navbar" . }}
+
+    {{ partial "dashboard/sidebar" . }}
+
+    <main class="content pt-4 pt-lg-xl pb-4">
+        {{ block "main" . }}
+        {{ end }}
+    </main>
+
+    {{ partial "dashboard/footer" . }}
+    {{ partial "scripts" . }}
+
+    {{ block "footer" . }}
+    {{ end }}
+  </body>
+</html>

@@ -1,0 +1,19 @@
+@mixin dark-mode-variables() {
+    // tables
+    $table-color: $white !default;
+    // end variables
+}
+
+html {
+    // manual dark mode override when there's no OS preference
+    &.dark {
+        @include dark-mode-variables();
+    }
+
+    // native dark mode preference to prevent screen flickering
+    @media (prefers-color-scheme: dark) {
+        &:not(&.light) {
+            @include dark-mode-variables();
+        }
+    }
+}

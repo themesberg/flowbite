@@ -31,6 +31,8 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.4.1",
+    "prismjs": "^1.24.1",
     "yarn": "^1.22.10"
   }
 }

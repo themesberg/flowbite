@@ -1,49 +1,70 @@
 {{ define "main" }}
-<header>
-  <nav className="py-4 w-full bg-white transition">
-    <div class="container px-4 lg:px-12 mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-center">
-      <div class="flex justify-between">
-        <a href="/" class="flex">
-          <img class="h-10 mr-4" alt="FlowBite Logo" />
-          <span class="self-center text-lg font-semibold whitespace-nowrap">FlowBite</span>
-        </a>
-        <button class="lg:hidden"><svg class="w-6 h-6 text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg></button>
-      </div>
-      <ul className="flex flex-col lg:flex-row lg:self-center py-6 lg:py-0 collapse">
-        <li class="lg:px-6 mb-3 lg:mb-0">
-          <Link to="/#tailwind" class="font-medium text-gray-900">How it works</Link>
-        </li>
-        <li class="lg:px-6 mb-3 lg:mb-0">
-          <Link to="/#features" class="font-medium text-gray-900">Features</Link>
-        </li>
-        <li class="lg:px-6 mb-3 lg:mb-0">
-          <Link to="/#roadmap" class="font-medium text-gray-900">Roadmap</Link>
-        </li>
-        <li class="lg:px-6 mb-3 lg:mb-0">
-          <Link to="/license" class="font-medium text-gray-900">License</Link>
-        </li>
-      </ul>
-      <div className="lg:self-center mb-4 lg:mb-0 collapse">
-        <a href="/#pricing" class="text-white bg-gray-800 hover:bg-gray-900 font-semibold rounded-xl text-base px-6 py-3">Pricing & FAQ</a>
-      </div>
-    </div>
-  </nav>
-</header>
-<main>
-  {{ partial "home/hero" . }}
-  {{ partial "home/testimonials" . }}
-  {{ partial "home/pages" . }}
-  {{ partial "home/devices" . }}
-  {{ partial "home/style-guideline" . }}
-  {{ partial "home/variants" . }}
-  {{ partial "home/auto-layout" . }}
-  {{ partial "home/roadmap" . }}
-  {{ partial "home/changelog" . }}
-  {{ partial "home/pricing" . }}
-  {{ partial "home/faq" . }}
-  {{ partial "home/subscribe" . }}
-  {{ partial "home/footer" . }}
-</main>
 
-{{ .Content }}
+{{ partial "docs-navbar" }}
+
+<div class="w-full container px-4 mx-auto">
+  <div class="lg:flex">
+    <!-- Sidebar -->
+    <aside id="sidebar"
+      class="fixed z-40 inset-0 flex-none h-full bg-black bg-opacity-25 w-full lg:bg-white lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block hidden">
+      {{ partial "docs-sidebar" . }}
+    </aside>
+
+    <main id="content-wrapper" class="min-w-0 w-full flex-auto lg:static lg:max-h-full lg:overflow-visible">
+      <div class="w-full flex">
+
+        <!-- Main content -->
+        <div class="min-w-0 flex-auto px-4 sm:px-6 xl:px-8 pt-10 pb-24 lg:pb-16">
+
+          <!-- Intro -->
+          <div class="pb-10 border-b border-gray-200 mb-10">
+            <h1 class="inline-block text-3xl font-extrabold text-gray-900 tracking-tight" id="content">{{ .Title | markdownify }}</h1>
+            <p class="mt-1 text-lg text-gray-500">{{ .Page.Params.Description | markdownify }}</p>
+          </div>
+
+          <div id="mainContent">
+            {{ if .Page.Params.sections }}
+            <div class="row g-3">
+              {{ range .Page.Params.sections }}
+              <div class="col-md-6">
+                <a class="d-block text-decoration-none" href="../{{ urlize .title }}/">
+                  <strong class="d-block h5 mb-0">{{ .title }}</strong>
+                  <span class="text-secondary">{{ .description }}</span>
+                </a>
+              </div>
+              {{ end }}
+            </div>
+            {{ end }}
+
+            <div class="prose">
+              {{ .Content }}
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Table of content -->
+        <div class="hidden xl:text-sm xl:block flex-none w-64 pl-8 mr-8">
+          {{ if (eq .Page.Params.toc true) }}
+          <div class="flex flex-col justify-between overflow-y-auto sticky max-h-(screen-18) pt-10 pb-6 top-18">
+            <div class="mb-8">
+              <h5 class="text-gray-900 uppercase tracking-wide font-semibold mb-3 text-sm lg:text-xs">On this page</h5>
+              {{ .TableOfContents }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+</div>
 {{ end }}
+
+{{ define "footer" }}
+{{ range .Page.Params.extra_js -}}
+<script{{ with .async }} async{{ end }} src="{{ .src }}">
+</script>
+  {{- end -}}
+  {{ end }}

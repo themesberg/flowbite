@@ -2,55 +2,156 @@
 @tailwind components;
 @tailwind utilities;
 
-/* custom CSS */
+/* custom docs CSS */
 
-.style-guideline-image,
-.figma-variants-image,
-.auto-layout-image {
-    max-height: 42rem;
+#TableOfContents > ul {
+    @apply overflow-x-hidden text-gray-500 font-medium;
 }
 
-@keyframes smoothScroll {
-    0% {
-        transform: translateY(-40px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+#TableOfContents > ul > li > a {
+    @apply block py-2 transition-colors duration-200 hover:text-gray-900 font-medium;
 }
 
-.navbar-top {
-    animation: smoothScroll 0.5s forwards;
+.prose {
+    max-width: none;
 }
 
-@media only screen and (max-width: 1024px) {
-    .collapse.collapsed {
-        display: none;
-    }
+/* prism styles */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #c5c8c6;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
 }
 
-.prism-code {
-    background-color: transparent !important;
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
 }
 
-.yt-video {
-    height: 250px;
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #1d1f21;
 }
 
-@media only screen and (min-width: 768px) {
-    .yt-video {
-        height: 350px;
-    }
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
 }
 
-
-@media only screen and (min-width: 1024px) {
-    .yt-video {
-        height: 500px;
-    }
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #7C7C7C;
 }
 
-.ytp-impression-link,
-.ytp-chrome-top-buttons {
-    display: none !important;
+.token.punctuation {
+	color: #c5c8c6;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.keyword,
+.token.tag {
+	color: #96CBFE;
+}
+
+.token.class-name {
+	color: #FFFFB6;
+	text-decoration: underline;
+}
+
+.token.boolean,
+.token.constant {
+	color: #99CC99;
+}
+
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.number {
+	color: #FF73FD;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #A8FF60;
+}
+
+.token.variable {
+	color: #C6C5FE;
+}
+
+.token.operator {
+	color: #EDEDED;
+}
+
+.token.entity {
+	color: #FFFFB6;
+	cursor: help;
+}
+
+.token.url {
+	color: #96CBFE;
+}
+
+.language-css .token.string,
+.style .token.string {
+	color: #87C38A;
+}
+
+.token.atrule,
+.token.attr-value {
+	color: #F9EE98;
+}
+
+.token.function {
+	color: #DAD085;
+}
+
+.token.regex {
+	color: #E9C062;
+}
+
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
 }

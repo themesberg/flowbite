@@ -1,6 +1,7 @@
 <!doctype html>
 <html {{ if eq .Page.Params.direction "rtl" }}lang="ar" dir="rtl"{{ else }}lang="en"{{ end }}{{ with .Page.Params.html_class }} class="{{ . }}"{{ end }}>
   <head>
+    <link rel="canonical" href="{{ .Permalink }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -8,16 +9,14 @@
     <meta name="generator" content="Hugo {{ hugo.Version }}">
     <title>{{ .Page.Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.docs_version }}</title>
 
-    <link rel="canonical" href="{{ .Permalink }}">
+    {{ partial "stylesheet" . }}
+    {{ partial "favicons" . }}
 
     <script src="{{ .Site.BaseURL }}/assets/system.bundle.js"></script>
 
     {{ with .Params.robots -}}
     <meta name="robots" content="{{ . }}">
     {{- end }}
-
-    {{ partial "stylesheet" . }}
-    {{ partial "favicons" . }}
 
     <style>
       .bd-placeholder-img {

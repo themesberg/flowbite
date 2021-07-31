@@ -1,45 +1,43 @@
-<nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
-  {{- $url := split .Permalink "/" -}}
-  {{- $page_slug := index $url (sub (len $url) 2) -}}
-
-  <ul class="list-unstyled mb-0">
-  {{- range $group := .Site.Data.sidebar -}}
-    {{- $link := $group.title -}}
-    {{- $link_slug := $link | urlize -}}
-
-    {{- if $group.pages -}}
-      {{- $link = index $group.pages 0 -}}
-      {{- $link_slug = $link.title | urlize -}}
-    {{- end -}}
-
-    {{- $group_slug := $group.title | urlize -}}
-    {{- $is_active_group := eq $.Page.Params.group $group_slug -}}
-
-    {{- if $group.pages }}
-      <li>
-        <button class="btn d-inline-flex align-items-center {{ if not $is_active_group }} collapsed{{ end }}" data-bs-toggle="collapse" data-bs-target="#{{ $group_slug }}-collapse" aria-expanded="{{ $is_active_group }}"{{ if $is_active_group }} aria-current="true"{{ end }}>            
-          {{ $group.title }}
-        </button>
-
-        <div class="collapse{{ if $is_active_group }} show{{ end }}" id="{{ $group_slug }}-collapse">
+<div id="navWrapper" class="h-full overflow-y-auto scrolling-touch lg:h-auto lg:block lg:relative lg:sticky lg:bg-transparent overflow-hidden lg:top-18 bg-white mr-24 lg:mr-0">
+  <nav id="nav" class="px-1 pt-2 overflow-y-auto font-medium text-base sm:px-3 xl:px-5 lg:text-sm pb-10 lg:pb-14 sticky?lg:h-(screen-18)" aria-label="Docs navigation">
+    {{- $url := split .Permalink "/" -}}
+    {{- $page_slug := index $url (sub (len $url) 2) -}}
+  
+    <ul class="list-unstyled mb-0">
+    {{- range $group := .Site.Data.sidebar -}}
+      {{- $link := $group.title -}}
+      {{- $link_slug := $link | urlize -}}
+  
+      {{- if $group.pages -}}
+        {{- $link = index $group.pages 0 -}}
+        {{- $link_slug = $link.title | urlize -}}
+      {{- end -}}
+  
+      {{- $group_slug := $group.title | urlize -}}
+      {{- $is_active_group := eq $.Page.Params.group $group_slug -}}
+  
+      {{- if $group.pages }}
+        <li class="mt-8">
+          <h5 class="px-3 mb-3 lg:mb-3 uppercase tracking-wide font-semibold text-sm lg:text-xs text-gray-900">{{ $group.title }}</h5>
           <ul class="list-unstyled fw-normal py-1 small">
             {{- range $doc := $group.pages -}}
               {{- $doc_slug := $doc.title | urlize -}}
               {{- $is_active := and $is_active_group (eq $page_slug $doc_slug) -}}
-              {{- $href := printf "/docs/%s/%s/" $group_slug $doc_slug }}
-              <li><a href="{{ $href }}" class="d-inline-flex align-items-center {{ if $is_active }} active{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }}</a></li>
+              {{- $href := printf "/%s/%s/" $group_slug $doc_slug }}
+              <li><a href="{{ $href }}" class="px-3 py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 {{ if $is_active }} text-blue-700{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }}</a></li>
             {{- end }}
           </ul>
-        </div>
-      </li>
-    {{- else }}
-      <li class="my-3 mx-4 border-top"></li>
-      <li>
-        <a href="/docs/{{ $group_slug }}/" class="d-inline-flex align-items-center {{ if $is_active_group }} active{{ end }}"{{ if $is_active_group }} aria-current="page"{{ end }}>
-          {{ $group.title }}
-        </a>
-      </li>
+        </li>
+      {{- else }}
+        <li class="my-3 mx-4 border-top"></li>
+        <li>
+          <a href="/{{ $group_slug }}/" class="d-inline-flex align-items-center {{ if $is_active_group }} active{{ end }}"{{ if $is_active_group }} aria-current="page"{{ end }}>
+            {{ $group.title }}
+          </a>
+        </li>
+      {{- end }}
     {{- end }}
-  {{- end }}
-  </ul>
-</nav>
+    </ul>
+  </nav>
+</div>
+

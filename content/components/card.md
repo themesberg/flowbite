@@ -6,6 +6,7 @@ group: components
 toc: true
 ---
 
+{{< prose >}}
 ## How it works
 
 These card components can be used in a "plug and play" way for your layout. We made sure to build a large variety of cards, which can be used in general, for applications, websites, blogs, and many more.
@@ -13,6 +14,7 @@ These card components can be used in a "plug and play" way for your layout. We m
 Most of these elements are built using other components from this framework, such as buttons, icons, images, lists, and so on. Check out all of the components by browsing this page.
 
 ## Default card with image
+{{< /prose >}}
 
 {{< example >}}
 <div class="card bg-blur-20" style="max-width:24rem">

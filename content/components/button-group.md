@@ -6,178 +6,130 @@ group: components
 toc: true
 ---
 
-## Example
+{{< prose >}}
+## Group buttons
 
-To wrap two or more buttons together, add them inside a `.btn-group` element like this:
-
-{{< example >}}
-<div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-primary">Left</button>
-  <button type="button" class="btn btn-primary">Middle</button>
-  <button type="button" class="btn btn-primary">Right</button>
-</div>
-{{< /example >}}
-
-## Buttons as links
-
-You can also use a `<a>` tag instead of `<button>`:
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
 
 {{< example >}}
-<div class="btn-group">
-  <a href="#" class="btn btn-primary active" aria-current="page">Profile</a>
-  <a href="#" class="btn btn-primary">Settings</a>
-  <a href="#" class="btn btn-primary">Contact</a>
-</div>
-{{< /example >}}
-
-## With Icons
-
-The following example shows how you can use icons inside the button elements:
-
-{{< example >}}
-<div class="btn-group">
-  <a href="#" class="btn btn-primary d-inline-flex align-items-center active" aria-current="page">
-    <svg class="icon icon-xxs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+<div class="relative z-0 inline-flex shadow-sm rounded-md">
+  <button type="button" class="relative rounded-l-lg border border-gray-200 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 inline-flex items-center">
     Profile
-  </a>
-  <a href="#" class="btn btn-primary d-inline-flex align-items-center">
-    <svg class="icon icon-xxs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+  </button>
+  <button type="button" class="-ml-px relative border border-gray-300 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 inline-flex items-center">
     Settings
-  </a>
-  <a href="#" class="btn btn-primary d-inline-flex align-items-center">
-    <svg class="icon icon-xxs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
-    Contact
-  </a>
+  </button>
+  <button type="button" class="-ml-px relative rounded-r-md border border-gray-300 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 inline-flex items-center">
+    Messages
+  </button>
 </div>
 {{< /example >}}
 
-## Outlined styles
+{{< prose >}}
+## Group buttons with icons
 
-Use the `.btn-outline-*` modifier class to use an outline style for the buttons:
-
-{{< example >}}
-<div class="btn-group" role="group" aria-label="Basic outlined example">
-  <button type="button" class="btn btn-outline-primary">Left</button>
-  <button type="button" class="btn btn-outline-primary">Middle</button>
-  <button type="button" class="btn btn-outline-primary">Right</button>
-</div>
-{{< /example >}}
-
-## Outlined with icons
-
-In this example you can also use icons:
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
 
 {{< example >}}
-<div class="btn-group">
-  <a href="#" class="btn btn-outline-primary d-inline-flex align-items-center active" aria-current="page">
-    <svg class="icon icon-xxs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+<div class="relative z-0 inline-flex shadow-sm rounded-md">
+  <button type="button" class="relative rounded-l-lg border border-gray-200 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 inline-flex items-center ">
+    <svg class="w-4 h-4 mr-2 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
     Profile
-  </a>
-  <a href="#" class="btn btn-outline-primary d-inline-flex align-items-center">
-    <svg class="icon icon-xxs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+  </button>
+  <button type="button" class="-ml-px relative border border-gray-200 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 inline-flex items-center">
+    <svg class="w-4 h-4 mr-2 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"></path></svg>
     Settings
-  </a>
-  <a href="#" class="btn btn-outline-primary d-inline-flex align-items-center">
-    <svg class="icon icon-xxs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
-    Contact
-  </a>
+  </button>
+  <button type="button" class="-ml-px relative rounded-r-md border border-gray-200 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 inline-flex items-center">
+    <svg class="w-4 h-4 mr-2 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 9.5A3.5 3.5 0 005.5 13H9v2.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 15.586V13h2.5a4.5 4.5 0 10-.616-8.958 4.002 4.002 0 10-7.753 1.977A3.5 3.5 0 002 9.5zm9 3.5H9V8a1 1 0 012 0v5z" clip-rule="evenodd"></path></svg>
+    Downloads
+  </button>
 </div>
 {{< /example >}}
 
-## Checkbox and radio
+{{< prose >}}
+## Outline
 
-Alternatively to the forms checkbox and radio styles, you can also use buttons for these input elements.
-
-### Checkbox
-
-Use the following markup with the `.btn-check` and `.btn .btn-outline-&` classes inside the `.btn-group` element to add checkbox inputs:
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
 
 {{< example >}}
-<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
-
-  <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
-
-  <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+<div class="relative z-0 inline-flex shadow-sm rounded-md">
+  <button type="button" class="relative rounded-l-lg border border-gray-900 bg-transparent text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white">
+    Profile
+  </button>
+  <button type="button" class="-ml-px relative border border-gray-900 bg-transparent text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white">
+    Settings
+  </button>
+  <button type="button" class="-ml-px relative rounded-r-md border border-gray-900 bg-transparent text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white">
+    Downloads
+  </button>
 </div>
 {{< /example >}}
 
-### Radio
+{{< prose >}}
+## Outlined with icon
 
-Use the following markup with the `.btn-check` and `.btn .btn-outline-&` classes inside the `.btn-group` element to add radio inputs:
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
 
 {{< example >}}
-<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-  <input type="radio" class="btn-check" name="btnradio1" id="btnradio1" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
-
-  <input type="radio" class="btn-check" name="btnradio1" id="btnradio2" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
-
-  <input type="radio" class="btn-check" name="btnradio1" id="btnradio3" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+<div class="relative z-0 inline-flex shadow-sm rounded-md">
+  <button type="button" class="relative rounded-l-lg border border-gray-900 bg-transparent text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white inline-flex items-center ">
+    <svg class="w-4 h-4 mr-2 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
+    Profile
+  </button>
+  <button type="button" class="-ml-px relative border border-gray-900 bg-transparent text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white inline-flex items-center">
+    <svg class="w-4 h-4 mr-2 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"></path></svg>
+    Settings
+  </button>
+  <button type="button" class="-ml-px relative rounded-r-md border border-gray-900 bg-transparent text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white inline-flex items-center">
+    <svg class="w-4 h-4 mr-2 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 9.5A3.5 3.5 0 005.5 13H9v2.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 15.586V13h2.5a4.5 4.5 0 10-.616-8.958 4.002 4.002 0 10-7.753 1.977A3.5 3.5 0 002 9.5zm9 3.5H9V8a1 1 0 012 0v5z" clip-rule="evenodd"></path></svg>
+    Downloads
+  </button>
 </div>
 {{< /example >}}
 
-## Button toolbar
+{{< prose >}}
+## Vertical 
 
-Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
+Make a set of buttons appear vertically stacked rather than horizontally.
+{{< /prose >}}
 
 {{< example >}}
-<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-  <div class="btn-group me-2" role="group" aria-label="First group">
-    <button type="button" class="btn btn-primary">1</button>
-    <button type="button" class="btn btn-primary">2</button>
-    <button type="button" class="btn btn-primary">3</button>
-    <button type="button" class="btn btn-primary">4</button>
-  </div>
-  <div class="btn-group me-2" role="group" aria-label="Second group">
-    <button type="button" class="btn btn-secondary">5</button>
-    <button type="button" class="btn btn-secondary">6</button>
-    <button type="button" class="btn btn-secondary">7</button>
-  </div>
-  <div class="btn-group" role="group" aria-label="Third group">
-    <button type="button" class="btn btn-gray-700">8</button>
-  </div>
+<div class="bg-white rounded-lg border border-gray-200">
+    <button class="px-4 py-2 relative hover:bg-gray-100 hover:text-blue-700 text-gray-900 text-sm font-medium border-b border-gray-200 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 w-full rounded-t-lg inline-flex items-center">Profile</button>
+    <button class="px-4 py-2 relative hover:bg-gray-100 hover:text-blue-700 text-gray-900 text-sm font-medium border-b border-gray-200 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 w-full inline-flex items-center">Settings</button>
+    <button class="px-4 py-2 relative hover:bg-gray-100 hover:text-blue-700 text-gray-900 text-sm font-medium border-b border-gray-200 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 w-full inline-flex items-center">Messages</button>
+    <button class="px-4 py-2 relative hover:bg-gray-100 hover:text-blue-700 text-gray-900 text-sm font-medium focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 w-full rounded-b-lg inline-flex items-center">Download</button>
 </div>
 {{< /example >}}
 
-## Sizing
+{{< prose >}}
+## Vertical with icons 
 
-Instead of applying button sizing classes to every button in a group, just add <span class="fw-bold text-danger">.btn-group-*</span> to each <span class="fw-bold text-danger">.btn-group</span>, including each one when nesting multiple groups.
+Make a set of buttons appear vertically stacked rather than horizontally.
+{{< /prose >}}
 
 {{< example >}}
-<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-primary">Left</button>
-  <button type="button" class="btn btn-primary">Middle</button>
-  <button type="button" class="btn btn-primary">Right</button>
-</div>
-<br>
-<div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-primary">Left</button>
-  <button type="button" class="btn btn-primary">Middle</button>
-  <button type="button" class="btn btn-primary">Right</button>
-</div>
-<br>
-<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-primary">Left</button>
-  <button type="button" class="btn btn-primary">Middle</button>
-  <button type="button" class="btn btn-primary">Right</button>
-</div>
-{{< /example >}}
-
-## Vertical
-Make a set of buttons appear vertically stacked rather than horizontally. Split button dropdowns are not supported here.
-{{< example >}}
-<div class="btn-group-vertical" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-primary">Button 1</button>
-  <button type="button" class="btn btn-primary">Button 2</button>
-  <button type="button" class="btn btn-primary">Button 3</button>
-    <button type="button" class="btn btn-primary">Button 4</button>
-  <button type="button" class="btn btn-primary">Button 5</button>
-  <button type="button" class="btn btn-primary">Button 6</button>
+<div class="bg-white rounded-lg border border-gray-200">
+<button class="px-4 py-2 relative hover:bg-gray-100 hover:text-blue-700 text-gray-900 text-sm font-medium border-b border-gray-200 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 w-full rounded-t-lg inline-flex items-center">
+    <svg class="w-4 h-4 mr-2 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
+    Profile
+</button>
+<button class="px-4 py-2 relative hover:bg-gray-100 hover:text-blue-700 text-gray-900 text-sm font-medium border-b border-gray-200 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 w-full inline-flex items-center">
+    <svg class="w-4 h-4 mr-2 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"></path></svg>
+    Settings
+</button>
+<button class="px-4 py-2 relative hover:bg-gray-100 hover:text-blue-700 text-gray-900 text-sm font-medium border-b border-gray-200 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 w-full inline-flex items-center">
+    <svg class="w-4 h-4 mr-2 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h10v7h-2l-1 2H8l-1-2H5V5z" clip-rule="evenodd"></path></svg>
+    Messages
+</button>
+<button class="px-4 py-2 relative hover:bg-gray-100 hover:text-blue-700 text-gray-900 text-sm font-medium focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 w-full rounded-b-lg inline-flex items-center">
+    <svg class="w-4 h-4 mr-2 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 9.5A3.5 3.5 0 005.5 13H9v2.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 15.586V13h2.5a4.5 4.5 0 10-.616-8.958 4.002 4.002 0 10-7.753 1.977A3.5 3.5 0 002 9.5zm9 3.5H9V8a1 1 0 012 0v5z" clip-rule="evenodd"></path></svg>
+    Download
+</button>
 </div>
 {{< /example >}}

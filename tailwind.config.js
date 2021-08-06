@@ -134,6 +134,8 @@ module.exports = {
     },
     variants: {
       extend: {
+        fill: ['hover', 'focus'],
+        zIndex: ['hover', 'active'],
       },
     },
     plugins: [

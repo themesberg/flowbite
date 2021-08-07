@@ -6,211 +6,475 @@ group: components
 toc: true
 ---
 
-## How it works
+{{< prose >}}
+## Default alerts
 
-The alert component can be used for any length of text, and it also has an optional close functionality. Use the contextual classes, such as `.alert-primary`, `.alert-success` or `.alert-danger` to add special styling to the element.
-
-## Example
-
-Use one of the following alert components as a basic element to notify a user:
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
 
 {{< example >}}
-<div class="alert alert-primary" role="alert">
-  A simple primary alert—check it out!
-</div>
-<div class="alert alert-secondary" role="alert">
-  A simple secondary alert—check it out!
-</div>
-<div class="alert alert-success" role="alert">
-  <strong>Well done!</strong> You successfully read this important alert message.
-</div>
-<div class="alert alert-danger" role="alert">
-  <strong>Oh snap!</strong> Change a few things up and try submitting again.
-</div>
-<div class="alert alert-warning" role="alert">
-  <strong>Warning!</strong> Better check yourself, you're not looking too good.
-</div>
-<div class="alert alert-info" role="alert">
-  <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-</div>
-<div class="alert alert-gray-100" role="alert">
-  A simple light alert—check it out!
-</div>
-<div class="alert alert-gray-800" role="alert">
-  A simple dark alert—check it out!
-</div>
-{{< /example >}}
-
-## Glassmorphism effect
-
-Use one of the following alert components as a basic element to notify a user:
-
-{{< example >}}
-<div class="alert bg-gray-900 border border-primary text-primary" role="alert">
-  A simple primary alert—check it out!
-</div>
-<div class="alert alert-secondary" role="alert">
-  A simple secondary alert—check it out!
-</div>
-<div class="alert alert-success" role="alert">
-  <strong>Well done!</strong> You successfully read this important alert message.
-</div>
-<div class="alert alert-danger" role="alert">
-  <strong>Oh snap!</strong> Change a few things up and try submitting again.
-</div>
-<div class="alert alert-warning" role="alert">
-  <strong>Warning!</strong> Better check yourself, you're not looking too good.
-</div>
-<div class="alert alert-info" role="alert">
-  <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-</div>
-<div class="alert alert-gray-100" role="alert">
-  A simple light alert—check it out!
-</div>
-<div class="alert alert-gray-800" role="alert">
-  A simple dark alert—check it out!
-</div>
-{{< /example >}}
-
-## Alerts with icons
-
-Use these alert components to also add a contextual icon to improve de usability and experience of the users:
-
-{{< example >}}
-<div class="alert alert-primary d-lg-flex align-items-center" role="alert">
-  <span class="icon-shape icon-shape-primary icon-xs rounded me-3 mb-2 mb-lg-0">
-    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>    
-  </span> 
-  <div>
-    <strong class="me-1">Primary!</strong>You successfully read this important alert message.
+<div class="bg-blue-100 rounded-lg p-4 mb-4">
+  <div class="flex">
+    <div>
+      <svg class="w-5 h-5 text-blue-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm text-blue-700">
+        <span class="font-medium">Important Note!</span> Change a few things up and try submitting again.
+      </p>
+    </div>
   </div>
 </div>
-<div class="alert alert-secondary d-lg-flex align-items-center" role="alert">
-  <span class="icon-shape icon-shape-secondary icon-xs rounded me-3 mb-2 mb-lg-0">
-    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>   
-  </span>
-  <div>
-    <strong class="me-1">Secondary!</strong>You successfully read this important alert message. 
-  </div>  
-</div>
-<div class="alert alert-tertiary d-lg-flex align-items-center" role="alert">
-  <span class="icon-shape icon-shape-tertiary icon-xs rounded me-3 mb-2 mb-lg-0">
-    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg> 
-  </span> 
-  <div>
-    <strong class="me-1">Well done!</strong>You successfully read this important alert message.
+<div class="bg-red-100 rounded-lg p-4 mb-4">
+  <div class="flex">
+    <div>
+      <svg class="w-5 h-5 text-red-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm text-red-700">
+        <span class="font-medium">Important Note!</span> Change a few things up and try submitting again.
+      </p>
+    </div>
   </div>
 </div>
-<div class="alert alert-success d-lg-flex align-items-center" role="alert">
-  <span class="icon-shape icon-shape-success icon-xs rounded me-3 mb-2 mb-lg-0">
-    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>   
-  </span>
-  <div> 
-    <strong class="me-1">Well done!</strong>You successfully read this important alert message.
+<div class="bg-green-100 rounded-lg p-4 mb-4">
+  <div class="flex">
+    <div>
+      <svg class="w-5 h-5 text-green-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm text-green-700">
+        <span class="font-medium">Important Note!</span> Change a few things up and try submitting again.
+      </p>
+    </div>
   </div>
 </div>
-<div class="alert alert-danger d-lg-flex align-items-center" role="alert">
-  <span class="icon-shape icon-shape-danger icon-xs rounded me-3 mb-2 mb-lg-0">
-    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-  </span>
-  <div>
-    <strong class="me-1">Oh snap!</strong> Change a few things up and try submitting again. 
-  </div> 
+<div class="bg-yellow-100 rounded-lg p-4 mb-4">
+  <div class="flex">
+    <div>
+      <svg class="w-5 h-5 text-yellow-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm text-yellow-700">
+        <span class="font-medium">Important Note!</span> Change a few things up and try submitting again.
+      </p>
+    </div>
+  </div>
 </div>
-<div class="alert alert-warning d-lg-flex align-items-center" role="alert">
-  <span class="icon-shape icon-shape-warning icon-xs rounded me-3 mb-2 mb-lg-0">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>  
-  </span>
-  <div>
-    <strong class="me-1">Warning!</strong> Better check yourself, you're not looking too good. 
-  </div>  
-</div>
-<div class="alert alert-info d-lg-flex align-items-center" role="alert">
-  <span class="icon-shape icon-shape-info icon-xs rounded me-3 mb-2 mb-lg-0">
-    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-  </span> 
-  <div>
-    <strong class="me-1">Heads up!</strong> You successfully read this important alert message.
-  </div> 
-</div>
-<div class="alert alert-gray-100 d-lg-flex align-items-center" role="alert">
-  <span class="icon-shape icon-shape-gray-600 icon-xs rounded me-3 mb-2 mb-lg-0">
-    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-  </span>
-  <div> 
-    <strong class="me-1">Light alert!</strong> You successfully read this important alert message.
-  </div>  
-</div>
-<div class="alert alert-dark d-lg-flex align-items-center" role="alert">
-  <span class="icon-shape icon-shape-dark icon-xs rounded me-3 mb-2 mb-lg-0">
-    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-  </span>
-  <div> 
-    <strong class="me-1">Dark alert!</strong> You successfully read this important alert message. 
-  </div>  
+<div class="bg-gray-100 rounded-lg p-4 mb-4">
+  <div class="flex">
+    <div>
+      <svg class="w-5 h-5 text-gray-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm text-gray-700">
+        <span class="font-medium">Important Note!</span> Change a few things up and try submitting again.
+      </p>
+    </div>
+  </div>
 </div>
 {{< /example >}}
 
-## Link colors
+{{< prose >}}
+## Dismissable alerts
 
-Use the `alert-link` class for the anchor element inside the alert component to match the colors:
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
 
 {{< example >}}
-<div class="alert alert-primary" role="alert">
-  A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+<div class="bg-blue-100 rounded-lg p-4 mb-4">
+  <div class="flex">
+    <div class="flex-shrink-0">
+      <svg class="w-5 h-5 text-blue-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm font-medium text-blue-700">
+        A simple info alert with an <a href="#" class="font-semibold hover:text-blue-800 underline">example link</a>. Give it a click if you like.
+      </p>
+    </div>
+    <div class="pl-3 ml-auto">
+      <div class="-mx-1.5 -my-1.5">
+        <button type="button" class="bg-blue-100 text-blue-500 rounded-lg focus:ring-2 focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex">
+          <span class="sr-only">Dismiss</span>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="alert alert-secondary" role="alert">
-  A simple secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+<div class="bg-red-100 rounded-lg p-4 mb-4">
+  <div class="flex">
+    <div class="flex-shrink-0">
+      <svg class="w-5 h-5 text-red-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm font-medium text-red-700">
+        A simple danger alert with an <a href="#" class="font-semibold hover:text-red-800 underline">example link</a>. Give it a click if you like.
+      </p>
+    </div>
+    <div class="pl-3 ml-auto">
+      <div class="-mx-1.5 -my-1.5">
+        <button type="button" class="bg-red-100 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex">
+          <span class="sr-only">Dismiss</span>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="alert alert-success" role="alert">
-  A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+<div class="bg-green-100 rounded-lg p-4 mb-4">
+  <div class="flex">
+    <div class="flex-shrink-0">
+      <svg class="w-5 h-5 text-green-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm font-medium text-green-700">
+        A simple success alert with an <a href="#" class="font-semibold hover:text-green-800 underline">example link</a>. Give it a click if you like.
+      </p>
+    </div>
+    <div class="pl-3 ml-auto">
+      <div class="-mx-1.5 -my-1.5">
+        <button type="button" class="bg-green-100 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex">
+          <span class="sr-only">Dismiss</span>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="alert alert-danger" role="alert">
-  A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+<div class="bg-yellow-100 rounded-lg p-4 mb-4">
+  <div class="flex">
+    <div class="flex-shrink-0">
+      <svg class="w-5 h-5 text-yellow-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm font-medium text-yellow-700">
+        A simple warning alert with an <a href="#" class="font-semibold hover:text-yellow-800 underline">example link</a>. Give it a click if you like.
+      </p>
+    </div>
+    <div class="pl-3 ml-auto">
+      <div class="-mx-1.5 -my-1.5">
+        <button type="button" class="bg-yellow-100 text-yellow-500 rounded-lg focus:ring-2 focus:ring-yellow-400 p-1.5 hover:bg-yellow-200 inline-flex">
+          <span class="sr-only">Dismiss</span>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="alert alert-warning" role="alert">
-  A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-</div>
-<div class="alert alert-info" role="alert">
-  A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-</div>
-<div class="alert alert-light" role="alert">
-  A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-</div>
-<div class="alert alert-dark" role="alert">
-  A simple dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+<div class="bg-gray-100 rounded-lg p-4 mb-4">
+  <div class="flex">
+    <div class="flex-shrink-0">
+      <svg class="w-5 h-5 text-gray-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm font-medium text-gray-700">
+        A simple dark alert with an <a href="#" class="font-semibold hover:text-gray-800 underline">example link</a>. Give it a click if you like.
+      </p>
+    </div>
+    <div class="pl-3 ml-auto">
+      <div class="-mx-1.5 -my-1.5">
+        <button type="button" class="bg-gray-100 text-gray-500 rounded-lg focus:ring-2 focus:ring-gray-400 p-1.5 hover:bg-gray-200 inline-flex">
+          <span class="sr-only">Dismiss</span>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 {{< /example >}}
 
-## Aditional content
-
-Alert components can also contain elements, such as headings, multiple paragraphs, buttons, and many more:
+{{< prose >}}
+## Bordered
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
 
 {{< example >}}
-<div class="alert alert-success" role="alert">
-    <h4 class="alert-heading">Well done!</h4>
-    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-    <hr>
-    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+<div class="bg-blue-100 rounded-lg border border-blue-300 p-4 mb-4">
+  <div class="flex items-center">
+    <div class="flex-shrink-0">
+      <div class="h-8 w-8 rounded-lg bg-blue-700 text-white flex items-center justify-center">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+      </div>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm font-medium text-blue-700">
+        A simple info alert with an <a href="#" class="font-semibold hover:text-blue-800 underline">example link</a>. Give it a click if you like.
+      </p>
+    </div>
+    <div class="pl-3 ml-auto">
+      <div class="-mx-1.5 -my-1.5">
+        <button type="button" class="bg-blue-100 text-blue-500 rounded-lg focus:ring-2 focus:ring-blue-400 p-1.5 hover:bg-blue-200 justify-end">
+          <span class="sr-only">Dismiss</span>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-red-100 rounded-lg border border-red-300 p-4 mb-4">
+  <div class="flex items-center">
+    <div class="flex-shrink-0">
+      <div class="h-8 w-8 rounded-lg bg-red-700 text-white flex items-center justify-center">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+      </div>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm font-medium text-red-700">
+        A simple danger alert with an <a href="#" class="font-semibold hover:text-red-800 underline">example link</a>. Give it a click if you like.
+      </p>
+    </div>
+    <div class="pl-3 ml-auto">
+      <div class="-mx-1.5 -my-1.5">
+        <button type="button" class="bg-red-100 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex">
+          <span class="sr-only">Dismiss</span>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-green-100 rounded-lg border border-green-300 p-4 mb-4">
+  <div class="flex items-center">
+    <div class="flex-shrink-0">
+      <div class="h-8 w-8 rounded-lg bg-green-700 text-white flex items-center justify-center">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+      </div>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm font-medium text-green-700">
+        A simple success alert with an <a href="#" class="font-semibold hover:text-green-800 underline">example link</a>. Give it a click if you like.
+      </p>
+    </div>
+    <div class="pl-3 ml-auto">
+      <div class="-mx-1.5 -my-1.5">
+        <button type="button" class="bg-green-100 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex">
+          <span class="sr-only">Dismiss</span>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-yellow-100 rounded-lg border border-yellow-300 p-4 mb-4">
+  <div class="flex items-center">
+    <div class="flex-shrink-0">
+      <div class="h-8 w-8 rounded-lg bg-yellow-700 text-white flex items-center justify-center">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+      </div>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm font-medium text-yellow-700">
+        A simple warning alert with an <a href="#" class="font-semibold hover:text-yellow-800 underline">example link</a>. Give it a click if you like.
+      </p>
+    </div>
+    <div class="pl-3 ml-auto">
+      <div class="-mx-1.5 -my-1.5">
+        <button type="button" class="bg-yellow-100 text-yellow-500 rounded-lg focus:ring-2 focus:ring-yellow-400 p-1.5 hover:bg-yellow-200 inline-flex">
+          <span class="sr-only">Dismiss</span>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-gray-100 rounded-lg border border-gray-300 p-4 mb-4">
+  <div class="flex items-center">
+    <div class="flex-shrink-0">
+      <div class="h-8 w-8 rounded-lg bg-gray-700 text-white flex items-center justify-center">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+      </div>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm font-medium text-gray-700">
+        A simple dark alert with an <a href="#" class="font-semibold hover:text-gray-800 underline">example link</a>. Give it a click if you like.
+      </p>
+    </div>
+    <div class="pl-3 ml-auto">
+      <div class="-mx-1.5 -my-1.5">
+        <button type="button" class="bg-gray-100 text-gray-500 rounded-lg focus:ring-2 focus:ring-gray-400 p-1.5 hover:bg-gray-200 inline-flex">
+          <span class="sr-only">Dismiss</span>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 {{< /example >}}
 
-## Dismissing
-
-Using the alert JavaScript plugin, it’s possible to dismiss any alert inline. Here’s how:
-
-- add a `button` element with the `data-bs-dismiss="alert"` and the `aria-label="Close"` attributes
-- make sure you add the `alert-dismissble` class to the main `alert` component
-- use the `fade` and `show` classes to animate the action
+{{< prose >}}
+## With accent border
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
 
 {{< example >}}
-<div class="alert alert-primary alert-dismissible d-lg-flex align-items-center fade show" role="alert">
-  <span class="icon-shape icon-shape-primary icon-xs rounded me-3 mb-2 mb-lg-0">
-    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>    
-  </span> 
-  <div>Big news! We're excited to announce a brand new product.</div>
-  <button type="button" class="btn-close align-middle ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+<div class="bg-blue-100 border-t-4 border-blue-500 p-4 mb-4">
+  <div class="flex">
+    <div class="flex-shrink-0">
+      <svg class="w-5 h-5 text-blue-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm font-medium text-blue-700">
+        A simple info alert with an <a href="#" class="font-semibold hover:text-blue-800 underline">example link</a>. Give it a click if you like.
+      </p>
+    </div>
+    <div class="pl-3 ml-auto">
+      <div class="-mx-1.5 -my-1.5">
+        <button type="button" class="bg-blue-100 text-blue-500 rounded-lg focus:ring-2 focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex">
+          <span class="sr-only">Dismiss</span>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-red-100 border-t-4 border-red-500 p-4 mb-4">
+  <div class="flex">
+    <div>
+      <svg class="w-5 h-5 text-red-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm text-red-700">
+        <span class="font-medium">Important Note!</span> Change a few things up and try submitting again.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="bg-green-100 border-t-4 border-green-500 p-4 mb-4">
+  <div class="flex">
+    <div>
+      <svg class="w-5 h-5 text-green-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm text-green-700">
+        <span class="font-medium">Important Note!</span> Change a few things up and try submitting again.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="bg-yellow-100 border-t-4 border-yellow-500 p-4 mb-4">
+  <div class="flex">
+    <div>
+      <svg class="w-5 h-5 text-yellow-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm text-yellow-700">
+        <span class="font-medium">Important Note!</span> Change a few things up and try submitting again.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="bg-gray-100 border-t-4 border-gray-500 p-4 mb-4">
+  <div class="flex">
+    <div>
+      <svg class="w-5 h-5 text-gray-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm text-gray-700">
+        <span class="font-medium">Important Note!</span> Change a few things up and try submitting again.
+      </p>
+    </div>
+  </div>
 </div>
 {{< /example >}}
 
+{{< prose >}}
+## Additional content
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
 
+{{< example >}}
+<!-- Alert -->
+<div class="bg-blue-100 rounded-lg p-4 mb-4">
+  <div class="flex items-center">
+    <svg class="w-5 h-5 text-blue-700 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <h3 class="text-blue-700 text-lg font-medium">
+      Note !     
+    </h3>
+  </div>
+  <div class="mt-2 text-sm text-blue-700">
+    <p>
+      More info about this info alert goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+    </p>
+  </div>
+  <div class="flex mt-4">
+    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center">
+      <svg class="-ml-0.5 mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+      View more
+    </button>
+    <button type="button" class="text-blue-700 bg-transparent border border-blue-700 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center">
+      Dismiss
+    </button>
+  </div>
+</div>
+<!-- Alert -->
+<div class="bg-red-100 rounded-lg p-4 mb-4">
+  <div class="flex items-center">
+    <svg class="w-5 h-5 text-red-700 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
+    <h3 class="text-red-700 text-lg font-medium">
+      Credit Card expired !     
+    </h3>
+  </div>
+  <div class="mt-2 text-sm text-red-700">
+    <p>
+      More info about this info alert goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+    </p>
+  </div>
+  <div class="flex mt-4">
+    <button type="button" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center">
+      <svg class="-ml-0.5 mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path></svg>
+      Update details
+    </button>
+    <button type="button" class="text-red-700 bg-transparent border border-red-700 hover:bg-red-800 hover:text-white focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center">
+      Dismiss
+    </button>
+  </div>
+</div>
+<!-- Alert -->
+<div class="bg-green-100 rounded-lg p-4 mb-4">
+  <div class="flex items-center">
+    <svg class="w-5 h-5 text-green-700 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+    <h3 class="text-green-700 text-lg font-medium">
+      Your file was uploaded!     
+    </h3>
+  </div>
+  <div class="mt-2 text-sm text-green-700">
+    <p>
+      More info about this info alert goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+    </p>
+  </div>
+  <div class="flex mt-4">
+    <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center">
+      <svg class="-ml-0.5 mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path></svg>
+      Copy link
+    </button>
+    <button type="button" class="text-green-700 bg-transparent border border-green-700 hover:bg-green-800 hover:text-white focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center">
+      Done
+    </button>
+  </div>
+</div>
+<!-- Alert -->
+<div class="bg-yellow-100 rounded-lg p-4 mb-4">
+  <div class="flex items-center">
+    <svg class="w-5 h-5 text-yellow-700 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+    <h3 class="text-yellow-700 text-lg font-medium">
+      Caution!     
+    </h3>
+  </div>
+  <div class="mt-2 text-sm text-yellow-700">
+    <p>
+      This email originated from outside of the organization. Do not click links or open attachments unless you recognize the sender and know the content is safe.
+    </p>
+  </div>
+  <div class="flex mt-4">
+    <button type="button" class="text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center">
+      <svg class="-ml-0.5 mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+      Show
+    </button>
+    <button type="button" class="text-yellow-700 bg-transparent border border-yellow-700 hover:bg-yellow-800 hover:text-white focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center">
+      Dismiss
+    </button>
+  </div>
+</div>
+<!-- Alert -->
+{{< /example >}}

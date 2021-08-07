@@ -13,6 +13,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 {{< /prose >}}
 
 {{< example >}}
+<!-- Alert -->
 <div class="bg-blue-100 rounded-lg p-4 mb-4">
   <div class="flex">
     <div>
@@ -25,6 +26,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-red-100 rounded-lg p-4 mb-4">
   <div class="flex">
     <div>
@@ -37,6 +39,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-green-100 rounded-lg p-4 mb-4">
   <div class="flex">
     <div>
@@ -49,6 +52,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-yellow-100 rounded-lg p-4 mb-4">
   <div class="flex">
     <div>
@@ -61,6 +65,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-gray-100 rounded-lg p-4 mb-4">
   <div class="flex">
     <div>
@@ -82,6 +87,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 {{< /prose >}}
 
 {{< example >}}
+<!-- Alert -->
 <div class="bg-blue-100 rounded-lg p-4 mb-4">
   <div class="flex">
     <div class="flex-shrink-0">
@@ -102,6 +108,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-red-100 rounded-lg p-4 mb-4">
   <div class="flex">
     <div class="flex-shrink-0">
@@ -122,6 +129,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-green-100 rounded-lg p-4 mb-4">
   <div class="flex">
     <div class="flex-shrink-0">
@@ -142,6 +150,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-yellow-100 rounded-lg p-4 mb-4">
   <div class="flex">
     <div class="flex-shrink-0">
@@ -162,6 +171,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-gray-100 rounded-lg p-4 mb-4">
   <div class="flex">
     <div class="flex-shrink-0">
@@ -212,6 +222,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-red-100 rounded-lg border border-red-300 p-4 mb-4">
   <div class="flex items-center">
     <div class="flex-shrink-0">
@@ -234,6 +245,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-green-100 rounded-lg border border-green-300 p-4 mb-4">
   <div class="flex items-center">
     <div class="flex-shrink-0">
@@ -256,6 +268,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-yellow-100 rounded-lg border border-yellow-300 p-4 mb-4">
   <div class="flex items-center">
     <div class="flex-shrink-0">
@@ -278,6 +291,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-gray-100 rounded-lg border border-gray-300 p-4 mb-4">
   <div class="flex items-center">
     <div class="flex-shrink-0">
@@ -328,6 +342,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-red-100 border-t-4 border-red-500 p-4 mb-4">
   <div class="flex">
     <div>
@@ -340,6 +355,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-green-100 border-t-4 border-green-500 p-4 mb-4">
   <div class="flex">
     <div>
@@ -352,6 +368,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-yellow-100 border-t-4 border-yellow-500 p-4 mb-4">
   <div class="flex">
     <div>
@@ -364,6 +381,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </div>
+<!-- Alert -->
 <div class="bg-gray-100 border-t-4 border-gray-500 p-4 mb-4">
   <div class="flex">
     <div>

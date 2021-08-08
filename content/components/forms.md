@@ -15,7 +15,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 {{< example >}}
 <div>
   <label for="email-address" class="sr-only">Email address</label>
-  <input type="text" name="email" id="email-address" class="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
+  <input type="text" name="email" id="email-address" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
 </div>
 {{< /example >}}
 
@@ -28,7 +28,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 {{< example >}}
 <div>
   <label for="email-address" class="sr-only">Email address</label>
-  <input type="text" name="email" id="email-address" class="shadow-sm bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
+  <input type="text" name="email" id="email-address" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
 </div>
 {{< /example >}}
 
@@ -41,7 +41,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 {{< example >}}
 <div>
   <label for="email-address" class="text-sm font-medium text-gray-900 block mb-2">Your email</label>
-  <input type="text" name="email" id="email-address" class="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
+  <input type="text" name="email" id="email-address" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
 </div>
 {{< /example >}}
 
@@ -56,7 +56,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
   <!-- Label -->
   <label for="email-address" class="text-sm font-medium text-gray-900 block mb-2">Your email</label>
   <!-- Input -->
-  <input type="text" name="email" id="email-address" class="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
+  <input type="text" name="email" id="email-address" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
   <!-- Help text -->
   <p class="mt-2 text-sm text-gray-500" id="email-help">We’ll never share your details. See our <a href="#" class="font-medium">Privacy Policy</a></p>
 </div>
@@ -73,7 +73,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
   <!-- Label -->
   <label for="message" class="text-sm font-medium text-gray-900 block mb-2">Your message</label>
   <!-- Textarea -->
-  <textarea id="message" name="message" rows="4" class="max-w-lg bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full"></textarea>
+  <textarea id="message" name="message" rows="4" class="max-w-lg bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full"></textarea>
 </div>
 {{< /example >}}
 
@@ -93,7 +93,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
     </div>
     <!-- Input -->
-    <input type="text" name="email" id="email-adress" class="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="name@company.com">
+    <input type="text" name="email" id="email-adress" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="name@company.com">
   </div>
 </div>
 {{< /example >}}

@@ -17,7 +17,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
   <!-- List -->
 	<ul class="flex pl-0 list-none rounded -space-x-px">
     <!-- Page links -->
-		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 relative block py-2 px-3 leading-tight ml-0 rounded-l">
+		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 relative block py-2 px-3 leading-tight ml-0 rounded-l-lg">
       <a class="page-link" href="#">Previous</a>
     </li>
 		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 relative block py-2 px-3 leading-tight">
@@ -35,7 +35,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     <li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 relative block py-2 px-3 leading-tight">
       <a class="page-link" href="#">5</a>
     </li>
-		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 relative block py-2 px-3 leading-tight rounded-r">
+		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 relative block py-2 px-3 leading-tight rounded-r-lg">
       <a class="page-link" href="#">Next</a>
     </li>
 	</ul>
@@ -53,7 +53,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
   <!-- List -->
 	<ul class="flex pl-0 list-none rounded -space-x-px">
     <!-- Page links -->
-		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-200 hover:text-gray-700 relative block py-2 px-3 leading-tight ml-0 rounded-l inline-flex items-center">
+		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-200 hover:text-gray-700 relative block py-2 px-3 leading-tight ml-0 rounded-l-lg inline-flex items-center">
       <a class="page-link" href="#">
         <span class="sr-only">Previous</span>
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -74,7 +74,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     <li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 relative block py-2 px-3 leading-tight">
       <a class="page-link" href="#">5</a>
     </li>
-		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 relative block py-2 px-3 leading-tight rounded-r">
+		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 relative block py-2 px-3 leading-tight rounded-r-lg">
       <span class="sr-only">Next</span>
       <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
     </li>

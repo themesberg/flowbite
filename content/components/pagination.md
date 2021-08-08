@@ -6,59 +6,15 @@ group: components
 toc: true
 ---
 
+{{< prose >}}
 ## Default
 
-{{< example >}}
-<nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-  </ul>
-</nav>
-{{< /example >}}
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
 
-## Working with icons
-Looking to use an icon or symbol in place of text for some pagination links? Be sure to provide proper screen reader support with <span class="fw-bold text-danger">aria</span> attributes.
 {{< example >}}
-<nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+<div>
+  <label for="email-address" class="sr-only">Email address</label>
+  <input type="text" name="email" id="email-address" class="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
+</div>
 {{< /example >}}
-
-## Disabled and active states
-Pagination links are customizable for different circumstances. Use <span class="fw-bold text-danger">.disabled</span> for links that appear un-clickable and <span class="fw-bold text-danger">.active</span> to indicate the current page.
-{{< example >}}
-<nav aria-label="Page navigation example 2">
-  <ul class="pagination">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item active" aria-current="page">
-      <a class="page-link" href="#">2</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
-{{< /example >}}
-

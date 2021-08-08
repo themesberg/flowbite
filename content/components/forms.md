@@ -63,6 +63,21 @@ Group a series of buttons together on a single line or stack them in a vertical 
 {{< /example >}}
 
 {{< prose >}}
+## Textarea
+
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
+
+{{< example >}}
+<div>
+  <!-- Label -->
+  <label for="message" class="text-sm font-medium text-gray-900 block mb-2">Your message</label>
+  <!-- Textarea -->
+  <textarea id="message" name="message" rows="4" class="max-w-lg bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full"></textarea>
+</div>
+{{< /example >}}
+
+{{< prose >}}
 ## With icon 
 
 Group a series of buttons together on a single line or stack them in a vertical column.

@@ -261,11 +261,11 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 {{< example >}}
   <!-- Radio 1 -->
-  <input type="radio" name="option-1" value="Option 1" class="h-4 w-4 border-gray-300 focus:ring-3 focus:ring-blue-500" aria-labelledby="option-1-label" aria-describedby="option-0-description">
+  <input type="radio" name="radio-options" value="Option 1" class="h-4 w-4 border-gray-300 focus:ring-3 focus:ring-blue-500" aria-labelledby="option-1-label" aria-describedby="option-0-description">
   <!-- Radio 2 -->
-  <input type="radio" name="option-2" value="Option 2" class="h-4 w-4 border-gray-300 focus:ring-3 focus:ring-blue-500" aria-labelledby="option-2-label" aria-describedby="option-1-description">
+  <input type="radio" name="radio-options" value="Option 2" class="h-4 w-4 border-gray-300 focus:ring-3 focus:ring-blue-500" aria-labelledby="option-2-label" aria-describedby="option-1-description">
   <!-- Radio 3 -->
-  <input type="radio" name="option-3" value="Option 3" class="h-4 w-4 border-gray-300 focus:ring-3 focus:ring-blue-500" aria-labelledby="option-2-label" aria-describedby="option-2-description">
+  <input type="radio" name="radio-options" value="Option 3" class="h-4 w-4 border-gray-300 focus:ring-3 focus:ring-blue-500" aria-labelledby="option-2-label" aria-describedby="option-2-description">
 {{< /example >}}
 
 
@@ -278,23 +278,23 @@ Group a series of buttons together on a single line or stack them in a vertical 
 {{< example >}}
   <!-- Option 1 -->
   <div class="flex items-center mb-4">
-    <input type="radio" name="option-1" value="Option 1" class="h-4 w-4 border-gray-300 focus:ring-3 focus:ring-blue-500" aria-labelledby="option-1-label" aria-describedby="option-1-description">
+    <input type="radio" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-3 focus:ring-blue-500" aria-labelledby="option-1-label" aria-describedby="option-1-description">
     <label for="option-1" class="text-sm text-gray-900 ml-2 block">
-      Option A
+      USA
     </label>
   </div>
   <!-- Option 2 -->
   <div class="flex items-center mb-4">
-    <input type="radio" name="option-2" value="Option 2" class="h-4 w-4 border-gray-300 focus:ring-3 focus:ring-blue-500" aria-labelledby="option-2-label" aria-describedby="option-2-description">
+    <input type="radio" name="countries" value="Germany" class="h-4 w-4 border-gray-300 focus:ring-3 focus:ring-blue-500" aria-labelledby="option-2-label" aria-describedby="option-2-description">
     <label for="option-2" class="text-sm text-gray-900 ml-2 block">
-      Option B
+      Germany
     </label>
   </div>
   <!-- Option 3 -->
   <div class="flex items-center mb-4">
-    <input type="radio" name="option-3" value="Option 3" class="h-4 w-4 border-gray-300 focus:ring-3 focus:ring-blue-500" aria-labelledby="option-3-label" aria-describedby="option-3-description">
+    <input type="radio" name="countries" value="Spain" class="h-4 w-4 border-gray-300 focus:ring-3 focus:ring-blue-500" aria-labelledby="option-3-label" aria-describedby="option-3-description">
     <label for="option-3" class="text-sm text-gray-900 ml-2 block">
-      Option C
+      Spain
     </label>
   </div>
 {{< /example >}}

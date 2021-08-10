@@ -16,6 +16,10 @@
     max-width: none;
 }
 
+.highlight {
+	@apply overflow-hidden;
+}
+
 /* prism styles */
 
 code[class*="language-"],

@@ -12,40 +12,27 @@ toc: true
 Group a series of buttons together on a single line or stack them in a vertical column.
 {{< /prose >}}
 
-{{< example >}}
-<!-- Badge -->
-<span class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
-  Badge
-</span>
-<!-- Badge -->
-<span class="bg-red-100 text-red-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
-  Badge
-</span>
-<!-- Badge -->
-<span class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
-  Badge
-</span>
-<!-- Badge -->
-<span class="bg-yellow-100 text-yellow-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
-  Badge
-</span>
-<!-- Badge -->
-<span class="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
-  Badge
-</span>
-<!-- Badge -->
-<span class="bg-indigo-100 text-indigo-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
-  Badge
-</span>
-<!-- Badge -->
-<span class="bg-purple-100 text-purple-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
-  Badge
-</span>
-<!-- Badge -->
-<span class="bg-pink-100 text-pink-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
-  Badge
-</span>
-{{< /example >}}
+{{< preview >}}
+<span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-indigo-100 text-indigo-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-pink-100 text-pink-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+{{< /preview >}}
+
+```html
+<span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+```
 
 {{< prose >}}
 ## Large badges
@@ -55,35 +42,35 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 {{< example >}}
 <!-- Badge -->
-<span class="bg-gray-100 text-gray-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+<span class="bg-gray-100 text-gray-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
   Badge
 </span>
 <!-- Badge -->
-<span class="bg-red-100 text-red-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+<span class="bg-red-100 text-red-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
   Badge
 </span>
 <!-- Badge -->
-<span class="bg-green-100 text-green-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+<span class="bg-green-100 text-green-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
   Badge
 </span>
 <!-- Badge -->
-<span class="bg-yellow-100 text-yellow-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+<span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
   Badge
 </span>
 <!-- Badge -->
-<span class="bg-blue-100 text-blue-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+<span class="bg-blue-100 text-blue-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
   Badge
 </span>
 <!-- Badge -->
-<span class="bg-indigo-100 text-indigo-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+<span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
   Badge
 </span>
 <!-- Badge -->
-<span class="bg-purple-100 text-purple-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+<span class="bg-purple-100 text-purple-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
   Badge
 </span>
 <!-- Badge -->
-<span class="bg-pink-100 text-pink-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+<span class="bg-pink-100 text-pink-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
   Badge
 </span>
 {{< /example >}}

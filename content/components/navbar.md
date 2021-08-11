@@ -250,7 +250,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
                   <span class="font-normal">name@company.com</span>
                 </a>
                 <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block px-4 py-2" role="menuitem" tabindex="-1" id="user-menu-item-1">Earnings</a>
-                <a href="#" class="text-sm text-gray-500 hover:bg-gray-50 block text-gray-500 px-4 py-2" role="menuitem" tabindex="-1" id="user-menu-item-2">Downloads</a>
+                <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem" tabindex="-1" id="user-menu-item-2">Downloads</a>
                 <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem" tabindex="-1" id="user-menu-item-2">Settings</a>
               </div>
               <div class="pt-1">

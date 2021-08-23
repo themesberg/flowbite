@@ -1,0 +1,3 @@
+<div class="rounded-t-xl overflow-hidden bg-gradient-to-r border border-gray-200 p-6 mt-8 {{ with .Get "class" }} {{ . }}{{ end }}">
+    {{ .Inner | markdownify }}
+</div>

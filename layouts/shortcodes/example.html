@@ -14,7 +14,7 @@
 {{- $input := .Inner -}}
 
 {{- if eq $show_preview true -}}
-<div{{ with .Get "id" }} id="{{ . }}"{{ end }} class="rounded-t-xl overflow-hidden bg-gradient-to-r bg-blue-50 p-10 mt-8{{ with .Get "class" }} {{ . }}{{ end }}">
+<div{{ with .Get "id" }} id="{{ . }}"{{ end }} class="rounded-t-xl overflow-hidden bg-gradient-to-r bg-white border border-gray-200 p-6 mt-8{{ with .Get "class" }} {{ . }}{{ end }}">
   {{- $input -}}
 </div>
 {{- end -}}

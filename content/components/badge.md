@@ -6,56 +6,345 @@ group: components
 toc: true
 ---
 
-## Example
+{{< prose >}}
+## Small badges
 
-You can use badges inside text elements such as headings, and the size of the badge will match the size of the text. Here's an example of all headings:
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
+
+{{< preview >}}
+<span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-indigo-100 text-indigo-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-pink-100 text-pink-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md">Badge</span>
+{{< /preview >}}
+
+```html
+<span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+<span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
+```
+
+{{< prose >}}
+## Large badges
+
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
 
 {{< example >}}
-<h1>Glassmorphism <span class="badge bg-primary">New</span></h1>
-<h2>Glassmorphism <span class="badge bg-primary">New</span></h2>
-<h3>Glassmorphism <span class="badge bg-primary">New</span></h3>
-<h4>Glassmorphism <span class="badge bg-primary">New</span></h4>
-<h5>Glassmorphism <span class="badge bg-primary">New</span></h5>
-<h6>Glassmorphism <span class="badge bg-primary">New</span></h6>
+<!-- Badge -->
+<span class="bg-gray-100 text-gray-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
+  Badge
+</span>
+<!-- Badge -->
+<span class="bg-red-100 text-red-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
+  Badge
+</span>
+<!-- Badge -->
+<span class="bg-green-100 text-green-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
+  Badge
+</span>
+<!-- Badge -->
+<span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
+  Badge
+</span>
+<!-- Badge -->
+<span class="bg-blue-100 text-blue-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
+  Badge
+</span>
+<!-- Badge -->
+<span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
+  Badge
+</span>
+<!-- Badge -->
+<span class="bg-purple-100 text-purple-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
+  Badge
+</span>
+<!-- Badge -->
+<span class="bg-pink-100 text-pink-800 text-sm font-medium px-3.5 py-0.5 rounded-md">
+  Badge
+</span>
 {{< /example >}}
 
-## Buttons
+{{< prose >}}
+## Small & left icon
 
-Badges can also be used inside elements, such as buttons, typically to show a count:
-
-{{< example >}}
-<button type="button" class="btn btn-primary">
-  Notifications <span class="badge bg-secondary ms-2">4</span>
-</button>
-{{< /example >}}
-
-
-## Background Colors
-
-The color of the badge component can also be changed using the contextual classes `.bg-primary`, `.bg-secondary`, `.bg-success`, `.bg-danger`, `.bg-warning`, `.bg-info` just like with any other component. You can also override the text color using the `.text-white` or `.text-dark` classes:
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
 
 {{< example >}}
-<span class="badge bg-primary">Primary</span>
-<span class="badge bg-secondary">Secondary</span>
-<span class="badge bg-success">Success</span>
-<span class="badge bg-danger">Danger</span>
-<span class="badge bg-warning text-dark">Warning</span>
-<span class="badge bg-info">Info</span>
-<span class="badge bg-gray-100 text-dark">Light</span>
-<span class="badge bg-dark">Dark</span>
-{{< /example >}}
-
-## With Icons
-
-The color of the badge component can also be changed using the contextual classes `.bg-primary`, `.bg-secondary`, `.bg-success`, `.bg-danger`, `.bg-warning`, `.bg-info` just like with any other component. You can also override the text color using the `.text-white` or `.text-dark` classes:
-
-{{< example >}}
-<span class="badge bg-primary">
-  <svg class="icon icon-xxs me-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+<span class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  <svg class="w-3 h-3 mr-1 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
   3 days ago
 </span>
-<span class="badge bg-danger">
-  2 unread messages
-  <svg class="icon icon-xxs ms-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+<!-- Badge -->
+<span class="bg-red-100 text-red-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  <svg class="w-3 h-3 mr-1 text-red-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+  3 days ago
+</span>
+<!-- Badge -->
+<span class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  <svg class="w-3 h-3 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+  3 days ago
+</span>
+<!-- Badge -->
+<span class="bg-yellow-100 text-yellow-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  <svg class="w-3 h-3 mr-1 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+  3 days ago
+</span>
+<!-- Badge -->
+<span class="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  <svg class="w-3 h-3 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+  3 days ago
+</span>
+<!-- Badge -->
+<span class="bg-indigo-100 text-indigo-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  <svg class="w-3 h-3 mr-1 text-indigo-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+  3 days ago
+</span>
+<!-- Badge -->
+<span class="bg-purple-100 text-purple-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  <svg class="w-3 h-3 mr-1 text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+  3 days ago
+</span>
+<!-- Badge -->
+<span class="bg-pink-100 text-pink-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  <svg class="w-3 h-3 mr-1 text-pink-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+  3 days ago
+</span>
+{{< /example >}}
+
+{{< prose >}}
+## Large & left icon
+
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
+
+{{< example >}}
+<!-- Badge -->
+<span class="bg-gray-100 text-gray-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md mb-4">
+  <svg class="w-3.5 h-3.5 mr-1 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+  3 days ago
+</span>
+<!-- Badge -->
+<span class="bg-red-100 text-red-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+  <svg class="w-3.5 h-3.5 mr-1 text-red-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+  3 days ago
+</span>
+<!-- Badge -->
+<span class="bg-green-100 text-green-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+  <svg class="w-3.5 h-3.5 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+  3 days ago
+</span>
+<!-- Badge -->
+<span class="bg-yellow-100 text-yellow-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+  <svg class="w-3.5 h-3.5 mr-1 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+  3 days ago
+</span>
+<!-- Badge -->
+<span class="bg-blue-100 text-blue-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+  <svg class="w-3.5 h-3.5 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+  3 days ago
+</span>
+<!-- Badge -->
+<span class="bg-indigo-100 text-indigo-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+  <svg class="w-3.5 h-3.5 mr-1 text-indigo-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+  3 days ago
+</span>
+<!-- Badge -->
+<span class="bg-purple-100 text-purple-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+  <svg class="w-3.5 h-3.5 mr-1 text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+  3 days ago
+</span>
+<!-- Badge -->
+<span class="bg-pink-100 text-pink-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+  <svg class="w-3.5 h-3.5 mr-1 text-pink-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+  3 days ago
+</span>
+{{< /example >}}
+
+{{< prose >}}
+## Small & right icon
+
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
+
+{{< example >}}
+<span class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3 h-3 ml-1 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-red-100 text-red-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3 h-3 ml-1 text-red-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3 h-3 ml-1 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-yellow-100 text-yellow-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3 h-3 ml-1 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3 h-3 ml-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-indigo-100 text-indigo-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3 h-3 ml-1 text-indigo-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-purple-100 text-purple-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3 h-3 ml-1 text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-pink-100 text-pink-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3 h-3 ml-1 text-pink-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+{{< /example >}}
+
+{{< prose >}}
+## Large & right icon
+
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
+
+{{< example >}}
+<span class="bg-gray-100 text-gray-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3.5 h-3.5 ml-1 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-red-100 text-red-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3.5 h-3.5 ml-1 text-red-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-green-100 text-green-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3.5 h-3.5 ml-1 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-yellow-100 text-yellow-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3.5 h-3.5 ml-1 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-blue-100 text-blue-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3.5 h-3.5 ml-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-indigo-100 text-indigo-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3.5 h-3.5 ml-1 text-indigo-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-purple-100 text-purple-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3.5 h-3.5 ml-1 text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-pink-100 text-pink-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
+  2.1 km
+  <svg class="w-3.5 h-3.5 ml-1 text-pink-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+</span>
+{{< /example >}}
+
+{{< prose >}}
+## Only icon (large)
+
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
+
+{{< example >}}
+<span class="bg-gray-100 text-gray-800 text-sm font-medium inline-flex items-center p-1 rounded-full">
+  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-red-100 text-red-800 text-sm font-medium inline-flex items-center p-1 rounded-full">
+  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-green-100 text-green-800 text-sm font-medium inline-flex items-center p-1 rounded-full">
+  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-yellow-100 text-yellow-800 text-sm font-medium inline-flex items-center p-1 rounded-full">
+  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-blue-100 text-blue-800 text-sm font-medium inline-flex items-center p-1 rounded-full">
+  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-indigo-100 text-indigo-800 text-sm font-medium inline-flex items-center p-1 rounded-full">
+  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-purple-100 text-purple-800 text-sm font-medium inline-flex items-center p-1 rounded-full">
+  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-pink-100 text-pink-800 text-sm font-medium inline-flex items-center p-1 rounded-full">
+  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+</span>
+{{< /example >}}
+
+
+{{< prose >}}
+## Only icon (large)
+
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
+
+{{< example >}}
+<span class="bg-gray-100 text-gray-800 text-sm font-medium inline-flex items-center p-1.5 rounded-full">
+  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-red-100 text-red-800 text-sm font-medium inline-flex items-center p-1.5 rounded-full">
+  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-green-100 text-green-800 text-sm font-medium inline-flex items-center p-1.5 rounded-full">
+  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-yellow-100 text-yellow-800 text-sm font-medium inline-flex items-center p-1.5 rounded-full">
+  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-blue-100 text-blue-800 text-sm font-medium inline-flex items-center p-1.5 rounded-full">
+  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-indigo-100 text-indigo-800 text-sm font-medium inline-flex items-center p-1.5 rounded-full">
+  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-purple-100 text-purple-800 text-sm font-medium inline-flex items-center p-1.5 rounded-full">
+  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+</span>
+<!-- Badge -->
+<span class="bg-pink-100 text-pink-800 text-sm font-medium inline-flex items-center p-1.5 rounded-full">
+  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
 </span>
 {{< /example >}}

@@ -6,20 +6,12 @@ group: components
 toc: true
 ---
 
-## Examples
-Hover over the links below to see tooltips:
+{{< prose >}}
+## Sizes
+
+In this example you can see the sizes fo buttons:
+{{< /prose >}}
 
 {{< example >}}
-<button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
-  Tooltip on top
-</button>
-<button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
-  Tooltip on right
-</button>
-<button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
-  Tooltip on bottom
-</button>
-<button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
-  Tooltip on left
-</button>
+
 {{< /example >}}

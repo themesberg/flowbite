@@ -6,55 +6,157 @@ group: components
 toc: true
 ---
 
-## Example
-Use an ordered or unordered list with linked list items to create a minimally styled breadcrumb. Use our utilities to add additional styles as desired.
+{{< prose >}}
+## Default
+
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
 
 {{< example >}}
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">Home</li>
-  </ol>
-</nav>
-
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
-  </ol>
-</nav>
-
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
+<nav class="flex" aria-label="Breadcrumb">
+  <ol class="inline-flex items-center space-x-3">
+    <li class="inline-flex items-center">
+      <a href="#" class="text-gray-700 hover:text-gray-900 inline-flex items-center">
+        <svg class="w-5 h-5 mr-2.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        <a href="#" class="text-gray-700 hover:text-gray-900 ml-3 text-sm font-medium">Projects</a>
+      </div>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        <a href="#" class="text-gray-500 hover:text-gray-600 ml-3 text-sm font-medium" aria-current="page">Project Nero</a>
+      </div>
+    </li>
   </ol>
 </nav>
 {{< /example >}}
 
+{{< prose >}}
+## With background
 
-## Bg opacity
-The following breadcrumbs have a transparent background which can be used for dark backgrounds:
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
 
 {{< example >}}
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb bg-white-50">
-    <li class="breadcrumb-item active" aria-current="page">Home</li>
+<!-- Breadcrumb -->
+<nav class="flex bg-blue-50 text-blue-700 border border-blue-200 py-3 px-5 rounded-lg mb-4" aria-label="Breadcrumb">
+  <ol class="inline-flex items-center space-x-3">
+    <li class="inline-flex items-center">
+      <a href="#" class="text-blue-700 hover:text-blue-800 inline-flex items-center">
+        <svg class="w-5 h-5 mr-2.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        <a href="#" class="text-blue-700 hover:text-gray-900 ml-3 text-sm font-medium">Templates</a>
+      </div>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        <a href="#" class="text-blue-500 hover:text-blue-800 ml-3 text-sm font-medium" aria-current="page">Glass UI</a>
+      </div>
+    </li>
   </ol>
 </nav>
-
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb text-dark bg-white-50">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
+<!-- Breadcrumb -->
+<nav class="flex bg-red-50 text-red-700 border border-red-200 py-3 px-5 rounded-lg mb-4" aria-label="Breadcrumb">
+  <ol class="inline-flex items-center space-x-3">
+    <li class="inline-flex items-center">
+      <a href="#" class="text-red-700 hover:text-red-800 inline-flex items-center">
+        <svg class="w-5 h-5 mr-2.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-red-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        <a href="#" class="text-red-700 hover:text-red-900 ml-3 text-sm font-medium">Templates</a>
+      </div>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-red-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        <a href="#" class="text-red-500 hover:text-red-800 ml-3 text-sm font-medium" aria-current="page">Glass UI</a>
+      </div>
+    </li>
   </ol>
 </nav>
-
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb text-dark bg-white-50">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
+<!-- Breadcrumb -->
+<nav class="flex bg-green-50 text-green-700 border border-green-200 py-3 px-5 rounded-lg mb-4" aria-label="Breadcrumb">
+  <ol class="inline-flex items-center space-x-3">
+    <li class="inline-flex items-center">
+      <a href="#" class="text-green-700 hover:text-blue-800 inline-flex items-center">
+        <svg class="w-5 h-5 mr-2.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        <a href="#" class="text-green-700 hover:text-green-900 ml-3 text-sm font-medium">Templates</a>
+      </div>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        <a href="#" class="text-green-500 hover:text-green-800 ml-3 text-sm font-medium" aria-current="page">Glass UI</a>
+      </div>
+    </li>
   </ol>
 </nav>
-{{< /example >}}
+<!-- Breadcrumb -->
+<nav class="flex bg-yellow-50 text-yellow-700 border border-yellow-200 py-3 px-5 rounded-lg mb-4" aria-label="Breadcrumb">
+  <ol class="inline-flex items-center space-x-3">
+    <li class="inline-flex items-center">
+      <a href="#" class="text-yellow-700 hover:text-yellow-800 inline-flex items-center">
+        <svg class="w-5 h-5 mr-2.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        <a href="#" class="text-yellow-700 hover:text-yellow-900 ml-3 text-sm font-medium">Templates</a>
+      </div>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        <a href="#" class="text-yellow-500 hover:text-yellow-800 ml-3 text-sm font-medium" aria-current="page">Glass UI</a>
+      </div>
+    </li>
+  </ol>
+</nav>
+<!-- Breadcrumb -->
+<nav class="flex bg-gray-50 text-gray-700 border border-gray-200 py-3 px-5 rounded-lg" aria-label="Breadcrumb">
+  <ol class="inline-flex items-center space-x-3">
+    <li class="inline-flex items-center">
+      <a href="#" class="text-gray-700 hover:text-gray-800 inline-flex items-center">
+        <svg class="w-5 h-5 mr-2.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        <a href="#" class="text-gray-700 hover:text-gray-900 ml-3 text-sm font-medium">Templates</a>
+      </div>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        <a href="#" class="text-gray-500 hover:text-gray-800 ml-3 text-sm font-medium" aria-current="page">Glass UI</a>
+      </div>
+    </li>
+  </ol>
+</nav>
+{{< /example >}}                

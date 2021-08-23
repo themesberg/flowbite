@@ -6,114 +6,186 @@ group: components
 toc: true
 ---
 
-## Default Example
-The following component is a simple example of a progress bar. You need to add an inline style attribute with the percentage and add the values you want for the min and max ranges with the aria-valuenow, aria-valuemin and aria-valuamax respectively.
-{{< example >}}
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="progress-bar bg-primary rounded role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-{{< /example >}}
+{{< prose >}}
+## Default
 
-## Color variations & Title
-Use the following modifier classes to update the color of the progress bar:
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
 
 {{< example >}}
-    <div class="progress-wrapper">
-        <span class="fs-6 fw-bold text-primary">Primary color</span>
-        <div class="progress mt-2">
-            <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-    </div>
-    <div class="progress-wrapper">
-        <span class="fs-6 fw-bold text-secondary">Secondary color</span>
-        <div class="progress mt-2">
-            <div class="progress-bar bg-secondary rounded" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-    </div>
-    <div class="progress-wrapper">
-        <span class="fs-6 fw-bold text-tertiary">Tertiary color</span>
-        <div class="progress mt-2">
-            <div class="progress-bar bg-tertiary rounded" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-    </div>
-    <div class="progress-wrapper">
-        <span class="fs-6 fw-bold text-info">Info color</span>
-        <div class="progress mt-2">
-            <div class="progress-bar bg-info rounded" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-    </div>
-    <div class="progress-wrapper">
-        <span class="fs-6 fw-bold text-danger">Danger color</span>
-        <div class="progress mt-2">
-            <div class="progress-bar bg-danger rounded" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-    </div>
-    <div class="progress-wrapper">
-        <span class="fs-6 fw-bold text-success">Success color</span>
-        <div class="progress mt-2">
-            <div class="progress-bar bg-success rounded" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-    </div>
-    <div class="progress-wrapper">
-        <span class="fs-6 fw-bold text-warning">Warning color</span>
-        <div class="progress mt-2">
-            <div class="progress-bar bg-warning rounded" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-    </div>
-    <div class="progress-wrapper">
-        <span class="fs-6 fw-bold text-dark">Dark color</span>
-        <div class="progress mt-2">
-            <div class="progress-bar bg-dark rounded" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-    </div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5">
+    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
 {{< /example >}}
 
-## Multiple bars
-Include multiple progress bars in a progress component if you need.
+{{< prose >}}
+## Sizes
+
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
+
+{{< preview >}}
+  <!-- Progress Bar -->
+  <div class="text-base font-medium mb-1">Small</div>
+  <div class="w-full bg-gray-200 rounded-full h-1.5 mb-4">
+    <div class="bg-gray-600 h-1.5 rounded-full" style="width: 45%"></div>
+  </div>
+  <!-- Progress Bar -->
+  <div class="text-base font-medium mb-1">Default</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+    <div class="bg-gray-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+  <!-- Progress Bar -->
+  <div class="text-lg font-medium mb-1">Large</div>
+  <div class="w-full bg-gray-200 rounded-full h-4 mb-4">
+    <div class="bg-gray-600 h-4 rounded-full" style="width: 45%"></div>
+  </div>
+  <!-- Progress Bar -->
+  <div class="text-lg font-medium mb-1">Extra Large</div>
+  <div class="w-full bg-gray-200 rounded-full h-6">
+    <div class="bg-gray-600 h-6 rounded-full" style="width: 45%"></div>
+  </div>
+{{< /preview >}}
+
+```html
+  <!-- Progress Bar -->
+  <div class="text-base font-medium mb-1">Small</div>
+  <div class="w-full bg-gray-200 rounded-full h-1.5">
+    <div class="bg-gray-600 h-1.5 rounded-full" style="width: 45%"></div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="text-base font-medium mb-1">Default</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5">
+    <div class="bg-gray-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="text-lg font-medium mb-1">Large</div>
+  <div class="w-full bg-gray-200 rounded-full h-4">
+    <div class="bg-gray-600 h-4 rounded-full" style="width: 45%"></div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="text-lg font-medium mb-1">Extra Large</div>
+  <div class="w-full bg-gray-200 rounded-full h-6">
+    <div class="bg-gray-600 h-6 rounded-full" style="width: 45%"></div>
+  </div>
+```
+
+{{< prose >}}
+## With label inside
+
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
+
 {{< example >}}
-<div class="progress">
-  <div class="progress-bar bg-primary" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-secondary" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-tertiary" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
+  <div class="w-full bg-gray-200 rounded-full">
+    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 45%"> 45%</div>
+  </div>
 {{< /example >}}
 
-## Striped
-Add <span class="fw-bold text-danger">.progress-bar-striped</span> to any <span class="fw-bold text-danger">.progress-bar</span> to apply a stripe via CSS gradient over the progress bar’s background color.
+{{< prose >}}
+## With label outside
+
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
+
 {{< example >}}
-<div class="progress">
-  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
+  <!-- Progress Bar -->
+  <div class="mb-1 flex justify-between">
+    <span class="text-base text-blue-700 font-medium">Themesberg project</span>
+    <span class="text-sm font-medium text-blue-700">45%</span>
+  </div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5">
+    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
 {{< /example >}}
 
-## Animated stripes
-The striped gradient can also be animated. Add <span class="fw-bold text-danger">.progress-bar-animated</span> to <span class="fw-bold text-danger">.progress-bar</span> to animate the stripes right to left via CSS3 animations.
-{{< example >}}
-<div class="progress">
-  <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-</div>
-{{< /example >}}
+{{< prose >}}
+## Colors
+
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
+
+{{< preview >}}
+  <!-- Progress Bar -->
+  <div class="text-base font-medium mb-1">Dark</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+    <div class="bg-gray-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+  <!-- Progress Bar -->
+  <div class="text-base text-blue-700 font-medium mb-1">Blue</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+  <!-- Progress Bar -->
+  <div class="text-base text-red-700 font-medium mb-1">Red</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+    <div class="bg-red-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+  <!-- Progress Bar -->
+  <div class="text-base text-green-700 font-medium mb-1">Green</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+    <div class="bg-green-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+  <!-- Progress Bar -->
+  <div class="text-base text-yellow-700 font-medium mb-1">Yellow</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+    <div class="bg-yellow-400 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+  <!-- Progress Bar -->
+  <div class="text-base text-indigo-700 font-medium mb-1">Indigo</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+  <!-- Progress Bar -->
+  <div class="text-base text-purple-700 font-medium mb-1">Purple</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5">
+    <div class="bg-purple-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+{{< /preview >}}
+
+```html
+  <!-- Progress Bar -->
+  <div class="text-base font-medium mb-1">Dark</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5">
+    <div class="bg-gray-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="text-base text-blue-700 font-medium mb-1">Blue</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5">
+    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="text-base text-red-700 font-medium mb-1">Red</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5">
+    <div class="bg-red-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="text-base text-green-700 font-medium mb-1">Green</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5">
+    <div class="bg-green-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="text-base text-yellow-700 font-medium mb-1">Yellow</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5">
+    <div class="bg-yellow-400 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="text-base text-indigo-700 font-medium mb-1">Indigo</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5">
+    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+  
+  <!-- Progress Bar -->
+  <div class="text-base text-purple-700 font-medium mb-1">Purple</div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5">
+    <div class="bg-purple-600 h-2.5 rounded-full" style="width: 45%"></div>
+  </div>
+```

@@ -13,32 +13,18 @@ Group a series of buttons together on a single line or stack them in a vertical 
 {{< /prose >}}
 
 {{< example >}}
-<nav aria-label="Page navigation example">
-  <!-- List -->
-	<ul class="flex pl-0 list-none rounded -space-x-px">
-    <!-- Page links -->
-		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 py-2 px-3 leading-tight ml-0 rounded-l-lg">
-      <a class="page-link" href="#">Previous</a>
-    </li>
-		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 py-2 px-3 leading-tight">
-      <a class="page-link" href="#">1</a>
-    </li>
-		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 py-2 px-3 leading-tight">
-      <a class="page-link" href="#">2</a>
-    </li>
-		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 py-2 px-3 leading-tight">
-      <a class="page-link" href="#">3</a>
-    </li>
-    <li class="bg-white border border-blue-300 text-blue-600 bg-blue-100 hover:bg-blue-200 hover:text-blue-700 py-2 px-3 leading-tight z-10">
-      <a class="page-link" href="#">4</a>
-    </li>
-    <li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 py-2 px-3 leading-tight">
-      <a class="page-link" href="#">5</a>
-    </li>
-		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 py-2 px-3 leading-tight rounded-r-lg">
-      <a class="page-link" href="#">Next</a>
-    </li>
-	</ul>
+<nav class="inline-flex -space-x-px" aria-label="Page navigation example">
+  <a href="#" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 ml-0 rounded-l-lg leading-tight py-2 px-3">
+    <span>Previous</span>
+  </a>
+  <a href="#" aria-current="page" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3">1</a>
+  <a href="#" aria-current="page" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3">2</a>
+  <a href="#" aria-current="page" class="bg-blue-50 border border-blue-300 text-blue-600 hover:bg-blue-100 hover:text-blue-700 leading-tight z-10 py-2 px-3">3</a>
+  <a href="#" aria-current="page" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3">4</a>
+  <a href="#" aria-current="page" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3">5</a>
+  <a href="#" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 rounded-r-lg leading-tight py-2 px-3">
+    <span>Next</span>
+  </a>
 </nav>
 {{< /example >}}
 
@@ -49,36 +35,20 @@ Group a series of buttons together on a single line or stack them in a vertical 
 {{< /prose >}}
 
 {{< example >}}
-<nav aria-label="Page navigation example">
-  <!-- List -->
-	<ul class="flex pl-0 list-none rounded -space-x-px">
-    <!-- Page links -->
-		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-200 hover:text-gray-700 py-2 px-3 leading-tight ml-0 rounded-l-lg inline-flex items-center">
-      <a class="page-link" href="#">
-        <span class="sr-only">Previous</span>
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-      </a>
-    </li>
-		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 py-2 px-3 leading-tight">
-      <a class="page-link" href="#">1</a>
-    </li>
-		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 py-2 px-3 leading-tight">
-      <a class="page-link" href="#">2</a>
-    </li>
-		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 py-2 px-3 leading-tight">
-      <a class="page-link" href="#">3</a>
-    </li>
-    <li class="bg-white border border-blue-300 text-blue-600 bg-blue-100 hover:bg-blue-200 hover:text-blue-700 py-2 px-3 leading-tight z-10">
-      <a class="page-link" href="#">4</a>
-    </li>
-    <li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 py-2 px-3 leading-tight">
-      <a class="page-link" href="#">5</a>
-    </li>
-		<li class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 py-2 px-3 leading-tight rounded-r-lg">
-      <span class="sr-only">Next</span>
-      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-    </li>
-	</ul>
+<nav class="inline-flex -space-x-px" aria-label="Page navigation example">
+  <a href="#" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 ml-0 rounded-l-lg leading-tight py-2 px-3">
+    <span class="sr-only">Previous</span>
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+  </a>
+  <a href="#" aria-current="page" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3">1</a>
+  <a href="#" aria-current="page" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3">2</a>
+  <a href="#" aria-current="page" class="bg-blue-50 border border-blue-300 text-blue-600 hover:bg-blue-100 hover:text-blue-700 leading-tight z-10 py-2 px-3">3</a>
+  <a href="#" aria-current="page" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3">4</a>
+  <a href="#" aria-current="page" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3">5</a>
+  <a href="#" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 rounded-r-lg leading-tight py-2 px-3">
+    <span class="sr-only">Next</span>
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+  </a>
 </nav>
 {{< /example >}}
 

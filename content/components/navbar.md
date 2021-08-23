@@ -24,7 +24,6 @@ Group a series of buttons together on a single line or stack them in a vertical 
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
           <!-- Close mobile menu icon -->
           <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-          </svg>
         </button>
       </div>
       <!-- Logo -->
@@ -75,7 +74,6 @@ Group a series of buttons together on a single line or stack them in a vertical 
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
           <!-- Close mobile menu icon -->
           <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-          </svg>
         </button>
       </div>
       <!-- Logo -->
@@ -109,16 +107,16 @@ Group a series of buttons together on a single line or stack them in a vertical 
           <!-- Dropdown -->
           <div class="bg-white origin-top-right absolute right-0 mt-6 w-48 rounded-lg shadow divide-y divide-gray-200 py-1" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
             <div class="pb-1">
-              <a href="#" class="block font-medium text-gray-900 text-sm px-4 py-2" role="menuitem" tabindex="-1" id="user-menu-item-0">
+              <a href="#" class="block font-medium text-gray-900 text-sm px-4 py-2" role="menuitem">
                 Bonnie Green
                 <span class="font-normal">name@company.com</span>
               </a>
-              <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block px-4 py-2" role="menuitem" tabindex="-1" id="user-menu-item-1">Earnings</a>
-              <a href="#" class="text-sm text-gray-500 hover:bg-gray-50 block text-gray-500 px-4 py-2" role="menuitem" tabindex="-1" id="user-menu-item-2">Downloads</a>
-              <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem" tabindex="-1" id="user-menu-item-2">Settings</a>
+              <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block px-4 py-2" role="menuitem">Earnings</a>
+              <a href="#" class="text-sm text-gray-500 hover:bg-gray-50 block text-gray-500 px-4 py-2" role="menuitem">Downloads</a>
+              <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem">Settings</a>
             </div>
             <div class="pt-1">
-              <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem" tabindex="-1" id="user-menu-item-3">Sign out</a>
+              <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem">Sign out</a>
             </div>
           </div>
         </div>
@@ -126,7 +124,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
   <!-- Mobile menu -->
-  <div class="sm:hidden" id="mobile-menu">
+  <div class="sm:hidden" id="mobile-menu-2">
     <div class="pt-2">
       <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Dashboard</a>
       <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Team</a>
@@ -163,7 +161,6 @@ Group a series of buttons together on a single line or stack them in a vertical 
       <!-- Search input -->
       <div class="flex-1 flex items-center justify-center lg:ml-6 lg:justify-end">
         <div class="max-w-lg w-full lg:max-w-xs">
-          <label for="search" class="sr-only">Search</label>
           <div class="relative">
             <label for="navbar-search" class="sr-only">Email address</label>
             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -188,7 +185,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
   <!-- Mobile menu -->
-  <div class="lg:hidden" id="mobile-menu">
+  <div class="lg:hidden" id="mobile-menu-3">
     <div class="pt-2">
       <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Dashboard</a>
       <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Team</a>
@@ -237,24 +234,24 @@ Group a series of buttons together on a single line or stack them in a vertical 
           <!-- Profile dropdown -->
           <div class="ml-3">
             <div>
-              <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+              <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:ring-4 focus:ring-gray-300" id="user-menu-button-2" aria-expanded="false" aria-haspopup="true">
                 <span class="sr-only">Open user menu</span>
                 <img class="h-8 w-8 rounded-full" src="/img/peoples/profile-picture-3.jpg" alt="user photo">
               </button>
             </div>
             <!-- Dropdown -->
-            <div class="bg-white origin-top-right absolute right-0 mt-6 w-48 rounded-lg shadow divide-y divide-gray-200 py-1" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+            <div class="bg-white origin-top-right absolute right-0 mt-6 w-48 rounded-lg shadow divide-y divide-gray-200 py-1" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button-2" tabindex="-1">
               <div class="pb-1">
-                <a href="#" class="block font-medium text-gray-900 text-sm px-4 py-2" role="menuitem" tabindex="-1" id="user-menu-item-0">
+                <a href="#" class="block font-medium text-gray-900 text-sm px-4 py-2" role="menuitem">
                   Bonnie Green
                   <span class="font-normal">name@company.com</span>
                 </a>
-                <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block px-4 py-2" role="menuitem" tabindex="-1" id="user-menu-item-1">Earnings</a>
-                <a href="#" class="text-sm text-gray-500 hover:bg-gray-50 block text-gray-500 px-4 py-2" role="menuitem" tabindex="-1" id="user-menu-item-2">Downloads</a>
-                <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem" tabindex="-1" id="user-menu-item-2">Settings</a>
+                <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block px-4 py-2" role="menuitem">Earnings</a>
+                <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem">Downloads</a>
+                <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem">Settings</a>
               </div>
               <div class="pt-1">
-                <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem" tabindex="-1" id="user-menu-item-3">Sign out</a>
+                <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem">Sign out</a>
               </div>
             </div>
           </div>
@@ -273,35 +270,32 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
   <!-- Mobile menu -->
-  <div class="md:hidden" id="mobile-menu">
-    <!-- User Details -->
-    <div class="lg:hidden" id="mobile-menu">
-      <div class="pt-2 pb-3">
-        <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">About</a>
-        <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Services</a>
-        <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Contact</a>
+  <div class="lg:hidden" id="mobile-menu-4">
+    <div class="pt-2 pb-3">
+      <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">About</a>
+      <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Services</a>
+      <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Contact</a>
+    </div>
+    <div class="pt-4 bg-dark-900">
+      <div class="flex items-center px-4">
+        <div class="flex-shrink-0">
+          <img class="h-10 w-10 rounded-full" src="/img/peoples/profile-picture-3.jpg" alt="user photo">
+        </div>
+        <div class="ml-3">
+          <div class="text-base font-medium text-gray-900">Bonnie Green</div>
+          <div class="text-sm font-normal text-gray-500">name@company.com</div>
+        </div>
+        <button class="ml-auto flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <span class="sr-only">View notifications</span>
+          <!-- Icon (bell) -->
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
+        </button>
       </div>
-      <div class="pt-4 bg-dark-900">
-        <div class="flex items-center px-4">
-          <div class="flex-shrink-0">
-            <img class="h-10 w-10 rounded-full" src="/img/peoples/profile-picture-3.jpg" alt="user photo">
-          </div>
-          <div class="ml-3">
-            <div class="text-base font-medium text-gray-900">Bonnie Green</div>
-            <div class="text-sm font-normal text-gray-500">name@company.com</div>
-          </div>
-          <button class="ml-auto flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-            <span class="sr-only">View notifications</span>
-            <!-- Icon (bell) -->
-            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
-          </button>
-        </div>
-        <div class="mt-3 space-y-1">
-          <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 py-2">Earnings</a>
-          <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 py-2">Downloads</a>
-          <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 py-2">Settings</a>
-          <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 py-2">Sign out</a>
-        </div>
+      <div class="mt-3 space-y-1">
+        <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 py-2">Earnings</a>
+        <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 py-2">Downloads</a>
+        <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 py-2">Settings</a>
+        <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 py-2">Sign out</a>
       </div>
     </div>
   </div>
@@ -309,7 +303,661 @@ Group a series of buttons together on a single line or stack them in a vertical 
 {{< /example >}}
 
 
+{{< prose >}}
+## Color schemes
 
+Group a series of buttons together on a single line or stack them in a vertical column.
+{{< /prose >}}
+
+{{< preview >}}
+<nav class="bg-white border-b border-gray-200 rounded mb-4">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">About Us</a>
+            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden pt-2">
+    <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Home</a>
+    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">About</a>
+    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">Features</a>
+    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">Pricing</a>
+    <a href="#" class="text-gray-600 hover:bg-gray-50 text-base font-normal hover:text-gray-900 block px-3 py-2">Contact</a>
+  </div>
+</nav>
+
+<nav class="bg-gray-800 border-b border-gray-600 rounded mb-4">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden pt-2">
+      <a href="#" class="bg-gray-700 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">About</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 text-base font-normal hover:white block px-3 py-2">Contact</a>
+  </div>
+</nav>
+
+<nav class="bg-blue-700 border-b border-blue-600 rounded mb-4">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-blue-300 hover:text-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden">
+    <div class="pt-2">
+      <a href="#" class="bg-blue-600 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">About Us</a>
+      <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+      <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+      <a href="#" class="text-gray-300 hover:bg-blue-600 text-base font-normal hover:text-white block px-3 py-2">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<nav class="bg-red-700 border-b border-red-600 rounded mb-4">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-red-300 hover:text-red-200 focus:outline-none focus:ring-2 focus:ring-red-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden">
+    <div class="pt-2">
+      <a href="#" class="bg-red-600 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      <a href="#" class="text-gray-300 hover:bg-red-600 border-b border-red-600 text-base font-normal hover:text-white block px-3 py-2">About</a>
+      <a href="#" class="text-gray-300 hover:bg-red-600 border-b border-red-600 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+      <a href="#" class="text-gray-300 hover:bg-red-600 border-b border-red-600 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+      <a href="#" class="text-gray-300 hover:bg-red-600 text-base font-normal hover:text-white block px-3 py-2">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<nav class="bg-teal-600 border-b border-teal-500 rounded mb-4">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-teal-300 hover:text-teal-200 focus:outline-none focus:ring-2 focus:ring-teal-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden">
+    <div class="pt-2">
+      <a href="#" class="bg-teal-500 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      <a href="#" class="text-gray-300 hover:bg-teal-500 border-b border-teal-500 text-base font-normal hover:text-white block px-3 py-2">About</a>
+      <a href="#" class="text-gray-300 hover:bg-teal-500 border-b border-teal-500 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+      <a href="#" class="text-gray-300 hover:bg-teal-500 border-b border-teal-500 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+      <a href="#" class="text-gray-300 hover:bg-teal-500 text-base font-normal hover:text-white block px-3 py-2">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<nav class="bg-purple-700 border-b border-purple-600 rounded mb-4">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-purple-300 hover:text-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden">
+    <div class="pt-2">
+      <a href="#" class="bg-purple-600 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      <a href="#" class="text-gray-300 hover:bg-purple-600 border-b border-purple-600 text-base font-normal hover:text-white block px-3 py-2">About</a>
+      <a href="#" class="text-gray-300 hover:bg-purple-600 border-b border-purple-600 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+      <a href="#" class="text-gray-300 hover:bg-purple-600 border-b border-purple-600 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+      <a href="#" class="text-gray-300 hover:bg-purple-600 text-base font-normal hover:text-white block px-3 py-2">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<nav class="bg-indigo-700 border-b border-indigo-600 rounded mb-4">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-indigo-300 hover:text-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden">
+    <div class="pt-2">
+      <a href="#" class="bg-indigo-600 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      <a href="#" class="text-gray-300 hover:bg-indigo-600 border-b border-indigo-600 text-base font-normal hover:text-white block px-3 py-2">About</a>
+      <a href="#" class="text-gray-300 hover:bg-indigo-600 border-b border-indigo-600 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+      <a href="#" class="text-gray-300 hover:bg-indigo-600 border-b border-indigo-600 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+      <a href="#" class="text-gray-300 hover:bg-indigo-600 text-base font-normal hover:text-white block px-3 py-2">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<nav class="bg-green-700 border-b border-green-600 rounded mb-4">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-green-300 hover:text-green-200 focus:outline-none focus:ring-2 focus:ring-green-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden">
+    <div class="pt-2">
+      <a href="#" class="bg-green-600 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      <a href="#" class="text-gray-300 hover:bg-green-600 border-b border-green-600 text-base font-normal hover:text-white block px-3 py-2">About</a>
+      <a href="#" class="text-gray-300 hover:bg-green-600 border-b border-green-600 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+      <a href="#" class="text-gray-300 hover:bg-green-600 border-b border-green-600 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+      <a href="#" class="text-gray-300 hover:bg-green-600 text-base font-normal hover:text-white block px-3 py-2">Contact</a>
+    </div>
+  </div>
+</nav>
+{{< /preview >}}
+
+```html
+<!-- Light navbar -->
+<nav class="bg-white border-b border-gray-200 rounded mb-4">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">About Us</a>
+            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden pt-2">
+    <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Home</a>
+    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">About</a>
+    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">Features</a>
+    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">Pricing</a>
+    <a href="#" class="text-gray-600 hover:bg-gray-50 text-base font-normal hover:text-gray-900 block px-3 py-2">Contact</a>
+  </div>
+</nav>
+
+<!-- Dark navbar -->
+<nav class="bg-gray-800 border-b border-gray-600 rounded mb-4">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden pt-2">
+      <a href="#" class="bg-gray-700 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">About Us</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 text-base font-normal hover:white block px-3 py-2">Contact</a>
+  </div>
+</nav>
+
+<!-- Blue Navbar -->
+<nav class="bg-blue-700 border-b border-blue-600 rounded mb-4">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-blue-400 hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden">
+    <div class="pt-2">
+      <a href="#" class="bg-blue-600 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">About</a>
+      <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+      <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+      <a href="#" class="text-gray-300 hover:bg-blue-600 text-base font-normal hover:text-white block px-3 py-2">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Red Navbar -->
+<nav class="bg-red-700 border-b border-red-600 rounded mb-4">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-red-300 hover:text-red-200 focus:outline-none focus:ring-2 focus:ring-red-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden">
+    <div class="pt-2">
+      <a href="#" class="bg-red-600 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      <a href="#" class="text-gray-300 hover:bg-red-600 border-b border-red-600 text-base font-normal hover:text-white block px-3 py-2">About</a>
+      <a href="#" class="text-gray-300 hover:bg-red-600 border-b border-red-600 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+      <a href="#" class="text-gray-300 hover:bg-red-600 border-b border-red-600 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+      <a href="#" class="text-gray-300 hover:bg-red-600 text-base font-normal hover:text-white block px-3 py-2">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Teal Navbar -->
+<nav class="bg-teal-600 border-b border-teal-500 rounded mb-4">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-teal-300 hover:text-teal-200 focus:outline-none focus:ring-2 focus:ring-teal-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden">
+    <div class="pt-2">
+      <a href="#" class="bg-teal-500 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      <a href="#" class="text-gray-300 hover:bg-teal-500 border-b border-teal-500 text-base font-normal hover:text-white block px-3 py-2">About</a>
+      <a href="#" class="text-gray-300 hover:bg-teal-500 border-b border-teal-500 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+      <a href="#" class="text-gray-300 hover:bg-teal-500 border-b border-teal-500 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+      <a href="#" class="text-gray-300 hover:bg-teal-500 text-base font-normal hover:text-white block px-3 py-2">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Purple Navbar -->
+<nav class="bg-purple-700 border-b border-purple-600 rounded mb-4">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-purple-300 hover:text-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden">
+    <div class="pt-2">
+      <a href="#" class="bg-purple-600 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      <a href="#" class="text-gray-300 hover:bg-purple-600 border-b border-purple-600 text-base font-normal hover:text-white block px-3 py-2">About</a>
+      <a href="#" class="text-gray-300 hover:bg-purple-600 border-b border-purple-600 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+      <a href="#" class="text-gray-300 hover:bg-purple-600 border-b border-purple-600 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+      <a href="#" class="text-gray-300 hover:bg-purple-600 text-base font-normal hover:text-white block px-3 py-2">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Indigo Navbar -->
+<nav class="bg-indigo-700 border-b border-indigo-600 rounded mb-4">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-indigo-300 hover:text-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden">
+    <div class="pt-2">
+      <a href="#" class="bg-indigo-600 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      <a href="#" class="text-gray-300 hover:bg-indigo-600 border-b border-indigo-600 text-base font-normal hover:text-white block px-3 py-2">About</a>
+      <a href="#" class="text-gray-300 hover:bg-indigo-600 border-b border-indigo-600 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+      <a href="#" class="text-gray-300 hover:bg-indigo-600 border-b border-indigo-600 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+      <a href="#" class="text-gray-300 hover:bg-indigo-600 text-base font-normal hover:text-white block px-3 py-2">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Green Navbar -->
+```
 
 
 

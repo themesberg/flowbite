@@ -1,4 +1,4 @@
-import '../style.css';
+// import '../style.css';
 
 // import "../styles/docs/docs.scss";
 // import '@popperjs/core';

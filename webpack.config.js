@@ -24,8 +24,7 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /\.css$/i,
-        include: path.resolve(__dirname, 'src'),
+        test: /\.css$/,
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
@@ -42,6 +41,9 @@ module.exports = {
         }]
     },
     ],
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx', '.css']
   },
   plugins: [
     new MiniCssExtractPlugin(),

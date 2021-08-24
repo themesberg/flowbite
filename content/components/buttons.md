@@ -5,11 +5,10 @@ description: Use these elements for links, form actions, and more using differen
 group: components
 toc: true
 ---
-{{< prose >}}
+
 ## Sizes
 
 In this example you can see the sizes fo buttons:
-{{< /prose >}}
 
 {{< example >}}
 <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-2 text-center">Extra small</button>
@@ -19,11 +18,9 @@ In this example you can see the sizes fo buttons:
 <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3.5 text-center">Extra large</button>
 {{< /example >}}
 
-{{< prose >}}
 ## With left icon
 
 In this example you can see the sizes fo buttons:
-{{< /prose >}}
 
 {{< example >}}
 <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-2 text-center inline-flex items-center">
@@ -48,11 +45,9 @@ In this example you can see the sizes fo buttons:
 </button>
 {{< /example >}}
 
-{{< prose >}}
 ## With right icon
 
 In this example you can see the sizes fo buttons:
-{{< /prose >}}
 
 {{< example >}}
 <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-2 text-center inline-flex items-center">
@@ -77,11 +72,9 @@ In this example you can see the sizes fo buttons:
 </button>
 {{< /example >}}
 
-{{< prose >}}
 ## Only icon
 
 In this example you can see the sizes fo buttons:
-{{< /prose >}}
 
 {{< example >}}
 <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs p-1.5 text-center inline-flex items-center">

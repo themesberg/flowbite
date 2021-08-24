@@ -12,10 +12,6 @@
     @apply block py-2 transition-colors duration-200 hover:text-gray-900 font-medium;
 }
 
-.prose {
-    max-width: none;
-}
-
 .highlight {
 	@apply overflow-hidden;
 }

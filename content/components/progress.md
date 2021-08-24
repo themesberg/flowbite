@@ -6,11 +6,9 @@ group: components
 toc: true
 ---
 
-{{< prose >}}
 ## Default
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
   <div class="w-full bg-gray-200 rounded-full h-2.5">
@@ -18,11 +16,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
   </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Sizes
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< preview >}}
   <!-- Progress Bar -->
@@ -73,11 +69,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
   </div>
 ```
 
-{{< prose >}}
 ## With label inside
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
   <div class="w-full bg-gray-200 rounded-full">
@@ -85,11 +79,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
   </div>
 {{< /example >}}
 
-{{< prose >}}
 ## With label outside
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
   <!-- Progress Bar -->
@@ -102,11 +94,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
   </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Colors
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< preview >}}
   <!-- Progress Bar -->

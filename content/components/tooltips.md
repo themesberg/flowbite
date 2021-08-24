@@ -6,11 +6,9 @@ group: components
 toc: true
 ---
 
-{{< prose >}}
 ## Sizes
 
 In this example you can see the sizes fo buttons:
-{{< /prose >}}
 
 {{< example >}}
 

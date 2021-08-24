@@ -6,11 +6,9 @@ group: components
 toc: true
 ---
 
-{{< prose >}}
 ## Default
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <nav class="inline-flex -space-x-px" aria-label="Page navigation example">

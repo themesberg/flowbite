@@ -6,11 +6,9 @@ group: components
 toc: true
 ---
 
-{{< prose >}}
 ## Group buttons
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div class="relative z-0 inline-flex shadow-sm rounded-md">
@@ -26,11 +24,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Group buttons with icons
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div class="relative z-0 inline-flex shadow-sm rounded-md">
@@ -49,11 +45,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Outline
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div class="relative z-0 inline-flex shadow-sm rounded-md">
@@ -69,11 +63,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Outlined with icon
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div class="relative z-0 inline-flex shadow-sm rounded-md">
@@ -91,12 +83,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
   </button>
 </div>
 {{< /example >}}
-
-{{< prose >}}
 ## Vertical 
 
 Make a set of buttons appear vertically stacked rather than horizontally.
-{{< /prose >}}
 
 {{< example >}}
 <div class="bg-white rounded-lg border border-gray-200">
@@ -107,11 +96,9 @@ Make a set of buttons appear vertically stacked rather than horizontally.
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Vertical with icons 
 
 Make a set of buttons appear vertically stacked rather than horizontally.
-{{< /prose >}}
 
 {{< example >}}
 <div class="bg-white rounded-lg border border-gray-200">

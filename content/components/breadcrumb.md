@@ -6,11 +6,9 @@ group: components
 toc: true
 ---
 
-{{< prose >}}
 ## Default
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <nav class="flex" aria-label="Breadcrumb">
@@ -37,11 +35,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </nav>
 {{< /example >}}
 
-{{< prose >}}
 ## With background
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <!-- Breadcrumb -->

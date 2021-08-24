@@ -6,11 +6,9 @@ group: components
 toc: true
 ---
 
-{{< prose >}}
 ## Default
 
 In this example you can see the sizes fo buttons:
-{{< /prose >}}
 
 {{< example >}}
 <div class="flex flex-col">

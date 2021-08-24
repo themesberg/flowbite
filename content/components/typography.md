@@ -6,11 +6,9 @@ group: components
 toc: true
 ---
 
-{{< prose >}}
 ## Font Size
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <p class="text-xs">FlowBite</p>
@@ -28,11 +26,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 <p class="text-9xl">FlowBite</p>
 {{< /example >}}
 
-{{< prose >}}
 ## Font Weight
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< preview >}}
 <p class="text-4xl font-thin">FlowBite</p>
@@ -58,11 +54,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 <p class="font-black">FlowBite</p>
 ```
 
-{{< prose >}}
 ## Line Height
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< preview >}}
 <span class="text-blue-700 font-normal">.leading-none</span>
@@ -88,11 +82,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 <p class="leading-loose">Themesberg was created to bring quality ...</p>
 ```
 
-{{< prose >}}
 ## Lists
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< preview >}}
 <span class="text-blue-700 font-normal">.list-disc</span>
@@ -137,11 +129,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </ul>
 ```
 
-{{< prose >}}
 ## List position
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< preview >}}
 <span class="text-blue-700 font-normal">.list-inside</span>
@@ -172,11 +162,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </ul>
 ```
 
-{{< prose >}}
 ## Text Decoration
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< preview >}}
 <span class="text-blue-700 font-normal">.underline</span>

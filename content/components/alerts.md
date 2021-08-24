@@ -6,11 +6,9 @@ group: components
 toc: true
 ---
 
-{{< prose >}}
 ## Default alerts
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <!-- Alert -->
@@ -80,11 +78,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Dismissable alerts
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <!-- Alert -->
@@ -194,10 +190,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Bordered
+
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div class="bg-blue-100 rounded-lg border border-blue-300 p-4 mb-4">
@@ -316,10 +311,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## With accent border
+
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div class="bg-blue-100 border-t-4 border-blue-500 p-4 mb-4">
@@ -396,10 +390,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Additional content
+
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <!-- Alert -->

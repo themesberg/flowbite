@@ -6,67 +6,36 @@ group: components
 toc: true
 ---
 
-{{< prose >}}
 ## Default
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
+<div class="mb-6">
+  <label for="email" class="text-sm font-medium text-gray-900 block mb-2">Default input</label>
+  <input type="text" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
+</div>
 <div>
-  <label for="email-address" class="sr-only">Email address</label>
-  <input type="text" name="email" id="email-address" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
+  <label for="email-shadow" class="text-sm font-medium text-gray-900 block mb-2">Input with shadow</label>
+  <input type="text" name="email-shadow" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
 </div>
 {{< /example >}}
 
-{{< prose >}}
-## With shadow
-
-Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
-
-{{< example >}}
-<div>
-  <label for="email-address-example-2" class="sr-only">Email address</label>
-  <input type="text" name="email" id="email-address-example-2" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
-</div>
-{{< /example >}}
-
-{{< prose >}}
-## With label
-
-Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
-
-{{< example >}}
-<div>
-  <label for="email-address-example-3" class="text-sm font-medium text-gray-900 block mb-2">Your email</label>
-  <input type="text" name="email" id="email-address-example-3" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
-</div>
-{{< /example >}}
-
-{{< prose >}}
 ## With help text
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div>
-  <!-- Label -->
   <label for="email-address-help-text" class="text-sm font-medium text-gray-900 block mb-2">Your email</label>
-  <!-- Input -->
   <input type="text" name="email" id="email-address-help-text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
-  <!-- Help text -->
-  <p class="mt-2 text-sm text-gray-500">We’ll never share your details. See our <a href="#" class="font-medium">Privacy Policy</a></p>
+  <p class="mt-2 text-sm text-gray-500">We’ll never share your details. Read our <a href="#" class="font-medium text-blue-600 hover:underline">Privacy Policy</a>.</p>
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Textarea
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div>
@@ -77,11 +46,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## With icon 
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div>
@@ -98,11 +65,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## With addon 
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div>
@@ -119,11 +84,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Success form
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div>
@@ -136,11 +99,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Error form
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div>
@@ -153,11 +114,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Select without label
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div>
@@ -174,11 +133,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Select with label
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div>
@@ -194,11 +151,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Toggle
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< preview >}}
 <div class="flex items-center mb-4">
@@ -248,11 +203,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 ```
 
-{{< prose >}}
 ## Toggle with icons
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< preview >}}
 <div class="flex items-center mb-4">
@@ -310,12 +263,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 ```
 
-
-{{< prose >}}
 ## Rounded checkbox with label and description
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <fieldset>
@@ -340,11 +290,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </fieldset>
 {{< /example >}}
 
-{{< prose >}}
 ## Full rounded checkbox with label and description
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <fieldset>
@@ -369,11 +317,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </fieldset>
 {{< /example >}}
 
-{{< prose >}}
 ## Disabled
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <fieldset>
@@ -399,12 +345,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </fieldset>
 {{< /example >}}
 
-
-{{< prose >}}
 ## Radios
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <fieldset>
@@ -435,11 +378,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </fieldset>
 {{< /example >}}
 
-{{< prose >}}
 ## Disabled radios
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <fieldset>

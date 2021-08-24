@@ -20,6 +20,18 @@
 	@apply overflow-hidden;
 }
 
+#mainContent > h2 {
+	@apply text-2xl font-bold mt-8 mb-4;
+}
+
+#mainContent > h3, #mainContent > h4 {
+	@apply text-xl font-bold mt-8 mb-4;
+}
+
+#mainContent > p {
+	@apply text-base font-normal text-gray-600;
+}
+
 /* prism styles */
 
 code[class*="language-"],

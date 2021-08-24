@@ -28,11 +28,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </nav>
 {{< /example >}}
 
-{{< prose >}}
 ## With icons
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <nav class="inline-flex -space-x-px" aria-label="Page navigation example">
@@ -52,11 +50,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </nav>
 {{< /example >}}
 
-{{< prose >}}
 ## Simple with buttons
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <!-- Previous Button -->
@@ -70,11 +66,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </a>
 {{< /example >}}
 
-{{< prose >}}
 ## Simple with buttons & icons
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <!-- Previous Button -->
@@ -90,11 +84,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </a>
 {{< /example >}}
 
-{{< prose >}}
 ## Centered
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div class="flex flex-col items-center">
@@ -114,11 +106,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Centered & icons
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div class="flex flex-col items-center">

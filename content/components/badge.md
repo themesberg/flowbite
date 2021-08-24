@@ -34,11 +34,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-md">Badge</span>
 ```
 
-{{< prose >}}
 ## Large badges
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <!-- Badge -->
@@ -75,11 +73,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </span>
 {{< /example >}}
 
-{{< prose >}}
 ## Small & left icon
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <span class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
@@ -123,11 +119,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </span>
 {{< /example >}}
 
-{{< prose >}}
 ## Large & left icon
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <!-- Badge -->
@@ -172,11 +166,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </span>
 {{< /example >}}
 
-{{< prose >}}
 ## Small & right icon
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <span class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md">
@@ -220,11 +212,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </span>
 {{< /example >}}
 
-{{< prose >}}
 ## Large & right icon
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <span class="bg-gray-100 text-gray-800 text-sm font-medium inline-flex items-center px-3.5 py-0.5 rounded-md">
@@ -268,11 +258,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </span>
 {{< /example >}}
 
-{{< prose >}}
 ## Only icon (large)
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <span class="bg-gray-100 text-gray-800 text-sm font-medium inline-flex items-center p-1 rounded-full">
@@ -308,12 +296,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </span>
 {{< /example >}}
 
-
-{{< prose >}}
 ## Only icon (large)
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <span class="bg-gray-100 text-gray-800 text-sm font-medium inline-flex items-center p-1.5 rounded-full">

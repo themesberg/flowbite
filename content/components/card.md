@@ -6,11 +6,9 @@ group: components
 toc: true
 ---
 
-{{< prose >}}
 ## Default
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm">
@@ -23,11 +21,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## With action button
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm">
@@ -44,11 +40,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## With image
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm">
@@ -66,11 +60,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-{{< prose >}}
 ## Horizontal
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white border shadow-md items-center">

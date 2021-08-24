@@ -6,11 +6,9 @@ group: components
 toc: true
 ---
 
-{{< prose >}}
 ## Default
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <nav class="bg-white border-b border-gray-200">
@@ -56,11 +54,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </nav>
 {{< /example >}}
 
-{{< prose >}}
 ## With Dropdown
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <nav class="bg-white border-b border-gray-200 mb-60">
@@ -135,11 +131,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </nav>
 {{< /example >}}
 
-{{< prose >}}
 ## With search
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <nav class="bg-white border-b border-gray-200">
@@ -196,11 +190,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </nav>
 {{< /example >}}
 
-{{< prose >}}
 ## With Action Button
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< example >}}
 <nav class="bg-white border-b border-gray-200 mb-60">
@@ -302,12 +294,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </nav>
 {{< /example >}}
 
-
-{{< prose >}}
 ## Color schemes
 
 Group a series of buttons together on a single line or stack them in a vertical column.
-{{< /prose >}}
 
 {{< preview >}}
 <nav class="bg-white border-b border-gray-200 rounded mb-4">
@@ -955,14 +944,4 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </nav>
-
-<!-- Green Navbar -->
 ```
-
-
-
-
-
-
-
-

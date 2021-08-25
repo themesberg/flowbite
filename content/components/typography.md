@@ -1,14 +1,16 @@
 ---
 layout: home
 title: Typography
-description: Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.
+description: Check out the typography and the utility classes from Tailwind CSS that you can use to style text with FlowBite
 group: components
 toc: true
 ---
 
+The typography for FlowBite is completely based on the utility classes from Tailwind CSS. We have listed some of the commonly used typography classes that we use throughout the FlowBite UI, however, you can also check out all of the utility classes on the [Tailwind CSS documentation](https://tailwindcss.com/docs/font-family) directly.
+
 ## Font Size
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following `text-{size}` utility classes from Tailwind to set the font size for any text element.
 
 {{< example >}}
 <p class="text-xs">FlowBite</p>
@@ -28,7 +30,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 ## Font Weight
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following `font-{weight}` utility classes to set the font weight for any text element.
 
 {{< preview >}}
 <p class="text-4xl font-thin">FlowBite</p>
@@ -56,7 +58,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 ## Line Height
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following `leading-{type}` utility classes to set the line height for any text element.
 
 {{< preview >}}
 <span class="text-blue-700 font-normal">.leading-none</span>
@@ -84,7 +86,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 ## Lists
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following code to create list items with ordered and unordered lists.
 
 {{< preview >}}
 <span class="text-blue-700 font-normal">.list-disc</span>
@@ -131,7 +133,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 ## List position
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the `list-inside` and `list-outside` classes to set the list item position inside a list component.
 
 {{< preview >}}
 <span class="text-blue-700 font-normal">.list-inside</span>
@@ -164,7 +166,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 ## Text Decoration
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+You can use the following classes to set the text decoration for any inline text element.
 
 {{< preview >}}
 <span class="text-blue-700 font-normal">.underline</span>

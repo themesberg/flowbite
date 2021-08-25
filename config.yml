@@ -1,5 +1,5 @@
 languageCode:           "en"
-title:                  "FlowBite"
+title:                  "FlowBite Tailwind CSS"
 baseURL:                "http://localhost:1313/"
 enableInlineShortcodes: true
 

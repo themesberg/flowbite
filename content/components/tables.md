@@ -1,14 +1,14 @@
 ---
 layout: home
 title: Tables
-description: Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-bs-attributes for local title storage.
+description: Use the following Tailwind CSS table components to show complex data in an organized layout
 group: components
 toc: true
 ---
 
-## Default
+## Default example
 
-In this example you can see the sizes fo buttons:
+Use the following HTML markup and Tailwind CSS utility classes to show a data set using a table component.
 
 {{< example >}}
 <div class="flex flex-col">

@@ -1,149 +1,178 @@
 ---
 layout: home
 title: Forms
-description: Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.
+description: Form elements and usage examples built with Tailwind CSS and custom design with FlowBite 
 group: components
 toc: true
 ---
 
-## Default
+## Form example
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+This is an example of a form component including an email, password, checkbox, and submit button that you can use as a starting point for any form element in your website using FlowBite and Tailwind CSS.
+
+{{< example >}}
+<form action="#">
+  <div class="mb-6">
+    <label for="email" class="text-sm font-medium text-gray-900 block mb-2">Your email</label>
+    <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com" required>
+  </div>
+  <div class="mb-6">
+    <label for="password" class="text-sm font-medium text-gray-900 block mb-2">Your password</label>
+    <input type="password" name="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+  </div>
+  <div class="flex items-start mb-6">
+    <div class="flex items-center h-5">
+      <input id="remember" aria-describedby="remember" name="remember" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required>
+    </div>
+    <div class="text-sm ml-3">
+      <label for="remember" class="font-medium text-gray-900">Remember me</label>
+    </div>
+  </div>
+  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login to your account</button>
+</form>
+{{< /example >}}
+
+## Input Sizing
+
+Use the following utility classes to create three different sizing options (large, base, and small) for your form input elements.
 
 {{< example >}}
 <div class="mb-6">
-  <label for="email" class="text-sm font-medium text-gray-900 block mb-2">Default input</label>
-  <input type="text" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
+    <label for="large-input" class="text-sm font-medium text-gray-900 block mb-2">Large input</label>
+    <input type="text" name="large-input" id="large-input" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4">
 </div>
-<div>
-  <label for="email-shadow" class="text-sm font-medium text-gray-900 block mb-2">Input with shadow</label>
-  <input type="text" name="email-shadow" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
+<div class="mb-6">
+    <label for="base-input" class="text-sm font-medium text-gray-900 block mb-2">Base input</label>
+    <input type="text" name="base-input" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+</div>
+<div class="mb-6">
+    <label for="small-input" class="text-sm font-medium text-gray-900 block mb-2">Small input</label>
+    <input type="text" name="small-input" id="small-input" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2">
 </div>
 {{< /example >}}
 
-## With help text
+## Disabled inputs
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following utility classes to indicate a disabled form input item.
 
 {{< example >}}
-<div>
-  <label for="email-address-help-text" class="text-sm font-medium text-gray-900 block mb-2">Your email</label>
-  <input type="text" name="email" id="email-address-help-text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
+<div class="mb-6">
+    <input type="text" name="disabled-input" id="disabled-input" class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" value="Disabled input" disabled>
+</div>
+<div class="mb-6">
+    <input type="text" name="disabled-input" id="disabled-input" class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" value="Disabled readonly input" disabled readonly>
+</div>
+{{< /example >}}
+
+## Shadow inputs
+
+Alternatively, you can decide to apply a shadow styling using the `shadow-sm` class to any of your form input elements.
+
+{{< example >}}
+<form action="#">
+  <div class="mb-6">
+    <label for="email" class="text-sm font-medium text-gray-900 block mb-2">Your email</label>
+    <input type="email" name="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com" required>
+  </div>
+  <div class="mb-6">
+    <label for="password" class="text-sm font-medium text-gray-900 block mb-2">Your password</label>
+    <input type="password" name="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+  </div>
+  <div class="mb-6">
+    <label for="repeat-password" class="text-sm font-medium text-gray-900 block mb-2">Repeat password</label>
+    <input type="password" name="repeat-password" id="repeat-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+  </div>
+  <div class="flex items-start mb-6">
+    <div class="flex items-center h-5">
+      <input id="terms" aria-describedby="terms" name="terms" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required>
+    </div>
+    <div class="text-sm ml-3">
+      <label for="terms" class="font-medium text-gray-900">I agree with the <a href="#" class="text-blue-600 hover:underline">terms and conditions</a></label>
+    </div>
+  </div>
+  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Register new account</button>
+</form>
+{{< /example >}}
+
+## Helper text
+
+Use the following markup to also add a helper text below your form input item. Usually used for newsletter signup elements.
+
+{{< example >}}
+<div class="mb-6">
+  <label for="email" class="text-sm font-medium text-gray-900 block mb-2">Your email</label>
+  <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
   <p class="mt-2 text-sm text-gray-500">We’ll never share your details. Read our <a href="#" class="font-medium text-blue-600 hover:underline">Privacy Policy</a>.</p>
 </div>
 {{< /example >}}
 
-## Textarea
+## Input element with icon
 
-Group a series of buttons together on a single line or stack them in a vertical column.
-
-{{< example >}}
-<div>
-  <!-- Label -->
-  <label for="message" class="text-sm font-medium text-gray-900 block mb-2">Your message</label>
-  <!-- Textarea -->
-  <textarea id="message" name="message" rows="4" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full"></textarea>
-</div>
-{{< /example >}}
-
-## With icon 
-
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following Tailwind utility classes and SVG icon to add an icon inside input form elements.
 
 {{< example >}}
 <div>
-  <!-- Label -->
   <label for="email-adress-icon" class="text-sm font-medium text-gray-900 block mb-2">Your Email</label>
   <div class="mt-1 relative">
     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-      <!-- Icon -->
       <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
     </div>
-    <!-- Input -->
     <input type="text" name="email" id="email-adress-icon" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="name@company.com">
   </div>
 </div>
 {{< /example >}}
 
-## With addon 
+## Input element with addon
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following utility classes and SVG icon to add an addon icon inside your input form elements.
 
 {{< example >}}
 <div>
-  <!-- Label -->
   <label for="website-admin" class="text-sm font-medium text-gray-900 block mb-2">Username</label>
   <div class="flex">
-    <!-- Addon -->
     <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-200 text-gray-900 sm:text-sm">
       @
     </span>
-    <!-- Input -->
     <input type="text" name="website-admin" id="website-admin" class="rounded-none rounded-r-lg bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full sm:text-sm border-gray-300 p-2.5" placeholder="Bonnie Green">
   </div>
 </div>
 {{< /example >}}
 
-## Success form
+## Success and error validation
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following two success and error styles when validation your forms.
 
 {{< example >}}
-<div>
-  <!-- Label -->
+<div class="mb-6">
   <label for="username-success" class="text-sm font-medium text-green-700 block mb-2">Your name</label>
-  <!-- Input -->
   <input type="text" name="username" id="username-success" class="bg-green-50 border-green-500 text-green-900 placeholder-green-700 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5" placeholder="Bonnie Green">
-  <!-- Help text -->
   <p class="mt-2 text-sm text-green-600"><span class="font-medium">Alright!</span> Username available!</p>
 </div>
-{{< /example >}}
-
-## Error form
-
-Group a series of buttons together on a single line or stack them in a vertical column.
-
-{{< example >}}
 <div>
-  <!-- Label -->
   <label for="username-error" class="text-sm font-medium text-red-700 block mb-2">Your name</label>
-  <!-- Input -->
   <input type="text" name="username" id="username-error" class="bg-red-50 border-red-500 text-red-900 placeholder-red-700 sm:text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" placeholder="Bonnie Green">
-  <!-- Help text -->
   <p class="mt-2 text-sm text-red-600"><span class="font-medium">Oops!</span> Username already taken!</p>
 </div>
 {{< /example >}}
 
-## Select without label
+## Textarea
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following code to create a textarea form element.
 
 {{< example >}}
-<div>
-  <!-- Label -->
-  <label for="country" class="sr-only">Your country</label>
-  <!-- Select -->
-  <select id="country" name="country" class="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-    <option>Select your country</option>
-    <option>USA</option>
-    <option>Canada</option>
-    <option>France</option>
-    <option>Germany</option>
-  </select>
-</div>
+<label for="message" class="text-sm font-medium text-gray-900 block mb-2">Your message</label>
+<textarea id="message" name="message" rows="4" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full"></textarea>
 {{< /example >}}
 
-## Select with label
+## Select input
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following select input element to show selectable list of items.
 
 {{< example >}}
 <div>
-  <!-- Label -->
-  <label for="country-2" class="text-sm font-medium text-gray-900 block mb-2">Select your country</label>
-  <!-- Select -->
-  <select id="country-2" name="country" class="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-    <option>USA</option>
+  <label for="countries" class="text-sm font-medium text-gray-900 block mb-2">Select your country</label>
+  <select id="countries" name="countries" class="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+    <option>United States</option>
     <option>Canada</option>
     <option>France</option>
     <option>Germany</option>

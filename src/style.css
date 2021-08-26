@@ -36,6 +36,10 @@
 	@apply underline;
 }
 
+#mainContent > p > code {
+	@apply font-mono text-blue-600;
+}
+
 /* prism styles */
 
 code[class*="language-"],

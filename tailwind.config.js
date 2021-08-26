@@ -5,7 +5,8 @@ module.exports = {
       extend: {},
       fontFamily: {
         'sans': ['Inter', 'sans-serif'],
-        'body': ['Inter', 'sans-serif']
+        'body': ['Inter', 'sans-serif'],
+        'mono': ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace']
       },
       colors: {
         white: "#ffffff",

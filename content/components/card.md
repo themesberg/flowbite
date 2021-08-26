@@ -1,14 +1,14 @@
 ---
 layout: home
 title: Cards
-description: Use the glassmorphism card components to build beautiful UI/UX layouts for your pages
+description: Get started with some pre-built Tailwind CSS card elements for your web project
 group: components
 toc: true
 ---
 
-## Default
+## Default example
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following simple card with a title and description.
 
 {{< example >}}
 <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm">
@@ -21,9 +21,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-## With action button
+## Card with action button
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following example of a card element if you also want to have an action button.
 
 {{< example >}}
 <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm">
@@ -40,9 +40,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-## With image
+## Card with image
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+You can use the following example of a card element with an image for blog posts, user cards, and many more.
 
 {{< example >}}
 <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm">
@@ -60,9 +60,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-## Horizontal
+## Horizontal card
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+If you want to spice up your cards you can use the following card which has its child elements aligned horizontally.
 
 {{< example >}}
 <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white border shadow-md items-center">

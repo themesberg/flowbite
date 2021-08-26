@@ -6,6 +6,8 @@ group: components
 toc: true
 ---
 
+If you want to use the dropdown functionality, make sure that you have [Popper.js](https://popper.js.org/) included in your project. By default, FlowBite already includes this package in the main javascript file.
+
 ## Dropdown example
 
 If you want to show a dropdown menu when click on an element, make sure that you add the `onclick="toggleDropdown(event, 'elementId')"`, where `elementId` is the id attribute and value that you have to set for the dropdown menu.

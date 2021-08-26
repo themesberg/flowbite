@@ -1,14 +1,14 @@
 ---
 layout: home
 title: Button group
-description: Learn how to group buttons together verticall or horizontally and use them as radios or checkboxes
+description: Button groups are a Tailwind CSS powered set of buttons sticked together in a horizontal line
 group: components
 toc: true
 ---
 
-## Group buttons
+## Default example
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following code to stack together buttons into a single group.
 
 {{< example >}}
 <div class="relative z-0 inline-flex shadow-sm rounded-md">
@@ -26,7 +26,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 ## Group buttons with icons
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+You can also use SVG icons inside the grouped buttons.
 
 {{< example >}}
 <div class="relative z-0 inline-flex shadow-sm rounded-md">

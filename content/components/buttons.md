@@ -94,11 +94,9 @@ In this example you can see the sizes fo buttons:
 </button>
 {{< /example >}}
 
-{{< prose >}}
 ## Only icon (Circle)
 
 In this example you can see the sizes fo buttons:
-{{< /prose >}}
 
 {{< example >}}
 <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-xs p-1.5 text-center inline-flex items-center">
@@ -118,11 +116,9 @@ In this example you can see the sizes fo buttons:
 </button>
 {{< /example >}}
 
-{{< prose >}}
 ## Outline buttons
 
 In this example you can see the sizes fo buttons:
-{{< /prose >}}
 
 {{< example >}}
 <button type="button" class="text-blue-700 bg-white border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-2 text-center">Extra small</button>
@@ -132,11 +128,9 @@ In this example you can see the sizes fo buttons:
 <button type="button" class="text-blue-700 bg-white border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3.5 text-center">Extra large</button>
 {{< /example >}}
 
-{{< prose >}}
 ## Outline buttons with left icon
 
 In this example you can see the sizes fo buttons:
-{{< /prose >}}
 
 {{< example >}}
 <button type="button" class="text-blue-700 bg-white border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-2 text-center inline-flex items-center">
@@ -161,11 +155,9 @@ In this example you can see the sizes fo buttons:
 </button>
 {{< /example >}}
 
-{{< prose >}}
 ## Outline buttons with right icon
 
 In this example you can see the sizes fo buttons:
-{{< /prose >}}
 
 {{< example >}}
 <button type="button" class="text-blue-700 bg-white border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-2 text-center inline-flex items-center">
@@ -190,11 +182,9 @@ In this example you can see the sizes fo buttons:
 </button>
 {{< /example >}}
 
-{{< prose >}}
 ## Outline buttons with icon (Rounded)
 
 In this example you can see the sizes fo buttons:
-{{< /prose >}}
 
 {{< example >}}
 <button type="button" class="text-blue-700 bg-white border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs p-1.5 text-center inline-flex items-center">
@@ -214,11 +204,9 @@ In this example you can see the sizes fo buttons:
 </button>
 {{< /example >}}
 
-{{< prose >}}
 ## Outline buttons with icon (Circle)
 
 In this example you can see the sizes fo buttons:
-{{< /prose >}}
 
 {{< example >}}
 <button type="button" class="text-blue-700 bg-white border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-xs p-1.5 text-center inline-flex items-center">
@@ -238,16 +226,11 @@ In this example you can see the sizes fo buttons:
 </button>
 {{< /example >}}
 
-
-{{< prose >}}
 # Color Schemes
-{{< /prose >}}
 
-{{< prose >}}
 ## Default buttons
 
 In this example you can see the sizes fo buttons:
-{{< /prose >}}
 
 {{< example >}}
 <div class="md:flex md:space-x-6">

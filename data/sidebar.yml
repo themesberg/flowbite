@@ -5,9 +5,9 @@
   pages:
     - title: Introduction
     - title: Quickstart
-    - title: Folder structure
+    - title: Download
     - title: Build tools
-    - title: Browser support
+    - title: License
     - title: Changelog
 
 - title: Customize

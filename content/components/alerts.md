@@ -1,14 +1,14 @@
 ---
 layout: home
 title: Alerts
-description: Show contextual information as a feedback to the users using your website
+description: Show contextual information to you users using Tailwind CSS alert elements
 group: components
 toc: true
 ---
 
 ## Default alerts
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following examples of alert components to show messages as feedback to your users.
 
 {{< example >}}
 <!-- Alert -->
@@ -80,7 +80,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 ## Dismissable alerts
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following alert elements that are also dismissable.
 
 {{< example >}}
 <!-- Alert -->
@@ -190,9 +190,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-## Bordered
+## Alternative
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following alternative bordered style alert components.
 
 {{< example >}}
 <div class="bg-blue-100 rounded-lg border border-blue-300 p-4 mb-4">
@@ -311,9 +311,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </div>
 {{< /example >}}
 
-## With accent border
+## Border accent
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following alert components with a border accent as an alternative style.
 
 {{< example >}}
 <div class="bg-blue-100 border-t-4 border-blue-500 p-4 mb-4">
@@ -392,7 +392,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 ## Additional content
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+The following alert components can be used if you wish to disclose more information inside the element.
 
 {{< example >}}
 <!-- Alert -->

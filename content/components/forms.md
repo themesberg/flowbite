@@ -57,10 +57,10 @@ Use the following utility classes to indicate a disabled form input item.
 
 {{< example >}}
 <div class="mb-6">
-    <input type="text" name="disabled-input" id="disabled-input" class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" value="Disabled input" disabled>
+    <input type="text" name="disabled-input" id="disabled-input" class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed" value="Disabled input" disabled>
 </div>
 <div class="mb-6">
-    <input type="text" name="disabled-input" id="disabled-input" class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" value="Disabled readonly input" disabled readonly>
+    <input type="text" name="disabled-input-2" id="disabled-input-2" class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed" value="Disabled readonly input" disabled readonly>
 </div>
 {{< /example >}}
 

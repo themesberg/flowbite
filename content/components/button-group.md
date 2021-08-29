@@ -83,12 +83,13 @@ Group a series of buttons together on a single line or stack them in a vertical 
   </button>
 </div>
 {{< /example >}}
-## Vertical 
 
-Make a set of buttons appear vertically stacked rather than horizontally.
+## List group
+
+Use the following example to create a list of buttons as a menu.
 
 {{< example >}}
-<div class="bg-white rounded-lg border border-gray-200">
+<div class="bg-white rounded-lg border border-gray-200 w-48">
     <button class="px-4 py-2 relative hover:bg-gray-100 hover:text-blue-700 text-gray-900 text-sm font-medium border-b border-gray-200 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 w-full rounded-t-lg inline-flex items-center">Profile</button>
     <button class="px-4 py-2 relative hover:bg-gray-100 hover:text-blue-700 text-gray-900 text-sm font-medium border-b border-gray-200 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 w-full inline-flex items-center">Settings</button>
     <button class="px-4 py-2 relative hover:bg-gray-100 hover:text-blue-700 text-gray-900 text-sm font-medium border-b border-gray-200 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 w-full inline-flex items-center">Messages</button>
@@ -96,12 +97,12 @@ Make a set of buttons appear vertically stacked rather than horizontally.
 </div>
 {{< /example >}}
 
-## Vertical with icons 
+## List group with icons
 
-Make a set of buttons appear vertically stacked rather than horizontally.
+Use the following example to create a list of buttons as a menu accompanied with SVG icons.
 
 {{< example >}}
-<div class="bg-white rounded-lg border border-gray-200">
+<div class="bg-white rounded-lg border border-gray-200 w-48">
 <button class="px-4 py-2 relative hover:bg-gray-100 hover:text-blue-700 text-gray-900 text-sm font-medium border-b border-gray-200 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 w-full rounded-t-lg inline-flex items-center">
     <svg class="w-4 h-4 mr-2 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
     Profile

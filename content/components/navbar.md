@@ -27,7 +27,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       <!-- Logo -->
       <div class="flex-1 flex items-center justify-center sm:justify-start">
         <a href="#">
-          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">
@@ -75,7 +75,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       <!-- Logo -->
       <div class="flex-1 flex items-center justify-center sm:justify-start">
         <a href="#">
-          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">
@@ -97,7 +97,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
           <div>
             <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <span class="sr-only">Open user menu</span>
-              <img class="h-8 w-8 rounded-full" src="/img/peoples/profile-picture-3.jpg" alt="user photo">
+              <img class="h-8 w-8 rounded-full" src="/img/people/profile-picture-3.jpg" alt="user photo">
             </button>
           </div>
           <!-- Dropdown -->
@@ -142,7 +142,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       <div class="flex px-2 lg:px-0">
         <div class="flex-shrink-0 flex items-center">
           <a href="#">
-            <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+            <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
           </a>
         </div>
         <div class="hidden lg:ml-6 lg:flex lg:space-x-8 items-center">
@@ -201,7 +201,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       <!-- Logo -->
       <div class="flex flex-1 items-center justify-center sm:justify-start">
         <a href="#">
-          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden md:block sm:ml-6">
           <div class="flex space-x-6">
@@ -228,7 +228,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
             <div>
               <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:ring-4 focus:ring-gray-300" id="user-menu-button-2" aria-expanded="false" aria-haspopup="true">
                 <span class="sr-only">Open user menu</span>
-                <img class="h-8 w-8 rounded-full" src="/img/peoples/profile-picture-3.jpg" alt="user photo">
+                <img class="h-8 w-8 rounded-full" src="/img/people/profile-picture-3.jpg" alt="user photo">
               </button>
             </div>
             <!-- Dropdown -->
@@ -271,7 +271,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     <div class="pt-4 bg-dark-900">
       <div class="flex items-center px-4">
         <div class="flex-shrink-0">
-          <img class="h-10 w-10 rounded-full" src="/img/peoples/profile-picture-3.jpg" alt="user photo">
+          <img class="h-10 w-10 rounded-full" src="/img/people/profile-picture-3.jpg" alt="user photo">
         </div>
         <div class="ml-3">
           <div class="text-base font-medium text-gray-900">Bonnie Green</div>
@@ -315,7 +315,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       <!-- Logo -->
       <div class="flex-1 flex items-center justify-center sm:justify-start">
         <a href="#">
-          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">
@@ -356,7 +356,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       <!-- Logo -->
       <div class="flex-1 flex items-center justify-center sm:justify-start">
         <a href="#">
-          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">
@@ -397,7 +397,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       <!-- Logo -->
       <div class="flex-1 flex items-center justify-center sm:justify-start">
         <a href="#">
-          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">
@@ -443,7 +443,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       <!-- Logo -->
       <div class="flex-1 flex items-center justify-center sm:justify-start">
         <a href="#">
-          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">
@@ -485,7 +485,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       <!-- Logo -->
       <div class="flex-1 flex items-center justify-center sm:justify-start">
         <a href="#">
-          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">
@@ -527,7 +527,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       <!-- Logo -->
       <div class="flex-1 flex items-center justify-center sm:justify-start">
         <a href="#">
-          <img src="/img/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">

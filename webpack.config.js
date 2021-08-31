@@ -9,7 +9,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'static/assets/'),
+    path: path.resolve(__dirname, 'static/js/'),
   },
   module: {
     rules: [
@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
           loader: 'file-loader',
           options: {
-              outputPath: 'static/assets/'
+              outputPath: 'static/images/'
           }
       },
       {

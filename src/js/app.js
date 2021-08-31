@@ -3,9 +3,6 @@ import 'tippy.js/dist/tippy.css'; // optional for styling
 import 'tippy.js/animations/scale.css';
 import { createPopper } from '@popperjs/core';
 
-// general stylings
-import '../style.css';
-
 function toggleDropdown(event, dropdownID) {
     let element = event.target;
     while (element.nodeName !== "BUTTON") {

@@ -1,10 +1,5 @@
-// import '../style.css';
-
-// import "../styles/docs/docs.scss";
-// import '@popperjs/core';
-// import 'bootstrap';
-// import { Tooltip } from 'bootstrap';
-// import interact from 'interactjs';
+// css for docs
+import '../docs.css';
 
 // document.addEventListener("DOMContentLoaded", function () {
 

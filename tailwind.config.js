@@ -1,5 +1,5 @@
 module.exports = {
-    purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+    purge: ['./build/**/*.{js,jsx,ts,tsx}'],
     darkMode: false, // or 'media' or 'class'
     theme: {
       extend: {},
@@ -140,7 +140,6 @@ module.exports = {
       },
     },
     plugins: [
-        require('@tailwindcss/typography'),
         require('@tailwindcss/forms'),
     ],
   }

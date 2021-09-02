@@ -12,6 +12,10 @@
     @apply block py-2 transition-colors duration-200 hover:text-gray-900 font-medium;
 }
 
+#TableOfContents > ul > li > ul {
+	@apply pl-4;
+}
+
 .highlight {
 	@apply overflow-hidden;
 }
@@ -47,7 +51,7 @@
 }
 
 #mainContent > ul {
-    list-style: circle;
+    list-style: disc;
 }
 
 #mainContent > ol {

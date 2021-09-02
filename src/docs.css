@@ -16,6 +16,10 @@
 	@apply pl-4;
 }
 
+#TableOfContents > ul > li > ul > li {
+	@apply pb-2;
+}
+
 .highlight {
 	@apply overflow-hidden;
 }
@@ -233,3 +237,66 @@ code.language-javascript .token.comment {
 }
 
 .tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}
+
+#carbonads * {
+	margin: initial;
+	padding: initial;
+  }
+  #carbonads {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+	  Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial,
+	  sans-serif;
+	  @apply mt-4 mb-12;
+  }
+  #carbonads {
+	display: flex;
+	max-width: 330px;
+	background-color: hsl(0, 0%, 98%);
+	box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);
+	z-index: 100;
+  }
+  #carbonads a {
+	color: inherit;
+	text-decoration: none;
+  }
+  #carbonads a:hover {
+	color: inherit;
+  }
+  #carbonads span {
+	position: relative;
+	display: block;
+	overflow: hidden;
+  }
+  #carbonads .carbon-wrap {
+	display: flex;
+  }
+  #carbonads .carbon-img {
+	display: block;
+	margin: 0;
+	line-height: 1;
+  }
+  #carbonads .carbon-img img {
+	display: block;
+  }
+  #carbonads .carbon-text {
+	font-size: 13px;
+	padding: 10px;
+	margin-bottom: 16px;
+	line-height: 1.5;
+	text-align: left;
+  }
+  #carbonads .carbon-poweredby {
+	display: block;
+	padding: 6px 8px;
+	background: #f1f1f2;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	font-weight: 600;
+	font-size: 8px;
+	line-height: 1;
+	border-top-left-radius: 3px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+  }

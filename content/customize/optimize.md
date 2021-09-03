@@ -1,7 +1,8 @@
 ---
 layout: home
 title: Optimize
-description: Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.
+description: Optimize for production by using Purge CSS inside the Tailwind configuration file
 group: customize
 toc: true
 ---
+

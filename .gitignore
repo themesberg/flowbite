@@ -2,4 +2,4 @@ node_modules/
 dist/
 build/
 _gh_pages/
-static/img/.DS_Store
+static/images/.DS_Store

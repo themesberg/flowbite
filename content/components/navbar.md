@@ -97,7 +97,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
           <div>
             <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <span class="sr-only">Open user menu</span>
-              <img class="h-8 w-8 rounded-full" src="/img/people/profile-picture-3.jpg" alt="user photo">
+              <img class="h-8 w-8 rounded-full" src="/images/people/profile-picture-3.jpg" alt="user photo">
             </button>
           </div>
           <!-- Dropdown -->
@@ -228,7 +228,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
             <div>
               <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:ring-4 focus:ring-gray-300" id="user-menu-button-2" aria-expanded="false" aria-haspopup="true">
                 <span class="sr-only">Open user menu</span>
-                <img class="h-8 w-8 rounded-full" src="/img/people/profile-picture-3.jpg" alt="user photo">
+                <img class="h-8 w-8 rounded-full" src="/images/people/profile-picture-3.jpg" alt="user photo">
               </button>
             </div>
             <!-- Dropdown -->
@@ -271,7 +271,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     <div class="pt-4 bg-dark-900">
       <div class="flex items-center px-4">
         <div class="flex-shrink-0">
-          <img class="h-10 w-10 rounded-full" src="/img/people/profile-picture-3.jpg" alt="user photo">
+          <img class="h-10 w-10 rounded-full" src="/images/people/profile-picture-3.jpg" alt="user photo">
         </div>
         <div class="ml-3">
           <div class="text-base font-medium text-gray-900">Bonnie Green</div>

@@ -8,6 +8,8 @@ toc: true
 
 FlowBite is an open-source project and you there are multiple ways that you can include it into your project.
 
+We recommend setting up your project using the [build tools]({{< ref "getting-started/build-tools" >}}) guide to be able to build for production.
+
 ## Include via CDN
 
 The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.

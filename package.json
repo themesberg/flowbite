@@ -14,7 +14,7 @@
     "start": "run-p start:*",
     "start:hugo": "hugo server -D",
     "start:webpack": "webpack --mode=development --watch",
-    "build": "run-s build:webpack build:hugo",
+    "build": "NODE_ENV=production && run-s build:webpack build:hugo",
     "build:hugo": "hugo",
     "build:webpack": "webpack --mode=production",
     "build:styles": "npx tailwindcss -i ./src/style.css -o ./dist/css/flowbite.css"

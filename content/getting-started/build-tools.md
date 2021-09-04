@@ -8,7 +8,7 @@ toc: true
 
 FlowBite is a collection of UI elements based on Tailwind CSS and uses a custom configuration file to extend the default utilities. This means that developing with FlowBite is almost the same as working with Tailwind CSS.
 
-## Getting started
+## Installation
 
 Follow these steps to configure, develop and build with FlowBite and Tailwind CSS:
 
@@ -44,7 +44,7 @@ And then add the following code inside the `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
-    purge: ['./build/**/*.{js,jsx,ts,tsx}'],
+    purge: ['**/*.html'],
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {},
@@ -206,5 +206,13 @@ npx tailwindcss -o flowbite.css
 ```
 
 11. Include the newly created `flowbite.css` file into your HTML template and start developing with FlowBite and Tailwind CSS.
+
+## Building for production
+
+If you want to build for production use the following command and remove any unused CSS:
+
+```bash
+NODE_ENV=production npx tailwindcss -o flowbite.css
+```
 
 Congratulations! You can now get started using the [components included in this UI library]({{< ref "getting-started/quickstart" >}}).

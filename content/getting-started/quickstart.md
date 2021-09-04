@@ -14,7 +14,7 @@ We recommend setting up your project using the [build tools]({{< ref "getting-st
 
 The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.
 
-Require the following stylesheet stylesheet inside the `head` tag:
+Require the following stylesheet inside the `head` tag:
 
 ```html
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />

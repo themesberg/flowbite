@@ -43,6 +43,8 @@ One of the disadvantages of Tailwind CSS compared to other frameworks is that it
 
 **This is where FlowBite comes into play**: it's basically Tailwind CSS, but you get all of the components that you would normally get with a classic CSS framework like Bootstrap or Bulma.
 
+descriptive image here
+
 There are at least 15 types of components including buttons, alerts, breadcrumbs, pagination, and navbars. FlowBite also includes some custom JavaScript that enables interactive components, such as dropdowns, modals, tooltips, and many more.
 
 ## How to get started?

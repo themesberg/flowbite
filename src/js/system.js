@@ -1,6 +1,20 @@
 // css for docs
 import '../docs.css';
 
+document.addEventListener("DOMContentLoaded", function() {
+
+    // toggle navbar menu mobile
+    document.getElementById("toggleNavbar").addEventListener("click", function () {
+        const menu = document.getElementById("menu");
+        if (menu.classList.contains("collapsed")) {
+            menu.classList.remove("collapsed");
+        } else {
+            menu.classList.add("collapsed");
+        }
+    });
+    
+});
+
 // document.addEventListener("DOMContentLoaded", function () {
 
 //   // On page load or when changing themes, best to add inline in `head` to avoid FOUC

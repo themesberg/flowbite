@@ -5,14 +5,15 @@
         <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         <span class="self-center text-lg font-semibold whitespace-nowrap">FlowBite Docs</span>
       </a>
-      <button class="lg:hidden"><svg class="w-6 h-6 text-gray-600" fill="currentColor" viewBox="0 0 20 20"
+      <button id="toggleNavbar" class="lg:hidden"><svg class="w-6 h-6 text-gray-600" fill="currentColor" viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg">
           <path fillRule="evenodd"
             d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
             clipRule="evenodd"></path>
-        </svg></button>
+        </svg>
+      </button>
     </div>
-    <ul class="flex flex-col lg:flex-row lg:self-center py-6 lg:py-0 collapse">
+    <ul id="menu" class="flex flex-col lg:flex-row lg:self-center py-6 lg:py-0 collapse collapsed">
       <li class="lg:px-6 mb-3 lg:mb-0">
         <a href="/#tailwind" class="font-medium text-gray-900">Quickstart</a>
       </li>
@@ -29,7 +30,7 @@
         <a href="/license" class="font-medium text-gray-900">Upgrade to pro</a>
       </li>
     </ul>
-    <div class="lg:self-center mb-4 lg:mb-0 collapse">
+    <div class="lg:self-center mb-4 lg:mb-0 hidden xl:block">
       <a href="/#pricing" class="text-white bg-gray-800 hover:bg-gray-900 font-semibold rounded-xl text-base px-6 py-3">Pricing & FAQ</a>
     </div>
   </div>

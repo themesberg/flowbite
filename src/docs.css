@@ -4,6 +4,12 @@
 
 /* custom docs CSS */
 
+@media only screen and (max-width: 1024px) {
+    .collapse.collapsed {
+        display: none;
+    }
+}
+
 #TableOfContents > ul {
     @apply overflow-x-hidden text-gray-500 font-medium;
 }

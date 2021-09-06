@@ -111,14 +111,12 @@ Use the following markup to also add a helper text below your form input item. U
 Use the following Tailwind utility classes and SVG icon to add an icon inside input form elements.
 
 {{< example >}}
-<div>
-  <label for="email-adress-icon" class="text-sm font-medium text-gray-900 block mb-2">Your Email</label>
-  <div class="mt-1 relative">
-    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-      <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-    </div>
-    <input type="text" name="email" id="email-adress-icon" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="name@company.com">
+<label for="email-adress-icon" class="text-sm font-medium text-gray-900 block mb-2">Your Email</label>
+<div class="mt-1 relative">
+  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+    <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
   </div>
+  <input type="text" name="email" id="email-adress-icon" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="name@company.com">
 </div>
 {{< /example >}}
 
@@ -127,14 +125,12 @@ Use the following Tailwind utility classes and SVG icon to add an icon inside in
 Use the following utility classes and SVG icon to add an addon icon inside your input form elements.
 
 {{< example >}}
-<div>
-  <label for="website-admin" class="text-sm font-medium text-gray-900 block mb-2">Username</label>
-  <div class="flex">
-    <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-200 text-gray-900 sm:text-sm">
-      @
-    </span>
-    <input type="text" name="website-admin" id="website-admin" class="rounded-none rounded-r-lg bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full sm:text-sm border-gray-300 p-2.5" placeholder="Bonnie Green">
-  </div>
+<label for="website-admin" class="text-sm font-medium text-gray-900 block mb-2">Username</label>
+<div class="flex">
+  <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-200 text-gray-900 sm:text-sm">
+    @
+  </span>
+  <input type="text" name="website-admin" id="website-admin" class="rounded-none rounded-r-lg bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full sm:text-sm border-gray-300 p-2.5" placeholder="Bonnie Green">
 </div>
 {{< /example >}}
 
@@ -169,15 +165,13 @@ Use the following code to create a textarea form element.
 Use the following select input element to show selectable list of items.
 
 {{< example >}}
-<div>
-  <label for="countries" class="text-sm font-medium text-gray-900 block mb-2">Select your country</label>
-  <select id="countries" name="countries" class="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-    <option>United States</option>
-    <option>Canada</option>
-    <option>France</option>
-    <option>Germany</option>
-  </select>
-</div>
+<label for="countries" class="text-sm font-medium text-gray-900 block mb-2">Select your country</label>
+<select id="countries" name="countries" class="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+  <option>United States</option>
+  <option>Canada</option>
+  <option>France</option>
+  <option>Germany</option>
+</select>
 {{< /example >}}
 
 ## Checkbox

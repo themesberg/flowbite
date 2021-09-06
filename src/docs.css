@@ -107,11 +107,11 @@ pre[class*="language-"] {
 /* without preview */
 .highlight pre[class*="language-"] {
 	overflow: auto;
-	@apply rounded-xl bg-gray-800 p-6 m-0 text-sm mb-8 mt-4;
+	@apply rounded-xl bg-gray-800 p-6 pt-6 m-0 text-sm mb-8 mt-4;
 }
 
 /* when after preview */
-.code-preview + .highlight pre[class*="language-"] {
+.code-preview + .code-syntax .highlight pre[class*="language-"] {
 	overflow: auto;
 	@apply rounded-t-none mt-0;
 }

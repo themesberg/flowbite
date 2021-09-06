@@ -10,7 +10,7 @@ FlowBite includes custom styles using Tailwind CSS and Tippy JS to enable toolti
 
 ## Using tooltips
 
-Although FlowBite already includes the necessary libraries to use tooltips, make sure that you have **Tippy JS** included in your project. Learn how to do that by reading the official guide on [Tippy JS](https://atomiks.github.io/tippyjs/v6/getting-started/). 
+If you want to use tooltips, make sure that you have **Tippy JS** included in your project. Learn how to do that by reading the official guide on <a href="https://atomiks.github.io/tippyjs/v6/getting-started/" target="_blank">Tippy JS</a>. 
 
 Apply the `data-tippy-content` data attribute to any element and the content inside will be applied as the tooltip text.
 
@@ -56,4 +56,4 @@ You can also use tooltips without the arrow styling by using the `data-tippy-arr
 
 ## Additional options
 
-Learn more about what options you can apply using Tailwind CSS and the tooltip plugin on [Tippy.js](https://atomiks.github.io/tippyjs/v6/all-props/).
+Learn more about what options you can apply using Tailwind CSS and the tooltip plugin on <a href="https://atomiks.github.io/tippyjs/v6/all-props/" target="_blank">Tippy.js</a>.

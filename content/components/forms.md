@@ -268,114 +268,35 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </fieldset>
 {{< /example >}}
 
-## Toggle
+## Toggle (switches)
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following toggle (switches) element to ask for a yes or no type of input from your users without the use of JavaScript.
 
-{{< preview >}}
-<div class="flex items-center mb-4">
-  <!-- Toggle -->
-  <div class="bg-gray-200 border-2 border-gray-200 focus:ring-4 focus:ring-blue-300 inline-flex h-6 w-11 rounded-full cursor-pointer" role="switch" aria-checked="false" aria-labelledby="hide-window-label">
-    <span aria-hidden="true" class="bg-white border border-gray-300 h-5 w-5 rounded-full ring-0"></span>
-  </div>
-  <!-- Toggle description -->
-  <span class="ml-3" id="hide-window-label">
-    <span class="text-gray-900 text-sm font-medium">Hide window at start up </span>
-  </span>
-</div>
+{{< example >}}
+<label for="toggle-example" class="flex items-center cursor-pointer relative mb-4">
+  <input type="checkbox" id="toggle-example" class="sr-only">
+  <div class="toggle-bg bg-gray-200 border-2 border-gray-200 focus:ring-4 focus:ring-blue-300 inline-flex h-6 w-11 rounded-full cursor-pointer"></div>
+  <div class="toggle-dot absolute left-0.5 top-0.5 bg-white border border-gray-300 h-5 w-5 rounded-full ring-0 transition"></div>
+  <span class="ml-3 text-gray-900 text-sm font-medium">Toggle me</span>
+</label>
 
-<div class="flex items-center">
-  <!-- Toggle -->
-  <div class="bg-blue-600 border-2 border-blue-600 focus:ring-4 focus:ring-blue-300 inline-flex h-6 w-11 rounded-full cursor-pointer" role="switch" aria-checked="false" aria-labelledby="hide-window-label-preview">
-    <span aria-hidden="true" class="bg-white border border-white h-5 w-5 rounded-full ring-0 transform translate-x-5"></span>
-  </div>
-  <!-- Toggle description -->
-  <span class="ml-3" id="hide-window-label-preview">
-    <span class="text-gray-900 text-sm font-medium">Hide window at start up </span>
-  </span>
-</div>
-{{< /preview >}}
+<label for="toggle-example-checked" class="flex items-center cursor-pointer relative">
+  <input type="checkbox" id="toggle-example-checked" class="sr-only" checked>
+  <div class="toggle-bg bg-gray-200 border-2 border-gray-200 focus:ring-4 focus:ring-blue-300 inline-flex h-6 w-11 rounded-full cursor-pointer"></div>
+  <div class="toggle-dot absolute left-0.5 top-0.5 bg-white border border-gray-300 h-5 w-5 rounded-full ring-0 transition"></div>
+  <span class="ml-3 text-gray-900 text-sm font-medium">Toggle me (checked)</span>
+</label>
+{{< /example >}}
 
-```html
-<div class="flex items-center">
-  <!-- Toggle -->
-  <div class="bg-gray-200 border-2 border-gray-200 focus:ring-4 focus:ring-blue-300 inline-flex h-6 w-11 rounded-full cursor-pointer" role="switch" aria-checked="false" aria-labelledby="hide-window-label">
-    <span aria-hidden="true" class="bg-white border border-gray-300 h-5 w-5 rounded-full ring-0"></span>
-  </div>
-  <!-- Toggle description -->
-  <span class="ml-3" id="hide-window-label">
-    <span class="text-gray-900 text-sm font-medium">Hide window at start up </span>
-  </span>
-</div>
+If you aren't using FlowBite's `style.css` file make sure that you include the following styles in your CSS for the toggle active styles:
 
-<div class="flex items-center">
-  <!-- Toggle -->
-  <div class="bg-blue-600 border-2 border-blue-600 focus:ring-4 focus:ring-blue-300 inline-flex h-6 w-11 rounded-full cursor-pointer" role="switch" aria-checked="false" aria-labelledby="hide-window-label-active">
-    <span aria-hidden="true" class="bg-white border border-white h-5 w-5 rounded-full ring-0 transform translate-x-5"></span>
-  </div>
-  <!-- Toggle description -->
-  <span class="ml-3" id="hide-window-label-active">
-    <span class="text-gray-900 text-sm font-medium">Hide window at start up </span>
-  </span>
-</div>
-```
+```css
+input:checked ~ .toggle-dot {
+	transform: translateX(100%);
+	@apply border-white;
+}
 
-## Toggle with icons
-
-Group a series of buttons together on a single line or stack them in a vertical column.
-
-{{< preview >}}
-<div class="flex items-center mb-4">
-  <span class="text-yellow-600">
-      <svg class="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-  </span>
-  <!-- Toggle -->
-  <div class="bg-gray-200 border-2 border-gray-200 focus:ring-4 focus:ring-blue-300 inline-flex h-6 w-11 rounded-full cursor-pointer mx-2" role="switch" aria-checked="false" aria-labelledby="hide-window-label">
-    <span aria-hidden="true" class="bg-white border border-gray-300 h-5 w-5 rounded-full ring-0"></span>
-  </div>
-  <span class="text-blue-600">
-    <svg class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-  </span>
-</div>
-
-<div class="flex items-center">
-  <span class="text-yellow-600">
-      <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-  </span>
-  <!-- Toggle -->
-  <div class="bg-blue-600 border-2 border-blue-600 focus:ring-4 focus:ring-blue-300 inline-flex h-6 w-11 rounded-full cursor-pointer mx-2" role="switch" aria-checked="false" aria-labelledby="hide-window-label">
-    <span aria-hidden="true" class="bg-white border border-white h-5 w-5 rounded-full ring-0 transform translate-x-5"></span>
-  </div>
-  <span class="text-teal-400">
-    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-  </span>
-</div>
-{{< /preview >}}
-
-```html
-<div class="flex items-center">
-  <span class="text-yellow-600">
-      <svg class="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-  </span>
-  <!-- Toggle -->
-  <div class="bg-gray-200 border-2 border-gray-200 focus:ring-4 focus:ring-blue-300 inline-flex h-6 w-11 rounded-full cursor-pointer mx-2" role="switch" aria-checked="false" aria-labelledby="hide-window-label">
-    <span aria-hidden="true" class="bg-white border border-gray-300 h-5 w-5 rounded-full ring-0"></span>
-  </div>
-  <span class="text-blue-600">
-    <svg class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-  </span>
-</div>
-
-<div class="flex items-center">
-  <span class="text-yellow-600">
-      <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-  </span>
-  <!-- Toggle -->
-  <div class="bg-blue-600 border-2 border-blue-600 focus:ring-4 focus:ring-blue-300 inline-flex h-6 w-11 rounded-full cursor-pointer mx-2" role="switch" aria-checked="false" aria-labelledby="hide-window-label">
-    <span aria-hidden="true" class="bg-white border border-white h-5 w-5 rounded-full ring-0 transform translate-x-5"></span>
-  </div>
-  <span class="text-teal-400">
-    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-  </span>
-</div>
+input:checked + .toggle-bg {
+	@apply bg-blue-600 border-blue-600;
+}
 ```

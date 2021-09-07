@@ -39,6 +39,5 @@ If you want to show a dropdown menu when click on an element, make sure that you
         <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem">Sign out</a>
       </li>
     </ul>
-    </div>
 </div>
 {{< /example >}}

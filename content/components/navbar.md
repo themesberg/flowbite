@@ -14,18 +14,8 @@ Group a series of buttons together on a single line or stack them in a vertical 
 <nav class="bg-white border-b border-gray-200">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <!-- Open mobile menu icon -->
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-          <!-- Close mobile menu icon -->
-          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </button>
-      </div>
       <!-- Logo -->
-      <div class="flex-1 flex items-center justify-center sm:justify-start">
+      <div class="flex-2 flex items-center sm:justify-start">
         <a href="#">
           <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
@@ -39,6 +29,16 @@ Group a series of buttons together on a single line or stack them in a vertical 
             <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
           </div>
         </div>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
       </div>
     </div>
   </div>
@@ -59,21 +59,11 @@ Group a series of buttons together on a single line or stack them in a vertical 
 Group a series of buttons together on a single line or stack them in a vertical column.
 
 {{< example >}}
-<nav class="bg-white border-b border-gray-200 mb-60">
+<nav class="bg-white border-b border-gray-200">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <!-- Open mobile menu icon -->
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-          <!-- Close mobile menu icon -->
-          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </button>
-      </div>
       <!-- Logo -->
-      <div class="flex-1 flex items-center justify-center sm:justify-start">
+      <div class="flex items-center sm:justify-start">
         <a href="#">
           <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
@@ -86,35 +76,53 @@ Group a series of buttons together on a single line or stack them in a vertical 
           </div>
         </div>
       </div>
-      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+      <div class="absolute inset-y-0 space-x-4 right-0 flex items-center sm:static sm:inset-auto sm:ml-6">
         <button class="text-gray-500 hover:text-gray-900">
           <span class="sr-only">View notifications</span>
           <!-- Bell icon -->
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path></svg>
         </button>
         <!-- Profile dropdown -->
-        <div class="ml-3 relative">
-          <div>
-            <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-              <span class="sr-only">Open user menu</span>
-              <img class="h-8 w-8 rounded-full" src="/images/people/profile-picture-3.jpg" alt="user photo">
-            </button>
-          </div>
-          <!-- Dropdown -->
-          <div class="bg-white origin-top-right absolute right-0 mt-6 w-48 rounded-lg shadow divide-y divide-gray-200 py-1" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-            <div class="pb-1">
-              <a href="#" class="block font-medium text-gray-900 text-sm px-4 py-2" role="menuitem">
+        <div class="relative">
+          <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" aria-haspopup="true" type="button" onclick="toggleDropdown(event, 'dropdown')">
+            <span class="sr-only">Open user menu</span>
+            <img class="h-8 w-8 rounded-full" src="/images/people/profile-picture-3.jpg" alt="user photo">
+          </button>
+          <!-- Dropdown menu -->
+          <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown">
+            <div class="px-4 py-3" role="none">
+              <p class="text-sm" role="none">
                 Bonnie Green
-                <span class="font-normal">name@company.com</span>
-              </a>
-              <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block px-4 py-2" role="menuitem">Earnings</a>
-              <a href="#" class="text-sm text-gray-500 hover:bg-gray-50 block text-gray-500 px-4 py-2" role="menuitem">Downloads</a>
-              <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem">Settings</a>
+              </p>
+              <p class="text-sm font-medium text-gray-900 truncate" role="none">
+                name@company.com
+              </p>
             </div>
-            <div class="pt-1">
-              <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem">Sign out</a>
-            </div>
+            <ul class="py-1" role="none">
+              <li>
+                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem">Dashboard</a>
+              </li>
+              <li>
+                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem">Settings</a>
+              </li>
+              <li>
+                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem">Earnings</a>
+              </li>
+              <li>
+                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem">Sign out</a>
+              </li>
+            </ul>
           </div>
+        </div>
+        <div class="inset-y-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!-- Open mobile menu icon -->
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            <!-- Close mobile menu icon -->
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -139,18 +147,16 @@ Group a series of buttons together on a single line or stack them in a vertical 
 <nav class="bg-white border-b border-gray-200">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="flex justify-between h-16">
-      <div class="flex px-2 lg:px-0">
-        <div class="flex-shrink-0 flex items-center">
-          <a href="#">
-            <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
-          </a>
-        </div>
-        <div class="hidden lg:ml-6 lg:flex lg:space-x-8 items-center">
-          <!-- Links -->
-          <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Dashboard</a>
-          <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Services</a>
-          <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
-        </div>
+      <div class="flex-shrink-0 flex items-center">
+        <a href="#">
+          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+      </div>
+      <div class="hidden lg:ml-6 lg:flex lg:space-x-8 items-center">
+        <!-- Links -->
+        <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Dashboard</a>
+        <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Services</a>
+        <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
       </div>
       <!-- Search input -->
       <div class="flex-1 flex items-center justify-center lg:ml-6 lg:justify-end">
@@ -166,9 +172,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
           </div>
         </div>
       </div>
-      <div class="flex items-center lg:hidden">
+      <div class="flex items-center ml-2 lg:hidden">
         <!-- Mobile menu button -->
-        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+        <button type="button" class="inline-flex items-center justify-center rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <!-- Open mobile menu icon -->
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -195,11 +201,11 @@ Group a series of buttons together on a single line or stack them in a vertical 
 Group a series of buttons together on a single line or stack them in a vertical column.
 
 {{< example >}}
-<nav class="bg-white border-b border-gray-200 mb-60">
+<nav class="bg-white border-b border-gray-200">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
       <!-- Logo -->
-      <div class="flex flex-1 items-center justify-center sm:justify-start">
+      <div class="flex items-center justify-start">
         <a href="#">
           <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
@@ -226,31 +232,41 @@ Group a series of buttons together on a single line or stack them in a vertical 
           <!-- Profile dropdown -->
           <div class="ml-3">
             <div>
-              <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:ring-4 focus:ring-gray-300" id="user-menu-button-2" aria-expanded="false" aria-haspopup="true">
+              <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:ring-4 focus:ring-gray-300" id="user-menu-button-2" aria-expanded="false" aria-haspopup="true" type="button" onclick="toggleDropdown(event, 'dropdown')">
                 <span class="sr-only">Open user menu</span>
                 <img class="h-8 w-8 rounded-full" src="/images/people/profile-picture-3.jpg" alt="user photo">
               </button>
             </div>
             <!-- Dropdown -->
-            <div class="bg-white origin-top-right absolute right-0 mt-6 w-48 rounded-lg shadow divide-y divide-gray-200 py-1" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button-2" tabindex="-1">
-              <div class="pb-1">
-                <a href="#" class="block font-medium text-gray-900 text-sm px-4 py-2" role="menuitem">
+            <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown">
+              <div class="px-4 py-3" role="none">
+                <p class="text-sm" role="none">
                   Bonnie Green
-                  <span class="font-normal">name@company.com</span>
-                </a>
-                <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block px-4 py-2" role="menuitem">Earnings</a>
-                <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem">Downloads</a>
-                <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem">Settings</a>
+                </p>
+                <p class="text-sm font-medium text-gray-900 truncate" role="none">
+                  name@company.com
+                </p>
               </div>
-              <div class="pt-1">
-                <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 block text-gray-500 px-4 py-2" role="menuitem">Sign out</a>
-              </div>
+              <ul class="py-1" role="none">
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem">Dashboard</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem">Settings</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem">Earnings</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem">Sign out</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="flex items-center md:hidden">
           <!-- Mobile menu button -->
-          <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+          <button type="button" class="inline-flex items-center justify-center rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <!-- Open mobile menu icon -->
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -262,13 +278,11 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
   <!-- Mobile menu -->
-  <div class="lg:hidden" id="mobile-menu-4">
-    <div class="pt-2 pb-3">
-      <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">About</a>
-      <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Services</a>
-      <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Contact</a>
-    </div>
-    <div class="pt-4 bg-dark-900">
+  <div class="md:hidden" id="mobile-menu-4">
+    <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">About</a>
+    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Services</a>
+    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Contact</a>
+    <div class="py-6 bg-dark-900">
       <div class="flex items-center px-4">
         <div class="flex-shrink-0">
           <img class="h-10 w-10 rounded-full" src="/images/people/profile-picture-3.jpg" alt="user photo">
@@ -287,7 +301,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
         <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 py-2">Earnings</a>
         <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 py-2">Downloads</a>
         <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 py-2">Settings</a>
-        <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 py-2">Sign out</a>
+        <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 pt-2">Sign out</a>
       </div>
     </div>
   </div>
@@ -302,18 +316,8 @@ Group a series of buttons together on a single line or stack them in a vertical 
 <nav class="bg-white border-b border-gray-200 rounded mb-4">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <!-- Open mobile menu icon -->
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-          <!-- Close mobile menu icon -->
-          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </button>
-      </div>
       <!-- Logo -->
-      <div class="flex-1 flex items-center justify-center sm:justify-start">
+      <div class="flex items-center justify-center sm:justify-start">
         <a href="#">
           <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
@@ -327,6 +331,16 @@ Group a series of buttons together on a single line or stack them in a vertical 
             <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
           </div>
         </div>
+      </div>
+      <div class="inset-y-0 right-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
       </div>
     </div>
   </div>
@@ -343,18 +357,8 @@ Group a series of buttons together on a single line or stack them in a vertical 
 <nav class="bg-gray-800 border-b border-gray-600 rounded mb-4">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <!-- Open mobile menu icon -->
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-          <!-- Close mobile menu icon -->
-          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </button>
-      </div>
       <!-- Logo -->
-      <div class="flex-1 flex items-center justify-center sm:justify-start">
+      <div class="flex items-center justify-center sm:justify-start">
         <a href="#">
           <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
@@ -368,6 +372,16 @@ Group a series of buttons together on a single line or stack them in a vertical 
             <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
           </div>
         </div>
+      </div>
+      <div class="inset-y-0 right-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
       </div>
     </div>
   </div>
@@ -384,18 +398,8 @@ Group a series of buttons together on a single line or stack them in a vertical 
 <nav class="bg-blue-700 border-b border-blue-600 rounded mb-4">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="text-blue-300 hover:text-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <!-- Open mobile menu icon -->
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-          <!-- Close mobile menu icon -->
-          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </button>
-      </div>
       <!-- Logo -->
-      <div class="flex-1 flex items-center justify-center sm:justify-start">
+      <div class="flex items-center justify-center sm:justify-start">
         <a href="#">
           <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
@@ -409,6 +413,16 @@ Group a series of buttons together on a single line or stack them in a vertical 
             <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
           </div>
         </div>
+      </div>
+      <div class="inset-y-0 right-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
       </div>
     </div>
   </div>
@@ -427,21 +441,11 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 ```html
 <!-- Light navbar -->
-<nav class="bg-white border-b border-gray-200 rounded mb-4">
+<nav class="bg-white border-b border-gray-200 rounded">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <!-- Open mobile menu icon -->
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-          <!-- Close mobile menu icon -->
-          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </button>
-      </div>
       <!-- Logo -->
-      <div class="flex-1 flex items-center justify-center sm:justify-start">
+      <div class="flex items-center justify-center sm:justify-start">
         <a href="#">
           <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
@@ -456,6 +460,16 @@ Group a series of buttons together on a single line or stack them in a vertical 
           </div>
         </div>
       </div>
+      <div class="inset-y-0 right-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
     </div>
   </div>
   <!-- Mobile menu -->
@@ -467,65 +481,12 @@ Group a series of buttons together on a single line or stack them in a vertical 
     <a href="#" class="text-gray-600 hover:bg-gray-50 text-base font-normal hover:text-gray-900 block px-3 py-2">Contact</a>
   </div>
 </nav>
-
 <!-- Dark navbar -->
-<nav class="bg-gray-800 border-b border-gray-600 rounded mb-4">
+<nav class="bg-gray-800 border-b border-gray-600 rounded">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <!-- Open mobile menu icon -->
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-          <!-- Close mobile menu icon -->
-          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </button>
-      </div>
       <!-- Logo -->
-      <div class="flex-1 flex items-center justify-center sm:justify-start">
-        <a href="#">
-          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
-        </a>
-        <div class="hidden sm:block sm:ml-6">
-          <div class="flex space-x-8">
-            <!-- Links -->
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About us</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Mobile menu -->
-  <div class="sm:hidden pt-2">
-      <a href="#" class="bg-gray-700 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">About Us</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">Features</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 text-base font-normal hover:white block px-3 py-2">Contact</a>
-  </div>
-</nav>
-
-<!-- Blue Navbar -->
-<nav class="bg-blue-700 border-b border-blue-600 rounded mb-4">
-  <div class="px-2 sm:px-4 lg:px-5">
-    <div class="relative flex items-center justify-between h-16">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="text-blue-400 hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center p-2 " aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <!-- Open mobile menu icon -->
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-          <!-- Close mobile menu icon -->
-          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </button>
-      </div>
-      <!-- Logo -->
-      <div class="flex-1 flex items-center justify-center sm:justify-start">
+      <div class="flex items-center justify-center sm:justify-start">
         <a href="#">
           <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
@@ -540,13 +501,64 @@ Group a series of buttons together on a single line or stack them in a vertical 
           </div>
         </div>
       </div>
+      <div class="inset-y-0 right-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden pt-2">
+      <a href="#" class="bg-gray-700 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">About</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 text-base font-normal hover:white block px-3 py-2">Contact</a>
+  </div>
+</nav>
+<!-- Blue navbar -->
+<nav class="bg-blue-700 border-b border-blue-600 rounded">
+  <div class="px-2 sm:px-4 lg:px-5">
+    <div class="relative flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex items-center justify-center sm:justify-start">
+        <a href="#">
+          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-8">
+            <!-- Links -->
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
+            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="inset-y-0 right-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Open mobile menu icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <!-- Close mobile menu icon -->
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
     </div>
   </div>
   <!-- Mobile menu -->
   <div class="sm:hidden">
     <div class="pt-2">
       <a href="#" class="bg-blue-600 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
-      <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">About</a>
+      <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">About Us</a>
       <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">Features</a>
       <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
       <a href="#" class="text-gray-300 hover:bg-blue-600 text-base font-normal hover:text-white block px-3 py-2">Contact</a>

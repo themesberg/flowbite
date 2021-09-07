@@ -25,6 +25,7 @@ function toggleDropdown(event, dropdownID) {
 window.toggleDropdown = toggleDropdown;
 
 function toggleModal(modalID) {
+    const modalId = modalID;
     document.getElementById(modalID).classList.toggle("hidden");
     document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
     document.getElementById(modalID).classList.toggle("flex");
@@ -32,6 +33,10 @@ function toggleModal(modalID) {
 }
 
 window.toggleModal = toggleModal;
+
+document.addEventListener("click", (evt) => {
+
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     tippy('[data-tippy-content]');

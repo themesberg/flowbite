@@ -16,7 +16,7 @@ If you want to show a dropdown menu when click on an element, make sure that you
 <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button" onclick="toggleDropdown(event, 'dropdown')">Dropdown button</button>
 
 <!-- Dropdown menu -->
-<div class="hidden bg-white text-base z-50 float-left list-none divide-y divide-gray-100 rounded shadow my-4" style="min-width:12rem" id="dropdown">
+<div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown">
     <div class="px-4 py-3" role="none">
       <p class="text-sm" role="none">
         Bonnie Green
@@ -25,14 +25,20 @@ If you want to show a dropdown menu when click on an element, make sure that you
         name@company.com
       </p>
     </div>
-    <div class="py-1" role="none">
-      <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-      <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem" id="menu-item-0">Dashboard</a>
-      <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem" id="menu-item-1">Settings</a>
-      <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem" id="menu-item-2">Earnings</a>
-    </div>
-    <div class="py-1" role="none">
-        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem" id="menu-item-3">Sign out</a>
+    <ul class="py-1" role="none">
+      <li>
+        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem">Dashboard</a>
+      </li>
+      <li>
+        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem">Settings</a>
+      </li>
+      <li>
+        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem">Earnings</a>
+      </li>
+      <li>
+        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem">Sign out</a>
+      </li>
+    </ul>
     </div>
 </div>
 {{< /example >}}

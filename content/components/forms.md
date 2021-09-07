@@ -261,6 +261,21 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </fieldset>
 {{< /example >}}
 
+## File upload
+
+{{< example >}}
+<div class="flex items-center justify-center w-full">
+    <label class="flex flex-col border-2 border-dashed border-gray-300 rounded w-full h-32 hover:bg-gray-50 cursor-pointer">
+      <div class="flex flex-col items-center justify-center pt-5 pb-6">
+        <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+        <p class="text-sm text-gray-600 py-1">Upload a file or drag and drop</p>
+        <p class="text-gray-500 text-xs">PNG, JPG, GIF up to 10MB</p>
+      </div>
+      <input type="file" class="hidden" />
+    </label>
+</div>
+{{< /example >}}
+
 ## Toggle (switches)
 
 **Important:** this element requires <a href="https://tailwindcss.com/docs/just-in-time-mode" target="_blank">JIT mode</a> because of the pseudo-elements.

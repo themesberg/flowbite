@@ -16,19 +16,23 @@ If you want to show a dropdown menu when click on an element, make sure that you
 <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button" onclick="toggleDropdown(event, 'dropdown')">Dropdown button</button>
 
 <!-- Dropdown menu -->
-<div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1" style="min-width:12rem" id="dropdown">
-    <a href="#" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-        Action
-    </a>
-    <a href="#" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-        Another action
-    </a>
-    <a href="#" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-        Something else here
-    </a>
-    <div class="h-0 my-2 border border-solid border-t-0 border-blueGray-800 opacity-25"></div>
-    <a href="#" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-        Seprated link
-    </a>
+<div class="hidden bg-white text-base z-50 float-left list-none divide-y divide-gray-100 rounded shadow" style="min-width:12rem" id="dropdown">
+    <div class="px-4 py-3" role="none">
+      <p class="text-sm" role="none">
+        Bonnie Green
+      </p>
+      <p class="text-sm font-medium text-gray-900 truncate" role="none">
+        name@company.com
+      </p>
+    </div>
+    <div class="py-1" role="none">
+      <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+      <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem" id="menu-item-0">Dashboard</a>
+      <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem" id="menu-item-1">Settings</a>
+      <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem" id="menu-item-2">Earnings</a>
+    </div>
+    <div class="py-1" role="none">
+        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2" role="menuitem" id="menu-item-3">Sign out</a>
+    </div>
 </div>
 {{< /example >}}

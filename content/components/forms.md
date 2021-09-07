@@ -180,32 +180,23 @@ The code below can be used to create a fieldset of checkbox elements inside a fo
 
 {{< example >}}
 <fieldset>
-  <legend class="sr-only">Shipping Details</legend>
-  <div class="flex items-start mb-4">
-    <div class="flex items-center h-5">
+<legend class="sr-only">Checkbox variants</legend>
+
+  <div class="flex items-center items-start mb-4">
       <input id="checkbox-1" aria-describedby="checkbox-1" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" checked>
-    </div>
-    <div class="text-sm ml-3">
-      <label for="checkbox-1" class="font-medium text-gray-900">I agree to the <a href="#" class="text-blue-600 hover:underline">terms and conditions</a></label>
-    </div>
+      <label for="checkbox-1" class="text-sm ml-3 font-medium text-gray-900">I agree to the <a href="#" class="text-blue-600 hover:underline">terms and conditions</a></label>
   </div>
-  <div class="flex items-start mb-4">
-    <div class="flex items-center h-5">
+
+  <div class="flex items-start items-center mb-4">
       <input id="checkbox-2" aria-describedby="checkbox-2" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded">
-    </div>
-    <div class="text-sm ml-3">
-      <label for="checkbox-2" class="font-medium text-gray-900">I want to get promotional offers</label>
-    </div>
+      <label for="checkbox-2" class="text-sm ml-3 font-medium text-gray-900">I want to get promotional offers</label>
   </div>
-  <div class="flex items-start mb-4">
-    <div class="flex items-center h-5">
+
+  <div class="flex items-start items-center mb-4">
       <input id="checkbox-3" aria-describedby="checkbox-3" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded">
-    </div>
-    <div class="text-sm ml-3">
-      <label for="checkbox-3" class="font-medium text-gray-900">I am 18 years or older</label>
-    </div>
+      <label for="checkbox-3" class="text-sm ml-3 font-medium text-gray-900">I am 18 years or older</label>
   </div>
-  <legend class="sr-only">Shipping Details</legend>
+  
   <div class="flex items-start mb-4">
     <div class="flex items-center h-5">
       <input id="shipping-2" aria-describedby="shipping-2" name="shipping-2" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded">
@@ -215,13 +206,10 @@ The code below can be used to create a fieldset of checkbox elements inside a fo
       <div class="text-gray-500"><span class="font-normal text-xs">For orders shipped from Flowbite from <span class="font-medium">€ 25</span> in books or <span>€ 29</span> on other categories</span></div>
     </div>
   </div>
-  <div class="flex items-start">
-    <div class="flex items-center h-5">
+
+  <div class="flex items-start items-center">
       <input id="international-shipping-disabled" aria-describedby="international-shipping-disabled" name="international-shipping" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" disabled>
-    </div>
-    <div class="text-sm ml-3">
-      <label for="international-shipping-disabled" class="font-medium text-gray-400">Eligible for international shipping (disabled)</label>
-    </div>
+      <label for="international-shipping-disabled" class="text-sm ml-3 font-medium text-gray-400">Eligible for international shipping (disabled)</label>
   </div>
 </fieldset>
 {{< /example >}}
@@ -235,30 +223,35 @@ Group a series of buttons together on a single line or stack them in a vertical 
   <legend class="sr-only">
     Countries
   </legend>
+
   <div class="flex items-center mb-4">
     <input id="country-option-1" type="radio" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="country-option-1" aria-describedby="country-option-1" checked>
     <label for="country-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
       United States
     </label>
   </div>
+
   <div class="flex items-center mb-4">
     <input id="country-option-2" type="radio" name="countries" value="Germany" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="country-option-2" aria-describedby="country-option-2">
     <label for="country-option-2" class="text-sm font-medium text-gray-900 ml-2 block">
       Germany
     </label>
   </div>
+
   <div class="flex items-center mb-4">
     <input id="country-option-3" type="radio" name="countries" value="Spain" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="country-option-3" aria-describedby="country-option-3">
     <label for="country-option-3" class="text-sm font-medium text-gray-900 ml-2 block">
       Spain
     </label>
   </div>
+
   <div class="flex items-center mb-4">
     <input id="country-option-4" type="radio" name="countries" value="United Kingdom" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="country-option-4" aria-describedby="country-option-4">
     <label for="country-option-4" class="text-sm font-medium text-gray-900 ml-2 block">
       United Kingdom
     </label>
   </div>
+  
   <div class="flex items-center">
     <input id="option-disabled" type="radio" name="countries" value="China" class="h-4 w-4 border-gray-200 focus:ring-2 focus:ring-blue-300" aria-labelledby="option-disabled" aria-describedby="option-disabled" disabled>
     <label for="option-disabled" class="text-sm font-medium text-gray-400 ml-2 block">

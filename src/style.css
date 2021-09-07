@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-input:checked ~ .toggle-dot {
+input:checked + .toggle-bg:after {
 	transform: translateX(100%);
 	@apply border-white;
 }

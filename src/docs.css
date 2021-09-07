@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* custom docs CSS */
-input:checked ~ .toggle-dot {
+/* copy paste from styles.css custom CSS */
+input:checked + .toggle-bg:after {
 	transform: translateX(100%);
 	@apply border-white;
 }
@@ -12,6 +12,7 @@ input:checked + .toggle-bg {
 	@apply bg-blue-600 border-blue-600;
 }
 
+/* custom docs CSS */
 @media only screen and (max-width: 1024px) {
     .collapse.collapsed {
         display: none;

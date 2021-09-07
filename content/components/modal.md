@@ -46,14 +46,13 @@ Use the following examples of alert components to show messages as feedback to y
 </div>
 <!-- modal backdrop -->
 <div class="bg-gray-900 opacity-50 hidden fixed inset-0 z-40" id="default-modal-backdrop"></div>
-<!-- javascript -->
-<script type="text/javascript">
-  function toggleModal(modalID){
+{{< /example >}}
+
+```javascript
+function toggleModal(modalID){
     document.getElementById(modalID).classList.toggle("hidden");
     document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
     document.getElementById(modalID).classList.toggle("flex");
     document.getElementById(modalID + "-backdrop").classList.toggle("flex");
-  }
-</script>
-{{< /example >}}
-
+}
+```

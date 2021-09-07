@@ -16,7 +16,7 @@ If you want to show a dropdown menu when click on an element, make sure that you
 <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button" onclick="toggleDropdown(event, 'dropdown')">Dropdown button</button>
 
 <!-- Dropdown menu -->
-<div class="hidden bg-white text-base z-50 float-left list-none divide-y divide-gray-100 rounded shadow" style="min-width:12rem" id="dropdown">
+<div class="hidden bg-white text-base z-50 float-left list-none divide-y divide-gray-100 rounded shadow my-4" style="min-width:12rem" id="dropdown">
     <div class="px-4 py-3" role="none">
       <p class="text-sm" role="none">
         Bonnie Green

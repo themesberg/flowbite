@@ -4,6 +4,9 @@ title:                  "FlowBite Tailwind CSS"
 baseURL:                "https://flowbite.design/docs"
 enableInlineShortcodes: true
 
+params:
+  social_image_path: /docs/images/og-image.png
+
 markup:
   goldmark:
     renderer:

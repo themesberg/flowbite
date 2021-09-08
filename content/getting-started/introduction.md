@@ -33,9 +33,9 @@ FlowBite is an open-source collection of UI elements based on the utility-first 
 
 One of the disadvantages of Tailwind CSS compared to other frameworks is that it doesn't have a base set of components. This makes it really hard to quickly prototype a user interface. 
 
-**This is where FlowBite comes into play**: it's basically Tailwind CSS, but you get all of the components that you would normally get with a classic CSS framework like Bootstrap or Bulma.
+<img src="/docs/images/og-image.png" alt="FlowBite - Tailwind CSS Components Library" class="mb-6 lg:mb-12">
 
-descriptive image here
+**This is where FlowBite comes into play**: it's basically Tailwind CSS, but you get all of the components that you would normally get with a classic CSS framework like Bootstrap or Bulma.
 
 There are at least 15 types of components including buttons, alerts, breadcrumbs, pagination, and navbars. FlowBite also includes some custom JavaScript that enables interactive components, such as dropdowns, modals, tooltips, and many more.
 

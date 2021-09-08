@@ -34,10 +34,6 @@ function toggleModal(modalID) {
 
 window.toggleModal = toggleModal;
 
-document.addEventListener("click", (evt) => {
-
-});
-
 document.addEventListener("DOMContentLoaded", function () {
     tippy('[data-tippy-content]');
 });

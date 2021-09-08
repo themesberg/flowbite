@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'jit',
   purge: {
-    // enabled: true,
+    enabled: true,
     content: ["./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html"],
   },
   darkMode: false, // or 'media' or 'class'

@@ -1,9 +1,10 @@
 ---
 layout: home
-title: Getting started with FlowBite
+title: FlowBite - Tailwind CSS components library
 description: Get started with an open-source set of UI components and elements built with Tailwind CSS
 group: getting-started
 toc: true
+cleanTitle: true
 ---
 
 ## What is FlowBite?

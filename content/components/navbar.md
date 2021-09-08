@@ -20,14 +20,23 @@ Use this example of a navigation bar built with Tailwind CSS to create a navigat
           <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
-          <div class="flex space-x-8">
-            <!-- Links -->
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Home</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">About Us</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Features</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Pricing</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
-          </div>
+          <ul class="flex space-x-8">
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">About us</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Features</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Pricing</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
@@ -44,13 +53,21 @@ Use this example of a navigation bar built with Tailwind CSS to create a navigat
   </div>
   <!-- Mobile menu -->
   <div class="hidden sm:hidden" id="mobile-menu">
-    <div class="pt-2">
-      <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Dashboard</a>
-      <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Team</a>
-      <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Projects</a>
-      <a href="#" class="text-gray-600 hover:bg-gray-50 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Calendar</a>
-    </div>
-  </div>
+    <ul class="pt-2">
+      <li>
+        <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Dashboard</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Team</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Projects</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-600 hover:bg-gray-50 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Calendar</a>
+      </li>
+    </ul>
+  </div>  
 </nav>
 {{< /example >}}
 
@@ -68,12 +85,17 @@ Use this navbar element with an element that open a dropdown menu.
           <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
-          <div class="flex space-x-8">
-            <!-- Links -->
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Dashboard</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Services</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
-          </div>
+          <ul class="flex space-x-8">
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Dashboard</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Services</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="absolute inset-y-0 space-x-4 right-0 flex items-center sm:static sm:inset-auto sm:ml-6">
@@ -129,12 +151,20 @@ Use this navbar element with an element that open a dropdown menu.
   </div>
   <!-- Mobile menu -->
   <div class="sm:hidden hidden" id="mobile-menu-2">
-    <div class="pt-2">
-      <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Dashboard</a>
-      <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Team</a>
-      <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Projects</a>
-      <a href="#" class="text-gray-600 hover:bg-gray-50 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Calendar</a>
-    </div>
+    <ul class="pt-2">
+      <li>
+        <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Dashboard</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Team</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Projects</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-600 hover:bg-gray-50 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Calendar</a>
+      </li>
+    </ul>
   </div>
 </nav>
 {{< /example >}}
@@ -152,12 +182,17 @@ Use this example of a navbar element to also show a search input element that yo
           <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
       </div>
-      <div class="hidden lg:ml-6 lg:flex lg:space-x-8 items-center">
-        <!-- Links -->
-        <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Dashboard</a>
-        <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Services</a>
-        <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
-      </div>
+      <ul class="hidden lg:ml-6 lg:flex lg:space-x-8 items-center">
+        <li>
+          <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Dashboard</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Services</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
+        </li>
+      </ul>
       <!-- Search input -->
       <div class="flex-1 flex items-center justify-center lg:ml-6 lg:justify-end">
         <div class="max-w-lg w-full lg:max-w-xs">
@@ -186,12 +221,20 @@ Use this example of a navbar element to also show a search input element that yo
   </div>
   <!-- Mobile menu -->
   <div class="hidden md:hidden" id="mobile-menu-3">
-    <div class="pt-2">
-      <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Dashboard</a>
-      <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Team</a>
-      <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Projects</a>
-      <a href="#" class="text-gray-600 hover:bg-gray-50 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Calendar</a>
-    </div>
+    <ul class="pt-2">
+      <li>
+        <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Dashboard</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Team</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Projects</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-600 hover:bg-gray-50 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Calendar</a>
+      </li>
+    </ul>
   </div>
 </nav>
 {{< /example >}}
@@ -210,12 +253,17 @@ Use the following navbar element to show a call to action button.
           <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden md:block sm:ml-6">
-          <div class="flex space-x-6">
-            <!-- Links -->
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">About</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Services</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
-          </div>
+          <ul class="flex space-x-6">
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">About</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Services</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="flex items-center">
@@ -278,11 +326,17 @@ Use the following navbar element to show a call to action button.
     </div>
   </div>
   <!-- Mobile menu -->
-  <div class="hidden md:hidden" id="mobile-menu-4">
-    <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">About</a>
-    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Services</a>
-    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Contact</a>
-  </div>
+  <ul class="hidden md:hidden" id="mobile-menu-4">
+    <li>
+      <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">About</a>
+    </li>
+    <li>
+      <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Services</a>
+    </li>
+    <li>
+      <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Contact</a>
+    </li>
+  </ul>
 </nav>
 {{< /example >}}
 
@@ -290,7 +344,7 @@ Use the following navbar element to show a call to action button.
 
 Alternatively, you can also use different color schemes for the navbar element.
 
-{{< preview >}}
+{{< example >}}
 <nav class="bg-white border-gray-200 rounded mb-4">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
@@ -300,14 +354,23 @@ Alternatively, you can also use different color schemes for the navbar element.
           <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
-          <div class="flex space-x-8">
-            <!-- Links -->
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Home</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">About Us</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Features</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Pricing</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
-          </div>
+          <ul class="flex space-x-8">
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Features</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Pricing</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="inset-y-0 right-0 flex items-center sm:hidden">
@@ -324,11 +387,23 @@ Alternatively, you can also use different color schemes for the navbar element.
   </div>
   <!-- Mobile menu -->
   <div id="mobile-menu-5" class="hidden sm:hidden pt-2">
-    <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Home</a>
-    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">About</a>
-    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">Features</a>
-    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">Pricing</a>
-    <a href="#" class="text-gray-600 hover:bg-gray-50 text-base font-normal hover:text-gray-900 block px-3 py-2">Contact</a>
+    <ul class="pt-2">
+      <li>
+        <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">About</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">Features</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">Pricing</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-600 hover:bg-gray-50 text-base font-normal hover:text-gray-900 block px-3 py-2">Contact</a>
+      </li>
+    </ul>
   </div>
 </nav>
 
@@ -341,14 +416,23 @@ Alternatively, you can also use different color schemes for the navbar element.
           <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
-          <div class="flex space-x-8">
-            <!-- Links -->
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
-          </div>
+          <ul class="flex space-x-8">
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Features</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Pricing</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="inset-y-0 right-0 flex items-center sm:hidden">
@@ -365,11 +449,23 @@ Alternatively, you can also use different color schemes for the navbar element.
   </div>
   <!-- Mobile menu -->
   <div id="mobile-menu-6" class="hidden sm:hidden pt-2">
-      <a href="#" class="bg-gray-700 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">About</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">Features</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 text-base font-normal hover:white block px-3 py-2">Contact</a>
+      <ul>
+        <li>
+          <a href="#" class="bg-gray-700 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">About</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 text-base font-normal hover:white block px-3 py-2">Contact</a>
+        </li>
+      </ul>
   </div>
 </nav>
 
@@ -382,14 +478,23 @@ Alternatively, you can also use different color schemes for the navbar element.
           <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
-          <div class="flex space-x-8">
-            <!-- Links -->
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
-          </div>
+          <ul class="flex space-x-8">
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">About us</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Features</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Pricing</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="inset-y-0 right-0 flex items-center sm:hidden">
@@ -406,144 +511,26 @@ Alternatively, you can also use different color schemes for the navbar element.
   </div>
   <!-- Mobile menu -->
   <div id="mobile-menu-8" class="hidden sm:hidden">
-    <div class="pt-2">
-      <a href="#" class="bg-blue-600 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
-      <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">About Us</a>
-      <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">Features</a>
-      <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
-      <a href="#" class="text-gray-300 hover:bg-blue-600 text-base font-normal hover:text-white block px-3 py-2">Contact</a>
-    </div>
+    <ul class="pt-2">
+      <li>
+        <a href="#" class="bg-blue-600 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">About Us</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">Features</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-300 hover:bg-blue-600 text-base font-normal hover:text-white block px-3 py-2">Contact</a>
+      </li>
+    </ul>
   </div>
 </nav>
-{{< /preview >}}
-
-```html
-<!-- Light navbar -->
-<nav class="bg-white border-b border-gray-200 rounded">
-  <div class="px-2 sm:px-4 lg:px-5">
-    <div class="relative flex items-center justify-between h-16">
-      <!-- Logo -->
-      <div class="flex items-center justify-center sm:justify-start">
-        <a href="#">
-          <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
-        </a>
-        <div class="hidden sm:block sm:ml-6">
-          <div class="flex space-x-8">
-            <!-- Links -->
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Home</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">About Us</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Features</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Pricing</a>
-            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
-          </div>
-        </div>
-      </div>
-      <div class="inset-y-0 right-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <!-- Open mobile menu icon -->
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-          <!-- Close mobile menu icon -->
-          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  <!-- Mobile menu -->
-  <div class="sm:hidden pt-2">
-    <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Home</a>
-    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">About</a>
-    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">Features</a>
-    <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">Pricing</a>
-    <a href="#" class="text-gray-600 hover:bg-gray-50 text-base font-normal hover:text-gray-900 block px-3 py-2">Contact</a>
-  </div>
-</nav>
-<!-- Dark navbar -->
-<nav class="bg-gray-800 rounded">
-  <div class="px-2 sm:px-4 lg:px-5">
-    <div class="relative flex items-center justify-between h-16">
-      <!-- Logo -->
-      <div class="flex items-center justify-center sm:justify-start">
-        <a href="#">
-          <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
-        </a>
-        <div class="hidden sm:block sm:ml-6">
-          <div class="flex space-x-8">
-            <!-- Links -->
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
-          </div>
-        </div>
-      </div>
-      <div class="inset-y-0 right-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <!-- Open mobile menu icon -->
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-          <!-- Close mobile menu icon -->
-          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  <!-- Mobile menu -->
-  <div class="sm:hidden pt-2">
-      <a href="#" class="bg-gray-700 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">About</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">Features</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 text-base font-normal hover:white block px-3 py-2">Contact</a>
-  </div>
-</nav>
-<!-- Blue navbar -->
-<nav class="bg-blue-700 rounded">
-  <div class="px-2 sm:px-4 lg:px-5">
-    <div class="relative flex items-center justify-between h-16">
-      <!-- Logo -->
-      <div class="flex items-center justify-center sm:justify-start">
-        <a href="#">
-          <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
-        </a>
-        <div class="hidden sm:block sm:ml-6">
-          <div class="flex space-x-8">
-            <!-- Links -->
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium" aria-current="page">Home</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">About Us</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Features</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
-            <a href="#" class="text-gray-300 hover:text-white text-sm font-medium">Contact</a>
-          </div>
-        </div>
-      </div>
-      <div class="inset-y-0 right-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <!-- Open mobile menu icon -->
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-          <!-- Close mobile menu icon -->
-          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  <!-- Mobile menu -->
-  <div class="sm:hidden">
-    <div class="pt-2">
-      <a href="#" class="bg-blue-600 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
-      <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">About Us</a>
-      <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">Features</a>
-      <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">Pricing</a>
-      <a href="#" class="text-gray-300 hover:bg-blue-600 text-base font-normal hover:text-white block px-3 py-2">Contact</a>
-    </div>
-  </div>
-</nav>
-```
+{{< /example >}}
 
 ## JavaScript
 

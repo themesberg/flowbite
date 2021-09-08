@@ -6,7 +6,7 @@
   <div class="lg:flex">
     <!-- Sidebar -->
     <aside id="sidebar"
-      class="fixed z-40 inset-0 flex-none h-full bg-black bg-opacity-25 w-full lg:bg-white lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block hidden">
+      class="fixed z-10 inset-0 flex-none h-full bg-black bg-opacity-25 w-full lg:bg-white lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block hidden">
       {{ partial "docs-sidebar" . }}
     </aside>
 
@@ -22,7 +22,7 @@
             <p class="mt-1 text-lg text-gray-500">{{ .Page.Params.Description | markdownify }}</p>
           </div>
 
-          <!-- <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7D4KQE&placement=flowbitedesign" id="_carbonads_js"></script> -->
+          <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7D4KQE&placement=flowbitedesign" id="_carbonads_js"></script>
 
           <div id="mainContent">
             {{ if .Page.Params.sections }}

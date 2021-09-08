@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Progress
-description: Use these Tailwind CSS powered progress bar elements to show the completion rate of something
+description: Use these Tailwind CSS progress bar elements to show the completion rate of something
 group: components
 toc: true
 ---

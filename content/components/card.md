@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Cards
-description: Get started with some pre-built Tailwind CSS card elements for your web project
+description: Get started with pre-built Tailwind CSS card elements for your web project
 group: components
 toc: true
 ---
@@ -41,7 +41,7 @@ You can use the following example of a card element with an image for blog posts
 {{< example >}}
 <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm">
     <a href="#">
-        <img class="rounded-t-lg" src="/images/blog/image-1.jpg" alt="blog image" />
+        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="blog image" />
     </a>
     <div class="p-5">
         <a href="#">
@@ -62,7 +62,7 @@ If you want to spice up your cards you can use the following card which has its 
 
 {{< example >}}
 <a href="#" class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white hover:bg-gray-100 border shadow-md items-center">
-    <img class="w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="/images/blog/image-4.jpg">
+    <img class="w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="/docs/images/blog/image-4.jpg">
     <div class="p-4 flex flex-col justify-between leading-normal">
         <h3 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">Noteworthy technology acquisitions 2021</h3>
         <p class="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>

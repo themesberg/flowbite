@@ -3,6 +3,16 @@ import 'tippy.js/dist/tippy.css'; // optional for styling
 import 'tippy.js/animations/scale.css';
 import { createPopper } from '@popperjs/core';
 
+function toggleCollapse(collapseId) {
+    const menu = document.getElementById(collapseId);
+    if (menu.classList.contains("hidden")) {
+        menu.classList.remove("hidden");
+    } else {
+        menu.classList.add("hidden");
+    }
+}
+window.toggleCollapse = toggleCollapse;
+
 function toggleDropdown(event, dropdownID) {
     let element = event.target;
     while (element.nodeName !== "BUTTON") {
@@ -25,7 +35,6 @@ function toggleDropdown(event, dropdownID) {
 window.toggleDropdown = toggleDropdown;
 
 function toggleModal(modalID) {
-    const modalId = modalID;
     document.getElementById(modalID).classList.toggle("hidden");
     document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
     document.getElementById(modalID).classList.toggle("flex");

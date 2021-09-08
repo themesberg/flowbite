@@ -1,23 +1,23 @@
 ---
 layout: home
 title: Navbar
-description: Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.
+description: Use these Tailwind CSS navbar elements to show a navigational bar at the top side of your website
 group: components
 toc: true
 ---
 
-## Default
+## Default navbar
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use this example of a navigation bar built with Tailwind CSS to create a navigation element for your website.
 
 {{< example >}}
-<nav class="bg-white border-b border-gray-200">
+<nav class="bg-white border-gray-200">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
       <!-- Logo -->
       <div class="flex-2 flex items-center sm:justify-start">
         <a href="#">
-          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">
@@ -32,7 +32,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       </div>
       <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
         <!-- Mobile menu button-->
-        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
+        <button onClick="toggleCollapse('mobile-menu')" type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <!-- Open mobile menu icon -->
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -43,7 +43,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
   <!-- Mobile menu -->
-  <div class="sm:hidden" id="mobile-menu">
+  <div class="hidden sm:hidden" id="mobile-menu">
     <div class="pt-2">
       <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Dashboard</a>
       <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Team</a>
@@ -54,18 +54,18 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </nav>
 {{< /example >}}
 
-## With Dropdown
+## Navbar with dropdown
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use this navbar element with an element that open a dropdown menu.
 
 {{< example >}}
-<nav class="bg-white border-b border-gray-200">
+<nav class="bg-white border-gray-200">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
       <!-- Logo -->
       <div class="flex items-center sm:justify-start">
         <a href="#">
-          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">
@@ -86,7 +86,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
         <div class="relative">
           <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" aria-haspopup="true" type="button" onclick="toggleDropdown(event, 'dropdown')">
             <span class="sr-only">Open user menu</span>
-            <img class="h-8 w-8 rounded-full" src="/images/people/profile-picture-3.jpg" alt="user photo">
+            <img class="h-8 w-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="user photo">
           </button>
           <!-- Dropdown menu -->
           <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown">
@@ -116,7 +116,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
         </div>
         <div class="inset-y-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
-          <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
+          <button onClick="toggleCollapse('mobile-menu-2')" type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <!-- Open mobile menu icon -->
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -128,7 +128,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
   <!-- Mobile menu -->
-  <div class="sm:hidden" id="mobile-menu-2">
+  <div class="sm:hidden hidden" id="mobile-menu-2">
     <div class="pt-2">
       <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Dashboard</a>
       <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Team</a>
@@ -139,17 +139,17 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </nav>
 {{< /example >}}
 
-## With search
+## Navbar with search
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use this example of a navbar element to also show a search input element that you can integrate for a site-wide search.
 
 {{< example >}}
-<nav class="bg-white border-b border-gray-200">
+<nav class="bg-white border-gray-200">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="flex justify-between h-16">
       <div class="flex-shrink-0 flex items-center">
         <a href="#">
-          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
       </div>
       <div class="hidden lg:ml-6 lg:flex lg:space-x-8 items-center">
@@ -174,7 +174,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       </div>
       <div class="flex items-center ml-2 lg:hidden">
         <!-- Mobile menu button -->
-        <button type="button" class="inline-flex items-center justify-center rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+        <button onClick="toggleCollapse('mobile-menu-3')" type="button" class="inline-flex items-center justify-center rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu-3" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <!-- Open mobile menu icon -->
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -185,7 +185,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
   <!-- Mobile menu -->
-  <div class="lg:hidden" id="mobile-menu-3">
+  <div class="hidden md:hidden" id="mobile-menu-3">
     <div class="pt-2">
       <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Dashboard</a>
       <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Team</a>
@@ -196,18 +196,18 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </nav>
 {{< /example >}}
 
-## With Action Button
+## Navbar with CTA button
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use the following navbar element to show a call to action button.
 
 {{< example >}}
-<nav class="bg-white border-b border-gray-200">
+<nav class="bg-white border-gray-200">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
       <!-- Logo -->
       <div class="flex items-center justify-start">
         <a href="#">
-          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden md:block sm:ml-6">
           <div class="flex space-x-6">
@@ -234,7 +234,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
             <div>
               <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:ring-4 focus:ring-gray-300" id="user-menu-button-2" aria-expanded="false" aria-haspopup="true" type="button" onclick="toggleDropdown(event, 'dropdown')">
                 <span class="sr-only">Open user menu</span>
-                <img class="h-8 w-8 rounded-full" src="/images/people/profile-picture-3.jpg" alt="user photo">
+                <img class="h-8 w-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="user photo">
               </button>
             </div>
             <!-- Dropdown -->
@@ -266,7 +266,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
         </div>
         <div class="flex items-center md:hidden">
           <!-- Mobile menu button -->
-          <button type="button" class="inline-flex items-center justify-center rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+          <button onClick="toggleCollapse('mobile-menu-4')" type="button" class="inline-flex items-center justify-center rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu-4" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <!-- Open mobile menu icon -->
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -278,48 +278,26 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
   <!-- Mobile menu -->
-  <div class="md:hidden" id="mobile-menu-4">
+  <div class="hidden md:hidden" id="mobile-menu-4">
     <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">About</a>
     <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Services</a>
     <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Contact</a>
-    <div class="py-6 bg-dark-900">
-      <div class="flex items-center px-4">
-        <div class="flex-shrink-0">
-          <img class="h-10 w-10 rounded-full" src="/images/people/profile-picture-3.jpg" alt="user photo">
-        </div>
-        <div class="ml-3">
-          <div class="text-base font-medium text-gray-900">Bonnie Green</div>
-          <div class="text-sm font-normal text-gray-500">name@company.com</div>
-        </div>
-        <button class="ml-auto flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          <span class="sr-only">View notifications</span>
-          <!-- Icon (bell) -->
-          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
-        </button>
-      </div>
-      <div class="mt-3 space-y-1">
-        <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 py-2">Earnings</a>
-        <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 py-2">Downloads</a>
-        <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 py-2">Settings</a>
-        <a href="#" class="text-sm text-gray-500 hover:bg-gray-100 font-normal block px-4 pt-2">Sign out</a>
-      </div>
-    </div>
   </div>
 </nav>
 {{< /example >}}
 
-## Color schemes
+## Color
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Alternatively, you can also use different color schemes for the navbar element.
 
 {{< preview >}}
-<nav class="bg-white border-b border-gray-200 rounded mb-4">
+<nav class="bg-white border-gray-200 rounded mb-4">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
       <!-- Logo -->
       <div class="flex items-center justify-center sm:justify-start">
         <a href="#">
-          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">
@@ -334,7 +312,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       </div>
       <div class="inset-y-0 right-0 flex items-center sm:hidden">
         <!-- Mobile menu button-->
-        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
+        <button onClick="toggleCollapse('mobile-menu-5')" type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <!-- Open mobile menu icon -->
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -345,7 +323,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
   <!-- Mobile menu -->
-  <div class="sm:hidden pt-2">
+  <div id="mobile-menu-5" class="hidden sm:hidden pt-2">
     <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Home</a>
     <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">About</a>
     <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:text-gray-900 block px-3 py-2">Features</a>
@@ -354,13 +332,13 @@ Group a series of buttons together on a single line or stack them in a vertical 
   </div>
 </nav>
 
-<nav class="bg-gray-800 border-b border-gray-600 rounded mb-4">
+<nav class="bg-gray-800 border-gray-600 rounded mb-4">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
       <!-- Logo -->
       <div class="flex items-center justify-center sm:justify-start">
         <a href="#">
-          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">
@@ -375,7 +353,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       </div>
       <div class="inset-y-0 right-0 flex items-center sm:hidden">
         <!-- Mobile menu button-->
-        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
+        <button onClick="toggleCollapse('mobile-menu-6')" type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <!-- Open mobile menu icon -->
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -386,7 +364,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
   <!-- Mobile menu -->
-  <div class="sm:hidden pt-2">
+  <div id="mobile-menu-6" class="hidden sm:hidden pt-2">
       <a href="#" class="bg-gray-700 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
       <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">About</a>
       <a href="#" class="text-gray-300 hover:bg-gray-700 border-b border-gray-700 text-base font-normal hover:text-white block px-3 py-2">Features</a>
@@ -395,13 +373,13 @@ Group a series of buttons together on a single line or stack them in a vertical 
   </div>
 </nav>
 
-<nav class="bg-blue-700 border-b border-blue-600 rounded mb-4">
+<nav class="bg-blue-700 rounded mb-4">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
       <!-- Logo -->
       <div class="flex items-center justify-center sm:justify-start">
         <a href="#">
-          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">
@@ -416,7 +394,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       </div>
       <div class="inset-y-0 right-0 flex items-center sm:hidden">
         <!-- Mobile menu button-->
-        <button type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
+        <button onClick="toggleCollapse('mobile-menu-8')" type="button" class="text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <!-- Open mobile menu icon -->
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -427,7 +405,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
   <!-- Mobile menu -->
-  <div class="sm:hidden">
+  <div id="mobile-menu-8" class="hidden sm:hidden">
     <div class="pt-2">
       <a href="#" class="bg-blue-600 text-white text-base font-normal block pl-3 pr-4 py-2">Home</a>
       <a href="#" class="text-gray-300 hover:bg-blue-600 border-b border-blue-600 text-base font-normal hover:text-white block px-3 py-2">About Us</a>
@@ -447,7 +425,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       <!-- Logo -->
       <div class="flex items-center justify-center sm:justify-start">
         <a href="#">
-          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">
@@ -482,13 +460,13 @@ Group a series of buttons together on a single line or stack them in a vertical 
   </div>
 </nav>
 <!-- Dark navbar -->
-<nav class="bg-gray-800 border-b border-gray-600 rounded">
+<nav class="bg-gray-800 rounded">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
       <!-- Logo -->
       <div class="flex items-center justify-center sm:justify-start">
         <a href="#">
-          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">
@@ -523,13 +501,13 @@ Group a series of buttons together on a single line or stack them in a vertical 
   </div>
 </nav>
 <!-- Blue navbar -->
-<nav class="bg-blue-700 border-b border-blue-600 rounded">
+<nav class="bg-blue-700 rounded">
   <div class="px-2 sm:px-4 lg:px-5">
     <div class="relative flex items-center justify-between h-16">
       <!-- Logo -->
       <div class="flex items-center justify-center sm:justify-start">
         <a href="#">
-          <img src="/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+          <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
         </a>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-8">
@@ -565,4 +543,26 @@ Group a series of buttons together on a single line or stack them in a vertical 
     </div>
   </div>
 </nav>
+```
+
+## JavaScript
+
+We created a custom function called `toggleCollapse` that you can use to show or hide any element.
+
+```javascript
+function toggleCollapse(collapseId) {
+    const menu = document.getElementById(collapseId);
+    if (menu.classList.contains("hidden")) {
+        menu.classList.remove("hidden");
+    } else {
+        menu.classList.add("hidden");
+    }
+}
+window.toggleCollapse = toggleCollapse;
+```
+
+If you want to show or hide any element you can use `onClick="toggleCollapse(elementId)"` on an element where `elementId` is the target element that will be shown or hidden when the current element is clicked.
+
+```html
+<button onClick="toggleCollapse('mobile-menu')">Show menu</button>
 ```

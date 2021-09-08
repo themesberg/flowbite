@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Typography
-description: Check out the typography and the utility classes from Tailwind CSS that you can use to style text with FlowBite
+description: Use the typography and the utility classes from Tailwind CSS to style text with FlowBite
 group: components
 toc: true
 ---

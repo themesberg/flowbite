@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Getting started with FlowBite
-description: Learn more about FlowBite and why it can help you with your Tailwind CSS development
+description: Get started with an open-source set of UI components and elements built with Tailwind CSS
 group: getting-started
 toc: true
 ---

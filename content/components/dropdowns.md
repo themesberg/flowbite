@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Dropdowns
-description: Use the Tailwind CSS powered dropdown elements to show a list of items displayed as a menu
+description: Use the Tailwind CSS dropdown elements to show a list of items displayed as a menu
 group: components
 toc: true
 ---

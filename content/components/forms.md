@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Forms
-description: Form elements and usage examples built with Tailwind CSS and custom design with FlowBite 
+description: Use the Tailwind CSS form and input elements such as checkboxes, radios, textarea, text inputs to collect information from users with FlowBite
 group: components
 toc: true
 ---
@@ -251,7 +251,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
       United Kingdom
     </label>
   </div>
-  
+
   <div class="flex items-center">
     <input id="option-disabled" type="radio" name="countries" value="China" class="h-4 w-4 border-gray-200 focus:ring-2 focus:ring-blue-300" aria-labelledby="option-disabled" aria-describedby="option-disabled" disabled>
     <label for="option-disabled" class="text-sm font-medium text-gray-400 ml-2 block">

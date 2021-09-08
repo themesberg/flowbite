@@ -3,3 +3,5 @@ dist/
 build/
 _gh_pages/
 static/images/.DS_Store
+static/js/
+static/css/

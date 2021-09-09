@@ -264,15 +264,16 @@ Group a series of buttons together on a single line or stack them in a vertical 
 ## File upload
 
 {{< example >}}
-<div class="flex items-center justify-center w-full">
-    <label class="flex flex-col border-2 border-dashed border-gray-300 rounded w-full h-32 hover:bg-gray-50 cursor-pointer">
-      <div class="flex flex-col items-center justify-center pt-5 pb-6">
-        <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
-        <p class="text-sm text-gray-600 py-1">Upload a file or drag and drop</p>
-        <p class="text-gray-500 text-xs">PNG, JPG, GIF up to 10MB</p>
-      </div>
-      <input type="file" class="hidden" />
-    </label>
+<div class="mb-4">
+  <label class="text-sm font-medium text-gray-900 block mb-2" for="user_avatar">
+    Upload file
+  </label>
+  <div class="relative">
+    <input class="block w-full overflow-hidden cursor-pointer bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent sm:text-sm rounded-lg block w-full" aria-describedby="user_avatar_help" id="user_avatar" name="user[avatar]" type="file">
+  </div>
+  <div class="mt-1 text-sm text-gray-500" id="user_avatar_help">
+    A profile picture is useful to confirm your are logged into your account
+  </div>
 </div>
 {{< /example >}}
 

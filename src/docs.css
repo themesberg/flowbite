@@ -314,4 +314,18 @@ code.language-javascript .token.comment {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-  }
+}
+
+
+/* File upload */
+
+@layer components {
+	::-webkit-file-upload-button {
+		@apply text-white bg-gray-700 hover:bg-gray-600
+		font-medium text-sm cursor-pointer
+		border-0
+		py-2.5 pl-8 pr-4;
+		margin-inline-start: -1rem;
+		margin-inline-end: 1rem;
+	}
+}

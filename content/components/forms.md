@@ -297,7 +297,7 @@ Use the following toggle (switches) element to ask for a yes or no type of input
 </label>
 {{< /example >}}
 
-If you aren't using FlowBite's `style.css` file make sure that you include the following styles in your CSS for the toggle active styles:
+If you aren't using FlowBite's `flowbite.css` file make sure that you include the following styles in your CSS for the toggle active styles:
 
 ```css
 input:checked + .toggle-bg:after {

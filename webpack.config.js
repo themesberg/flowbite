@@ -4,8 +4,8 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, 'src/js/app.js'),
-    system: path.resolve(__dirname, 'src/js/system.js')
+    flowbite: path.resolve(__dirname, 'src/js/flowbite.js'),
+    docs: path.resolve(__dirname, 'src/js/docs.js')
   },
   output: {
     filename: '[name].bundle.js',

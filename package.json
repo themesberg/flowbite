@@ -1,10 +1,11 @@
 {
-  "name": "@themesberg/flowbite",
-  "version": "1.0.0",
-  "description": "Library of web components and elements based on the utility-first framework Tailwind CSS.",
+  "name": "@themesberg/flowbite-test-1",
+  "version": "1.0.1",
+  "description": "Open-source library of Tailwind CSS components and elements.",
+  "keywords": ["tailwind", "tailwind components", "tailwind elements", "tailwind library", "tailwind sections", "tailwind css"],
   "license": "MIT",
   "style": "dist/flowbite.css",
-  "main": "static/js/app.bundle.js",
+  "main": "static/js/flowbite.bundle.js",
   "homepage": "https://flowbite.design",
   "contributors": [
     "Zoltán Szőgyényi <zoltan@themesberg.com>",
@@ -17,7 +18,7 @@
     "build": "NODE_ENV=production && run-s build:webpack build:hugo",
     "build:hugo": "hugo",
     "build:webpack": "webpack --mode=production",
-    "build:styles": "npx tailwindcss -i ./src/style.css -o ./dist/css/flowbite.css"
+    "build:npm": "webpack --mode=production && npx tailwindcss -i ./src/flowbite.css -o ./dist/css/flowbite.css"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",

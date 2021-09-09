@@ -10,6 +10,8 @@ These are the source files for the Flowbite Tailwind CSS components library.
 
 ## Building the docs website
 
+Make sure to switch `enabled` to `true` in the `tailwind.config.js` file when building for docs to purge the extra CSS. (doesn't work with the process env for some reason).
+
 Run `yarn build` to build the static HTML files that will be uploaded to FlowBite. The static HTML files can be found in the `_gh_pages/` folder.
 
 ## Building for NPM registry

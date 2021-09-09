@@ -276,4 +276,4 @@ If you want to build for production use the following command and remove any unu
 NODE_ENV=production npx tailwindcss -o flowbite.css
 ```
 
-Congratulations! You can now get started using the [components included in this UI library]({{< ref "getting-started/quickstart" >}}).
+Congratulations! You can now get started using the [components included in this UI library]({{< ref "components/alerts" >}}).

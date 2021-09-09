@@ -17,6 +17,13 @@ input:checked + .toggle-bg {
 	@apply bg-blue-600 border-blue-600;
 }
 
+/* File upload */
+input[type=file]::-webkit-file-upload-button {
+	@apply text-white bg-gray-700 hover:bg-gray-600 font-medium text-sm cursor-pointer border-0 py-2.5 pl-8 pr-4;
+	margin-inline-start: -1rem;
+	margin-inline-end: 1rem;
+}
+
 /* custom docs CSS */
 @media only screen and (max-width: 1024px) {
 	.collapse.collapsed {
@@ -393,15 +400,3 @@ code.language-javascript .token.comment {
 	right: 0;
 }
 
-/* File upload */
-
-@layer components {
-	::-webkit-file-upload-button {
-		@apply text-white bg-gray-700 hover:bg-gray-600
-		font-medium text-sm cursor-pointer
-		border-0
-		py-2.5 pl-8 pr-4;
-		margin-inline-start: -1rem;
-		margin-inline-end: 1rem;
-	}
-}

@@ -279,20 +279,18 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 ## Toggle (switches)
 
-**Important:** this element requires <a href="https://tailwindcss.com/docs/just-in-time-mode" target="_blank">JIT mode</a> because of the pseudo-elements.
-
 Use the following toggle (switches) element to ask for a yes or no type of input from your users without the use of JavaScript.
 
 {{< example >}}
 <label for="toggle-example" class="flex items-center cursor-pointer relative mb-4">
   <input type="checkbox" id="toggle-example" class="sr-only">
-  <div class="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full after:absolute after:left-0.5 after:top-0.5 after:bg-white after:border after:border-gray-300 after:h-5 after:w-5 after:rounded-full after:ring-0 after:transition"></div>
+  <div class="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full"></div>
   <span class="ml-3 text-gray-900 text-sm font-medium">Toggle me</span>
 </label>
 
 <label for="toggle-example-checked" class="flex items-center cursor-pointer relative">
   <input type="checkbox" id="toggle-example-checked" class="sr-only" checked>
-  <div class="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full after:absolute after:left-0.5 after:top-0.5 after:bg-white after:border after:border-gray-300 after:h-5 after:w-5 after:rounded-full after:ring-0 after:transition"></div>
+  <div class="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full"></div>
   <span class="ml-3 text-gray-900 text-sm font-medium">Toggle me (checked)</span>
 </label>
 {{< /example >}}
@@ -300,6 +298,11 @@ Use the following toggle (switches) element to ask for a yes or no type of input
 If you aren't using FlowBite's `flowbite.css` file make sure that you include the following styles in your CSS for the toggle active styles:
 
 ```css
+.toggle-bg:after {
+  content: '';
+  @apply absolute left-0.5 top-0.5 bg-white border border-gray-300 h-5 w-5 rounded-full ring-0 transition;
+}
+
 input:checked + .toggle-bg:after {
 	transform: translateX(100%);
 	@apply border-white;

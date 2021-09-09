@@ -7,7 +7,7 @@ layouts/
 node_modules/
 resources/
 static/
-src/js/docs.js
+src/docs.js
 src/docs.css
 config.yml
 yarn-error.log

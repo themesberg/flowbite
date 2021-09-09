@@ -1,7 +1,7 @@
 module.exports = {
-  mode: 'jit',
+  mode: process.env.NODE_ENV === "development" ? true : false,
   purge: {
-    enabled: true,
+    enabled: process.env.NODE_ENV === "production" ? true : false,
     content: ["./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html"],
   },
   darkMode: false, // or 'media' or 'class'

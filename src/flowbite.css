@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.toggle-bg:after {
+	content: '';
+	@apply absolute left-0.5 top-0.5 bg-white border border-gray-300 h-5 w-5 rounded-full ring-0 transition;
+}
+
 input:checked + .toggle-bg:after {
 	transform: translateX(100%);
 	@apply border-white;

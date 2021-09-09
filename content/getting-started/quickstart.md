@@ -17,13 +17,13 @@ The quickest way to get started working with FlowBite is to simply include the C
 Require the following stylesheet inside the `head` tag:
 
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite-test-1@1.0.2/dist/flowbite.min.css" />
 ```
 
 And include the following javascript file before the end of the `body` element:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.js"></script>
+<script src="https://unpkg.com/@themesberg/flowbite-test-1@1.0.2/dist/flowbite.bundle.js"></script>
 ```
 
 **Important:** This is *not the recommended way* of working with FlowBite because you won't be able to purge the unnecessary CSS. Check out the [build tools]({{< ref "getting-started/build-tools" >}}) to properly set up FlowBite for development and production code.

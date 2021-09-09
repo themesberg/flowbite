@@ -209,6 +209,64 @@ npx tailwindcss -o flowbite.css
 ```
 
 11. Include the newly created `flowbite.css` file into your HTML template and start developing with FlowBite and Tailwind CSS.
+12. Using ES6: make sure that you also create a JavaScript file called `flowbite.js` to make elements such as dropdowns and modals work and add the following code:
+
+```javascript
+import tippy from 'tippy.js';
+import 'tippy.js/dist/tippy.css'; // optional for styling
+import 'tippy.js/animations/scale.css';
+import { createPopper } from '@popperjs/core';
+
+function toggleCollapse(collapseId) {
+    const menu = document.getElementById(collapseId);
+    if (menu.classList.contains("hidden")) {
+        menu.classList.remove("hidden");
+    } else {
+        menu.classList.add("hidden");
+    }
+}
+window.toggleCollapse = toggleCollapse;
+
+function toggleDropdown(event, dropdownID) {
+    let element = event.target;
+    while (element.nodeName !== "BUTTON") {
+        element = element.parentNode;
+    }
+    createPopper(element, document.getElementById(dropdownID), {
+        placement: 'bottom-start',
+        modifiers: [
+            {
+                name: 'offset',
+                options: {
+                    offset: [0, 10],
+                },
+            },
+        ]
+    });
+    document.getElementById(dropdownID).classList.toggle("hidden");
+    document.getElementById(dropdownID).classList.toggle("block");
+}
+window.toggleDropdown = toggleDropdown;
+
+function toggleModal(modalID) {
+    document.getElementById(modalID).classList.toggle("hidden");
+    document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
+    document.getElementById(modalID).classList.toggle("flex");
+    document.getElementById(modalID + "-backdrop").classList.toggle("flex");
+}
+
+window.toggleModal = toggleModal;
+
+document.addEventListener("DOMContentLoaded", function () {
+    tippy('[data-tippy-content]');
+});
+```
+
+Alternatively, you can also just use a CDN link with the compiled JS:
+
+```html
+<script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+```
 
 ## Building for production
 

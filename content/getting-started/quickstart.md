@@ -14,16 +14,16 @@ We recommend setting up your project using the [build tools]({{< ref "getting-st
 
 The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.
 
-Require the following stylesheet inside the `head` tag:
+Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite-test-1@1.0.2/dist/flowbite.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.min.css" />
 ```
 
 And include the following javascript file before the end of the `body` element:
 
 ```html
-<script src="https://unpkg.com/@themesberg/flowbite-test-1@1.0.2/dist/flowbite.bundle.js"></script>
+<script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
 ```
 
 **Important:** This is *not the recommended way* of working with FlowBite because you won't be able to purge the unnecessary CSS. Check out the [build tools]({{< ref "getting-started/build-tools" >}}) to properly set up FlowBite for development and production code.
@@ -33,13 +33,13 @@ And include the following javascript file before the end of the `body` element:
 You can also require FlowBite as a dependency using NPM by running the following command:
 
 ```bash
-npm install flowbite
+npm i @themesberg/flowbite
 ```
 
-## Download as a zip
+<!-- ## Download as a zip
 
-If you want to directly download the source and dist files of the FlowBite project you can do so by [creating an account for free on FlowBite](https://flowbite.design/) and download the project files from there.
+If you want to directly download the source and dist files of the FlowBite project you can do so by [creating an account for free on FlowBite](https://flowbite.design/) and download the project files from there. -->
 
-## Clone it from Github
+<!-- ## Clone it from Github
 
-The source files are also available to be cloned or downloaded from the official [Github repository](https://github.com). Don't forget to give it a star if you appreciate the project.
+The source files are also available to be cloned or downloaded from the official [Github repository](https://github.com). Don't forget to give it a star if you appreciate the project. -->

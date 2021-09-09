@@ -54,6 +54,8 @@ function initiateCopyToClipboard(element) {
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
     // toggle navbar menu mobile
     document.getElementById("toggleNavbar").addEventListener("click", function () {
         const menu = document.getElementById("menu");

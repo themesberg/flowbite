@@ -56,16 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // toggle navbar menu mobile
-    document.getElementById("toggleNavbar").addEventListener("click", function () {
-        const menu = document.getElementById("menu");
-        if (menu.classList.contains("collapsed")) {
-            menu.classList.remove("collapsed");
-        } else {
-            menu.classList.add("collapsed");
-        }
-    });
-
     var codeExamples = document.getElementsByClassName("code-example");
     for (var i = 0; i < codeExamples.length; i++) {
         initiateCopyToClipboard(codeExamples.item(i));

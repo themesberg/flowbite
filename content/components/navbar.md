@@ -40,7 +40,7 @@ Use this example of a navigation bar built with Tailwind CSS to create a navigat
         </div>
       </div>
       <!-- Mobile menu button-->
-        <button onClick="toggleCollapse('mobile-menu')" type="button" class="sm:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
+        <button data-collapse-toggle="mobile-menu" type="button" class="sm:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <!-- Open mobile menu icon -->
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -133,7 +133,7 @@ Use this navbar element with an element that open a dropdown menu.
             </ul>
         </div>
         <!-- Mobile menu button-->
-        <button onClick="toggleCollapse('mobile-menu-2')" type="button" class="sm:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
+        <button data-collapse-toggle="mobile-menu-2" type="button" class="sm:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <!-- Open mobile menu icon -->
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -203,7 +203,7 @@ Use this example of a navbar element to also show a search input element that yo
       </div>
       <div class="flex items-center ml-2 lg:hidden">
         <!-- Mobile menu button -->
-        <button onClick="toggleCollapse('mobile-menu-3')" type="button" class="inline-flex items-center justify-center rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu-3" aria-expanded="false">
+        <button data-collapse-toggle="mobile-menu-3" type="button" class="inline-flex items-center justify-center rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu-3" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <!-- Open mobile menu icon -->
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -307,7 +307,7 @@ Use the following navbar element to show a call to action button.
           </div>
         </div>
         <!-- Mobile menu button-->
-        <button onClick="toggleCollapse('mobile-menu-4')" type="button" class="sm:hidden ml-1 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-4" aria-expanded="false">
+        <button data-collapse-toggle="mobile-menu-4" type="button" class="sm:hidden ml-1 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-4" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <!-- Open mobile menu icon -->
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -366,7 +366,7 @@ Alternatively, you can also use different color schemes for the navbar element.
         </div>
       </div>
       <!-- Mobile menu button-->
-        <button onClick="toggleCollapse('mobile-menu-5')" type="button" class="sm:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
+        <button data-collapse-toggle="mobile-menu-5" type="button" class="sm:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <!-- Open mobile menu icon -->
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -426,7 +426,7 @@ Alternatively, you can also use different color schemes for the navbar element.
         </div>
       </div>
       <!-- Mobile menu button-->
-        <button onClick="toggleCollapse('mobile-menu-6')" type="button" class="sm:hidden ml-3 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
+        <button data-collapse-toggle="mobile-menu-6" type="button" class="sm:hidden ml-3 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <!-- Open mobile menu icon -->
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -486,7 +486,7 @@ Alternatively, you can also use different color schemes for the navbar element.
         </div>
       </div>
       <!-- Mobile menu button-->
-      <button onClick="toggleCollapse('mobile-menu-8')" type="button" class="sm:hidden ml-3 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
+      <button data-collapse-toggle="mobile-menu-8" type="button" class="sm:hidden ml-3 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <!-- Open mobile menu icon -->
         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -520,22 +520,27 @@ Alternatively, you can also use different color schemes for the navbar element.
 
 ## JavaScript
 
-We created a custom function called `toggleCollapse` that you can use to show or hide any element.
-
-```javascript
-function toggleCollapse(collapseId) {
-    const menu = document.getElementById(collapseId);
-    if (menu.classList.contains("hidden")) {
-        menu.classList.remove("hidden");
-    } else {
-        menu.classList.add("hidden");
-    }
-}
-window.toggleCollapse = toggleCollapse;
-```
-
-If you want to show or hide any element you can use `onClick="toggleCollapse(elementId)"` on an element where `elementId` is the target element that will be shown or hidden when the current element is clicked.
+If you want to show or hide any element you can use the `data-collapse-toggle="elementId"` data attribute where `elementId` is the target element that will be toggled.
 
 ```html
-<button onClick="toggleCollapse('mobile-menu')">Show menu</button>
+<button data-collapse-toggle="elementId">Show menu</button>
+
+<div id="elementId">This will be toggled when the button is clicked.</div>
+```
+
+Although if you have included `flowbite.js` in your project this will already work you can also manually add this code to make toggle elements work.
+
+```javascript
+document.querySelectorAll('[data-collapse-toggle]').forEach(function (collapseToggleEl) {
+    var collapseId = collapseToggleEl.getAttribute('data-collapse-toggle');
+    var collapseEl = document.getElementById(collapseId);
+
+    collapseToggleEl.addEventListener('click', function() {
+        if (collapseEl.classList.contains("hidden")) {
+            collapseEl.classList.remove("hidden");
+        } else {
+            collapseEl.classList.add("hidden");
+        }
+    });
+});
 ```

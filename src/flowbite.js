@@ -3,15 +3,18 @@ import 'tippy.js/dist/tippy.css'; // optional for styling
 import 'tippy.js/animations/scale.css';
 import { createPopper } from '@popperjs/core';
 
-function toggleCollapse(collapseId) {
-    const menu = document.getElementById(collapseId);
-    if (menu.classList.contains("hidden")) {
-        menu.classList.remove("hidden");
-    } else {
-        menu.classList.add("hidden");
-    }
-}
-window.toggleCollapse = toggleCollapse;
+document.querySelectorAll('[data-collapse-toggle]').forEach(function (collapseToggleEl) {
+    var collapseId = collapseToggleEl.getAttribute('data-collapse-toggle');
+    var collapseEl = document.getElementById(collapseId);
+
+    collapseToggleEl.addEventListener('click', function() {
+        if (collapseEl.classList.contains("hidden")) {
+            collapseEl.classList.remove("hidden");
+        } else {
+            collapseEl.classList.add("hidden");
+        }
+    });
+});
 
 document.querySelectorAll('[data-dropdown-toggle]').forEach(function (dropdownToggleEl) {
     var dropdownMenuId = dropdownToggleEl.getAttribute('data-dropdown-toggle');
@@ -40,12 +43,6 @@ document.querySelectorAll('[data-dropdown-toggle]').forEach(function (dropdownTo
 
         function handleDropdownOutsideClick(event) {
             var targetElement = event.target; // clicked element
-            console.log('target');
-            console.log(targetElement);
-            console.log('dropdown menu');
-            console.log(dropdownMenuEl);
-            console.log('toggle el');
-            console.log(dropdownToggleEl);
             if (targetElement !== dropdownMenuEl && targetElement !== dropdownToggleEl) {
                 console.log('click outside');
                 dropdownMenuEl.classList.add("hidden");
@@ -57,7 +54,6 @@ document.querySelectorAll('[data-dropdown-toggle]').forEach(function (dropdownTo
         // hide popper when clicking outside the element
         document.body.addEventListener('click', handleDropdownOutsideClick, true);
     });
-
 });
 
 function toggleModal(modalID) {

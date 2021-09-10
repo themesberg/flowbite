@@ -3969,6 +3969,10 @@ code.language-javascript .token.comment {
     margin-top: 2rem;
   }
 
+  .lg\:mt-12 {
+    margin-top: 3rem;
+  }
+
   .lg\:mt-20 {
     margin-top: 5rem;
   }

@@ -18,4 +18,6 @@ Run `yarn build` to build the static HTML files that will be uploaded to FlowBit
 
 ** Important! ** Test this with another package name because you can't delete a version! (eg. @themesberg/flowbite-test)
 
+Make sure that purge is NOT enabled.
+
 Run `npm run build:npm` and then `npm publish` to release a new version. Make sure you also change the version.

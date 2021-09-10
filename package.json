@@ -1,5 +1,5 @@
 {
-  "name": "@themesberg/flowbite",
+  "name": "@themesberg/flowbite-test-2",
   "version": "1.0.0",
   "description": "Open-source library of Tailwind CSS components and elements.",
   "keywords": [
@@ -27,7 +27,7 @@
     "build:webpack": "webpack --mode=production",
     "build:css:min": "NPM_ENV=production npx postcss src/flowbite.css  > dist/flowbite.min.css",
     "build:css": "NPM_ENV=development npx postcss src/flowbite.css  > dist/flowbite.css",
-    "build:js": "run-s build:webpack && copyfiles --flat static/js/flowbite.bundle.js dist && copyfiles --flat static/js/flowbite.bundle.js.map dist",
+    "build:js": "run-s build:webpack && copyfiles --flat static/flowbite.bundle.js dist && copyfiles --flat static/flowbite.bundle.js.map dist",
     "build:npm": "run-s build:css:min build:css build:js"
   },
   "devDependencies": {

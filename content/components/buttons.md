@@ -4,6 +4,11 @@ title: Buttons
 description: Use these Tailwind CSS buttons of different colors, sizes, and variations to use for user actions and links
 group: components
 toc: true
+
+previous: Breadcrumbs
+previousLink: components/breadcrumb
+next: Button group
+nextLink: components/button-group
 ---
 
 ## Examples

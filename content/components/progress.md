@@ -4,6 +4,11 @@ title: Progress
 description: Use these Tailwind CSS progress bar elements to show the completion rate of something
 group: components
 toc: true
+
+previous: Pagination
+previousLink: components/pagination
+next: Tables
+nextLink: components/tables
 ---
 
 ## Default example

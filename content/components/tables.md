@@ -4,6 +4,11 @@ title: Tables
 description: Use the following Tailwind CSS table components to show complex data in an organized layout
 group: components
 toc: true
+
+previous: Progress
+previousLink: components/progress
+next: Tooltips
+nextLink: components/tooltips
 ---
 
 ## Default example

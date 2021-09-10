@@ -4,6 +4,11 @@ title: Quickstart
 description: Quickly get started with including Flowbite into your project and start developing
 group: getting-started
 toc: true
+
+previous: Introduction
+previousLink: getting-started/introduction
+next: Build tools
+nextLink: getting-started/build-tools
 ---
 
 FlowBite is an open-source project and you there are multiple ways that you can include it into your project.

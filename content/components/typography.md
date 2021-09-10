@@ -4,6 +4,11 @@ title: Typography
 description: Use the typography and the utility classes from Tailwind CSS to style text with FlowBite
 group: components
 toc: true
+
+previous: Forms
+previousLink: components/forms
+next: Modals
+nextLink: components/modal
 ---
 
 The typography for FlowBite is completely based on the utility classes from Tailwind CSS. We have listed some of the commonly used typography classes that we use throughout the FlowBite UI, however, you can also check out all of the utility classes on the [Tailwind CSS documentation](https://tailwindcss.com/docs/font-family) directly.

@@ -2668,6 +2668,10 @@ select {
   font-style: italic;
 }
 
+.leading-6 {
+  line-height: 1.5rem;
+}
+
 .leading-none {
   line-height: 1;
 }

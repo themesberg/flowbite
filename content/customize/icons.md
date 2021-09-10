@@ -4,6 +4,11 @@ title: Icons
 description: Use this set of SVG powered icons for Tailwind CSS and FlowBite
 group: customize
 toc: true
+
+previous: Color
+previousLink: customize/color
+next: Optimization
+nextLink: customize/optimization
 ---
 
 ## SVG icons

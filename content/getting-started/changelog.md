@@ -4,6 +4,11 @@ title: Changelog
 description: Read more about the releases made for FlowBite from the official changelog
 group: getting-started
 toc: true
+
+previous: License
+previousLink: getting-started/license
+next: Configuration
+nextLink: customize/configuration
 ---
 
 ## Changelog

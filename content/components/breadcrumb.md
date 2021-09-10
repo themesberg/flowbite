@@ -4,6 +4,11 @@ title: Breadcrumb
 description: Show the location of the current page in a hierarchical structure using the Tailwind CSS breadcrumb components 
 group: components
 toc: true
+
+previous: Badges
+previousLink: components/badge
+next: Buttons
+nextLink: components/buttons
 ---
 
 ## Default example

@@ -4,6 +4,11 @@ title: Forms
 description: Use the Tailwind CSS form and input elements such as checkboxes, radios, textarea, text inputs to collect information from users with FlowBite
 group: components
 toc: true
+
+previous: Dropdowns
+previousLink: components/dropdowns
+next: Typography
+nextLink: components/typography
 ---
 
 ## Form example

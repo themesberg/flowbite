@@ -4,6 +4,11 @@ title: License
 description: Learn more about the licensing terms for FlowBite and Tailwind CSS
 group: getting-started
 toc: true
+
+previous: Build tools
+previousLink: getting-started/build-tools
+next: Changelog
+nextLink: getting-started/changelog
 ---
 
 **Important:** The pro version and Figma design files of FlowBite is subject to another license which you can read on the [EULA page (End User License Agreement)](https://flowbite.design/license/) from the FlowBite website.

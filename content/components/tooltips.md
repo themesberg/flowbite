@@ -4,6 +4,9 @@ title: Tooltips
 description: Use the following Tailwind CSS powered tooltips to show extra content when hovering or clicking on an element
 group: components
 toc: true
+
+previous: Tables
+previousLink: components/tables
 ---
 
 FlowBite includes custom styles using Tailwind CSS and Tippy JS to enable tooltips that can be shown when hovering or clicking on an element powered by data attributes.

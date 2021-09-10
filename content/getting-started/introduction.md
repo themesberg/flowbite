@@ -5,6 +5,9 @@ description: Get started with an open-source set of UI components and elements b
 group: getting-started
 toc: true
 cleanTitle: true
+
+next: Quickstart
+nextLink: getting-started/quickstart
 ---
 
 ## What is FlowBite?

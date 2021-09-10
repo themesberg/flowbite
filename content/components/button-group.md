@@ -4,6 +4,11 @@ title: Button group
 description: Button groups are a Tailwind CSS powered set of buttons sticked together in a horizontal line
 group: components
 toc: true
+
+previous: Buttons
+previousLink: components/buttons
+next: Cards
+nextLink: components/card
 ---
 
 ## Default example

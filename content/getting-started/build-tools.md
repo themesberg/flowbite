@@ -4,6 +4,11 @@ title: Build tools
 description: Follow the steps below to configure, develop and build with FlowBite and Tailwind CSS
 group: getting-started
 toc: true
+
+previous: Quickstart
+previousLink: getting-started/quickstart
+next: License
+nextLink: getting-started/license
 ---
 
 FlowBite is a collection of UI elements based on Tailwind CSS and uses a custom configuration file to extend the default utilities. This means that developing with FlowBite is almost the same as working with Tailwind CSS.

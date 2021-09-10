@@ -4,6 +4,11 @@ title: Modal
 description: Use FlowBite's custom modals built with Tailwind CSS to add dialogs for your site
 group: components
 toc: true
+
+previous: Typography
+previousLink: components/typography
+next: Navbar
+nextLink: components/navbar
 ---
 
 ## Default example

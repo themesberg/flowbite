@@ -40,6 +40,15 @@
 
             {{ .Content }}
 
+            <div class="mt-12 flex leading-6 font-medium">
+              {{ if isset .Page.Params "previous" }}
+                <a class="flex mr-8 transition-colors duration-200 text-gray-500 hover:text-gray-900" href="{{ .Page.Params.PreviousLink | relURL }}"><span aria-hidden="true" class="mr-2">←</span>{{ .Page.Params.Previous }}</a>
+              {{ end }}
+              {{ if isset .Page.Params "next" }}
+              <a class="flex text-right ml-auto transition-colors duration-200 text-gray-500 hover:text-gray-900" href="{{ .Page.Params.NextLink | relURL }}">{{ .Page.Params.Next }}<span aria-hidden="true" class="ml-2">→</span></a>
+              {{ end }}
+            </div>
+
           </div>
         </div>
 

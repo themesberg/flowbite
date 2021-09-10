@@ -4,6 +4,11 @@ title: Optimization
 description: Optimize for production by using Purge CSS and remove unused CSS using the Tailwind configuration file
 group: customize
 toc: true
+
+previous: Icons
+previousLink: customize/icons
+next: Alerts
+nextLink: components/alerts
 ---
 
 The default development build of FlowBite and Tailwind CSS is roughly 3566.2kB uncompressed, 289.2kB when minified and compressed with Gzip, and 71.3kB when compressed with Brotli.

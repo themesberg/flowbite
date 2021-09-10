@@ -4,6 +4,11 @@ title: Color
 description: Customize the default colors of FlowBite using the Tailwind CSS configuration file
 group: customize
 toc: true
+
+previous: Theming
+previousLink: customize/theming
+next: Icons
+nextLink: customize/icons
 ---
 
 ## Default color palette

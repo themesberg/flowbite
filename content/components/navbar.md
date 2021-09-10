@@ -4,6 +4,11 @@ title: Navbar
 description: Use these Tailwind CSS navbar elements to show a navigational bar at the top side of your website
 group: components
 toc: true
+
+previous: Modals
+previousLink: components/modal
+next: Pagination
+nextLink: components/pagination
 ---
 
 ## Default navbar

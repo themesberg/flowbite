@@ -4,6 +4,11 @@ title: Cards
 description: Get started with pre-built Tailwind CSS card elements for your web project
 group: components
 toc: true
+
+previous: Button group
+previousLink: components/button-group
+next: Dropdowns
+nextLink: components/dropdowns
 ---
 
 ## Default example

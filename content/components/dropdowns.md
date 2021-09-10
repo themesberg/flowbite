@@ -4,6 +4,11 @@ title: Dropdowns
 description: Use the Tailwind CSS dropdown elements to show a list of items displayed as a menu
 group: components
 toc: true
+
+previous: Cards
+previousLink: components/card
+next: Forms
+nextLink: components/forms
 ---
 
 If you want to use the dropdown functionality, make sure that you have [Popper.js](https://popper.js.org/) included in your project. By default, FlowBite already includes this package in the main javascript file.

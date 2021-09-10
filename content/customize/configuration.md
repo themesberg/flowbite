@@ -4,6 +4,11 @@ title: Configuration
 description: Customize the default utility classes by configuring the Tailwind CSS config file
 group: customize
 toc: true
+
+previous: Changelog
+previousLink: getting-started/changelog
+next: Theming
+nextLink: customize/theming
 ---
 
 ## Configuration file

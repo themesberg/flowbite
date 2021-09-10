@@ -4,6 +4,11 @@ title: Pagination
 description: Use the Tailwind CSS pagination element to indicate a series of content across various pages
 group: components
 toc: true
+
+previous: Navbar
+previousLink: components/navbar
+next: Progress
+nextLink: components/progress
 ---
 
 ## Default example

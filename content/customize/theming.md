@@ -4,6 +4,11 @@ title: Theming
 description: Use the theming options from the configuration file to override the default utility classes from FlowBite
 group: customize
 toc: true
+
+previous: Configuration
+previousLink: customize/configuration
+next: Color
+nextLink: customize/color
 ---
 
 You can use the `theme` object from the configuration file to define any style related classes, such as the color palette, fonts, breakpoints, and more.

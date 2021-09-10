@@ -4,6 +4,11 @@ title: Badge
 description: Use Tailwind CSS badges as elements to show counts or labels separately or inside other components
 group: components
 toc: true
+
+previous: Alerts
+previousLink: components/alerts
+next: Breadcrumbs
+nextLink: components/breadcrumb
 ---
 
 ## Default example

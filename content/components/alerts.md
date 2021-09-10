@@ -4,6 +4,11 @@ title: Alerts
 description: Show contextual information to you users using Tailwind CSS alert elements
 group: components
 toc: true
+
+previous: Optimization
+previousLink: customize/optimization
+next: Badges
+nextLink: components/badge
 ---
 
 ## Default alerts

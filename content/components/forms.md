@@ -280,7 +280,8 @@ Group a series of buttons together on a single line or stack them in a vertical 
 Make sure that you also add this extra bit of CSS:
 
 ```css
-input[type=file]::-webkit-file-upload-button {
+input[type=file]::-webkit-file-upload-button,
+input[type=file]::file-selector-button {
 	@apply text-white bg-gray-700 hover:bg-gray-600 font-medium text-sm cursor-pointer border-0 py-2.5 pl-8 pr-4;
 	margin-inline-start: -1rem;
 	margin-inline-end: 1rem;

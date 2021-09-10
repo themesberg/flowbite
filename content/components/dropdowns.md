@@ -76,8 +76,7 @@ document.querySelectorAll('[data-dropdown-toggle]').forEach(function (dropdownTo
 
         function handleDropdownOutsideClick(event) {
             var targetElement = event.target; // clicked element
-            if (targetElement !== dropdownMenuEl && targetElement !== dropdownToggleEl) {
-                console.log('click outside');
+            if (targetElement !== dropdownMenuEl && targetElement !== dropdownToggleEl && !dropdownToggleEl.contains(targetElement)) {
                 dropdownMenuEl.classList.add("hidden");
                 dropdownMenuEl.classList.remove("block");
                 document.body.removeEventListener('click', handleDropdownOutsideClick, true);
@@ -87,6 +86,5 @@ document.querySelectorAll('[data-dropdown-toggle]').forEach(function (dropdownTo
         // hide popper when clicking outside the element
         document.body.addEventListener('click', handleDropdownOutsideClick, true);
     });
-
 });
 ```

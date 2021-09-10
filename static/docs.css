@@ -3259,7 +3259,19 @@ input[type=file]::-webkit-file-upload-button {
   background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
 }
 
+input[type=file]::-webkit-file-upload-button, input[type=file]::file-selector-button {
+  cursor: pointer;
+  border-width: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+}
+
 input[type=file]::-webkit-file-upload-button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
+}
+
+input[type=file]::-webkit-file-upload-button:hover, input[type=file]::file-selector-button:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
 }
@@ -3274,6 +3286,29 @@ input[type=file]::-webkit-file-upload-button {
   font-weight: 500;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+input[type=file]::-webkit-file-upload-button, input[type=file]::file-selector-button {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-right: 1rem;
+  padding-left: 2rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+input[type=file]::-webkit-file-upload-button {
+  -webkit-margin-start: -1rem;
+          margin-inline-start: -1rem;
+  -webkit-margin-end: 1rem;
+          margin-inline-end: 1rem;
+}
+
+input[type=file]::-webkit-file-upload-button,
+input[type=file]::file-selector-button {
   -webkit-margin-start: -1rem;
           margin-inline-start: -1rem;
   -webkit-margin-end: 1rem;

@@ -8,16 +8,15 @@ toc: true
 
 ## Default example
 
-In order to create a modal with Tailwind CSS you only have to add a `onclick="toggleModal('default-modal')"` event listener to an element such as a button and then apply the `default-modal` id to the modal element.
-
-You can use the same event listener on other elements such as the close button or decline button.
+In order to create a modal with Tailwind CSS you only have to add `data-modal-toggle="modalId"` data attribute where `modalId` is the id of the modal that you are targeting.
 
 {{< example >}}
 <!-- Modal toggle -->
-<button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button" onclick="toggleModal('default-modal')">
-  Default
+<button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button" data-modal-toggle="default-modal">
+  Toggle modal
 </button>
 
+<!-- Main modal -->
 <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 justify-center items-center" id="default-modal">
     <div class="relative w-auto max-w-2xl px-4">
         <!-- Modal content -->
@@ -27,7 +26,7 @@ You can use the same event listener on other elements such as the close button o
                 <h3 class="text-xl lg:text-2xl font-semibold">
                     Terms of Service
                 </h3>
-                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" onclick="toggleModal('default-modal')">
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="default-modal">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
                 </button>
             </div>
@@ -42,8 +41,8 @@ You can use the same event listener on other elements such as the close button o
             </div>
             <!-- Modal footer -->
             <div class="flex space-x-2 items-center p-6 border-t border-gray-200 rounded-b">
-                <button onclick="toggleModal('default-modal')" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">I accept</button>
-                <button onclick="toggleModal('default-modal')" type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Decline</button>
+                <button data-modal-toggle="default-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">I accept</button>
+                <button data-modal-toggle="default-modal" type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Decline</button>
             </div>
         </div>
     </div>

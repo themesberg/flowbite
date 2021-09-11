@@ -1,6 +1,6 @@
 {
-  "name": "@themesberg/flowbite-test-2",
-  "version": "1.0.0",
+  "name": "@themesberg/flowbite",
+  "version": "1.0.1",
   "description": "Open-source library of Tailwind CSS components and elements.",
   "keywords": [
     "tailwind",

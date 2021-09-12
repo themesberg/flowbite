@@ -2,9 +2,9 @@
   context: info
 - name: red
   context: danger
-- name: green
-  context: success
 - name: yellow
   context: warning
+- name: green
+  context: success
 - name: gray
   context: dark

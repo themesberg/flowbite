@@ -41,10 +41,6 @@ You can also require FlowBite as a dependency using NPM by running the following
 npm i @themesberg/flowbite
 ```
 
-<!-- ## Download as a zip
+## Github repository
 
-If you want to directly download the source and dist files of the FlowBite project you can do so by [creating an account for free on FlowBite](https://flowbite.design/) and download the project files from there. -->
-
-<!-- ## Clone it from Github
-
-The source files are also available to be cloned or downloaded from the official [Github repository](https://github.com). Don't forget to give it a star if you appreciate the project. -->
+The source files are also available to be cloned or downloaded from the official <a href="https://github.com/themesberg/flowbite" target="_blank">FlowBite Github repository</a>. Don't forget to give it a star if you appreciate the project.

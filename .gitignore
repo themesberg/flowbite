@@ -5,3 +5,4 @@ _gh_pages/
 static/images/.DS_Store
 static/*.css
 static/*.js
+static/*.map

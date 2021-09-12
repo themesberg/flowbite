@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Alerts
-description: Show contextual information to you users using Tailwind CSS alert elements
+description: Show contextual information to your users using alert elements based on Tailwind CSS
 group: components
 toc: true
 

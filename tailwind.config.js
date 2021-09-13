@@ -135,7 +135,10 @@ module.exports = {
         800: '#99154B',
         900: '#751A3D'
       }
-    }
+    },
+    maxWidth: {
+      '2xs': '16rem',
+     }
   },
   variants: {
     extend: {

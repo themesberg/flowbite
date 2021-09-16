@@ -13,7 +13,7 @@
   "license": "MIT",
   "style": "dist/flowbite.css",
   "main": "dist/flowbite.bundle.js",
-  "homepage": "https://flowbite.design/docs/getting-started/introduction/",
+  "homepage": "https://flowbite.com/docs/getting-started/introduction/",
   "contributors": [
     "Zoltán Szőgyényi <zoltan@themesberg.com>",
     "Robert Tanislav <robert@themesberg.com>"

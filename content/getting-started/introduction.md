@@ -23,11 +23,11 @@ FlowBite is an open-source collection of UI elements based on the utility-first 
         <h3 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">Components</h3>
         <p class="font-normal text-gray-700">Explore the Tailwind CSS elements such as buttons, navbars, alerts, dropdowns and use them to build your website.</p>
     </a>
-    <a href="https://flowbite.design" target="_blank" class="p-6 block bg-white hover:bg-gray-100 shadow-md border border-gray-200 rounded-lg mb-6 lg:mb-0">
+    <a href="https://flowbite.com" target="_blank" class="p-6 block bg-white hover:bg-gray-100 shadow-md border border-gray-200 rounded-lg mb-6 lg:mb-0">
         <h3 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">Figma design files</h3>
         <p class="font-normal text-gray-700">Prototype and design your website before coding with the FlowBite Figma file which is based on the Tailwind CSS classes.</p>
     </a>
-    <a href="https://flowbite.design" target="_blank" class="p-6 block bg-white hover:bg-gray-100 shadow-md border border-gray-200 rounded-lg">
+    <a href="https://flowbite.com" target="_blank" class="p-6 block bg-white hover:bg-gray-100 shadow-md border border-gray-200 rounded-lg">
         <h3 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">Upgrade to Pro</h3>
         <p class="font-normal text-gray-700">Take your Figma and Tailwind CSS development to the next level with thousands more elements and pages with FlowBite Pro.</p>
     </a>
@@ -49,13 +49,13 @@ Getting started with FlowBite is fairly easy: all you need to do is follow the [
 
 ## Figma design files
 
-If you'd like to work with a Figma design file you can either duplicate the <a href="https://www.figma.com/community/file/973638860086718856" target="_blank">free version on Figma Community</a> or upgrade for additional application UI, marketing UI, and e-commerce sections and pages with [FlowBite Pro](https://flowbite.design).
+If you'd like to work with a Figma design file you can either duplicate the <a href="https://www.figma.com/community/file/973638860086718856" target="_blank">free version on Figma Community</a> or upgrade for additional application UI, marketing UI, and e-commerce sections and pages with [FlowBite Pro](https://flowbite.com).
 
 ## Licensing
 
 The components library of FlowBite is open-source under the [MIT License]({{< ref "getting-started/license" >}}). 
 
-However, please take into account that the pro version of FlowBite is subject to the [EULA (End User License Agreement)](https://flowbite.design/license/) from FlowBite.
+However, please take into account that the pro version of FlowBite is subject to the [EULA (End User License Agreement)](https://flowbite.com/license/) from FlowBite.
 
 ## Authors
 

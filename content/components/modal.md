@@ -23,7 +23,7 @@ In order to create a modal with Tailwind CSS you only have to add `data-modal-to
 
 <!-- Main modal -->
 <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 justify-center items-center" id="default-modal">
-    <div class="relative w-auto max-w-2xl px-4">
+    <div class="relative w-full max-w-2xl px-4">
         <!-- Modal content -->
         <div class="bg-white rounded-lg shadow relative flex flex-col">
             <!-- Modal header -->

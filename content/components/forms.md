@@ -33,7 +33,7 @@ This is an example of a form component including an email, password, checkbox, a
       <label for="remember" class="font-medium text-gray-900">Remember me</label>
     </div>
   </div>
-  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login to your account</button>
+  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Submit</button>
 </form>
 {{< /example >}}
 

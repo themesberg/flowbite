@@ -16,18 +16,18 @@ nextLink: components/typography
 This is an example of a form component including an email, password, checkbox, and submit button that you can use as a starting point for any form element in your website using FlowBite and Tailwind CSS.
 
 {{< example >}}
-<form action="#">
+<form>
   <div class="mb-6">
     <label for="email" class="text-sm font-medium text-gray-900 block mb-2">Your email</label>
-    <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com" required>
+    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com" required>
   </div>
   <div class="mb-6">
     <label for="password" class="text-sm font-medium text-gray-900 block mb-2">Your password</label>
-    <input type="password" name="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+    <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
   </div>
   <div class="flex items-start mb-6">
     <div class="flex items-center h-5">
-      <input id="remember" aria-describedby="remember" name="remember" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required>
+      <input id="remember" aria-describedby="remember" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required>
     </div>
     <div class="text-sm ml-3">
       <label for="remember" class="font-medium text-gray-900">Remember me</label>
@@ -44,15 +44,15 @@ Use the following utility classes to create three different sizing options (larg
 {{< example >}}
 <div class="mb-6">
     <label for="large-input" class="text-sm font-medium text-gray-900 block mb-2">Large input</label>
-    <input type="text" name="large-input" id="large-input" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4">
+    <input type="text" id="large-input" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4">
 </div>
 <div class="mb-6">
     <label for="base-input" class="text-sm font-medium text-gray-900 block mb-2">Base input</label>
-    <input type="text" name="base-input" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+    <input type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
 </div>
 <div class="mb-6">
     <label for="small-input" class="text-sm font-medium text-gray-900 block mb-2">Small input</label>
-    <input type="text" name="small-input" id="small-input" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2">
+    <input type="text" id="small-input" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2">
 </div>
 {{< /example >}}
 
@@ -62,10 +62,10 @@ Use the following utility classes to indicate a disabled form input item.
 
 {{< example >}}
 <div class="mb-6">
-    <input type="text" name="disabled-input" id="disabled-input" class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed" value="Disabled input" disabled>
+    <input type="text" id="disabled-input" class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed" value="Disabled input" disabled>
 </div>
 <div class="mb-6">
-    <input type="text" name="disabled-input-2" id="disabled-input-2" class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed" value="Disabled readonly input" disabled readonly>
+    <input type="text" id="disabled-input-2" class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed" value="Disabled readonly input" disabled readonly>
 </div>
 {{< /example >}}
 
@@ -74,22 +74,22 @@ Use the following utility classes to indicate a disabled form input item.
 Alternatively, you can decide to apply a shadow styling using the `shadow-sm` class to any of your form input elements.
 
 {{< example >}}
-<form action="#">
+<form>
   <div class="mb-6">
     <label for="email" class="text-sm font-medium text-gray-900 block mb-2">Your email</label>
-    <input type="email" name="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com" required>
+    <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com" required>
   </div>
   <div class="mb-6">
     <label for="password" class="text-sm font-medium text-gray-900 block mb-2">Your password</label>
-    <input type="password" name="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+    <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
   </div>
   <div class="mb-6">
     <label for="repeat-password" class="text-sm font-medium text-gray-900 block mb-2">Repeat password</label>
-    <input type="password" name="repeat-password" id="repeat-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+    <input type="password" id="repeat-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
   </div>
   <div class="flex items-start mb-6">
     <div class="flex items-center h-5">
-      <input id="terms" aria-describedby="terms" name="terms" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required>
+      <input id="terms" aria-describedby="terms" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required>
     </div>
     <div class="text-sm ml-3">
       <label for="terms" class="font-medium text-gray-900">I agree with the <a href="#" class="text-blue-600 hover:underline">terms and conditions</a></label>
@@ -106,7 +106,7 @@ Use the following markup to also add a helper text below your form input item. U
 {{< example >}}
 <div class="mb-6">
   <label for="email" class="text-sm font-medium text-gray-900 block mb-2">Your email</label>
-  <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
+  <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com">
   <p class="mt-2 text-sm text-gray-500">We’ll never share your details. Read our <a href="#" class="font-medium text-blue-600 hover:underline">Privacy Policy</a>.</p>
 </div>
 {{< /example >}}
@@ -121,7 +121,7 @@ Use the following Tailwind utility classes and SVG icon to add an icon inside in
   <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
     <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
   </div>
-  <input type="text" name="email" id="email-adress-icon" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="name@company.com">
+  <input type="text" id="email-adress-icon" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="name@company.com">
 </div>
 {{< /example >}}
 
@@ -135,7 +135,7 @@ Use the following utility classes and SVG icon to add an addon icon inside your 
   <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-200 text-gray-900 sm:text-sm">
     @
   </span>
-  <input type="text" name="website-admin" id="website-admin" class="rounded-none rounded-r-lg bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full sm:text-sm border-gray-300 p-2.5" placeholder="Bonnie Green">
+  <input type="text" id="website-admin" class="rounded-none rounded-r-lg bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full sm:text-sm border-gray-300 p-2.5" placeholder="Bonnie Green">
 </div>
 {{< /example >}}
 
@@ -146,12 +146,12 @@ Use the following two success and error styles when validation your forms.
 {{< example >}}
 <div class="mb-6">
   <label for="username-success" class="text-sm font-medium text-green-700 block mb-2">Your name</label>
-  <input type="text" name="username" id="username-success" class="bg-green-50 border-green-500 text-green-900 placeholder-green-700 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5" placeholder="Bonnie Green">
+  <input type="text" id="username-success" class="bg-green-50 border-green-500 text-green-900 placeholder-green-700 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5" placeholder="Bonnie Green">
   <p class="mt-2 text-sm text-green-600"><span class="font-medium">Alright!</span> Username available!</p>
 </div>
 <div>
   <label for="username-error" class="text-sm font-medium text-red-700 block mb-2">Your name</label>
-  <input type="text" name="username" id="username-error" class="bg-red-50 border-red-500 text-red-900 placeholder-red-700 sm:text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" placeholder="Bonnie Green">
+  <input type="text" id="username-error" class="bg-red-50 border-red-500 text-red-900 placeholder-red-700 sm:text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" placeholder="Bonnie Green">
   <p class="mt-2 text-sm text-red-600"><span class="font-medium">Oops!</span> Username already taken!</p>
 </div>
 {{< /example >}}
@@ -162,7 +162,7 @@ Use the following code to create a textarea form element.
 
 {{< example >}}
 <label for="message" class="text-sm font-medium text-gray-900 block mb-2">Your message</label>
-<textarea id="message" name="message" rows="4" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full" placeholder="Leave a comment..."></textarea>
+<textarea id="message" rows="4" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full" placeholder="Leave a comment..."></textarea>
 {{< /example >}}
 
 ## Select input
@@ -171,7 +171,7 @@ Use the following select input element to show selectable list of items.
 
 {{< example >}}
 <label for="countries" class="text-sm font-medium text-gray-900 block mb-2">Select your country</label>
-<select id="countries" name="countries" class="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+<select id="countries" class="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
   <option>United States</option>
   <option>Canada</option>
   <option>France</option>
@@ -204,7 +204,7 @@ The code below can be used to create a fieldset of checkbox elements inside a fo
   
   <div class="flex items-start mb-4">
     <div class="flex items-center h-5">
-      <input id="shipping-2" aria-describedby="shipping-2" name="shipping-2" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded">
+      <input id="shipping-2" aria-describedby="shipping-2" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded">
     </div>
     <div class="text-sm ml-3">
       <label for="shipping-2" class="font-medium text-gray-900">Free shipping via Flowbite</label>
@@ -213,7 +213,7 @@ The code below can be used to create a fieldset of checkbox elements inside a fo
   </div>
 
   <div class="flex items-start items-center">
-      <input id="international-shipping-disabled" aria-describedby="international-shipping-disabled" name="international-shipping" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" disabled>
+      <input id="international-shipping-disabled" aria-describedby="international-shipping-disabled" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" disabled>
       <label for="international-shipping-disabled" class="text-sm ml-3 font-medium text-gray-400">Eligible for international shipping (disabled)</label>
   </div>
 </fieldset>
@@ -274,7 +274,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
     Upload file
   </label>
   <div class="relative">
-    <input class="block w-full overflow-hidden cursor-pointer bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent sm:text-sm rounded-lg block w-full" aria-describedby="user_avatar_help" id="user_avatar" name="user[avatar]" type="file">
+    <input class="block w-full overflow-hidden cursor-pointer bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent sm:text-sm rounded-lg block w-full" aria-describedby="user_avatar_help" id="user_avatar" type="file">
   </div>
   <div class="mt-1 text-sm text-gray-500" id="user_avatar_help">
     A profile picture is useful to confirm your are logged into your account

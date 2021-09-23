@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Tables
+title: Tailwind CSS Table - Flowbite
 description: Use the following Tailwind CSS table components to show complex data in an organized layout
 group: components
 toc: true

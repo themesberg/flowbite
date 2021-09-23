@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Badge
+title: Tailwind CSS Badge - Flowbite
 description: Use Tailwind CSS badges as elements to show counts or labels separately or inside other components
 group: components
 toc: true

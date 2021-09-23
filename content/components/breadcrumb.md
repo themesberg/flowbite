@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Breadcrumb
+title: Tailwind CSS Breadcrumb - Flowbite
 description: Show the location of the current page in a hierarchical structure using the Tailwind CSS breadcrumb components 
 group: components
 toc: true

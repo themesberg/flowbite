@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Color
+title: Flowbite - Color scheme
 description: Customize the default colors of FlowBite using the Tailwind CSS configuration file
 group: customize
 toc: true

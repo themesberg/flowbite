@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Theming
+title: Flowbite - Theming
 description: Use the theming options from the configuration file to override the default utility classes from FlowBite
 group: customize
 toc: true

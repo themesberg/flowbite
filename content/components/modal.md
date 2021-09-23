@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Modal
+title: Tailwind CSS Modal - Flowbite
 description: Use FlowBite's custom modals built with Tailwind CSS to add dialogs for your site
 group: components
 toc: true

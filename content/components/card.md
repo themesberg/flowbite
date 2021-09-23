@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Cards
+title: Tailwind CSS Card - Flowbite
 description: Get started with pre-built Tailwind CSS card elements for your web project
 group: components
 toc: true

@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Quickstart
+title: Flowbite - Quickstart
 description: Quickly get started with including Flowbite into your project and start developing
 group: getting-started
 toc: true

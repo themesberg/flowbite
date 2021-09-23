@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Build tools
+title: Flowbite - Build tools
 description: Follow the steps below to configure, develop and build with FlowBite and Tailwind CSS
 group: getting-started
 toc: true
@@ -272,6 +272,8 @@ Alternatively, you can also just use a CDN link with the compiled JS:
 ```html
 <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
 ```
+
+13. Include `flowbite.css` to make use of the extra styles for special components such as the [datepicker component]({{< ref "plugins/datepicker" >}}).
 
 ## Building for production
 

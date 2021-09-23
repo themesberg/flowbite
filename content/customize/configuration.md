@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Configuration
+title: Flowbite - Configuration
 description: Customize the default utility classes by configuring the Tailwind CSS config file
 group: customize
 toc: true

@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Progress
+title: Tailwind CSS Progress Bar - Flowbite
 description: Use these Tailwind CSS progress bar elements to show the completion rate of something
 group: components
 toc: true

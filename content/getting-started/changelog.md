@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Changelog
+title: Flowbite - Changelog
 description: Read more about the releases made for FlowBite from the official changelog
 group: getting-started
 toc: true

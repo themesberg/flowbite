@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Tooltips
+title: Tailwind CSS Tooltip - Flowbite
 description: Use the following Tailwind CSS powered tooltips to show extra content when hovering or clicking on an element
 group: components
 toc: true

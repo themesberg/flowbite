@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Forms
+title: Tailwind CSS Form Components - Flowbite
 description: Use the Tailwind CSS form and input elements such as checkboxes, radios, textarea, text inputs to collect information from users with FlowBite
 group: components
 toc: true

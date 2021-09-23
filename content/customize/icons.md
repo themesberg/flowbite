@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Icons
+title: Flowbite - Tailwind CSS Icons
 description: Use this set of SVG powered icons for Tailwind CSS and FlowBite
 group: customize
 toc: true

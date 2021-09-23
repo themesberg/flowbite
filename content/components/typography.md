@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Typography
+title: Tailwind CSS Typography - Flowbite
 description: Use the typography and the utility classes from Tailwind CSS to style text with FlowBite
 group: components
 toc: true

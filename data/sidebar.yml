@@ -34,3 +34,7 @@
     - title: Progress
     - title: Tables
     - title: Tooltips
+
+- title: Plugins
+  pages:
+    - title: Datepicker

@@ -18,13 +18,6 @@ If you want to use the Tailwind datepicker component from Flowbite you will need
 ```html
 <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
 ```
-
-Also make sure that you also include the following styles in your CSS file if you haven't included `flowbite.css` into your project using NPM or the [build tools]({{< ref "getting-started/build-tools" >}}) page.
-
-```css
-
-```
-
 ## Datepicker example
 
 Use the following example of an input element to create a datepicker component. All you need to do is to add the `datepicker` data attribute to any `input` element.

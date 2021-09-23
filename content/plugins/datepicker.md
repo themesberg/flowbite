@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Datepicker
+title: Tailwind CSS Datepicker - Flowbite
 description: Use the Tailwind CSS datepicker plugin to get date and time data from input users using JavaScript and utility classes with Flowbite
 group: plugins
 toc: true

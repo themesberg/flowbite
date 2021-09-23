@@ -273,8 +273,6 @@ Alternatively, you can also just use a CDN link with the compiled JS:
 <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
 ```
 
-13. Include `flowbite.css` to make use of the extra styles for special components such as the [datepicker component]({{< ref "plugins/datepicker" >}}).
-
 ## Building for production
 
 If you want to build for production use the following command and remove any unused CSS:

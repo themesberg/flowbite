@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Datepicker - Flowbite
-description: Use the Tailwind CSS datepicker plugin to get date and time data from input users using JavaScript and utility classes with Flowbite
+description: Start receiving date and time data from your users using this free datepicker element based on Tailwind utility-classes and vanilla JavaScript
 group: plugins
 toc: true
 
@@ -172,8 +172,3 @@ new DateRangePicker(datepickerEl, {
     // options
 }); 
 ```
-<!-- ## Options
-
-The second argument for the `Datepicker` and `DateRangePicker` constructors is the `option` object where you can add optional options such as default dates, different behaviours, extra elements, and many more.
-
-Here's the full list of the available options. -->

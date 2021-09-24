@@ -9,7 +9,7 @@ previous: Tooltips
 previousLink: components/tooltips
 ---
 
-The Tailwind CSS datepicker component developed by Flowbite is based on the popular <a href="https://mymth.github.io/vanillajs-datepicker/#/" target="_blank" rel="nofollow">Vanilla JS Datepicker</a> library optimized with Tailwind utility classes and custom design.
+The Tailwind CSS datepicker component developed by Flowbite is built with vanilla JavaScript and using the utility-first classes from Tailwind. The datepicker features both inline and a date range picker functionality and some extra options such as autohide, custom format, positioning, and more.
 
 ## Getting started
 

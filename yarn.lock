@@ -911,6 +911,11 @@
   dependencies:
     "mini-svg-data-uri" "^1.2.3"
 
+"@themesberg/tailwind-datepicker@^1.0.0":
+  "integrity" "sha512-JcojyrXDFEFY5aEbA66qu1GR4oiUhwaNzcjI3IZpsA+nMBS1XrXRXduwrHDatqUNab/LCNDG3uJBBXT2wAuwTA=="
+  "resolved" "https://registry.npmjs.org/@themesberg/tailwind-datepicker/-/tailwind-datepicker-1.0.0.tgz"
+  "version" "1.0.0"
+
 "@trysound/sax@0.1.1":
   "integrity" "sha512-Z6DoceYb/1xSg5+e+ZlPZ9v0N16ZvZ+wYMraFue4HYrE4ttONKtsvruIRf6t9TBR0YvSOfi1hUU0fJfBLCDYow=="
   "resolved" "https://registry.npmjs.org/@trysound/sax/-/sax-0.1.1.tgz"
@@ -6266,11 +6271,6 @@
   dependencies:
     "spdx-correct" "^3.0.0"
     "spdx-expression-parse" "^3.0.0"
-
-"vanillajs-datepicker@^1.1.4":
-  "integrity" "sha512-XJhvRx+VqtRjqrPlgNCQntLpCntFKPMBd8ahxZhLkvrWX0bNdpP3kz5j13L2Q0xfTAY/QMfQtVZvBvRF0NilcA=="
-  "resolved" "https://registry.npmjs.org/vanillajs-datepicker/-/vanillajs-datepicker-1.1.4.tgz"
-  "version" "1.1.4"
 
 "vary@~1.1.2":
   "integrity" "sha1-IpnwLG3tMNSllhsLn3RSShj2NPw="

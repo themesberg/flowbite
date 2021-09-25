@@ -60,8 +60,8 @@
   "dependencies": {
     "@popperjs/core": "^2.9.3",
     "@tailwindcss/forms": "^0.3.3",
+    "@themesberg/tailwind-datepicker": "^1.0.1",
     "tippy.js": "^6.3.1",
-    "@themesberg/tailwind-datepicker": "^1.0.0",
     "yarn": "^1.22.10"
   }
 }

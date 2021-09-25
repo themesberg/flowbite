@@ -16,7 +16,8 @@ module.exports = {
         'h-6',
         'leading-6',
         'h-9',
-        'leading-9'
+        'leading-9',
+        'shadow-lg'
       ],
     }
   },

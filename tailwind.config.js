@@ -25,6 +25,9 @@ module.exports = {
     extend: {
       maxWidth: {
         '2xs': '16rem',
+      },
+      height: {
+        'modal': 'calc(100% - 2rem)'
       }
     },
     fontFamily: {

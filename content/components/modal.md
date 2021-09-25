@@ -22,10 +22,10 @@ In order to create a modal with Tailwind CSS you only have to add `data-modal-to
 </button>
 
 <!-- Main modal -->
-<div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 justify-center items-center" id="default-modal">
-    <div class="relative w-full max-w-2xl px-4">
+<div class="hidden overflow-x-hidden overflow-y-auto fixed h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center" style="height: calc(100% - 2rem)" id="default-modal">
+    <div class="relative w-full max-w-2xl px-4 h-full md:h-auto">
         <!-- Modal content -->
-        <div class="bg-white rounded-lg shadow relative flex flex-col">
+        <div class="bg-white rounded-lg shadow relative">
             <!-- Modal header -->
             <div class="flex items-start justify-between p-5 border-b rounded-t">
                 <h3 class="text-xl lg:text-2xl font-semibold">
@@ -56,6 +56,19 @@ In order to create a modal with Tailwind CSS you only have to add `data-modal-to
 <!-- Modal backdrop -->
 <div class="bg-gray-900 opacity-50 hidden fixed inset-0 z-40" id="default-modal-backdrop"></div>
 {{< /example >}}
+
+You also have to extend the Tailwind configuration file to add an extra `h-modal` utility class for the mobile spacing of the modals:
+
+```javascript
+theme: {
+    extend: {
+      // other options
+      height: {
+        'modal': 'calc(100% - 2rem)'
+      }
+    }
+}
+```
 
 ## Javascript
 

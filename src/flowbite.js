@@ -60,29 +60,45 @@ document.querySelectorAll('[data-dropdown-toggle]').forEach(function (dropdownTo
     });
 });
 
+const toggleModal = (modalId, show = true) => {
+
+    const modalEl = document.getElementById(modalId);
+
+    if (show) {
+        modalEl.classList.add('flex');
+        modalEl.classList.remove('hidden');
+        modalEl.setAttribute('aria-modal', 'true');
+        modalEl.setAttribute('role', 'dialog');
+        modalEl.removeAttribute('aria-hidden');
+
+        // create backdrop element
+        var backdropEl = document.createElement('div');
+        backdropEl.setAttribute('modal-backdrop', '');
+        backdropEl.classList.add('bg-gray-900', 'bg-opacity-50', 'fixed', 'inset-0', 'z-40');
+        document.querySelector('body').append(backdropEl);
+    } else {
+        modalEl.classList.add('hidden');
+        modalEl.classList.remove('flex');
+        modalEl.setAttribute('aria-hidden', 'true');
+        modalEl.removeAttribute('aria-modal');
+        modalEl.removeAttribute('role');
+        document.querySelector('[modal-backdrop]').remove();
+    }
+
+}
+
+window.toggleModal = toggleModal;
+
 document.querySelectorAll('[data-modal-toggle]').forEach(function (modalToggleEl) {
     var modalId = modalToggleEl.getAttribute('data-modal-toggle');
     var modalEl = document.getElementById(modalId);
 
+    if (!modalEl.hasAttribute('aria-hidden') && !modalEl.hasAttribute('aria-modal')) {
+        modalEl.setAttribute('aria-hidden', 'true');
+    }
+
     modalToggleEl.addEventListener('click', function() {
-        modalEl.classList.toggle("hidden");
-        document.getElementById(modalId + "-backdrop").classList.toggle("hidden");
-        modalEl.classList.toggle("flex");
-        document.getElementById(modalId + "-backdrop").classList.toggle("flex");
-
-        function handleModalOutsideClick(event) {
-            var targetElement = event.target; // clicked element
-            if (targetElement !== modalEl && !modalEl.contains(targetElement)) {
-                modalEl.classList.add("hidden");
-                document.getElementById(modalId + "-backdrop").classList.add("hidden");
-                modalEl.classList.remove("flex");
-                document.getElementById(modalId + "-backdrop").classList.remove("flex");
-                document.body.removeEventListener('click', handleModalOutsideClick, true);
-            }
-        }
-
-        // hide popper when clicking outside the element
-        document.body.addEventListener('click', handleModalOutsideClick, true);
+        toggleModal(modalId, modalEl.hasAttribute('aria-hidden', 'true'));
     });
 });
 

@@ -7,8 +7,8 @@ toc: true
 
 previous: Dropdowns
 previousLink: components/dropdowns
-next: Typography
-nextLink: components/typography
+next: List group
+nextLink: components/list-group
 ---
 
 ## Form example

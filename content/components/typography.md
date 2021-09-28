@@ -5,8 +5,8 @@ description: Use the typography and the utility classes from Tailwind CSS to sty
 group: components
 toc: true
 
-previous: Forms
-previousLink: components/forms
+previous: List group
+previousLink: components/list-group
 next: Modals
 nextLink: components/modal
 ---

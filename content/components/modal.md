@@ -15,6 +15,8 @@ nextLink: components/navbar
 
 In order to create a modal with Tailwind CSS you only have to add `data-modal-toggle="modalId"` data attribute where `modalId` is the id of the modal that you are targeting.
 
+Make sure that you also have `aria-hidden="true"` applied as an attribute when the modal is hidden by default so that Flowbite can check whether the modal is being shown or not. If you forget to apply the attribute, the Flowbite JavaScript will still set it up for you as a fallback.
+
 {{< example >}}
 <!-- Modal toggle -->
 <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button" data-modal-toggle="default-modal">
@@ -22,7 +24,7 @@ In order to create a modal with Tailwind CSS you only have to add `data-modal-to
 </button>
 
 <!-- Main modal -->
-<div class="hidden overflow-x-hidden overflow-y-auto fixed h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center" style="height: calc(100% - 2rem)" id="default-modal">
+<div id="default-modal" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
     <div class="relative w-full max-w-2xl px-4 h-full md:h-auto">
         <!-- Modal content -->
         <div class="bg-white rounded-lg shadow relative">
@@ -52,9 +54,6 @@ In order to create a modal with Tailwind CSS you only have to add `data-modal-to
         </div>
     </div>
 </div>
-
-<!-- Modal backdrop -->
-<div class="bg-gray-900 opacity-50 hidden fixed inset-0 z-40" id="default-modal-backdrop"></div>
 {{< /example >}}
 
 You also have to extend the Tailwind configuration file to add an extra `h-modal` utility class for the mobile spacing of the modals:
@@ -72,20 +71,15 @@ theme: {
 
 ## Javascript
 
-The JavaScript code that enables modals to work is the following;
+If you want to programatically show or hide the modal element using JavaScript, all you need to do is call the `toggleModal(modalId, show)` function where the first parameter is the id of the modal element and the second is a true or false boolean that will show or hide the modal.
 
 ```javascript
-function toggleModal(modalID){
-    document.getElementById(modalID).classList.toggle("hidden");
-    document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
-    document.getElementById(modalID).classList.toggle("flex");
-    document.getElementById(modalID + "-backdrop").classList.toggle("flex");
-}
-```
+// shows the modal
+toggleModal('default-modal');
 
-If you want to show or hide the modal programatically, all you need to do us use the following function where the parameter is the id of your modal:
+// hides the modal
+toggleModal('default-modal', false);
 
-```javascript
-// Show or hide a modal
-toggleModal(modalId);
+// also shows the modal
+toggleModal('default-modal', true);
 ```

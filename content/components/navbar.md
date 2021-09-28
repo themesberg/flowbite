@@ -11,6 +11,8 @@ next: Pagination
 nextLink: components/pagination
 ---
 
+Get started with the responsive navbar component from Flowbite to quickly set up a navigation menu for your website and set up the logo, list of pages and even call to action buttons, a search field, or a dropdown item.
+
 ## Default navbar
 
 Use this example of a navigation bar built with Tailwind CSS to create a navigation element for your website.

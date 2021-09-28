@@ -11,7 +11,7 @@ next: Navbar
 nextLink: components/navbar
 ---
 
-The modal component is an interactive element that you can use to show user dialogs using data attributes 
+The modal component is an interactive element that you can use to show user dialogs using data attributes but also programatically show or hide using JavaScript.
 
 ## Default example
 

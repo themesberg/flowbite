@@ -11,7 +11,9 @@ next: Modals
 nextLink: components/modal
 ---
 
-The typography for FlowBite is completely based on the utility classes from Tailwind CSS. We have listed some of the commonly used typography classes that we use throughout the FlowBite UI, however, you can also check out all of the utility classes on the [Tailwind CSS documentation](https://tailwindcss.com/docs/font-family) directly.
+The typography for FlowBite is completely based on the utility classes from Tailwind CSS.
+
+We have listed some of the commonly used typography classes that we use throughout the FlowBite UI, however, you can also check out all of the utility classes on the [Tailwind CSS documentation](https://tailwindcss.com/docs/font-family) directly.
 
 ## Font Size
 

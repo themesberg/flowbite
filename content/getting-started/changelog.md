@@ -17,10 +17,12 @@ We strive to keep a good accountability of all of the version changes that we ma
 
 ### v1.0.2
 
-- improve the modal functionality by generating the backdrop on the fly and enable showing/hiding of the modal with JS not just data attributes
+- improve the modal functionality by generating the backdrop on the fly and enable showing/hiding of the modal with JS not just data attributes by using the `toggleModal` function
 - improve the semantic HTML markup of alerts, button groups, navigation bars, and dropdowns
 - fix the responsive scroll issue for modals (if the content was larger than the viewport, elements inside the modal were unaccessible)
 - create a new component called list group which got separated from the button group component
+- improve navigation bar markup by requiring only one list of pages to prevent duplicate content
+- add the possibility to programatically show or hide elements using the `toggleCollapse` global function
 
 ### v1.0.1
 

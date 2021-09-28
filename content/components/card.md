@@ -11,6 +11,8 @@ next: Dropdowns
 nextLink: components/dropdowns
 ---
 
+The card component can be used to show information about data entries and link to other pages such as a profile or blog post page.
+
 ## Default example
 
 Use the following simple card with a title and description.

@@ -15,6 +15,13 @@ nextLink: customize/configuration
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
+### v1.0.2
+
+- improve the modal functionality by generating the backdrop on the fly and enable showing/hiding of the modal with JS not just data attributes
+- improve the semantic HTML markup of alerts, button groups, navigation bars, and dropdowns
+- fix the responsive scroll issue for modals (if the content was larger than the viewport, elements inside the modal were unaccessible)
+- create a new component called list group which got separated from the button group component
+
 ### v1.0.1
 
 Released on 10th of September 2021.

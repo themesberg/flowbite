@@ -11,11 +11,15 @@ next: Navbar
 nextLink: components/navbar
 ---
 
+The modal component is an interactive element that you can use to show user dialogs using data attributes 
+
 ## Default example
 
 In order to create a modal with Tailwind CSS you only have to add `data-modal-toggle="modalId"` data attribute where `modalId` is the id of the modal that you are targeting.
 
-Make sure that you also have `aria-hidden="true"` applied as an attribute when the modal is hidden by default so that Flowbite can check whether the modal is being shown or not. If you forget to apply the attribute, the Flowbite JavaScript will still set it up for you as a fallback.
+Make sure that you also have `aria-hidden="true"` applied as an attribute when the modal is hidden by default so that Flowbite can check whether the modal is being shown or not.
+
+If you forget to apply the attribute, the Flowbite JavaScript will still set it up for you as a fallback.
 
 {{< example >}}
 <!-- Modal toggle -->
@@ -74,12 +78,12 @@ theme: {
 If you want to programatically show or hide the modal element using JavaScript, all you need to do is call the `toggleModal(modalId, show)` function where the first parameter is the id of the modal element and the second is a true or false boolean that will show or hide the modal.
 
 ```javascript
-// shows the modal
-toggleModal('default-modal');
+// shows the #modal element
+toggleModal('modal');
 
-// hides the modal
-toggleModal('default-modal', false);
+// hides the #modal element
+toggleModal('modal', false);
 
-// also shows the modal
-toggleModal('default-modal', true);
+// also shows the #modal element
+toggleModal('modal', true);
 ```

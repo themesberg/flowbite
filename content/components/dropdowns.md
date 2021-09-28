@@ -26,7 +26,7 @@ The `dropdownId` is the id of the dropdown menu element.
 <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown">
     <div class="px-4 py-3">
       <span class="block text-sm">Bonnie Green</span>
-      <span class="block text-sm font-medium text-gray-900 truncate">name@company.com</span>
+      <span class="block text-sm font-medium text-gray-900 truncate">name@flowbite.com</span>
     </div>
     <ul class="py-1" aria-labelledby="dropdown">
       <li>

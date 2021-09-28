@@ -12,7 +12,11 @@ nextLink: getting-started/quickstart
 
 ## What is FlowBite?
 
-FlowBite is an open-source collection of UI elements based on the utility-first CSS framework Tailwind designed and coded by [Themesberg](https://themesberg.com) available in Figma and as web components.
+FlowBite is an open-source library of UI elements based on the utility-first CSS framework Tailwind designed and coded by [Themesberg](https://themesberg.com) available in Figma and as web components.
+
+[video florin]
+
+It includes all of the commonly used components a website requires, such as buttons, dropdowns, navigation bars, modals, but also some more advanced interactive elements such as datepickers. All of the element are built using utility classes from Tailwind CSS and vanilla JavaScript.
 
 <div class="lg:grid lg:grid-cols-2 lg:gap-8 mt-10">
     <a href="{{< ref "getting-started/quickstart" >}}" class="p-6 block bg-white hover:bg-gray-100 shadow-md border border-gray-200 rounded-lg mb-6 lg:mb-0">
@@ -37,8 +41,6 @@ FlowBite is an open-source collection of UI elements based on the utility-first 
 
 One of the disadvantages of Tailwind CSS compared to other frameworks is that it doesn't have a base set of components. This makes it really hard to quickly prototype a user interface. 
 
-<img src="/docs/images/og-image.png" alt="FlowBite - Tailwind CSS Components Library" class="mb-6 lg:mb-12">
-
 **This is where FlowBite comes into play**: it's basically Tailwind CSS, but you get all of the components that you would normally get with a classic CSS framework like Bootstrap or Bulma.
 
 There are at least 15 types of components including buttons, alerts, breadcrumbs, pagination, and navbars. FlowBite also includes some custom JavaScript that enables interactive components, such as dropdowns, modals, tooltips, and many more.
@@ -51,12 +53,22 @@ Getting started with FlowBite is fairly easy: all you need to do is follow the [
 
 If you'd like to work with a Figma design file you can either duplicate the <a href="https://www.figma.com/community/file/973638860086718856" target="_blank">free version on Figma Community</a> or upgrade for additional application UI, marketing UI, and e-commerce sections and pages with [FlowBite Pro](https://flowbite.com).
 
+## Upgrade to Pro
+
+If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite](https://flowbite.com) which includes fully coded pages and layouts for application, marketing, and e-commerce websites.
+
 ## Licensing
 
 The components library of FlowBite is open-source under the [MIT License]({{< ref "getting-started/license" >}}). 
 
-However, please take into account that the pro version of FlowBite is subject to the [EULA (End User License Agreement)](https://flowbite.com/license/) from FlowBite.
+## Contributions
 
-## Authors
+Flowbite is an open source library under the MIT license and anyone who would like to contribute to the codebase or design is welcome to do so. 
 
-The authors of FlowBite are [Zoltán Szőgyényi](https://twitter.com/zoltanszogyenyi) (development) and [Robert Tanislav](https://twitter.com/RobertTanislav) (designer) as the co-founders of [Themesberg](https://themesberg.com).
+Please reach out to us via the [official Github repository](https://github.com/themesberg/flowbite) and the main development team will get in touch as soon as possible.
+
+Authors & contributors:
+
+- [Zoltan Szogyenyi](https://twitter.com/zoltanszogyenyi) (web developer)
+- [Robert Tanislav](https://twitter.com/RobertTanislav) (web designer)
+- [Victor Cordos](https://twitter.com/victorcordos) (webdeveloper)

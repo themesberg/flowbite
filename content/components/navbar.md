@@ -16,34 +16,12 @@ nextLink: components/pagination
 Use this example of a navigation bar built with Tailwind CSS to create a navigation element for your website.
 
 {{< example >}}
-<nav class="bg-white border-gray-200">
-  <div class="px-2 sm:px-4 lg:px-5">
-    <div class="flex items-center justify-between h-16">
-      <!-- Logo -->
-      <div class="flex-2 flex items-center sm:justify-start">
-        <a href="#">
-          <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
-        </a>
-        <div class="hidden sm:block sm:ml-6">
-          <ul class="flex space-x-8">
-            <li>
-              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Home</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">About us</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Features</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Pricing</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+<nav class="bg-white border-gray-200 px-2 sm:px-4 lg:px-5 flex items-center justify-between h-16">
+    <!-- Logo -->
+    <div class="flex-2 flex items-center sm:justify-start">
+      <a href="#">
+        <img src="/docs/images/logo.svg" class="h-10 mr-4" alt="FlowBite Logo" />
+      </a>
       <!-- Mobile menu button-->
       <button data-collapse-toggle="mobile-menu" type="button" class="sm:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
@@ -52,25 +30,26 @@ Use this example of a navigation bar built with Tailwind CSS to create a navigat
         <!-- Close mobile menu icon -->
         <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
       </button>
+      <div class="hidden sm:block sm:ml-6" id="mobile-menu">
+        <ul class="flex-column sm:flex-row space-x-8">
+          <li>
+            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">About us</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Features</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Pricing</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-blue-700 text-sm font-medium">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <!-- Mobile menu -->
-  <div class="hidden sm:hidden" id="mobile-menu">
-    <ul class="pt-2">
-      <li>
-        <a href="#" class="bg-gray-100 text-gray-900 text-base font-normal block pl-3 pr-4 py-2">Dashboard</a>
-      </li>
-      <li>
-        <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Team</a>
-      </li>
-      <li>
-        <a href="#" class="text-gray-600 hover:bg-gray-50 border-b border-gray-100 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Projects</a>
-      </li>
-      <li>
-        <a href="#" class="text-gray-600 hover:bg-gray-50 text-base font-normal hover:border-gray-300 hover:text-gray-900 block px-3 py-2">Calendar</a>
-      </li>
-    </ul>
-  </div>  
 </nav>
 {{< /example >}}
 

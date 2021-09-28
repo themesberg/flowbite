@@ -11,6 +11,10 @@ next: Breadcrumbs
 nextLink: components/breadcrumb
 ---
 
+The badge component can be used to complement other elements such as buttons or text elements as a label or to show the count of a given data, such as the number of comments for an article or how much time has passed by since a comment has been made.
+
+Alternatively, badges can also be used as standalone elements that link to a certain page by using the anchor tag instead of a `span` element.
+
 ## Default example
 
 Use the following badge elements to indicate counts or labels inside or outside components.

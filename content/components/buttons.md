@@ -11,6 +11,10 @@ next: Button group
 nextLink: components/button-group
 ---
 
+The button component is probably the most widely used element in any user interface or website as it can be used to launch an action but also to link to other pages.
+
+The Flowbite library comes with a large variety of styles and sizes for the button component including outlined buttons, multiple colors, sizes, buttons with icons, and more.
+
 ## Examples
 
 Use the following color and style variations of the button element to indicate an action or link on your website.

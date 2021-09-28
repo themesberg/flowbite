@@ -22,7 +22,7 @@
     "start": "NODE_ENV=development run-p start:*",
     "start:hugo": "hugo server -D",
     "start:webpack": "webpack --mode=development --watch",
-    "build": "NODE_ENV=production && run-s build:webpack build:hugo",
+    "build": "NODE_ENV=production && HUGO_ENV=production && run-s build:webpack build:hugo",
     "build:hugo": "hugo",
     "build:webpack": "webpack --mode=production",
     "build:css:min": "NPM_ENV=production npx postcss src/flowbite.css  > dist/flowbite.min.css",

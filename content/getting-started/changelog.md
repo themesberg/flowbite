@@ -15,7 +15,7 @@ nextLink: customize/configuration
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
-### v1.0.2
+### v1.0.3
 
 - improve the modal functionality by generating the backdrop on the fly and enable showing/hiding of the modal with JS not just data attributes by using the `toggleModal` function
 - improve the semantic HTML markup of alerts, button groups, navigation bars, and dropdowns
@@ -23,6 +23,13 @@ We strive to keep a good accountability of all of the version changes that we ma
 - create a new component called list group which got separated from the button group component
 - improve navigation bar markup by requiring only one list of pages to prevent duplicate content
 - add the possibility to programatically show or hide elements using the `toggleCollapse` global function
+
+### v1.0.1
+
+Released on 10th of September 2021.
+
+- add datepicker plugin and documentation
+- improve documentation
 
 ### v1.0.1
 

@@ -34,10 +34,10 @@ Use the following breadcrumb example to show the hierarchical structure of pages
         <a href="#" class="text-gray-700 hover:text-gray-900 ml-1 md:ml-2 text-sm font-medium">Projects</a>
       </div>
     </li>
-    <li>
+    <li aria-current="page">
       <div class="flex items-center">
         <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-        <span class="text-gray-400 ml-1 md:ml-2 text-sm font-medium" aria-current="page">FlowBite</span>
+        <span class="text-gray-400 ml-1 md:ml-2 text-sm font-medium">FlowBite</span>
       </div>
     </li>
   </ol>
@@ -64,10 +64,10 @@ You can alternatively also use the breadcrumb components with a solid background
         <a href="#" class="text-blue-700 hover:text-blue-900 ml-1 md:ml-2 text-sm font-medium">Templates</a>
       </div>
     </li>
-    <li>
+    <li aria-current="page">
       <div class="flex items-center">
         <svg class="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-        <span class="text-blue-400 ml-1 md:ml-2 text-sm font-medium" aria-current="page">FlowBite</span>
+        <span class="text-blue-400 ml-1 md:ml-2 text-sm font-medium">FlowBite</span>
       </div>
     </li>
   </ol>
@@ -87,10 +87,10 @@ You can alternatively also use the breadcrumb components with a solid background
         <a href="#" class="text-red-700 hover:text-red-900 ml-1 md:ml-2 text-sm font-medium">Templates</a>
       </div>
     </li>
-    <li>
+    <li aria-current="page">
       <div class="flex items-center">
         <svg class="w-6 h-6 text-red-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-        <span class="text-red-400 ml-1 md:ml-2 text-sm font-medium" aria-current="page">FlowBite</span>
+        <span class="text-red-400 ml-1 md:ml-2 text-sm font-medium">FlowBite</span>
       </div>
     </li>
   </ol>
@@ -110,10 +110,10 @@ You can alternatively also use the breadcrumb components with a solid background
         <a href="#" class="text-green-700 hover:text-green-900 ml-1 md:ml-2 text-sm font-medium">Templates</a>
       </div>
     </li>
-    <li>
+    <li aria-current="page">
       <div class="flex items-center">
         <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-        <span class="text-green-400 ml-1 md:ml-2 text-sm font-medium" aria-current="page">FlowBite</span>
+        <span class="text-green-400 ml-1 md:ml-2 text-sm font-medium">FlowBite</span>
       </div>
     </li>
   </ol>
@@ -133,10 +133,10 @@ You can alternatively also use the breadcrumb components with a solid background
         <a href="#" class="text-yellow-700 hover:text-yellow-900 ml-1 md:ml-2 text-sm font-medium">Templates</a>
       </div>
     </li>
-    <li>
+    <li aria-current="page">
       <div class="flex items-center">
         <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-        <span class="text-yellow-400 ml-1 md:ml-2 text-sm font-medium" aria-current="page">FlowBite</span>
+        <span class="text-yellow-400 ml-1 md:ml-2 text-sm font-medium">FlowBite</span>
       </div>
     </li>
   </ol>
@@ -156,10 +156,10 @@ You can alternatively also use the breadcrumb components with a solid background
         <a href="#" class="text-gray-700 hover:text-gray-900 ml-1 md:ml-2 text-sm font-medium">Templates</a>
       </div>
     </li>
-    <li>
+    <li aria-current="page">
       <div class="flex items-center">
         <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-        <span class="text-gray-400 ml-1 md:ml-2 text-sm font-medium" aria-current="page">FlowBite</span>
+        <span class="text-gray-400 ml-1 md:ml-2 text-sm font-medium">FlowBite</span>
       </div>
     </li>
   </ol>

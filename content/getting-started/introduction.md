@@ -14,7 +14,9 @@ nextLink: getting-started/quickstart
 
 FlowBite is an open-source library of UI elements based on the utility-first CSS framework Tailwind designed and coded by [Themesberg](https://themesberg.com) available in Figma and as web components.
 
-It includes all of the commonly used components a website requires, such as buttons, dropdowns, navigation bars, modals, but also some more advanced interactive elements such as datepickers. All of the element are built using utility classes from Tailwind CSS and vanilla JavaScript.
+It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, but also some more advanced interactive elements such as datepickers. 
+
+All of the elements are built using utility classes from Tailwind CSS and vanilla JavaScript.
 
 <iframe width="100%" class="my-8 rounded-lg shadow-lg yt-video" src="https://www.youtube.com/embed/4bnJG2UDr9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

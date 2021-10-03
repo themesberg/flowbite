@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Tailwind CSS Button - Flowbite
+title: Tailwind CSS Buttons - Flowbite
 description: Use these Tailwind CSS buttons of different colors, sizes, and variations to use for user actions and links
 group: components
 toc: true

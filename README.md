@@ -66,8 +66,8 @@ If you want to help support this project you can send us Bitcoin or Ethereum to 
 
 The money will be used to pay for the hosting plan and other costs that are included to maintain this project.
 
-### Authors & contributors:
+### Authors & contributors
 
 - [Zoltan Szogyenyi](https://twitter.com/zoltanszogyenyi) (web developer)
 - [Robert Tanislav](https://twitter.com/RobertTanislav) (web designer)
-- [Victor Cordos](https://twitter.com/victorcordos) (webdeveloper)
+- [Victor Cordos](https://twitter.com/victorcordos) (web developer)

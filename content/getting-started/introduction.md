@@ -70,7 +70,7 @@ The components library of FlowBite is open-source under the [MIT License]({{< re
 Flowbite is an open source library under the MIT license and anyone who would like to contribute to the codebase or design is welcome to do so. 
 
 Please reach out to us via the [official Github repository](https://github.com/themesberg/flowbite) and the main development team will get in touch as soon as possible.
-### Donations
+### Donate
 
 If you want to help support this project you can send us Bitcoin or Ethereum to the following addresses:
 
@@ -79,7 +79,7 @@ If you want to help support this project you can send us Bitcoin or Ethereum to 
 
 The money will be used to pay for the hosting plan and other costs that are included to maintain this project.
 
-### Authors & contributors
+### Authors
 
 - [Zoltan Szogyenyi](https://twitter.com/zoltanszogyenyi) (web developer)
 - [Robert Tanislav](https://twitter.com/RobertTanislav) (web designer)

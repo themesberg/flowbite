@@ -9,9 +9,9 @@ import DateRangePicker from '@themesberg/tailwind-datepicker/DateRangePicker';
 const toggleCollapse = (elementId, show = true) => {
     const collapseEl = document.getElementById(elementId);
     if (show) {
-        collapseEl.classList.remove("hidden");
+        collapseEl.classList.remove('hidden');
     } else {
-        collapseEl.classList.add("hidden");
+        collapseEl.classList.add('hidden');
     }
 }
 
@@ -49,14 +49,14 @@ document.querySelectorAll('[data-dropdown-toggle]').forEach(function (dropdownTo
         });
 
         // toggle when click on the button
-        dropdownMenuEl.classList.toggle("hidden");
-        dropdownMenuEl.classList.toggle("block");
+        dropdownMenuEl.classList.toggle('hidden');
+        dropdownMenuEl.classList.toggle('block');
 
         function handleDropdownOutsideClick(event) {
             var targetElement = event.target; // clicked element
             if (targetElement !== dropdownMenuEl && targetElement !== dropdownToggleEl && !dropdownToggleEl.contains(targetElement)) {
-                dropdownMenuEl.classList.add("hidden");
-                dropdownMenuEl.classList.remove("block");
+                dropdownMenuEl.classList.add('hidden');
+                dropdownMenuEl.classList.remove('block');
                 document.body.removeEventListener('click', handleDropdownOutsideClick, true);
             }
         }
@@ -108,7 +108,7 @@ document.querySelectorAll('[data-modal-toggle]').forEach(function (modalToggleEl
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
     tippy('[data-tippy-content]');
 });
 

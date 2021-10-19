@@ -15,6 +15,11 @@ nextLink: customize/configuration
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
+### v1.0.4
+
+- use single quotes for JavaScript code and event listeners
+- update card button icons
+
 ### v1.0.3
 
 Released on September 28th, 2021.

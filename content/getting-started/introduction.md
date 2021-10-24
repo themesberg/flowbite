@@ -1,6 +1,6 @@
 ---
 layout: home
-title: FlowBite - Tailwind CSS components library
+title: FlowBite - Tailwind CSS component library
 description: Get started with an open-source set of UI components and elements built with Tailwind CSS
 group: getting-started
 toc: true

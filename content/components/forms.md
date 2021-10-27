@@ -104,11 +104,9 @@ Alternatively, you can decide to apply a shadow styling using the `shadow-sm` cl
 Use the following markup to also add a helper text below your form input item. Usually used for newsletter signup elements.
 
 {{< example >}}
-<div class="mb-6">
-  <label for="email" class="text-sm font-medium text-gray-900 block mb-2">Your email</label>
-  <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@flowbite.com">
-  <p class="mt-2 text-sm text-gray-500">We’ll never share your details. Read our <a href="#" class="font-medium text-blue-600 hover:underline">Privacy Policy</a>.</p>
-</div>
+<label for="email" class="text-sm font-medium text-gray-900 block mb-2">Your email</label>
+<input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@flowbite.com">
+<p class="mt-2 text-sm text-gray-500">We’ll never share your details. Read our <a href="#" class="font-medium text-blue-600 hover:underline">Privacy Policy</a>.</p>
 {{< /example >}}
 
 ## Input element with icon
@@ -185,7 +183,7 @@ The code below can be used to create a fieldset of checkbox elements inside a fo
 
 {{< example >}}
 <fieldset>
-<legend class="sr-only">Checkbox variants</legend>
+  <legend class="sr-only">Checkbox variants</legend>
 
   <div class="flex items-center items-start mb-4">
       <input id="checkbox-1" aria-describedby="checkbox-1" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" checked>
@@ -225,9 +223,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 {{< example >}}
 <fieldset>
-  <legend class="sr-only">
-    Countries
-  </legend>
+  <legend class="sr-only">Countries</legend>
 
   <div class="flex items-center mb-4">
     <input id="country-option-1" type="radio" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="country-option-1" aria-describedby="country-option-1" checked>
@@ -269,17 +265,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 ## File upload
 
 {{< example >}}
-<div class="mb-4">
-  <label class="text-sm font-medium text-gray-900 block mb-2" for="user_avatar">
-    Upload file
-  </label>
-  <div class="relative">
-    <input class="block w-full overflow-hidden cursor-pointer bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent sm:text-sm rounded-lg block w-full" aria-describedby="user_avatar_help" id="user_avatar" type="file">
-  </div>
-  <div class="mt-1 text-sm text-gray-500" id="user_avatar_help">
-    A profile picture is useful to confirm your are logged into your account
-  </div>
-</div>
+<label class="text-sm font-medium text-gray-900 block mb-2" for="user_avatar">Upload file</label>
+<input class="block w-full cursor-pointer bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none focus:border-transparent text-sm rounded-lg" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+<div class="mt-1 text-sm text-gray-500" id="user_avatar_help">A profile picture is useful to confirm your are logged into your account</div>
 {{< /example >}}
 
 Make sure that you also add this extra bit of CSS:

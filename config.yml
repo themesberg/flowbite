@@ -1,6 +1,6 @@
 languageCode:           "en"
 title:                  "FlowBite Tailwind CSS"
-baseURL:                "https://flowbite.com/docs"
+baseURL:                "https://flowbite.com/docs/"
 # baseURL:                "http://localhost:1313/docs"
 enableInlineShortcodes: true
 

@@ -52,7 +52,7 @@ You can also display a series of links inside the list group element.
 It is also possible to display a list of button element inside the list group component. The following example includes an active and disabled item as well.
 
 {{< example >}}
-<div class="bg-white rounded-lg border border-gray-200 w-full max-w-md text-gray-900 text-sm font-medium">
+<div class="bg-white rounded-lg border border-gray-200 w-48 text-gray-900 text-sm font-medium">
     <button aria-current="true" type="button" class="text-left px-4 py-2 border-b border-gray-200 w-full rounded-t-lg bg-blue-700 text-white focus:outline-none cursor-pointer">
         Profile
     </button>

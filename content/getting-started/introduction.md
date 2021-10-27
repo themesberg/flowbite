@@ -31,11 +31,11 @@ Here's a quick overview of the Flowbite ecosystem including the open source Tail
         <h3 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">Components</h3>
         <p class="font-normal text-gray-700">Explore the Tailwind CSS elements such as buttons, navbars, alerts, dropdowns and use them to build your website.</p>
     </a>
-    <a href="https://flowbite.com" target="_blank" class="p-6 block bg-white hover:bg-gray-100 shadow-md border border-gray-200 rounded-lg mb-6 lg:mb-0">
+    <a href="https://flowbite.com/figma/" target="_blank" class="p-6 block bg-white hover:bg-gray-100 shadow-md border border-gray-200 rounded-lg mb-6 lg:mb-0">
         <h3 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">Figma design files</h3>
         <p class="font-normal text-gray-700">Prototype and design your website before coding with the FlowBite Figma file which is based on the Tailwind CSS classes.</p>
     </a>
-    <a href="https://flowbite.com" target="_blank" class="p-6 block bg-white hover:bg-gray-100 shadow-md border border-gray-200 rounded-lg">
+    <a href="https://flowbite.com/pro/" target="_blank" class="p-6 block bg-white hover:bg-gray-100 shadow-md border border-gray-200 rounded-lg">
         <h3 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">Upgrade to Pro</h3>
         <p class="font-normal text-gray-700">Take your Figma and Tailwind CSS development to the next level with thousands more elements and pages with FlowBite Pro.</p>
     </a>

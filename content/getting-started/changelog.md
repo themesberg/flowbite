@@ -15,6 +15,12 @@ nextLink: customize/configuration
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
+### v1.0.6
+
+- remove `@tailwindcss/forms` plugin as a dependency
+- create a Tailwind CSS plugin that can be included after requiring via NPM
+- remove some unnecessary HTML markup and classes from the component examples
+
 ### v1.0.4
 
 - use single quotes for JavaScript code and event listeners

@@ -47,8 +47,6 @@ module.exports = {
 }
 ```
 
-Follow the [build tools]({{< ref "getting-started/build-tools" >}}) page steps to set up the configuration file if you haven't done so.
-
 ## Theme
 
 Use the `theme` object to define the color palette, fonts, border sizes, breakpoints. Basically, all of the visual design aspects of your website.

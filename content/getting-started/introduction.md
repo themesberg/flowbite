@@ -51,7 +51,7 @@ There are at least 15 types of components including buttons, alerts, breadcrumbs
 
 ## How to get started?
 
-Getting started with FlowBite is fairly easy: all you need to do is follow the [quickstart guide]({{< ref "getting-started/quickstart" >}}) or set up an advanced workflow by following the [build tools guide]({{< ref "getting-started/build-tools" >}}).
+Getting started with Flowbite is fairly easy: all you need to do is follow the [quickstart guide]({{< ref "getting-started/quickstart" >}}) and make sure that you have Tailwind CSS already installed.
 
 ## Figma design files
 

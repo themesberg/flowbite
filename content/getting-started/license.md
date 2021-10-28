@@ -6,7 +6,7 @@ group: getting-started
 toc: true
 
 previous: Build tools
-previousLink: getting-started/build-tools
+previousLink: getting-started/quickstart
 next: Changelog
 nextLink: getting-started/changelog
 ---

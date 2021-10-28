@@ -1,19 +1,51 @@
 ---
 layout: home
 title: Flowbite - Quickstart
-description: Quickly get started with including Flowbite into your project and start developing
+description: Get started with Flowbite by including it into your project using NPM or CDN
 group: getting-started
 toc: true
 
 previous: Introduction
 previousLink: getting-started/introduction
 next: Build tools
-nextLink: getting-started/build-tools
+nextLink: getting-started/license
 ---
 
-FlowBite is an open-source project and you there are multiple ways that you can include it into your project.
+Flowbite is a library of components built on top of the utility-classes from Tailwind CSS and it also includes a JavaScript file that makes interactive elements works, such as modals, dropdowns, and more. Learn how to get started by following this quickstart guide.
 
-We recommend setting up your project using the [build tools]({{< ref "getting-started/build-tools" >}}) guide to be able to build for production.
+## Require via NPM
+
+Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="_blank">Node.js</a> and <a href="https://tailwindcss.com/" rel="nofollow" target="_blank">Tailwind CSS</a> installed. 
+
+Then install Flowbite as a dependency using NPM by running the following command:
+
+```bash
+npm i @themesberg/flowbite
+```
+
+Require Flowbite as a plugin inside the `tailwind.config.js` file:
+
+```javascript
+module.exports = {
+
+    plugins: [
+        require('@themesberg/flowbite/plugin'),
+    ],
+
+}
+```
+
+Include the main JavaScript file to make interactive elements work:
+
+```html
+<script src="../path/to/@themesberg/flowbite/dist/flowbite.bundle.js"></script>
+```
+
+If you use Webpack or other bundlers you can also import it like this:
+
+```javascript
+import '@themesberg/flowbite';
+```
 
 ## Include via CDN
 
@@ -30,17 +62,6 @@ And include the following javascript file before the end of the `body` element:
 ```html
 <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
 ```
-
-**Important:** This is *not the recommended way* of working with FlowBite because you won't be able to purge the unnecessary CSS. Check out the [build tools]({{< ref "getting-started/build-tools" >}}) to properly set up FlowBite for development and production code.
-
-## Require via NPM
-
-You can also require FlowBite as a dependency using NPM by running the following command:
-
-```bash
-npm i @themesberg/flowbite
-```
-
 ## Github repository
 
 The source files are also available to be cloned or downloaded from the official <a href="https://github.com/themesberg/flowbite" target="_blank">FlowBite Github repository</a>. Don't forget to give it a star if you appreciate the project.

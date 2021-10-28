@@ -27,7 +27,7 @@ This is an example of a form component including an email, password, checkbox, a
   </div>
   <div class="flex items-start mb-6">
     <div class="flex items-center h-5">
-      <input id="remember" aria-describedby="remember" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required>
+      <input id="remember" aria-describedby="remember" type="checkbox" class="bg-gray-50 border border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required>
     </div>
     <div class="text-sm ml-3">
       <label for="remember" class="font-medium text-gray-900">Remember me</label>
@@ -50,7 +50,7 @@ Use the following utility classes to create three different sizing options (larg
     <label for="base-input" class="text-sm font-medium text-gray-900 block mb-2">Base input</label>
     <input type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
 </div>
-<div class="mb-6">
+<div>
     <label for="small-input" class="text-sm font-medium text-gray-900 block mb-2">Small input</label>
     <input type="text" id="small-input" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2">
 </div>
@@ -61,12 +61,8 @@ Use the following utility classes to create three different sizing options (larg
 Use the following utility classes to indicate a disabled form input item.
 
 {{< example >}}
-<div class="mb-6">
-    <input type="text" id="disabled-input" class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed" value="Disabled input" disabled>
-</div>
-<div class="mb-6">
-    <input type="text" id="disabled-input-2" class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed" value="Disabled readonly input" disabled readonly>
-</div>
+<input type="text" id="disabled-input" class="mb-6 bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed" value="Disabled input" disabled>
+<input type="text" id="disabled-input-2" class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed" value="Disabled readonly input" disabled readonly>
 {{< /example >}}
 
 ## Shadow inputs
@@ -89,7 +85,7 @@ Alternatively, you can decide to apply a shadow styling using the `shadow-sm` cl
   </div>
   <div class="flex items-start mb-6">
     <div class="flex items-center h-5">
-      <input id="terms" aria-describedby="terms" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required>
+      <input id="terms" aria-describedby="terms" type="checkbox" class="bg-gray-50 border border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required>
     </div>
     <div class="text-sm ml-3">
       <label for="terms" class="font-medium text-gray-900">I agree with the <a href="#" class="text-blue-600 hover:underline">terms and conditions</a></label>
@@ -133,7 +129,7 @@ Use the following utility classes and SVG icon to add an addon icon inside your 
   <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-200 text-gray-900 sm:text-sm">
     @
   </span>
-  <input type="text" id="website-admin" class="rounded-none rounded-r-lg bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full sm:text-sm border-gray-300 p-2.5" placeholder="Bonnie Green">
+  <input type="text" id="website-admin" class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full sm:text-sm border-gray-300 p-2.5" placeholder="Bonnie Green">
 </div>
 {{< /example >}}
 
@@ -144,12 +140,12 @@ Use the following two success and error styles when validation your forms.
 {{< example >}}
 <div class="mb-6">
   <label for="username-success" class="text-sm font-medium text-green-700 block mb-2">Your name</label>
-  <input type="text" id="username-success" class="bg-green-50 border-green-500 text-green-900 placeholder-green-700 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5" placeholder="Bonnie Green">
+  <input type="text" id="username-success" class="bg-green-50 border border-green-500 text-green-900 placeholder-green-700 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5" placeholder="Bonnie Green">
   <p class="mt-2 text-sm text-green-600"><span class="font-medium">Alright!</span> Username available!</p>
 </div>
 <div>
   <label for="username-error" class="text-sm font-medium text-red-700 block mb-2">Your name</label>
-  <input type="text" id="username-error" class="bg-red-50 border-red-500 text-red-900 placeholder-red-700 sm:text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" placeholder="Bonnie Green">
+  <input type="text" id="username-error" class="bg-red-50 border border-red-500 text-red-900 placeholder-red-700 sm:text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" placeholder="Bonnie Green">
   <p class="mt-2 text-sm text-red-600"><span class="font-medium">Oops!</span> Username already taken!</p>
 </div>
 {{< /example >}}
@@ -160,7 +156,7 @@ Use the following code to create a textarea form element.
 
 {{< example >}}
 <label for="message" class="text-sm font-medium text-gray-900 block mb-2">Your message</label>
-<textarea id="message" rows="4" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full" placeholder="Leave a comment..."></textarea>
+<textarea id="message" rows="4" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2" placeholder="Leave a comment..."></textarea>
 {{< /example >}}
 
 ## Select input
@@ -169,7 +165,7 @@ Use the following select input element to show selectable list of items.
 
 {{< example >}}
 <label for="countries" class="text-sm font-medium text-gray-900 block mb-2">Select your country</label>
-<select id="countries" class="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+<select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
   <option>United States</option>
   <option>Canada</option>
   <option>France</option>

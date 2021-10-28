@@ -14,7 +14,13 @@ We recommend you to [read the documentation](https://flowbite.com/docs/getting-s
 
 There are multiple ways that you can include it into your project.
 
-We recommend setting up your project using the [build tools](https://flowbite.com/docs/getting-started/build-tools/) guide to be able to build for production.
+## Require via NPM
+
+You can also require FlowBite as a dependency using NPM by running the following command:
+
+```bash
+npm i @themesberg/flowbite
+```
 
 ## Include via CDN
 
@@ -30,16 +36,6 @@ And include the following javascript file before the end of the `body` element:
 
 ```html
 <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
-```
-
-**Important:** This is *not the recommended way* of working with FlowBite because you won't be able to purge the unnecessary CSS. Check out the [build tools](https://flowbite.com/docs/getting-started/build-tools/) to properly set up FlowBite for development and production code.
-
-## Require via NPM
-
-You can also require FlowBite as a dependency using NPM by running the following command:
-
-```bash
-npm i @themesberg/flowbite
 ```
 
 ## Upgrade to pro

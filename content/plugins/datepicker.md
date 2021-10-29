@@ -4,6 +4,7 @@ title: Tailwind CSS Datepicker - Flowbite
 description: Start receiving date and time data from your users using this free datepicker element based on Tailwind utility-classes and vanilla JavaScript
 group: plugins
 toc: true
+requires_js: true
 
 previous: Tooltips
 previousLink: components/tooltips
@@ -20,6 +21,7 @@ By including the `flowbite.bundle.js` JavaScript file then you will be able to c
 ```
 
 However, if you'd like to manually be able to manipulate the datepicker component using JavaScript then you should <a href="#javascript">install the plugin using NPM</a> and include it into your JavaScript code.
+
 ## Datepicker example
 
 Use the following example of an input element to create a datepicker component. All you need to do is to add the `datepicker` data attribute to any `input` element.

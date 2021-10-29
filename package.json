@@ -55,13 +55,12 @@
     "tailwindcss": "^2.2.9",
     "webpack": "^5.47.0",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "yarn": "^1.22.10"
   },
   "dependencies": {
     "@popperjs/core": "^2.9.3",
-    "@tailwindcss/forms": "^0.3.3",
     "@themesberg/tailwind-datepicker": "^1.0.1",
-    "tippy.js": "^6.3.1",
-    "yarn": "^1.22.10"
+    "tippy.js": "^6.3.1"
   }
 }

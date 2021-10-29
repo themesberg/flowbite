@@ -4,6 +4,7 @@ title: Tailwind CSS Modal - Flowbite
 description: Use FlowBite's custom modals built with Tailwind CSS to add dialogs for your site
 group: components
 toc: true
+requires_js: true
 
 previous: Typography
 previousLink: components/typography
@@ -59,19 +60,6 @@ If you forget to apply the attribute, the Flowbite JavaScript will still set it 
     </div>
 </div>
 {{< /example >}}
-
-You also have to extend the Tailwind configuration file to add an extra `h-modal` utility class for the mobile spacing of the modals:
-
-```javascript
-theme: {
-    extend: {
-      // other options
-      height: {
-        'modal': 'calc(100% - 2rem)'
-      }
-    }
-}
-```
 
 ## Javascript
 

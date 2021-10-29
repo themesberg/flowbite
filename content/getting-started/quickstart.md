@@ -7,7 +7,7 @@ toc: true
 
 previous: Introduction
 previousLink: getting-started/introduction
-next: Build tools
+next: License
 nextLink: getting-started/license
 ---
 

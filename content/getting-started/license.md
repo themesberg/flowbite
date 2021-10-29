@@ -5,7 +5,7 @@ description: Learn more about the licensing terms for FlowBite and Tailwind CSS
 group: getting-started
 toc: true
 
-previous: Build tools
+previous: Quickstart
 previousLink: getting-started/quickstart
 next: Changelog
 nextLink: getting-started/changelog

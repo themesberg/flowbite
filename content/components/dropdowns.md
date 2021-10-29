@@ -4,6 +4,7 @@ title: Tailwind CSS Dropdown - Flowbite
 description: Use the Tailwind CSS dropdown elements to show a list of items displayed as a menu
 group: components
 toc: true
+requires_js: true
 
 previous: Cards
 previousLink: components/card
@@ -11,7 +12,7 @@ next: Forms
 nextLink: components/forms
 ---
 
-Make sure that you have [Popper.js](https://popper.js.org/) included in your project. By default, FlowBite already includes this package in the main javascript file.
+You can use the Tailwind CSS dropdown element from Flowbite to show a menu when clicking on an element such as a button. Make sure to include [Flowbite's JavaScript file]({{< ref "getting-started/quickstart" >}}) inside your project to enable dropdowns.
 
 ## Dropdown example
 
@@ -44,48 +45,3 @@ The `dropdownId` is the id of the dropdown menu element.
     </ul>
 </div>
 {{< /example >}}
-
-## JavaScript
-
-Although already included in the `flowbite.js` file, this is the JavaScript code that searches for all of the data attributes and toggles the dropdown menu.
-
-```javascript
-document.querySelectorAll('[data-dropdown-toggle]').forEach(function (dropdownToggleEl) {
-    var dropdownMenuId = dropdownToggleEl.getAttribute('data-dropdown-toggle');
-    var dropdownMenuEl = document.getElementById(dropdownMenuId);
-
-    dropdownToggleEl.addEventListener('click', function (event) {
-        var element = event.target;
-        while (element.nodeName !== "BUTTON") {
-            element = element.parentNode;
-        }
-        createPopper(element, dropdownMenuEl, {
-            placement: 'bottom-start',
-            modifiers: [
-                {
-                    name: 'offset',
-                    options: {
-                        offset: [0, 10],
-                    },
-                },
-            ]
-        });
-
-        // toggle when click on the button
-        dropdownMenuEl.classList.toggle("hidden");
-        dropdownMenuEl.classList.toggle("block");
-
-        function handleDropdownOutsideClick(event) {
-            var targetElement = event.target; // clicked element
-            if (targetElement !== dropdownMenuEl && targetElement !== dropdownToggleEl && !dropdownToggleEl.contains(targetElement)) {
-                dropdownMenuEl.classList.add("hidden");
-                dropdownMenuEl.classList.remove("block");
-                document.body.removeEventListener('click', handleDropdownOutsideClick, true);
-            }
-        }
-
-        // hide popper when clicking outside the element
-        document.body.addEventListener('click', handleDropdownOutsideClick, true);
-    });
-});
-```

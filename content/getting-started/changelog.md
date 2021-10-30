@@ -15,6 +15,10 @@ nextLink: customize/configuration
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
+### v1.0.7
+
+- apply checkbox and radio input styles as base styles using the plugin interface
+
 ### v1.0.6
 
 - remove `@tailwindcss/forms` plugin as a dependency

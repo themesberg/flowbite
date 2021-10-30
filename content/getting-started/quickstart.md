@@ -17,7 +17,7 @@ Flowbite is a library of components built on top of the utility-classes from Tai
 
 Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="_blank">Node.js</a> and <a href="https://tailwindcss.com/" rel="nofollow" target="_blank">Tailwind CSS</a> installed. 
 
-1. Then install Flowbite as a dependency using NPM by running the following command:
+1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
 npm i @themesberg/flowbite
@@ -62,6 +62,7 @@ And include the following javascript file before the end of the `body` element:
 ```html
 <script src="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.bundle.js"></script>
 ```
+
 ## Github repository
 
 The source files are also available to be cloned or downloaded from the official <a href="https://github.com/themesberg/flowbite" target="_blank">FlowBite Github repository</a>. Don't forget to give it a star if you appreciate the project.

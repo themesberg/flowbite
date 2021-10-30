@@ -16,10 +16,36 @@ There are multiple ways that you can include it into your project.
 
 ## Require via NPM
 
-You can also require FlowBite as a dependency using NPM by running the following command:
+Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="_blank">Node.js</a> and <a href="https://tailwindcss.com/" rel="nofollow" target="_blank">Tailwind CSS</a> installed. 
+
+1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
 npm i @themesberg/flowbite
+```
+
+2. Require Flowbite as a plugin inside the `tailwind.config.js` file:
+
+```javascript
+module.exports = {
+
+    plugins: [
+        require('@themesberg/flowbite/plugin'),
+    ],
+
+}
+```
+
+3. Include the main JavaScript file to make interactive elements work:
+
+```html
+<script src="../path/to/@themesberg/flowbite/dist/flowbite.bundle.js"></script>
+```
+
+If you use Webpack or other bundlers you can also import it like this:
+
+```javascript
+import '@themesberg/flowbite';
 ```
 
 ## Include via CDN

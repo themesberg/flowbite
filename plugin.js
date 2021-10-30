@@ -2,10 +2,10 @@ const svgToDataUri = require('mini-svg-data-uri')
 const plugin = require('tailwindcss/plugin')
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
-const [baseFontSize, { lineHeight: baseLineHeight }] = defaultTheme.fontSize.base
 const { spacing, borderWidth, borderRadius } = defaultTheme
 
 module.exports = plugin(function ({ addBase, theme }) {
+
     addBase({
         ['select']: {
             'background-image': `url("${svgToDataUri(
@@ -20,7 +20,7 @@ module.exports = plugin(function ({ addBase, theme }) {
             'padding-right': spacing[10],
             'color-adjust': `exact`,
         },
-        [`[type='checkbox']`, `[type='radio']`]: {
+        [[`[type='checkbox']`, `[type='radio']`]]: {
             appearance: 'none',
             padding: '0',
             'color-adjust': 'exact',
@@ -43,7 +43,7 @@ module.exports = plugin(function ({ addBase, theme }) {
         [`[type='radio']`]: {
             'border-radius': '100%',
         },
-        [`[type='checkbox']:focus`, `[type='radio']:focus`]: {
+        [[`[type='checkbox']:focus`, `[type='radio']:focus`]]: {
             outline: '2px solid transparent',
             'outline-offset': '2px',
             '--tw-ring-inset': 'var(--tw-empty,/*!*/ /*!*/)',
@@ -54,7 +54,7 @@ module.exports = plugin(function ({ addBase, theme }) {
             '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
             'box-shadow': `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)`,
         },
-        [`[type='checkbox']:checked`, `[type='radio']:checked`]: {
+        [[`[type='checkbox']:checked`, `[type='radio']:checked`]]: {
             'border-color': `transparent`,
             'background-color': `currentColor`,
             'background-size': `100% 100%`,
@@ -71,7 +71,7 @@ module.exports = plugin(function ({ addBase, theme }) {
                 `<svg viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`
             )}")`,
         },
-        [`[type='checkbox']:checked:hover`, `[type='checkbox']:checked:focus`, `[type='radio']:checked:hover`, `[type='radio']:checked:focus`]: {
+        [[`[type='checkbox']:checked:hover`, `[type='checkbox']:checked:focus`, `[type='radio']:checked:hover`, `[type='radio']:checked:focus`]]: {
             'border-color': 'transparent',
             'background-color': 'currentColor',
         },
@@ -85,7 +85,7 @@ module.exports = plugin(function ({ addBase, theme }) {
             'background-position': `center`,
             'background-repeat': `no-repeat`,
         },
-        [`[type='checkbox']:indeterminate:hover`, `[type='checkbox']:indeterminate:focus`]: {
+        [[`[type='checkbox']:indeterminate:hover`, `[type='checkbox']:indeterminate:focus`]]: {
             'border-color': 'transparent',
             'background-color': 'currentColor',
         }

@@ -17,13 +17,13 @@ Flowbite is a library of components built on top of the utility-classes from Tai
 
 Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="_blank">Node.js</a> and <a href="https://tailwindcss.com/" rel="nofollow" target="_blank">Tailwind CSS</a> installed. 
 
-Then install Flowbite as a dependency using NPM by running the following command:
+1. Then install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
 npm i @themesberg/flowbite
 ```
 
-Require Flowbite as a plugin inside the `tailwind.config.js` file:
+2. Require Flowbite as a plugin inside the `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
@@ -35,7 +35,7 @@ module.exports = {
 }
 ```
 
-Include the main JavaScript file to make interactive elements work:
+3. Include the main JavaScript file to make interactive elements work:
 
 ```html
 <script src="../path/to/@themesberg/flowbite/dist/flowbite.bundle.js"></script>
@@ -54,13 +54,13 @@ The quickest way to get started working with FlowBite is to simply include the C
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.min.css" />
 ```
 
 And include the following javascript file before the end of the `body` element:
 
 ```html
-<script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+<script src="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.bundle.js"></script>
 ```
 ## Github repository
 

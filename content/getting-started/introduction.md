@@ -16,7 +16,7 @@ Flowbite is an open-source library of UI elements based on the utility-first CSS
 
 It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, but also some more advanced interactive elements such as datepickers. 
 
-All of the elements are built using utility classes from Tailwind CSS and vanilla JavaScript.
+All of the elements are built using the utility classes from Tailwind CSS and vanilla JavaScript.
 
 <iframe width="100%" class="my-8 rounded-lg shadow-lg yt-video" src="https://www.youtube.com/embed/4bnJG2UDr9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -51,7 +51,10 @@ There are at least 15 types of components including buttons, alerts, breadcrumbs
 
 ## How to get started?
 
-Getting started with Flowbite is fairly easy: all you need to do is follow the [quickstart guide]({{< ref "getting-started/quickstart" >}}) and make sure that you have Tailwind CSS already installed.
+First of all, you have to make sure that you have Node.js and Tailwind CSS already installed. After that, you can get started with Flowbite by either requiring it using NPM or by including the project via CDN. Check out the [quickstart guide]({{< ref "getting-started/quickstart" >}}) and follow all of the steps there.
+
+Flowbite can also be included into an existing Tailwind CSS project.
+
 
 ## Figma design files
 
@@ -63,13 +66,18 @@ If you want to take your Tailwind development workflow to the next level you can
 
 ## Licensing
 
-The components library of Flowbite is open-source under the [MIT License]({{< ref "getting-started/license" >}}). 
+Flowbite and all of the Tailwind CSS components are open-source under the [MIT License]({{< ref "getting-started/license" >}}). 
 
 ## Contributions
 
 Flowbite is an open source library under the MIT license and anyone who would like to contribute to the codebase or design is welcome to do so. 
 
 Please reach out to us via the [official Github repository](https://github.com/themesberg/flowbite) and the main development team will get in touch as soon as possible.
+
+## Discord community
+
+Feel free to join our <a href="https://discord.gg/qAbMDYbE" target="_blank" rel="nofollow">community on Discord</a> to receive help, contribute to the project, or just discuss about Flowbite, Tailwind CSS, and web development in general.
+
 ### Authors
 
 - [Zoltan Szogyenyi](https://twitter.com/zoltanszogyenyi) (web developer)

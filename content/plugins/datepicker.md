@@ -17,7 +17,7 @@ The Tailwind CSS datepicker component developed by Flowbite is built with vanill
 By including the `flowbite.bundle.js` JavaScript file then you will be able to create datepicker components based on Tailwind using the data attributes.
 
 ```html
-<script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+<script src="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.bundle.js"></script>
 ```
 
 However, if you'd like to manually be able to manipulate the datepicker component using JavaScript then you should <a href="#javascript">install the plugin using NPM</a> and include it into your JavaScript code.

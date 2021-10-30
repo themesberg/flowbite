@@ -5,6 +5,7 @@ baseURL:                "https://flowbite.com/docs/"
 enableInlineShortcodes: true
 
 params:
+  current_version: 1.0.6
   authors: Themesberg
   social_image_path: /docs/images/og-image.png
 

@@ -1,6 +1,6 @@
 {
   "name": "@themesberg/flowbite",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Open-source library of Tailwind CSS components and elements.",
   "keywords": [
     "tailwind",
@@ -56,12 +56,12 @@
     "webpack": "^5.47.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2",
-    "yarn": "^1.22.10",
-    "mini-svg-data-uri": "^1.2.3"
+    "yarn": "^1.22.10"
   },
   "dependencies": {
     "@popperjs/core": "^2.9.3",
     "@themesberg/tailwind-datepicker": "^1.0.1",
-    "tippy.js": "^6.3.1"
+    "tippy.js": "^6.3.1",
+    "mini-svg-data-uri": "^1.2.3"
   }
 }

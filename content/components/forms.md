@@ -266,17 +266,6 @@ Group a series of buttons together on a single line or stack them in a vertical 
 <div class="mt-1 text-sm text-gray-500" id="user_avatar_help">A profile picture is useful to confirm your are logged into your account</div>
 {{< /example >}}
 
-Make sure that you also add this extra bit of CSS:
-
-```css
-input[type=file]::-webkit-file-upload-button,
-input[type=file]::file-selector-button {
-	@apply text-white bg-gray-700 hover:bg-gray-600 font-medium text-sm cursor-pointer border-0 py-2.5 pl-8 pr-4;
-	margin-inline-start: -1rem;
-	margin-inline-end: 1rem;
-}
-```
-
 ## Toggle (switches)
 
 Use the following toggle (switches) element to ask for a yes or no type of input from your users without the use of JavaScript.

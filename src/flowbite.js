@@ -4,5 +4,3 @@ import './components/dropdown';
 import './components/modal';
 import './components/datepicker';
 import './components/tooltip';
-
-

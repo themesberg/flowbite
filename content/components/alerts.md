@@ -74,6 +74,10 @@ You can also include a descriptive icon to complement the message inside the ale
 </div>
 {{< /example >}}
 
+<div class="mt-8 -mb-5">
+  {{< requires_js >}}
+</div>
+
 ## Dismissable alerts
 
 Use the following alert elements that are also dismissable.

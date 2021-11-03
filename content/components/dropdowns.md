@@ -212,7 +212,7 @@ The dropdown menus work with buttons of all sizes including smaller or larger on
 
 You can also use the `data-dropdown-placement={top|right|bottom|left}` data attribute options to choose the placement of the dropdown menu. By default the positioning is set to the bottom side of the button.
 
-{{< example >}}
+{{< example class="flex" >}}
 <button id="dropdownTopButton" data-dropdown-toggle="dropdownTop" data-dropdown-placement="top" class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center" type="button">Dropdown top <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg></button>
 
 <!-- Dropdown menu -->
@@ -296,7 +296,7 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 
 Alternatively you can choose the secondary axis placement by specifying `*-start` after the primary position has been chosen. For example, you can use the `right-start` or `left-start` to position the menu just below the button.
 
-{{< example >}}
+{{< example class="flex" >}}
 <button id="dropdownLeftStartButton" data-dropdown-toggle="dropdownLeftStart" data-dropdown-placement="left-start" class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center" type="button"><svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Dropdown left start</button>
 
 <!-- Dropdown menu -->
@@ -337,6 +337,3 @@ Alternatively you can choose the secondary axis placement by specifying `*-start
     </ul>
 </div>
 {{< /example >}}
-
-## JavaScript
-

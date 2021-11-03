@@ -101,9 +101,9 @@ Use the following markup to show simple previous and next elements.
 
 Use the following code to show simple previous and next elements with icons.
 
-{{< example >}}
+{{< example class="flex" >}}
 <!-- Previous Button -->
-<a href="#" class="text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 text-sm font-medium rounded-lg inline-flex items-center px-4 py-2">
+<a href="#" class="text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 text-sm font-medium rounded-lg inline-flex items-center px-4 py-2 mr-3">
   <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
   Previous
 </a>

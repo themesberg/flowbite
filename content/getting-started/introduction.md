@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Flowbite - Tailwind CSS component library
-description: Get started with an open-source set of UI components and elements built with Tailwind CSS
+description: Get started with an open-source set of UI components and elements built with the utility-classes from Tailwind CSS
 group: getting-started
 toc: true
 cleanTitle: true

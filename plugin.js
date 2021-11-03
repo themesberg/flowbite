@@ -179,6 +179,29 @@ module.exports = plugin(function ({ addBase, theme }) {
             '&:hover': {
                 background: theme('colors.gray.600', colors.gray[600])
             }
+        },
+        ['.toggle-bg:after']: {
+            content: '""',
+            position: 'absolute',
+            top: spacing[0.5],
+            left: spacing[0.5],
+            background: 'white',
+            'border-color': theme('colors.gray.300', colors.gray[300]),
+            'border-width': borderWidth['DEFAULT'],
+            'border-radius': borderRadius.full,
+            'height': theme('height.5'),
+            'width': theme('width.5'),
+            'transition-property': 'background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter',
+            'transition-duration': '.15s',
+            'box-shadow': 'var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color)'
+        },
+        ['input:checked + .toggle-bg:after']: {
+            transform: 'translateX(100%);',
+            'border-color': 'white'
+        },
+        ['input:checked + .toggle-bg']: {
+            background: theme('colors.blue.600', colors.gray[600]),
+            'border-color': theme('colors.blue.600', colors.gray[600])
         }
     })
 }, {

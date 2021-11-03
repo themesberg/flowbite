@@ -29,8 +29,8 @@ npm i @themesberg/flowbite
 module.exports = {
 
     plugins: [
-        require('@themesberg/flowbite/plugin'),
-    ],
+        require('@themesberg/flowbite/plugin')
+    ]
 
 }
 ```

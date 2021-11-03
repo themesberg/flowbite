@@ -260,6 +260,8 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 ## File upload
 
+Use the following Tailwind CSS file upload element to receive any type of file from users.
+
 {{< example >}}
 <label class="text-sm font-medium text-gray-900 block mb-2" for="user_avatar">Upload file</label>
 <input class="block w-full cursor-pointer bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none focus:border-transparent text-sm rounded-lg" aria-describedby="user_avatar_help" id="user_avatar" type="file">

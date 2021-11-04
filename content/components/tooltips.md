@@ -18,7 +18,7 @@ Apply the `data-tooltip` data attribute to any element and the content inside wi
 
 {{< example >}}
 <button data-tooltip-target="tooltip-default" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Default tooltip</button>
-<div id="tooltip-default" role="tooltip" class="tooltip z-10 inline-block bg-gray-900 font-medium shadow-sm text-white py-2 px-3 text-sm rounded-lg opacity-0 transition">
+<div id="tooltip-default" role="tooltip" class="tooltip absolute z-10 inline-block bg-gray-900 font-medium shadow-sm text-white py-2 px-3 text-sm rounded-lg opacity-0 invisible">
     Tooltip content
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
@@ -30,22 +30,22 @@ You can also set the positioning of the tooltips by using the `data-tippy-placem
 
 {{< example >}}
 <button data-tooltip-target="tooltip-top" data-tooltip-placement="top" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Tooltip top</button>
-<div id="tooltip-top" role="tooltip" class="tooltip z-10 inline-block bg-gray-900 font-medium shadow-sm text-white py-2 px-3 text-sm rounded-lg opacity-0 transition">
+<div id="tooltip-top" role="tooltip" class="tooltip absolute z-10 inline-block bg-gray-900 font-medium shadow-sm text-white py-2 px-3 text-sm rounded-lg opacity-0 invisible">
     Tooltip on top
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
 <button data-tooltip-target="tooltip-right" data-tooltip-placement="right" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Tooltip right</button>
-<div id="tooltip-right" role="tooltip" class="tooltip z-10 inline-block bg-gray-900 font-medium shadow-sm text-white py-2 px-3 text-sm rounded-lg opacity-0 transition">
+<div id="tooltip-right" role="tooltip" class="tooltip absolute z-10 inline-block bg-gray-900 font-medium shadow-sm text-white py-2 px-3 text-sm rounded-lg opacity-0 invisible">
     Tooltip on right
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
 <button data-tooltip-target="tooltip-bottom" data-tooltip-placement="bottom" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Tooltip bottom</button>
-<div id="tooltip-bottom" role="tooltip" class="tooltip z-10 inline-block bg-gray-900 font-medium shadow-sm text-white py-2 px-3 text-sm rounded-lg opacity-0 transition">
+<div id="tooltip-bottom" role="tooltip" class="tooltip absolute z-10 inline-block bg-gray-900 font-medium shadow-sm text-white py-2 px-3 text-sm rounded-lg opacity-0 invisible">
     Tooltip on bottom
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
 <button data-tooltip-target="tooltip-left" data-tooltip-placement="left" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Tooltip left</button>
-<div id="tooltip-left" role="tooltip" class="tooltip z-10 inline-block bg-gray-900 font-medium shadow-sm text-white py-2 px-3 text-sm rounded-lg opacity-0 transition">
+<div id="tooltip-left" role="tooltip" class="tooltip absolute z-10 inline-block bg-gray-900 font-medium shadow-sm text-white py-2 px-3 text-sm rounded-lg opacity-0 invisible">
     Tooltip on left
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>

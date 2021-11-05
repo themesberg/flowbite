@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "start": "NODE_ENV=development run-p start:*",
-    "start:hugo": "hugo server -D --bind=0.0.0.0 --baseURL=http://192.168.80.117:1313/docs/",
+    "start:hugo": "hugo server -D",
     "start:webpack": "webpack --mode=development --watch",
     "build": "NODE_ENV=production && HUGO_ENV=production && run-s build:webpack build:hugo",
     "build:hugo": "hugo",

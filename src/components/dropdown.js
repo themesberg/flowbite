@@ -2,21 +2,25 @@ import { createPopper } from '@popperjs/core';
 
 // Toggle dropdown elements using [data-dropdown-toggle]
 document.querySelectorAll('[data-dropdown-toggle]').forEach(function (dropdownToggleEl) {
-    var dropdownMenuId = dropdownToggleEl.getAttribute('data-dropdown-toggle');
-    var dropdownMenuEl = document.getElementById(dropdownMenuId);
+    const dropdownMenuId = dropdownToggleEl.getAttribute('data-dropdown-toggle');
+    const dropdownMenuEl = document.getElementById(dropdownMenuId);
+
+    // options
+    const placement = dropdownToggleEl.getAttribute('data-dropdown-placement');
 
     dropdownToggleEl.addEventListener('click', function (event) {
         var element = event.target;
         while (element.nodeName !== "BUTTON") {
             element = element.parentNode;
         }
+
         createPopper(element, dropdownMenuEl, {
-            placement: 'bottom-start',
+            placement: placement ? placement : 'bottom-start',
             modifiers: [
                 {
                     name: 'offset',
                     options: {
-                        offset: [0, 10],
+                        offset: [0, 10]
                     },
                 },
             ]

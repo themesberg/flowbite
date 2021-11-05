@@ -15,6 +15,15 @@ nextLink: customize/configuration
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
+### v1.1.0
+
+- separated the datepicker plugin from the main `flowbite.bundle.js` file and instead created a separate one which is optional to include
+- added more dropdown component variants and placement options
+- reset form styles and move the extra pseudo CSS styles inside the Flowbite Tailwind CSS plugin file (no longer need to write it yourself)
+- create new styles and options for the tooltip component and remove Tippy JS as a dependency
+- improve documentation container styles and spacing
+- create separate files for each component inside the Flowbite JavaScript ES6 file
+
 ### v1.0.7
 
 - apply checkbox and radio input styles as base styles using the plugin interface

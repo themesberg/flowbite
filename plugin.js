@@ -2,11 +2,64 @@ const svgToDataUri = require('mini-svg-data-uri')
 const plugin = require('tailwindcss/plugin')
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
+const [baseFontSize, { lineHeight: baseLineHeight }] = defaultTheme.fontSize.base
 const { spacing, borderWidth, borderRadius } = defaultTheme
 
 module.exports = plugin(function ({ addBase, theme }) {
 
     addBase({
+        [[
+            "[type='text']",
+            "[type='email']",
+            "[type='url']",
+            "[type='password']",
+            "[type='number']",
+            "[type='date']",
+            "[type='datetime-local']",
+            "[type='month']",
+            "[type='search']",
+            "[type='tel']",
+            "[type='time']",
+            "[type='week']",
+            '[multiple]',
+            'textarea',
+            'select',
+        ]]: {
+            appearance: 'none',
+            'background-color': '#fff',
+            'border-color': theme('colors.gray.500', colors.gray[500]),
+            'border-width': borderWidth['DEFAULT'],
+            'border-radius': borderRadius.none,
+            'padding-top': spacing[2],
+            'padding-right': spacing[3],
+            'padding-bottom': spacing[2],
+            'padding-left': spacing[3],
+            'font-size': baseFontSize,
+            'line-height': baseLineHeight,
+            '--tw-shadow': '0 0 #0000',
+            '&:focus': {
+                outline: '2px solid transparent',
+                'outline-offset': '2px',
+                '--tw-ring-inset': 'var(--tw-empty,/*!*/ /*!*/)',
+                '--tw-ring-offset-width': '0px',
+                '--tw-ring-offset-color': '#fff',
+                '--tw-ring-color': theme('colors.blue.600', colors.blue[600]),
+                '--tw-ring-offset-shadow': `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
+                '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
+                'box-shadow': `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)`,
+                'border-color': theme('colors.blue.600', colors.blue[600]),
+            }
+        },
+        [['input::placeholder', 'textarea::placeholder']]: {
+            color: theme('colors.gray.500', colors.gray[500]),
+            opacity: '1',
+        },
+        ['::-webkit-datetime-edit-fields-wrapper']: {
+            padding: '0',
+        },
+        ['::-webkit-date-and-time-value']: {
+            'min-height': '1.5em',
+        },
         ['select']: {
             'background-image': `url("${svgToDataUri(
                 `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><path stroke="${theme(
@@ -19,6 +72,14 @@ module.exports = plugin(function ({ addBase, theme }) {
             'background-size': `1.5em 1.5em`,
             'padding-right': spacing[10],
             'color-adjust': `exact`,
+        },
+        ['[multiple]']: {
+            'background-image': 'initial',
+            'background-position': 'initial',
+            'background-repeat': 'unset',
+            'background-size': 'initial',
+            'padding-right': spacing[3],
+            'color-adjust': 'unset',
         },
         [[`[type='checkbox']`, `[type='radio']`]]: {
             appearance: 'none',
@@ -88,28 +149,111 @@ module.exports = plugin(function ({ addBase, theme }) {
         [[`[type='checkbox']:indeterminate:hover`, `[type='checkbox']:indeterminate:focus`]]: {
             'border-color': 'transparent',
             'background-color': 'currentColor',
+        },
+        [`[type='file']`]: {
+            background: 'unset',
+            'border-color': 'inherit',
+            'border-width': '0',
+            'border-radius': '0',
+            padding: '0',
+            'font-size': 'unset',
+            'line-height': 'inherit',
+        },
+        [`[type='file']:focus`]: {
+            outline: `1px solid ButtonText`,
+            outline: `1px auto -webkit-focus-ring-color`,
+        },
+        [[`input[type=file]::file-selector-button`]]: {
+            color: 'white',
+            background: theme('colors.gray.700', colors.gray[700]),
+            'font-weight': theme('fontWeight.medium'),
+            'font-size': theme('fontSize.sm'),
+            'cursor': 'pointer',
+            border: 0,
+            'padding-top': spacing[2.5],
+            'padding-bottom': spacing[2.5],
+            'padding-left': spacing[8],
+            'padding-right': spacing[4],
+            'margin-inline-start': '-1rem',
+            'margin-inline-end': '1rem',
+            '&:hover': {
+                background: theme('colors.gray.600', colors.gray[600])
+            }
+        },
+        ['.toggle-bg:after']: {
+            content: '""',
+            position: 'absolute',
+            top: spacing[0.5],
+            left: spacing[0.5],
+            background: 'white',
+            'border-color': theme('colors.gray.300', colors.gray[300]),
+            'border-width': borderWidth['DEFAULT'],
+            'border-radius': borderRadius.full,
+            'height': theme('height.5'),
+            'width': theme('width.5'),
+            'transition-property': 'background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter',
+            'transition-duration': '.15s',
+            'box-shadow': 'var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color)'
+        },
+        ['input:checked + .toggle-bg:after']: {
+            transform: 'translateX(100%);',
+            'border-color': 'white'
+        },
+        ['input:checked + .toggle-bg']: {
+            background: theme('colors.blue.600', colors.gray[600]),
+            'border-color': theme('colors.blue.600', colors.gray[600])
+        },
+        [['.tooltip-arrow', '.tooltip-arrow:before']]: {
+            position: 'absolute',
+            width: '8px',
+            height: '8px',
+            background: 'inherit'
+        },
+        ['.tooltip-arrow']: {
+            visibility: 'hidden',
+        },
+        ['.tooltip-arrow:before']: {
+            content: '""',
+            visibility: 'visible',
+            transform: 'rotate(45deg)'
+        },
+        [`[data-tooltip-style^='light'] + .tooltip > .tooltip-arrow:before`]: {
+            'border-style': 'solid',
+            'border-color': colors.gray[200],
+        },
+        [`[data-tooltip-style^='light'] + .tooltip[data-popper-placement^='top'] > .tooltip-arrow:before`]: {
+            'border-bottom-width': '1px',
+            'border-right-width': '1px'
+        },
+        [`[data-tooltip-style^='light'] + .tooltip[data-popper-placement^='right'] > .tooltip-arrow:before`]: {
+            'border-bottom-width': '1px',
+            'border-left-width': '1px'
+        },
+        [`[data-tooltip-style^='light'] + .tooltip[data-popper-placement^='bottom'] > .tooltip-arrow:before`]: {
+            'border-top-width': '1px',
+            'border-left-width': '1px'
+        },
+        [`[data-tooltip-style^='light'] + .tooltip[data-popper-placement^='left'] > .tooltip-arrow:before`]: {
+            'border-top-width': '1px',
+            'border-right-width': '1px'
+        },
+        [`.tooltip[data-popper-placement^='top'] > .tooltip-arrow`]: {
+            bottom: '-4px'
+        },
+        [`.tooltip[data-popper-placement^='bottom'] > .tooltip-arrow`]: {
+            top: '-4px'
+        },
+        [`.tooltip[data-popper-placement^='left'] > .tooltip-arrow`]: {
+            right: '-4px'
+        },
+        [`.tooltip[data-popper-placement^='right'] > .tooltip-arrow`]: {
+            left: '-4px'
+        },
+        ['.tooltip.invisible > .tooltip-arrow:before']: {
+            visibility: 'hidden'
         }
     })
 }, {
-    purge: {
-        options: {
-            // safelist classes generated by plugins like the datepicker
-            safelist: [
-                'w-64',
-                'w-1/2',
-                'rounded-l-lg',
-                'rounded-r-lg',
-                'bg-gray-200',
-                'grid-cols-4',
-                'grid-cols-7',
-                'h-6',
-                'leading-6',
-                'h-9',
-                'leading-9',
-                'shadow-lg'
-            ],
-        }
-    },
     theme: {
         extend: {
             height: {

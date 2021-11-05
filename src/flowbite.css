@@ -2,24 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.toggle-bg:after {
-	content: '';
-	@apply absolute left-0.5 top-0.5 bg-white border border-gray-300 h-5 w-5 rounded-full ring-0 transition;
-}
-
-input:checked + .toggle-bg:after {
-	transform: translateX(100%);
-	@apply border-white;
-}
-
-input:checked + .toggle-bg {
-	@apply bg-blue-600 border-blue-600;
-}
-
-/* File upload */
-input[type=file]::-webkit-file-upload-button,
-input[type=file]::file-selector-button {
-	@apply text-white bg-gray-700 hover:bg-gray-600 font-medium text-sm cursor-pointer border-0 py-2.5 pl-8 pr-4;
-	margin-inline-start: -1rem;
-	margin-inline-end: 1rem;
-}
+/*
+“Have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.”
+― Steve Jobs
+*/

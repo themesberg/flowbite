@@ -258,7 +258,13 @@ Group a series of buttons together on a single line or stack them in a vertical 
 </fieldset>
 {{< /example >}}
 
+<div class="mt-8 -mb-5">
+  {{< requires_js >}}
+</div>
+
 ## File upload
+
+Use the following Tailwind CSS file upload element to receive any type of file from users.
 
 {{< example >}}
 <label class="text-sm font-medium text-gray-900 block mb-2" for="user_avatar">Upload file</label>
@@ -266,16 +272,9 @@ Group a series of buttons together on a single line or stack them in a vertical 
 <div class="mt-1 text-sm text-gray-500" id="user_avatar_help">A profile picture is useful to confirm your are logged into your account</div>
 {{< /example >}}
 
-Make sure that you also add this extra bit of CSS:
-
-```css
-input[type=file]::-webkit-file-upload-button,
-input[type=file]::file-selector-button {
-	@apply text-white bg-gray-700 hover:bg-gray-600 font-medium text-sm cursor-pointer border-0 py-2.5 pl-8 pr-4;
-	margin-inline-start: -1rem;
-	margin-inline-end: 1rem;
-}
-```
+<div class="mt-8 -mb-5">
+  {{< requires_js >}}
+</div>
 
 ## Toggle (switches)
 
@@ -294,21 +293,3 @@ Use the following toggle (switches) element to ask for a yes or no type of input
   <span class="ml-3 text-gray-900 text-sm font-medium">Toggle me (checked)</span>
 </label>
 {{< /example >}}
-
-If you aren't using FlowBite's `flowbite.css` file make sure that you include the following styles in your CSS for the toggle active styles:
-
-```css
-.toggle-bg:after {
-  content: '';
-  @apply absolute left-0.5 top-0.5 bg-white border border-gray-300 h-5 w-5 rounded-full ring-0 transition;
-}
-
-input:checked + .toggle-bg:after {
-	transform: translateX(100%);
-	@apply border-white;
-}
-
-input:checked + .toggle-bg {
-	@apply bg-blue-600 border-blue-600;
-}
-```

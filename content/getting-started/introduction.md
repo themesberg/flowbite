@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Flowbite - Tailwind CSS component library
-description: Get started with an open-source set of UI components and elements built with Tailwind CSS
+description: Get started with an open-source set of UI components and elements built with the utility-classes from Tailwind CSS
 group: getting-started
 toc: true
 cleanTitle: true
@@ -78,7 +78,7 @@ Please reach out to us via the [official Github repository](https://github.com/t
 
 Feel free to join our <a href="https://discord.gg/qAbMDYbE" target="_blank" rel="nofollow">community on Discord</a> to receive help, contribute to the project, or just discuss about Flowbite, Tailwind CSS, and web development in general.
 
-### Authors
+## Authors
 
 - [Zoltan Szogyenyi](https://twitter.com/zoltanszogyenyi) (web developer)
 - [Robert Tanislav](https://twitter.com/RobertTanislav) (web designer)

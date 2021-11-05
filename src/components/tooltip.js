@@ -4,6 +4,7 @@ import { createPopper } from '@popperjs/core';
 document.querySelectorAll('[data-tooltip-target]').forEach(function (tooltipToggleEl) {
     const tooltipEl = document.getElementById(tooltipToggleEl.getAttribute('data-tooltip-target'));
     const placement = tooltipToggleEl.getAttribute('data-tooltip-placement');
+    const trigger = tooltipToggleEl.getAttribute('data-tooltip-trigger');
 
     const popperInstance = createPopper(tooltipToggleEl, tooltipEl, {
         placement: placement ? placement : 'top',
@@ -54,8 +55,22 @@ document.querySelectorAll('[data-tooltip-target]').forEach(function (tooltipTogg
         }));
     }
 
-    const showEvents = ['mouseenter', 'focus'];
-    const hideEvents = ['mouseleave', 'blur'];
+    var showEvents = [];
+    var hideEvents = [];
+
+    switch(trigger) {
+        case 'hover':
+            showEvents = ['mouseenter', 'focus'];
+            hideEvents = ['mouseleave', 'blur'];
+            break;
+        case 'click':
+            showEvents = ['click', 'focus'];
+            hideEvents = ['focusout', 'blur'];
+            break;
+        default:
+            showEvents = ['mouseenter', 'focus'];
+            hideEvents = ['mouseleave', 'blur'];
+    }
 
     showEvents.forEach((event) => {
         tooltipToggleEl.addEventListener(event, show);

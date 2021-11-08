@@ -15,6 +15,10 @@ nextLink: customize/configuration
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
+### v1.1.1
+
+- fix the package `mini-svg-data-uri` not being included as a dependency
+
 ### v1.1.0
 
 - separated the datepicker plugin from the main `flowbite.bundle.js` file and instead created a separate one which is optional to include

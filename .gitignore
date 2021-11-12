@@ -7,3 +7,4 @@ static/*.css
 static/*.js
 static/*.map
 .DS_Store
+yarn-error.log

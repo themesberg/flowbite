@@ -1,7 +1,7 @@
 module.exports = {
   purge: {
     // enabled: process.env.NODE_ENV === "production" ? true : false,
-    enabled: true,
+    // enabled: true,
     content: ["./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html", "./src/**/*.js"],
     options: {
       safelist: [
@@ -21,7 +21,7 @@ module.exports = {
       ],
     }
   },
-  darkMode: false, // or 'media' or 'class',
+  darkMode: 'class',
   theme: {
     extend: {
       // sidebar mobile fix
@@ -35,6 +35,11 @@ module.exports = {
         'mono': ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace']
       }
     }
+  },
+  variants: {
+    extend: {
+      border: ['dark']
+    },
   },
   plugins: [
     require('./plugin')

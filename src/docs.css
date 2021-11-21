@@ -21,11 +21,11 @@
 }
 
 #TableOfContents > ul {
-	@apply overflow-x-hidden text-gray-500 font-medium;
+	@apply overflow-x-hidden text-gray-500 dark:text-gray-400 font-medium;
 }
 
 #TableOfContents > ul > li > a {
-	@apply block py-2 transition-colors duration-200 hover:text-gray-900 font-medium;
+	@apply block py-2 transition-colors duration-200 hover:text-gray-900 dark:hover:text-white font-medium;
 }
 
 #TableOfContents > ul > li > ul {
@@ -41,22 +41,22 @@
 }
 
 #mainContent > h2 {
-	@apply text-2xl font-bold mt-8 mb-4;
+	@apply text-2xl font-bold mt-8 mb-4 dark:text-white;
 }
 
 #mainContent > h3,
 #mainContent > h4 {
-	@apply text-xl font-bold mt-8 mb-4;
+	@apply text-xl font-bold mt-8 mb-4 dark:text-white;
 }
 
 #mainContent > p {
-	@apply text-base font-normal text-gray-600 mb-4;
+	@apply text-base font-normal text-gray-600 dark:text-gray-400 mb-4;
 }
 
 #mainContent > p > a,
 #mainContent > ul > li > a,
 #mainContent > ol > li > a {
-	@apply text-blue-600;
+	@apply text-blue-600 dark:text-blue-500;
 }
 
 #mainContent > p > a:hover,
@@ -86,7 +86,7 @@
 
 #mainContent > ul > li,
 #mainContent > ol > li {
-	@apply text-base font-normal text-gray-600 mb-4;
+	@apply text-base font-normal text-gray-600 dark:text-gray-400 mb-4;
 }
 
 /* prism styles */

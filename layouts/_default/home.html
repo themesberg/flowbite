@@ -5,7 +5,7 @@
 <div class="w-full max-w-8xl mx-auto px-4">
   <div class="lg:flex">
     <!-- Sidebar -->
-    <aside id="sidebar" class="fixed z-10 inset-0 flex-none h-full bg-black bg-opacity-25 w-full lg:bg-white lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block hidden">
+    <aside id="sidebar" class="fixed z-10 inset-0 flex-none h-full w-full lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block hidden">
       {{ partial "docs-sidebar" . }}
     </aside>
 
@@ -16,7 +16,7 @@
         <div class="min-w-0 max-w-4xl flex-auto xl:px-8 pt-6 lg:pt-10 pb:12 xl:pb-24 lg:pb-16">
 
           <!-- Intro -->
-          <div class="pb-10 border-b border-gray-200 mb-10">
+          <div class="pb-10 border-b border-gray-200 dark:border-gray-800 mb-10">
             {{ if ( eq .Page.Params.requires_js true) }}
               <div class="mb-5">
                 <a href="{{ "getting-started/quickstart" | relURL }}" rel="nofollow" target="_blank" class="bg-gray-100 rounded-full py-1 px-1 pr-4 text-sm text-gray-700 inline-flex items-center justify-between hover:bg-gray-200" role="alert">
@@ -24,8 +24,8 @@
                 </a>
               </div>
             {{ end }}
-            <h1 class="inline-block text-3xl font-extrabold text-gray-900 tracking-tight" id="content">{{ .Title | markdownify }}</h1>
-            <p class="mt-1 text-lg text-gray-500">{{ .Page.Params.Description | markdownify }}</p>
+            <h1 class="inline-block text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight" id="content">{{ .Title | markdownify }}</h1>
+            <p class="mt-1 text-lg text-gray-500 dark:text-gray-400">{{ .Page.Params.Description | markdownify }}</p>
           </div>
 
           <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7D4KQE&placement=flowbitedesign" id="_carbonads_js"></script>
@@ -48,10 +48,10 @@
 
             <div class="mt-8 lg:mt-12 flex leading-6 font-medium">
               {{ if isset .Page.Params "previous" }}
-                <a class="flex mr-8 transition-colors duration-200 text-gray-500 hover:text-gray-900" href="{{ .Page.Params.PreviousLink | relURL }}"><span aria-hidden="true" class="mr-2">←</span>{{ .Page.Params.Previous }}</a>
+                <a class="flex mr-8 transition-colors duration-200 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.PreviousLink | relURL }}"><span aria-hidden="true" class="mr-2">←</span>{{ .Page.Params.Previous }}</a>
               {{ end }}
               {{ if isset .Page.Params "next" }}
-              <a class="flex text-right ml-auto transition-colors duration-200 text-gray-500 hover:text-gray-900" href="{{ .Page.Params.NextLink | relURL }}">{{ .Page.Params.Next }}<span aria-hidden="true" class="ml-2">→</span></a>
+              <a class="flex text-right ml-auto transition-colors duration-200 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.NextLink | relURL }}">{{ .Page.Params.Next }}<span aria-hidden="true" class="ml-2">→</span></a>
               {{ end }}
             </div>
 
@@ -63,7 +63,7 @@
           {{ if (eq .Page.Params.toc true) }}
           <div class="flex flex-col justify-between overflow-y-auto sticky max-h-(screen-18) pt-10 pb-6 top-12">
             <div class="mb-8">
-              <h5 class="text-gray-900 uppercase tracking-wide font-semibold mb-3 text-sm lg:text-xs">On this page</h5>
+              <h5 class="text-gray-900 dark:text-white uppercase tracking-wide font-semibold mb-3 text-sm lg:text-xs">On this page</h5>
               {{ .TableOfContents }}
             </div>
           </div>

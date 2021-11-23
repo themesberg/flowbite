@@ -284,12 +284,12 @@ Use the following toggle (switches) element to ask for a yes or no type of input
 <label for="toggle-example" class="flex items-center cursor-pointer relative mb-4">
   <input type="checkbox" id="toggle-example" class="sr-only">
   <div class="toggle-bg bg-gray-200 border border-gray-200 h-6 w-11 rounded-full dark:bg-gray-700 dark:border-gray-600"></div>
-  <span class="ml-3 text-gray-900 text-sm font-medium">Toggle me</span>
+  <span class="ml-3 text-gray-900 text-sm font-medium dark:text-white">Toggle me</span>
 </label>
 
 <label for="toggle-example-checked" class="flex items-center cursor-pointer relative">
   <input type="checkbox" id="toggle-example-checked" class="sr-only" checked>
   <div class="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full"></div>
-  <span class="ml-3 text-gray-900 text-sm font-medium">Toggle me (checked)</span>
+  <span class="ml-3 text-gray-900 text-sm font-medium dark:text-white">Toggle me (checked)</span>
 </label>
 {{< /example >}}

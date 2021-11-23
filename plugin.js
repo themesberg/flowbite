@@ -255,10 +255,20 @@ module.exports = plugin(function ({ addBase, theme }) {
     })
 }, {
     darkMode: 'class', // or 'media' or 'class',
+    variants: {
+        extend: {
+            border: ['dark'],
+            textDecoration: ['dark'],
+            boxShadow: ['dark']
+        }
+    },
     theme: {
         extend: {
             height: {
                 'modal': 'calc(100% - 2rem)'
+            },
+            boxShadow: {
+                'sm-light': '0 2px 5px 0px rgba(255, 255, 255, 0.08)'
             }
         },
         colors: {

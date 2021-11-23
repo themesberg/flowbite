@@ -82,7 +82,7 @@ And this is an example of using a progress bar outside the bar.
 
 {{< example >}}
 <div class="mb-1 flex justify-between">
-  <span class="text-base text-blue-700 font-medium dark:text-white">Themesberg project</span>
+  <span class="text-base text-blue-700 font-medium dark:text-white">Flowbite</span>
   <span class="text-sm font-medium text-blue-700 dark:text-white">45%</span>
 </div>
 <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">

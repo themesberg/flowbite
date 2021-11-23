@@ -56,7 +56,7 @@ Use the following HTML markup and Tailwind CSS utility classes to show a data se
                                 $2999
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:text-blue-700">Edit</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
                             </td>
                         </tr>
                         <!-- Product 2 -->
@@ -74,7 +74,7 @@ Use the following HTML markup and Tailwind CSS utility classes to show a data se
                                 $1999
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:text-blue-700">Edit</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
                             </td>
                         </tr>
                         <!-- Product 2 -->
@@ -92,7 +92,7 @@ Use the following HTML markup and Tailwind CSS utility classes to show a data se
                                 $99
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:text-blue-700">Edit</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
                             </td>
                         </tr>
                     </tbody>

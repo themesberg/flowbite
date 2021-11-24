@@ -259,7 +259,8 @@ module.exports = plugin(function ({ addBase, theme }) {
         extend: {
             border: ['dark'],
             textDecoration: ['dark'],
-            boxShadow: ['dark']
+            boxShadow: ['dark'],
+            background: ['dark']
         }
     },
     theme: {

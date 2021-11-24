@@ -73,7 +73,7 @@ Use this example to create a navigation bar with a user profile or button to tog
       <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4 dark:bg-gray-700 dark:divide-gray-600" id="dropdown">
         <div class="px-4 py-3">
           <span class="text-gray-900 block text-sm dark:text-white">Bonnie Green</span>
-          <span class="text-gray-500 block text-sm font-medium text-gray-900 truncate dark:text-gray-400">name@flowbite.com</span>
+          <span class="text-gray-500 block text-sm font-medium truncate dark:text-gray-400">name@flowbite.com</span>
         </div>
         <ul class="py-1" aria-labelledby="dropdown">
         <li>

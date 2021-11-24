@@ -265,9 +265,9 @@ code.language-javascript .token.comment {
 #carbonads {
 	display: flex;
 	max-width: 330px;
-	background-color: hsl(0, 0%, 98%);
 	box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);
 	z-index: 100;
+	@apply bg-white dark:bg-gray-800 dark:text-white;
 }
 #carbonads a {
 	color: inherit;
@@ -300,9 +300,9 @@ code.language-javascript .token.comment {
 	text-align: left;
 }
 #carbonads .carbon-poweredby {
+	@apply bg-gray-100 dark:bg-gray-800;
 	display: block;
 	padding: 6px 8px;
-	background: #f1f1f2;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;

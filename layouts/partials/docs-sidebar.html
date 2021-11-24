@@ -1,5 +1,5 @@
-<div id="navWrapper" class="max-w-2xs h-full overflow-y-auto scrolling-touch lg:h-screen lg:block lg:relative lg:sticky overflow-hidden top:24 lg:top-12 bg-white dark:bg-gray-900 mr-24 lg:mr-0">
-  <nav id="nav" class="px-1 pt-16 lg:pt-2 overflow-y-auto font-medium text-base sm:px-3 xl:px-5 lg:text-sm pb-10 lg:pb-20 sticky?lg:h-(screen-18)" aria-label="Docs navigation">
+<div id="navWrapper" class="max-w-2xs h-full overflow-y-auto scrolling-touch lg:h-screen lg:block lg:sticky overflow-hidden top:24 lg:top-12 bg-white dark:bg-gray-900 mr-24 lg:mr-0">
+  <nav id="nav" class="px-1 pt-16 pl-3 lg:pl-0 lg:pt-2 overflow-y-auto font-medium text-base lg:text-sm pb-10 lg:pb-20 sticky?lg:h-(screen-18)" aria-label="Docs navigation">
     {{- $url := split .Permalink "/" -}}
     {{- $page_slug := index $url (sub (len $url) 2) -}}
   
@@ -18,13 +18,13 @@
   
       {{- if $group.pages }}
         <li class="mt-8">
-          <h5 class="px-3 mb-3 lg:mb-3 uppercase tracking-wide font-semibold text-sm lg:text-xs text-gray-900 dark:text-white">{{ $group.title }}</h5>
+          <h5 class="mb-3 lg:mb-3 uppercase tracking-wide font-semibold text-sm lg:text-xs text-gray-900 dark:text-white">{{ $group.title }}</h5>
           <ul class="list-unstyled fw-normal py-1 small">
             {{- range $doc := $group.pages -}}
               {{- $doc_slug := $doc.title | urlize -}}
               {{- $is_active := and $is_active_group (eq $page_slug $doc_slug) -}}
               {{- $href := printf "/docs/%s/%s/" $group_slug $doc_slug }}
-              <li><a href="{{ $href }}" class="px-3 py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-400 dark:hover:text-white {{ if $is_active }} text-blue-700 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-500{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }}</a></li>
+              <li><a href="{{ $href }}" class="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-400 dark:hover:text-white {{ if $is_active }} text-blue-700 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-500{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }}</a></li>
             {{- end }}
           </ul>
         </li>

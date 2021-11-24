@@ -31,11 +31,14 @@ document.querySelectorAll('[data-modal-toggle]').forEach(function (modalToggleEl
     var modalId = modalToggleEl.getAttribute('data-modal-toggle');
     var modalEl = document.getElementById(modalId);
 
-    if (!modalEl.hasAttribute('aria-hidden') && !modalEl.hasAttribute('aria-modal')) {
-        modalEl.setAttribute('aria-hidden', 'true');
+    if(modalEl) {
+        if (!modalEl.hasAttribute('aria-hidden') && !modalEl.hasAttribute('aria-modal')) {
+            modalEl.setAttribute('aria-hidden', 'true');
+        }
+    
+        modalToggleEl.addEventListener('click', function() {
+            toggleModal(modalId, modalEl.hasAttribute('aria-hidden', 'true'));
+        });
     }
 
-    modalToggleEl.addEventListener('click', function() {
-        toggleModal(modalId, modalEl.hasAttribute('aria-hidden', 'true'));
-    });
 });

@@ -11,6 +11,8 @@
 - title: Customize
   pages:
     - title: Configuration
+    - title: Dark mode
+      new: true
     - title: Theming
     - title: Color
     - title: Icons

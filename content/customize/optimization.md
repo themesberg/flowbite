@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Flowbite - Optimization
+title: Tailwind CSS Optimization - Flowbite
 description: Optimize for production by using Purge CSS and remove unused CSS using the Tailwind configuration file
 group: customize
 toc: true

@@ -1,17 +1,15 @@
 ---
 layout: home
-title: Tailwind CSS Configuration - Flowbite
-description: Learn how to customize the default Flowbite and Tailwind CSS options and styles
+title: Tailwind CSS Dark Mode Switcher - Flowbite
+description: Learn how to use and build a dark mode switcher for Tailwind CSS using Flowbite
 group: customize
 toc: true
 
-previous: Changelog
-previousLink: getting-started/changelog
-next: Dark mode
-nextLink: customize/dark-mode
+previous: Configuration
+previousLink: customize/configuration
+next: Theming
+nextLink: customize/theming
 ---
-
-Before continuing, please make sure that you have installed Flowbite as a plugin inside your Tailwind CSS by following the [quickstart guide]({{< ref "getting-started/quickstart" >}}).
 
 ## Configuration file
 

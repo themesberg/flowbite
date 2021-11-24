@@ -68,7 +68,7 @@
 #mainContent > p > code,
 #mainContent > ul > li > code,
 #mainContent > ol > li > code {
-	@apply font-mono text-blue-600 text-sm px-1;
+	@apply font-mono text-blue-600 dark:text-blue-400 text-sm px-1;
 }
 
 #mainContent > ul {

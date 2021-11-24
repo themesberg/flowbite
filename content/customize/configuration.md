@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Flowbite - Configuration
-description: Customize the default utility classes by configuring the Tailwind CSS config file
+description: Learn how to customize the default Flowbite and Tailwind CSS options and styles
 group: customize
 toc: true
 
@@ -19,32 +19,44 @@ You can easily to so by editing the `tailwind.config.js` file from the root fold
 
 ```javascript
 module.exports = {
-  purge: ['./build/**/*.{js,jsx,ts,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  purge: {
+    enabled: true,
+    content: ["./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html", "./src/**/*.js"],
+    options: {
+      safelist: [
+        'w-64',
+        'w-1/2',
+        'rounded-l-lg',
+        'rounded-r-lg',
+        'bg-gray-200',
+        'grid-cols-4',
+        'grid-cols-7',
+        'h-6',
+        'leading-6',
+        'h-9',
+        'leading-9',
+        'shadow-lg',
+        /data-.*/
+      ],
+    }
+  },
+  darkMode: 'class',
   theme: {
-      extend: {},
-      fontFamily: {
-      'sans': ['Inter', 'sans-serif'],
-      'body': ['Inter', 'sans-serif'],
-      'mono': ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace']
-      },
-      colors: {
-      white: "#ffffff",
-      black: "#000000",
-
-      // other colors ...
-      }
+    extend: {
+      // extend base Tailwind CSS utility classes
+    }
   },
   variants: {
-      extend: {
-      fill: ['hover', 'focus'],
-      zIndex: ['hover', 'active'],
-      },
+    extend: {
+      // apply variants like hover, focus, dark to components
+    }
   },
   plugins: [
-      require('@tailwindcss/forms'),
-  ],
+    // include Flowbite as a plugin in your Tailwind CSS project
+    require('@themesberg/flowbite/plugin')
+  ]
 }
+
 ```
 
 ## Theme

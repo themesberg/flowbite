@@ -181,24 +181,24 @@ The code below can be used to create a fieldset of checkbox elements inside a fo
 <fieldset>
   <legend class="sr-only">Checkbox variants</legend>
 
-  <div class="flex items-center items-start mb-4">
-      <input id="checkbox-1" aria-describedby="checkbox-1" type="checkbox" class="bg-gray-100 focus:ring-blue-500 text-blue-600 border-gray-300 h-4 w-4  rounded dark:focus:ring-blue-600 dark:focus:border-blue-600 dark:ring-offset-gray-800 focus:ring-2 text-blue-600" checked>
+  <div class="flex items-center mb-4">
+      <input id="checkbox-1" aria-describedby="checkbox-1" type="checkbox" class="bg-gray-100 focus:ring-blue-500 text-blue-600 border-gray-300 h-4 w-4  rounded dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"" checked>
       <label for="checkbox-1" class="text-sm ml-3 font-medium text-gray-900 dark:text-white">I agree to the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
   </div>
 
-  <div class="flex items-start items-center mb-4">
-      <input id="checkbox-2" aria-describedby="checkbox-2" type="checkbox" class="bg-gray-100 focus:ring-blue-500 text-blue-600 border-gray-300 h-4 w-4  rounded dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 text-blue-600 dark:bg-gray-700 dark:border-gray-600">
+  <div class="flex items-center mb-4">
+      <input id="checkbox-2" aria-describedby="checkbox-2" type="checkbox" class="bg-gray-100 focus:ring-blue-500 text-blue-600 border-gray-300 h-4 w-4  rounded dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
       <label for="checkbox-2" class="text-sm ml-3 font-medium text-gray-900 dark:text-white">I want to get promotional offers</label>
   </div>
 
-  <div class="flex items-start items-center mb-4">
-      <input id="checkbox-3" aria-describedby="checkbox-3" type="checkbox" class="bg-gray-100 focus:ring-blue-500 text-blue-600 border-gray-300 h-4 w-4  rounded dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 text-blue-600 dark:bg-gray-700 dark:border-gray-600">
+  <div class="flex items-center mb-4">
+      <input id="checkbox-3" aria-describedby="checkbox-3" type="checkbox" class="bg-gray-100 focus:ring-blue-500 text-blue-600 border-gray-300 h-4 w-4 rounded dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
       <label for="checkbox-3" class="text-sm ml-3 font-medium text-gray-900 dark:text-white">I am 18 years or older</label>
   </div>
   
-  <div class="flex items-start mb-4">
+  <div class="flex mb-4">
     <div class="flex items-center h-5">
-      <input id="shipping-2" aria-describedby="shipping-2" type="checkbox" class="bg-gray-100 focus:ring-blue-500 text-blue-600 border-gray-300 h-4 w-4  rounded dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 text-blue-600 dark:bg-gray-700 dark:border-gray-600">
+      <input id="shipping-2" aria-describedby="shipping-2" type="checkbox" class="bg-gray-100 focus:ring-blue-500 text-blue-600 border-gray-300 h-4 w-4 rounded dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     </div>
     <div class="text-sm ml-3">
       <label for="shipping-2" class="font-medium text-gray-900 dark:text-white">Free shipping via Flowbite</label>
@@ -206,7 +206,7 @@ The code below can be used to create a fieldset of checkbox elements inside a fo
     </div>
   </div>
 
-  <div class="flex items-start items-center">
+  <div class="flex items-center">
       <input id="international-shipping-disabled" aria-describedby="international-shipping-disabled" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" disabled>
       <label for="international-shipping-disabled" class="text-sm ml-3 font-medium text-gray-400 dark:text-gray-500">Eligible for international shipping (disabled)</label>
   </div>
@@ -222,35 +222,35 @@ Group a series of buttons together on a single line or stack them in a vertical 
   <legend class="sr-only">Countries</legend>
 
   <div class="flex items-center mb-4">
-    <input id="country-option-1" type="radio" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="country-option-1" aria-describedby="country-option-1" checked>
+    <input id="country-option-1" type="radio" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" aria-labelledby="country-option-1" aria-describedby="country-option-1" checked>
     <label for="country-option-1" class="text-sm font-medium text-gray-900 ml-2 block dark:text-white">
       United States
     </label>
   </div>
 
   <div class="flex items-center mb-4">
-    <input id="country-option-2" type="radio" name="countries" value="Germany" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" aria-labelledby="country-option-2" aria-describedby="country-option-2">
+    <input id="country-option-2" type="radio" name="countries" value="Germany" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" aria-labelledby="country-option-2" aria-describedby="country-option-2">
     <label for="country-option-2" class="text-sm font-medium text-gray-900 ml-2 block dark:text-white">
       Germany
     </label>
   </div>
 
   <div class="flex items-center mb-4">
-    <input id="country-option-3" type="radio" name="countries" value="Spain" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600" aria-labelledby="country-option-3" aria-describedby="country-option-3">
+    <input id="country-option-3" type="radio" name="countries" value="Spain" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:bg-gray-700 dark:border-gray-600" aria-labelledby="country-option-3" aria-describedby="country-option-3">
     <label for="country-option-3" class="text-sm font-medium text-gray-900 ml-2 block dark:text-white">
       Spain
     </label>
   </div>
 
   <div class="flex items-center mb-4">
-    <input id="country-option-4" type="radio" name="countries" value="United Kingdom" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600" aria-labelledby="country-option-4" aria-describedby="country-option-4">
+    <input id="country-option-4" type="radio" name="countries" value="United Kingdom" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring:blue-300 dark:focus-ring-blue-600 dark:bg-gray-700 dark:border-gray-600" aria-labelledby="country-option-4" aria-describedby="country-option-4">
     <label for="country-option-4" class="text-sm font-medium text-gray-900 ml-2 block dark:text-white">
       United Kingdom
     </label>
   </div>
 
   <div class="flex items-center">
-    <input id="option-disabled" type="radio" name="countries" value="China" class="h-4 w-4 border-gray-200 focus:ring-2 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600" aria-labelledby="option-disabled" aria-describedby="option-disabled" disabled>
+    <input id="option-disabled" type="radio" name="countries" value="China" class="h-4 w-4 border-gray-200 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:bg-gray-700 dark:border-gray-600" aria-labelledby="option-disabled" aria-describedby="option-disabled" disabled>
     <label for="option-disabled" class="text-sm font-medium text-gray-400 ml-2 block dark:text-white">
       China (disabled)
     </label>

@@ -115,7 +115,7 @@ module.exports = plugin(function ({ addBase, theme }) {
             '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
             'box-shadow': `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)`,
         },
-        [[`[type='checkbox']:checked`, `[type='radio']:checked`]]: {
+        [[`[type='checkbox']:checked`, `[type='radio']:checked`, `.dark [type='checkbox']:checked`, `.dark [type='radio']:checked`]]: {
             'border-color': `transparent`,
             'background-color': `currentColor`,
             'background-size': `100% 100%`,
@@ -131,10 +131,6 @@ module.exports = plugin(function ({ addBase, theme }) {
             'background-image': `url("${svgToDataUri(
                 `<svg viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`
             )}")`,
-        },
-        [[`[type='checkbox']:checked:hover`, `[type='checkbox']:checked:focus`, `[type='radio']:checked:hover`, `[type='radio']:checked:focus`]]: {
-            'border-color': 'transparent',
-            'background-color': 'currentColor',
         },
         [`[type='checkbox']:indeterminate`]: {
             'background-image': `url("${svgToDataUri(
@@ -260,7 +256,8 @@ module.exports = plugin(function ({ addBase, theme }) {
             border: ['dark'],
             textDecoration: ['dark'],
             boxShadow: ['dark'],
-            background: ['dark']
+            background: ['dark'],
+            ringColor: ['dark']
         }
     },
     theme: {

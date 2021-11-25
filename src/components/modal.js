@@ -12,7 +12,7 @@ const toggleModal = (modalId, show = true) => {
         // create backdrop element
         var backdropEl = document.createElement('div');
         backdropEl.setAttribute('modal-backdrop', '');
-        backdropEl.classList.add('bg-gray-900', 'bg-opacity-50', 'fixed', 'inset-0', 'z-40');
+        backdropEl.classList.add('bg-gray-900', 'bg-opacity-50', 'dark:bg-opacity-80', 'fixed', 'inset-0', 'z-40');
         document.querySelector('body').append(backdropEl);
     } else {
         modalEl.classList.add('hidden');

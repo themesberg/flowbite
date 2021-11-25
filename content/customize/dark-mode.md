@@ -27,6 +27,16 @@ module.exports = {
 }
 ```
 
+Alternatively, you can also just use the "media" option to automatically set the dark or light theme based on the browser's color scheme preference.
+
+```javascript
+// tailwind.config.js
+module.exports = {
+  darkMode: 'media',
+  // ...
+}
+```
+
 ## Dark mode switcher
 
 If you want to create a dark mode switcher for Tailwind CSS and Flowbite you'll have to add some JavaScript code and a toggle element that a user can use to change their preferences.

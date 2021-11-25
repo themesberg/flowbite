@@ -22,7 +22,7 @@ Make sure that you also have `aria-hidden="true"` applied as an attribute when t
 
 If you forget to apply the attribute, the Flowbite JavaScript will still set it up for you as a fallback.
 
-{{< example class="dark:bg-gray-900" >}}
+{{< example>}}
 <!-- Modal toggle -->
 <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="default-modal">
   Toggle modal
@@ -65,7 +65,7 @@ If you forget to apply the attribute, the Flowbite JavaScript will still set it 
 
 In order to create a modal with Tailwind CSS you only have to add `data-modal-toggle="modalId"` data attribute where `modalId` is the id of the modal that you are targeting.
 
-{{< example class="dark:bg-gray-900" >}}
+{{< example  >}}
 <!-- Modal toggle -->
 <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="popup-modal">
   Toggle modal
@@ -100,6 +100,7 @@ In order to create a modal with Tailwind CSS you only have to add `data-modal-to
 
 In order to create a modal with Tailwind CSS you only have to add `data-modal-toggle="modalId"` data attribute where `modalId` is the id of the modal that you are targeting.
 
+{{< example >}}
 <!-- Modal toggle -->
 <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="authentication-modal">
   Toggle modal
@@ -127,10 +128,10 @@ In order to create a modal with Tailwind CSS you only have to add `data-modal-to
                 </div>
                 <div class="flex items-start">
                     <div class="flex items-center h-5">
-                    <input id="remember" aria-describedby="remember" name="remember" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required>
+                        <input id="checkbox-2" aria-describedby="checkbox-2" type="checkbox" class="bg-gray-100 focus:ring-blue-500 text-blue-600 border-gray-300 h-4 w-4  rounded dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                     </div>
                     <div class="text-sm ml-3">
-                    <label for="remember" class="font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                        <label for="remember" class="font-medium text-gray-900 dark:text-gray-300">Remember me</label>
                     </div>
                     <a href="#" class="text-sm text-blue-700 hover:underline ml-auto dark:text-blue-500">Lost Password?</a>
                 </div>
@@ -142,28 +143,27 @@ In order to create a modal with Tailwind CSS you only have to add `data-modal-to
         </div>
     </div>
 </div> 
-
-
+{{< /example >}}
 ## Sizes
 
 In order to create a modal with Tailwind CSS you only have to add `data-modal-toggle="modalId"` data attribute where `modalId` is the id of the modal that you are targeting.
 
-{{< example class="dark:bg-gray-900" >}}
-    <div class="block md:flex  space-y-4 md:space-y-0 md:space-x-4">
-        <!-- Modal toggle -->
-        <button class="block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="small-modal">
-        Small modal
-        </button>
-        <button class="block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="default-modal">
-        Default modal
-        </button>
-        <button class="block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="large-modal">
-        Large modal
-        </button>
-        <button class="block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="extralarge-modal">
-        Extra large modal
-        </button>
-    </div>
+{{< example  >}}
+<div class="block md:flex  space-y-4 md:space-y-0 md:space-x-4">
+    <!-- Modal toggle -->
+    <button class="block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="small-modal">
+    Small modal
+    </button>
+    <button class="block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="default-modal">
+    Default modal
+    </button>
+    <button class="block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="large-modal">
+    Large modal
+    </button>
+    <button class="block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="extralarge-modal">
+    Extra large modal
+    </button>
+</div>
 
 <!-- Small Modal -->
 <div class="hidden overflow-x-hidden overflow-y-auto fixed top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center h-modal sm:h-full" id="small-modal">

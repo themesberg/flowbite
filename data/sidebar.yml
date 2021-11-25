@@ -31,6 +31,8 @@
     - title: List Group
     - title: Typography
     - title: Modal
+    - title: Tabs
+      new: true
     - title: Navbar
     - title: Pagination
     - title: Progress

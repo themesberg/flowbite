@@ -56,7 +56,7 @@
 #mainContent > p > a,
 #mainContent > ul > li > a,
 #mainContent > ol > li > a {
-	@apply text-blue-600 dark:text-blue-400;
+	@apply text-blue-600 dark:text-blue-500;
 }
 
 #mainContent > p > a:hover,

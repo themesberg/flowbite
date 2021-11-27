@@ -210,7 +210,7 @@ The dropdown menus work with buttons of all sizes including smaller or larger on
 
 ## Placement
 
-You can also use the `data-dropdown-placement={top|right|bottom|left}` data attribute options to choose the placement of the dropdown menu. By default the positioning is set to the bottom side of the button.
+You can also use the `data-dropdown-placement={top|right|bottom|bottom-end|left}` data attribute options to choose the placement of the dropdown menu. By default the positioning is set to the bottom side of the button.
 
 {{< example class="flex flex-wrap" >}}
 <button id="dropdownTopButton" data-dropdown-toggle="dropdownTop" data-dropdown-placement="top" class="mr-3 mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center" type="button">Dropdown top <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg></button>
@@ -258,6 +258,26 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 <!-- Dropdown menu -->
 <div id="dropdownBottom" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow w-44">
     <ul class="py-1" aria-labelledby="dropdownBottomButton">
+      <li>
+        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Dashboard</a>
+      </li>
+      <li>
+        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Settings</a>
+      </li>
+      <li>
+        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Earnings</a>
+      </li>
+      <li>
+        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign out</a>
+      </li>
+    </ul>
+</div>
+
+<button id="dropdownBottomEndButton" data-dropdown-toggle="dropdownBottomEnd" data-dropdown-placement="bottom-end" class="mr-3 mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center" type="button">Dropdown bottom end <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+
+<!-- Dropdown menu -->
+<div id="dropdownBottomEnd" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow w-44">
+    <ul class="py-1" aria-labelledby="dropdownBottomEndButton">
       <li>
         <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Dashboard</a>
       </li>

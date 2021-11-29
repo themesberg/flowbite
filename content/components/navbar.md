@@ -6,8 +6,8 @@ group: components
 toc: true
 requires_js: true
 
-previous: Modals
-previousLink: components/modal
+previous: Tabs
+previousLink: components/tabs
 next: Pagination
 nextLink: components/pagination
 ---

@@ -1,15 +1,17 @@
 ---
 layout: home
 title: Tailwind CSS Tabs - Flowbite
-description: Use the following Tailwind CSS table components to show complex data in an organized layout
+description: Use these responsive tabs components to create a secondary navigational hierarchy for your website or toggle content inside a container
 group: components
 toc: true
 
-previous: Progress
-previousLink: components/progress
-next: Tooltips
-nextLink: components/tooltips
+previous: Modal
+previousLink: components/modal
+next: Navbar
+nextLink: components/navbar
 ---
+
+The tabs component can be used either as an extra navigational hierarchy complementing the main navbar or you can also use it to change content inside a container just below the tabs using the data attributes from Flowbite.
 
 ## Default tabs
 
@@ -132,45 +134,71 @@ Use the following HTML markup and Tailwind CSS utility classes to show a data se
 </div>
 <ul class="hidden sm:flex rounded-lg shadow flex divide-x divide-gray-200 dark:divide-gray-700">
     <li class="w-full">
-        <a href="#" class="w-full inline-block bg-gray-50 text-gray-900 rounded-l-lg py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:ring-2 focus:ring-blue-300 relative focus:z-20 active dark:bg-gray-700 dark:text-white">Profile</a>
+        <a href="#" class="w-full inline-block bg-gray-100 text-gray-900 rounded-l-lg py-4 px-4 text-sm font-medium text-center focus:ring-4 focus:ring-blue-300 relative focus:z-20 active dark:bg-gray-700 dark:text-white" aria-current="page">Profile</a>
     </li>
     <li class="w-full">
-        <a href="#" class="w-full inline-block bg-white text-gray-500 hover:text-gray-700 py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:ring-2 focus:ring-blue-300 relative focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-gray-800  dark:hover:bg-gray-700 dark:text-white">Dashboard</a>
+        <a href="#" class="w-full inline-block bg-white text-gray-500 hover:text-gray-700 py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 relative focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-gray-800  dark:hover:bg-gray-700 dark:text-white">Dashboard</a>
     </li>
     <li class="w-full">
-        <a href="#" class="w-full inline-block bg-white text-gray-500 hover:text-gray-700 py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:ring-2 focus:ring-blue-300 relative focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">Settings</a>
+        <a href="#" class="w-full inline-block bg-white text-gray-500 hover:text-gray-700 py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 relative focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">Settings</a>
     </li>
     <li class="w-full">
-        <a href="#" class="w-full inline-block bg-white text-gray-500 hover:text-gray-700 rounded-r-lg py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:ring-2 focus:ring-blue-300 relative focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">Invoice</a>
+        <a href="#" class="w-full inline-block bg-white text-gray-500 hover:text-gray-700 rounded-r-lg py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 relative focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">Invoice</a>
     </li>
 </ul>
 {{< /example >}}
 
-## JavaScript behaviour
+<div class="mt-8 -mb-5">
+  {{< requires_js >}}
+</div>
 
-Use the following HTML markup and Tailwind CSS utility classes to show a data set using a table component.
+## Interactive tabs
+
+Use the dynamic tabs component to interactively show and hide the content below the tabs based on the currently active tab item. Make sure that you initialize the component by using the `data-tabs-toggle="{parentTabContentSelector}"` and also apply an `id` attribute to the same element.
+
+Each tab toggle button needs to have a `role="tab"` attribute and a `data-tabs-target="{tabContentSelector}"` to target the tab content element that will be shown when clicked. You must also use the `aria-selected="true"` data attribute so that Flowbite can target the currently active tab component and hide it when another is shown.
+
+You must also apply the `role="tabpanel"` data attribute to every tab content element and apply the `id` attribute which will be equal to the `data-tabs-target={tabContentSelector}` from the tabs toggles.
+
+You can use multiple tab components on a single page but make sure that the id's are different.
 
 {{< example class="dark:bg-gray-900" >}}
-<div class="border-b border-gray-200 dark:border-gray-700">
-    <ul class="flex flex-wrap space-x-2 -mb-px" id="myTab" role="tablist">
+<div class="border-b border-gray-200 dark:border-gray-700 mb-4">
+    <ul class="flex flex-wrap space-x-2 -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
         <li role="presentation">
-            <button class="text-gray-500 hover:text-blue-600 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-blue-500" id="example-tab-1" data-bs-toggle="tab" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1" aria-selected="true">Profile</button>
+            <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
         </li>
         <li role="presentation">
-            <button class="text-blue-600 rounded-t-lg border-b-2 border-blue-600 py-4 px-4 text-sm font-medium text-center active dark:text-blue-500 dark:border-blue-500" id="example-tab-2" data-bs-toggle="tab" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2" aria-selected="false">Dashboard</button>
+            <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300 active" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</button>
         </li>
         <li role="presentation">
-            <button class="text-gray-500 hover:text-blue-600 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-blue-500" id="example-tab-3" data-bs-toggle="tab" data-bs-target="#tab-3" type="button" role="tab" aria-controls="tab-3" aria-selected="false">Settings</button>
+            <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
         </li>
         <li role="presentation">
-            <button class="text-gray-500 hover:text-blue-600 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-blue-500" id="example-tab-4" data-bs-toggle="tab" data-bs-target="#tab-4" type="button" role="tab" aria-controls="tab-4" aria-selected="false">Contacts</button>
+            <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Contacts</button>
         </li>
     </ul>
 </div>
 <div id="myTabContent">
-    <div class="text-gray-500 bg-gray-50 p-4 rounded-lg active dark:bg-gray-800 dark:text-gray-400" id="tab-1" role="tabpanel" aria-labelledby="tab-1-tab">Tab 1 content</div>
-    <div class="text-gray-500 bg-gray-50 p-4 rounded-lg hidden dark:bg-gray-800 dark:text-gray-400" id="tab-2" role="tabpanel" aria-labelledby="tab-2-tab">Tab 2 content</div>
-    <div class="text-gray-500 bg-gray-50 p-4 rounded-lg hidden dark:bg-gray-800 dark:text-gray-400" id="tab-3" role="tabpanel" aria-labelledby="tab-3-tab">Tab 3 content</div>
-    <div class="text-gray-500 bg-gray-50 p-4 rounded-lg hidden dark:bg-gray-800 dark:text-gray-400" id="tab-4" role="tabpanel" aria-labelledby="tab-4-tab">Tab 3 content</div>
+    <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <p class="text-gray-500 dark:text-gray-400 text-sm">This is some placeholder content the <strong class="font-medium text-gray-800">Profile tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+    </div>
+    <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+        <p class="text-gray-500 dark:text-gray-400 text-sm">This is some placeholder content the <strong class="font-medium text-gray-800">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+    </div>
+    <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+        <p class="text-gray-500 dark:text-gray-400 text-sm">This is some placeholder content the <strong class="font-medium text-gray-800">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+    </div>
+    <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+        <p class="text-gray-500 dark:text-gray-400 text-sm">This is some placeholder content the <strong class="font-medium text-gray-800">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+    </div>
 </div>
 {{< /example >}}
+
+If you want to change the `active` style of the currently active tab from the default blue color just use the following selector in your CSS file and make sure that you also apply the `:hover` styles as well.
+
+```css
+[role="tab"].active {
+    @apply text-red-600 border-red-600 dark:text-red-500 dark:border-red-500 hover:text-red-600 hover:border-red-600 dark:hover:text-red-500 dark:hover:border-red-500;
+}
+```

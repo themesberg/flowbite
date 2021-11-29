@@ -5,8 +5,8 @@ description: Use the theming options from the configuration file to override the
 group: customize
 toc: true
 
-previous: Configuration
-previousLink: customize/configuration
+previous: Dark mode
+previousLink: customize/dark-mode
 next: Color
 nextLink: customize/color
 ---

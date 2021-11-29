@@ -12,7 +12,7 @@ const toggleModal = (modalId, show = true) => {
         // create backdrop element
         var backdropEl = document.createElement('div');
         backdropEl.setAttribute('modal-backdrop', '');
-        backdropEl.classList.add('bg-gray-900', 'bg-opacity-50', 'fixed', 'inset-0', 'z-40');
+        backdropEl.classList.add('bg-gray-900', 'bg-opacity-50', 'dark:bg-opacity-80', 'fixed', 'inset-0', 'z-40');
         document.querySelector('body').append(backdropEl);
     } else {
         modalEl.classList.add('hidden');
@@ -31,11 +31,14 @@ document.querySelectorAll('[data-modal-toggle]').forEach(function (modalToggleEl
     var modalId = modalToggleEl.getAttribute('data-modal-toggle');
     var modalEl = document.getElementById(modalId);
 
-    if (!modalEl.hasAttribute('aria-hidden') && !modalEl.hasAttribute('aria-modal')) {
-        modalEl.setAttribute('aria-hidden', 'true');
+    if(modalEl) {
+        if (!modalEl.hasAttribute('aria-hidden') && !modalEl.hasAttribute('aria-modal')) {
+            modalEl.setAttribute('aria-hidden', 'true');
+        }
+    
+        modalToggleEl.addEventListener('click', function() {
+            toggleModal(modalId, modalEl.hasAttribute('aria-hidden', 'true'));
+        });
     }
 
-    modalToggleEl.addEventListener('click', function() {
-        toggleModal(modalId, modalEl.hasAttribute('aria-hidden', 'true'));
-    });
 });

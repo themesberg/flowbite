@@ -1,7 +1,7 @@
 module.exports = {
   purge: {
     // enabled: process.env.NODE_ENV === "production" ? true : false,
-    enabled: true,
+    // enabled: true,
     content: ["./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html", "./src/**/*.js"],
     options: {
       safelist: [
@@ -21,7 +21,7 @@ module.exports = {
       ],
     }
   },
-  darkMode: false, // or 'media' or 'class',
+  darkMode: 'class',
   theme: {
     extend: {
       // sidebar mobile fix
@@ -33,8 +33,16 @@ module.exports = {
         'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
         'body': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
         'mono': ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace']
+      },
+      fontSize: {
+        '2xs': '0.625rem'
       }
     }
+  },
+  variants: {
+    extend: {
+      backgroundColor: ['active'],
+    },
   },
   plugins: [
     require('./plugin')

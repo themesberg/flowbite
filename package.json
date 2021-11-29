@@ -1,14 +1,19 @@
 {
   "name": "@themesberg/flowbite",
-  "version": "1.1.1",
-  "description": "Open-source library of Tailwind CSS components and elements.",
+  "version": "1.2.0",
+  "description": "Open-source library of Tailwind CSS components and interactive elements.",
   "keywords": [
+    "flowbite",
+    "html",
+    "css",
+    "javascript",
     "tailwind",
     "tailwind components",
     "tailwind elements",
     "tailwind library",
     "tailwind sections",
-    "tailwind css"
+    "tailwind css",
+    "tailwind ui"
   ],
   "license": "MIT",
   "style": "dist/flowbite.css",
@@ -33,7 +38,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.8",
-    "@themesberg/tailwind-datepicker": "^1.0.1",
+    "@themesberg/tailwind-datepicker": "^1.1.0",
     "autoprefixer": "^10.3.3",
     "babel-loader": "^8.2.2",
     "copyfiles": "^2.4.1",

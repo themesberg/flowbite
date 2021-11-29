@@ -1,15 +1,17 @@
 ---
 layout: home
-title: Flowbite - Configuration
-description: Customize the default utility classes by configuring the Tailwind CSS config file
+title: Tailwind CSS Configuration - Flowbite
+description: Learn how to customize the default Flowbite and Tailwind CSS options and styles
 group: customize
 toc: true
 
 previous: Changelog
 previousLink: getting-started/changelog
-next: Theming
-nextLink: customize/theming
+next: Dark mode
+nextLink: customize/dark-mode
 ---
+
+Before continuing, please make sure that you have installed Flowbite as a plugin inside your Tailwind CSS by following the [quickstart guide]({{< ref "getting-started/quickstart" >}}).
 
 ## Configuration file
 
@@ -19,32 +21,49 @@ You can easily to so by editing the `tailwind.config.js` file from the root fold
 
 ```javascript
 module.exports = {
-  purge: ['./build/**/*.{js,jsx,ts,tsx}'],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-      extend: {},
-      fontFamily: {
-      'sans': ['Inter', 'sans-serif'],
-      'body': ['Inter', 'sans-serif'],
-      'mono': ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace']
-      },
-      colors: {
-      white: "#ffffff",
-      black: "#000000",
+  purge: {
+    // enable or disable the purging
+    enabled: true,
 
-      // other colors ...
-      }
+    // add the folders and files from your templates
+    content: ["./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html", "./src/**/*.js"],
+
+    options: {
+      // make sure to safelist these classes when using purge
+      safelist: [
+        'w-64',
+        'w-1/2',
+        'rounded-l-lg',
+        'rounded-r-lg',
+        'bg-gray-200',
+        'grid-cols-4',
+        'grid-cols-7',
+        'h-6',
+        'leading-6',
+        'h-9',
+        'leading-9',
+        'shadow-lg',
+        /data-.*/
+      ],
+    }
+  },
+  darkMode: 'class',
+  theme: {
+    extend: {
+      // extend base Tailwind CSS utility classes
+    }
   },
   variants: {
-      extend: {
-      fill: ['hover', 'focus'],
-      zIndex: ['hover', 'active'],
-      },
+    extend: {
+      // apply variants like hover, focus, dark to components
+    }
   },
   plugins: [
-      require('@tailwindcss/forms'),
-  ],
+    // include Flowbite as a plugin in your Tailwind CSS project
+    require('@themesberg/flowbite/plugin')
+  ]
 }
+
 ```
 
 ## Theme
@@ -103,10 +122,8 @@ The `plugins` object lets you define which external plugin you would like to inc
 // tailwind.config.js
 module.exports = {
   plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/typography'),
-    require('tailwindcss-children'),
+    require('@themesberg/flowbite/plugin'),
+    // ...
   ],
 }
 ```
@@ -158,4 +175,4 @@ Doing so it will add the prefix to all of the classes.
 /* etc. */
 ```
 
-If you'd like to browse the full list of configurable options, please visit the official [Tailwind CSS configuration](https://tailwindcss.com/docs/configuration).
+If you'd like to browse the full list of configurable options, please visit the official <a href="https://tailwindcss.com/docs/configuration" rel="nofollow">Tailwind CSS configuration</a>.

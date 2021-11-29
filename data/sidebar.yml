@@ -11,6 +11,8 @@
 - title: Customize
   pages:
     - title: Configuration
+    - title: Dark mode
+      new: true
     - title: Theming
     - title: Color
     - title: Icons
@@ -29,6 +31,8 @@
     - title: List Group
     - title: Typography
     - title: Modal
+    - title: Tabs
+      new: true
     - title: Navbar
     - title: Pagination
     - title: Progress

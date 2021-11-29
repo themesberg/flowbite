@@ -21,11 +21,11 @@
 }
 
 #TableOfContents > ul {
-	@apply overflow-x-hidden text-gray-500 font-medium;
+	@apply overflow-x-hidden text-gray-500 dark:text-gray-400 font-medium;
 }
 
 #TableOfContents > ul > li > a {
-	@apply block py-2 transition-colors duration-200 hover:text-gray-900 font-medium;
+	@apply block py-2 transition-colors duration-200 hover:text-gray-900 dark:hover:text-white font-medium;
 }
 
 #TableOfContents > ul > li > ul {
@@ -41,22 +41,22 @@
 }
 
 #mainContent > h2 {
-	@apply text-2xl font-bold mt-8 mb-4;
+	@apply text-2xl font-bold mt-8 mb-4 dark:text-white;
 }
 
 #mainContent > h3,
 #mainContent > h4 {
-	@apply text-xl font-bold mt-8 mb-4;
+	@apply text-xl font-bold mt-8 mb-4 dark:text-white;
 }
 
 #mainContent > p {
-	@apply text-base font-normal text-gray-600 mb-4;
+	@apply text-base font-normal text-gray-600 dark:text-gray-400 mb-4;
 }
 
 #mainContent > p > a,
 #mainContent > ul > li > a,
 #mainContent > ol > li > a {
-	@apply text-blue-600;
+	@apply text-blue-600 dark:text-blue-500;
 }
 
 #mainContent > p > a:hover,
@@ -68,7 +68,7 @@
 #mainContent > p > code,
 #mainContent > ul > li > code,
 #mainContent > ol > li > code {
-	@apply font-mono text-blue-600 text-sm px-1;
+	@apply font-mono text-blue-600 dark:text-blue-400 text-sm px-1;
 }
 
 #mainContent > ul {
@@ -86,7 +86,7 @@
 
 #mainContent > ul > li,
 #mainContent > ol > li {
-	@apply text-base font-normal text-gray-600 mb-4;
+	@apply text-base font-normal text-gray-600 dark:text-gray-400 mb-4;
 }
 
 /* prism styles */
@@ -265,9 +265,9 @@ code.language-javascript .token.comment {
 #carbonads {
 	display: flex;
 	max-width: 330px;
-	background-color: hsl(0, 0%, 98%);
 	box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);
 	z-index: 100;
+	@apply bg-white dark:bg-gray-800 dark:text-white;
 }
 #carbonads a {
 	color: inherit;
@@ -300,9 +300,9 @@ code.language-javascript .token.comment {
 	text-align: left;
 }
 #carbonads .carbon-poweredby {
+	@apply bg-gray-100 dark:bg-gray-800;
 	display: block;
 	padding: 6px 8px;
-	background: #f1f1f2;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;

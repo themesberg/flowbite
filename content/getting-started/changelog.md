@@ -15,6 +15,17 @@ nextLink: customize/configuration
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
+### v1.2.0
+
+Released on November 29th, 2021.
+
+- full dark/light mode integration
+- add new tabs component
+- new modal component variations and sizes
+- new card components
+- dark mode switcher guide
+- minor bug fixes
+
 ### v1.1.1
 
 - fix the package `mini-svg-data-uri` not being included as a dependency

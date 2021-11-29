@@ -176,6 +176,13 @@ module.exports = plugin(function ({ addBase, theme }) {
                 background: theme('colors.gray.600', colors.gray[600])
             }
         },
+        [[`.dark input[type=file]::file-selector-button`]]: {
+            color: 'white',
+            background: theme('colors.gray.600', colors.gray[600]),
+            '&:hover': {
+                background: theme('colors.gray.500', colors.gray[500])
+            }
+        },
         ['.toggle-bg:after']: {
             content: '""',
             position: 'absolute',

@@ -46,7 +46,7 @@
 
             {{ .Content }}
 
-            <div class="mt-8 lg:mt-12 flex leading-6 font-medium">
+            <div class="my-8 lg:mt-12 flex leading-6 font-medium">
               {{ if isset .Page.Params "previous" }}
                 <a class="flex mr-8 transition-colors duration-200 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.PreviousLink | relURL }}"><span aria-hidden="true" class="mr-2">←</span>{{ .Page.Params.Previous }}</a>
               {{ end }}

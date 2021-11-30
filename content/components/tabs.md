@@ -15,7 +15,7 @@ The tabs component can be used either as an extra navigational hierarchy complem
 
 ## Default tabs
 
-Use the following HTML markup and Tailwind CSS utility classes to show a data set using a table component.
+Use the following default tabs component example to show a list of links that the user can navigate from on your website.
 
 {{< example class="dark:bg-gray-900" >}}
 <ul class="flex flex-wrap border-b border-gray-200 dark:border-gray-700">
@@ -39,7 +39,7 @@ Use the following HTML markup and Tailwind CSS utility classes to show a data se
 
 ## Tabs with underline
 
-Use the following HTML markup and Tailwind CSS utility classes to show a data set using a table component.
+Use this alternative tabs component style with an underline instead of a background when hovering and being active on a certain page.
 
 {{< example class="dark:bg-gray-900" >}}
 <div class="border-b border-gray-200 dark:border-gray-700">
@@ -65,7 +65,7 @@ Use the following HTML markup and Tailwind CSS utility classes to show a data se
 
 ## Tabs with icons
 
-Use the following HTML markup and Tailwind CSS utility classes to show a data set using a table component.
+This is an example of the tabs component where you can also use a SVG powered icon to complement the text within the navigational tabs.
 
 {{< example class="dark:bg-gray-900" >}}
 <div class="border-b border-gray-200 dark:border-gray-700">
@@ -99,7 +99,7 @@ Use the following HTML markup and Tailwind CSS utility classes to show a data se
 
 ## Tabs in pills
 
-Use the following HTML markup and Tailwind CSS utility classes to show a data set using a table component.
+If you want to use pills as a style for the tabs component you can do so by using this example.
 
 {{< example class="dark:bg-gray-900" >}}
 <ul class="flex flex-wrap">
@@ -120,7 +120,7 @@ Use the following HTML markup and Tailwind CSS utility classes to show a data se
 
 ## Full width tabs
 
-Use the following HTML markup and Tailwind CSS utility classes to show a data set using a table component.
+If you want to show the tabs on the full width relative to the parent element you can do so by using the full width tabs component example.
 
 {{< example class="dark:bg-gray-900" >}}
 <div class="sm:hidden">

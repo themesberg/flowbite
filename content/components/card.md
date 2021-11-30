@@ -11,7 +11,7 @@ next: Dropdowns
 nextLink: components/dropdowns
 ---
 
-The card component can be used to show information about data entries and link to other pages such as a profile or blog post page.
+Use these responsive card components to show data entries and information to your users in multiple forms and contexts such as for your blog, application, user profiles, and more.
 
 ## Default example
 
@@ -77,9 +77,9 @@ If you want to spice up your cards you can use the following card which has its 
 </a>
 {{< /example >}}
 
-## Complex Interaction
+## Interactive card
 
-You can use the following example of a card element with an image for blog posts, user cards, and many more.
+Use this interactive card example if you want to show a dropdown menu and buttons to enable multiple actions from your user.
 
 {{< example class="dark:bg-gray-900" >}}
 <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
@@ -114,9 +114,9 @@ You can use the following example of a card element with an image for blog posts
 </div>
 {{< /example >}}
 
-## With Forms
+## Card with form inputs
 
-You can use the following example of a card element with an image for blog posts, user cards, and many more.
+Use this card example where you can add form input elements that can be used for authentication actions or any other context where you need to receive information from your users.
 
 {{< example class="dark:bg-gray-900" >}}
 <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm p-4 sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700">
@@ -149,9 +149,9 @@ You can use the following example of a card element with an image for blog posts
 </div>
 {{< /example >}}
 
- ## Product card
+ ## E-commerce card
 
-You can use the following example of a card element with an image for blog posts, user cards, and many more.
+Use this card for your e-commerce websites and show information about the products and enable actions such as adding a review and adding the product to the cart.
 
 {{< example class="dark:bg-gray-900" >}}
 <div class="bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
@@ -178,9 +178,9 @@ You can use the following example of a card element with an image for blog posts
 </div>
 {{< /example >}}
 
-## Full width width CTA
+## Call to action card
 
-You can use the following example of a card element with an image for blog posts, user cards, and many more.
+Use this CTA card example to encourage your users to visit a certain page such as downloading the iOS or Android application for your project.
 
 {{< example class="dark:bg-gray-900" >}}
 <div class="bg-white w-full shadow-md rounded-lg border text-center p-4 sm:p-8 dark:bg-gray-800 dark:border-gray-700">
@@ -205,9 +205,9 @@ You can use the following example of a card element with an image for blog posts
 </div>
 {{< /example >}}
 
-## With List
+## Card with list
 
-You can use the following example of a card element with an image for blog posts, user cards, and many more.
+Use this card example if you want to show a list of data:
 
 {{< example class="dark:bg-gray-900" >}}
 <div class="bg-white shadow-md rounded-lg border max-w-md p-4 sm:p-8 dark:bg-gray-800 dark:border-gray-700">

@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Table - Flowbite
-description: Use the following Tailwind CSS table components to show complex data in an organized layout
+description: Use the responsive table components from Flowbite to show complex data in an organized layout
 group: components
 toc: true
 
@@ -10,6 +10,8 @@ previousLink: components/progress
 next: Tooltips
 nextLink: components/tooltips
 ---
+
+Tables are important components when you want to show complex set of data within your website. You can use Flowbite's responsive table components and the multiple styles that it comes with.
 
 ## Default example
 
@@ -103,9 +105,9 @@ Use the following HTML markup and Tailwind CSS utility classes to show a data se
 </div>
 {{< /example >}}
 
-## Striped
+## Striped table
 
-Use the following HTML markup and Tailwind CSS utility classes to show a data set using a table component.
+Use this alternative table style which uses an alternating background color for each row inside the table increasing readability overall.
 
 {{< example class="dark:bg-gray-900" >}}
 <div class="flex flex-col">

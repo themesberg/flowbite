@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Modal - Flowbite
-description: Use FlowBite's custom modals built with Tailwind CSS to add dialogs for your site
+description: Use the responsive modal component from Flowbite to show interactive dialogs to your website users
 group: components
 toc: true
 requires_js: true
@@ -12,7 +12,7 @@ next: Tabs
 nextLink: components/tabs
 ---
 
-The modal component is an interactive element that you can use to show user dialogs using data attributes but also programatically show or hide using JavaScript.
+The modal component is an interactive element that you can use to show user dialogs using data attributes which comes in multiple variants and sizes.
 
 ## Default example
 
@@ -61,9 +61,9 @@ If you forget to apply the attribute, the Flowbite JavaScript will still set it 
 </div>
 {{< /example >}}
 
-## Popup example
+## Pop-up modal
 
-In order to create a modal with Tailwind CSS you only have to add `data-modal-toggle="modalId"` data attribute where `modalId` is the id of the modal that you are targeting.
+You can use this modal example to show a pop-up decision dialog to your users especially when deleting an item and making sure if the user really wants to do that by double confirming.
 
 {{< example  >}}
 <!-- Modal toggle -->
@@ -96,9 +96,9 @@ In order to create a modal with Tailwind CSS you only have to add `data-modal-to
 </div>
 {{< /example >}}
 
-## With Forms
+## Modal with form inputs
 
-In order to create a modal with Tailwind CSS you only have to add `data-modal-toggle="modalId"` data attribute where `modalId` is the id of the modal that you are targeting.
+Use this modal example with form input element to receive information from your users with the advantage of not having to link to another page but keeping the user on the currently active page. A great example would be a login or a register form.
 
 {{< example >}}
 <!-- Modal toggle -->
@@ -146,9 +146,10 @@ In order to create a modal with Tailwind CSS you only have to add `data-modal-to
     </div>
 </div> 
 {{< /example >}}
-## Sizes
 
-In order to create a modal with Tailwind CSS you only have to add `data-modal-toggle="modalId"` data attribute where `modalId` is the id of the modal that you are targeting.
+## Sizing
+
+You can use four different modal sizing options starting from small to extra large, but keep in mind that the width of these modals will remain the same when browsing on smaller devices.
 
 {{< example  >}}
 <div class="block md:flex  space-y-4 md:space-y-0 md:space-x-4">

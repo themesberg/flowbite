@@ -83,3 +83,9 @@ If you need help or just want to discuss about the library join the community on
 For casual chatting with others using the library:
 
 [Join the Flowbite Discord Server](https://discord.com/invite/4eeurUVvTy)
+
+## Figma design files
+
+If you need the Figma design files for the library and extra components your can check it out on our website:
+
+[Flowbite Figma Design Kit](https://flowbite.com/figma/)

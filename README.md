@@ -86,6 +86,6 @@ For casual chatting with others using the library:
 
 ## Figma design files
 
-If you need the Figma design files for the library and extra components your can check it out on our website:
+If you need the Figma design files for the components you can check out our website for more information:
 
 [Flowbite Figma Design Kit](https://flowbite.com/figma/)

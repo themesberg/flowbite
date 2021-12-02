@@ -84,8 +84,8 @@ For casual chatting with others using the library:
 
 [Join the Flowbite Discord Server](https://discord.com/invite/4eeurUVvTy)
 
-## Figma design files
+## Figma
 
-If you need the Figma design files for the components you can check out our website for more information:
+If you need the Figma files for the components you can check out our website for more information:
 
-🎨 [Figma design files](https://flowbite.com/figma/)
+[Get access to the Figma design files](https://flowbite.com/figma/)

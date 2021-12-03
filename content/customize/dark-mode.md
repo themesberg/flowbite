@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Dark Mode - Flowbite
-description: Learn how to use and build a dark and light mode switcher for Tailwind CSS using Flowbite
+description: Learn how to configure and build a dark mode switcher for Tailwind CSS using Flowbite and start developing with the components from the library
 group: customize
 toc: true
 
@@ -113,3 +113,18 @@ themeToggleBtn.addEventListener('click', function() {
 ```
 
 This script changes the icon inside the button based on previous preferences and also handles the click events by setting the dark mode preference using local storage and also adding or removing the `dark` class from the main `<html>` tag.
+
+## Customize components
+
+By using the components from Flowbite you automatically receive dark mode support because of the `dark:{*}` class variant, however, if you would like to customize the appearance of these components when in dark mode all you need to do is change the styles for these class variants.
+
+{{< example >}}
+<div class="bg-white dark:bg-gray-800">
+  <h1 class="text-gray-900 dark:text-white">Dark mode</h1>
+  <p class="text-gray-600 dark:text-gray-300">
+    Lorem ipsum...
+  </p>
+</div>
+{{< /example >}}
+
+As you can see, when dark mode is activated the `.bg-gray-800` and `.text-white` takes over the default `.bg-white` and `.text-gray-900` classes. You can add as many styles using the `dark:{*}` variant.

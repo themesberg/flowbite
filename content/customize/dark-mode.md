@@ -15,7 +15,7 @@ Offering a dark version for your website is more of an expected feature rather t
 
 Learn how to enable and build a dark version switcher for Tailwind CSS and Flowbite by using JavaScript and the configuration file.
 
-## Toggle dark mode manually
+## Enable dark mode
 
 All you need to do to enable dark mode for your Tailwind CSS project and Flowbite components is to add the following code inside your `tailwind.config.js` file and then add the `dark` class on your `html` element.
 

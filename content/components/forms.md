@@ -6,9 +6,9 @@ group: components
 toc: true
 
 previous: Dropdowns
-previousLink: components/dropdowns
+previousLink: components/dropdowns/
 next: List group
-nextLink: components/list-group
+nextLink: components/list-group/
 ---
 
 ## Form example

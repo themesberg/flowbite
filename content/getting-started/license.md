@@ -6,9 +6,9 @@ group: getting-started
 toc: true
 
 previous: Quickstart
-previousLink: getting-started/quickstart
+previousLink: getting-started/quickstart/
 next: Changelog
-nextLink: getting-started/changelog
+nextLink: getting-started/changelog/
 ---
 
 **Important:** The pro version and Figma design files of FlowBite is subject to another license which you can read on the [EULA page (End User License Agreement)](https://flowbite.com/license/) from the FlowBite website.

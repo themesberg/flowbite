@@ -6,9 +6,9 @@ group: components
 toc: true
 
 previous: Badges
-previousLink: components/badge
+previousLink: components/badge/
 next: Buttons
-nextLink: components/buttons
+nextLink: components/buttons/
 ---
 
 The breadcrumb component is an important part of any website or application that can be used to show the current location of a page in a hierarchical structure of pages. 

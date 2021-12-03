@@ -6,9 +6,9 @@ group: components
 toc: true
 
 previous: Pagination
-previousLink: components/pagination
+previousLink: components/pagination/
 next: Tables
-nextLink: components/tables
+nextLink: components/tables/
 ---
 
 ## Default example

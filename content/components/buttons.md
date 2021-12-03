@@ -6,9 +6,9 @@ group: components
 toc: true
 
 previous: Breadcrumbs
-previousLink: components/breadcrumb
+previousLink: components/breadcrumb/
 next: Button group
-nextLink: components/button-group
+nextLink: components/button-group/
 ---
 
 The button component is probably the most widely used element in any user interface or website as it can be used to launch an action but also to link to other pages.

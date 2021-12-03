@@ -6,9 +6,9 @@ group: components
 toc: true
 
 previous: List group
-previousLink: components/list-group
+previousLink: components/list-group/
 next: Modals
-nextLink: components/modal
+nextLink: components/modal/
 ---
 
 The typography for FlowBite is completely based on the utility classes from Tailwind CSS.

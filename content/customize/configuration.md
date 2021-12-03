@@ -6,9 +6,9 @@ group: customize
 toc: true
 
 previous: Changelog
-previousLink: getting-started/changelog
+previousLink: getting-started/changelog/
 next: Dark mode
-nextLink: customize/dark-mode
+nextLink: customize/dark-mode/
 ---
 
 Before continuing, please make sure that you have installed Flowbite as a plugin inside your Tailwind CSS by following the [quickstart guide]({{< ref "getting-started/quickstart" >}}).

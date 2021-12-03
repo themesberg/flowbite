@@ -7,9 +7,9 @@ toc: true
 requires_js: true
 
 previous: Typography
-previousLink: components/typography
+previousLink: components/typography/
 next: Tabs
-nextLink: components/tabs
+nextLink: components/tabs/
 ---
 
 The modal component is an interactive element that you can use to show user dialogs using data attributes which comes in multiple variants and sizes.

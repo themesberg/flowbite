@@ -7,9 +7,9 @@ toc: true
 requires_js: true
 
 previous: Cards
-previousLink: components/card
+previousLink: components/card/
 next: Forms
-nextLink: components/forms
+nextLink: components/forms/
 ---
 
 You can use the Tailwind CSS dropdown element from Flowbite to show a menu when clicking on an element such as a button. Make sure to include <a href="{{< ref "getting-started/quickstart" >}}" rel="nofollow" target="_blank">Flowbite's JavaScript file</a> inside your project to enable dropdowns.

@@ -6,9 +6,9 @@ group: components
 toc: true
 
 previous: Button group
-previousLink: components/button-group
+previousLink: components/button-group/
 next: Dropdowns
-nextLink: components/dropdowns
+nextLink: components/dropdowns/
 ---
 
 Use these responsive card components to show data entries and information to your users in multiple forms and contexts such as for your blog, application, user profiles, and more.

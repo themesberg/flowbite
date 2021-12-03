@@ -6,9 +6,9 @@ group: components
 toc: true
 
 previous: Buttons
-previousLink: components/buttons
+previousLink: components/buttons/
 next: Cards
-nextLink: components/card
+nextLink: components/card/
 ---
 
 The button group component from Flowbite can be used to stack together multiple buttons and links inside a single element.

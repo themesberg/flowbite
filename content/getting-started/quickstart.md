@@ -6,9 +6,9 @@ group: getting-started
 toc: true
 
 previous: Introduction
-previousLink: getting-started/introduction
+previousLink: getting-started/introduction/
 next: License
-nextLink: getting-started/license
+nextLink: getting-started/license/
 ---
 
 Flowbite is a library of components built on top of the utility-classes from Tailwind CSS and it also includes a JavaScript file that makes interactive elements works, such as modals, dropdowns, and more. Learn how to get started by following this quickstart guide.

@@ -7,10 +7,10 @@ toc: true
 requires_js: true
 
 previous: Tables
-previousLink: components/tables
+previousLink: components/tables/
 
 next: Datepicker
-nextLink: plugins/datepicker
+nextLink: plugins/datepicker/
 ---
 
 Flowbite allows you to use the Tailwind CSS tooltip component to show extra information when hovering or focusing over an element in multiple positions, styles, and animations.

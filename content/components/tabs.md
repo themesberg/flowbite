@@ -6,9 +6,9 @@ group: components
 toc: true
 
 previous: Modal
-previousLink: components/modal
+previousLink: components/modal/
 next: Navbar
-nextLink: components/navbar
+nextLink: components/navbar/
 ---
 
 The tabs component can be used either as an extra navigational hierarchy complementing the main navbar or you can also use it to change content inside a container just below the tabs using the data attributes from Flowbite.

@@ -6,9 +6,9 @@ group: customize
 toc: true
 
 previous: Configuration
-previousLink: customize/configuration
+previousLink: customize/configuration/
 next: Theming
-nextLink: customize/theming
+nextLink: customize/theming/
 ---
 
 Offering a dark version for your website is more of an expected feature rather than a nice to have nowadays. Luckily, Tailwind CSS has a dark mode functionality enabled and the components from Flowbite also support it by using the "class" option.

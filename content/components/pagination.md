@@ -6,9 +6,9 @@ group: components
 toc: true
 
 previous: Navbar
-previousLink: components/navbar
+previousLink: components/navbar/
 next: Progress
-nextLink: components/progress
+nextLink: components/progress/
 ---
 
 ## Default example

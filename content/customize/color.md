@@ -6,9 +6,9 @@ group: customize
 toc: true
 
 previous: Theming
-previousLink: customize/theming
+previousLink: customize/theming/
 next: Icons
-nextLink: customize/icons
+nextLink: customize/icons/
 ---
 
 ## Default color palette

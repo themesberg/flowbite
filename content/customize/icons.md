@@ -6,9 +6,9 @@ group: customize
 toc: true
 
 previous: Color
-previousLink: customize/color
+previousLink: customize/color/
 next: Optimization
-nextLink: customize/optimization
+nextLink: customize/optimization/
 ---
 
 ## SVG icons

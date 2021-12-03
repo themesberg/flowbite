@@ -6,9 +6,9 @@ group: components
 toc: true
 
 previous: Progress
-previousLink: components/progress
+previousLink: components/progress/
 next: Tooltips
-nextLink: components/tooltips
+nextLink: components/tooltips/
 ---
 
 Tables are important components when you want to show complex set of data within your website. You can use Flowbite's responsive table components and the multiple styles that it comes with.

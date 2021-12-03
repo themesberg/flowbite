@@ -7,7 +7,7 @@ toc: true
 cleanTitle: true
 
 next: Quickstart
-nextLink: getting-started/quickstart
+nextLink: getting-started/quickstart/
 ---
 
 ## What is Flowbite?

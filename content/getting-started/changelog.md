@@ -6,9 +6,9 @@ group: getting-started
 toc: true
 
 previous: License
-previousLink: getting-started/license
+previousLink: getting-started/license/
 next: Configuration
-nextLink: customize/configuration
+nextLink: customize/configuration/
 ---
 
 ## Changelog

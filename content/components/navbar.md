@@ -7,9 +7,9 @@ toc: true
 requires_js: true
 
 previous: Tabs
-previousLink: components/tabs
+previousLink: components/tabs/
 next: Pagination
-nextLink: components/pagination
+nextLink: components/pagination/
 ---
 
 Get started with the responsive navbar component from Flowbite to quickly set up a navigation menu for your website and set up the logo, list of pages and even call to action buttons, a search field, or a dropdown item.

@@ -6,9 +6,9 @@ group: customize
 toc: true
 
 previous: Dark mode
-previousLink: customize/dark-mode
+previousLink: customize/dark-mode/
 next: Color
-nextLink: customize/color
+nextLink: customize/color/
 ---
 
 You can use the `theme` object from the configuration file to define any style related classes, such as the color palette, fonts, breakpoints, and more.

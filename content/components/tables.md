@@ -79,7 +79,7 @@ Use the following HTML markup and Tailwind CSS utility classes to show a data se
                                 <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
                             </td>
                         </tr>
-                        <!-- Product 2 -->
+                        <!-- Product 3 -->
                         <tr class="bg-white dark:bg-gray-800">
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                 Apple Magic Mouse 2

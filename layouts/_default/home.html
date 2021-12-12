@@ -46,7 +46,7 @@
 
             {{ .Content }}
 
-            <div class="my-8 flex leading-6 font-medium">
+            <div class="mt-6 mb-8 flex leading-6 font-medium">
               {{ if isset .Page.Params "previous" }}
                 <a class="flex mr-8 transition-colors duration-200 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.PreviousLink | relURL }}"><span aria-hidden="true" class="mr-2">←</span>{{ .Page.Params.Previous }}</a>
               {{ end }}
@@ -55,9 +55,9 @@
               {{ end }}
             </div>
 
-            <aside id="revue-embed" class="bg-white shadow-md border border-gray-200 rounded-lg p-4 sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700 lg:mt-8">
+            <aside id="revue-embed" class="bg-white shadow-md border border-gray-200 rounded-lg p-4 sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700 my-8">
               <h3 class="text-xl font-medium text-gray-900 dark:text-white mb-3">Get more updates...</h3>
-              <p class="text-sm font-medium text-gray-500 dark:text-gray-300 mb-5">If you want to be up to date with all the new versions, features, and tools provided by Flowbite make sure to sign up for our free newsletter and you'll be among the first to find out.</p>
+              <p class="text-sm font-medium text-gray-500 dark:text-gray-300 mb-5">Do you want to get notified when a new component is added to Flowbite? Sign up for our newsletter and you'll be among the first to find out about new features, components, versions, and tools.</p>
               <form action="https://www.getrevue.co/profile/flowbite/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
               <div class="flex items-end mb-3">
                 <div class="revue-form-group mr-3 w-full relative">

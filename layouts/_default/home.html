@@ -46,7 +46,7 @@
 
             {{ .Content }}
 
-            <div class="my-8 lg:mt-12 flex leading-6 font-medium">
+            <div class="my-8 flex leading-6 font-medium">
               {{ if isset .Page.Params "previous" }}
                 <a class="flex mr-8 transition-colors duration-200 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.PreviousLink | relURL }}"><span aria-hidden="true" class="mr-2">←</span>{{ .Page.Params.Previous }}</a>
               {{ end }}
@@ -54,6 +54,26 @@
               <a class="flex text-right ml-auto transition-colors duration-200 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.NextLink | relURL }}">{{ .Page.Params.Next }}<span aria-hidden="true" class="ml-2">→</span></a>
               {{ end }}
             </div>
+
+            <aside id="revue-embed" class="bg-white shadow-md border border-gray-200 rounded-lg p-4 sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700 lg:mt-8">
+              <h3 class="text-xl font-medium text-gray-900 dark:text-white mb-3">Get more updates...</h3>
+              <p class="text-sm font-medium text-gray-500 dark:text-gray-300 mb-5">If you want to be up to date with all the new versions, features, and tools provided by Flowbite make sure to sign up for our free newsletter and you'll be among the first to find out.</p>
+              <form action="https://www.getrevue.co/profile/flowbite/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
+              <div class="flex items-end mb-3">
+                <div class="revue-form-group mr-3 w-full relative">
+                  <label for="member_email" class="hidden text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Email address</label>
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                  </div>
+                  <input class="revue-form-field bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your email address..." type="email" name="member[email]" id="member_email" required>
+                </div>
+                <div class="revue-form-actions">
+                  <input type="submit" value="Subscribe" class="cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" name="member[subscribe]" id="member_submit">
+                </div>
+              </div>
+              <div class="revue-form-footer text-sm font-medium text-gray-500 dark:text-gray-300">By subscribing, you agree with Revue’s <a target="_blank" rel="nofollow" href="https://www.getrevue.co/terms" class="text-blue-600 hover:underline dark:text-blue-500">Terms of Service</a> and <a target="_blank" rel="nofollow" class="text-blue-600 hover:underline dark:text-blue-500" href="https://www.getrevue.co/privacy">Privacy Policy</a>.</div>
+              </form>
+            </aside>
 
           </div>
         </div>

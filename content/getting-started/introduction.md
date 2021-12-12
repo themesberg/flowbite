@@ -49,7 +49,7 @@ One of the disadvantages of Tailwind CSS compared to other frameworks is that it
 
 There are at least 15 types of components including buttons, alerts, breadcrumbs, pagination, and navbars. Flowbite also includes some custom JavaScript that enables interactive components, such as dropdowns, modals, tooltips, and many more.
 
-## How to get started?
+## Getting started
 
 Flowbite is technically a plugin that can be included into any existing Tailwind CSS project. To get started, you first need to make sure that you have a working Tailwind CSS project installed and that you also have Node and NPM installed on your machine.
 

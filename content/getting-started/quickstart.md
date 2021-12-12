@@ -47,6 +47,14 @@ If you use Webpack or other bundlers you can also import it like this:
 import '@themesberg/flowbite';
 ```
 
+### Tailwind CSS v2.x
+
+Flowbite works with the 2.x version of Tailwind CSS.
+
+### Tailwind CSS v3.x
+
+Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking changes when using the components from Flowbite.
+
 ## Include via CDN
 
 The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.

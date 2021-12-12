@@ -85,6 +85,14 @@ If you use Webpack or other bundlers you can also import it like this:
 import '@themesberg/flowbite';
 ```
 
+### Tailwind CSS v2.x
+
+Flowbite is fully compatible with the 2.x versions of Tailwind CSS.
+
+### Tailwind CSS v3.x
+
+Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking changes when using the components from Flowbite.
+
 ### Include via CDN
 
 If you want to quickly test out Flowbite you can easily include the following CSS and JavaScript files.
@@ -100,6 +108,8 @@ And include the following javascript file before the end of the `body` element:
 ```html
 <script src="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.bundle.js"></script>
 ```
+
+Please remember that the best way to work with Tailwind CSS and Flowbite is by purging the CSS classes.
 
 ## Figma design files
 

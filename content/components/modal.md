@@ -22,7 +22,7 @@ Make sure that you also have `aria-hidden="true"` applied as an attribute when t
 
 If you forget to apply the attribute, the Flowbite JavaScript will still set it up for you as a fallback.
 
-{{< example>}}
+{{< example class="dark:bg-gray-800" >}}
 <!-- Modal toggle -->
 <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="default-modal">
   Toggle modal
@@ -65,7 +65,7 @@ If you forget to apply the attribute, the Flowbite JavaScript will still set it 
 
 You can use this modal example to show a pop-up decision dialog to your users especially when deleting an item and making sure if the user really wants to do that by double confirming.
 
-{{< example  >}}
+{{< example class="dark:bg-gray-800" >}}
 <!-- Modal toggle -->
 <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="popup-modal">
   Toggle modal
@@ -100,7 +100,7 @@ You can use this modal example to show a pop-up decision dialog to your users es
 
 Use this modal example with form input element to receive information from your users with the advantage of not having to link to another page but keeping the user on the currently active page. A great example would be a login or a register form.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <!-- Modal toggle -->
 <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="authentication-modal">
   Toggle modal
@@ -151,7 +151,7 @@ Use this modal example with form input element to receive information from your 
 
 You can use four different modal sizing options starting from small to extra large, but keep in mind that the width of these modals will remain the same when browsing on smaller devices.
 
-{{< example  >}}
+{{< example class="dark:bg-gray-800" >}}
 <div class="block md:flex  space-y-4 md:space-y-0 md:space-x-4">
     <!-- Modal toggle -->
     <button class="block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="small-modal">

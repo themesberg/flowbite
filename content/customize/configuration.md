@@ -21,41 +21,32 @@ You can easily to so by editing the `tailwind.config.js` file from the root fold
 
 ```javascript
 module.exports = {
-  purge: {
-    // enable or disable the purging
-    enabled: true,
 
-    // add the folders and files from your templates
-    content: ["./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html", "./src/**/*.js"],
+  // add the folders and files from your templates
+  content: ["./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html", "./src/**/*.js"],
 
-    options: {
-      // make sure to safelist these classes when using purge
-      safelist: [
-        'w-64',
-        'w-1/2',
-        'rounded-l-lg',
-        'rounded-r-lg',
-        'bg-gray-200',
-        'grid-cols-4',
-        'grid-cols-7',
-        'h-6',
-        'leading-6',
-        'h-9',
-        'leading-9',
-        'shadow-lg',
-        /data-.*/
-      ],
-    }
-  },
+  // make sure to safelist these classes when using purge
+  safelist: [
+    'w-64',
+    'w-1/2',
+    'rounded-l-lg',
+    'rounded-r-lg',
+    'bg-gray-200',
+    'grid-cols-4',
+    'grid-cols-7',
+    'h-6',
+    'leading-6',
+    'h-9',
+    'leading-9',
+    'shadow-lg'
+  ],
+
+  // enable dark mode via class strategy
   darkMode: 'class',
+
   theme: {
     extend: {
       // extend base Tailwind CSS utility classes
-    }
-  },
-  variants: {
-    extend: {
-      // apply variants like hover, focus, dark to components
     }
   },
   plugins: [
@@ -63,7 +54,6 @@ module.exports = {
     require('@themesberg/flowbite/plugin')
   ]
 }
-
 ```
 
 ## Theme

@@ -21,7 +21,7 @@ Before continuing, make sure that you have the <a href="{{< ref "getting-started
 
 To get started with using tooltips all you need to do is add the `data-tooltip-target="{elementId}"` data attribute to an element where `elementId` is the id of the tooltip component. In the following example you can see the button that will trigger the `tooltip-default` element to be shown when hovered or focused.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <button data-tooltip-target="tooltip-default" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default tooltip</button>
 <div id="tooltip-default" role="tooltip" class="tooltip absolute z-10 inline-block bg-gray-900 font-medium shadow-sm text-white py-2 px-3 text-sm rounded-lg opacity-0 duration-300 transition-opacity invisible dark:bg-gray-700">
     Tooltip content
@@ -33,7 +33,7 @@ To get started with using tooltips all you need to do is add the `data-tooltip-t
 
 You can use choose between dark and light version styles for the tooltip component by changing the utility classes from Tailwind CSS and by applying the `data-tooltip-style="{light|dark}"` data attribute.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <!-- Light style tooltip -->
 <button data-tooltip-target="tooltip-light" data-tooltip-style="light" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Light tooltip</button>
 <div id="tooltip-light" role="tooltip" class="tooltip absolute z-10 inline-block bg-white font-medium shadow-sm text-gray-900 border border-gray-200 py-2 px-3 text-sm rounded-lg opacity-0 invisible">
@@ -53,7 +53,7 @@ You can use choose between dark and light version styles for the tooltip compone
 
 The positioning of the tooltip element relative to the triggering element (eg. button, link) can be set using the `data-tooltip-placement="{top|right|bottom"left}"` data attribute.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <!-- Show tooltip on top -->
 <button data-tooltip-target="tooltip-top" data-tooltip-placement="top" type="button" class="mb-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip top</button>
 <div id="tooltip-top" role="tooltip" class="tooltip absolute z-10 inline-block bg-gray-900 font-medium shadow-sm text-white py-2 px-3 text-sm rounded-lg opacity-0 invisible dark:bg-gray-700">
@@ -87,7 +87,7 @@ The positioning of the tooltip element relative to the triggering element (eg. b
 
 You can choose the triggering event by using the `data-tooltip-trigger="{hover|click}"` data attributes to choose whether you want to show the tooltip when hovering or clicking on the element. By default this option is set to `hover`.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <!-- Show tooltip on hover -->
 <button data-tooltip-target="tooltip-hover" data-tooltip-trigger="hover" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip hover</button>
 <div id="tooltip-hover" role="tooltip" class="tooltip absolute z-10 inline-block bg-gray-900 font-medium shadow-sm text-white py-2 px-3 text-sm rounded-lg opacity-0 invisible dark:bg-gray-700">
@@ -107,7 +107,7 @@ You can choose the triggering event by using the `data-tooltip-trigger="{hover|c
 
 You can set tooltip animation styles by using the transition utility classes from Tailwind CSS. Make sure that you add `transition-opacity` and `duration-{x}` to set the animation duration.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <button data-tooltip-target="tooltip-animation" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Animated tooltip</button>
 <div id="tooltip-animation" role="tooltip" class="tooltip absolute z-10 inline-block bg-gray-900 font-medium shadow-sm text-white py-2 px-3 text-sm rounded-lg opacity-0 duration-300 transition-opacity invisible dark:bg-gray-700">
     Tooltip content
@@ -119,7 +119,7 @@ You can set tooltip animation styles by using the transition utility classes fro
 
 You can also disable the tooltip arrow by not including the `data-popper-arrow` element.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <button data-tooltip-target="tooltip-no-arrow" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default tooltip</button>
 <div id="tooltip-no-arrow" role="tooltip" class="tooltip absolute z-10 inline-block bg-gray-900 font-medium shadow-sm text-white py-2 px-3 text-sm rounded-lg opacity-0 invisible dark:bg-gray-700">
     Tooltip content

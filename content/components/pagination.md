@@ -15,7 +15,7 @@ nextLink: components/progress/
 
 Use the following list of pagination items powered by Tailwind CSS utility classes to indicate a series of content for your website.
 
-{{< example class="dark:bg-gray-900" >}}
+{{< example >}}
 <nav aria-label="Page navigation example">
   <ul class="inline-flex -space-x-px">
     <li>
@@ -47,7 +47,7 @@ Use the following list of pagination items powered by Tailwind CSS utility class
 
 The following pagination component example shows how you can use SVG icons instead of text to show the previous and next pages.
 
-{{< example class="dark:bg-gray-900" >}}
+{{< example >}}
 <nav aria-label="Page navigation example">
   <ul class="inline-flex items-center -space-x-px">
     <li>
@@ -85,7 +85,7 @@ The following pagination component example shows how you can use SVG icons inste
 
 Use the following markup to show simple previous and next elements.
 
-{{< example class="dark:bg-gray-900" >}}
+{{< example >}}
 <!-- Previous Button -->
 <a href="#" class="text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 text-sm font-medium rounded-lg inline-flex items-center px-4 py-2 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
   Previous
@@ -101,7 +101,7 @@ Use the following markup to show simple previous and next elements.
 
 Use the following code to show simple previous and next elements with icons.
 
-{{< example class="flex dark:bg-gray-900" >}}
+{{< example class="flex" >}}
 <!-- Previous Button -->
 <a href="#" class="text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 text-sm font-medium rounded-lg inline-flex items-center px-4 py-2 mr-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
   <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
@@ -117,7 +117,7 @@ Use the following code to show simple previous and next elements with icons.
 
 You can use the following markup to show the number of data shown inside a table element and also the previous and next action buttons.
 
-{{< example class="dark:bg-gray-900" >}}
+{{< example >}}
 <div class="flex flex-col items-center">
   <!-- Help text -->
   <span class="text-sm text-gray-700 dark:text-gray-400">
@@ -139,7 +139,7 @@ You can use the following markup to show the number of data shown inside a table
 
 You can use the following code to show the number of data shown inside a table element and also the previous and next action buttons coupled with icons.
 
-{{< example class="dark:bg-gray-900">}}
+{{< example >}}
 <div class="flex flex-col items-center">
   <!-- Help text -->
   <span class="text-sm text-gray-700 dark:text-gray-400">
@@ -158,8 +158,3 @@ You can use the following code to show the number of data shown inside a table e
   </div>
 </div>
 {{< /example >}}
-
-
-
-
-

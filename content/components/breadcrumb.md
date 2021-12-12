@@ -19,7 +19,7 @@ Flowbite includes two styles of breadcrumb elements, one that has a transparent 
 
 Use the following breadcrumb example to show the hierarchical structure of pages.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <nav class="flex" aria-label="Breadcrumb">
   <ol class="inline-flex items-center space-x-1 md:space-x-3">
     <li class="inline-flex items-center">
@@ -48,7 +48,7 @@ Use the following breadcrumb example to show the hierarchical structure of pages
 
 You can alternatively also use the breadcrumb components with a solid background. 
 
-{{< example class="dark:bg-gray-900" >}}
+{{< example >}}
 <!-- Breadcrumb -->
 <nav class="flex bg-gray-50 text-gray-700 border border-gray-200 py-3 px-5 rounded-lg dark:bg-gray-800 dark:border-gray-700" aria-label="Breadcrumb">
   <ol class="inline-flex items-center space-x-1 md:space-x-3">

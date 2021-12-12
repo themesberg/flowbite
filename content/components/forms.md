@@ -15,7 +15,7 @@ nextLink: components/list-group/
 
 This is an example of a form component including an email, password, checkbox, and submit button that you can use as a starting point for any form element in your website using FlowBite and Tailwind CSS.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <form>
   <div class="mb-6">
     <label for="email" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Your email</label>
@@ -41,7 +41,7 @@ This is an example of a form component including an email, password, checkbox, a
 
 Use the following utility classes to create three different sizing options (large, base, and small) for your form input elements.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <div class="mb-6">
     <label for="large-input" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Large input</label>
     <input type="text" id="large-input" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -60,7 +60,7 @@ Use the following utility classes to create three different sizing options (larg
 
 Use the following utility classes to indicate a disabled form input item.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <input type="text" id="disabled-input" class="mb-6 bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-500 dark:text-gray-500 dark:focus:ring-blue-500 dark:focus:border-blue-500" value="Disabled input" disabled>
 <input type="text" id="disabled-input-2" class="bg-gray-100 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-500 dark:text-gray-500 dark:focus:ring-blue-500 dark:focus:border-blue-500" value="Disabled readonly input" disabled readonly>
 {{< /example >}}
@@ -69,7 +69,7 @@ Use the following utility classes to indicate a disabled form input item.
 
 Alternatively, you can decide to apply a shadow styling using the `shadow-sm` class to any of your form input elements.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <form>
   <div class="mb-6">
     <label for="email" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Your email</label>
@@ -99,7 +99,7 @@ Alternatively, you can decide to apply a shadow styling using the `shadow-sm` cl
 
 Use the following markup to also add a helper text below your form input item. Usually used for newsletter signup elements.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <label for="email" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Your email</label>
 <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com">
 <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">We’ll never share your details. Read our <a href="#" class="font-medium text-blue-600 hover:underline dark:text-blue-500">Privacy Policy</a>.</p>
@@ -109,7 +109,7 @@ Use the following markup to also add a helper text below your form input item. U
 
 Use the following Tailwind utility classes and SVG icon to add an icon inside input form elements.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <label for="email-adress-icon" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Your Email</label>
 <div class="mt-1 relative">
   <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -123,7 +123,7 @@ Use the following Tailwind utility classes and SVG icon to add an icon inside in
 
 Use the following utility classes and SVG icon to add an addon icon inside your input form elements.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <label for="website-admin" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Username</label>
 <div class="flex">
   <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-200 text-gray-900 sm:text-sm dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
@@ -137,7 +137,7 @@ Use the following utility classes and SVG icon to add an addon icon inside your 
 
 Use the following two success and error styles when validation your forms.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <div class="mb-6">
   <label for="username-success" class="text-sm font-medium text-green-700 block mb-2 dark:text-green-500">Your name</label>
   <input type="text" id="username-success" class="bg-green-50 border border-green-500 text-green-900 placeholder-green-700 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-green-100 dark:border-green-400" placeholder="Bonnie Green">
@@ -154,7 +154,7 @@ Use the following two success and error styles when validation your forms.
 
 Use the following code to create a textarea form element.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <label for="message" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-400">Your message</label>
 <textarea id="message" rows="4" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
 {{< /example >}}
@@ -163,7 +163,7 @@ Use the following code to create a textarea form element.
 
 Use the following select input element to show selectable list of items.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <label for="countries" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-400">Select your country</label>
 <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
   <option>United States</option>
@@ -177,7 +177,7 @@ Use the following select input element to show selectable list of items.
 
 The code below can be used to create a fieldset of checkbox elements inside a form. We also created a checkbox variant with extra description and one in a disabled form.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <fieldset>
   <legend class="sr-only">Checkbox variants</legend>
 
@@ -217,7 +217,7 @@ The code below can be used to create a fieldset of checkbox elements inside a fo
 
 Group a series of buttons together on a single line or stack them in a vertical column.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <fieldset>
   <legend class="sr-only">Countries</legend>
 
@@ -266,7 +266,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 Use the following Tailwind CSS file upload element to receive any type of file from users.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <label class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300" for="user_avatar">Upload file</label>
 <input class="block w-full cursor-pointer bg-gray-50 border border-gray-300 text-gray-900 dark:text-gray-400 focus:outline-none focus:border-transparent text-sm rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
 <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help">A profile picture is useful to confirm your are logged into your account</div>
@@ -280,7 +280,7 @@ Use the following Tailwind CSS file upload element to receive any type of file f
 
 Use the following toggle (switches) element to ask for a yes or no type of input from your users without the use of JavaScript.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <label for="toggle-example" class="flex items-center cursor-pointer relative mb-4">
   <input type="checkbox" id="toggle-example" class="sr-only">
   <div class="toggle-bg bg-gray-200 border border-gray-200 h-6 w-11 rounded-full dark:bg-gray-700 dark:border-gray-600"></div>

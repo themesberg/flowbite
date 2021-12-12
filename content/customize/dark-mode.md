@@ -37,6 +37,10 @@ module.exports = {
 }
 ```
 
+<div class="bg-blue-100 rounded-lg p-4 mb-4 text-sm text-blue-700 dark:bg-blue-200 dark:text-blue-800" role="alert">
+  <p>The "media" option is now set by default if you use version 3.x of Tailwind CSS.</p>
+</div>
+
 ## Dark mode switcher
 
 If you want to create a dark mode switcher for Tailwind CSS and Flowbite you'll have to add some JavaScript code and a toggle element that a user can use to change their preferences.

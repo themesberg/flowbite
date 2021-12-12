@@ -266,15 +266,6 @@ module.exports = plugin(function ({ addBase, theme }) {
     })
 }, {
     darkMode: 'class', // or 'media' or 'class',
-    variants: {
-        extend: {
-            border: ['dark'],
-            textDecoration: ['dark'],
-            boxShadow: ['dark'],
-            background: ['dark'],
-            ringColor: ['dark']
-        }
-    },
     theme: {
         extend: {
             height: {

@@ -15,7 +15,7 @@
 
 <div class="code-example">
   {{- if eq $show_preview true -}}
-  <div{{ with .Get "id" }} id="{{ . }}"{{ end }} class="code-preview rounded-t-xl bg-gradient-to-r bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-2 sm:p-6 mt-8{{ with .Get "class" }} {{ . }}{{ end }}">
+  <div{{ with .Get "id" }} id="{{ . }}"{{ end }} class="code-preview rounded-t-xl bg-gradient-to-r bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-2 sm:p-6 mt-8{{ with .Get "class" }} {{ . }}{{ end }}">
     {{- $input -}}
   </div>
   {{- end -}}

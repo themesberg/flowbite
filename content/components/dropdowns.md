@@ -20,7 +20,7 @@ If you want to show a dropdown menu when clicking on an element, make sure that 
 
 The `dropdownId` is the id of the dropdown menu element.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <button id="dropdownButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 
 <!-- Dropdown menu -->
@@ -46,7 +46,7 @@ The `dropdownId` is the id of the dropdown menu element.
 
 You can use the `divide-y divide-gray-100` classes to add separate elements inside the dropdown menu.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown divider <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 
 <!-- Dropdown menu -->
@@ -72,7 +72,7 @@ You can use the `divide-y divide-gray-100` classes to add separate elements insi
 
 You can also show extra information inside the dropdown menu using the divider option.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <button id="dropdownInformationButton" data-dropdown-toggle="dropdownInformation" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown header <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 
 <!-- Dropdown menu -->
@@ -102,7 +102,7 @@ You can also show extra information inside the dropdown menu using the divider o
 
 You can also use the dropdown element inside a navigation bar and add a second level of navigation hierarchy, but make sure to use a `button` element.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <nav class="bg-white border-gray-200 px-2 dark:bg-gray-800 dark:border-gray-700">
   <div class="container mx-auto flex flex-wrap items-center justify-between">
     <a href="#" class="flex">
@@ -158,7 +158,7 @@ You can also use the dropdown element inside a navigation bar and add a second l
 
 The dropdown menus work with buttons of all sizes including smaller or larger ones.
 
-{{< example >}}
+{{< example class="dark:bg-gray-800" >}}
 <button id="dropdownSmallButton" data-dropdown-toggle="dropdownSmall" class="mr-3 mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Small dropdown <svg class="w-3 h-3 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 
 <!-- Dropdown menu -->
@@ -212,7 +212,7 @@ The dropdown menus work with buttons of all sizes including smaller or larger on
 
 You can also use the `data-dropdown-placement={top|right|bottom|left}` data attribute options to choose the placement of the dropdown menu. By default the positioning is set to the bottom side of the button.
 
-{{< example class="flex flex-wrap" >}}
+{{< example class="flex flex-wrap dark:bg-gray-800" >}}
 <button id="dropdownTopButton" data-dropdown-toggle="dropdownTop" data-dropdown-placement="top" class="mr-3 mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown top <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg></button>
 
 <!-- Dropdown menu -->
@@ -296,7 +296,7 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 
 Alternatively you can choose the secondary axis placement by specifying `*-start` after the primary position has been chosen. For example, you can use the `right-start` or `left-start` to position the menu just below the button.
 
-{{< example class="flex flex-wrap" >}}
+{{< example class="flex flex-wrap dark:bg-gray-800" >}}
 <button id="dropdownLeftStartButton" data-dropdown-toggle="dropdownLeftStart" data-dropdown-placement="left-start" class="mr-3 mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"><svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Dropdown left start</button>
 
 <!-- Dropdown menu -->

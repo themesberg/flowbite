@@ -17,7 +17,7 @@ The tabs component can be used either as an extra navigational hierarchy complem
 
 Use the following default tabs component example to show a list of links that the user can navigate from on your website.
 
-{{< example class="dark:bg-gray-900" >}}
+{{< example >}}
 <ul class="flex flex-wrap border-b border-gray-200 dark:border-gray-700">
     <li class="mr-2">
         <a href="#" aria-current="page" class="inline-block bg-gray-100 text-blue-600 rounded-t-lg py-4 px-4 text-sm font-medium text-center active dark:bg-gray-800 dark:text-blue-500">Profile</a>
@@ -41,7 +41,7 @@ Use the following default tabs component example to show a list of links that th
 
 Use this alternative tabs component style with an underline instead of a background when hovering and being active on a certain page.
 
-{{< example class="dark:bg-gray-900" >}}
+{{< example >}}
 <div class="border-b border-gray-200 dark:border-gray-700">
     <ul class="flex flex-wrap -mb-px">
         <li class="mr-2">
@@ -67,7 +67,7 @@ Use this alternative tabs component style with an underline instead of a backgro
 
 This is an example of the tabs component where you can also use a SVG powered icon to complement the text within the navigational tabs.
 
-{{< example class="dark:bg-gray-900" >}}
+{{< example >}}
 <div class="border-b border-gray-200 dark:border-gray-700">
     <ul class="flex flex-wrap -mb-px">
         <li class="mr-2">
@@ -101,7 +101,7 @@ This is an example of the tabs component where you can also use a SVG powered ic
 
 If you want to use pills as a style for the tabs component you can do so by using this example.
 
-{{< example class="dark:bg-gray-900" >}}
+{{< example >}}
 <ul class="flex flex-wrap">
     <li class="mr-2">
         <a href="#" class="inline-block bg-blue-600 text-white rounded-lg py-3 px-4 text-sm font-medium text-center active" aria-current="page">Tab 1</a>
@@ -122,7 +122,7 @@ If you want to use pills as a style for the tabs component you can do so by usin
 
 If you want to show the tabs on the full width relative to the parent element you can do so by using the full width tabs component example.
 
-{{< example class="dark:bg-gray-900" >}}
+{{< example >}}
 <div class="sm:hidden">
     <label for="tabs" class="sr-only">Select your country</label>
     <select id="tabs" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -162,7 +162,7 @@ You must also apply the `role="tabpanel"` data attribute to every tab content el
 
 You can use multiple tab components on a single page but make sure that the id's are different.
 
-{{< example class="dark:bg-gray-900" >}}
+{{< example >}}
 <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
     <ul class="flex flex-wrap -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
         <li class="mr-2" role="presentation">

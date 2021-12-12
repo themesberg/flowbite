@@ -22,13 +22,12 @@ First of all, you need to set the type of files that you want to be searched for
 ```javascript
 // tailwind.config.js
 module.exports = {
-  purge: [
+  content: [
     './src/**/*.html',
     './src/**/*.vue',
     './src/**/*.jsx',
   ],
   theme: {},
-  variants: {},
   plugins: [],
 }
 ```

@@ -56,13 +56,13 @@
 #mainContent > p > a,
 #mainContent > ul > li > a,
 #mainContent > ol > li > a {
-	@apply text-blue-600 dark:text-blue-500;
+	@apply text-gray-700 font-semibold dark:text-gray-300 underline decoration-1 underline-offset-2 decoration-blue-600 dark:decoration-blue-500;
 }
 
 #mainContent > p > a:hover,
 #mainContent > ul > li > a:hover,
 #mainContent > ol > li > a:hover {
-	@apply underline;
+	@apply decoration-2;
 }
 
 #mainContent > p > code,

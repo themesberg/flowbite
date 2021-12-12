@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Flowbite - Tailwind CSS component library
-description: Get started with an open-source set of UI components and elements built with the utility-classes from Tailwind CSS
+description: Get started with an open-source set of UI components and elements built with the utility classes from Tailwind CSS
 group: getting-started
 toc: true
 cleanTitle: true
@@ -12,7 +12,7 @@ nextLink: getting-started/quickstart/
 
 ## What is Flowbite?
 
-Flowbite is an open-source library of UI elements based on the utility-first CSS framework Tailwind designed and coded by [Themesberg](https://themesberg.com) available in Figma and as web components.
+Flowbite is an open-source library of UI elements based on the utility-first CSS framework Tailwind designed and coded by <a href="https://themesberg.com" target="_blank">Themesberg</a> available in Figma and as web components.
 
 It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, but also some more advanced interactive elements such as datepickers. 
 
@@ -51,28 +51,75 @@ There are at least 15 types of components including buttons, alerts, breadcrumbs
 
 ## How to get started?
 
-First of all, you have to make sure that you have Node.js and Tailwind CSS already installed. After that, you can get started with Flowbite by either requiring it using NPM or by including the project via CDN. Check out the [quickstart guide]({{< ref "getting-started/quickstart" >}}) and follow all of the steps there.
+Flowbite is technically a plugin that can be included into any existing Tailwind CSS project. To get started, you first need to make sure that you have a working Tailwind CSS project installed and that you also have Node and NPM installed on your machine.
 
-Flowbite can also be included into an existing Tailwind CSS project.
+### Require via NPM
 
+1. Install the latest version of Flowbite using NPM:
+
+```bash
+npm i @themesberg/flowbite
+```
+
+2. Include Flowbite as a plugin inside the `tailwind.config.js` file:
+
+```javascript
+module.exports = {
+
+    plugins: [
+        require('@themesberg/flowbite/plugin')
+    ]
+
+}
+```
+
+3. Require the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
+
+```html
+<script src="../path/to/@themesberg/flowbite/dist/flowbite.bundle.js"></script>
+```
+
+If you use Webpack or other bundlers you can also import it like this:
+
+```javascript
+import '@themesberg/flowbite';
+```
+
+### Include via CDN
+
+If you want to quickly test out Flowbite you can easily include the following CSS and JavaScript files.
+
+Require the following minified stylesheet inside the `head` tag:
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.min.css" />
+```
+
+And include the following javascript file before the end of the `body` element:
+
+```html
+<script src="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.bundle.js"></script>
+```
 
 ## Figma design files
 
-If you'd like to work with a Figma design file you can either duplicate the <a href="https://www.figma.com/community/file/973638860086718856" target="_blank">free version on Figma Community</a> or upgrade for additional application UI, marketing UI, and e-commerce sections and pages with [Flowbite Pro](https://flowbite.com/pro/).
+The components from Flowbite are first conceptualized and designed in Figma using the latest features such as variants, auto-layout, grids, responsive layouts, and more.
+
+Learn more by checking out <a href="https://flowbite.com/figma/" target="_blank">Flowbite's Figma design files</a> and start designing your Tailwind CSS projects before actually coding them.
 
 ## Upgrade to Pro
 
-If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite](https://flowbite.com/pro/) which includes fully coded pages and layouts for application, marketing, and e-commerce websites.
+If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite](https://flowbite.com/pro/) which includes fully coded pages and layouts for application, marketing, and e-commerce user interfaces.
 
 ## Licensing
 
-Flowbite and all of the Tailwind CSS components are open-source under the [MIT License]({{< ref "getting-started/license" >}}). 
+The library of components from Flowbite is open source under the [MIT License]({{< ref "getting-started/license" >}}).
 
 ## Contributions
 
 Flowbite is an open source library under the MIT license and anyone who would like to contribute to the codebase or design is welcome to do so. 
 
-Please reach out to us via the [official Github repository](https://github.com/themesberg/flowbite) and the main development team will get in touch as soon as possible.
+Please reach out to us via the <a href="https://github.com/themesberg/flowbite" target="_blank">official Github repository</a> and the main development team will get in touch as soon as possible.
 
 ## Discord community
 
@@ -80,6 +127,6 @@ Feel free to join our <a href="https://discord.gg/qAbMDYbE" target="_blank" rel=
 
 ## Authors
 
-- [Zoltan Szogyenyi](https://twitter.com/zoltanszogyenyi) (web developer)
-- [Robert Tanislav](https://twitter.com/RobertTanislav) (web designer)
-- [Victor Cordos](https://twitter.com/victorcordos) (web developer)
+- <a href="https://twitter.com/zoltanszogyenyi" target="_blank" rel="nofollow">Zoltán Szőgyényi</a> (web developer)
+- <a href="https://twitter.com/RobertTanislav" target="_blank" rel="nofollow">Robert Tanislav</a> (web designer)
+- <a href="https://twitter.com/victorcordos" target="_blank" rel="nofollow">Victor Cordos</a> (web developer)

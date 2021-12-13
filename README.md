@@ -22,7 +22,7 @@ For full documentation, visit [flowbite.com](https://flowbite.com/).
 
 Flowbite can be included as a plugin into an existing Tailwind CSS project and it is supposed to help you build websites faster by having a set of web components to work with built with the utility classes from Tailwind CSS.
 
-👉 [See all components](https://flowbite.com/docs/components/alerts/) <br>
+👉 [See all components](https://flowbite.com/docs/getting-started/introduction/) <br>
 
 ### Require via NPM
 

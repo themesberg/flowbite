@@ -16,7 +16,7 @@
         <div class="min-w-0 max-w-4xl flex-auto xl:px-8 pt-6 lg:pt-10 pb:12 xl:pb-24 lg:pb-16">
 
           <!-- Intro -->
-          <div class="pb-10 border-b border-gray-200 dark:border-gray-800 mb-10">
+          <div class="pb-4 border-b border-gray-200 dark:border-gray-800 mb-10">
             {{ if ( eq .Page.Params.requires_js true) }}
               <div class="mb-5">
                 <a href="{{ "getting-started/quickstart/" | relURL }}" rel="nofollow" target="_blank" class="bg-gray-100 dark:bg-gray-800 rounded-full py-1 px-1 pr-4 text-sm text-gray-700 dark:text-white inline-flex items-center justify-between hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
@@ -24,8 +24,9 @@
                 </a>
               </div>
             {{ end }}
-            <h1 class="inline-block text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight" id="content">{{ .Title | markdownify }}</h1>
-            <p class="mt-1 text-lg text-gray-500 dark:text-gray-400">{{ .Page.Params.Description | markdownify }}</p>
+            
+            <h1 class="inline-block text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-2" id="content">{{ .Title | markdownify }}</h1>
+            <p class="text-lg text-gray-500 dark:text-gray-400 mb-4">{{ .Page.Params.Description | markdownify }}</p>
           </div>
 
           <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7D4KQE&placement=flowbitedesign" id="_carbonads_js"></script>

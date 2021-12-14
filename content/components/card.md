@@ -17,7 +17,7 @@ Use these responsive card components to show data entries and information to you
 
 Use the following simple card with a title and description.
 
-{{< example >}}
+{{< example github="components/card.md" >}}
 <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
     <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
@@ -28,7 +28,7 @@ Use the following simple card with a title and description.
 
 Use the following example of a card element if you also want to have an action button.
 
-{{< example >}}
+{{< example github="components/card.md" >}}
 <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
@@ -45,7 +45,7 @@ Use the following example of a card element if you also want to have an action b
 
 You can use the following example of a card element with an image for blog posts, user cards, and many more.
 
-{{< example >}}
+{{< example github="components/card.md" >}}
 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
         <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
@@ -67,7 +67,7 @@ You can use the following example of a card element with an image for blog posts
 
 If you want to spice up your cards you can use the following card which has its child elements aligned horizontally.
 
-{{< example >}}
+{{< example github="components/card.md" >}}
 <a href="#" class="flex flex-col items-center bg-white border rounded-lg shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
     <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/docs/images/blog/image-4.jpg" alt="">
     <div class="flex flex-col justify-between p-4 leading-normal">
@@ -81,7 +81,7 @@ If you want to spice up your cards you can use the following card which has its 
 
 Use this interactive card example if you want to show a dropdown menu and buttons to enable multiple actions from your user.
 
-{{< example >}}
+{{< example github="components/card.md" >}}
 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
     <div class="flex justify-end px-4 pt-4">
         <button id="dropdownButton" data-dropdown-toggle="dropdown" class="hidden sm:inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
@@ -118,7 +118,7 @@ Use this interactive card example if you want to show a dropdown menu and button
 
 Use this card example where you can add form input elements that can be used for authentication actions or any other context where you need to receive information from your users.
 
-{{< example >}}
+{{< example github="components/card.md" >}}
 <div class="max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-md sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700">
     <form class="space-y-6" action="#">
         <h3 class="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
@@ -153,7 +153,7 @@ Use this card example where you can add form input elements that can be used for
 
 Use this card for your e-commerce websites and show information about the products and enable actions such as adding a review and adding the product to the cart.
 
-{{< example >}}
+{{< example github="components/card.md" >}}
 <div class="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
         <img class="p-8 rounded-t-lg" src="/docs/images/products/product-1.png" alt="product image" />
@@ -182,7 +182,7 @@ Use this card for your e-commerce websites and show information about the produc
 
 Use this CTA card example to encourage your users to visit a certain page such as downloading the iOS or Android application for your project.
 
-{{< example >}}
+{{< example github="components/card.md" >}}
 <div class="w-full p-4 text-center bg-white border rounded-lg shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
     <h3 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Work fast from anywhere</h3>
     <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">Stay up to date and move work forward with Flowbite on iOS & Android. Download the app today.</p>
@@ -209,7 +209,7 @@ Use this CTA card example to encourage your users to visit a certain page such a
 
 Use this card example if you want to show a list of data:
 
-{{< example >}}
+{{< example github="components/card.md" >}}
 <div class="max-w-md p-4 bg-white border rounded-lg shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
     <div class="flex items-center justify-between mb-4">
         <h3 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest Customers</h3>

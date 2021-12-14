@@ -17,7 +17,7 @@ Tables are important components when you want to show complex set of data within
 
 Use the following HTML markup and Tailwind CSS utility classes to show a data set using a table component.
 
-{{< example >}}
+{{< example github="components/tables.md" >}}
 <div class="flex flex-col">
     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
@@ -109,7 +109,7 @@ Use the following HTML markup and Tailwind CSS utility classes to show a data se
 
 Use this alternative table style which uses an alternating background color for each row inside the table increasing readability overall.
 
-{{< example >}}
+{{< example github="components/tables.md" >}}
 <div class="flex flex-col">
     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">

@@ -40,14 +40,17 @@ function initiateCopyToClipboard(element) {
     var textToCopy = element.getElementsByClassName("code-preview")[0].innerHTML;
     var button = element.getElementsByClassName("copy-to-clipboard-button")[0];
     var alert = document.getElementById('copied-code-alert');
+    var copyText = button.getElementsByClassName('copy-text')[0];
     button.addEventListener("click", function () {
         copyTextToClipboard(textToCopy);
         alert.classList.remove('opacity-0');
         alert.classList.add('opacity-100');
+        copyText.innerHTML = 'Copied';
 
         setTimeout(function () {
             alert.classList.add('opacity-0');
             alert.classList.remove('opacity-100');
+            copyText.innerHTML = 'Copy';
         }, 3000);
     });
 }

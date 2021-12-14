@@ -124,7 +124,7 @@ pre[class*="language-"] {
 /* when after preview */
 .code-preview + .code-syntax .highlight pre[class*="language-"] {
 	overflow: auto;
-	@apply mt-0 rounded-t-none;
+	@apply mt-0;
 }
 
 :not(pre) > code[class*="language-"],

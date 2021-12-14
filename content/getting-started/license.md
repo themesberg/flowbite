@@ -13,7 +13,7 @@ nextLink: getting-started/changelog/
 
 **Important:** The pro version and Figma design files of FlowBite is subject to another license which you can read on the [EULA page (End User License Agreement)](https://flowbite.com/license/) from the FlowBite website.
 
-The FlowBite library is an open-source set of web components built on top of the Tailwind CSS utility-first framework and both projects are licensed under the MIT license.
+The Flowbite library is an open-source set of web components built on top of the Tailwind CSS utility-first framework and both projects are licensed under the MIT license.
 
 ## MIT License
 

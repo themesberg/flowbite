@@ -22,21 +22,21 @@ All of the elements are built using the utility classes from Tailwind CSS and va
 
 Here's a quick overview of the Flowbite ecosystem including the open source Tailwind components library, the Figma design files, and the pro version.
 
-<div class="lg:grid lg:grid-cols-2 lg:gap-8 mt-10">
-    <a href="{{< ref "getting-started/quickstart" >}}" class="p-6 block bg-white dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 shadow-md border border-gray-200 dark:border-gray-700 rounded-lg mb-6 lg:mb-0">
-        <h3 class="text-gray-900 dark:text-white font-bold text-2xl tracking-tight mb-2">Quickstart</h3>
+<div class="mt-10 lg:grid lg:grid-cols-2 lg:gap-8">
+    <a href="{{< ref "getting-started/quickstart" >}}" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
+        <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Quickstart</h3>
         <p class="font-normal text-gray-700 dark:text-gray-400">Learn how to get started by downloading and configuring Flowbite locally on your machine and start developing.</p>
     </a>
-    <a href="{{< ref "components/alerts" >}}" class="p-6 block bg-white dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 shadow-md border border-gray-200 dark:border-gray-700 rounded-lg mb-6 lg:mb-0">
-        <h3 class="text-gray-900 dark:text-white font-bold text-2xl tracking-tight mb-2">Components</h3>
+    <a href="{{< ref "components/alerts" >}}" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
+        <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Components</h3>
         <p class="font-normal text-gray-700 dark:text-gray-400">Explore the Tailwind CSS elements such as buttons, navbars, alerts, dropdowns and use them to build your website.</p>
     </a>
-    <a href="https://flowbite.com/figma/" class="p-6 block bg-white dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 shadow-md border border-gray-200 dark:border-gray-700 rounded-lg mb-6 lg:mb-0">
-        <h3 class="text-gray-900 dark:text-white font-bold text-2xl tracking-tight mb-2">Figma design files</h3>
+    <a href="https://flowbite.com/figma/" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
+        <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Figma design files</h3>
         <p class="font-normal text-gray-700 dark:text-gray-400">Prototype and design your website before coding with the Flowbite Figma file which is based on the Tailwind CSS classes.</p>
     </a>
-    <a href="https://flowbite.com/pro/" class="p-6 block bg-white dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 shadow-md border border-gray-200 dark:border-gray-700 rounded-lg mb-6 lg:mb-0">
-        <h3 class="text-gray-900 dark:text-white font-bold text-2xl tracking-tight mb-2">Upgrade to Pro</h3>
+    <a href="https://flowbite.com/pro/" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
+        <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Upgrade to Pro</h3>
         <p class="font-normal text-gray-700 dark:text-gray-400">Take your Figma and Tailwind CSS development to the next level with thousands more elements and pages with Flowbite Pro.</p>
     </a>
 </div>
@@ -45,7 +45,7 @@ Here's a quick overview of the Flowbite ecosystem including the open source Tail
 
 One of the disadvantages of Tailwind CSS compared to other frameworks is that it doesn't have a base set of components. This makes it really hard to quickly prototype a user interface. 
 
-<span class="font-semibold dark:text-gray-200 text-gray-700">This is where Flowbite comes into play</span>: it's basically Tailwind CSS, but you get all of the components that you would normally get with a classic CSS framework like Bootstrap or Bulma.
+<span class="font-semibold text-gray-700 dark:text-gray-200">This is where Flowbite comes into play</span>: it's basically Tailwind CSS, but you get all of the components that you would normally get with a classic CSS framework like Bootstrap or Bulma.
 
 There are at least 15 types of components including buttons, alerts, breadcrumbs, pagination, and navbars. Flowbite also includes some custom JavaScript that enables interactive components, such as dropdowns, modals, tooltips, and many more.
 

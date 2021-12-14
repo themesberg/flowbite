@@ -68,18 +68,18 @@ Use the following `font-{weight}` utility classes to set the font weight for any
 Use the following `leading-{type}` utility classes to set the line height for any text element.
 
 {{< preview >}}
-<span class="text-blue-700 font-normal dark:text-blue-500">.leading-none</span>
-<p class="leading-none text-gray-700 dark:text-gray-400 mb-4">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
-<span class="text-blue-700 font-normal dark:text-blue-500">.leading-tight</span>
-<p class="leading-tight text-gray-700 dark:text-gray-400 mb-4">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
-<span class="text-blue-700 font-normal dark:text-blue-500">.leading-snug</span>
-<p class="leading-snug text-gray-700 dark:text-gray-400 mb-4 dark:text-gray-400">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
-<span class="text-blue-700 font-normal dark:text-blue-500">.leading-normal</span>
-<p class="leading-normal text-gray-700 dark:text-gray-400 mb-4">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
-<span class="text-blue-700 font-normal dark:text-blue-500">.leading-relaxed</span>
-<p class="leading-relaxed text-gray-700 dark:text-gray-400 mb-4">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
-<span class="text-blue-700 font-normal dark:text-blue-500">.leading-loose</span>
-<p class="leading-loose text-gray-700 dark:text-gray-400 mb-4">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
+<span class="font-normal text-blue-700 dark:text-blue-500">.leading-none</span>
+<p class="mb-4 leading-none text-gray-700 dark:text-gray-400">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
+<span class="font-normal text-blue-700 dark:text-blue-500">.leading-tight</span>
+<p class="mb-4 leading-tight text-gray-700 dark:text-gray-400">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
+<span class="font-normal text-blue-700 dark:text-blue-500">.leading-snug</span>
+<p class="mb-4 leading-snug text-gray-700 dark:text-gray-400">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
+<span class="font-normal text-blue-700 dark:text-blue-500">.leading-normal</span>
+<p class="mb-4 leading-normal text-gray-700 dark:text-gray-400">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
+<span class="font-normal text-blue-700 dark:text-blue-500">.leading-relaxed</span>
+<p class="mb-4 leading-relaxed text-gray-700 dark:text-gray-400">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
+<span class="font-normal text-blue-700 dark:text-blue-500">.leading-loose</span>
+<p class="mb-4 leading-loose text-gray-700 dark:text-gray-400">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
 {{< /preview >}}
 
 ```html
@@ -96,21 +96,21 @@ Use the following `leading-{type}` utility classes to set the line height for an
 Use the following code to create list items with ordered and unordered lists.
 
 {{< preview >}}
-<span class="text-blue-700 font-normal dark:text-blue-500">.list-disc</span>
-<ul class="list-disc text-gray-700 mb-6 pl-4 dark:text-gray-400">
+<span class="font-normal text-blue-700 dark:text-blue-500">.list-disc</span>
+<ul class="pl-4 mb-6 text-gray-700 list-disc dark:text-gray-400">
     <li>Design</li>
     <li>Develop</li>
     <li>Test</li>
 </ul>
 
-<span class="text-blue-700 font-normal dark:text-blue-500">.list-decimal</span>
-<ol class="list-decimal text-gray-700 mb-6 pl-4 dark:text-gray-400">
+<span class="font-normal text-blue-700 dark:text-blue-500">.list-decimal</span>
+<ol class="pl-4 mb-6 text-gray-700 list-decimal dark:text-gray-400">
     <li>Design</li>
     <li>Develop</li>
     <li>Test</li>
 </ol>
 
-<span class="text-blue-700 font-normal dark:text-blue-500">.list-default</span>
+<span class="font-normal text-blue-700 dark:text-blue-500">.list-default</span>
 <ul class="text-gray-700 dark:text-gray-400">
     <li>Design</li>
     <li>Develop</li>
@@ -143,14 +143,14 @@ Use the following code to create list items with ordered and unordered lists.
 Use the `list-inside` and `list-outside` classes to set the list item position inside a list component.
 
 {{< preview >}}
-<span class="text-blue-700 font-normal dark:text-blue-500">.list-inside</span>
-<ul class="list-disc list-inside text-green-700 bg-green-100 rounded-lg mt-2 mb-6 dark:bg-gray-700 dark:text-green-500">
+<span class="font-normal text-blue-700 dark:text-blue-500">.list-inside</span>
+<ul class="mt-2 mb-6 text-green-700 list-disc list-inside bg-green-100 rounded-lg dark:bg-gray-700 dark:text-green-500">
     <li>Design</li>
     <li>Develop</li>
     <li>Test</li>
 </ul>
-<span class="text-blue-700 font-normal dark:text-blue-500">.list-outside</span>
-<ul class="list-disc list-outside text-green-700 bg-green-100 rounded-lg mt-2 dark:bg-gray-700 dark:text-green-500">
+<span class="font-normal text-blue-700 dark:text-blue-500">.list-outside</span>
+<ul class="mt-2 text-green-700 list-disc list-outside bg-green-100 rounded-lg dark:bg-gray-700 dark:text-green-500">
     <li>Design</li>
     <li>Develop</li>
     <li>Test</li>
@@ -176,10 +176,10 @@ Use the `list-inside` and `list-outside` classes to set the list item position i
 You can use the following classes to set the text decoration for any inline text element.
 
 {{< preview >}}
-<span class="text-blue-700 font-normal dark:text-blue-500">.underline</span>
-<p class="underline mt-2 mb-4 dark:text-gray-400">please read our terms and services</p>
-<span class="text-blue-700 font-normal dark:text-blue-500">.line-through</span>
-<p class="line-through mt-2 mb-4 dark:text-gray-400">please read our terms and services</p>
+<span class="font-normal text-blue-700 dark:text-blue-500">.underline</span>
+<p class="mt-2 mb-4 underline dark:text-gray-400">please read our terms and services</p>
+<span class="font-normal text-blue-700 dark:text-blue-500">.line-through</span>
+<p class="mt-2 mb-4 line-through dark:text-gray-400">please read our terms and services</p>
 {{< /preview >}}
 
 ```html

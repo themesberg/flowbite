@@ -2,31 +2,31 @@
 
 {{ partial "docs-navbar" }}
 
-<div class="w-full max-w-8xl mx-auto px-4">
+<div class="w-full px-4 mx-auto max-w-8xl">
   <div class="lg:flex">
     <!-- Sidebar -->
-    <aside id="sidebar" class="fixed z-10 inset-0 flex-none h-full w-full lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block hidden">
+    <aside id="sidebar" class="fixed inset-0 z-10 flex-none hidden w-full h-full lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block">
       {{ partial "docs-sidebar" . }}
     </aside>
 
-    <main id="content-wrapper" class="min-w-0 w-full flex-auto lg:static lg:max-h-full lg:overflow-visible">
-      <div class="w-full flex">
+    <main id="content-wrapper" class="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible">
+      <div class="flex w-full">
 
         <!-- Main content -->
-        <div class="min-w-0 max-w-4xl flex-auto xl:px-8 pt-6 lg:pt-10 pb:12 xl:pb-24 lg:pb-16">
+        <div class="flex-auto max-w-4xl min-w-0 pt-6 xl:px-8 lg:pt-10 pb:12 xl:pb-24 lg:pb-16">
 
           <!-- Intro -->
-          <div class="pb-4 border-b border-gray-200 dark:border-gray-800 mb-10">
+          <div class="pb-4 mb-10 border-b border-gray-200 dark:border-gray-800">
             {{ if ( eq .Page.Params.requires_js true) }}
               <div class="mb-5">
-                <a href="{{ "getting-started/quickstart/" | relURL }}" rel="nofollow" target="_blank" class="bg-gray-100 dark:bg-gray-800 rounded-full py-1 px-1 pr-4 text-sm text-gray-700 dark:text-white inline-flex items-center justify-between hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
+                <a href="{{ "getting-started/quickstart/" | relURL }}" rel="nofollow" target="_blank" class="inline-flex items-center justify-between px-1 py-1 pr-4 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
                   <span class="text-xs bg-blue-600 rounded-full text-white px-3 py-1.5 mr-3"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span> <span class="text-sm font-medium">Requires JS</span> <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
                 </a>
               </div>
             {{ end }}
             
-            <h1 class="inline-block text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-2" id="content">{{ .Title | markdownify }}</h1>
-            <p class="text-lg text-gray-500 dark:text-gray-400 mb-4">{{ .Page.Params.Description | markdownify }}</p>
+            <h1 class="inline-block mb-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white" id="content">{{ .Title | markdownify }}</h1>
+            <p class="mb-4 text-lg text-gray-500 dark:text-gray-400">{{ .Page.Params.Description | markdownify }}</p>
           </div>
 
           <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7D4KQE&placement=flowbitedesign" id="_carbonads_js"></script>
@@ -37,7 +37,7 @@
               {{ range .Page.Params.sections }}
               <div class="col-md-6">
                 <a class="d-block text-decoration-none" href="../{{ urlize .title }}/">
-                  <strong class="d-block h5 mb-0">{{ .title }}</strong>
+                  <strong class="mb-0 d-block h5">{{ .title }}</strong>
                   <span class="text-secondary">{{ .description }}</span>
                 </a>
               </div>
@@ -47,23 +47,23 @@
 
             {{ .Content }}
 
-            <div class="mt-6 mb-8 flex leading-6 font-medium">
+            <div class="flex mt-6 mb-8 font-medium leading-6">
               {{ if isset .Page.Params "previous" }}
-                <a class="flex mr-8 transition-colors duration-200 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.PreviousLink | relURL }}"><span aria-hidden="true" class="mr-2">←</span>{{ .Page.Params.Previous }}</a>
+                <a class="flex mr-8 text-gray-500 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.PreviousLink | relURL }}"><span aria-hidden="true" class="mr-2">←</span>{{ .Page.Params.Previous }}</a>
               {{ end }}
               {{ if isset .Page.Params "next" }}
-              <a class="flex text-right ml-auto transition-colors duration-200 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.NextLink | relURL }}">{{ .Page.Params.Next }}<span aria-hidden="true" class="ml-2">→</span></a>
+              <a class="flex ml-auto text-right text-gray-500 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.NextLink | relURL }}">{{ .Page.Params.Next }}<span aria-hidden="true" class="ml-2">→</span></a>
               {{ end }}
             </div>
 
-            <aside id="revue-embed" class="bg-white shadow-md border border-gray-200 rounded-lg p-4 sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700 my-8">
-              <h3 class="text-xl font-medium text-gray-900 dark:text-white mb-3">Get more updates...</h3>
-              <p class="text-sm font-medium text-gray-500 dark:text-gray-300 mb-5">Do you want to get notified when a new component is added to Flowbite? Sign up for our newsletter and you'll be among the first to find out about new features, components, versions, and tools.</p>
+            <aside id="revue-embed" class="p-4 my-8 bg-white border border-gray-200 rounded-lg shadow-md sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700">
+              <h3 class="mb-3 text-xl font-medium text-gray-900 dark:text-white">Get more updates...</h3>
+              <p class="mb-5 text-sm font-medium text-gray-500 dark:text-gray-300">Do you want to get notified when a new component is added to Flowbite? Sign up for our newsletter and you'll be among the first to find out about new features, components, versions, and tools.</p>
               <form action="https://www.getrevue.co/profile/flowbite/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
               <div class="flex items-end mb-3">
-                <div class="revue-form-group mr-3 w-full relative">
-                  <label for="member_email" class="hidden text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Email address</label>
-                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <div class="relative w-full mr-3 revue-form-group">
+                  <label for="member_email" class="hidden block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email address</label>
+                  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
                   </div>
                   <input class="revue-form-field bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your email address..." type="email" name="member[email]" id="member_email" required>
@@ -72,7 +72,7 @@
                   <input type="submit" value="Subscribe" class="cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" name="member[subscribe]" id="member_submit">
                 </div>
               </div>
-              <div class="revue-form-footer text-sm font-medium text-gray-500 dark:text-gray-300">By subscribing, you agree with Revue’s <a target="_blank" rel="nofollow" href="https://www.getrevue.co/terms" class="text-blue-600 hover:underline dark:text-blue-500">Terms of Service</a> and <a target="_blank" rel="nofollow" class="text-blue-600 hover:underline dark:text-blue-500" href="https://www.getrevue.co/privacy">Privacy Policy</a>.</div>
+              <div class="text-sm font-medium text-gray-500 revue-form-footer dark:text-gray-300">By subscribing, you agree with Revue’s <a target="_blank" rel="nofollow" href="https://www.getrevue.co/terms" class="text-blue-600 hover:underline dark:text-blue-500">Terms of Service</a> and <a target="_blank" rel="nofollow" class="text-blue-600 hover:underline dark:text-blue-500" href="https://www.getrevue.co/privacy">Privacy Policy</a>.</div>
               </form>
             </aside>
 
@@ -80,11 +80,11 @@
         </div>
 
         <!-- Table of content -->
-        <div class="hidden xl:text-sm xl:block flex-none w-64 pl-8 mr-8">
+        <div class="flex-none hidden w-64 pl-8 mr-8 xl:text-sm xl:block">
           {{ if (eq .Page.Params.toc true) }}
           <div class="flex flex-col justify-between overflow-y-auto sticky max-h-(screen-18) pt-10 pb-6 top-12">
             <div class="mb-8">
-              <h5 class="text-gray-900 dark:text-white uppercase tracking-wide font-semibold mb-3 text-sm lg:text-xs">On this page</h5>
+              <h5 class="mb-3 text-sm font-semibold tracking-wide text-gray-900 uppercase dark:text-white lg:text-xs">On this page</h5>
               {{ .TableOfContents }}
             </div>
           </div>

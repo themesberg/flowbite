@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Buttons - Flowbite
-description: Use these Tailwind CSS buttons of different colors, sizes, and variations to use for user actions and links
+description: Use the Tailwind CSS button component inside forms, as links, and more with support for multiple colors, sizes, and variations
 group: components
 toc: true
 
@@ -13,7 +13,7 @@ nextLink: components/button-group/
 
 The button component is probably the most widely used element in any user interface or website as it can be used to launch an action but also to link to other pages.
 
-The Flowbite library comes with a large variety of styles and sizes for the button component including outlined buttons, multiple colors, sizes, buttons with icons, and more.
+Flowbite provides a large variety of styles and sizes for the button component including outlined buttons, multiple colors, sizes, buttons with icons, and more.
 
 ## Examples
 

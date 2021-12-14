@@ -21,11 +21,11 @@
 }
 
 #TableOfContents > ul {
-	@apply overflow-x-hidden text-gray-500 dark:text-gray-400 font-medium;
+	@apply overflow-x-hidden font-medium text-gray-500 dark:text-gray-400;
 }
 
 #TableOfContents > ul > li > a {
-	@apply block py-2 transition-colors duration-200 hover:text-gray-900 dark:hover:text-white font-medium;
+	@apply block py-2 font-medium transition-colors duration-200 hover:text-gray-900 dark:hover:text-white;
 }
 
 #TableOfContents > ul > li > ul {
@@ -41,34 +41,34 @@
 }
 
 #mainContent > h2 {
-	@apply text-2xl font-bold mt-8 mb-4 dark:text-white;
+	@apply mt-8 mb-4 text-2xl font-bold dark:text-white;
 }
 
 #mainContent > h3,
 #mainContent > h4 {
-	@apply text-xl font-bold mt-8 mb-4 dark:text-white;
+	@apply mt-8 mb-4 text-xl font-bold dark:text-white;
 }
 
 #mainContent > p {
-	@apply text-base font-normal text-gray-600 dark:text-gray-400 mb-4;
+	@apply mb-4 text-base font-normal text-gray-600 dark:text-gray-400;
 }
 
 #mainContent > p > a,
 #mainContent > ul > li > a,
 #mainContent > ol > li > a {
-	@apply text-gray-700 font-semibold dark:text-gray-300 underline decoration-1 underline-offset-2 decoration-blue-600 dark:decoration-blue-500;
+	@apply font-semibold text-gray-700 underline dark:text-gray-300 decoration-1 underline-offset-2 decoration-blue-600 dark:decoration-blue-500;
 }
 
 #mainContent > p > a:hover,
 #mainContent > ul > li > a:hover,
 #mainContent > ol > li > a:hover {
-	@apply decoration-2;
+	@apply text-gray-900 decoration-2 dark:text-white;
 }
 
 #mainContent > p > code,
 #mainContent > ul > li > code,
 #mainContent > ol > li > code {
-	@apply font-mono text-blue-600 dark:text-blue-400 text-sm px-1;
+	@apply px-1 font-mono text-sm text-blue-600 dark:text-blue-400;
 }
 
 #mainContent > ul {
@@ -86,7 +86,7 @@
 
 #mainContent > ul > li,
 #mainContent > ol > li {
-	@apply text-base font-normal text-gray-600 dark:text-gray-400 mb-4;
+	@apply mb-4 text-base font-normal text-gray-600 dark:text-gray-400;
 }
 
 /* prism styles */
@@ -118,13 +118,13 @@ pre[class*="language-"] {
 /* without preview */
 .highlight pre[class*="language-"] {
 	overflow: auto;
-	@apply rounded-xl bg-gray-800 p-6 pt-6 m-0 text-sm mb-8 mt-4;
+	@apply p-6 pt-6 m-0 mt-4 mb-8 text-sm bg-gray-800 rounded-xl;
 }
 
 /* when after preview */
 .code-preview + .code-syntax .highlight pre[class*="language-"] {
 	overflow: auto;
-	@apply rounded-t-none mt-0;
+	@apply mt-0 rounded-t-none;
 }
 
 :not(pre) > code[class*="language-"],

@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Form Elements - Flowbite
-description: Use the Tailwind CSS form and input elements such as checkboxes, radios, textarea, text inputs to collect information from users with FlowBite
+description: Use the Tailwind CSS form and input elements such as checkboxes, radios, textarea, text inputs to collect information from users with Flowbite
 group: components
 toc: true
 
@@ -11,9 +11,11 @@ next: List group
 nextLink: components/list-group/
 ---
 
+Get started with these custom Tailwind CSS form components to gather information from your users using input text elements, checkboxes, radios, textareas, selects, file uploads, switches, and more.
+
 ## Form example
 
-This is an example of a form component including an email, password, checkbox, and submit button that you can use as a starting point for any form element in your website using FlowBite and Tailwind CSS.
+This is an example of a form component including an email, password, checkbox, and submit button that you can use as a starting point for any form element in your website using Flowbite and Tailwind CSS.
 
 {{< example class="dark:bg-gray-800" >}}
 <form>

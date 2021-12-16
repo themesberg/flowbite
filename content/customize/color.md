@@ -24,9 +24,9 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
                <div><code class="text-xs text-gray-500">colors.coolGray</code></div>
             </div>
          </div>
-         <div class="grid flex-1 min-w-0 grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2">
+         <div class="grid flex-1 grid-cols-5 gap-y-3 gap-x-4 min-w-0 2xl:grid-cols-10 2xl:gap-x-2">
             <div class="space-y-1.5">
-               <div class="w-full h-10 rounded ring-1 ring-inset ring-black ring-opacity-0 bg-gray-50"></div>
+               <div class="w-full h-10 bg-gray-50 rounded ring-1 ring-inset ring-black ring-opacity-0"></div>
                <div class="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
                   <div class="w-6 font-medium text-gray-900 dark:text-gray-400">50</div>
                   <div class="text-gray-900 dark:text-gray-400">#F9FAFB</div>
@@ -106,9 +106,9 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
                <div><code class="text-xs text-gray-500">colors.red</code></div>
             </div>
          </div>
-         <div class="grid flex-1 min-w-0 grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2">
+         <div class="grid flex-1 grid-cols-5 gap-y-3 gap-x-4 min-w-0 2xl:grid-cols-10 2xl:gap-x-2">
             <div class="space-y-1.5">
-               <div class="w-full h-10 rounded ring-1 ring-inset ring-black ring-opacity-0 bg-red-50"></div>
+               <div class="w-full h-10 bg-red-50 rounded ring-1 ring-inset ring-black ring-opacity-0"></div>
                <div class="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
                   <div class="w-6 font-medium text-gray-900 dark:text-gray-400">50</div>
                   <div class="text-gray-900 dark:text-gray-400">#FDF2F2</div>
@@ -188,9 +188,9 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
                <div><code class="text-xs text-gray-500">colors.amber</code></div>
             </div>
          </div>
-         <div class="grid flex-1 min-w-0 grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2">
+         <div class="grid flex-1 grid-cols-5 gap-y-3 gap-x-4 min-w-0 2xl:grid-cols-10 2xl:gap-x-2">
             <div class="space-y-1.5">
-               <div class="w-full h-10 rounded ring-1 ring-inset ring-black ring-opacity-0 bg-yellow-50"></div>
+               <div class="w-full h-10 bg-yellow-50 rounded ring-1 ring-inset ring-black ring-opacity-0"></div>
                <div class="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
                   <div class="w-6 font-medium text-gray-900 dark:text-gray-400">50</div>
                   <div class="text-gray-900 dark:text-gray-400">#FDFDEA</div>
@@ -270,9 +270,9 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
                <div><code class="text-xs text-gray-500">colors.emerald</code></div>
             </div>
          </div>
-         <div class="grid flex-1 min-w-0 grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2">
+         <div class="grid flex-1 grid-cols-5 gap-y-3 gap-x-4 min-w-0 2xl:grid-cols-10 2xl:gap-x-2">
             <div class="space-y-1.5">
-               <div class="w-full h-10 rounded ring-1 ring-inset ring-black ring-opacity-0 bg-green-50"></div>
+               <div class="w-full h-10 bg-green-50 rounded ring-1 ring-inset ring-black ring-opacity-0"></div>
                <div class="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
                   <div class="w-6 font-medium text-gray-900 dark:text-gray-400">50</div>
                   <div class="text-gray-900 dark:text-gray-400">#F3FAF7</div>
@@ -352,9 +352,9 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
                <div><code class="text-xs text-gray-500">colors.blue</code></div>
             </div>
          </div>
-         <div class="grid flex-1 min-w-0 grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2">
+         <div class="grid flex-1 grid-cols-5 gap-y-3 gap-x-4 min-w-0 2xl:grid-cols-10 2xl:gap-x-2">
             <div class="space-y-1.5">
-               <div class="w-full h-10 rounded ring-1 ring-inset ring-black ring-opacity-0 bg-blue-50"></div>
+               <div class="w-full h-10 bg-blue-50 rounded ring-1 ring-inset ring-black ring-opacity-0"></div>
                <div class="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
                   <div class="w-6 font-medium text-gray-900 dark:text-gray-400">50</div>
                   <div class="text-gray-900 dark:text-gray-400">#EBF5FF</div>
@@ -434,9 +434,9 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
                <div><code class="text-xs text-gray-500">colors.indigo</code></div>
             </div>
          </div>
-         <div class="grid flex-1 min-w-0 grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2">
+         <div class="grid flex-1 grid-cols-5 gap-y-3 gap-x-4 min-w-0 2xl:grid-cols-10 2xl:gap-x-2">
             <div class="space-y-1.5">
-               <div class="w-full h-10 rounded ring-1 ring-inset ring-black ring-opacity-0 bg-indigo-50"></div>
+               <div class="w-full h-10 bg-indigo-50 rounded ring-1 ring-inset ring-black ring-opacity-0"></div>
                <div class="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
                   <div class="w-6 font-medium text-gray-900 dark:text-gray-400">50</div>
                   <div class="text-gray-900 dark:text-gray-400">#F0F5FF</div>
@@ -516,9 +516,9 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
                <div><code class="text-xs text-gray-500">colors.violet</code></div>
             </div>
          </div>
-         <div class="grid flex-1 min-w-0 grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2">
+         <div class="grid flex-1 grid-cols-5 gap-y-3 gap-x-4 min-w-0 2xl:grid-cols-10 2xl:gap-x-2">
             <div class="space-y-1.5">
-               <div class="w-full h-10 rounded ring-1 ring-inset ring-black ring-opacity-0 bg-purple-50"></div>
+               <div class="w-full h-10 bg-purple-50 rounded ring-1 ring-inset ring-black ring-opacity-0"></div>
                <div class="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
                   <div class="w-6 font-medium text-gray-900 dark:text-gray-400">50</div>
                   <div class="text-gray-900 dark:text-gray-400">#F6F5FF</div>
@@ -598,9 +598,9 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
                <div><code class="text-xs text-gray-500">colors.pink</code></div>
             </div>
          </div>
-         <div class="grid flex-1 min-w-0 grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2">
+         <div class="grid flex-1 grid-cols-5 gap-y-3 gap-x-4 min-w-0 2xl:grid-cols-10 2xl:gap-x-2">
             <div class="space-y-1.5">
-               <div class="w-full h-10 rounded ring-1 ring-inset ring-black ring-opacity-0 bg-pink-50"></div>
+               <div class="w-full h-10 bg-pink-50 rounded ring-1 ring-inset ring-black ring-opacity-0"></div>
                <div class="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
                   <div class="w-6 font-medium text-gray-900 dark:text-gray-400">50</div>
                   <div class="text-gray-900 dark:text-gray-400">#FDF2F8</div>

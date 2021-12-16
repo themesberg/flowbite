@@ -97,14 +97,14 @@ Use the following code to create list items with ordered and unordered lists.
 
 {{< preview github="components/typography.md" >}}
 <span class="font-normal text-blue-700 dark:text-blue-500">.list-disc</span>
-<ul class="pl-4 mb-6 text-gray-700 list-disc dark:text-gray-400">
+<ul class="pl-4 mb-6 list-disc text-gray-700 dark:text-gray-400">
     <li>Design</li>
     <li>Develop</li>
     <li>Test</li>
 </ul>
 
 <span class="font-normal text-blue-700 dark:text-blue-500">.list-decimal</span>
-<ol class="pl-4 mb-6 text-gray-700 list-decimal dark:text-gray-400">
+<ol class="pl-4 mb-6 list-decimal text-gray-700 dark:text-gray-400">
     <li>Design</li>
     <li>Develop</li>
     <li>Test</li>
@@ -144,13 +144,13 @@ Use the `list-inside` and `list-outside` classes to set the list item position i
 
 {{< preview github="components/typography.md" >}}
 <span class="font-normal text-blue-700 dark:text-blue-500">.list-inside</span>
-<ul class="mt-2 mb-6 text-green-700 list-disc list-inside bg-green-100 rounded-lg dark:bg-gray-700 dark:text-green-500">
+<ul class="mt-2 mb-6 list-disc list-inside text-green-700 bg-green-100 rounded-lg dark:bg-gray-700 dark:text-green-500">
     <li>Design</li>
     <li>Develop</li>
     <li>Test</li>
 </ul>
 <span class="font-normal text-blue-700 dark:text-blue-500">.list-outside</span>
-<ul class="mt-2 text-green-700 list-disc list-outside bg-green-100 rounded-lg dark:bg-gray-700 dark:text-green-500">
+<ul class="mt-2 list-disc list-outside text-green-700 bg-green-100 rounded-lg dark:bg-gray-700 dark:text-green-500">
     <li>Design</li>
     <li>Develop</li>
     <li>Test</li>

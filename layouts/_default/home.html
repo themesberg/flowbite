@@ -2,25 +2,27 @@
 
 {{ partial "docs-navbar" }}
 
-<div class="w-full px-4 mx-auto max-w-8xl">
+<div class="px-4 mx-auto w-full max-w-8xl">
   <div class="lg:flex">
     <!-- Sidebar -->
-    <aside id="sidebar" class="fixed inset-0 z-10 flex-none hidden w-full h-full lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-48 xl:w-72 lg:block">
+    <aside id="sidebar" class="hidden fixed inset-0 z-20 flex-none w-72 h-full lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-48 xl:w-72 lg:block">
       {{ partial "docs-sidebar" . }}
     </aside>
+
+    <div class="hidden fixed inset-0 z-10 bg-gray-900/50 dark:bg-gray-900/60" id="sidebarBackdrop"></div>
 
     <main id="content-wrapper" class="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible">
       <div class="flex w-full">
 
         <!-- Main content -->
-        <div class="flex-auto max-w-4xl min-w-0 pt-6 xl:px-8 lg:pt-10 pb:12 xl:pb-24 lg:pb-16">
+        <div class="flex-auto pt-6 min-w-0 max-w-4xl xl:px-8 lg:pt-10 pb:12 xl:pb-24 lg:pb-16">
 
           <!-- Intro -->
           <div class="pb-4 mb-10 border-b border-gray-200 dark:border-gray-800">
             {{ if ( eq .Page.Params.requires_js true) }}
               <div class="mb-5">
-                <a href="{{ "getting-started/quickstart/" | relURL }}" rel="nofollow" target="_blank" class="inline-flex items-center justify-between px-1 py-1 pr-4 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
-                  <span class="text-xs bg-blue-600 rounded-full text-white px-3 py-1.5 mr-3"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span> <span class="text-sm font-medium">Requires JS</span> <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                <a href="{{ "getting-started/quickstart/" | relURL }}" rel="nofollow" target="_blank" class="inline-flex justify-between items-center py-1 px-1 pr-4 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
+                  <span class="text-xs bg-blue-600 rounded-full text-white px-3 py-1.5 mr-3"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span> <span class="text-sm font-medium">Requires JS</span> <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
                 </a>
               </div>
             {{ end }}
@@ -56,14 +58,14 @@
               {{ end }}
             </div>
 
-            <aside id="revue-embed" class="p-4 my-8 bg-white border border-gray-200 rounded-lg shadow-md sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <aside id="revue-embed" class="p-4 my-8 bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700">
               <h3 class="mb-3 text-xl font-medium text-gray-900 dark:text-white">Get more updates...</h3>
               <p class="mb-5 text-sm font-medium text-gray-500 dark:text-gray-300">Do you want to get notified when a new component is added to Flowbite? Sign up for our newsletter and you'll be among the first to find out about new features, components, versions, and tools.</p>
               <form action="https://www.getrevue.co/profile/flowbite/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
               <div class="flex items-end mb-3">
-                <div class="relative w-full mr-3 revue-form-group">
-                  <label for="member_email" class="hidden block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email address</label>
-                  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <div class="relative mr-3 w-full revue-form-group">
+                  <label for="member_email" class="block hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email address</label>
+                  <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                     <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
                   </div>
                   <input class="revue-form-field bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your email address..." type="email" name="member[email]" id="member_email" required>
@@ -80,7 +82,7 @@
         </div>
 
         <!-- Table of content -->
-        <div class="flex-none hidden w-64 pl-8 mr-8 xl:text-sm xl:block">
+        <div class="hidden flex-none pl-8 mr-8 w-64 xl:text-sm xl:block">
           {{ if (eq .Page.Params.toc true) }}
           <div class="flex flex-col justify-between overflow-y-auto sticky max-h-(screen-18) pt-10 pb-6 top-12">
             <div class="mb-8">

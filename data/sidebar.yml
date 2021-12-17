@@ -24,6 +24,7 @@
     - title: Badge
     - title: Breadcrumb
     - title: Buttons
+      new: true
     - title: Button group
     - title: Card
     - title: Dropdowns

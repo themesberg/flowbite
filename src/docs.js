@@ -1,7 +1,5 @@
 // css for docs
 import './docs.css';
-// external js
-import './plugins/metamask';
 
 function fallbackCopyTextToClipboard(text) {
     var textArea = document.createElement("textarea");

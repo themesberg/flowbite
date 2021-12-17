@@ -16,7 +16,7 @@ The button component is probably the most widely used element in any user interf
 
 Flowbite provides a large variety of styles and sizes for the button component including outlined buttons, multiple colors, sizes, buttons with icons, and more.
 
-## Example
+## Default button
 
 Use these default button styles with multiple colors to indicate an action or link within your website.
 

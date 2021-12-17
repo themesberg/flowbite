@@ -69,7 +69,7 @@ These beautifully colored buttons built with the gradient color stops utility cl
   {{< requires_tw3 >}}
 </div>
 
-## Gradient Duotone
+## Gradient duotone
 
 These buttons use a style that includes two contrasted colors creating an impressive mesh gradient effect.
 
@@ -183,7 +183,7 @@ Use these button styles when building social media login forms using Facebook, T
   {{< requires_tw3 >}}
 </div>
 
-## Payment Buttons
+## Payment buttons
 
 Use these payment buttons for your product checkout or NFT minting landing page including MetaMask, Bitcoin, Ethereum, Paypal, Visa, Mastercard, and American Express.
 
@@ -221,7 +221,6 @@ Use these payment buttons for your product checkout or NFT minting landing page 
   Pay with Ethereum
 </button>
 {{< /example >}}
-
 
 ## Outline buttons
 

@@ -224,7 +224,7 @@ Use these payment buttons for your product checkout or NFT minting landing page 
 </button>
 {{< /example >}}
 
-If you want to apply the MetaMask animation then copy the <a href="https://pastebin.com/mjwQJ8d8" target="_blank" rel="nofollow noopener noreferrer">JavaScript code</a> from Pastebin.
+If you want to apply the MetaMask animation then copy the <a href="https://pastebin.com/QqhjVjU9" target="_blank" rel="nofollow noopener noreferrer">JavaScript code</a> from Pastebin.
 
 ## Outline buttons
 

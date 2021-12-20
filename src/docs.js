@@ -78,6 +78,8 @@ if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localS
 
 var themeToggleBtn = document.getElementById('theme-toggle');
 
+const event = new Event('dark-mode');
+
 themeToggleBtn.addEventListener('click', function() {
 
     // toggle icons
@@ -104,6 +106,8 @@ themeToggleBtn.addEventListener('click', function() {
             localStorage.setItem('color-theme', 'dark');
         }
     }
+
+    document.dispatchEvent(event);
     
 });
 

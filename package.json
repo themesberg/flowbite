@@ -39,6 +39,7 @@
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.8",
     "@themesberg/tailwind-datepicker": "^1.1.0",
+    "apexcharts": "^3.32.0",
     "autoprefixer": "^10.3.3",
     "babel-loader": "^8.2.2",
     "copyfiles": "^2.4.1",

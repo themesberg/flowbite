@@ -43,3 +43,5 @@
 - title: Plugins
   pages:
     - title: Datepicker
+    - title: Charts
+      new: true

@@ -85,6 +85,7 @@ if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localS
 }
 
 var themeToggleBtn = document.getElementById('theme-toggle');
+var event = new Event('dark-mode');
 
 themeToggleBtn.addEventListener('click', function() {
 
@@ -112,6 +113,9 @@ themeToggleBtn.addEventListener('click', function() {
             localStorage.setItem('color-theme', 'dark');
         }
     }
+
+    // use the "dark-mode" as an event listener to hook dark/light mode changes
+    document.dispatchEvent(event);
     
 });
 ```

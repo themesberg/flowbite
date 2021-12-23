@@ -152,7 +152,7 @@ If you want to show the tabs on the full width relative to the parent element yo
   {{< requires_js >}}
 </div>
 
-## Interactivee tabs
+## Interactive tabs
 
 Use the dynamic tabs component to interactively show and hide the content below the tabs based on the currently active tab item. Make sure that you initialize the component by using the `data-tabs-toggle="{parentTabContentSelector}"` and also apply an `id` attribute to the same element.
 

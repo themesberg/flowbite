@@ -14,5 +14,29 @@ previousLink: plugins/datepicker/
 Use these default button styles with multiple colors to indicate an action or link within your website.
 
 {{< example class="flex flex-wrap" github="components/buttons.md" >}}
-<div id="main-chart" class="w-full"></div>
+<div id="line-chart-example" class="w-full"></div>
+{{< /example >}}
+
+## Column chart
+
+Use these default button styles with multiple colors to indicate an action or link within your website.
+
+{{< example class="flex flex-wrap" github="components/buttons.md" >}}
+<div id="column-chart-example" class="w-full"></div>
+{{< /example >}}
+
+## Area chart
+
+Use these default button styles with multiple colors to indicate an action or link within your website.
+
+{{< example class="flex flex-wrap" github="components/buttons.md" >}}
+<div id="area-chart-example" class="w-full"></div>
+{{< /example >}}
+
+## Pie chart
+
+Use these default button styles with multiple colors to indicate an action or link within your website.
+
+{{< example class="flex flex-wrap" github="components/buttons.md" >}}
+<div id="pie-chart-example" class="w-full"></div>
 {{< /example >}}

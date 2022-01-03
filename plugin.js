@@ -263,18 +263,20 @@ module.exports = plugin(function ({ addBase, theme }) {
             color: theme('colors.blue.600', colors.blue[600]),
             'border-color': theme('colors.blue.600', colors.blue[500])
         },
-        [`div.apexcharts-tooltip.apexcharts-active`]: {
-            background: 'red',
-            // background: 'white',
-            color: colors.gray[500],
-            border: 0,
-            'border-radius': borderRadius.lg
-        },
-        [`.dark div.apexcharts-tooltip.apexcharts-active`]: {
-            background: theme('colors.gray.700', colors.gray[700]),
-            color: theme('colors.gray.400', colors.gray[400]),
-            border: 0
-        }
+        // [`div.apexcharts-tooltip.apexcharts-active`]: {
+        //     background: 'white',
+        //     color: colors.gray[500],
+        //     border: 0,
+        //     'border-radius': borderRadius.lg
+        // },
+        // [`.dark div.apexcharts-tooltip.apexcharts-active`]: {
+        //     background: theme('colors.gray.700', colors.gray[700]),
+        //     color: theme('colors.gray.400', colors.gray[400]),
+        //     border: 0
+        // },
+        // [`apexcharts-xaxistooltip-text`]: {
+
+        // }
     })
 }, {
     darkMode: 'class', // or 'media' or 'class',

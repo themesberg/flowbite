@@ -316,20 +316,24 @@ code.language-javascript .token.comment {
 }
 
 /* chart styles */
-/* .apexcharts-tooltip {
+.apexcharts-tooltip {
 	@apply bg-white dark:bg-gray-700 text-gray-500 dark:text-gray-400 border-0 rounded-lg shadow-lg !important;
-} */
+}
 
 .apexcharts-tooltip .apexcharts-tooltip-title {
-	@apply py-2 px-4 bg-gray-100 dark:bg-gray-600 border-b border-gray-200 dark:border-gray-500 !important;
+	@apply py-2 px-4 bg-gray-100 dark:bg-gray-600 border-b border-gray-200 dark:border-gray-500 font-normal !important;
 }
 
 .apexcharts-xaxistooltip {
 	@apply text-gray-500 border-0 bg-white dark:bg-gray-700 dark:text-gray-300 rounded-lg shadow-lg !important;
 }
 
+.apexcharts-tooltip .apexcharts-tooltip-text {
+	@apply font-normal;
+}
+
 .apexcharts-tooltip .apexcharts-tooltip-text-y-value {
-	@apply dark:text-white;
+	@apply font-medium dark:text-white;
 }
 
 .apexcharts-xaxistooltip-text {

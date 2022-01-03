@@ -181,7 +181,7 @@ Then in the same fashion you can initalize a date range picker component by usin
 
 ```javascript
 const dateRangePickerEl = document.getElementById('dateRangePickerId');
-new DateRangePicker(datepickerEl, {
+new DateRangePicker(dateRangePickerEl, {
     // options
 }); 
 ```

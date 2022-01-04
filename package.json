@@ -65,6 +65,7 @@
     "yarn": "^1.22.10"
   },
   "dependencies": {
+    "@docsearch/js": "^3.0.0-alpha.42",
     "@popperjs/core": "^2.9.3",
     "mini-svg-data-uri": "^1.4.3"
   }

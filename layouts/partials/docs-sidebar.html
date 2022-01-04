@@ -1,5 +1,4 @@
 <div id="navWrapper" class="overflow-hidden overflow-y-auto z-20 h-full bg-white scrolling-touch max-w-2xs lg:h-screen lg:block lg:sticky top:24 lg:top-12 dark:bg-gray-900 lg:mr-0">
-  <div id="docsearch" class="mt-10"></div>
   <nav id="nav" class="px-1 pl-3 lg:pl-0 lg:pt-2 overflow-y-auto font-medium text-base lg:text-sm pb-10 lg:pb-20 sticky?lg:h-(screen-18)" aria-label="Docs navigation">
     {{- $url := split .Permalink "/" -}}
     {{- $page_slug := index $url (sub (len $url) 2) -}}
@@ -18,7 +17,7 @@
       {{- $is_active_group := eq $.Page.Params.group $group_slug -}}
   
       {{- if $group.pages }}
-        <li class="mt-6">
+        <li class="mt-8">
           <h5 class="mb-3 text-sm font-semibold tracking-wide text-gray-900 uppercase lg:mb-3 lg:text-xs dark:text-white">{{ $group.title }}</h5>
           <ul class="py-1 list-unstyled fw-normal small">
             {{- range $doc := $group.pages -}}

@@ -318,7 +318,7 @@ code.language-javascript .token.comment {
 /* Search */
 
 .DocSearch-Button {
-	@apply p-2 m-0 w-full h-auto bg-gray-50 rounded-lg border border-gray-300 border-solid shadow-none hover:shadow-none focus:shadow-none hover:bg-gray-50 dark:bg-gray-700 dark:border-gray-600;
+	@apply p-2 m-0 w-full h-auto bg-gray-50 rounded-lg border border-gray-300 border-solid shadow-none lg:w-52 xl:w-64 hover:shadow-none focus:shadow-none hover:bg-gray-50 dark:bg-gray-700 dark:border-gray-600;
 }
 
 .DocSearch-Button-Placeholder {

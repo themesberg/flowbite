@@ -7,6 +7,7 @@ docsearch({
     appId: 'JUWZAHYJQ9',
     indexName: 'flowbite',
     apiKey: '63250f7f96b4ea48c49dbd149aab687c',
+    placeholder: 'Search documentation'
 });
 
 function fallbackCopyTextToClipboard(text) {

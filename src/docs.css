@@ -318,15 +318,15 @@ code.language-javascript .token.comment {
 /* Search */
 
 .DocSearch-Button {
-	@apply ml-4 bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-500 dark:focus:border-blue-500;
+	@apply p-2 m-0 w-full h-auto bg-gray-50 rounded-lg border border-gray-300 border-solid shadow-none hover:shadow-none focus:shadow-none hover:bg-gray-50 dark:bg-gray-700 dark:border-gray-600;
 }
 
 .DocSearch-Button-Placeholder {
-	@apply text-gray-500 font-normal dark:text-gray-400 text-sm;
+	@apply text-sm font-normal text-gray-500 dark:text-gray-400;
 }
 
 .DocSearch-Search-Icon {
-	@apply w-3 h-3 text-gray-500 dark:text-gray-400;
+	@apply mr-1 w-3 h-3 text-gray-500 dark:text-gray-400;
 }
 
 .DocSearch-Button-Keys {
@@ -334,5 +334,25 @@ code.language-javascript .token.comment {
 }
 
 .DocSearch-Button-Key {
-	@apply bg-none shadow-none text-gray-500 font-normal dark:text-gray-400 text-xs m-0 w-auto;
+	@apply pt-1 pb-0 m-0 w-auto text-xs font-normal text-gray-500 bg-none shadow-none dark:text-gray-400;
+}
+
+.DocSearch-Button .DocSearch-Search-Icon {
+	@apply text-gray-500;
+}
+
+.DocSearch-Hit-icon {
+	@apply hidden;
+}
+
+.DocSearch-Hits mark {
+	@apply text-blue-500;
+}
+
+.DocSearch-Hit[aria-selected=true] a {
+	@apply bg-blue-700;
+}
+
+.DocSearch-Hit-source {
+	@apply text-blue-600;
 }

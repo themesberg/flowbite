@@ -18,7 +18,7 @@
   
       {{- if $group.pages }}
         <li class="mt-8">
-          <h5 class="mb-3 text-sm font-semibold tracking-wide text-gray-900 uppercase lg:mb-3 lg:text-xs dark:text-white">{{ $group.title }}</h5>
+          <h5 class="mb-2 text-sm font-semibold tracking-wide text-gray-900 uppercase lg:text-xs dark:text-white">{{ $group.title }}</h5>
           <ul class="py-1 list-unstyled fw-normal small">
             {{- range $doc := $group.pages -}}
               {{- $doc_slug := $doc.title | urlize -}}

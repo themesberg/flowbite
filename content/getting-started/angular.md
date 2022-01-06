@@ -1,24 +1,19 @@
 ---
 layout: home
-title: Flowbite - Changelog
+title: Tailwind CSS Angular - Flowbite
 description: Read more about the releases made for FlowBite from the official changelog
 group: getting-started
 toc: true
 
-previous: License
-previousLink: getting-started/license/
-next: Configuration
-nextLink: customize/configuration/
+previous: Vue
+previousLink: getting-started/vue/
+next: License
+nextLink: getting-started/license/
 ---
 
 ## Changelog
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
-
-### v1.3.0
-
-- provide React, Vue, and Angular support for the interactive elements
-- update the main plugin file based on Tailwind CSS v3.x
 
 ### v1.2.0
 

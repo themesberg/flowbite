@@ -7,12 +7,14 @@ const toggleCollapse = (elementId, show = true) => {
     }
 }
 
-// Toggle target elements using [data-collapse-toggle]
-document.querySelectorAll('[data-collapse-toggle]').forEach(function (collapseToggleEl) {
-    var collapseId = collapseToggleEl.getAttribute('data-collapse-toggle');
+document.addEventListener('DOMContentLoaded', () => {
+    // Toggle target elements using [data-collapse-toggle]
+    document.querySelectorAll('[data-collapse-toggle]').forEach(function (collapseToggleEl) {
+        var collapseId = collapseToggleEl.getAttribute('data-collapse-toggle');
 
-    collapseToggleEl.addEventListener('click', function() {
-        toggleCollapse(collapseId, document.getElementById(collapseId).classList.contains('hidden'));
+        collapseToggleEl.addEventListener('click', function () {
+            toggleCollapse(collapseId, document.getElementById(collapseId).classList.contains('hidden'));
+        });
     });
 });
 

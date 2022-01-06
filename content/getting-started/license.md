@@ -5,8 +5,8 @@ description: Learn more about the licensing terms for FlowBite and Tailwind CSS
 group: getting-started
 toc: true
 
-previous: Quickstart
-previousLink: getting-started/quickstart/
+previous: Vue
+previousLink: getting-started/vue/
 next: Changelog
 nextLink: getting-started/changelog/
 ---

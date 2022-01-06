@@ -8,8 +8,8 @@ requires_vue: true
 
 previous: React
 previousLink: getting-started/react/
-next: Angular
-nextLink: getting-started/angular/
+next: License
+nextLink: getting-started/license/
 ---
 
 Vue.js is a popular front-end library used by websites such as Behance, Nintendo, Gitlab, Font Awesome, and more that you can use to build modern web applications. By installing Tailwind CSS and Flowbite you can build your project even faster using the utility-first approach from Tailwind and the interactive components from Flowbite.

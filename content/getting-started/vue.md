@@ -98,3 +98,5 @@ Now you can start the local server by running `npm run dev` in your terminal.
 You can start using all of the components from Flowbite in your Vue.js project as long as you've properly followed the instructions above and installed both Tailwind CSS and Flowbite.
 
 The interactive elements such as the dropdowns, modals, and tooltips will work based on the settings that you apply using the data attributes.
+
+We are currently working on a standalone Vue.js project where you will be able to include these interactive elements directly as Vue components and programatically work with them instead of just using the data attributes.

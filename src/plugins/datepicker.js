@@ -30,14 +30,16 @@ const getDatepickerOptions = (datepickerEl) => {
     return options;
 }
 
-document.querySelectorAll('[datepicker]').forEach(function (datepickerEl) {
-    new Datepicker(datepickerEl, getDatepickerOptions(datepickerEl));
-});
-
-document.querySelectorAll('[inline-datepicker]').forEach(function (datepickerEl) {
-    new Datepicker(datepickerEl, getDatepickerOptions(datepickerEl));
-});
-
-document.querySelectorAll('[date-rangepicker]').forEach(function (datepickerEl) {
-    new DateRangePicker(datepickerEl, getDatepickerOptions(datepickerEl));
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[datepicker]').forEach(function (datepickerEl) {
+        new Datepicker(datepickerEl, getDatepickerOptions(datepickerEl));
+    });
+    
+    document.querySelectorAll('[inline-datepicker]').forEach(function (datepickerEl) {
+        new Datepicker(datepickerEl, getDatepickerOptions(datepickerEl));
+    });
+    
+    document.querySelectorAll('[date-rangepicker]').forEach(function (datepickerEl) {
+        new DateRangePicker(datepickerEl, getDatepickerOptions(datepickerEl));
+    });
 });

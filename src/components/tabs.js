@@ -12,6 +12,11 @@ document.querySelectorAll('[data-tabs-toggle]').forEach(function (tabsToggleEl) 
             var tabTargetSelector = tabToggleEl.getAttribute('data-tabs-target');
             var tabContentEl = document.querySelector(tabTargetSelector);
 
+            // save as last tab if has attribute data-tabs-save
+            if(tabToggleEl.getAttribute('data-tabs-save') !== null){
+                localStorage.setItem('dataTabSave', tabToggleEl.getAttribute('id'));
+            }
+
             // don't do anything if it's already active
             if (tabToggleEl !== activeTabToggleEl) {
 
@@ -21,15 +26,15 @@ document.querySelectorAll('[data-tabs-toggle]').forEach(function (tabsToggleEl) 
                     activeTabContentEl = document.querySelector(activeTabToggleEl.getAttribute('data-tabs-target'));
                 }
 
-                // show and activate tab
-                tabToggleEl.classList.add('active');
-                tabToggleEl.setAttribute('aria-selected', true);
-                tabContentEl.classList.remove('hidden');
-
                 // hide and deactive currently active tab toggle and content
                 activeTabToggleEl.setAttribute('aria-selected', false);
                 activeTabToggleEl.classList.remove('active');
                 activeTabContentEl.classList.add('hidden');
+
+                // show and activate tab
+                tabToggleEl.classList.add('active');
+                tabToggleEl.setAttribute('aria-selected', true);
+                tabContentEl.classList.remove('hidden');
 
                 // set currently active toggle and content tabs
                 activeTabToggleEl = tabToggleEl;
@@ -38,4 +43,10 @@ document.querySelectorAll('[data-tabs-toggle]').forEach(function (tabsToggleEl) 
 
         });
     });
+
+    // load most recent tab safe from local storage
+    var localTabSave = localStorage.getItem('dataTabSave');
+    if(localTabSave !== null){
+        document.getElementById(localTabSave).click();
+    }
 });

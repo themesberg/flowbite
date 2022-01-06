@@ -1,9 +1,10 @@
 ---
 layout: home
 title: Tailwind CSS Vue - Flowbite
-description: Learn how to install and set up Tailwind CSS with Flowbite for your Vue project and start developing modern web applications with interactive components
+description: Learn how to install and set up Tailwind CSS with Flowbite for your Vue.js project and start developing modern web applications with interactive components
 group: getting-started
 toc: true
+requires_vue: true
 
 previous: React
 previousLink: getting-started/react/
@@ -94,3 +95,6 @@ Now you can start the local server by running `npm run dev` in your terminal.
 
 ## Flowbite components in Vue.js
 
+You can start using all of the components from Flowbite in your Vue.js project as long as you've properly followed the instructions above and installed both Tailwind CSS and Flowbite.
+
+The interactive elements such as the dropdowns, modals, and tooltips will work based on the settings that you apply using the data attributes.

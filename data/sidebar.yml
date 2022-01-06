@@ -7,7 +7,7 @@
     - title: Quickstart
     - title: React
     - title: Vue
-    - title: Angular
+    # - title: Angular
     - title: License
     - title: Changelog
 

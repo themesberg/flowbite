@@ -111,6 +111,26 @@ And include the following javascript file before the end of the `body` element:
 
 Please remember that the best way to work with Tailwind CSS and Flowbite is by purging the CSS classes.
 
+<div class="mt-8 -mb-5">
+  {{< requires_react >}}
+</div>
+
+## React
+
+If you're using React as a front-end library you can also use the components from Flowbite including the interactive ones such as the dropdowns, modals, and tooltips as long as you install Tailwind CSS and Flowbite in an existing project.
+
+Learn how to <a href="{{< ref "getting-started/react" >}}">install Tailwind CSS and Flowbite with React</a>.
+
+<div class="mt-8 -mb-5">
+  {{< requires_vue >}}
+</div>
+
+## Vue.js
+
+The components from Flowbite can also be used any new or existing Vue 3 projects as long as you install Tailwind CSS and Flowbite.
+
+Learn how to <a href="{{< ref "getting-started/vue" >}}">install Tailwind CSS and Flowbite with Vue.js</a>.
+
 ## Figma design files
 
 The components from Flowbite are first conceptualized and designed in Figma using the latest features such as variants, auto-layout, grids, responsive layouts, and more.

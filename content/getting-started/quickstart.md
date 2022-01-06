@@ -71,6 +71,14 @@ And include the following javascript file before the end of the `body` element:
 <script src="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.bundle.js"></script>
 ```
 
+## React
+
+You can use all of the components from Flowbite including the interactive ones for any React application. Check out this guide to learn how to <a href="{{< ref "getting-started/react" >}}">use Flowbite inside a React project</a> by installing Tailwind CSS and the Flowbite library.
+
+## Vue.js
+
+All of the components from Flowbite are supported in Vue 3 as long as you have Tailwind CSS installed and the Flowbite library includes. Check out this guide to learn how to <a href="{{< ref "getting-started/vue" >}}">use Flowbite inside a Vue.js project</a> by installing Tailwind CSS and Flowbite.
+
 ## Github repository
 
 The source files are also available to be cloned or downloaded from the official <a href="https://github.com/themesberg/flowbite" target="_blank">FlowBite Github repository</a>. Don't forget to give it a star if you appreciate the project.

@@ -57,7 +57,7 @@ module.exports = {
 5. Install Flowbite by running the following command in your terminal:
 
 ```bash
-npm install -D @themesberg/flowbite
+npm install @themesberg/flowbite
 ```
 
 6. Require Flowbite as a plugin inside your `tailwind.config.js` file:

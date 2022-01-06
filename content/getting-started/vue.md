@@ -11,7 +11,7 @@ next: Angular
 nextLink: getting-started/angular/
 ---
 
-Vue is a popular front-end library used by websites such as Behance, Nintendo, Gitlab, Font Awesome, and more that you can use to build modern web applications. By installing Tailwind CSS and Flowbite you can build your project even faster using the utility-first approach from Tailwind and the interactive components from Flowbite.
+Vue.js is a popular front-end library used by websites such as Behance, Nintendo, Gitlab, Font Awesome, and more that you can use to build modern web applications. By installing Tailwind CSS and Flowbite you can build your project even faster using the utility-first approach from Tailwind and the interactive components from Flowbite.
 
 ## Install Tailwind CSS and Flowbite with Vue 3 and Vite
 
@@ -92,5 +92,5 @@ import '@themesberg/flowbite';
 
 Now you can start the local server by running `npm run dev` in your terminal.
 
-## Working with Flowbite components in Vue
+## Flowbite components in Vue.js
 

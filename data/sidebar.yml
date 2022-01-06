@@ -6,6 +6,7 @@
     - title: Introduction
     - title: Quickstart
     - title: React
+      new: true
     - title: Vue
     # - title: Angular
     - title: License
@@ -36,7 +37,6 @@
     - title: Typography
     - title: Modal
     - title: Tabs
-      new: true
     - title: Navbar
     - title: Pagination
     - title: Progress

@@ -80,6 +80,18 @@ module.exports = {
 import '@themesberg/flowbite';
 ```
 
+8. Additionally to your own `content` data you should add `@themesberg/flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
+
+```javascript
+module.exports = {
+
+    content: [
+        "./node_modules/@themesberg/flowbite/**/*.js"
+    ]
+
+}
+```
+
 Now you can start the server by running `npm run start` or build the project using `npm run build`.
 
 ## Flowbite components in React

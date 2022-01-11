@@ -41,6 +41,18 @@ module.exports = {
 <script src="../path/to/@themesberg/flowbite/dist/flowbite.bundle.js"></script>
 ```
 
+4. Additionally to your own `content` data you should add `@themesberg/flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
+
+```javascript
+module.exports = {
+
+    content: [
+        "./node_modules/@themesberg/flowbite/**/*.js"
+    ]
+
+}
+```
+
 If you use Webpack or other bundlers you can also import it like this:
 
 ```javascript

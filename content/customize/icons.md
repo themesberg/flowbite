@@ -13,7 +13,7 @@ nextLink: customize/optimization/
 
 ## SVG icons
 
-The icons used in FlowBite are the SVG-powered <a href="https://heroicons.dev/" target="_blank">Hero Icons</a> built by one the creators of Tailwind CSS.
+The icons used in FlowBite are the SVG-powered <a href="https://heroicons.dev/" target="_blank">Hero Icons</a> built by one of the creators of Tailwind CSS.
 
 {{<example>}}
 <!-- A few examples from Hero Icons -->

@@ -6,8 +6,8 @@ group: components
 toc: true
 requires_js: true
 
-previous: Tables
-previousLink: components/tables/
+previous: Toast
+previousLink: components/toast/
 
 next: Datepicker
 nextLink: plugins/datepicker/

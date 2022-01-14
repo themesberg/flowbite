@@ -6,7 +6,6 @@
     - title: Introduction
     - title: Quickstart
     - title: React
-      new: true
     - title: Vue
     # - title: Angular
     - title: License
@@ -43,6 +42,8 @@
       new: true
     - title: Progress
     - title: Tables
+    - title: Toast
+      new: true
     - title: Tooltips
 
 - title: Plugins

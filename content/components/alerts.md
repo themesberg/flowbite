@@ -15,7 +15,7 @@ The alert component can be used to provide information to your users such as suc
 
 Flowbite also includes dismissable alerts which can be hidden by the users by clicking on the close icon.
 
-## Default alerts
+## Default alert
 
 Use the following examples of alert components to show messages as feedback to your users.
 

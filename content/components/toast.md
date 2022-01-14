@@ -1,25 +1,23 @@
 ---
 layout: home
 title: Tailwind CSS Toast - Flowbite
-description: Use these responsive tabs components to create a secondary navigational hierarchy for your website or toggle content inside a container
+description: Push notifications to your users using the toast component and choose from multiple sizes, colors, styles, and positionings
 group: components
 toc: true
 
-previous: Modal
-previousLink: components/modal/
-next: Navbar
-nextLink: components/navbar/
+previous: Tables
+previousLink: components/tables/
+next: Tooltips
+nextLink: components/tooltips/
 ---
 
-The tabs component can be used either as an extra navigational hierarchy complementing the main navbar or you can also use it to change content inside a container just below the tabs using the data attributes from Flowbite.
+The toast component can be used to enhance your website's interactivity by pushing notifications to your visitors. You can choose from multiple styles, colors, sizes, and positionings and even dismiss the component by using the `data-collapse-toggle` data attribute from Flowbite.
 
-## Default
+## Default toast
 
-Use the following default tabs component example to show a list of links that the user can navigate from on your website.
-
-{{< example github="components/tabs.md" >}}
-<div id="toast-1" class="flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:bg-gray-800" role="alert">
-    <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg">
+{{< example github="components/toast.md" >}}
+<div id="toast-1" class="flex items-center p-4 mb-4 w-full max-w-xs text-gray-500 bg-white rounded-lg shadow dark:bg-gray-800" role="alert">
+    <div class="inline-flex flex-shrink-0 justify-center items-center w-8 h-8 text-green-500 bg-green-100 rounded-lg">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
     </div>
     <div class="ml-3 text-sm font-normal">Item moved successfully.</div>
@@ -32,10 +30,8 @@ Use the following default tabs component example to show a list of links that th
 
 ## Simple
 
-Use the following default tabs component example to show a list of links that the user can navigate from on your website.
-
-{{< example github="components/tabs.md" >}}
-<div id="toast-1" class="flex items-center w-full max-w-xs p-4 mb-4 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow space-x dark:bg-gray-800" role="alert">
+{{< example github="components/toast.md" >}}
+<div id="toast-1" class="flex items-center p-4 mb-4 space-x-4 w-full max-w-xs text-gray-500 bg-white rounded-lg divide-x divide-gray-200 shadow space-x dark:bg-gray-800" role="alert">
     <svg class="w-5 h-5 text-blue-600" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="paper-plane" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M511.6 36.86l-64 415.1c-1.5 9.734-7.375 18.22-15.97 23.05c-4.844 2.719-10.27 4.097-15.68 4.097c-4.188 0-8.319-.8154-12.29-2.472l-122.6-51.1l-50.86 76.29C226.3 508.5 219.8 512 212.8 512C201.3 512 192 502.7 192 491.2v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96l-293.7 264.3L19.69 317.5C8.438 312.8 .8125 302.2 .0625 289.1s5.469-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z"></path></svg>
     <div class="pl-4 text-sm font-normal">Message sent successfully.</div>
 </div>
@@ -43,10 +39,8 @@ Use the following default tabs component example to show a list of links that th
 
 ## Undo
 
-Use the following default tabs component example to show a list of links that the user can navigate from on your website.
-
-{{< example github="components/tabs.md" >}}
-<div id="toast-1" class="flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:bg-gray-800" role="alert">
+{{< example github="components/toast.md" >}}
+<div id="toast-1" class="flex items-center p-4 mb-4 w-full max-w-xs text-gray-500 bg-white rounded-lg shadow dark:bg-gray-800" role="alert">
     <div class="text-sm font-normal">
        Conversation archived.
     </div>
@@ -62,10 +56,8 @@ Use the following default tabs component example to show a list of links that th
 
 ## With CTA
 
-Use the following default tabs component example to show a list of links that the user can navigate from on your website.
-
-{{< example github="components/tabs.md" >}}
-<div id="toast-2" class="w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:bg-gray-800 dark:text-gray-300" role="alert">
+{{< example github="components/toast.md" >}}
+<div id="toast-2" class="p-4 mb-4 w-full max-w-xs text-gray-500 bg-white rounded-lg shadow dark:bg-gray-800 dark:text-gray-300" role="alert">
     <div class="flex">
         <img class="w-8 h-8 rounded-full shadow-lg" src="/docs/images/people/profile-picture-1.jpg" alt="Jese Leos image"/>
         <div class="ml-3 text-sm font-normal">
@@ -83,10 +75,8 @@ Use the following default tabs component example to show a list of links that th
 
 ## With avatar and icon
 
-Use the following default tabs component example to show a list of links that the user can navigate from on your website.
-
-{{< example github="components/tabs.md" >}}
-<div id="toast-2" class="w-full max-w-xs p-4 mb-4 text-gray-900 bg-white rounded-lg shadow dark:bg-gray-800 dark:text-gray-300" role="alert">
+{{< example github="components/toast.md" >}}
+<div id="toast-2" class="p-4 mb-4 w-full max-w-xs text-gray-900 bg-white rounded-lg shadow dark:bg-gray-800 dark:text-gray-300" role="alert">
     <div class="flex items-center mb-3">
         <h3 class="mb-1 text-sm font-semibold text-gray-900">New notification</h3>
         <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1 hover:bg-gray-100 inline-flex items-center h-6 w-6 dark:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700" data-collapse-toggle="toast-2" aria-label="Close">
@@ -95,9 +85,9 @@ Use the following default tabs component example to show a list of links that th
         </button>
     </div>
     <div class="flex items-center">
-        <div class="relative inline-block shrink-0">
+        <div class="inline-block relative shrink-0">
             <img class="w-12 h-12 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese Leos image"/>
-            <span class="absolute bottom-0 right-0 inline-flex items-center justify-center block w-6 h-6 bg-blue-600 rounded-full">
+            <span class="block inline-flex absolute right-0 bottom-0 justify-center items-center w-6 h-6 bg-blue-600 rounded-full">
                 <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
             </span>
         </div>
@@ -110,15 +100,12 @@ Use the following default tabs component example to show a list of links that th
 </div>
 {{< /example >}}
 
-
 ## With CTA
 
-Use the following default tabs component example to show a list of links that the user can navigate from on your website.
-
-{{< example github="components/tabs.md" >}}
-<div id="toast-2" class="w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:bg-gray-800 dark:text-gray-300" role="alert">
+{{< example github="components/toast.md" >}}
+<div id="toast-2" class="p-4 mb-4 w-full max-w-xs text-gray-500 bg-white rounded-lg shadow dark:bg-gray-800 dark:text-gray-300" role="alert">
     <div class="flex">
-        <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-blue-500 bg-blue-100 rounded-lg">
+        <div class="inline-flex flex-shrink-0 justify-center items-center w-8 h-8 text-blue-500 bg-blue-100 rounded-lg">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path></svg>
         </div>
         <div class="ml-3 text-sm font-normal">

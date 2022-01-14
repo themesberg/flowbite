@@ -15,7 +15,7 @@ The badge component can be used to complement other elements such as buttons or 
 
 Alternatively, badges can also be used as standalone elements that link to a certain page by using the anchor tag instead of a `span` element.
 
-## Default example
+## Default badge
 
 Use the following badge elements to indicate counts or labels inside or outside components.
 

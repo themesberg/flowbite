@@ -13,8 +13,7 @@ nextLink: components/tabs/
 ---
 
 The modal component is an interactive element that you can use to show user dialogs using data attributes which comes in multiple variants and sizes.
-
-## Default example
+## Default modal
 
 In order to create a modal with Tailwind CSS you only have to add `data-modal-toggle="modalId"` data attribute where `modalId` is the id of the modal that you are targeting.
 

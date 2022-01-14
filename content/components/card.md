@@ -12,7 +12,6 @@ nextLink: components/dropdowns/
 ---
 
 Use these responsive card components to show data entries and information to your users in multiple forms and contexts such as for your blog, application, user profiles, and more.
-
 ## Default example
 
 Use the following simple card with a title and description.

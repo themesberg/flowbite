@@ -17,8 +17,9 @@ We strive to keep a good accountability of all of the version changes that we ma
 
 ### v1.3.0
 
-- provide React, Vue, and Angular support for the interactive elements
+- add new timeline component
 - update the main plugin file based on Tailwind CSS v3.x
+- provide React, Vue, and Angular support for the interactive elements
 
 ### v1.2.0
 

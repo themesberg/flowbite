@@ -7,8 +7,8 @@ toc: true
 
 previous: Progress
 previousLink: components/progress/
-next: Tooltips
-nextLink: components/tooltips/
+next: Toast
+nextLink: components/toast/
 ---
 
 Tables are important components when you want to show complex set of data within your website. You can use Flowbite's responsive table components and the multiple styles that it comes with.
@@ -136,7 +136,7 @@ Use this alternative table style which uses an alternating background color for 
                     </thead>
                     <tbody>
                         <!-- Product 1 -->
-                        <tr class="odd:bg-white even:bg-gray-50 border-b odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
+                        <tr class="border-b odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 Apple MacBook Pro 17"
                             </td>
@@ -154,7 +154,7 @@ Use this alternative table style which uses an alternating background color for 
                             </td>
                         </tr>
                         <!-- Product 2 -->
-                        <tr class="odd:bg-white even:bg-gray-50 border-b odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
+                        <tr class="border-b odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 Apple Imac 27"
                             </td>
@@ -172,7 +172,7 @@ Use this alternative table style which uses an alternating background color for 
                             </td>
                         </tr>
                         <!-- Product 3 -->
-                        <tr class="odd:bg-white even:bg-gray-50 border-b odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
+                        <tr class="border-b odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 iPhone 13 Pro 
                             </td>
@@ -190,7 +190,7 @@ Use this alternative table style which uses an alternating background color for 
                             </td>
                         </tr>
                         <!-- Product 4 -->
-                        <tr class="odd:bg-white even:bg-gray-50 border-b odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
+                        <tr class="border-b odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 Apple Magic Mouse 2
                             </td>
@@ -208,7 +208,7 @@ Use this alternative table style which uses an alternating background color for 
                             </td>
                         </tr>
                         <!-- Product 5 -->
-                        <tr class="odd:bg-white even:bg-gray-50 border-b odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
+                        <tr class="border-b odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 Apple Watch Series 7
                             </td>

@@ -5,8 +5,8 @@ description: Use the progress bar component to show the completion rate of a dat
 group: components
 toc: true
 
-previous: Pagination
-previousLink: components/pagination/
+previous: Timeline
+previousLink: components/timeline/
 next: Tables
 nextLink: components/tables/
 ---

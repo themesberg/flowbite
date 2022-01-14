@@ -5,10 +5,10 @@ description: Get started with the responsive timeline component to show data in 
 group: components
 toc: true
 
-previous: Modal
-previousLink: components/modal/
-next: Navbar
-nextLink: components/navbar/
+previous: Pagination
+previousLink: components/pagination/
+next: Progress
+nextLink: components/progress/
 ---
 
 The timeline component can be used to show series of data in a chronological order for use cases such as activity feeds, user actions, application updates, and more. Get started with multiple vertical timeline styles built with the utility classes from Tailwind CSS and Flowbite.
@@ -19,7 +19,7 @@ Use this responsive Tailwind CSS timeline component to show a series of data ent
 
 Optionally, you can also add a CTA button to any of the timeline elements.
 
-{{< example github="components/tabs.md" >}}
+{{< example github="components/timeline.md" >}}
 <ol class="relative border-l border-gray-200 dark:border-gray-700">                  
     <li class="mb-10 ml-4">
         <div class="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -47,7 +47,7 @@ Optionally, you can also add a CTA button to any of the timeline elements.
 
 Use this vertical timeline component with icons and badges to show a more advanced set of data.
 
-{{< example github="components/tabs.md" >}}
+{{< example github="components/timeline.md" >}}
 <ol class="relative border-l border-gray-200 dark:border-gray-700">                  
     <li class="mb-10 ml-6">            
         <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
@@ -77,11 +77,11 @@ Use this vertical timeline component with icons and badges to show a more advanc
 </ol>
 {{< /example >}}
 
-## Activity feed
+## Activity log
 
 This component can be used to show the timline of a user's activity history inside your application by using an avatar, datetime, description, and links to specific pages.
 
-{{< example github="components/tabs.md" >}}
+{{< example github="components/timeline.md" >}}
 <ol class="relative border-l border-gray-200 dark:border-gray-700">                  
     <li class="mb-10 ml-6">            
         <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
@@ -116,11 +116,11 @@ This component can be used to show the timline of a user's activity history insi
 </ol>
 {{< /example >}}
 
-## With cards
+## Grouped timeline
 
-Use the following default tabs component example to show a list of links that the user can navigate from on your website.
+Use this timeline component to group multiple data entries inside a single date and show elements like avatars, title, description, and tags.
 
-{{< example github="components/tabs.md" >}}
+{{< example github="components/timeline.md" >}}
 <div class="p-5 mb-4 bg-gray-50 rounded-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
     <time class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">January 13, 2022</time>
     <ol class="divide-y divider-gray-200 dark:divide-gray-700">

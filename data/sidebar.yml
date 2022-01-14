@@ -39,6 +39,8 @@
     - title: Tabs
     - title: Navbar
     - title: Pagination
+    - title: Timeline
+      new: true
     - title: Progress
     - title: Tables
     - title: Tooltips

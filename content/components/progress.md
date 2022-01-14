@@ -1,15 +1,17 @@
 ---
 layout: home
 title: Tailwind CSS Progress Bar - Flowbite
-description: Use these Tailwind CSS progress bar elements to show the completion rate of something
+description: Use the progress bar component to show the completion rate of a data indicator or use it as a loader element
 group: components
 toc: true
 
-previous: Pagination
-previousLink: components/pagination/
+previous: Timeline
+previousLink: components/timeline/
 next: Tables
 nextLink: components/tables/
 ---
+
+The progress bar component can be used as an indicator to show the completion rate of data sets or it can be used as an animated loader component. There are multiple sizes, colors, and styles available.
 
 ## Default example
 
@@ -31,7 +33,7 @@ You can also use different sizes by using various sizing utility classes from Fl
   <div class="bg-gray-600 h-1.5 rounded-full dark:bg-gray-300" style="width: 45%"></div>
 </div>
 <div class="mb-1 text-base font-medium dark:text-white">Default</div>
-<div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700 dark:bg-gray-700">
+<div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
   <div class="bg-gray-600 h-2.5 rounded-full dark:bg-gray-300" style="width: 45%"></div>
 </div>
 <div class="mb-1 text-lg font-medium dark:text-white">Large</div>

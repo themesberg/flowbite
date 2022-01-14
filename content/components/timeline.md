@@ -122,8 +122,8 @@ Use this component to group multiple data entries inside a single date and show 
 
 {{< example github="components/timeline.md" >}}
 <div class="p-5 mb-4 bg-gray-50 rounded-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
-    <time class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">January 13, 2022</time>
-    <ol class="divide-y divider-gray-200 dark:divide-gray-700">
+    <time class="text-lg font-semibold text-gray-900 dark:text-white">January 13th, 2022</time>
+    <ol class="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
         <li>
             <a href="#" class="block items-center p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                 <img class="mr-3 mb-3 w-12 h-12 rounded-full sm:mb-0" src="/docs/images/people/profile-picture-1.jpg" alt="Jese Leos image"/>
@@ -152,8 +152,8 @@ Use this component to group multiple data entries inside a single date and show 
     </ol>
 </div>
 <div class="p-5 bg-gray-50 rounded-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
-    <time class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">January 10, 2022</time>
-    <ol class="divide-y divider-gray-200 dark:divide-gray-700">
+    <time class="text-lg font-semibold text-gray-900 dark:text-white">January 12th, 2022</time>
+    <ol class="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
         <li>
             <a href="#" class="block items-center p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                 <img class="mr-3 mb-3 w-12 h-12 rounded-full sm:mb-0" src="/docs/images/people/profile-picture-4.jpg" alt="Laura Romeros image"/>

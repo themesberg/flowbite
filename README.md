@@ -24,9 +24,30 @@ Flowbite can be included as a plugin into an existing Tailwind CSS project and i
 
 👉 [See all components](https://flowbite.com/docs/getting-started/introduction/)
 
-| Alerts | Badge | Breadcrumbs |
-| --- | --- | --- |
-| [![Tailwind CSS Alerts](https://flowbite.s3.amazonaws.com/github/alerts.jpg)](https://flowbite.com/docs/components/alerts/) | [![Tailwind CSS Badge](https://flowbite.s3.amazonaws.com/github/badge.jpg)](https://flowbite.com/docs/components/badge/) | [![Tailwind CSS Breadcrumbs](https://flowbite.s3.amazonaws.com/github/breadcrumbs.jpg)](https://flowbite.com/docs/components/breadcrumb/)
+<table>
+  <tr>
+    <td style="width: 33.3333%">Alerts</td>
+    <td style="width: 33.3333%">Badge</td>
+    <td style="width: 33.3333%">Breadcrumbs</td>
+  </tr>
+  <tr>
+    <td style="width: 33.3333%">
+        <a href="https://flowbite.com/docs/components/alerts/">
+            <img alt="Tailwind CSS Alerts" src="https://flowbite.s3.amazonaws.com/github/alerts.jpg">
+        </a>
+    </td>
+    <td style="width: 33.3333%">
+        <a href="https://flowbite.com/docs/components/badge/">
+            <img alt="Tailwind CSS Badge" src="https://flowbite.s3.amazonaws.com/github/badge.jpg">
+        </a>
+    </td>
+    <td style="width: 33.3333%">
+        <a href="https://flowbite.com/docs/components/breadcrumb/">
+            <img alt="Tailwind CSS Breadcrumbs" src="https://flowbite.s3.amazonaws.com/github/breadcrumbs.jpg">
+        </a>
+    </td>
+  </tr>
+</table>
 
 ### Require via NPM
 

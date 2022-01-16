@@ -18,7 +18,7 @@ The toast component can be used to enhance your website's interactivity by pushi
 
 Use this simple toast component with an icon, message, and dismissable close button to show alert messages to your website visitors. Make sure that you set the correct id for the `data-collapse-toggle` data attribute to enable the dismissable feature.
 
-{{< example github="components/tabs.md" >}}
+{{< example github="components/toast.md" >}}
 <div id="toast-default" class="flex items-center w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
     <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-blue-500 bg-blue-100 rounded-lg dark:bg-blue-800 dark:text-blue-200">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path></svg>
@@ -35,7 +35,7 @@ Use this simple toast component with an icon, message, and dismissable close but
 
 Use these contextual toast components to show success, danger, or warning alert messages to your users.
 
-{{< example github="components/tabs.md" >}}
+{{< example github="components/toast.md" >}}
 <div id="toast-success" class="flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
     <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -72,7 +72,7 @@ Use these contextual toast components to show success, danger, or warning alert 
 
 This component can be used to show simple messages and notifications without the use of a close button.
 
-{{< example github="components/tabs.md" >}}
+{{< example github="components/toast.md" >}}
 <div id="toast-simple" class="flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800" role="alert">
     <svg class="w-5 h-5 text-blue-600 dark:text-blue-500" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="paper-plane" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M511.6 36.86l-64 415.1c-1.5 9.734-7.375 18.22-15.97 23.05c-4.844 2.719-10.27 4.097-15.68 4.097c-4.188 0-8.319-.8154-12.29-2.472l-122.6-51.1l-50.86 76.29C226.3 508.5 219.8 512 212.8 512C201.3 512 192 502.7 192 491.2v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96l-293.7 264.3L19.69 317.5C8.438 312.8 .8125 302.2 .0625 289.1s5.469-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z"></path></svg>
     <div class="pl-4 text-sm font-normal">Message sent successfully.</div>
@@ -83,7 +83,7 @@ This component can be used to show simple messages and notifications without the
 
 Use this toast component to also show an "undo" button to reverse the action of the user.
 
-{{< example github="components/tabs.md" >}}
+{{< example github="components/toast.md" >}}
 <div id="toast-undo" class="flex items-center w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
     <div class="text-sm font-normal">
        Conversation archived.
@@ -102,7 +102,7 @@ Use this toast component to also show an "undo" button to reverse the action of 
 
 This component can be used to show messages and a CTA button when receiveing chat messages, comment notifications, and other use cases.
 
-{{< example github="components/tabs.md" >}}
+{{< example github="components/toast.md" >}}
 <div id="toast-message-cta" class="w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow dark:bg-gray-800 dark:text-gray-400" role="alert">
     <div class="flex">
         <img class="w-8 h-8 rounded-full shadow-lg" src="/docs/images/people/profile-picture-1.jpg" alt="Jese Leos image"/>
@@ -152,7 +152,7 @@ This component can be used to show notifications for an action from another user
 
 Use this interactive toast component to encourage users to make a certain action such as updating to the latest software version. You can set an icon, message, and two CTA buttons.
 
-{{< example github="components/tabs.md" >}}
+{{< example github="components/toast.md" >}}
 <div id="toast-interactive" class="w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow dark:bg-gray-800 dark:text-gray-400" role="alert">
     <div class="flex">
         <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-blue-500 bg-blue-100 rounded-lg dark:text-blue-300 dark:bg-blue-900">
@@ -187,7 +187,7 @@ Use the `absolute` class from Tailwind CSS to position these toast components re
 - Bottom left: `absolute bottom-5 left-5`
 - Bottom right: `absolute bottom-5 right-5`
 
-{{< example github="components/tabs.md" class="relative h-56" >}}
+{{< example github="components/toast.md" class="relative h-56" >}}
 <div id="toast-top-left" class="absolute top-5 left-5 flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800" role="alert">
     <div class="text-sm font-normal">Top left positioning.</div>
 </div>

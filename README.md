@@ -18,9 +18,9 @@
 
 For full documentation, visit [flowbite.com](https://flowbite.com/).
 
-## Getting started
+## Components
 
-Flowbite can be included as a plugin into an existing Tailwind CSS project and it is supposed to help you build websites faster by having a set of web components to work with built with the utility classes from Tailwind CSS.
+Flowbite is an open source collection of UI components built with the utility classes from Tailwind CSS that you can use as a starting point when coding user interfaces and websites.
 
 👉 [See all components](https://flowbite.com/docs/getting-started/introduction/)
 
@@ -179,6 +179,10 @@ Flowbite can be included as a plugin into an existing Tailwind CSS project and i
 </table>
 
 👉 [See all components](https://flowbite.com/docs/getting-started/introduction/)
+
+## Getting started
+
+Flowbite can be included as a plugin into an existing Tailwind CSS project and it is supposed to help you build websites faster by having a set of web components to work with built with the utility classes from Tailwind CSS.
 
 ### Require via NPM
 

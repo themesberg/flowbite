@@ -47,7 +47,138 @@ Flowbite can be included as a plugin into an existing Tailwind CSS project and i
         </a>
     </td>
   </tr>
+  <tr>
+    <td width="33.3333%">Buttons</td>
+    <td width="33.3333%">Button group</td>
+    <td width="33.3333%">Cards</td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/buttons/">
+            <img alt="Tailwind CSS Buttons" src="https://flowbite.s3.amazonaws.com/github/buttons.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/button-group/">
+            <img alt="Tailwind CSS Button Group" src="https://flowbite.s3.amazonaws.com/github/button-group.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/card/">
+            <img alt="Tailwind CSS Cards" src="https://flowbite.s3.amazonaws.com/github/cards.jpg">
+        </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Dropdown</td>
+    <td width="33.3333%">Forms</td>
+    <td width="33.3333%">List group</td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/dropdowns/">
+            <img alt="Tailwind CSS Dropdown" src="https://flowbite.s3.amazonaws.com/github/dropdown.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/forms/">
+            <img alt="Tailwind CSS Forms" src="https://flowbite.s3.amazonaws.com/github/forms.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/list-group/">
+            <img alt="Tailwind CSS List group" src="https://flowbite.s3.amazonaws.com/github/list-group.jpg">
+        </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Typography</td>
+    <td width="33.3333%">Modal</td>
+    <td width="33.3333%">Tabs</td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/typography/">
+            <img alt="Tailwind CSS Typography" src="https://flowbite.s3.amazonaws.com/github/typography.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/modal/">
+            <img alt="Tailwind CSS Modal" src="https://flowbite.s3.amazonaws.com/github/modal.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/tabs/">
+            <img alt="Tailwind CSS Tabs" src="https://flowbite.s3.amazonaws.com/github/tabs.jpg">
+        </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Navbar</td>
+    <td width="33.3333%">Pagination</td>
+    <td width="33.3333%">Timeline</td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/navbar/">
+            <img alt="Tailwind CSS Navbar" src="https://flowbite.s3.amazonaws.com/github/navbar.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/pagination/">
+            <img alt="Tailwind CSS Pagination" src="https://flowbite.s3.amazonaws.com/github/pagination.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/timeline/">
+            <img alt="Tailwind CSS Timeline" src="https://flowbite.s3.amazonaws.com/github/timeline.jpg">
+        </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Progress bar</td>
+    <td width="33.3333%">Tables</td>
+    <td width="33.3333%">Toast</td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/progress/">
+            <img alt="Tailwind CSS Progress Bar" src="https://flowbite.s3.amazonaws.com/github/progress.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/tables/">
+            <img alt="Tailwind CSS Tables" src="https://flowbite.s3.amazonaws.com/github/tables.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/toast/">
+            <img alt="Tailwind CSS Toast" src="https://flowbite.s3.amazonaws.com/github/toast.jpg">
+        </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Tooltips</td>
+    <td width="33.3333%">Datepicker</td>
+    <td width="33.3333%"></td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/tooltips/">
+            <img alt="Tailwind CSS Tooltips" src="https://flowbite.s3.amazonaws.com/github/tooltips.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/plugins/datepicker/">
+            <img alt="Tailwind CSS Datepicker" src="https://flowbite.s3.amazonaws.com/github/datepicker.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+    </td>
+  </tr>
 </table>
+
+👉 [See all components](https://flowbite.com/docs/getting-started/introduction/)
 
 ### Require via NPM
 

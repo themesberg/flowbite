@@ -11,7 +11,7 @@ next: List group
 nextLink: components/list-group/
 ---
 
-Get started with these custom Tailwind CSS form components to gather information from your users using input text elements, checkboxes, radios, textareas, selects, file uploads, switches, and more.
+Get started with these custom Tailwind CSS form components to gather information from your users using input text elements, checkboxes, radios, textareas, selects, file uploads, toggle switches, and more.
 ## Form example
 
 This is an example of a form component including an email, password, checkbox, and submit button that you can use as a starting point for any form element in your website using Flowbite and Tailwind CSS.
@@ -277,9 +277,9 @@ Use the following Tailwind CSS file upload element to receive any type of file f
   {{< requires_js >}}
 </div>
 
-## Toggle (switches)
+## Toggle Switch
 
-Use the following toggle (switches) element to ask for a yes or no type of input from your users without the use of JavaScript.
+Use the following toggle switch component to ask for a yes or no type of input from your users without the use of JavaScript.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" >}}
 <label for="toggle-example" class="flex relative items-center mb-4 cursor-pointer">

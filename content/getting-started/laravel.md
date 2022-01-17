@@ -18,11 +18,11 @@ Use the officially recommended Tailwind CSS utility-first framework and the UI c
 
 ## Install Tailwind CSS with Laravel
 
-Follow the next steps to install Tailwind CSS and Flowbite with Laravel Mix.
-
 Make sure that you have <a href="https://getcomposer.org/" target="_blank" rel="nofollow">Composer</a> and <a href="https://nodejs.org/en/" target="_blank" rel="nofollow">Node.js</a> installed locally on your computer.
 
-1. Require the Laravel Installer globally using Composer.
+Follow the next steps to install Tailwind CSS and Flowbite with Laravel Mix. 
+
+1. Require the Laravel Installer globally using Composer:
 
 ```bash
 composer global require laravel/installer
@@ -78,6 +78,8 @@ module.exports = {
     ],
   }
 ```
+
+This will tell the compiler from Tailwidn what files to look for to properly apply the classes inside the final CSS file and it will also install the extra plugin options from Flowbite.
 
 6. Add Tailwind CSS to your Laravel Mix configuration by requiring it inside the `webpack.mix.js` file:
 

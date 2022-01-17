@@ -6,6 +6,7 @@
     - title: Introduction
     - title: Quickstart
     - title: Laravel
+      new: true
     - title: React
     - title: Vue
     # - title: Angular

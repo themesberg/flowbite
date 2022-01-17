@@ -153,11 +153,11 @@ The components from Flowbite can also be used any new or existing Vue 3 projects
 
 Learn how to <a href="{{< ref "getting-started/vue" >}}">install Tailwind CSS and Flowbite with Vue.js</a>.
 
-## Figma design files
+## Figma
 
 The components from Flowbite are first conceptualized and designed in Figma using the latest features such as variants, auto-layout, grids, responsive layouts, and more.
 
-Learn more by checking out <a href="https://flowbite.com/figma/" target="_blank">Flowbite's Figma design files</a> and start designing your Tailwind CSS projects before actually coding them.
+Learn more by checking out <a href="https://flowbite.com/figma/" target="_blank">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
 
 ## Upgrade to Pro
 

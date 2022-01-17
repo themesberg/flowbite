@@ -124,6 +124,16 @@ And include the following javascript file before the end of the `body` element:
 Please remember that the best way to work with Tailwind CSS and Flowbite is by purging the CSS classes.
 
 <div class="mt-8 -mb-5">
+  {{< requires_laravel >}}
+</div>
+
+## Laravel
+
+If you're running a Laravel application you can easily set up Tailwind CSS and Flowbite and start developing user interfaces based on the utility-first classes and components.
+
+Learn how to <a href="{{< ref "getting-started/laravel" >}}">install Tailwind CSS and Flowbite with Laravel</a>.
+
+<div class="mt-8 -mb-5">
   {{< requires_react >}}
 </div>
 

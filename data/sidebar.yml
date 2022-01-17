@@ -5,6 +5,7 @@
   pages:
     - title: Introduction
     - title: Quickstart
+    - title: Laravel
     - title: React
     - title: Vue
     # - title: Angular

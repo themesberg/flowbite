@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Laravel - Flowbite
-description: Learn how to install and set up Tailwind CSS with Flowbite for your Laravel project and start building modern websites with the most popular PHP framework in the world
+description: Learn how to install and set up Tailwind CSS with Flowbite using Laravel Mix and start building modern websites with the most popular PHP framework in the world
 group: getting-started
 toc: true
 requires_laravel: true
@@ -18,7 +18,7 @@ Use the officially recommended Tailwind CSS utility-first framework and the UI c
 
 ## Install Tailwind CSS with Laravel
 
-Follow the next steps to install Tailwind CSS and Flowbite with Laravel.
+Follow the next steps to install Tailwind CSS and Flowbite with Laravel Mix.
 
 Make sure that you have <a href="https://getcomposer.org/" target="_blank" rel="nofollow">Composer</a> and <a href="https://nodejs.org/en/" target="_blank" rel="nofollow">Node.js</a> installed locally on your computer.
 

@@ -68,7 +68,7 @@
 #mainContent > p > code,
 #mainContent > ul > li > code,
 #mainContent > ol > li > code {
-	@apply px-1 font-mono text-sm text-blue-600 dark:text-blue-400;
+	@apply px-1 font-mono text-sm text-blue-600 break-all dark:text-blue-400;
 }
 
 #mainContent > ul {
@@ -318,7 +318,7 @@ code.language-javascript .token.comment {
 /* Search */
 
 .DocSearch-Button {
-	@apply hidden md:flex p-2 m-0 h-auto bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-300 border-solid shadow-none w-52 xl:w-64 hover:shadow-none focus:shadow-none dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600;
+	@apply hidden p-2 m-0 w-52 h-auto bg-gray-50 rounded-lg border border-gray-300 border-solid shadow-none md:flex hover:bg-gray-100 xl:w-64 hover:shadow-none focus:shadow-none dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600;
 }
 
 .DocSearch-Button-Placeholder {
@@ -326,7 +326,7 @@ code.language-javascript .token.comment {
 }
 
 .DocSearch-Search-Icon {
-	@apply md:mr-1 w-3 h-3 text-gray-500 dark:text-gray-400;
+	@apply w-3 h-3 text-gray-500 md:mr-1 dark:text-gray-400;
 }
 
 .DocSearch-Button-Keys {
@@ -354,7 +354,7 @@ code.language-javascript .token.comment {
 }
 
 .DocSearch-Hit-source {
-	@apply text-gray-700 bg-white dark:bg-gray-700 dark:text-gray-400 pb-1;
+	@apply pb-1 text-gray-700 bg-white dark:bg-gray-700 dark:text-gray-400;
 }
 
 .DocSearch-Container {
@@ -374,11 +374,11 @@ code.language-javascript .token.comment {
 }
 
 .DocSearch-Input {
-	@apply shadow-none text-sm text-gray-500 dark:text-white focus:shadow-none focus:ring-0 dark:bg-gray-700;
+	@apply text-sm text-gray-500 shadow-none dark:text-white focus:shadow-none focus:ring-0 dark:bg-gray-700;
 }
 
 .DocSearch-LoadingIndicator svg, .DocSearch-MagnifierLabel svg {
-	@apply h-4 w-4;
+	@apply w-4 h-4;
 }
 
 .DocSearch-Commands {
@@ -386,7 +386,7 @@ code.language-javascript .token.comment {
 }
 
 .DocSearch-Footer {
-	@apply shadow-none border-t border-gray-100 h-12 dark:bg-gray-700 dark:border-gray-600;
+	@apply h-12 border-t border-gray-100 shadow-none dark:bg-gray-700 dark:border-gray-600;
 }
 
 .DocSearch-Dropdown {
@@ -394,11 +394,11 @@ code.language-javascript .token.comment {
 }
 
 .DocSearch-Hit {
-	@apply shadow-none pb-2;
+	@apply pb-2 shadow-none;
 }
 
 .DocSearch-Hit a {
-	@apply shadow-none dark:bg-gray-600 rounded-lg bg-gray-50 dark:hover:bg-blue-600;
+	@apply bg-gray-50 rounded-lg shadow-none dark:bg-gray-600 dark:hover:bg-blue-600;
 }
 
 .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-Select-Icon,
@@ -407,7 +407,7 @@ code.language-javascript .token.comment {
 }
 
 .DocSearch-Hit .DocSearch-Hit-action:last-child {
-	@apply h-5 w-5;
+	@apply w-5 h-5;
 	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m11 9 3 3-3 3' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
@@ -422,7 +422,7 @@ code.language-javascript .token.comment {
 }
 
 .DocSearch-Title {
-	@apply text-gray-700 dark:text-gray-200 font-normal text-lg mb-1;
+	@apply mb-1 text-lg font-normal text-gray-700 dark:text-gray-200;
 }
 
 .DocSearch-Hit-Container {

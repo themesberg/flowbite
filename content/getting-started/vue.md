@@ -107,7 +107,7 @@ module.exports = {
 
 Now you can start the local server by running `npm run dev` in your terminal.
 
-## Flowbite components in Vue.js
+## Flowbite components
 
 You can start using all of the components from Flowbite in your Vue.js project as long as you've properly followed the instructions above and installed both Tailwind CSS and Flowbite.
 

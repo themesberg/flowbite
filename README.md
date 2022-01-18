@@ -22,8 +22,6 @@ For full documentation, visit [flowbite.com](https://flowbite.com/).
 
 Flowbite is an open source collection of UI components built with the utility classes from Tailwind CSS that you can use as a starting point when coding user interfaces and websites.
 
-👉 [See all components](https://flowbite.com/docs/getting-started/introduction/)
-
 <table>
   <tr>
     <td width="33.3333%">Alerts</td>

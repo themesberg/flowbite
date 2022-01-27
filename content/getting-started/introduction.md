@@ -175,7 +175,7 @@ Please reach out to us via the <a href="https://github.com/themesberg/flowbite" 
 
 ## Discord community
 
-Feel free to join our <a href="https://discord.gg/qAbMDYbE" target="_blank" rel="nofollow">community on Discord</a> to receive help, contribute to the project, or just discuss about Flowbite, Tailwind CSS, and web development in general.
+Feel free to join our <a href="https://discord.gg/4eeurUVvTy" target="_blank" rel="nofollow">community on Discord</a> to receive help, contribute to the project, or just discuss about Flowbite, Tailwind CSS, and web development in general.
 
 ## Authors
 

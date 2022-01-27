@@ -240,7 +240,7 @@ If you need help or just want to discuss about the library join the community on
 
 For casual chatting with others using the library:
 
-[Join the Flowbite Discord Server](https://discord.com/invite/4eeurUVvTy)
+[Join the Flowbite Discord Server](https://discord.gg/4eeurUVvTy)
 
 ## Figma
 

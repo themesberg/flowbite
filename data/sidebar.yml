@@ -44,8 +44,9 @@
       new: true
     - title: Progress
     - title: Tables
-    - title: Toast
+    - title: Spinner
       new: true
+    - title: Toast
     - title: Tooltips
 
 - title: Plugins

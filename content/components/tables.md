@@ -7,8 +7,8 @@ toc: true
 
 previous: Progress
 previousLink: components/progress/
-next: Toast
-nextLink: components/toast/
+next: Spinner
+nextLink: components/spinner/
 ---
 
 Tables are important components when you want to show complex set of data within your website. You can use Flowbite's responsive table components and the multiple styles that it comes with.

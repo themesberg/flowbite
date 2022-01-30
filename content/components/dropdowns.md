@@ -16,7 +16,7 @@ You can use the Tailwind CSS dropdown element from Flowbite to show a menu when 
 
 ## Dropdown example
 
-If you want to show a dropdown menu when clicking on an element, make sure that you add the the `data-dropdown-toggle="dropdownId"` data attribute to the element that will toggle the dropdown menu.
+If you want to show a dropdown menu when clicking on an element, make sure that you add the `data-dropdown-toggle="dropdownId"` data attribute to the element that will toggle the dropdown menu.
 
 The `dropdownId` is the id of the dropdown menu element.
 

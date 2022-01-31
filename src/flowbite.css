@@ -6,21 +6,3 @@
 “Have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.”
 ― Steve Jobs
 */
-
-.origin-0 {
-transform-origin: 0%;
-}
-
-input:focus ~ label,
-input:not(:placeholder-shown) ~ label,
-textarea:focus ~ label,
-textarea:not(:placeholder-shown) ~ label,
-select:focus ~ label,
-select:not([value='']):valid ~ label {
-    @apply transform scale-75 -translate-y-6;
-}
-
-input:focus ~ label,
-select:focus ~ label {
-    @apply left-0 text-blue-600 dark:text-blue-500;
-}

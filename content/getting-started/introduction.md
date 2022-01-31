@@ -79,7 +79,7 @@ module.exports = {
 <script src="../path/to/@themesberg/flowbite/dist/flowbite.bundle.js"></script>
 ```
 
-4. Additionally to your own `content` data you should add `@themesberg/flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
+4. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
 
 ```javascript
 module.exports = {

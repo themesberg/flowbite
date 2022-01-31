@@ -205,16 +205,16 @@ If you have a website with many pages you can use this footer component to show 
             <h3 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Download</h3>
             <ul>
                 <li class="mb-4">
-                    <a href="#" target="_blank" rel="noreferrer" class="font-normal text-gray-300 hover:underline">MacOS</a>
+                    <a href="#" target="_blank" rel="noreferrer" class="font-normal text-gray-300 hover:underline">iOS</a>
                 </li>
                 <li class="mb-4">
                     <a href="#" target="_blank" rel="noreferrer" class="font-normal text-gray-300 hover:underline">Android</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#" target="_blank" rel="noreferrer" class="font-normal text-gray-300 hover:underline">Iphone</a>
+                    <a href="#" target="_blank" rel="noreferrer" class="font-normal text-gray-300 hover:underline">Windows</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#" target="_blank" rel="noreferrer" class="font-normal text-gray-300 hover:underline">Windows</a>
+                    <a href="#" target="_blank" rel="noreferrer" class="font-normal text-gray-300 hover:underline">MacOS</a>
                 </li>
             </ul>
         </div>

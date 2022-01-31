@@ -38,7 +38,7 @@ Released on November 29th, 2021.
 
 ### v1.1.0
 
-- separated the datepicker plugin from the main `flowbite.bundle.js` file and instead created a separate one which is optional to include
+- separated the datepicker plugin from the main `flowbite.js` file and instead created a separate one which is optional to include
 - added more dropdown component variants and placement options
 - reset form styles and move the extra pseudo CSS styles inside the Flowbite Tailwind CSS plugin file (no longer need to write it yourself)
 - create new styles and options for the tooltip component and remove Tippy JS as a dependency

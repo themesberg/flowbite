@@ -14,17 +14,17 @@ The Tailwind CSS datepicker component developed by Flowbite is built with vanill
 
 ## Getting started
 
-If you want to use the datepicker component plugin from Flowbite you have to include the `datepicker.bundle.js` file either from NPM or CDN into your project.
+If you want to use the datepicker component plugin from Flowbite you have to include the `datepicker.js` file either from NPM or CDN into your project.
 
 Follow the [quickstart guide]({{< ref "getting-started/quickstart" >}}) and then include the following JavaScript file:
 
 ```html
-<script src="../path/to/@themesberg/flowbite/dist/datepicker.bundle.js"></script>
+<script src="../path/to/flowbite/dist/datepicker.js"></script>
 ```
 Alternatively you can also use CDN to include the datepicker JavaScript.
 
 ```html
-<script src="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/datepicker.bundle.js"></script>
+<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/datepicker.js"></script>
 ```
 
 If you'd like to manually be able to manipulate the datepicker component using JavaScript then you should <a href="#javascript">install the plugin using NPM</a> and include it into your JavaScript code.

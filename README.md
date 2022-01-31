@@ -7,7 +7,7 @@
 
 <p>
     <a href="https://discord.com/invite/4eeurUVvTy"><img src="https://img.shields.io/discord/902911619032576090?color=%237289da&label=Discord" alt="Discord"></a>
-    <a href="https://www.npmjs.com/package/@themesberg/flowbite"><img src="https://img.shields.io/npm/dt/@themesberg/flowbite.svg" alt="Total Downloads"></a>
+    <a href="https://www.npmjs.com/package//flowbite"><img src="https://img.shields.io/npm/dt//flowbite.svg" alt="Total Downloads"></a>
     <a href="https://github.com/themesberg/flowbite/releases"><img src="https://img.shields.io/npm/v/@themesberg/flowbite.svg" alt="Latest Release"></a>
     <a href="https://flowbite.com/docs/getting-started/license/"><img src="https://img.shields.io/badge/license-MIT-blue" alt="Licenese"></a>
 </p>
@@ -189,7 +189,7 @@ Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="
 1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
-npm i @themesberg/flowbite
+npm install flowbite
 ```
 
 2. Require Flowbite as a plugin inside the `tailwind.config.js` file:
@@ -198,7 +198,7 @@ npm i @themesberg/flowbite
 module.exports = {
 
     plugins: [
-        require('@themesberg/flowbite/plugin')
+        require('flowbite/plugin')
     ]
 
 }
@@ -207,13 +207,13 @@ module.exports = {
 3. Include the main JavaScript file to make interactive elements work:
 
 ```html
-<script src="../path/to/@themesberg/flowbite/dist/flowbite.bundle.js"></script>
+<script src="../path/to/flowbite/dist/flowbite.js"></script>
 ```
 
 If you use Webpack or other bundlers you can also import it like this:
 
 ```javascript
-import '@themesberg/flowbite';
+import 'flowbite';
 ```
 
 ### Include via CDN
@@ -223,13 +223,13 @@ The quickest way to get started working with FlowBite is to simply include the C
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/flowbite@latest/dist/flowbite.min.css" />
 ```
 
 And include the following javascript file before the end of the `body` element:
 
 ```html
-<script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+<script src="https://unpkg.com/flowbite@latest/dist/flowbite.js"></script>
 ```
 
 ## Community

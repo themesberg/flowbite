@@ -49,7 +49,7 @@ This command will initialize a blank Laravel project that you can get started wi
 3. Install Tailwind CSS and Flowbite using NPM:
 
 ```javascript
-npm install -D tailwindcss postcss autoprefixer @themesberg/flowbite
+npm install -D tailwindcss postcss autoprefixer flowbite
 ```
 
 4. Create a Tailwind CSS config file:
@@ -68,13 +68,13 @@ module.exports = {
       "./resources/**/*.blade.php",
       "./resources/**/*.js",
       "./resources/**/*.vue",
-      "./node_modules/@themesberg/flowbite/**/*.js"
+      "./node_modules/flowbite/**/*.js"
     ],
     theme: {
       extend: {},
     },
     plugins: [
-        require('@themesberg/flowbite/plugin')
+        require('flowbite/plugin')
     ],
   }
 ```
@@ -107,16 +107,16 @@ mix.js("resources/js/app.js", "public/js")
 <link href="/css/app.css" rel="stylesheet">
 ```
 
-9. Require the `flowbite.bundle.js` file before the end of the `<body>` tag:
+9. Require the `flowbite.js` file before the end of the `<body>` tag:
 
 ```html
-<script src="../path/to/@themesberg/flowbite/dist/flowbite.bundle.js"></script>
+<script src="../path/to/flowbite/dist/flowbite.js"></script>
 ```
 
 Alternatively, you can also include the JavaScript file using CDN:
 
 ```html
-<script src="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.bundle.js"></script>
+<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
 ```
 
 Now that you've set everything up start up a local development server using `php artisan serve` and run the build process for Webpack by using `npm run watch`.

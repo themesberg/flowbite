@@ -70,35 +70,35 @@ Use the following simple card with a title rand description.
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-                <h3 class="mb-6 text-sm font-semibold text-gray-600 uppercase">Resources</h3>
+                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h3>
                 <ul>
                     <li class="mb-4">
-                        <a href="https://github.com/themesberg" target="_blank" rel="noreferrer" class="font-normal text-gray-600 hover:underline">Flowbite</a>
+                        <a href="https://github.com/themesberg" target="_blank" rel="noreferrer" class="font-normal text-gray-600 hover:underline dark:text-gray-400">Flowbite</a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/themesberg" target="_blank" rel="noreferrer" class="font-normal text-gray-600 hover:underline">Themesberg</a>
+                        <a href="https://twitter.com/themesberg" target="_blank" rel="noreferrer" class="font-normal text-gray-600 hover:underline dark:text-gray-400">Themesberg</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <h3 class="mb-6 text-sm font-semibold text-gray-600 uppercase">Help</h3>
+                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help</h3>
                 <ul>
                     <li class="mb-4">
-                        <a href="https://github.com/themesberg" target="_blank" rel="noreferrer" class="font-normal text-gray-600 hover:underline">Discord</a>
+                        <a href="https://github.com/themesberg" target="_blank" rel="noreferrer" class="font-normal text-gray-600 hover:underline dark:text-gray-400">Discord</a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/themesberg" target="_blank" rel="noreferrer" class="font-normal text-gray-600 hover:underline">Contact Us</a>
+                        <a href="https://twitter.com/themesberg" target="_blank" rel="noreferrer" class="font-normal text-gray-600 hover:underline dark:text-gray-400">Contact Us</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <h3 class="mb-6 text-sm font-semibold text-gray-600 uppercase">Legal</h3>
+                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h3>
                 <ul>
                     <li class="mb-4">
-                        <a href="https://themesberg.com/privacy-policy" target="_blank" rel="noreferrer" class="font-normal text-gray-600 hover:underline">Privacy Policy</a>
+                        <a href="https://themesberg.com/privacy-policy" target="_blank" rel="noreferrer" class="font-normal text-gray-600 hover:underline dark:text-gray-400">Privacy Policy</a>
                     </li>
                     <li>
-                        <a href="https://themesberg.com/terms-and-conditions" target="_blank" rel="noreferrer" class="font-normal text-gray-600 hover:underline">Terms &amp; Conditions</a>
+                        <a href="https://themesberg.com/terms-and-conditions" target="_blank" rel="noreferrer" class="font-normal text-gray-600 hover:underline dark:text-gray-400">Terms &amp; Conditions</a>
                     </li>
                 </ul>
             </div>
@@ -203,7 +203,7 @@ Use the following simple card with a title rand description.
         </div>
     </div>
     <div class="px-4 py-6 bg-gray-700 md:flex md:items-center md:justify-between">
-        <span class="text-sm font-normal text-gray-300 sm:text-center dark:text-gray-400">© <span id="currentYear"></span> <a href="https://flowbite.com">Flowbite™</a>. All Rights Reserved.
+        <span class="text-sm font-normal text-gray-300 sm:text-center">© <span id="currentYear"></span> <a href="https://flowbite.com">Flowbite™</a>. All Rights Reserved.
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center md:mt-0">
             <a href="#" class="text-gray-400 hover:text-white">

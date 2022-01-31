@@ -10,7 +10,7 @@ module.exports = {
     docs: path.resolve(__dirname, 'src/docs.js')
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'static/'),
   },
   module: {

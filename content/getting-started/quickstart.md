@@ -29,7 +29,7 @@ npm i flowbite
 module.exports = {
 
     plugins: [
-        require('flowbite/plugin')
+        require('@themesberg/flowbite/plugin')
     ]
 
 }
@@ -47,7 +47,7 @@ module.exports = {
 module.exports = {
 
     content: [
-        "./node_modules/flowbite/**/*.js"
+        "./node_modules/@themesberg/flowbite/**/*.js"
     ]
 
 }
@@ -56,7 +56,7 @@ module.exports = {
 If you use Webpack or other bundlers you can also import it like this:
 
 ```javascript
-import 'flowbite';
+import '@themesberg/flowbite';
 ```
 
 ### Tailwind CSS v2.x
@@ -74,13 +74,13 @@ The quickest way to get started working with FlowBite is to simply include the C
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.min.css" />
 ```
 
 And include the following javascript file before the end of the `body` element:
 
 ```html
-<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
+<script src="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.bundle.js"></script>
 ```
 
 ## React

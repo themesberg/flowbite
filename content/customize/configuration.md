@@ -51,7 +51,7 @@ module.exports = {
   },
   plugins: [
     // include Flowbite as a plugin in your Tailwind CSS project
-    require('flowbite/plugin')
+    require('@themesberg/flowbite/plugin')
   ]
 }
 ```
@@ -112,7 +112,7 @@ The `plugins` object lets you define which external plugin you would like to inc
 // tailwind.config.js
 module.exports = {
   plugins: [
-    require('flowbite/plugin'),
+    require('@themesberg/flowbite/plugin'),
     // ...
   ],
 }

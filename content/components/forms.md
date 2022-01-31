@@ -38,6 +38,30 @@ This is an example of a form component including an email, password, checkbox, a
 </form>
 {{< /example >}}
 
+## Floating labels
+
+{{< example class="dark:bg-gray-800" github="components/forms.md" >}}
+<form>
+  <div class="relative z-0 mb-6 w-full">
+      <input type="email" name="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600" placeholder=" " required />
+      <label for="floating_email" class="absolute top-3 text-sm text-gray-500 duration-300 -z-10 origin-0">Email</label>
+  </div>
+  <div class="relative z-0 mb-6 w-full">
+      <input type="password" name="floating_password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600" placeholder=" " required />
+      <label for="floating_password" class="absolute top-3 text-sm text-gray-500 duration-300 -z-10 origin-0">Password</label>
+  </div>
+  <div class="flex items-start mb-6">
+    <div class="flex items-center h-5">
+      <input id="floating_remember" aria-describedby="floating_remember" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
+    </div>
+    <div class="ml-3 text-sm">
+      <label for="floating_remember" class="font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+    </div>
+  </div>
+  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+</form>
+{{< /example >}}
+
 ## Input Sizing
 
 Use the following utility classes to create three different sizing options (large, base, and small) for your form input elements.
@@ -157,7 +181,7 @@ Use the following code to create a textarea form element.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" >}}
 <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-<textarea id="message" rows="4" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+<textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
 {{< /example >}}
 
 ## Select input

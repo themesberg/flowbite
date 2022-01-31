@@ -59,7 +59,7 @@ module.exports = {
 5. Install Flowbite by running the following command in your terminal:
 
 ```bash
-npm install @themesberg/flowbite
+npm install flowbite
 ```
 
 6. Require Flowbite as a plugin inside your `tailwind.config.js` file:
@@ -68,7 +68,7 @@ npm install @themesberg/flowbite
 module.exports = {
 
     plugins: [
-        require('@themesberg/flowbite/plugin')
+        require('flowbite/plugin')
     ]
 
 }
@@ -77,16 +77,16 @@ module.exports = {
 7. Import the Flowbite JavaScript file inside your main `index.js` file:
 
 ```bash
-import '@themesberg/flowbite';
+import 'flowbite';
 ```
 
-8. Additionally to your own `content` data you should add `@themesberg/flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
+8. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
 
     content: [
-        "./node_modules/@themesberg/flowbite/**/*.js"
+        "./node_modules/flowbite/**/*.js"
     ]
 
 }

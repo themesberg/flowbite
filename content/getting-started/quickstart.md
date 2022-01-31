@@ -20,7 +20,7 @@ Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="
 1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
-npm i @themesberg/flowbite
+npm i flowbite
 ```
 
 2. Require Flowbite as a plugin inside the `tailwind.config.js` file:
@@ -29,7 +29,7 @@ npm i @themesberg/flowbite
 module.exports = {
 
     plugins: [
-        require('@themesberg/flowbite/plugin')
+        require('flowbite/plugin')
     ]
 
 }
@@ -38,16 +38,16 @@ module.exports = {
 3. Include the main JavaScript file to make interactive elements work:
 
 ```html
-<script src="../path/to/@themesberg/flowbite/dist/flowbite.bundle.js"></script>
+<script src="../path/to/flowbite/dist/flowbite.js"></script>
 ```
 
-4. Additionally to your own `content` data you should add `@themesberg/flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
+4. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
 
     content: [
-        "./node_modules/@themesberg/flowbite/**/*.js"
+        "./node_modules/flowbite/**/*.js"
     ]
 
 }
@@ -56,7 +56,7 @@ module.exports = {
 If you use Webpack or other bundlers you can also import it like this:
 
 ```javascript
-import '@themesberg/flowbite';
+import 'flowbite';
 ```
 
 ### Tailwind CSS v2.x
@@ -74,13 +74,13 @@ The quickest way to get started working with FlowBite is to simply include the C
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.css" />
 ```
 
 And include the following javascript file before the end of the `body` element:
 
 ```html
-<script src="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.bundle.js"></script>
+<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
 ```
 
 ## React

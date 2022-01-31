@@ -28,7 +28,7 @@ This is an example of a form component including an email, password, checkbox, a
   </div>
   <div class="flex items-start mb-6">
     <div class="flex items-center h-5">
-      <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
+      <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
     </div>
     <div class="ml-3 text-sm">
       <label for="remember" class="font-medium text-gray-900 dark:text-gray-300">Remember me</label>
@@ -42,20 +42,20 @@ This is an example of a form component including an email, password, checkbox, a
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" >}}
 <form>
-  <div class="relative z-0 mb-6 w-full">
-      <input type="email" name="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600" placeholder=" " required />
-      <label for="floating_email" class="absolute top-3 text-sm text-gray-500 duration-300 -z-10 origin-0">Email</label>
+  <div class="relative z-0 w-full mb-6">
+      <input type="email" name="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600" placeholder=" " required />
+      <label for="floating_email" class="absolute text-sm text-gray-500 duration-300 top-3 -z-10 origin-0">Email</label>
   </div>
-  <div class="relative z-0 mb-6 w-full">
-      <input type="password" name="floating_password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600" placeholder=" " required />
-      <label for="floating_password" class="absolute top-3 text-sm text-gray-500 duration-300 -z-10 origin-0">Password</label>
+  <div class="relative z-0 w-full mb-6">
+      <input type="password" name="floating_password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600" placeholder=" " required />
+      <label for="floating_password" class="absolute text-sm text-gray-500 duration-300 top-3 -z-10 origin-0">Password</label>
   </div>
   <div class="flex items-start mb-6">
     <div class="flex items-center h-5">
-      <input id="floating_remember" aria-describedby="floating_remember" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
+      <input id="floating_remember" aria-describedby="floating_remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
     </div>
     <div class="ml-3 text-sm">
-      <label for="floating_remember" class="font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+      <label for="floating_remember" class="font-medium text-gray-600 dark:text-gray-300">Remember me</label>
     </div>
   </div>
   <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
@@ -69,7 +69,7 @@ Use the following utility classes to create three different sizing options (larg
 {{< example class="dark:bg-gray-800" github="components/forms.md" >}}
 <div class="mb-6">
     <label for="large-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Large input</label>
-    <input type="text" id="large-input" class="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+    <input type="text" id="large-input" class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
 </div>
 <div class="mb-6">
     <label for="base-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Base input</label>
@@ -77,7 +77,7 @@ Use the following utility classes to create three different sizing options (larg
 </div>
 <div>
     <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Small input</label>
-    <input type="text" id="small-input" class="block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+    <input type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
 </div>
 {{< /example >}}
 
@@ -110,7 +110,7 @@ Alternatively, you can decide to apply a shadow styling using the `shadow-sm` cl
   </div>
   <div class="flex items-start mb-6">
     <div class="flex items-center h-5">
-      <input id="terms" aria-describedby="terms" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
+      <input id="terms" aria-describedby="terms" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
     </div>
     <div class="ml-3 text-sm">
       <label for="terms" class="font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
@@ -137,7 +137,7 @@ Use the following Tailwind utility classes and SVG icon to add an icon inside in
 {{< example class="dark:bg-gray-800" github="components/forms.md" >}}
 <label for="email-adress-icon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Email</label>
 <div class="relative mt-1">
-  <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
     <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
   </div>
   <input type="text" id="email-adress-icon" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com">
@@ -151,7 +151,7 @@ Use the following utility classes and SVG icon to add an addon icon inside your 
 {{< example class="dark:bg-gray-800" github="components/forms.md" >}}
 <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Username</label>
 <div class="flex">
-  <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 rounded-l-md border border-r-0 border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+  <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
     @
   </span>
   <input type="text" id="website-admin" class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Bonnie Green">
@@ -207,23 +207,23 @@ The code below can be used to create a fieldset of checkbox elements inside a fo
   <legend class="sr-only">Checkbox variants</legend>
 
   <div class="flex items-center mb-4">
-      <input id="checkbox-1" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"" checked>
+      <input id="checkbox-1" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"" checked>
       <label for="checkbox-1" class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">I agree to the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
   </div>
 
   <div class="flex items-center mb-4">
-      <input id="checkbox-2" aria-describedby="checkbox-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+      <input id="checkbox-2" aria-describedby="checkbox-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
       <label for="checkbox-2" class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">I want to get promotional offers</label>
   </div>
 
   <div class="flex items-center mb-4">
-      <input id="checkbox-3" aria-describedby="checkbox-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+      <input id="checkbox-3" aria-describedby="checkbox-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
       <label for="checkbox-3" class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">I am 18 years or older</label>
   </div>
   
   <div class="flex mb-4">
     <div class="flex items-center h-5">
-      <input id="shipping-2" aria-describedby="shipping-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+      <input id="shipping-2" aria-describedby="shipping-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     </div>
     <div class="ml-3 text-sm">
       <label for="shipping-2" class="font-medium text-gray-900 dark:text-gray-300">Free shipping via Flowbite</label>
@@ -232,7 +232,7 @@ The code below can be used to create a fieldset of checkbox elements inside a fo
   </div>
 
   <div class="flex items-center">
-      <input id="international-shipping-disabled" aria-describedby="international-shipping-disabled" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" disabled>
+      <input id="international-shipping-disabled" aria-describedby="international-shipping-disabled" type="checkbox" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" disabled>
       <label for="international-shipping-disabled" class="ml-3 text-sm font-medium text-gray-300 dark:text-gray-500">Eligible for international shipping (disabled)</label>
   </div>
 </fieldset>
@@ -293,7 +293,7 @@ Use the following Tailwind CSS file upload element to receive any type of file f
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" >}}
 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Upload file</label>
-<input class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+<input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
 <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help">A profile picture is useful to confirm your are logged into your account</div>
 {{< /example >}}
 
@@ -306,21 +306,21 @@ Use the following Tailwind CSS file upload element to receive any type of file f
 Use the following toggle switch component to ask for a yes or no type of input from your users without the use of JavaScript.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" >}}
-<label for="toggle-example" class="flex relative items-center mb-4 cursor-pointer">
+<label for="toggle-example" class="relative flex items-center mb-4 cursor-pointer">
   <input type="checkbox" id="toggle-example" class="sr-only">
-  <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
+  <div class="h-6 bg-gray-200 border border-gray-200 rounded-full w-11 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
   <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
 </label>
 
-<label for="toggle-example-checked" class="flex relative items-center mb-4 cursor-pointer">
+<label for="toggle-example-checked" class="relative flex items-center mb-4 cursor-pointer">
   <input type="checkbox" id="toggle-example-checked" class="sr-only" checked>
-  <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
+  <div class="h-6 bg-gray-200 border border-gray-200 rounded-full w-11 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
   <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me (checked)</span>
 </label>
 
-<label for="toggle-example-disabled" class="flex relative items-center mb-4 cursor-not-allowed">
+<label for="toggle-example-disabled" class="relative flex items-center mb-4 cursor-not-allowed">
   <input type="checkbox" id="toggle-example-disabled" class="sr-only" disabled>
-  <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
+  <div class="h-6 bg-gray-200 border border-gray-200 rounded-full w-11 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
   <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-600">Toggle me (disabled)</span>
 </label>
 {{< /example >}}

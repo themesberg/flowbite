@@ -7,7 +7,7 @@
 
 <p>
     <a href="https://discord.com/invite/4eeurUVvTy"><img src="https://img.shields.io/discord/902911619032576090?color=%237289da&label=Discord" alt="Discord"></a>
-    <a href="https://www.npmjs.com/package/flowbite"><img src="https://img.shields.io/npm/dt//flowbite.svg" alt="Total Downloads"></a>
+    <a href="https://www.npmjs.com/package/flowbite"><img src="https://img.shields.io/npm/dt/flowbite.svg" alt="Total Downloads"></a>
     <a href="https://github.com/themesberg/flowbite/releases"><img src="https://img.shields.io/npm/v/@themesberg/flowbite.svg" alt="Latest Release"></a>
     <a href="https://flowbite.com/docs/getting-started/license/"><img src="https://img.shields.io/badge/license-MIT-blue" alt="Licenese"></a>
 </p>
@@ -189,7 +189,7 @@ Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="
 1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
-npm install flowbite
+npm i flowbite
 ```
 
 2. Require Flowbite as a plugin inside the `tailwind.config.js` file:

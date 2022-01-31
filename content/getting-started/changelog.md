@@ -17,6 +17,8 @@ We strive to keep a good accountability of all of the version changes that we ma
 
 ### v1.3.1
 
+Released on January 31th, 2022.
+
 - add new spinner component
 - add new floating labels for form elements
 - remove `.bundle` name convention

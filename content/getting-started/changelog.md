@@ -15,6 +15,13 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
+### v1.3.1
+
+- add new spinner component
+- add new floating labels for form elements
+- remove `.bundle` name convention
+- remove `@themesberg` tag from NPM
+
 ### v1.3.0
 
 - add new timeline component

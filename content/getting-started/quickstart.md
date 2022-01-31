@@ -20,7 +20,7 @@ Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="
 1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
-npm i flowbite
+npm i @themesberg/flowbite
 ```
 
 2. Require Flowbite as a plugin inside the `tailwind.config.js` file:
@@ -38,7 +38,7 @@ module.exports = {
 3. Include the main JavaScript file to make interactive elements work:
 
 ```html
-<script src="../path/to/flowbite/dist/flowbite.js"></script>
+<script src="../path/to/@themesberg/flowbite/dist/flowbite.js"></script>
 ```
 
 4. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:

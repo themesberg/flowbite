@@ -110,13 +110,13 @@ mix.js("resources/js/app.js", "public/js")
 9. Require the `flowbite.bundle.js` file before the end of the `<body>` tag:
 
 ```html
-<script src="../path/to/flowbite/dist/flowbite.bundle.js"></script>
+<script src="../path/to/@themesberg/flowbite/dist/flowbite.bundle.js"></script>
 ```
 
 Alternatively, you can also include the JavaScript file using CDN:
 
 ```html
-<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.bundle.js"></script>
+<script src="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.bundle.js"></script>
 ```
 
 Now that you've set everything up start up a local development server using `php artisan serve` and run the build process for Webpack by using `npm run watch`.

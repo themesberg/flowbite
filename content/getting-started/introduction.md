@@ -76,7 +76,7 @@ module.exports = {
 3. Require the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
 
 ```html
-<script src="../path/to/flowbite/dist/flowbite.bundle.js"></script>
+<script src="../path/to/@themesberg/flowbite/dist/flowbite.bundle.js"></script>
 ```
 
 4. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
@@ -94,7 +94,7 @@ module.exports = {
 If you use Webpack or other bundlers you can also import it like this:
 
 ```javascript
-import 'flowbite';
+import '@themesberg/flowbite';
 ```
 
 ### Tailwind CSS v2.x

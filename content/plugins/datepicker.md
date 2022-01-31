@@ -19,7 +19,7 @@ If you want to use the datepicker component plugin from Flowbite you have to inc
 Follow the [quickstart guide]({{< ref "getting-started/quickstart" >}}) and then include the following JavaScript file:
 
 ```html
-<script src="../path/to/flowbite/dist/datepicker.bundle.js"></script>
+<script src="../path/to/@themesberg/flowbite/dist/datepicker.bundle.js"></script>
 ```
 Alternatively you can also use CDN to include the datepicker JavaScript.
 

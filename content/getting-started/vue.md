@@ -90,7 +90,7 @@ module.exports = {
 8. Import the Flowbite JavaScript file inside your main `./src/main.js` file:
 
 ```bash
-import 'flowbite';
+import '@themesberg/flowbite';
 ```
 
 9. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:

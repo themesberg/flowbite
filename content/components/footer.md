@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Footer - Flowbite
-description: Get started with a large variety of Tailwind CSS card examples for your web project
+description: Use the footer section at the bottom of every page to show valuable information to your users, such as sitemap links, a copyright notice, and a logo
 group: components
 toc: true
 
@@ -10,11 +10,14 @@ previousLink: components/navbar/
 next: Pagination
 nextLink: components/pagination/
 ---
-Use these responsive card components to show data entries and information to your users in multiple forms and contexts such as for your blog, application, user profiles, and more.
+
+The footer is one of the most underestimated sections of a website being located at the very bottom of every page, however, it can be used as a way to try to convince users to stay on your website if they haven't found the information they've been looking for inside the main content area.
+
+Use these footer sections coded with the utility classes from Tailwind CSS and components from Flowbite to offer valuable information to your users such as the brand's logo, sitemap links, copyright notice, social media profiles, and more.
 
 ## Default footer
 
-Use the following simple card with a title and description.
+Use this footer component to show a copyright notice and some helpful website links.
 
 {{< example github="components/footer.md" class="p-2" >}}
 <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
@@ -37,11 +40,9 @@ Use the following simple card with a title and description.
 </footer>
 {{< /example >}}
 
-Use these responsive card components to show data entries and information to your users in multiple forms and contexts such as for your blog, application, user profiles, and more.
-
 ## Footer with logo
 
-Use the following simple card with a title rand description.
+Use this component to show your brand's logo, a few website links and the copyright notice on a second row.
 
 {{< example github="components/footer.md" class="p-2" >}}
 <footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-800">
@@ -73,7 +74,7 @@ Use the following simple card with a title rand description.
 
 ## Social media icons
 
-Use the following simple card with a title rand description.
+This footer component can be used to show your brand's logo, multiple rows of website links, a copyright notice and social media profile icons including Twitter, Facebook, Instagram, and more.
 
 {{< example github="components/footer.md" >}}
 <footer class="p-4 bg-white sm:p-6 dark:bg-gray-800">
@@ -147,7 +148,7 @@ Use the following simple card with a title rand description.
 
 ## Sitemap links
 
-Use the following simple card with a title rand description.
+If you have a website with many pages you can use this footer component to show a sitemap spanning the entire width of a row followed below by a copyright notice and social media icons.
 
 {{< example github="components/footer.md" >}}
 <footer class="bg-gray-800">

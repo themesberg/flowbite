@@ -158,7 +158,7 @@ Flowbite is an open source collection of UI components built with the utility cl
   <tr>
     <td width="33.3333%">Tooltips</td>
     <td width="33.3333%">Datepicker</td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">Spinner</td>
   </tr>
   <tr>
     <td width="33.3333%">
@@ -172,7 +172,24 @@ Flowbite is an open source collection of UI components built with the utility cl
         </a>
     </td>
     <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/spinner/">
+            <img alt="Tailwind CSS Spinner" src="https://flowbite.s3.amazonaws.com/github/spinner.jpg">
+        </a>
     </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Footer</td>
+    <td width="33.3333%"></td>
+    <td width="33.3333%"></td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/footer/">
+            <img alt="Tailwind CSS Footer" src="https://flowbite.s3.amazonaws.com/github/footer.jpg">
+        </a>
+    </td>
+    <td width="33.3333%"></td>
+    <td width="33.3333%"></td>
   </tr>
 </table>
 

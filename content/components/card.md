@@ -315,7 +315,7 @@ Use this card example if you want to show a list of data:
 
 ## Pricing card
 
-Use this CTA card example to encourage your users to visit a certain page such as downloading the iOS or Android application for your project.
+Show detailed information to potential customers about your product's pricing plan, list of features, and a purchas button.
 
 {{< example github="components/card.md" >}}
     <div class="p-4 max-w-sm bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">

@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Table - Flowbite
-description: Use the responsive table components from Flowbite to show complex data in an organized layout
+description: Use the table component to show text, images, links, and other elements inside a structured set of data made up of rows and columns of table cells
 group: components
 toc: true
 
@@ -11,11 +11,13 @@ next: Spinner
 nextLink: components/spinner/
 ---
 
-Tables are important components when you want to show complex set of data within your website. You can use Flowbite's responsive table components and the multiple styles that it comes with.
+The table component represents a set of structured elements made up of rows and columns as table cells that can be used to show data sets to your website users.
 
-## Default example
+Get started with multiple variants and styles of these table components built with the utility classes from Tailwind CSS and components from Flowbite.
 
-Use the following HTML markup and Tailwind CSS utility classes to show a data set using a table component.
+## Default table
+
+Use the following example of a responsive table component to show multiple rows and columns of text data.
 
 {{< example github="components/tables.md" >}}
 <div class="flex flex-col">
@@ -58,7 +60,7 @@ Use the following HTML markup and Tailwind CSS utility classes to show a data se
                                 $2999
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                         <!-- Product 2 -->
@@ -76,7 +78,7 @@ Use the following HTML markup and Tailwind CSS utility classes to show a data se
                                 $1999
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                         <!-- Product 2 -->
@@ -94,7 +96,7 @@ Use the following HTML markup and Tailwind CSS utility classes to show a data se
                                 $99
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                     </tbody>
@@ -105,9 +107,9 @@ Use the following HTML markup and Tailwind CSS utility classes to show a data se
 </div>
 {{< /example >}}
 
-## Striped table
+## Striped rows
 
-Use this alternative table style which uses an alternating background color for each row inside the table increasing readability overall.
+Use this example to increase the readability of the data sets by alternating the background colors of every second table row.
 
 {{< example github="components/tables.md" >}}
 <div class="flex flex-col">
@@ -150,7 +152,7 @@ Use this alternative table style which uses an alternating background color for 
                                 $2999
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                         <!-- Product 2 -->
@@ -168,7 +170,7 @@ Use this alternative table style which uses an alternating background color for 
                                 $1999
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                         <!-- Product 3 -->
@@ -186,7 +188,7 @@ Use this alternative table style which uses an alternating background color for 
                                 $999
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                         <!-- Product 4 -->
@@ -204,7 +206,7 @@ Use this alternative table style which uses an alternating background color for 
                                 $99
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                         <!-- Product 5 -->
@@ -222,7 +224,7 @@ Use this alternative table style which uses an alternating background color for 
                                 $599
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                     </tbody>
@@ -233,9 +235,84 @@ Use this alternative table style which uses an alternating background color for 
 </div>
 {{< /example >}}
 
-With checkbox
+## Hover state
 
-Use this alternative table style which uses an alternating background color for each row inside the table increasing readability overall.
+Use the `hover:{bg-*}` utility class from Tailwind CSS to change the background color of a data row when hovering over the element with the cursor.
+
+{{< example github="components/tables.md" >}}
+<div class="flex flex-col">
+    <div class="overflow-x-auto shadow-md sm:rounded-lg">
+        <div class="inline-block min-w-full align-middle">
+            <div class="overflow-hidden ">
+                <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700">
+                    <thead class="bg-gray-100 dark:bg-gray-700">
+                        <tr>
+                            <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                Product Name
+                            </th>
+                            <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                Category
+                            </th>
+                            <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                Price
+                            </th>
+                            <th scope="col" class="p-4">
+                                <span class="sr-only">Edit</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple Imac 27"</td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">Desktop PC</td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">$1999</td>
+                            <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple MacBook Pro 17"</td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">Laptop</td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">$2999</td>
+                            <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">iPhone 13 Pro</td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">Phone</td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">$999</td>
+                            <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple Magic Mouse 2</td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">Accessories</td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">$99</td>
+                            <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple Watch Series 7</td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">Accessories</td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">$599</td>
+                            <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{{< /example >}}
+
+## Checkbox selection
+
+Checkboxes can be used inside table data rows to select multiple data sets and apply a bulk action.
 
 {{< example github="components/tables.md" >}}
 <div class="flex flex-col">
@@ -247,7 +324,7 @@ Use this alternative table style which uses an alternating background color for 
                         <tr>
                             <th scope="col" class="p-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-all" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <input id="checkbox-all" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="checkbox-all" class="sr-only">checkbox</label>
                                 </div>
                             </th>
@@ -269,71 +346,71 @@ Use this alternative table style which uses an alternating background color for 
                         <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
+                                    <input id="checkbox-table-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-table-1" class="sr-only">checkbox</label>
                                 </div>
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple Imac 27"</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">Desktop PC</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">$1999</td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                         <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
+                                    <input id="checkbox-table-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-table-2" class="sr-only">checkbox</label>
                                 </div>
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple MacBook Pro 17"</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">Laptop</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">$2999</td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                         <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
+                                    <input id="checkbox-table-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-table-3" class="sr-only">checkbox</label>
                                 </div>
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">iPhone 13 Pro</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">Phone</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">$999</td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                         <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
+                                    <input id="checkbox-table-4" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-table-4" class="sr-only">checkbox</label>
                                 </div>
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple Magic Mouse 2</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">Accessories</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">$99</td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                         <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
+                                    <input id="checkbox-table-5" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-table-5" class="sr-only">checkbox</label>
                                 </div>
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple Watch Series 7</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">Accessories</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">$599</td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                     </tbody>
@@ -345,21 +422,15 @@ Use this alternative table style which uses an alternating background color for 
 {{< /example >}}
 
 
-## With Forms
+## Search input
 
-Use this alternative table style which uses an alternating background color for each row inside the table increasing readability overall.
+Use this example to show a search bar that can be used to filter data inside the table component.
 
 {{< example github="components/tables.md" >}}
 <div class="flex flex-col">
     <div class="overflow-x-auto shadow-md sm:rounded-lg">
         <div class="inline-block min-w-full align-middle dark:bg-gray-800">
-            <div class="flex justify-between items-center p-4">
-                <select id="items" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 py-2.5 pl-2.5 pr-6 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-auto">
-                    <option>10</option>
-                    <option>25</option>
-                    <option>50</option>
-                    <option>100</option>
-                </select>
+            <div class="p-4">
                 <label for="table-search" class="sr-only">Search</label>
                 <div class="relative mt-1">
                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -374,8 +445,8 @@ Use this alternative table style which uses an alternating background color for 
                         <tr>
                             <th scope="col" class="p-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-all" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="checkbox-all" class="sr-only">checkbox</label>
+                                    <input id="checkbox-search-all" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-search-all" class="sr-only">checkbox</label>
                                 </div>
                             </th>
                             <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
@@ -396,71 +467,71 @@ Use this alternative table style which uses an alternating background color for 
                         <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
+                                    <input id="checkbox-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-search-1" class="sr-only">checkbox</label>
                                 </div>
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple Imac 27"</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">Desktop PC</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">$1999</td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                         <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
+                                    <input id="checkbox-search-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-search-2" class="sr-only">checkbox</label>
                                 </div>
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple MacBook Pro 17"</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">Laptop</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">$2999</td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                         <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
+                                    <input id="checkbox-search-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-search-3" class="sr-only">checkbox</label>
                                 </div>
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">iPhone 13 Pro</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">Phone</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">$999</td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                         <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
+                                    <input id="checkbox-search-4" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-search-4" class="sr-only">checkbox</label>
                                 </div>
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple Magic Mouse 2</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">Accessories</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">$99</td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                         <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
+                                    <input id="checkbox-search-5" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-search-5" class="sr-only">checkbox</label>
                                 </div>
                             </td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple Watch Series 7</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">Accessories</td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">$599</td>
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
+                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             </td>
                         </tr>
                     </tbody>
@@ -470,4 +541,3 @@ Use this alternative table style which uses an alternating background color for 
     </div>
 </div>
 {{< /example >}}
-

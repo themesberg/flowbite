@@ -233,7 +233,7 @@ Use this alternative table style which uses an alternating background color for 
 </div>
 {{< /example >}}
 
-<!-- ## With checkbox
+With checkbox
 
 Use this alternative table style which uses an alternating background color for each row inside the table increasing readability overall.
 
@@ -242,12 +242,12 @@ Use this alternative table style which uses an alternating background color for 
     <div class="overflow-x-auto shadow-md sm:rounded-lg">
         <div class="inline-block min-w-full align-middle">
             <div class="overflow-hidden ">
-                <table class="min-w-full divide-y divide-gray-200 table-fixed">
-                    <thead class="bg-gray-100">
+                <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700">
+                    <thead class="bg-gray-100 dark:bg-gray-700">
                         <tr>
                             <th scope="col" class="p-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-all" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border-gray-300 focus:ring-3 focus:ring-blue-200">
+                                    <input id="checkbox-all" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="checkbox-all" class="sr-only">checkbox</label>
                                 </div>
                             </th>
@@ -265,11 +265,11 @@ Use this alternative table style which uses an alternating background color for 
                             </th>
                         </tr>
                     </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
-                        <tr class="hover:bg-gray-100">
+                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border-gray-300 focus:ring-3 focus:ring-blue-200">
+                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
                                 </div>
                             </td>
@@ -280,10 +280,10 @@ Use this alternative table style which uses an alternating background color for 
                                 <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
                             </td>
                         </tr>
-                        <tr class="hover:bg-gray-100">
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border-gray-300 focus:ring-3 focus:ring-blue-200">
+                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
                                 </div>
                             </td>
@@ -294,10 +294,10 @@ Use this alternative table style which uses an alternating background color for 
                                 <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
                             </td>
                         </tr>
-                        <tr class="hover:bg-gray-100">
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border-gray-300 focus:ring-3 focus:ring-blue-200">
+                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
                                 </div>
                             </td>
@@ -308,10 +308,10 @@ Use this alternative table style which uses an alternating background color for 
                                 <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
                             </td>
                         </tr>
-                        <tr class="hover:bg-gray-100">
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border-gray-300 focus:ring-3 focus:ring-blue-200">
+                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
                                 </div>
                             </td>
@@ -322,10 +322,10 @@ Use this alternative table style which uses an alternating background color for 
                                 <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
                             </td>
                         </tr>
-                        <tr class="hover:bg-gray-100">
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border-gray-300 focus:ring-3 focus:ring-blue-200">
+                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
                                 </div>
                             </td>
@@ -352,7 +352,7 @@ Use this alternative table style which uses an alternating background color for 
 {{< example github="components/tables.md" >}}
 <div class="flex flex-col">
     <div class="overflow-x-auto shadow-md sm:rounded-lg">
-        <div class="inline-block min-w-full align-middle">
+        <div class="inline-block min-w-full align-middle dark:bg-gray-800">
             <div class="flex justify-between items-center p-4">
                 <select id="items" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 py-2.5 pl-2.5 pr-6 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-auto">
                     <option>10</option>
@@ -369,12 +369,12 @@ Use this alternative table style which uses an alternating background color for 
                 </div>
             </div>
             <div class="overflow-hidden">
-                <table class="min-w-full divide-y divide-gray-200 table-fixed">
-                    <thead class="bg-gray-100">
+                <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700">
+                    <thead class="bg-gray-100 dark:bg-gray-700">
                         <tr>
                             <th scope="col" class="p-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-all" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border-gray-300 focus:ring-3 focus:ring-blue-200">
+                                    <input id="checkbox-all" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="checkbox-all" class="sr-only">checkbox</label>
                                 </div>
                             </th>
@@ -392,11 +392,11 @@ Use this alternative table style which uses an alternating background color for 
                             </th>
                         </tr>
                     </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
-                        <tr class="hover:bg-gray-100">
+                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border-gray-300 focus:ring-3 focus:ring-blue-200">
+                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
                                 </div>
                             </td>
@@ -407,10 +407,10 @@ Use this alternative table style which uses an alternating background color for 
                                 <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
                             </td>
                         </tr>
-                        <tr class="hover:bg-gray-100">
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border-gray-300 focus:ring-3 focus:ring-blue-200">
+                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
                                 </div>
                             </td>
@@ -421,10 +421,10 @@ Use this alternative table style which uses an alternating background color for 
                                 <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
                             </td>
                         </tr>
-                        <tr class="hover:bg-gray-100">
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border-gray-300 focus:ring-3 focus:ring-blue-200">
+                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
                                 </div>
                             </td>
@@ -435,10 +435,10 @@ Use this alternative table style which uses an alternating background color for 
                                 <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
                             </td>
                         </tr>
-                        <tr class="hover:bg-gray-100">
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border-gray-300 focus:ring-3 focus:ring-blue-200">
+                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
                                 </div>
                             </td>
@@ -449,10 +449,10 @@ Use this alternative table style which uses an alternating background color for 
                                 <a href="#" class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:underline">Edit</a>
                             </td>
                         </tr>
-                        <tr class="hover:bg-gray-100">
+                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border-gray-300 focus:ring-3 focus:ring-blue-200">
+                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
                                 </div>
                             </td>
@@ -470,4 +470,4 @@ Use this alternative table style which uses an alternating background color for 
     </div>
 </div>
 {{< /example >}}
- -->
+

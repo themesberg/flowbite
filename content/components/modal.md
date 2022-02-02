@@ -63,7 +63,7 @@ If you forget to apply the attribute, the Flowbite JavaScript will still set it 
 </div>
 {{< /example >}}
 
-## Confirmation
+## Pop-up modal
 
 You can use this modal example to show a pop-up decision dialog to your users especially when deleting an item and making sure if the user really wants to do that by double confirming.
 
@@ -151,7 +151,7 @@ Use this modal example with form input element to receive information from your 
 
 ## Crypto wallet
 
-Use this modal component to show crypto wallet connection options like MetaMask or WalletConnect when building a website based on NFT authentication and collectibles.
+Use this web3 modal component to show crypto wallet connection options like MetaMask or WalletConnect when building a website based on NFT authentication and collectibles.
 
 {{< example class="dark:bg-gray-800" github="components/modal.md" >}}
 <button type="button" data-modal-toggle="walletModal" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700">

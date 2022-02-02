@@ -15,14 +15,19 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
+### v1.3.2
+
+Released on February 2nd, 2022.
+
+- add new footer component
+- remove `.bundle` name convention
+- remove `@themesberg` tag from NPM
 ### v1.3.1
 
 Released on January 31th, 2022.
 
 - add new spinner component
 - add new floating labels for form elements
-- remove `.bundle` name convention
-- remove `@themesberg` tag from NPM
 
 ### v1.3.0
 

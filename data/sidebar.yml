@@ -25,6 +25,8 @@
 
 - title: Components
   pages:
+    - title: Accordion
+      new: true
     - title: Alerts
     - title: Badge
     - title: Breadcrumb

@@ -58,7 +58,7 @@ Flowbite is technically a plugin that can be included into any existing Tailwind
 1. Install the latest version of Flowbite using NPM:
 
 ```bash
-npm i @themesberg/flowbite
+npm i flowbite
 ```
 
 2. Include Flowbite as a plugin inside the `tailwind.config.js` file:
@@ -67,7 +67,7 @@ npm i @themesberg/flowbite
 module.exports = {
 
     plugins: [
-        require('@themesberg/flowbite/plugin')
+        require('flowbite/plugin')
     ]
 
 }
@@ -76,7 +76,7 @@ module.exports = {
 3. Require the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
 
 ```html
-<script src="../path/to/@themesberg/flowbite/dist/flowbite.bundle.js"></script>
+<script src="../path/to/flowbite/dist/flowbite.js"></script>
 ```
 
 4. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
@@ -85,7 +85,7 @@ module.exports = {
 module.exports = {
 
     content: [
-        "./node_modules/@themesberg/flowbite/**/*.js"
+        "./node_modules/flowbite/**/*.js"
     ]
 
 }
@@ -94,7 +94,7 @@ module.exports = {
 If you use Webpack or other bundlers you can also import it like this:
 
 ```javascript
-import '@themesberg/flowbite';
+import 'flowbite';
 ```
 
 ### Tailwind CSS v2.x
@@ -112,13 +112,13 @@ If you want to quickly test out Flowbite you can easily include the following CS
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.css" />
 ```
 
 And include the following javascript file before the end of the `body` element:
 
 ```html
-<script src="https://unpkg.com/@themesberg/flowbite@{{< current_version >}}/dist/flowbite.bundle.js"></script>
+<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
 ```
 
 Please remember that the best way to work with Tailwind CSS and Flowbite is by purging the CSS classes.

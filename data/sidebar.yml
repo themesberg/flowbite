@@ -6,7 +6,6 @@
     - title: Introduction
     - title: Quickstart
     - title: Laravel
-      new: true
     - title: React
     - title: Vue
     # - title: Angular
@@ -25,9 +24,9 @@
 
 - title: Components
   pages:
+    - title: Alerts
     - title: Accordion
       new: true
-    - title: Alerts
     - title: Badge
     - title: Breadcrumb
     - title: Buttons

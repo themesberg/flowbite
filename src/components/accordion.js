@@ -1,12 +1,14 @@
-const hideAllAccordionHeaderElements = (accordionHeaderElements) => {
+const hideAllOtherAccordionHeaderElements = (accordionHeaderElements, currentAccordionHeaderEl) => {
     accordionHeaderElements.forEach(headerEl => {
-        const bodyEl = document.querySelector(headerEl.getAttribute('data-accordion-target'));
-        headerEl.setAttribute('aria-expanded', false);
-        headerEl.classList.remove('bg-gray-50')
-        bodyEl.classList.add('hidden');
-
-        if (headerEl.querySelector('[data-accordion-icon]')) {
-            headerEl.querySelector('[data-accordion-icon]').classList.remove('rotate-180');
+        if (currentAccordionHeaderEl !== headerEl) {
+            const bodyEl = document.querySelector(headerEl.getAttribute('data-accordion-target'));
+            headerEl.setAttribute('aria-expanded', false);
+            headerEl.classList.remove('bg-gray-100')
+            bodyEl.classList.add('hidden');
+    
+            if (headerEl.querySelector('[data-accordion-icon]')) {
+                headerEl.querySelector('[data-accordion-icon]').classList.remove('rotate-180');
+            }
         }
     });
 }
@@ -30,20 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
             accordionHeaderEl.addEventListener('click', () => {
 
                 if (collapseAccordion === 'collapse') {
-                    hideAllAccordionHeaderElements(accordionHeaderElements);
+                    hideAllOtherAccordionHeaderElements(accordionHeaderElements, accordionHeaderEl);
                 }
 
                 if (accordionHeaderEl.getAttribute('aria-expanded') === 'true') {
                     accordionHeaderEl.setAttribute('aria-expanded', false);
 
-                    accordionHeaderEl.classList.remove('bg-gray-50')
+                    accordionHeaderEl.classList.remove('bg-gray-100')
                     accordionBodyEl.classList.add('hidden');
 
                     rotateAccordionIcon(accordionHeaderEl);
                 } else {
                     accordionHeaderEl.setAttribute('aria-expanded', true);
 
-                    accordionHeaderEl.classList.add('bg-gray-50')
+                    accordionHeaderEl.classList.add('bg-gray-100')
                     accordionBodyEl.classList.remove('hidden');
 
                     rotateAccordionIcon(accordionHeaderEl);

@@ -1,9 +1,10 @@
 ---
 layout: home
 title: Tailwind CSS Accordion - Flowbite
-description: Show contextual information to your users using alert elements based on Tailwind CSS
+description: Use the accordion component to show hidden information based on the collapse and expand state of the child elements
 group: components
 toc: true
+requires_js: true
 
 previous: Optimization
 previousLink: customize/optimization/
@@ -11,9 +12,20 @@ next: Badges
 nextLink: components/badge/
 ---
 
+The accordion component is a collection of vertically collapsing header and body elements that can be used to show and hide information based on the Tailwind CSS utility classes and JavaScript from Flowbite.
+
+A popular use case would be the "Frequently Asked Questions" section of a website or page when you can show questions and answers for each child element.
+
+There are two main options to initialize the accordion component:
+
+- `data-accordion="collapse"` show only one active child element
+- `data-accordion="open"` keep multiple elements open
+
+Don't forget to set the `data-accordion-target="{selector}"` data attribute to the header element where the value is the id or class of the accordion body element and the `aria-expanded="{true|false}"` attribute to mark the active or inactive state of the accordion.
+
 ## Default accordion
 
-Use the `data-accordion="collapse"` option to keep only one accordion element and collapse all of the other ones.
+Use the `data-accordion="collapse"` to collapse every other child element when expanding a single one. 
 
 {{< example class="dark:bg-gray-800" github="components/accordion.md" >}}
 <div id="accordion-collapse" data-accordion="collapse">
@@ -56,7 +68,7 @@ Use the `data-accordion="collapse"` option to keep only one accordion element an
 </div>
 {{< /example >}}
 
-## Default accordion
+## Always open
 
 Use the `data-accordion="open"` option to keep previously opened accordion elements unchanged.
 

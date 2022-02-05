@@ -3,7 +3,10 @@ const hideAllOtherAccordionHeaderElements = (accordionHeaderElements, currentAcc
         if (currentAccordionHeaderEl !== headerEl) {
             const bodyEl = document.querySelector(headerEl.getAttribute('data-accordion-target'));
             headerEl.setAttribute('aria-expanded', false);
-            headerEl.classList.remove('bg-gray-100')
+            // active classes
+            headerEl.classList.remove('bg-gray-100', 'dark:bg-gray-800', 'text-gray-900', 'dark:text-white');
+            // inactive classes
+            headerEl.classList.add('text-gray-500', 'dark:text-gray-400');
             bodyEl.classList.add('hidden');
     
             if (headerEl.querySelector('[data-accordion-icon]')) {
@@ -38,14 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (accordionHeaderEl.getAttribute('aria-expanded') === 'true') {
                     accordionHeaderEl.setAttribute('aria-expanded', false);
 
-                    accordionHeaderEl.classList.remove('bg-gray-100')
+                    // active classes
+                    accordionHeaderEl.classList.remove('bg-gray-100', 'dark:bg-gray-800', 'text-gray-900', 'dark:text-white');
+                    // inactive classes
+                    accordionHeaderEl.classList.add('text-gray-500', 'dark:text-gray-400');
                     accordionBodyEl.classList.add('hidden');
 
                     rotateAccordionIcon(accordionHeaderEl);
                 } else {
                     accordionHeaderEl.setAttribute('aria-expanded', true);
-
-                    accordionHeaderEl.classList.add('bg-gray-100')
+                    // active classes
+                    accordionHeaderEl.classList.add('bg-gray-100', 'dark:bg-gray-800', 'text-gray-900', 'dark:text-white')
+                    // inactive classes
+                    accordionHeaderEl.classList.remove('text-gray-500', 'dark:text-gray-400');
                     accordionBodyEl.classList.remove('hidden');
 
                     rotateAccordionIcon(accordionHeaderEl);

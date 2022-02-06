@@ -1,12 +1,16 @@
-const hideAllOtherAccordionHeaderElements = (accordionHeaderElements, currentAccordionHeaderEl) => {
+const hideAllOtherAccordionHeaderElements = (accordionHeaderElements, currentAccordionHeaderEl, activeClassesArray, inactiveClassesArray) => {
     accordionHeaderElements.forEach(headerEl => {
         if (currentAccordionHeaderEl !== headerEl) {
             const bodyEl = document.querySelector(headerEl.getAttribute('data-accordion-target'));
             headerEl.setAttribute('aria-expanded', false);
             // active classes
-            headerEl.classList.remove('bg-gray-100', 'dark:bg-gray-800', 'text-gray-900', 'dark:text-white');
+            activeClassesArray.map(c => {
+                headerEl.classList.remove(c);
+            })
             // inactive classes
-            headerEl.classList.add('text-gray-500', 'dark:text-gray-400');
+            inactiveClassesArray.map(c => {
+                headerEl.classList.add(c);
+            })
             bodyEl.classList.add('hidden');
     
             if (headerEl.querySelector('[data-accordion-icon]')) {
@@ -27,7 +31,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const accordionId = accordionEl.getAttribute('id');
         const collapseAccordion = accordionEl.getAttribute('data-accordion');
         const accordionHeaderElements = document.querySelectorAll('#' + accordionId + ' [data-accordion-target]');
+        const activeClasses = accordionEl.getAttribute('data-active-classes');
+        const inactiveClasses = accordionEl.getAttribute('data-inactive-classes');
         
+        let activeClassesArray = null;
+        if (activeClasses) {
+            activeClassesArray = activeClassesArray.split(" ");
+        } else {
+            // fallback classes if option not set
+            activeClassesArray = ['bg-gray-100', 'dark:bg-gray-800', 'text-gray-900', 'dark:text-white'];
+        }
+
+        let inactiveClassesArray = null;
+        if (inactiveClasses) {
+            inactiveClassesArray = inactiveClasses.split(" ");
+        } else {
+            // fallback classes if option not set
+            inactiveClassesArray = ['text-gray-500', 'dark:text-gray-400'];
+        }
+
         accordionHeaderElements.forEach(accordionHeaderEl => {
 
             const accordionBodyEl = document.querySelector(accordionHeaderEl.getAttribute('data-accordion-target'));
@@ -35,25 +57,38 @@ document.addEventListener('DOMContentLoaded', () => {
             accordionHeaderEl.addEventListener('click', () => {
 
                 if (collapseAccordion === 'collapse') {
-                    hideAllOtherAccordionHeaderElements(accordionHeaderElements, accordionHeaderEl);
+                    hideAllOtherAccordionHeaderElements(accordionHeaderElements, accordionHeaderEl, activeClassesArray, inactiveClassesArray);
                 }
 
                 if (accordionHeaderEl.getAttribute('aria-expanded') === 'true') {
                     accordionHeaderEl.setAttribute('aria-expanded', false);
 
                     // active classes
-                    accordionHeaderEl.classList.remove('bg-gray-100', 'dark:bg-gray-800', 'text-gray-900', 'dark:text-white');
+                    activeClassesArray.map(c => {
+                        accordionHeaderEl.classList.remove(c);
+                    })
+
                     // inactive classes
-                    accordionHeaderEl.classList.add('text-gray-500', 'dark:text-gray-400');
+                    inactiveClassesArray.map(c => {
+                        accordionHeaderEl.classList.add(c);
+                    })
+
                     accordionBodyEl.classList.add('hidden');
 
                     rotateAccordionIcon(accordionHeaderEl);
                 } else {
                     accordionHeaderEl.setAttribute('aria-expanded', true);
+
                     // active classes
-                    accordionHeaderEl.classList.add('bg-gray-100', 'dark:bg-gray-800', 'text-gray-900', 'dark:text-white')
+                    activeClassesArray.map(c => {
+                        accordionHeaderEl.classList.add(c);
+                    })
+
                     // inactive classes
-                    accordionHeaderEl.classList.remove('text-gray-500', 'dark:text-gray-400');
+                    inactiveClassesArray.map(c => {
+                        accordionHeaderEl.classList.remove(c);
+                    })
+
                     accordionBodyEl.classList.remove('hidden');
 
                     rotateAccordionIcon(accordionHeaderEl);

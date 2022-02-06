@@ -15,25 +15,28 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
+### v1.3.3
+
+- added new accordion component
+
 ### v1.3.2
 
-Released on February 2nd, 2022.
-
 - add new footer component
+- add a new pricing card
+- add new crypto wallet connect modal component
+- add two new table components
 - remove `.bundle` name convention
 - remove `@themesberg` tag from NPM
-### v1.3.1
 
-Released on January 31th, 2022.
+### v1.3.1
 
 - add new spinner component
 - add new floating labels for form elements
 
 ### v1.3.0
 
-- add new timeline component
-- update the main plugin file based on Tailwind CSS v3.x
-- provide React, Vue, and Angular support for the interactive elements
+- update plugin file to Tailwind CSS v3.x
+- add React and Vue.js support for the interactive elements (data attributes only)
 
 ### v1.2.0
 

@@ -310,7 +310,7 @@ Use the `hover:{bg-*}` utility class from Tailwind CSS to change the background 
 </div>
 {{< /example >}}
 
-## Checkbox selection
+## Checkbox
 
 Checkboxes can be used inside table data rows to select multiple data sets and apply a bulk action.
 

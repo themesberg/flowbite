@@ -7,8 +7,8 @@ toc: true
 
 previous: Optimization
 previousLink: customize/optimization/
-next: Badges
-nextLink: components/badge/
+next: Accordion
+nextLink: components/accordion/
 ---
 
 The alert component can be used to provide information to your users such as success or error messages, but also highlighted information complementing the normal flow of paragraphs and headers on a page.

@@ -5,8 +5,8 @@ description: Use Tailwind CSS badges as elements to show counts or labels separa
 group: components
 toc: true
 
-previous: Alerts
-previousLink: components/alerts/
+previous: Accordion
+previousLink: components/accordion/
 next: Breadcrumbs
 nextLink: components/breadcrumb/
 ---

@@ -35,15 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const inactiveClasses = accordionEl.getAttribute('data-inactive-classes');
         
         let activeClassesArray = null;
-        if (activeClasses) {
-            activeClassesArray = activeClassesArray.split(" ");
+        if (activeClasses && activeClasses !== '') {
+            activeClassesArray = activeClasses.split(" ");
         } else {
             // fallback classes if option not set
             activeClassesArray = ['bg-gray-100', 'dark:bg-gray-800', 'text-gray-900', 'dark:text-white'];
         }
 
         let inactiveClassesArray = null;
-        if (inactiveClasses) {
+        if (inactiveClasses && inactiveClasses !== '') {
             inactiveClassesArray = inactiveClasses.split(" ");
         } else {
             // fallback classes if option not set

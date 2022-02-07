@@ -179,7 +179,7 @@ Flowbite is an open source collection of UI components built with the utility cl
   </tr>
   <tr>
     <td width="33.3333%">Footer</td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">Accordion</td>
     <td width="33.3333%"></td>
   </tr>
   <tr>
@@ -188,7 +188,11 @@ Flowbite is an open source collection of UI components built with the utility cl
             <img alt="Tailwind CSS Footer" src="https://flowbite.s3.amazonaws.com/github/footer.jpg">
         </a>
     </td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/accordion/">
+            <img alt="Tailwind CSS Accordion" src="https://flowbite.s3.amazonaws.com/github/accordion.jpg">
+        </a>
+    </td>
     <td width="33.3333%"></td>
   </tr>
 </table>

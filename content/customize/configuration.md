@@ -17,7 +17,7 @@ Before continuing, please make sure that you have installed Flowbite as a plugin
 
 You will probably want to be able to add your own colors, fonts, sizings, shadows, and other styles to the default set of utility classes from FlowBite and Tailwind CSS.
 
-You can easily to so by editing the `tailwind.config.js` file from the root folder of your project.
+You can easily do that by editing the `tailwind.config.js` file from the root folder of your project.
 
 ```javascript
 module.exports = {

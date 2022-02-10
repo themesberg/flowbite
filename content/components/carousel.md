@@ -27,13 +27,13 @@ nextLink: components/progress/
         </div>
     </div>
     <div class="flex absolute top-0 left-0 justify-center items-center px-4 h-full cursor-pointer group" data-carousel-prev>
-        <button class="inline-flex justify-center items-center w-10 h-10 bg-white bg-opacity-30 rounded-full group-hover:bg-opacity-60" type="button">
+        <button class="inline-flex justify-center items-center w-10 h-10 bg-white bg-opacity-30 rounded-full group-hover:bg-opacity-50" type="button">
         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
         <span class="hidden">Previous</span>
         </button>
     </div>
     <div class="flex absolute top-0 right-0 justify-center items-center px-4 h-full cursor-pointer group" data-carousel-next>
-        <button class="inline-flex justify-center items-center w-10 h-10 bg-white bg-opacity-30 rounded-full group-hover:bg-opacity-60" type="button">
+        <button class="inline-flex justify-center items-center w-10 h-10 bg-white bg-opacity-30 rounded-full group-hover:bg-opacity-50" type="button">
         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
         <span class="hidden">Next</span>
         </button>

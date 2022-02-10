@@ -77,7 +77,7 @@ Use this vertical timeline component with icons and badges to show a more advanc
 </ol>
 {{< /example >}}
 
-## Horizontal timeline
+## Stepper timeline
 
 Use this horizontally aligned timeline component to show a series of data in a chronological order.
 

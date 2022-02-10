@@ -45,8 +45,8 @@ class Carousel {
         const activeItem = this.getActiveItem()
         let nextItem = null
 
+        activeItem.el.classList.add('-translate-x-full')
         activeItem.el.classList.remove('translate-x-0')
-        activeItem.el.classList.add('translate-x-full')
 
         // check if last item
         if (activeItem.id === this._items.length - 1) {
@@ -55,8 +55,8 @@ class Carousel {
             nextItem = this._items[activeItem.id + 1]
         }
 
-        nextItem.el.classList.remove('translate-x-full')
         nextItem.el.classList.add('translate-x-0')
+        nextItem.el.classList.remove('translate-x-full')
         activeItem.active = false
         nextItem.active = true
 
@@ -81,7 +81,7 @@ class Carousel {
             prevItem = this._items[activeItem.id - 1]
         }
 
-        prevItem.el.classList.remove('translate-x-full')
+        prevItem.el.classList.remove('-translate-x-full')
         prevItem.el.classList.add('translate-x-0')
         activeItem.active = false
         prevItem.active = true

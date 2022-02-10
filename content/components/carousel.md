@@ -15,15 +15,15 @@ nextLink: components/progress/
 
 {{< example github="components/carousel.md" >}}
 <div id="default-carousel" class="relative" data-carousel="slide">
-    <div class="overflow-hidden relative h-96">
-        <div class="absolute inset-0 transition-all duration-500 ease-in-out transform translate-x-0" data-carousel-item="active">
-            <img src="https://placekitten.com/800/400" class="d-block w-100" alt="...">
+    <div class="overflow-hidden relative h-96 rounded-lg">
+        <div class="absolute inset-0 transition-all duration-1000 ease-in-out transform translate-x-full" data-carousel-item="">
+            <img src="https://placekitten.com/800/400" class="block w-full" alt="...">
         </div>
-        <div class="absolute inset-0 transition-all duration-500 ease-in-out transform translate-x-full" data-carousel-item="">
-            <img src="https://placekitten.com/801/400" class="d-block w-100" alt="...">
+        <div class="absolute inset-0 transition-all duration-1000 ease-in-out transform translate-x-0" data-carousel-item="active">
+            <img src="https://placekitten.com/801/400" class="block w-full" alt="...">
         </div>
-        <div class="absolute inset-0 transition-all duration-500 ease-in-out transform translate-x-full" data-carousel-item="">
-            <img src="https://placekitten.com/802/400" class="d-block w-100" alt="...">
+        <div class="absolute inset-0 transition-all duration-1000 ease-in-out transform translate-x-full" data-carousel-item="">
+            <img src="https://placekitten.com/802/400" class="block w-full" alt="...">
         </div>
     </div>
     <div class="flex absolute top-0 left-0 justify-center items-center px-4 h-full cursor-pointer group" data-carousel-prev>

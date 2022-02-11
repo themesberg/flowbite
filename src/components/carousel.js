@@ -45,9 +45,6 @@ class Carousel {
         const activeItem = this.getActiveItem()
         let nextItem = null
 
-        activeItem.el.classList.add('-translate-x-full')
-        activeItem.el.classList.remove('translate-x-0')
-
         // check if last item
         if (activeItem.id === this._items.length - 1) {
             nextItem = this._items[0]
@@ -55,14 +52,33 @@ class Carousel {
             nextItem = this._items[activeItem.id + 1]
         }
 
-        nextItem.el.classList.add('translate-x-0')
-        nextItem.el.classList.remove('translate-x-full')
-        activeItem.active = false
-        nextItem.active = true
+        console.log(nextItem.id)
+        const rotationItems = {
+            'left': this.getActiveItem(),
+            'middle': nextItem,
+            'right': nextItem.id === this._items.length - 1 ? this._items[0] : this._items[nextItem.id + 1]
+        }
 
-        console.log(this._items)
+        // reset
+        this._items.map(item => {
+            item.el.classList.add('hidden')
+        })
+
+        // left item (previously active)
+        rotationItems.left.el.classList.remove('-translate-x-full', 'translate-x-full', 'translate-x-0', 'hidden')
+        rotationItems.left.el.classList.add('-translate-x-full')
+
+        // currently active item
+        rotationItems.middle.el.classList.remove('-translate-x-full', 'translate-x-full', 'translate-x-0', 'hidden')
+        rotationItems.middle.el.classList.add('translate-x-0')
+        
+        // right item (upcoming active)
+        rotationItems.right.el.classList.remove('-translate-x-full', 'translate-x-full', 'translate-x-0', 'hidden')
+        rotationItems.right.el.classList.add('translate-x-full')
 
         this.setActiveItem(nextItem.id)
+
+        console.log(rotationItems)
     }
 
     prevSlide() {
@@ -80,11 +96,6 @@ class Carousel {
         } else {
             prevItem = this._items[activeItem.id - 1]
         }
-
-        prevItem.el.classList.remove('-translate-x-full')
-        prevItem.el.classList.add('translate-x-0')
-        activeItem.active = false
-        prevItem.active = true
 
         console.log(this._items)
 
@@ -108,8 +119,10 @@ class Carousel {
     setActiveItem(id) {
         this._items.map(item => {
             item.active = false
+            item.el.setAttribute('data-carousel-item', '')
             if (item.id === id) {
                 item.active = true
+                item.el.setAttribute('data-carousel-item', 'active')
             }
         })
     }

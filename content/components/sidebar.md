@@ -19,7 +19,7 @@ Use this example to show a responsive list of menu items inside the sidebar with
 
 {{< example github="components/sidebar.md" >}}
 <aside class="w-64" aria-label="Sidebar">
-   <div class="rounded py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 px-3">
+   <div class="px-3 py-4 overflow-y-auto rounded bg-gray-50 dark:bg-gray-800">
       <ul class="space-y-2">
          <li>
             <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -80,7 +80,7 @@ Use this sidebar example to create multi-level menu items by applying the `data-
 
 {{< example github="components/sidebar.md" >}}
 <aside class="w-64" aria-label="Sidebar">
-   <div class="rounded py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 px-3">
+   <div class="px-3 py-4 overflow-y-auto rounded bg-gray-50 dark:bg-gray-800">
       <ul class="space-y-2">
          <li>
             <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -156,7 +156,7 @@ Separate the content inside the sidebar component by applying a border separator
 
 {{< example github="components/sidebar.md" >}}
 <aside class="w-64" aria-label="Sidebar">
-   <div class="rounded py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 px-3">
+   <div class="px-3 py-4 overflow-y-auto rounded bg-gray-50 dark:bg-gray-800">
       <ul class="space-y-2">
          <li>
             <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -203,7 +203,7 @@ Separate the content inside the sidebar component by applying a border separator
             </a>
          </li>
       </ul>
-      <ul class="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700 space-y-2">
+      <ul class="pt-4 mt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
          <li>
             <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
                <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white dark:text-gray-400" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gem" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M378.7 32H133.3L256 182.7L378.7 32zM512 192l-107.4-141.3L289.6 192H512zM107.4 50.67L0 192h222.4L107.4 50.67zM244.3 474.9C247.3 478.2 251.6 480 256 480s8.653-1.828 11.67-5.062L510.6 224H1.365L244.3 474.9z"></path></svg>
@@ -239,7 +239,7 @@ Use this example to add a CTA button inside the sidebar component and encourage 
 
 {{< example github="components/sidebar.md" >}}
 <aside class="w-64" aria-label="Sidebar">
-   <div class="rounded py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 px-3">
+   <div class="px-3 py-4 overflow-y-auto rounded bg-gray-50 dark:bg-gray-800">
       <ul class="space-y-2">
          <li>
             <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -286,7 +286,7 @@ Use this example to add a CTA button inside the sidebar component and encourage 
             </a>
          </li>
       </ul>
-      <div id="dropdown-cta" class="p-4 rounded-lg bg-blue-50 dark:bg-blue-900 mt-8" role="alert">
+      <div id="dropdown-cta" class="p-4 mt-6 rounded-lg bg-blue-50 dark:bg-blue-900" role="alert">
          <div class="flex items-center mb-3">
             <span class="bg-orange-100 text-orange-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-900">Beta</span>
             <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-blue-50 text-blue-900 rounded-lg focus:ring-2 focus:ring-blue-400 p-1 hover:bg-blue-200 inline-flex h-6 w-6 dark:bg-blue-900 dark:text-blue-400 dark:hover:bg-blue-800" data-collapse-toggle="dropdown-cta" aria-label="Close">
@@ -309,7 +309,7 @@ Show the logo of your brand and link back to the homepage from the top part of t
 
 {{< example github="components/sidebar.md" >}}
 <aside class="w-64" aria-label="Sidebar">
-   <div class="rounded py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 px-3">
+   <div class="px-3 py-4 overflow-y-auto rounded bg-gray-50 dark:bg-gray-800">
       <a href="https://flowbite.com" class="flex pl-2.5 mb-5">
             <svg class="mr-3 h-9" viewBox="0 0 52 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.87695 53H28.7791C41.5357 53 51.877 42.7025 51.877 30H24.9748C12.2182 30 1.87695 40.2975 1.87695 53Z" fill="#76A9FA"/><path d="M0.000409561 32.1646L0.000409561 66.4111C12.8618 66.4111 23.2881 55.9849 23.2881 43.1235L23.2881 8.87689C10.9966 8.98066 1.39567 19.5573 0.000409561 32.1646Z" fill="#A4CAFE"/><path d="M50.877 5H23.9748C11.2182 5 0.876953 15.2975 0.876953 28H27.7791C40.5357 28 50.877 17.7025 50.877 5Z" fill="#1C64F2"/></svg>
             <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white">FlowBite</span>

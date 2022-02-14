@@ -201,8 +201,6 @@ Flowbite is an open source collection of UI components built with the utility cl
   </tr>
 </table>
 
-👉 [See all components](https://flowbite.com/docs/getting-started/introduction/)
-
 ## Getting started
 
 Flowbite can be included as a plugin into an existing Tailwind CSS project and it is supposed to help you build websites faster by having a set of web components to work with built with the utility classes from Tailwind CSS.

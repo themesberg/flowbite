@@ -247,7 +247,7 @@ You can easily customize the duration and animation style of the carousel compon
 </div>
 {{< /example >}}
 
-## JavaScript
+<!-- ## JavaScript
 
 Alternatively to the data attributes, you can also choose to initialise a new carousel component based on the `new Carousel(id, options)` object constructor and access the public methods.
 
@@ -284,4 +284,4 @@ carousel.cycle()
 
 // pauses the cycling (automated sliding)
 carousel.pause()
-```
+``` -->

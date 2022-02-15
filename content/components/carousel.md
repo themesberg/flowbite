@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Tailwind CSS Timeline - Flowbite
+title: Tailwind CSS Carousel - Flowbite
 description: Get started with the responsive timeline component to show data in a chronological order with support for multiple styles, sizes, and variants
 group: components
 toc: true
@@ -16,20 +16,25 @@ nextLink: components/progress/
 {{< example github="components/carousel.md" >}}
 <div id="default-carousel" class="relative" data-carousel="slide">
     <div class="overflow-hidden relative h-96 rounded-lg">
-        <div class="absolute inset-0 transition-all duration-1000 ease-in-out transform translate-x-0" data-carousel-item="active">
-            <img src="https://placekitten.com/800/400" class="block w-full" alt="...">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+            <span class="absolute top-1/2 left-1/2 text-3xl font-semibold text-white -translate-x-1/2 -translate-y-1/2">First Slide</span>
+            <img src="/docs/images/gradients/mesh-gradient-1.png" class="block w-full" alt="...">
         </div>
-        <div class="absolute inset-0 transition-all duration-1000 ease-in-out transform translate-x-full" data-carousel-item="">
-            <img src="https://placekitten.com/801/400" class="block w-full" alt="...">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+            <span class="absolute top-1/2 left-1/2 text-3xl font-semibold text-white -translate-x-1/2 -translate-y-1/2">Second Slide</span>
+            <img src="/docs/images/gradients/mesh-gradient-2.png" class="block w-full" alt="...">
         </div>
-        <div class="hidden absolute inset-0 transition-all duration-1000 ease-in-out transform" data-carousel-item="">
-            <img src="https://placekitten.com/802/400" class="block w-full" alt="...">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+            <span class="absolute top-1/2 left-1/2 text-3xl font-semibold text-white -translate-x-1/2 -translate-y-1/2">Third Slide</span>
+            <img src="/docs/images/gradients/mesh-gradient-3.png" class="block w-full" alt="...">
         </div>
-        <div class="hidden absolute inset-0 transition-all duration-1000 ease-in-out transform" data-carousel-item="">
-            <img src="https://placekitten.com/803/400" class="block w-full" alt="...">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+            <span class="absolute top-1/2 left-1/2 text-3xl font-semibold text-white -translate-x-1/2 -translate-y-1/2">Fourth Slide</span>
+            <img src="/docs/images/gradients/mesh-gradient-4.png" class="block w-full" alt="...">
         </div>
-        <div class="absolute inset-0 transition-all duration-1000 ease-in-out transform -translate-x-full" data-carousel-item="">
-            <img src="https://placekitten.com/804/400" class="block w-full" alt="...">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+            <span class="absolute top-1/2 left-1/2 text-3xl font-semibold text-white -translate-x-1/2 -translate-y-1/2">Fifth Slide</span>
+            <img src="/docs/images/gradients/mesh-gradient-5.png" class="block w-full" alt="...">
         </div>
     </div>
     <div class="flex absolute top-0 left-0 justify-center items-center px-4 h-full cursor-pointer group" data-carousel-prev>

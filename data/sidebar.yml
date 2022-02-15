@@ -32,6 +32,8 @@
     - title: Buttons
     - title: Button group
     - title: Card
+    - title: Carousel
+      new: true
     - title: Dropdowns
     - title: Forms
     - title: List Group

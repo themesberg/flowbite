@@ -23,7 +23,12 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       },
       {
         test: /\.css$/,
@@ -31,17 +36,17 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-          loader: 'file-loader',
-          options: {
-              outputPath: 'static/images/'
-          }
+        loader: 'file-loader',
+        options: {
+          outputPath: 'static/images/'
+        }
       },
       {
         test: /\.(ttf|eot|svg|gif|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: [{
-            loader: 'file-loader',
+          loader: 'file-loader',
         }]
-    },
+      }
     ],
   },
   resolve: {

@@ -18,6 +18,7 @@ We strive to keep a good accountability of all of the version changes that we ma
 ### v1.3.3
 
 - added new accordion component
+- added new sidebar component
 
 ### v1.3.2
 

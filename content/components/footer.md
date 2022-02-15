@@ -7,8 +7,8 @@ toc: true
 
 previous: Navbar
 previousLink: components/navbar/
-next: Pagination
-nextLink: components/pagination/
+next: Sidebar
+nextLink: components/sidebar/
 ---
 
 The footer is one of the most underestimated sections of a website being located at the very bottom of every page, however, it can be used as a way to try to convince users to stay on your website if they haven't found the information they've been looking for inside the main content area.

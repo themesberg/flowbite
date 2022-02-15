@@ -6,8 +6,8 @@ group: components
 toc: true
 requires_js: true
 
-previous: Cards
-previousLink: components/card/
+previous: Carousel
+previousLink: components/carousel/
 next: Forms
 nextLink: components/forms/
 ---

@@ -1,44 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-carousel]').forEach(function (carouselEl) {
-        const interval = carouselEl.getAttribute('data-carousel-interval')
-        const slide = carouselEl.getAttribute('data-carousel') === 'slide' ? true : false
-
-        const carousel = new Carousel(carouselEl.getAttribute('id'), {
-            interval
-        })
-
-        if (slide) {
-            carousel.cycle();
-        }
-
-        // check for controls
-        const carouselNextEl = carouselEl.querySelector('[data-carousel-next]')
-        const carouselPrevEl = carouselEl.querySelector('[data-carousel-prev]')
-
-        if (carouselNextEl) {
-            carouselNextEl.addEventListener('click', () => {
-                carousel.nextSlide()
-            })
-        }
-
-        if (carouselPrevEl) {
-            carouselPrevEl.addEventListener('click', () => {
-                carousel.prevSlide()
-            })
-        }
-
-        // check for indicators
-        carouselEl.querySelectorAll('[data-carousel-slide-to]').forEach(slideToEl => {
-            slideToEl.addEventListener('click', () => {
-                const id = slideToEl.getAttribute('data-carousel-slide-to')
-                carousel.slideTo(id)
-
-            })
-        })
-
-    })
-})
-
 const Default = {
     interval: 3000
 }
@@ -53,7 +12,9 @@ class Carousel {
             return { id, el}
         }) : []
         this._interval = null
-        this._intervalDuration = options.interval ? options.interval : Default.interval
+        if (options) {
+            this._intervalDuration = options.interval ? options.interval : Default.interval
+        }
         this._init()
     }
 
@@ -203,3 +164,48 @@ class Carousel {
     }
 
 }
+
+window.Carousel = Carousel;
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-carousel]').forEach(function (carouselEl) {
+        const interval = carouselEl.getAttribute('data-carousel-interval')
+        const slide = carouselEl.getAttribute('data-carousel') === 'slide' ? true : false
+
+        const carousel = new Carousel(carouselEl.getAttribute('id'), {
+            interval
+        })
+
+        if (slide) {
+            carousel.cycle();
+        }
+
+        // check for controls
+        const carouselNextEl = carouselEl.querySelector('[data-carousel-next]')
+        const carouselPrevEl = carouselEl.querySelector('[data-carousel-prev]')
+
+        if (carouselNextEl) {
+            carouselNextEl.addEventListener('click', () => {
+                carousel.nextSlide()
+            })
+        }
+
+        if (carouselPrevEl) {
+            carouselPrevEl.addEventListener('click', () => {
+                carousel.prevSlide()
+            })
+        }
+
+        // check for indicators
+        carouselEl.querySelectorAll('[data-carousel-slide-to]').forEach(slideToEl => {
+            slideToEl.addEventListener('click', () => {
+                const id = slideToEl.getAttribute('data-carousel-slide-to')
+                carousel.slideTo(id)
+
+            })
+        })
+
+    })
+})
+
+export default Carousel

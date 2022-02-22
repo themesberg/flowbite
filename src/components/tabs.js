@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const tabsToggleElementsId = tabsToggleEl.getAttribute('id');
         const tabsToggleElements = document.querySelectorAll('#' + tabsToggleElementsId + ' [role="tab"]');
 
-        var activeTabToggleEl = null;
-        var activeTabContentEl = null;
+        var activeTabToggleEl = document.querySelector('#' + tabsToggleElementsId + ' [aria-selected="true"]');
+        var activeTabContentEl = document.querySelector(activeTabToggleEl.getAttribute('data-tabs-target'));
 
         tabsToggleElements.forEach(function (tabToggleEl) {
             tabToggleEl.addEventListener('click', function (event) {

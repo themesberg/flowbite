@@ -131,7 +131,7 @@ Use the following code to create list items with ordered and unordered lists.
     <li>Test</li>
 </ol>
 
-<ul class=" dark:text-gray-400">
+<ul class="dark:text-gray-400">
     <li>Design</li>
     <li>Develop</li>
     <li>Test</li>

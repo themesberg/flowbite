@@ -97,14 +97,6 @@ If you use Webpack or other bundlers you can also import it like this:
 import 'flowbite';
 ```
 
-## Tailwind CSS v2
-
-Flowbite is fully compatible with the 2.x versions of Tailwind CSS.
-
-## Tailwind CSS v3
-
-Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking changes when using the components from Flowbite.
-
 ### Include via CDN
 
 If you want to quickly test out Flowbite you can easily include the following CSS and JavaScript files.
@@ -122,6 +114,14 @@ And include the following javascript file before the end of the `body` element:
 ```
 
 Please remember that the best way to work with Tailwind CSS and Flowbite is by purging the CSS classes.
+
+## Tailwind CSS 2.0
+
+Flowbite is fully compatible with the 2.x versions of Tailwind CSS.
+
+## Tailwind CSS 3.0
+
+Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking changes when using the components from Flowbite.
 
 <div class="mt-8 -mb-5">
   {{< requires_react >}}

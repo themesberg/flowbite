@@ -32,6 +32,10 @@
 	@apply pl-4;
 }
 
+#TableOfContents > ul > li > ul {
+	@apply pt-2;
+}
+
 #TableOfContents > ul > li > ul > li {
 	@apply pb-3;
 }

@@ -59,14 +59,6 @@ If you use Webpack or other bundlers you can also import it like this:
 import 'flowbite';
 ```
 
-## Tailwind CSS v2
-
-Flowbite works with the 2.x version of Tailwind CSS.
-
-## Tailwind CSS v3
-
-Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking changes when using the components from Flowbite.
-
 ## Include via CDN
 
 The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.
@@ -82,6 +74,14 @@ And include the following javascript file before the end of the `body` element:
 ```html
 <script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
 ```
+
+## Tailwind CSS 2.0
+
+Flowbite works with the 2.x version of Tailwind CSS.
+
+## Tailwind CSS 3.0
+
+Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking changes when using the components from Flowbite.
 
 <div class="mt-8 -mb-5">
   {{< requires_react >}}

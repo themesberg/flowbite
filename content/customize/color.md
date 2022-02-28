@@ -689,4 +689,4 @@ module.exports = {
 }
 ```
 
-You can read more about <a href="https://tailwindcss.com/docs/customizing-colors" target="_blank">customizing colors on Tailwind CSS</a>.
+You can read more about <a href="https://tailwindcss.com/docs/customizing-colors">customizing colors on Tailwind CSS</a>.

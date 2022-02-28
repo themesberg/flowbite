@@ -97,11 +97,11 @@ If you use Webpack or other bundlers you can also import it like this:
 import 'flowbite';
 ```
 
-### Tailwind CSS v2.x
+## Tailwind CSS v2
 
 Flowbite is fully compatible with the 2.x versions of Tailwind CSS.
 
-### Tailwind CSS v3.x
+## Tailwind CSS v3
 
 Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking changes when using the components from Flowbite.
 
@@ -124,16 +124,6 @@ And include the following javascript file before the end of the `body` element:
 Please remember that the best way to work with Tailwind CSS and Flowbite is by purging the CSS classes.
 
 <div class="mt-8 -mb-5">
-  {{< requires_laravel >}}
-</div>
-
-## Laravel
-
-If you're running a Laravel application you can easily set up Tailwind CSS and Flowbite and start developing user interfaces based on the utility-first classes and components.
-
-Learn how to <a href="{{< ref "getting-started/laravel" >}}">install Tailwind CSS and Flowbite with Laravel</a>.
-
-<div class="mt-8 -mb-5">
   {{< requires_react >}}
 </div>
 
@@ -153,11 +143,31 @@ The components from Flowbite can also be used any new or existing Vue 3 projects
 
 Learn how to <a href="{{< ref "getting-started/vue" >}}">install Tailwind CSS and Flowbite with Vue.js</a>.
 
+<div class="mt-8 -mb-5">
+  {{< requires_laravel >}}
+</div>
+
+## Laravel
+
+If you're running a Laravel application you can easily set up Tailwind CSS and Flowbite and start developing user interfaces based on the utility-first classes and components.
+
+Learn how to <a href="{{< ref "getting-started/laravel" >}}">install Tailwind CSS and Flowbite with Laravel</a>.
+
+<div class="mt-8 -mb-5">
+  {{< requires_svelte >}}
+</div>
+
+## Svelte
+
+If you're using a Svelte application you can install a standalone Flowbite Svelte library and start developing modern websites using the components from Flowbite and the utility classes from Tailwind CSS.
+
+Learn how to <a href="{{< ref "getting-started/svelte" >}}">install Tailwind CSS and Flowbite with Svelte</a>.
+
 ## Figma
 
 The components from Flowbite are first conceptualized and designed in Figma using the latest features such as variants, auto-layout, grids, responsive layouts, and more.
 
-Learn more by checking out <a href="https://flowbite.com/figma/" target="_blank">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
+Learn more by checking out <a href="https://flowbite.com/figma/">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
 
 ## Upgrade to Pro
 
@@ -171,14 +181,14 @@ The library of components from Flowbite is open source under the [MIT License]({
 
 Flowbite is an open source library under the MIT license and anyone who would like to contribute to the codebase or design is welcome to do so. 
 
-Please reach out to us via the <a href="https://github.com/themesberg/flowbite" target="_blank">official Github repository</a> and the main development team will get in touch as soon as possible.
+Please reach out to us via the <a href="https://github.com/themesberg/flowbite">official Github repository</a> and the main development team will get in touch as soon as possible.
 
 ## Discord community
 
-Feel free to join our <a href="https://discord.gg/4eeurUVvTy" target="_blank" rel="nofollow">community on Discord</a> to receive help, contribute to the project, or just discuss about Flowbite, Tailwind CSS, and web development in general.
+Feel free to join our <a href="https://discord.gg/4eeurUVvTy" rel="nofollow">community on Discord</a> to receive help, contribute to the project, or just discuss about Flowbite, Tailwind CSS, and web development in general.
 
 ## Authors
 
-- <a href="https://twitter.com/zoltanszogyenyi" target="_blank" rel="nofollow">Zoltán Szőgyényi</a> (web developer)
-- <a href="https://twitter.com/RobertTanislav" target="_blank" rel="nofollow">Robert Tanislav</a> (web designer)
-- <a href="https://twitter.com/victorcordos" target="_blank" rel="nofollow">Victor Cordos</a> (web developer)
+- <a href="https://twitter.com/zoltanszogyenyi" rel="nofollow">Zoltán Szőgyényi</a> (web developer)
+- <a href="https://twitter.com/RobertTanislav" rel="nofollow">Robert Tanislav</a> (web designer)
+- <a href="https://twitter.com/victorcordos" rel="nofollow">Victor Cordos</a> (web developer)

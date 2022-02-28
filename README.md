@@ -1,6 +1,6 @@
 <p>
-    <a href="https://flowbite.com" target="_blank">
-      <img alt="Flowbite - Tailwind CSS components" width="350" src="https://flowbite.s3.amazonaws.com/flowbite-logo-text.svg">
+    <a href="https://flowbite.com" >
+      <img alt="Flowbite - Tailwind CSS components" width="350" src="https://flowbite.s3.amazonaws.com/github/logo-github.png">
     </a><br>
     Build websites even faster with components on top of Tailwind CSS
 </p>
@@ -199,6 +199,20 @@ Flowbite is an open source collection of UI components built with the utility cl
         </a>
     </td>
   </tr>
+  <tr>
+    <td width="33.3333%">Carousel</td>
+    <td width="33.3333%"></td>
+    <td width="33.3333%"></td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/carousel/">
+            <img alt="Tailwind CSS Carousel" src="https://flowbite.s3.amazonaws.com/github/carousel.jpg">
+        </a>
+    </td>
+    <td width="33.3333%"></td>
+    <td width="33.3333%"></td>
+  </tr>
 </table>
 
 ## Getting started
@@ -207,7 +221,7 @@ Flowbite can be included as a plugin into an existing Tailwind CSS project and i
 
 ### Require via NPM
 
-Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="_blank">Node.js</a> and <a href="https://tailwindcss.com/" rel="nofollow" target="_blank">Tailwind CSS</a> installed. 
+Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" >Node.js</a> and <a href="https://tailwindcss.com/" rel="nofollow" >Tailwind CSS</a> installed. 
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 

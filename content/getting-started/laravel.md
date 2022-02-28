@@ -6,10 +6,10 @@ group: getting-started
 toc: true
 requires_laravel: true
 
-previous: Quickstart
-previousLink: getting-started/quickstart/
-next: React
-nextLink: getting-started/react/
+previous: Vue
+previousLink: getting-started/vue/
+next: Svelte
+nextLink: getting-started/svelte/
 ---
 
 Laravel is the most popular PHP web framework based on the model-view-controller (MCV) model that helps you build modern web applications and API's.
@@ -18,7 +18,7 @@ Use the officially recommended Tailwind CSS utility-first framework and the UI c
 
 ## Install Tailwind CSS with Laravel
 
-Make sure that you have <a href="https://getcomposer.org/" target="_blank" rel="nofollow">Composer</a> and <a href="https://nodejs.org/en/" target="_blank" rel="nofollow">Node.js</a> installed locally on your computer.
+Make sure that you have <a href="https://getcomposer.org/" rel="nofollow">Composer</a> and <a href="https://nodejs.org/en/" rel="nofollow">Node.js</a> installed locally on your computer.
 
 Follow the next steps to install Tailwind CSS and Flowbite with Laravel Mix. 
 

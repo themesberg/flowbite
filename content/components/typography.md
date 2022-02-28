@@ -19,7 +19,7 @@ We have listed some of the commonly used typography classes that we use througho
 
 Use the following `text-{size}` utility classes from Tailwind to set the font size for any text element.
 
-{{< example github="components/typography.md" >}}
+{{< example github="components/typography.md" show_dark=true >}}
 <p class="text-xs dark:text-white">Flowbite</p>
 <p class="text-sm dark:text-white">FlowBite</p>
 <p class="text-base dark:text-white">FlowBite</p>
@@ -39,7 +39,7 @@ Use the following `text-{size}` utility classes from Tailwind to set the font si
 
 Use the following `font-{weight}` utility classes to set the font weight for any text element.
 
-{{< preview github="components/typography.md" >}}
+{{< preview github="components/typography.md" show_dark=true >}}
 <p class="text-4xl font-thin dark:text-white">FlowBite</p>
 <p class="text-4xl font-extralight dark:text-white">FlowBite</p>
 <p class="text-4xl font-light dark:text-white">FlowBite</p>
@@ -67,7 +67,7 @@ Use the following `font-{weight}` utility classes to set the font weight for any
 
 Use the following `leading-{type}` utility classes to set the line height for any text element.
 
-{{< preview github="components/typography.md" >}}
+{{< preview github="components/typography.md" show_dark=true >}}
 <span class="font-normal text-blue-700 dark:text-blue-500">.leading-none</span>
 <p class="mb-4 leading-none text-gray-700 dark:text-gray-400">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
 <span class="font-normal text-blue-700 dark:text-blue-500">.leading-tight</span>
@@ -95,7 +95,7 @@ Use the following `leading-{type}` utility classes to set the line height for an
 
 Use the following code to create list items with ordered and unordered lists.
 
-{{< preview github="components/typography.md" >}}
+{{< preview github="components/typography.md" show_dark=true >}}
 <span class="font-normal text-blue-700 dark:text-blue-500">.list-disc</span>
 <ul class="pl-4 mb-6 list-disc text-gray-700 dark:text-gray-400">
     <li>Design</li>
@@ -142,7 +142,7 @@ Use the following code to create list items with ordered and unordered lists.
 
 Use the `list-inside` and `list-outside` classes to set the list item position inside a list component.
 
-{{< preview github="components/typography.md" >}}
+{{< preview github="components/typography.md" show_dark=true >}}
 <span class="font-normal text-blue-700 dark:text-blue-500">.list-inside</span>
 <ul class="mt-2 mb-6 list-disc list-inside text-green-700 bg-green-100 rounded-lg dark:bg-gray-700 dark:text-green-500">
     <li>Design</li>
@@ -175,7 +175,7 @@ Use the `list-inside` and `list-outside` classes to set the list item position i
 
 You can use the following classes to set the text decoration for any inline text element.
 
-{{< preview github="components/typography.md" >}}
+{{< preview github="components/typography.md" show_dark=true >}}
 <span class="font-normal text-blue-700 dark:text-blue-500">.underline</span>
 <p class="mt-2 mb-4 underline dark:text-gray-400">please read our terms and services</p>
 <span class="font-normal text-blue-700 dark:text-blue-500">.line-through</span>

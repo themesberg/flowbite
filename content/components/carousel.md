@@ -25,7 +25,7 @@ You can add as many carousel items as you want, but make sure that you add the `
 
 Use the `duration-*` and the animation classes from Tailwind CSS to apply custom effects to the carousel items and don't forget to set the `hidden` class by default to prevent flickering.
 
-{{< example github="components/carousel.md" >}}
+{{< example github="components/carousel.md" show_dark=true >}}
 <div id="default-carousel" data-carousel="slide" class="relative">
 
     <!-- Carousel wrapper -->
@@ -88,7 +88,7 @@ Use the `data-carousel-prev` and `data-carousel-next` data attribute to listen t
 
 You can customize the control elements with the classes from Tailwind CSS anyhow you want.
 
-{{< example github="components/carousel.md" >}}
+{{< example github="components/carousel.md" show_dark=true >}}
 <div id="controls-carousel" class="relative" data-carousel="static">
 
     <!-- Carousel wrapper -->
@@ -140,7 +140,7 @@ You can customize the control elements with the classes from Tailwind CSS anyhow
 
 Show the carousel indicators by adding the `data-carousel-slide-to={position}` to any number or style of indicator elements where the value equals the position of the slider element.
 
-{{< example github="components/carousel.md" >}}
+{{< example github="components/carousel.md" show_dark=true >}}
 <div id="indicators-carousel" class="relative" data-carousel="static">
 
     <!-- Carousel wrapper -->
@@ -201,7 +201,7 @@ Show the carousel indicators by adding the `data-carousel-slide-to={position}` t
 
 You can easily customize the duration and animation style of the carousel component by using the `duration-*` and `ease-*` utility classes from Tailwind CSS.
 
-{{< example github="components/carousel.md" >}}
+{{< example github="components/carousel.md" show_dark=true >}}
 <div id="animation-carousel" class="relative" data-carousel="static">
 
     <!-- Carousel wrapper -->

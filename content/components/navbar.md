@@ -17,7 +17,7 @@ Get started with the responsive navbar component from Flowbite to quickly set up
 
 Use this example of a navigation bar built with the utility classes from Tailwind CSS to enable users to navigate between the pages of your website.
 
-{{< example github="components/navbar.md" >}}
+{{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
     <a href="#" class="flex items-center">
@@ -56,7 +56,7 @@ Use this example of a navigation bar built with the utility classes from Tailwin
 
 Use this example to create a navigation bar with a user profile or button to toggle a dropdown menu.
 
-{{< example github="components/navbar.md" >}}
+{{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
   <a href="#" class="flex items-center">
@@ -122,7 +122,7 @@ Use this example to create a navigation bar with a user profile or button to tog
 
 Use this example of a navbar element to also show a search input element that you can integrate for a site-wide search.
 
-{{< example github="components/navbar.md" >}}
+{{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
   <a href="#" class="flex items-center">
@@ -163,7 +163,7 @@ Use this example of a navbar element to also show a search input element that yo
 
 Use the following navbar element to show a call to action button alongside the logo and page links.
 
-{{< example github="components/navbar.md" >}}
+{{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
   <a href="#" class="flex items-center">

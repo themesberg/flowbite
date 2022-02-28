@@ -23,18 +23,18 @@ Use this footer component to show a copyright notice and some helpful website li
 <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
     <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com" class="hover:underline">Flowbite™</a>. All Rights Reserved.
     </span>
-    <ul class="flex flex-wrap items-center mt-3 sm:mt-0">
+    <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
         <li>
-            <a href="#" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">About</a>
+            <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
         </li>
         <li>
-            <a href="#" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">Privacy Policy</a>
+            <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
         </li>
         <li>
-            <a href="#" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">Licensing</a>
+            <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
         </li>
         <li>
-            <a href="#" class="text-sm text-gray-500 hover:underline dark:text-gray-400">Contact</a>
+            <a href="#" class="hover:underline">Contact</a>
         </li>
     </ul>
 </footer>
@@ -51,18 +51,18 @@ Use this component to show your brand's logo, a few website links and the copyri
             <img src="/docs/images/logo.svg" class="mr-3 h-8" alt="Flowbite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
         </a>
-        <ul class="flex flex-wrap items-center mb-6 sm:mb-0">
+        <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
             <li>
-                <a href="#" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">About</a>
+                <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
             </li>
             <li>
-                <a href="#" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">Privacy Policy</a>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
             </li>
             <li>
-                <a href="#" class="mr-4 text-sm text-gray-500 hover:underline md:mr-6 dark:text-gray-400">Licensing</a>
+                <a href="#" class="mr-4 hover:underline md:mr-6 ">Licensing</a>
             </li>
             <li>
-                <a href="#" class="text-sm text-gray-500 hover:underline dark:text-gray-400">Contact</a>
+                <a href="#" class="hover:underline">Contact</a>
             </li>
         </ul>
     </div>
@@ -87,35 +87,35 @@ This footer component can be used to show your brand's logo, multiple rows of we
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h3>
-                <ul>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                <ul class="text-gray-600 dark:text-gray-400">
                     <li class="mb-4">
-                        <a href="https://flowbite.com" class="text-gray-600 hover:underline dark:text-gray-400">Flowbite</a>
+                        <a href="https://flowbite.com" class="hover:underline">Flowbite</a>
                     </li>
                     <li>
-                        <a href="https://tailwindcss.com/" rel="nofollow" class="text-gray-600 hover:underline dark:text-gray-400">Tailwind CSS</a>
+                        <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h3>
-                <ul>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                <ul class="text-gray-600 dark:text-gray-400">
                     <li class="mb-4">
-                        <a href="https://github.com/themesberg/flowbite" class="text-gray-600 hover:underline dark:text-gray-400">Github</a>
+                        <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
                     </li>
                     <li>
-                        <a href="https://discord.gg/4eeurUVvTy" class="text-gray-600 hover:underline dark:text-gray-400">Discord</a>
+                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h3>
-                <ul>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                <ul class="text-gray-600 dark:text-gray-400">
                     <li class="mb-4">
-                        <a href="#" class="text-gray-600 hover:underline dark:text-gray-400">Privacy Policy</a>
+                        <a href="#" class="hover:underline">Privacy Policy</a>
                     </li>
                     <li>
-                        <a href="#" class="text-gray-600 hover:underline dark:text-gray-400">Terms &amp; Conditions</a>
+                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
                     </li>
                 </ul>
             </div>
@@ -154,67 +154,67 @@ If you have a website with many pages you can use this footer component to show 
 <footer class="bg-gray-800">
     <div class="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
         <div>
-            <h3 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Company</h3>
-            <ul>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Company</h2>
+            <ul class="text-gray-300">
                 <li class="mb-4">
-                    <a href="#" rel="noreferrer" class="text-gray-300 hover:underline">About</a>
+                    <a href="#" class=" hover:underline">About</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#" rel="noreferrer" class="text-gray-300 hover:underline">Careers</a>
+                    <a href="#" class="hover:underline">Careers</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#" rel="noreferrer" class="text-gray-300 hover:underline">Brand Center</a>
+                    <a href="#" class="hover:underline">Brand Center</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#" rel="noreferrer" class="text-gray-300 hover:underline">Blog</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h3 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Help center</h3>
-            <ul>
-                <li class="mb-4">
-                    <a href="#" rel="noreferrer" class="text-gray-300 hover:underline">Discord Server</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" rel="noreferrer" class="text-gray-300 hover:underline">Twitter</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" rel="noreferrer" class="text-gray-300 hover:underline">Facebook
-                </li>
-                <li class="mb-4">
-                    <a href="#" rel="noreferrer" class="text-gray-300 hover:underline">Contact Us</a>
+                    <a href="#" class="hover:underline">Blog</a>
                 </li>
             </ul>
         </div>
         <div>
-            <h3 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Legal</h3>
-            <ul>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Help center</h2>
+            <ul class="text-gray-300">
                 <li class="mb-4">
-                    <a href="#" rel="noreferrer" class="text-gray-300 hover:underline">Privacy Policy</a>
+                    <a href="#" class="hover:underline">Discord Server</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#" rel="noreferrer" class="text-gray-300 hover:underline">Licensing</a>
+                    <a href="#" class="hover:underline">Twitter</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#" rel="noreferrer" class="text-gray-300 hover:underline">Terms &amp; Conditions</a>
+                    <a href="#" class="hover:underline">Facebook
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Contact Us</a>
                 </li>
             </ul>
         </div>
         <div>
-            <h3 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Download</h3>
-            <ul>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Legal</h2>
+            <ul class="text-gray-300">
                 <li class="mb-4">
-                    <a href="#" rel="noreferrer" class="text-gray-300 hover:underline">iOS</a>
+                    <a href="#" class="hover:underline">Privacy Policy</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#" rel="noreferrer" class="text-gray-300 hover:underline">Android</a>
+                    <a href="#" class="hover:underline">Licensing</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#" rel="noreferrer" class="text-gray-300 hover:underline">Windows</a>
+                    <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Download</h2>
+            <ul class="text-gray-300">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">iOS</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#" rel="noreferrer" class="text-gray-300 hover:underline">MacOS</a>
+                    <a href="#" class="hover:underline">Android</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Windows</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">MacOS</a>
                 </li>
             </ul>
         </div>

@@ -64,6 +64,32 @@ function initiateCopyToClipboard(element) {
     });
 }
 
+function initiateToggleDarkState(element) {
+    var codePreviewWrapper = element.getElementsByClassName('code-preview-wrapper')[0];
+    var button = element.getElementsByClassName("toggle-dark-state-example")[0];
+    var moonIcon = element.querySelector('[data-toggle-icon="moon"]');
+    var sunIcon = element.querySelector('[data-toggle-icon="sun"]');
+    
+
+    button.addEventListener('click', function () {
+        
+        var state = button.getAttribute('data-toggle-dark');
+
+        if (state === 'light') {
+            codePreviewWrapper.classList.add('dark');
+            button.setAttribute('data-toggle-dark', 'dark');
+            moonIcon.classList.add('hidden');
+            sunIcon.classList.remove('hidden');
+        }
+        if (state === 'dark') {
+            codePreviewWrapper.classList.remove('dark');
+            button.setAttribute('data-toggle-dark', 'light');
+            moonIcon.classList.remove('hidden');
+            sunIcon.classList.add('hidden');
+        }
+    })
+}
+
 document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -71,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var codeExamples = document.getElementsByClassName("code-example");
     for (var i = 0; i < codeExamples.length; i++) {
         initiateCopyToClipboard(codeExamples.item(i));
+        initiateToggleDarkState(codeExamples.item(i));
     }
 
 });

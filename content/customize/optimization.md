@@ -42,4 +42,4 @@ The command that you have to run in your terminal for production build would be:
 NODE_ENV=production npx tailwindcss -o flowbite.css
 ```
 
-Learn more about how to optimize your code for production by reading the official <a href="https://tailwindcss.com/docs/optimizing-for-production" target="_blank">Tailwind CSS guide</a>.
+Learn more about how to optimize your code for production by reading the official <a href="https://tailwindcss.com/docs/optimizing-for-production">Tailwind CSS guide</a>.

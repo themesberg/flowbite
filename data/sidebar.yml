@@ -5,9 +5,11 @@
   pages:
     - title: Introduction
     - title: Quickstart
-    - title: Laravel
     - title: React
     - title: Vue
+    - title: Laravel
+    - title: Svelte
+      new: true
     # - title: Angular
     - title: License
     - title: Changelog

@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Tailwind CSS Carousel Slider - Flowbite
+title: Tailwind CSS Carousel - Flowbite
 description: Use the carousel component to slide through multiple elements and images using custom controls, indicators, intervals, and options
 group: components
 toc: true
@@ -39,26 +39,22 @@ Use the `duration-*` and the animation classes from Tailwind CSS to apply custom
 
         <!-- Item 2 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Second Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-2.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-2.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 3 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Third Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-3.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-3.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 4 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Fourth Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-4.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-4.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 5 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Fifth Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-5.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-5.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
     </div>
 
@@ -93,7 +89,7 @@ Use the `data-carousel-prev` and `data-carousel-next` data attribute to listen t
 
 You can customize the control elements with the classes from Tailwind CSS anyhow you want.
 
-{{< example github="components/carousel.md" >}}
+{{< example github="components/carousel.md" show_dark=true >}}
 <div id="controls-carousel" class="relative" data-carousel="static">
 
     <!-- Carousel wrapper -->
@@ -101,32 +97,27 @@ You can customize the control elements with the classes from Tailwind CSS anyhow
 
          <!-- Item 1 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-1.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-1.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 2 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Second Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-2.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-2.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 3 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Third Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-3.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-3.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 4 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Fourth Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-4.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-4.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 5 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Fifth Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-5.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-5.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
     </div>
 
@@ -150,7 +141,7 @@ You can customize the control elements with the classes from Tailwind CSS anyhow
 
 Show the carousel indicators by adding the `data-carousel-slide-to={position}` to any number or style of indicator elements where the value equals the position of the slider element.
 
-{{< example github="components/carousel.md" >}}
+{{< example github="components/carousel.md" show_dark=true >}}
 <div id="indicators-carousel" class="relative" data-carousel="static">
 
     <!-- Carousel wrapper -->
@@ -158,32 +149,27 @@ Show the carousel indicators by adding the `data-carousel-slide-to={position}` t
 
          <!-- Item 1 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-1.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-1.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 2 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Second Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-2.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-2.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 3 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Third Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-3.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-3.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 4 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Fourth Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-4.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-4.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 5 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Fifth Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-5.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-5.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
     </div>
 
@@ -216,7 +202,7 @@ Show the carousel indicators by adding the `data-carousel-slide-to={position}` t
 
 You can easily customize the duration and animation style of the carousel component by using the `duration-*` and `ease-*` utility classes from Tailwind CSS.
 
-{{< example github="components/carousel.md" >}}
+{{< example github="components/carousel.md" show_dark=true >}}
 <div id="animation-carousel" class="relative" data-carousel="static">
 
     <!-- Carousel wrapper -->
@@ -224,32 +210,27 @@ You can easily customize the duration and animation style of the carousel compon
 
          <!-- Item 1 -->
         <div class="hidden duration-200 ease-linear" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-1.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-1.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 2 -->
         <div class="hidden duration-200 ease-linear" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Second Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-2.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-2.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 3 -->
         <div class="hidden duration-200 ease-linear" data-carousel-item="active">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Third Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-3.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-3.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 4 -->
         <div class="hidden duration-200 ease-linear" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Fourth Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-4.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-4.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 5 -->
         <div class="hidden duration-200 ease-linear" data-carousel-item="">
-            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">Fifth Slide</span>
-            <img src="/docs/images/gradients/mesh-gradient-5.png" class="block w-full" alt="...">
+            <img src="/docs/images/carousel/carousel-5.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
     </div>
 
@@ -269,7 +250,7 @@ You can easily customize the duration and animation style of the carousel compon
 </div>
 {{< /example >}}
 
-<!-- ## JavaScript
+## JavaScript
 
 Alternatively to the data attributes, you can also choose to initialise a new carousel component based on the `new Carousel(id, options)` object constructor and access the public methods.
 
@@ -306,4 +287,4 @@ carousel.cycle()
 
 // pauses the cycling (automated sliding)
 carousel.pause()
-``` -->
+```

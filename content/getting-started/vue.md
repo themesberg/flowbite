@@ -8,8 +8,8 @@ requires_vue: true
 
 previous: React
 previousLink: getting-started/react/
-next: License
-nextLink: getting-started/license/
+next: Laravel
+nextLink: getting-started/laravel/
 ---
 
 Vue.js is a popular front-end library used by websites such as Behance, Nintendo, Gitlab, Font Awesome, and more that you can use to build modern web applications. 

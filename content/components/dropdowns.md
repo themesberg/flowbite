@@ -12,7 +12,7 @@ next: Forms
 nextLink: components/forms/
 ---
 
-You can use the Tailwind CSS dropdown element from Flowbite to show a menu when clicking on an element such as a button. Make sure to include <a href="{{< ref "getting-started/quickstart" >}}" rel="nofollow" target="_blank">Flowbite's JavaScript file</a> inside your project to enable dropdowns.
+You can use the Tailwind CSS dropdown element from Flowbite to show a menu when clicking on an element such as a button. Make sure to include <a href="{{< ref "getting-started/quickstart" >}}" rel="nofollow">Flowbite's JavaScript file</a> inside your project to enable dropdowns.
 
 ## Dropdown example
 
@@ -20,7 +20,7 @@ If you want to show a dropdown menu when clicking on an element, make sure that 
 
 The `dropdownId` is the id of the dropdown menu element.
 
-{{< example class="dark:bg-gray-800" github="components/dropdowns.md" >}}
+{{< example class="dark:bg-gray-800" github="components/dropdowns.md" show_dark=true >}}
 <button id="dropdownButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 
 <!-- Dropdown menu -->
@@ -46,7 +46,7 @@ The `dropdownId` is the id of the dropdown menu element.
 
 You can use the `divide-y divide-gray-100` classes to add separate elements inside the dropdown menu.
 
-{{< example class="dark:bg-gray-800" github="components/dropdowns.md" >}}
+{{< example class="dark:bg-gray-800" github="components/dropdowns.md" show_dark=true >}}
 <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown divider <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 
 <!-- Dropdown menu -->
@@ -72,7 +72,7 @@ You can use the `divide-y divide-gray-100` classes to add separate elements insi
 
 You can also show extra information inside the dropdown menu using the divider option.
 
-{{< example class="dark:bg-gray-800" github="components/dropdowns.md" >}}
+{{< example class="dark:bg-gray-800" github="components/dropdowns.md" show_dark=true >}}
 <button id="dropdownInformationButton" data-dropdown-toggle="dropdownInformation" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown header <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 
 <!-- Dropdown menu -->
@@ -102,12 +102,12 @@ You can also show extra information inside the dropdown menu using the divider o
 
 You can also use the dropdown element inside a navigation bar and add a second level of navigation hierarchy, but make sure to use a `button` element.
 
-{{< example class="dark:bg-gray-800" github="components/dropdowns.md" >}}
+{{< example class="dark:bg-gray-800" github="components/dropdowns.md" show_dark=true >}}
 <nav class="px-2 bg-white border-gray-200 dark:bg-gray-800 dark:border-gray-700">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
-    <a href="#" class="flex">
-      <svg class="mr-3 h-10" width="51" height="70" viewBox="0 0 51 70" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M1 53H27.9022C40.6587 53 51 42.7025 51 30H24.0978C11.3412 30 1 40.2975 1 53Z" fill="#76A9FA"/><path d="M-0.876544 32.1644L-0.876544 66.411C11.9849 66.411 22.4111 55.9847 22.4111 43.1233L22.4111 8.87674C10.1196 8.98051 0.518714 19.5571 -0.876544 32.1644Z" fill="#A4CAFE"/><path d="M50 5H23.0978C10.3413 5 0 15.2975 0 28H26.9022C39.6588 28 50 17.7025 50 5Z" fill="#1C64F2"/></g><defs><clipPath id="clip0"><rect width="51" height="70" fill="white"/></clipPath></defs></svg>
-        <span class="self-center text-lg font-semibold text-gray-900 whitespace-nowrap dark:text-white">FlowBite</span>
+    <a href="#" class="flex items-center">
+        <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo" />
+        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
     </a>
     <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex justify-center items-center ml-3 text-gray-400 rounded-lg md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-500" aria-controls="mobile-menu-2" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
@@ -158,7 +158,7 @@ You can also use the dropdown element inside a navigation bar and add a second l
 
 The dropdown menus work with buttons of all sizes including smaller or larger ones.
 
-{{< example class="dark:bg-gray-800" github="components/dropdowns.md" >}}
+{{< example class="dark:bg-gray-800" github="components/dropdowns.md" show_dark=true >}}
 <button id="dropdownSmallButton" data-dropdown-toggle="dropdownSmall" class="inline-flex items-center py-2 px-3 mr-3 mb-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg md:mb-0 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Small dropdown <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 
 <!-- Dropdown menu -->
@@ -212,7 +212,7 @@ The dropdown menus work with buttons of all sizes including smaller or larger on
 
 You can also use the `data-dropdown-placement={top|right|bottom|left}` data attribute options to choose the placement of the dropdown menu. By default the positioning is set to the bottom side of the button.
 
-{{< example class="flex flex-wrap dark:bg-gray-800" github="components/dropdowns.md" >}}
+{{< example class="flex flex-wrap dark:bg-gray-800" github="components/dropdowns.md" show_dark=true >}}
 <button id="dropdownTopButton" data-dropdown-toggle="dropdownTop" data-dropdown-placement="top" class="mr-3 mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown top <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg></button>
 
 <!-- Dropdown menu -->

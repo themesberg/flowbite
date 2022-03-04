@@ -1,21 +1,42 @@
-const toggleCollapse = (elementId, show = true) => {
-    const collapseEl = document.getElementById(elementId);
-    if (show) {
-        collapseEl.classList.remove('hidden');
-    } else {
-        collapseEl.classList.add('hidden');
+class Collapse {
+    constructor(el, targetID) {
+        this._el = el
+        this._targetEl = document.getElementById(targetID)
+        if (this._el.hasAttribute('aria-expanded')) {
+            this._visible = this._el.getAttribute('aria-expanded') === 'true' ? true : false
+        } else {
+            // fix until v2 not to break previous single collapses which became dismiss
+            this._visible = this._targetEl.classList.contains('hidden') ? false : true
+        }
+        this._init()
+    }
+
+    _init() {
+        this._el.addEventListener('click', () => {
+            this._visible ? this.hide() : this.show()
+        })
+    }
+
+    show() {
+        this._targetEl.classList.remove('hidden')
+        this._el.setAttribute('aria-expanded', 'true')
+        this._visible = true
+    }
+
+    hide() {
+        this._targetEl.classList.add('hidden')
+        this._el.setAttribute('aria-expanded', 'false')
+        this._visible = false
     }
 }
 
+window.Collapse = Collapse;
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Toggle target elements using [data-collapse-toggle]
-    document.querySelectorAll('[data-collapse-toggle]').forEach(function (collapseToggleEl) {
-        var collapseId = collapseToggleEl.getAttribute('data-collapse-toggle');
+    document.querySelectorAll('[data-collapse-toggle]').forEach(function (el) {
+        const collapse = new Collapse(el, el.getAttribute('data-collapse-toggle'))
+        // console.log(collapse);
+    })
+})
 
-        collapseToggleEl.addEventListener('click', function () {
-            toggleCollapse(collapseId, document.getElementById(collapseId).classList.contains('hidden'));
-        });
-    });
-});
-
-window.toggleCollapse = toggleCollapse;
+export default Collapse

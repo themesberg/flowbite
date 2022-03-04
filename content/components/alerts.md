@@ -291,7 +291,7 @@ The following alert components can be used if you wish to disclose more informat
 
 ## JavaScript behaviour
 
-The Dismiss class from Flowbite can be used to create an object that will hide a target element or elements based on the parameters, options, and methods that you provide.
+The **Dismiss class** from Flowbite can be used to create an object that will hide a target element or elements based on the parameters, options, and methods that you provide.
 
 ### Object parameters
 
@@ -354,7 +354,7 @@ The parameters for the Dismiss object can be used to programatically initialize 
                 Optional
             </td>
             <td class="py-4 px-6">
-                Optional object of options.
+                Set these options to override the default transition, duration, and timing function of the dismiss animation.
             </td>
         </tr>
     </tbody>

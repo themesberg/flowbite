@@ -83,6 +83,10 @@
 	list-style: decimal;
 }
 
+#mainContent p > strong {
+	@apply text-gray-900 dark:text-white;
+}
+
 #mainContent > ul,
 #mainContent > ol {
 	padding-left: 1rem;

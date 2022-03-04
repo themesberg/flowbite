@@ -178,7 +178,7 @@ Use this interactive toast component to encourage users to make a certain action
 </div>
 {{< /example >}}
 
-## Position
+## Positioning
 
 Use the `absolute` class from Tailwind CSS to position these toast components relative to the main content wrapper element from your document:
 
@@ -203,3 +203,7 @@ Use the `absolute` class from Tailwind CSS to position these toast components re
 {{< /example >}}
 
 You can set your own distance for the `top-*|right-*|bottom-*|left-*` positioning classes.
+
+## JavaScript behaviour
+
+Please check out the <a href="{{< ref "components/alerts" >}}#javascript-behaviour">Dismiss object</a> documentation to learn how to programatically work with the toast component directly from JavaScript.

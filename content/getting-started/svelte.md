@@ -142,5 +142,3 @@ If you are using Flowbite.js, you need to add `rel="external"` to the link tag f
 
 By default, the SvelteKit runtime intercepts clicks on `<a>` elements and bypasses the normal browser navigation for relative (same-origin) URLs that match one of your page routes. — SvelteKit doc
 Adding a rel=external attribute to a link will trigger a browser navigation when the link is clicked.
-  
-  

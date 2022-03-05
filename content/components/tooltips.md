@@ -23,7 +23,7 @@ To get started with using tooltips all you need to do is add the `data-tooltip-t
 
 {{< example class="dark:bg-gray-800" github="components/tooltips.md" show_dark=true >}}
 <button data-tooltip-target="tooltip-default" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default tooltip</button>
-<div id="tooltip-default" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+<div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Tooltip content
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
@@ -36,14 +36,14 @@ You can use choose between dark and light version styles for the tooltip compone
 {{< example class="dark:bg-gray-800" github="components/tooltips.md" show_dark=true >}}
 <!-- Light style tooltip -->
 <button data-tooltip-target="tooltip-light" data-tooltip-style="light" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Light tooltip</button>
-<div id="tooltip-light" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 shadow-sm opacity-0 tooltip">
+<div id="tooltip-light" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 tooltip">
     Tooltip content
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
 
 <!-- Dark style tooltip -->
 <button data-tooltip-target="tooltip-dark" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Dark tooltip</button>
-<div id="tooltip-dark" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+<div id="tooltip-dark" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Tooltip content
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
@@ -56,28 +56,28 @@ The positioning of the tooltip element relative to the triggering element (eg. b
 {{< example class="dark:bg-gray-800" github="components/tooltips.md" show_dark=true >}}
 <!-- Show tooltip on top -->
 <button data-tooltip-target="tooltip-top" data-tooltip-placement="top" type="button" class="mb-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip top</button>
-<div id="tooltip-top" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+<div id="tooltip-top" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Tooltip on top
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
 
 <!-- Show tooltip on right -->
 <button data-tooltip-target="tooltip-right" data-tooltip-placement="right" type="button" class="mb-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip right</button>
-<div id="tooltip-right" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+<div id="tooltip-right" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Tooltip on right
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
 
 <!-- Show tooltip on bottom -->
 <button data-tooltip-target="tooltip-bottom" data-tooltip-placement="bottom" type="button" class="mb-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip bottom</button>
-<div id="tooltip-bottom" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+<div id="tooltip-bottom" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Tooltip on bottom
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
 
 <!-- Show tooltip on left -->
 <button data-tooltip-target="tooltip-left" data-tooltip-placement="left" type="button" class="mb-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip left</button>
-<div id="tooltip-left" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+<div id="tooltip-left" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Tooltip on left
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
@@ -90,14 +90,14 @@ You can choose the triggering event by using the `data-tooltip-trigger="{hover|c
 {{< example class="dark:bg-gray-800" github="components/tooltips.md" show_dark=true >}}
 <!-- Show tooltip on hover -->
 <button data-tooltip-target="tooltip-hover" data-tooltip-trigger="hover" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip hover</button>
-<div id="tooltip-hover" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+<div id="tooltip-hover" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Tooltip content
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
 
 <!-- Show tooltip on click -->
 <button data-tooltip-target="tooltip-click" data-tooltip-trigger="click" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip click</button>
-<div id="tooltip-click" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+<div id="tooltip-click" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Tooltip content
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
@@ -109,7 +109,7 @@ You can set tooltip animation styles by using the transition utility classes fro
 
 {{< example class="dark:bg-gray-800" github="components/tooltips.md" show_dark=true >}}
 <button data-tooltip-target="tooltip-animation" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Animated tooltip</button>
-<div id="tooltip-animation" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+<div id="tooltip-animation" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Tooltip content
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
@@ -121,7 +121,140 @@ You can also disable the tooltip arrow by not including the `data-popper-arrow` 
 
 {{< example class="dark:bg-gray-800" github="components/tooltips.md" show_dark=true >}}
 <button data-tooltip-target="tooltip-no-arrow" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default tooltip</button>
-<div id="tooltip-no-arrow" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+<div id="tooltip-no-arrow" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Tooltip content
 </div>
 {{< /example >}}
+
+## JavaScript behaviour
+
+### Object parameters
+
+<table class="min-w-full my-10 text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
+    <thead class="bg-gray-50 dark:bg-gray-700">
+        <tr class="text-xs font-medium uppercase">
+            <th scope="col" class="px-6 py-3">
+                Parameter
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Type
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Required
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">targetId</code>
+            </td>
+            <td class="px-6 py-4">
+                String
+            </td>
+            <td class="px-6 py-4">
+                Required
+            </td>
+            <td class="px-6 py-4">
+                Apple the tooltip content element's id which will be used for a <code class="text-blue-600 dark:text-blue-400">getElementById()</code> function inside the Tooltip object.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
+            </td>
+            <td class="px-6 py-4">
+                Element
+            </td>
+            <td class="px-6 py-4">
+                Optional
+            </td>
+            <td class="px-6 py-4">
+                Optionally set an element to trigger the tooltip when clicking or hovering (ie. a button, text).
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">options</code>
+            </td>
+            <td class="px-6 py-4">
+               Object
+            </td>
+            <td class="px-6 py-4">
+                Optional
+            </td>
+            <td class="px-6 py-4">
+                Use the options parameter to set the positioning of the tooltip element, trigger type, offsets, and more.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+### Options
+
+<table class="min-w-full my-10 text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
+    <thead class="bg-gray-50 dark:bg-gray-700">
+        <tr class="text-xs font-medium uppercase">
+            <th scope="col" class="px-6 py-3">
+                Option
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">position</code>
+            </td>
+            <td class="px-6 py-4">
+                Set the position of the tooltip element relative to the trigger element choosing from <code class="text-purple-600 dark:text-purple-400">top|right|bottom|left</code>.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">triggerType</code>
+            </td>
+            <td class="px-6 py-4">
+                Set the event type that will trigger the tooltip content choosing between <code class="text-purple-600 dark:text-purple-400">hover|click</code>.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+### Methods
+
+<table class="min-w-full my-10 text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
+    <thead class="bg-gray-50 dark:bg-gray-700">
+        <tr class="text-xs font-medium uppercase">
+            <th scope="col" class="px-6 py-3">
+                Method
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">show()</code>
+            </td>
+            <td class="px-6 py-4">
+                Use the <code class="text-blue-600 dark:text-blue-400">show()</code> method on the Tooltip object to show the tooltip content.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">hide()</code>
+            </td>
+            <td class="px-6 py-4">
+                Use the <code class="text-blue-600 dark:text-blue-400">hide()</code> method on the Tooltip object to hide the tooltip content.
+            </td>
+        </tr>
+    </tbody>
+</table>

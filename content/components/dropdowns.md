@@ -410,7 +410,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
 
 ### Options
 
-Use the following options as the third parameter for the Tooltip class to set the positioning, offset, and the trigger type (hover or click) for the tooltip element.
+Use the following options as the third parameter for the Dropdown class to set the placement of the dropdown menu.
 
 <table class="my-10 min-w-full text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
     <thead class="bg-gray-50 dark:bg-gray-700">
@@ -437,7 +437,7 @@ Use the following options as the third parameter for the Tooltip class to set th
 
 ### Methods
 
-Use the methods from the Tooltip object to programatically show or hide the tooltip from JavaScript.
+Use the methods from the Dropdown object to programatically show or hide the dropdown menu directly from JavaScript.
 
 <table class="my-10 min-w-full text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
     <thead class="bg-gray-50 dark:bg-gray-700">

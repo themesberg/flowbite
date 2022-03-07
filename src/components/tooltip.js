@@ -6,8 +6,8 @@ const Default = {
 }
 
 class Tooltip {
-    constructor(targetId = null, triggerElement = null, options = {}) {
-        this._targetEl = document.getElementById(targetId)
+    constructor(targetElement = null, triggerElement = null, options = {}) {
+        this._targetEl = targetElement
         this._triggerEl = triggerElement
         this._options = { ...Default, ...options }
         this._popperInstance = this._createPopperInstace()
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const triggerType = el.getAttribute('data-tooltip-trigger');
         const placement = el.getAttribute('data-tooltip-placement');
 
-        const tooltip = new Tooltip(el.getAttribute('data-tooltip-target'), el, {
+        const tooltip = new Tooltip(document.getElementById(el.getAttribute('data-tooltip-target')), el, {
             placement: placement ? placement : Default.placement,
             triggerType: triggerType ? triggerType : Default.triggerType
         })

@@ -35,7 +35,7 @@ window.Collapse = Collapse;
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-collapse-toggle]').forEach(function (el) {
         const collapse = new Collapse(el, el.getAttribute('data-collapse-toggle'))
-        // console.log(collapse);
+        console.log(collapse);
     })
 })
 

@@ -21,13 +21,12 @@ If you want to show a dropdown menu when clicking on an element, make sure that 
 The `dropdownId` is the id of the dropdown menu element.
 
 {{< example class="dark:bg-gray-800" github="components/dropdowns.md" show_dark=true >}}
-<button id="dropdownButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-
+<button id="dropdownDefault" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 <!-- Dropdown menu -->
 <div id="dropdown" class="hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
-    <ul class="py-1" aria-labelledby="dropdownButton">
+    <ul class="py-1" aria-labelledby="dropdownDefault">
       <li>
-        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+        <a href="https://flowbite.com" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
       </li>
       <li>
         <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
@@ -337,3 +336,189 @@ Alternatively you can choose the secondary axis placement by specifying `*-start
     </ul>
 </div>
 {{< /example >}}
+
+## JavaScript behaviour
+
+The **Dropdown** class from Flowbite can be used to create an object that will show a dropdown menu relative to the main trigger element (eg. a button) based on the parameters, options, and methods that you provide.
+
+### Object parameters
+
+Initialize a Dropdown object with the object parameters such as the main target dropdown menu, a trigger element (eg. a button) and options to set the placement relative to the trigger element.
+
+<table class="my-10 min-w-full text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
+    <thead class="bg-gray-50 dark:bg-gray-700">
+        <tr class="text-xs font-medium uppercase">
+            <th scope="col" class="py-3 px-6">
+                Parameter
+            </th>
+            <th scope="col" class="py-3 px-6">
+                Type
+            </th>
+            <th scope="col" class="py-3 px-6">
+                Required
+            </th>
+            <th scope="col" class="py-3 px-6">
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="py-4 px-6 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">targetElement</code>
+            </td>
+            <td class="py-4 px-6">
+                Element
+            </td>
+            <td class="py-4 px-6">
+                Required
+            </td>
+            <td class="py-4 px-6">
+                Apply the main dropdown menu element as the first parameter of the Dropdown object.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="py-4 px-6 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
+            </td>
+            <td class="py-4 px-6">
+                Element
+            </td>
+            <td class="py-4 px-6">
+                Required
+            </td>
+            <td class="py-4 px-6">
+                Apply the trigger element, such as a button, which is required to position the dropdown menu and set a click event.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="py-4 px-6 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">options</code>
+            </td>
+            <td class="py-4 px-6">
+                Object
+            </td>
+            <td class="py-4 px-6">
+                Optional
+            </td>
+            <td class="py-4 px-6">
+                Use the options parameter to set the positioning of the dropdown menu.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+### Options
+
+Use the following options as the third parameter for the Tooltip class to set the positioning, offset, and the trigger type (hover or click) for the tooltip element.
+
+<table class="my-10 min-w-full text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
+    <thead class="bg-gray-50 dark:bg-gray-700">
+        <tr class="text-xs font-medium uppercase">
+            <th scope="col" class="py-3 px-6">
+                Option
+            </th>
+            <th scope="col" class="py-3 px-6">
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="py-4 px-6 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">placement</code>
+            </td>
+            <td class="py-4 px-6">
+                Set the position of the dropdown menu relative to the trigger element choosing from <code class="text-purple-600 dark:text-purple-400">top|right|bottom|left</code>.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+### Methods
+
+Use the methods from the Tooltip object to programatically show or hide the tooltip from JavaScript.
+
+<table class="my-10 min-w-full text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
+    <thead class="bg-gray-50 dark:bg-gray-700">
+        <tr class="text-xs font-medium uppercase">
+            <th scope="col" class="py-3 px-6">
+                Method
+            </th>
+            <th scope="col" class="py-3 px-6">
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="py-4 px-6 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">show()</code>
+            </td>
+            <td class="py-4 px-6">
+                Use the <code class="text-blue-600 dark:text-blue-400">show()</code> method on the Dropdown object to show the dropdown menu.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="py-4 px-6 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">hide()</code>
+            </td>
+            <td class="py-4 px-6">
+                Use the <code class="text-blue-600 dark:text-blue-400">hide()</code> method on the Dropdown object to hide the dropdown menu.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+### Example
+
+Check out the following JavaScript example to learn how to initialize, set the options, and use the methods for the Dropdown object:
+
+```javascript
+// set the dropdown menu element
+const targetEl = document.getElementById('dropdownMenu');
+
+// set the element that trigger the dropdown menu on click
+const triggerEl = document.getElementById('dropdownButton');
+
+// options with default values
+const options = {
+  placement: 'bottom'
+};
+
+/*
+* targetEl: required
+* triggerEl: required
+* options: optional
+*/
+const dropdown = new Dropdown(targetEl, triggerEl, options);
+
+// show the dropdown menu
+dropdown.show();
+
+// hide the dropdown menu
+dropdown.hide();
+```
+
+The HTML used for this example:
+
+```html
+<button id="dropdownButton" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+<!-- Dropdown menu -->
+<div id="dropdownMenu" class="hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+    <ul class="py-1" aria-labelledby="dropdownButton">
+      <li>
+        <a href="https://flowbite.com" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+      </li>
+    </ul>
+</div>
+```

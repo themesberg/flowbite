@@ -15,17 +15,19 @@ class Tooltip {
     }
 
     _init() {
-        const triggerEvents = this._getTriggerEvents()
-        triggerEvents.showEvents.forEach(ev => {
-            this._triggerEl.addEventListener(ev, () => {
-                this.show()
+        if (this._triggerEl) {
+            const triggerEvents = this._getTriggerEvents()
+            triggerEvents.showEvents.forEach(ev => {
+                this._triggerEl.addEventListener(ev, () => {
+                    this.show()
+                })
             })
-        })
-        triggerEvents.hideEvents.forEach(ev => {
-            this._triggerEl.addEventListener(ev, () => {
-                this.hide()
+            triggerEvents.hideEvents.forEach(ev => {
+                this._triggerEl.addEventListener(ev, () => {
+                    this.hide()
+                })
             })
-        })
+        }
     }
 
     _createPopperInstace() {

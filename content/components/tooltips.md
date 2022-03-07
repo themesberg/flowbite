@@ -286,7 +286,7 @@ const options = {
 
 /*
 * targetEl: required
-* triggerEl: optional
+* triggerEl: required
 * options: optional
 */
 const tooltip = new Tooltip(targetEl, triggerEl, options);

@@ -68,7 +68,7 @@ class Dropdown {
 
     _handleClickOutside(ev, targetEl) {
         const clickedEl = ev.target
-        if (clickedEl !== targetEl && clickedEl !== targetEl && !targetEl.contains(clickedEl)) {
+        if (clickedEl !== targetEl && !targetEl.contains(clickedEl)) {
             targetEl.classList.add('hidden')
             targetEl.classList.remove('block')
             document.body.removeEventListener('click', this._handleClickOutside, true)

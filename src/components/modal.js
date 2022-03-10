@@ -4,36 +4,17 @@ const Default = {
 }
 
 class Modal {
-    constructor(targetElement = null, triggerElement = null, options = {}) {
+    constructor(targetElement = null, options = {}) {
         this._targetEl = targetElement
-        this._triggerEl = triggerElement
         this._options = { ...Default, ...options }
         this._isHidden = this._options.isHidden
         this._init()
     }
 
     _init() {
-        if (this._triggerEl) {
-            this._triggerEl.addEventListener('click', () => {
-                this.toggle()
-            })
-            this._targetEl.addEventListener('click', (ev) => {
-                console.log('click')
-                const clickedEl = ev.target
-                if (clickedEl === this._targetEl && this._targetEl.contains(clickedEl)) {
-                    this.hide()
-                }
-            })
-        }
-    }
-
-    _handleClickOutside(ev, targetEl) {
-        const clickedEl = ev.target
-        if (clickedEl !== targetEl && clickedEl !== targetEl && !targetEl.contains(clickedEl)) {
-            targetEl.classList.add('hidden')
-            targetEl.classList.remove('block')
-            document.body.removeEventListener('click', this._handleClickOutside, true)
-        }
+        this._getPlacementClasses().map(c => {
+            this._targetEl.classList.add(c)
+        })
     }
 
     _createBackdrop() {
@@ -47,8 +28,39 @@ class Modal {
         document.querySelector('[modal-backdrop]').remove();
     }
 
+    _getPlacementClasses() {
+        switch (this._options.placement) {
+
+            // top
+            case 'top-left':
+                return ['justify-start', 'items-start']
+            case 'top-center':
+                return ['justify-center', 'items-start']
+            case 'top-right':
+                return ['justify-end', 'items-start']
+
+            // center
+            case 'center-left':
+                return ['justify-start', 'items-center']
+            case 'center':
+                return ['justify-center', 'items-center']
+            case 'center-right':
+                return ['justify-end', 'items-center']
+
+            // bottom
+            case 'bottom-left':
+                return ['justify-start', 'items-end']
+            case 'bottom-center':
+                return ['justify-center', 'items-end']
+            case 'bottom-right':
+                return ['justify-end', 'items-end']
+
+            default:
+                return ['justify-center', 'items-center']
+        }
+    }
+
     toggle() {
-        console.log(this._isHidden)
         if (this._isHidden) {
             this.show()
         } else {
@@ -57,7 +69,6 @@ class Modal {
     }
 
     show() {
-        console.log('show')
         this._targetEl.classList.add('flex')
         this._targetEl.classList.remove('hidden')
         this._targetEl.setAttribute('aria-modal', 'true')
@@ -68,7 +79,6 @@ class Modal {
     }
 
     hide() {
-        console.log('hide')
         this._targetEl.classList.add('hidden')
         this._targetEl.classList.remove('flex')
         this._targetEl.setAttribute('aria-hidden', 'true')
@@ -77,11 +87,23 @@ class Modal {
         this._isHidden = true
         this._destroyBackdropEl()
     }
+
+    isHidden() {
+        return this._isHidden
+    }
 }
 
 window.Modal = Modal;
 
+const getModalInstance = (id, instances) => {
+    if (instances.some(modalInstance => modalInstance.id === id)) {
+        return instances.find(modalInstance => modalInstance.id === id)
+    }
+    return false
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    let modalInstances = []
     document.querySelectorAll('[data-modal-toggle]').forEach(el => {
         var modalId = el.getAttribute('data-modal-toggle');
         var modalEl = document.getElementById(modalId);
@@ -92,11 +114,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        const modal = new Modal(modalEl, el, {
-            isHidden: true
+        let modal = null
+        if (getModalInstance(modalId, modalInstances)) {
+            modal = getModalInstance(modalId, modalInstances)
+            modal = modal.object
+        } else {
+            modal = new Modal(modalEl, {
+                isHidden: true,
+                placement: 'center'
+            })
+            modalInstances.push({
+                id: modalId,
+                object: modal
+            })
+        }
+
+        el.addEventListener('click', () => {
+            modal.toggle()
         })
-        console.log(modal);
     })
+    console.log(modalInstances)
 })
 
 export default Modal

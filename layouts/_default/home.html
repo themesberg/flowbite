@@ -1,12 +1,12 @@
 {{ define "main" }}
 
-{{ partial "docs-navbar" }}
+{{ partial "navbar" }}
 
 <div class="px-4 mx-auto w-full max-w-8xl">
   <div class="lg:flex">
     <!-- Sidebar -->
     <aside id="sidebar" class="hidden fixed inset-0 z-20 flex-none w-72 h-full lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-48 lg:block">
-      {{ partial "docs-sidebar" . }}
+      {{ partial "sidebar" . }}
     </aside>
 
     <div class="hidden fixed inset-0 z-10 bg-gray-900/50 dark:bg-gray-900/60" id="sidebarBackdrop"></div>
@@ -18,7 +18,7 @@
         <div class="flex-auto pt-6 min-w-0 max-w-4xl lg:px-8 lg:pt-10 pb:12 xl:pb-24 lg:pb-16">
 
           <!-- Intro -->
-          <div class="pb-4 mb-10 border-b border-gray-200 dark:border-gray-800">
+          <header id="header" class="pb-4 mb-10 border-b border-gray-200 dark:border-gray-800">
             {{ if ( eq .Page.Params.requires_js true) }}
               <div class="mb-5">
                 <a href="{{ "getting-started/quickstart/" | relURL }}" rel="nofollow" class="inline-flex justify-between items-center py-1 px-1 pr-4 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
@@ -85,7 +85,7 @@
             
             <h1 class="inline-block mb-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white" id="content">{{ .Title | markdownify }}</h1>
             <p class="mb-4 text-lg text-gray-500 dark:text-gray-400">{{ .Page.Params.Description | markdownify }}</p>
-          </div>
+            </header>
 
           <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7D4KQE&placement=flowbitedesign" id="_carbonads_js"></script>
 
@@ -105,14 +105,14 @@
 
             {{ .Content }}
 
-            <div class="flex mt-6 mb-8 font-medium leading-6">
+            <footer class="flex mt-6 mb-8 font-medium leading-6">
               {{ if isset .Page.Params "previous" }}
                 <a class="flex mr-8 text-gray-500 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.PreviousLink | relURL }}"><span aria-hidden="true" class="mr-2">←</span>{{ .Page.Params.Previous }}</a>
               {{ end }}
               {{ if isset .Page.Params "next" }}
               <a class="flex ml-auto text-right text-gray-500 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.NextLink | relURL }}">{{ .Page.Params.Next }}<span aria-hidden="true" class="ml-2">→</span></a>
               {{ end }}
-            </div>
+            </footer>
 
             <aside id="revue-embed" class="p-4 my-8 bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700">
               <h3 class="mb-3 text-xl font-medium text-gray-900 dark:text-white">Get more updates...</h3>

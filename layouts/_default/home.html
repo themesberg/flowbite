@@ -1,12 +1,12 @@
 {{ define "main" }}
 
-{{ partial "docs-navbar" }}
+{{ partial "navbar" }}
 
 <div class="px-4 mx-auto w-full max-w-8xl">
   <div class="lg:flex">
     <!-- Sidebar -->
     <aside id="sidebar" class="hidden fixed inset-0 z-20 flex-none w-72 h-full lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-48 lg:block">
-      {{ partial "docs-sidebar" . }}
+      {{ partial "sidebar" . }}
     </aside>
 
     <div class="hidden fixed inset-0 z-10 bg-gray-900/50 dark:bg-gray-900/60" id="sidebarBackdrop"></div>
@@ -90,18 +90,6 @@
           <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7D4KQE&placement=flowbitedesign" id="_carbonads_js"></script>
 
           <div id="mainContent">
-            {{ if .Page.Params.sections }}
-            <div class="row g-3">
-              {{ range .Page.Params.sections }}
-              <div class="col-md-6">
-                <a class="d-block text-decoration-none" href="../{{ urlize .title }}/">
-                  <strong class="mb-0 d-block h5">{{ .title }}</strong>
-                  <span class="text-secondary">{{ .description }}</span>
-                </a>
-              </div>
-              {{ end }}
-            </div>
-            {{ end }}
 
             {{ .Content }}
 

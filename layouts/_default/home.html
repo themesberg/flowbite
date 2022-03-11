@@ -5,13 +5,13 @@
 <div class="px-4 mx-auto w-full max-w-8xl">
   <div class="lg:flex">
     <!-- Sidebar -->
-    <aside id="sidebar" class="hidden fixed inset-0 z-20 flex-none w-72 h-full lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-48 lg:block">
+    <div id="sidebar" class="hidden fixed inset-0 z-20 flex-none w-72 h-full lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-48 lg:block">
       {{ partial "sidebar" . }}
-    </aside>
+    </div>
 
     <div class="hidden fixed inset-0 z-10 bg-gray-900/50 dark:bg-gray-900/60" id="sidebarBackdrop"></div>
 
-    <main id="content-wrapper" class="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible">
+    <div id="content-wrapper" class="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible">
       <div class="flex w-full">
 
         <!-- Main content -->
@@ -85,34 +85,25 @@
             
             <h1 class="inline-block mb-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white" id="content">{{ .Title | markdownify }}</h1>
             <p class="mb-4 text-lg text-gray-500 dark:text-gray-400">{{ .Page.Params.Description | markdownify }}</p>
-            </header>
+          </header>
 
-          <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7D4KQE&placement=flowbitedesign" id="_carbonads_js"></script>
+          <main>
+            <aside>
+              <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7D4KQE&placement=flowbitedesign" id="_carbonads_js"></script>
+            </aside>
 
-          <div id="mainContent">
-            {{ if .Page.Params.sections }}
-            <div class="row g-3">
-              {{ range .Page.Params.sections }}
-              <div class="col-md-6">
-                <a class="d-block text-decoration-none" href="../{{ urlize .title }}/">
-                  <strong class="mb-0 d-block h5">{{ .title }}</strong>
-                  <span class="text-secondary">{{ .description }}</span>
-                </a>
-              </div>
-              {{ end }}
-            </div>
-            {{ end }}
+            <article id="mainContent">
+              {{ .Content }}
+            </article>
 
-            {{ .Content }}
-
-            <footer class="flex mt-6 mb-8 font-medium leading-6">
+            <aside class="flex mt-6 mb-8 font-medium leading-6">
               {{ if isset .Page.Params "previous" }}
                 <a class="flex mr-8 text-gray-500 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.PreviousLink | relURL }}"><span aria-hidden="true" class="mr-2">←</span>{{ .Page.Params.Previous }}</a>
               {{ end }}
               {{ if isset .Page.Params "next" }}
-              <a class="flex ml-auto text-right text-gray-500 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.NextLink | relURL }}">{{ .Page.Params.Next }}<span aria-hidden="true" class="ml-2">→</span></a>
+                <a class="flex ml-auto text-right text-gray-500 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.NextLink | relURL }}">{{ .Page.Params.Next }}<span aria-hidden="true" class="ml-2">→</span></a>
               {{ end }}
-            </footer>
+            </aside>
 
             <aside id="revue-embed" class="p-4 my-8 bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700">
               <h3 class="mb-3 text-xl font-medium text-gray-900 dark:text-white">Get more updates...</h3>
@@ -133,8 +124,9 @@
               <div class="text-sm font-medium text-gray-500 revue-form-footer dark:text-gray-300">By subscribing, you agree with Revue’s <a rel="nofollow" href="https://www.getrevue.co/terms" class="text-blue-600 hover:underline dark:text-blue-500">Terms of Service</a> and <a rel="nofollow" class="text-blue-600 hover:underline dark:text-blue-500" href="https://www.getrevue.co/privacy">Privacy Policy</a>.</div>
               </form>
             </aside>
-
-          </div>
+            
+          </main>
+          
         </div>
 
         <!-- Table of content -->
@@ -150,7 +142,7 @@
         </div>
       </div>
 
-    </main>
+    </div>
 
   </div>
 </div>

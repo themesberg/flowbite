@@ -1,13 +1,15 @@
 const Default = {
     placement: 'center',
-    isHidden: true
+    backdropClasses: ['bg-gray-900', 'bg-opacity-50', 'dark:bg-opacity-80', 'fixed', 'inset-0', 'z-40'],
+    onHide: () => {},
+    onShow: () => {},
+    onToggle: () => {}
 }
-
 class Modal {
     constructor(targetElement = null, options = {}) {
         this._targetEl = targetElement
         this._options = { ...Default, ...options }
-        this._isHidden = this._options.isHidden
+        this._isHidden = true
         this._init()
     }
 
@@ -20,7 +22,7 @@ class Modal {
     _createBackdrop() {
         const backdropEl = document.createElement('div');
         backdropEl.setAttribute('modal-backdrop', '');
-        backdropEl.classList.add('bg-gray-900', 'bg-opacity-50', 'dark:bg-opacity-80', 'fixed', 'inset-0', 'z-40');
+        backdropEl.classList.add(...Default.backdropClasses, ...this._options.backdropClasses);
         document.querySelector('body').append(backdropEl);
     }
 
@@ -66,6 +68,9 @@ class Modal {
         } else {
             this.hide()
         }
+
+        // callback function
+        this._options.onToggle()
     }
 
     show() {
@@ -76,6 +81,9 @@ class Modal {
         this._targetEl.removeAttribute('aria-hidden')
         this._isHidden = false
         this._createBackdrop()
+
+        // callback function
+        this._options.onShow()
     }
 
     hide() {
@@ -86,11 +94,11 @@ class Modal {
         this._targetEl.removeAttribute('role')
         this._isHidden = true
         this._destroyBackdropEl()
+
+        // callback function
+        this._options.onHide()
     }
 
-    isHidden() {
-        return this._isHidden
-    }
 }
 
 window.Modal = Modal;
@@ -105,8 +113,9 @@ const getModalInstance = (id, instances) => {
 document.addEventListener('DOMContentLoaded', () => {
     let modalInstances = []
     document.querySelectorAll('[data-modal-toggle]').forEach(el => {
-        var modalId = el.getAttribute('data-modal-toggle');
-        var modalEl = document.getElementById(modalId);
+        const modalId = el.getAttribute('data-modal-toggle');
+        const modalEl = document.getElementById(modalId);
+        const placement = modalEl.getAttribute('data-modal-placement')
 
         if (modalEl) {
             if (!modalEl.hasAttribute('aria-hidden') && !modalEl.hasAttribute('aria-modal')) {
@@ -120,8 +129,13 @@ document.addEventListener('DOMContentLoaded', () => {
             modal = modal.object
         } else {
             modal = new Modal(modalEl, {
-                isHidden: true,
-                placement: 'center'
+                placement: placement ? placement : Default.placement,
+                onHide: () => {
+                    alert('hide')
+                },
+                onShow: () => {
+                    console.log('show')
+                }
             })
             modalInstances.push({
                 id: modalId,

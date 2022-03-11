@@ -2,7 +2,9 @@ import { createPopper } from '@popperjs/core';
 
 const Default = {
     placement: 'bottom',
-    triggerType: 'click'
+    triggerType: 'click',
+    onShow: () => {},
+    onHide: () => {}
 }
 
 class Dropdown {
@@ -26,6 +28,7 @@ class Dropdown {
     
             triggerEvents.hideEvents.forEach(ev => {
                 this._triggerEl.addEventListener(ev, () => {
+                    console.log('?')
                     this.hide()
                 })
             })
@@ -48,11 +51,6 @@ class Dropdown {
 
     _getTriggerEvents() {
         switch (this._options.triggerType) {
-            // case 'hover':
-            //     return {
-            //         showEvents: ['mouseenter'],
-            //         hideEvents: ['mouseleave']
-            //     }
             case 'click':
                 return {
                     showEvents: ['click'],
@@ -69,15 +67,14 @@ class Dropdown {
     _handleClickOutside(ev, targetEl) {
         const clickedEl = ev.target
         if (clickedEl !== targetEl && !targetEl.contains(clickedEl)) {
-            targetEl.classList.add('hidden')
-            targetEl.classList.remove('block')
+            this.hide()
             document.body.removeEventListener('click', this._handleClickOutside, true)
         }
     }
 
     show() {
-        this._targetEl.classList.remove('hidden');
-        this._targetEl.classList.add('block');
+        this._targetEl.classList.remove('hidden')
+        this._targetEl.classList.add('block')
         console.log(this._targetEl)
 
         // Enable the event listeners
@@ -89,15 +86,18 @@ class Dropdown {
             ],
         }));
 
-        document.body.addEventListener('click', (ev) => { this._handleClickOutside(ev, this._targetEl) }, true);
+        document.body.addEventListener('click', (ev) => { this._handleClickOutside(ev, this._targetEl) }, true)
 
         // Update its position
-        this._popperInstance.update();
+        this._popperInstance.update()
+
+        // callback function
+        this._options.onShow()
     }
 
     hide() {
-        this._targetEl.classList.remove('block');
-        this._targetEl.classList.add('hidden');
+        this._targetEl.classList.remove('block')
+        this._targetEl.classList.add('hidden')
 
         // Disable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -106,20 +106,30 @@ class Dropdown {
                 ...options.modifiers,
                 { name: 'eventListeners', enabled: false },
             ],
-        }));
+        }))
+        
+        // callback function
+        this._options.onHide()
     }
 }
 
 window.Dropdown = Dropdown;
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-dropdown-toggle]').forEach(el => {
-        const placement = el.getAttribute('data-dropdown-placement');
+    document.querySelectorAll('[data-dropdown-toggle]').forEach(triggerEl => {
+        const targetEl = document.getElementById(triggerEl.getAttribute('data-dropdown-toggle'))
+        const placement = triggerEl.getAttribute('data-dropdown-placement')
 
-        const dropdown = new Dropdown(document.getElementById(el.getAttribute('data-dropdown-toggle')), el, {
-            placement: placement ? placement : Default.placement
+        const dropdown = new Dropdown(targetEl, triggerEl, {
+            placement: placement ? placement : Default.placement,
+            onShow: () => {
+                console.log('show')
+            },
+            onHide: () => {
+                console.log('hide')
+            }
         })
-        console.log(dropdown);
+        console.log(dropdown)
     })
 })
 

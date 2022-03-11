@@ -419,6 +419,9 @@ Use the following options as the third parameter for the Dropdown class to set t
                 Option
             </th>
             <th scope="col" class="py-3 px-6">
+                Type
+            </th>
+            <th scope="col" class="py-3 px-6">
                 Description
             </th>
         </tr>
@@ -428,8 +431,33 @@ Use the following options as the third parameter for the Dropdown class to set t
             <td class="py-4 px-6 font-medium">
                 <code class="text-blue-600 dark:text-blue-400">placement</code>
             </td>
+            <td class="py-4 px-6 font-medium">
+                String
+            </td>
             <td class="py-4 px-6">
                 Set the position of the dropdown menu relative to the trigger element choosing from <code class="text-purple-600 dark:text-purple-400">top|right|bottom|left</code>.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="py-4 px-6 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">onHide</code>
+            </td>
+            <td class="py-4 px-6 font-medium">
+                Function
+            </td>
+            <td class="py-4 px-6">
+                Set a callback function when the dropdown has been hidden.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="py-4 px-6 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">onShow</code>
+            </td>
+            <td class="py-4 px-6 font-medium">
+                Function
+            </td>
+            <td class="py-4 px-6">
+                Set a callback function when the dropdown has been shown.
             </td>
         </tr>
     </tbody>
@@ -483,7 +511,13 @@ const triggerEl = document.getElementById('dropdownButton');
 
 // options with default values
 const options = {
-  placement: 'bottom'
+  placement: 'bottom',
+  onHide: () => {
+      console.log('dropdown is hidden');
+  },
+  onShow: () => {
+      console.log('dropdown is shown');
+  }
 };
 
 /*

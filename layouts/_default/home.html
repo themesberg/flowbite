@@ -87,20 +87,22 @@
             <p class="mb-4 text-lg text-gray-500 dark:text-gray-400">{{ .Page.Params.Description | markdownify }}</p>
           </div>
 
-          <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7D4KQE&placement=flowbitedesign" id="_carbonads_js"></script>
+          <aside>
+            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7D4KQE&placement=flowbitedesign" id="_carbonads_js"></script>
+          </aside>
 
           <div id="mainContent">
 
             {{ .Content }}
 
-            <div class="flex mt-6 mb-8 font-medium leading-6">
+            <aside class="flex mt-6 mb-8 font-medium leading-6">
               {{ if isset .Page.Params "previous" }}
                 <a class="flex mr-8 text-gray-500 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.PreviousLink | relURL }}"><span aria-hidden="true" class="mr-2">←</span>{{ .Page.Params.Previous }}</a>
               {{ end }}
               {{ if isset .Page.Params "next" }}
               <a class="flex ml-auto text-right text-gray-500 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ .Page.Params.NextLink | relURL }}">{{ .Page.Params.Next }}<span aria-hidden="true" class="ml-2">→</span></a>
               {{ end }}
-            </div>
+            </aside>
 
             <aside id="revue-embed" class="p-4 my-8 bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700">
               <h3 class="mb-3 text-xl font-medium text-gray-900 dark:text-white">Get more updates...</h3>

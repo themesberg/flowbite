@@ -208,6 +208,9 @@ Use the following options as the third parameter for the Tooltip class to set th
                 Option
             </th>
             <th scope="col" class="py-3 px-6">
+                Type
+            </th>
+            <th scope="col" class="py-3 px-6">
                 Description
             </th>
         </tr>
@@ -217,6 +220,9 @@ Use the following options as the third parameter for the Tooltip class to set th
             <td class="py-4 px-6 font-medium">
                 <code class="text-blue-600 dark:text-blue-400">placement</code>
             </td>
+            <td class="py-4 px-6 font-medium">
+                String
+            </td>
             <td class="py-4 px-6">
                 Set the position of the tooltip element relative to the trigger element choosing from <code class="text-purple-600 dark:text-purple-400">top|right|bottom|left</code>.
             </td>
@@ -225,8 +231,33 @@ Use the following options as the third parameter for the Tooltip class to set th
             <td class="py-4 px-6 font-medium">
                 <code class="text-blue-600 dark:text-blue-400">triggerType</code>
             </td>
+            <td class="py-4 px-6 font-medium">
+                String
+            </td>
             <td class="py-4 px-6">
                 Set the event type that will trigger the tooltip content choosing between <code class="text-purple-600 dark:text-purple-400">hover|click</code>.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="py-4 px-6 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">onHide</code>
+            </td>
+            <td class="py-4 px-6 font-medium">
+                Function
+            </td>
+            <td class="py-4 px-6">
+                Set a callback function when the tooltip is hidden.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="py-4 px-6 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">onShow</code>
+            </td>
+            <td class="py-4 px-6 font-medium">
+                Function
+            </td>
+            <td class="py-4 px-6">
+                Set a callback function when the tooltip is shown.
             </td>
         </tr>
     </tbody>
@@ -281,7 +312,13 @@ const triggerEl = document.getElementById('tooltipButton');
 // options with default values
 const options = {
   placement: 'bottom',
-  triggerType: 'hover'
+  triggerType: 'hover',
+  onHide: () => {
+      console.log('tooltip is shown');
+  },
+  onShow: () => {
+      console.log('tooltip is hidden');
+  }
 };
 
 /*

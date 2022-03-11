@@ -2,7 +2,9 @@ import { createPopper } from '@popperjs/core';
 
 const Default = {
     placement: 'top',
-    triggerType: 'hover'
+    triggerType: 'hover',
+    onShow: () => {},
+    onHide: () => {}
 }
 
 class Tooltip {
@@ -67,8 +69,8 @@ class Tooltip {
 
     show() {
         console.log(this._targetEl)
-        this._targetEl.classList.remove('opacity-0', 'invisible');
-        this._targetEl.classList.add('opacity-100', 'visible');
+        this._targetEl.classList.remove('opacity-0', 'invisible')
+        this._targetEl.classList.add('opacity-100', 'visible')
 
         // Enable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -80,12 +82,15 @@ class Tooltip {
         }));
 
         // Update its position
-        this._popperInstance.update();
+        this._popperInstance.update()
+
+        // callback function
+        this._options.onShow()
     }
 
     hide() {
-        this._targetEl.classList.remove('opacity-100', 'visible');
-        this._targetEl.classList.add('opacity-0', 'invisible');
+        this._targetEl.classList.remove('opacity-100', 'visible')
+        this._targetEl.classList.add('opacity-0', 'invisible')
 
         // Disable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -95,6 +100,9 @@ class Tooltip {
                 { name: 'eventListeners', enabled: false },
             ],
         }));
+
+        // callback function
+        this._options.onHide()
     }
 }
 

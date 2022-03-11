@@ -28,6 +28,10 @@
 	@apply block py-2 font-medium transition-colors duration-200 hover:text-gray-900 dark:hover:text-white;
 }
 
+#TableOfContents > ul > li > ul > li > a {
+	@apply transition-colors duration-200 hover:text-gray-900 dark:hover:text-white;
+}
+
 #TableOfContents > ul > li > ul {
 	@apply pl-4;
 }

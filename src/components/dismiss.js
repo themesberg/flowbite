@@ -1,7 +1,8 @@
 const Default = {
     transition: 'transition-opacity',
     duration: 300,
-    timing: 'ease-out'
+    timing: 'ease-out',
+    onHide: () => {}
 }
 
 class Dismiss {
@@ -27,6 +28,9 @@ class Dismiss {
                 el.classList.add('hidden')
             }, this._options.duration)
         })
+
+        // callback function
+        this._options.onHide()
     }
 }
 
@@ -34,7 +38,11 @@ window.Dismiss = Dismiss;
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-dismiss-target]').forEach(el => {
-        const dismiss = new Dismiss(el.getAttribute('data-dismiss-target'), el)
+        const dismiss = new Dismiss(el.getAttribute('data-dismiss-target'), el, {
+            onHide: () => {
+                console.log('hidden')
+            }
+        })
         console.log(dismiss);
     })
 })

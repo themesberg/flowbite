@@ -1,5 +1,7 @@
 const Default = {
-    interval: 3000
+    interval: 3000,
+    onNextSlide: () => { },
+    onPrevSlide: () => { }
 }
 
 class Carousel {
@@ -9,12 +11,13 @@ class Carousel {
             return { id, el, active: el.getAttribute(['data-carousel-item']) === 'active' ? true : false }
         }) : []
         this._indicators = [...this._el.querySelectorAll('[data-carousel-slide-to]')].length ? [...this._el.querySelectorAll('[data-carousel-slide-to]')].map((el, id) => {
-            return { id, el}
+            return { id, el }
         }) : []
         this._interval = null
         if (options) {
             this._intervalDuration = options.interval ? options.interval : Default.interval
         }
+        this._options = { ...Default, ...options }
         this._init()
     }
 
@@ -64,6 +67,9 @@ class Carousel {
         }
 
         this.slideTo(nextItem.id)
+
+        // callback function
+        this._options.onNextSlide()
     }
 
     /**
@@ -81,6 +87,9 @@ class Carousel {
         }
 
         this.slideTo(prevItem.id)
+
+        // callback function
+        this._options.onPrevSlide()
     }
 
     /**

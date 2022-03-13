@@ -1,33 +1,48 @@
+const Default = {
+    onHide: () => { },
+    onShow: () => { }
+}
+
 class Collapse {
-    constructor(el, targetID) {
+    constructor(el, targetID, options) {
         this._el = el
         this._targetEl = document.getElementById(targetID)
+        this._options = { ...Default, ...options }
+        this._init()
+    }
+
+    _init() {
+
         if (this._el.hasAttribute('aria-expanded')) {
             this._visible = this._el.getAttribute('aria-expanded') === 'true' ? true : false
         } else {
             // fix until v2 not to break previous single collapses which became dismiss
             this._visible = this._targetEl.classList.contains('hidden') ? false : true
         }
-        this._init()
-    }
 
-    _init() {
         this._el.addEventListener('click', () => {
             this._visible ? this.hide() : this.show()
         })
-    }
-
-    show() {
-        this._targetEl.classList.remove('hidden')
-        this._el.setAttribute('aria-expanded', 'true')
-        this._visible = true
     }
 
     hide() {
         this._targetEl.classList.add('hidden')
         this._el.setAttribute('aria-expanded', 'false')
         this._visible = false
+
+        // callback function
+        this._options.onHide()
     }
+
+    show() {
+        this._targetEl.classList.remove('hidden')
+        this._el.setAttribute('aria-expanded', 'true')
+        this._visible = true
+
+        // callback function
+        this._options.onShow()
+    }
+
 }
 
 window.Collapse = Collapse;

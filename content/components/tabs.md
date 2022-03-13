@@ -204,3 +204,241 @@ If you want to change the `active` style of the currently active tab from the de
     @apply text-red-600 border-red-600 dark:text-red-500 dark:border-red-500 hover:text-red-600 hover:border-red-600 dark:hover:text-red-500 dark:hover:border-red-500;
 }
 ```
+
+## JavaScript behaviour
+
+The **Modal** class from Flowbite can be used to create an object that will launch an interactive modal based on the object parameters, options, and methods that you choose to apply.
+
+### Object parameters
+
+Initialize a Modal object with parameters such as the modal element and the optional options object.
+
+<table class="min-w-full my-10 text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
+    <thead class="bg-gray-50 dark:bg-gray-700">
+        <tr class="text-xs font-medium uppercase">
+            <th scope="col" class="px-6 py-3">
+                Parameter
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Type
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Required
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">targetElement</code>
+            </td>
+            <td class="px-6 py-4">
+                Element
+            </td>
+            <td class="px-6 py-4">
+                Required
+            </td>
+            <td class="px-6 py-4">
+                Set the main modal element as a JavaScript object.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">options</code>
+            </td>
+            <td class="px-6 py-4">
+                Object
+            </td>
+            <td class="px-6 py-4">
+                Optional
+            </td>
+            <td class="px-6 py-4">
+                Use the options parameter to set the default state of the modal, placement, and animations.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+### Options
+
+Use the following options as the second parameter for the Modal object to set the position of the modal, custom classes for the backdrop element and the callback functions.
+
+<table class="min-w-full my-10 text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
+    <thead class="bg-gray-50 dark:bg-gray-700">
+        <tr class="text-xs font-medium uppercase">
+            <th scope="col" class="px-6 py-3">
+                Option
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Type
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">placement</code>
+            </td>
+            <td class="px-6 py-4">
+                String
+            </td>
+            <td class="px-6 py-4">
+                Set the position of the modal element relative to the document body by choosing one of the values from <code class="text-purple-600 dark:text-purple-400">{top|center|right}-{left|center|right}</code>. (eg. top-left or bottom-right)
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">backdropClasses</code>
+            </td>
+            <td class="px-6 py-4">
+                Array
+            </td>
+            <td class="px-6 py-4">
+                Set an array of Tailwind CSS classes for the backdrop element (eg. <code class="text-purple-600 dark:text-purple-400">['bg-blue-500', 'dark:bg-blue-400']</code>.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">onHide</code>
+            </td>
+            <td class="px-6 py-4">
+                Function
+            </td>
+            <td class="px-6 py-4">
+                Set a callback function when the modal has been hidden.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">onShow</code>
+            </td>
+            <td class="px-6 py-4">
+                Function
+            </td>
+            <td class="px-6 py-4">
+                Set a callback function when the modal has been shown.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">onToggle</code>
+            </td>
+            <td class="px-6 py-4">
+                Function
+            </td>
+            <td class="px-6 py-4">
+                Set a callback function when the modal visibility has been toggled.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+### Methods
+
+Use the methods from the Modal object to show, hide, and toggle the visibility directly from JavaScript.
+
+<table class="min-w-full my-10 text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
+    <thead class="bg-gray-50 dark:bg-gray-700">
+        <tr class="text-xs font-medium uppercase">
+            <th scope="col" class="px-6 py-3">
+                Method
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">toggle()</code>
+            </td>
+            <td class="px-6 py-4">
+                Use the toggle function on the Modal object to toggle the modal element's visibility.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">show()</code>
+            </td>
+            <td class="px-6 py-4">
+                Use the show function on the Modal object to show the modal element.
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium">
+                <code class="text-blue-600 dark:text-blue-400">hide()</code>
+            </td>
+            <td class="px-6 py-4">
+                Use the hide function on the Modal object to hide the modal element.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+### Example
+
+Check out the following JavaScript example to learn how to initialize, set the options, and use the methods for the Modal object:
+
+```javascript
+// set the tab element
+const targetEl = document.getElementById('tabContent');
+const triggerEl = document.getElementById('tab');
+
+// options with default values
+const options = {
+  onShow: () => {
+      console.log('tab is shown');
+  }
+};
+
+/*
+* targetEl: required
+* options: optional
+*/
+const tab = new Tab(targetEl, triggerEl options);
+
+// show the modal
+tab.show('tabId');
+```
+
+The HTML used for this example:
+
+```html
+<div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+    <ul class="flex flex-wrap -mb-px" id="myTab" role="tablist">
+        <li class="mr-2" role="presentation">
+            <button class="inline-block px-4 py-4 text-sm font-medium text-center text-gray-500 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+        </li>
+        <li class="mr-2" role="presentation">
+            <button class="inline-block px-4 py-4 text-sm font-medium text-center text-gray-500 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 active" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Dashboard</button>
+        </li>
+        <li class="mr-2" role="presentation">
+            <button class="inline-block px-4 py-4 text-sm font-medium text-center text-gray-500 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+        </li>
+        <li role="presentation">
+            <button class="inline-block px-4 py-4 text-sm font-medium text-center text-gray-500 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Contacts</button>
+        </li>
+    </ul>
+</div>
+<div>
+    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Profile tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+    </div>
+    <div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+    </div>
+    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+    </div>
+    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+    </div>
+</div>
+```

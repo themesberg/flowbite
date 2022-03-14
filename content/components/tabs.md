@@ -18,21 +18,21 @@ The tabs component can be used either as an extra navigational hierarchy complem
 Use the following default tabs component example to show a list of links that the user can navigate from on your website.
 
 {{< example github="components/tabs.md" show_dark=true >}}
-<ul class="flex flex-wrap border-b border-gray-200 dark:border-gray-700">
+<ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400">
     <li class="mr-2">
-        <a href="#" aria-current="page" class="inline-block py-4 px-4 text-sm font-medium text-center text-blue-600 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500">Profile</a>
+        <a href="#" aria-current="page" class="inline-block p-4 text-blue-600 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500">Profile</a>
     </li>
     <li class="mr-2">
-        <a href="#" class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300">Dashboard</a>
+        <a href="#" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Dashboard</a>
     </li>
     <li class="mr-2">
-        <a href="#" class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300">Settings</a>
+        <a href="#" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Settings</a>
     </li>
     <li class="mr-2">
-        <a href="#" class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300">Contacts</a>
+        <a href="#" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Contacts</a>
     </li>
     <li>
-        <a class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Disabled</a>
+        <a class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Disabled</a>
     </li>
 </ul>
 {{< /example >}}
@@ -42,22 +42,22 @@ Use the following default tabs component example to show a list of links that th
 Use this alternative tabs component style with an underline instead of a background when hovering and being active on a certain page.
 
 {{< example github="components/tabs.md" show_dark=true >}}
-<div class="border-b border-gray-200 dark:border-gray-700">
+<div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
     <ul class="flex flex-wrap -mb-px">
         <li class="mr-2">
-            <a href="#" class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300">Profile</a>
+            <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Profile</a>
         </li>
         <li class="mr-2">
-            <a href="#" class="inline-block py-4 px-4 text-sm font-medium text-center text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 dark:border-blue-500" aria-current="page">Dashboard</a>
+            <a href="#" class="inline-block p-4 text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 dark:border-blue-500" aria-current="page">Dashboard</a>
         </li>
         <li class="mr-2">
-            <a href="#" class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300">Settings</a>
+            <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Settings</a>
         </li>
         <li class="mr-2">
-            <a href="#" class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300">Contacts</a>
+            <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Contacts</a>
         </li>
         <li>
-            <a class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Disabled</a>
+            <a class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Disabled</a>
         </li>
     </ul>
 </div>
@@ -69,51 +69,54 @@ This is an example of the tabs component where you can also use a SVG powered ic
 
 {{< example github="components/tabs.md" show_dark=true >}}
 <div class="border-b border-gray-200 dark:border-gray-700">
-    <ul class="flex flex-wrap -mb-px">
+    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
         <li class="mr-2">
-            <a href="#" class="inline-flex py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 group">
+            <a href="#" class="inline-flex p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
                 <svg class="mr-2 w-5 h-5 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>Profile
             </a>
         </li>
         <li class="mr-2">
-            <a href="#" class="inline-flex py-4 px-4 text-sm font-medium text-center text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 dark:border-blue-500 group" aria-current="page">
+            <a href="#" class="inline-flex p-4 text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 dark:border-blue-500 group" aria-current="page">
                 <svg class="mr-2 w-5 h-5 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>Dashboard
             </a>
         </li>
         <li class="mr-2">
-            <a href="#" class="inline-flex py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 group">
+            <a href="#" class="inline-flex p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
                 <svg class="mr-2 w-5 h-5 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"></path></svg>Settings
             </a>
         </li>
         <li class="mr-2">
-            <a href="#" class="inline-flex py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 group">
+            <a href="#" class="inline-flex p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
                 <svg class="mr-2 w-5 h-5 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>Contacts
             </a>
         </li>
         <li>
-            <a class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Disabled</a>
+            <a class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Disabled</a>
         </li>
     </ul>
 </div>
 {{< /example >}}
 
-## Tabs in pills
+## Pills tabs
 
 If you want to use pills as a style for the tabs component you can do so by using this example.
 
 {{< example github="components/tabs.md" show_dark=true >}}
-<ul class="flex flex-wrap">
+<ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400">
     <li class="mr-2">
-        <a href="#" class="inline-block py-3 px-4 text-sm font-medium text-center text-white bg-blue-600 rounded-lg active" aria-current="page">Tab 1</a>
+        <a href="#" class="inline-block py-3 px-4 text-white bg-blue-600 rounded-lg active" aria-current="page">Tab 1</a>
     </li>
     <li class="mr-2">
-        <a href="#"  class="inline-block py-3 px-4 text-sm font-medium text-center text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white">Tab 2</a>
+        <a href="#"  class="inline-block py-3 px-4 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">Tab 2</a>
     </li>
     <li class="mr-2">
-        <a href="#" class="inline-block py-3 px-4 text-sm font-medium text-center text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white">Tab 3</a>
+        <a href="#" class="inline-block py-3 px-4 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">Tab 3</a>
+    </li>
+    <li class="mr-2">
+        <a href="#" class="inline-block py-3 px-4 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">Tab 4</a>
     </li>
     <li>
-        <a class="inline-block py-3 px-4 text-sm font-medium text-center text-gray-400 cursor-not-allowed dark:text-gray-500">Tab 3</a>
+        <a class="inline-block py-3 px-4 text-gray-400 cursor-not-allowed dark:text-gray-500">Tab 5</a>
     </li>
 </ul>
 {{< /example >}}
@@ -132,18 +135,18 @@ If you want to show the tabs on the full width relative to the parent element yo
         <option>Germany</option>
     </select>
 </div>
-<ul class="flex hidden rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700">
+<ul class="hidden text-sm font-medium text-center text-gray-500 rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
     <li class="w-full">
-        <a href="#" class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-900 bg-gray-100 rounded-l-lg focus:ring-4 focus:ring-blue-300 focus:z-20 active dark:bg-gray-700 dark:text-white" aria-current="page">Profile</a>
+        <a href="#" class="inline-block p-4 w-full text-gray-900 bg-gray-100 rounded-l-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-700 dark:text-white" aria-current="page">Profile</a>
     </li>
     <li class="w-full">
-        <a href="#" class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-500 bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">Dashboard</a>
+        <a href="#" class="inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Dashboard</a>
     </li>
     <li class="w-full">
-        <a href="#" class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-500 bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">Settings</a>
+        <a href="#" class="inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Settings</a>
     </li>
     <li class="w-full">
-        <a href="#" class="inline-block relative py-4 px-4 w-full text-sm font-medium text-center text-gray-500 bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:z-20 dark:text-gray-400 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">Invoice</a>
+        <a href="#" class="inline-block p-4 w-full bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Invoice</a>
     </li>
 </ul>
 {{< /example >}}
@@ -165,19 +168,19 @@ You must also apply the `role="tabpanel"` data attribute to every tab content el
 You can use multiple tab components on a single page but make sure that the id's are different.
 
 {{< example github="components/tabs.md" show_dark=true >}}
-<div class="mb-4 border-b border-gray-200 dark:border-gray-700">
-    <ul class="flex flex-wrap -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+<div class="mb-4 text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400">
+    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
         <li class="mr-2" role="presentation">
-            <button class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+            <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
         </li>
         <li class="mr-2" role="presentation">
-            <button class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 active" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Dashboard</button>
+            <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 active" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Dashboard</button>
         </li>
         <li class="mr-2" role="presentation">
-            <button class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+            <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
         </li>
         <li role="presentation">
-            <button class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Contacts</button>
+            <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Contacts</button>
         </li>
     </ul>
 </div>
@@ -207,11 +210,11 @@ If you want to change the `active` style of the currently active tab from the de
 
 ## JavaScript behaviour
 
-The **Tab** class from Flowbite can be used to create an object that will enable the interactive navigation between tabs and its content based on the parameters, options, methods, and callback functions that you apply.
+The **Tabs** class from Flowbite can be used to create an object that will enable the interactive navigation between tabs and its content based on the parameters, options, methods, and callback functions that you apply.
 
 ### Object parameters
 
-Initialize a new Tab object with parameters such as an array of the tab and content elements.
+Initialize a new **Tabs** object with parameters such as an array of the tab and content elements.
 
 <table class="my-10 min-w-full text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
     <thead class="bg-gray-50 dark:bg-gray-700">
@@ -278,7 +281,7 @@ Initialize a new Tab object with parameters such as an array of the tab and cont
 
 ### Options
 
-Use the following options as the third parameter for the Tab object to set the appearance of the active tab elements and use callback functions.
+Use the following options as the third parameter for the **Tabs** object to set the appearance of the active tab elements and use callback functions.
 
 <table class="my-10 min-w-full text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
     <thead class="bg-gray-50 dark:bg-gray-700">
@@ -311,7 +314,7 @@ Use the following options as the third parameter for the Tab object to set the a
 
 ### Methods
 
-Use the methods from the Tab object to programatically change the current active tab using JavaScript.
+Use the methods from the **Tabs** object to programatically change the current active tab using JavaScript.
 
 <table class="my-10 min-w-full text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
     <thead class="bg-gray-50 dark:bg-gray-700">
@@ -346,7 +349,7 @@ Use the methods from the Tab object to programatically change the current active
 
 ### Example
 
-Check out the following example to learn how to initialize and manipulate a Tab object in JavaScript.
+Check out the following example to learn how to initialize and manipulate a **Tabs** object in JavaScript.
 
 First of all, create an array of objects that contains the id, trigger element, and content element of each tab, set the active tab based on the id, and optionally set a callback function after a new tab has been shown.
 
@@ -386,7 +389,7 @@ const options = {
 };
 ```
 
-Create a new Tabs object based on the parameters we've previously set.
+Create a new **Tabs** object based on the parameters we've previously set.
 
 ```javascript
 /*
@@ -397,35 +400,35 @@ Create a new Tabs object based on the parameters we've previously set.
 const tabs = new Tabs(tabElements, activeTabID, options);
 ```
 
-Lastly, you can now programatically show any tab element based on the id.
+Lastly, you can now use the methods on the **Tabs** object to show another tab element, get a tab element based on the id, or get the current active tab element.
 
 ```javascript
 // shows another tab element
-tab.show('settings');
+tabs.show('dashboard');
 
 // get the tab object based on ID
-tab.getTabByID('contacts')
+tabs.getTabByID('contacts')
 
 // get the current active tab object
-tab.getActiveTab()
+tabs.getActiveTab()
 ```
 
 You can use this HTML code as an example for the JavaScript code from above.
 
 <!-- ```html -->
 <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
-    <ul class="flex flex-wrap -mb-px" id="tabExample" role="tablist">
+    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400" id="tabExample" role="tablist">
         <li class="mr-2" role="presentation">
-            <button class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="profile-tab-example" type="button" role="tab" aria-controls="profile-example" aria-selected="false">Profile</button>
+            <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="profile-tab-example" type="button" role="tab" aria-controls="profile-example" aria-selected="false">Profile</button>
         </li>
         <li class="mr-2" role="presentation">
-            <button class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="dashboard-tab-example" type="button" role="tab" aria-controls="dashboard-example" aria-selected="false">Dashboard</button>
+            <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab-example" type="button" role="tab" aria-controls="dashboard-example" aria-selected="false">Dashboard</button>
         </li>
         <li class="mr-2" role="presentation">
-            <button class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="settings-tab-example" type="button" role="tab" aria-controls="settings-example" aria-selected="false">Settings</button>
+            <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-tab-example" type="button" role="tab" aria-controls="settings-example" aria-selected="false">Settings</button>
         </li>
         <li role="presentation">
-            <button class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="contacts-tab-example" type="button" role="tab" aria-controls="contacts-example" aria-selected="false">Contacts</button>
+            <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="contacts-tab-example" type="button" role="tab" aria-controls="contacts-example" aria-selected="false">Contacts</button>
         </li>
     </ul>
 </div>

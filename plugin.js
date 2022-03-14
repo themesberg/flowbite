@@ -260,8 +260,8 @@ module.exports = plugin(function ({ addBase, theme }) {
             'border-color': theme('colors.blue.600', colors.blue[600])
         },
         [['.dark [role="tab"].active', '.dark [role="tab"].active:hover']]: {
-            color: theme('colors.blue.600', colors.blue[600]),
-            'border-color': theme('colors.blue.600', colors.blue[500])
+            color: theme('colors.blue.500', colors.blue[500]),
+            'border-color': theme('colors.blue.500', colors.blue[500])
         },
     })
 }, {

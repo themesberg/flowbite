@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-dismiss-target]').forEach(el => {
         const dismiss = new Dismiss(el.getAttribute('data-dismiss-target'), el, {
             onHide: () => {
-                console.log('hidden')
+                console.log('dismissed')
             }
         })
         console.log(dismiss);

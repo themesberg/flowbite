@@ -3,8 +3,8 @@ import { createPopper } from '@popperjs/core';
 const Default = {
     placement: 'bottom',
     triggerType: 'click',
-    onShow: () => {},
-    onHide: () => {}
+    onShow: () => { },
+    onHide: () => { }
 }
 
 class Dropdown {
@@ -13,24 +13,14 @@ class Dropdown {
         this._triggerEl = triggerElement
         this._options = { ...Default, ...options }
         this._popperInstance = this._createPopperInstace()
+        this._visible = false
         this._init()
     }
 
     _init() {
         if (this._triggerEl) {
-            const triggerEvents = this._getTriggerEvents()
-
-            triggerEvents.showEvents.forEach(ev => {
-                this._triggerEl.addEventListener(ev, () => {
-                    this.show()
-                })
-            })
-    
-            triggerEvents.hideEvents.forEach(ev => {
-                this._triggerEl.addEventListener(ev, () => {
-                    console.log('?')
-                    this.hide()
-                })
+            this._triggerEl.addEventListener('click', () => {
+                this.toggle()
             })
         }
     }
@@ -49,26 +39,20 @@ class Dropdown {
         });
     }
 
-    _getTriggerEvents() {
-        switch (this._options.triggerType) {
-            case 'click':
-                return {
-                    showEvents: ['click'],
-                    hideEvents: []
-                }
-            default:
-                return {
-                    showEvents: ['click'],
-                    hideEvents: []
-                }
-        }
-    }
-
     _handleClickOutside(ev, targetEl) {
         const clickedEl = ev.target
-        if (clickedEl !== targetEl && !targetEl.contains(clickedEl)) {
+        if (clickedEl !== targetEl && !targetEl.contains(clickedEl) && !this._triggerEl.contains(clickedEl) && this._visible) {
+            this.hide()
+        }
+        document.body.removeEventListener('click', this._handleClickOutside, true)
+    }
+
+    toggle() {
+        if (this._visible) {
             this.hide()
             document.body.removeEventListener('click', this._handleClickOutside, true)
+        } else {
+            this.show()
         }
     }
 
@@ -90,6 +74,7 @@ class Dropdown {
 
         // Update its position
         this._popperInstance.update()
+        this._visible = true
 
         // callback function
         this._options.onShow()
@@ -107,7 +92,9 @@ class Dropdown {
                 { name: 'eventListeners', enabled: false },
             ],
         }))
-        
+
+        this._visible = false
+
         // callback function
         this._options.onHide()
     }
@@ -123,10 +110,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const dropdown = new Dropdown(targetEl, triggerEl, {
             placement: placement ? placement : Default.placement,
             onShow: () => {
-                console.log('show')
+                console.log('dropdown has been shown')
             },
             onHide: () => {
-                console.log('hide')
+                console.log('dropdown has been hidden')
             }
         })
         console.log(dropdown)

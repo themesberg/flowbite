@@ -115,7 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const tooltip = new Tooltip(document.getElementById(el.getAttribute('data-tooltip-target')), el, {
             placement: placement ? placement : Default.placement,
-            triggerType: triggerType ? triggerType : Default.triggerType
+            triggerType: triggerType ? triggerType : Default.triggerType,
+            onShow: () => {
+                console.log('tooltip shown')
+            },
+            onHide: () => {
+                console.log('tooltip hidden')
+            }
         })
         console.log(tooltip);
     })

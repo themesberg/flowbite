@@ -1,46 +1,59 @@
 const Default = {
     onHide: () => { },
-    onShow: () => { }
+    onShow: () => { },
+    onToggle: () => { }
 }
 
 class Collapse {
-    constructor(el, targetID, options) {
-        this._el = el
-        this._targetEl = document.getElementById(targetID)
+    constructor(targetElement = null, triggerElement = null, options) {
+        this._targetEl = targetElement
+        this._triggerEl = triggerElement
         this._options = { ...Default, ...options }
+        this._visible = false
         this._init()
     }
 
     _init() {
 
-        if (this._el.hasAttribute('aria-expanded')) {
-            this._visible = this._el.getAttribute('aria-expanded') === 'true' ? true : false
-        } else {
-            // fix until v2 not to break previous single collapses which became dismiss
-            this._visible = this._targetEl.classList.contains('hidden') ? false : true
+        if (this._triggerEl) {
+            if (this._triggerEl.hasAttribute('aria-expanded')) {
+                this._visible = this._triggerEl.getAttribute('aria-expanded') === 'true' ? true : false
+            } else {
+                // fix until v2 not to break previous single collapses which became dismiss
+                this._visible = this._targetEl.classList.contains('hidden') ? false : true
+            }
+
+            this._triggerEl.addEventListener('click', () => {
+                this._visible ? this.collapse() : this.expand()
+            })
         }
 
-        this._el.addEventListener('click', () => {
-            this._visible ? this.hide() : this.show()
-        })
     }
 
-    hide() {
+    collapse() {
         this._targetEl.classList.add('hidden')
-        this._el.setAttribute('aria-expanded', 'false')
+        this._triggerEl.setAttribute('aria-expanded', 'false')
         this._visible = false
 
         // callback function
         this._options.onHide()
     }
 
-    show() {
+    expand() {
         this._targetEl.classList.remove('hidden')
-        this._el.setAttribute('aria-expanded', 'true')
+        this._triggerEl.setAttribute('aria-expanded', 'true')
         this._visible = true
 
         // callback function
         this._options.onShow()
+    }
+
+    toggle() {
+        if (this._visible) {
+            this.collapse()
+        } else {
+            this.expand()
+        }
     }
 
 }
@@ -48,8 +61,9 @@ class Collapse {
 window.Collapse = Collapse;
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-collapse-toggle]').forEach(function (el) {
-        const collapse = new Collapse(el, el.getAttribute('data-collapse-toggle'))
+    document.querySelectorAll('[data-collapse-toggle]').forEach(function (triggerEl) {
+        const targetEl = document.getElementById(triggerEl.getAttribute('data-collapse-toggle'))
+        const collapse = new Collapse(targetEl, triggerEl)
         console.log(collapse);
     })
 })

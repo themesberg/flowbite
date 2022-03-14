@@ -129,7 +129,16 @@ document.addEventListener('DOMContentLoaded', () => {
             modal = modal.object
         } else {
             modal = new Modal(modalEl, {
-                placement: placement ? placement : Default.placement
+                placement: placement ? placement : Default.placement,
+                onShow: () => {
+                    console.log('modal has been shown')
+                },
+                onHide: () => {
+                    console.log('modal has been hidden')
+                },
+                onToggle: () => {
+                    console.log('modal has been toggled')
+                }
             })
             modalInstances.push({
                 id: modalId,

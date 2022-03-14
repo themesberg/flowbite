@@ -1,8 +1,7 @@
 import './flowbite.css';
 
 // core components
-import './components/accordion';
-
+import Accordion from './components/accordion'
 import Collapse from './components/collapse'
 import Carousel from './components/carousel'
 import Dismiss from './components/dismiss'
@@ -12,6 +11,7 @@ import Tabs from './components/tabs'
 import Tooltip from './components/tooltip'
 
 export default {
+    Accordion,
     Collapse,
     Carousel,
     Dismiss,

@@ -2,10 +2,10 @@ const Default = {
     onShow: () => { }
 }
 
-class Tab {
-    constructor(tabs = [], activeTab = null, options = {}) {
+class Tabs {
+    constructor(tabs = [], activeTabID = null, options = {}) {
         this._tabs = tabs
-        this._activeTab = activeTab
+        this._activeTab = activeTabID ? this.getTabByID(activeTabID) : null
         this._options = { ...Default, ...options }
         this._init()
     }
@@ -29,16 +29,20 @@ class Tab {
         }
     }
 
+    getActiveTab() {
+        return this._activeTab
+    }
+
     _setActiveTab(tab) {
         this._activeTab = tab
     }
 
-    _getTabById(id) {
+    getTabByID(id) {
         return this._tabs.filter(t => t.id === id)[0]
     }
 
     show(id, forceShow = false) {
-        const tab = this._getTabById(id)
+        const tab = this.getTabByID(id)
 
         // don't do anything if already active
         if (tab === this._activeTab && !forceShow) {
@@ -67,13 +71,13 @@ class Tab {
 
 }
 
-window.Tab = Tab;
+window.Tabs = Tabs;
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-tabs-toggle]').forEach(triggerEl => {
-        
-        const tabs = []
-        const activeTab = null
+
+        const tabElements = []
+        let activeTabID = null
         triggerEl.querySelectorAll('[role="tab"]').forEach(el => {
             const isActive = el.getAttribute('aria-selected') === 'true'
             const tab = {
@@ -81,21 +85,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 triggerEl: el,
                 contentEl: document.querySelector(el.getAttribute('data-tabs-target'))
             }
-            tabs.push(tab)
+            tabElements.push(tab)
 
             if (isActive) {
-                activeTab = tab
+                activeTabID = tab.id
             }
         })
 
-        const tab = new Tab(tabs, activeTab, {
+        const tabs = new Tabs(tabElements, activeTabID, {
             onShow: () => {
                 console.log('tab is shown')
-                console.log(tab)
             }
         })
-        console.log(tab)
+        console.log(tabs)
     })
 })
 
-export default Tab
+export default Tabs

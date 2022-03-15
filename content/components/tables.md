@@ -19,10 +19,10 @@ Get started with multiple variants and styles of these table components built wi
 
 Use the following example of a responsive table component to show multiple rows and columns of text data.
 
-{{< example github="components/tables.md" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs tracking-wider text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="py-3 px-6">
                     Product name
@@ -102,10 +102,10 @@ Use the following example of a responsive table component to show multiple rows 
 
 Use this example to increase the readability of the data sets by alternating the background colors of every second table row.
 
-{{< example github="components/tables.md" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs tracking-wider text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="py-3 px-6">
                     Product name
@@ -219,10 +219,10 @@ Use this example to increase the readability of the data sets by alternating the
 
 Use the `hover:{bg-*}` utility class from Tailwind CSS to change the background color of a data row when hovering over the element with the cursor.
 
-{{< example github="components/tables.md" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs tracking-wider text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="py-3 px-6">
                     Product name
@@ -302,10 +302,10 @@ Use the `hover:{bg-*}` utility class from Tailwind CSS to change the background 
 
 Checkboxes can be used inside table data rows to select multiple data sets and apply a bulk action.
 
-{{< example github="components/tables.md" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs tracking-wider text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="p-4">
                     <div class="flex items-center">
@@ -410,7 +410,7 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
 
 Use this example to show a search bar that can be used to filter data inside the table component.
 
-{{< example github="components/tables.md" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto shadow-md sm:rounded-lg">
     <div class="p-4">
         <label for="table-search" class="sr-only">Search</label>
@@ -422,7 +422,7 @@ Use this example to show a search bar that can be used to filter data inside the
         </div>
     </div>
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs tracking-wider text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="p-4">
                     <div class="flex items-center">

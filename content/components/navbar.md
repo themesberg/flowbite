@@ -198,192 +198,175 @@ Use the following navbar element to show a call to action button alongside the l
 </nav>
 {{< /example >}}
 
-If you want to programatically show or hide an element on the page, you can use the `toggleCollapse(elementId, show)` function where `elementId` is the id of the element that you want to show or hide and `show` is a true or false parameter that will either show or hide the element.
-
-```javascript
-// shows #navbar element
-toggleCollapse('navbar');
-
-// hides #navbar element
-toggleCollapse('navbar', false);
-
-// also shows #navbar element
-toggleCollapse('navbar', true);
-```
-
 ## JavaScript behaviour
 
 The **Dismiss class** from Flowbite can be used to create an object that will hide a target element or elements based on the parameters, options, and methods that you provide.
-
-### Data attributes
-
-If you want to show or hide any element you can use the `data-collapse-toggle="elementId"` data attribute where `elementId` is the target element that will be toggled.
-
-```html
-<button data-collapse-toggle="elementId">Show menu</button>
-
-<div id="elementId">This will be toggled when the button is clicked.</div>
-```
 
 ### Object parameters
 
 The parameters for the Dismiss object can be used to programatically initialize and manipulate the behaviour of the dismissal of multiple elements.
 
-<table class="my-10 min-w-full text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
-    <thead class="bg-gray-50 dark:bg-gray-700">
-        <tr class="text-xs font-medium uppercase">
-            <th scope="col" class="py-3 px-6">
-                Parameter
-            </th>
-            <th scope="col" class="py-3 px-6">
-                Type
-            </th>
-            <th scope="col" class="py-3 px-6">
-                Required
-            </th>
-            <th scope="col" class="py-3 px-6">
-                Description
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="py-4 px-6 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">targetElement</code>
-            </td>
-            <td class="py-4 px-6">
-                Element
-            </td>
-            <td class="py-4 px-6">
-                Required
-            </td>
-            <td class="py-4 px-6">
-                Pass the target element object that will be expanded or collapsed.
-            </td>
-        </tr>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="py-4 px-6 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
-            </td>
-            <td class="py-4 px-6">
-                Element
-            </td>
-            <td class="py-4 px-6">
-                Optional
-            </td>
-            <td class="py-4 px-6">
-                Set an optional element object which will expand or collapse the target element when clicked.
-            </td>
-        </tr>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="py-4 px-6 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">options</code>
-            </td>
-            <td class="py-4 px-6">
-               Object
-            </td>
-            <td class="py-4 px-6">
-                Optional
-            </td>
-            <td class="py-4 px-6">
-                Set these options to override the default transition, duration, and timing function of the collapse animation.
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="overflow-x-auto my-10 shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs font-medium uppercase">
+              <th scope="col" class="py-3 px-6">
+                  Parameter
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Type
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Required
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">targetElement</code>
+              </td>
+              <td class="py-4 px-6">
+                  Element
+              </td>
+              <td class="py-4 px-6">
+                  Required
+              </td>
+              <td class="py-4 px-6">
+                  Pass the target element object that will be expanded or collapsed.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
+              </td>
+              <td class="py-4 px-6">
+                  Element
+              </td>
+              <td class="py-4 px-6">
+                  Optional
+              </td>
+              <td class="py-4 px-6">
+                  Set an optional element object which will expand or collapse the target element when clicked.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">options</code>
+              </td>
+              <td class="py-4 px-6">
+                Object
+              </td>
+              <td class="py-4 px-6">
+                  Optional
+              </td>
+              <td class="py-4 px-6">
+                  Set these options to override the default transition, duration, and timing function of the collapse animation.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
 
 ### Options
 
 Use these optional options for the Dismiss object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
 
-<table class="my-10 min-w-full text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
-    <thead class="bg-gray-50 dark:bg-gray-700">
-        <tr class="text-xs font-medium uppercase">
-            <th scope="col" class="py-3 px-6">
-                Option
-            </th>
-            <th scope="col" class="py-3 px-6">
-                Type
-            </th>
-            <th scope="col" class="py-3 px-6">
-                Description
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="py-4 px-6 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">transition</code>
-            </td>
-            <td class="py-4 px-6 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">String</code>
-            </td>
-            <td class="py-4 px-6">
-                Use one of the Transition Property utility classes from Tailwind CSS to set transition type for the main element. The default value is <code class="text-purple-600 dark:text-purple-400">transition-opacity</code>.
-            </td>
-        </tr>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="py-4 px-6 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">duration</code>
-            </td>
-            <td class="py-4 px-6 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">Integer</code>
-            </td>
-            <td class="py-4 px-6">
-                Set the duration of the dismissing animation. The default value is <code class="text-purple-600 dark:text-purple-400">300</code> (300 miliseconds).
-            </td>
-        </tr>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="py-4 px-6 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">timing</code>
-            </td>
-            <td class="py-4 px-6 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">String</code>
-            </td>
-            <td class="py-4 px-6">
-                Set the transition timing function utility class from Tailwind CSS. The default value is <code class="text-purple-600 dark:text-purple-400">ease-out</code>.
-            </td>
-        </tr>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="py-4 px-6 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">onHide</code>
-            </td>
-            <td class="py-4 px-6 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">Function</code>
-            </td>
-            <td class="py-4 px-6">
-                Set a callback function when the item has been dismissed.
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="overflow-x-auto my-10 shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs font-medium uppercase">
+              <th scope="col" class="py-3 px-6">
+                  Option
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Type
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">transition</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">String</code>
+              </td>
+              <td class="py-4 px-6">
+                  Use one of the Transition Property utility classes from Tailwind CSS to set transition type for the main element. The default value is <code class="text-purple-600 dark:text-purple-400">transition-opacity</code>.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">duration</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">Integer</code>
+              </td>
+              <td class="py-4 px-6">
+                  Set the duration of the dismissing animation. The default value is <code class="text-purple-600 dark:text-purple-400">300</code> (300 miliseconds).
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">timing</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">String</code>
+              </td>
+              <td class="py-4 px-6">
+                  Set the transition timing function utility class from Tailwind CSS. The default value is <code class="text-purple-600 dark:text-purple-400">ease-out</code>.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">onHide</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">Function</code>
+              </td>
+              <td class="py-4 px-6">
+                  Set a callback function when the item has been dismissed.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
 
 ### Methods
 
 Use the following methods on the Dismiss object to programatically manipulate the behaviour.
 
-<table class="my-10 min-w-full text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
-    <thead class="bg-gray-50 dark:bg-gray-700">
-        <tr class="text-xs font-medium uppercase">
-            <th scope="col" class="py-3 px-6">
-                Method
-            </th>
-            <th scope="col" class="py-3 px-6">
-                Description
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="py-4 px-6 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">hide()</code>
-            </td>
-            <td class="py-4 px-6">
-                Use the <code class="text-blue-600 dark:text-blue-400">hide()</code> method on the Dismiss object to hide all target elements.
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="overflow-x-auto my-10 shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs font-medium uppercase">
+              <th scope="col" class="py-3 px-6">
+                  Method
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">hide()</code>
+              </td>
+              <td class="py-4 px-6">
+                  Use the <code class="text-blue-600 dark:text-blue-400">hide()</code> method on the Dismiss object to hide all target elements.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
 
 ### Example
 
@@ -391,10 +374,10 @@ Check out the following JavaScript example to learn how to initialize, set the o
 
 ```javascript
 // dismiss all elements based on querySelectorAll
-const targetQuery = '#alertId';
+const targetElement = document.getElementById('targetCollapse');
 
 // element which trigger the dismiss based on a click
-const triggerEl = document.getElementById('closeButton');
+const triggerElement = document.getElementById('triggerCollapse');
 
 // optional options with default values
 const options = {
@@ -412,4 +395,14 @@ const alert = new Dismiss(targetQuery, triggerEl, options);
 
 // hide the target element or elements
 alert.hide();
+```
+
+### Data attributes
+
+If you want to show or hide any element you can use the `data-collapse-toggle="elementId"` data attribute where `elementId` is the target element that will be toggled.
+
+```html
+<button data-collapse-toggle="elementId">Show menu</button>
+
+<div id="elementId">This will be toggled when the button is clicked.</div>
 ```

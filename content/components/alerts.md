@@ -297,161 +297,167 @@ The **Dismiss class** from Flowbite can be used to create an object that will hi
 
 The parameters for the Dismiss object can be used to programatically initialize and manipulate the behaviour of the dismissal of multiple elements.
 
-<table class="min-w-full my-10 text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
-    <thead class="bg-gray-50 dark:bg-gray-700">
-        <tr class="text-xs font-medium uppercase">
-            <th scope="col" class="px-6 py-3">
-                Parameter
-            </th>
-            <th scope="col" class="px-6 py-3">
-                Type
-            </th>
-            <th scope="col" class="px-6 py-3">
-                Required
-            </th>
-            <th scope="col" class="px-6 py-3">
-                Description
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">targetQuery</code>
-            </td>
-            <td class="px-6 py-4">
-                String
-            </td>
-            <td class="px-6 py-4">
-                Required
-            </td>
-            <td class="px-6 py-4">
-                Apply the query value for <code>querySelectorAll</code> for the target elements that will be dismissed.
-            </td>
-        </tr>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
-            </td>
-            <td class="px-6 py-4">
-                Element
-            </td>
-            <td class="px-6 py-4">
-                Optional
-            </td>
-            <td class="px-6 py-4">
-                Set an optional element object which will dismiss all the target elements when clicked.
-            </td>
-        </tr>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">options</code>
-            </td>
-            <td class="px-6 py-4">
-               Object
-            </td>
-            <td class="px-6 py-4">
-                Optional
-            </td>
-            <td class="px-6 py-4">
-                Set these options to override the default transition, duration, and timing function of the dismiss animation.
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs font-medium uppercase">
+              <th scope="col" class="px-6 py-3">
+                  Parameter
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Type
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Required
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">targetQuery</code>
+              </td>
+              <td class="px-6 py-4">
+                  String
+              </td>
+              <td class="px-6 py-4">
+                  Required
+              </td>
+              <td class="px-6 py-4">
+                  Apply the query value for <code>querySelectorAll</code> for the target elements that will be dismissed.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
+              </td>
+              <td class="px-6 py-4">
+                  Element
+              </td>
+              <td class="px-6 py-4">
+                  Optional
+              </td>
+              <td class="px-6 py-4">
+                  Set an optional element object which will dismiss all the target elements when clicked.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">options</code>
+              </td>
+              <td class="px-6 py-4">
+                Object
+              </td>
+              <td class="px-6 py-4">
+                  Optional
+              </td>
+              <td class="px-6 py-4">
+                  Set these options to override the default transition, duration, and timing function of the dismiss animation.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
 
 ### Options
 
 Use these optional options for the Dismiss object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
 
-<table class="min-w-full my-10 text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
-    <thead class="bg-gray-50 dark:bg-gray-700">
-        <tr class="text-xs font-medium uppercase">
-            <th scope="col" class="px-6 py-3">
-                Option
-            </th>
-            <th scope="col" class="px-6 py-3">
-                Type
-            </th>
-            <th scope="col" class="px-6 py-3">
-                Description
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">transition</code>
-            </td>
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">String</code>
-            </td>
-            <td class="px-6 py-4">
-                Use one of the Transition Property utility classes from Tailwind CSS to set transition type for the main element. The default value is <code class="text-purple-600 dark:text-purple-400">transition-opacity</code>.
-            </td>
-        </tr>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">duration</code>
-            </td>
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">Integer</code>
-            </td>
-            <td class="px-6 py-4">
-                Set the duration of the dismissing animation. The default value is <code class="text-purple-600 dark:text-purple-400">300</code> (300 miliseconds).
-            </td>
-        </tr>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">timing</code>
-            </td>
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">String</code>
-            </td>
-            <td class="px-6 py-4">
-                Set the transition timing function utility class from Tailwind CSS. The default value is <code class="text-purple-600 dark:text-purple-400">ease-out</code>.
-            </td>
-        </tr>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">onHide</code>
-            </td>
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">Function</code>
-            </td>
-            <td class="px-6 py-4">
-                Set a callback function when the item has been dismissed.
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-4000">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs font-medium uppercase">
+              <th scope="col" class="px-6 py-3">
+                  Option
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Type
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">transition</code>
+              </td>
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">String</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use one of the Transition Property utility classes from Tailwind CSS to set transition type for the main element. The default value is <code class="text-purple-600 dark:text-purple-400">transition-opacity</code>.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">duration</code>
+              </td>
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">Integer</code>
+              </td>
+              <td class="px-6 py-4">
+                  Set the duration of the dismissing animation. The default value is <code class="text-purple-600 dark:text-purple-400">300</code> (300 miliseconds).
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">timing</code>
+              </td>
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">String</code>
+              </td>
+              <td class="px-6 py-4">
+                  Set the transition timing function utility class from Tailwind CSS. The default value is <code class="text-purple-600 dark:text-purple-400">ease-out</code>.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">onHide</code>
+              </td>
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">Function</code>
+              </td>
+              <td class="px-6 py-4">
+                  Set a callback function when the item has been dismissed.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
 
 ### Methods
 
 Use the following methods on the Dismiss object to programatically manipulate the behaviour.
 
-<table class="min-w-full my-10 text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
-    <thead class="bg-gray-50 dark:bg-gray-700">
-        <tr class="text-xs font-medium uppercase">
-            <th scope="col" class="px-6 py-3">
-                Method
-            </th>
-            <th scope="col" class="px-6 py-3">
-                Description
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">hide()</code>
-            </td>
-            <td class="px-6 py-4">
-                Use the <code class="text-blue-600 dark:text-blue-400">hide()</code> method on the Dismiss object to hide all target elements.
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs font-medium uppercase">
+              <th scope="col" class="px-6 py-3">
+                  Method
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">hide()</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use the <code class="text-blue-600 dark:text-blue-400">hide()</code> method on the Dismiss object to hide all target elements.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
 
 ### Example
 

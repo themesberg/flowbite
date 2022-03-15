@@ -216,136 +216,142 @@ The **Tabs** class from Flowbite can be used to create an object that will enabl
 
 Initialize a new **Tabs** object with parameters such as an array of the tab and content elements.
 
-<table class="min-w-full my-10 text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
-    <thead class="bg-gray-50 dark:bg-gray-700">
-        <tr class="text-xs font-medium uppercase">
-            <th scope="col" class="px-6 py-3">
-                Parameter
-            </th>
-            <th scope="col" class="px-6 py-3">
-                Type
-            </th>
-            <th scope="col" class="px-6 py-3">
-                Required
-            </th>
-            <th scope="col" class="px-6 py-3">
-                Description
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">tabs</code>
-            </td>
-            <td class="px-6 py-4">
-                Array
-            </td>
-            <td class="px-6 py-4">
-                Required
-            </td>
-            <td class="px-6 py-4">
-                Array of the tab objects including the id, trigger element, and the content element.
-            </td>
-        </tr>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">activeTabID</code>
-            </td>
-            <td class="px-6 py-4">
-                String
-            </td>
-            <td class="px-6 py-4">
-                Optional
-            </td>
-            <td class="px-6 py-4">
-                Set the currently active tab element based on the ID.
-            </td>
-        </tr>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">options</code>
-            </td>
-            <td class="px-6 py-4">
-                Object
-            </td>
-            <td class="px-6 py-4">
-                Optional
-            </td>
-            <td class="px-6 py-4">
-                An object of options for the appearances of the tabs and to use callback functions.
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="bg-gray-50 dark:bg-gray-700">
+            <tr class="text-xs font-medium uppercase">
+                <th scope="col" class="px-6 py-3">
+                    Parameter
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Type
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Required
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">tabs</code>
+                </td>
+                <td class="px-6 py-4">
+                    Array
+                </td>
+                <td class="px-6 py-4">
+                    Required
+                </td>
+                <td class="px-6 py-4">
+                    Array of the tab objects including the id, trigger element, and the content element.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">activeTabID</code>
+                </td>
+                <td class="px-6 py-4">
+                    String
+                </td>
+                <td class="px-6 py-4">
+                    Optional
+                </td>
+                <td class="px-6 py-4">
+                    Set the currently active tab element based on the ID.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">options</code>
+                </td>
+                <td class="px-6 py-4">
+                    Object
+                </td>
+                <td class="px-6 py-4">
+                    Optional
+                </td>
+                <td class="px-6 py-4">
+                    An object of options for the appearances of the tabs and to use callback functions.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Options
 
 Use the following options as the third parameter for the **Tabs** object to set the appearance of the active tab elements and use callback functions.
 
-<table class="min-w-full my-10 text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
-    <thead class="bg-gray-50 dark:bg-gray-700">
-        <tr class="text-xs font-medium uppercase">
-            <th scope="col" class="px-6 py-3">
-                Option
-            </th>
-            <th scope="col" class="px-6 py-3">
-                Type
-            </th>
-            <th scope="col" class="px-6 py-3">
-                Description
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">onShow</code>
-            </td>
-            <td class="px-6 py-4">
-                Function
-            </td>
-            <td class="px-6 py-4">
-                Set a callback function when the a new tab has been shown.
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="bg-gray-50 dark:bg-gray-700">
+            <tr class="text-xs font-medium uppercase">
+                <th scope="col" class="px-6 py-3">
+                    Option
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Type
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">onShow</code>
+                </td>
+                <td class="px-6 py-4">
+                    Function
+                </td>
+                <td class="px-6 py-4">
+                    Set a callback function when the a new tab has been shown.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Methods
 
 Use the methods from the **Tabs** object to programatically change the current active tab using JavaScript.
 
-<table class="min-w-full my-10 text-sm text-left text-gray-500 shadow-md dark:border-gray-700 dark:text-gray-400">
-    <thead class="bg-gray-50 dark:bg-gray-700">
-        <tr class="text-xs font-medium uppercase">
-            <th scope="col" class="px-6 py-3">
-                Method
-            </th>
-            <th scope="col" class="px-6 py-3">
-                Description
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">show('tabID')</code>
-            </td>
-            <td class="px-6 py-4">
-                Use the show function on the Tab object to change the current active tab element.
-            </td>
-        </tr>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-            <td class="px-6 py-4 font-medium">
-                <code class="text-blue-600 dark:text-blue-400">getTabByID('tabID')</code>
-            </td>
-            <td class="px-6 py-4">
-                Return the tab element based on the ID.
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="bg-gray-50 dark:bg-gray-700">
+            <tr class="text-xs font-medium uppercase">
+                <th scope="col" class="px-6 py-3">
+                    Method
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">show('tabID')</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use the show function on the Tab object to change the current active tab element.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">getTabByID('tabID')</code>
+                </td>
+                <td class="px-6 py-4">
+                    Return the tab element based on the ID.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Example
 

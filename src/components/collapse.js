@@ -1,6 +1,6 @@
 const Default = {
-    onHide: () => { },
-    onShow: () => { },
+    onCollapse: () => { },
+    onExpand: () => { },
     onToggle: () => { }
 }
 
@@ -32,20 +32,24 @@ class Collapse {
 
     collapse() {
         this._targetEl.classList.add('hidden')
-        this._triggerEl.setAttribute('aria-expanded', 'false')
+        if(this._triggerEl) {
+            this._triggerEl.setAttribute('aria-expanded', 'false')
+        }
         this._visible = false
 
         // callback function
-        this._options.onHide()
+        this._options.onCollapse()
     }
 
     expand() {
         this._targetEl.classList.remove('hidden')
-        this._triggerEl.setAttribute('aria-expanded', 'true')
+        if(this._triggerEl) {
+            this._triggerEl.setAttribute('aria-expanded', 'true')
+        }
         this._visible = true
 
         // callback function
-        this._options.onShow()
+        this._options.onExpand()
     }
 
     toggle() {
@@ -63,7 +67,17 @@ window.Collapse = Collapse;
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-collapse-toggle]').forEach(function (triggerEl) {
         const targetEl = document.getElementById(triggerEl.getAttribute('data-collapse-toggle'))
-        const collapse = new Collapse(targetEl, triggerEl)
+        const collapse = new Collapse(targetEl, triggerEl, {
+            onCollapse: () => {
+                console.log('element has been collapsed')
+            },
+            onExpand: () => {
+                console.log('element has been expanded')
+            },
+            onToggle: () => {
+                console.log('element has been toggled')
+            },
+        })
         console.log(collapse);
     })
 })

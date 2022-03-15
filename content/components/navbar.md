@@ -19,9 +19,9 @@ Use this example of a navigation bar built with the utility classes from Tailwin
 
 {{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
-  <div class="container flex flex-wrap justify-between items-center mx-auto">
+  <div class="container flex flex-wrap items-center justify-between mx-auto">
     <a href="https://flowbite.com" class="flex items-center">
-        <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo" />
+        <img src="/docs/images/logo.svg" class="h-6 mr-3 sm:h-10" alt="Flowbite Logo" />
         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
     </a>
     <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
@@ -32,19 +32,19 @@ Use this example of a navigation bar built with the utility classes from Tailwin
     <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
       <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
         <li>
-          <a href="#" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+          <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
         </li>
         <li>
-          <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
         </li>
         <li>
-          <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
         </li>
         <li>
-          <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
         </li>
         <li>
-          <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
         </li>
       </ul>
     </div>
@@ -58,9 +58,9 @@ Use this example to create a navigation bar with a user profile or button to tog
 
 {{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
-  <div class="container flex flex-wrap justify-between items-center mx-auto">
+  <div class="container flex flex-wrap items-center justify-between mx-auto">
   <a href="https://flowbite.com" class="flex items-center">
-      <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo" />
+      <img src="/docs/images/logo.svg" class="h-6 mr-3 sm:h-10" alt="Flowbite Logo" />
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
   </a>
   <div class="flex items-center md:order-2">
@@ -69,23 +69,23 @@ Use this example to create a navigation bar with a user profile or button to tog
         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="user photo">
       </button>
       <!-- Dropdown menu -->
-      <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown">
-        <div class="py-3 px-4">
+      <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown">
+        <div class="px-4 py-3">
           <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
           <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
         </div>
         <ul class="py-1" aria-labelledby="dropdown">
         <li>
-          <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
         </li>
         <li>
-          <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
         </li>
         <li>
-          <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
+          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
         </li>
         <li>
-          <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
         </li>
         </ul>
       </div>
@@ -95,22 +95,22 @@ Use this example to create a navigation bar with a user profile or button to tog
       <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
     </button>
   </div>
-  <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
+  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
     <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+        <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
       </li>
     </ul>
   </div>
@@ -124,17 +124,17 @@ Use this example of a navbar element to also show a search input element that yo
 
 {{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
-  <div class="container flex flex-wrap justify-between items-center mx-auto">
+  <div class="container flex flex-wrap items-center justify-between mx-auto">
   <a href="https://flowbite.com" class="flex items-center">
-      <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo" />
+      <img src="/docs/images/logo.svg" class="h-6 mr-3 sm:h-10" alt="Flowbite Logo" />
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
   </a>
   <div class="flex md:order-2">
-      <div class="hidden relative mr-3 md:mr-0 md:block">
-        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+      <div class="relative hidden mr-3 md:mr-0 md:block">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
           <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
         </div>
-        <input type="text" id="email-adress-icon" class="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+        <input type="text" id="email-adress-icon" class="block w-full p-2 pl-10 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
       </div>
       <button data-collapse-toggle="mobile-menu-3" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-3" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
@@ -142,16 +142,16 @@ Use this example of a navbar element to also show a search input element that yo
       <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
     </button>
   </div>
-  <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-3">
+  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-3">
     <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+        <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
       </li>
     </ul>
   </div>
@@ -165,9 +165,9 @@ Use the following navbar element to show a call to action button alongside the l
 
 {{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
-  <div class="container flex flex-wrap justify-between items-center mx-auto">
+  <div class="container flex flex-wrap items-center justify-between mx-auto">
   <a href="https://flowbite.com" class="flex items-center">
-      <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo" />
+      <img src="/docs/images/logo.svg" class="h-6 mr-3 sm:h-10" alt="Flowbite Logo" />
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
   </a>
   <div class="flex md:order-2">
@@ -178,19 +178,19 @@ Use the following navbar element to show a call to action button alongside the l
       <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
     </button>
   </div>
-  <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
+  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
     <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+        <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
       </li>
       <li>
-        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
       </li>
     </ul>
   </div>
@@ -200,70 +200,70 @@ Use the following navbar element to show a call to action button alongside the l
 
 ## JavaScript behaviour
 
-The **Dismiss class** from Flowbite can be used to create an object that will hide a target element or elements based on the parameters, options, and methods that you provide.
+Use the **Collapse** class to create an object with a trigger and target element, where the target element will be collapsed or expanded based on the events dispatched on the trigger element. This can be used to toggle another element such as a dropdown menu or a hamburger navbar.
 
 ### Object parameters
 
-The parameters for the Dismiss object can be used to programatically initialize and manipulate the behaviour of the dismissal of multiple elements.
+Use the object parameters from the Collapse object to set the trigger element, target element, and the options including callback functions.
 
-<div class="overflow-x-auto my-10 shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Parameter
               </th>
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Type
               </th>
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Required
               </th>
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Description
               </th>
           </tr>
       </thead>
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">targetElement</code>
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Element
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Required
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Pass the target element object that will be expanded or collapsed.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Element
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Optional
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Set an optional element object which will expand or collapse the target element when clicked.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">options</code>
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                 Object
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Optional
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Set these options to override the default transition, duration, and timing function of the collapse animation.
               </td>
           </tr>
@@ -275,64 +275,53 @@ The parameters for the Dismiss object can be used to programatically initialize 
 
 Use these optional options for the Dismiss object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
 
-<div class="overflow-x-auto my-10 shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Option
               </th>
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Type
               </th>
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Description
               </th>
           </tr>
       </thead>
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">transition</code>
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">onCollapse</code>
               </td>
-              <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">String</code>
-              </td>
-              <td class="py-4 px-6">
-                  Use one of the Transition Property utility classes from Tailwind CSS to set transition type for the main element. The default value is <code class="text-purple-600 dark:text-purple-400">transition-opacity</code>.
-              </td>
-          </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">duration</code>
-              </td>
-              <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">Integer</code>
-              </td>
-              <td class="py-4 px-6">
-                  Set the duration of the dismissing animation. The default value is <code class="text-purple-600 dark:text-purple-400">300</code> (300 miliseconds).
-              </td>
-          </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">timing</code>
-              </td>
-              <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">String</code>
-              </td>
-              <td class="py-4 px-6">
-                  Set the transition timing function utility class from Tailwind CSS. The default value is <code class="text-purple-600 dark:text-purple-400">ease-out</code>.
-              </td>
-          </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">onHide</code>
-              </td>
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">Function</code>
               </td>
-              <td class="py-4 px-6">
-                  Set a callback function when the item has been dismissed.
+              <td class="px-6 py-4">
+                  Set a callback function when the item has been collapsed.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">onExpand</code>
+              </td>
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">Function</code>
+              </td>
+              <td class="px-6 py-4">
+                  Set a callback function when the item has been expanded.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">onToggle</code>
+              </td>
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">Function</code>
+              </td>
+              <td class="px-6 py-4">
+                  Set a callback function when the item has either been expanded or collapsed.
               </td>
           </tr>
       </tbody>
@@ -343,25 +332,41 @@ Use these optional options for the Dismiss object to set the transition, duratio
 
 Use the following methods on the Dismiss object to programatically manipulate the behaviour.
 
-<div class="overflow-x-auto my-10 shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Method
               </th>
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Description
               </th>
           </tr>
       </thead>
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">hide()</code>
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">collapse()</code>
               </td>
-              <td class="py-4 px-6">
-                  Use the <code class="text-blue-600 dark:text-blue-400">hide()</code> method on the Dismiss object to hide all target elements.
+              <td class="px-6 py-4">
+                  Use the <code class="text-blue-600 dark:text-blue-400">collapse()</code> method on the Collapse object to hide the target element.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">expand()</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use the <code class="text-blue-600 dark:text-blue-400">expand()</code> method on the Collapse object to show the target element.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">toggle()</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use the <code class="text-blue-600 dark:text-blue-400">toggle()</code> method on the Collapse object toggle the current visibility of the target element.
               </td>
           </tr>
       </tbody>
@@ -370,39 +375,78 @@ Use the following methods on the Dismiss object to programatically manipulate th
 
 ### Example
 
-Check out the following JavaScript example to learn how to initialize, set the options, and use the methods for the Dismiss object:
+Check out the following example to learn how to initialize and use the methods of the **Collapse** object to manually expand and collapse elements on the page.
+
+First of all, you need to set the object parameters where the target element is required and the other two are optional.
 
 ```javascript
-// dismiss all elements based on querySelectorAll
-const targetElement = document.getElementById('targetCollapse');
+// set the target element that will be collapsed or expanded (eg. navbar menu)
+const targetElement = document.getElementById('targetEl');
 
-// element which trigger the dismiss based on a click
-const triggerElement = document.getElementById('triggerCollapse');
+// optionally set a trigger element (eg. a button, hamburger icon)
+const triggerElement = document.getElementById('triggerEl');
 
-// optional options with default values
+// optional options with default values and callback functions
 const options = {
-  transition: 'transition-opacity',
-  duration: 1000,
-  timing: 'ease-out'
+  onCollapse: () => {
+      console.log('element has been collapsed')
+  },
+  onExpand: () => {
+      console.log('element has been expanded')
+  },
+  onToggle: () => {
+      console.log('element has been toggled')
+  }
 };
-
-/*
-* targetQuery: required
-* triggerEl: optional
-* options: optional
-*/
-const alert = new Dismiss(targetQuery, triggerEl, options);
-
-// hide the target element or elements
-alert.hide();
 ```
 
-### Data attributes
+Next step is to create a new instance of a Collapse object using the parameters we have set above.
 
-If you want to show or hide any element you can use the `data-collapse-toggle="elementId"` data attribute where `elementId` is the target element that will be toggled.
+```javascript
+/*
+* targetElement: required
+* triggerElement: optional
+* options: optional
+*/
+const collapse = new Collapse(targetElement, triggerElement, options);
+```
+
+Now you can programatically expand or collapse the target element using the methods of the Collapse object.
+
+```javascript
+// show the target element
+collapse.expand();
+
+// hide the target element
+collapse.collapse();
+
+// toggle the visibility of the target element
+collapse.toggle();
+```
+
+Alternatively, you can also use the Collapse object without the trigger element.
+
+```javascript
+const targetElement = document.getElementById('targetEl');
+
+const collapse = new Collapse(targetElement);
+```
+
+### HTML Markup
+
+Here is an example of the HTML markup that you can use for the JavaScript example above. Please note that you should use the `hidden` class from Tailwind CSS to hide the target element by default.
 
 ```html
-<button data-collapse-toggle="elementId">Show menu</button>
+<!-- Trigger element -->
+<button id="triggerEl" aria-expanded="false" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Trigger element</button>
 
-<div id="elementId">This will be toggled when the button is clicked.</div>
+<!-- Target element -->
+<div id="targetEl" class="hidden">
+  <ul class="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+      <li class="w-full px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">Profile</li>
+      <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Settings</li>
+      <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Messages</li>
+      <li class="w-full px-4 py-2 rounded-b-lg">Download</li>
+  </ul>
+</div>
 ```

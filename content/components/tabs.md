@@ -161,20 +161,20 @@ Use the dynamic tabs component to interactively show and hide the content below 
 
 Each tab toggle button needs to have a `role="tab"` attribute and a `data-tabs-target="{tabContentSelector}"` to target the tab content element that will be shown when clicked. 
 
-You must also use the `aria-selected="true"` data attribute so that Flowbite can target the currently active tab component and hide it when another is shown. If not set, it will show the first tab as active.
+Use the `aria-selected="true"` data attribute so that Flowbite can target the currently active tab component and hide it when another is shown. If not set, it will show the first tab as active.
 
-You must also apply the `role="tabpanel"` data attribute to every tab content element and apply the `id` attribute which will be equal to the `data-tabs-target={tabContentSelector}` from the tabs toggles.
+Apply the `role="tabpanel"` data attribute to every tab content element and set the `id` attribute which will be equal to the `data-tabs-target={tabContentSelector}` from the tabs toggles.
 
 You can use multiple tab components on a single page but make sure that the id's are different.
 
 {{< example github="components/tabs.md" show_dark=true >}}
-<div class="mb-4 text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400">
+<div class="mb-4 border-b border-gray-200">
     <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
         <li class="mr-2" role="presentation">
-            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+            <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
         </li>
         <li class="mr-2" role="presentation">
-            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 active" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Dashboard</button>
+            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Dashboard</button>
         </li>
         <li class="mr-2" role="presentation">
             <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
@@ -199,14 +199,6 @@ You can use multiple tab components on a single page but make sure that the id's
     </div>
 </div>
 {{< /example >}}
-
-If you want to change the `active` style of the currently active tab from the default blue color just use the following selector in your CSS file and make sure that you also apply the `:hover` styles as well.
-
-```css
-[role="tab"].active {
-    @apply text-red-600 border-red-600 dark:text-red-500 dark:border-red-500 hover:text-red-600 hover:border-red-600 dark:hover:text-red-500 dark:hover:border-red-500;
-}
-```
 
 ## JavaScript behaviour
 
@@ -303,6 +295,28 @@ Use the following options as the third parameter for the **Tabs** object to set 
         <tbody>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">activeClasses</code>
+                </td>
+                <td class="px-6 py-4">
+                    Array
+                </td>
+                <td class="px-6 py-4">
+                    Set an array of Tailwind CSS class names to apply for the active tab element.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">inactiveClasses</code>
+                </td>
+                <td class="px-6 py-4">
+                    Array
+                </td>
+                <td class="px-6 py-4">
+                    Apply an array of Tailwind CSS class names to apply for the inactive tab elements.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onShow</code>
                 </td>
                 <td class="px-6 py-4">
@@ -335,7 +349,7 @@ Use the methods from the **Tabs** object to programatically change the current a
         <tbody>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">show('tabID')</code>
+                    <code class="text-blue-600 dark:text-blue-400">show(id)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use the show function on the Tab object to change the current active tab element.
@@ -343,7 +357,7 @@ Use the methods from the **Tabs** object to programatically change the current a
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">getTabByID('tabID')</code>
+                    <code class="text-blue-600 dark:text-blue-400">getTab(id)</code>
                 </td>
                 <td class="px-6 py-4">
                     Return the tab element based on the ID.
@@ -389,9 +403,11 @@ const activeTabID = 'settings';
 
 // options with default values
 const options = {
-  onShow: () => {
-      console.log('tab is shown');
-  }
+    activeClasses: ['text-red-600', 'hover:text-red-600', 'dark:text-red-500', 'dark:hover:text-red-400', 'border-red-600', 'dark:border-red-500'],
+    inactiveClasses: ['text-gray-500', 'hover:text-gray-600', 'dark:text-gray-400', 'border-gray-100', 'hover:border-gray-300', 'dark:border-gray-700', 'dark:hover:text-gray-300'],
+    onShow: () => {
+        console.log('tab is shown');
+    }
 };
 ```
 
@@ -413,17 +429,17 @@ Lastly, you can now use the methods on the **Tabs** object to show another tab e
 tabs.show('dashboard');
 
 // get the tab object based on ID
-tabs.getTabByID('contacts')
+tabs.getTab('contacts')
 
 // get the current active tab object
 tabs.getActiveTab()
 ```
 
-## Markup
+### HTML Markup
 
 You can use this HTML code as an example for the JavaScript code from above.
 
-```html
+<!-- ```html -->
 <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
     <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400" id="tabExample" role="tablist">
         <li class="mr-2" role="presentation">
@@ -454,4 +470,4 @@ You can use this HTML code as an example for the JavaScript code from above.
         <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
     </div>
 </div>
-```
+<!-- ``` -->

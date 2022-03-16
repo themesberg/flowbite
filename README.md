@@ -287,4 +287,4 @@ If you need the Figma files for the components you can check out our website for
 
 ## Copyright and license
 
-The "Flowbite" brand is a registered trademark of Crafty Dwarf LLC. Code released under the [MIT License](https://flowbite.com/docs/getting-started/license/). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/)
+The "Flowbite" brand is a registered trademark of Crafty Dwarf LLC. Code released under the [MIT License](https://flowbite.com/docs/getting-started/license/). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).

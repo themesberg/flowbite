@@ -68,7 +68,7 @@ class Accordion {
         }
 
         // callback function
-        this._options.onOpen()
+        this._options.onOpen(item)
     }
 
     toggle(id) {
@@ -79,6 +79,9 @@ class Accordion {
         } else {
             this.open(id)
         }
+
+        // callback function
+        this._options.onToggle(item)
     }
 
     close(id) {
@@ -96,7 +99,7 @@ class Accordion {
         }
 
         // callback function
-        this._options.onClose()
+        this._options.onClose(item)
     }
 
 }
@@ -126,11 +129,17 @@ document.addEventListener('DOMContentLoaded', () => {
             alwaysOpen: alwaysOpen === 'open' ? true : false,
             activeClasses: activeClasses.length ? activeClasses : [...Default.activeClasses],
             inactiveClasses: inactiveClasses.length ? inactiveClasses : [...Default.inactiveClasses],
-            onOpen: () => {
+            onOpen: item => {
                 console.log('accordion item has been shown')
+                console.log(item)
             },
-            onClose: () => {
+            onClose: item => {
                 console.log('accordion item has been hidden')
+                console.log(item)
+            },
+            onToggle: item => {
+                console.log('accordion item has been toggled')
+                console.log(item)
             }
         })
         console.log(accordion)

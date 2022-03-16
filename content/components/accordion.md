@@ -414,7 +414,7 @@ Use the following options as the second parameter for the Accordion object to cu
 
 ### Methods
 
-Use the methods from the **Tabs** object to programatically change the current active tab using JavaScript.
+Use the object methods on the Accordion object to programatically open, close, or toggle the visibility of a given accordion item.
 
 <div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -493,14 +493,17 @@ const options = {
     alwaysOpen: true,
     activeClasses: ['bg-gray-100', 'dark:bg-gray-800', 'text-gray-900', 'dark:text-white'],
     inactiveClasses: ['text-gray-500', 'dark:text-gray-400'],
-    onOpen: () => {
-        console.log('accordion item has been opened');
+    onOpen: (item) => {
+        console.log('accordion item has been shown');
+        console.log(item);
     },
-    onClose: () => {
-        console.log('accordion item has been closed');
+    onClose: (item) => {
+        console.log('accordion item has been hidden');
+        console.log(item);
     },
-    onToggle: () => {
+    onToggle: (item) => {
         console.log('accordion item has been toggled');
+        console.log(item);
     },
 };
 ```
@@ -509,8 +512,7 @@ Create a new Accordion object using the options set above as the parameters.
 
 ```javascript
 /*
-* tabElements: array of tab objects
-* activeTabID: current active tab id
+* accordionItems: array of accordion item objects
 * options: optional
 */
 const accordion = new Accordion(accordionItems, options);
@@ -519,13 +521,13 @@ const accordion = new Accordion(accordionItems, options);
 Now you can access the object methods to programatically open, close, and toggle the accordion items based on the unique identifier.
 
 ```javascript
-// shows another tab element
+// open accordion item based on id
 accordion.open('accordion-example-heading-2');
 
-// get the tab object based on ID
+// close accordion item based on id
 accordion.close('accordion-example-heading-2');
 
-// get the current active tab object
+// toggle visibility of item based on id
 accordion.toggle('accordion-example-heading-3');
 ```
 

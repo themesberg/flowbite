@@ -284,3 +284,7 @@ For casual chatting with others using the library:
 If you need the Figma files for the components you can check out our website for more information:
 
 [Get access to the Figma design files](https://flowbite.com/figma/)
+
+## Copyright and license
+
+The Flowbite brand is a registered trademark of Crafty Dwarf LLC. Released code is under the [MIT License](https://flowbite.com/docs/getting-started/license/). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/)

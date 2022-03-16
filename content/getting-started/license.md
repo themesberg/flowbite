@@ -11,6 +11,10 @@ next: Changelog
 nextLink: getting-started/changelog/
 ---
 
+## Copyright
+
+The Flowbite name and logos are trademarks of Crafty Dwarf Inc.
+
 ## Released code
 
 The released code is licensed under the [MIT license](https://github.com/themesberg/flowbite/blob/main/README.md).

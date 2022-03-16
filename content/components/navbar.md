@@ -297,7 +297,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   <code class="text-blue-600 dark:text-blue-400">onCollapse</code>
               </td>
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">Function</code>
+                  Function
               </td>
               <td class="px-6 py-4">
                   Set a callback function when the item has been collapsed.
@@ -308,7 +308,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   <code class="text-blue-600 dark:text-blue-400">onExpand</code>
               </td>
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">Function</code>
+                  Function
               </td>
               <td class="px-6 py-4">
                   Set a callback function when the item has been expanded.
@@ -319,7 +319,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   <code class="text-blue-600 dark:text-blue-400">onToggle</code>
               </td>
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">Function</code>
+                  Function
               </td>
               <td class="px-6 py-4">
                   Set a callback function when the item has either been expanded or collapsed.

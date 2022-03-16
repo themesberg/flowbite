@@ -2,8 +2,8 @@ const Default = {
     alwaysOpen: false,
     activeClasses: ['bg-gray-100', 'dark:bg-gray-800', 'text-gray-900', 'dark:text-white'],
     inactiveClasses: ['text-gray-500', 'dark:text-gray-400'],
-    onShow: () => { },
-    onHide: () => { }
+    onOpen: () => { },
+    onClose: () => { }
 }
 
 class Accordion {
@@ -19,7 +19,7 @@ class Accordion {
             this._items.map(item => {
 
                 if (item.active) {
-                    this.show(item.id)
+                    this.open(item.id)
                 }
 
                 item.triggerEl.addEventListener('click', () => {
@@ -33,10 +33,8 @@ class Accordion {
         return this._items.filter(item => item.id === id)[0]
     }
 
-    show(id) {
+    open(id) {
         const item = this.getItem(id)
-        console.log('ITEM')
-        console.log(item)
 
         // don't hide other accordions if always open
         if (!this._options.alwaysOpen) {
@@ -70,23 +68,21 @@ class Accordion {
         }
 
         // callback function
-        this._options.onShow()
+        this._options.onOpen()
     }
 
     toggle(id) {
         const item = this.getItem(id)
 
         if (item.active) {
-            this.hide(id)
+            this.close(id)
         } else {
-            this.show(id)
+            this.open(id)
         }
     }
 
-    hide(id) {
+    close(id) {
         const item = this.getItem(id)
-        console.log('ITEM')
-        console.log(item)
 
         item.triggerEl.classList.remove(...this._options.activeClasses)
         item.triggerEl.classList.add(...this._options.inactiveClasses)
@@ -100,7 +96,7 @@ class Accordion {
         }
 
         // callback function
-        this._options.onHide()
+        this._options.onClose()
     }
 
 }
@@ -130,10 +126,10 @@ document.addEventListener('DOMContentLoaded', () => {
             alwaysOpen: alwaysOpen === 'open' ? true : false,
             activeClasses: activeClasses.length ? activeClasses : [...Default.activeClasses],
             inactiveClasses: inactiveClasses.length ? inactiveClasses : [...Default.inactiveClasses],
-            onShow: () => {
+            onOpen: () => {
                 console.log('accordion item has been shown')
             },
-            onHide: () => {
+            onClose: () => {
                 console.log('accordion item has been hidden')
             }
         })

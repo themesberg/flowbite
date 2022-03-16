@@ -1,6 +1,3 @@
-# This file holds all sidebar menu's entries.
-# The logic for the sidebar generation is in "site/layouts/partials/docs-sidebar.html".
-
 - title: Getting started
   pages:
     - title: Introduction

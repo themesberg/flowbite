@@ -1,22 +1,15 @@
 const Default = {
+    indicators: [],
     interval: 3000,
     onNextSlide: () => { },
     onPrevSlide: () => { }
 }
 
 class Carousel {
-    constructor(id, options) {
-        this._el = document.getElementById(id)
-        this._items = [...this._el.querySelectorAll('[data-carousel-item]')].length ? [...this._el.querySelectorAll('[data-carousel-item]')].map((el, id) => {
-            return { id, el, active: el.getAttribute(['data-carousel-item']) === 'active' ? true : false }
-        }) : []
-        this._indicators = [...this._el.querySelectorAll('[data-carousel-slide-to]')].length ? [...this._el.querySelectorAll('[data-carousel-slide-to]')].map((el, id) => {
-            return { id, el }
-        }) : []
+    constructor(items = [], options = {}) {
+        this._items = items
+        this._indicators = options.indicators
         this._interval = null
-        if (options) {
-            this._intervalDuration = options.interval ? options.interval : Default.interval
-        }
         this._options = { ...Default, ...options }
         this._init()
     }
@@ -30,22 +23,28 @@ class Carousel {
         this._items.map(item => {
             item.el.classList.add('absolute', 'inset-0', 'transition-all', 'transform')
         })
-        this.slideTo(activeItem.id)
+        this.slideTo(activeItem.position)
+
+        this._indicators.map((indicator, position) => {
+            indicator.el.addEventListener('click', () => {
+                this.slideTo(position)
+            })
+        })
     }
 
     /**
      * Slide to the element based on id
-     * @param {*} id 
+     * @param {*} position 
      */
-    slideTo(id) {
-        const nextItem = this._items[id]
+    slideTo(position) {
+        const nextItem = this._items[position]
         const rotationItems = {
-            'left': nextItem.id === 0 ? this._items[this._items.length - 1] : this._items[nextItem.id - 1],
+            'left': nextItem.position === 0 ? this._items[this._items.length - 1] : this._items[nextItem.position - 1],
             'middle': nextItem,
-            'right': nextItem.id === this._items.length - 1 ? this._items[0] : this._items[nextItem.id + 1]
+            'right': nextItem.position === this._items.length - 1 ? this._items[0] : this._items[nextItem.position + 1]
         }
         this._rotate(rotationItems)
-        this._setActiveItem(nextItem.id)
+        this._setActiveItem(nextItem.position)
         if (this._interval) {
             this.pause()
             this.cycle()
@@ -60,13 +59,13 @@ class Carousel {
         let nextItem = null
 
         // check if last item
-        if (activeItem.id === this._items.length - 1) {
+        if (activeItem.position === this._items.length - 1) {
             nextItem = this._items[0]
         } else {
-            nextItem = this._items[activeItem.id + 1]
+            nextItem = this._items[activeItem.position + 1]
         }
 
-        this.slideTo(nextItem.id)
+        this.slideTo(nextItem.position)
 
         // callback function
         this._options.onNextSlide()
@@ -80,13 +79,13 @@ class Carousel {
         let prevItem = null
 
         // check if first item
-        if (activeItem.id === 0) {
+        if (activeItem.position === 0) {
             prevItem = this._items[this._items.length - 1]
         } else {
-            prevItem = this._items[activeItem.id - 1]
+            prevItem = this._items[activeItem.position - 1]
         }
 
-        this.slideTo(prevItem.id)
+        this.slideTo(prevItem.position)
 
         // callback function
         this._options.onPrevSlide()
@@ -118,15 +117,10 @@ class Carousel {
     /**
      * Set an interval to cycle through the carousel items
      */
-    cycle(intervalDuration) {
-
-        if (intervalDuration) {
-            this._intervalDuration = intervalDuration
-        }
-
+    cycle() {
         this._interval = setInterval(() => {
             this.nextSlide();
-        }, this._intervalDuration)
+        }, this._options.interval)
     }
 
     /**
@@ -145,31 +139,29 @@ class Carousel {
 
     /**
      * Set the currently active item and data attribute
-     * @param {*} id 
+     * @param {*} position 
      */
-    _setActiveItem(id) {
+    _setActiveItem(position) {
         this._items.map(item => {
             item.active = false
             item.el.setAttribute('data-carousel-item', '')
-            if (item.id === id) {
-                item.active = true
-                item.el.setAttribute('data-carousel-item', 'active')
-            }
         })
+
+        this._items[position].active = true
+        this._items[position].el.setAttribute('data-carousel-item', 'active')
 
         // update the indicators if available
-        this._indicators.map(indicator => {
-            indicator.el.setAttribute('aria-current', 'false')
-            indicator.el.classList.remove('bg-white', 'dark:bg-gray-800')
-            indicator.el.classList.add('bg-white/50', 'dark:bg-gray-800/50')
+        if (this._indicators.length) {
+            this._indicators.map(indicator => {
+                indicator.el.setAttribute('aria-current', 'false')
+                indicator.el.classList.remove('bg-white', 'dark:bg-gray-800')
+                indicator.el.classList.add('bg-white/50', 'dark:bg-gray-800/50')
 
-            if (indicator.id === id) {
-                indicator.el.classList.add('bg-white', 'dark:bg-gray-800')
-                indicator.el.classList.remove('bg-white/50', 'dark:bg-gray-800/50')
-                indicator.el.setAttribute('aria-current', 'true')
-            }
-        })
-
+            })
+            this._indicators[position].el.classList.add('bg-white', 'dark:bg-gray-800')
+            this._indicators[position].el.classList.remove('bg-white/50', 'dark:bg-gray-800/50')
+            this._indicators[position].el.setAttribute('aria-current', 'true')
+        }
     }
 
 }
@@ -177,12 +169,34 @@ class Carousel {
 window.Carousel = Carousel;
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-carousel]').forEach(function (carouselEl) {
+    document.querySelectorAll('[data-carousel]').forEach(carouselEl => {
         const interval = carouselEl.getAttribute('data-carousel-interval')
         const slide = carouselEl.getAttribute('data-carousel') === 'slide' ? true : false
 
-        const carousel = new Carousel(carouselEl.getAttribute('id'), {
-            interval
+        const items = [];
+        if (carouselEl.querySelectorAll('[data-carousel-item]').length) {
+            [...carouselEl.querySelectorAll('[data-carousel-item]')].map((carouselItemEl, position) => {
+                items.push({
+                    position: position,
+                    el: carouselItemEl,
+                    active: carouselItemEl.getAttribute('data-carousel-item') === 'active' ? true : false
+                })
+            })
+        }
+
+        const indicators = [];
+        if (carouselEl.querySelectorAll('[data-carousel-slide-to]').length) {
+            [...carouselEl.querySelectorAll('[data-carousel-slide-to]')].map((indicatorEl, position) => {
+                indicators.push({
+                    position: position,
+                    el: indicatorEl
+                })
+            })
+        }
+
+        const carousel = new Carousel(items, {
+            indicators: indicators.length ? indicators : Default.indicators,
+            interval: interval ? interval : Default.interval
         })
 
         if (slide) {
@@ -204,15 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 carousel.prevSlide()
             })
         }
-
-        // check for indicators
-        carouselEl.querySelectorAll('[data-carousel-slide-to]').forEach(slideToEl => {
-            slideToEl.addEventListener('click', () => {
-                const id = slideToEl.getAttribute('data-carousel-slide-to')
-                carousel.slideTo(id)
-
-            })
-        })
 
     })
 })

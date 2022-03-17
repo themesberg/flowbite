@@ -76,9 +76,9 @@ If you want to spice up your cards you can use the following card which has its 
 </a>
 {{< /example >}}
 
-## Interactive card
+## Profile card
 
-Use this interactive card example if you want to show a dropdown menu and buttons to enable multiple actions from your user.
+Use this user profile card example if you want to show a dropdown menu and buttons to enable multiple actions from your user.
 
 {{< example github="components/card.md" show_dark=true >}}
 <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">

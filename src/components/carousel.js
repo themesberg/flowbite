@@ -19,11 +19,17 @@ class Carousel {
      * Initialise carousel and items based on active one
      */
     _init() {
-        const activeItem = this._getActiveItem()
         this._items.map(item => {
             item.el.classList.add('absolute', 'inset-0', 'transition-all', 'transform')
         })
-        this.slideTo(activeItem.position)
+
+        // if no active item is set then first position is default
+        if (this._getActiveItem()) {
+            this.slideTo(this._getActiveItem())
+        } else {
+            this._setActiveItem(0)
+            this.slideTo(0)
+        }
 
         this._indicators.map((indicator, position) => {
             indicator.el.addEventListener('click', () => {

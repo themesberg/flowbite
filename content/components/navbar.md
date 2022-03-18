@@ -64,7 +64,7 @@ Use this example to create a navigation bar with a user profile or button to tog
       <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
   </a>
-  <div class="items-center sflex md:order-2">
+  <div class="flex items-center md:order-2">
       <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" type="button" data-dropdown-toggle="dropdown">
         <span class="sr-only">Open user menu</span>
         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="user photo">
@@ -242,20 +242,6 @@ Use the object parameters from the Collapse object to set the trigger element, t
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
-              </td>
-              <td class="py-4 px-6">
-                  Element
-              </td>
-              <td class="py-4 px-6">
-                  Optional
-              </td>
-              <td class="py-4 px-6">
-                  Set an optional element object which will expand or collapse the target element when clicked.
-              </td>
-          </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">options</code>
               </td>
               <td class="py-4 px-6">
@@ -292,6 +278,17 @@ Use these optional options for the Dismiss object to set the transition, duratio
           </tr>
       </thead>
       <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
+              </td>
+              <td class="py-4 px-6">
+                  Element
+              </td>
+              <td class="py-4 px-6">
+                  Set an optional element object which will expand or collapse the target element when clicked.
+              </td>
+          </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="py-4 px-6 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">onCollapse</code>
@@ -351,7 +348,7 @@ Use the following methods on the Dismiss object to programatically manipulate th
                   <code class="text-blue-600 dark:text-blue-400">collapse()</code>
               </td>
               <td class="py-4 px-6">
-                  Use the <code class="text-blue-600 dark:text-blue-400">collapse()</code> method on the Collapse object to hide the target element.
+                  Use this method on the Collapse object to hide the target element.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -359,7 +356,7 @@ Use the following methods on the Dismiss object to programatically manipulate th
                   <code class="text-blue-600 dark:text-blue-400">expand()</code>
               </td>
               <td class="py-4 px-6">
-                  Use the <code class="text-blue-600 dark:text-blue-400">expand()</code> method on the Collapse object to show the target element.
+                  Use this method on the Collapse object to show the target element.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -367,7 +364,7 @@ Use the following methods on the Dismiss object to programatically manipulate th
                   <code class="text-blue-600 dark:text-blue-400">toggle()</code>
               </td>
               <td class="py-4 px-6">
-                  Use the <code class="text-blue-600 dark:text-blue-400">toggle()</code> method on the Collapse object toggle the current visibility of the target element.
+                  Use this method on the Collapse object toggle the current visibility of the target element.
               </td>
           </tr>
       </tbody>
@@ -389,6 +386,7 @@ const triggerElement = document.getElementById('triggerEl');
 
 // optional options with default values and callback functions
 const options = {
+  triggerElement: triggerElement,
   onCollapse: () => {
       console.log('element has been collapsed')
   },
@@ -406,10 +404,9 @@ Next step is to create a new instance of a Collapse object using the parameters 
 ```javascript
 /*
 * targetElement: required
-* triggerElement: optional
 * options: optional
 */
-const collapse = new Collapse(targetElement, triggerElement, options);
+const collapse = new Collapse(targetElement, options);
 ```
 
 Now you can programatically expand or collapse the target element using the methods of the Collapse object.

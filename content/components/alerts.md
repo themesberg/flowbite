@@ -384,7 +384,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   <code class="text-blue-600 dark:text-blue-400">transition</code>
               </td>
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">String</code>
+                  String
               </td>
               <td class="py-4 px-6">
                   Use one of the Transition Property utility classes from Tailwind CSS to set transition type for the main element. The default value is <code class="text-purple-600 dark:text-purple-400">transition-opacity</code>.
@@ -395,7 +395,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   <code class="text-blue-600 dark:text-blue-400">duration</code>
               </td>
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">Integer</code>
+                  Integer
               </td>
               <td class="py-4 px-6">
                   Set the duration of the dismissing animation. The default value is <code class="text-purple-600 dark:text-purple-400">300</code> (300 miliseconds).
@@ -406,7 +406,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   <code class="text-blue-600 dark:text-blue-400">timing</code>
               </td>
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">String</code>
+                  String
               </td>
               <td class="py-4 px-6">
                   Set the transition timing function utility class from Tailwind CSS. The default value is <code class="text-purple-600 dark:text-purple-400">ease-out</code>.
@@ -417,7 +417,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   <code class="text-blue-600 dark:text-blue-400">onHide</code>
               </td>
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">Function</code>
+                  Function
               </td>
               <td class="py-4 px-6">
                   Set a callback function when the item has been dismissed.
@@ -449,7 +449,7 @@ Use the following methods on the Dismiss object to programatically manipulate th
                   <code class="text-blue-600 dark:text-blue-400">hide()</code>
               </td>
               <td class="py-4 px-6">
-                  Use the <code class="text-blue-600 dark:text-blue-400">hide()</code> method on the Dismiss object to hide all target elements.
+                  Use this method on the Dismiss object to hide the target element.
               </td>
           </tr>
       </tbody>
@@ -472,7 +472,13 @@ const options = {
   triggerEl: triggerEl,
   transition: 'transition-opacity',
   duration: 1000,
-  timing: 'ease-out'
+  timing: 'ease-out',
+
+  // callback functions
+  onHide: (targetEl) => {
+    console.log('element has been dismissed')
+    console.log(targetEl)
+  }
 };
 
 /*
@@ -486,6 +492,8 @@ alert.hide();
 ```
 
 ### HTML markup
+
+Use this HTML code for the JavaScript code example above.
 
 ```html
 <button id="triggerElement" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Hide alert</button>

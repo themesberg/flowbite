@@ -9,7 +9,7 @@ const Default = {
 class Dismiss {
     constructor(targetEl = null, options = {}) {
         this._targetEl = targetEl
-        this._triggerEl = options.triggerEl
+        this._triggerEl = options ? options.triggerEl : Default.triggerEl
         this._options = { ...Default, ...options }
         this._init()
     }
@@ -29,7 +29,7 @@ class Dismiss {
         }, this._options.duration)
 
         // callback function
-        this._options.onHide()
+        this._options.onHide(this._targetEl)
     }
 }
 

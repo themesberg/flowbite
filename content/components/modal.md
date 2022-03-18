@@ -722,7 +722,7 @@ const targetEl = document.getElementById('modalEl');
 // options with default values
 const options = {
   placement: 'bottom-right',
-  backdropClasses: ['bg-blue-500', 'dark:bg-blue-400'],
+  backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
   onHide: () => {
       console.log('modal is hidden');
   },

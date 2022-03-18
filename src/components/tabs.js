@@ -1,7 +1,7 @@
 const Default = {
     activeTabID: null,
-    activeClasses: ['text-blue-600', 'hover:text-blue-600', 'dark:text-blue-500', 'dark:hover:text-blue-400', 'border-blue-600', 'dark:border-blue-500'],
-    inactiveClasses: ['text-gray-500', 'hover:text-gray-600', 'dark:text-gray-400', 'border-gray-100', 'hover:border-gray-300', 'dark:border-gray-700', 'dark:hover:text-gray-300'],
+    activeClasses: 'text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-400 border-blue-600 dark:border-blue-500',
+    inactiveClasses: 'text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300',
     onShow: () => { }
 }
 
@@ -55,16 +55,16 @@ class Tabs {
         // hide other tabs
         this._tabs.map(t => {
             if (t !== tab) {
-                t.triggerEl.classList.remove(...this._options.activeClasses);
-                t.triggerEl.classList.add(...this._options.inactiveClasses);
+                t.triggerEl.classList.remove(...this._options.activeClasses.split(" "));
+                t.triggerEl.classList.add(...this._options.inactiveClasses.split(" "));
                 t.contentEl.classList.add('hidden')
                 t.triggerEl.setAttribute('aria-selected', false)
             }
         })
 
         // show active tab
-        tab.triggerEl.classList.add(...this._options.activeClasses);
-        tab.triggerEl.classList.remove(...this._options.inactiveClasses);
+        tab.triggerEl.classList.add(...this._options.activeClasses.split(" "));
+        tab.triggerEl.classList.remove(...this._options.inactiveClasses.split(" "));
         tab.triggerEl.setAttribute('aria-selected', true)
         tab.contentEl.classList.remove('hidden')
 

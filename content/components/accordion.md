@@ -491,8 +491,8 @@ const accordionItems = [
 // options with default values
 const options = {
     alwaysOpen: true,
-    activeClasses: ['bg-gray-100', 'dark:bg-gray-800', 'text-gray-900', 'dark:text-white'],
-    inactiveClasses: ['text-gray-500', 'dark:text-gray-400'],
+    activeClasses: 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white',
+    inactiveClasses: 'text-gray-500 dark:text-gray-400',
     onOpen: (item) => {
         console.log('accordion item has been shown');
         console.log(item);

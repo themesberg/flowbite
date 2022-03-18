@@ -1,7 +1,7 @@
 const Default = {
     alwaysOpen: false,
-    activeClasses: ['bg-gray-100', 'dark:bg-gray-800', 'text-gray-900', 'dark:text-white'],
-    inactiveClasses: ['text-gray-500', 'dark:text-gray-400'],
+    activeClasses: 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white',
+    inactiveClasses: 'text-gray-500 dark:text-gray-400',
     onOpen: () => { },
     onClose: () => { }
 }
@@ -40,8 +40,8 @@ class Accordion {
         if (!this._options.alwaysOpen) {
             this._items.map(i => {
                 if (i !== item) {
-                    i.triggerEl.classList.remove(...this._options.activeClasses)
-                    i.triggerEl.classList.add(...this._options.inactiveClasses)
+                    i.triggerEl.classList.remove(...this._options.activeClasses.split(" "))
+                    i.triggerEl.classList.add(...this._options.inactiveClasses.split(" "))
                     i.contentEl.classList.add('hidden')
                     i.triggerEl.setAttribute('aria-expanded', false)
                     i.active = false
@@ -56,8 +56,8 @@ class Accordion {
 
 
         // show active item
-        item.triggerEl.classList.add(...this._options.activeClasses)
-        item.triggerEl.classList.remove(...this._options.inactiveClasses)
+        item.triggerEl.classList.add(...this._options.activeClasses.split(" "))
+        item.triggerEl.classList.remove(...this._options.inactiveClasses.split(" "))
         item.triggerEl.setAttribute('aria-expanded', true)
         item.contentEl.classList.remove('hidden')
         item.active = true
@@ -110,8 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-accordion]').forEach(accordionEl => {
 
         const alwaysOpen = accordionEl.getAttribute('data-accordion')
-        const activeClasses = accordionEl.getAttribute('data-active-classes') ? accordionEl.getAttribute('data-active-classes').split(" ") : []
-        const inactiveClasses = accordionEl.getAttribute('data-inactive-classes') ? accordionEl.getAttribute('data-inactive-classes').split(" ") : []
+        const activeClasses = accordionEl.getAttribute('data-active-classes')
+        const inactiveClasses = accordionEl.getAttribute('data-inactive-classes')
 
         const items = []
         accordionEl.querySelectorAll('[data-accordion-target]').forEach(el => {
@@ -127,8 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const accordion = new Accordion(items, {
             alwaysOpen: alwaysOpen === 'open' ? true : false,
-            activeClasses: activeClasses.length ? activeClasses : [...Default.activeClasses],
-            inactiveClasses: inactiveClasses.length ? inactiveClasses : [...Default.inactiveClasses],
+            activeClasses: activeClasses ? activeClasses : Default.activeClasses,
+            inactiveClasses: inactiveClasses ? inactiveClasses : Default.activeClasses,
             onOpen: item => {
                 console.log('accordion item has been shown')
                 console.log(item)

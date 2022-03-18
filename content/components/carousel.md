@@ -329,7 +329,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   Integer
               </td>
               <td class="py-4 px-6">
-                  Set the default active item position.
+                  Set the default active slider item based on its position (starts from [0-x]).
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -340,7 +340,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   Integer
               </td>
               <td class="py-4 px-6">
-                  Set the interval duration in miliseconds when the carousel cycles.
+                  Set the interval duration in miliseconds when the carousel is cycling.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -488,8 +488,8 @@ const options = {
     interval: 3000,
     
     indicators: {
-        activeClasses: ['bg-white', 'dark:bg-gray-800'],
-        inactiveClasses: ['bg-white/50', 'dark:bg-gray-800/50'],
+        activeClasses: 'bg-white dark:bg-gray-800',
+        inactiveClasses: 'bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800',
         items: [
             {
                 position: 0,

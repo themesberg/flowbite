@@ -2,8 +2,8 @@ const Default = {
     defaultPosition: 0,
     indicators: {
         items: [],
-        activeClasses: ['bg-white', 'dark:bg-gray-800'],
-        inactiveClasses: ['bg-white/50', 'dark:bg-gray-800/50', 'hover:bg-white', 'dark:hover:bg-gray-800']
+        activeClasses: 'bg-white dark:bg-gray-800',
+        inactiveClasses: 'bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800'
     },
     interval: 3000,
     onNext: () => { },
@@ -167,11 +167,11 @@ class Carousel {
         if (this._indicators.length) {
             this._indicators.map(indicator => {
                 indicator.el.setAttribute('aria-current', 'false')
-                indicator.el.classList.remove(...this._options.indicators.activeClasses)
-                indicator.el.classList.add(...this._options.indicators.inactiveClasses)
+                indicator.el.classList.remove(...this._options.indicators.activeClasses.split(" "))
+                indicator.el.classList.add(...this._options.indicators.inactiveClasses.split(" "))
             })
-            this._indicators[position].el.classList.add(...this._options.indicators.activeClasses)
-            this._indicators[position].el.classList.remove(...this._options.indicators.inactiveClasses)
+            this._indicators[position].el.classList.add(...this._options.indicators.activeClasses.split(" "))
+            this._indicators[position].el.classList.remove(...this._options.indicators.inactiveClasses.split(" "))
             this._indicators[position].el.setAttribute('aria-current', 'true')
         }
     }

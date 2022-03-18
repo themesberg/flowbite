@@ -293,20 +293,6 @@ Pass the object parameters for the Carousel object to set the carousel items and
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
-              </td>
-              <td class="py-4 px-6">
-                  Element
-              </td>
-              <td class="py-4 px-6">
-                  Optional
-              </td>
-              <td class="py-4 px-6">
-                  Set an optional element object which will expand or collapse the target element when clicked.
-              </td>
-          </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">options</code>
               </td>
               <td class="py-4 px-6">
@@ -316,7 +302,7 @@ Pass the object parameters for the Carousel object to set the carousel items and
                   Optional
               </td>
               <td class="py-4 px-6">
-                  Set these options to override the default transition, duration, and timing function of the collapse animation.
+                  Pass an object of options to set the interval, indicators, and callback functions.
               </td>
           </tr>
       </tbody>
@@ -345,6 +331,50 @@ Use these optional options for the Dismiss object to set the transition, duratio
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">interval</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  Integer
+              </td>
+              <td class="py-4 px-6">
+                  Set the interval duration in miliseconds when the carousel cycles.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">indicators</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  Array
+              </td>
+              <td class="py-4 px-6">
+                  Set an optional array of indicator elements.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">activeClasses</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  Array
+              </td>
+              <td class="py-4 px-6">
+                  Set an array of Tailwind CSS classes for the active indicator element.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">inactiveClasses</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  Array
+              </td>
+              <td class="py-4 px-6">
+                  Set an array of Tailwind CSS classes for the default inactive indicator element.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">onCollapse</code>
               </td>
               <td class="py-4 px-6 font-medium">
@@ -356,24 +386,35 @@ Use these optional options for the Dismiss object to set the transition, duratio
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">onExpand</code>
+                  <code class="text-blue-600 dark:text-blue-400">onNext</code>
               </td>
               <td class="py-4 px-6 font-medium">
                   Function
               </td>
               <td class="py-4 px-6">
-                  Set a callback function when the item has been expanded.
+                  Set a callback function when the next carousel item has been shown.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">onToggle</code>
+                  <code class="text-blue-600 dark:text-blue-400">onPrev</code>
               </td>
               <td class="py-4 px-6 font-medium">
                   Function
               </td>
               <td class="py-4 px-6">
-                  Set a callback function when the item has either been expanded or collapsed.
+                  Set a callback function when the previous carousel item has been shown.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">onChange</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  Function
+              </td>
+              <td class="py-4 px-6">
+                  Set a callback function when the previous carousel item has been shown.
               </td>
           </tr>
       </tbody>
@@ -399,26 +440,42 @@ Use the following methods on the Dismiss object to programatically manipulate th
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">collapse()</code>
+                  <code class="text-blue-600 dark:text-blue-400">nextSlide()</code>
               </td>
               <td class="py-4 px-6">
-                  Use the <code class="text-blue-600 dark:text-blue-400">collapse()</code> method on the Collapse object to hide the target element.
+                  Use this method to go to the next slide of the carousel component.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">expand()</code>
+                  <code class="text-blue-600 dark:text-blue-400">prevSlide()</code>
               </td>
               <td class="py-4 px-6">
-                  Use the <code class="text-blue-600 dark:text-blue-400">expand()</code> method on the Collapse object to show the target element.
+                  Use this method to go to the previous slide of the carousel component.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">toggle()</code>
+                  <code class="text-blue-600 dark:text-blue-400">slideTo(position)</code>
               </td>
               <td class="py-4 px-6">
-                  Use the <code class="text-blue-600 dark:text-blue-400">toggle()</code> method on the Collapse object toggle the current visibility of the target element.
+                  Use this method to go the the carousel with the position that you set as a parameter.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">cycle()</code>
+              </td>
+              <td class="py-4 px-6">
+                  Use this method to start cycling the carousel component based on the default interval duration.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">pause()</code>
+              </td>
+              <td class="py-4 px-6">
+                  Use this method to stop the automatic cycling of the carousel component.
               </td>
           </tr>
       </tbody>
@@ -427,10 +484,57 @@ Use the following methods on the Dismiss object to programatically manipulate th
 
 ### Example
 
+Check out the following example to learn how to programatically create a new Carousel object by passing the parameters, using the methods, and the callback functions.
+
 ```javascript
-const carousel = new Carousel('carousel-id', {
-    interval: 2000 // by default 3000
-})
+const items = [
+    {
+        position: 0,
+        el: document.getElementById('carousel-item-1'),
+        active: false
+    },
+    {
+        position: 1,
+        el: document.getElementById('carousel-item-2'),
+        active: true
+    },
+    {
+        position: 2,
+        el: document.getElementById('carousel-item-3'),
+        active: false
+    },
+];
+
+const options = {
+    indicators: [
+        {
+            position: 0,
+            el: document.getElementById('carousel-indicator-1')
+        },
+        {
+            position: 1,
+            el: document.getElementById('carousel-indicator-2')
+        },
+        {
+            position: 2,
+            el: document.getElementById('carousel-indicator-3')
+        }
+    ],
+    activeClasses: ['bg-white', 'dark:bg-gray-800'],
+    inactiveClasses: ['bg-white/50', 'dark:bg-gray-800/50'],
+    interval: 3000,
+    
+    // callback functions
+    onNext: () => { },
+    onPrev: () => { },
+    onChange: () => { }
+};
+```
+
+Create a new carousel object using the options set above.
+
+```javascript
+const carousel = new Carousel(items, options);
 ```
 
 Use the `nextSlide()` and `prevSlide()` public methods on the carousel object to jump to the left or right carousel slide item based on the position of the current active item.
@@ -450,7 +554,7 @@ Use the `slideTo(position)` public method to jump to the carousel slide item wit
 carousel.slideTo(2)
 ```
 
-Use the `cycle(duration)` method to start an automated cycling where the duration is the miliseconds of time between each slide and the `pause()` method to clear the cycle event.
+Use the `cycle()` method to start an automated cycling where the duration is the miliseconds of time between each slide and the `pause()` method to clear the cycle event.
 
 ```javascript
 // starts or resumes the carousel cycling (automated sliding)
@@ -459,23 +563,47 @@ carousel.cycle()
 // pauses the cycling (automated sliding)
 carousel.pause()
 ```
-```
 
 ### HTML Markup
 
-Here is an example of the HTML markup that you can use for the JavaScript example above. Please note that you should use the `hidden` class from Tailwind CSS to hide the target element by default.
+Here is an example of the HTML markup that you can use for the JavaScript example above. Please note that you should use the `hidden` class from Tailwind CSS to hide the carousel items by default.
 
 ```html
-<!-- Trigger element -->
-<button id="triggerEl" aria-expanded="false" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Trigger element</button>
-
-<!-- Target element -->
-<div id="targetEl" class="hidden">
-  <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-      <li class="py-2 px-4 w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">Profile</li>
-      <li class="py-2 px-4 w-full border-b border-gray-200 dark:border-gray-600">Settings</li>
-      <li class="py-2 px-4 w-full border-b border-gray-200 dark:border-gray-600">Messages</li>
-      <li class="py-2 px-4 w-full rounded-b-lg">Download</li>
-  </ul>
+<div class="relative">
+    <!-- Carousel wrapper -->
+    <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
+         <!-- Item 1 -->
+        <div id="carousel-item-1" class="hidden duration-700 ease-in-out">
+            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
+            <img src="/docs/images/carousel/carousel-1.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+        <!-- Item 2 -->
+        <div id="carousel-item-2" class="hidden duration-700 ease-in-out">
+            <img src="/docs/images/carousel/carousel-2.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+        <!-- Item 3 -->
+        <div id="carousel-item-3" class="hidden duration-700 ease-in-out">
+            <img src="/docs/images/carousel/carousel-3.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+    </div>
+    <!-- Slider indicators -->
+    <div class="flex absolute bottom-5 left-1/2 space-x-3 -translate-x-1/2">
+        <button id="carousel-indicator-1" type="button" class="w-3 h-3 bg-white rounded-full dark:bg-gray-800" aria-current="true" aria-label="Slide 1"></button>
+        <button id="carousel-indicator-2" type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 2"></button>
+        <button id="carousel-indicator-3" type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 3"></button>
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="flex absolute top-0 left-0 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="hidden">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="flex absolute top-0 right-0 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <span class="hidden">Next</span>
+        </span>
+    </button>
 </div>
 ```

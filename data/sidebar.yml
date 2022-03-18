@@ -25,6 +25,7 @@
   pages:
     - title: Alerts
     - title: Accordion
+    - title: Avatar
       new: true
     - title: Badge
     - title: Breadcrumb
@@ -41,15 +42,14 @@
     - title: Tabs
     - title: Navbar
     - title: Footer
-      new: true
     - title: Sidebar
-      new: true
     - title: Pagination
+    - title: Rating
+      new: true
     - title: Timeline
     - title: Progress
     - title: Tables
     - title: Spinner
-      new: true
     - title: Toast
     - title: Tooltips
 

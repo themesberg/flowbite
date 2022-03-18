@@ -1,21 +1,21 @@
 const Default = {
     indicators: [],
-    indicatorActiveClasses: ['bg-white', 'dark:bg-gray-800'],
-    indicatorInactiveClasses: ['bg-white/50', 'dark:bg-gray-800/50'],
+    activeClasses: ['bg-white', 'dark:bg-gray-800'],
+    inactiveClasses: ['bg-white/50', 'dark:bg-gray-800/50'],
     interval: 3000,
-    onNextSlide: () => { },
-    onPrevSlide: () => { }
+    onNext: () => { },
+    onPrev: () => { },
+    onChange: () => { }
 }
 
 class Carousel {
     constructor(items = [], options = {}) {
         this._items = items
-        this._indicators = options.indicators
+        this._indicators = options.indicators ? options.indicators : Default.indicators
         this._interval = null
         this._options = { ...Default, ...options }
         this._init()
     }
-
 
     /**
      * Initialise carousel and items based on active one
@@ -57,6 +57,8 @@ class Carousel {
             this.pause()
             this.cycle()
         }
+
+        this._options.onChange()
     }
 
     /**
@@ -76,7 +78,7 @@ class Carousel {
         this.slideTo(nextItem.position)
 
         // callback function
-        this._options.onNextSlide()
+        this._options.onNext()
     }
 
     /**
@@ -96,7 +98,7 @@ class Carousel {
         this.slideTo(prevItem.position)
 
         // callback function
-        this._options.onPrevSlide()
+        this._options.onPrev()
     }
 
     /**
@@ -162,12 +164,12 @@ class Carousel {
         if (this._indicators.length) {
             this._indicators.map(indicator => {
                 indicator.el.setAttribute('aria-current', 'false')
-                indicator.el.classList.remove(...this._options.indicatorActiveClasses)
-                indicator.el.classList.add(...this._options.indicatorInactiveClasses)
+                indicator.el.classList.remove(...this._options.activeClasses)
+                indicator.el.classList.add(...this._options.inactiveClasses)
 
             })
-            this._indicators[position].el.classList.add(...this._options.indicatorActiveClasses)
-            this._indicators[position].el.classList.remove(...this._options.indicatorInactiveClasses)
+            this._indicators[position].el.classList.add(...this._options.activeClasses)
+            this._indicators[position].el.classList.remove(...this._options.inactiveClasses)
             this._indicators[position].el.setAttribute('aria-current', 'true')
         }
     }

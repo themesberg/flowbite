@@ -1,14 +1,15 @@
 const Default = {
+    triggerEl: null,
     transition: 'transition-opacity',
     duration: 300,
     timing: 'ease-out',
-    onHide: () => {}
+    onHide: () => { }
 }
 
 class Dismiss {
-    constructor(targetQuery = null, triggerElement = null, options = {}) {
-        this._targetEls = document.querySelectorAll(targetQuery)
-        this._triggerEl = triggerElement
+    constructor(targetEl = null, options = {}) {
+        this._targetEl = targetEl
+        this._triggerEl = options.triggerEl
         this._options = { ...Default, ...options }
         this._init()
     }
@@ -22,12 +23,10 @@ class Dismiss {
     }
 
     hide() {
-        this._targetEls.forEach(el => {
-            el.classList.add(this._options.transition, `duration-${this._options.duration}`, this._options.timing, 'opacity-0')
-            setTimeout(() => {
-                el.classList.add('hidden')
-            }, this._options.duration)
-        })
+        this._targetEl.classList.add(this._options.transition, `duration-${this._options.duration}`, this._options.timing, 'opacity-0')
+        setTimeout(() => {
+            this._targetEl.classList.add('hidden')
+        }, this._options.duration)
 
         // callback function
         this._options.onHide()
@@ -37,8 +36,11 @@ class Dismiss {
 window.Dismiss = Dismiss;
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-dismiss-target]').forEach(el => {
-        const dismiss = new Dismiss(el.getAttribute('data-dismiss-target'), el, {
+    document.querySelectorAll('[data-dismiss-target]').forEach(triggerEl => {
+        const targetEl = document.querySelector(triggerEl.getAttribute('data-dismiss-target'))
+
+        const dismiss = new Dismiss(targetEl, {
+            triggerEl,
             onHide: () => {
                 console.log('dismissed')
             }

@@ -250,11 +250,182 @@ You can easily customize the duration and animation style of the carousel compon
 </div>
 {{< /example >}}
 
-## JavaScript
+## JavaScript behaviour
 
-Alternatively to the data attributes, you can also choose to initialise a new carousel component based on the `new Carousel(id, options)` object constructor and access the public methods.
+Use the **Carousel** class from Flowbite to create an object that you can use to apply custom styles, change the active slide item, set callback functions and more directly from JavaScript.
 
-Here's an example:
+### Object parameters
+
+Pass the object parameters for the Carousel object to set the carousel items and options.
+
+<div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs font-medium uppercase">
+              <th scope="col" class="py-3 px-6">
+                  Parameter
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Type
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Required
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">items</code>
+              </td>
+              <td class="py-4 px-6">
+                  Array
+              </td>
+              <td class="py-4 px-6">
+                  Required
+              </td>
+              <td class="py-4 px-6">
+                  Pass an array of carousel item objects including the position, element, and the active status.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
+              </td>
+              <td class="py-4 px-6">
+                  Element
+              </td>
+              <td class="py-4 px-6">
+                  Optional
+              </td>
+              <td class="py-4 px-6">
+                  Set an optional element object which will expand or collapse the target element when clicked.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">options</code>
+              </td>
+              <td class="py-4 px-6">
+                Object
+              </td>
+              <td class="py-4 px-6">
+                  Optional
+              </td>
+              <td class="py-4 px-6">
+                  Set these options to override the default transition, duration, and timing function of the collapse animation.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+### Options
+
+Use these optional options for the Dismiss object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
+
+<div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs font-medium uppercase">
+              <th scope="col" class="py-3 px-6">
+                  Option
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Type
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">onCollapse</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  Function
+              </td>
+              <td class="py-4 px-6">
+                  Set a callback function when the item has been collapsed.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">onExpand</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  Function
+              </td>
+              <td class="py-4 px-6">
+                  Set a callback function when the item has been expanded.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">onToggle</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  Function
+              </td>
+              <td class="py-4 px-6">
+                  Set a callback function when the item has either been expanded or collapsed.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+### Methods
+
+Use the following methods on the Dismiss object to programatically manipulate the behaviour.
+
+<div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs font-medium uppercase">
+              <th scope="col" class="py-3 px-6">
+                  Method
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">collapse()</code>
+              </td>
+              <td class="py-4 px-6">
+                  Use the <code class="text-blue-600 dark:text-blue-400">collapse()</code> method on the Collapse object to hide the target element.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">expand()</code>
+              </td>
+              <td class="py-4 px-6">
+                  Use the <code class="text-blue-600 dark:text-blue-400">expand()</code> method on the Collapse object to show the target element.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">toggle()</code>
+              </td>
+              <td class="py-4 px-6">
+                  Use the <code class="text-blue-600 dark:text-blue-400">toggle()</code> method on the Collapse object toggle the current visibility of the target element.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+### Example
 
 ```javascript
 const carousel = new Carousel('carousel-id', {
@@ -287,4 +458,24 @@ carousel.cycle()
 
 // pauses the cycling (automated sliding)
 carousel.pause()
+```
+```
+
+### HTML Markup
+
+Here is an example of the HTML markup that you can use for the JavaScript example above. Please note that you should use the `hidden` class from Tailwind CSS to hide the target element by default.
+
+```html
+<!-- Trigger element -->
+<button id="triggerEl" aria-expanded="false" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Trigger element</button>
+
+<!-- Target element -->
+<div id="targetEl" class="hidden">
+  <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+      <li class="py-2 px-4 w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">Profile</li>
+      <li class="py-2 px-4 w-full border-b border-gray-200 dark:border-gray-600">Settings</li>
+      <li class="py-2 px-4 w-full border-b border-gray-200 dark:border-gray-600">Messages</li>
+      <li class="py-2 px-4 w-full rounded-b-lg">Download</li>
+  </ul>
+</div>
 ```

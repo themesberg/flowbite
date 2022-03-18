@@ -437,7 +437,7 @@ const collapse = new Collapse(targetElement);
 
 Here is an example of the HTML markup that you can use for the JavaScript example above. Please note that you should use the `hidden` class from Tailwind CSS to hide the target element by default.
 
-<!-- ```html -->
+```html
 <!-- Trigger element -->
 <button id="triggerEl" aria-expanded="false" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Trigger element</button>
 
@@ -450,4 +450,4 @@ Here is an example of the HTML markup that you can use for the JavaScript exampl
       <li class="py-2 px-4 w-full rounded-b-lg">Download</li>
   </ul>
 </div>
-<!-- ``` -->
+```

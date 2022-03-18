@@ -1,5 +1,7 @@
 const Default = {
     indicators: [],
+    indicatorActiveClasses: ['bg-white', 'dark:bg-gray-800'],
+    indicatorInactiveClasses: ['bg-white/50', 'dark:bg-gray-800/50'],
     interval: 3000,
     onNextSlide: () => { },
     onPrevSlide: () => { }
@@ -25,7 +27,7 @@ class Carousel {
 
         // if no active item is set then first position is default
         if (this._getActiveItem()) {
-            this.slideTo(this._getActiveItem())
+            this.slideTo(this._getActiveItem().position)
         } else {
             this._setActiveItem(0)
             this.slideTo(0)
@@ -160,12 +162,12 @@ class Carousel {
         if (this._indicators.length) {
             this._indicators.map(indicator => {
                 indicator.el.setAttribute('aria-current', 'false')
-                indicator.el.classList.remove('bg-white', 'dark:bg-gray-800')
-                indicator.el.classList.add('bg-white/50', 'dark:bg-gray-800/50')
+                indicator.el.classList.remove(...this._options.indicatorActiveClasses)
+                indicator.el.classList.add(...this._options.indicatorInactiveClasses)
 
             })
-            this._indicators[position].el.classList.add('bg-white', 'dark:bg-gray-800')
-            this._indicators[position].el.classList.remove('bg-white/50', 'dark:bg-gray-800/50')
+            this._indicators[position].el.classList.add(...this._options.indicatorActiveClasses)
+            this._indicators[position].el.classList.remove(...this._options.indicatorInactiveClasses)
             this._indicators[position].el.setAttribute('aria-current', 'true')
         }
     }

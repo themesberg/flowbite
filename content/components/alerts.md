@@ -43,31 +43,31 @@ You can also include a descriptive icon to complement the message inside the ale
 
 {{< example class="dark:bg-gray-800" github="components/alerts.md" show_dark=true >}}
 <div class="flex p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800" role="alert">
-  <svg class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+  <svg class="inline flex-shrink-0 mr-3 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
   <div>
     <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
   </div>
 </div>
 <div class="flex p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
-  <svg class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+  <svg class="inline flex-shrink-0 mr-3 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
   <div>
     <span class="font-medium">Danger alert!</span> Change a few things up and try submitting again.
   </div>
 </div>
 <div class="flex p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800" role="alert">
-  <svg class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+  <svg class="inline flex-shrink-0 mr-3 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
   <div>
     <span class="font-medium">Success alert!</span> Change a few things up and try submitting again.
   </div>
 </div>
 <div class="flex p-4 mb-4 text-sm text-yellow-700 bg-yellow-100 rounded-lg dark:bg-yellow-200 dark:text-yellow-800" role="alert">
-  <svg class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+  <svg class="inline flex-shrink-0 mr-3 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
   <div>
     <span class="font-medium">Warning alert!</span> Change a few things up and try submitting again.
   </div>
 </div>
 <div class="flex p-4 mb-4 text-sm text-gray-700 bg-gray-100 rounded-lg dark:bg-gray-700 dark:text-gray-300" role="alert">
-  <svg class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+  <svg class="inline flex-shrink-0 mr-3 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
   <div>
     <span class="font-medium">Dark alert!</span> Change a few things up and try submitting again.
   </div>
@@ -199,7 +199,7 @@ The following alert components can be used if you wish to disclose more informat
 {{< example class="dark:bg-gray-800" github="components/alerts.md" show_dark=true >}}
 <div id="alert-additional-content-1" class="p-4 mb-4 bg-blue-100 rounded-lg dark:bg-blue-200" role="alert">
   <div class="flex items-center">
-    <svg class="w-5 h-5 mr-2 text-blue-700 dark:text-blue-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <svg class="mr-2 w-5 h-5 text-blue-700 dark:text-blue-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
     <h3 class="text-lg font-medium text-blue-700 dark:text-blue-800">This is a info alert</h3>
   </div>
   <div class="mt-2 mb-4 text-sm text-blue-700 dark:text-blue-800">
@@ -217,7 +217,7 @@ The following alert components can be used if you wish to disclose more informat
 </div>
 <div id="alert-additional-content-2" class="p-4 mb-4 bg-red-100 rounded-lg dark:bg-red-200" role="alert">
   <div class="flex items-center">
-    <svg class="w-5 h-5 mr-2 text-red-700 dark:text-red-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <svg class="mr-2 w-5 h-5 text-red-700 dark:text-red-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
     <h3 class="text-lg font-medium text-red-700 dark:text-red-800">This is a danger alert</h3>
   </div>
   <div class="mt-2 mb-4 text-sm text-red-700 dark:text-red-800">
@@ -235,7 +235,7 @@ The following alert components can be used if you wish to disclose more informat
 </div>
 <div id="alert-additional-content-3" class="p-4 mb-4 bg-green-100 rounded-lg dark:bg-green-200" role="alert">
   <div class="flex items-center">
-    <svg class="w-5 h-5 mr-2 text-green-700 dark:text-green-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <svg class="mr-2 w-5 h-5 text-green-700 dark:text-green-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
     <h3 class="text-lg font-medium text-green-700 dark:text-green-800">This is a success alert</h3>
   </div>
   <div class="mt-2 mb-4 text-sm text-green-700 dark:text-green-800">
@@ -253,7 +253,7 @@ The following alert components can be used if you wish to disclose more informat
 </div>
 <div id="alert-additional-content-4" class="p-4 mb-4 bg-yellow-100 rounded-lg dark:bg-yellow-200" role="alert">
   <div class="flex items-center">
-    <svg class="w-5 h-5 mr-2 text-yellow-700 dark:text-yellow-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <svg class="mr-2 w-5 h-5 text-yellow-700 dark:text-yellow-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
     <h3 class="text-lg font-medium text-yellow-700 dark:text-yellow-800">This is a warning alert</h3>
   </div>
   <div class="mt-2 mb-4 text-sm text-yellow-700 dark:text-yellow-800">
@@ -271,7 +271,7 @@ The following alert components can be used if you wish to disclose more informat
 </div>
 <div id="alert-additional-content-5" class="p-4 mb-4 bg-gray-100 rounded-lg dark:bg-gray-700" role="alert">
   <div class="flex items-center">
-    <svg class="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <svg class="mr-2 w-5 h-5 text-gray-700 dark:text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
     <h3 class="text-lg font-medium text-gray-700 dark:text-gray-300">This is a dark alert</h3>
   </div>
   <div class="mt-2 mb-4 text-sm text-gray-700 dark:text-gray-300">
@@ -297,64 +297,50 @@ The **Dismiss class** from Flowbite can be used to create an object that will hi
 
 The parameters for the Dismiss object can be used to programatically initialize and manipulate the behaviour of the dismissal of multiple elements.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+<div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" class="py-3 px-6">
                   Parameter
               </th>
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" class="py-3 px-6">
                   Type
               </th>
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" class="py-3 px-6">
                   Required
               </th>
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" class="py-3 px-6">
                   Description
               </th>
           </tr>
       </thead>
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">targetQuery</code>
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">targetEl</code>
               </td>
-              <td class="px-6 py-4">
+              <td class="py-4 px-6">
                   String
               </td>
-              <td class="px-6 py-4">
+              <td class="py-4 px-6">
                   Required
               </td>
-              <td class="px-6 py-4">
-                  Apply the query value for <code>querySelectorAll</code> for the target elements that will be dismissed.
+              <td class="py-4 px-6">
+                  Pass an element object that will be dismissed.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
-              </td>
-              <td class="px-6 py-4">
-                  Element
-              </td>
-              <td class="px-6 py-4">
-                  Optional
-              </td>
-              <td class="px-6 py-4">
-                  Set an optional element object which will dismiss all the target elements when clicked.
-              </td>
-          </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="px-6 py-4 font-medium">
+              <td class="py-4 px-6 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">options</code>
               </td>
-              <td class="px-6 py-4">
+              <td class="py-4 px-6">
                 Object
               </td>
-              <td class="px-6 py-4">
+              <td class="py-4 px-6">
                   Optional
               </td>
-              <td class="px-6 py-4">
+              <td class="py-4 px-6">
                   Set these options to override the default transition, duration, and timing function of the dismiss animation.
               </td>
           </tr>
@@ -366,63 +352,74 @@ The parameters for the Dismiss object can be used to programatically initialize 
 
 Use these optional options for the Dismiss object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+<div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-4000">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" class="py-3 px-6">
                   Option
               </th>
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" class="py-3 px-6">
                   Type
               </th>
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" class="py-3 px-6">
                   Description
               </th>
           </tr>
       </thead>
       <tbody>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
+              </td>
+              <td class="py-4 px-6">
+                  Element
+              </td>
+              <td class="py-4 px-6">
+                  Set an optional element object which will dismiss all the target elements when clicked.
+              </td>
+          </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="px-6 py-4 font-medium">
+              <td class="py-4 px-6 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">transition</code>
               </td>
-              <td class="px-6 py-4 font-medium">
+              <td class="py-4 px-6 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">String</code>
               </td>
-              <td class="px-6 py-4">
+              <td class="py-4 px-6">
                   Use one of the Transition Property utility classes from Tailwind CSS to set transition type for the main element. The default value is <code class="text-purple-600 dark:text-purple-400">transition-opacity</code>.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="px-6 py-4 font-medium">
+              <td class="py-4 px-6 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">duration</code>
               </td>
-              <td class="px-6 py-4 font-medium">
+              <td class="py-4 px-6 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">Integer</code>
               </td>
-              <td class="px-6 py-4">
+              <td class="py-4 px-6">
                   Set the duration of the dismissing animation. The default value is <code class="text-purple-600 dark:text-purple-400">300</code> (300 miliseconds).
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="px-6 py-4 font-medium">
+              <td class="py-4 px-6 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">timing</code>
               </td>
-              <td class="px-6 py-4 font-medium">
+              <td class="py-4 px-6 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">String</code>
               </td>
-              <td class="px-6 py-4">
+              <td class="py-4 px-6">
                   Set the transition timing function utility class from Tailwind CSS. The default value is <code class="text-purple-600 dark:text-purple-400">ease-out</code>.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="px-6 py-4 font-medium">
+              <td class="py-4 px-6 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">onHide</code>
               </td>
-              <td class="px-6 py-4 font-medium">
+              <td class="py-4 px-6 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">Function</code>
               </td>
-              <td class="px-6 py-4">
+              <td class="py-4 px-6">
                   Set a callback function when the item has been dismissed.
               </td>
           </tr>
@@ -434,24 +431,24 @@ Use these optional options for the Dismiss object to set the transition, duratio
 
 Use the following methods on the Dismiss object to programatically manipulate the behaviour.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+<div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" class="py-3 px-6">
                   Method
               </th>
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" class="py-3 px-6">
                   Description
               </th>
           </tr>
       </thead>
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="px-6 py-4 font-medium">
+              <td class="py-4 px-6 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">hide()</code>
               </td>
-              <td class="px-6 py-4">
+              <td class="py-4 px-6">
                   Use the <code class="text-blue-600 dark:text-blue-400">hide()</code> method on the Dismiss object to hide all target elements.
               </td>
           </tr>
@@ -464,26 +461,36 @@ Use the following methods on the Dismiss object to programatically manipulate th
 Check out the following JavaScript example to learn how to initialize, set the options, and use the methods for the Dismiss object:
 
 ```javascript
-// dismiss all elements based on querySelectorAll
-const targetQuery = '#alertId';
+// target element that will be dismissed
+const targetEl = document.getElementById('targetElement');
 
-// element which trigger the dismiss based on a click
-const triggerEl = document.getElementById('closeButton');
+// element which trigger the dismiss based on a click event
+const triggerEl = document.getElementById('triggerElement');
 
 // optional options with default values
 const options = {
+  triggerEl: triggerEl,
   transition: 'transition-opacity',
   duration: 1000,
   timing: 'ease-out'
 };
 
 /*
-* targetQuery: required
-* triggerEl: optional
+* targetEl: required
 * options: optional
 */
-const alert = new Dismiss(targetQuery, triggerEl, options);
+const alert = new Dismiss(targetEl, options);
 
 // hide the target element or elements
 alert.hide();
+```
+
+### HTML markup
+
+```html
+<button id="triggerElement" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Hide alert</button>
+
+<div id="targetElement" class="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800" role="alert">
+  <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
+</div>
 ```

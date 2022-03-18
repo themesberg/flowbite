@@ -1,13 +1,14 @@
 const Default = {
+    activeTabID: null,
     activeClasses: ['text-blue-600', 'hover:text-blue-600', 'dark:text-blue-500', 'dark:hover:text-blue-400', 'border-blue-600', 'dark:border-blue-500'],
     inactiveClasses: ['text-gray-500', 'hover:text-gray-600', 'dark:text-gray-400', 'border-gray-100', 'hover:border-gray-300', 'dark:border-gray-700', 'dark:hover:text-gray-300'],
     onShow: () => { }
 }
 
 class Tabs {
-    constructor(tabs = [], activeTabID = null, options = {}) {
+    constructor(tabs = [], options = {}) {
         this._tabs = tabs
-        this._activeTab = activeTabID ? this.getTab(activeTabID) : null
+        this._activeTab = options ? this.getTab(options.activeTabID) : null
         this._options = { ...Default, ...options }
         this._init()
     }
@@ -96,7 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
 
-        const tabs = new Tabs(tabElements, activeTabID, {
+        const tabs = new Tabs(tabElements, {
+            activeTabID: activeTabID,
             onShow: () => {
                 console.log('tab is shown')
             }

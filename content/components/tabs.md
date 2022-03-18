@@ -243,20 +243,6 @@ Initialize a new **Tabs** object with parameters such as an array of the tab and
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="py-4 px-6 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">activeTabID</code>
-                </td>
-                <td class="py-4 px-6">
-                    String
-                </td>
-                <td class="py-4 px-6">
-                    Optional
-                </td>
-                <td class="py-4 px-6">
-                    Set the currently active tab element based on the ID.
-                </td>
-            </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-                <td class="py-4 px-6 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">options</code>
                 </td>
                 <td class="py-4 px-6">
@@ -293,6 +279,20 @@ Use the following options as the third parameter for the **Tabs** object to set 
             </tr>
         </thead>
         <tbody>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="py-4 px-6 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">activeTabID</code>
+                </td>
+                <td class="py-4 px-6">
+                    String
+                </td>
+                <td class="py-4 px-6">
+                    Optional
+                </td>
+                <td class="py-4 px-6">
+                    Set the currently active tab element based on the ID.
+                </td>
+            </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="py-4 px-6 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">activeClasses</code>
@@ -403,6 +403,7 @@ const activeTabID = 'settings';
 
 // options with default values
 const options = {
+    activeTabID: activeTabID,
     activeClasses: ['text-red-600', 'hover:text-red-600', 'dark:text-red-500', 'dark:hover:text-red-400', 'border-red-600', 'dark:border-red-500'],
     inactiveClasses: ['text-gray-500', 'hover:text-gray-600', 'dark:text-gray-400', 'border-gray-100', 'hover:border-gray-300', 'dark:border-gray-700', 'dark:hover:text-gray-300'],
     onShow: () => {
@@ -416,10 +417,9 @@ Create a new **Tabs** object based on the parameters we've previously set.
 ```javascript
 /*
 * tabElements: array of tab objects
-* activeTabID: current active tab id
 * options: optional
 */
-const tabs = new Tabs(tabElements, activeTabID, options);
+const tabs = new Tabs(tabElements, options);
 ```
 
 Lastly, you can now use the methods on the **Tabs** object to show another tab element, get a tab element based on the id, or get the current active tab element.

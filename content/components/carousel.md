@@ -27,46 +27,38 @@ Use the `duration-*` and the animation classes from Tailwind CSS to apply custom
 
 {{< example github="components/carousel.md" >}}
 <div id="default-carousel" class="relative" data-carousel="slide">
-
     <!-- Carousel wrapper -->
     <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
-
          <!-- Item 1 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
             <img src="/docs/images/carousel/carousel-1.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
-
         <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img src="/docs/images/carousel/carousel-2.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
-
         <!-- Item 3 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img src="/docs/images/carousel/carousel-3.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
-
         <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img src="/docs/images/carousel/carousel-4.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
-
         <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img src="/docs/images/carousel/carousel-5.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
     </div>
-
     <!-- Slider indicators -->
     <div class="flex absolute bottom-5 left-1/2 space-x-3 -translate-x-1/2">
-        <button type="button" class="w-3 h-3 bg-white rounded-full dark:bg-gray-800" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-        <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
     </div>
-
     <!-- Slider controls -->
     <button type="button" class="flex absolute top-0 left-0 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
         <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -96,12 +88,12 @@ You can customize the control elements with the classes from Tailwind CSS anyhow
     <div class="overflow-hidden relative h-48 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
 
          <!-- Item 1 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img src="/docs/images/carousel/carousel-1.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img src="/docs/images/carousel/carousel-2.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
@@ -111,12 +103,12 @@ You can customize the control elements with the classes from Tailwind CSS anyhow
         </div>
 
         <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img src="/docs/images/carousel/carousel-4.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img src="/docs/images/carousel/carousel-5.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
     </div>
@@ -153,22 +145,22 @@ Show the carousel indicators by adding the `data-carousel-slide-to={position}` t
         </div>
 
         <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img src="/docs/images/carousel/carousel-2.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 3 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img src="/docs/images/carousel/carousel-3.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img src="/docs/images/carousel/carousel-4.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <img src="/docs/images/carousel/carousel-5.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
     </div>
@@ -209,12 +201,12 @@ You can easily customize the duration and animation style of the carousel compon
     <div class="overflow-hidden relative h-48 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
 
          <!-- Item 1 -->
-        <div class="hidden duration-200 ease-linear" data-carousel-item="">
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
             <img src="/docs/images/carousel/carousel-1.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 2 -->
-        <div class="hidden duration-200 ease-linear" data-carousel-item="">
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
             <img src="/docs/images/carousel/carousel-2.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
@@ -224,12 +216,12 @@ You can easily customize the duration and animation style of the carousel compon
         </div>
 
         <!-- Item 4 -->
-        <div class="hidden duration-200 ease-linear" data-carousel-item="">
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
             <img src="/docs/images/carousel/carousel-4.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
 
         <!-- Item 5 -->
-        <div class="hidden duration-200 ease-linear" data-carousel-item="">
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
             <img src="/docs/images/carousel/carousel-5.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
     </div>
@@ -331,6 +323,17 @@ Use these optional options for the Dismiss object to set the transition, duratio
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">defaultPosition</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  Integer
+              </td>
+              <td class="py-4 px-6">
+                  Set the default active item position.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">interval</code>
               </td>
               <td class="py-4 px-6 font-medium">
@@ -348,29 +351,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   Array
               </td>
               <td class="py-4 px-6">
-                  Set an optional array of indicator elements.
-              </td>
-          </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">activeClasses</code>
-              </td>
-              <td class="py-4 px-6 font-medium">
-                  Array
-              </td>
-              <td class="py-4 px-6">
-                  Set an array of Tailwind CSS classes for the active indicator element.
-              </td>
-          </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">inactiveClasses</code>
-              </td>
-              <td class="py-4 px-6 font-medium">
-                  Array
-              </td>
-              <td class="py-4 px-6">
-                  Set an array of Tailwind CSS classes for the default inactive indicator element.
+                 An optional object of indicator elements and custom classes.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -440,7 +421,7 @@ Use the following methods on the Dismiss object to programatically manipulate th
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">nextSlide()</code>
+                  <code class="text-blue-600 dark:text-blue-400">next()</code>
               </td>
               <td class="py-4 px-6">
                   Use this method to go to the next slide of the carousel component.
@@ -448,7 +429,7 @@ Use the following methods on the Dismiss object to programatically manipulate th
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">prevSlide()</code>
+                  <code class="text-blue-600 dark:text-blue-400">prev()</code>
               </td>
               <td class="py-4 px-6">
                   Use this method to go to the previous slide of the carousel component.
@@ -490,39 +471,40 @@ Check out the following example to learn how to programatically create a new Car
 const items = [
     {
         position: 0,
-        el: document.getElementById('carousel-item-1'),
-        active: false
+        el: document.getElementById('carousel-item-1')
     },
     {
         position: 1,
-        el: document.getElementById('carousel-item-2'),
-        active: true
+        el: document.getElementById('carousel-item-2')
     },
     {
         position: 2,
-        el: document.getElementById('carousel-item-3'),
-        active: false
+        el: document.getElementById('carousel-item-3')
     },
 ];
 
 const options = {
-    indicators: [
-        {
-            position: 0,
-            el: document.getElementById('carousel-indicator-1')
-        },
-        {
-            position: 1,
-            el: document.getElementById('carousel-indicator-2')
-        },
-        {
-            position: 2,
-            el: document.getElementById('carousel-indicator-3')
-        }
-    ],
-    activeClasses: ['bg-white', 'dark:bg-gray-800'],
-    inactiveClasses: ['bg-white/50', 'dark:bg-gray-800/50'],
+    activeItemPosition: 1,
     interval: 3000,
+    
+    indicators: {
+        activeClasses: ['bg-white', 'dark:bg-gray-800'],
+        inactiveClasses: ['bg-white/50', 'dark:bg-gray-800/50'],
+        items: [
+            {
+                position: 0,
+                el: document.getElementById('carousel-indicator-1')
+            },
+            {
+                position: 1,
+                el: document.getElementById('carousel-indicator-2')
+            },
+            {
+                position: 2,
+                el: document.getElementById('carousel-indicator-3')
+            },
+        ]
+    },
     
     // callback functions
     onNext: () => { },
@@ -537,14 +519,14 @@ Create a new carousel object using the options set above.
 const carousel = new Carousel(items, options);
 ```
 
-Use the `nextSlide()` and `prevSlide()` public methods on the carousel object to jump to the left or right carousel slide item based on the position of the current active item.
+Use the `next()` and `prev()` public methods on the carousel object to jump to the left or right carousel slide item based on the position of the current active item.
 
 ```javascript
 // goes to the next (right) slide
-carousel.nextSlide()
+carousel.next()
 
 // goes to the previous (left) slide
-carousel.prevSlide()
+carousel.prev()
 ```
 
 Use the `slideTo(position)` public method to jump to the carousel slide item with the specified position.
@@ -588,9 +570,9 @@ Here is an example of the HTML markup that you can use for the JavaScript exampl
     </div>
     <!-- Slider indicators -->
     <div class="flex absolute bottom-5 left-1/2 space-x-3 -translate-x-1/2">
-        <button id="carousel-indicator-1" type="button" class="w-3 h-3 bg-white rounded-full dark:bg-gray-800" aria-current="true" aria-label="Slide 1"></button>
-        <button id="carousel-indicator-2" type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 2"></button>
-        <button id="carousel-indicator-3" type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 3"></button>
+        <button id="carousel-indicator-1" type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"></button>
+        <button id="carousel-indicator-2" type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"></button>
+        <button id="carousel-indicator-3" type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"></button>
     </div>
     <!-- Slider controls -->
     <button type="button" class="flex absolute top-0 left-0 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>

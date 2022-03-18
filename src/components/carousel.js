@@ -1,7 +1,10 @@
 const Default = {
-    indicators: [],
-    activeClasses: ['bg-white', 'dark:bg-gray-800'],
-    inactiveClasses: ['bg-white/50', 'dark:bg-gray-800/50'],
+    defaultPosition: 0,
+    indicators: {
+        items: [],
+        activeClasses: ['bg-white', 'dark:bg-gray-800'],
+        inactiveClasses: ['bg-white/50', 'dark:bg-gray-800/50', 'hover:bg-white', 'dark:hover:bg-gray-800']
+    },
     interval: 3000,
     onNext: () => { },
     onPrev: () => { },
@@ -11,10 +14,12 @@ const Default = {
 class Carousel {
     constructor(items = [], options = {}) {
         this._items = items
-        this._indicators = options.indicators ? options.indicators : Default.indicators
+        this._options = { ...Default, ...options, indicators : { ...Default.indicators, ...options.indicators } }
+        this._activeItem = this.getItem(this._options.defaultPosition)
+        this._indicators = this._options.indicators.items
         this._interval = null
-        this._options = { ...Default, ...options }
         this._init()
+
     }
 
     /**
@@ -38,6 +43,10 @@ class Carousel {
                 this.slideTo(position)
             })
         })
+    }
+
+    getItem(position) {
+        return this._items[position]
     }
 
     /**
@@ -64,7 +73,7 @@ class Carousel {
     /**
      * Based on the currently active item it will go to the next position
      */
-    nextSlide() {
+    next() {
         const activeItem = this._getActiveItem()
         let nextItem = null
 
@@ -84,7 +93,7 @@ class Carousel {
     /**
      * Based on the currently active item it will go to the previous position
      */
-    prevSlide() {
+    prev() {
         const activeItem = this._getActiveItem()
         let prevItem = null
 
@@ -129,7 +138,7 @@ class Carousel {
      */
     cycle() {
         this._interval = setInterval(() => {
-            this.nextSlide();
+            this.next();
         }, this._options.interval)
     }
 
@@ -144,7 +153,7 @@ class Carousel {
      * Get the currently active item
      */
     _getActiveItem() {
-        return this._items.filter(item => item.active)[0]
+        return this._activeItem
     }
 
     /**
@@ -152,24 +161,17 @@ class Carousel {
      * @param {*} position 
      */
     _setActiveItem(position) {
-        this._items.map(item => {
-            item.active = false
-            item.el.setAttribute('data-carousel-item', '')
-        })
-
-        this._items[position].active = true
-        this._items[position].el.setAttribute('data-carousel-item', 'active')
+        this._activeItem = this._items[position]
 
         // update the indicators if available
         if (this._indicators.length) {
             this._indicators.map(indicator => {
                 indicator.el.setAttribute('aria-current', 'false')
-                indicator.el.classList.remove(...this._options.activeClasses)
-                indicator.el.classList.add(...this._options.inactiveClasses)
-
+                indicator.el.classList.remove(...this._options.indicators.activeClasses)
+                indicator.el.classList.add(...this._options.indicators.inactiveClasses)
             })
-            this._indicators[position].el.classList.add(...this._options.activeClasses)
-            this._indicators[position].el.classList.remove(...this._options.inactiveClasses)
+            this._indicators[position].el.classList.add(...this._options.indicators.activeClasses)
+            this._indicators[position].el.classList.remove(...this._options.indicators.inactiveClasses)
             this._indicators[position].el.setAttribute('aria-current', 'true')
         }
     }
@@ -183,29 +185,36 @@ document.addEventListener('DOMContentLoaded', () => {
         const interval = carouselEl.getAttribute('data-carousel-interval')
         const slide = carouselEl.getAttribute('data-carousel') === 'slide' ? true : false
 
-        const items = [];
+        const items = []
+        let defaultPosition = 0
         if (carouselEl.querySelectorAll('[data-carousel-item]').length) {
             [...carouselEl.querySelectorAll('[data-carousel-item]')].map((carouselItemEl, position) => {
                 items.push({
                     position: position,
-                    el: carouselItemEl,
-                    active: carouselItemEl.getAttribute('data-carousel-item') === 'active' ? true : false
+                    el: carouselItemEl
                 })
+
+                if (carouselItemEl.getAttribute('data-carousel-item') === 'active') {
+                    defaultPosition = position
+                }
             })
         }
 
         const indicators = [];
         if (carouselEl.querySelectorAll('[data-carousel-slide-to]').length) {
-            [...carouselEl.querySelectorAll('[data-carousel-slide-to]')].map((indicatorEl, position) => {
+            [...carouselEl.querySelectorAll('[data-carousel-slide-to]')].map((indicatorEl) => {
                 indicators.push({
-                    position: position,
+                    position: indicatorEl.getAttribute('data-carousel-slide-to'),
                     el: indicatorEl
                 })
             })
         }
 
         const carousel = new Carousel(items, {
-            indicators: indicators.length ? indicators : Default.indicators,
+            defaultPosition: defaultPosition,
+            indicators: {
+                items: indicators
+            },
             interval: interval ? interval : Default.interval
         })
 
@@ -219,13 +228,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (carouselNextEl) {
             carouselNextEl.addEventListener('click', () => {
-                carousel.nextSlide()
+                carousel.next()
             })
         }
 
         if (carouselPrevEl) {
             carouselPrevEl.addEventListener('click', () => {
-                carousel.prevSlide()
+                carousel.prev()
             })
         }
 

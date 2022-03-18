@@ -471,19 +471,19 @@ const accordionItems = [
     {
         id: 'accordion-example-heading-1',
         triggerEl: document.querySelector('#accordion-example-heading-1'),
-        contentEl: document.querySelector('#accordion-example-body-1'),
+        targetEl: document.querySelector('#accordion-example-body-1'),
         active: true
     },
     {
         id: 'accordion-example-heading-2',
         triggerEl: document.querySelector('#accordion-example-heading-2'),
-        contentEl: document.querySelector('#accordion-example-body-2'),
+        targetEl: document.querySelector('#accordion-example-body-2'),
         active: false
     },
     {
         id: 'accordion-example-heading-3',
         triggerEl: document.querySelector('#accordion-example-heading-3'),
-        contentEl: document.querySelector('#accordion-example-body-3'),
+        targetEl: document.querySelector('#accordion-example-body-3'),
         active: false
     }
 ];

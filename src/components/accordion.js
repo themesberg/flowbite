@@ -42,7 +42,7 @@ class Accordion {
                 if (i !== item) {
                     i.triggerEl.classList.remove(...this._options.activeClasses.split(" "))
                     i.triggerEl.classList.add(...this._options.inactiveClasses.split(" "))
-                    i.contentEl.classList.add('hidden')
+                    i.targetEl.classList.add('hidden')
                     i.triggerEl.setAttribute('aria-expanded', false)
                     i.active = false
 
@@ -54,12 +54,11 @@ class Accordion {
             })
         }
 
-
         // show active item
         item.triggerEl.classList.add(...this._options.activeClasses.split(" "))
         item.triggerEl.classList.remove(...this._options.inactiveClasses.split(" "))
         item.triggerEl.setAttribute('aria-expanded', true)
-        item.contentEl.classList.remove('hidden')
+        item.targetEl.classList.remove('hidden')
         item.active = true
 
         // rotate icon if set
@@ -87,9 +86,9 @@ class Accordion {
     close(id) {
         const item = this.getItem(id)
 
-        item.triggerEl.classList.remove(...this._options.activeClasses)
-        item.triggerEl.classList.add(...this._options.inactiveClasses)
-        item.contentEl.classList.add('hidden')
+        item.triggerEl.classList.remove(...this._options.activeClasses.split(" "))
+        item.triggerEl.classList.add(...this._options.inactiveClasses.split(" "))
+        item.targetEl.classList.add('hidden')
         item.triggerEl.setAttribute('aria-expanded', false)
         item.active = false
 
@@ -118,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const item = {
                 id: el.getAttribute('data-accordion-target'),
                 triggerEl: el,
-                contentEl: document.querySelector(el.getAttribute('data-accordion-target')),
+                targetEl: document.querySelector(el.getAttribute('data-accordion-target')),
                 iconEl: el.querySelector('[data-accordion-icon]'),
                 active: el.getAttribute('aria-expanded') === 'true' ? true : false
             }
@@ -128,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const accordion = new Accordion(items, {
             alwaysOpen: alwaysOpen === 'open' ? true : false,
             activeClasses: activeClasses ? activeClasses : Default.activeClasses,
-            inactiveClasses: inactiveClasses ? inactiveClasses : Default.activeClasses,
+            inactiveClasses: inactiveClasses ? inactiveClasses : Default.inactiveClasses,
             onOpen: item => {
                 console.log('accordion item has been shown')
                 console.log(item)

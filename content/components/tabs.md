@@ -281,7 +281,7 @@ Use the following options as the third parameter for the **Tabs** object to set 
         <tbody>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="py-4 px-6 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">activeTabID</code>
+                    <code class="text-blue-600 dark:text-blue-400">defaultTabId</code>
                 </td>
                 <td class="py-4 px-6">
                     String
@@ -379,28 +379,28 @@ const tabElements = [
     {
         id: 'profile',
         triggerEl: document.querySelector('#profile-tab-example'),
-        contentEl: document.querySelector('#profile-example')
+        targetEl: document.querySelector('#profile-example')
     },
     {
         id: 'dashboard',
         triggerEl: document.querySelector('#dashboard-tab-example'),
-        contentEl: document.querySelector('#dashboard-example')
+        targetEl: document.querySelector('#dashboard-example')
     },
     {
         id: 'settings',
         triggerEl: document.querySelector('#settings-tab-example'),
-        contentEl: document.querySelector('#settings-example')
+        targetEl: document.querySelector('#settings-example')
     },
     {
         id: 'contacts',
         triggerEl: document.querySelector('#contacts-tab-example'),
-        contentEl: document.querySelector('#contacts-example')
+        targetEl: document.querySelector('#contacts-example')
     }
 ];
 
 // options with default values
 const options = {
-    activeTabID: 'settings',
+    defaultTabId: 'settings',
     activeClasses: 'text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-400 border-blue-600 dark:border-blue-500',
     inactiveClasses: 'text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300',
     onShow: () => {

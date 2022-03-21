@@ -70,24 +70,26 @@ function initiateToggleDarkState(element) {
     var moonIcon = element.querySelector('[data-toggle-icon="moon"]');
     var sunIcon = element.querySelector('[data-toggle-icon="sun"]');
     
-
-    button.addEventListener('click', function () {
+    if (button) {
+        button.addEventListener('click', function () {
         
-        var state = button.getAttribute('data-toggle-dark');
+            var state = button.getAttribute('data-toggle-dark');
+    
+            if (state === 'light') {
+                codePreviewWrapper.classList.add('dark');
+                button.setAttribute('data-toggle-dark', 'dark');
+                moonIcon.classList.add('hidden');
+                sunIcon.classList.remove('hidden');
+            }
+            if (state === 'dark') {
+                codePreviewWrapper.classList.remove('dark');
+                button.setAttribute('data-toggle-dark', 'light');
+                moonIcon.classList.remove('hidden');
+                sunIcon.classList.add('hidden');
+            }
+        })
+    }
 
-        if (state === 'light') {
-            codePreviewWrapper.classList.add('dark');
-            button.setAttribute('data-toggle-dark', 'dark');
-            moonIcon.classList.add('hidden');
-            sunIcon.classList.remove('hidden');
-        }
-        if (state === 'dark') {
-            codePreviewWrapper.classList.remove('dark');
-            button.setAttribute('data-toggle-dark', 'light');
-            moonIcon.classList.remove('hidden');
-            sunIcon.classList.add('hidden');
-        }
-    })
 }
 
 document.addEventListener("DOMContentLoaded", function () {

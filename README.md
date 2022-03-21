@@ -273,20 +273,20 @@ And include the following javascript file before the end of the `body` element:
 
 If you need help or just want to discuss about the library join the community on Github:
 
-[Discuss about Flowbite on GitHub](https://github.com/themesberg/flowbite/discussions)
+⌨️ [Discuss about Flowbite on GitHub](https://github.com/themesberg/flowbite/discussions)
 
 For casual chatting with others using the library:
 
-[Join the Flowbite Discord Server](https://discord.gg/4eeurUVvTy)
+💬 [Join the Flowbite Discord Server](https://discord.gg/4eeurUVvTy)
 
 ## Figma
 
 If you need the Figma files for the components you can check out our website for more information:
 
-[Get access to the Figma design files](https://flowbite.com/figma/)
+🎨 [Get access to the Figma design files](https://flowbite.com/figma/)
 
 ## Copyright and license
 
 The Flowbite name and logos are trademarks of Crafty Dwarf Inc. 
 
-Code released under the [MIT License](https://flowbite.com/docs/getting-started/license/). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+📝 [Read about the licensing terms](https://flowbite.com/docs/getting-started/license/)

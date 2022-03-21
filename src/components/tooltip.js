@@ -1,14 +1,40 @@
 import { createPopper } from '@popperjs/core';
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Toggle dropdown elements using [data-dropdown-toggle]
-    document.querySelectorAll('[data-tooltip-target]').forEach(function (tooltipToggleEl) {
-        const tooltipEl = document.getElementById(tooltipToggleEl.getAttribute('data-tooltip-target'));
-        const placement = tooltipToggleEl.getAttribute('data-tooltip-placement');
-        const trigger = tooltipToggleEl.getAttribute('data-tooltip-trigger');
+const Default = {
+    placement: 'top',
+    triggerType: 'hover',
+    onShow: () => { },
+    onHide: () => { }
+}
 
-        const popperInstance = createPopper(tooltipToggleEl, tooltipEl, {
-            placement: placement ? placement : 'top',
+class Tooltip {
+    constructor(targetEl = null, triggerEl = null, options = {}) {
+        this._targetEl = targetEl
+        this._triggerEl = triggerEl
+        this._options = { ...Default, ...options }
+        this._popperInstance = this._createPopperInstace()
+        this._init()
+    }
+
+    _init() {
+        if (this._triggerEl) {
+            const triggerEvents = this._getTriggerEvents()
+            triggerEvents.showEvents.forEach(ev => {
+                this._triggerEl.addEventListener(ev, () => {
+                    this.show()
+                })
+            })
+            triggerEvents.hideEvents.forEach(ev => {
+                this._triggerEl.addEventListener(ev, () => {
+                    this.hide()
+                })
+            })
+        }
+    }
+
+    _createPopperInstace() {
+        return createPopper(this._triggerEl, this._targetEl, {
+            placement: this._options.placement,
             modifiers: [
                 {
                     name: 'offset',
@@ -18,68 +44,79 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
             ],
         });
+    }
 
-        function show() {
-            // Make the tooltip visible
-            tooltipEl.classList.remove('opacity-0');
-            tooltipEl.classList.add('opacity-100');
-            tooltipEl.classList.remove('invisible');
-            tooltipEl.classList.add('visible');
-
-            // Enable the event listeners
-            popperInstance.setOptions((options) => ({
-                ...options,
-                modifiers: [
-                    ...options.modifiers,
-                    { name: 'eventListeners', enabled: true },
-                ],
-            }));
-
-            // Update its position
-            popperInstance.update();
-        }
-
-        function hide() {
-            // Hide the tooltip
-            tooltipEl.classList.remove('opacity-100');
-            tooltipEl.classList.add('opacity-0');
-            tooltipEl.classList.remove('visible');
-            tooltipEl.classList.add('invisible');
-
-            // Disable the event listeners
-            popperInstance.setOptions((options) => ({
-                ...options,
-                modifiers: [
-                    ...options.modifiers,
-                    { name: 'eventListeners', enabled: false },
-                ],
-            }));
-        }
-
-        var showEvents = [];
-        var hideEvents = [];
-
-        switch (trigger) {
+    _getTriggerEvents() {
+        switch (this._options.triggerType) {
             case 'hover':
-                showEvents = ['mouseenter', 'focus'];
-                hideEvents = ['mouseleave', 'blur'];
-                break;
+                return {
+                    showEvents: ['mouseenter', 'focus'],
+                    hideEvents: ['mouseleave', 'blur']
+                }
             case 'click':
-                showEvents = ['click', 'focus'];
-                hideEvents = ['focusout', 'blur'];
-                break;
+                return {
+                    showEvents: ['click', 'focus'],
+                    hideEvents: ['focusout', 'blur']
+                }
             default:
-                showEvents = ['mouseenter', 'focus'];
-                hideEvents = ['mouseleave', 'blur'];
+                return {
+                    showEvents: ['mouseenter', 'focus'],
+                    hideEvents: ['mouseleave', 'blur']
+                }
         }
+    }
 
-        showEvents.forEach((event) => {
-            tooltipToggleEl.addEventListener(event, show);
-        });
+    show() {
+        this._targetEl.classList.remove('opacity-0', 'invisible')
+        this._targetEl.classList.add('opacity-100', 'visible')
 
-        hideEvents.forEach((event) => {
-            tooltipToggleEl.addEventListener(event, hide);
-        });
+        // Enable the event listeners
+        this._popperInstance.setOptions(options => ({
+            ...options,
+            modifiers: [
+                ...options.modifiers,
+                { name: 'eventListeners', enabled: true },
+            ],
+        }));
 
-    });
-});
+        // Update its position
+        this._popperInstance.update()
+
+        // callback function
+        this._options.onShow()
+    }
+
+    hide() {
+        this._targetEl.classList.remove('opacity-100', 'visible')
+        this._targetEl.classList.add('opacity-0', 'invisible')
+
+        // Disable the event listeners
+        this._popperInstance.setOptions(options => ({
+            ...options,
+            modifiers: [
+                ...options.modifiers,
+                { name: 'eventListeners', enabled: false },
+            ],
+        }));
+
+        // callback function
+        this._options.onHide()
+    }
+}
+
+window.Tooltip = Tooltip;
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-tooltip-target]').forEach(triggerEl => {
+        const targetEl = document.getElementById(triggerEl.getAttribute('data-tooltip-target'))
+        const triggerType = triggerEl.getAttribute('data-tooltip-trigger');
+        const placement = triggerEl.getAttribute('data-tooltip-placement');
+
+        new Tooltip(targetEl, triggerEl, {
+            placement: placement ? placement : Default.placement,
+            triggerType: triggerType ? triggerType : Default.triggerType
+        })
+    })
+})
+
+export default Tooltip

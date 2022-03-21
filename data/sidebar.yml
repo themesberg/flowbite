@@ -1,6 +1,3 @@
-# This file holds all sidebar menu's entries.
-# The logic for the sidebar generation is in "site/layouts/partials/docs-sidebar.html".
-
 - title: Getting started
   pages:
     - title: Introduction
@@ -20,7 +17,7 @@
     - title: Dark mode
       new: true
     - title: Theming
-    - title: Color
+    - title: Colors
     - title: Icons
     - title: Optimization
 
@@ -28,7 +25,6 @@
   pages:
     - title: Alerts
     - title: Accordion
-      new: true
     - title: Badge
     - title: Breadcrumb
     - title: Buttons
@@ -44,15 +40,12 @@
     - title: Tabs
     - title: Navbar
     - title: Footer
-      new: true
     - title: Sidebar
-      new: true
     - title: Pagination
     - title: Timeline
     - title: Progress
     - title: Tables
     - title: Spinner
-      new: true
     - title: Toast
     - title: Tooltips
 

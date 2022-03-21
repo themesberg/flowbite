@@ -13,6 +13,7 @@ nextLink: components/footer/
 ---
 
 Get started with the responsive navbar component from Flowbite to quickly set up a navigation menu for your website and set up the logo, list of pages, CTA button, search input, user profile options with a dropdown, and more.
+
 ## Default navbar
 
 Use this example of a navigation bar built with the utility classes from Tailwind CSS to enable users to navigate between the pages of your website.
@@ -20,11 +21,11 @@ Use this example of a navigation bar built with the utility classes from Tailwin
 {{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
-    <a href="#" class="flex items-center">
-        <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo" />
+    <a href="https://flowbite.com" class="flex items-center">
+        <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
     </a>
-    <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+    <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
       <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
       <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -59,8 +60,8 @@ Use this example to create a navigation bar with a user profile or button to tog
 {{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
-  <a href="#" class="flex items-center">
-      <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo" />
+  <a href="https://flowbite.com" class="flex items-center">
+      <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
   </a>
   <div class="flex items-center md:order-2">
@@ -75,18 +76,18 @@ Use this example to create a navigation bar with a user profile or button to tog
           <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
         </div>
         <ul class="py-1" aria-labelledby="dropdown">
-        <li>
-          <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
-        </li>
+          <li>
+            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+          </li>
         </ul>
       </div>
       <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
@@ -125,8 +126,8 @@ Use this example of a navbar element to also show a search input element that yo
 {{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
-  <a href="#" class="flex items-center">
-      <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo" />
+  <a href="https://flowbite.com" class="flex items-center">
+      <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
   </a>
   <div class="flex md:order-2">
@@ -166,12 +167,12 @@ Use the following navbar element to show a call to action button alongside the l
 {{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
-  <a href="#" class="flex items-center">
-      <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo" />
+  <a href="https://flowbite.com" class="flex items-center">
+      <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
   </a>
   <div class="flex md:order-2">
-      <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
+      <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
       <button data-collapse-toggle="mobile-menu-4" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-4" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
       <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -198,25 +199,252 @@ Use the following navbar element to show a call to action button alongside the l
 </nav>
 {{< /example >}}
 
-## JavaScript
+## JavaScript behaviour
 
-If you want to show or hide any element you can use the `data-collapse-toggle="elementId"` data attribute where `elementId` is the target element that will be toggled.
+Use the **Collapse** class to create an object with a trigger and target element, where the target element will be collapsed or expanded based on the events dispatched on the trigger element. This can be used to toggle another element such as a dropdown menu or a hamburger navbar.
 
-```html
-<button data-collapse-toggle="elementId">Show menu</button>
+### Object parameters
 
-<div id="elementId">This will be toggled when the button is clicked.</div>
-```
+Use the object parameters from the Collapse object to set the trigger element, target element, and the options including callback functions.
 
-If you want to programatically show or hide an element on the page, you can use the `toggleCollapse(elementId, show)` function where `elementId` is the id of the element that you want to show or hide and `show` is a true or false parameter that will either show or hide the element.
+<div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs font-medium uppercase">
+              <th scope="col" class="py-3 px-6">
+                  Parameter
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Type
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Required
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">targetEl</code>
+              </td>
+              <td class="py-4 px-6">
+                  Element
+              </td>
+              <td class="py-4 px-6">
+                  Required
+              </td>
+              <td class="py-4 px-6">
+                  Pass the target element object that will be expanded or collapsed.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">options</code>
+              </td>
+              <td class="py-4 px-6">
+                Object
+              </td>
+              <td class="py-4 px-6">
+                  Optional
+              </td>
+              <td class="py-4 px-6">
+                  Set these options to override the default transition, duration, and timing function of the collapse animation.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+### Options
+
+Use these optional options for the Dismiss object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
+
+<div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs font-medium uppercase">
+              <th scope="col" class="py-3 px-6">
+                  Option
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Type
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
+              </td>
+              <td class="py-4 px-6">
+                  Element
+              </td>
+              <td class="py-4 px-6">
+                  Set an optional element object which will expand or collapse the target element when clicked.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">onCollapse</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  Function
+              </td>
+              <td class="py-4 px-6">
+                  Set a callback function when the item has been collapsed.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">onExpand</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  Function
+              </td>
+              <td class="py-4 px-6">
+                  Set a callback function when the item has been expanded.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">onToggle</code>
+              </td>
+              <td class="py-4 px-6 font-medium">
+                  Function
+              </td>
+              <td class="py-4 px-6">
+                  Set a callback function when the item has either been expanded or collapsed.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+### Methods
+
+Use the following methods on the Dismiss object to programatically manipulate the behaviour.
+
+<div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs font-medium uppercase">
+              <th scope="col" class="py-3 px-6">
+                  Method
+              </th>
+              <th scope="col" class="py-3 px-6">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">collapse()</code>
+              </td>
+              <td class="py-4 px-6">
+                  Use this method on the Collapse object to hide the target element.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">expand()</code>
+              </td>
+              <td class="py-4 px-6">
+                  Use this method on the Collapse object to show the target element.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="py-4 px-6 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">toggle()</code>
+              </td>
+              <td class="py-4 px-6">
+                  Use this method on the Collapse object toggle the current visibility of the target element.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+### Example
+
+Check out the following example to learn how to initialize and use the methods of the **Collapse** object to manually expand and collapse elements on the page.
+
+First of all, you need to set the object parameters where the target element is required and the other two are optional.
 
 ```javascript
-// shows #navbar element
-toggleCollapse('navbar');
+// set the target element that will be collapsed or expanded (eg. navbar menu)
+const targetEl = document.getElementById('targetEl');
 
-// hides #navbar element
-toggleCollapse('navbar', false);
+// optionally set a trigger element (eg. a button, hamburger icon)
+const triggerEl = document.getElementById('triggerEl');
 
-// also shows #navbar element
-toggleCollapse('navbar', true);
+// optional options with default values and callback functions
+const options = {
+  triggerEl: triggerEl,
+  onCollapse: () => {
+      console.log('element has been collapsed')
+  },
+  onExpand: () => {
+      console.log('element has been expanded')
+  },
+  onToggle: () => {
+      console.log('element has been toggled')
+  }
+};
+```
+
+Next step is to create a new instance of a Collapse object using the parameters we have set above.
+
+```javascript
+/*
+* targetEl: required
+* options: optional
+*/
+const collapse = new Collapse(targetEl, options);
+```
+
+Now you can programatically expand or collapse the target element using the methods of the Collapse object.
+
+```javascript
+// show the target element
+collapse.expand();
+
+// hide the target element
+collapse.collapse();
+
+// toggle the visibility of the target element
+collapse.toggle();
+```
+
+Alternatively, you can also use the Collapse object without the trigger element.
+
+```javascript
+const targetEl = document.getElementById('targetEl');
+
+const collapse = new Collapse(targetEl);
+```
+
+### HTML Markup
+
+Here is an example of the HTML markup that you can use for the JavaScript example above. Please note that you should use the `hidden` class from Tailwind CSS to hide the target element by default.
+
+```html
+<!-- Trigger element -->
+<button id="triggerEl" aria-expanded="false" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Trigger element</button>
+
+<!-- Target element -->
+<div id="targetEl" class="hidden">
+  <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+      <li class="py-2 px-4 w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">Profile</li>
+      <li class="py-2 px-4 w-full border-b border-gray-200 dark:border-gray-600">Settings</li>
+      <li class="py-2 px-4 w-full border-b border-gray-200 dark:border-gray-600">Messages</li>
+      <li class="py-2 px-4 w-full rounded-b-lg">Download</li>
+  </ul>
+</div>
 ```

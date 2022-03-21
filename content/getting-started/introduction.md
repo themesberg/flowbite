@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Flowbite - Tailwind CSS component library
-description: Get started with an open-source set of UI components and elements built with the utility classes from Tailwind CSS
+description: Get started with the most popular open-source library of interactive UI components built with the utility classes from Tailwind CSS
 group: getting-started
 toc: true
 cleanTitle: true
@@ -10,7 +10,7 @@ next: Quickstart
 nextLink: getting-started/quickstart/
 ---
 
-## What is Flowbite?
+## Introduction
 
 Flowbite is an open-source library of UI components based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.
 
@@ -41,7 +41,7 @@ Here's a quick overview of the Flowbite ecosystem including the open source Tail
     </a>
 </div>
 
-## Why use Flowbite?
+## Using Flowbite
 
 One of the disadvantages of Tailwind CSS compared to other frameworks is that it doesn't have a base set of components. This makes it really hard to quickly prototype a user interface. 
 
@@ -123,6 +123,12 @@ Flowbite is fully compatible with the 2.x versions of Tailwind CSS.
 
 Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking changes when using the components from Flowbite.
 
+## Figma
+
+The components from Flowbite are first conceptualized and designed in Figma using the latest features such as variants, auto-layout, grids, responsive layouts, and more.
+
+Learn more by checking out <a href="https://flowbite.com/figma/">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
+
 <div class="mt-8 -mb-5">
   {{< requires_react >}}
 </div>
@@ -163,13 +169,7 @@ If you're using a Svelte application you can install a standalone Flowbite Svelt
 
 Learn how to <a href="{{< ref "getting-started/svelte" >}}">install Tailwind CSS and Flowbite with Svelte</a>.
 
-## Figma
-
-The components from Flowbite are first conceptualized and designed in Figma using the latest features such as variants, auto-layout, grids, responsive layouts, and more.
-
-Learn more by checking out <a href="https://flowbite.com/figma/">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
-
-## Upgrade to Pro
+## Pro version
 
 If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite](https://flowbite.com/pro/) which includes fully coded pages and layouts for application, marketing, and e-commerce user interfaces.
 

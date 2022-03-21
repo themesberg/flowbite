@@ -15,6 +15,11 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
+### v1.4.0
+
+- refactored all interactive components using JavaScript objects, methods, and callback functions
+- improved accessibility and removed unused classes
+
 ### v1.3.4
 
 - added new carousel component

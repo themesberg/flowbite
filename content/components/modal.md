@@ -557,7 +557,7 @@ Initialize a Modal object with parameters such as the modal element and the opti
         <tbody>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="py-4 px-6 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">targetElement</code>
+                    <code class="text-blue-600 dark:text-blue-400">targetEl</code>
                 </td>
                 <td class="py-4 px-6">
                     Element
@@ -623,10 +623,10 @@ Use the following options as the second parameter for the Modal object to set th
                     <code class="text-blue-600 dark:text-blue-400">backdropClasses</code>
                 </td>
                 <td class="py-4 px-6">
-                    Array
+                    String
                 </td>
                 <td class="py-4 px-6">
-                    Set an array of Tailwind CSS classes for the backdrop element (eg. <code class="text-purple-600 dark:text-purple-400">['bg-blue-500', 'dark:bg-blue-400']</code>.
+                    Set a string of Tailwind CSS classes for the backdrop element (eg. <code class="text-purple-600 dark:text-purple-400">'bg-blue-500 dark:bg-blue-400'</code>.
                 </td>
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -713,7 +713,9 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
 
 ### Example
 
-Check out the following JavaScript example to learn how to initialize, set the options, and use the methods for the Modal object:
+Check out the following JavaScript example to learn how to initialize, set the options, and use the methods for the Modal object.
+
+First of all, create a new JavaScript element object for the first parameter of the Modal object and another options object to set the placement, backdrop styles, and callback functions.
 
 ```javascript
 // set the modal menu element
@@ -733,19 +735,31 @@ const options = {
       console.log('modal has been toggled');
   }
 };
+```
 
+Create a new Modal object based on the options above.
+
+```javascript
 /*
 * targetEl: required
 * options: optional
 */
 const modal = new Modal(targetEl, options);
+```
 
+Use the `show` and `hide` methods to show and hide the modal component directly from JavaScript.
+
+```javascript
 // show the modal
 modal.show();
 
 // hide the modal
 modal.hide();
+```
 
+Use the `toggle` method to toggle the visibility of the modal.
+
+```javascript
 // toggle the modal
 modal.toggle();
 ```

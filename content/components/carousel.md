@@ -472,9 +472,15 @@ const options = {
     },
     
     // callback functions
-    onNext: () => { },
-    onPrev: () => { },
-    onChange: () => { }
+    onNext: () => {
+        console.log('next slider item is shown');
+    },
+    onPrev: ( ) => {
+        console.log('previous slider item is shown);
+    },
+    onChange: ( ) => {
+        console.log('new slider item has been shown');
+    }
 };
 ```
 
@@ -515,7 +521,7 @@ carousel.pause()
 
 Here is an example of the HTML markup that you can use for the JavaScript example above. Please note that you should use the `hidden` class from Tailwind CSS to hide the carousel items by default.
 
-<!-- ```html -->
+```html
 <div class="relative">
     <!-- Carousel wrapper -->
     <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
@@ -558,7 +564,7 @@ Here is an example of the HTML markup that you can use for the JavaScript exampl
         </span>
     </button>
 </div>
-<!-- ``` -->
+```
 
 If you want to set trigger the next or previous slide item for the any button, just add some event listeners and call the `next()` and `prev()` methods on the Carousel object.
 

@@ -68,19 +68,9 @@ window.Collapse = Collapse;
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-collapse-toggle]').forEach(triggerEl => {
         const targetEl = document.getElementById(triggerEl.getAttribute('data-collapse-toggle'))
-        const collapse = new Collapse(targetEl, {
-            triggerEl: triggerEl,
-            onCollapse: () => {
-                console.log('element has been collapsed')
-            },
-            onExpand: () => {
-                console.log('element has been expanded')
-            },
-            onToggle: () => {
-                console.log('element has been toggled')
-            },
+        new Collapse(targetEl, {
+            triggerEl: triggerEl
         })
-        console.log(collapse);
     })
 })
 

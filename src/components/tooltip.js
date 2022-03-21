@@ -3,8 +3,8 @@ import { createPopper } from '@popperjs/core';
 const Default = {
     placement: 'top',
     triggerType: 'hover',
-    onShow: () => {},
-    onHide: () => {}
+    onShow: () => { },
+    onHide: () => { }
 }
 
 class Tooltip {
@@ -33,7 +33,6 @@ class Tooltip {
     }
 
     _createPopperInstace() {
-    console.log(this._options)
         return createPopper(this._triggerEl, this._targetEl, {
             placement: this._options.placement,
             modifiers: [
@@ -68,7 +67,6 @@ class Tooltip {
     }
 
     show() {
-        console.log(this._targetEl)
         this._targetEl.classList.remove('opacity-0', 'invisible')
         this._targetEl.classList.add('opacity-100', 'visible')
 
@@ -114,17 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const triggerType = triggerEl.getAttribute('data-tooltip-trigger');
         const placement = triggerEl.getAttribute('data-tooltip-placement');
 
-        const tooltip = new Tooltip(targetEl, triggerEl, {
+        new Tooltip(targetEl, triggerEl, {
             placement: placement ? placement : Default.placement,
-            triggerType: triggerType ? triggerType : Default.triggerType,
-            onShow: () => {
-                console.log('tooltip shown')
-            },
-            onHide: () => {
-                console.log('tooltip hidden')
-            }
+            triggerType: triggerType ? triggerType : Default.triggerType
         })
-        console.log(tooltip);
     })
 })
 

@@ -96,13 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 defaultTabId = tab.id
             }
         })
-        const tabs = new Tabs(tabElements, {
-            defaultTabId: defaultTabId,
-            onShow: () => {
-                console.log('tab is shown')
-            }
+        new Tabs(tabElements, {
+            defaultTabId: defaultTabId
         })
-        console.log(tabs)
     })
 })
 

@@ -155,7 +155,7 @@ Initialize a Tooltip object with the object parameters including the trigger ele
         <tbody>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="py-4 px-6 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">targetElement</code>
+                    <code class="text-blue-600 dark:text-blue-400">targetEl</code>
                 </td>
                 <td class="py-4 px-6">
                     Element
@@ -169,7 +169,7 @@ Initialize a Tooltip object with the object parameters including the trigger ele
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="py-4 px-6 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
+                    <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
                 </td>
                 <td class="py-4 px-6">
                     Element
@@ -306,7 +306,11 @@ Use the methods from the Tooltip object to programatically show or hide the tool
 
 ### Example
 
-Check out the following JavaScript example to learn how to initialize, set the options, and use the methods for the Tooltip object:
+Check out the following JavaScript example to learn how to initialize, set the options, and use the methods for the Tooltip object.
+
+First of all, set the target element as the tooltip itself and the trigger element which can be a button or text element.
+
+After that you can also set the options object to change the placement and trigger type of the tooltip, alongside with the callback functions.
 
 ```javascript
 // set the tooltip content element
@@ -326,14 +330,22 @@ const options = {
       console.log('tooltip is hidden');
   }
 };
+```
 
+Create a new Tooltip object based on the options above.
+
+```javascript
 /*
 * targetEl: required
 * triggerEl: required
 * options: optional
 */
 const tooltip = new Tooltip(targetEl, triggerEl, options);
+```
 
+Use the `show` and `hide` methods on the Tooltip object to programatically show and hide the tooltip element using JavaScript.
+
+```javascript
 // show the tooltip
 tooltip.show();
 

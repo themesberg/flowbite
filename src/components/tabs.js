@@ -6,25 +6,25 @@ const Default = {
 }
 
 class Tabs {
-    constructor(tabs = [], options = {}) {
-        this._tabs = tabs
+    constructor(items = [], options = {}) {
+        this._items = items
         this._activeTab = options ? this.getTab(options.defaultTabId) : null
         this._options = { ...Default, ...options }
         this._init()
     }
 
     _init() {
-        if (this._tabs.length) {
+        if (this._items.length) {
             // set the first tab as active if not set by explicitly
             if (!this._activeTab) {
-                this._setActiveTab(this._tabs[0])
+                this._setActiveTab(this._items[0])
             }
 
             // force show the first default tab
             this.show(this._activeTab.id, true)
 
             // show tab content based on click
-            this._tabs.map(tab => {
+            this._items.map(tab => {
                 tab.triggerEl.addEventListener('click', () => {
                     this.show(tab.id)
                 })
@@ -41,7 +41,7 @@ class Tabs {
     }
 
     getTab(id) {
-        return this._tabs.filter(t => t.id === id)[0]
+        return this._items.filter(t => t.id === id)[0]
     }
 
     show(id, forceShow = false) {
@@ -53,7 +53,7 @@ class Tabs {
         }
 
         // hide other tabs
-        this._tabs.map(t => {
+        this._items.map(t => {
             if (t !== tab) {
                 t.triggerEl.classList.remove(...this._options.activeClasses.split(" "));
                 t.triggerEl.classList.add(...this._options.inactiveClasses.split(" "));

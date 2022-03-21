@@ -206,7 +206,7 @@ The **Tabs** class from Flowbite can be used to create an object that will enabl
 
 ### Object parameters
 
-Initialize a new **Tabs** object with parameters such as an array of the tab and content elements.
+Create a new Tabs object with parameters such as an array of the tab and content elements.
 
 <div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -229,7 +229,7 @@ Initialize a new **Tabs** object with parameters such as an array of the tab and
         <tbody>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="py-4 px-6 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">tabs</code>
+                    <code class="text-blue-600 dark:text-blue-400">items</code>
                 </td>
                 <td class="py-4 px-6">
                     Array
@@ -261,7 +261,7 @@ Initialize a new **Tabs** object with parameters such as an array of the tab and
 
 ### Options
 
-Use the following options as the third parameter for the **Tabs** object to set the appearance of the active tab elements and use callback functions.
+Use the following options as the second parameter for the Tabs object to set the appearance of the active tab elements and use callback functions.
 
 <div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -329,7 +329,7 @@ Use the following options as the third parameter for the **Tabs** object to set 
 
 ### Methods
 
-Use the methods from the **Tabs** object to programatically change the current active tab using JavaScript.
+Use the methods from the Tabs object to programatically change the current active tab using JavaScript.
 
 <div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -366,7 +366,7 @@ Use the methods from the **Tabs** object to programatically change the current a
 
 ### Example
 
-Check out the following example to learn how to initialize and manipulate a **Tabs** object in JavaScript.
+Check out the following example to learn how to initialize and manipulate a Tabs object in JavaScript.
 
 First of all, create an array of objects that contains the id, trigger element, and content element of each tab, set the active tab based on the id, and optionally set a callback function after a new tab has been shown.
 
@@ -406,7 +406,7 @@ const options = {
 };
 ```
 
-Create a new **Tabs** object based on the parameters we've previously set.
+Create a new Tabs object based on the parameters we've previously set.
 
 ```javascript
 /*
@@ -416,7 +416,7 @@ Create a new **Tabs** object based on the parameters we've previously set.
 const tabs = new Tabs(tabElements, options);
 ```
 
-Lastly, you can now use the methods on the **Tabs** object to show another tab element, get a tab element based on the id, or get the current active tab element.
+Lastly, you can now use the methods on the Tabs object to show another tab element, get a tab element based on the id, or get the current active tab element.
 
 ```javascript
 // shows another tab element
@@ -433,7 +433,7 @@ tabs.getActiveTab()
 
 You can use this HTML code as an example for the JavaScript code from above.
 
-<!-- ```html -->
+```html
 <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
     <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400" id="tabExample" role="tablist">
         <li class="mr-2" role="presentation">
@@ -464,4 +464,4 @@ You can use this HTML code as an example for the JavaScript code from above.
         <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
     </div>
 </div>
-<!-- ``` -->
+```

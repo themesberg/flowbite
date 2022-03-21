@@ -1,14 +1,14 @@
 const Default = {
-    triggerElement: null,
+    triggerEl: null,
     onCollapse: () => { },
     onExpand: () => { },
     onToggle: () => { }
 }
 
 class Collapse {
-    constructor(targetElement = null, options) {
-        this._targetEl = targetElement
-        this._triggerEl = options ? options.triggerElement : Default.triggerElement
+    constructor(targetEl = null, options) {
+        this._targetEl = targetEl
+        this._triggerEl = options ? options.triggerEl : Default.triggerEl
         this._options = { ...Default, ...options }
         this._visible = false
         this._init()
@@ -66,10 +66,10 @@ class Collapse {
 window.Collapse = Collapse;
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-collapse-toggle]').forEach(function (triggerEl) {
+    document.querySelectorAll('[data-collapse-toggle]').forEach(triggerEl => {
         const targetEl = document.getElementById(triggerEl.getAttribute('data-collapse-toggle'))
         const collapse = new Collapse(targetEl, {
-            triggerElement: triggerEl,
+            triggerEl: triggerEl,
             onCollapse: () => {
                 console.log('element has been collapsed')
             },

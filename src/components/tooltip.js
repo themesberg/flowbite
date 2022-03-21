@@ -8,9 +8,9 @@ const Default = {
 }
 
 class Tooltip {
-    constructor(targetElement = null, triggerElement = null, options = {}) {
-        this._targetEl = targetElement
-        this._triggerEl = triggerElement
+    constructor(targetEl = null, triggerEl = null, options = {}) {
+        this._targetEl = targetEl
+        this._triggerEl = triggerEl
         this._options = { ...Default, ...options }
         this._popperInstance = this._createPopperInstace()
         this._init()
@@ -33,7 +33,7 @@ class Tooltip {
     }
 
     _createPopperInstace() {
-        console.log(this._options)
+    console.log(this._options)
         return createPopper(this._triggerEl, this._targetEl, {
             placement: this._options.placement,
             modifiers: [
@@ -109,11 +109,12 @@ class Tooltip {
 window.Tooltip = Tooltip;
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-tooltip-target]').forEach(el => {
-        const triggerType = el.getAttribute('data-tooltip-trigger');
-        const placement = el.getAttribute('data-tooltip-placement');
+    document.querySelectorAll('[data-tooltip-target]').forEach(triggerEl => {
+        const targetEl = document.getElementById(triggerEl.getAttribute('data-tooltip-target'))
+        const triggerType = triggerEl.getAttribute('data-tooltip-trigger');
+        const placement = triggerEl.getAttribute('data-tooltip-placement');
 
-        const tooltip = new Tooltip(document.getElementById(el.getAttribute('data-tooltip-target')), el, {
+        const tooltip = new Tooltip(targetEl, triggerEl, {
             placement: placement ? placement : Default.placement,
             triggerType: triggerType ? triggerType : Default.triggerType,
             onShow: () => {

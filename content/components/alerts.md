@@ -295,7 +295,7 @@ The **Dismiss class** from Flowbite can be used to create an object that will hi
 
 ### Object parameters
 
-The parameters for the Dismiss object can be used to programatically initialize and manipulate the behaviour of the dismissal of multiple elements.
+The parameters for the Dismiss object can be used to programatically initialize and manipulate the behaviour of the dismissal of the target element.
 
 <div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -321,13 +321,13 @@ The parameters for the Dismiss object can be used to programatically initialize 
                   <code class="text-blue-600 dark:text-blue-400">targetEl</code>
               </td>
               <td class="py-4 px-6">
-                  String
+                  Element
               </td>
               <td class="py-4 px-6">
                   Required
               </td>
               <td class="py-4 px-6">
-                  Pass an element object that will be dismissed.
+                  Pass the element object that will be dismissed.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -341,7 +341,7 @@ The parameters for the Dismiss object can be used to programatically initialize 
                   Optional
               </td>
               <td class="py-4 px-6">
-                  Set these options to override the default transition, duration, and timing function of the dismiss animation.
+                  Pass the options object to set the trigger element, transition, duration, timing classes of the dismiss animation and callback functions.
               </td>
           </tr>
       </tbody>
@@ -370,13 +370,13 @@ Use these optional options for the Dismiss object to set the transition, duratio
       <tbody>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
+                  <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
               </td>
               <td class="py-4 px-6">
                   Element
               </td>
               <td class="py-4 px-6">
-                  Set an optional element object which will dismiss all the target elements when clicked.
+                  Set an optional element object which will dismiss the target element when being clicked.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -458,18 +458,17 @@ Use the following methods on the Dismiss object to programatically manipulate th
 
 ### Example
 
-Check out the following JavaScript example to learn how to initialize, set the options, and use the methods for the Dismiss object:
+Check out the following JavaScript example to learn how to initialize, set the options, and use the methods for the Dismiss object.
+
+First of all, you should set the required target element and optionally set a trigger element which will dismiss the target element when clicked and other options to customize the animation.
 
 ```javascript
 // target element that will be dismissed
 const targetEl = document.getElementById('targetElement');
 
-// element which trigger the dismiss based on a click event
-const triggerEl = document.getElementById('triggerElement');
-
-// optional options with default values
+// options object
 const options = {
-  triggerEl: triggerEl,
+  triggerEl: document.getElementById('triggerElement'),
   transition: 'transition-opacity',
   duration: 1000,
   timing: 'ease-out',
@@ -480,25 +479,33 @@ const options = {
     console.log(targetEl)
   }
 };
+```
 
+Create a new Dismiss object based on the options set above.
+
+```javascript
 /*
 * targetEl: required
 * options: optional
 */
-const alert = new Dismiss(targetEl, options);
+const dismiss = new Dismiss(targetEl, options);
+```
 
-// hide the target element or elements
-alert.hide();
+You can now use the methods on the Dismiss object.
+
+```javascript
+// hide the target element
+dismiss.hide();
 ```
 
 ### HTML markup
 
 Use this HTML code for the JavaScript code example above.
 
-```html
+<!-- ```html -->
 <button id="triggerElement" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Hide alert</button>
 
 <div id="targetElement" class="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800" role="alert">
   <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
 </div>
-```
+<!-- ``` -->

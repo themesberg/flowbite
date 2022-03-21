@@ -287,9 +287,6 @@ Use the following options as the third parameter for the **Tabs** object to set 
                     String
                 </td>
                 <td class="py-4 px-6">
-                    Optional
-                </td>
-                <td class="py-4 px-6">
                     Set the currently active tab element based on the ID.
                 </td>
             </tr>
@@ -436,7 +433,7 @@ tabs.getActiveTab()
 
 You can use this HTML code as an example for the JavaScript code from above.
 
-```html
+<!-- ```html -->
 <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
     <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400" id="tabExample" role="tablist">
         <li class="mr-2" role="presentation">
@@ -467,4 +464,4 @@ You can use this HTML code as an example for the JavaScript code from above.
         <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
     </div>
 </div>
-```
+<!-- ``` -->

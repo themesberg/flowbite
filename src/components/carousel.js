@@ -34,7 +34,6 @@ class Carousel {
         if (this._getActiveItem()) {
             this.slideTo(this._getActiveItem().position)
         } else {
-            this._setActiveItem(0)
             this.slideTo(0)
         }
 
@@ -121,16 +120,16 @@ class Carousel {
         })
 
         // left item (previously active)
-        rotationItems.left.el.classList.remove('-translate-x-full', 'translate-x-full', 'translate-x-0', 'hidden')
-        rotationItems.left.el.classList.add('-translate-x-full')
+        rotationItems.left.el.classList.remove('-translate-x-full', 'translate-x-full', 'translate-x-0', 'hidden', 'z-20')
+        rotationItems.left.el.classList.add('-translate-x-full', 'z-10')
 
         // currently active item
-        rotationItems.middle.el.classList.remove('-translate-x-full', 'translate-x-full', 'translate-x-0', 'hidden')
-        rotationItems.middle.el.classList.add('translate-x-0')
+        rotationItems.middle.el.classList.remove('-translate-x-full', 'translate-x-full', 'translate-x-0', 'hidden', 'z-10')
+        rotationItems.middle.el.classList.add('translate-x-0', 'z-20')
 
         // right item (upcoming active)
-        rotationItems.right.el.classList.remove('-translate-x-full', 'translate-x-full', 'translate-x-0', 'hidden')
-        rotationItems.right.el.classList.add('translate-x-full')
+        rotationItems.right.el.classList.remove('-translate-x-full', 'translate-x-full', 'translate-x-0', 'hidden', 'z-20')
+        rotationItems.right.el.classList.add('translate-x-full', 'z-10')
     }
 
     /**

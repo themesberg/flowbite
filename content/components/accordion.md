@@ -442,7 +442,7 @@ Use the object methods on the Accordion object to programatically open, close, o
                     <code class="text-blue-600 dark:text-blue-400">open(id)</code>
                 </td>
                 <td class="py-4 px-6">
-                    Use this function to open an accordion item.
+                    Use this function to open an accordion item based on the id.
                 </td>
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -450,7 +450,7 @@ Use the object methods on the Accordion object to programatically open, close, o
                     <code class="text-blue-600 dark:text-blue-400">close(id)</code>
                 </td>
                 <td class="py-4 px-6">
-                    Use this function to close an accordion item.
+                    Use this function to close an accordion item based on the id.
                 </td>
             </tr>
         </tbody>

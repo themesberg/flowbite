@@ -291,7 +291,7 @@ The following alert components can be used if you wish to disclose more informat
 
 ## JavaScript behaviour
 
-The **Dismiss class** from Flowbite can be used to create an object that will hide a target element or elements based on the parameters, options, and methods that you provide.
+The **Dismiss** class from Flowbite can be used to create an object that will hide a target element or elements based on the parameters, options, and methods that you provide.
 
 ### Object parameters
 

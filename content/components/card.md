@@ -76,7 +76,7 @@ If you want to spice up your cards you can use the following card which has its 
 </a>
 {{< /example >}}
 
-## Profile card
+## User profile card
 
 Use this user profile card example if you want to show a dropdown menu and buttons to enable multiple actions from your user.
 

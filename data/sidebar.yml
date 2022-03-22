@@ -25,6 +25,8 @@
   pages:
     - title: Alerts
     - title: Accordion
+    - title: Avatar
+      new: true
     - title: Badge
     - title: Breadcrumb
     - title: Buttons
@@ -42,6 +44,8 @@
     - title: Footer
     - title: Sidebar
     - title: Pagination
+    - title: Rating
+      new: true
     - title: Timeline
     - title: Progress
     - title: Tables

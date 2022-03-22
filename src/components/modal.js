@@ -6,8 +6,8 @@ const Default = {
     onToggle: () => {}
 }
 class Modal {
-    constructor(targetElement = null, options = {}) {
-        this._targetEl = targetElement
+    constructor(targetEl = null, options = {}) {
+        this._targetEl = targetEl
         this._options = { ...Default, ...options }
         this._isHidden = true
         this._init()
@@ -20,14 +20,18 @@ class Modal {
     }
 
     _createBackdrop() {
-        const backdropEl = document.createElement('div');
-        backdropEl.setAttribute('modal-backdrop', '');
-        backdropEl.classList.add(...this._options.backdropClasses.split(" "));
-        document.querySelector('body').append(backdropEl);
+        if(this._isHidden) {
+            const backdropEl = document.createElement('div');
+            backdropEl.setAttribute('modal-backdrop', '');
+            backdropEl.classList.add(...this._options.backdropClasses.split(" "));
+            document.querySelector('body').append(backdropEl);
+        }
     }
 
     _destroyBackdropEl() {
-        document.querySelector('[modal-backdrop]').remove();
+        if (!this._isHidden) {
+            document.querySelector('[modal-backdrop]').remove();
+        }
     }
 
     _getPlacementClasses() {
@@ -79,8 +83,8 @@ class Modal {
         this._targetEl.setAttribute('aria-modal', 'true')
         this._targetEl.setAttribute('role', 'dialog')
         this._targetEl.removeAttribute('aria-hidden')
-        this._isHidden = false
         this._createBackdrop()
+        this._isHidden = false
 
         // callback function
         this._options.onShow()
@@ -92,8 +96,8 @@ class Modal {
         this._targetEl.setAttribute('aria-hidden', 'true')
         this._targetEl.removeAttribute('aria-modal')
         this._targetEl.removeAttribute('role')
-        this._isHidden = true
         this._destroyBackdropEl()
+        this._isHidden = true
 
         // callback function
         this._options.onHide()
@@ -129,16 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modal = modal.object
         } else {
             modal = new Modal(modalEl, {
-                placement: placement ? placement : Default.placement,
-                onShow: () => {
-                    console.log('modal has been shown')
-                },
-                onHide: () => {
-                    console.log('modal has been hidden')
-                },
-                onToggle: () => {
-                    console.log('modal has been toggled')
-                }
+                placement: placement ? placement : Default.placement
             })
             modalInstances.push({
                 id: modalId,

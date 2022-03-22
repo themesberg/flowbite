@@ -39,13 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-dismiss-target]').forEach(triggerEl => {
         const targetEl = document.querySelector(triggerEl.getAttribute('data-dismiss-target'))
 
-        const dismiss = new Dismiss(targetEl, {
-            triggerEl,
-            onHide: () => {
-                console.log('dismissed')
-            }
+        new Dismiss(targetEl, {
+            triggerEl
         })
-        console.log(dismiss);
     })
 })
 

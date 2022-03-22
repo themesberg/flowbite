@@ -124,24 +124,11 @@ document.addEventListener('DOMContentLoaded', () => {
             items.push(item)
         })
 
-        const accordion = new Accordion(items, {
+        new Accordion(items, {
             alwaysOpen: alwaysOpen === 'open' ? true : false,
             activeClasses: activeClasses ? activeClasses : Default.activeClasses,
-            inactiveClasses: inactiveClasses ? inactiveClasses : Default.inactiveClasses,
-            onOpen: item => {
-                console.log('accordion item has been shown')
-                console.log(item)
-            },
-            onClose: item => {
-                console.log('accordion item has been hidden')
-                console.log(item)
-            },
-            onToggle: item => {
-                console.log('accordion item has been toggled')
-                console.log(item)
-            }
+            inactiveClasses: inactiveClasses ? inactiveClasses : Default.inactiveClasses
         })
-        console.log(accordion)
     })
 })
 

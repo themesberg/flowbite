@@ -59,7 +59,6 @@ class Dropdown {
     show() {
         this._targetEl.classList.remove('hidden')
         this._targetEl.classList.add('block')
-        console.log(this._targetEl)
 
         // Enable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -107,16 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetEl = document.getElementById(triggerEl.getAttribute('data-dropdown-toggle'))
         const placement = triggerEl.getAttribute('data-dropdown-placement')
 
-        const dropdown = new Dropdown(targetEl, triggerEl, {
-            placement: placement ? placement : Default.placement,
-            onShow: () => {
-                console.log('dropdown has been shown')
-            },
-            onHide: () => {
-                console.log('dropdown has been hidden')
-            }
+        new Dropdown(targetEl, triggerEl, {
+            placement: placement ? placement : Default.placement
         })
-        console.log(dropdown)
     })
 })
 

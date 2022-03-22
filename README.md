@@ -285,7 +285,6 @@ If you need the Figma files for the components you can check out our website for
 
 🎨 [Get access to the Figma design files](https://flowbite.com/figma/)
 
-
 ## Copyright and license
 
 The Flowbite name and logos are trademarks of Crafty Dwarf Inc. 

@@ -228,7 +228,7 @@ Use the object parameters from the Collapse object to set the trigger element, t
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">targetElement</code>
+                  <code class="text-blue-600 dark:text-blue-400">targetEl</code>
               </td>
               <td class="py-4 px-6">
                   Element
@@ -280,7 +280,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="py-4 px-6 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
+                  <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
               </td>
               <td class="py-4 px-6">
                   Element
@@ -379,14 +379,14 @@ First of all, you need to set the object parameters where the target element is 
 
 ```javascript
 // set the target element that will be collapsed or expanded (eg. navbar menu)
-const targetElement = document.getElementById('targetEl');
+const targetEl = document.getElementById('targetEl');
 
 // optionally set a trigger element (eg. a button, hamburger icon)
-const triggerElement = document.getElementById('triggerEl');
+const triggerEl = document.getElementById('triggerEl');
 
 // optional options with default values and callback functions
 const options = {
-  triggerElement: triggerElement,
+  triggerEl: triggerEl,
   onCollapse: () => {
       console.log('element has been collapsed')
   },
@@ -403,10 +403,10 @@ Next step is to create a new instance of a Collapse object using the parameters 
 
 ```javascript
 /*
-* targetElement: required
+* targetEl: required
 * options: optional
 */
-const collapse = new Collapse(targetElement, options);
+const collapse = new Collapse(targetEl, options);
 ```
 
 Now you can programatically expand or collapse the target element using the methods of the Collapse object.
@@ -425,9 +425,9 @@ collapse.toggle();
 Alternatively, you can also use the Collapse object without the trigger element.
 
 ```javascript
-const targetElement = document.getElementById('targetEl');
+const targetEl = document.getElementById('targetEl');
 
-const collapse = new Collapse(targetElement);
+const collapse = new Collapse(targetEl);
 ```
 
 ### HTML Markup

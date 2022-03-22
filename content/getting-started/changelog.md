@@ -18,8 +18,6 @@ We strive to keep a good accountability of all of the version changes that we ma
 ### v1.4.0
 
 - refactored all interactive components using JavaScript objects, methods, and callback functions
-- new Rating component
-- new Avatar component
 - improved accessibility and removed unused classes
 
 ### v1.3.4

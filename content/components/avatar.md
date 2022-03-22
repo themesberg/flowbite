@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Avatar - Flowbite
-description: Use the avatar component to show a visually descriptive representation of a user profile using an image element or SVG object in multiple styles and sizes
+description: Use the avatar component to show a visual representation of a user profile using an image element or SVG object based on multiple styles and sizes
 group: components
 toc: true
 
@@ -11,7 +11,7 @@ next: Badge
 nextLink: components/badge/
 ---
 
-The avatar component can be used as a visual identifier of a user profile for your website and you can use the examples from Flowbite to modify the styles and sizes of these components using the utility classes from Tailwind CSS.
+The avatar component can be used as a visual identifier for a user profile on your website and you can use the examples from Flowbite to modify the styles and sizes of these components using the utility classes from Tailwind CSS.
 
 ## Default avatar
 
@@ -47,19 +47,19 @@ Use a dot element relative to the avatar component as an indicator for the user 
 {{< example class="flex space-x-4 dark:bg-gray-800" github="components/badge.md" show_dark=true >}}
 <div class="relative">
     <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="">
-    <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white rounded-full"></span>
+    <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
 </div>
 <div class="relative">
     <img class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="">
-    <span class="absolute top-0 left-8 transform -translate-y-1/2 w-3.5 h-3.5 bg-red-400 border-2 border-white rounded-full"></span>
+    <span class="absolute top-0 left-8 transform -translate-y-1/2 w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
 </div>
 <div class="relative">
     <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="">
-    <span class="bottom-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white rounded-full"></span>
+    <span class="bottom-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
 </div>
 <div class="relative">
     <img class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="">
-    <span class="absolute bottom-0 left-8 transform translate-y-1/4 w-3.5 h-3.5 bg-green-400 border-2 border-white rounded-full"></span>
+    <span class="absolute bottom-0 left-8 transform translate-y-1/4 w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
 </div>
 {{< /example >}}
 
@@ -130,7 +130,7 @@ Use this example if you want to show a dropdown menu when clicking on the avatar
 
 Choose from multiple sizing options for the avatar component from this example.
 
-{{< example class="flex items-center space-x-6 dark:bg-gray-800" github="components/badge.md" show_dark=true >}}
+{{< example class="flex flex-wrap items-center space-x-6 dark:bg-gray-800" github="components/badge.md" show_dark=true >}}
 <img class="w-6 h-6 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Extra small avatar">
 <img class="w-8 h-8 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Small avatar">
 <img class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Medium avatar">

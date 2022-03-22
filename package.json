@@ -1,6 +1,6 @@
 {
   "name": "flowbite",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "The most popular library of interactive components built with Tailwind CSS",
   "keywords": [
     "flowbite",
@@ -44,6 +44,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.8",
+    "@docsearch/js": "^3.0.0-alpha.42",
     "@themesberg/tailwind-datepicker": "^1.1.0",
     "autoprefixer": "^10.3.3",
     "babel-loader": "^8.2.2",
@@ -68,11 +69,10 @@
     "webpack": "^5.47.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2",
-    "yarn": "^1.22.10",
-    "mini-svg-data-uri": "^1.4.3",
-    "@docsearch/js": "^3.0.0-alpha.42"
+    "yarn": "^1.22.10"
   },
   "dependencies": {
-    "@popperjs/core": "^2.9.3"
+    "@popperjs/core": "^2.9.3",
+    "mini-svg-data-uri": "^1.4.3"
   }
 }

@@ -201,8 +201,8 @@ Flowbite is an open source collection of UI components built with the utility cl
   </tr>
   <tr>
     <td width="33.3333%">Carousel</td>
-    <td width="33.3333%"></td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">Avatar</td>
+    <td width="33.3333%">Rating</td>
   </tr>
   <tr>
     <td width="33.3333%">
@@ -210,8 +210,16 @@ Flowbite is an open source collection of UI components built with the utility cl
             <img alt="Tailwind CSS Carousel" src="https://flowbite.s3.amazonaws.com/github/carousel.jpg">
         </a>
     </td>
-    <td width="33.3333%"></td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/avatar/">
+            <img alt="Tailwind CSS Avatar" src="https://flowbite.s3.amazonaws.com/github/avatar.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/rating/">
+            <img alt="Tailwind CSS Rating" src="https://flowbite.s3.amazonaws.com/github/rating.jpg">
+        </a>
+    </td>
   </tr>
 </table>
 

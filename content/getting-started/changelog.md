@@ -18,7 +18,8 @@ We strive to keep a good accountability of all of the version changes that we ma
 ### v1.4.1
 
 - fixed mini-css-extract-plugin dependency
-- add new avatar component
+- new avatar component
+- new rating component
 
 ### v1.4.0
 

@@ -7,8 +7,8 @@ toc: true
 
 previous: Sidebar
 previousLink: components/sidebar/
-next: Timeline
-nextLink: components/timeline/
+next: Rating
+nextLink: components/rating/
 ---
 
 The pagination component can be used to navigate across a series of content and data sets for various pages such as blog posts, products, and more. You can use multiple variants of this component with or without icons and even for paginating table data entries.

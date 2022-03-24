@@ -5,8 +5,8 @@ description: Get started with the responsive timeline component to show data in 
 group: components
 toc: true
 
-previous: Pagination
-previousLink: components/pagination/
+previous: Rating
+previousLink: components/rating/
 next: Progress
 nextLink: components/progress/
 ---

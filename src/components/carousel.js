@@ -66,7 +66,7 @@ class Carousel {
             this.cycle()
         }
 
-        this._options.onChange()
+        this._options.onChange(this)
     }
 
     /**
@@ -86,7 +86,7 @@ class Carousel {
         this.slideTo(nextItem.position)
 
         // callback function
-        this._options.onNext()
+        this._options.onNext(this)
     }
 
     /**
@@ -106,7 +106,7 @@ class Carousel {
         this.slideTo(prevItem.position)
 
         // callback function
-        this._options.onPrev()
+        this._options.onPrev(this)
     }
 
     /**

@@ -474,7 +474,7 @@ const options = {
   timing: 'ease-out',
 
   // callback functions
-  onHide: (targetEl) => {
+  onHide: (context, targetEl) => {
     console.log('element has been dismissed')
     console.log(targetEl)
   }

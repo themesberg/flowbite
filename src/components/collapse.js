@@ -39,7 +39,7 @@ class Collapse {
         this._visible = false
 
         // callback function
-        this._options.onCollapse()
+        this._options.onCollapse(this)
     }
 
     expand() {
@@ -50,7 +50,7 @@ class Collapse {
         this._visible = true
 
         // callback function
-        this._options.onExpand()
+        this._options.onExpand(this)
     }
 
     toggle() {

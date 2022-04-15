@@ -15,6 +15,10 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
+### v1.4.2
+
+- pass relevant objects for callback functions
+
 ### v1.4.1
 
 - fixed mini-css-extract-plugin dependency

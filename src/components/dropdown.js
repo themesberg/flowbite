@@ -76,7 +76,7 @@ class Dropdown {
         this._visible = true
 
         // callback function
-        this._options.onShow()
+        this._options.onShow(this)
     }
 
     hide() {
@@ -95,7 +95,7 @@ class Dropdown {
         this._visible = false
 
         // callback function
-        this._options.onHide()
+        this._options.onHide(this)
     }
 }
 

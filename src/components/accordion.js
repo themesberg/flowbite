@@ -67,7 +67,7 @@ class Accordion {
         }
 
         // callback function
-        this._options.onOpen(item)
+        this._options.onOpen(this, item)
     }
 
     toggle(id) {
@@ -80,7 +80,7 @@ class Accordion {
         }
 
         // callback function
-        this._options.onToggle(item)
+        this._options.onToggle(this, item)
     }
 
     close(id) {
@@ -98,7 +98,7 @@ class Accordion {
         }
 
         // callback function
-        this._options.onClose(item)
+        this._options.onClose(this, item)
     }
 
 }

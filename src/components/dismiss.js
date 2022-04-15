@@ -29,7 +29,7 @@ class Dismiss {
         }, this._options.duration)
 
         // callback function
-        this._options.onHide(this._targetEl)
+        this._options.onHide(this, this._targetEl)
     }
 }
 

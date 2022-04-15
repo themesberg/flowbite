@@ -71,7 +71,7 @@ class Tabs {
         this._setActiveTab(tab)
 
         // callback function
-        this._options.onShow()
+        this._options.onShow(this, tab)
     }
 
 }

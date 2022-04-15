@@ -83,7 +83,7 @@ class Tooltip {
         this._popperInstance.update()
 
         // callback function
-        this._options.onShow()
+        this._options.onShow(this)
     }
 
     hide() {
@@ -100,7 +100,7 @@ class Tooltip {
         }));
 
         // callback function
-        this._options.onHide()
+        this._options.onHide(this)
     }
 }
 

@@ -74,7 +74,7 @@ class Modal {
         }
 
         // callback function
-        this._options.onToggle()
+        this._options.onToggle(this)
     }
 
     show() {
@@ -87,7 +87,7 @@ class Modal {
         this._isHidden = false
 
         // callback function
-        this._options.onShow()
+        this._options.onShow(this)
     }
 
     hide() {
@@ -100,7 +100,7 @@ class Modal {
         this._isHidden = true
 
         // callback function
-        this._options.onHide()
+        this._options.onHide(this)
     }
 
 }

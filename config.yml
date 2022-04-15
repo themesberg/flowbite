@@ -1,11 +1,11 @@
 languageCode:           "en"
-title:                  "FlowBite Tailwind CSS"
+title:                  "Flowbite"
 baseURL:                "https://flowbite.com/docs/"
 # baseURL:                "http://localhost:1313/docs"
 enableInlineShortcodes: true
 
 params:
-  current_version: 1.4.1
+  current_version: 1.4.2
   authors: Themesberg
   social_image_path: /docs/images/og-image.png
 

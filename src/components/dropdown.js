@@ -1,115 +1,132 @@
-import { createPopper } from '@popperjs/core';
+import { createPopper } from "@popperjs/core";
 
 const Default = {
-    placement: 'bottom',
-    triggerType: 'click',
-    onShow: () => { },
-    onHide: () => { }
-}
+  placement: "bottom",
+  triggerType: "click",
+  onShow: () => {},
+  onHide: () => {},
+};
 
 class Dropdown {
-    constructor(targetElement = null, triggerElement = null, options = {}) {
-        this._targetEl = targetElement
-        this._triggerEl = triggerElement
-        this._options = { ...Default, ...options }
-        this._popperInstance = this._createPopperInstace()
-        this._visible = false
-        this._init()
+  constructor(targetElement = null, triggerElement = null, options = {}) {
+    this._targetEl = targetElement;
+    this._triggerEl = triggerElement;
+    this._options = { ...Default, ...options };
+    this._popperInstance = this._createPopperInstace();
+    this._visible = false;
+    this._init();
+  }
+
+  _init() {
+    if (this._triggerEl) {
+      this._triggerEl.addEventListener("click", () => {
+        this.toggle();
+      });
     }
+  }
 
-    _init() {
-        if (this._triggerEl) {
-            this._triggerEl.addEventListener('click', () => {
-                this.toggle()
-            })
-        }
+  _createPopperInstace() {
+    return createPopper(this._triggerEl, this._targetEl, {
+      placement: this._options.placement,
+      modifiers: [
+        {
+          name: "offset",
+          options: {
+            offset: [0, 10],
+          },
+        },
+      ],
+    });
+  }
+
+  _handleClickOutside(ev, targetEl) {
+    const clickedEl = ev.target;
+    if (
+      clickedEl !== targetEl &&
+      !targetEl.contains(clickedEl) &&
+      !this._triggerEl.contains(clickedEl) &&
+      this._visible
+    ) {
+      this.hide();
     }
+    document.body.removeEventListener("click", this._handleClickOutside, true);
+  }
 
-    _createPopperInstace() {
-        return createPopper(this._triggerEl, this._targetEl, {
-            placement: this._options.placement,
-            modifiers: [
-                {
-                    name: 'offset',
-                    options: {
-                        offset: [0, 10],
-                    },
-                },
-            ],
-        });
+  toggle() {
+    if (this._visible) {
+      this.hide();
+      document.body.removeEventListener(
+        "click",
+        this._handleClickOutside,
+        true
+      );
+    } else {
+      this.show();
     }
+  }
 
-    _handleClickOutside(ev, targetEl) {
-        const clickedEl = ev.target
-        if (clickedEl !== targetEl && !targetEl.contains(clickedEl) && !this._triggerEl.contains(clickedEl) && this._visible) {
-            this.hide()
-        }
-        document.body.removeEventListener('click', this._handleClickOutside, true)
-    }
+  show() {
+    this._targetEl.classList.remove("hidden");
+    this._targetEl.classList.add("block");
 
-    toggle() {
-        if (this._visible) {
-            this.hide()
-            document.body.removeEventListener('click', this._handleClickOutside, true)
-        } else {
-            this.show()
-        }
-    }
+    // Enable the event listeners
+    this._popperInstance.setOptions((options) => ({
+      ...options,
+      modifiers: [
+        ...options.modifiers,
+        { name: "eventListeners", enabled: true },
+      ],
+    }));
 
-    show() {
-        this._targetEl.classList.remove('hidden')
-        this._targetEl.classList.add('block')
+    document.body.addEventListener(
+      "click",
+      (ev) => {
+        this._handleClickOutside(ev, this._targetEl);
+      },
+      true
+    );
 
-        // Enable the event listeners
-        this._popperInstance.setOptions(options => ({
-            ...options,
-            modifiers: [
-                ...options.modifiers,
-                { name: 'eventListeners', enabled: true },
-            ],
-        }));
+    // Update its position
+    this._popperInstance.update();
+    this._visible = true;
 
-        document.body.addEventListener('click', (ev) => { this._handleClickOutside(ev, this._targetEl) }, true)
+    // callback function
+    this._options.onShow(this);
+  }
 
-        // Update its position
-        this._popperInstance.update()
-        this._visible = true
+  hide() {
+    this._targetEl.classList.remove("block");
+    this._targetEl.classList.add("hidden");
 
-        // callback function
-        this._options.onShow(this)
-    }
+    // Disable the event listeners
+    this._popperInstance.setOptions((options) => ({
+      ...options,
+      modifiers: [
+        ...options.modifiers,
+        { name: "eventListeners", enabled: false },
+      ],
+    }));
 
-    hide() {
-        this._targetEl.classList.remove('block')
-        this._targetEl.classList.add('hidden')
+    this._visible = false;
 
-        // Disable the event listeners
-        this._popperInstance.setOptions(options => ({
-            ...options,
-            modifiers: [
-                ...options.modifiers,
-                { name: 'eventListeners', enabled: false },
-            ],
-        }))
-
-        this._visible = false
-
-        // callback function
-        this._options.onHide(this)
-    }
+    // callback function
+    this._options.onHide(this);
+  }
 }
 
 window.Dropdown = Dropdown;
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-dropdown-toggle]').forEach(triggerEl => {
-        const targetEl = document.getElementById(triggerEl.getAttribute('data-dropdown-toggle'))
-        const placement = triggerEl.getAttribute('data-dropdown-placement')
+document.addEventListener("turbo:load", () => {
+  document.querySelectorAll("[data-dropdown-toggle]").forEach((triggerEl) => {
+    const targetEl = document.getElementById(
+      triggerEl.getAttribute("data-dropdown-toggle")
+    );
+    const placement = triggerEl.getAttribute("data-dropdown-placement");
 
-        new Dropdown(targetEl, triggerEl, {
-            placement: placement ? placement : Default.placement
-        })
-    })
-})
+    new Dropdown(targetEl, triggerEl, {
+      placement: placement ? placement : Default.placement,
+    });
+  });
+});
 
-export default Dropdown
+export default Dropdown;

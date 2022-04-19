@@ -9,8 +9,8 @@ requires_js: true
 previous: Toast
 previousLink: components/toast/
 
-next: Datepicker
-nextLink: plugins/datepicker/
+next: Input Field
+nextLink: forms/input-field/
 ---
 
 Flowbite allows you to use the Tailwind CSS tooltip component to show extra information when hovering or focusing over an element in multiple positions, styles, and animations.

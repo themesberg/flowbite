@@ -15,6 +15,11 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
+### v1.4.3
+
+- added new range input slider component
+- create standalone form component documentation
+
 ### v1.4.2
 
 - pass relevant objects for callback functions

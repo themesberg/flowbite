@@ -53,6 +53,20 @@
     - title: Toast
     - title: Tooltips
 
+- title: Forms
+  pages:
+    - title: Input Field
+    - title: File Input
+    - title: Search Input
+    - title: Select
+    - title: Textarea
+    - title: Checkbox
+    - title: Radio
+    - title: Toggle
+    - title: Range Slider
+      new: true
+    - title: Floating Labels
+
 - title: Plugins
   pages:
     - title: Datepicker

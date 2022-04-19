@@ -157,15 +157,15 @@ module.exports = plugin(function ({ addBase, theme }) {
         },
         [`[type='file']:focus`]: {
             outline: `1px solid ButtonText`,
-            outline: `1px auto -webkit-focus-ring-color`,
+            outline: `1px auto inherit`,
         },
         [[`input[type=file]::file-selector-button`]]: {
             color: 'white',
-            background: theme('colors.gray.700', colors.gray[700]),
+            background: theme('colors.gray.800', colors.gray[800]),
+            border: 0,
             'font-weight': theme('fontWeight.medium'),
             'font-size': theme('fontSize.sm'),
             'cursor': 'pointer',
-            border: 0,
             'padding-top': spacing[2.5],
             'padding-bottom': spacing[2.5],
             'padding-left': spacing[8],
@@ -173,7 +173,7 @@ module.exports = plugin(function ({ addBase, theme }) {
             'margin-inline-start': '-1rem',
             'margin-inline-end': '1rem',
             '&:hover': {
-                background: theme('colors.gray.600', colors.gray[600])
+                background: theme('colors.gray.700', colors.gray[700])
             }
         },
         [[`.dark input[type=file]::file-selector-button`]]: {

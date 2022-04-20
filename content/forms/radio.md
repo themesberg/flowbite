@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Tailwind CSS Radio - Flowbite
+title: Tailwind CSS Radio Button - Flowbite
 description: Use the Tailwind CSS form and input elements such as checkboxes, radios, textarea, text inputs to collect information from users with Flowbite
 group: forms
 toc: true
@@ -11,7 +11,7 @@ next: Radio
 nextLink: forms/radio/
 ---
 
-## Checkbox example
+## Radio example
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <div class="flex items-center mb-4">
@@ -37,7 +37,7 @@ nextLink: forms/radio/
 </div>
 {{< /example >}}
 
-## Checkbox link
+## Radio link
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <div class="flex items-center">

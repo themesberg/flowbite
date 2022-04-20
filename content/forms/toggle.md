@@ -16,8 +16,8 @@ nextLink: forms/range-slider/
 Use the following toggle switch component to ask for a yes or no type of input from your users without the use of JavaScript.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
-<label for="toggle-example" class="flex relative items-center mb-4 cursor-pointer">
-  <input type="checkbox" id="toggle-example" class="sr-only">
+<label for="default-toggle" class="flex relative items-center cursor-pointer">
+  <input type="checkbox" value="" id="default-toggle" class="sr-only">
   <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
   <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
 </label>
@@ -26,8 +26,8 @@ Use the following toggle switch component to ask for a yes or no type of input f
 ## Checked state
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
-<label for="toggle-example-checked" class="flex relative items-center mb-4 cursor-pointer">
-  <input type="checkbox" id="toggle-example-checked" class="sr-only" checked>
+<label for="checked-toggle" class="flex relative items-center cursor-pointer">
+  <input type="checkbox" value="" id="checked-toggle" class="sr-only" checked>
   <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
   <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Checked toggle</span>
 </label>
@@ -36,8 +36,8 @@ Use the following toggle switch component to ask for a yes or no type of input f
 ## Disabled state
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
-<label for="toggle-example-disabled" class="flex relative items-center cursor-not-allowed">
-  <input type="checkbox" id="toggle-example-disabled" class="sr-only" disabled>
+<label for="disabled-toggle" class="flex relative items-center cursor-not-allowed">
+  <input type="checkbox" value="" id="disabled-toggle" class="sr-only" disabled>
   <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
   <span class="ml-3 text-sm font-medium text-gray-400 dark:text-gray-500">Disabled toggle</span>
 </label>
@@ -46,10 +46,10 @@ Use the following toggle switch component to ask for a yes or no type of input f
 ## Colors
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
-<label for="toggle-example-red" class="flex relative items-center cursor-not-allowed">
-  <input type="checkbox" id="toggle-example-red" class="sr-only" disabled>
+<label for="red-toggle" class="flex relative items-center cursor-not-allowed">
+  <input type="checkbox" value="" id="red-toggle" class="sr-only">
   <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
-  <span class="ml-3 text-sm font-medium text-gray-400 dark:text-gray-500">Disabled toggle</span>
+  <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Disabled toggle</span>
 </label>
 {{< /example >}}
 

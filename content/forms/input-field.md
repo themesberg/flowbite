@@ -59,9 +59,7 @@ Use this example as a generic form element which includes multiple input fields 
         <div class="flex items-center h-5">
         <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
         </div>
-        <div class="ml-3 text-sm">
-            <label for="remember" class="font-medium text-gray-600 dark:text-gray-400">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
-        </div>
+        <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-400">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
     </div>
     <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
 </form>
@@ -145,7 +143,7 @@ Use this example to show a helper text below the input field for additional expl
 
 ## Search input
 
-Get started with this example where the submit button is inside the input field and it can be used for 
+Get started with this example where the submit button is positioned inside the input field.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <form action="#">   
@@ -162,7 +160,7 @@ Get started with this example where the submit button is inside the input field 
 
 ## Dropdown input
 
-Get started with this example where the submit button is inside the input field and it can be used for 
+Use this example to show a dropdown menu right next to the input field.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <form action="#">

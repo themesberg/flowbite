@@ -336,9 +336,12 @@ Use the following toggle switch component to ask for a yes or no type of input f
   <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me (checked)</span>
 </label>
 
-<label for="toggle-example-disabled" class="flex relative items-center mb-4 cursor-not-allowed">
+<label for="toggle-example-disabled" class="flex relative items-center cursor-not-allowed">
   <input type="checkbox" id="toggle-example-disabled" class="sr-only" disabled>
   <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
-  <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-600">Toggle me (disabled)</span>
+  <span class="ml-3 text-sm font-medium text-gray-400 dark:text-gray-500">Toggle me (disabled)</span>
 </label>
 {{< /example >}}
+
+## Checked state
+

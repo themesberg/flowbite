@@ -45,7 +45,7 @@ This is an example of a form component including an email, password, checkbox, a
 Use these form elements inspired by material design from Google to adjust the `label` tag as the visual placeholder for the input elements using the `peer-placeholder-shown` and `peer-focus` utility classes. These components require Tailwind CSS v3.x and above.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
-<form>
+<form action="#">
   <div class="relative z-0 mb-6 w-full group">
       <input type="email" name="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
       <label for="floating_email" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
@@ -176,7 +176,7 @@ Use the following utility classes and SVG icon to add an addon icon inside your 
 </div>
 {{< /example >}}
 
-## Success and error validation
+## Form validation
 
 Use the following two success and error styles when validation your forms.
 
@@ -315,33 +315,26 @@ Use the following Tailwind CSS file upload element to receive any type of file f
 <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help">A profile picture is useful to confirm your are logged into your account</div>
 {{< /example >}}
 
-<div class="mt-8 -mb-5">
-  {{< requires_js >}}
-</div>
-
 ## Toggle Switch
 
 Use the following toggle switch component to ask for a yes or no type of input from your users without the use of JavaScript.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
-<label for="toggle-example" class="flex relative items-center mb-4 cursor-pointer">
-  <input type="checkbox" id="toggle-example" class="sr-only">
-  <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
+<label for="default-toggle" class="flex relative items-center mb-4 cursor-pointer">
+  <input type="checkbox" value="" id="default-toggle" class="sr-only peer">
+  <div class="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
   <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
 </label>
 
-<label for="toggle-example-checked" class="flex relative items-center mb-4 cursor-pointer">
-  <input type="checkbox" id="toggle-example-checked" class="sr-only" checked>
-  <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
-  <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me (checked)</span>
+<label for="checked-toggle" class="flex relative items-center mb-4 cursor-pointer">
+  <input type="checkbox" value="" id="checked-toggle" class="sr-only peer" checked>
+  <div class="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+  <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Checked toggle</span>
 </label>
 
-<label for="toggle-example-disabled" class="flex relative items-center cursor-not-allowed">
-  <input type="checkbox" id="toggle-example-disabled" class="sr-only" disabled>
-  <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
-  <span class="ml-3 text-sm font-medium text-gray-400 dark:text-gray-500">Toggle me (disabled)</span>
+<label for="disabled-toggle" class="flex relative items-center mb-3 cursor-pointer">
+  <input type="checkbox" value="" id="disabled-toggle" class="sr-only peer" disabled>
+  <div class="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+  <span class="ml-3 text-sm font-medium text-gray-400 dark:text-gray-500">Disabled toggle</span>
 </label>
 {{< /example >}}
-
-## Checked state
-

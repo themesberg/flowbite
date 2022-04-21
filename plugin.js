@@ -183,6 +183,7 @@ module.exports = plugin(function ({ addBase, theme }) {
                 background: theme('colors.gray.500', colors.gray[500])
             }
         },
+        // remove from v2.x+
         ['.toggle-bg:after']: {
             content: '""',
             position: 'absolute',
@@ -206,6 +207,7 @@ module.exports = plugin(function ({ addBase, theme }) {
             background: theme('colors.blue.600', colors.gray[600]),
             'border-color': theme('colors.blue.600', colors.gray[600])
         },
+        // remove from v2.x+ END
         [['.tooltip-arrow', '.tooltip-arrow:before']]: {
             position: 'absolute',
             width: '8px',

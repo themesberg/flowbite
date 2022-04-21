@@ -6,7 +6,6 @@
     - title: Vue
     - title: Laravel
     - title: Svelte
-      new: true
     # - title: Angular
     - title: License
     - title: Changelog
@@ -15,7 +14,6 @@
   pages:
     - title: Configuration
     - title: Dark mode
-      new: true
     - title: Theming
     - title: Colors
     - title: Icons
@@ -63,7 +61,7 @@
     - title: Checkbox
     - title: Radio
     - title: Toggle
-    - title: Range Slider
+    - title: Range
       new: true
     - title: Floating Labels
 

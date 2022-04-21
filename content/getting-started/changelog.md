@@ -15,6 +15,19 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
+## v1.4.4
+
+- removed `toggle-bg` class as a requirement for the toggle component
+- added new input fields
+- added new textarea components
+- added new checkbox examples
+- added new radio button examples
+- added new toggle colors and sizes
+- added new select component examples
+- added new search input component
+- added new range slider component
+- added new file input examples
+
 ### v1.4.3
 
 - added new range input slider component

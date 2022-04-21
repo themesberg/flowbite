@@ -454,7 +454,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]:focus::-webkit-slider-thumb {
-	@apply ring-4 ring-blue-300 outline-none dark:ring-blue-400;
+	@apply ring-4 ring-blue-300 outline-none dark:ring-blue-500;
 }
 
 input[type="range"]:disabled::-webkit-slider-thumb {
@@ -466,7 +466,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 input[type="range"]:focus::-moz-range-thumb {
-	@apply ring-4 ring-blue-300 outline-none dark:ring-blue-400;
+	@apply ring-4 ring-blue-300 outline-none dark:ring-blue-500;
 }
 
 input[type="range"]:disabled::-moz-range-thumb {

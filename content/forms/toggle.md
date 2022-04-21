@@ -86,19 +86,19 @@ Use the following toggle switch component to ask for a yes or no type of input f
 ## Sizing
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
-<label for="checked-toggle" class="flex relative items-center cursor-pointer">
-  <input type="checkbox" value="" id="checked-toggle" class="sr-only" checked>
-  <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
-  <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Checked toggle</span>
+<label for="small-toggle" class="flex relative items-center mb-5 cursor-pointer">
+  <input type="checkbox" value="" id="small-toggle" class="sr-only peer">
+  <div class="w-10 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+  <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Small toggle</span>
 </label>
-<label for="checked-toggle" class="flex relative items-center cursor-pointer">
-  <input type="checkbox" value="" id="checked-toggle" class="sr-only" checked>
-  <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
-  <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Checked toggle</span>
+<label for="default-toggle-size" class="flex relative items-center mb-5 cursor-pointer">
+  <input type="checkbox" value="" id="default-toggle-size" class="sr-only peer">
+  <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+  <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Default toggle</span>
 </label>
-<label for="checked-toggle" class="flex relative items-center cursor-pointer">
-  <input type="checkbox" value="" id="checked-toggle" class="sr-only" checked>
-  <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg dark:bg-gray-700 dark:border-gray-600"></div>
-  <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Checked toggle</span>
+<label for="large-toggle" class="flex relative items-center cursor-pointer">
+  <input type="checkbox" value="" id="large-toggle" class="sr-only peer">
+  <div class="w-14 h-7 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+  <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Large toggle</span>
 </label>
 {{< /example >}}

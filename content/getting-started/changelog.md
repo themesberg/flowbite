@@ -15,7 +15,7 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
 
-## v1.4.4
+### v1.4.4
 
 - removed `toggle-bg` class as a requirement for the toggle component
 - added new input fields

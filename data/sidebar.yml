@@ -63,7 +63,7 @@
     - title: Toggle
     - title: Range
       new: true
-    - title: Floating Labels
+    - title: Floating Label
 
 - title: Plugins
   pages:

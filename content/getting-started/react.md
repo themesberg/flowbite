@@ -98,7 +98,7 @@ Now you can start the server by running `npm run start` or build the project usi
 
 Most of the components from Flowbite will work as long as you have Tailwind CSS included in your project. The interactive elements such as dropdowns, tooltips, and modals will work based on the data attributes that you can code directly in your view files, except when using a routing system like React Router. 
 
-We are currently working on a [standalone React component library](https://github.com/bacali95/flowbite-react) to make integration with React fully compatible and with frameworks such as NextJS.
+We are currently working on a [standalone React component library](https://flowbite-react.com) to make integration with React fully compatible and with frameworks such as NextJS.
 
 You can start using the components from Flowbite inside your React project by only changing the `class` attributes to `className`. 
 

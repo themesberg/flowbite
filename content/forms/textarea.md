@@ -21,7 +21,7 @@ nextLink: forms/checkbox/
 ## WYSIWYG Editor
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
-<form action="#">
+<form>
    <div class="mb-4 w-full bg-gray-50 rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600">
        <div class="flex justify-between items-center py-2 px-3 border-b dark:border-gray-600">
            <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x dark:divide-gray-600">
@@ -79,7 +79,7 @@ nextLink: forms/checkbox/
 ## Comment box
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
-<form action="#">
+<form>
    <div class="mb-4 w-full bg-gray-50 rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600">
        <div class="py-2 px-4 bg-white rounded-t-lg dark:bg-gray-800">
            <label for="new-comment" class="sr-only">Your comment</label>

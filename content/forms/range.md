@@ -45,7 +45,7 @@ nextLink: forms/floating-labels/
 <input type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
 {{< /example >}}
 
-## Sizing
+## Sizes
 
 {{< example class="dark:bg-gray-800" github="components/alerts.md" show_dark=true >}}
 <input type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">

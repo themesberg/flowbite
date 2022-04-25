@@ -126,7 +126,7 @@ Use this example if you want to show a dropdown menu when clicking on the avatar
 </div>
 {{< /example >}}
 
-## Sizing
+## Sizes
 
 Choose from multiple sizing options for the avatar component from this example.
 

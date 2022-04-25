@@ -35,7 +35,7 @@ nextLink: forms/search-input/
 <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="multiple_files_help">Upload screenshots for your web application as SVG, PNG, JPG or GIF (MAX. 800x400px).</p>
 {{< /example >}}
 
-## Sizing
+## Sizes
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="multiple_files">Small file input</label>

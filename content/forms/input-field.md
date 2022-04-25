@@ -69,7 +69,7 @@ Use this example as a generic form element which includes multiple input fields 
 </form>
 {{< /example >}}
 
-## Input sizing
+## Input sizes
 
 Use the following examples to apply a small, default or large size for the input fields.
 

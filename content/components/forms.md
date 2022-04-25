@@ -83,7 +83,7 @@ Use these form elements inspired by material design from Google to adjust the `l
 </form>
 {{< /example >}}
 
-## Input Sizing
+## Input Sizes
 
 Use the following utility classes to create three different sizing options (large, base, and small) for your form input elements.
 

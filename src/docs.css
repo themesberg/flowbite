@@ -330,7 +330,7 @@ code.language-javascript .token.comment {
 /* Search */
 
 .DocSearch-Button {
-	@apply hidden p-2 m-0 w-52 h-auto bg-gray-50 rounded-lg border border-gray-300 border-solid shadow-none md:flex hover:bg-gray-100 xl:w-64 hover:shadow-none focus:shadow-none dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600;
+	@apply hidden h-auto p-2 m-0 border border-gray-300 border-solid rounded-lg shadow-none w-52 bg-gray-50 md:flex hover:bg-gray-100 xl:w-64 hover:shadow-none focus:shadow-none dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600;
 }
 
 .DocSearch-Button-Placeholder {
@@ -346,7 +346,7 @@ code.language-javascript .token.comment {
 }
 
 .DocSearch-Button-Key {
-	@apply pt-1 pb-0 m-0 w-auto text-xs font-normal text-gray-500 bg-none shadow-none dark:text-gray-400;
+	@apply w-auto pt-1 pb-0 m-0 text-xs font-normal text-gray-500 shadow-none bg-none dark:text-gray-400;
 }
 
 .DocSearch-Button .DocSearch-Search-Icon {
@@ -410,7 +410,7 @@ code.language-javascript .token.comment {
 }
 
 .DocSearch-Hit a {
-	@apply bg-gray-50 rounded-lg shadow-none dark:bg-gray-600 dark:hover:bg-blue-600;
+	@apply rounded-lg shadow-none bg-gray-50 dark:bg-gray-600 dark:hover:bg-blue-600;
 }
 
 .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-Select-Icon,
@@ -447,36 +447,4 @@ code.language-javascript .token.comment {
 
 .DocSearch-Reset {
 	@apply dark:text-gray-300 dark:hover:text-white hover:text-black;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-    @apply w-5 h-5 bg-blue-600 rounded-full border-0 shadow-sm appearance-none cursor-pointer after:content-[''] after:w-5 after:h-5 after:bg-gray-200;
-}
-
-input[type="range"]:focus::-webkit-slider-thumb {
-	@apply ring-4 ring-blue-300 outline-none dark:ring-blue-500;
-}
-
-input[type="range"]:disabled::-webkit-slider-thumb {
-	@apply bg-gray-400;
-}
-
-input[type="range"]::-moz-range-thumb {
-    @apply w-6 h-6 bg-blue-600 rounded-full border-0 shadow-sm appearance-none cursor-pointer;
-}
-
-input[type="range"]:focus::-moz-range-thumb {
-	@apply ring-4 ring-blue-300 outline-none dark:ring-blue-500;
-}
-
-input[type="range"]:disabled::-moz-range-thumb {
-	@apply bg-gray-400;
-}
-
-input[type="range"]::-moz-range-progress {
-    @apply bg-blue-500;
-}
-
-input[type="range"]::-ms-fill-lower {
-    @apply bg-blue-500;
 }

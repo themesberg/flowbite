@@ -1,9 +1,10 @@
 ---
 layout: home
 title: Tailwind CSS Radio Button - Flowbite
-description: Use the Tailwind CSS form and input elements such as checkboxes, radios, textarea, text inputs to collect information from users with Flowbite
+description: Get started with the radio component to let the user choose a single option from multiple options in the form of a circle based on multiple styles and colors
 group: forms
 toc: true
+requires_js: true
 
 previous: Textarea
 previousLink: forms/textarea/
@@ -11,7 +12,13 @@ next: Radio
 nextLink: forms/radio/
 ---
 
+The radio component can be used to allow the user to choose a single option from one or more available options coded with the utility classes from Tailwind CSS and available in multiple styles, variants, and colors and support dark mode.
+
+Make sure that you have included Flowbite as a plugin inside your Tailwind CSS project to apply all the necessary styles for the radio component.
+
 ## Radio example
+
+Use the default example of a radio component with the checked and unchecked state.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <div class="flex items-center mb-4">
@@ -26,6 +33,8 @@ nextLink: forms/radio/
 
 ## Disabled state
 
+Apply the `disabled` attribute to the radio component to disallow the selection for the user.
+
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <div class="flex items-center mb-4">
     <input disabled id="disabled-radio-1" type="radio" value="" name="disabled-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
@@ -39,6 +48,8 @@ nextLink: forms/radio/
 
 ## Radio link
 
+Use this example if you want to include an anchor tag inside the label of the radio component.
+
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <div class="flex items-center">
     <input id="link-radio" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
@@ -47,6 +58,8 @@ nextLink: forms/radio/
 {{< /example >}}
 
 ## Helper text
+
+Get started with this example if you want to add a secondary text to the label for the radio component.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <div class="flex">
@@ -61,6 +74,8 @@ nextLink: forms/radio/
 {{< /example >}}
 
 ## Inline
+
+Use the `flex` class for a wrapper element to horizontally align the radio elements.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <div class="flex">
@@ -84,6 +99,8 @@ nextLink: forms/radio/
 {{< /example >}}
 
 ## Colors
+
+Apply the `text-{color}-{shade}` utility class from Tailwind CSS to change the color of the radio component.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <div class="flex flex-wrap">

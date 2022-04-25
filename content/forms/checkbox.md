@@ -4,6 +4,7 @@ title: Tailwind CSS Checkbox - Flowbite
 description: Get started with the checkbox component to allow the user to select one or more options in the form of a square box available in multiple sizes and colors
 group: forms
 toc: true
+requires_js: true
 
 previous: Textarea
 previousLink: forms/textarea/
@@ -12,6 +13,8 @@ nextLink: forms/radio/
 ---
 
 The checkbox component can be used to receive one or more selected options from the user in the form of a square box available in multiple styles, sizes, colors, and variants coded with the utility classes from Tailwind CSS and with support for dark mode.
+
+Make sure that you have included Flowbite as a plugin inside your Tailwind CSS project to apply all the necessary styles for the checkbox component.
 
 ## Checkbox example
 

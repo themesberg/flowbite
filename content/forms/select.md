@@ -73,6 +73,10 @@ Use the underline style for the select component as an alternative appearance.
 </select>
 {{< /example >}}
 
+<div class="mt-8 -mb-5">
+  {{< requires_js >}}
+</div>
+
 ## Select with dropdown
 
 Use this example if you want to create a multi-level dropdown and select component combination.

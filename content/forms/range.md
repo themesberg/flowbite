@@ -11,6 +11,8 @@ next: Floating Labels
 nextLink: forms/floating-labels/
 ---
 
+Make sure that you have included Flowbite as a plugin inside your Tailwind CSS project to apply all the necessary styles for the range slider component.
+
 ## Range slider example
 
 {{< example class="dark:bg-gray-800" github="components/alerts.md" show_dark=true >}}

@@ -162,6 +162,10 @@ Get started with this example where the submit button is positioned inside the i
 </form>
 {{< /example >}}
 
+<div class="mt-8 -mb-5">
+  {{< requires_js >}}
+</div>
+
 ## Dropdown input
 
 Use this example to show a dropdown menu right next to the input field.

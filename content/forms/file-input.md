@@ -4,6 +4,7 @@ title: Tailwind CSS File Input - Flowbite
 description: Get started with the file input element to let the user to choose one or more files from their device storage based on multiple styles and sizes
 group: forms
 toc: true
+requires_js: true
 
 previous: Input Field
 previousLink: forms/input-field/
@@ -12,6 +13,8 @@ nextLink: forms/search-input/
 ---
 
 The file input component can be used to receive one or more files from the device storage of the user available in multiple sizes, styles, and variants and built with the utility-first classes from Tailwind CSS including support for dark mode.
+
+Make sure that you have included Flowbite as a plugin inside your Tailwind CSS project to apply all the necessary styles for the file input component.
 
 ## File input example
 

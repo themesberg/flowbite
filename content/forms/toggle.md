@@ -4,12 +4,15 @@ title: Tailwind CSS Toggle - Flowbite
 description: Use the Tailwind CSS form and input elements such as checkboxes, radios, textarea, text inputs to collect information from users with Flowbite
 group: forms
 toc: true
+requires_js: true
 
 previous: Radio
 previousLink: forms/radio/
 next: Range Slider
 nextLink: forms/range-slider/
 ---
+
+Make sure that you have included Flowbite as a plugin inside your Tailwind CSS project to apply all the necessary styles for the radio component.
 
 ## Toggle example
 

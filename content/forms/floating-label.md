@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Floating Label - Flowbite
-description: Use the Tailwind CSS form and input elements such as checkboxes, radios, textarea, text inputs to collect information from users with Flowbite
+description: Use the floating label style for the input field elements to replicate the Material UI design system from Google and choose from multiple styles and sizes
 group: forms
 toc: true
 
@@ -11,9 +11,13 @@ next: Datepicker
 nextLink: plugins/datepicker/
 ---
 
-## Default example
+The floating label style was first pioneered by Google in its infamous Material UI design system and it's basically a label tag which floats just above the input field when it is being focused or already has content inside.
 
-Use these form elements inspired by material design from Google to adjust the `label` tag as the visual placeholder for the input elements using the `peer-placeholder-shown` and `peer-focus` utility classes. These components require Tailwind CSS v3.x and above.
+On this page you will find a three different input field styles including a standard, outlined, and filled style including validation styles and sizes coded with Tailwind CSS and supported for dark mode.
+
+## Floatin label styles
+
+Get started with the following three styles for the floating label component and use the `label` tag as a visual placeholder using the `peer-placeholder-shown` and `peer-focus` utility classes from Tailwind CSS.
 
 {{< example class="grid items-end gap-6 lg:grid-cols-3 dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <div class="relative">
@@ -32,6 +36,8 @@ Use these form elements inspired by material design from Google to adjust the `l
 
 ## Disabled state
 
+Apply the `disabled` attribute to the input fields to disallow the user from changing the content.
+
 {{< example class="grid items-end gap-6 lg:grid-cols-3 dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <div class="relative">
     <input type="text" id="disabled_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " disabled />
@@ -48,6 +54,8 @@ Use these form elements inspired by material design from Google to adjust the `l
 {{< /example >}}
 
 ## Validation
+
+Use the following examples of input validation for the success and error messages by applying the validation text below the input field and using the green or red color classes from Tailwind CSS.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <!-- Success messages -->
@@ -103,6 +111,8 @@ Use these form elements inspired by material design from Google to adjust the `l
 
 ## Sizes
 
+Use the small and default sizes of the floating label input fields from the following example.
+
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <div class="grid items-end gap-6 mb-6 lg:grid-cols-3">
     <div class="relative">
@@ -135,6 +145,8 @@ Use these form elements inspired by material design from Google to adjust the `l
 {{< /example >}}
 
 ## Helper text
+
+Add a helper text in addition to the label if you want to show more information below the input field.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <div class="relative">

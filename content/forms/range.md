@@ -40,15 +40,3 @@ Make sure that you have included Flowbite as a plugin inside your Tailwind CSS p
 <label for="steps-range" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Range steps</label>
 <input id="steps-range" type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
 {{< /example >}}
-
-## Colors
-
-{{< example class="dark:bg-gray-800" github="components/alerts.md" show_dark=true >}}
-<input type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
-{{< /example >}}
-
-## Sizes
-
-{{< example class="dark:bg-gray-800" github="components/alerts.md" show_dark=true >}}
-<input type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
-{{< /example >}}

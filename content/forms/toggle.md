@@ -1,10 +1,9 @@
 ---
 layout: home
 title: Tailwind CSS Toggle - Flowbite
-description: Use the Tailwind CSS form and input elements such as checkboxes, radios, textarea, text inputs to collect information from users with Flowbite
+description: Use the toggle component to switch between a binary state of true or false using a single click available in multiple sizes, variants, and colors
 group: forms
 toc: true
-requires_js: true
 
 previous: Radio
 previousLink: forms/radio/
@@ -12,11 +11,11 @@ next: Range Slider
 nextLink: forms/range-slider/
 ---
 
-Make sure that you have included Flowbite as a plugin inside your Tailwind CSS project to apply all the necessary styles for the radio component.
+The toggle component can be used to receive a simple "yes" or "no" type of answer from the user by choosing a single option from two options available in multiple sizes, styles, and colors coded with the utility classes from Tailwind CSS and with dark mode support.
 
 ## Toggle example
 
-Use the following toggle switch component to ask for a yes or no type of input from your users without the use of JavaScript.
+Get started with the default toggle component example as a checkbox element to receive a true or false selection from the user.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <label for="default-toggle" class="relative inline-flex items-center cursor-pointer">
@@ -28,6 +27,8 @@ Use the following toggle switch component to ask for a yes or no type of input f
 
 ## Checked state
 
+Apply the `checked` attribute to the toggle component to activate the selection by default.
+
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <label for="checked-toggle" class="relative inline-flex items-center cursor-pointer">
   <input type="checkbox" value="" id="checked-toggle" class="sr-only peer" checked>
@@ -37,6 +38,8 @@ Use the following toggle switch component to ask for a yes or no type of input f
 {{< /example >}}
 
 ## Disabled state
+
+Apply the `disabled` attribute to disallow the users from making any further selections.
 
 {{< example class="flex flex-col flex-wrap dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <label for="disabled-toggle" class="relative inline-flex items-center mb-5 cursor-pointer">
@@ -53,6 +56,8 @@ Use the following toggle switch component to ask for a yes or no type of input f
 {{< /example >}}
 
 ## Colors
+
+Change the color of the toggle component by updating the color classes of `peer-focus` and `peer-checked`.
 
 {{< example class="inline-flex inline-flex-wrap dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <label for="red-toggle" class="relative inline-flex items-center mr-5 cursor-pointer">
@@ -93,6 +98,8 @@ Use the following toggle switch component to ask for a yes or no type of input f
 {{< /example >}}
 
 ## Sizes
+
+Get started with small, default, or large sizes of the toggle component based on your needs.
 
 {{< example class="flex flex-col flex-wrap dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <label for="small-toggle" class="relative inline-flex items-center mb-5 cursor-pointer">

@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Select - Flowbite
-description: Use the Tailwind CSS form and input elements such as checkboxes, radios, textarea, text inputs to collect information from users with Flowbite
+description: Get started with the select component to allow the user to choose from one or more options from a dropdown list based on multiple styles, sizes, and variants
 group: forms
 toc: true
 
@@ -11,7 +11,11 @@ next: Textarea
 nextLink: forms/textarea/
 ---
 
+The select input component can be used to gather information from users based on multiple options in the form of a dropdown list and by browsing this page you will find multiple options, styles, sizes, and variants built with the utility classes from Tailwind CSS also available in dark mode.
+
 ## Select input example
+
+Get started with the default example of a select input component to get a single option selection.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Select an option</label>
@@ -26,6 +30,8 @@ nextLink: forms/textarea/
 
 ## Multiple options
 
+Apply the `multiple` attribute to the select component to allow users to select one or more options.
+
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <label for="countries_multiple" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Select an option</label>
 <select multiple id="countries_multiple" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -38,6 +44,8 @@ nextLink: forms/textarea/
 {{< /example >}}
 
 ## Disabled state
+
+Apply the `disable` state to the select component to disallow the selection of new options.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <label for="countries_disabled" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Select an option</label>
@@ -52,8 +60,10 @@ nextLink: forms/textarea/
 
 ## Underline select
 
+Use the underline style for the select component as an alternative appearance.
+
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
-<label for="underline_select" class="sr-only">Regular select</label>
+<label for="underline_select" class="sr-only">Underline select</label>
 <select id="underline_select" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
     <option selected>Choose a country</option>
     <option value="US">United States</option>
@@ -63,7 +73,9 @@ nextLink: forms/textarea/
 </select>
 {{< /example >}}
 
-## Dropdown + Input
+## Select with dropdown
+
+Use this example if you want to create a multi-level dropdown and select component combination.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <div class="flex">
@@ -122,6 +134,8 @@ nextLink: forms/textarea/
 {{< /example >}}
 
 ## Sizes
+
+Get started with the small, default, and large sizes for the select component from the example below.
 
 {{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
 <label for="small" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Small select</label>

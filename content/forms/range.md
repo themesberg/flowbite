@@ -8,8 +8,8 @@ requires_js: true
 
 previous: Toggle
 previousLink: forms/toggle/
-next: Floating Labels
-nextLink: forms/floating-labels/
+next: Floating Label
+nextLink: forms/floating-label/
 ---
 
 The range component can be used as an input field to get a number from the user based on your custom selection (ie. from 1 to 100) by using a sliding animation.

@@ -6,7 +6,7 @@ group: forms
 toc: true
 
 previous: Range Slider
-previousLink: forms/range-slider/
+previousLink: forms/range/
 next: Datepicker
 nextLink: plugins/datepicker/
 ---

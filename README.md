@@ -222,6 +222,11 @@ Flowbite is an open source collection of UI components built with the utility cl
     </td>
   </tr>
   <tr>
+    <td width="33.3333%">Input Field</td>
+    <td width="33.3333%">File Input</td>
+    <td width="33.3333%">Search Input</td>
+  </tr>
+  <tr>
     <td width="33.3333%">
         <a href="https://flowbite.com/docs/forms/input-field/">
             <img alt="Tailwind CSS Input Field" src="https://flowbite.s3.amazonaws.com/github/input-field.jpg">
@@ -237,6 +242,11 @@ Flowbite is an open source collection of UI components built with the utility cl
             <img alt="Tailwind CSS Search Input" src="https://flowbite.s3.amazonaws.com/github/search-input.jpg">
         </a>
     </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Select</td>
+    <td width="33.3333%">Textarea</td>
+    <td width="33.3333%">Checkbox</td>
   </tr>
   <tr>
     <td width="33.3333%">
@@ -256,6 +266,11 @@ Flowbite is an open source collection of UI components built with the utility cl
     </td>
   </tr>
   <tr>
+    <td width="33.3333%">Radio</td>
+    <td width="33.3333%">Toggle</td>
+    <td width="33.3333%">Range Slider</td>
+  </tr>
+  <tr>
     <td width="33.3333%">
         <a href="https://flowbite.com/docs/forms/radio/">
             <img alt="Tailwind CSS Radio" src="https://flowbite.s3.amazonaws.com/github/radio.jpg">
@@ -271,6 +286,11 @@ Flowbite is an open source collection of UI components built with the utility cl
             <img alt="Tailwind CSS Range Slider" src="https://flowbite.s3.amazonaws.com/github/range-slider.jpg">
         </a>
     </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Floating Label</td>
+    <td width="33.3333%"></td>
+    <td width="33.3333%"></td>
   </tr>
   <tr>
     <td width="33.3333%">

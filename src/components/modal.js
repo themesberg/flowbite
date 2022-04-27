@@ -140,6 +140,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 object: modal
             })
         }
+    
+        if (modalEl.getAttribute('data-modal-show')) {
+            modal.show();
+        }
 
         el.addEventListener('click', () => {
             modal.toggle()

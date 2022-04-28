@@ -1,9 +1,9 @@
 const Default = {
     placement: 'center',
     backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
-    onHide: () => {},
-    onShow: () => {},
-    onToggle: () => {}
+    onHide: () => { },
+    onShow: () => { },
+    onToggle: () => { }
 }
 class Modal {
     constructor(targetEl = null, options = {}) {
@@ -20,7 +20,7 @@ class Modal {
     }
 
     _createBackdrop() {
-        if(this._isHidden) {
+        if (this._isHidden) {
             const backdropEl = document.createElement('div');
             backdropEl.setAttribute('modal-backdrop', '');
             backdropEl.classList.add(...this._options.backdropClasses.split(" "));
@@ -139,6 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: modalId,
                 object: modal
             })
+        }
+
+        if (modalEl.hasAttribute('data-modal-show') && modalEl.getAttribute('data-modal-show') === 'true') {
+            modal.show();
         }
 
         el.addEventListener('click', () => {

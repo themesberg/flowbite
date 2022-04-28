@@ -13,8 +13,12 @@ nextLink: customize/configuration/
 
 ## Changelog
 
-We strive to keep a good accountability of all of the version changes that we make for the FlowBite library.
+We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v1.4.4
+
+- use `data-modal-show="true"` to show modal by default
+- fix accordion onToggle JS bug
 ### v1.4.3
 
 - removed `toggle-bg` class as a requirement for the toggle component

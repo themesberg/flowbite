@@ -16,7 +16,7 @@ The range component can be used as an input field to get a number from the user 
 
 The examples on this page are all coded with Tailwind CSS and requires you to install Flowbite as a plugin inside your project to obtain all the necessary stylings.
 
-## Range example
+## Range slider example
 
 Get started with this default example with values from 1 to 100 and the default value of 50.
 
@@ -58,10 +58,10 @@ Apply the small, default, and large sizes for the range component by applying th
 
 {{< example class="dark:bg-gray-800" github="components/alerts.md" show_dark=true >}}
 <label for="small-range" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Small range</label>
-<input id="small-range" type="range" value="50" class="w-full h-1 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm dark:bg-gray-700">
+<input id="small-range" type="range" value="50" class="mb-6 w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm dark:bg-gray-700">
 
 <label for="medium-range" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default range</label>
-<input id="medium-range" type="range" value="50" class="w-full h-2 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+<input id="medium-range" type="range" value="50" class="mb-6 w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
 
 <label for="large-range" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Large range</label>
 <input id="large-range" type="range" value="50" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700">

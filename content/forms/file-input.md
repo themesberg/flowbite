@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS File Input - Flowbite
-description: Get started with the file input element to let the user to upload one or more files from their device storage based on multiple styles and sizes
+description: Get started with the file input component to let the user to upload one or more files from their device storage based on multiple styles and sizes
 group: forms
 toc: true
 requires_js: true
@@ -16,7 +16,7 @@ The file input component can be used to upload one or more files from the device
 
 Make sure that you have included Flowbite as a plugin inside your Tailwind CSS project to apply all the necessary styles for the file input component.
 
-## File input example
+## File upload example
 
 Get started with a simple file input component to let users upload one single file.
 

@@ -19,7 +19,7 @@ You will also find more advanced search components on this page including dropdo
 
 Get started with the default example of a search input component including and icon and submit button.
 
-{{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
+{{< example class="dark:bg-gray-800" github="forms/search-input.md" show_dark=true >}}
 <form>   
     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
     <div class="relative">
@@ -40,7 +40,7 @@ Get started with the default example of a search input component including and i
 
 Use this search component with a dropdown to let your users select a category in which they would like the search query to be targeted in.
 
-{{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
+{{< example class="dark:bg-gray-800" github="forms/search-input.md" show_dark=true >}}
 
 <form>
     <div class="flex">
@@ -74,7 +74,7 @@ Use this search component with a dropdown to let your users select a category in
 
 Use the simplest form of a search input component with an icon and a search button next to the text field.
 
-{{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
+{{< example class="dark:bg-gray-800" github="forms/search-input.md" show_dark=true >}}
 <form class="flex items-center">   
     <label for="simple-search" class="sr-only">Search</label>
     <div class="relative w-full">
@@ -95,7 +95,7 @@ Use the simplest form of a search input component with an icon and a search butt
 
 Use this example where you can select a country in which you want to search for an address or city.
 
-{{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
+{{< example class="dark:bg-gray-800" github="forms/search-input.md" show_dark=true >}}
 <form>
     <div class="flex">
         <label for="location-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Your Email</label>
@@ -150,7 +150,7 @@ Use this example where you can select a country in which you want to search for 
 
 Get started with this example if you would like to enable voice search for your website and users.
 
-{{< example class="dark:bg-gray-800" github="components/forms.md" show_dark=true >}}
+{{< example class="dark:bg-gray-800" github="forms/search-input.md" show_dark=true >}}
 <form class="flex items-center">   
     <label for="voice-search" class="sr-only">Search</label>
     <div class="relative w-full">

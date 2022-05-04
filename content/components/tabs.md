@@ -168,7 +168,7 @@ Apply the `role="tabpanel"` data attribute to every tab content element and set 
 You can use multiple tab components on a single page but make sure that the id's are different.
 
 {{< example github="components/tabs.md" show_dark=true >}}
-<div class="mb-4 border-b border-gray-200">
+<div class="mb-4 border-b border-gray-200 dark:border-gray-700">
     <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
         <li class="mr-2" role="presentation">
             <button class="inline-block p-4 rounded-t-lg border-b-2" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>

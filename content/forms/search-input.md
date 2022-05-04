@@ -15,7 +15,7 @@ The search input component can be used to let your users search through your web
 
 You will also find more advanced search components on this page including dropdown category selections, search buttons positioned inside the input field, voice search fields and more.
 
-## Search input example
+## Search bar example
 
 Get started with the default example of a search input component including and icon and submit button.
 

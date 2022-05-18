@@ -71,7 +71,7 @@ module.exports = plugin(function ({ addBase, theme }) {
             'background-repeat': `no-repeat`,
             'background-size': `1.5em 1.5em`,
             'padding-right': spacing[10],
-            'color-adjust': `exact`,
+            'print-color-adjust': `exact`,
         },
         ['[multiple]']: {
             'background-image': 'initial',
@@ -79,12 +79,12 @@ module.exports = plugin(function ({ addBase, theme }) {
             'background-repeat': 'unset',
             'background-size': 'initial',
             'padding-right': spacing[3],
-            'color-adjust': 'unset',
+            'print-color-adjust': 'unset',
         },
         [[`[type='checkbox']`, `[type='radio']`]]: {
             appearance: 'none',
             padding: '0',
-            'color-adjust': 'exact',
+            'print-color-adjust': 'exact',
             display: 'inline-block',
             'vertical-align': 'middle',
             'background-origin': 'border-box',

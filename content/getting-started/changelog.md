@@ -15,6 +15,10 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v1.4.7
+
+- fix datepicker CDN JS
+
 ### v1.4.6
 
 - fix datepicker colors issues on dark mode

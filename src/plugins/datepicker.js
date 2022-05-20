@@ -1,5 +1,5 @@
-import Datepicker from '@themesberg/tailwind-datepicker/Datepicker';
-import DateRangePicker from '@themesberg/tailwind-datepicker/DateRangePicker';
+import Datepicker from 'flowbite-datepicker/Datepicker';
+import DateRangePicker from 'flowbite-datepicker/DateRangePicker';
 
 const getDatepickerOptions = (datepickerEl) => {
 

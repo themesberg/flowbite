@@ -1,6 +1,6 @@
 {
   "name": "flowbite",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "The most popular library of interactive components built with Tailwind CSS",
   "keywords": [
     "flowbite",
@@ -45,7 +45,7 @@
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.8",
     "@docsearch/js": "^3.0.0-alpha.42",
-    "@themesberg/tailwind-datepicker": "^1.1.0",
+    "flowbite-datepicker": "^1.2.1",
     "autoprefixer": "^10.3.3",
     "babel-loader": "^8.2.2",
     "copyfiles": "^2.4.1",

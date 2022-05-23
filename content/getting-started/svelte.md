@@ -1,15 +1,15 @@
 ---
 layout: home
 title: Tailwind CSS Svelte - Flowbite
-description: Learn how to install and set up Tailwind CSS with Flowbite for your Svelte project and start developing modern web applications using interactive elements based on utility classes
+description: Learn how to install Tailwind CSS with Flowbite for your Svelte project and start developing modern web applications using interactive elements based on utility classes
 group: getting-started
 toc: true
 requires_svelte: true
 
 previous: Laravel
 previousLink: getting-started/laravel/
-next: License
-nextLink: getting-started/license/
+next: Ruby on Rails
+nextLink: getting-started/rails/
 ---
 
 Svelte is a modern and growing front-end compiler. Developers build boilerplate-free components using languages HTML, CSS and JavaScript. Svelte compiles your code to tiny, framework-less vanilla JS. 

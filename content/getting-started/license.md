@@ -5,8 +5,8 @@ description: Learn more about the licensing terms for Flowbite and Tailwind CSS
 group: getting-started
 toc: true
 
-previous: Svelte
-previousLink: getting-started/svelte/
+previous: Ruby on Rails
+previousLink: getting-started/rails/
 next: Changelog
 nextLink: getting-started/changelog/
 ---

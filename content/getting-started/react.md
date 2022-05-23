@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS React - Flowbite
-description: Learn how to install and set up Tailwind CSS with Flowbite for your React project and start developing modern web applications using interactive elements based on utility classes
+description: Learn how to install Tailwind CSS with Flowbite for your React project and start developing modern web applications using interactive elements based on utility classes
 group: getting-started
 toc: true
 requires_react: true

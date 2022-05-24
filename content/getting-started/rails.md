@@ -14,9 +14,9 @@ nextLink: getting-started/license/
 
 [Ruby on Rails](https://rubyonrails.org/) is an open-source full-stack web application framework that runs server-side written in Ruby and built by the creators of Basecamp based on a model-view-controller architecture.
 
-Popular websites such as GitHub, Shopify, Twitch, Dribbble, AirBnB, Coinbase are all based on the Ruby on Rails framework and it is continued to be used by thousands of companies and developers.
+Popular websites such as GitHub, Shopify, Twitch, Dribbble, AirBnB, and Coinbase are all based on the Ruby on Rails framework and it is continued to be used by thousands of companies and developers.
 
-In this guide you will learn how to set up Ruby on Rails with Tailwind CSS and install Flowbite to start using the UI components built with the utility classes from Tailwind CSS.
+In this guide, you will learn how to set up Ruby on Rails with Tailwind CSS and install Flowbite to start using the UI components built with the utility classes from Tailwind CSS.
 
 ## Create a new project
 
@@ -53,7 +53,7 @@ Now that you have created a new project you can proceed by setting up Tailwind C
 ./bin/rails tailwindcss:install
 ```
 
-5. Configure the `tailwind.config.js` file by setting the appropiate `content` paths:
+5. Configure the `tailwind.config.js` file by setting the appropriate `content` paths:
 
 ```javascript
 module.exports = {
@@ -77,7 +77,7 @@ module.exports = {
 @tailwind utilities;
 ```
 
-Now that Tailwind CSS has been succesfully installed you can proceed by installing Flowbite.
+Now that Tailwind CSS has been successfully installed you can proceed by installing Flowbite.
 
 ## Install Flowbite
 
@@ -140,7 +140,7 @@ This will create a local server and you will be able to access the pages on `loc
 
 ## Create a homepage
 
-First of all you need to delete the default `index.html` file inside the `public/` directory and then follow these steps:
+First of all, you need to delete the default `index.html` file inside the `public/` directory and then follow these steps:
 
 1. Create a new `pages/` directory inside the `app/views/` directory.
 2. Create a new `home.html.erb` file inside the `app/views/pages/` directory.

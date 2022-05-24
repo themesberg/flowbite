@@ -69,7 +69,7 @@ module.exports = {
 }
 ```
 
-6. Set up the Tailwind directives inside the `./app/assets/stylesheets/application.css` file:
+6. Set up the Tailwind directives inside the `./app/assets/stylesheets/application.tailwind.css` file:
 
 ```css
 @tailwind base;

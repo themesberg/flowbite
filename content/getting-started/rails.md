@@ -99,7 +99,7 @@ module.exports = {
 }
 ```
 
-8. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
+9. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
@@ -111,7 +111,7 @@ module.exports = {
 }
 ```
 
-9. Run the following command to include Flowbite's JavaScript inside the `importmap.rb` file:
+10. Run the following command to include Flowbite's JavaScript inside the `importmap.rb` file:
 
 ```bash
 ./bin/importmap pin flowbite

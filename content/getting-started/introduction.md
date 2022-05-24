@@ -169,6 +169,16 @@ If you're using a Svelte application you can install a standalone Flowbite Svelt
 
 Learn how to <a href="{{< ref "getting-started/svelte" >}}">install Tailwind CSS and Flowbite with Svelte</a>.
 
+<div class="mt-8 -mb-5">
+  {{< requires_ruby >}}
+</div>
+
+## Ruby on Rails
+
+If you're using a Ruby on Rails project you can install Tailwind CSS with Flowbite and start building web pages using the utility-first classes and the interactive UI compnonents from Flowbite.
+
+Learn how to <a href="{{< ref "getting-started/rails" >}}">install Tailwind CSS and Flowbite with Ruby on Rails</a>.
+
 ## Pro version
 
 If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite](https://flowbite.com/pro/) which includes fully coded pages and layouts for application, marketing, and e-commerce user interfaces.

@@ -9,6 +9,7 @@ import Dropdown from './components/dropdown'
 import Modal from './components/modal'
 import Tabs from './components/tabs'
 import Tooltip from './components/tooltip'
+import Autocomplete from './components/autocomplete'
 
 export default {
     Accordion,

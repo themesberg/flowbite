@@ -180,7 +180,7 @@ If you have a website with many pages you can use this footer component to show 
                     <a href="#" class="hover:underline">Twitter</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#" class="hover:underline">Facebook
+                    <a href="#" class="hover:underline">Facebook</a>
                 </li>
                 <li class="mb-4">
                     <a href="#" class="hover:underline">Contact Us</a>

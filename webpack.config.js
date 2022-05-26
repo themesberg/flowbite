@@ -4,6 +4,7 @@ const { SourceMapDevToolPlugin } = require("webpack");
 const path = require('path');
 
 module.exports = {
+  target: ["web", "es5"],
   entry: {
     datepicker: path.resolve(__dirname, 'src/plugins/datepicker.js'),
     flowbite: path.resolve(__dirname, 'src/flowbite.js'),

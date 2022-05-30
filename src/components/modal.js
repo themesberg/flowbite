@@ -103,6 +103,12 @@ class Modal {
         this._options.onHide(this)
     }
 
+    clickAway(event, clickAwayEl) {
+        if (!this._isHidden && !clickAwayEl.contains(event.target)) {
+            this.hide()
+        }
+    }
+
 }
 
 window.Modal = Modal;
@@ -120,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const modalId = el.getAttribute('data-modal-toggle');
         const modalEl = document.getElementById(modalId);
         const placement = modalEl.getAttribute('data-modal-placement')
+        const clickAwayEl = modalEl.querySelector('[data-clickAway]')
 
         if (modalEl) {
             if (!modalEl.hasAttribute('aria-hidden') && !modalEl.hasAttribute('aria-modal')) {
@@ -148,6 +155,19 @@ document.addEventListener('DOMContentLoaded', () => {
         el.addEventListener('click', () => {
             modal.toggle()
         })
+
+        if (clickAwayEl !== null && clickAwayEl.getAttribute('data-clickAway') === 'true') {
+            document.addEventListener('click', (event) => {
+                modal.clickAway(event, clickAwayEl)
+            })
+        }
+
+        window.onkeydown = (e) => {
+            if (e.key === 'Escape') {
+                modal.hide()
+            }
+        }
+
     })
 })
 

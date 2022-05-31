@@ -179,6 +179,16 @@ If you're using a Ruby on Rails project you can install Tailwind CSS with Flowbi
 
 Learn how to <a href="{{< ref "getting-started/rails" >}}">install Tailwind CSS and Flowbite with Ruby on Rails</a>.
 
+<div class="mt-8 -mb-5">
+  {{< requires_django >}}
+</div>
+
+## Django
+
+Check out the Django integration guide with Tailwind CSS and Flowbite to set up all technologies and start developing even faster using the UI components from Flowbite.
+
+Learn how to <a href="{{< ref "getting-started/django" >}}">install Tailwind CSS and Flowbite with Django</a>.
+
 ## Pro version
 
 If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite](https://flowbite.com/pro/) which includes fully coded pages and layouts for application, marketing, and e-commerce user interfaces.

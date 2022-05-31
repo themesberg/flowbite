@@ -1,16 +1,22 @@
 ---
 layout: home
 title: Tailwind CSS Django - Flowbite
-description: Learn how to install Tailwind CSS with Flowbite for your Ruby on Rails project and start developing modern web applications based on the full-stack framework
+description: Learn how to install Tailwind CSS and Flowbite inside a Django project and start developing modern web applications with a high-level Python framework
 group: getting-started
 toc: true
 requires_django: true
 
-previous: Svelte
-previousLink: getting-started/svelte/
+previous: Ruby on Rails
+previousLink: getting-started/rails/
 next: License
 nextLink: getting-started/license/
 ---
+
+[Django](https://www.djangoproject.com/) is an open-source web framework following the model-template-views architecture built in Python currently maintained by the Django Software Organization.
+
+It is currently being used by small and large corporations for websites such as YouTube, Spotify, Instagram, Disqus, and Dropbox and demand for Django developers is increasing.
+
+By following this guide you will learn how to properly set up a Django project with Tailwind CSS and Flowbite to start developing modern web applications even faster.
 
 ## Requirements
 
@@ -65,7 +71,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'todos',  # new
+    'compressor',  # new
 ]
 ```
 
@@ -79,7 +85,7 @@ COMPRESS_ENABLED = True
 STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 ```
 
-7. Create two new folders and a `input.css` CSS file relative to the project folder:
+7. Create two new folders and an `input.css` file inside the `static/src/` folder:
 
 ```bash
 static
@@ -87,7 +93,9 @@ static
     └── input.css
 ```
 
-8. Create a new `views.py` file and add the following content:
+Later we will import the Tailwind CSS directives and use it as the source file for the final stylesheet.
+
+8. Create a new `views.py` file inside `myapp/` next to `urls.py` and add the following content:
 
 ```bash
 from django.shortcuts import render
@@ -158,7 +166,7 @@ urlpatterns = [
 python manage.py runserver
 ```
 
-Later we will import the Tailwind CSS directives and use it as the source file for the final stylesheet.
+You will now get an error that the `output.css` file does not exist, but that will be fixed once we install Tailwind CSS.
 
 Awesome! Now you have a working Django project locally. Let's continue by installing Tailwind CSS.
 
@@ -206,9 +214,13 @@ module.exports = {
 npx tailwindcss -i ./static/src/input.css -o ./static/src/output.css --watch
 ```
 
-Awesome! Now you have configured both Django and Tailwind CSS. If you want to start using the components from Flowbite based on the utility classes from Tailwind CSS then you can follow the next steps to configure it and use navbars, buttons, modals, accordions and more in your project.
+Open `localhost:3000` in your browser and you'll see working HTML with Tailwind CSS code.
+
+Now that you have configured both Django and Tailwind CSS you can also set up Flowbite to get access to the whole collection of interactive components like navbars, modals, dropdowns, buttons, and more to make development even faster.
 
 ## Install Flowbite
+
+Flowbite is an open source library of interactive components built on top of Tailwind CSS and it can be installed using NPM and required as a plugin inside Tailwind CSS.
 
 1. Install Flowbite as a dependency using NPM:
 
@@ -243,7 +255,7 @@ module.exports = {
 }
 ```
 
-4. Include Flowbite's JavaScript file using CDN or by including it from the `node_modules/` folder:
+4. Include Flowbite's JavaScript file inside the `_base.html` file just before the end of the `<body>` tag using CDN or by including it directly from the `node_modules/` folder:
 
 ```html
 <script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
@@ -367,4 +379,6 @@ Check out one of the <a href="{{< ref "components/card" >}}">Card components</a>
 {% endblock content %}
 ```
 
-As you can see, from this point you can use any of the components to build user interfaces easier together with the Django, Tailwind CSS and Flowbite stack. Check out all of the components by browsing the menu on the left sidebar under the "components" section.
+At this point you can use any of the components to build user interfaces easier and faster together with Django, Tailwind CSS and Flowbite. 
+
+Check out all of the components by browsing the menu on the left sidebar under the "components" section.

@@ -5,8 +5,8 @@ description: Learn more about the licensing terms for Flowbite and Tailwind CSS
 group: getting-started
 toc: true
 
-previous: Ruby on Rails
-previousLink: getting-started/rails/
+previous: Django
+previousLink: getting-started/django/
 next: Changelog
 nextLink: getting-started/changelog/
 ---

@@ -8,6 +8,8 @@
     - title: Svelte
     - title: Rails
       new: true
+    - title: Django
+      new: true
     # - title: Angular
     - title: License
     - title: Changelog

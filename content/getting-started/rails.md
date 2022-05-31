@@ -8,8 +8,8 @@ requires_rails: true
 
 previous: Svelte
 previousLink: getting-started/svelte/
-next: License
-nextLink: getting-started/license/
+next: Django
+nextLink: getting-started/django/
 ---
 
 [Ruby on Rails](https://rubyonrails.org/) is an open-source full-stack web application framework that runs server-side written in Ruby and built by the creators of Basecamp based on a model-view-controller architecture.

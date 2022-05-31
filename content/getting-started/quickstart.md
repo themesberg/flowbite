@@ -69,7 +69,7 @@ Require the following minified stylesheet inside the `head` tag:
 <link rel="stylesheet" href="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.css" />
 ```
 
-And include the following javascript file before the end of the `body` element:
+And include the following JavaScript file before the end of the `body` element:
 
 ```html
 <script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>

@@ -91,4 +91,4 @@ Now you can start the server by running `npm run start` or build the project usi
 
 ## React components
 
-You can check out the whole collection of Flowbite components built with React and Tailwind CSS by checking out the [GitHub repository](https://github.com/themesberg/flowbite-react) and the [Flowbite React](https://github.com/themesberg/flowbite-react) official documentation.
+You can check out the whole collection of Flowbite components built with React and Tailwind CSS by checking out the [GitHub repository](https://github.com/themesberg/flowbite-react) and the [Flowbite React](https://flowbite-react.com) official documentation.

@@ -113,7 +113,7 @@ You can start using all of the components from Flowbite in your Vue.js project a
 
 The interactive elements such as the dropdowns, modals, and tooltips will work based on the settings that you apply using the data attributes, except when using a routing system.
 
-We are currently working on a standalone Vue.js component library to provide full support for this technology and compatibility with frameworks such as NuxtJS.
+We are currently working on a [standalone Vue.js component library](https://github.com/themesberg/flowbite-vue) to provide full support for this technology and compatibility with frameworks such as NuxtJS.
 
 Here's an example of a modal component that you can use by adding inside your `App.vue` template file:
 

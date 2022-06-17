@@ -47,4 +47,4 @@ The docs code is licensed under the [CC BY 3.0](https://creativecommons.org/lice
 
 ## Pro version
 
-The pro version is licensed under the [EULA](https://flowbite.com/license/) from our website.
+The pro version is licensed under the [EULA]("{{< param homepage >}}/license/") from our website.

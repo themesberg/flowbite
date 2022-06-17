@@ -38,7 +38,7 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
   <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="https://flowbite.com/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+      <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-collapse-heading-2">
@@ -50,7 +50,7 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
   <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="{{< param homepage >}}/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
   </div>
   <h2 id="accordion-collapse-heading-3">
@@ -65,7 +65,7 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
       <ul class="pl-5 list-disc text-gray-500 dark:text-gray-400">
-        <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+        <li><a href="{{< param homepage >}}/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
       </ul>
     </div>
@@ -88,7 +88,7 @@ Use the `data-accordion="open"` option to keep previously opened accordion eleme
   <div id="accordion-open-body-1" class="hidden" aria-labelledby="accordion-open-heading-1">
     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="https://flowbite.com/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+      <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-open-heading-2">
@@ -100,7 +100,7 @@ Use the `data-accordion="open"` option to keep previously opened accordion eleme
   <div id="accordion-open-body-2" class="hidden" aria-labelledby="accordion-open-heading-2">
     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="{{< param homepage >}}/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
   </div>
   <h2 id="accordion-open-heading-3">
@@ -115,7 +115,7 @@ Use the `data-accordion="open"` option to keep previously opened accordion eleme
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
       <ul class="pl-5 list-disc text-gray-500 dark:text-gray-400">
-        <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+        <li><a href="{{< param homepage >}}/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
       </ul>
     </div>
@@ -140,7 +140,7 @@ Here's an example where we apply the blue colors instead of gray:
   <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="https://flowbite.com/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+      <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-color-heading-2">
@@ -152,7 +152,7 @@ Here's an example where we apply the blue colors instead of gray:
   <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="{{< param homepage >}}/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
   </div>
   <h2 id="accordion-color-heading-3">
@@ -167,7 +167,7 @@ Here's an example where we apply the blue colors instead of gray:
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
       <ul class="pl-5 list-disc text-gray-500 dark:text-gray-400">
-        <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+        <li><a href="{{< param homepage >}}/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
       </ul>
     </div>
@@ -190,7 +190,7 @@ Use this example to remove the background color and rounded borders from the acc
   <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
     <div class="py-5 border-b border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="https://flowbite.com/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+      <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-flush-heading-2">
@@ -202,7 +202,7 @@ Use this example to remove the background color and rounded borders from the acc
   <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
     <div class="py-5 border-b border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="{{< param homepage >}}/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
   </div>
   <h2 id="accordion-flush-heading-3">
@@ -217,7 +217,7 @@ Use this example to remove the background color and rounded borders from the acc
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
       <ul class="pl-5 list-disc text-gray-500 dark:text-gray-400">
-        <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+        <li><a href="{{< param homepage >}}/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
       </ul>
     </div>
@@ -239,7 +239,7 @@ Use the `data-accordion-icon` data attribute to optionally set an element to rot
   <div id="accordion-arrow-icon-body-1" aria-labelledby="accordion-arrow-icon-heading-1">
     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="https://flowbite.com/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+      <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-arrow-icon-heading-2">
@@ -251,7 +251,7 @@ Use the `data-accordion-icon` data attribute to optionally set an element to rot
   <div id="accordion-arrow-icon-body-2" class="hidden" aria-labelledby="accordion-arrow-icon-heading-2">
     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="{{< param homepage >}}/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
   </div>
   <h2 id="accordion-arrow-icon-heading-3">
@@ -266,7 +266,7 @@ Use the `data-accordion-icon` data attribute to optionally set an element to rot
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
       <ul class="pl-5 list-disc text-gray-500 dark:text-gray-400">
-        <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+        <li><a href="{{< param homepage >}}/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
       </ul>
     </div>
@@ -546,7 +546,7 @@ Use the following HTML markup example for the JavaScript script above.
   <div id="accordion-example-body-1" class="hidden" aria-labelledby="accordion-example-heading-1">
     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="https://flowbite.com/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+      <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-example-heading-2">
@@ -558,7 +558,7 @@ Use the following HTML markup example for the JavaScript script above.
   <div id="accordion-example-body-2" class="hidden" aria-labelledby="accordion-example-heading-2">
     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="{{< param homepage >}}/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
   </div>
   <h2 id="accordion-example-heading-3">
@@ -573,7 +573,7 @@ Use the following HTML markup example for the JavaScript script above.
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
       <ul class="pl-5 list-disc text-gray-500 dark:text-gray-400">
-        <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+        <li><a href="{{< param homepage >}}/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
       </ul>
     </div>

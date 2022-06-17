@@ -295,8 +295,8 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
     <!-- Add this -->
     <nav class="bg-green-50 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <a href="https://flowbite.com" class="flex items-center">
-              <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+          <a href="{{ .Site.Params.homepage }}/" class="flex items-center">
+              <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
               <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite Django</span>
           </a>
           <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
@@ -332,7 +332,7 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
         {% endblock content %}
     </div>
 
-    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+    <script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
 </body>
 
 </html>
@@ -354,7 +354,7 @@ Check out one of the <a href="{{< ref "components/card" >}}">Card components</a>
 <h1 class="mb-6 text-3xl text-green-800">Django + Tailwind CSS + Flowbite</h1>
 <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
-        <img class="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
+        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
     </a>
     <div class="p-5">
         <a href="#">

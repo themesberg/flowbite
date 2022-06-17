@@ -31,11 +31,11 @@ Here's a quick overview of the Flowbite ecosystem including the open source Tail
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Components</h3>
         <p class="font-normal text-gray-700 dark:text-gray-400">Explore the Tailwind CSS elements such as buttons, navbars, alerts, dropdowns and use them to build your website.</p>
     </a>
-    <a href="https://flowbite.com/figma/" class="block p-6 mb-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
+    <a href="{{< param homepage >}}/figma/" class="block p-6 mb-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Figma design files</h3>
         <p class="font-normal text-gray-700 dark:text-gray-400">Prototype and design your website before coding with the Flowbite Figma file which is based on the Tailwind CSS classes.</p>
     </a>
-    <a href="https://flowbite.com/pro/" class="block p-6 mb-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
+    <a href="{{< param homepage >}}/pro/" class="block p-6 mb-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Upgrade to Pro</h3>
         <p class="font-normal text-gray-700 dark:text-gray-400">Take your Figma and Tailwind CSS development to the next level with thousands more elements and pages with Flowbite Pro.</p>
     </a>
@@ -127,7 +127,7 @@ Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking chang
 
 The components from Flowbite are first conceptualized and designed in Figma using the latest features such as variants, auto-layout, grids, responsive layouts, and more.
 
-Learn more by checking out <a href="https://flowbite.com/figma/">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
+Learn more by checking out <a href="{{< param homepage >}}/figma/">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
 
 <div class="mt-8 -mb-5">
   {{< requires_react >}}
@@ -191,7 +191,7 @@ Learn how to <a href="{{< ref "getting-started/django" >}}">install Tailwind CSS
 
 ## Pro version
 
-If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite](https://flowbite.com/pro/) which includes fully coded pages and layouts for application, marketing, and e-commerce user interfaces.
+If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite]("{{< param homepage >}}/pro/") which includes fully coded pages and layouts for application, marketing, and e-commerce user interfaces.
 
 ## Licensing
 

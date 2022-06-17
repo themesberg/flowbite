@@ -21,7 +21,7 @@ Use this footer component to show a copyright notice and some helpful website li
 
 {{< example github="components/footer.md" class="p-2" show_dark=true >}}
 <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
     </span>
     <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
         <li>
@@ -47,7 +47,7 @@ Use this component to show your brand's logo, a few website links and the copyri
 {{< example github="components/footer.md" class="p-2" show_dark=true >}}
 <footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-800">
     <div class="sm:flex sm:items-center sm:justify-between">
-        <a href="https://flowbite.com" class="flex items-center mb-4 sm:mb-0">
+        <a href="{{< param homepage >}}/" class="flex items-center mb-4 sm:mb-0">
             <img src="/docs/images/logo.svg" class="mr-3 h-8" alt="Flowbite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
         </a>
@@ -67,7 +67,7 @@ Use this component to show your brand's logo, a few website links and the copyri
         </ul>
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
     </span>
 </footer>
 {{< /example >}}
@@ -80,7 +80,7 @@ This footer component can be used to show your brand's logo, multiple rows of we
 <footer class="p-4 bg-white sm:p-6 dark:bg-gray-800">
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
-            <a href="https://flowbite.com" class="flex items-center">
+            <a href="{{< param homepage >}}/" class="flex items-center">
                 <img src="/docs/images/logo.svg" class="mr-3 h-8" alt="FlowBite Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
             </a>
@@ -90,7 +90,7 @@ This footer component can be used to show your brand's logo, multiple rows of we
                 <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                 <ul class="text-gray-600 dark:text-gray-400">
                     <li class="mb-4">
-                        <a href="https://flowbite.com" class="hover:underline">Flowbite</a>
+                        <a href="{{< param homepage >}}/" class="hover:underline">Flowbite</a>
                     </li>
                     <li>
                         <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
@@ -123,7 +123,7 @@ This footer component can be used to show your brand's logo, multiple rows of we
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
     <div class="sm:flex sm:items-center sm:justify-between">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
@@ -220,7 +220,7 @@ If you have a website with many pages you can use this footer component to show 
         </div>
     </div>
     <div class="py-6 px-4 bg-gray-700 md:flex md:items-center md:justify-between">
-        <span class="text-sm text-gray-300 sm:text-center">© 2022 <a href="https://flowbite.com">Flowbite™</a>. All Rights Reserved.
+        <span class="text-sm text-gray-300 sm:text-center">© 2022 <a href="{{< param homepage >}}/">Flowbite™</a>. All Rights Reserved.
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center md:mt-0">
             <a href="#" class="text-gray-400 hover:text-white">

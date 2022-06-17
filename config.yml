@@ -1,10 +1,12 @@
 languageCode:           "en"
 title:                  "Flowbite"
 baseURL:                "https://flowbite.com/docs/"
+# baseURL:                "http://localhost:3001/docs/"
 # baseURL:                "http://localhost:1313/docs"
 enableInlineShortcodes: true
 
 params:
+  homepage: "https://flowbite.com"
   current_version: 1.4.7
   authors: Themesberg
   social_image_path: /docs/images/og-image.png

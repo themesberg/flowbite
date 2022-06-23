@@ -373,6 +373,18 @@ If you need the Figma files for the components you can check out our website for
 
 🎨 [Get access to the Figma design files](https://flowbite.com/figma/)
 
+## Blocks
+
+Check out Flowbite Blocks to get access to over 120+ website sections coded in Tailwind CSS and Flowbite:
+
+📦 [Check out Flowbite Blocks](https://flowbite.com/blocks/)
+
+## Pro version
+
+Get access to all premium features including the Figma design system, access to all Flowbite Block sections and a dashboard UI interface:
+
+💎 [Check out Flowbite Pro](https://flowbite.com/pro/)
+
 ## Copyright and license
 
 The Flowbite name and logos are trademarks of Crafty Dwarf Inc. 

@@ -166,3 +166,10 @@ toggleSidebarMobileEl.addEventListener('click', () => {
 sidebarBackdrop.addEventListener('click', () => {
     toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
 });
+
+// Prevent anchor elements with empty fragments from linking to the top of the page 
+document.querySelectorAll('.code-example [href="#"]').forEach((event) => {
+    event.addEventListener('click', (event) => {
+        event.preventDefault();
+    })
+})

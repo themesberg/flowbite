@@ -179,7 +179,7 @@ class Carousel {
 
 window.Carousel = Carousel;
 
-document.addEventListener('DOMContentLoaded', () => {
+function initCarousel() {
     document.querySelectorAll('[data-carousel]').forEach(carouselEl => {
         const interval = carouselEl.getAttribute('data-carousel-interval')
         const slide = carouselEl.getAttribute('data-carousel') === 'slide' ? true : false
@@ -238,6 +238,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     })
-})
+}
+
+if (document.readyState !== 'loading') {
+	// DOMContentLoaded event were already fired. Perform explicit initialization now
+	initCarousel()
+} else {
+	// DOMContentLoaded event not yet fired, attach initialization process to it
+	document.addEventListener('DOMContentLoaded', initCarousel)
+}
 
 export default Carousel

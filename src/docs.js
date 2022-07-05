@@ -166,3 +166,51 @@ toggleSidebarMobileEl.addEventListener('click', () => {
 sidebarBackdrop.addEventListener('click', () => {
     toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
 });
+
+const _carbonOptimize = {
+    isRefreshAble: function () {
+      return !(
+        typeof document.addEventListener === 'undefined' ||
+        this.browserSupport().hidden === undefined
+      );
+    },
+    browserSupport: function () {
+      let hidden;
+      let visibilityChange;
+      if (typeof document.hidden !== 'undefined') {
+        // Opera 12.10 and Firefox 18 and later support
+        hidden = 'hidden';
+        visibilityChange = 'visibilitychange';
+      } else if (typeof document.msHidden !== 'undefined') {
+        hidden = 'msHidden';
+        visibilityChange = 'msvisibilitychange';
+      } else if (
+        typeof document.webkitHidden !== 'undefined'
+      ) {
+        hidden = 'webkitHidden';
+        visibilityChange = 'webkitvisibilitychange';
+      }
+      return {
+        hidden: hidden,
+        visibilityChange: visibilityChange,
+      };
+    },
+    handleVisibilityChange: function () {
+      if (!document.hidden) {
+        console.log("State triggered")
+        if (typeof _carbonads !== 'undefined')
+          _carbonads.refresh();
+      }
+    },
+    init: function () {
+      if (this.isRefreshAble()) {
+        document.addEventListener(
+          this.browserSupport().visibilityChange,
+          this.handleVisibilityChange,
+          false
+        );
+      }
+    },
+  };
+  
+  _carbonOptimize.init();

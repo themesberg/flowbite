@@ -41,7 +41,7 @@ django-admin startproject myapp
 cd myapp/
 ```
 
-3. Create a new `templates/` directory inside the project folder and update `settings.py` folder:
+2. Create a new `templates/` directory inside the project folder and update `settings.py` folder:
 
 ```bash
 TEMPLATES = [
@@ -53,13 +53,13 @@ TEMPLATES = [
 ]
 ```
 
-4. Installed `django-compressor` by running the following command in your terminal:
+3. Installed `django-compressor` by running the following command in your terminal:
 
 ```bash
 python -m pip install django-compressor
 ```
 
-5. Add `compressor` to the installed apps inside the `settings.py` file:
+4. Add `compressor` to the installed apps inside the `settings.py` file:
 
 ```bash
 # config/settings.py
@@ -75,7 +75,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-6. Configure the `compressor` inside the `settings.py` file:
+5. Configure the `compressor` inside the `settings.py` file:
 
 ```bash
 COMPRESS_ROOT = BASE_DIR / 'static'
@@ -85,7 +85,7 @@ COMPRESS_ENABLED = True
 STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 ```
 
-7. Create two new folders and an `input.css` file inside the `static/src/` folder:
+6. Create two new folders and an `input.css` file inside the `static/src/` folder:
 
 ```bash
 static
@@ -95,7 +95,7 @@ static
 
 Later we will import the Tailwind CSS directives and use it as the source file for the final stylesheet.
 
-8. Create a new `views.py` file inside `myapp/` next to `urls.py` and add the following content:
+7. Create a new `views.py` file inside `myapp/` next to `urls.py` and add the following content:
 
 ```bash
 from django.shortcuts import render
@@ -104,7 +104,7 @@ def index(request):
     return render(request, 'index.html')
 ```
 
-9. Import the newly created view instance inside the `urls.py` file by adding the following code:
+8. Import the newly created view instance inside the `urls.py` file by adding the following code:
 
 ```bash
 from .views import index
@@ -115,7 +115,7 @@ urlpatterns = [
 ]
 ```
 
-10. Create a new `_base.html` file inside the `templates/` directory:
+9. Create a new `_base.html` file inside the `templates/` directory:
 
 ```html
 <!-- templates/_base.html -->
@@ -148,7 +148,7 @@ urlpatterns = [
 </html>
 ```
 
-11. Create an `index.html` file that will be served as the homepage:
+10. Create an `index.html` file that will be served as the homepage:
 
 ```html
 <!-- templates/index.html -->
@@ -160,7 +160,7 @@ urlpatterns = [
 {% endblock content %}
 ```
 
-12. Finally, create a local server instance by running the following command:
+11. Finally, create a local server instance by running the following command:
 
 ```bash
 python manage.py runserver
@@ -294,9 +294,9 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
 
     <!-- Add this -->
     <nav class="bg-green-50 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
           <a href="{{ .Site.Params.homepage }}/" class="flex items-center">
-              <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+              <img src="/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
               <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite Django</span>
           </a>
           <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
@@ -307,19 +307,19 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
           <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
             <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               <li>
-                <a href="#" class="block py-2 pr-4 pl-3 text-white bg-green-700 rounded md:bg-transparent md:text-green-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+                <a href="#" class="block py-2 pl-3 pr-4 text-white bg-green-700 rounded md:bg-transparent md:text-green-700 md:p-0 dark:text-white" aria-current="page">Home</a>
               </li>
               <li>
-                <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
               </li>
               <li>
-                <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
               </li>
               <li>
-                <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
               </li>
               <li>
-                <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
               </li>
             </ul>
           </div>
@@ -352,7 +352,7 @@ Check out one of the <a href="{{< ref "components/card" >}}">Card components</a>
 {% block content %}
 
 <h1 class="mb-6 text-3xl text-green-800">Django + Tailwind CSS + Flowbite</h1>
-<div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
         <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
     </a>
@@ -364,9 +364,9 @@ Check out one of the <a href="{{< ref "components/card" >}}">Card components</a>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
             acquisitions of 2021 so far, in reverse chronological order.</p>
         <a href="#"
-            class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
             Read more
-            <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+            <svg class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                     d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"

@@ -79,7 +79,7 @@ module.exports = {
   }
 ```
 
-This will tell the compiler from Tailwidn what files to look for to properly apply the classes inside the final CSS file and it will also install the extra plugin options from Flowbite.
+This will tell the compiler from Tailwind what files to look for to properly apply the classes inside the final CSS file and it will also install the extra plugin options from Flowbite.
 
 6. Add Tailwind CSS to your Laravel Mix configuration by requiring it inside the `webpack.mix.js` file:
 

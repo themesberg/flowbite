@@ -31,6 +31,7 @@
   ],
   "scripts": {
     "test": "test-storybook",
+    "test:watch": "test-storybook --watch",
     "start": "NODE_ENV=development run-p start:*",
     "start:hugo": "hugo server -D",
     "start:webpack": "webpack --mode=development --watch",

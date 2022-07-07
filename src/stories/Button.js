@@ -39,7 +39,7 @@ const getSizeClassNames = (size) => {
   }
 }
 
-const createButton = ({
+export const createButton = ({
   style = 'default',
   size = 'md',
   label = 'Default'
@@ -52,5 +52,3 @@ const createButton = ({
 
   return btn;
 };
-
-module.exports = { createButton }

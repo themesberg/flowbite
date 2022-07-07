@@ -1,5 +1,10 @@
-const { createButton } = require('../../stories/button')
-const { configureAxe, toHaveNoViolations } = require('jest-axe')
+// const { args } = require('../../stories/button.stories')
+// const { createButton } = require('../../stories/button')
+// const { configureAxe, toHaveNoViolations } = require('jest-axe')
+
+import args from '../../stories/button.stories'
+import { createButton } from '../../stories/button'
+import {configureAxe, toHaveNoViolations} from 'jest-axe'
 
 const axe = configureAxe({
 	rules: {
@@ -12,6 +17,7 @@ expect.extend(toHaveNoViolations)
 
 describe('Button', () => {
 	it('should be accessible', async () => {
+		console.log(args)
 		const render = () => createButton({
 			style: 'default',
 			size: 'md',

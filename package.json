@@ -30,7 +30,7 @@
     "Victor Cordos <victor@themesberg.com>"
   ],
   "scripts": {
-    "test": "test-storybook",
+    "test": "jest",
     "test:watch": "test-storybook --watch",
     "start": "NODE_ENV=development run-p start:*",
     "start:hugo": "hugo server -D",
@@ -72,6 +72,8 @@
     "cssnano": "^5.0.8",
     "file-loader": "^6.2.0",
     "flowbite-datepicker": "^1.2.1",
+    "jest": "^27.5.1",
+    "jest-axe": "^6.0.0",
     "mini-css-extract-plugin": "^1.3.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.6",

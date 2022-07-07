@@ -8,3 +8,4 @@ static/*.map
 .DS_Store
 yarn-error.log.DS_Store
 /.idea
+coverage/

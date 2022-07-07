@@ -1,4 +1,4 @@
-import { createButton } from './Button';
+import { createButton } from './button'
 
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {
@@ -29,5 +29,4 @@ export const Default = Template.bind({});
 Default.args = {
   style: 'default',
   label: 'Default',
-
 };

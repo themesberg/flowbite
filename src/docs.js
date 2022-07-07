@@ -196,7 +196,7 @@ const _carbonOptimize = {
       };
     },
     handleVisibilityChange: function () {
-      isElementInViewport = function (el) {
+      const isElementInViewport = function (el) {
         let element = document.querySelector(el);
         let bounding = element.getBoundingClientRect();
         let isVisible;

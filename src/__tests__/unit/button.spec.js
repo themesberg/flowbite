@@ -4,14 +4,8 @@
 
 import args from '../../stories/button.stories'
 import { createButton } from '../../stories/button'
-import {configureAxe, toHaveNoViolations} from 'jest-axe'
-
-const axe = configureAxe({
-	rules: {
-		// disabled landmark rules when testing isolated components.
-		'region': { enabled: false }
-	}
-})
+import { toHaveNoViolations } from 'jest-axe'
+const axe = require('../../axe-helper')
 
 expect.extend(toHaveNoViolations)
 
@@ -25,10 +19,10 @@ describe('Button', () => {
 				size: 'md',
 				label: 'Default'
 			})
-	
+
 			// pass anything that outputs html to axe
 			const html = render()
-	
+
 			expect(await axe(html)).toHaveNoViolations()
 		})
 	})
@@ -41,10 +35,10 @@ describe('Button', () => {
 				size: s,
 				label: 'Default'
 			})
-	
+
 			// pass anything that outputs html to axe
 			const html = render()
-	
+
 			expect(await axe(html)).toHaveNoViolations()
 		})
 	})

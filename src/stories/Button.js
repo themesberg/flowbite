@@ -20,7 +20,7 @@ const getStyleClassNames = (style) => {
     case 'danger':
       return ['bg-red-700', 'text-white', 'focus:ring-red-300'];
     case 'warning':
-      return ['bg-yellow-400', 'text-white', 'focus:ring-yellow-300'];
+      return ['bg-yellow-100', 'text-white', 'focus:ring-yellow-300'];
   }
 }
 

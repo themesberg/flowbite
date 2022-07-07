@@ -16,17 +16,37 @@ const axe = configureAxe({
 expect.extend(toHaveNoViolations)
 
 describe('Button', () => {
-	it('should be accessible', async () => {
-		console.log(args)
-		const render = () => createButton({
-			style: 'default',
-			size: 'md',
-			label: 'Default'
+
+	// check style types
+	args.argTypes.style.options.map(s => {
+		it(`${s} should be accessible`, async () => {
+			const render = () => createButton({
+				style: s,
+				size: 'md',
+				label: 'Default'
+			})
+	
+			// pass anything that outputs html to axe
+			const html = render()
+	
+			expect(await axe(html)).toHaveNoViolations()
 		})
-
-		// pass anything that outputs html to axe
-		const html = render()
-
-		expect(await axe(html)).toHaveNoViolations()
 	})
+
+	// check button sizes
+	args.argTypes.size.options.map(s => {
+		it(`${s} should be accessible`, async () => {
+			const render = () => createButton({
+				style: 'default',
+				size: s,
+				label: 'Default'
+			})
+	
+			// pass anything that outputs html to axe
+			const html = render()
+	
+			expect(await axe(html)).toHaveNoViolations()
+		})
+	})
+
 })

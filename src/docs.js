@@ -196,10 +196,31 @@ const _carbonOptimize = {
       };
     },
     handleVisibilityChange: function () {
+      const isElementInViewport = function (el) {
+        let element = document.querySelector(el);
+        let bounding = element.getBoundingClientRect();
+        let isVisible;
+  
+        if (
+          bounding.top >= 0 &&
+          bounding.left >= 0 &&
+          bounding.right <= window.innerWidth &&
+          bounding.bottom <= window.innerHeight
+        ) {
+          isVisible = true;
+        } else {
+          isVisible = false;
+        }
+        return isVisible;
+      };
+  
       if (!document.hidden) {
-        console.log("State triggered")
-        if (typeof _carbonads !== 'undefined')
+        if (
+          typeof _carbonads !== 'undefined' &&
+          isElementInViewport('#carbonads')
+        ) {
           _carbonads.refresh();
+        }
       }
     },
     init: function () {
@@ -214,3 +235,4 @@ const _carbonOptimize = {
   };
   
   _carbonOptimize.init();
+  

@@ -65,7 +65,7 @@ You can also use the `data-fb-modal-show="true"` attribute to show open the moda
 
 ## Static modal
 
-Use the `data-fb-modal-backdrop="static"` data attribute to prevent the modal from closing when clicking outside the element.
+Use the `data-fb-modal-backdrop="static` data attribute to prevent the modal from closing when clicking outside of it. This can be used with situations where you want to force the user to choose an option such as a cookie notice or when taking a survey.
 
 {{< example class="dark:bg-gray-800" github="components/modal.md" show_dark=true >}}
 <!-- Modal toggle -->
@@ -660,6 +660,17 @@ Use the following options as the second parameter for the Modal object to set th
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="py-4 px-6 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">backdrop</code>
+                </td>
+                <td class="py-4 px-6">
+                    String
+                </td>
+                <td class="py-4 px-6">
+                    Choose between <code class="text-purple-600 dark:text-purple-400">static</code> or <code class="text-purple-600 dark:text-purple-400">dynamic</code> to prevent closing the modal when clicking outside.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="py-4 px-6 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">backdropClasses</code>
                 </td>
                 <td class="py-4 px-6">
@@ -764,6 +775,7 @@ const targetEl = document.getElementById('modalEl');
 // options with default values
 const options = {
   placement: 'bottom-right',
+  backdrop: 'dynamic'
   backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
   onHide: () => {
       console.log('modal is hidden');
@@ -809,8 +821,8 @@ modal.toggle();
 Use the following HTML code for the JavaScript example above.
 
 ```html
-<div id="modalEl" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
-    <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
+<div id="modalEl" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full">
+    <div class="relative w-full max-w-2xl h-full md:h-auto">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
             <!-- Modal header -->

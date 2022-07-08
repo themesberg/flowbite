@@ -758,6 +758,14 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use the hide function on the Modal object to hide the modal element.
                 </td>
             </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="py-4 px-6 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">isHidden()</code>
+                </td>
+                <td class="py-4 px-6">
+                    Use this function to check if the modal is visible or not.
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -775,7 +783,7 @@ const targetEl = document.getElementById('modalEl');
 // options with default values
 const options = {
   placement: 'bottom-right',
-  backdrop: 'dynamic'
+  backdrop: 'dynamic',
   backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
   onHide: () => {
       console.log('modal is hidden');
@@ -816,11 +824,18 @@ Use the `toggle` method to toggle the visibility of the modal.
 modal.toggle();
 ```
 
+Use the `isHidden` method to check if the modal is visible or not.
+
+```javascript
+// true or false
+modal.isHidden();
+```
+
 ### HTML markup
 
 Use the following HTML code for the JavaScript example above.
 
-```html
+<!-- ```html -->
 <div id="modalEl" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full">
     <div class="relative w-full max-w-2xl h-full md:h-auto">
         <!-- Modal content -->
@@ -851,4 +866,4 @@ Use the following HTML code for the JavaScript example above.
         </div>
     </div>
 </div>
-```
+<!-- ``` -->

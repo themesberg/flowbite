@@ -132,6 +132,10 @@ class Modal {
         this._options.onHide(this)
     }
 
+    isHidden() {
+        return this._isHidden
+    }
+
 }
 
 window.Modal = Modal;

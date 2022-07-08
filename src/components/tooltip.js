@@ -1,6 +1,7 @@
 import config from '../core/config'
-import { getDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedDataAttributes } from '../helpers/data-attribute'
 import { createPopper } from '@popperjs/core';
+import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
 
 const Default = {
     placement: 'top',
@@ -69,8 +70,8 @@ class Tooltip {
     }
 
     show() {
-        this._targetEl.classList.remove('opacity-0', 'invisible')
-        this._targetEl.classList.add('opacity-100', 'visible')
+        this._targetEl.classList.remove(...getPrefixedClassNames('%prefix%opacity-0 %prefix%invisible').split(' '))
+        this._targetEl.classList.add(...getPrefixedClassNames('%prefix%opacity-100 %prefix%visible').split(' '))
 
         // Enable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -89,8 +90,8 @@ class Tooltip {
     }
 
     hide() {
-        this._targetEl.classList.remove('opacity-100', 'visible')
-        this._targetEl.classList.add('opacity-0', 'invisible')
+        this._targetEl.classList.remove(...getPrefixedClassNames('%prefix%opacity-100 %prefix%visible').split(' '))
+        this._targetEl.classList.add(...getPrefixedClassNames('%prefix%opacity-0 %prefix%invisible').split(' '))
 
         // Disable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -127,8 +128,8 @@ const selectors = {
 	placement: 'tooltip-placement'
 }
 
-const baseSelectors = getDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
-const prefixSelectors = getDataAttributes(selectors, config.getPrefix())
+const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
 
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now

@@ -1,5 +1,6 @@
 import config from '../core/config'
-import { getDataAttribute } from '../helpers/data-attribute'
+import { getPrefixedAttribute } from '../helpers/data-attribute'
+import { getPrefixedClassName } from '../helpers/class-name'
 
 const Default = {
     triggerEl: null,
@@ -24,7 +25,7 @@ class Collapse {
                 this._visible = this._triggerEl.getAttribute('aria-expanded') === 'true' ? true : false
             } else {
                 // fix until v2 not to break previous single collapses which became dismiss
-                this._visible = this._targetEl.classList.contains('hidden') ? false : true
+                this._visible = this._targetEl.classList.contains(getPrefixedClassName('%prefix%hidden')) ? false : true
             }
 
             this._triggerEl.addEventListener('click', () => {
@@ -35,7 +36,7 @@ class Collapse {
     }
 
     collapse() {
-        this._targetEl.classList.add('hidden')
+        this._targetEl.classList.add(getPrefixedClassName('%prefix%hidden'))
         if(this._triggerEl) {
             this._triggerEl.setAttribute('aria-expanded', 'false')
         }
@@ -46,7 +47,7 @@ class Collapse {
     }
 
     expand() {
-        this._targetEl.classList.remove('hidden')
+        this._targetEl.classList.remove(getPrefixedAttribute('%prefix%hidden'))
         if(this._triggerEl) {
             this._triggerEl.setAttribute('aria-expanded', 'true')
         }
@@ -77,8 +78,8 @@ const initCollapse = (selector) => {
     })
 }
 
-const baseSelector = getDataAttribute('collapse-toggle', '') // we need this to make legacy selectors with no prefix work pre v1.5
-const prefixSelector = getDataAttribute('collapse-toggle', config.getPrefix())
+const baseSelector = getPrefixedAttribute('collapse-toggle', '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelector = getPrefixedAttribute('collapse-toggle', config.getSelectorsPrefix())
 
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now

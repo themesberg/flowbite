@@ -1,10 +1,11 @@
 import config from '../core/config'
-import { getDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
 
 const Default = {
     defaultTabId: null,
-    activeClasses: 'text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500',
-    inactiveClasses: 'dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300',
+    activeClasses: getPrefixedClassNames('%prefix%text-blue-600 hover:%prefix%text-blue-600 dark:%prefix%text-blue-500 dark:hover:%prefix%text-blue-500 %prefix%border-blue-600 dark:%prefix%border-blue-500'),
+    inactiveClasses: getPrefixedClassNames('dark:%prefix%border-transparent %prefix%text-gray-500 hover:%prefix%text-gray-600 dark:%prefix%text-gray-400 %prefix%border-gray-100 hover:%prefix%border-gray-300 dark:%prefix%border-gray-700 dark:hover:%prefix%text-gray-300'),
     onShow: () => { }
 }
 
@@ -60,7 +61,7 @@ class Tabs {
             if (t !== tab) {
                 t.triggerEl.classList.remove(...this._options.activeClasses.split(" "));
                 t.triggerEl.classList.add(...this._options.inactiveClasses.split(" "));
-                t.targetEl.classList.add('hidden')
+                t.targetEl.classList.add(getPrefixedClassName('%prefix%hidden'))
                 t.triggerEl.setAttribute('aria-selected', false)
             }
         })
@@ -69,7 +70,7 @@ class Tabs {
         tab.triggerEl.classList.add(...this._options.activeClasses.split(" "));
         tab.triggerEl.classList.remove(...this._options.inactiveClasses.split(" "));
         tab.triggerEl.setAttribute('aria-selected', true)
-        tab.targetEl.classList.remove('hidden')
+        tab.targetEl.classList.remove(getPrefixedClassName('%prefix%hidden'))
 
         this._setActiveTab(tab)
 
@@ -110,8 +111,8 @@ const selectors = {
 	target: 'tabs-target'
 }
 
-const baseSelectors = getDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
-const prefixSelectors = getDataAttributes(selectors, config.getPrefix())
+const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
 
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now

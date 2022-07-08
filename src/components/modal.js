@@ -1,9 +1,10 @@
 import config from '../core/config'
-import { getDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
 
 const Default = {
     placement: 'center',
-    backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+    backdropClasses: getPrefixedClassNames('%prefix%bg-gray-900 %prefix%bg-opacity-50 dark:%prefix%bg-opacity-80 %prefix%fixed %prefix%inset-0 %prefix%z-40'),
     onHide: () => { },
     onShow: () => { },
     onToggle: () => { }
@@ -42,30 +43,30 @@ class Modal {
 
             // top
             case 'top-left':
-                return ['justify-start', 'items-start']
+                return [getPrefixedClassName('%prefix%justify-start'), getPrefixedClassName('%prefix%items-start')]
             case 'top-center':
-                return ['justify-center', 'items-start']
+                return [getPrefixedClassName('%prefix%justify-center'), getPrefixedClassName('%prefix%items-start')]
             case 'top-right':
-                return ['justify-end', 'items-start']
+                return [getPrefixedClassName('%prefix%justify-end'), getPrefixedClassName('%prefix%items-start')]
 
             // center
             case 'center-left':
-                return ['justify-start', 'items-center']
+                return [getPrefixedClassName('%prefix%justify-start'), getPrefixedClassName('%prefix%items-center')]
             case 'center':
-                return ['justify-center', 'items-center']
+                return [getPrefixedClassName('%prefix%justify-center'), getPrefixedClassName('%prefix%items-center')]
             case 'center-right':
-                return ['justify-end', 'items-center']
+                return [getPrefixedClassName('%prefix%justify-end'), getPrefixedClassName('%prefix%items-center')]
 
             // bottom
             case 'bottom-left':
-                return ['justify-start', 'items-end']
+                return [getPrefixedClassName('%prefix%justify-start'), getPrefixedClassName('%prefix%items-end')]
             case 'bottom-center':
-                return ['justify-center', 'items-end']
+                return [getPrefixedClassName('%prefix%justify-center'), getPrefixedClassName('%prefix%items-end')]
             case 'bottom-right':
-                return ['justify-end', 'items-end']
+                return [getPrefixedClassName('%prefix%justify-end'), getPrefixedClassName('%prefix%items-end')]
 
             default:
-                return ['justify-center', 'items-center']
+                return [getPrefixedClassName('%prefix%justify-center'), getPrefixedClassName('%prefix%items-center')]
         }
     }
 
@@ -81,8 +82,8 @@ class Modal {
     }
 
     show() {
-        this._targetEl.classList.add('flex')
-        this._targetEl.classList.remove('hidden')
+        this._targetEl.classList.add(getPrefixedClassName('%prefix%flex'))
+        this._targetEl.classList.remove(getPrefixedClassName('%prefix%hidden'))
         this._targetEl.setAttribute('aria-modal', 'true')
         this._targetEl.setAttribute('role', 'dialog')
         this._targetEl.removeAttribute('aria-hidden')
@@ -94,8 +95,8 @@ class Modal {
     }
 
     hide() {
-        this._targetEl.classList.add('hidden')
-        this._targetEl.classList.remove('flex')
+        this._targetEl.classList.add(getPrefixedClassName('%prefix%hidden'))
+        this._targetEl.classList.remove(getPrefixedClassName('%prefix%flex'))
         this._targetEl.setAttribute('aria-hidden', 'true')
         this._targetEl.removeAttribute('aria-modal')
         this._targetEl.removeAttribute('role')
@@ -160,8 +161,8 @@ const selectors = {
 	show: 'modal-show',
 }
 
-const baseSelectors = getDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
-const prefixSelectors = getDataAttributes(selectors, config.getPrefix())
+const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
 
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now

@@ -1,6 +1,7 @@
 import config from '../core/config'
-import { getDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedDataAttributes } from '../helpers/data-attribute'
 import { createPopper } from '@popperjs/core';
+import { getPrefixedClassName } from '../helpers/class-name'
 
 const Default = {
     placement: 'bottom',
@@ -59,8 +60,8 @@ class Dropdown {
     }
 
     show() {
-        this._targetEl.classList.remove('hidden')
-        this._targetEl.classList.add('block')
+        this._targetEl.classList.remove(getPrefixedClassName('%prefix%hidden'))
+        this._targetEl.classList.add(getPrefixedClassName('%prefix%block'))
 
         // Enable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -82,8 +83,8 @@ class Dropdown {
     }
 
     hide() {
-        this._targetEl.classList.remove('block')
-        this._targetEl.classList.add('hidden')
+        this._targetEl.classList.remove(getPrefixedClassName('%prefix%block'))
+        this._targetEl.classList.add(getPrefixedClassName('%prefix%hidden'))
 
         // Disable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -119,8 +120,8 @@ const selectors = {
 	placement: 'dropdown-placement'
 }
 
-const baseSelectors = getDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
-const prefixSelectors = getDataAttributes(selectors, config.getPrefix())
+const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
 
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now

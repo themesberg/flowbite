@@ -1,11 +1,12 @@
 import config from '../core/config'
-import { getDataAttribute } from '../helpers/data-attribute'
+import { getPrefixedAttribute } from '../helpers/data-attribute'
+import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
 
 const Default = {
     triggerEl: null,
-    transition: 'transition-opacity',
+    transition: getPrefixedClassName('%prefix%transition-opacity'),
     duration: 300,
-    timing: 'ease-out',
+    timing: getPrefixedClassName('%prefix%ease-out'),
     onHide: () => { }
 }
 
@@ -26,9 +27,9 @@ class Dismiss {
     }
 
     hide() {
-        this._targetEl.classList.add(this._options.transition, `duration-${this._options.duration}`, this._options.timing, 'opacity-0')
+        this._targetEl.classList.add(...getPrefixedClassNames(`%prefix%${this._options.transition} %prefix%duration-${this._options.duration} %prefix%${this._options.timing} %prefix%opacity-0`).split(' '))
         setTimeout(() => {
-            this._targetEl.classList.add('hidden')
+            this._targetEl.classList.add(getPrefixedClassName('%prefix%hidden'))
         }, this._options.duration)
 
         // callback function
@@ -48,8 +49,8 @@ const initDismiss = (selector) => {
     })
 }
 
-const baseSelector = getDataAttribute('dismiss-target', '') // we need this to make legacy selectors with no prefix work pre v1.5
-const prefixSelector = getDataAttribute('dismiss-target', config.getPrefix())
+const baseSelector = getPrefixedAttribute('dismiss-target', '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelector = getPrefixedAttribute('dismiss-target', config.getSelectorsPrefix())
 
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now

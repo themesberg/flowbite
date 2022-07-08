@@ -1,12 +1,13 @@
 import config from '../core/config'
-import { getDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
 
 const Default = {
     defaultPosition: 0,
     indicators: {
         items: [],
-        activeClasses: 'bg-white dark:bg-gray-800',
-        inactiveClasses: 'bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800'
+        activeClasses: getPrefixedClassNames('%prefix%bg-white dark:%prefix%bg-gray-800'),
+        inactiveClasses: getPrefixedClassNames('%prefix%bg-white/50 dark:%prefix%bg-gray-800/50 hover:%prefix%bg-white dark:hover:%prefix%bg-gray-800')
     },
     interval: 3000,
     onNext: () => { },
@@ -30,7 +31,7 @@ class Carousel {
      */
     _init() {
         this._items.map(item => {
-            item.el.classList.add('absolute', 'inset-0', 'transition-all', 'transform')
+            item.el.classList.add(...getPrefixedClassNames('%prefix%absolute %prefix%inset-0 %prefix%transition-all %prefix%transform').split(' '))
         })
 
         // if no active item is set then first position is default
@@ -119,20 +120,20 @@ class Carousel {
     _rotate(rotationItems) {
         // reset
         this._items.map(item => {
-            item.el.classList.add('hidden')
+            item.el.classList.add(getPrefixedClassName('%prefix%hidden'))
         })
 
         // left item (previously active)
-        rotationItems.left.el.classList.remove('-translate-x-full', 'translate-x-full', 'translate-x-0', 'hidden', 'z-20')
-        rotationItems.left.el.classList.add('-translate-x-full', 'z-10')
+        rotationItems.left.el.classList.remove(...getPrefixedClassNames('-%prefix%translate-x-full %prefix%translate-x-full %prefix%translate-x-0 %prefix%hidden %prefix%z-20').split(' '))
+        rotationItems.left.el.classList.add(...getPrefixedClassNames('-%prefix%translate-x-full %prefix%z-10').split(' '))
 
         // currently active item
-        rotationItems.middle.el.classList.remove('-translate-x-full', 'translate-x-full', 'translate-x-0', 'hidden', 'z-10')
-        rotationItems.middle.el.classList.add('translate-x-0', 'z-20')
+        rotationItems.middle.el.classList.remove(...getPrefixedClassNames('-%prefix%translate-x-full %prefix%translate-x-full %prefix%translate-x-0 %prefix%hidden %prefix%z-10').split(' '))
+        rotationItems.middle.el.classList.add(...getPrefixedClassNames('%prefix%translate-x-0 %prefix%z-20').split(' '))
 
         // right item (upcoming active)
-        rotationItems.right.el.classList.remove('-translate-x-full', 'translate-x-full', 'translate-x-0', 'hidden', 'z-20')
-        rotationItems.right.el.classList.add('translate-x-full', 'z-10')
+        rotationItems.right.el.classList.remove(...getPrefixedClassNames('-%prefix%translate-x-full %prefix%translate-x-full %prefix%translate-x-0 %prefix%hidden %prefix%z-20').split(' '))
+        rotationItems.right.el.classList.add(...getPrefixedClassNames('%prefix%translate-x-full %prefix%z-10').split(' '))
     }
 
     /**
@@ -252,8 +253,8 @@ const selectors = {
     prev: 'carousel-prev'
 }
 
-const baseSelectors = getDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
-const prefixSelectors = getDataAttributes(selectors, config.getPrefix())
+const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
 
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now

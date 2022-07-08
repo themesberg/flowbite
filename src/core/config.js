@@ -1,22 +1,29 @@
-import configuration from '../../flowbite.config'
+import fbConfig from '../../flowbite.config'
+import twConfig from '../../tailwind.config'
 
 const Default = {
-    prefix: ''
+    flowbiteConfig: {
+        prefix: 'fb'
+    },
+    tailwindConfig: {
+        prefix: ''
+    }
 }
 
 class Config {
-    constructor(options) {
-        this.options = { ...Default, ...options }
+    constructor(fbConfig, twConfig) {
+        this.fbConfig = { ...Default.flowbiteConfig, ...fbConfig }
+        this.twConfig = { ...Default.tailwindConfig, ...twConfig }
     }
 
-    getPrefix() {
-        return this.options.prefix
+    getSelectorsPrefix() {
+        return this.fbConfig.prefix
     }
 
-    setPrefix(prefix) {
-        this.options.prefix = prefix
+    getClassesPrefix() {
+        return this.twConfig.prefix
     }
 
 }
 
-export default new Config(configuration)
+export default new Config(fbConfig, twConfig)

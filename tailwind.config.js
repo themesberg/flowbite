@@ -1,5 +1,6 @@
 module.exports = {
   content: ["./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html", "./src/**/*.js"],
+  // prefix: 'fb-',
   safelist: [
     'w-64',
     'w-1/2',

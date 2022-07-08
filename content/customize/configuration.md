@@ -165,4 +165,17 @@ Doing so it will add the prefix to all of the classes.
 /* etc. */
 ```
 
+### Data attributes
+
+You can also update the `flowbite.config.js` file and set your own prefix (or none) to update the data attributes.
+
+```javascript
+// flowbite.config.js
+module.exports = {
+  prefix: 'fb', // default value
+}
+```
+
+For example `data-fb-collapse-target` can be changed to `data-prefix-collapse-target` if you change the prefix value from the Flowbite config file.
+
 If you'd like to browse the full list of configurable options, please visit the official <a href="https://tailwindcss.com/docs/configuration" rel="nofollow">Tailwind CSS configuration</a>.

@@ -1,4 +1,7 @@
+import config from '../core/config'
+import { getPrefixedDataAttributes } from '../helpers/data-attribute'
 import { createPopper } from '@popperjs/core';
+import { getPrefixedClassName } from '../helpers/class-name'
 
 const Default = {
     placement: 'bottom',
@@ -57,8 +60,8 @@ class Dropdown {
     }
 
     show() {
-        this._targetEl.classList.remove('hidden')
-        this._targetEl.classList.add('block')
+        this._targetEl.classList.remove(getPrefixedClassName('%p%hidden'))
+        this._targetEl.classList.add(getPrefixedClassName('%p%block'))
 
         // Enable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -80,8 +83,8 @@ class Dropdown {
     }
 
     hide() {
-        this._targetEl.classList.remove('block')
-        this._targetEl.classList.add('hidden')
+        this._targetEl.classList.remove(getPrefixedClassName('%p%block'))
+        this._targetEl.classList.add(getPrefixedClassName('%p%hidden'))
 
         // Disable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -101,15 +104,33 @@ class Dropdown {
 
 window.Dropdown = Dropdown;
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-dropdown-toggle]').forEach(triggerEl => {
-        const targetEl = document.getElementById(triggerEl.getAttribute('data-dropdown-toggle'))
-        const placement = triggerEl.getAttribute('data-dropdown-placement')
+const initDropdown = (selectors) => {
+    document.querySelectorAll(`[${selectors.main}]`).forEach(triggerEl => {
+        const targetEl = document.getElementById(triggerEl.getAttribute(selectors.main))
+        const placement = triggerEl.getAttribute(selectors.placement)
 
         new Dropdown(targetEl, triggerEl, {
             placement: placement ? placement : Default.placement
         })
     })
-})
+}
+
+const selectors = {
+	main: 'dropdown-toggle',
+	placement: 'dropdown-placement'
+}
+
+const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
+
+if (document.readyState !== 'loading') {
+	// DOMContentLoaded event were already fired. Perform explicit initialization now
+	initDropdown(baseSelectors)
+	initDropdown(prefixSelectors)
+} else {
+	// DOMContentLoaded event not yet fired, attach initialization process to it
+	document.addEventListener('DOMContentLoaded', initDropdown(baseSelectors))
+	document.addEventListener('DOMContentLoaded', initDropdown(prefixSelectors))
+}
 
 export default Dropdown

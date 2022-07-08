@@ -1,6 +1,10 @@
+import config from '../core/config'
+import { getPrefixedDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
+
 const Default = {
     placement: 'center',
-    backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+    backdropClasses: getPrefixedClassNames('%p%bg-gray-900 %p%bg-opacity-50 dark:%p%bg-opacity-80 %p%fixed %p%inset-0 %p%z-40'),
     onHide: () => { },
     onShow: () => { },
     onToggle: () => { }
@@ -39,30 +43,30 @@ class Modal {
 
             // top
             case 'top-left':
-                return ['justify-start', 'items-start']
+                return [getPrefixedClassName('%p%justify-start'), getPrefixedClassName('%p%items-start')]
             case 'top-center':
-                return ['justify-center', 'items-start']
+                return [getPrefixedClassName('%p%justify-center'), getPrefixedClassName('%p%items-start')]
             case 'top-right':
-                return ['justify-end', 'items-start']
+                return [getPrefixedClassName('%p%justify-end'), getPrefixedClassName('%p%items-start')]
 
             // center
             case 'center-left':
-                return ['justify-start', 'items-center']
+                return [getPrefixedClassName('%p%justify-start'), getPrefixedClassName('%p%items-center')]
             case 'center':
-                return ['justify-center', 'items-center']
+                return [getPrefixedClassName('%p%justify-center'), getPrefixedClassName('%p%items-center')]
             case 'center-right':
-                return ['justify-end', 'items-center']
+                return [getPrefixedClassName('%p%justify-end'), getPrefixedClassName('%p%items-center')]
 
             // bottom
             case 'bottom-left':
-                return ['justify-start', 'items-end']
+                return [getPrefixedClassName('%p%justify-start'), getPrefixedClassName('%p%items-end')]
             case 'bottom-center':
-                return ['justify-center', 'items-end']
+                return [getPrefixedClassName('%p%justify-center'), getPrefixedClassName('%p%items-end')]
             case 'bottom-right':
-                return ['justify-end', 'items-end']
+                return [getPrefixedClassName('%p%justify-end'), getPrefixedClassName('%p%items-end')]
 
             default:
-                return ['justify-center', 'items-center']
+                return [getPrefixedClassName('%p%justify-center'), getPrefixedClassName('%p%items-center')]
         }
     }
 
@@ -78,8 +82,8 @@ class Modal {
     }
 
     show() {
-        this._targetEl.classList.add('flex')
-        this._targetEl.classList.remove('hidden')
+        this._targetEl.classList.add(getPrefixedClassName('%p%flex'))
+        this._targetEl.classList.remove(getPrefixedClassName('%p%hidden'))
         this._targetEl.setAttribute('aria-modal', 'true')
         this._targetEl.setAttribute('role', 'dialog')
         this._targetEl.removeAttribute('aria-hidden')
@@ -91,8 +95,8 @@ class Modal {
     }
 
     hide() {
-        this._targetEl.classList.add('hidden')
-        this._targetEl.classList.remove('flex')
+        this._targetEl.classList.add(getPrefixedClassName('%p%hidden'))
+        this._targetEl.classList.remove(getPrefixedClassName('%p%flex'))
         this._targetEl.setAttribute('aria-hidden', 'true')
         this._targetEl.removeAttribute('aria-modal')
         this._targetEl.removeAttribute('role')
@@ -114,12 +118,12 @@ const getModalInstance = (id, instances) => {
     return false
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+const initModal = (selectors) => {
     let modalInstances = []
-    document.querySelectorAll('[data-modal-toggle]').forEach(el => {
-        const modalId = el.getAttribute('data-modal-toggle');
+    document.querySelectorAll(`[${selectors.main}]`).forEach(el => {
+        const modalId = el.getAttribute(selectors.main);
         const modalEl = document.getElementById(modalId);
-        const placement = modalEl.getAttribute('data-modal-placement')
+        const placement = modalEl.getAttribute(selectors.placement)
 
         if (modalEl) {
             if (!modalEl.hasAttribute('aria-hidden') && !modalEl.hasAttribute('aria-modal')) {
@@ -141,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         }
 
-        if (modalEl.hasAttribute('data-modal-show') && modalEl.getAttribute('data-modal-show') === 'true') {
+        if (modalEl.hasAttribute(selectors.show) && modalEl.getAttribute(selectors.show) === 'true') {
             modal.show();
         }
 
@@ -149,6 +153,25 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.toggle()
         })
     })
-})
+}
+
+const selectors = {
+	main: 'modal-toggle',
+	placement: 'modal-placement',
+	show: 'modal-show',
+}
+
+const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
+
+if (document.readyState !== 'loading') {
+	// DOMContentLoaded event were already fired. Perform explicit initialization now
+	initModal(baseSelectors)
+	initModal(prefixSelectors)
+} else {
+	// DOMContentLoaded event not yet fired, attach initialization process to it
+	document.addEventListener('DOMContentLoaded', initModal(baseSelectors))
+	document.addEventListener('DOMContentLoaded', initModal(prefixSelectors))
+}
 
 export default Modal

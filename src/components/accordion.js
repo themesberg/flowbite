@@ -1,9 +1,13 @@
+import config from '../core/config'
+import { getPrefixedDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
+
 const Default = {
 	alwaysOpen: false,
-	activeClasses: 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white',
-	inactiveClasses: 'text-gray-500 dark:text-gray-400',
+	activeClasses: getPrefixedClassNames('%p%bg-gray-100 dark:%p%bg-gray-800 %p%text-gray-900 dark:%p%text-white'),
+	inactiveClasses: getPrefixedClassNames('%p%text-gray-500 dark:%p%text-gray-400'),
 	onOpen: () => { },
-	onClose: () => { },
+	onClose: () => { },	
 	onToggle: () => { }
 }
 
@@ -43,13 +47,13 @@ class Accordion {
 				if (i !== item) {
 					i.triggerEl.classList.remove(...this._options.activeClasses.split(" "))
 					i.triggerEl.classList.add(...this._options.inactiveClasses.split(" "))
-					i.targetEl.classList.add('hidden')
+					i.targetEl.classList.add(getPrefixedClassName('%p%hidden'))
 					i.triggerEl.setAttribute('aria-expanded', false)
 					i.active = false
 
 					// rotate icon if set
 					if (i.iconEl) {
-						i.iconEl.classList.remove('rotate-180')
+						i.iconEl.classList.remove(getPrefixedClassName('%p%rotate-180'))
 					}
 				}
 			})
@@ -59,12 +63,12 @@ class Accordion {
 		item.triggerEl.classList.add(...this._options.activeClasses.split(" "))
 		item.triggerEl.classList.remove(...this._options.inactiveClasses.split(" "))
 		item.triggerEl.setAttribute('aria-expanded', true)
-		item.targetEl.classList.remove('hidden')
+		item.targetEl.classList.remove(getPrefixedClassName('%p%hidden'))
 		item.active = true
 
 		// rotate icon if set
 		if (item.iconEl) {
-			item.iconEl.classList.add('rotate-180')
+			item.iconEl.classList.add(getPrefixedClassName('%p%rotate-180'))
 		}
 
 		// callback function
@@ -89,13 +93,13 @@ class Accordion {
 
 		item.triggerEl.classList.remove(...this._options.activeClasses.split(" "))
 		item.triggerEl.classList.add(...this._options.inactiveClasses.split(" "))
-		item.targetEl.classList.add('hidden')
+		item.targetEl.classList.add(getPrefixedClassName('%p%hidden'))
 		item.triggerEl.setAttribute('aria-expanded', false)
 		item.active = false
 
 		// rotate icon if set
 		if (item.iconEl) {
-			item.iconEl.classList.remove('rotate-180')
+			item.iconEl.classList.remove(getPrefixedClassName('%p%rotate-180'))
 		}
 
 		// callback function
@@ -106,20 +110,21 @@ class Accordion {
 
 window.Accordion = Accordion;
 
-document.addEventListener('DOMContentLoaded', () => {
-	document.querySelectorAll('[data-accordion]').forEach(accordionEl => {
+const initAccordion = (selectors) => {
 
-		const alwaysOpen = accordionEl.getAttribute('data-accordion')
-		const activeClasses = accordionEl.getAttribute('data-active-classes')
-		const inactiveClasses = accordionEl.getAttribute('data-inactive-classes')
+	document.querySelectorAll(`[${selectors.main}]`).forEach(accordionEl => {
+
+		const alwaysOpen = accordionEl.getAttribute(selectors.main)
+		const activeClasses = accordionEl.getAttribute(selectors.active)
+		const inactiveClasses = accordionEl.getAttribute(selectors.inactive)
 
 		const items = []
-		accordionEl.querySelectorAll('[data-accordion-target]').forEach(el => {
+		accordionEl.querySelectorAll(`[${selectors.target}]`).forEach(el => {
 			const item = {
-				id: el.getAttribute('data-accordion-target'),
+				id: el.getAttribute(selectors.target),
 				triggerEl: el,
-				targetEl: document.querySelector(el.getAttribute('data-accordion-target')),
-				iconEl: el.querySelector('[data-accordion-icon]'),
+				targetEl: document.querySelector(el.getAttribute(selectors.target)),
+				iconEl: el.querySelector(`[${selectors.icon}]`),
 				active: el.getAttribute('aria-expanded') === 'true' ? true : false
 			}
 			items.push(item)
@@ -131,6 +136,27 @@ document.addEventListener('DOMContentLoaded', () => {
 			inactiveClasses: inactiveClasses ? inactiveClasses : Default.inactiveClasses
 		})
 	})
-})
+}
+
+const selectors = {
+	main: 'accordion',
+	active: 'active-classes',
+	inactive: 'inactive-classes',
+	target: 'accordion-target',
+	icon: 'accordion-icon'
+}
+
+const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
+
+if (document.readyState !== 'loading') {
+	// DOMContentLoaded event were already fired. Perform explicit initialization now
+	initAccordion(baseSelectors)
+	initAccordion(prefixSelectors)
+} else {
+	// DOMContentLoaded event not yet fired, attach initialization process to it
+	document.addEventListener('DOMContentLoaded', initAccordion(baseSelectors))
+	document.addEventListener('DOMContentLoaded', initAccordion(prefixSelectors))
+}
 
 export default Accordion

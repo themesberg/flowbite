@@ -1,3 +1,7 @@
+import config from '../core/config'
+import { getPrefixedAttribute } from '../helpers/data-attribute'
+import { getPrefixedClassName } from '../helpers/class-name'
+
 const Default = {
     triggerEl: null,
     onCollapse: () => { },
@@ -21,7 +25,7 @@ class Collapse {
                 this._visible = this._triggerEl.getAttribute('aria-expanded') === 'true' ? true : false
             } else {
                 // fix until v2 not to break previous single collapses which became dismiss
-                this._visible = this._targetEl.classList.contains('hidden') ? false : true
+                this._visible = this._targetEl.classList.contains(getPrefixedClassName('%p%hidden')) ? false : true
             }
 
             this._triggerEl.addEventListener('click', () => {
@@ -32,7 +36,7 @@ class Collapse {
     }
 
     collapse() {
-        this._targetEl.classList.add('hidden')
+        this._targetEl.classList.add(getPrefixedClassName('%p%hidden'))
         if(this._triggerEl) {
             this._triggerEl.setAttribute('aria-expanded', 'false')
         }
@@ -43,7 +47,7 @@ class Collapse {
     }
 
     expand() {
-        this._targetEl.classList.remove('hidden')
+        this._targetEl.classList.remove(getPrefixedAttribute('%p%hidden'))
         if(this._triggerEl) {
             this._triggerEl.setAttribute('aria-expanded', 'true')
         }
@@ -65,13 +69,26 @@ class Collapse {
 
 window.Collapse = Collapse;
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-collapse-toggle]').forEach(triggerEl => {
-        const targetEl = document.getElementById(triggerEl.getAttribute('data-collapse-toggle'))
+const initCollapse = (selector) => {
+    document.querySelectorAll(`[${selector}]`).forEach(triggerEl => {
+        const targetEl = document.getElementById(triggerEl.getAttribute(selector))
         new Collapse(targetEl, {
             triggerEl: triggerEl
         })
     })
-})
+}
+
+const baseSelector = getPrefixedAttribute('collapse-toggle', '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelector = getPrefixedAttribute('collapse-toggle', config.getSelectorsPrefix())
+
+if (document.readyState !== 'loading') {
+	// DOMContentLoaded event were already fired. Perform explicit initialization now
+	initCollapse(baseSelector)
+	initCollapse(prefixSelector)
+} else {
+	// DOMContentLoaded event not yet fired, attach initialization process to it
+	document.addEventListener('DOMContentLoaded', initCollapse(baseSelector))
+	document.addEventListener('DOMContentLoaded', initCollapse(prefixSelector))
+}
 
 export default Collapse

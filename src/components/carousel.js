@@ -1,9 +1,13 @@
+import config from '../core/config'
+import { getPrefixedDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
+
 const Default = {
     defaultPosition: 0,
     indicators: {
         items: [],
-        activeClasses: 'bg-white dark:bg-gray-800',
-        inactiveClasses: 'bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800'
+        activeClasses: getPrefixedClassNames('%p%bg-white dark:%p%bg-gray-800'),
+        inactiveClasses: getPrefixedClassNames('%p%bg-white/50 dark:%p%bg-gray-800/50 hover:%p%bg-white dark:hover:%p%bg-gray-800')
     },
     interval: 3000,
     onNext: () => { },
@@ -27,7 +31,7 @@ class Carousel {
      */
     _init() {
         this._items.map(item => {
-            item.el.classList.add('absolute', 'inset-0', 'transition-all', 'transform')
+            item.el.classList.add(...getPrefixedClassNames('%p%absolute %p%inset-0 %p%transition-all %p%transform').split(' '))
         })
 
         // if no active item is set then first position is default
@@ -116,20 +120,20 @@ class Carousel {
     _rotate(rotationItems) {
         // reset
         this._items.map(item => {
-            item.el.classList.add('hidden')
+            item.el.classList.add(getPrefixedClassName('%p%hidden'))
         })
 
         // left item (previously active)
-        rotationItems.left.el.classList.remove('-translate-x-full', 'translate-x-full', 'translate-x-0', 'hidden', 'z-20')
-        rotationItems.left.el.classList.add('-translate-x-full', 'z-10')
+        rotationItems.left.el.classList.remove(...getPrefixedClassNames('-%p%translate-x-full %p%translate-x-full %p%translate-x-0 %p%hidden %p%z-20').split(' '))
+        rotationItems.left.el.classList.add(...getPrefixedClassNames('-%p%translate-x-full %p%z-10').split(' '))
 
         // currently active item
-        rotationItems.middle.el.classList.remove('-translate-x-full', 'translate-x-full', 'translate-x-0', 'hidden', 'z-10')
-        rotationItems.middle.el.classList.add('translate-x-0', 'z-20')
+        rotationItems.middle.el.classList.remove(...getPrefixedClassNames('-%p%translate-x-full %p%translate-x-full %p%translate-x-0 %p%hidden %p%z-10').split(' '))
+        rotationItems.middle.el.classList.add(...getPrefixedClassNames('%p%translate-x-0 %p%z-20').split(' '))
 
         // right item (upcoming active)
-        rotationItems.right.el.classList.remove('-translate-x-full', 'translate-x-full', 'translate-x-0', 'hidden', 'z-20')
-        rotationItems.right.el.classList.add('translate-x-full', 'z-10')
+        rotationItems.right.el.classList.remove(...getPrefixedClassNames('-%p%translate-x-full %p%translate-x-full %p%translate-x-0 %p%hidden %p%z-20').split(' '))
+        rotationItems.right.el.classList.add(...getPrefixedClassNames('%p%translate-x-full %p%z-10').split(' '))
     }
 
     /**
@@ -179,31 +183,31 @@ class Carousel {
 
 window.Carousel = Carousel;
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-carousel]').forEach(carouselEl => {
-        const interval = carouselEl.getAttribute('data-carousel-interval')
-        const slide = carouselEl.getAttribute('data-carousel') === 'slide' ? true : false
+const initCarousel = (selectors) => {
+    document.querySelectorAll(`[${selectors.main}]`).forEach(carouselEl => {
+        const interval = carouselEl.getAttribute(selectors.interval)
+        const slide = carouselEl.getAttribute(selectors.main) === 'slide' ? true : false
 
         const items = []
         let defaultPosition = 0
-        if (carouselEl.querySelectorAll('[data-carousel-item]').length) {
-            [...carouselEl.querySelectorAll('[data-carousel-item]')].map((carouselItemEl, position) => {
+        if (carouselEl.querySelectorAll(`[${selectors.item}]`).length) {
+            [...carouselEl.querySelectorAll(`[${selectors.item}]`)].map((carouselItemEl, position) => {
                 items.push({
                     position: position,
                     el: carouselItemEl
                 })
 
-                if (carouselItemEl.getAttribute('data-carousel-item') === 'active') {
+                if (carouselItemEl.getAttribute(selectors.item) === 'active') {
                     defaultPosition = position
                 }
             })
         }
 
         const indicators = [];
-        if (carouselEl.querySelectorAll('[data-carousel-slide-to]').length) {
-            [...carouselEl.querySelectorAll('[data-carousel-slide-to]')].map((indicatorEl) => {
+        if (carouselEl.querySelectorAll(`[${selectors.slide}]`).length) {
+            [...carouselEl.querySelectorAll(`[${selectors.slide}]`)].map((indicatorEl) => {
                 indicators.push({
-                    position: indicatorEl.getAttribute('data-carousel-slide-to'),
+                    position: indicatorEl.getAttribute(selectors.slide),
                     el: indicatorEl
                 })
             })
@@ -222,8 +226,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // check for controls
-        const carouselNextEl = carouselEl.querySelector('[data-carousel-next]')
-        const carouselPrevEl = carouselEl.querySelector('[data-carousel-prev]')
+        const carouselNextEl = carouselEl.querySelector(`[${selectors.next}]`)
+        const carouselPrevEl = carouselEl.querySelector(`[${selectors.prev}]`)
 
         if (carouselNextEl) {
             carouselNextEl.addEventListener('click', () => {
@@ -238,6 +242,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     })
-})
+}
+
+const selectors = {
+	main: 'carousel',
+	interval: 'carousel-interval',
+    item: 'carousel-item',
+    slide: 'carousel-slide-to',
+    next: 'carousel-next',
+    prev: 'carousel-prev'
+}
+
+const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
+
+if (document.readyState !== 'loading') {
+	// DOMContentLoaded event were already fired. Perform explicit initialization now
+	initCarousel(baseSelectors)
+	initCarousel(prefixSelectors)
+} else {
+	// DOMContentLoaded event not yet fired, attach initialization process to it
+	document.addEventListener('DOMContentLoaded', initCarousel(baseSelectors))
+	document.addEventListener('DOMContentLoaded', initCarousel(prefixSelectors))
+}
 
 export default Carousel

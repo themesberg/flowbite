@@ -1,7 +1,11 @@
+import config from '../core/config'
+import { getPrefixedDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
+
 const Default = {
     defaultTabId: null,
-    activeClasses: 'text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500',
-    inactiveClasses: 'dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300',
+    activeClasses: getPrefixedClassNames('%p%text-blue-600 hover:%p%text-blue-600 dark:%p%text-blue-500 dark:hover:%p%text-blue-500 %p%border-blue-600 dark:%p%border-blue-500'),
+    inactiveClasses: getPrefixedClassNames('dark:%p%border-transparent %p%text-gray-500 hover:%p%text-gray-600 dark:%p%text-gray-400 %p%border-gray-100 hover:%p%border-gray-300 dark:%p%border-gray-700 dark:hover:%p%text-gray-300'),
     onShow: () => { }
 }
 
@@ -57,7 +61,7 @@ class Tabs {
             if (t !== tab) {
                 t.triggerEl.classList.remove(...this._options.activeClasses.split(" "));
                 t.triggerEl.classList.add(...this._options.inactiveClasses.split(" "));
-                t.targetEl.classList.add('hidden')
+                t.targetEl.classList.add(getPrefixedClassName('%p%hidden'))
                 t.triggerEl.setAttribute('aria-selected', false)
             }
         })
@@ -66,7 +70,7 @@ class Tabs {
         tab.triggerEl.classList.add(...this._options.activeClasses.split(" "));
         tab.triggerEl.classList.remove(...this._options.inactiveClasses.split(" "));
         tab.triggerEl.setAttribute('aria-selected', true)
-        tab.targetEl.classList.remove('hidden')
+        tab.targetEl.classList.remove(getPrefixedClassName('%p%hidden'))
 
         this._setActiveTab(tab)
 
@@ -78,17 +82,17 @@ class Tabs {
 
 window.Tabs = Tabs;
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-tabs-toggle]').forEach(triggerEl => {
+const initTabs = (selectors) => {
+    document.querySelectorAll(`[${selectors.main}]`).forEach(triggerEl => {
 
         const tabElements = []
         let defaultTabId = null
         triggerEl.querySelectorAll('[role="tab"]').forEach(el => {
             const isActive = el.getAttribute('aria-selected') === 'true'
             const tab = {
-                id: el.getAttribute('data-tabs-target'),
+                id: el.getAttribute(selectors.target),
                 triggerEl: el,
-                targetEl: document.querySelector(el.getAttribute('data-tabs-target'))
+                targetEl: document.querySelector(el.getAttribute(selectors.target))
             }
             tabElements.push(tab)
 
@@ -100,6 +104,24 @@ document.addEventListener('DOMContentLoaded', () => {
             defaultTabId: defaultTabId
         })
     })
-})
+}
+
+const selectors = {
+	main: 'tabs-toggle',
+	target: 'tabs-target'
+}
+
+const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
+
+if (document.readyState !== 'loading') {
+	// DOMContentLoaded event were already fired. Perform explicit initialization now
+	initTabs(baseSelectors)
+	initTabs(prefixSelectors)
+} else {
+	// DOMContentLoaded event not yet fired, attach initialization process to it
+	document.addEventListener('DOMContentLoaded', initTabs(baseSelectors))
+	document.addEventListener('DOMContentLoaded', initTabs(prefixSelectors))
+}
 
 export default Tabs

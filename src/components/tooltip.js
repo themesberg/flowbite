@@ -1,4 +1,7 @@
+import config from '../core/config'
+import { getPrefixedDataAttributes } from '../helpers/data-attribute'
 import { createPopper } from '@popperjs/core';
+import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
 
 const Default = {
     placement: 'top',
@@ -67,8 +70,8 @@ class Tooltip {
     }
 
     show() {
-        this._targetEl.classList.remove('opacity-0', 'invisible')
-        this._targetEl.classList.add('opacity-100', 'visible')
+        this._targetEl.classList.remove(...getPrefixedClassNames('%p%opacity-0 %p%invisible').split(' '))
+        this._targetEl.classList.add(...getPrefixedClassNames('%p%opacity-100 %p%visible').split(' '))
 
         // Enable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -87,8 +90,8 @@ class Tooltip {
     }
 
     hide() {
-        this._targetEl.classList.remove('opacity-100', 'visible')
-        this._targetEl.classList.add('opacity-0', 'invisible')
+        this._targetEl.classList.remove(...getPrefixedClassNames('%p%opacity-100 %p%visible').split(' '))
+        this._targetEl.classList.add(...getPrefixedClassNames('%p%opacity-0 %p%invisible').split(' '))
 
         // Disable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -106,17 +109,36 @@ class Tooltip {
 
 window.Tooltip = Tooltip;
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-tooltip-target]').forEach(triggerEl => {
-        const targetEl = document.getElementById(triggerEl.getAttribute('data-tooltip-target'))
-        const triggerType = triggerEl.getAttribute('data-tooltip-trigger');
-        const placement = triggerEl.getAttribute('data-tooltip-placement');
+const initTooltip = (selectors) => {
+    document.querySelectorAll(`[${selectors.main}]`).forEach(triggerEl => {
+        const targetEl = document.getElementById(triggerEl.getAttribute(selectors.main))
+        const triggerType = triggerEl.getAttribute(selectors.trigger);
+        const placement = triggerEl.getAttribute(selectors.placement);
 
         new Tooltip(targetEl, triggerEl, {
             placement: placement ? placement : Default.placement,
             triggerType: triggerType ? triggerType : Default.triggerType
         })
     })
-})
+}
+
+const selectors = {
+	main: 'tooltip-target',
+	trigger: 'tooltip-trigger',
+	placement: 'tooltip-placement'
+}
+
+const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
+
+if (document.readyState !== 'loading') {
+	// DOMContentLoaded event were already fired. Perform explicit initialization now
+	initTooltip(baseSelectors)
+	initTooltip(prefixSelectors)
+} else {
+	// DOMContentLoaded event not yet fired, attach initialization process to it
+	document.addEventListener('DOMContentLoaded', initTooltip(baseSelectors))
+	document.addEventListener('DOMContentLoaded', initTooltip(prefixSelectors))
+}
 
 export default Tooltip

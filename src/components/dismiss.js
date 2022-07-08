@@ -35,7 +35,7 @@ class Dismiss {
 
 window.Dismiss = Dismiss;
 
-document.addEventListener('DOMContentLoaded', () => {
+function initDismiss() {
     document.querySelectorAll('[data-dismiss-target]').forEach(triggerEl => {
         const targetEl = document.querySelector(triggerEl.getAttribute('data-dismiss-target'))
 
@@ -43,6 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
             triggerEl
         })
     })
-})
+}
+
+if (document.readyState !== 'loading') {
+	// DOMContentLoaded event were already fired. Perform explicit initialization now
+	initDismiss()
+} else {
+	// DOMContentLoaded event not yet fired, attach initialization process to it
+	document.addEventListener('DOMContentLoaded', initDismiss)
+}
 
 export default Dismiss

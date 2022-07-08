@@ -65,13 +65,21 @@ class Collapse {
 
 window.Collapse = Collapse;
 
-document.addEventListener('DOMContentLoaded', () => {
+function initCollapse() {
     document.querySelectorAll('[data-collapse-toggle]').forEach(triggerEl => {
         const targetEl = document.getElementById(triggerEl.getAttribute('data-collapse-toggle'))
         new Collapse(targetEl, {
             triggerEl: triggerEl
         })
     })
-})
+}
+
+if (document.readyState !== 'loading') {
+	// DOMContentLoaded event were already fired. Perform explicit initialization now
+	initCollapse()
+} else {
+	// DOMContentLoaded event not yet fired, attach initialization process to it
+	document.addEventListener('DOMContentLoaded', initCollapse)
+}
 
 export default Collapse

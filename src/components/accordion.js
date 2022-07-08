@@ -106,7 +106,7 @@ class Accordion {
 
 window.Accordion = Accordion;
 
-document.addEventListener('DOMContentLoaded', () => {
+function initAccordion() {
 	document.querySelectorAll('[data-accordion]').forEach(accordionEl => {
 
 		const alwaysOpen = accordionEl.getAttribute('data-accordion')
@@ -131,6 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			inactiveClasses: inactiveClasses ? inactiveClasses : Default.inactiveClasses
 		})
 	})
-})
+}
+
+if (document.readyState !== 'loading') {
+	// DOMContentLoaded event were already fired. Perform explicit initialization now
+	initAccordion()
+} else {
+	// DOMContentLoaded event not yet fired, attach initialization process to it
+	document.addEventListener('DOMContentLoaded', initAccordion)
+}
 
 export default Accordion

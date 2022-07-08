@@ -114,7 +114,7 @@ const getModalInstance = (id, instances) => {
     return false
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initModal() {
     let modalInstances = []
     document.querySelectorAll('[data-modal-toggle]').forEach(el => {
         const modalId = el.getAttribute('data-modal-toggle');
@@ -149,6 +149,14 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.toggle()
         })
     })
-})
+}
+
+if (document.readyState !== 'loading') {
+	// DOMContentLoaded event were already fired. Perform explicit initialization now
+	initModal()
+} else {
+	// DOMContentLoaded event not yet fired, attach initialization process to it
+	document.addEventListener('DOMContentLoaded', initModal)
+}
 
 export default Modal

@@ -78,7 +78,7 @@ class Tabs {
 
 window.Tabs = Tabs;
 
-document.addEventListener('DOMContentLoaded', () => {
+function initTabs() {
     document.querySelectorAll('[data-tabs-toggle]').forEach(triggerEl => {
 
         const tabElements = []
@@ -100,6 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
             defaultTabId: defaultTabId
         })
     })
-})
+}
+
+if (document.readyState !== 'loading') {
+	// DOMContentLoaded event were already fired. Perform explicit initialization now
+	initTabs()
+} else {
+	// DOMContentLoaded event not yet fired, attach initialization process to it
+	document.addEventListener('DOMContentLoaded', initTabs)
+}
 
 export default Tabs

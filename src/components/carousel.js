@@ -1,3 +1,6 @@
+import config from '../core/config'
+import { getDataAttributes } from '../helpers/data-attribute'
+
 const Default = {
     defaultPosition: 0,
     indicators: {
@@ -179,31 +182,31 @@ class Carousel {
 
 window.Carousel = Carousel;
 
-function initCarousel() {
-    document.querySelectorAll('[data-carousel]').forEach(carouselEl => {
-        const interval = carouselEl.getAttribute('data-carousel-interval')
-        const slide = carouselEl.getAttribute('data-carousel') === 'slide' ? true : false
+const initCarousel = (selectors) => {
+    document.querySelectorAll(`[${selectors.main}]`).forEach(carouselEl => {
+        const interval = carouselEl.getAttribute(selectors.interval)
+        const slide = carouselEl.getAttribute(selectors.main) === 'slide' ? true : false
 
         const items = []
         let defaultPosition = 0
-        if (carouselEl.querySelectorAll('[data-carousel-item]').length) {
-            [...carouselEl.querySelectorAll('[data-carousel-item]')].map((carouselItemEl, position) => {
+        if (carouselEl.querySelectorAll(`[${selectors.item}]`).length) {
+            [...carouselEl.querySelectorAll(`[${selectors.item}]`)].map((carouselItemEl, position) => {
                 items.push({
                     position: position,
                     el: carouselItemEl
                 })
 
-                if (carouselItemEl.getAttribute('data-carousel-item') === 'active') {
+                if (carouselItemEl.getAttribute(selectors.item) === 'active') {
                     defaultPosition = position
                 }
             })
         }
 
         const indicators = [];
-        if (carouselEl.querySelectorAll('[data-carousel-slide-to]').length) {
-            [...carouselEl.querySelectorAll('[data-carousel-slide-to]')].map((indicatorEl) => {
+        if (carouselEl.querySelectorAll(`[${selectors.slide}]`).length) {
+            [...carouselEl.querySelectorAll(`[${selectors.slide}]`)].map((indicatorEl) => {
                 indicators.push({
-                    position: indicatorEl.getAttribute('data-carousel-slide-to'),
+                    position: indicatorEl.getAttribute(selectors.slide),
                     el: indicatorEl
                 })
             })
@@ -222,8 +225,8 @@ function initCarousel() {
         }
 
         // check for controls
-        const carouselNextEl = carouselEl.querySelector('[data-carousel-next]')
-        const carouselPrevEl = carouselEl.querySelector('[data-carousel-prev]')
+        const carouselNextEl = carouselEl.querySelector(`[${selectors.next}]`)
+        const carouselPrevEl = carouselEl.querySelector(`[${selectors.prev}]`)
 
         if (carouselNextEl) {
             carouselNextEl.addEventListener('click', () => {
@@ -240,12 +243,26 @@ function initCarousel() {
     })
 }
 
+const selectors = {
+	main: 'carousel',
+	interval: 'carousel-interval',
+    item: 'carousel-item',
+    slide: 'carousel-slide-to',
+    next: 'carousel-next',
+    prev: 'carousel-prev'
+}
+
+const baseSelectors = getDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getDataAttributes(selectors, config.getPrefix())
+
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initCarousel()
+	initCarousel(baseSelectors)
+	initCarousel(prefixSelectors)
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initCarousel)
+	document.addEventListener('DOMContentLoaded', initCarousel(baseSelectors))
+	document.addEventListener('DOMContentLoaded', initCarousel(prefixSelectors))
 }
 
 export default Carousel

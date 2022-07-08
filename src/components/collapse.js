@@ -1,3 +1,6 @@
+import config from '../core/config'
+import { getDataAttribute } from '../helpers/data-attribute'
+
 const Default = {
     triggerEl: null,
     onCollapse: () => { },
@@ -65,21 +68,26 @@ class Collapse {
 
 window.Collapse = Collapse;
 
-function initCollapse() {
-    document.querySelectorAll('[data-collapse-toggle]').forEach(triggerEl => {
-        const targetEl = document.getElementById(triggerEl.getAttribute('data-collapse-toggle'))
+const initCollapse = (selector) => {
+    document.querySelectorAll(`[${selector}]`).forEach(triggerEl => {
+        const targetEl = document.getElementById(triggerEl.getAttribute(selector))
         new Collapse(targetEl, {
             triggerEl: triggerEl
         })
     })
 }
 
+const baseSelector = getDataAttribute('collapse-toggle', '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelector = getDataAttribute('collapse-toggle', config.getPrefix())
+
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initCollapse()
+	initCollapse(baseSelector)
+	initCollapse(prefixSelector)
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initCollapse)
+	document.addEventListener('DOMContentLoaded', initCollapse(baseSelector))
+	document.addEventListener('DOMContentLoaded', initCollapse(prefixSelector))
 }
 
 export default Collapse

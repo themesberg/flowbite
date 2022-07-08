@@ -1,3 +1,6 @@
+import config from '../core/config'
+import { getDataAttribute } from '../helpers/data-attribute'
+
 const Default = {
     triggerEl: null,
     transition: 'transition-opacity',
@@ -35,9 +38,9 @@ class Dismiss {
 
 window.Dismiss = Dismiss;
 
-function initDismiss() {
-    document.querySelectorAll('[data-dismiss-target]').forEach(triggerEl => {
-        const targetEl = document.querySelector(triggerEl.getAttribute('data-dismiss-target'))
+const initDismiss = (selector) => {
+    document.querySelectorAll(`[${selector}]`).forEach(triggerEl => {
+        const targetEl = document.querySelector(triggerEl.getAttribute(selector))
 
         new Dismiss(targetEl, {
             triggerEl
@@ -45,12 +48,17 @@ function initDismiss() {
     })
 }
 
+const baseSelector = getDataAttribute('dismiss-target', '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelector = getDataAttribute('dismiss-target', config.getPrefix())
+
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initDismiss()
+	initDismiss(baseSelector)
+	initDismiss(prefixSelector)
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initDismiss)
+	document.addEventListener('DOMContentLoaded', initDismiss(baseSelector))
+	document.addEventListener('DOMContentLoaded', initDismiss(prefixSelector))
 }
 
 export default Dismiss

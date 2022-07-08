@@ -157,30 +157,30 @@ If you want to show the tabs on the full width relative to the parent element yo
 
 ## Interactive tabs
 
-Use the dynamic tabs component to interactively show and hide the content below the tabs based on the currently active tab item. Make sure that you initialize the component by using the `data-tabs-toggle="{parentTabContentSelector}"` and also apply an `id` attribute to the same element.
+Use the dynamic tabs component to interactively show and hide the content below the tabs based on the currently active tab item. Make sure that you initialize the component by using the `data-fb-tabs-toggle="{parentTabContentSelector}"` and also apply an `id` attribute to the same element.
 
-Each tab toggle button needs to have a `role="tab"` attribute and a `data-tabs-target="{tabContentSelector}"` to target the tab content element that will be shown when clicked. 
+Each tab toggle button needs to have a `role="tab"` attribute and a `data-fb-tabs-target="{tabContentSelector}"` to target the tab content element that will be shown when clicked. 
 
 Use the `aria-selected="true"` data attribute so that Flowbite can target the currently active tab component and hide it when another is shown. If not set, it will show the first tab as active.
 
-Apply the `role="tabpanel"` data attribute to every tab content element and set the `id` attribute which will be equal to the `data-tabs-target={tabContentSelector}` from the tabs toggles.
+Apply the `role="tabpanel"` data attribute to every tab content element and set the `id` attribute which will be equal to the `data-fb-tabs-target={tabContentSelector}` from the tabs toggles.
 
 You can use multiple tab components on a single page but make sure that the id's are different.
 
 {{< example github="components/tabs.md" show_dark=true >}}
 <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
-    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-fb-tabs-toggle="#myTabContent" role="tablist">
         <li class="mr-2" role="presentation">
-            <button class="inline-block p-4 rounded-t-lg border-b-2" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+            <button class="inline-block p-4 rounded-t-lg border-b-2" id="profile-tab" data-fb-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
         </li>
         <li class="mr-2" role="presentation">
-            <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Dashboard</button>
+            <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-fb-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Dashboard</button>
         </li>
         <li class="mr-2" role="presentation">
-            <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+            <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-tab" data-fb-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
         </li>
         <li role="presentation">
-            <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Contacts</button>
+            <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="contacts-tab" data-fb-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Contacts</button>
         </li>
     </ul>
 </div>

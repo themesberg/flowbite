@@ -31,7 +31,7 @@ We strive to keep a good accountability of all of the version changes that we ma
 
 ### v1.4.4
 
-- use `data-modal-show="true"` to show modal by default
+- use `data-fb-modal-show="true"` to show modal by default
 - fix accordion onToggle JS bug
 ### v1.4.3
 

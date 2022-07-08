@@ -101,7 +101,7 @@ This example can be used if you want to show additional information in the form 
 Use this example if you want to show a dropdown menu when clicking on the avatar component.
 
 {{< example class="flex space-x-4 dark:bg-gray-800" github="components/avatar.md" show_dark=true >}}
-<img id="avatar" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" src="/docs/images/people/profile-picture-5.jpg" alt="User dropdown">
+<img id="avatar" type="button" data-fb-dropdown-toggle="userDropdown" data-fb-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" src="/docs/images/people/profile-picture-5.jpg" alt="User dropdown">
 
 <!-- Dropdown menu -->
 <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">

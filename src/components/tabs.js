@@ -1,3 +1,6 @@
+import config from '../core/config'
+import { getDataAttributes } from '../helpers/data-attribute'
+
 const Default = {
     defaultTabId: null,
     activeClasses: 'text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500',
@@ -78,17 +81,17 @@ class Tabs {
 
 window.Tabs = Tabs;
 
-function initTabs() {
-    document.querySelectorAll('[data-tabs-toggle]').forEach(triggerEl => {
+const initTabs = (selectors) => {
+    document.querySelectorAll(`[${selectors.main}]`).forEach(triggerEl => {
 
         const tabElements = []
         let defaultTabId = null
         triggerEl.querySelectorAll('[role="tab"]').forEach(el => {
             const isActive = el.getAttribute('aria-selected') === 'true'
             const tab = {
-                id: el.getAttribute('data-tabs-target'),
+                id: el.getAttribute(selectors.target),
                 triggerEl: el,
-                targetEl: document.querySelector(el.getAttribute('data-tabs-target'))
+                targetEl: document.querySelector(el.getAttribute(selectors.target))
             }
             tabElements.push(tab)
 
@@ -102,12 +105,22 @@ function initTabs() {
     })
 }
 
+const selectors = {
+	main: 'tabs-toggle',
+	target: 'tabs-target'
+}
+
+const baseSelectors = getDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getDataAttributes(selectors, config.getPrefix())
+
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initTabs()
+	initTabs(baseSelectors)
+	initTabs(prefixSelectors)
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initTabs)
+	document.addEventListener('DOMContentLoaded', initTabs(baseSelectors))
+	document.addEventListener('DOMContentLoaded', initTabs(prefixSelectors))
 }
 
 export default Tabs

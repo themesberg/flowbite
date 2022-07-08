@@ -1,3 +1,5 @@
+import config from '../core/config'
+import { getDataAttributes } from '../helpers/data-attribute'
 import { createPopper } from '@popperjs/core';
 
 const Default = {
@@ -106,11 +108,11 @@ class Tooltip {
 
 window.Tooltip = Tooltip;
 
-function initTooltip() {
-    document.querySelectorAll('[data-tooltip-target]').forEach(triggerEl => {
-        const targetEl = document.getElementById(triggerEl.getAttribute('data-tooltip-target'))
-        const triggerType = triggerEl.getAttribute('data-tooltip-trigger');
-        const placement = triggerEl.getAttribute('data-tooltip-placement');
+const initTooltip = (selectors) => {
+    document.querySelectorAll(`[${selectors.main}]`).forEach(triggerEl => {
+        const targetEl = document.getElementById(triggerEl.getAttribute(selectors.main))
+        const triggerType = triggerEl.getAttribute(selectors.trigger);
+        const placement = triggerEl.getAttribute(selectors.placement);
 
         new Tooltip(targetEl, triggerEl, {
             placement: placement ? placement : Default.placement,
@@ -119,12 +121,23 @@ function initTooltip() {
     })
 }
 
+const selectors = {
+	main: 'tooltip-target',
+	trigger: 'tooltip-trigger',
+	placement: 'tooltip-placement'
+}
+
+const baseSelectors = getDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getDataAttributes(selectors, config.getPrefix())
+
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initTooltip()
+	initTooltip(baseSelectors)
+	initTooltip(prefixSelectors)
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initTooltip)
+	document.addEventListener('DOMContentLoaded', initTooltip(baseSelectors))
+	document.addEventListener('DOMContentLoaded', initTooltip(prefixSelectors))
 }
 
 export default Tooltip

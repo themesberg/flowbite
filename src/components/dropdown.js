@@ -1,3 +1,5 @@
+import config from '../core/config'
+import { getDataAttributes } from '../helpers/data-attribute'
 import { createPopper } from '@popperjs/core';
 
 const Default = {
@@ -101,10 +103,10 @@ class Dropdown {
 
 window.Dropdown = Dropdown;
 
-function initDropdown() {
-    document.querySelectorAll('[data-dropdown-toggle]').forEach(triggerEl => {
-        const targetEl = document.getElementById(triggerEl.getAttribute('data-dropdown-toggle'))
-        const placement = triggerEl.getAttribute('data-dropdown-placement')
+const initDropdown = (selectors) => {
+    document.querySelectorAll(`[${selectors.main}]`).forEach(triggerEl => {
+        const targetEl = document.getElementById(triggerEl.getAttribute(selectors.main))
+        const placement = triggerEl.getAttribute(selectors.placement)
 
         new Dropdown(targetEl, triggerEl, {
             placement: placement ? placement : Default.placement
@@ -112,12 +114,22 @@ function initDropdown() {
     })
 }
 
+const selectors = {
+	main: 'dropdown-toggle',
+	placement: 'dropdown-placement'
+}
+
+const baseSelectors = getDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getDataAttributes(selectors, config.getPrefix())
+
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initDropdown()
+	initDropdown(baseSelectors)
+	initDropdown(prefixSelectors)
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initDropdown)
+	document.addEventListener('DOMContentLoaded', initDropdown(baseSelectors))
+	document.addEventListener('DOMContentLoaded', initDropdown(prefixSelectors))
 }
 
 export default Dropdown

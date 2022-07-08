@@ -1,3 +1,6 @@
+import config from '../core/config'
+import { getDataAttributes } from '../helpers/data-attribute'
+
 const Default = {
     placement: 'center',
     backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
@@ -114,12 +117,12 @@ const getModalInstance = (id, instances) => {
     return false
 }
 
-function initModal() {
+const initModal = (selectors) => {
     let modalInstances = []
-    document.querySelectorAll('[data-modal-toggle]').forEach(el => {
-        const modalId = el.getAttribute('data-modal-toggle');
+    document.querySelectorAll(`[${selectors.main}]`).forEach(el => {
+        const modalId = el.getAttribute(selectors.main);
         const modalEl = document.getElementById(modalId);
-        const placement = modalEl.getAttribute('data-modal-placement')
+        const placement = modalEl.getAttribute(selectors.placement)
 
         if (modalEl) {
             if (!modalEl.hasAttribute('aria-hidden') && !modalEl.hasAttribute('aria-modal')) {
@@ -141,7 +144,7 @@ function initModal() {
             })
         }
 
-        if (modalEl.hasAttribute('data-modal-show') && modalEl.getAttribute('data-modal-show') === 'true') {
+        if (modalEl.hasAttribute(selectors.show) && modalEl.getAttribute(selectors.show) === 'true') {
             modal.show();
         }
 
@@ -151,12 +154,23 @@ function initModal() {
     })
 }
 
+const selectors = {
+	main: 'modal-toggle',
+	placement: 'modal-placement',
+	show: 'modal-show',
+}
+
+const baseSelectors = getDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getDataAttributes(selectors, config.getPrefix())
+
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initModal()
+	initModal(baseSelectors)
+	initModal(prefixSelectors)
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initModal)
+	document.addEventListener('DOMContentLoaded', initModal(baseSelectors))
+	document.addEventListener('DOMContentLoaded', initModal(prefixSelectors))
 }
 
 export default Modal

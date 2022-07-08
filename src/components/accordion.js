@@ -1,3 +1,6 @@
+import config from '../core/config'
+import { getDataAttributes } from '../helpers/data-attribute'
+
 const Default = {
 	alwaysOpen: false,
 	activeClasses: 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white',
@@ -106,20 +109,23 @@ class Accordion {
 
 window.Accordion = Accordion;
 
-function initAccordion() {
-	document.querySelectorAll('[data-accordion]').forEach(accordionEl => {
+const initAccordion = (selectors) => {
 
-		const alwaysOpen = accordionEl.getAttribute('data-accordion')
-		const activeClasses = accordionEl.getAttribute('data-active-classes')
-		const inactiveClasses = accordionEl.getAttribute('data-inactive-classes')
+	console.log(selectors.main)
+
+	document.querySelectorAll(`[${selectors.main}]`).forEach(accordionEl => {
+
+		const alwaysOpen = accordionEl.getAttribute(selectors.main)
+		const activeClasses = accordionEl.getAttribute(selectors.active)
+		const inactiveClasses = accordionEl.getAttribute(selectors.inactive)
 
 		const items = []
-		accordionEl.querySelectorAll('[data-accordion-target]').forEach(el => {
+		accordionEl.querySelectorAll(`[${selectors.target}]`).forEach(el => {
 			const item = {
-				id: el.getAttribute('data-accordion-target'),
+				id: el.getAttribute(selectors.target),
 				triggerEl: el,
-				targetEl: document.querySelector(el.getAttribute('data-accordion-target')),
-				iconEl: el.querySelector('[data-accordion-icon]'),
+				targetEl: document.querySelector(el.getAttribute(selectors.target)),
+				iconEl: el.querySelector(`[${selectors.icon}]`),
 				active: el.getAttribute('aria-expanded') === 'true' ? true : false
 			}
 			items.push(item)
@@ -133,12 +139,25 @@ function initAccordion() {
 	})
 }
 
+const selectors = {
+	main: 'accordion',
+	active: 'active-classes',
+	inactive: 'inactive-classes',
+	target: 'accordion-target',
+	icon: 'accordion-icon'
+}
+
+const baseSelectors = getDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getDataAttributes(selectors, config.getPrefix())
+
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initAccordion()
+	initAccordion(baseSelectors)
+	initAccordion(prefixSelectors)
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initAccordion)
+	document.addEventListener('DOMContentLoaded', initAccordion(baseSelectors))
+	document.addEventListener('DOMContentLoaded', initAccordion(prefixSelectors))
 }
 
 export default Accordion

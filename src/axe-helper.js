@@ -1,5 +1,5 @@
 // Global helper file (axe-helper.js)
-const { configureAxe, axe } = require('jest-axe')
+const { configureAxe } = require('jest-axe')
 
 const axe = configureAxe({
   rules: {

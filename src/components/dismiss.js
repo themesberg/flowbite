@@ -4,9 +4,9 @@ import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-na
 
 const Default = {
     triggerEl: null,
-    transition: getPrefixedClassName('%prefix%transition-opacity'),
+    transition: getPrefixedClassName('%p%transition-opacity'),
     duration: 300,
-    timing: getPrefixedClassName('%prefix%ease-out'),
+    timing: getPrefixedClassName('%p%ease-out'),
     onHide: () => { }
 }
 
@@ -27,9 +27,9 @@ class Dismiss {
     }
 
     hide() {
-        this._targetEl.classList.add(...getPrefixedClassNames(`%prefix%${this._options.transition} %prefix%duration-${this._options.duration} %prefix%${this._options.timing} %prefix%opacity-0`).split(' '))
+        this._targetEl.classList.add(...getPrefixedClassNames(`%p%${this._options.transition} %p%duration-${this._options.duration} %p%${this._options.timing} %p%opacity-0`).split(' '))
         setTimeout(() => {
-            this._targetEl.classList.add(getPrefixedClassName('%prefix%hidden'))
+            this._targetEl.classList.add(getPrefixedClassName('%p%hidden'))
         }, this._options.duration)
 
         // callback function

@@ -3,8 +3,8 @@ import config from '../core/config'
 const prefix = config.getClassesPrefix()
 
 export const getPrefixedClassName = value => {
-    console.log(value.replaceAll('%prefix%', prefix))
-    return value.replaceAll('%prefix%', prefix)
+    console.log(value.replaceAll('%p%', prefix))
+    return value.replaceAll('%p%', prefix)
 }
 
 export const getPrefixedClassNames = values => {

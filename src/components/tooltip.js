@@ -70,8 +70,8 @@ class Tooltip {
     }
 
     show() {
-        this._targetEl.classList.remove(...getPrefixedClassNames('%prefix%opacity-0 %prefix%invisible').split(' '))
-        this._targetEl.classList.add(...getPrefixedClassNames('%prefix%opacity-100 %prefix%visible').split(' '))
+        this._targetEl.classList.remove(...getPrefixedClassNames('%p%opacity-0 %p%invisible').split(' '))
+        this._targetEl.classList.add(...getPrefixedClassNames('%p%opacity-100 %p%visible').split(' '))
 
         // Enable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -90,8 +90,8 @@ class Tooltip {
     }
 
     hide() {
-        this._targetEl.classList.remove(...getPrefixedClassNames('%prefix%opacity-100 %prefix%visible').split(' '))
-        this._targetEl.classList.add(...getPrefixedClassNames('%prefix%opacity-0 %prefix%invisible').split(' '))
+        this._targetEl.classList.remove(...getPrefixedClassNames('%p%opacity-100 %p%visible').split(' '))
+        this._targetEl.classList.add(...getPrefixedClassNames('%p%opacity-0 %p%invisible').split(' '))
 
         // Disable the event listeners
         this._popperInstance.setOptions(options => ({

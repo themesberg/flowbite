@@ -4,8 +4,8 @@ import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-na
 
 const Default = {
 	alwaysOpen: false,
-	activeClasses: getPrefixedClassNames('%prefix%bg-gray-100 dark:%prefix%bg-gray-800 %prefix%text-gray-900 dark:%prefix%text-white'),
-	inactiveClasses: getPrefixedClassNames('%prefix%text-gray-500 dark:%prefix%text-gray-400'),
+	activeClasses: getPrefixedClassNames('%p%bg-gray-100 dark:%p%bg-gray-800 %p%text-gray-900 dark:%p%text-white'),
+	inactiveClasses: getPrefixedClassNames('%p%text-gray-500 dark:%p%text-gray-400'),
 	onOpen: () => { },
 	onClose: () => { },	
 	onToggle: () => { }
@@ -47,13 +47,13 @@ class Accordion {
 				if (i !== item) {
 					i.triggerEl.classList.remove(...this._options.activeClasses.split(" "))
 					i.triggerEl.classList.add(...this._options.inactiveClasses.split(" "))
-					i.targetEl.classList.add(getPrefixedClassName('%prefix%hidden'))
+					i.targetEl.classList.add(getPrefixedClassName('%p%hidden'))
 					i.triggerEl.setAttribute('aria-expanded', false)
 					i.active = false
 
 					// rotate icon if set
 					if (i.iconEl) {
-						i.iconEl.classList.remove(getPrefixedClassName('%prefix%rotate-180'))
+						i.iconEl.classList.remove(getPrefixedClassName('%p%rotate-180'))
 					}
 				}
 			})
@@ -63,12 +63,12 @@ class Accordion {
 		item.triggerEl.classList.add(...this._options.activeClasses.split(" "))
 		item.triggerEl.classList.remove(...this._options.inactiveClasses.split(" "))
 		item.triggerEl.setAttribute('aria-expanded', true)
-		item.targetEl.classList.remove(getPrefixedClassName('%prefix%hidden'))
+		item.targetEl.classList.remove(getPrefixedClassName('%p%hidden'))
 		item.active = true
 
 		// rotate icon if set
 		if (item.iconEl) {
-			item.iconEl.classList.add(getPrefixedClassName('%prefix%rotate-180'))
+			item.iconEl.classList.add(getPrefixedClassName('%p%rotate-180'))
 		}
 
 		// callback function
@@ -93,13 +93,13 @@ class Accordion {
 
 		item.triggerEl.classList.remove(...this._options.activeClasses.split(" "))
 		item.triggerEl.classList.add(...this._options.inactiveClasses.split(" "))
-		item.targetEl.classList.add(getPrefixedClassName('%prefix%hidden'))
+		item.targetEl.classList.add(getPrefixedClassName('%p%hidden'))
 		item.triggerEl.setAttribute('aria-expanded', false)
 		item.active = false
 
 		// rotate icon if set
 		if (item.iconEl) {
-			item.iconEl.classList.remove(getPrefixedClassName('%prefix%rotate-180'))
+			item.iconEl.classList.remove(getPrefixedClassName('%p%rotate-180'))
 		}
 
 		// callback function

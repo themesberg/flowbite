@@ -25,7 +25,7 @@ class Collapse {
                 this._visible = this._triggerEl.getAttribute('aria-expanded') === 'true' ? true : false
             } else {
                 // fix until v2 not to break previous single collapses which became dismiss
-                this._visible = this._targetEl.classList.contains(getPrefixedClassName('%prefix%hidden')) ? false : true
+                this._visible = this._targetEl.classList.contains(getPrefixedClassName('%p%hidden')) ? false : true
             }
 
             this._triggerEl.addEventListener('click', () => {
@@ -36,7 +36,7 @@ class Collapse {
     }
 
     collapse() {
-        this._targetEl.classList.add(getPrefixedClassName('%prefix%hidden'))
+        this._targetEl.classList.add(getPrefixedClassName('%p%hidden'))
         if(this._triggerEl) {
             this._triggerEl.setAttribute('aria-expanded', 'false')
         }
@@ -47,7 +47,7 @@ class Collapse {
     }
 
     expand() {
-        this._targetEl.classList.remove(getPrefixedAttribute('%prefix%hidden'))
+        this._targetEl.classList.remove(getPrefixedAttribute('%p%hidden'))
         if(this._triggerEl) {
             this._triggerEl.setAttribute('aria-expanded', 'true')
         }

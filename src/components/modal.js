@@ -4,7 +4,7 @@ import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-na
 
 const Default = {
     placement: 'center',
-    backdropClasses: getPrefixedClassNames('%prefix%bg-gray-900 %prefix%bg-opacity-50 dark:%prefix%bg-opacity-80 %prefix%fixed %prefix%inset-0 %prefix%z-40'),
+    backdropClasses: getPrefixedClassNames('%p%bg-gray-900 %p%bg-opacity-50 dark:%p%bg-opacity-80 %p%fixed %p%inset-0 %p%z-40'),
     onHide: () => { },
     onShow: () => { },
     onToggle: () => { }
@@ -43,30 +43,30 @@ class Modal {
 
             // top
             case 'top-left':
-                return [getPrefixedClassName('%prefix%justify-start'), getPrefixedClassName('%prefix%items-start')]
+                return [getPrefixedClassName('%p%justify-start'), getPrefixedClassName('%p%items-start')]
             case 'top-center':
-                return [getPrefixedClassName('%prefix%justify-center'), getPrefixedClassName('%prefix%items-start')]
+                return [getPrefixedClassName('%p%justify-center'), getPrefixedClassName('%p%items-start')]
             case 'top-right':
-                return [getPrefixedClassName('%prefix%justify-end'), getPrefixedClassName('%prefix%items-start')]
+                return [getPrefixedClassName('%p%justify-end'), getPrefixedClassName('%p%items-start')]
 
             // center
             case 'center-left':
-                return [getPrefixedClassName('%prefix%justify-start'), getPrefixedClassName('%prefix%items-center')]
+                return [getPrefixedClassName('%p%justify-start'), getPrefixedClassName('%p%items-center')]
             case 'center':
-                return [getPrefixedClassName('%prefix%justify-center'), getPrefixedClassName('%prefix%items-center')]
+                return [getPrefixedClassName('%p%justify-center'), getPrefixedClassName('%p%items-center')]
             case 'center-right':
-                return [getPrefixedClassName('%prefix%justify-end'), getPrefixedClassName('%prefix%items-center')]
+                return [getPrefixedClassName('%p%justify-end'), getPrefixedClassName('%p%items-center')]
 
             // bottom
             case 'bottom-left':
-                return [getPrefixedClassName('%prefix%justify-start'), getPrefixedClassName('%prefix%items-end')]
+                return [getPrefixedClassName('%p%justify-start'), getPrefixedClassName('%p%items-end')]
             case 'bottom-center':
-                return [getPrefixedClassName('%prefix%justify-center'), getPrefixedClassName('%prefix%items-end')]
+                return [getPrefixedClassName('%p%justify-center'), getPrefixedClassName('%p%items-end')]
             case 'bottom-right':
-                return [getPrefixedClassName('%prefix%justify-end'), getPrefixedClassName('%prefix%items-end')]
+                return [getPrefixedClassName('%p%justify-end'), getPrefixedClassName('%p%items-end')]
 
             default:
-                return [getPrefixedClassName('%prefix%justify-center'), getPrefixedClassName('%prefix%items-center')]
+                return [getPrefixedClassName('%p%justify-center'), getPrefixedClassName('%p%items-center')]
         }
     }
 
@@ -82,8 +82,8 @@ class Modal {
     }
 
     show() {
-        this._targetEl.classList.add(getPrefixedClassName('%prefix%flex'))
-        this._targetEl.classList.remove(getPrefixedClassName('%prefix%hidden'))
+        this._targetEl.classList.add(getPrefixedClassName('%p%flex'))
+        this._targetEl.classList.remove(getPrefixedClassName('%p%hidden'))
         this._targetEl.setAttribute('aria-modal', 'true')
         this._targetEl.setAttribute('role', 'dialog')
         this._targetEl.removeAttribute('aria-hidden')
@@ -95,8 +95,8 @@ class Modal {
     }
 
     hide() {
-        this._targetEl.classList.add(getPrefixedClassName('%prefix%hidden'))
-        this._targetEl.classList.remove(getPrefixedClassName('%prefix%flex'))
+        this._targetEl.classList.add(getPrefixedClassName('%p%hidden'))
+        this._targetEl.classList.remove(getPrefixedClassName('%p%flex'))
         this._targetEl.setAttribute('aria-hidden', 'true')
         this._targetEl.removeAttribute('aria-modal')
         this._targetEl.removeAttribute('role')

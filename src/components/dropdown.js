@@ -60,8 +60,8 @@ class Dropdown {
     }
 
     show() {
-        this._targetEl.classList.remove(getPrefixedClassName('%prefix%hidden'))
-        this._targetEl.classList.add(getPrefixedClassName('%prefix%block'))
+        this._targetEl.classList.remove(getPrefixedClassName('%p%hidden'))
+        this._targetEl.classList.add(getPrefixedClassName('%p%block'))
 
         // Enable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -83,8 +83,8 @@ class Dropdown {
     }
 
     hide() {
-        this._targetEl.classList.remove(getPrefixedClassName('%prefix%block'))
-        this._targetEl.classList.add(getPrefixedClassName('%prefix%hidden'))
+        this._targetEl.classList.remove(getPrefixedClassName('%p%block'))
+        this._targetEl.classList.add(getPrefixedClassName('%p%hidden'))
 
         // Disable the event listeners
         this._popperInstance.setOptions(options => ({

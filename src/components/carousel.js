@@ -6,8 +6,8 @@ const Default = {
     defaultPosition: 0,
     indicators: {
         items: [],
-        activeClasses: getPrefixedClassNames('%prefix%bg-white dark:%prefix%bg-gray-800'),
-        inactiveClasses: getPrefixedClassNames('%prefix%bg-white/50 dark:%prefix%bg-gray-800/50 hover:%prefix%bg-white dark:hover:%prefix%bg-gray-800')
+        activeClasses: getPrefixedClassNames('%p%bg-white dark:%p%bg-gray-800'),
+        inactiveClasses: getPrefixedClassNames('%p%bg-white/50 dark:%p%bg-gray-800/50 hover:%p%bg-white dark:hover:%p%bg-gray-800')
     },
     interval: 3000,
     onNext: () => { },
@@ -31,7 +31,7 @@ class Carousel {
      */
     _init() {
         this._items.map(item => {
-            item.el.classList.add(...getPrefixedClassNames('%prefix%absolute %prefix%inset-0 %prefix%transition-all %prefix%transform').split(' '))
+            item.el.classList.add(...getPrefixedClassNames('%p%absolute %p%inset-0 %p%transition-all %p%transform').split(' '))
         })
 
         // if no active item is set then first position is default
@@ -120,20 +120,20 @@ class Carousel {
     _rotate(rotationItems) {
         // reset
         this._items.map(item => {
-            item.el.classList.add(getPrefixedClassName('%prefix%hidden'))
+            item.el.classList.add(getPrefixedClassName('%p%hidden'))
         })
 
         // left item (previously active)
-        rotationItems.left.el.classList.remove(...getPrefixedClassNames('-%prefix%translate-x-full %prefix%translate-x-full %prefix%translate-x-0 %prefix%hidden %prefix%z-20').split(' '))
-        rotationItems.left.el.classList.add(...getPrefixedClassNames('-%prefix%translate-x-full %prefix%z-10').split(' '))
+        rotationItems.left.el.classList.remove(...getPrefixedClassNames('-%p%translate-x-full %p%translate-x-full %p%translate-x-0 %p%hidden %p%z-20').split(' '))
+        rotationItems.left.el.classList.add(...getPrefixedClassNames('-%p%translate-x-full %p%z-10').split(' '))
 
         // currently active item
-        rotationItems.middle.el.classList.remove(...getPrefixedClassNames('-%prefix%translate-x-full %prefix%translate-x-full %prefix%translate-x-0 %prefix%hidden %prefix%z-10').split(' '))
-        rotationItems.middle.el.classList.add(...getPrefixedClassNames('%prefix%translate-x-0 %prefix%z-20').split(' '))
+        rotationItems.middle.el.classList.remove(...getPrefixedClassNames('-%p%translate-x-full %p%translate-x-full %p%translate-x-0 %p%hidden %p%z-10').split(' '))
+        rotationItems.middle.el.classList.add(...getPrefixedClassNames('%p%translate-x-0 %p%z-20').split(' '))
 
         // right item (upcoming active)
-        rotationItems.right.el.classList.remove(...getPrefixedClassNames('-%prefix%translate-x-full %prefix%translate-x-full %prefix%translate-x-0 %prefix%hidden %prefix%z-20').split(' '))
-        rotationItems.right.el.classList.add(...getPrefixedClassNames('%prefix%translate-x-full %prefix%z-10').split(' '))
+        rotationItems.right.el.classList.remove(...getPrefixedClassNames('-%p%translate-x-full %p%translate-x-full %p%translate-x-0 %p%hidden %p%z-20').split(' '))
+        rotationItems.right.el.classList.add(...getPrefixedClassNames('%p%translate-x-full %p%z-10').split(' '))
     }
 
     /**

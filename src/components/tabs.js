@@ -4,8 +4,8 @@ import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-na
 
 const Default = {
     defaultTabId: null,
-    activeClasses: getPrefixedClassNames('%prefix%text-blue-600 hover:%prefix%text-blue-600 dark:%prefix%text-blue-500 dark:hover:%prefix%text-blue-500 %prefix%border-blue-600 dark:%prefix%border-blue-500'),
-    inactiveClasses: getPrefixedClassNames('dark:%prefix%border-transparent %prefix%text-gray-500 hover:%prefix%text-gray-600 dark:%prefix%text-gray-400 %prefix%border-gray-100 hover:%prefix%border-gray-300 dark:%prefix%border-gray-700 dark:hover:%prefix%text-gray-300'),
+    activeClasses: getPrefixedClassNames('%p%text-blue-600 hover:%p%text-blue-600 dark:%p%text-blue-500 dark:hover:%p%text-blue-500 %p%border-blue-600 dark:%p%border-blue-500'),
+    inactiveClasses: getPrefixedClassNames('dark:%p%border-transparent %p%text-gray-500 hover:%p%text-gray-600 dark:%p%text-gray-400 %p%border-gray-100 hover:%p%border-gray-300 dark:%p%border-gray-700 dark:hover:%p%text-gray-300'),
     onShow: () => { }
 }
 
@@ -61,7 +61,7 @@ class Tabs {
             if (t !== tab) {
                 t.triggerEl.classList.remove(...this._options.activeClasses.split(" "));
                 t.triggerEl.classList.add(...this._options.inactiveClasses.split(" "));
-                t.targetEl.classList.add(getPrefixedClassName('%prefix%hidden'))
+                t.targetEl.classList.add(getPrefixedClassName('%p%hidden'))
                 t.triggerEl.setAttribute('aria-selected', false)
             }
         })
@@ -70,7 +70,7 @@ class Tabs {
         tab.triggerEl.classList.add(...this._options.activeClasses.split(" "));
         tab.triggerEl.classList.remove(...this._options.inactiveClasses.split(" "));
         tab.triggerEl.setAttribute('aria-selected', true)
-        tab.targetEl.classList.remove(getPrefixedClassName('%prefix%hidden'))
+        tab.targetEl.classList.remove(getPrefixedClassName('%p%hidden'))
 
         this._setActiveTab(tab)
 

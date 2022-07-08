@@ -43,6 +43,8 @@
     - title: Modal
     - title: Tabs
     - title: Navbar
+    - title: Mega menu
+      new: true
     - title: Footer
     - title: Sidebar
     - title: Pagination

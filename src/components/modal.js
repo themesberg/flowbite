@@ -5,6 +5,7 @@ import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-na
 const Default = {
     placement: 'center',
     backdropClasses: getPrefixedClassNames('%p%bg-gray-900 %p%bg-opacity-50 dark:%p%bg-opacity-80 %p%fixed %p%inset-0 %p%z-40'),
+    backdrop: 'dynamic',
     onHide: () => { },
     onShow: () => { },
     onToggle: () => { }
@@ -14,13 +15,19 @@ class Modal {
         this._targetEl = targetEl
         this._options = { ...Default, ...options }
         this._isHidden = true
+        this._backdropEl = null
         this._init()
     }
 
     _init() {
-        this._getPlacementClasses().map(c => {
-            this._targetEl.classList.add(c)
-        })
+        if (this._targetEl) {
+            this._getPlacementClasses().map(c => {
+                this._targetEl.classList.add(c)
+            })
+            this._targetEl.addEventListener('click', ev => {
+                this._handleOutsideClick(ev.target)
+            })
+        }
     }
 
     _createBackdrop() {
@@ -29,12 +36,24 @@ class Modal {
             backdropEl.setAttribute('modal-backdrop', '');
             backdropEl.classList.add(...this._options.backdropClasses.split(" "));
             document.querySelector('body').append(backdropEl);
+            this._backdropEl = backdropEl
         }
     }
 
     _destroyBackdropEl() {
         if (!this._isHidden) {
             document.querySelector('[modal-backdrop]').remove();
+        }
+    }
+
+    _handleOutsideClick(target) {
+        console.log(target)
+        console.log(this._options.backdrop)
+        console.log(this._targetEl.id)
+        if (this._options.backdrop === 'dynamic') {
+            if (target === this._targetEl || target === this._backdropEl) {
+                this.hide()
+            }
         }
     }
 
@@ -90,6 +109,9 @@ class Modal {
         this._createBackdrop()
         this._isHidden = false
 
+        // prevent body scroll
+        document.body.classList.add(getPrefixedClassName('%p%overflow-hidden'))
+
         // callback function
         this._options.onShow(this)
     }
@@ -102,6 +124,9 @@ class Modal {
         this._targetEl.removeAttribute('role')
         this._destroyBackdropEl()
         this._isHidden = true
+
+        // re-apply body scroll
+        document.body.classList.remove(getPrefixedClassName('%p%overflow-hidden'))
 
         // callback function
         this._options.onHide(this)
@@ -124,6 +149,7 @@ const initModal = (selectors) => {
         const modalId = el.getAttribute(selectors.main);
         const modalEl = document.getElementById(modalId);
         const placement = modalEl.getAttribute(selectors.placement)
+        const backdrop = modalEl.getAttribute(selectors.backdrop)
 
         if (modalEl) {
             if (!modalEl.hasAttribute('aria-hidden') && !modalEl.hasAttribute('aria-modal')) {
@@ -137,8 +163,10 @@ const initModal = (selectors) => {
             modal = modal.object
         } else {
             modal = new Modal(modalEl, {
-                placement: placement ? placement : Default.placement
+                placement: placement ? placement : Default.placement,
+                backdrop: backdrop ? backdrop : Default.backdrop
             })
+            console.log(modal)
             modalInstances.push({
                 id: modalId,
                 object: modal
@@ -156,22 +184,23 @@ const initModal = (selectors) => {
 }
 
 const selectors = {
-	main: 'modal-toggle',
-	placement: 'modal-placement',
-	show: 'modal-show',
+    main: 'modal-toggle',
+    placement: 'modal-placement',
+    show: 'modal-show',
+    backdrop: 'modal-backdrop'
 }
 
 const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
 const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
 
 if (document.readyState !== 'loading') {
-	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initModal(baseSelectors)
-	initModal(prefixSelectors)
+    // DOMContentLoaded event were already fired. Perform explicit initialization now
+    initModal(baseSelectors)
+    initModal(prefixSelectors)
 } else {
-	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initModal(baseSelectors))
-	document.addEventListener('DOMContentLoaded', initModal(prefixSelectors))
+    // DOMContentLoaded event not yet fired, attach initialization process to it
+    document.addEventListener('DOMContentLoaded', initModal(baseSelectors))
+    document.addEventListener('DOMContentLoaded', initModal(prefixSelectors))
 }
 
 export default Modal

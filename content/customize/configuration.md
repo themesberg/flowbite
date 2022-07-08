@@ -165,6 +165,8 @@ Doing so it will add the prefix to all of the classes.
 /* etc. */
 ```
 
+If the prefix is added in the `tailwind.config.js` file then the classes injected into the Flowbite JS components will also use the prefix [starting from the 1.5 version](https://github.com/themesberg/flowbite/issues/132).
+
 ### Data attributes
 
 You can also update the `flowbite.config.js` file and set your own prefix (or none) to update the data attributes.

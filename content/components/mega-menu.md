@@ -535,12 +535,13 @@ Use this example of a navigation bar built with the utility classes from Tailwin
                     </a>
                 </li>
             </ul>
-                <a href="#" class="p-8 text-left bg-[url('https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/bmw-m6.png')] bg-no-repeat bg-cover bg-center bg-gray-500 bg-blend-multiply hover:bg-blend-normal rounded-lg">
-                    <p class="mb-5 max-w-xl font-extrabold tracking-tight leading-tight text-white">Enjoy nature sustainable travel in the BMW iX</p>
-                    <button type="button" class="inline-flex items-center px-2.5 py-1.5 text-sm font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700">
-                        Show more
-                    </button>
-                </a>
+            <a href="#" class="p-8 text-left bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light" style="background-image: url(/docs/images/dashboard-overview.png)">
+                <p class="mb-5 max-w-xl font-extrabold tracking-tight leading-tight text-white">Preview the new Flowbite dashboard navigation.</p>
+                <button type="button" class="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700">
+                    Get started
+                    <svg class="ml-1 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </a>
         </div>
     </div>
 </nav>

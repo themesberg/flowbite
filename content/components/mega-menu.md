@@ -1,22 +1,24 @@
 ---
 layout: home
-title: Tailwind CSS Mega menu - Flowbite
-description: Use these responsive Tailwind CSS navbar elements to show a navigational bar at the top side of your website
+title: Tailwind CSS mega menu - Flowbite
+description: Use the mega menu component as a full-width dropdown inside the navbar to show a list of menu items based on multiple sizes, variants, and styles.
 group: components
 toc: true
 requires_js: true
 
-previous: Tabs
-previousLink: components/tabs/
+previous: Navbar
+previousLink: components/navbar/
 next: Footer
 nextLink: components/footer/
 ---
 
-Get started with the responsive navbar component from Flowbite to quickly set up a navigation menu for your website and set up the logo, list of pages, CTA button, search input, user profile options with a dropdown, and more.
+The mega menu component is a full-width dropdown that can be triggered by clicking on the menu item and it shows a list of links that you can use to navigate between the pages on a website.
+
+Make sure that you have included the Flowbite JavaScript file inside your project to enable the interactivity of the hamburger icon on mobile devices and the dropdown functionality.
 
 ## Default mega menu
 
-Use this example of a navigation bar built with the utility classes from Tailwind CSS to enable users to navigate between the pages of your website.
+Use this example to show a list of links aligned on three columns inside the mega menu dropdown.
 
 {{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 lg:px-4 py-2.5 dark:bg-gray-800">
@@ -126,7 +128,7 @@ Use this example of a navigation bar built with the utility classes from Tailwin
 
 ## Mega menu with icons
 
-Use this example of a navigation bar built with the utility classes from Tailwind CSS to enable users to navigate between the pages of your website.
+This example of a mega menu dropdown can be used to also show an icon near the text of the link.
 
 {{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 lg:px-4 py-2.5 dark:bg-gray-800">
@@ -254,9 +256,9 @@ Use this example of a navigation bar built with the utility classes from Tailwin
 </nav>
 {{< /example >}}
 
-## Full width
+## Full width dropdown
 
-Use this example of a navigation bar built with the utility classes from Tailwind CSS to enable users to navigate between the pages of your website.
+Use this example to show a mega menu dropdown that spans the entire width of the document page.
 
 {{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-800">
@@ -359,7 +361,7 @@ Use this example of a navigation bar built with the utility classes from Tailwin
 
 ## Full width with CTA
 
-Use this example of a navigation bar built with the utility classes from Tailwind CSS to enable users to navigate between the pages of your website.
+This example can be used to also show a CTA button or link next to the menu items inside the dropdown.
 
 {{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-800">

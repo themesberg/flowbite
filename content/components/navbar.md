@@ -119,9 +119,48 @@ Use this example to create a navigation bar with a user profile or button to tog
 </nav>
 {{< /example >}}
 
-## Navbar with language select
+## Navbar with submenu
 
-Use this example to create a navigation bar with a user profile or button to toggle a dropdown menu.
+Use this example to show another subnav below the main navbar element.
+
+{{< example github="components/navbar.md" show_dark=true >}}
+<nav class="bg-white border-gray-200 dark:bg-gray-800">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
+        <a href="https://flowbite.com" class="flex items-center">
+            <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+        </a>
+        <div class="flex items-center">
+            <a href="tel:5541251234" class="mr-6 text-sm font-medium text-gray-500 dark:text-white hover:underline">(555) 412-1234</a>
+            <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">Login</a>
+        </div>
+    </div>
+</nav>
+<nav class="bg-gray-50 dark:bg-gray-700">
+    <div class="py-3 px-4 mx-auto max-w-screen-xl md:px-6">
+        <div class="flex items-center">
+            <ul class="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
+                <li>
+                    <a href="#" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-900 dark:text-white hover:underline">Company</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-900 dark:text-white hover:underline">Team</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-900 dark:text-white hover:underline">Features</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{{< /example >}}
+
+## Language dropdown
+
+Get started with this example to show a language dropdown selector in the navbar component.
 
 {{< example github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
@@ -131,12 +170,12 @@ Use this example to create a navigation bar with a user profile or button to tog
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
   </a>
   <div class="flex items-center md:order-2">
-      <button type="button" data-dropdown-toggle="language-dropdown" class="inline-flex justify-center items-center p-2 text-sm text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+      <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex justify-center items-center p-2 text-sm text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
         <svg class="mr-2 w-5 h-5 rounded-full" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900"><path fill="#b22234" d="M0 0h7410v3900H0z"/><path d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0" stroke="#fff" stroke-width="300"/><path fill="#3c3b6e" d="M0 0h2964v2100H0z"/><g fill="#fff"><g id="d"><g id="c"><g id="e"><g id="b"><path id="a" d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z"/><use xlink:href="#a" y="420"/><use xlink:href="#a" y="840"/><use xlink:href="#a" y="1260"/></g><use xlink:href="#a" y="1680"/></g><use xlink:href="#b" x="247" y="210"/></g><use xlink:href="#c" x="494"/></g><use xlink:href="#d" x="988"/><use xlink:href="#c" x="1976"/><use xlink:href="#e" x="2470"/></g></svg>
         English (US)
       </button>
       <!-- Dropdown -->
-      <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700" id="language-dropdown">
+      <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700" id="language-dropdown-menu">
         <ul class="py-1" role="none">
           <li>
             <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
@@ -200,43 +239,6 @@ Use this example to create a navigation bar with a user profile or button to tog
   </div>
 </nav>
 {{< /example >}}
-
-##  With subnav
-{{< example github="components/navbar.md" show_dark=true >}}
-<nav class="bg-white border-gray-200 dark:bg-gray-800">
-    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
-        <a href="https://flowbite.com" class="flex items-center">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-        </a>
-        <div class="flex items-center">
-            <a href="tel:5541251234" class="hidden mr-6 text-sm font-medium text-gray-500 dark:text-white hover:underline sm:inline">(555) 412-1234</a>
-            <a href="#" class="hidden text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline sm:inline">Login</a>
-        </div>
-    </div>
-</nav>
-<nav class="bg-gray-50 dark:bg-gray-700">
-    <div class="py-3 px-4 mx-auto max-w-screen-xl md:px-6">
-        <div class="flex items-center">
-            <ul class="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
-                <li>
-                    <a href="#" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="text-gray-900 dark:text-white hover:underline">Company</a>
-                </li>
-                <li>
-                    <a href="#" class="text-gray-900 dark:text-white hover:underline">Team</a>
-                </li>
-                <li>
-                    <a href="#" class="text-gray-900 dark:text-white hover:underline">Features</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-{{< /example >}}
-
 
 ## Navbar with search
 

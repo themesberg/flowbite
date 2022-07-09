@@ -5,8 +5,8 @@ description: Use the footer section at the bottom of every page to show valuable
 group: components
 toc: true
 
-previous: Navbar
-previousLink: components/navbar/
+previous: Mega menu
+previousLink: components/mega-menu/
 next: Sidebar
 nextLink: components/sidebar/
 ---

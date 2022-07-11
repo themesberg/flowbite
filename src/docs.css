@@ -24,16 +24,16 @@
 	@apply overflow-x-hidden font-normal text-gray-500 dark:text-gray-400;
 }
 
+#TableOfContents > ul > li {
+	@apply py-2;
+}
+
 #TableOfContents > ul > li > a {
-	@apply block py-2 font-normal transition-colors duration-200 hover:text-gray-900 dark:hover:text-white;
+	@apply block pl-2.5 font-normal border-l border-white transition-colors duration-200 hover:text-gray-900 dark:hover:text-white hover:border-gray-300 after:content-['#'] after:text-blue-700 after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity;
 }
 
 #TableOfContents > ul > li > ul > li > a {
-	@apply transition-colors duration-200 hover:text-gray-900 dark:hover:text-white;
-}
-
-#TableOfContents > ul > li > ul {
-	@apply pl-4;
+	@apply pl-6 border-l border-white transition-colors duration-200 hover:text-gray-900 dark:hover:text-white hover:border-gray-300 after:content-['#'] after:text-blue-700 after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity;
 }
 
 #TableOfContents > ul > li > ul {
@@ -41,7 +41,7 @@
 }
 
 #TableOfContents > ul > li > ul > li {
-	@apply pb-3;
+	@apply py-2;
 }
 
 .highlight {
@@ -321,7 +321,7 @@ code.language-javascript .token.comment {
 	font-weight: 600;
 	font-size: 8px;
 	line-height: 1;
-	border-top-left-radius: 3px;
+	/* border-left-radius: 3px; */
 	position: absolute;
 	bottom: 0;
 	right: 0;

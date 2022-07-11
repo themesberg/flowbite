@@ -92,18 +92,6 @@ function initiateToggleDarkState(element) {
 
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-
-  document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-  var codeExamples = document.getElementsByClassName("code-example");
-  for (var i = 0; i < codeExamples.length; i++) {
-    initiateCopyToClipboard(codeExamples.item(i));
-    initiateToggleDarkState(codeExamples.item(i));
-  }
-
-});
-
 var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
 var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
@@ -174,72 +162,135 @@ document.querySelectorAll('.code-example [href="#"]').forEach((event) => {
   })
 })
 
+window.addEventListener('DOMContentLoaded', () => {
+  // copy to clipboard
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-const _carbonOptimize = {
-  isRefreshAble: function () {
-    return !(
-      typeof document.addEventListener === 'undefined' ||
-      this.browserSupport().hidden === undefined
-    );
-  },
-  browserSupport: function () {
-    let hidden;
-    let visibilityChange;
-    if (typeof document.hidden !== 'undefined') {
-      // Opera 12.10 and Firefox 18 and later support
-      hidden = 'hidden';
-      visibilityChange = 'visibilitychange';
-    } else if (typeof document.msHidden !== 'undefined') {
-      hidden = 'msHidden';
-      visibilityChange = 'msvisibilitychange';
-    } else if (
-      typeof document.webkitHidden !== 'undefined'
-    ) {
-      hidden = 'webkitHidden';
-      visibilityChange = 'webkitvisibilitychange';
-    }
-    return {
-      hidden: hidden,
-      visibilityChange: visibilityChange,
-    };
-  },
-  handleVisibilityChange: function () {
-    const isElementInViewport = function (el) {
-      let element = document.querySelector(el);
-      let bounding = element.getBoundingClientRect();
-      let isVisible;
+  var codeExamples = document.getElementsByClassName("code-example");
+  for (var i = 0; i < codeExamples.length; i++) {
+    initiateCopyToClipboard(codeExamples.item(i));
+    initiateToggleDarkState(codeExamples.item(i));
+  }
 
-      if (
-        bounding.top >= 0 &&
-        bounding.left >= 0 &&
-        bounding.right <= window.innerWidth &&
-        bounding.bottom <= window.innerHeight
-      ) {
-        isVisible = true;
-      } else {
-        isVisible = false;
+  // toc menu item activation
+  const deactivateMenuEl = el => {
+    el.classList.remove('!border-blue-700', '!after:opacity-100', '!text-blue-700')
+  }
+
+  const allMenuEls = document.querySelectorAll('#TableOfContents [href]')
+  const activateMenuEl = el => {
+    allMenuEls.forEach(el => {
+      deactivateMenuEl(el)
+    })
+    el.classList.add('!border-blue-700', '!after:opacity-100', '!text-blue-700')
+  }
+
+  window.addEventListener('hashchange', () => {
+    console.log('change hash')
+    const menuEl = document.querySelector(`#TableOfContents [href="${location.hash}"]`)
+    activateMenuEl(menuEl)
+  })
+
+  // toc on scroll activation
+  const contentAnchorTags = document.querySelectorAll('#mainContent > h2 > span[id], #mainContent > h3 > span[id], #mainContent > h4 > span[id], #mainContent > h5 > span[id], #mainContent > h6 > span[id]')
+  contentAnchorTags.forEach((anchorEl, key) => {
+    window.addEventListener('scroll', () => {
+      var element = anchorEl;
+      var position = element.getBoundingClientRect();
+      var prevElement = contentAnchorTags[key === 0 ? key : key - 1];
+      var prevElementPosition = prevElement.getBoundingClientRect();
+      var nextElement = contentAnchorTags[key === contentAnchorTags.length - 1 ? key : key + 1];
+      var nextElementPosition = nextElement.getBoundingClientRect();
+
+      if(key === 1) {
+        console.log('=============')
+        console.log('prev el pos:', prevElementPosition.bottom)
+        console.log('prev el:', prevElement.id)
+        console.log('-------------')
+        console.log('current el pos:', position.bottom)
+        console.log('current el:', element.id)
+        console.log('-------------')
+        console.log('next el pos:', nextElementPosition.bottom)
+        console.log('next el:', nextElement.id)
+        console.log('=============')
       }
-      return isVisible;
-    };
 
-    if (!document.hidden) {
-      if (
-        typeof _carbonads !== 'undefined' &&
-        isElementInViewport('#carbonads')
-      ) {
-        _carbonads.refresh();
+
+      // checking whether fully visible
+      if (position.top + 140 >= 0 && position.bottom + 140 <= window.innerHeight) {
+        const menuEl = document.querySelector(`#TableOfContents [href="#${element.id}"]`)
+        activateMenuEl(menuEl)
       }
-    }
-  },
-  init: function () {
-    if (this.isRefreshAble()) {
-      document.addEventListener(
-        this.browserSupport().visibilityChange,
-        this.handleVisibilityChange,
-        false
-      );
-    }
-  },
-};
+    });
+  })
 
-_carbonOptimize.init();
+});
+
+// const _carbonOptimize = {
+//   isRefreshAble: function () {
+//     return !(
+//       typeof document.addEventListener === 'undefined' ||
+//       this.browserSupport().hidden === undefined
+//     );
+//   },
+//   browserSupport: function () {
+//     let hidden;
+//     let visibilityChange;
+//     if (typeof document.hidden !== 'undefined') {
+//       // Opera 12.10 and Firefox 18 and later support
+//       hidden = 'hidden';
+//       visibilityChange = 'visibilitychange';
+//     } else if (typeof document.msHidden !== 'undefined') {
+//       hidden = 'msHidden';
+//       visibilityChange = 'msvisibilitychange';
+//     } else if (
+//       typeof document.webkitHidden !== 'undefined'
+//     ) {
+//       hidden = 'webkitHidden';
+//       visibilityChange = 'webkitvisibilitychange';
+//     }
+//     return {
+//       hidden: hidden,
+//       visibilityChange: visibilityChange,
+//     };
+//   },
+//   handleVisibilityChange: function () {
+//     const isElementInViewport = function (el) {
+//       let element = document.querySelector(el);
+//       let bounding = element.getBoundingClientRect();
+//       let isVisible;
+
+//       if (
+//         bounding.top >= 0 &&
+//         bounding.left >= 0 &&
+//         bounding.right <= window.innerWidth &&
+//         bounding.bottom <= window.innerHeight
+//       ) {
+//         isVisible = true;
+//       } else {
+//         isVisible = false;
+//       }
+//       return isVisible;
+//     };
+
+//     if (!document.hidden) {
+//       if (
+//         typeof _carbonads !== 'undefined' &&
+//         isElementInViewport('#carbonads')
+//       ) {
+//         _carbonads.refresh();
+//       }
+//     }
+//   },
+//   init: function () {
+//     if (this.isRefreshAble()) {
+//       document.addEventListener(
+//         this.browserSupport().visibilityChange,
+//         this.handleVisibilityChange,
+//         false
+//       );
+//     }
+//   },
+// };
+
+// _carbonOptimize.init();

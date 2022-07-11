@@ -18,7 +18,7 @@ Get started with the responsive navbar component from Flowbite to quickly set up
 
 Use this example of a navigation bar built with the utility classes from Tailwind CSS to enable users to navigate between the pages of your website.
 
-{{< example github="components/navbar.md" show_dark=true >}}
+{{< example github="components/navbar.md" show_dark=true iframeHeight="300" >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
     <a href="{{< param homepage >}}/" class="flex items-center">

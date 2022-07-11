@@ -66,36 +66,52 @@ function initiateCopyToClipboard(element) {
 
 function initiateToggleDarkState(element) {
   var codePreviewWrapper = element.getElementsByClassName('code-preview-wrapper')[0];
-  var codeSyntaxWrapper = element.getElementsByClassName('code-syntax-wrapper')[0];
+  var iframeCodeEl = element.getElementsByClassName('iframe-code')[0];
   var button = element.getElementsByClassName("toggle-dark-state-example")[0];
+  var fullViewButton = element.getElementsByClassName("toggle-full-view")[0];
+  var tabletViewButton = element.getElementsByClassName("toggle-tablet-view")[0];
+  var mobileViewButton = element.getElementsByClassName("toggle-mobile-view")[0];
   var moonIcon = element.querySelector('[data-toggle-icon="moon"]');
   var sunIcon = element.querySelector('[data-toggle-icon="sun"]');
 
-  console.log(codePreviewWrapper)
-  console.log(codeSyntaxWrapper)
-  console.log(button)
-  console.log(moonIcon)
-  console.log(sunIcon)
-
   if (button) {
     button.addEventListener('click', function () {
+
+      console.log('click')
 
       var state = button.getAttribute('data-toggle-dark');
 
       if (state === 'light') {
         codePreviewWrapper.classList.add('dark');
-        codeSyntaxWrapper.classList.add('dark');
         button.setAttribute('data-toggle-dark', 'dark');
         moonIcon.classList.add('hidden');
         sunIcon.classList.remove('hidden');
       }
       if (state === 'dark') {
         codePreviewWrapper.classList.remove('dark');
-        codeSyntaxWrapper.classList.remove('dark');
         button.setAttribute('data-toggle-dark', 'light');
         moonIcon.classList.remove('hidden');
         sunIcon.classList.add('hidden');
       }
+    })
+  }
+
+  console.log('mobileViewButton')
+  if (mobileViewButton) {
+    mobileViewButton.addEventListener('click', () => {
+      iframeCodeEl.classList.add('max-w-sm')
+      iframeCodeEl.classList.add('max-w-lg')
+    })
+  }
+  if (tabletViewButton) {
+    tabletViewButton.addEventListener('click', () => {
+      iframeCodeEl.classList.add('max-w-lg')
+      iframeCodeEl.classList.remove('max-w-sm')
+    })
+  }
+  if (fullViewButton) {
+    fullViewButton.addEventListener('click', () => {
+      iframeCodeEl.classList.remove('max-w-sm', 'max-w-lg')
     })
   }
 
@@ -172,6 +188,7 @@ document.querySelectorAll('.code-example [href="#"]').forEach((event) => {
 })
 
 window.addEventListener('DOMContentLoaded', () => {
+
   // copy to clipboard
   document.getElementById('currentYear').textContent = new Date().getFullYear();
 
@@ -215,7 +232,7 @@ window.addEventListener('DOMContentLoaded', () => {
       // checking whether fully visible
       if (position.top + 140 >= 0 && position.bottom + 140 <= window.innerHeight) {
         const menuEl = document.querySelector(`#TableOfContents [href="#${element.id}"]`)
-        if(!anchorChanged) {
+        if (!anchorChanged) {
           activateMenuEl(menuEl)
         }
       }

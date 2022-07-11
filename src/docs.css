@@ -21,11 +21,11 @@
 }
 
 #TableOfContents > ul {
-	@apply overflow-x-hidden font-medium text-gray-500 dark:text-gray-400;
+	@apply overflow-x-hidden font-normal text-gray-500 dark:text-gray-400;
 }
 
 #TableOfContents > ul > li > a {
-	@apply block py-2 font-medium transition-colors duration-200 hover:text-gray-900 dark:hover:text-white;
+	@apply block py-2 font-normal transition-colors duration-200 hover:text-gray-900 dark:hover:text-white;
 }
 
 #TableOfContents > ul > li > ul > li > a {

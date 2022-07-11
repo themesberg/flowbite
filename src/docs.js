@@ -66,9 +66,16 @@ function initiateCopyToClipboard(element) {
 
 function initiateToggleDarkState(element) {
   var codePreviewWrapper = element.getElementsByClassName('code-preview-wrapper')[0];
+  var codeSyntaxWrapper = element.getElementsByClassName('code-syntax-wrapper')[0];
   var button = element.getElementsByClassName("toggle-dark-state-example")[0];
   var moonIcon = element.querySelector('[data-toggle-icon="moon"]');
   var sunIcon = element.querySelector('[data-toggle-icon="sun"]');
+
+  console.log(codePreviewWrapper)
+  console.log(codeSyntaxWrapper)
+  console.log(button)
+  console.log(moonIcon)
+  console.log(sunIcon)
 
   if (button) {
     button.addEventListener('click', function () {
@@ -77,12 +84,14 @@ function initiateToggleDarkState(element) {
 
       if (state === 'light') {
         codePreviewWrapper.classList.add('dark');
+        codeSyntaxWrapper.classList.add('dark');
         button.setAttribute('data-toggle-dark', 'dark');
         moonIcon.classList.add('hidden');
         sunIcon.classList.remove('hidden');
       }
       if (state === 'dark') {
         codePreviewWrapper.classList.remove('dark');
+        codeSyntaxWrapper.classList.remove('dark');
         button.setAttribute('data-toggle-dark', 'light');
         moonIcon.classList.remove('hidden');
         sunIcon.classList.add('hidden');

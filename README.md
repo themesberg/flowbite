@@ -289,7 +289,7 @@ Flowbite is an open source collection of UI components built with the utility cl
   </tr>
   <tr>
     <td width="33.3333%">Floating Label</td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">Mega Menu</td>
     <td width="33.3333%"></td>
   </tr>
   <tr>
@@ -298,7 +298,11 @@ Flowbite is an open source collection of UI components built with the utility cl
             <img alt="Tailwind CSS Floating Label" src="https://flowbite.s3.amazonaws.com/github/floating-label.jpg">
         </a>
     </td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/mega-menu/">
+            <img alt="Tailwind CSS Mega Menu" src="https://flowbite.s3.amazonaws.com/github/mega-menu.jpg">
+        </a>
+    </td>
     <td width="33.3333%"></td>
   </tr>
 </table>

@@ -466,7 +466,7 @@ You can also use the dropdown element inside a navigation bar and add a second l
 </nav>
 {{< /example >}}
 
-## With megamenu
+## With mega menu
 
 You can also use the dropdown element inside a navigation bar and add a second level of navigation hierarchy, but make sure to use a `button` element.
 

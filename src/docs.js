@@ -174,7 +174,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // toc menu item activation
   const deactivateMenuEl = el => {
-    el.classList.remove('!border-blue-700', '!after:opacity-100', '!text-blue-700')
+    el.classList.remove('!border-blue-700', '!after:opacity-100', '!text-blue-700', 'dark:!border-blue-500', 'dark:!text-blue-500')
   }
 
   const allMenuEls = document.querySelectorAll('#TableOfContents [href]')
@@ -182,44 +182,33 @@ window.addEventListener('DOMContentLoaded', () => {
     allMenuEls.forEach(el => {
       deactivateMenuEl(el)
     })
-    el.classList.add('!border-blue-700', '!after:opacity-100', '!text-blue-700')
+    el.classList.add('!border-blue-700', '!after:opacity-100', '!text-blue-700', 'dark:!border-blue-500', 'dark:!text-blue-500')
   }
 
+  let anchorChanged = false;
   window.addEventListener('hashchange', () => {
     console.log('change hash')
+    anchorChanged = true;
     const menuEl = document.querySelector(`#TableOfContents [href="${location.hash}"]`)
     activateMenuEl(menuEl)
+    setTimeout(() => {
+      anchorChanged = false;
+    }, 99)
   })
 
   // toc on scroll activation
   const contentAnchorTags = document.querySelectorAll('#mainContent > h2 > span[id], #mainContent > h3 > span[id], #mainContent > h4 > span[id], #mainContent > h5 > span[id], #mainContent > h6 > span[id]')
-  contentAnchorTags.forEach((anchorEl, key) => {
+  contentAnchorTags.forEach(anchorEl => {
     window.addEventListener('scroll', () => {
       var element = anchorEl;
       var position = element.getBoundingClientRect();
-      var prevElement = contentAnchorTags[key === 0 ? key : key - 1];
-      var prevElementPosition = prevElement.getBoundingClientRect();
-      var nextElement = contentAnchorTags[key === contentAnchorTags.length - 1 ? key : key + 1];
-      var nextElementPosition = nextElement.getBoundingClientRect();
-
-      if(key === 1) {
-        console.log('=============')
-        console.log('prev el pos:', prevElementPosition.bottom)
-        console.log('prev el:', prevElement.id)
-        console.log('-------------')
-        console.log('current el pos:', position.bottom)
-        console.log('current el:', element.id)
-        console.log('-------------')
-        console.log('next el pos:', nextElementPosition.bottom)
-        console.log('next el:', nextElement.id)
-        console.log('=============')
-      }
-
 
       // checking whether fully visible
       if (position.top + 140 >= 0 && position.bottom + 140 <= window.innerHeight) {
         const menuEl = document.querySelector(`#TableOfContents [href="#${element.id}"]`)
-        activateMenuEl(menuEl)
+        if(!anchorChanged) {
+          activateMenuEl(menuEl)
+        }
       }
     });
   })

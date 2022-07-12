@@ -64,7 +64,7 @@
 #mainContent > p > a,
 #mainContent > ul > li > a,
 #mainContent > ol > li > a {
-	@apply font-semibold text-gray-700 underline dark:text-gray-300 decoration-1 underline-offset-2 decoration-blue-600 dark:decoration-blue-500;
+	@apply font-medium text-gray-700 underline dark:text-gray-300 decoration-1 underline-offset-2 decoration-blue-600 dark:decoration-blue-500;
 }
 
 #mainContent > p > a:hover,
@@ -139,6 +139,10 @@ pre[class*="language-"] {
 .code-preview-wrapper + .code-syntax-wrapper > .code-syntax {
 	overflow: auto;
 	@apply mt-0 rounded-none;
+}
+
+.code-preview-wrapper + .code-syntax-wrapper {
+	@apply mb-4;
 }
 
 .code-preview-wrapper + .code-syntax-wrapper > .code-syntax > .highlight > pre[class*="language-"] {
@@ -383,7 +387,7 @@ code.language-html .token.comment{
 /* Search */
 
 .DocSearch-Button {
-	@apply hidden h-auto p-2 m-0 border border-gray-300 border-solid rounded-lg shadow-none w-52 bg-gray-50 md:flex hover:bg-gray-100 xl:w-64 hover:shadow-none focus:shadow-none dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600;
+	@apply hidden p-2 m-0 w-52 h-auto bg-gray-50 rounded-lg border border-gray-300 border-solid shadow-none md:flex hover:bg-gray-100 xl:w-64 hover:shadow-none focus:shadow-none dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600;
 }
 
 .DocSearch-Button-Placeholder {
@@ -399,7 +403,7 @@ code.language-html .token.comment{
 }
 
 .DocSearch-Button-Key {
-	@apply w-auto pt-1 pb-0 m-0 text-xs font-normal text-gray-500 shadow-none bg-none dark:text-gray-400;
+	@apply pt-1 pb-0 m-0 w-auto text-xs font-normal text-gray-500 bg-none shadow-none dark:text-gray-400;
 }
 
 .DocSearch-Button .DocSearch-Search-Icon {
@@ -463,7 +467,7 @@ code.language-html .token.comment{
 }
 
 .DocSearch-Hit a {
-	@apply rounded-lg shadow-none bg-gray-50 dark:bg-gray-600 dark:hover:bg-blue-600;
+	@apply bg-gray-50 rounded-lg shadow-none dark:bg-gray-600 dark:hover:bg-blue-600;
 }
 
 .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-Select-Icon,

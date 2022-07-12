@@ -85,7 +85,6 @@ module.exports = {
     ]
 
 }
-
 ```
 8. Import the Flowbite JavaScript file inside your main `./src/main.js` file:
 

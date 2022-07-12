@@ -49,8 +49,8 @@ const copyTextToClipboard = text => {
 }
 
 const initiateCopyToClipboard = element => {
-  console.log(element)
-  var textToCopy = element.querySelector('.iframe-code').contentDocument.querySelector('#exampleWrapper').innerHTML;
+  const iframe = element.querySelector('.iframe-code');
+  var textToCopy = iframe.contentDocument.querySelector('#exampleWrapper').innerHTML;
   var button = element.getElementsByClassName("copy-to-clipboard-button")[0];
   var alert = document.getElementById('copied-code-alert');
   var copyText = button.getElementsByClassName('copy-text')[0];
@@ -125,32 +125,49 @@ const initiateToggleDarkState = element => {
 
   if (mobileViewButton) {
     mobileViewButton.addEventListener('click', () => {
+      const theme = button.getAttribute('data-toggle-dark');
       iframeCodeEl.classList.add('max-w-sm')
       iframeCodeEl.classList.add('max-w-lg')
       iframeCodeEl.contentWindow.location.reload();
-      iframeCodeEl.contentWindow.location.reload();
+      iframeCodeEl.classList.add('opacity-0')
       iframeCodeEl.onload = () => {
         updateiFrameHeight(iframeCodeEl)
+        updateiFrameDarkMode(iframeCodeEl, theme)
       }
+      setTimeout(() => {
+        iframeCodeEl.classList.remove('opacity-0')
+      }, 500)
     })
   }
   if (tabletViewButton) {
     tabletViewButton.addEventListener('click', () => {
+      const theme = button.getAttribute('data-toggle-dark');
       iframeCodeEl.classList.add('max-w-lg')
       iframeCodeEl.classList.remove('max-w-sm')
       iframeCodeEl.contentWindow.location.reload();
+      iframeCodeEl.classList.add('opacity-0')
       iframeCodeEl.onload = () => {
         updateiFrameHeight(iframeCodeEl)
+        updateiFrameDarkMode(iframeCodeEl, theme)
       }
+      setTimeout(() => {
+        iframeCodeEl.classList.remove('opacity-0')
+      }, 500)
     })
   }
   if (fullViewButton) {
     fullViewButton.addEventListener('click', () => {
+      const theme = button.getAttribute('data-toggle-dark');
       iframeCodeEl.classList.remove('max-w-sm', 'max-w-lg')
       iframeCodeEl.contentWindow.location.reload();
+      iframeCodeEl.classList.add('opacity-0')
       iframeCodeEl.onload = () => {
         updateiFrameHeight(iframeCodeEl)
+        updateiFrameDarkMode(iframeCodeEl, theme)
       }
+      setTimeout(() => {
+        iframeCodeEl.classList.remove('opacity-0')
+      }, 500)
     })
   }
 
@@ -167,12 +184,15 @@ const updateiFrameCodeElsDarkMode = (theme) => {
   })
 }
 
-const updateiFrameCodeElsDarkModeOnLoad = (theme) => {
-  const iframeCodeEls = document.querySelectorAll('.iframe-code')
-  iframeCodeEls.forEach(i => {
-    i.onload = () => {
-      updateiFrameHeight(i)
-      updateiFrameDarkMode(i, theme)
+const initializeCodeExamples = (theme) => {
+  const codeExampleEls = document.querySelectorAll('.code-example')
+
+  codeExampleEls.forEach(c => {
+    const iframe = c.querySelector('.iframe-code')
+    iframe.onload = () => {
+      updateiFrameDarkMode(iframe, theme)
+      updateiFrameHeight(iframe)
+      initiateCopyToClipboard(c)
     }
   })
 }
@@ -193,11 +213,11 @@ window.addEventListener('DOMContentLoaded', () => {
   // Change the icons inside the button based on previous settings
   if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     themeToggleLightIcon.classList.remove('hidden');
-    updateiFrameCodeElsDarkModeOnLoad('dark')
+    initializeCodeExamples('dark')
     updateButtonThemeToggleEls('dark')
   } else {
     themeToggleDarkIcon.classList.remove('hidden');
-    updateiFrameCodeElsDarkModeOnLoad('light')
+    initializeCodeExamples('light')
     updateButtonThemeToggleEls('light')
   }
 
@@ -270,7 +290,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // copy to clipboard
   var codeExamples = document.querySelectorAll('.code-example');
   codeExamples.forEach(c => {
-    initiateCopyToClipboard(c);
     initiateToggleDarkState(c);
   })
   // toc menu item activation

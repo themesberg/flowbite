@@ -49,7 +49,8 @@ const copyTextToClipboard = text => {
 }
 
 const initiateCopyToClipboard = element => {
-  var textToCopy = element.getElementsByClassName("code-preview")[0].innerHTML;
+  console.log(element)
+  var textToCopy = element.querySelector('.iframe-code').contentDocument.querySelector('#exampleWrapper').innerHTML;
   var button = element.getElementsByClassName("copy-to-clipboard-button")[0];
   var alert = document.getElementById('copied-code-alert');
   var copyText = button.getElementsByClassName('copy-text')[0];
@@ -94,7 +95,6 @@ const updatePreviewThemeToggleButton = (buttonEl, theme) => {
     sunIconEl.classList.add('hidden');
     buttonTextEl.textContent = 'Toggle dark mode';
   }
-
 
 }
 
@@ -263,15 +263,16 @@ window.addEventListener('DOMContentLoaded', () => {
     toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
   });
 
-  // copy to clipboard
+  
+  // current year
   document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-  var codeExamples = document.getElementsByClassName("code-example");
-  for (var i = 0; i < codeExamples.length; i++) {
-    initiateCopyToClipboard(codeExamples.item(i));
-    initiateToggleDarkState(codeExamples.item(i));
-  }
-
+  // copy to clipboard
+  var codeExamples = document.querySelectorAll('.code-example');
+  codeExamples.forEach(c => {
+    initiateCopyToClipboard(c);
+    initiateToggleDarkState(c);
+  })
   // toc menu item activation
   const deactivateMenuEl = el => {
     el.classList.remove('!border-blue-700', '!after:opacity-100', '!text-blue-700', 'dark:!border-blue-500', 'dark:!text-blue-500')

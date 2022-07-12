@@ -57,6 +57,89 @@ Use this example if you want to include an anchor tag inside the label of the ra
 </div>
 {{< /example >}}
 
+## Radio example bordered
+
+Use the default example of a radio component with the checked and unchecked state.
+
+{{< example class="dark:bg-gray-800" github="forms/radio.md" show_dark=true >}}
+<div class="flex items-center pl-4 mb-4 border border-gray-200 rounded dark:border-gray-700">
+    <input id="default-radio-5" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    <label for="default-radio-5" class="w-full py-4 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default radio</label>
+</div>
+<div class="flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700">
+    <input checked id="default-radio-6" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    <label for="default-radio-6" class="w-full py-4 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+</div>
+{{< /example >}}
+
+## List
+
+Here's an example of a list group that you can use right away.
+
+{{< example class="dark:bg-gray-800" github="components/radio.md" show_dark=true >}}
+<h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Identification</h3>
+<ul class="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+        <div class="flex items-center pl-3">
+            <input id="list-radio-license" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="list-radio-license" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Driver License </label>
+        </div>
+    </li>
+    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+        <div class="flex items-center pl-3">
+            <input id="list-radio-id" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="list-radio-id" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">State ID</label>
+        </div>
+    </li>
+    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+        <div class="flex items-center pl-3">
+            <input id="list-radio-millitary" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="list-radio-millitary" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">US Millitary</label>
+        </div>
+    </li>
+    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+        <div class="flex items-center pl-3">
+            <input id="list-radio-passport" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="list-radio-passport" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">US Passport</label>
+        </div>
+    </li>
+</ul>
+{{< /example >}}
+
+## Horizontal List
+
+Here's an example of a list group that you can use right away.
+
+{{< example class="dark:bg-gray-800" github="components/radio.md" show_dark=true >}}
+<h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Identification</h3>
+<ul class="flex items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+    <li class="w-full border-r border-gray-200 dark:border-gray-600">
+        <div class="flex items-center pl-3">
+            <input id="horizontal-list-radio-license" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="horizontal-list-radio-license" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Driver License </label>
+        </div>
+    </li>
+    <li class="w-full border-r border-gray-200 dark:border-gray-600">
+        <div class="flex items-center pl-3">
+            <input id="horizontal-list-radio-id" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="horizontal-list-radio-id" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">State ID</label>
+        </div>
+    </li>
+    <li class="w-full border-r border-gray-200 dark:border-gray-600">
+        <div class="flex items-center pl-3">
+            <input id="horizontal-list-radio-millitary" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="horizontal-list-radio-millitary" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">US Millitary</label>
+        </div>
+    </li>
+    <li class="w-full dark:border-gray-600">
+        <div class="flex items-center pl-3">
+            <input id="horizontal-list-radio-passport" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="horizontal-list-radio-passport" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">US Passport</label>
+        </div>
+    </li>
+</ul>
+{{< /example >}}
+
 ## Helper text
 
 Get started with this example if you want to add a secondary text to the label for the radio component.
@@ -129,4 +212,36 @@ Apply the `text-{color}-{shade}` utility class from Tailwind CSS to change the c
         <label for="orange-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Orange</label>
     </div>
 </div>
+{{< /example >}}
+
+## Advanced
+
+Use the `text-{color}-{shade}` classes from Tailwind CSS to change the color of the checkbox component.
+
+{{< example class="flex flex-wrap dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
+    <div>
+        <h3 class="mb-5 text-lg font-medium text-gray-900 dark:text-white">How much do you expect to use each month?</h3>
+        <ul class="space-y-4">
+            <li>
+                <input type="radio" id="hosting-small" name="hosting" value="hosting-small" class="hidden peer" required>
+                <label for="hosting-small" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
+                    <div class="block">
+                        <div class="w-full text-lg font-semibold">0-50 MB</div>
+                        <div class="w-full">Good for small websites</div>
+                    </div>
+                    <svg class="w-6 h-6 ml-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </label>
+            </li>
+            <li>
+                <input type="radio" id="hosting-big" name="hosting" value="hosting-big" class="hidden peer">
+                <label for="hosting-big" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <div class="block">
+                        <div class="w-full text-lg font-semibold">500-1000 MB</div>
+                        <div class="w-full">Good for large websites</div>
+                    </div>
+                    <svg class="w-6 h-6 ml-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </label>
+            </li>
+        </ul>
+    </div>
 {{< /example >}}

@@ -127,20 +127,30 @@ const initiateToggleDarkState = element => {
     mobileViewButton.addEventListener('click', () => {
       iframeCodeEl.classList.add('max-w-sm')
       iframeCodeEl.classList.add('max-w-lg')
-      updateiFrameHeight(iframeCodeEl)
+      iframeCodeEl.contentWindow.location.reload();
+      iframeCodeEl.contentWindow.location.reload();
+      iframeCodeEl.onload = () => {
+        updateiFrameHeight(iframeCodeEl)
+      }
     })
   }
   if (tabletViewButton) {
     tabletViewButton.addEventListener('click', () => {
       iframeCodeEl.classList.add('max-w-lg')
       iframeCodeEl.classList.remove('max-w-sm')
-      updateiFrameHeight(iframeCodeEl)
+      iframeCodeEl.contentWindow.location.reload();
+      iframeCodeEl.onload = () => {
+        updateiFrameHeight(iframeCodeEl)
+      }
     })
   }
   if (fullViewButton) {
     fullViewButton.addEventListener('click', () => {
       iframeCodeEl.classList.remove('max-w-sm', 'max-w-lg')
-      updateiFrameHeight(iframeCodeEl)
+      iframeCodeEl.contentWindow.location.reload();
+      iframeCodeEl.onload = () => {
+        updateiFrameHeight(iframeCodeEl)
+      }
     })
   }
 

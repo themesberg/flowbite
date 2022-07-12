@@ -253,23 +253,23 @@ pre[class*="language-"] {
 	font-style: italic;
 }
 
-/* code.language-bash,
+code.language-bash,
 pre.language-bash {
 	@apply text-gray-600 dark:text-gray-500;
 }
 
 code.language-javascript {
 	@apply text-gray-900 dark:text-gray-500;
-} */
+}
 
 code.language-javascript .token {
 	/* @apply text-blue-900 dark:text-blue-500; */
 	background: transparent;
 }
 
-/* code.language-javascript .token.comment {
+code.language-javascript .token.comment {
 	@apply text-gray-900 dark:text-gray-500;
-} */
+}
 
 .code-responsive-wrapper {
 	background-color: #ffffff;

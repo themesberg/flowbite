@@ -17,7 +17,7 @@ The toggle component can be used to receive a simple "yes" or "no" type of answe
 
 Get started with the default toggle component example as a checkbox element to receive a true or false selection from the user.
 
-{{< example class="dark:bg-gray-800" github="forms/toggle.md" show_dark=true >}}
+{{< example id="default-toggle-example" class="dark:bg-gray-800" github="forms/toggle.md" show_dark=true >}}
 <label for="default-toggle" class="inline-flex relative items-center cursor-pointer">
   <input type="checkbox" value="" id="default-toggle" class="sr-only peer">
   <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
@@ -29,7 +29,7 @@ Get started with the default toggle component example as a checkbox element to r
 
 Apply the `checked` attribute to the toggle component to activate the selection by default.
 
-{{< example class="dark:bg-gray-800" github="forms/toggle.md" show_dark=true >}}
+{{< example id="toggle-checked-example" class="dark:bg-gray-800" github="forms/toggle.md" show_dark=true >}}
 <label for="checked-toggle" class="inline-flex relative items-center cursor-pointer">
   <input type="checkbox" value="" id="checked-toggle" class="sr-only peer" checked>
   <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
@@ -41,7 +41,7 @@ Apply the `checked` attribute to the toggle component to activate the selection 
 
 Apply the `disabled` attribute to disallow the users from making any further selections.
 
-{{< example class="flex flex-col flex-wrap dark:bg-gray-800" github="forms/toggle.md" show_dark=true >}}
+{{< example id="toggle-disabled-example" class="flex flex-col flex-wrap dark:bg-gray-800" github="forms/toggle.md" show_dark=true >}}
 <label for="disabled-toggle" class="inline-flex relative items-center mb-5 cursor-pointer">
   <input type="checkbox" value="" id="disabled-toggle" class="sr-only peer" disabled>
   <div class="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
@@ -59,7 +59,7 @@ Apply the `disabled` attribute to disallow the users from making any further sel
 
 Change the color of the toggle component by updating the color classes of `peer-focus` and `peer-checked`.
 
-{{< example class="flex inline-flex-wrap dark:bg-gray-800" github="forms/toggle.md" show_dark=true >}}
+{{< example id="toggle-colors-example" class="flex inline-flex-wrap dark:bg-gray-800" github="forms/toggle.md" show_dark=true >}}
 <label for="red-toggle" class="inline-flex relative items-center mr-5 cursor-pointer">
   <input type="checkbox" value="" id="red-toggle" class="sr-only peer" checked>
   <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-red-300 dark:peer-focus:ring-red-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-red-600"></div>
@@ -101,7 +101,7 @@ Change the color of the toggle component by updating the color classes of `peer-
 
 Get started with small, default, or large sizes of the toggle component based on your needs.
 
-{{< example class="flex flex-col flex-wrap dark:bg-gray-800" github="forms/toggle.md" show_dark=true >}}
+{{< example id="toggle-sizes-example" class="flex flex-col flex-wrap dark:bg-gray-800" github="forms/toggle.md" show_dark=true >}}
 <label for="small-toggle" class="inline-flex relative items-center mb-5 cursor-pointer">
   <input type="checkbox" value="" id="small-toggle" class="sr-only peer">
   <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>

@@ -19,7 +19,7 @@ Use this responsive Tailwind CSS timeline component to show a series of data ent
 
 Optionally, you can also add a CTA button to any of the timeline elements.
 
-{{< example github="components/timeline.md" show_dark=true >}}
+{{< example id="default-timeline-example" github="components/timeline.md" show_dark=true >}}
 <ol class="relative border-l border-gray-200 dark:border-gray-700">                  
     <li class="mb-10 ml-4">
         <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -47,7 +47,7 @@ Optionally, you can also add a CTA button to any of the timeline elements.
 
 Use this vertical timeline component with icons and badges to show a more advanced set of data.
 
-{{< example github="components/timeline.md" show_dark=true >}}
+{{< example id="timeline-vertical-example" github="components/timeline.md" show_dark=true >}}
 <ol class="relative border-l border-gray-200 dark:border-gray-700">                  
     <li class="mb-10 ml-6">            
         <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
@@ -81,7 +81,7 @@ Use this vertical timeline component with icons and badges to show a more advanc
 
 Use this horizontally aligned timeline component to show a series of data in a chronological order.
 
-{{< example github="components/timeline.md" show_dark=true >}}
+{{< example id="timeline-stepper-example" github="components/timeline.md" show_dark=true >}}
 <ol class="items-center sm:flex">
     <li class="relative mb-6 sm:mb-0">
         <div class="flex items-center">
@@ -129,7 +129,7 @@ Use this horizontally aligned timeline component to show a series of data in a c
 
 This component can be used to show the timline of a user's activity history inside your application by using an avatar, datetime, description, and links to specific pages.
 
-{{< example github="components/timeline.md" show_dark=true >}}
+{{< example id="timeline-activity-log-example" github="components/timeline.md" show_dark=true >}}
 <ol class="relative border-l border-gray-200 dark:border-gray-700">                  
     <li class="mb-10 ml-6">            
         <span class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
@@ -168,7 +168,7 @@ This component can be used to show the timline of a user's activity history insi
 
 Use this component to group multiple data entries inside a single date and show elements like the avatar, title, description, tag and link to a relevant page.
 
-{{< example github="components/timeline.md" show_dark=true >}}
+{{< example id="timeline-grouped-example" github="components/timeline.md" show_dark=true >}}
 <div class="p-5 mb-4 bg-gray-50 rounded-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
     <time class="text-lg font-semibold text-gray-900 dark:text-white">January 13th, 2022</time>
     <ol class="mt-3 divide-y divider-gray-200 dark:divide-gray-700">

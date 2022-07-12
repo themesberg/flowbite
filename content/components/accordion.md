@@ -27,7 +27,7 @@ Don't forget to set the `data-accordion-target="{selector}"` data attribute to t
 
 Use the `data-accordion="collapse"` to collapse every other child element when expanding a single one. 
 
-{{< example github="components/accordion.md" show_dark=true >}}
+{{< example id="default-accordion-example" github="components/accordion.md" show_dark=true >}}
 <div id="accordion-collapse" data-accordion="collapse">
   <h2 id="accordion-collapse-heading-1">
     <button type="button" class="flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 rounded-t-xl border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
@@ -77,7 +77,7 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
 
 Use the `data-accordion="open"` option to keep previously opened accordion elements unchanged.
 
-{{< example github="components/accordion.md" show_dark=true >}}
+{{< example id="accordion-always-open-example" github="components/accordion.md" show_dark=true >}}
 <div id="accordion-open" data-accordion="open">
   <h2 id="accordion-open-heading-1">
     <button type="button" class="flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 rounded-t-xl border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-1" aria-expanded="true" aria-controls="accordion-open-body-1">
@@ -129,7 +129,7 @@ Use the `data-active-classes` and `data-inactive-classes` to set the active and 
 
 Here's an example where we apply the blue colors instead of gray:
 
-{{< example github="components/accordion.md" show_dark=true >}}
+{{< example id="accordion-color-options-example" github="components/accordion.md" show_dark=true >}}
 <div id="accordion-color" data-accordion="collapse" data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white">
   <h2 id="accordion-color-heading-1">
     <button type="button" class="flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 rounded-t-xl border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-color-body-1" aria-expanded="true" aria-controls="accordion-color-body-1">
@@ -179,7 +179,7 @@ Here's an example where we apply the blue colors instead of gray:
 
 Use this example to remove the background color and rounded borders from the accordion component.
 
-{{< example github="components/accordion.md" show_dark=true >}}
+{{< example id="accordion-flush-example" github="components/accordion.md" show_dark=true >}}
 <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
   <h2 id="accordion-flush-heading-1">
     <button type="button" class="flex justify-between items-center py-5 w-full font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
@@ -229,7 +229,7 @@ Use this example to remove the background color and rounded borders from the acc
 
 Use the `data-accordion-icon` data attribute to optionally set an element to rotate 180 degrees when the accordion element is expanded. If the data attribute is not set, then it will not rotate.
 
-{{< example github="components/accordion.md" show_dark=true >}}
+{{< example id="accordion-arrow-style-example" github="components/accordion.md" show_dark=true >}}
 <div id="accordion-arrow-icon" data-accordion="open">
   <h2 id="accordion-arrow-icon-heading-1">
     <button type="button" class="flex justify-between items-center p-5 w-full font-medium text-left text-gray-900 bg-gray-100 rounded-t-xl border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-arrow-icon-body-1" aria-expanded="true" aria-controls="accordion-arrow-icon-body-1">

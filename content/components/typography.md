@@ -19,7 +19,7 @@ We have listed some of the commonly used typography classes that we use througho
 
 Use the following `text-{size}` utility classes from Tailwind to set the font size for any text element.
 
-{{< example github="components/typography.md" show_dark=true >}}
+{{< example id="font-size-example" github="components/typography.md" show_dark=true >}}
 <p class="text-xs dark:text-white">Flowbite</p>
 <p class="text-sm dark:text-white">FlowBite</p>
 <p class="text-base dark:text-white">FlowBite</p>

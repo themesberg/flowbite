@@ -20,7 +20,7 @@ Make sure that you have included Flowbite as a plugin inside your Tailwind CSS p
 
 Use this default example of a checbkox element in a checked and unchecked state.
 
-{{< example class="dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="default-checkbox-example" class="dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex items-center mb-4">
     <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default checkbox</label>
@@ -35,7 +35,7 @@ Use this default example of a checbkox element in a checked and unchecked state.
 
 This example can be used for the disabled state of the checkbox component by applying the `disabled` attribute to the input element.
 
-{{< example class="dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="checkbox-disabled-example" class="dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex items-center mb-4">
     <input disabled id="disabled-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <label for="disabled-checkbox" class="ml-2 text-sm font-medium text-gray-400 dark:text-gray-500">Disabled checkbox</label>
@@ -50,7 +50,7 @@ This example can be used for the disabled state of the checkbox component by app
 
 Use this example if you want to add an anchor link inside the label of the checkbox component.
 
-{{< example class="dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="checkbox-link-example" class="dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex items-center">
     <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <label for="link-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">terms and conditions</a>.</label>
@@ -61,7 +61,7 @@ Use this example if you want to add an anchor link inside the label of the check
 
 Get started with this example if you want to add a secondary helper text for the checkbox component.
 
-{{< example class="dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="checkbox-helper-example" class="dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex">
     <div class="flex items-center h-5">
         <input id="helper-checkbox" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
@@ -77,7 +77,7 @@ Get started with this example if you want to add a secondary helper text for the
 
 You can align the checkbox elements horizontally by using a wrapper tag and applying the `flex` class.
 
-{{< example class="dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="checkbox-inline-example" class="dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex">
     <div class="flex items-center mr-4">
         <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
@@ -102,7 +102,7 @@ You can align the checkbox elements horizontally by using a wrapper tag and appl
 
 Use the `text-{color}-{shade}` classes from Tailwind CSS to change the color of the checkbox component.
 
-{{< example class="flex flex-wrap dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="checkbox-colors-example" class="flex flex-wrap dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex items-center mr-4">
     <input checked id="red-checkbox" type="checkbox" value="" class="w-4 h-4 text-red-600 bg-gray-100 rounded border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <label for="red-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Red</label>

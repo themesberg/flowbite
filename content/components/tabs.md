@@ -17,7 +17,7 @@ The tabs component can be used either as an extra navigational hierarchy complem
 
 Use the following default tabs component example to show a list of links that the user can navigate from on your website.
 
-{{< example github="components/tabs.md" show_dark=true >}}
+{{< example id="default-tabs-example" github="components/tabs.md" show_dark=true >}}
 <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400">
     <li class="mr-2">
         <a href="#" aria-current="page" class="inline-block p-4 text-blue-600 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500">Profile</a>
@@ -41,7 +41,7 @@ Use the following default tabs component example to show a list of links that th
 
 Use this alternative tabs component style with an underline instead of a background when hovering and being active on a certain page.
 
-{{< example github="components/tabs.md" show_dark=true >}}
+{{< example id="tabs-underline-example" github="components/tabs.md" show_dark=true >}}
 <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
     <ul class="flex flex-wrap -mb-px">
         <li class="mr-2">
@@ -67,7 +67,7 @@ Use this alternative tabs component style with an underline instead of a backgro
 
 This is an example of the tabs component where you can also use a SVG powered icon to complement the text within the navigational tabs.
 
-{{< example github="components/tabs.md" show_dark=true >}}
+{{< example id="tabs-icons-example" github="components/tabs.md" show_dark=true >}}
 <div class="border-b border-gray-200 dark:border-gray-700">
     <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
         <li class="mr-2">
@@ -101,7 +101,7 @@ This is an example of the tabs component where you can also use a SVG powered ic
 
 If you want to use pills as a style for the tabs component you can do so by using this example.
 
-{{< example github="components/tabs.md" show_dark=true >}}
+{{< example id="tabs-pill-example" github="components/tabs.md" show_dark=true >}}
 <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400">
     <li class="mr-2">
         <a href="#" class="inline-block py-3 px-4 text-white bg-blue-600 rounded-lg active" aria-current="page">Tab 1</a>
@@ -125,7 +125,7 @@ If you want to use pills as a style for the tabs component you can do so by usin
 
 If you want to show the tabs on the full width relative to the parent element you can do so by using the full width tabs component example.
 
-{{< example github="components/tabs.md" show_dark=true >}}
+{{< example id="tabs-full-width-example" github="components/tabs.md" show_dark=true >}}
 <div class="sm:hidden">
     <label for="tabs" class="sr-only">Select your country</label>
     <select id="tabs" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -167,7 +167,7 @@ Apply the `role="tabpanel"` data attribute to every tab content element and set 
 
 You can use multiple tab components on a single page but make sure that the id's are different.
 
-{{< example github="components/tabs.md" show_dark=true >}}
+{{< example id="tabs-interactive-example" github="components/tabs.md" show_dark=true >}}
 <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
     <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
         <li class="mr-2" role="presentation">

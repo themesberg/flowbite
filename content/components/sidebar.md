@@ -17,7 +17,7 @@ The sidebar component can be used as a complementary element relative to the nav
 
 Use this example to show a responsive list of menu items inside the sidebar with icons and labels.
 
-{{< example github="components/sidebar.md" show_dark=true >}}
+{{< example id="default-sidebar-example" github="components/sidebar.md" show_dark=true >}}
 <aside class="w-64" aria-label="Sidebar">
    <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
       <ul class="space-y-2">
@@ -78,7 +78,7 @@ Use this example to show a responsive list of menu items inside the sidebar with
 
 Use this sidebar example to create multi-level menu items by applying the `data-collapse-toggle="id"` data attribute from Flowbite and toggle the second-level menu item.
 
-{{< example github="components/sidebar.md" show_dark=true >}}
+{{< example id="sidebar-multi-level-example" github="components/sidebar.md" show_dark=true >}}
 <aside class="w-64" aria-label="Sidebar">
    <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
       <ul class="space-y-2">
@@ -154,7 +154,7 @@ Use this sidebar example to create multi-level menu items by applying the `data-
 
 Separate the content inside the sidebar component by applying a border separator between the two menus.
 
-{{< example github="components/sidebar.md" show_dark=true >}}
+{{< example id="sidebar-separator-example" github="components/sidebar.md" show_dark=true >}}
 <aside class="w-64" aria-label="Sidebar">
    <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
       <ul class="space-y-2">
@@ -237,7 +237,7 @@ Separate the content inside the sidebar component by applying a border separator
 
 Use this example to add a CTA button inside the sidebar component and encourage your users to visit the dedicated page.
 
-{{< example github="components/sidebar.md" show_dark=true >}}
+{{< example id="sidebar-cta-button-example" github="components/sidebar.md" show_dark=true >}}
 <aside class="w-64" aria-label="Sidebar">
    <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
       <ul class="space-y-2">
@@ -307,7 +307,7 @@ Use this example to add a CTA button inside the sidebar component and encourage 
 
 Show the logo of your brand and link back to the homepage from the top part of the sidebar. 
 
-{{< example github="components/sidebar.md" show_dark=true >}}
+{{< example id="sidebar-logo-example" github="components/sidebar.md" show_dark=true >}}
 <aside class="w-64" aria-label="Sidebar">
    <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
       <a href="{{< param homepage >}}/" class="flex items-center pl-2.5 mb-5">

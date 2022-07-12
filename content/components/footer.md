@@ -19,7 +19,7 @@ Use these footer sections coded with the utility classes from Tailwind CSS and c
 
 Use this footer component to show a copyright notice and some helpful website links.
 
-{{< example github="components/footer.md" class="p-2" show_dark=true >}}
+{{< example id="default-footer-example" github="components/footer.md" class="p-2" show_dark=true >}}
 <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
     <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
     </span>
@@ -44,7 +44,7 @@ Use this footer component to show a copyright notice and some helpful website li
 
 Use this component to show your brand's logo, a few website links and the copyright notice on a second row.
 
-{{< example github="components/footer.md" class="p-2" show_dark=true >}}
+{{< example id="footer-logo-example" github="components/footer.md" class="p-2" show_dark=true >}}
 <footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-800">
     <div class="sm:flex sm:items-center sm:justify-between">
         <a href="{{< param homepage >}}/" class="flex items-center mb-4 sm:mb-0">
@@ -76,7 +76,7 @@ Use this component to show your brand's logo, a few website links and the copyri
 
 This footer component can be used to show your brand's logo, multiple rows of website links, a copyright notice and social media profile icons including Twitter, Facebook, Instagram, and more.
 
-{{< example github="components/footer.md" show_dark=true >}}
+{{< example id="footer-social-media-example" github="components/footer.md" show_dark=true >}}
 <footer class="p-4 bg-white sm:p-6 dark:bg-gray-800">
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
@@ -150,7 +150,7 @@ This footer component can be used to show your brand's logo, multiple rows of we
 
 If you have a website with many pages you can use this footer component to show a sitemap spanning the entire width of a row followed below by a copyright notice and social media icons.
 
-{{< example github="components/footer.md" show_dark=true >}}
+{{< example id="footer-sitemap-example" github="components/footer.md" show_dark=true >}}
 <footer class="bg-gray-800">
     <div class="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
         <div>

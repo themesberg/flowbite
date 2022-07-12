@@ -20,7 +20,7 @@ Make sure that you have included the Flowbite JavaScript file inside your projec
 
 Use this example to show a list of links aligned on three columns inside the mega menu dropdown.
 
-{{< example github="components/mega-menu.md" show_dark=true >}}
+{{< example id="default-mega-menu-example" github="components/mega-menu.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 lg:px-4 py-2.5 dark:bg-gray-800">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
         <a href="https://flowbite.com" class="flex items-center">
@@ -130,7 +130,7 @@ Use this example to show a list of links aligned on three columns inside the meg
 
 This example of a mega menu dropdown can be used to also show an icon near the text of the link.
 
-{{< example github="components/mega-menu.md" show_dark=true >}}
+{{< example id="mega-menu-icons-example" github="components/mega-menu.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 px-2 lg:px-4 py-2.5 dark:bg-gray-800">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
         <a href="https://flowbite.com" class="flex items-center">
@@ -260,7 +260,7 @@ This example of a mega menu dropdown can be used to also show an icon near the t
 
 Use this example to show a mega menu dropdown that spans the entire width of the document page.
 
-{{< example github="components/mega-menu.md" show_dark=true >}}
+{{< example id="mega-menu-full-width-example" github="components/mega-menu.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-800">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
         <a href="https://flowbite.com" class="flex items-center">
@@ -363,7 +363,7 @@ Use this example to show a mega menu dropdown that spans the entire width of the
 
 This example can be used to also show a CTA button or link next to the menu items inside the dropdown.
 
-{{< example github="components/mega-menu.md" show_dark=true >}}
+{{< example id="mega-menu-full-width-cta-example" github="components/mega-menu.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-800">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
         <a href="https://flowbite.com" class="flex items-center">
@@ -458,7 +458,7 @@ This example can be used to also show a CTA button or link next to the menu item
 
 This example can be used to also show a CTA with a backdround image inside the dropdown next to the other menu items and links.
 
-{{< example github="components/mega-menu.md" show_dark=true >}}
+{{< example id="mega-menu-full-width-image-example" github="components/mega-menu.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-800">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
         <a href="https://flowbite.com" class="flex items-center">

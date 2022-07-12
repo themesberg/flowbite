@@ -190,8 +190,8 @@ const initializeCodeExamples = (theme) => {
   codeExampleEls.forEach(c => {
     const iframe = c.querySelector('.iframe-code')
     iframe.onload = () => {
-      updateiFrameDarkMode(iframe, theme)
       updateiFrameHeight(iframe)
+      updateiFrameDarkMode(iframe, theme)
       initiateCopyToClipboard(c)
     }
   })

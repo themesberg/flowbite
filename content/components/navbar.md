@@ -57,7 +57,7 @@ Use this example of a navigation bar built with the utility classes from Tailwin
 
 Use this example to create a navigation bar with a user profile or button to toggle a dropdown menu.
 
-{{< example id="navbar-dropdown-example" github="components/navbar.md" show_dark=true >}}
+{{< example id="navbar-dropdown-example" github="components/navbar.md" show_dark=true iframeHeight="320" >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
   <a href="{{< param homepage >}}/" class="flex items-center">
@@ -65,7 +65,7 @@ Use this example to create a navigation bar with a user profile or button to tog
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
   </a>
   <div class="flex items-center md:order-2">
-      <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
+      <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown" data-dropdown-placement="bottom">
         <span class="sr-only">Open user menu</span>
         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="user photo">
       </button>
@@ -162,7 +162,7 @@ Use this example to show another subnav below the main navbar element.
 
 Use this example of a navbar element to also show a search input element that you can integrate for a site-wide search.
 
-{{< example id="navbar-search-example" github="components/navbar.md" show_dark=true >}}
+{{< example id="navbar-search-example" github="components/navbar.md" show_dark=true iframeHeight="300" >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
   <a href="{{< param homepage >}}/" class="flex items-center">
@@ -211,7 +211,7 @@ Use this example of a navbar element to also show a search input element that yo
 
 Use the following navbar element to show a call to action button alongside the logo and page links.
 
-{{< example id="navbar-cta-example" github="components/navbar.md" show_dark=true >}}
+{{< example id="navbar-cta-example" github="components/navbar.md" show_dark=true iframeHeight="300" >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
   <a href="{{< param homepage >}}/" class="flex items-center">
@@ -250,11 +250,11 @@ Use the following navbar element to show a call to action button alongside the l
 
 Get started with this example to show a language dropdown selector in the navbar component.
 
-{{< example id="navbar-language-example" github="components/navbar.md" show_dark=true >}}
+{{< example id="navbar-language-example" github="components/navbar.md" show_dark=true iframeHeight="260" >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
   <a href="{{< param homepage >}}/" class="flex items-center">
-      <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+      <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
   </a>
   <div class="flex items-center md:order-2">

@@ -20,7 +20,7 @@ Make sure that you have included Flowbite as a plugin inside your Tailwind CSS p
 
 Use the default example of a radio component with the checked and unchecked state.
 
-{{< example id="default-radio-example" class="dark:bg-gray-800" github="forms/radio.md" show_dark=true >}}
+{{< example id="default-radio-example" github="forms/radio.md" show_dark=true >}}
 <div class="flex items-center mb-4">
     <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <label for="default-radio-1" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default radio</label>
@@ -35,7 +35,7 @@ Use the default example of a radio component with the checked and unchecked stat
 
 Apply the `disabled` attribute to the radio component to disallow the selection for the user.
 
-{{< example id="radio-disabled-example" class="dark:bg-gray-800" github="forms/radio.md" show_dark=true >}}
+{{< example id="radio-disabled-example" github="forms/radio.md" show_dark=true >}}
 <div class="flex items-center mb-4">
     <input disabled id="disabled-radio-1" type="radio" value="" name="disabled-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <label for="disabled-radio-1" class="ml-2 text-sm font-medium text-gray-400 dark:text-gray-500">Disabled radio</label>
@@ -50,7 +50,7 @@ Apply the `disabled` attribute to the radio component to disallow the selection 
 
 Use this example if you want to include an anchor tag inside the label of the radio component.
 
-{{< example id="radio-link-example" class="dark:bg-gray-800" github="forms/radio.md" show_dark=true >}}
+{{< example id="radio-link-example" github="forms/radio.md" show_dark=true >}}
 <div class="flex items-center">
     <input id="link-radio" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <label for="link-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Radio button with a <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">link inside</a>.</label>
@@ -61,7 +61,7 @@ Use this example if you want to include an anchor tag inside the label of the ra
 
 Get started with this example if you want to add a secondary text to the label for the radio component.
 
-{{< example id="radio-helper-example" class="dark:bg-gray-800" github="forms/radio.md" show_dark=true >}}
+{{< example id="radio-helper-example" github="forms/radio.md" show_dark=true >}}
 <div class="flex">
     <div class="flex items-center h-5">
         <input id="helper-radio" aria-describedby="helper-radio-text" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
@@ -77,7 +77,7 @@ Get started with this example if you want to add a secondary text to the label f
 
 Use the `flex` class for a wrapper element to horizontally align the radio elements.
 
-{{< example id="radio-inline-example" class="dark:bg-gray-800" github="forms/radio.md" show_dark=true >}}
+{{< example id="radio-inline-example" github="forms/radio.md" show_dark=true >}}
 <div class="flex">
     <div class="flex items-center mr-4">
         <input id="inline-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
@@ -102,7 +102,7 @@ Use the `flex` class for a wrapper element to horizontally align the radio eleme
 
 Apply the `text-{color}-{shade}` utility class from Tailwind CSS to change the color of the radio component.
 
-{{< example id="radio-colors-example" class="dark:bg-gray-800" github="forms/radio.md" show_dark=true >}}
+{{< example id="radio-colors-example" github="forms/radio.md" show_dark=true >}}
 <div class="flex flex-wrap">
     <div class="flex items-center mr-4">
         <input id="red-radio" type="radio" value="" name="colored-radio" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">

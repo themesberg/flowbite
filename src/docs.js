@@ -2,6 +2,7 @@
 import './docs.css';
 import docsearch from '@docsearch/js';
 
+// Algolia docsearch
 docsearch({
   container: '#docsearch',
   appId: 'JUWZAHYJQ9',
@@ -10,6 +11,7 @@ docsearch({
   placeholder: 'Search documentation'
 });
 
+// copy to clipboard
 const fallbackCopyTextToClipboard = text => {
   var textArea = document.createElement("textarea");
   textArea.value = text;
@@ -65,6 +67,34 @@ const initiateCopyToClipboard = element => {
   });
 }
 
+const updateiFrameDarkMode = (iFrame, theme) => {
+  let html = iFrame.contentDocument.querySelector('html')
+
+  if (theme === 'dark') {
+    html.classList.add('dark')
+  } else {
+    html.classList.remove('dark')
+  }
+}
+
+const updatePreviewThemeToggleButton = (buttonEl, theme) => {
+
+  const moonIconEl = buttonEl.querySelector('[data-toggle-icon="moon"]')
+  const sunIconEl = buttonEl.querySelector('[data-toggle-icon="sun"]')
+
+  if (theme === 'dark') {
+    buttonEl.setAttribute('data-toggle-dark', 'dark');
+    moonIconEl.classList.add('hidden');
+    sunIconEl.classList.remove('hidden');
+  } else {
+    buttonEl.setAttribute('data-toggle-dark', 'light');
+    moonIconEl.classList.remove('hidden');
+    sunIconEl.classList.add('hidden');
+  }
+
+
+}
+
 const initiateToggleDarkState = element => {
   var codePreviewWrapper = element.getElementsByClassName('code-preview-wrapper')[0];
   var iframeCodeEl = element.getElementsByClassName('iframe-code')[0];
@@ -72,8 +102,6 @@ const initiateToggleDarkState = element => {
   var fullViewButton = element.getElementsByClassName("toggle-full-view")[0];
   var tabletViewButton = element.getElementsByClassName("toggle-tablet-view")[0];
   var mobileViewButton = element.getElementsByClassName("toggle-mobile-view")[0];
-  var moonIcon = element.querySelector('[data-toggle-icon="moon"]');
-  var sunIcon = element.querySelector('[data-toggle-icon="sun"]');
 
   if (button) {
     button.addEventListener('click', function () {
@@ -81,15 +109,13 @@ const initiateToggleDarkState = element => {
 
       if (state === 'light') {
         codePreviewWrapper.classList.add('dark');
-        button.setAttribute('data-toggle-dark', 'dark');
-        moonIcon.classList.add('hidden');
-        sunIcon.classList.remove('hidden');
+        updatePreviewThemeToggleButton(button, 'dark')
+        updateiFrameDarkMode(iframeCodeEl, 'dark')
       }
       if (state === 'dark') {
         codePreviewWrapper.classList.remove('dark');
-        button.setAttribute('data-toggle-dark', 'light');
-        moonIcon.classList.remove('hidden');
-        sunIcon.classList.add('hidden');
+        updatePreviewThemeToggleButton(button, 'light')
+        updateiFrameDarkMode(iframeCodeEl, 'light')
       }
     })
   }
@@ -114,72 +140,98 @@ const initiateToggleDarkState = element => {
 
 }
 
-// toggle dark mode
-var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-
-// Change the icons inside the button based on previous settings
-if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  themeToggleLightIcon.classList.remove('hidden');
-} else {
-  themeToggleDarkIcon.classList.remove('hidden');
+const updateiFrameCodeElsDarkMode = (theme) => {
+  const iframeCodeEls = document.querySelectorAll('.iframe-code')
+  iframeCodeEls.forEach(i => {
+    updateiFrameDarkMode(i, theme)
+  })
 }
 
-var themeToggleBtn = document.getElementById('theme-toggle');
-
-themeToggleBtn.addEventListener('click', function () {
-
-  // toggle icons
-  themeToggleDarkIcon.classList.toggle('hidden');
-  themeToggleLightIcon.classList.toggle('hidden');
-
-  // if set via local storage previously
-  if (localStorage.getItem('color-theme')) {
-    if (localStorage.getItem('color-theme') === 'light') {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('color-theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('color-theme', 'light');
-    }
-
-    // if NOT set via local storage previously
-  } else {
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('color-theme', 'light');
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('color-theme', 'dark');
-    }
-  }
-
-});
-
-// sidebar functionality
-const sidebar = document.getElementById('sidebar');
-
-const toggleSidebarMobile = (sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose) => {
-  sidebar.classList.toggle('hidden');
-  sidebarBackdrop.classList.toggle('hidden');
-  toggleSidebarMobileHamburger.classList.toggle('hidden');
-  toggleSidebarMobileClose.classList.toggle('hidden');
+const updateButtonThemeToggleEls = (theme) => {
+  const buttonThemeToggleEls = document.querySelectorAll('.toggle-dark-state-example')
+  buttonThemeToggleEls.forEach(b => {
+    updatePreviewThemeToggleButton(b, theme)
+  })
 }
-
-const toggleSidebarMobileEl = document.getElementById('toggleSidebarMobile');
-const sidebarBackdrop = document.getElementById('sidebarBackdrop');
-const toggleSidebarMobileHamburger = document.getElementById('toggleSidebarMobileHamburger');
-const toggleSidebarMobileClose = document.getElementById('toggleSidebarMobileClose');
-
-toggleSidebarMobileEl.addEventListener('click', () => {
-  toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
-});
-
-sidebarBackdrop.addEventListener('click', () => {
-  toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
-});
 
 window.addEventListener('DOMContentLoaded', () => {
+
+  // toggle dark mode
+  var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+  var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+  // Change the icons inside the button based on previous settings
+  if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    themeToggleLightIcon.classList.remove('hidden');
+    updateiFrameCodeElsDarkMode('dark')
+    updateButtonThemeToggleEls('dark')
+  } else {
+    themeToggleDarkIcon.classList.remove('hidden');
+    updateiFrameCodeElsDarkMode('light')
+    updateButtonThemeToggleEls('light')
+  }
+
+  var themeToggleBtn = document.getElementById('theme-toggle');
+
+  themeToggleBtn.addEventListener('click', function () {
+
+    // toggle icons
+    themeToggleDarkIcon.classList.toggle('hidden');
+    themeToggleLightIcon.classList.toggle('hidden');
+
+    // if set via local storage previously
+    if (localStorage.getItem('color-theme')) {
+      if (localStorage.getItem('color-theme') === 'light') {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+        updateiFrameCodeElsDarkMode('dark')
+        updateButtonThemeToggleEls('dark')
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+        updateiFrameCodeElsDarkMode('light')
+        updateButtonThemeToggleEls('light')
+      }
+
+      // if NOT set via local storage previously
+    } else {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+        updateiFrameCodeElsDarkMode('light')
+        updateButtonThemeToggleEls('light')
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+        updateiFrameCodeElsDarkMode('dark')
+        updateButtonThemeToggleEls('dark')
+      }
+    }
+
+  });
+
+  // sidebar functionality
+  const sidebar = document.getElementById('sidebar');
+
+  const toggleSidebarMobile = (sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose) => {
+    sidebar.classList.toggle('hidden');
+    sidebarBackdrop.classList.toggle('hidden');
+    toggleSidebarMobileHamburger.classList.toggle('hidden');
+    toggleSidebarMobileClose.classList.toggle('hidden');
+  }
+
+  const toggleSidebarMobileEl = document.getElementById('toggleSidebarMobile');
+  const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+  const toggleSidebarMobileHamburger = document.getElementById('toggleSidebarMobileHamburger');
+  const toggleSidebarMobileClose = document.getElementById('toggleSidebarMobileClose');
+
+  toggleSidebarMobileEl.addEventListener('click', () => {
+    toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
+  });
+
+  sidebarBackdrop.addEventListener('click', () => {
+    toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
+  });
 
   // copy to clipboard
   document.getElementById('currentYear').textContent = new Date().getFullYear();

@@ -77,9 +77,6 @@ const initiateToggleDarkState = element => {
 
   if (button) {
     button.addEventListener('click', function () {
-
-      console.log('click')
-
       var state = button.getAttribute('data-toggle-dark');
 
       if (state === 'light') {
@@ -97,7 +94,6 @@ const initiateToggleDarkState = element => {
     })
   }
 
-  console.log('mobileViewButton')
   if (mobileViewButton) {
     mobileViewButton.addEventListener('click', () => {
       iframeCodeEl.classList.add('max-w-sm')

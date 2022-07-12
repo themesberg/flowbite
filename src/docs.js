@@ -81,15 +81,18 @@ const updatePreviewThemeToggleButton = (buttonEl, theme) => {
 
   const moonIconEl = buttonEl.querySelector('[data-toggle-icon="moon"]')
   const sunIconEl = buttonEl.querySelector('[data-toggle-icon="sun"]')
+  const buttonTextEl = document.getElementById(buttonEl.getAttribute('data-tooltip-target'))
 
   if (theme === 'dark') {
     buttonEl.setAttribute('data-toggle-dark', 'dark');
     moonIconEl.classList.add('hidden');
     sunIconEl.classList.remove('hidden');
+    buttonTextEl.textContent = 'Toggle light mode';
   } else {
     buttonEl.setAttribute('data-toggle-dark', 'light');
     moonIconEl.classList.remove('hidden');
     sunIconEl.classList.add('hidden');
+    buttonTextEl.textContent = 'Toggle dark mode';
   }
 
 

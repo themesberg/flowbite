@@ -10,7 +10,7 @@ docsearch({
   placeholder: 'Search documentation'
 });
 
-function fallbackCopyTextToClipboard(text) {
+const fallbackCopyTextToClipboard = text => {
   var textArea = document.createElement("textarea");
   textArea.value = text;
 
@@ -33,7 +33,8 @@ function fallbackCopyTextToClipboard(text) {
 
   document.body.removeChild(textArea);
 }
-function copyTextToClipboard(text) {
+
+const copyTextToClipboard = text => {
   if (!navigator.clipboard) {
     fallbackCopyTextToClipboard(text);
     return;
@@ -45,7 +46,7 @@ function copyTextToClipboard(text) {
   });
 }
 
-function initiateCopyToClipboard(element) {
+const initiateCopyToClipboard = element => {
   var textToCopy = element.getElementsByClassName("code-preview")[0].innerHTML;
   var button = element.getElementsByClassName("copy-to-clipboard-button")[0];
   var alert = document.getElementById('copied-code-alert');
@@ -64,7 +65,7 @@ function initiateCopyToClipboard(element) {
   });
 }
 
-function initiateToggleDarkState(element) {
+const initiateToggleDarkState = element => {
   var codePreviewWrapper = element.getElementsByClassName('code-preview-wrapper')[0];
   var iframeCodeEl = element.getElementsByClassName('iframe-code')[0];
   var button = element.getElementsByClassName("toggle-dark-state-example")[0];
@@ -117,6 +118,7 @@ function initiateToggleDarkState(element) {
 
 }
 
+// toggle dark mode
 var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
 var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
@@ -158,6 +160,7 @@ themeToggleBtn.addEventListener('click', function () {
 
 });
 
+// sidebar functionality
 const sidebar = document.getElementById('sidebar');
 
 const toggleSidebarMobile = (sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose) => {
@@ -179,13 +182,6 @@ toggleSidebarMobileEl.addEventListener('click', () => {
 sidebarBackdrop.addEventListener('click', () => {
   toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
 });
-
-// Prevent anchor elements with empty fragments from linking to the top of the page 
-document.querySelectorAll('.code-example [href="#"]').forEach((event) => {
-  event.addEventListener('click', (event) => {
-    event.preventDefault();
-  })
-})
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -211,9 +207,9 @@ window.addEventListener('DOMContentLoaded', () => {
     el.classList.add('!border-blue-700', '!after:opacity-100', '!text-blue-700', 'dark:!border-blue-500', 'dark:!text-blue-500')
   }
 
+  // anchor change activate menu element
   let anchorChanged = false;
   window.addEventListener('hashchange', () => {
-    console.log('change hash')
     anchorChanged = true;
     const menuEl = document.querySelector(`#TableOfContents [href="${location.hash}"]`)
     activateMenuEl(menuEl)
@@ -240,72 +236,3 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 
 });
-
-// const _carbonOptimize = {
-//   isRefreshAble: function () {
-//     return !(
-//       typeof document.addEventListener === 'undefined' ||
-//       this.browserSupport().hidden === undefined
-//     );
-//   },
-//   browserSupport: function () {
-//     let hidden;
-//     let visibilityChange;
-//     if (typeof document.hidden !== 'undefined') {
-//       // Opera 12.10 and Firefox 18 and later support
-//       hidden = 'hidden';
-//       visibilityChange = 'visibilitychange';
-//     } else if (typeof document.msHidden !== 'undefined') {
-//       hidden = 'msHidden';
-//       visibilityChange = 'msvisibilitychange';
-//     } else if (
-//       typeof document.webkitHidden !== 'undefined'
-//     ) {
-//       hidden = 'webkitHidden';
-//       visibilityChange = 'webkitvisibilitychange';
-//     }
-//     return {
-//       hidden: hidden,
-//       visibilityChange: visibilityChange,
-//     };
-//   },
-//   handleVisibilityChange: function () {
-//     const isElementInViewport = function (el) {
-//       let element = document.querySelector(el);
-//       let bounding = element.getBoundingClientRect();
-//       let isVisible;
-
-//       if (
-//         bounding.top >= 0 &&
-//         bounding.left >= 0 &&
-//         bounding.right <= window.innerWidth &&
-//         bounding.bottom <= window.innerHeight
-//       ) {
-//         isVisible = true;
-//       } else {
-//         isVisible = false;
-//       }
-//       return isVisible;
-//     };
-
-//     if (!document.hidden) {
-//       if (
-//         typeof _carbonads !== 'undefined' &&
-//         isElementInViewport('#carbonads')
-//       ) {
-//         _carbonads.refresh();
-//       }
-//     }
-//   },
-//   init: function () {
-//     if (this.isRefreshAble()) {
-//       document.addEventListener(
-//         this.browserSupport().visibilityChange,
-//         this.handleVisibilityChange,
-//         false
-//       );
-//     }
-//   },
-// };
-
-// _carbonOptimize.init();

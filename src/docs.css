@@ -255,11 +255,35 @@ pre[class*="language-"] {
 
 code.language-bash,
 pre.language-bash {
-	@apply text-gray-600 dark:text-gray-500;
+	@apply text-blue-600 dark:text-blue-400;
 }
 
 code.language-javascript {
-	@apply text-gray-900 dark:text-gray-500;
+	@apply text-blue-600 dark:text-blue-400;
+}
+
+code.language-javascript .token.function{
+	@apply text-green-500 dark:text-green-300;
+}
+
+code.language-javascript .token.punctuation{
+	@apply text-gray-500 dark:text-gray-400;
+}
+
+code.language-javascript .token.keyword{
+	@apply text-pink-500 dark:text-pink-400;
+}
+
+code.language-javascript .token.comment{
+	@apply text-gray-500 dark:text-gray-500;
+}
+
+code.language-javascript .token.string{
+	@apply text-purple-600 dark:text-purple-400;
+}
+
+code.language-javascript .token.class-name{
+	@apply text-orange-400 dark:text-orange-300;
 }
 
 code.language-javascript .token {
@@ -267,9 +291,23 @@ code.language-javascript .token {
 	background: transparent;
 }
 
-code.language-javascript .token.comment {
-	@apply text-gray-900 dark:text-gray-500;
+/* language html */
+code.language-html .token.tag{
+	@apply text-fuchsia-700 dark:text-fuchsia-400;
 }
+code.language-html .token.attr-value{
+	@apply text-blue-600 dark:text-blue-400;
+}
+code.language-html .token.punctuation{
+	@apply text-gray-400 dark:text-gray-500;
+}
+code.language-html .token.attr-name{
+	@apply text-green-600 dark:text-green-400;
+}
+code.language-html .token.comment{
+	@apply text-gray-400 dark:text-gray-500;
+}
+
 
 .code-responsive-wrapper {
 	background-color: #ffffff;
@@ -345,7 +383,7 @@ code.language-javascript .token.comment {
 /* Search */
 
 .DocSearch-Button {
-	@apply hidden p-2 m-0 w-52 h-auto bg-gray-50 rounded-lg border border-gray-300 border-solid shadow-none md:flex hover:bg-gray-100 xl:w-64 hover:shadow-none focus:shadow-none dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600;
+	@apply hidden h-auto p-2 m-0 border border-gray-300 border-solid rounded-lg shadow-none w-52 bg-gray-50 md:flex hover:bg-gray-100 xl:w-64 hover:shadow-none focus:shadow-none dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600;
 }
 
 .DocSearch-Button-Placeholder {
@@ -361,7 +399,7 @@ code.language-javascript .token.comment {
 }
 
 .DocSearch-Button-Key {
-	@apply pt-1 pb-0 m-0 w-auto text-xs font-normal text-gray-500 bg-none shadow-none dark:text-gray-400;
+	@apply w-auto pt-1 pb-0 m-0 text-xs font-normal text-gray-500 shadow-none bg-none dark:text-gray-400;
 }
 
 .DocSearch-Button .DocSearch-Search-Icon {
@@ -425,7 +463,7 @@ code.language-javascript .token.comment {
 }
 
 .DocSearch-Hit a {
-	@apply bg-gray-50 rounded-lg shadow-none dark:bg-gray-600 dark:hover:bg-blue-600;
+	@apply rounded-lg shadow-none bg-gray-50 dark:bg-gray-600 dark:hover:bg-blue-600;
 }
 
 .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-Select-Icon,

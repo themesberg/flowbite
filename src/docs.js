@@ -140,10 +140,24 @@ const initiateToggleDarkState = element => {
 
 }
 
+const updateiFrameHeight = iFrame => {
+  iFrame.style.height = iFrame.contentWindow.document.body.scrollHeight + 40 + 'px'
+}
+
 const updateiFrameCodeElsDarkMode = (theme) => {
   const iframeCodeEls = document.querySelectorAll('.iframe-code')
   iframeCodeEls.forEach(i => {
     updateiFrameDarkMode(i, theme)
+  })
+}
+
+const updateiFrameCodeElsDarkModeOnLoad = (theme) => {
+  const iframeCodeEls = document.querySelectorAll('.iframe-code')
+  iframeCodeEls.forEach(i => {
+    i.onload = () => {
+      updateiFrameHeight(i)
+      updateiFrameDarkMode(i, theme)
+    }
   })
 }
 
@@ -163,11 +177,11 @@ window.addEventListener('DOMContentLoaded', () => {
   // Change the icons inside the button based on previous settings
   if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     themeToggleLightIcon.classList.remove('hidden');
-    updateiFrameCodeElsDarkMode('dark')
+    updateiFrameCodeElsDarkModeOnLoad('dark')
     updateButtonThemeToggleEls('dark')
   } else {
     themeToggleDarkIcon.classList.remove('hidden');
-    updateiFrameCodeElsDarkMode('light')
+    updateiFrameCodeElsDarkModeOnLoad('light')
     updateButtonThemeToggleEls('light')
   }
 

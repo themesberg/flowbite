@@ -83,8 +83,9 @@ const updatePreviewThemeToggleButton = (buttonEl, theme) => {
   const moonIconEl = buttonEl.querySelector('[data-toggle-icon="moon"]')
   const sunIconEl = buttonEl.querySelector('[data-toggle-icon="sun"]')
   const tooltipId = buttonEl.getAttribute('data-tooltip-target')
+  let buttonTextEl = null
   if (tooltipId) {
-    const buttonTextEl = document.getElementById(buttonEl.getAttribute('data-tooltip-target'))
+    buttonTextEl = document.getElementById(buttonEl.getAttribute('data-tooltip-target'))
   }
 
   if (theme === 'dark') {

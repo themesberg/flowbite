@@ -92,14 +92,14 @@ const updatePreviewThemeToggleButton = (buttonEl, theme) => {
     buttonEl.setAttribute('data-toggle-dark', 'dark');
     moonIconEl.classList.add('hidden');
     sunIconEl.classList.remove('hidden');
-    if(tooltipId) {
+    if (tooltipId) {
       buttonTextEl.textContent = 'Toggle light mode';
     }
   } else {
     buttonEl.setAttribute('data-toggle-dark', 'light');
     moonIconEl.classList.remove('hidden');
     sunIconEl.classList.add('hidden');
-    if(tooltipId) {
+    if (tooltipId) {
       buttonTextEl.textContent = 'Toggle dark mode';
     }
   }
@@ -218,11 +218,12 @@ window.addEventListener('DOMContentLoaded', () => {
   const currentHref = window.location.href;
   const sidebarItemEls = document.querySelectorAll('[data-sidebar-item]')
   const sidenav = document.getElementById('navWrapper')
+  const sidenavHeight = sidenav.clientHeight
 
   sidebarItemEls.forEach(s => {
-    if(s.href === currentHref) {
-      sidenav.scrollTop = s.offsetTop
-      console.log(sidenav.scrollTop)
+    if (s.href === currentHref) {
+      const itemHeight = s.clientHeight
+      sidenav.scrollTop = s.offsetTop - (sidenavHeight / 2) + (itemHeight / 2)
     }
   })
 
@@ -303,7 +304,7 @@ window.addEventListener('DOMContentLoaded', () => {
     toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
   });
 
-  
+
   // current year
   document.getElementById('currentYear').textContent = new Date().getFullYear();
 

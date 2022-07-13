@@ -156,6 +156,10 @@ Use this example to group up radio button components inside a list.
 </ul>
 {{< /example >}}
 
+<div class="mt-8 -mb-5">
+  {{< requires_js >}}
+</div>
+
 ## Radio in dropdown
 
 Here's an example of a list group that you can use right away.

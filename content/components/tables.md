@@ -19,7 +19,7 @@ Get started with multiple variants and styles of these table components built wi
 
 Use the following example of a responsive table component to show multiple rows and columns of text data.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="default-table-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -92,9 +92,9 @@ Accentuate certain elements inside the table such as the rows, columns or data c
 
 ### Striped rows
 
-Use this example to increase the readability of the data sets by alternating the background colors of every second table row.
+Use this example to increase the readability of the data sets by alternating the background color of every second table row.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="table-striped-rows-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -209,9 +209,9 @@ Use this example to increase the readability of the data sets by alternating the
 
 ### Striped columns
 
-Use this example to increase the readability of the data sets by alternating the background colors of every second table row.
+Use this example to increase the readability of the table cells by alternating the background color of every second table column.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="table-striped-columns-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
@@ -310,7 +310,7 @@ Use this example to increase the readability of the data sets by alternating the
 
 Use the `hover:{bg-*}` utility class from Tailwind CSS to change the background color of a data row when hovering over the element with the cursor.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="table-hover-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -391,11 +391,13 @@ Use the `hover:{bg-*}` utility class from Tailwind CSS to change the background 
 
 ## Table layout
 
+Use the following examples of table layouts to show the head, foot or caption of the table.
+
 ### Table head (sortable)
 
-Use the following example of a responsive table component to show multiple rows and columns of text data.
+This example can be used to show the head of the table component with sortable icons.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="table-head-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -485,11 +487,9 @@ Use the following example of a responsive table component to show multiple rows 
 
 ### Table foot
 
-The `<tfoot>` tag is used to group footer content in an HTML table.
+Use this example where the `<tfoot>` HTML element can be used in conjunction with the head and caption of the table component.
 
-The `<tfoot>` element is used in conjunction with the `<thead>` and `<tbody>` elements to specify each part of a table (footer, header, body).
-
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="table-foot-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
@@ -553,9 +553,9 @@ The `<tfoot>` element is used in conjunction with the `<thead>` and `<tbody>` el
 
 ### Table caption
 
-A caption functions like a heading for a table. Most screen readers announce the content of captions. Captions help users to find a table and understand what it's about and decide if they want to read it. https://www.w3.org/WAI/tutorials/tables/caption-summary/
+Improve accessibility by using a caption inside the table as a heading to better describe what the table is about for screen readers.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="table-caption-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <caption class="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
@@ -640,11 +640,13 @@ A caption functions like a heading for a table. Most screen readers announce the
 
 ## Table styles
 
-### Borderless
+Get started with the following table styles and choose the one that best fits your application.
 
-Use this example of a table component without a border between table data cells.
+### Without border
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+Use this example of a table component without any border between the table cells.
+
+{{< example id="table-borderless-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-900 uppercase dark:text-gray-400">
@@ -713,9 +715,9 @@ Use this example of a table component without a border between table data cells.
 
 ### Table with shadow
 
-Use the following example of a responsive table component to show multiple rows and columns of text data.
+Use this example to apply a shadow border to the table component.
 
-{{< example github="components/tables.md" class="overflow-hidden pb-4" show_dark=true >}}
+{{< example id="table-shadow-example" github="components/tables.md" class="overflow-hidden pb-4" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -733,7 +735,7 @@ Use the following example of a responsive table component to show multiple rows 
                     Price
                 </th>
                 <th scope="col" class="py-3 px-6">
-                    <span class="sr-only">Edit</span>
+                    Action
                 </th>
             </tr>
         </thead>
@@ -751,7 +753,7 @@ Use the following example of a responsive table component to show multiple rows 
                 <td class="py-4 px-6">
                     $2999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -768,7 +770,7 @@ Use the following example of a responsive table component to show multiple rows 
                 <td class="py-4 px-6">
                     $1999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -785,7 +787,7 @@ Use the following example of a responsive table component to show multiple rows 
                 <td class="py-4 px-6">
                     $99
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -796,9 +798,9 @@ Use the following example of a responsive table component to show multiple rows 
 
 ## Overflow scrolling
 
-Use this example to show a search bar that can be used to filter data inside the table component.
+Use this example where we apply `overflow-x-auto` to enable horizontal scrolling if the content inside the table overflows that maximum width.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="table-scroll-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -825,7 +827,7 @@ Use this example to show a search bar that can be used to filter data inside the
                     Price
                 </th>
                 <th scope="col" class="py-3 px-6">
-                    <span class="sr-only">Edit</span>
+                    Action
                 </th>
             </tr>
         </thead>
@@ -852,7 +854,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $2999
                 </td>
-                <td class="flex items-center py-4 px-6 space-x-3 text-right">
+                <td class="flex items-center py-4 px-6 space-x-3">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                 </td>
@@ -879,7 +881,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $1999
                 </td>
-                <td class="flex items-center py-4 px-6 space-x-3 text-right">
+                <td class="flex items-center py-4 px-6 space-x-3">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                 </td>
@@ -906,7 +908,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $99
                 </td>
-                <td class="flex items-center py-4 px-6 space-x-3 text-right">
+                <td class="flex items-center py-4 px-6 space-x-3">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                 </td>
@@ -933,7 +935,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $199
                 </td>
-                <td class="flex items-center py-4 px-6 space-x-3 text-right">
+                <td class="flex items-center py-4 px-6 space-x-3">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                 </td>
@@ -960,7 +962,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $2999
                 </td>
-                <td class="flex items-center py-4 px-6 space-x-3 text-right">
+                <td class="flex items-center py-4 px-6 space-x-3">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                 </td>
@@ -987,7 +989,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $399
                 </td>
-                <td class="flex items-center py-4 px-6 space-x-3 text-right">
+                <td class="flex items-center py-4 px-6 space-x-3">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                 </td>
@@ -1014,7 +1016,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $699
                 </td>
-                <td class="flex items-center py-4 px-6 space-x-3 text-right">
+                <td class="flex items-center py-4 px-6 space-x-3">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                 </td>
@@ -1041,7 +1043,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $99
                 </td>
-                <td class="flex items-center py-4 px-6 space-x-3 text-right">
+                <td class="flex items-center py-4 px-6 space-x-3">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                 </td>
@@ -1068,7 +1070,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $79
                 </td>
-                <td class="flex items-center py-4 px-6 space-x-3 text-right">
+                <td class="flex items-center py-4 px-6 space-x-3">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                 </td>
@@ -1095,7 +1097,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $29
                 </td>
-                <td class="flex items-center py-4 px-6 space-x-3 text-right">
+                <td class="flex items-center py-4 px-6 space-x-3">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                 </td>
@@ -1107,9 +1109,9 @@ Use this example to show a search bar that can be used to filter data inside the
 
 ## Table search
 
-Use this example to show a search bar that can be used to filter data inside the table component.
+Use this example to show a search bar that can be used to query through data inside the table component.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="table-search-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
     <div class="py-4 bg-white dark:bg-gray-800">
         <label for="table-search" class="sr-only">Search</label>
@@ -1142,7 +1144,7 @@ Use this example to show a search bar that can be used to filter data inside the
                     Price
                 </th>
                 <th scope="col" class="py-3 px-6">
-                    <span class="sr-only">Edit</span>
+                    Action
                 </th>
             </tr>
         </thead>
@@ -1166,7 +1168,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $2999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1189,7 +1191,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $1999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1212,7 +1214,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $99
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1223,11 +1225,11 @@ Use this example to show a search bar that can be used to filter data inside the
 
 ## Table filter
 
-Use this example to show a search bar that can be used to filter data inside the table component.
+Use this example with a filter bar to select certain data sets inside the table based on the options that you've selected.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="table-filter-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
-    <div class="flex justify-between items-center p-4">
+    <div class="flex justify-between items-center py-4">
         <div>
             <button id="dropdownRadioButton" data-dropdown-toggle="dropdownRadio" class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
                 <svg class="mr-2 w-4 h-4 text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
@@ -1300,7 +1302,7 @@ Use this example to show a search bar that can be used to filter data inside the
                     Price
                 </th>
                 <th scope="col" class="py-3 px-6">
-                    <span class="sr-only">Edit</span>
+                    Action
                 </th>
             </tr>
         </thead>
@@ -1324,7 +1326,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $2999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1347,7 +1349,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $1999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1370,7 +1372,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $99
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1381,9 +1383,9 @@ Use this example to show a search bar that can be used to filter data inside the
 
 ## Table pagination
 
-Use this example to show a search bar that can be used to filter data inside the table component.
+Paginate the table data when using larger data sets based on any given amount of results per page.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="table-pagination-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -1407,7 +1409,7 @@ Use this example to show a search bar that can be used to filter data inside the
                     Price
                 </th>
                 <th scope="col" class="py-3 px-6">
-                    <span class="sr-only">Edit</span>
+                    Action
                 </th>
             </tr>
         </thead>
@@ -1431,7 +1433,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $2999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1454,7 +1456,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $1999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1477,7 +1479,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $99
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1500,7 +1502,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $199
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1523,7 +1525,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $2999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1546,7 +1548,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $399
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1569,7 +1571,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $699
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1592,7 +1594,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $99
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1615,7 +1617,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $79
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1638,13 +1640,13 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6">
                     $29
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
         </tbody>
     </table>
-    <nav class="flex justify-between items-center p-4" aria-label="Table navigation">
+    <nav class="flex justify-between items-center py-4" aria-label="Table navigation">
         <span class="text-sm font-normal text-gray-500">Showing <span class="font-semibold text-gray-900">1-10</span> of <span class="font-semibold text-gray-900">1000</span></span>
         <ul class="inline-flex items-center -space-x-px">
             <li>
@@ -1683,7 +1685,7 @@ Use this example to show a search bar that can be used to filter data inside the
 
 Checkboxes can be used inside table data rows to select multiple data sets and apply a bulk action.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="table-checkbox-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -1707,7 +1709,7 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
                     Price
                 </th>
                 <th scope="col" class="py-3 px-6">
-                    <span class="sr-only">Edit</span>
+                    Action
                 </th>
             </tr>
         </thead>
@@ -1731,7 +1733,7 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
                 <td class="py-4 px-6">
                     $2999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1754,7 +1756,7 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
                 <td class="py-4 px-6">
                     $1999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1777,7 +1779,7 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
                 <td class="py-4 px-6">
                     $99
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
@@ -1788,9 +1790,9 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
 
 ## Table with users
 
-Use this example to show a search bar that can be used to filter data inside the table component.
+Use this example of a table where we show a data set of users and showing a profile picture, name, email, online status, and more.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="table-users-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
     <div class="flex justify-between items-center py-4 bg-white dark:bg-gray-800">
         <div>
@@ -1844,7 +1846,7 @@ Use this example to show a search bar that can be used to filter data inside the
                     Status
                 </th>
                 <th scope="col" class="py-3 px-6">
-                    <span class="sr-only">Edit</span>
+                    Action
                 </th>
             </tr>
         </thead>
@@ -1871,7 +1873,7 @@ Use this example to show a search bar that can be used to filter data inside the
                         <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
                     </div>
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
                 </td>
             </tr>
@@ -1897,7 +1899,7 @@ Use this example to show a search bar that can be used to filter data inside the
                         <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
                     </div>
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
                 </td>
             </tr>
@@ -1923,7 +1925,7 @@ Use this example to show a search bar that can be used to filter data inside the
                         <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
                     </div>
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
                 </td>
             </tr>
@@ -1949,7 +1951,7 @@ Use this example to show a search bar that can be used to filter data inside the
                         <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
                     </div>
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
                 </td>
             </tr>
@@ -1975,7 +1977,7 @@ Use this example to show a search bar that can be used to filter data inside the
                         <div class="h-2.5 w-2.5 rounded-full bg-red-500 mr-2"></div> Offline
                     </div>
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
                 </td>
             </tr>
@@ -1986,9 +1988,9 @@ Use this example to show a search bar that can be used to filter data inside the
 
 ## Table with products
 
-Use this example to show a search bar that can be used to filter data inside the table component.
+Get started with this example to show a list of products inside the table and show a preview image, product name, quantity selector, price and actions tab.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="table-products-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -2006,7 +2008,7 @@ Use this example to show a search bar that can be used to filter data inside the
                     Price
                 </th>
                 <th scope="col" class="py-3 px-6">
-                    <span class="sr-only">Remove</span>
+                    Action
                 </th>
             </tr>
         </thead>
@@ -2036,7 +2038,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6 font-semibold text-gray-900 dark:text-white">
                     $599
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                 </td>
             </tr>
@@ -2065,7 +2067,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6 font-semibold text-gray-900 dark:text-white">
                     $2499
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                 </td>
             </tr>
@@ -2094,7 +2096,7 @@ Use this example to show a search bar that can be used to filter data inside the
                 <td class="py-4 px-6 font-semibold text-gray-900 dark:text-white">
                     $999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
                 </td>
             </tr>
@@ -2105,9 +2107,9 @@ Use this example to show a search bar that can be used to filter data inside the
 
 ## Table with modal
 
-Use this example to show a search bar that can be used to filter data inside the table component.
+Use this example to show a modal with a form where you can edit table data by clicking on one of the rows.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true iframeHeight="640" >}}
+{{< example id="table-modal-example" github="components/tables.md" class="overflow-hidden" show_dark=true iframeHeight="640" >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
     <div class="flex justify-between items-center py-4 bg-white dark:bg-gray-800">
         <div>
@@ -2139,7 +2141,7 @@ Use this example to show a search bar that can be used to filter data inside the
             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                 <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
             </div>
-            <input type="text" id="table-search-users" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for users">
+            <input type="text" id="table-search-users" class="block p-2 pl-10 w-80 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for users">
         </div>
     </div>
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -2161,7 +2163,7 @@ Use this example to show a search bar that can be used to filter data inside the
                     Status
                 </th>
                 <th scope="col" class="py-3 px-6">
-                    <span class="sr-only">Edit</span>
+                    Action
                 </th>
             </tr>
         </thead>
@@ -2188,7 +2190,7 @@ Use this example to show a search bar that can be used to filter data inside the
                         <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
                     </div>
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <!-- Modal toggle -->
                     <a href="#" type="button" data-modal-toggle="editUserModal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
                 </td>
@@ -2215,7 +2217,7 @@ Use this example to show a search bar that can be used to filter data inside the
                         <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
                     </div>
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <!-- Modal toggle -->
                     <a href="#" type="button" data-modal-toggle="editUserModal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
                 </td>
@@ -2242,7 +2244,7 @@ Use this example to show a search bar that can be used to filter data inside the
                         <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
                     </div>
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <!-- Modal toggle -->
                     <a href="#" type="button" data-modal-toggle="editUserModal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
                 </td>
@@ -2269,7 +2271,7 @@ Use this example to show a search bar that can be used to filter data inside the
                         <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
                     </div>
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <!-- Modal toggle -->
                     <a href="#" type="button" data-modal-toggle="editUserModal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
                 </td>
@@ -2296,7 +2298,7 @@ Use this example to show a search bar that can be used to filter data inside the
                         <div class="h-2.5 w-2.5 rounded-full bg-red-500 mr-2"></div> Offline
                     </div>
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <!-- Modal toggle -->
                     <a href="#" type="button" data-modal-toggle="editUserModal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
                 </td>
@@ -2367,10 +2369,10 @@ Use this example to show a search bar that can be used to filter data inside the
 
 ## Comparison table
 
-Use this example to show a search bar that can be used to filter data inside the table component.
+Use this example to compare values inside a table such as a pricing card.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
-<div id="detailed-pricing" class="overflow-x-auto mt-8 w-full">
+{{< example id="table-comparison-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+<div id="detailed-pricing" class="overflow-x-auto w-full">
     <div class="overflow-hidden min-w-max">
         <div class="grid grid-cols-4 gap-x-16 p-4 text-sm font-medium text-gray-900 bg-gray-100 border-t border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 dark:text-white">
             <div class="flex items-center">Tailwind CSS code</div>
@@ -2442,11 +2444,11 @@ Use this example to show a search bar that can be used to filter data inside the
 </div>
 {{< /example >}}
 
-## Color
+## Table colors
 
-Use this example to increase the readability of the data sets by alternating the background colors of every second table row.
+Apply any color to the table element by using the `bg-{color}` and `text-{color}` color class variants from Tailwind CSS.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="table-colors-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-blue-100 dark:text-blue-100">
         <thead class="text-xs text-white uppercase bg-blue-600 dark:text-white">
@@ -2464,7 +2466,7 @@ Use this example to increase the readability of the data sets by alternating the
                     Price
                 </th>
                 <th scope="col" class="py-3 px-6">
-                    <span class="sr-only">Edit</span>
+                    Action
                 </th>
             </tr>
         </thead>
@@ -2482,7 +2484,7 @@ Use this example to increase the readability of the data sets by alternating the
                 <td class="py-4 px-6">
                     $2999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-white hover:underline">Edit</a>
                 </td>
             </tr>
@@ -2499,7 +2501,7 @@ Use this example to increase the readability of the data sets by alternating the
                 <td class="py-4 px-6">
                     $1999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-white hover:underline">Edit</a>
                 </td>
             </tr>
@@ -2516,7 +2518,7 @@ Use this example to increase the readability of the data sets by alternating the
                 <td class="py-4 px-6">
                     $99
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-white hover:underline">Edit</a>
                 </td>
             </tr>
@@ -2533,7 +2535,7 @@ Use this example to increase the readability of the data sets by alternating the
                 <td class="py-4 px-6">
                     $799
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-white hover:underline">Edit</a>
                 </td>
             </tr>
@@ -2550,7 +2552,7 @@ Use this example to increase the readability of the data sets by alternating the
                 <td class="py-4 px-6">
                     $999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-white hover:underline">Edit</a>
                 </td>
             </tr>
@@ -2559,11 +2561,11 @@ Use this example to increase the readability of the data sets by alternating the
 </div>
 {{< /example >}}
 
-### Striped color
+### Striped rows color
 
-Use this example to increase the readability of the data sets by alternating the background colors of every second table row.
+Use this example to apply a different color to every second row inside the table.
 
-{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example id="table-striped-colors-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-blue-100 dark:text-blue-100">
         <thead class="text-xs text-white uppercase bg-blue-600 dark:text-white">
@@ -2581,7 +2583,7 @@ Use this example to increase the readability of the data sets by alternating the
                     Price
                 </th>
                 <th scope="col" class="py-3 px-6">
-                    <span class="sr-only">Edit</span>
+                    Action
                 </th>
             </tr>
         </thead>
@@ -2599,7 +2601,7 @@ Use this example to increase the readability of the data sets by alternating the
                 <td class="py-4 px-6">
                     $2999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-white hover:underline">Edit</a>
                 </td>
             </tr>
@@ -2616,7 +2618,7 @@ Use this example to increase the readability of the data sets by alternating the
                 <td class="py-4 px-6">
                     $1999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-white hover:underline">Edit</a>
                 </td>
             </tr>
@@ -2633,7 +2635,7 @@ Use this example to increase the readability of the data sets by alternating the
                 <td class="py-4 px-6">
                     $99
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-white hover:underline">Edit</a>
                 </td>
             </tr>
@@ -2650,7 +2652,7 @@ Use this example to increase the readability of the data sets by alternating the
                 <td class="py-4 px-6">
                     $799
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-white hover:underline">Edit</a>
                 </td>
             </tr>
@@ -2667,7 +2669,7 @@ Use this example to increase the readability of the data sets by alternating the
                 <td class="py-4 px-6">
                     $999
                 </td>
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6">
                     <a href="#" class="font-medium text-white hover:underline">Edit</a>
                 </td>
             </tr>

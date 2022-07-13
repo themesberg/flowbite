@@ -156,7 +156,7 @@ Use this example to group up radio button components inside a list.
 </ul>
 {{< /example >}}
 
-## Radio button in dropdown
+## Radio in dropdown
 
 Here's an example of a list group that you can use right away.
 

@@ -7,9 +7,7 @@
     - title: Laravel
     - title: Svelte
     - title: Rails
-      new: true
     - title: Django
-      new: true
     # - title: Angular
     - title: License
     - title: Changelog
@@ -28,15 +26,14 @@
     - title: Alerts
     - title: Accordion
     - title: Avatar
-      new: true
     - title: Badge
     - title: Breadcrumb
     - title: Buttons
     - title: Button group
     - title: Card
     - title: Carousel
-      new: true
     - title: Dropdowns
+      new: true
     - title: Forms
     - title: List Group
     - title: Typography
@@ -49,10 +46,10 @@
     - title: Sidebar
     - title: Pagination
     - title: Rating
-      new: true
     - title: Timeline
     - title: Progress
     - title: Tables
+      new: true
     - title: Spinner
     - title: Toast
     - title: Tooltips
@@ -65,10 +62,11 @@
     - title: Select
     - title: Textarea
     - title: Checkbox
+      new: true
     - title: Radio
+      new: true
     - title: Toggle
     - title: Range
-      new: true
     - title: Floating Label
 
 - title: Plugins

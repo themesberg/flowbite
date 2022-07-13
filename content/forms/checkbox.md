@@ -20,7 +20,7 @@ Make sure that you have included Flowbite as a plugin inside your Tailwind CSS p
 
 Use this default example of a checbkox element in a checked and unchecked state.
 
-{{< example class="dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="default-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex items-center mb-4">
     <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default checkbox</label>
@@ -35,7 +35,7 @@ Use this default example of a checbkox element in a checked and unchecked state.
 
 This example can be used for the disabled state of the checkbox component by applying the `disabled` attribute to the input element.
 
-{{< example class="dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="disabled-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex items-center mb-4">
     <input disabled id="disabled-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <label for="disabled-checkbox" class="ml-2 text-sm font-medium text-gray-400 dark:text-gray-500">Disabled checkbox</label>
@@ -50,7 +50,7 @@ This example can be used for the disabled state of the checkbox component by app
 
 Use this example if you want to add an anchor link inside the label of the checkbox component.
 
-{{< example class="dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="checkbox-link-example" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex items-center">
     <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <label for="link-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">terms and conditions</a>.</label>
@@ -61,7 +61,7 @@ Use this example if you want to add an anchor link inside the label of the check
 
 Get started with this example if you want to add a secondary helper text for the checkbox component.
 
-{{< example class="dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="checkbox-helper-example" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex">
     <div class="flex items-center h-5">
         <input id="helper-checkbox" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
@@ -73,11 +73,26 @@ Get started with this example if you want to add a secondary helper text for the
 </div>
 {{< /example >}}
 
-## List
+## Bordered
 
-Here's an example of a list group that you can use right away.
+Use this example of a checkbox inside a card element to enable a larger area of clicking activation.
 
-{{< example class="dark:bg-gray-800" github="components/radio.md" show_dark=true >}}
+{{< example id="checkbox-bordered-example" class="grid gap-6 md:grid-cols-2" github="forms/checkbox.md" show_dark=true >}}
+<div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700">
+    <input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    <label for="bordered-checkbox-1" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Default radio</label>
+</div>
+<div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700">
+    <input checked id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+</div>
+{{< /example >}}
+
+## Checkbox list group
+
+Use this example to show a list of checkbox items grouped inside a card.
+
+{{< example id="checkbox-list-example" github="components/radio.md" show_dark=true >}}
 <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Technology</h3>
 <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
@@ -107,11 +122,11 @@ Here's an example of a list group that you can use right away.
 </ul>
 {{< /example >}}
 
-## Horizontal List
+## Horizontal List group
 
-Here's an example of a list group that you can use right away.
+Use this example to show a list of checkbox items inside a card horizontally.
 
-{{< example class="dark:bg-gray-800" github="components/radio.md" show_dark=true >}}
+{{< example id="checkbox-horizontal-list-example" github="components/radio.md" show_dark=true >}}
 <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Identification</h3>
 <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
     <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
@@ -141,12 +156,12 @@ Here's an example of a list group that you can use right away.
 </ul>
 {{< /example >}}
 
-## Dropdown
+## Checkbox in dropdown
 
-You can use the `divide-y divide-gray-100` classes to add separate elements inside the dropdown menu.
+Use this example to show a list of checkbox items inside a dropdown menu.
 
-{{< example class="dark:bg-gray-800" github="components/dropdowns.md" show_dark=true >}}
-<button id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown search <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+{{< example id="checkbox-dropdown-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="400" >}}
+<button id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch" class="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown search <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 
 <!-- Dropdown menu -->
 <div id="dropdownSearch" class="hidden z-10 w-60 bg-white rounded shadow dark:bg-gray-700">
@@ -210,11 +225,11 @@ You can use the `divide-y divide-gray-100` classes to add separate elements insi
 </div>
 {{< /example >}}
 
-## Inline
+## Inline checkboxes
 
 You can align the checkbox elements horizontally by using a wrapper tag and applying the `flex` class.
 
-{{< example class="dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="checkbox-inline-example" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex">
     <div class="flex items-center mr-4">
         <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
@@ -235,11 +250,11 @@ You can align the checkbox elements horizontally by using a wrapper tag and appl
 </div>
 {{< /example >}}
 
-## Colors
+## Checkbox colors
 
 Use the `text-{color}-{shade}` classes from Tailwind CSS to change the color of the checkbox component.
 
-{{< example class="flex flex-wrap dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="checkbox-colors-example" class="flex flex-wrap" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex items-center mr-4">
     <input checked id="red-checkbox" type="checkbox" value="" class="w-4 h-4 text-red-600 bg-gray-100 rounded border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <label for="red-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Red</label>

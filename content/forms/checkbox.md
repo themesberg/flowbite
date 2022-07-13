@@ -156,7 +156,11 @@ Use this example to show a list of checkbox items inside a card horizontally.
 </ul>
 {{< /example >}}
 
-## Checkbox in dropdown
+<div class="mt-8 -mb-5">
+  {{< requires_js >}}
+</div>
+
+## Checkbox dropdown
 
 Use this example to show a list of checkbox items inside a dropdown menu.
 

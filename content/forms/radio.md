@@ -20,7 +20,7 @@ Make sure that you have included Flowbite as a plugin inside your Tailwind CSS p
 
 Use the default example of a radio component with the checked and unchecked state.
 
-{{< example class="dark:bg-gray-800" github="forms/radio.md" show_dark=true >}}
+{{< example id="default-radio-example" github="forms/radio.md" show_dark=true >}}
 <div class="flex items-center mb-4">
     <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <label for="default-radio-1" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default radio</label>
@@ -35,7 +35,7 @@ Use the default example of a radio component with the checked and unchecked stat
 
 Apply the `disabled` attribute to the radio component to disallow the selection for the user.
 
-{{< example class="dark:bg-gray-800" github="forms/radio.md" show_dark=true >}}
+{{< example id="radio-disabled-example" github="forms/radio.md" show_dark=true >}}
 <div class="flex items-center mb-4">
     <input disabled id="disabled-radio-1" type="radio" value="" name="disabled-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <label for="disabled-radio-1" class="ml-2 text-sm font-medium text-gray-400 dark:text-gray-500">Disabled radio</label>
@@ -50,33 +50,49 @@ Apply the `disabled` attribute to the radio component to disallow the selection 
 
 Use this example if you want to include an anchor tag inside the label of the radio component.
 
-{{< example class="dark:bg-gray-800" github="forms/radio.md" show_dark=true >}}
+{{< example id="radio-link-example" github="forms/radio.md" show_dark=true >}}
 <div class="flex items-center">
     <input id="link-radio" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <label for="link-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Radio button with a <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">link inside</a>.</label>
 </div>
 {{< /example >}}
 
-## Radio example bordered
+## Helper text
 
-Use the default example of a radio component with the checked and unchecked state.
+Get started with this example if you want to add a secondary text to the label for the radio component.
 
-{{< example class="dark:bg-gray-800" github="forms/radio.md" show_dark=true >}}
-<div class="flex items-center pl-4 mb-4 rounded border border-gray-200 dark:border-gray-700">
-    <input id="default-radio-5" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-    <label for="default-radio-5" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Default radio</label>
-</div>
-<div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700">
-    <input checked id="default-radio-6" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-    <label for="default-radio-6" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+{{< example id="radio-helper-example" github="forms/radio.md" show_dark=true >}}
+<div class="flex">
+    <div class="flex items-center h-5">
+        <input id="helper-radio" aria-describedby="helper-radio-text" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    </div>
+    <div class="ml-2 text-sm">
+        <label for="helper-radio" class="font-medium text-gray-900 dark:text-gray-300">Free shipping via Flowbite</label>
+        <p id="helper-radio-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">For orders shipped from $25 in books or $29 in other categories</p>
+    </div>
 </div>
 {{< /example >}}
 
-## List
+## Bordered
 
-Here's an example of a list group that you can use right away.
+Use this example to show a radio input elements inside a card with border.
 
-{{< example class="dark:bg-gray-800" github="components/radio.md" show_dark=true >}}
+{{< example id="radio-bordered-example" class="grid gap-6 md:grid-cols-2" github="forms/radio.md" show_dark=true >}}
+<div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700">
+    <input id="bordered-radio-1" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    <label for="bordered-radio-1" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Default radio</label>
+</div>
+<div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700">
+    <input checked id="bordered-radio-2" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    <label for="bordered-radio-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+</div>
+{{< /example >}}
+
+## Radio list group
+
+This example can be used to show a list of radio buttons inside a grouped list.
+
+{{< example id="radio-list-group-example" github="components/radio.md" show_dark=true >}}
 <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Identification</h3>
 <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
@@ -106,11 +122,11 @@ Here's an example of a list group that you can use right away.
 </ul>
 {{< /example >}}
 
-## Horizontal List
+## Horizontal list group
 
-Here's an example of a list group that you can use right away.
+Use this example to group up radio button components inside a list.
 
-{{< example class="dark:bg-gray-800" github="components/radio.md" show_dark=true >}}
+{{< example id="radio-horizontal-list-example" github="components/radio.md" show_dark=true >}}
 <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Identification</h3>
 <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
     <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
@@ -140,11 +156,11 @@ Here's an example of a list group that you can use right away.
 </ul>
 {{< /example >}}
 
-## Dropdown
+## Radio button in dropdown
 
 Here's an example of a list group that you can use right away.
 
-{{< example class="dark:bg-gray-800" github="components/radio.md" show_dark=true >}}
+{{< example id="radio-dropdown-example" class="flex justify-center" github="components/radio.md" show_dark=true iframeHeight="340" >}}
 <button id="dropdownHelperRadioButton" data-dropdown-toggle="dropdownHelperRadio" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown radio <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 
 <!-- Dropdown menu -->
@@ -157,7 +173,7 @@ Here's an example of a list group that you can use right away.
           </div>
           <div class="ml-2 text-sm">
               <label for="helper-radio-4" class="font-medium text-gray-900 dark:text-gray-300">
-                <div>Radio &amp; Helper</div>
+                <div>Individual</div>
                 <p id="helper-radio-text-4" class="text-xs font-normal text-gray-500 dark:text-gray-300">Some helpful instruction goes over here.</p>
               </label>
           </div>
@@ -170,7 +186,7 @@ Here's an example of a list group that you can use right away.
           </div>
           <div class="ml-2 text-sm">
               <label for="helper-radio-5" class="font-medium text-gray-900 dark:text-gray-300">
-                <div>Radio &amp; Helper</div>
+                <div>Company</div>
                 <p id="helper-radio-text-5" class="text-xs font-normal text-gray-500 dark:text-gray-300">Some helpful instruction goes over here.</p>
               </label>
           </div>
@@ -183,7 +199,7 @@ Here's an example of a list group that you can use right away.
           </div>
           <div class="ml-2 text-sm">
               <label for="helper-radio-6" class="font-medium text-gray-900 dark:text-gray-300">
-                <div>Radio &amp; Helper</div>
+                <div>Non profit</div>
                 <p id="helper-radio-text-6" class="text-xs font-normal text-gray-500 dark:text-gray-300">Some helpful instruction goes over here.</p>
               </label>
           </div>
@@ -193,27 +209,11 @@ Here's an example of a list group that you can use right away.
 </div>
 {{< /example >}}
 
-## Helper text
-
-Get started with this example if you want to add a secondary text to the label for the radio component.
-
-{{< example class="dark:bg-gray-800" github="forms/radio.md" show_dark=true >}}
-<div class="flex">
-    <div class="flex items-center h-5">
-        <input id="helper-radio" aria-describedby="helper-radio-text" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-    </div>
-    <div class="ml-2 text-sm">
-        <label for="helper-radio" class="font-medium text-gray-900 dark:text-gray-300">Free shipping via Flowbite</label>
-        <p id="helper-radio-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">For orders shipped from $25 in books or $29 in other categories</p>
-    </div>
-</div>
-{{< /example >}}
-
-## Inline
+## Inline layout
 
 Use the `flex` class for a wrapper element to horizontally align the radio elements.
 
-{{< example class="dark:bg-gray-800" github="forms/radio.md" show_dark=true >}}
+{{< example id="radio-inline-example" github="forms/radio.md" show_dark=true >}}
 <div class="flex">
     <div class="flex items-center mr-4">
         <input id="inline-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
@@ -238,7 +238,7 @@ Use the `flex` class for a wrapper element to horizontally align the radio eleme
 
 Apply the `text-{color}-{shade}` utility class from Tailwind CSS to change the color of the radio component.
 
-{{< example class="dark:bg-gray-800" github="forms/radio.md" show_dark=true >}}
+{{< example id="radio-colors-example" github="forms/radio.md" show_dark=true >}}
 <div class="flex flex-wrap">
     <div class="flex items-center mr-4">
         <input id="red-radio" type="radio" value="" name="colored-radio" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
@@ -269,32 +269,30 @@ Apply the `text-{color}-{shade}` utility class from Tailwind CSS to change the c
 
 ## Advanced
 
-Use the `text-{color}-{shade}` classes from Tailwind CSS to change the color of the checkbox component.
+Use this example of a more advanced radio component to add more information and update the style of the whole card instead of just the circled dot.
 
-{{< example class="flex flex-wrap dark:bg-gray-800" github="forms/checkbox.md" show_dark=true >}}
-    <div>
-        <h3 class="mb-5 text-lg font-medium text-gray-900 dark:text-white">How much do you expect to use each month?</h3>
-        <ul class="space-y-4">
-            <li>
-                <input type="radio" id="hosting-small" name="hosting" value="hosting-small" class="hidden peer" required>
-                <label for="hosting-small" class="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
-                    <div class="block">
-                        <div class="w-full text-lg font-semibold">0-50 MB</div>
-                        <div class="w-full">Good for small websites</div>
-                    </div>
-                    <svg class="ml-3 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </label>
-            </li>
-            <li>
-                <input type="radio" id="hosting-big" name="hosting" value="hosting-big" class="hidden peer">
-                <label for="hosting-big" class="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <div class="block">
-                        <div class="w-full text-lg font-semibold">500-1000 MB</div>
-                        <div class="w-full">Good for large websites</div>
-                    </div>
-                    <svg class="ml-3 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </label>
-            </li>
-        </ul>
-    </div>
+{{< example id="radio-advanced-example" class="flex flex-wrap" github="forms/checkbox.md" show_dark=true >}}
+<h3 class="mb-5 text-lg font-medium text-gray-900 dark:text-white">How much do you expect to use each month?</h3>
+<ul class="grid gap-6 w-full md:grid-cols-2">
+    <li>
+        <input type="radio" id="hosting-small" name="hosting" value="hosting-small" class="hidden peer" required>
+        <label for="hosting-small" class="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
+            <div class="block">
+                <div class="w-full text-lg font-semibold">0-50 MB</div>
+                <div class="w-full">Good for small websites</div>
+            </div>
+            <svg class="ml-3 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </label>
+    </li>
+    <li>
+        <input type="radio" id="hosting-big" name="hosting" value="hosting-big" class="hidden peer">
+        <label for="hosting-big" class="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <div class="block">
+                <div class="w-full text-lg font-semibold">500-1000 MB</div>
+                <div class="w-full">Good for large websites</div>
+            </div>
+            <svg class="ml-3 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </label>
+    </li>
+</ul>
 {{< /example >}}

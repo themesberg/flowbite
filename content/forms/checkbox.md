@@ -122,7 +122,7 @@ Use this example to show a list of checkbox items grouped inside a card.
 </ul>
 {{< /example >}}
 
-## Horizontal List group
+## Horizontal list group
 
 Use this example to show a list of checkbox items inside a card horizontally.
 
@@ -225,7 +225,7 @@ Use this example to show a list of checkbox items inside a dropdown menu.
 </div>
 {{< /example >}}
 
-## Inline checkboxes
+## Inline layout
 
 You can align the checkbox elements horizontally by using a wrapper tag and applying the `flex` class.
 
@@ -250,7 +250,7 @@ You can align the checkbox elements horizontally by using a wrapper tag and appl
 </div>
 {{< /example >}}
 
-## Checkbox colors
+## Colors
 
 Use the `text-{color}-{shade}` classes from Tailwind CSS to change the color of the checkbox component.
 

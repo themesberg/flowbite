@@ -1179,7 +1179,7 @@ Use this example to show a search bar that can be used to query through data ins
 
 {{< example id="table-search-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
-    <div class="py-4 bg-white dark:bg-gray-800">
+    <div class="pb-4 bg-white dark:bg-gray-800">
         <label for="table-search" class="sr-only">Search</label>
         <div class="relative mt-1">
             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -1358,13 +1358,17 @@ Use this example to show a search bar that can be used to query through data ins
 </div>
 {{< /example >}}
 
+<div class="mt-8 -mb-5">
+  {{< requires_js >}}
+</div>
+
 ## Table filter
 
 Use this example with a filter bar to select certain data sets inside the table based on the options that you've selected.
 
 {{< example id="table-filter-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
-    <div class="flex justify-between items-center py-4">
+    <div class="flex justify-between items-center pb-4">
         <div>
             <button id="dropdownRadioButton" data-dropdown-toggle="dropdownRadio" class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
                 <svg class="mr-2 w-4 h-4 text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
@@ -1850,7 +1854,7 @@ Paginate the table data when using larger data sets based on any given amount of
             </tr>
         </tbody>
     </table>
-    <nav class="flex justify-between items-center py-4" aria-label="Table navigation">
+    <nav class="flex justify-between items-center pt-4" aria-label="Table navigation">
         <span class="text-sm font-normal text-gray-500">Showing <span class="font-semibold text-gray-900">1-10</span> of <span class="font-semibold text-gray-900">1000</span></span>
         <ul class="inline-flex items-center -space-x-px">
             <li>
@@ -2061,13 +2065,17 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
 </div>
 {{< /example >}}
 
+<div class="mt-8 -mb-5">
+  {{< requires_js >}}
+</div>
+
 ## Table with users
 
 Use this example of a table where we show a data set of users and showing a profile picture, name, email, online status, and more.
 
 {{< example id="table-users-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
-    <div class="flex justify-between items-center py-4 bg-white dark:bg-gray-800">
+    <div class="flex justify-between items-center pb-4 bg-white dark:bg-gray-800">
         <div>
             <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
                 <span class="sr-only">Action button</span>
@@ -2377,6 +2385,10 @@ Get started with this example to show a list of products inside the table and sh
     </table>
 </div>
 {{< /example >}}
+
+<div class="mt-8 -mb-5">
+  {{< requires_js >}}
+</div>
 
 ## Table with modal
 

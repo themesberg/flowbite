@@ -44,6 +44,10 @@
 	@apply py-2;
 }
 
+#TableOfContents > ul > li > ul > li:last-of-type {
+	@apply pb-0;
+}
+
 .highlight {
 	@apply overflow-hidden;
 }

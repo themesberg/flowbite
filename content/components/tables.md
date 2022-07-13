@@ -1179,7 +1179,7 @@ Use this example to show a search bar that can be used to query through data ins
 
 {{< example id="table-search-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
-    <div class="pb-4 bg-white dark:bg-gray-800">
+    <div class="pb-4 bg-white dark:bg-gray-900">
         <label for="table-search" class="sr-only">Search</label>
         <div class="relative mt-1">
             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -2075,7 +2075,7 @@ Use this example of a table where we show a data set of users and showing a prof
 
 {{< example id="table-users-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
-    <div class="flex justify-between items-center pb-4 bg-white dark:bg-gray-800">
+    <div class="flex justify-between items-center pb-4 bg-white dark:bg-gray-900">
         <div>
             <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
                 <span class="sr-only">Action button</span>

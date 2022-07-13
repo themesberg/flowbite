@@ -157,7 +157,7 @@
         <!-- Table of content -->
         <div class="hidden flex-none pl-8 mr-8 w-64 xl:text-sm xl:block">
           {{ if (eq .Page.Params.toc true) }}
-          <div class="flex flex-col justify-between overflow-y-auto sticky max-h-(screen-18) pt-10 pb-6 top-28">
+          <div class="flex overflow-y-auto sticky top-28 flex-col justify-between pt-10 pb-6 h-[calc(100vh-5rem)]">
             <div class="mb-8">
               <h5 class="pl-2.5 mb-2 text-sm font-semibold tracking-wide text-gray-900 uppercase dark:text-white lg:text-xs">On this page</h5>
               {{ .TableOfContents }}

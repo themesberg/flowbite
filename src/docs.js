@@ -214,6 +214,18 @@ const updateButtonThemeToggleEls = (theme) => {
 
 window.addEventListener('DOMContentLoaded', () => {
 
+  // set menu item location scroll
+  const currentHref = window.location.href;
+  const sidebarItemEls = document.querySelectorAll('[data-sidebar-item]')
+  const sidenav = document.getElementById('navWrapper')
+
+  sidebarItemEls.forEach(s => {
+    if(s.href === currentHref) {
+      sidenav.scrollTop = s.offsetTop
+      console.log(sidenav.scrollTop)
+    }
+  })
+
   // toggle dark mode
   var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
   var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');

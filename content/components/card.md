@@ -154,7 +154,7 @@ Use this card for your e-commerce websites and show information about the produc
 {{< example id="card-ecommerce-example" github="components/card.md" show_dark=true >}}
 <div class="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
-        <img class="p-8 rounded-t-lg" src="/docs/images/products/product-1.png" alt="product image" />
+        <img class="p-8 rounded-t-lg" src="/docs/images/products/apple-watch.png" alt="product image" />
     </a>
     <div class="px-5 pb-5">
         <a href="#">

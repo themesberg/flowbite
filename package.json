@@ -16,7 +16,10 @@
     "tailwind ui",
     "tailwind css react",
     "tailwind css vue",
-    "tailwind css angular"
+    "tailwind css angular",
+    "tailwind css svelte",
+    "tailwind css django",
+    "tailwind css ruby on rails"
   ],
   "license": "MIT",
   "style": "dist/flowbite.css",
@@ -25,9 +28,9 @@
   "bugs": "https://github.com/themesberg/flowbite/issues",
   "homepage": "https://flowbite.com",
   "contributors": [
-    "Zoltán Szőgyényi <zoltan@themesberg.com>",
-    "Robert Tanislav <robert@themesberg.com>",
-    "Victor Cordos <victor@themesberg.com>"
+    "Zoltán Szőgyényi (https://twitter.com/zoltanszogyenyi)",
+    "Robert Tanislav (https://twitter.com/roberttanislav)",
+    "Victor Cordos (https://twitter.com/victorcordos)"
   ],
   "scripts": {
     "start": "NODE_ENV=development run-p start:*",

@@ -289,7 +289,7 @@ Use the `text-{color}-{shade}` classes from Tailwind CSS to change the color of 
 
 Use this example of an advanced layout of checkbox elements where the label parent element can be styled when the checkbox is checked.
 
-{{< example id="checkbox-colors-example" class="flex flex-wrap" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="checkbox-advanced-example" class="flex flex-wrap" github="forms/checkbox.md" show_dark=true >}}
 <h3 class="mb-5 text-lg font-medium text-gray-900 dark:text-white">Choose technology:</h3>
 <ul class="grid gap-6 w-full md:grid-cols-3">
     <li>

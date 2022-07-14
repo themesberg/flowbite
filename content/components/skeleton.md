@@ -163,7 +163,7 @@ Use this footer component to show a copyright notice and some helpful website li
 
 Use this footer component to show a copyright notice and some helpful website links.
 
-{{< example id="default-footer-example" github="components/footer.md" class="p-2" show_dark=true >}}
+{{< example id="default-footer-example" github="components/footer.md" show_dark=true >}}
 <div class="max-w-md p-4 space-y-4 border border-gray-200 divide-y divide-gray-200 rounded shadow dark:divide-gray-700 md:p-6 animate-pulse dark:border-gray-700">
     <div class="flex items-center justify-between">
         <div>

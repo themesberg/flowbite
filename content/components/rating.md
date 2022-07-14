@@ -5,8 +5,8 @@ description: Use the rating component to show reviews and testimonials from your
 group: components
 toc: true
 
-previous: Pagination
-previousLink: components/pagination/
+previous: Skeleton
+previousLink: components/skeleton/
 next: Timeline
 nextLink: components/timeline/
 ---

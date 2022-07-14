@@ -5,8 +5,8 @@ description: Use the Tailwind CSS pagination element to indicate a series of con
 group: components
 toc: true
 
-previous: Sidebar
-previousLink: components/sidebar/
+previous: Skeleton
+previousLink: components/skeleton/
 next: Rating
 nextLink: components/rating/
 ---

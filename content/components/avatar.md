@@ -101,7 +101,7 @@ This example can be used if you want to show additional information in the form 
 Use this example if you want to show a dropdown menu when clicking on the avatar component.
 
 {{< example id="avatar-user-dropdown-example" class="flex space-x-4" github="components/avatar.md" show_dark=true iframeHeight="320" >}}
-<img id="avatar" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" src="/docs/images/people/profile-picture-5.jpg" alt="User dropdown">
+<img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" src="/docs/images/people/profile-picture-5.jpg" alt="User dropdown">
 
 <!-- Dropdown menu -->
 <div id="userDropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
@@ -109,7 +109,7 @@ Use this example if you want to show a dropdown menu when clicking on the avatar
       <div>Bonnie Green</div>
       <div class="font-medium truncate">name@flowbite.com</div>
     </div>
-    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownInformationButton">
+    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
       <li>
         <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
       </li>

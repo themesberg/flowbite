@@ -200,11 +200,9 @@ const initializeCodeExamples = (theme) => {
 
   codeExampleEls.forEach(c => {
     const iframe = c.querySelector('.iframe-code')
-    iframe.onload = () => {
-      updateiFrameHeight(iframe)
-      updateiFrameDarkMode(iframe, theme)
-      initiateCopyToClipboard(c)
-    }
+    updateiFrameHeight(iframe)
+    updateiFrameDarkMode(iframe, theme)
+    initiateCopyToClipboard(c)
   })
 }
 
@@ -215,7 +213,7 @@ const updateButtonThemeToggleEls = (theme) => {
   })
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
 
   // set menu item location scroll
   const currentHref = window.location.href;

@@ -182,7 +182,10 @@ const initiateToggleDarkState = element => {
 }
 
 const updateiFrameHeight = iFrame => {
-  iFrame.style.height = iFrame.contentWindow.document.body.scrollHeight + 40 + 'px'
+  setTimeout(() => {
+    iFrame.style.height = iFrame.contentWindow.document.body.scrollHeight + 40 + 'px'
+    iFrame.nextElementSibling.classList.add('hidden')
+  }, 500)
 }
 
 const updateiFrameCodeElsDarkMode = (theme) => {

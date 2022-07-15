@@ -183,8 +183,8 @@ const initiateToggleDarkState = element => {
 
 const updateiFrameHeight = iFrame => {
   setTimeout(() => {
-    iFrame.style.height = iFrame.contentWindow.document.body.scrollHeight + 40 + 'px'
     iFrame.nextElementSibling.classList.add('hidden')
+    iFrame.style.height = iFrame.contentWindow.document.body.scrollHeight + 40 + 'px'
   }, 500)
 }
 

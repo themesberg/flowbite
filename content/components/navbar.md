@@ -57,7 +57,7 @@ Use this example of a navigation bar built with the utility classes from Tailwin
 This example can be used to show a secondary dropdown menu when clicking on one of the navigation links.
 
 {{< example id="navbar-dropdown-example" github="components/navbar.md" show_dark=true iframeHeight="320" >}}
-<nav class="px-2 bg-white border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+<nav class="px-2 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
     <a href="#" class="flex items-center">
         <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo" />
@@ -112,7 +112,7 @@ This example can be used to show a secondary dropdown menu when clicking on one 
 Use this example to show multiple layers of dropdown menu by stacking them inside of each other.
 
 {{< example id="navbar-multi-dropdown-example" github="components/navbar.md" show_dark=true iframeHeight="320" >}}
-<nav class="px-2 bg-white border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+<nav class="px-2 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
     <a href="#" class="flex items-center">
         <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo" />
@@ -391,7 +391,7 @@ Get started with this example to show a language dropdown selector in the navbar
 
 Use this example to create a navigation bar with a user profile or button to toggle a dropdown menu.
 
-{{< example id="navbar-user-example" class="dark:bg-gray-800" github="components/navbar.md" show_dark=true iframeHeight="340" >}}
+{{< example id="navbar-user-example" github="components/navbar.md" show_dark=true iframeHeight="340" >}}
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
   <a href="{{< param homepage >}}/" class="flex items-center">
@@ -456,8 +456,8 @@ Use this example to create a navigation bar with a user profile or button to tog
 
 You can also use the dropdown element inside a navigation bar and add a second level of navigation hierarchy, but make sure to use a `button` element.
 
-{{< example id="navbar-mega-menu" class="dark:bg-gray-800" github="components/navbar.md" show_dark=true iframeHeight="340" >}}
-<nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-800">
+{{< example id="navbar-mega-menu" github="components/navbar.md" show_dark=true iframeHeight="340" >}}
+<nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
         <a href="https://flowbite.com" class="flex items-center">
             <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />

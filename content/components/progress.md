@@ -5,8 +5,8 @@ description: Use the progress bar component to show the completion rate of a dat
 group: components
 toc: true
 
-previous: Timeline
-previousLink: components/timeline/
+previous: KBD (Keyboard)
+previousLink: components/kbd/
 next: Tables
 nextLink: components/tables/
 ---
@@ -41,7 +41,7 @@ You can also use different sizes by using various sizing utility classes from Fl
   <div class="bg-blue-600 h-2.5 rounded-full dark:bg-blue-500" style="width: 45%"></div>
 </div>
 <div class="mb-1 text-lg font-medium dark:text-white">Large</div>
-<div class="w-full h-4 mb-4 bg-gray-200 rounded-full dark:bg-gray-700">
+<div class="mb-4 w-full h-4 bg-gray-200 rounded-full dark:bg-gray-700">
   <div class="h-4 bg-blue-600 rounded-full dark:bg-blue-500" style="width: 45%"></div>
 </div>
 <div class="mb-1 text-lg font-medium dark:text-white">Extra Large</div>

@@ -1,23 +1,25 @@
 ---
 layout: home
-title: Tailwind CSS Kbd - Flowbite
-description: Use the list group component to display a series of items, buttons or links inside a single element
+title: Tailwind CSS KBD (Keyboard) - Flowbite
+description: Use the KBD component as an inline element to denote textual user input from the keyboard inside paragraphs, tables, and other components
 group: components
 toc: true
 
-previous: Forms
-previousLink: components/forms/
-next: List Group
-nextLink: components/list-group/
+previous: Timeline
+previousLink: components/timeline/
+next: Progress bar
+nextLink: components/progress/
 ---
 
-The list group component can be used to display a series of elements, buttons or links inside a single card component similar to a sidebar.
+The KBD (Keyboard) component can be used to indicate a textual user input from the keyboard inside other elements such as in text, tables, cards, and more.
 
-## Default
+Use the semantic `<kbd>` keyboard input tag to use the default monospace font which is best suited for representing input keys. 
 
-Here's an example of a list group that you can use right away.
+## Default KBD
 
-{{< example id="default-list-group-example" github="components/kbd.md" show_dark=true >}}
+Here's a list of KBD components that you can use inside any other element.
+
+{{< example id="default-kbd-example" github="components/kbd.md" show_dark=true >}}
 <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Shift</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Ctrl</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Tab</kbd>
@@ -27,60 +29,56 @@ Here's an example of a list group that you can use right away.
 <kbd class="px-2 py-1.5  text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Enter</kbd>
 {{< /example >}}
 
-## Text
+## KBD inside text
 
-Here's an example of a list group that you can use right away.
+Use this example by nesting an inline KBD component inside a paragraph.
 
-{{< example id="default-list-group-example" github="components/kbd.md" show_dark=true >}}
+{{< example id="kbd-text-example" github="components/kbd.md" show_dark=true >}}
 <p class="text-gray-500 dark:text-gray-400">
     Please press <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Ctrl</kbd> + <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Shift</kbd> + <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">R</kbd> to re-render an MDN page.
 </p>
 {{< /example >}}
 
-## Table
+## KBD inside table
 
-Here's an example of a list group that you can use right away.
+The KBD component can also be used inside table components to denote what type of key can be pressed for certain descriptions.
 
-{{< example id="default-list-group-example" github="components/kbd.md" show_dark=true >}}
-
-<div class="relative overflow-x-auto">
+{{< example id="kbd-table-example" github="components/kbd.md" show_dark=true >}}
+<div class="overflow-x-auto relative">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-800 dark:text-gray-400">
             <tr>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="py-3 px-6">
                     Key
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="py-3 px-6">
                     Description
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                <td class="px-6 py-4">
-                    Navigate to interactive elements
-                </td>
-                <th scope="row" class="px-6 py-4 font-medium text-gray-500 dark:text-gray-400 whitespace-nowrap">
+                <th scope="row" class="py-4 px-6 font-medium text-gray-500 whitespace-nowrap dark:text-gray-400">
                     <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Shift</kbd>
                         <span class="mx-2">or</span>
                     <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Tab</kbd>
                 </th>
+                <td class="py-4 px-6">
+                    Navigate to interactive elements
+                </td>
             </tr>
             <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                <td class="px-6 py-4">
-                    Ensure elements with ARIA role="button" can be activated with both key commands.
-                </td>
-                <th scope="row" class="px-6 py-4 font-medium text-gray-500 dark:text-gray-400 whitespace-nowrap">
+                <th scope="row" class="py-4 px-6 font-medium text-gray-500 whitespace-nowrap dark:text-gray-400">
                     <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Enter</kbd>
                     <span class="mx-2">or</span>
                     <kbd class="px-4 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Spacebar</kbd>
                 </th>
+                <td class="py-4 px-6">
+                    Ensure elements with ARIA role="button" can be activated with both key commands.
+                </td>
             </tr>
             <tr class="bg-white dark:bg-gray-900">
-                <td class="px-6 py-4">
-                    choose and activate previous/next tab.
-                </td>
-                <th scope="row" class="inline-flex items-center px-6 py-4 font-medium text-gray-500 dark:text-gray-400 whitespace-nowra">
+                <th scope="row" class="inline-flex items-center py-4 px-6 font-medium text-gray-500 dark:text-gray-400 whitespace-nowra">
                     <kbd class="inline-flex items-center mr-1 px-2 py-1.5 text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
                         <svg class="w-4 h-4" ariha-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M9.39 265.4l127.1-128C143.6 131.1 151.8 128 160 128s16.38 3.125 22.63 9.375l127.1 128c9.156 9.156 11.9 22.91 6.943 34.88S300.9 320 287.1 320H32.01c-12.94 0-24.62-7.781-29.58-19.75S.2333 274.5 9.39 265.4z"/></svg>
                     </kbd>
@@ -95,17 +93,20 @@ Here's an example of a list group that you can use right away.
                         <svg class="w-4 h-4" ariha-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z"/></svg>
                     </kbd>
                 </th>
+                <td class="py-4 px-6">
+                    Choose and activate previous/next tab.
+                </td>
             </tr>
         </tbody>
     </table>
 </div>
 {{< /example >}}
 
-## Arrows
+## Arrow keys
 
-Here's an example of a list group that you can use right away.
+Use this example to show arrow keys inside the KBD styled element.
 
-{{< example id="default-list-group-example" github="components/list-group.md" show_dark=true >}}
+{{< example id="kbd-arrow-example" github="components/list-group.md" show_dark=true >}}
 <kbd class="inline-flex items-center px-2 py-1.5 text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
     <svg class="w-4 h-4" ariha-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M9.39 265.4l127.1-128C143.6 131.1 151.8 128 160 128s16.38 3.125 22.63 9.375l127.1 128c9.156 9.156 11.9 22.91 6.943 34.88S300.9 320 287.1 320H32.01c-12.94 0-24.62-7.781-29.58-19.75S.2333 274.5 9.39 265.4z"/></svg>
 </kbd>
@@ -120,11 +121,11 @@ Here's an example of a list group that you can use right away.
 </kbd>
 {{< /example >}}
 
-## Letters
+## Letter keys
 
-Here's an example of a list group that you can use right away.
+Use this example if you need to show a key from the latin alphabet
 
-{{< example id="default-list-group-example" github="components/kbd.md" show_dark=true >}}
+{{< example id="kbd-letter-example" github="components/kbd.md" show_dark=true >}}
 <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Q</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">W</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">E</kbd>
@@ -153,11 +154,11 @@ Here's an example of a list group that you can use right away.
 <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">M</kbd>
 {{< /example >}}
 
-## Numbers
+## Number keys
 
-Here's an example of a list group that you can use right away.
+Use this example to show a key inside a KBD component from the english numeral system.
 
-{{< example id="default-list-group-example" github="components/kbd.md" show_dark=true >}}
+{{< example id="kbd-number-example" github="components/kbd.md" show_dark=true >}}
 <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">1</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">2</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">3</kbd>
@@ -172,9 +173,9 @@ Here's an example of a list group that you can use right away.
 
 ## Function keys
 
-Here's an example of a list group that you can use right away.
+This example can be used to denote function keys inside the KBD component.
 
-{{< example id="default-list-group-example" github="components/kbd.md" show_dark=true >}}
+{{< example id="kbd-function-example" github="components/kbd.md" show_dark=true >}}
 <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F1</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F2</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F3</kbd>

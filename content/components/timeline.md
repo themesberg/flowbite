@@ -7,8 +7,8 @@ toc: true
 
 previous: Rating
 previousLink: components/rating/
-next: Progress
-nextLink: components/progress/
+next: KBD (Keyboard)
+nextLink: components/kbd/
 ---
 
 The timeline component can be used to show series of data in a chronological order for use cases such as activity feeds, user actions, application updates, and more. Get started with multiple vertical timeline styles built with the utility classes from Tailwind CSS and Flowbite.

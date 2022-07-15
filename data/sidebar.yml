@@ -35,8 +35,6 @@
     - title: Dropdowns
       new: true
     - title: Forms
-    - title: Kbd
-      new: true
     - title: List Group
     - title: Typography
     - title: Modal
@@ -51,6 +49,8 @@
     - title: Pagination
     - title: Rating
     - title: Timeline
+    - title: KBD
+      new: true
     - title: Progress
     - title: Tables
       new: true

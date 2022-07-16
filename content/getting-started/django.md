@@ -41,7 +41,68 @@ django-admin startproject myapp
 cd myapp/
 ```
 
-2. Create a new `templates/` directory inside the project folder and update `settings.py` folder:
+## Install Python Webpack Boilerplate
+
+> Python Webpack Boilerplate can help you jump start frontend project bundled by Webpack
+
+```bash
+python -m pip install python-webpack-boilerplate
+```
+
+Add `webpack_boilerplate` to the `INSTALLED_APPS` in `myapp/settings.py`
+
+```python
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    'webpack_boilerplate',        # new
+]
+```
+
+Let's run Django command to create frontend project from the templates. Please set `run_npm_command_at_root` to `y`, so we can run `npm` command at root directory.
+
+```bash
+python manage.py webpack_init
+
+project_slug [frontend]:
+run_npm_command_at_root [n]: y
+ [SUCCESS]: Frontend app 'frontend' has been created. To know more, check https://python-webpack-boilerplate.rtfd.io/en/latest/frontend/
+```
+
+Now a new `frontend` directory is created which contains pre-defined files for our frontend project.
+
+And root directory contains a `package.json` file.
+
+```bash
+# install frontend dependency
+npm install
+
+# build frontend assets
+npm run watch
+```
+
+If the command succeed without error, press `CTRL + c` to terminate the npm command.
+
+## Config Django
+
+Add code below to Django settings `myapp/settings.py`
+
+```python
+STATICFILES_DIRS = [
+    BASE_DIR / "frontend/build",
+]
+
+WEBPACK_LOADER = {
+    'MANIFEST_FILE': BASE_DIR / "frontend/build/manifest.json",
+}
+```
+
+Create a new `templates/` directory inside the project folder and update `settings.py` folder:
 
 ```bash
 TEMPLATES = [
@@ -53,65 +114,18 @@ TEMPLATES = [
 ]
 ```
 
-3. Installed `django-compressor` by running the following command in your terminal:
+## Load the bundle file
+
+Update `myapp/urls.py`
 
 ```bash
-python -m pip install django-compressor
-```
-
-4. Add `compressor` to the installed apps inside the `settings.py` file:
-
-```bash
-# config/settings.py
-
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'compressor',  # new
-]
-```
-
-5. Configure the `compressor` inside the `settings.py` file:
-
-```bash
-COMPRESS_ROOT = BASE_DIR / 'static'
-
-COMPRESS_ENABLED = True
-
-STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
-```
-
-6. Create two new folders and an `input.css` file inside the `static/src/` folder:
-
-```bash
-static
-└── src
-    └── input.css
-```
-
-Later we will import the Tailwind CSS directives and use it as the source file for the final stylesheet.
-
-7. Create a new `views.py` file inside `myapp/` next to `urls.py` and add the following content:
-
-```bash
-from django.shortcuts import render
-
-def index(request):
-    return render(request, 'index.html')
-```
-
-8. Import the newly created view instance inside the `urls.py` file by adding the following code:
-
-```bash
-from .views import index
+from django.contrib import admin
+from django.urls import path
+from django.views.generic import TemplateView
 
 urlpatterns = [
+    path('', TemplateView.as_view(template_name="index.html")), # new
     path('admin/', admin.site.urls),
-    path('', index, name='index')
 ]
 ```
 
@@ -120,8 +134,7 @@ urlpatterns = [
 ```html
 <!-- templates/_base.html -->
 
-{% load compress %}
-{% load static %}
+{% load static webpack_loader %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -132,9 +145,7 @@ urlpatterns = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Django + Tailwind CSS + Flowbite</title>
 
-    {% compress css %}
-    <link rel="stylesheet" href="{% static 'src/output.css' %}">
-    {% endcompress %}
+    {% stylesheet_pack 'app' %}
 
 </head>
 
@@ -143,12 +154,15 @@ urlpatterns = [
         {% block content %}
         {% endblock content %}
     </div>
+
+{% javascript_pack 'app' attrs='charset="UTF-8"' %}
+
 </body>
 
 </html>
 ```
 
-10. Create an `index.html` file that will be served as the homepage:
+Create an `index.html` file that will be served as the homepage:
 
 ```html
 <!-- templates/index.html -->
@@ -160,25 +174,47 @@ urlpatterns = [
 {% endblock content %}
 ```
 
-11. Finally, create a local server instance by running the following command:
+Now please launch npm command to watch and build frontend assets
 
-```bash
-python manage.py runserver
+```
+npm run watch
 ```
 
-You will now get an error that the `output.css` file does not exist, but that will be fixed once we install Tailwind CSS.
+Create a local server instance by running the following command:
+
+```bash
+python manage.py migrate
+python manage.py runserver
+```
 
 Awesome! Now you have a working Django project locally. Let's continue by installing Tailwind CSS.
 
 ## Install Tailwind CSS
 
-1. Run the following command the install Tailwind CSS as a dev dependency using NPM:
+Run the following command the install Tailwind CSS as a dev dependency using NPM:
 
 ```bash
-npm install -D tailwindcss
+npm install -D tailwindcss@latest postcss-import
 ```
 
-2. Using the Tailwind CLI create a new `tailwind.config.js` file:
+Update `postcss.config.js`
+
+```js
+// https://tailwindcss.com/docs/using-with-preprocessors
+
+module.exports = {
+  plugins: [
+    require('postcss-import'),
+    require('tailwindcss/nesting')(require('postcss-nesting')),
+    require('tailwindcss'),
+    require('postcss-preset-env')({
+      features: { 'nesting-rules': false }
+    }),
+  ]
+};
+```
+
+Using the Tailwind CLI create a new `tailwind.config.js` file:
 
 ```bash
 npx tailwindcss init
@@ -198,23 +234,37 @@ module.exports = {
 }
 ```
 
-3. Import the Tailwind CSS directives inside the `input.css` file:
+Update `frontend/src/styles/index.scss`
 
-```css
-/* static/src/input.css */
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+```
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 ```
 
-4. Run the following command to watch for changes and compile the Tailwind CSS code:
+Update `frontend/src/application/app.js`
+
+```js
+// This is the scss entry file
+import "../styles/index.scss";
+
+// We can import other JS file as we like
+import "../components/sidebar";
+
+window.document.addEventListener("DOMContentLoaded", function () {
+  window.console.log("dom ready 1");
+});
+```
+
+Terminate npm command and run it again
 
 ```bash
-npx tailwindcss -i ./static/src/input.css -o ./static/src/output.css --watch
+npm run watch
 ```
 
-Open `localhost:3000` in your browser and you'll see working HTML with Tailwind CSS code.
+Terminate Django server and run it again
+
+Open `localhost:8000` in your browser and you'll see working HTML with Tailwind CSS code.
 
 Now that you have configured both Django and Tailwind CSS you can also set up Flowbite to get access to the whole collection of interactive components like navbars, modals, dropdowns, buttons, and more to make development even faster.
 
@@ -251,14 +301,33 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
 ```
 
-4. Include Flowbite's JavaScript file inside the `_base.html` file just before the end of the `<body>` tag using CDN or by including it directly from the `node_modules/` folder:
+4. Include Flowbite's JavaScript file in `frontend/src/application/app.js`
 
-```html
-<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
+```js
+// This is the scss entry file
+import "../styles/index.scss";
+
+// We can import other JS file as we like
+import "../components/sidebar";
+
+// import flowbite
+import 'flowbite';
+
+window.document.addEventListener("DOMContentLoaded", function () {
+  window.console.log("dom ready 1");
+});
+```
+
+Now run npm command to compile frontend assets
+
+```
+npm run watch
 ```
 
 Now that you have everything configured you can check out the components from Flowbite such as navbars, modals, buttons, datepickers, and more.
@@ -272,8 +341,7 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
 ```html
 <!-- templates/_base.html -->
 
-{% load compress %}
-{% load static %}
+{% load static webpack_loader %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -284,9 +352,7 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Django + Tailwind CSS + Flowbite</title>
 
-    {% compress css %}
-    <link rel="stylesheet" href="{% static 'src/output.css' %}">
-    {% endcompress %}
+    {% stylesheet_pack 'app' %}
 
 </head>
 
@@ -294,45 +360,47 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
 
     <!-- Add this -->
     <nav class="bg-green-50 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
-        <div class="container flex flex-wrap items-center justify-between mx-auto">
-          <a href="{{ .Site.Params.homepage }}/" class="flex items-center">
-              <img src="/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-              <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite Django</span>
-          </a>
-          <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-          </button>
-          <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
-            <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-              <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-white bg-green-700 rounded md:bg-transparent md:text-green-700 md:p-0 dark:text-white" aria-current="page">Home</a>
-              </li>
-              <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-              </li>
-              <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
-              </li>
-              <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
-              </li>
-              <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-              </li>
-            </ul>
-          </div>
+      <div class="container flex flex-wrap items-center justify-between mx-auto">
+        <a href="#" class="flex items-center">
+          <img src="/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
+          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite Django</span>
+        </a>
+        <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+          <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-white bg-green-700 rounded md:bg-transparent md:text-green-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
     <!-- End of new HTML -->
+
 
     <div class="container mx-auto mt-4">
         {% block content %}
         {% endblock content %}
     </div>
 
-    <script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
+{% javascript_pack 'app' attrs='charset="UTF-8"' %}
+
 </body>
 
 </html>
@@ -382,3 +450,4 @@ Check out one of the <a href="{{< ref "components/card" >}}">Card components</a>
 At this point you can use any of the components to build user interfaces easier and faster together with Django, Tailwind CSS and Flowbite. 
 
 Check out all of the components by browsing the menu on the left sidebar under the "components" section.
+

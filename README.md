@@ -309,6 +309,20 @@ Flowbite is an open source collection of UI components built with the utility cl
         </a>
     </td>
   </tr>
+  <tr>
+    <td width="33.3333%">KBD (Keyboard)</td>
+    <td width="33.3333%"></td>
+    <td width="33.3333%"></td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/kbd/">
+            <img alt="Tailwind CSS KBD (Keyboard)" src="https://flowbite.s3.amazonaws.com/github/kbd.jpg">
+        </a>
+    </td>
+    <td width="33.3333%"></td>
+    <td width="33.3333%"></td>
+  </tr>
 </table>
 
 ## Getting started

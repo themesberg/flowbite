@@ -25,7 +25,7 @@ You can add as many carousel items as you want, but make sure that you add the `
 
 Use the `duration-*` and the animation classes from Tailwind CSS to apply custom effects to the carousel items and don't forget to set the `hidden` class by default to prevent flickering.
 
-{{< example id="default-carousel-example" github="components/carousel.md" >}}
+{{< example id="default-carousel-example" github="components/carousel.md" show_dark=true >}}
 <div id="default-carousel" class="relative" data-carousel="static">
     <!-- Carousel wrapper -->
     <div class="overflow-hidden relative h-56 rounded-lg md:h-96">

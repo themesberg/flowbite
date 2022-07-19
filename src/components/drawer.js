@@ -2,6 +2,7 @@ const Default = {
     placement: 'left',
     bodyScrolling: false,
     backdrop: true,
+    edge: false,
     backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-30',
     onShow: () => { },
     onHide: () => { },
@@ -14,6 +15,8 @@ class Drawer {
         this._options = { ...Default, ...options }
         this._visible = false
         this._init()
+
+        console.log(options)
     }
 
     _init() {
@@ -23,7 +26,8 @@ class Drawer {
             this._targetEl.classList.add('transition-transform')
         }
 
-        this._getPlacementClasses().base.map(c => {
+        // set base placement classes
+        this._getPlacementClasses(this._options.placement).base.map(c => {
             this._targetEl.classList.add(c)
         })
 
@@ -31,13 +35,27 @@ class Drawer {
         this.hide()
     }
 
+    isVisible() {
+        return this._visible
+    }
+
     hide() {
-        this._getPlacementClasses().active.map(c => {
-            this._targetEl.classList.remove(c)
-        })
-        this._getPlacementClasses().inactive.map(c => {
-            this._targetEl.classList.add(c)
-        })
+        // based on the edge option show placement classes
+        if (this._options.edge) {
+            this._getPlacementClasses(this._options.placement + '-edge').active.map(c => {
+                this._targetEl.classList.remove(c)
+            })
+            this._getPlacementClasses(this._options.placement + '-edge').inactive.map(c => {
+                this._targetEl.classList.add(c)
+            })
+        } else {
+            this._getPlacementClasses(this._options.placement).active.map(c => {
+                this._targetEl.classList.remove(c)
+            })
+            this._getPlacementClasses(this._options.placement).inactive.map(c => {
+                this._targetEl.classList.add(c)
+            })
+        }
 
         // set accessibility attributes
         this._targetEl.setAttribute('aria-hidden', 'true')
@@ -61,12 +79,21 @@ class Drawer {
     }
 
     show() {
-        this._getPlacementClasses().active.map(c => {
-            this._targetEl.classList.add(c)
-        })
-        this._getPlacementClasses().inactive.map(c => {
-            this._targetEl.classList.remove(c)
-        })
+        if (this._options.edge) {
+            this._getPlacementClasses(this._options.placement + '-edge').active.map(c => {
+                this._targetEl.classList.add(c)
+            })
+            this._getPlacementClasses(this._options.placement + '-edge').inactive.map(c => {
+                this._targetEl.classList.remove(c)
+            })
+        } else {
+            this._getPlacementClasses(this._options.placement).active.map(c => {
+                this._targetEl.classList.add(c)
+            })
+            this._getPlacementClasses(this._options.placement).inactive.map(c => {
+                this._targetEl.classList.remove(c)
+            })
+        }
 
         // set accessibility attributes
         this._targetEl.setAttribute('aria-modal', 'true')
@@ -79,7 +106,7 @@ class Drawer {
         }
 
         // show backdrop
-        if(this._options.backdrop) {
+        if (this._options.backdrop) {
             this._createBackdrop()
         }
 
@@ -115,8 +142,8 @@ class Drawer {
         }
     }
 
-    _getPlacementClasses() {
-        switch (this._options.placement) {
+    _getPlacementClasses(placement) {
+        switch (placement) {
             case 'top':
                 return {
                     base: ['top-0', 'left-0', 'right-0'],
@@ -141,6 +168,12 @@ class Drawer {
                     active: ['transform-none'],
                     inactive: ['-translate-x-full']
                 }
+            case 'bottom-edge':
+                return {
+                    base: ['left-0', 'top-0', 'h-screen'],
+                    active: ['transform-none'],
+                    inactive: ['translate-y-full', 'bottom-14']
+                }
             default:
                 return {
                     base: ['left-0', 'top-0', 'h-screen'],
@@ -162,36 +195,50 @@ const getDrawerInstance = (id, instances) => {
 
 function initDrawer() {
     let drawerInstances = []
-    document.querySelectorAll('[data-drawer-toggle]').forEach(triggerEl => {
+    document.querySelectorAll('[data-drawer-target]').forEach(triggerEl => {
         // mandatory
-        const targetEl = document.getElementById(triggerEl.getAttribute('data-drawer-toggle'))
+        const targetEl = document.getElementById(triggerEl.getAttribute('data-drawer-target'))
         const drawerId = targetEl.id
 
         // optional
         const placement = triggerEl.getAttribute('data-drawer-placement')
         const bodyScrolling = triggerEl.getAttribute('data-drawer-body-scrolling')
         const backdrop = triggerEl.getAttribute('data-drawer-backdrop')
+        const edge = triggerEl.getAttribute('data-drawer-edge')
+        console.log(edge)
 
         let drawer = null
         if (getDrawerInstance(drawerId, drawerInstances)) {
-            modal = getDrawerInstance(drawerId, drawerInstances)
+            drawer = getDrawerInstance(drawerId, drawerInstances)
             drawer = drawer.object
         } else {
             drawer = new Drawer(targetEl, {
                 placement: placement ? placement : Default.placement,
-                bodyScrolling: bodyScrolling ? bodyScrolling === 'true' ? bodyScrolling : false : Default.bodyScrolling,
-                backdrop: backdrop ? backdrop === 'true' ? backdrop : false : Default.backdrop
+                bodyScrolling: bodyScrolling ? bodyScrolling === 'true' ? true : false : Default.bodyScrolling,
+                backdrop: backdrop ? backdrop === 'true' ? true : false : Default.backdrop,
+                edge: edge ? edge === 'true' ? true : false : Default.edge,
             })
             drawerInstances.push({
                 id: drawerId,
                 object: drawer
             })
         }
+    })
+
+    document.querySelectorAll('[data-drawer-toggle]').forEach(triggerEl => {
+        const targetEl = document.getElementById(triggerEl.getAttribute('data-drawer-toggle'))
+        const drawerId = targetEl.id
+        const drawer = getDrawerInstance(drawerId, drawerInstances)
 
         triggerEl.addEventListener('click', () => {
-            drawer.show()
+            if(drawer.object.isVisible()) {
+                drawer.object.hide()
+            } else {
+                drawer.object.show()
+            }
         })
     })
+
     document.querySelectorAll('[data-drawer-dismiss]').forEach(triggerEl => {
         const targetEl = document.getElementById(triggerEl.getAttribute('data-drawer-dismiss'))
         const drawerId = targetEl.id
@@ -199,6 +246,16 @@ function initDrawer() {
 
         triggerEl.addEventListener('click', () => {
             drawer.object.hide()
+        })
+    })
+
+    document.querySelectorAll('[data-drawer-show]').forEach(triggerEl => {
+        const targetEl = document.getElementById(triggerEl.getAttribute('data-drawer-show'))
+        const drawerId = targetEl.id
+        const drawer = getDrawerInstance(drawerId, drawerInstances)
+
+        triggerEl.addEventListener('click', () => {
+            drawer.object.show()
         })
     })
 }

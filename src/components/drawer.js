@@ -119,7 +119,7 @@ class Drawer {
         switch (this._options.placement) {
             case 'top':
                 return {
-                    base: ['top-0', 'left-0', 'w-full'],
+                    base: ['top-0', 'left-0', 'right-0'],
                     active: ['transform-none'],
                     inactive: ['-translate-y-full']
                 }
@@ -131,7 +131,7 @@ class Drawer {
                 }
             case 'bottom':
                 return {
-                    base: ['bottom-0', 'left-0', 'w-full'],
+                    base: ['bottom-0', 'left-0', 'right-0'],
                     active: ['transform-none'],
                     inactive: ['translate-y-full']
                 }

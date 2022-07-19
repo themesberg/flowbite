@@ -32,7 +32,10 @@ class Drawer {
     }
 
     hide() {
-        this._getPlacementClasses().toggle.map(c => {
+        this._getPlacementClasses().active.map(c => {
+            this._targetEl.classList.remove(c)
+        })
+        this._getPlacementClasses().inactive.map(c => {
             this._targetEl.classList.add(c)
         })
         setTimeout(() => {
@@ -61,7 +64,10 @@ class Drawer {
         this._createBackdrop()
 
         this._targetEl.classList.remove('invisible')
-        this._getPlacementClasses().toggle.map(c => {
+        this._getPlacementClasses().active.map(c => {
+            this._targetEl.classList.add(c)
+        })
+        this._getPlacementClasses().inactive.map(c => {
             this._targetEl.classList.remove(c)
         })
 
@@ -111,27 +117,32 @@ class Drawer {
             case 'top':
                 return {
                     base: ['top-0', 'w-full'],
-                    toggle: ['-translate-y-full', 'invisible']
+                    active: ['transform-none'],
+                    inactive: ['-translate-y-full']
                 }
             case 'right':
                 return {
                     base: ['right-0', 'top-0', 'h-screen'],
-                    toggle: ['translate-x-full', 'invisible']
+                    active: ['transform-none'],
+                    inactive: ['translate-x-full']
                 }
             case 'bottom':
                 return {
                     base: ['bottom-0', 'w-full'],
-                    toggle: ['translate-y-full', 'invisible']
+                    active: ['transform-none'],
+                    inactive: ['translate-y-full']
                 }
             case 'left':
                 return {
                     base: ['left-0', 'top-0', 'h-screen'],
-                    toggle: ['-translate-x-full']
+                    active: ['transform-none'],
+                    inactive: ['-translate-x-full']
                 }
             default:
                 return {
                     base: ['left-0', 'top-0', 'h-screen'],
-                    toggle: ['-translate-x-full', 'invisible']
+                    active: ['transform-none'],
+                    inactive: ['-translate-x-full']
                 }
         }
     }

@@ -205,7 +205,6 @@ function initDrawer() {
         const bodyScrolling = triggerEl.getAttribute('data-drawer-body-scrolling')
         const backdrop = triggerEl.getAttribute('data-drawer-backdrop')
         const edge = triggerEl.getAttribute('data-drawer-edge')
-        console.log(edge)
 
         let drawer = null
         if (getDrawerInstance(drawerId, drawerInstances)) {

@@ -14,8 +14,6 @@ class Drawer {
         this._options = { ...Default, ...options }
         this._visible = false
         this._init()
-
-        console.log(options)
     }
 
     _init() {
@@ -40,9 +38,6 @@ class Drawer {
         this._getPlacementClasses().inactive.map(c => {
             this._targetEl.classList.add(c)
         })
-        setTimeout(() => {
-            this._targetEl.classList.add('invisible')
-        }, 250)
 
         // set accessibility attributes
         this._targetEl.setAttribute('aria-hidden', 'true')
@@ -66,12 +61,6 @@ class Drawer {
     }
 
     show() {
-        // show backdrop
-        if(this._options.backdrop) {
-            this._createBackdrop()
-        }
-
-        this._targetEl.classList.remove('invisible')
         this._getPlacementClasses().active.map(c => {
             this._targetEl.classList.add(c)
         })
@@ -87,6 +76,11 @@ class Drawer {
         // disable body scroll
         if (!this._options.bodyScrolling) {
             document.body.classList.add('overflow-hidden')
+        }
+
+        // show backdrop
+        if(this._options.backdrop) {
+            this._createBackdrop()
         }
 
         this._visible = true
@@ -122,11 +116,10 @@ class Drawer {
     }
 
     _getPlacementClasses() {
-        console.log(this._options.placement)
         switch (this._options.placement) {
             case 'top':
                 return {
-                    base: ['top-0', 'w-full'],
+                    base: ['top-0', 'left-0', 'w-full'],
                     active: ['transform-none'],
                     inactive: ['-translate-y-full']
                 }
@@ -138,7 +131,7 @@ class Drawer {
                 }
             case 'bottom':
                 return {
-                    base: ['bottom-0', 'w-full'],
+                    base: ['bottom-0', 'left-0', 'w-full'],
                     active: ['transform-none'],
                     inactive: ['translate-y-full']
                 }

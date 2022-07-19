@@ -13,12 +13,14 @@ nextLink: components/modal/
 
 ## Default Drawer
 
-{{< example id="default-drawer-example" class="flex justify-center" github="components/drawer.md" show_dark=true iframeHeight="540" >}}
-<button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-example" aria-controls="drawer-example">
-  Toggle drawer
-</button>
+{{< example id="default-drawer-example" github="components/drawer.md" show_dark=true iframeHeight="640" >}}
+<div class="text-center">
+   <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-example" aria-controls="drawer-example">
+   Toggle drawer
+   </button>
+</div>
 
-<div class="fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-example" aria-labelledby="drawer-label">
+<div class="overflow-y-auto fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-example" aria-labelledby="drawer-label">
     <h5 class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400" id="drawer-label">Menu</h5>
     <button type="button" data-drawer-dismiss="drawer-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -91,20 +93,82 @@ nextLink: components/modal/
       </ul>
    </div>
 </div>
+
+<div role="status" class="my-6 animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="my-6 animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="my-6 animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="pb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
 {{< /example >}}
 
 ## Placement
 
 ### Toggle left
 
-{{< example id="drawer-placement-example" class="flex justify-center" github="components/drawer.md" show_dark=true iframeHeight="540" >}}
-<button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-left-example" data-drawer-placement="left" aria-controls="drawer-left-example">
+{{< example id="drawer-placement-example" github="components/drawer.md" show_dark=true iframeHeight="640" >}}
+<div class="text-center">
+   <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-left-example" data-drawer-placement="left" aria-controls="drawer-left-example">
   Toggle left drawer
-</button>
+   </button>
+</div>
 
-<div class="fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-left-example" aria-labelledby="drawer-left-label">
+<div class="overflow-y-auto fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-left-example" aria-labelledby="drawer-left-label">
     <h5 class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400" id="drawer-left-label">Menu</h5>
-    <button type="button" data-drawer-dismiss="drawer-left-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 left-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
+    <button type="button" data-drawer-dismiss="drawer-left-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         <span class="sr-only">Close drawer</span>
     </button>
@@ -175,16 +239,78 @@ nextLink: components/modal/
       </ul>
    </div>
 </div>
+
+<div role="status" class="my-6 animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="my-6 animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="my-6 animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="pb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
 {{< /example >}}
 
 ### Toggle right
 
-{{< example id="drawer-placement-example" class="flex justify-center" github="components/drawer.md" show_dark=true iframeHeight="540" >}}
-<button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-right-example" data-drawer-placement="right" aria-controls="drawer-right-example">
-  Toggle right drawer
-</button>
+{{< example id="drawer-placement-example" github="components/drawer.md" show_dark=true iframeHeight="640" >}}
+<div class="text-center">
+   <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-right-example" data-drawer-placement="right" aria-controls="drawer-right-example">
+   Toggle right drawer
+   </button>
+</div>
 
-<div class="fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-right-example" aria-labelledby="drawer-right-label">
+<div class="overflow-y-auto fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-right-example" aria-labelledby="drawer-right-label">
     <h5 class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400" id="drawer-right-label">Menu</h5>
     <button type="button" data-drawer-dismiss="drawer-right-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -257,14 +383,76 @@ nextLink: components/modal/
       </ul>
    </div>
 </div>
+
+<div role="status" class="my-6 animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="my-6 animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="my-6 animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="pb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
 {{< /example >}}
 
 ### Toggle top
 
-{{< example id="drawer-placement-example" class="flex justify-center" github="components/drawer.md" show_dark=true iframeHeight="540" >}}
-<button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-top-example" data-drawer-placement="top" aria-controls="drawer-top-example">
-  Toggle top drawer
-</button>
+{{< example id="drawer-placement-example" github="components/drawer.md" show_dark=true iframeHeight="640" >}}
+<div class="text-center">
+   <button class="overflow-y-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-top-example" data-drawer-placement="top" aria-controls="drawer-top-example">
+   Toggle top drawer
+   </button>
+</div>
 
 <div class="fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-top-example" aria-labelledby="drawer-top-label">
     <h5 class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400" id="drawer-top-label">Menu</h5>
@@ -273,21 +461,143 @@ nextLink: components/modal/
         <span class="sr-only">Close drawer</span>
     </button>
 </div>
+
+<div role="status" class="my-6 animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="my-6 animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="my-6 animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="pb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
 {{< /example >}}
 
 ### Toggle bottom
 
-{{< example id="drawer-placement-example" class="flex justify-center" github="components/drawer.md" show_dark=true iframeHeight="540" >}}
-<button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-bottom-example" data-drawer-placement="bottom" aria-controls="drawer-bottom-example">
-  Toggle bottom drawer
-</button>
+{{< example id="drawer-placement-example" github="components/drawer.md" show_dark=true iframeHeight="640" >}}
+<div class="text-center">
+   <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-bottom-example" data-drawer-placement="bottom" aria-controls="drawer-bottom-example">
+   Toggle bottom drawer
+   </button>
+</div>
 
-<div class="fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-bottom-example" aria-labelledby="drawer-bottom-label">
+<div class="overflow-y-auto fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-bottom-example" aria-labelledby="drawer-bottom-label">
     <h5 class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400" id="drawer-bottom-label">Menu</h5>
     <button type="button" data-drawer-dismiss="drawer-bottom-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         <span class="sr-only">Close drawer</span>
     </button>
+</div>
+
+<div role="status" class="my-6 animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="my-6 animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="my-6 animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div role="status" class="pb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
 </div>
 {{< /example >}}
 
@@ -295,12 +605,14 @@ nextLink: components/modal/
 
 ### Disabled (default)
 
-{{< example id="drawer-disable-body-scrolling-example" github="components/drawer.md" show_dark=true iframeHeight="540" iframeMaxHeight="540"  >}}
-<button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-disable-body-scrolling-example" data-drawer-body-scrolling="false" aria-controls="drawer-disable-body-scrolling-example">
-  Toggle body scrolling disabled
-</button>
+{{< example id="drawer-disable-body-scrolling-example" github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640"  >}}
+<div class="text-center">
+   <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-disable-body-scrolling-example" data-drawer-body-scrolling="false" aria-controls="drawer-disable-body-scrolling-example">
+   Toggle body scrolling disabled
+   </button>
+</div>
 
-<div class="fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-disable-body-scrolling-example" aria-labelledby="drawer-disable-body-scrolling-label">
+<div class="overflow-y-auto fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-disable-body-scrolling-example" aria-labelledby="drawer-disable-body-scrolling-label">
     <h5 class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400" id="drawer-disable-body-scrolling-label">Menu</h5>
     <button type="button" data-drawer-dismiss="drawer-disable-body-scrolling-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -374,7 +686,7 @@ nextLink: components/modal/
    </div>
 </div>
 
-<div role="status" class="my-6 max-w-sm animate-pulse">
+<div role="status" class="my-6 animate-pulse">
     <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
@@ -384,8 +696,17 @@ nextLink: components/modal/
     <span class="sr-only">Loading...</span>
 </div>
 
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
 
-<div role="status" class="mb-6 max-w-sm animate-pulse">
+<div role="status" class="my-6 animate-pulse">
     <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
@@ -395,8 +716,17 @@ nextLink: components/modal/
     <span class="sr-only">Loading...</span>
 </div>
 
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
 
-<div role="status" class="mb-6 max-w-sm animate-pulse">
+<div role="status" class="my-6 animate-pulse">
     <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
@@ -406,59 +736,27 @@ nextLink: components/modal/
     <span class="sr-only">Loading...</span>
 </div>
 
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-    <span class="sr-only">Loading...</span>
-</div>
-
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-    <span class="sr-only">Loading...</span>
-</div>
-
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-    <span class="sr-only">Loading...</span>
-</div>
-
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+<div role="status" class="pb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
     <span class="sr-only">Loading...</span>
 </div>
 {{< /example >}}
 
 ### Enabled
 
-{{< example id="drawer-body-scrolling-example" github="components/drawer.md" show_dark=true iframeHeight="540" iframeMaxHeight="540"  >}}
-<button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-body-scrolling-example" data-drawer-body-scrolling="true" aria-controls="drawer-body-scrolling-example">
-  Toggle body scrolling
-</button>
+{{< example id="drawer-body-scrolling-example" github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640"  >}}
+<div class="text-center">
+   <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-body-scrolling-example" data-drawer-body-scrolling="true" aria-controls="drawer-body-scrolling-example">
+   Toggle body scrolling
+   </button>
+</div>
 
-<div class="fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-body-scrolling-example" aria-labelledby="drawer-body-scrolling-label">
+<div class="overflow-y-auto fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-body-scrolling-example" aria-labelledby="drawer-body-scrolling-label">
     <h5 class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400" id="drawer-body-scrolling-label">Menu</h5>
     <button type="button" data-drawer-dismiss="drawer-body-scrolling-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -532,7 +830,7 @@ nextLink: components/modal/
    </div>
 </div>
 
-<div role="status" class="my-6 max-w-sm animate-pulse">
+<div role="status" class="my-6 animate-pulse">
     <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
@@ -542,8 +840,17 @@ nextLink: components/modal/
     <span class="sr-only">Loading...</span>
 </div>
 
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
 
-<div role="status" class="mb-6 max-w-sm animate-pulse">
+<div role="status" class="my-6 animate-pulse">
     <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
@@ -553,8 +860,17 @@ nextLink: components/modal/
     <span class="sr-only">Loading...</span>
 </div>
 
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
 
-<div role="status" class="mb-6 max-w-sm animate-pulse">
+<div role="status" class="my-6 animate-pulse">
     <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
@@ -564,47 +880,13 @@ nextLink: components/modal/
     <span class="sr-only">Loading...</span>
 </div>
 
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-    <span class="sr-only">Loading...</span>
-</div>
-
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-    <span class="sr-only">Loading...</span>
-</div>
-
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-    <span class="sr-only">Loading...</span>
-</div>
-
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+<div role="status" class="pb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
     <span class="sr-only">Loading...</span>
 </div>
 {{< /example >}}
@@ -613,12 +895,14 @@ nextLink: components/modal/
 
 ### Enabled (default)
 
-{{< example id="drawer-backdrop-example" github="components/drawer.md" show_dark=true iframeHeight="540" iframeMaxHeight="540"  >}}
-<button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-backdrop-example" data-drawer-backdrop="true" aria-controls="drawer-backdrop-example">
-  Toggle drawer with backdrop
-</button>
+{{< example id="drawer-backdrop-example" github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640"  >}}
+<div class="text-center">
+   <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-backdrop-example" data-drawer-backdrop="true" aria-controls="drawer-backdrop-example">
+   Toggle drawer with backdrop
+   </button>
+</div>
 
-<div class="fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-backdrop-example" aria-labelledby="drawer-backdrop-label">
+<div class="overflow-y-auto fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-backdrop-example" aria-labelledby="drawer-backdrop-label">
     <h5 class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400" id="drawer-backdrop-label">Menu</h5>
     <button type="button" data-drawer-dismiss="drawer-backdrop-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -692,7 +976,7 @@ nextLink: components/modal/
    </div>
 </div>
 
-<div role="status" class="my-6 max-w-sm animate-pulse">
+<div role="status" class="my-6 animate-pulse">
     <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
@@ -702,8 +986,17 @@ nextLink: components/modal/
     <span class="sr-only">Loading...</span>
 </div>
 
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
 
-<div role="status" class="mb-6 max-w-sm animate-pulse">
+<div role="status" class="my-6 animate-pulse">
     <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
@@ -713,8 +1006,17 @@ nextLink: components/modal/
     <span class="sr-only">Loading...</span>
 </div>
 
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
 
-<div role="status" class="mb-6 max-w-sm animate-pulse">
+<div role="status" class="my-6 animate-pulse">
     <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
@@ -724,59 +1026,27 @@ nextLink: components/modal/
     <span class="sr-only">Loading...</span>
 </div>
 
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-    <span class="sr-only">Loading...</span>
-</div>
-
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-    <span class="sr-only">Loading...</span>
-</div>
-
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-    <span class="sr-only">Loading...</span>
-</div>
-
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+<div role="status" class="pb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
     <span class="sr-only">Loading...</span>
 </div>
 {{< /example >}}
 
 ### Disabled
 
-{{< example id="drawer-disabled-backdrop-example" github="components/drawer.md" show_dark=true iframeHeight="540" iframeMaxHeight="540"  >}}
-<button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-disabled-backdrop-example" data-drawer-backdrop="false" aria-controls="drawer-disabled-backdrop-example">
-  Toggle drawer without backdrop
-</button>
+{{< example id="drawer-disabled-backdrop-example" github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640"  >}}
+<div class="text-center">
+   <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-toggle="drawer-disabled-backdrop-example" data-drawer-backdrop="false" aria-controls="drawer-disabled-backdrop-example">
+   Toggle drawer without backdrop
+   </button>
+</div>
 
-<div class="fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-disabled-backdrop-example" aria-labelledby="drawer-disabled-backdrop-label">
+<div class="overflow-y-auto fixed z-40 p-4 w-64 bg-white dark:bg-gray-800" tabindex="-1" id="drawer-disabled-backdrop-example" aria-labelledby="drawer-disabled-backdrop-label">
     <h5 class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400" id="drawer-disabled-backdrop-label">Menu</h5>
     <button type="button" data-drawer-dismiss="drawer-disabled-backdrop-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -850,7 +1120,7 @@ nextLink: components/modal/
    </div>
 </div>
 
-<div role="status" class="my-6 max-w-sm animate-pulse">
+<div role="status" class="my-6 animate-pulse">
     <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
@@ -860,8 +1130,17 @@ nextLink: components/modal/
     <span class="sr-only">Loading...</span>
 </div>
 
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
 
-<div role="status" class="mb-6 max-w-sm animate-pulse">
+<div role="status" class="my-6 animate-pulse">
     <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
@@ -871,8 +1150,17 @@ nextLink: components/modal/
     <span class="sr-only">Loading...</span>
 </div>
 
+<div role="status" class="mb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
+    <span class="sr-only">Loading...</span>
+</div>
 
-<div role="status" class="mb-6 max-w-sm animate-pulse">
+<div role="status" class="my-6 animate-pulse">
     <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
     <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
@@ -882,47 +1170,13 @@ nextLink: components/modal/
     <span class="sr-only">Loading...</span>
 </div>
 
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-    <span class="sr-only">Loading...</span>
-</div>
-
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-    <span class="sr-only">Loading...</span>
-</div>
-
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-    <span class="sr-only">Loading...</span>
-</div>
-
-
-<div role="status" class="mb-6 max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+<div role="status" class="pb-6 ml-auto max-w-lg animate-pulse">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5 ml-auto"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] ml-auto"></div>
     <span class="sr-only">Loading...</span>
 </div>
 {{< /example >}}

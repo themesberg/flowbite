@@ -1,5 +1,6 @@
 const Default = {
     placement: 'left',
+    bodyScrolling: false,
     backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-30',
     onShow: () => { },
     onHide: () => { },
@@ -48,7 +49,9 @@ class Drawer {
         this._targetEl.removeAttribute('role')
 
         // enable body scroll
-        document.body.classList.remove('overflow-hidden')
+        if (!this._options.bodyScrolling) {
+            document.body.classList.remove('overflow-hidden')
+        }
 
         // destroy backdrop
         this._destroyBackdropEl()
@@ -77,7 +80,9 @@ class Drawer {
         this._targetEl.removeAttribute('aria-hidden')
 
         // disable body scroll
-        document.body.classList.add('overflow-hidden')
+        if (!this._options.bodyScrolling) {
+            document.body.classList.add('overflow-hidden')
+        }
 
         this._visible = true
 
@@ -160,9 +165,13 @@ const getDrawerInstance = (id, instances) => {
 function initDrawer() {
     let drawerInstances = []
     document.querySelectorAll('[data-drawer-toggle]').forEach(triggerEl => {
+        // mandatory
         const targetEl = document.getElementById(triggerEl.getAttribute('data-drawer-toggle'))
-        const placement = triggerEl.getAttribute('data-drawer-placement')
         const drawerId = targetEl.id
+
+        // optional
+        const placement = triggerEl.getAttribute('data-drawer-placement')
+        const bodyScrolling = triggerEl.getAttribute('data-drawer-body-scrolling')
 
         let drawer = null
         if (getDrawerInstance(drawerId, drawerInstances)) {
@@ -170,7 +179,8 @@ function initDrawer() {
             drawer = drawer.object
         } else {
             drawer = new Drawer(targetEl, {
-                placement: placement ? placement : Default.placement
+                placement: placement ? placement : Default.placement,
+                bodyScrolling: bodyScrolling ? bodyScrolling === 'true' ? bodyScrolling : false : Default.bodyScrolling
             })
             drawerInstances.push({
                 id: drawerId,

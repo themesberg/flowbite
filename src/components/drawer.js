@@ -1,6 +1,7 @@
 const Default = {
     placement: 'left',
     bodyScrolling: false,
+    backdrop: true,
     backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-30',
     onShow: () => { },
     onHide: () => { },
@@ -54,7 +55,9 @@ class Drawer {
         }
 
         // destroy backdrop
-        this._destroyBackdropEl()
+        if (this._options.backdrop) {
+            this._destroyBackdropEl()
+        }
 
         this._visible = false
 
@@ -64,7 +67,9 @@ class Drawer {
 
     show() {
         // show backdrop
-        this._createBackdrop()
+        if(this._options.backdrop) {
+            this._createBackdrop()
+        }
 
         this._targetEl.classList.remove('invisible')
         this._getPlacementClasses().active.map(c => {
@@ -172,6 +177,7 @@ function initDrawer() {
         // optional
         const placement = triggerEl.getAttribute('data-drawer-placement')
         const bodyScrolling = triggerEl.getAttribute('data-drawer-body-scrolling')
+        const backdrop = triggerEl.getAttribute('data-drawer-backdrop')
 
         let drawer = null
         if (getDrawerInstance(drawerId, drawerInstances)) {
@@ -180,7 +186,8 @@ function initDrawer() {
         } else {
             drawer = new Drawer(targetEl, {
                 placement: placement ? placement : Default.placement,
-                bodyScrolling: bodyScrolling ? bodyScrolling === 'true' ? bodyScrolling : false : Default.bodyScrolling
+                bodyScrolling: bodyScrolling ? bodyScrolling === 'true' ? bodyScrolling : false : Default.bodyScrolling,
+                backdrop: backdrop ? backdrop === 'true' ? backdrop : false : Default.backdrop
             })
             drawerInstances.push({
                 id: drawerId,

@@ -3,6 +3,7 @@ const Default = {
     bodyScrolling: false,
     backdrop: true,
     edge: false,
+    edgeOffset: 'bottom-[60px]',
     backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-30',
     onShow: () => { },
     onHide: () => { },
@@ -15,8 +16,6 @@ class Drawer {
         this._options = { ...Default, ...options }
         this._visible = false
         this._init()
-
-        console.log(options)
     }
 
     _init() {
@@ -117,7 +116,7 @@ class Drawer {
     }
 
     toggle() {
-        if (this._visible) {
+        if (this.isVisible()) {
             this.hide()
         } else {
             this.show()
@@ -152,7 +151,7 @@ class Drawer {
                 }
             case 'right':
                 return {
-                    base: ['right-0', 'top-0', 'h-screen'],
+                    base: ['right-0', 'top-0'],
                     active: ['transform-none'],
                     inactive: ['translate-x-full']
                 }
@@ -164,19 +163,19 @@ class Drawer {
                 }
             case 'left':
                 return {
-                    base: ['left-0', 'top-0', 'h-screen'],
+                    base: ['left-0', 'top-0'],
                     active: ['transform-none'],
                     inactive: ['-translate-x-full']
                 }
             case 'bottom-edge':
                 return {
-                    base: ['left-0', 'top-0', 'h-screen'],
+                    base: ['left-0', 'top-0'],
                     active: ['transform-none'],
-                    inactive: ['translate-y-full', 'bottom-14']
+                    inactive: ['translate-y-full', this._options.edgeOffset]
                 }
             default:
                 return {
-                    base: ['left-0', 'top-0', 'h-screen'],
+                    base: ['left-0', 'top-0'],
                     active: ['transform-none'],
                     inactive: ['-translate-x-full']
                 }
@@ -205,7 +204,8 @@ function initDrawer() {
         const bodyScrolling = triggerEl.getAttribute('data-drawer-body-scrolling')
         const backdrop = triggerEl.getAttribute('data-drawer-backdrop')
         const edge = triggerEl.getAttribute('data-drawer-edge')
-
+        const edgeOffset = triggerEl.getAttribute('data-drawer-edge-offset')
+        
         let drawer = null
         if (getDrawerInstance(drawerId, drawerInstances)) {
             drawer = getDrawerInstance(drawerId, drawerInstances)
@@ -216,6 +216,7 @@ function initDrawer() {
                 bodyScrolling: bodyScrolling ? bodyScrolling === 'true' ? true : false : Default.bodyScrolling,
                 backdrop: backdrop ? backdrop === 'true' ? true : false : Default.backdrop,
                 edge: edge ? edge === 'true' ? true : false : Default.edge,
+                edgeOffset: edgeOffset ? edgeOffset : Default.edgeOffset
             })
             drawerInstances.push({
                 id: drawerId,
@@ -230,7 +231,7 @@ function initDrawer() {
         const drawer = getDrawerInstance(drawerId, drawerInstances)
 
         triggerEl.addEventListener('click', () => {
-            if(drawer.object.isVisible()) {
+            if (drawer.object.isVisible()) {
                 drawer.object.hide()
             } else {
                 drawer.object.show()

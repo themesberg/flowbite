@@ -5,8 +5,8 @@ description: The skeleton component can be used as an alternative loading indica
 group: components
 toc: true
 
-previous: Sidebar
-previousLink: components/sidebar/
+previous: Drawer
+previousLink: components/drawer/
 next: Pagination
 nextLink: components/pagination/
 ---

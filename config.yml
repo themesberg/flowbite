@@ -1,8 +1,6 @@
 languageCode:           "en"
 title:                  "Flowbite"
 baseURL:                "https://flowbite.com/docs/"
-# baseURL:                "http://localhost:3001/docs/"
-# baseURL:                "http://localhost:1313/docs"
 enableInlineShortcodes: true
 
 params:

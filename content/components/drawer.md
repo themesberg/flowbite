@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Tailwind CSS Drawer (off-canvas) - Flowbite
+title: Tailwind CSS Drawer (offcanvas) - Flowbite
 description: The Drawer component can be used as a hidden off-canvas sidebar for navigation and to show other information based on multiple styles and placements
 group: components
 requires_js: true

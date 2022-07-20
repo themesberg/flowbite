@@ -15,6 +15,16 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v1.5.0
+
+- added new Drawer component
+- added new Skeleton component
+- added new KBD component
+- added new Dropdown and Table components
+- added new Checkbox and Radio examples
+- update documentation code and component preview
+- update table of contents of the docs
+
 ### v1.4.7
 
 - fix datepicker CDN JS

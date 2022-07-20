@@ -1679,7 +1679,7 @@ Use the following options for the Drawer object to set the placement, enable or 
                     Function
                 </td>
                 <td class="py-4 px-6">
-                    Set a callback function when thedrawer has been hidden.
+                    Set a callback function when the drawer has been hidden.
                 </td>
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">

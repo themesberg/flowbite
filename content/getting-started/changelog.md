@@ -15,6 +15,10 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v1.5.1
+
+- fix drawer js build
+
 ### v1.5.0
 
 - added new Drawer component

@@ -1,10 +1,10 @@
 ---
 layout: home
 title: Tailwind CSS Flask - Flowbite
-description: Learn how to install Tailwind CSS and Flowbite inside a Django project and start developing modern web applications with a high-level Python framework
+description: Learn how to install Tailwind CSS and Flowbite inside a Flask project and start building modern web applications with a micro Python web framework
 group: getting-started
 toc: true
-requires_django: true
+requires_flask: true
 
 previous: Ruby on Rails
 previousLink: getting-started/rails/
@@ -12,184 +12,115 @@ next: License
 nextLink: getting-started/license/
 ---
 
-[Flask](https://flask.palletsprojects.com/) is an open-source micro web framework based on Python that allows you to quickly build websites using only a single Python file.
+[Flask](https://flask.palletsprojects.com/) is an open-source micro web framework based on Python that allows you to quickly build websites using only a single Python file without requiring any other particular tools or libraries.
 
-It is being used by hundreds of thousands of developers and even large companies such as Samsung, Netflix, Reddit, Lfy, and even Airbnb.
+It is being used by hundreds of thousands of developers and even large companies such as Samsung, Netflix, Reddit, Lfy, and even Airbnb since its initial release in 2010.
 
-By following this guide you will learn how to properly set up Tailwind CSS with Flowbite inside a Flask project written in Python.
+By following this guide you will learn how to properly set up Tailwind CSS with Flowbite inside a Flask project and get started with building websites faster.
 
 ## Requirements
 
-Follow the next steps to learn how to install a Flask project with Tailwind CSS and the Flowbite component library.
+Follow the next steps in this tutorial to learn how to install a Flask project with Tailwind CSS and the Flowbite component library.
 
 Make sure that you have both [Node.js](https://nodejs.org) and [Python](https://www.python.org/) installed on your local machine.
 
-After that, you'll need to install Flask on your local computer by following the official [installation guide](https://flask.palletsprojects.com/en/2.1.x/installation/) or by running the following command in the terminal if you have pip available in your Python environment:
+After that, you'll need to install Flask on your computer by following the official [installation guide](https://flask.palletsprojects.com/en/2.1.x/installation/) or by running the following command in the terminal if you have pip available in your Python environment:
 
 ```bash
 python -m pip install Flask
 ```
 
-Now that you have all the required technologies installed you can start by creating a new Django project.
+Now that you have installed all of the required technologies you can now create a new Flask project.
 
 ## Create a new project
 
-1. Run the following command in the terminal to create a new Django project with the name `myapp`:
+1. Run the following command in the terminal to create a new Flask project with the name `flowbite-flask`:
 
 ```bash
-django-admin startproject myapp
-cd myapp/
+mkdir flowbite-flask
+cd flowbite-flask/
 ```
 
-2. Create a new `templates/` directory inside the project folder and update `settings.py` folder:
+2. Create a new file called `app.py` inside the root of the project folder with the following content:
 
 ```bash
-TEMPLATES = [
-    {
-        ...
-        'DIRS': [BASE_DIR / 'templates'], # new
-        ...
-    },
-]
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+@app.route("/index")
+def index():
+	return render_template("index.html")
+
+if __name__ == '__main__':
+	app.run(debug=True)
 ```
 
-3. Installed `django-compressor` by running the following command in your terminal:
+What we do here is that we import the Flask micro framework from Python and also set the app route for a new `index.html` file inside the `templates/` folder that we will create in the next step.
+
+3. Create two new folders called `templates/` and `static/`:
 
 ```bash
-python -m pip install django-compressor
+flowbite-flask/
+   - app.py
+   - templates/
+   - static/
 ```
 
-4. Add `compressor` to the installed apps inside the `settings.py` file:
+This is how your project folder structure should look like.
+
+4. Create a new `index.html` file inside your `templates/` folder and create a basic HTML document structure:
 
 ```bash
-# config/settings.py
-
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'compressor',  # new
-]
-```
-
-5. Configure the `compressor` inside the `settings.py` file:
-
-```bash
-COMPRESS_ROOT = BASE_DIR / 'static'
-
-COMPRESS_ENABLED = True
-
-STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
-```
-
-6. Create two new folders and an `input.css` file inside the `static/src/` folder:
-
-```bash
-static
-└── src
-    └── input.css
-```
-
-Later we will import the Tailwind CSS directives and use it as the source file for the final stylesheet.
-
-7. Create a new `views.py` file inside `myapp/` next to `urls.py` and add the following content:
-
-```bash
-from django.shortcuts import render
-
-def index(request):
-    return render(request, 'index.html')
-```
-
-8. Import the newly created view instance inside the `urls.py` file by adding the following code:
-
-```bash
-from .views import index
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', index, name='index')
-]
-```
-
-9. Create a new `_base.html` file inside the `templates/` directory:
-
-```html
-<!-- templates/_base.html -->
-
-{% load compress %}
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django + Tailwind CSS + Flowbite</title>
-
-    {% compress css %}
-    <link rel="stylesheet" href="{% static 'src/output.css' %}">
-    {% endcompress %}
-
+    <title>Flowbite Flask</title>
 </head>
-
-<body class="bg-green-50">
-    <div class="container mx-auto mt-4">
-        {% block content %}
-        {% endblock content %}
-    </div>
+<body>
+    <h1>Hello, Flask!</h1>
 </body>
-
 </html>
 ```
 
-10. Create an `index.html` file that will be served as the homepage:
-
-```html
-<!-- templates/index.html -->
-
-{% extends "_base.html" %}
-
-{% block content %}
-  <h1 class="text-3xl text-green-800">Django + Tailwind CSS + Flowbite</h1>
-{% endblock content %}
-```
-
-11. Finally, create a local server instance by running the following command:
+5. Start a local server by running `python app.py` inside your terminal:
 
 ```bash
-python manage.py runserver
+python app.py
 ```
 
-You will now get an error that the `output.css` file does not exist, but that will be fixed once we install Tailwind CSS.
-
-Awesome! Now you have a working Django project locally. Let's continue by installing Tailwind CSS.
+This should make the project available via the browser by going to `http://localhost:5000/`. 
 
 ## Install Tailwind CSS
 
-1. Run the following command the install Tailwind CSS as a dev dependency using NPM:
+Now that you have a working Flask project we can proceed by installing Tailwind CSS. 
+
+You can either follow the official [installation guide](https://tailwindcss.com/docs/installation) or follow the next steps from this guide.
+
+1. Install the `tailwindcss` package via NPM:
 
 ```bash
 npm install -D tailwindcss
 ```
 
-2. Using the Tailwind CLI create a new `tailwind.config.js` file:
+2. Create a new `tailwind.config.js` file by running the following command in your terminal:
 
 ```bash
-npx tailwindcss init
+npm install -D tailwindcss
 ```
 
-Configure the template paths using the `content` value inside the Tailwind configuration file:
+3. Configure the template files inside the `tailwind.config.js` file:
 
 ```javascript
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-      './templates/**/*.html'
+    "./templates/**/*.{html}",
+    "./static/src/**/*.{js}"
   ],
   theme: {
     extend: {},
@@ -198,29 +129,45 @@ module.exports = {
 }
 ```
 
-3. Import the Tailwind CSS directives inside the `input.css` file:
+4. Create a new `static/src/` folder and add a new `input.css` file with the following content:
 
 ```css
-/* static/src/input.css */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
 
-4. Run the following command to watch for changes and compile the Tailwind CSS code:
+5. Run the following command to compile and watch for changes for the Tailwind CSS file:
 
 ```bash
-npx tailwindcss -i ./static/src/input.css -o ./static/src/output.css --watch
+npx tailwindcss -i ./static/src/input.css -o ./static/dist/css/output.css --watch
 ```
 
-Open `localhost:3000` in your browser and you'll see working HTML with Tailwind CSS code.
+This will generate a new `output.css` file inside the `static/dist/css/` folder that we will now include in the newly created `index.html` template file.
 
-Now that you have configured both Django and Tailwind CSS you can also set up Flowbite to get access to the whole collection of interactive components like navbars, modals, dropdowns, buttons, and more to make development even faster.
+6. Include `output.css` inside the main `index.html` template:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowbite Flask</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+</head>
+<body>
+    <h1 class="text-blue-600">Hello, Flask!</h1>
+</body>
+</html>
+```
+
+Notice how the `text-blue-600` class is now being applied using the configuration that we set up which means that you can start building user interfaces with Tailwind CSS.
 
 ## Install Flowbite
 
-Flowbite is an open source library of interactive components built on top of Tailwind CSS and it can be installed using NPM and required as a plugin inside Tailwind CSS.
+Now that you have a working Flask and Tailwind CSS configuration you can also include Flowbite inside your project to get started with hundreds of UI components like navbars, dropdowns, tables, and more.
 
 1. Install Flowbite as a dependency using NPM:
 
@@ -240,13 +187,14 @@ module.exports = {
 }
 ```
 
-3. Include Flowbite inside the content value of the `tailwind.config.js` file:
+3. Include Flowbite inside the content key value pair of the `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
   content: [
-      './templates/**/*.html',
-      './node_modules/flowbite/**/*.js'
+      "./templates/**/*.{html}",
+      "./static/src/**/*.{js}",
+      "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     extend: {},
@@ -255,26 +203,21 @@ module.exports = {
 }
 ```
 
-4. Include Flowbite's JavaScript file inside the `_base.html` file just before the end of the `<body>` tag using CDN or by including it directly from the `node_modules/` folder:
+4. Include Flowbite's JavaScript file inside the `index.html` file just before the end of the `<body>` tag using CDN or by including it directly from the `node_modules/` folder:
 
 ```html
 <script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
 ```
 
-Now that you have everything configured you can check out the components from Flowbite such as navbars, modals, buttons, datepickers, and more.
+Now that you have Flowbite also configured you can explore all of the components by browsing the sidebar menu on the left side of the documentation.
 
 ## Flowbite components
 
-In this section I'll show you how you can search for and use the interactive components from Flowbite.
+Let's now take a look how we can quickly build a simple page using the components from Flowbite.
 
-Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar component</a> inside the `_base.html` file:
+Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar component</a> inside the `index.html` file:
 
 ```html
-<!-- templates/_base.html -->
-
-{% load compress %}
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -282,103 +225,93 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django + Tailwind CSS + Flowbite</title>
-
-    {% compress css %}
-    <link rel="stylesheet" href="{% static 'src/output.css' %}">
-    {% endcompress %}
-
+    <title>Flowbite Flask</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
 </head>
 
-<body class="bg-green-50">
-
-    <!-- Add this -->
-    <nav class="bg-green-50 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+<body>
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <a href="{{ .Site.Params.homepage }}/" class="flex items-center">
-              <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-              <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite Django</span>
-          </a>
-          <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-          </button>
-          <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
-            <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-              <li>
-                <a href="#" class="block py-2 pr-4 pl-3 text-white bg-green-700 rounded md:bg-transparent md:text-green-700 md:p-0 dark:text-white" aria-current="page">Home</a>
-              </li>
-              <li>
-                <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-              </li>
-              <li>
-                <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
-              </li>
-              <li>
-                <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
-              </li>
-              <li>
-                <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-              </li>
-            </ul>
-          </div>
+            <a href="https://flowbite.com/" class="flex items-center">
+                <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            </a>
+            <div class="flex md:order-2">
+                <button type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get
+                    started</button>
+                <button data-collapse-toggle="navbar-cta" type="button"
+                    class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                <ul
+                    class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="#"
+                            class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
-    <!-- End of new HTML -->
+    </nav>
 
-    <div class="container mx-auto mt-4">
-        {% block content %}
-        {% endblock content %}
-    </div>
-
-    <script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
 </body>
 
 </html>
 ```
 
-This way you already have a functional and responsive navigation bar added to all pages.
+As you can see, the navigation bar will render correctly and even the hamburger icon functionality will work by toggling the mobile menu on smaller devices.
 
-Let's take a look how can added more content directly to the view templates, not just the base template.
+Other than the base components from the library you can also check out some of the free and premium website sections from [Flowbite Blocks](https://flowbite.com/blocks/) such as hero sections, pricing sections, contact sections, and more.
 
-Check out one of the <a href="{{< ref "components/card" >}}">Card components</a> from Flowbite and add it to the `index.html` file:
+Let's add a free [Tailwind CSS hero section](https://flowbite.com/blocks/marketing/hero/) just after the navigation bar:
 
 ```html
-<!-- templates/index.html -->
-
-{% extends "_base.html" %}
-
-{% block content %}
-
-<h1 class="mb-6 text-3xl text-green-800">Django + Tailwind CSS + Flowbite</h1>
-<div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
-        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-                acquisitions 2021</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-            acquisitions of 2021 so far, in reverse chronological order.</p>
-        <a href="#"
-            class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-            Read more
-            <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd"></path>
-            </svg>
-        </a>
+<section class="bg-white dark:bg-gray-900">
+    <div class="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div class="place-self-center mr-auto lg:col-span-7">
+            <h1 class="mb-4 max-w-2xl text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Payments tool for software companies</h1>
+            <p class="mb-6 max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
+            <a href="#" class="inline-flex justify-center items-center py-3 px-5 mr-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Get started
+                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+            <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                Speak to Sales
+            </a> 
+        </div>
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup">
+        </div>                
     </div>
-</div>
-
-{% endblock content %}
+</section>
 ```
 
-At this point you can use any of the components to build user interfaces easier and faster together with Django, Tailwind CSS and Flowbite. 
+This gives you a pretty good idea on how powerful a Flask, Tailwind CSS and Flowbite technology stack can be for quickly building websites.
 
-Check out all of the components by browsing the menu on the left sidebar under the "components" section.
+## Flask starter project
+
+This configuration can also be found on the [Flask starter project]() from GitHub where Flask, Tailwind CSS and Flowbite is already configured and you can start building websites right away.

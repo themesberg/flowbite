@@ -110,7 +110,7 @@ npm install -D tailwindcss
 2. Create a new `tailwind.config.js` file by running the following command in your terminal:
 
 ```bash
-npm install -D tailwindcss
+npx tailwindcss init
 ```
 
 3. Configure the template files inside the `tailwind.config.js` file:
@@ -119,8 +119,8 @@ npm install -D tailwindcss
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./templates/**/*.{html}",
-    "./static/src/**/*.{js}"
+    "./templates/**/*.html",
+    "./static/src/**/*.js"
   ],
   theme: {
     extend: {},
@@ -181,7 +181,7 @@ npm i flowbite
 module.exports = {
 
     plugins: [
-        require('flowbite/plugin')
+        require("flowbite/plugin")
     ]
 
 }
@@ -192,14 +192,16 @@ module.exports = {
 ```javascript
 module.exports = {
   content: [
-      "./templates/**/*.{html}",
-      "./static/src/**/*.{js}",
+      "./templates/**/*.html",
+      "./static/src/**/*.js",
       "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("flowbite/plugin")
+  ],
 }
 ```
 

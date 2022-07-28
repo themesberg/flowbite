@@ -14,7 +14,7 @@ nextLink: getting-started/license/
 
 [Flask](https://flask.palletsprojects.com/) is an open-source micro web framework based on Python that allows you to quickly build websites using only a single Python file without requiring any other particular tools or libraries.
 
-It is being used by hundreds of thousands of developers and even large companies such as Samsung, Netflix, Reddit, Lfy, and even Airbnb since its initial release in 2010.
+It is being used by hundreds of thousands of developers and even large companies such as Samsung, Netflix, Reddit, Lyft, and even Airbnb since its initial release in 2010.
 
 By following this guide you will learn how to properly set up Tailwind CSS with Flowbite inside a Flask project and get started with building websites faster.
 

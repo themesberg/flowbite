@@ -43,38 +43,69 @@ You can also include a descriptive icon to complement the message inside the ale
 
 {{< example id="alerts-with-icon-example" github="components/alerts.md" show_dark=true >}}
 <div class="flex p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800" role="alert">
-  <svg aria-hidden="true" class="inline flex-shrink-0 mr-3 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+  <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
   <span class="sr-only">Info</span>
   <div>
     <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
   </div>
 </div>
 <div class="flex p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
-  <svg aria-hidden="true" class="inline flex-shrink-0 mr-3 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+  <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
   <span class="sr-only">Info</span>
   <div>
     <span class="font-medium">Danger alert!</span> Change a few things up and try submitting again.
   </div>
 </div>
 <div class="flex p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800" role="alert">
-  <svg aria-hidden="true" class="inline flex-shrink-0 mr-3 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+  <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
   <span class="sr-only">Info</span>
   <div>
     <span class="font-medium">Success alert!</span> Change a few things up and try submitting again.
   </div>
 </div>
 <div class="flex p-4 mb-4 text-sm text-yellow-700 bg-yellow-100 rounded-lg dark:bg-yellow-200 dark:text-yellow-800" role="alert">
-  <svg aria-hidden="true" class="inline flex-shrink-0 mr-3 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+  <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
   <span class="sr-only">Info</span>
   <div>
     <span class="font-medium">Warning alert!</span> Change a few things up and try submitting again.
   </div>
 </div>
 <div class="flex p-4 text-sm text-gray-700 bg-gray-100 rounded-lg dark:bg-gray-700 dark:text-gray-300" role="alert">
-  <svg aria-hidden="true" class="inline flex-shrink-0 mr-3 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+  <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
   <span class="sr-only">Info</span>
   <div>
     <span class="font-medium">Dark alert!</span> Change a few things up and try submitting again.
+  </div>
+</div>
+{{< /example >}}
+
+## Alerts with list
+
+You can also include a descriptive icon to complement the message inside the alert component with the following example.
+
+{{< example id="alerts-with-icon-example" github="components/alerts.md" show_dark=true >}}
+<div class="flex p-4 mb-4 text-sm text-blue-900 rounded-lg bg-blue-50" role="alert">
+  <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+  <span class="sr-only">Info</span>
+  <div>
+    <span class="font-medium">Ensure that these requirements are met:</span>
+      <ul class="mt-1.5 ml-4 text-blue-900 list-disc list-inside">
+        <li>At least 10 characters (and up to 100 characters)</li>
+        <li>At least one lowercase character</li>
+        <li>Inclusion of at least one special character, e.g., ! @ # ?</li>
+    </ul>
+  </div>
+</div>
+<div class="flex p-4 mb-4 text-sm text-red-900 rounded-lg bg-red-50 dark:bg-red-200 dark:text-red-800" role="alert">
+  <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+  <span class="sr-only">Danger</span>
+  <div>
+    <span class="font-medium">Ensure that these requirements are met:</span>
+      <ul class="mt-1.5 ml-4 text-red-900 list-disc list-inside">
+        <li>At least 10 characters (and up to 100 characters)</li>
+        <li>At least one lowercase character</li>
+        <li>Inclusion of at least one special character, e.g., ! @ # ?</li>
+    </ul>
   </div>
 </div>
 {{< /example >}}
@@ -207,47 +238,47 @@ Use the following alert components with a border accent as an alternative style.
 The following alert components can be used if you wish to disclose more information inside the element.
 
 {{< example id="alerts-additional-content-example" github="components/alerts.md" show_dark=true >}}
-<div id="alert-additional-content-1" class="p-4 mb-4 bg-blue-100 rounded-lg dark:bg-blue-200" role="alert">
+<div id="alert-additional-content-1" class="p-4 mb-4 border border-blue-300 rounded-lg bg-blue-50 dark:bg-blue-300" role="alert">
   <div class="flex items-center">
-    <svg aria-hidden="true" class="mr-2 w-5 h-5 text-blue-700 dark:text-blue-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <svg aria-hidden="true" class="w-5 h-5 mr-2 text-blue-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
     <span class="sr-only">Info</span>
-    <h3 class="text-lg font-medium text-blue-700 dark:text-blue-800">This is a info alert</h3>
+    <h3 class="text-lg font-medium text-blue-900">This is a info alert</h3>
   </div>
-  <div class="mt-2 mb-4 text-sm text-blue-700 dark:text-blue-800">
+  <div class="mt-2 mb-4 text-sm text-blue-900">
     More info about this info alert goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
   </div>
   <div class="flex">
-    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center dark:bg-blue-800 dark:hover:bg-blue-900">
+    <button type="button" class="text-white bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center dark:bg-blue-800 dark:hover:bg-blue-900">
       <svg aria-hidden="true" class="-ml-0.5 mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
       View more
     </button>
-    <button type="button" class="text-blue-700 bg-transparent border border-blue-700 hover:bg-blue-800 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:border-blue-800 dark:text-blue-800 dark:hover:text-white" data-dismiss-target="#alert-additional-content-1" aria-label="Close">
+    <button type="button" class="text-blue-900 bg-transparent border border-blue-900 hover:bg-blue-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:border-blue-800 dark:text-blue-800 dark:hover:text-white" data-dismiss-target="#alert-additional-content-1" aria-label="Close">
       Dismiss
     </button>
   </div>
 </div>
-<div id="alert-additional-content-2" class="p-4 mb-4 bg-red-100 rounded-lg dark:bg-red-200" role="alert">
+<div id="alert-additional-content-2" class="p-4 mb-4 border border-red-300 rounded-lg bg-red-50 dark:bg-red-200" role="alert">
   <div class="flex items-center">
-    <svg aria-hidden="true" class="mr-2 w-5 h-5 text-red-700 dark:text-red-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <svg aria-hidden="true" class="w-5 h-5 mr-2 text-red-900 dark:text-red-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
     <span class="sr-only">Info</span>
-    <h3 class="text-lg font-medium text-red-700 dark:text-red-800">This is a danger alert</h3>
+    <h3 class="text-lg font-medium text-red-900 dark:text-red-800">This is a danger alert</h3>
   </div>
-  <div class="mt-2 mb-4 text-sm text-red-700 dark:text-red-800">
+  <div class="mt-2 mb-4 text-sm text-red-900 dark:text-red-800">
     More info about this info danger goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
   </div>
   <div class="flex">
-    <button type="button" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center dark:bg-red-800 dark:hover:bg-red-900">
+    <button type="button" class="text-white bg-red-900 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center dark:bg-red-800 dark:hover:bg-red-900">
       <svg aria-hidden="true" class="-ml-0.5 mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
       View more
     </button>
-    <button type="button" class="text-red-700 bg-transparent border border-red-700 hover:bg-red-800 hover:text-white focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:border-red-800 dark:text-red-800 dark:hover:text-white" data-dismiss-target="#alert-additional-content-2" aria-label="Close">
+    <button type="button" class="text-red-900 bg-transparent border border-red-900 hover:bg-red-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:border-red-800 dark:text-red-800 dark:hover:text-white" data-dismiss-target="#alert-additional-content-2" aria-label="Close">
       Dismiss
     </button>
   </div>
 </div>
-<div id="alert-additional-content-3" class="p-4 mb-4 bg-green-100 rounded-lg dark:bg-green-200" role="alert">
+<div id="alert-additional-content-3" class="p-4 mb-4 border border-green-300 rounded-lg bg-green-50 dark:bg-green-200" role="alert">
   <div class="flex items-center">
-    <svg aria-hidden="true" class="mr-2 w-5 h-5 text-green-700 dark:text-green-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <svg aria-hidden="true" class="w-5 h-5 mr-2 text-green-700 dark:text-green-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
     <span class="sr-only">Info</span>
     <h3 class="text-lg font-medium text-green-700 dark:text-green-800">This is a success alert</h3>
   </div>
@@ -264,9 +295,9 @@ The following alert components can be used if you wish to disclose more informat
     </button>
   </div>
 </div>
-<div id="alert-additional-content-4" class="p-4 mb-4 bg-yellow-100 rounded-lg dark:bg-yellow-200" role="alert">
+<div id="alert-additional-content-4" class="p-4 mb-4 border border-yellow-300 rounded-lg bg-yellow-50 dark:bg-yellow-200" role="alert">
   <div class="flex items-center">
-    <svg aria-hidden="true" class="mr-2 w-5 h-5 text-yellow-700 dark:text-yellow-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <svg aria-hidden="true" class="w-5 h-5 mr-2 text-yellow-700 dark:text-yellow-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
     <span class="sr-only">Info</span>
     <h3 class="text-lg font-medium text-yellow-700 dark:text-yellow-800">This is a warning alert</h3>
   </div>
@@ -283,9 +314,9 @@ The following alert components can be used if you wish to disclose more informat
     </button>
   </div>
 </div>
-<div id="alert-additional-content-5" class="p-4 bg-gray-100 rounded-lg dark:bg-gray-700" role="alert">
+<div id="alert-additional-content-5" class="p-4 border border-gray-300 rounded-lg dark:border-gray-600 bg-gray-50 dark:bg-gray-700" role="alert">
   <div class="flex items-center">
-    <svg aria-hidden="true" class="mr-2 w-5 h-5 text-gray-700 dark:text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <svg aria-hidden="true" class="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
     <span class="sr-only">Info</span>
     <h3 class="text-lg font-medium text-gray-700 dark:text-gray-300">This is a dark alert</h3>
   </div>
@@ -312,50 +343,50 @@ The **Dismiss** class from Flowbite can be used to create an object that will hi
 
 The parameters for the Dismiss object can be used to programatically initialize and manipulate the behaviour of the dismissal of the target element.
 
-<div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Parameter
               </th>
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Type
               </th>
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Required
               </th>
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Description
               </th>
           </tr>
       </thead>
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">targetEl</code>
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Element
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Required
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Pass the element object that will be dismissed.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">options</code>
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                 Object
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Optional
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Pass the options object to set the trigger element, transition, duration, timing classes of the dismiss animation and callback functions.
               </td>
           </tr>
@@ -367,74 +398,74 @@ The parameters for the Dismiss object can be used to programatically initialize 
 
 Use these optional options for the Dismiss object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
 
-<div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-4000">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Option
               </th>
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Type
               </th>
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Description
               </th>
           </tr>
       </thead>
       <tbody>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Element
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Set an optional element object which will dismiss the target element when being clicked.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">transition</code>
               </td>
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   String
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Use one of the Transition Property utility classes from Tailwind CSS to set transition type for the main element. The default value is <code class="text-purple-600 dark:text-purple-400">transition-opacity</code>.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">duration</code>
               </td>
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   Integer
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Set the duration of the dismissing animation. The default value is <code class="text-purple-600 dark:text-purple-400">300</code> (300 miliseconds).
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">timing</code>
               </td>
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   String
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Set the transition timing function utility class from Tailwind CSS. The default value is <code class="text-purple-600 dark:text-purple-400">ease-out</code>.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">onHide</code>
               </td>
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   Function
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Set a callback function when the item has been dismissed.
               </td>
           </tr>
@@ -446,24 +477,24 @@ Use these optional options for the Dismiss object to set the transition, duratio
 
 Use the following methods on the Dismiss object to programatically manipulate the behaviour.
 
-<div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Method
               </th>
-              <th scope="col" class="py-3 px-6">
+              <th scope="col" class="px-6 py-3">
                   Description
               </th>
           </tr>
       </thead>
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="py-4 px-6 font-medium">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">hide()</code>
               </td>
-              <td class="py-4 px-6">
+              <td class="px-6 py-4">
                   Use this method on the Dismiss object to hide the target element.
               </td>
           </tr>

@@ -316,4 +316,4 @@ This gives you a pretty good idea on how powerful a Flask, Tailwind CSS and Flow
 
 ## Flask starter project
 
-This configuration can also be found on the [Flask starter project](https://github.com/themesberg/tailwind-flask-starter) from GitHub where Flask, Tailwind CSS and Flowbite is already configured and you can start building websites right away.
+This configuration can also be found on the [Flask starter project](https://github.com/themesberg/tailwind-flask-starter) from GitHub where Flask, Tailwind CSS, and Flowbite are already configured and you can start building websites right away.

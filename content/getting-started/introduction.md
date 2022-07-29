@@ -189,6 +189,16 @@ Check out the Django integration guide with Tailwind CSS and Flowbite to set up 
 
 Learn how to <a href="{{< ref "getting-started/django" >}}">install Tailwind CSS and Flowbite with Django</a>.
 
+<div class="mt-8 -mb-5">
+  {{< requires_flask >}}
+</div>
+
+## Flask
+
+Check out the Flask integration guide with Tailwind CSS and Flowbite to set up all technologies and start developing with a micro framework combined with the UI components from Flowbite.
+
+Learn how to <a href="{{< ref "getting-started/flask" >}}">install Tailwind CSS and Flowbite with Flask</a>.
+
 ## Pro version
 
 If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite]("{{< param homepage >}}/pro/") which includes fully coded pages and layouts for application, marketing, and e-commerce user interfaces.

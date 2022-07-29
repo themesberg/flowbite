@@ -14,7 +14,7 @@ nextLink: getting-started/license/
 
 [Flask](https://flask.palletsprojects.com/) is an open-source micro web framework based on Python that allows you to quickly build websites using only a single Python file without requiring any other particular tools or libraries.
 
-It is being used by hundreds of thousands of developers and even large companies such as Samsung, Netflix, Reddit, Lfy, and even Airbnb since its initial release in 2010.
+It is being used by hundreds of thousands of developers and even large companies such as Samsung, Netflix, Reddit, Lyft, and even Airbnb since its initial release in 2010.
 
 By following this guide you will learn how to properly set up Tailwind CSS with Flowbite inside a Flask project and get started with building websites faster.
 
@@ -316,4 +316,4 @@ This gives you a pretty good idea on how powerful a Flask, Tailwind CSS and Flow
 
 ## Flask starter project
 
-This configuration can also be found on the [Flask starter project](https://github.com/themesberg/tailwind-flask-starter) from GitHub where Flask, Tailwind CSS and Flowbite is already configured and you can start building websites right away.
+This configuration can also be found on the [Flask starter project](https://github.com/themesberg/tailwind-flask-starter) from GitHub where Flask, Tailwind CSS, and Flowbite are already configured and you can start building websites right away.

@@ -3,6 +3,8 @@
     - title: Introduction
     - title: Quickstart
     - title: React
+    - title: Next JS
+      new: true
     - title: Vue
     - title: Laravel
     - title: Svelte

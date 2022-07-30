@@ -6,8 +6,8 @@ group: getting-started
 toc: true
 requires_react: true
 
-previous: Quickstart
-previousLink: getting-started/quickstart/
+previous: React
+previousLink: getting-started/react/
 next: Vue
 nextLink: getting-started/vue/
 ---

@@ -3,7 +3,8 @@
     - title: Introduction
     - title: Quickstart
     - title: React
-    - title: Next JS
+    - title: Next.js
+      slug: next-js
       new: true
     - title: Vue
     - title: Laravel

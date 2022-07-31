@@ -93,6 +93,12 @@ If you're using React as a front-end library you can also use the components fro
 
 Learn how to <a href="{{< ref "getting-started/react" >}}">install Tailwind CSS and Flowbite with React</a>.
 
+## Next.js
+
+If you're using React as a front-end library and Next.js as a framework you can also use the components from Flowbite React such as the modals, dropdowns, and navbars to speed up your development time coupled with the utility classes from Tailwind CSS.
+
+Learn how to <a href="{{< ref "getting-started/next-js" >}}">install Tailwind CSS and Flowbite with Next.js and React</a>.
+
 <div class="mt-8 -mb-5">
   {{< requires_vue >}}
 </div>

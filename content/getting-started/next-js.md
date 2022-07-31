@@ -81,7 +81,7 @@ module.exports = {
 };
 ```
 
-This is needed in order to look for all of the class names inside the project and only include the used ones in the finall CSS file.
+This is needed in order to look for all of the class names inside the project and only include the used ones in the final CSS file.
 
 4. Replace the contents of the `styles/globals.css` file and import the following directives:
 
@@ -135,7 +135,9 @@ module.exports = {
     "./pages/**/*.{ts,tsx}",
     "./public/**/*.html",
   ],
-  plugins: [require("flowbite/plugin")],
+  plugins: [
+    require("flowbite/plugin")
+  ],
   theme: {},
 };
 ```

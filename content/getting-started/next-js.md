@@ -226,4 +226,4 @@ To learn more about Flowbite React make sure to check out to the repository and 
 
 ## Next.js starter project
 
-We have also created an open-source Next.js starter project that has Tailwind CSS and Flowbite React set up beforehand and you can go ahead and clone it by checking out the [repository on GitHub](https://github.com/tulupinc/flowbite-next-starter).
+The Flowbite community has created an open-source Next.js starter project that has Tailwind CSS and Flowbite React set up beforehand and you can go ahead and clone it by checking out the [repository on GitHub](https://github.com/tulupinc/flowbite-next-starter).

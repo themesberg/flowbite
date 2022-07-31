@@ -12,7 +12,7 @@ next: Vue
 nextLink: getting-started/vue/
 ---
 
-Next.js is a popular web development framework based on the React library that enables server-side rendering and generating static websites improving development time and website performance.
+[Next.js](https://nextjs.org/) is a popular web development framework based on the React library that enables server-side rendering and generating static websites improving development time and website performance.
 
 This technology is being used by hundreds of thousands of developers and companies such as Vercel, Netflix, TikTok, Twitch, Hulu, Nike and HBO Max since its original release in 2016.
 

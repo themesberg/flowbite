@@ -124,7 +124,7 @@ Use this user profile card example if you want to show a dropdown menu and butto
         <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
         <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
         <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
-        <div class="flex mt-4 space-x-3 lg:mt-6">
+        <div class="flex mt-4 space-x-3 md:mt-6">
             <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add friend</a>
             <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">Message</a>
         </div>
@@ -137,7 +137,7 @@ Use this user profile card example if you want to show a dropdown menu and butto
 Use this card example where you can add form input elements that can be used for authentication actions or any other context where you need to receive information from your users.
 
 {{< example id="card-form-inputs-example" github="components/card.md" show_dark=true >}}
-<div class="max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-md sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700">
+<div class="max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
     <form class="space-y-6" action="#">
         <h5 class="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h5>
         <div>
@@ -227,33 +227,110 @@ Use this CTA card example to encourage your users to visit a certain page such a
 Use this CTA card example to encourage your users to visit a certain page such as downloading the iOS or Android application for your project.
 
 {{< example id="card-cta-example" github="components/card.md" show_dark=true >}}
-<div class="w-full text-center bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+<div class="w-full bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
     <div class="sm:hidden">
         <label for="tabs" class="sr-only">Select your country</label>
         <select id="tabs" class="bg-gray-50 border-0 border-b border-gray-200 text-gray-900 sm:text-sm rounded-t-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option>About Us</option>
+            <option>Stats</option>
             <option>Services</option>
             <option>Products</option>
             <option>Contact</option>
         </select>
     </div>
-    <ul class="hidden text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg sm:flex dark:divide-gray-600 dark:text-gray-400">
+    <ul class="hidden text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg sm:flex dark:divide-gray-600 dark:text-gray-400" id="fullWidthTab" data-tabs-toggle="#fullWidthTabContent" role="tablist">
         <li class="w-full">
-            <a href="#" class="inline-block w-full p-4 text-gray-900 bg-gray-100 rounded-tl-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-800 dark:text-white" aria-current="page">About Us</a>
+            <button id="stats-tab" data-tabs-target="#stats" type="button" role="tab" aria-controls="stats" aria-selected="false" class="inline-block w-full p-4 text-gray-900 bg-gray-100 rounded-tl-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-800 dark:text-white" aria-current="page">Stats</button>
         </li>
         <li class="w-full">
-            <a href="#" class="inline-block w-full p-4 bg-gray-50 hover:text-gray-700 hover:bg-gray-100 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-700 dark:hover:bg-gray-600">Services</a>
+            <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false" class="inline-block w-full p-4 bg-gray-50 hover:text-gray-700 hover:bg-gray-100 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-700 dark:hover:bg-gray-600">Services</button>
         </li>
         <li class="w-full">
-            <a href="#" class="inline-block w-full p-4 bg-gray-50 hover:text-gray-700 hover:bg-gray-100 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-700 dark:hover:bg-gray-600">Products</a>
-        </li>
-        <li class="w-full">
-            <a href="#" class="inline-block w-full p-4 rounded-tr-lg bg-gray-50 hover:text-gray-700 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-700 dark:hover:bg-gray-600">Contact</a>
+            <button id="faq-tab" data-tabs-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false" class="inline-block w-full p-4 bg-gray-50 hover:text-gray-700 hover:bg-gray-100 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-700 dark:hover:bg-gray-600">FAQ</button>
         </li>
     </ul>
-    <div class="p-4 sm:p-8">
-        <h5 class="mb-2 text-2xl font-bold text-gray-900 dark:text-white">Work fast from anywhere</h5>
-        <p class="mb-5 font-light text-gray-500 sm:text-lg dark:text-gray-400">Stay up to date and move work forward with Flowbite on iOS & Android. Download the app today.</p>
+    <div id="fullWidthTabContent">
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="stats" role="tabpanel" aria-labelledby="stats-tab">
+            <dl class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
+                    <dd class="font-light text-gray-500 dark:text-gray-400">Developers</dd>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">100M+</dt>
+                    <dd class="font-light text-gray-500 dark:text-gray-400">Public repositories</dd>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">1000s</dt>
+                    <dd class="font-light text-gray-500 dark:text-gray-400">Open source projects</dd>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">1B+</dt>
+                    <dd class="font-light text-gray-500 dark:text-gray-400">Contributors</dd>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">90+</dt>
+                    <dd class="font-light text-gray-500 dark:text-gray-400">Top Forbes companies</dd>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">4M+</dt>
+                    <dd class="font-light text-gray-500 dark:text-gray-400">Organizations</dd>
+                </div>
+            </dl>
+        </div>
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="about" role="tabpanel" aria-labelledby="about-tab">
+            <h2 class="mb-5 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">We invest in the world’s potential</h2>
+            <!-- List -->
+            <ul role="list" class="space-y-4 text-gray-500 dark:text-gray-400">
+                <li class="flex space-x-2">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="font-light leading-tight">Dynamic reports and dashboards</span>
+                </li>
+                <li class="flex space-x-2">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="font-light leading-tight">Templates for everyone</span>
+                </li>
+                <li class="flex space-x-2">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="font-light leading-tight">Development workflow</span>
+                </li>
+                <li class="flex space-x-2">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="font-light leading-tight">Limitless business automation</span>
+                </li>
+            </ul>
+        </div>
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+            <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
+                <h2 id="accordion-flush-heading-1">
+                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+                        <span>Can I use Flowbite in open-source projects?</span>
+                        <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-1" class="" aria-labelledby="accordion-flush-heading-1">
+                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
+                        <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="#" class="text-primary-600 dark:text-primary-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+                    </div>
+                </div>
+                <h2 id="accordion-flush-heading-2">
+                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                        <span>Is there a Figma file available?</span>
+                        <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
+                        <p class="text-gray-500 dark:text-gray-400">Check out the <a href="#" class="text-primary-600 dark:text-primary-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+                    </div>
+                </div>
+            </div> 
+        </div>
     </div>
 </div>
 {{< /example >}}
@@ -263,21 +340,69 @@ Use this CTA card example to encourage your users to visit a certain page such a
 Use this CTA card example to encourage your users to visit a certain page such as downloading the iOS or Android application for your project.
 
 {{< example id="card-cta-example" github="components/card.md" show_dark=true >}}
-<div class="w-full text-center bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-    <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 rounded-t-lg dark:border-gray-700 dark:text-gray-400 bg-gray-50 dark:bg-gray-700">
+<div class="w-full bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 rounded-t-lg dark:border-gray-700 dark:text-gray-400 bg-gray-50 dark:bg-gray-700" id="defaultTab" data-tabs-toggle="#defaultTabContent" role="tablist">
         <li class="mr-2">
-            <a href="#" aria-current="page" class="inline-block p-4 text-blue-600 bg-gray-100 rounded-tl-lg active dark:bg-gray-800 dark:text-blue-500">About Us</a>
+            <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false" class="inline-block p-4 text-blue-600 bg-gray-100 rounded-tl-lg active dark:bg-gray-800 dark:text-blue-500">About</button>
         </li>
         <li class="mr-2">
-            <a href="#" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-300">Services</a>
+            <button id="services-tab" data-tabs-target="#services" type="button" role="tab" aria-controls="services" aria-selected="false" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-300">Services</button>
         </li>
         <li class="mr-2">
-            <a href="#" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-300">Products</a>
+            <button id="facts-tab" data-tabs-target="#facts" type="button" role="tab" aria-controls="facts" aria-selected="false" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-300">Facts</button>
         </li>
     </ul>
-    <div class="p-4 sm:p-8">
-        <h5 class="mb-2 text-2xl font-bold text-gray-900 dark:text-white">Work fast from anywhere</h5>
-        <p class="mb-5 font-light text-gray-500 sm:text-lg dark:text-gray-400">Stay up to date and move work forward with Flowbite on iOS & Android. Download the app today.</p>
+    <div id="defaultTabContent">
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="about" role="tabpanel" aria-labelledby="about-tab">
+            <h2 class="mb-3 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Powering innovation & trust at 200,000+ companies worldwide</h2>
+            <p class="mb-3 text-gray-500 dark:text-gray-400">Empower Developers, IT Ops, and business teams to collaborate at high velocity. Respond to changes and deliver great customer and employee service experiences fast.</p>
+            <a href="#" class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">
+                Learn more
+                <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+            </a>
+        </div>
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="services" role="tabpanel" aria-labelledby="services-tab">
+            <h2 class="mb-5 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">We invest in the world’s potential</h2>
+            <!-- List -->
+            <ul role="list" class="space-y-4 text-gray-500 dark:text-gray-400">
+                <li class="flex space-x-2">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="font-light leading-tight">Dynamic reports and dashboards</span>
+                </li>
+                <li class="flex space-x-2">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="font-light leading-tight">Templates for everyone</span>
+                </li>
+                <li class="flex space-x-2">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="font-light leading-tight">Development workflow</span>
+                </li>
+                <li class="flex space-x-2">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="font-light leading-tight">Limitless business automation</span>
+                </li>
+            </ul>
+        </div>
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="facts" role="tabpanel" aria-labelledby="facts-tab">
+            <dl class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
+                <div class="flex flex-col">
+                    <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
+                    <dd class="font-light text-gray-500 dark:text-gray-400">Developers</dd>
+                </div>
+                <div class="flex flex-col">
+                    <dt class="mb-2 text-3xl font-extrabold">100M+</dt>
+                    <dd class="font-light text-gray-500 dark:text-gray-400">Public repositories</dd>
+                </div>
+                <div class="flex flex-col">
+                    <dt class="mb-2 text-3xl font-extrabold">1000s</dt>
+                    <dd class="font-light text-gray-500 dark:text-gray-400">Open source projects</dd>
+                </div>
+            </dl>
+        </div>
     </div>
 </div>
 {{< /example >}}
@@ -512,7 +637,7 @@ Use this web3 card component to show a list of applications that you can use to 
 
 {{< example id="card-crypto-example" github="components/card.md" show_dark=true >}}
     <div class="max-w-sm p-4 bg-white border rounded-lg shadow-md sm:p-6 dark:bg-gray-800 dark:border-gray-700">
-        <h5 class="mb-3 text-base font-semibold text-gray-900 lg:text-xl dark:text-white">
+        <h5 class="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
             Connect wallet
         </h5>
         <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Connect with one of our available wallet providers or create a new one.</p>

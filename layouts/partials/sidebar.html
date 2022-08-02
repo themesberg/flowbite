@@ -21,7 +21,12 @@
           <h5 class="mb-2 text-sm font-semibold tracking-wide text-gray-900 uppercase lg:text-xs dark:text-white">{{ $group.title }}</h5>
           <ul class="py-1 list-unstyled fw-normal small">
             {{- range $doc := $group.pages -}}
-              {{- $doc_slug := $doc.title | urlize -}}
+              {{- $doc_slug := "" -}}
+              {{- if $doc.slug -}}
+                {{- $doc_slug = $doc.slug -}}
+              {{- else -}}
+                {{- $doc_slug = $doc.title | urlize -}}
+              {{- end -}}
               {{- $is_active := and $is_active_group (eq $page_slug $doc_slug) -}}
               {{- $href := printf "/docs/%s/%s/" $group_slug $doc_slug }}
               <li>
@@ -31,7 +36,7 @@
           </ul>
         </li>
       {{- else }}
-        <li class="my-3 mx-4 border-top"></li>
+        <li class="mx-4 my-3 border-top"></li>
         <li>
           <a href="/{{ $group_slug }}/" data-sidebar-item class="d-inline-flex align-items-center {{ if $is_active_group }} active{{ end }}"{{ if $is_active_group }} aria-current="page"{{ end }}>
             {{ $group.title }}

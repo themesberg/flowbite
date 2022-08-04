@@ -11,7 +11,7 @@ next: Modals
 nextLink: components/modal/
 ---
 
-Get started with the Flowbite Typography plugin forked from the official [Tailwind CSS Typography plugin](https://tailwindcss.com/docs/typography-plugin) to set a custom `format` class to a wrapper element to apply styles to all inline child elements such as headings, paragraphs, images, lists, and more and apply font sizes, font weights, colors, and spacings.
+Get started with the [Flowbite Typography](https://github.com/themesberg/flowbite-typography) plugin forked from the official [Tailwind CSS Typography](https://tailwindcss.com/docs/typography-plugin) plugin to set a custom `format` class to a wrapper element to apply styles to all inline child elements such as headings, paragraphs, images, lists, and more and apply font sizes, font weights, colors, and spacings.
 
 You can check out this [live demo]() to see how content inside an article will render like.
 
@@ -158,22 +158,24 @@ module.exports = {
       typography: ({ theme }) => ({
         orange: {
           css: {
-            '--tw-prose-body': theme('colors.orange[800]'),
+            '--tw-prose-body': theme('colors.orange[500]'),
             '--tw-prose-headings': theme('colors.orange[900]'),
-            '--tw-prose-lead': theme('colors.orange[700]'),
-            '--tw-prose-links': theme('colors.orange[900]'),
+            '--tw-prose-lead': theme('colors.orange[500]'),
+            '--tw-prose-links': theme('colors.orange[600]'),
             '--tw-prose-bold': theme('colors.orange[900]'),
-            '--tw-prose-counters': theme('colors.orange[600]'),
-            '--tw-prose-bullets': theme('colors.orange[400]'),
-            '--tw-prose-hr': theme('colors.orange[300]'),
+            '--tw-prose-counters': theme('colors.orange[500]'),
+            '--tw-prose-bullets': theme('colors.orange[500]'),
+            '--tw-prose-hr': theme('colors.orange[200]'),
             '--tw-prose-quotes': theme('colors.orange[900]'),
             '--tw-prose-quote-borders': theme('colors.orange[300]'),
             '--tw-prose-captions': theme('colors.orange[700]'),
             '--tw-prose-code': theme('colors.orange[900]'),
+            '--tw-prose-code-bg': theme('colors.orange[50]'),
             '--tw-prose-pre-code': theme('colors.orange[100]'),
             '--tw-prose-pre-bg': theme('colors.orange[900]'),
             '--tw-prose-th-borders': theme('colors.orange[300]'),
             '--tw-prose-td-borders': theme('colors.orange[200]'),
+            '--tw-format-th-bg': theme('colors.orange[50]'),
             '--tw-prose-invert-body': theme('colors.orange[200]'),
             '--tw-prose-invert-headings': theme('colors.white'),
             '--tw-prose-invert-lead': theme('colors.orange[300]'),
@@ -190,6 +192,7 @@ module.exports = {
             '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
             '--tw-prose-invert-th-borders': theme('colors.orange[600]'),
             '--tw-prose-invert-td-borders': theme('colors.orange[700]'),
+            '--tw-format-invert-th-bg': theme('colors.orange[700]'),
           },
         },
       }),

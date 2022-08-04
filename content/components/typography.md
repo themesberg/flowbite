@@ -13,7 +13,7 @@ nextLink: components/modal/
 
 Get started with the [Flowbite Typography](https://github.com/themesberg/flowbite-typography) plugin forked from the official [Tailwind CSS Typography](https://tailwindcss.com/docs/typography-plugin) plugin to set a custom `format` class to a wrapper element to apply styles to all inline child elements such as headings, paragraphs, images, lists, and more and apply font sizes, font weights, colors, and spacings.
 
-You can check out this [live demo]() to see how content inside an article will render like.
+You can check out this [live demo](https://flowbite.com/plugins/typography/) to see how content inside an article will render like.
 
 ## Getting started
 
@@ -22,7 +22,7 @@ Make sure that you have both [Node.js](https://nodejs.org/) and [Tailwind CSS](h
 1. Install the Flowbite Typography plugin via NPM:
 
 ```bash
-npm -D flowbite-typography --save
+npm -D flowbite-typography
 ```
 
 2. Require the plugin inside the `tailwind.config.js` file:

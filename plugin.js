@@ -322,6 +322,55 @@ module.exports = plugin(function ({ addBase, theme }) {
         ['.tooltip.invisible > .tooltip-arrow:before']: {
             visibility: 'hidden'
         },
+        [['[data-popper-arrow]', '[data-popper-arrow]:before']]: {
+            position: 'absolute',
+            width: '8px',
+            height: '8px',
+            background: 'inherit'
+        },
+        ['[data-popper-arrow]']: {
+            visibility: 'hidden',
+        },
+        ['[data-popper-arrow]:before']: {
+            content: '""',
+            visibility: 'visible',
+            transform: 'rotate(45deg)'
+        },
+        [`[data-tooltip-style^='light'] + [role="tooltip"] > [data-popper-arrow]:before`]: {
+            'border-style': 'solid',
+            'border-color': colors.gray[200],
+        },
+        [`[data-tooltip-style^='light'] + [role="tooltip"][data-popper-placement^='top'] > [data-popper-arrow]:before`]: {
+            'border-bottom-width': '1px',
+            'border-right-width': '1px'
+        },
+        [`[data-tooltip-style^='light'] + [role="tooltip"][data-popper-placement^='right'] > [data-popper-arrow]:before`]: {
+            'border-bottom-width': '1px',
+            'border-left-width': '1px'
+        },
+        [`[data-tooltip-style^='light'] + [role="tooltip"][data-popper-placement^='bottom'] > [data-popper-arrow]:before`]: {
+            'border-top-width': '1px',
+            'border-left-width': '1px'
+        },
+        [`[data-tooltip-style^='light'] + [role="tooltip"][data-popper-placement^='left'] > [data-popper-arrow]:before`]: {
+            'border-top-width': '1px',
+            'border-right-width': '1px'
+        },
+        [`[role="tooltip"][data-popper-placement^='top'] > [data-popper-arrow]`]: {
+            bottom: '-4px'
+        },
+        [`[role="tooltip"][data-popper-placement^='bottom'] > [data-popper-arrow]`]: {
+            top: '-4px'
+        },
+        [`[role="tooltip"][data-popper-placement^='left'] > [data-popper-arrow]`]: {
+            right: '-4px'
+        },
+        [`[role="tooltip"][data-popper-placement^='right'] > [data-popper-arrow]`]: {
+            left: '-4px'
+        },
+        ['[role="tooltip"].invisible > [data-popper-arrow]:before']: {
+            visibility: 'hidden'
+        },
     })
 }, {
     darkMode: 'class', // or 'media' or 'class',

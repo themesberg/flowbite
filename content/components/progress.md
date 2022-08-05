@@ -25,11 +25,7 @@ Use the following example of a progress bar element to show a completion rate of
 
 ## Sizes
 
-You can also use different sizes by using various sizing utility classes from FlowBite and Tailwind CSS.
-
-## Sizes
-
-You can also use different sizes by using various sizing utility classes from FlowBite and Tailwind CSS.
+You can also use different sizes by using various sizing utility classes from Flowbite and Tailwind CSS.
 
 {{< example id="progress-sizes-example" github="components/progress.md" show_dark=true >}}
 <div class="mb-1 text-base font-medium dark:text-white">Small</div>

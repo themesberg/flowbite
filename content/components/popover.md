@@ -34,6 +34,48 @@ To get started with using tooltips all you need to do is add the `data-popover-t
 </div>
 {{< /example >}}
 
+## User profile
+
+## Default popover
+
+{{< example id="popover-user-profile-example" class="flex justify-center pt-48" github="components/popover.md" show_dark=true >}}
+<button data-popover-target="popover-user-profile" data-popover-trigger="click" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default popover</button>
+<div id="popover-user-profile" role="tooltip" class="inline-block absolute invisible z-10 w-64 text-sm font-light text-gray-500 bg-white rounded-lg border border-gray-200 shadow-sm opacity-0 transition-opacity duration-300 dark:bg-gray-700">
+    <div class="p-3">
+        <div class="flex justify-between items-center mb-2">
+            <a href="#">
+                <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese Leos">
+            </a>
+            <div>
+                <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Follow</button>
+            </div>
+        </div>
+        <p class="text-base font-semibold leading-none text-gray-900">
+            <a href="#">Jese Leos</a>
+        </p>
+        <p class="mb-3 text-sm font-normal text-gray-500">
+            <a href="#" class="hover:underline">@jeseleos</a>
+        </p>
+        <p class="mb-4 text-sm font-light text-gray-500">Open-source contributor. Building <a href="#" class="text-blue-600 hover:underline">flowbite.com</a>.</p>
+        <ul class="flex text-sm font-light text-gray-500">
+            <li class="mr-2">
+                <a href="#" class="hover:underline">
+                    <span class="font-semibold text-gray-900">799</span>
+                    <span class="text-gray-500">Following</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline">
+                    <span class="font-semibold text-gray-900">3,758</span>
+                    <span class="text-gray-500">Followers</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div data-popper-arrow></div>
+</div>
+{{< /example >}}
+
 ## Placement
 
 The positioning of the tooltip element relative to the triggering element (eg. button, link) can be set using the `data-popover-placement="{top|right|bottom"left}"` data attribute.

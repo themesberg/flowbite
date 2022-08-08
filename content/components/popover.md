@@ -34,57 +34,50 @@ To get started with using tooltips all you need to do is add the `data-popover-t
 </div>
 {{< /example >}}
 
-## Tooltip styles
-
-You can use choose between dark and light version styles for the tooltip component by changing the utility classes from Tailwind CSS and by applying the `data-popover-style="{light|dark}"` data attribute.
-
-{{< example id="popover-styles-example" class="pt-8" github="components/tooltips.md" show_dark=true >}}
-<!-- Light style tooltip -->
-<button data-popover-target="popover-light" data-popover-style="light" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Light tooltip</button>
-<div id="popover-light" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 shadow-sm opacity-0 tooltip">
-    Tooltip content
-    <div class="popover-arrow" data-popper-arrow></div>
-</div>
-
-<!-- Dark style tooltip -->
-<button data-popover-target="popover-dark" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Dark tooltip</button>
-<div id="popover-dark" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-    Tooltip content
-    <div class="popover-arrow" data-popper-arrow></div>
-</div>
-{{< /example >}}
-
 ## Placement
 
 The positioning of the tooltip element relative to the triggering element (eg. button, link) can be set using the `data-popover-placement="{top|right|bottom"left}"` data attribute.
 
-{{< example id="popover-placement-example" class="py-8" github="components/tooltips.md" show_dark=true >}}
-<!-- Show tooltip on top -->
-<button data-popover-target="popover-top" data-popover-placement="top" type="button" class="mb-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip top</button>
-<div id="popover-top" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-    Tooltip on top
-    <div class="popover-arrow" data-popper-arrow></div>
+{{< example id="popover-placement-example" class="flex justify-center py-24 space-x-4" github="components/popover.md" show_dark=true >}}
+<button data-popover-target="popover-top" data-popover-placement="top" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Top popover</button>
+<div id="popover-top" role="tooltip" class="inline-block absolute invisible z-10 w-64 text-sm font-light text-gray-500 bg-white rounded-lg border border-gray-200 shadow-sm opacity-0 transition-opacity duration-300 dark:bg-gray-700">
+    <div class="py-2 px-3 bg-gray-100 rounded-t-lg border-b border-gray-200">
+        <h3 class="font-semibold text-gray-900 dark:text-white">Popover top</h3>
+    </div>
+    <div class="py-2 px-3">
+        <p>And here's some amazing content. It's very engaging. Right?</p>
+    </div>
+    <div data-popper-arrow></div>
 </div>
-
-<!-- Show tooltip on right -->
-<button data-popover-target="popover-right" data-popover-placement="right" type="button" class="mb-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip right</button>
-<div id="popover-right" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-    Tooltip on right
-    <div class="popover-arrow" data-popper-arrow></div>
+<button data-popover-target="popover-right" data-popover-placement="right" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Right popover</button>
+<div id="popover-right" role="tooltip" class="inline-block absolute invisible z-10 w-64 text-sm font-light text-gray-500 bg-white rounded-lg border border-gray-200 shadow-sm opacity-0 transition-opacity duration-300 dark:bg-gray-700">
+    <div class="py-2 px-3 bg-gray-100 rounded-t-lg border-b border-gray-200">
+        <h3 class="font-semibold text-gray-900 dark:text-white">Popover right</h3>
+    </div>
+    <div class="py-2 px-3">
+        <p>And here's some amazing content. It's very engaging. Right?</p>
+    </div>
+    <div data-popper-arrow></div>
 </div>
-
-<!-- Show tooltip on bottom -->
-<button data-popover-target="popover-bottom" data-popover-placement="bottom" type="button" class="mb-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip bottom</button>
-<div id="popover-bottom" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-    Tooltip on bottom
-    <div class="popover-arrow" data-popper-arrow></div>
+<button data-popover-target="popover-bottom" data-popover-placement="bottom" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Bottom popover</button>
+<div id="popover-bottom" role="tooltip" class="inline-block absolute invisible z-10 w-64 text-sm font-light text-gray-500 bg-white rounded-lg border border-gray-200 shadow-sm opacity-0 transition-opacity duration-300 dark:bg-gray-700">
+    <div class="py-2 px-3 bg-gray-100 rounded-t-lg border-b border-gray-200">
+        <h3 class="font-semibold text-gray-900 dark:text-white">Popover bottom</h3>
+    </div>
+    <div class="py-2 px-3">
+        <p>And here's some amazing content. It's very engaging. Right?</p>
+    </div>
+    <div data-popper-arrow></div>
 </div>
-
-<!-- Show tooltip on left -->
-<button data-popover-target="popover-left" data-popover-placement="left" type="button" class="mb-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip left</button>
-<div id="popover-left" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-    Tooltip on left
-    <div class="popover-arrow" data-popper-arrow></div>
+<button data-popover-target="popover-left" data-popover-placement="left" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Left popover</button>
+<div id="popover-left" role="tooltip" class="inline-block absolute invisible z-10 w-64 text-sm font-light text-gray-500 bg-white rounded-lg border border-gray-200 shadow-sm opacity-0 transition-opacity duration-300 dark:bg-gray-700">
+    <div class="py-2 px-3 bg-gray-100 rounded-t-lg border-b border-gray-200">
+        <h3 class="font-semibold text-gray-900 dark:text-white">Popover left</h3>
+    </div>
+    <div class="py-2 px-3">
+        <p>And here's some amazing content. It's very engaging. Right?</p>
+    </div>
+    <div data-popper-arrow></div>
 </div>
 {{< /example >}}
 
@@ -92,19 +85,27 @@ The positioning of the tooltip element relative to the triggering element (eg. b
 
 You can choose the triggering event by using the `data-popover-trigger="{hover|click}"` data attributes to choose whether you want to show the tooltip when hovering or clicking on the element. By default this option is set to `hover`.
 
-{{< example id="popover-triggering-example" class="pt-8" github="components/tooltips.md" show_dark=true >}}
-<!-- Show tooltip on hover -->
-<button data-popover-target="popover-hover" data-popover-trigger="hover" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip hover</button>
-<div id="popover-hover" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-    Tooltip content
-    <div class="popover-arrow" data-popper-arrow></div>
+{{< example id="popover-triggering-example" class="pt-24" github="components/popover.md" show_dark=true >}}
+<button data-popover-target="popover-hover" data-popover-trigger="hover" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Hover popover</button>
+<div id="popover-hover" role="tooltip" class="inline-block absolute invisible z-10 w-64 text-sm font-light text-gray-500 bg-white rounded-lg border border-gray-200 shadow-sm opacity-0 transition-opacity duration-300 dark:bg-gray-700">
+    <div class="py-2 px-3 bg-gray-100 rounded-t-lg border-b border-gray-200">
+        <h3 class="font-semibold text-gray-900 dark:text-white">Popover hover</h3>
+    </div>
+    <div class="py-2 px-3">
+        <p>And here's some amazing content. It's very engaging. Right?</p>
+    </div>
+    <div data-popper-arrow></div>
 </div>
 
-<!-- Show tooltip on click -->
-<button data-popover-target="popover-click" data-popover-trigger="click" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip click</button>
-<div id="popover-click" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-    Tooltip content
-    <div class="popover-arrow" data-popper-arrow></div>
+<button data-popover-target="popover-click" data-popover-trigger="click" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Click popover</button>
+<div id="popover-click" role="tooltip" class="inline-block absolute invisible z-10 w-64 text-sm font-light text-gray-500 bg-white rounded-lg border border-gray-200 shadow-sm opacity-0 transition-opacity duration-300 dark:bg-gray-700">
+    <div class="py-2 px-3 bg-gray-100 rounded-t-lg border-b border-gray-200">
+        <h3 class="font-semibold text-gray-900 dark:text-white">Popover click</h3>
+    </div>
+    <div class="py-2 px-3">
+        <p>And here's some amazing content. It's very engaging. Right?</p>
+    </div>
+    <div data-popper-arrow></div>
 </div>
 {{< /example >}}
 
@@ -112,7 +113,7 @@ You can choose the triggering event by using the `data-popover-trigger="{hover|c
 
 You can set tooltip animation styles by using the transition utility classes from Tailwind CSS. Make sure that you add `transition-opacity` and `duration-{x}` to set the animation duration.
 
-{{< example id="popover-animation-example" class="pt-8" github="components/tooltips.md" show_dark=true >}}
+{{< example id="popover-animation-example" class="pt-8" github="components/popover.md" show_dark=true >}}
 <button data-popover-target="popover-animation" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Animated tooltip</button>
 <div id="popover-animation" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
     Tooltip content
@@ -124,7 +125,7 @@ You can set tooltip animation styles by using the transition utility classes fro
 
 You can also disable the tooltip arrow by not including the `data-popper-arrow` element.
 
-{{< example id="popover-disable-arrow-example" class="pt-8" github="components/tooltips.md" show_dark=true >}}
+{{< example id="popover-disable-arrow-example" class="pt-8" github="components/popover.md" show_dark=true >}}
 <button data-popover-target="popover-no-arrow" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default tooltip</button>
 <div id="popover-no-arrow" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Tooltip content

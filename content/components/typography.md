@@ -22,7 +22,7 @@ Make sure that you have both [Node.js](https://nodejs.org/) and [Tailwind CSS](h
 1. Install the Flowbite Typography plugin via NPM:
 
 ```bash
-npm -D flowbite-typography
+npm i -D flowbite-typography
 ```
 
 2. Require the plugin inside the `tailwind.config.js` file:

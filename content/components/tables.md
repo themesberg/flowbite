@@ -5,8 +5,8 @@ description: Use the table component to show text, images, links, and other elem
 group: components
 toc: true
 
-previous: Progress
-previousLink: components/progress/
+previous: Popover
+previousLink: components/popover/
 next: Spinner
 nextLink: components/spinner/
 ---

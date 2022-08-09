@@ -15,7 +15,7 @@ nextLink: forms/input-field/
 
 Flowbite allows you to use the Tailwind CSS tooltip component to show extra information when hovering or focusing over an element in multiple positions, styles, and animations.
 
-Before continuing, make sure that you have the <a href="{{< ref "getting-started/quickstart" >}}" rel="nofollow">Flowbite JavaScript file</a> included in your project in order to make the tooltip component work.
+Before continuing, make sure that you have the <a href="{{< ref "getting-started/quickstart" >}}">Flowbite JavaScript file</a> included in your project in order to make the tooltip component work.
 
 ## Default tooltip example
 

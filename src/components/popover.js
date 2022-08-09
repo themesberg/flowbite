@@ -2,6 +2,7 @@ import { createPopper } from '@popperjs/core';
 
 const Default = {
     placement: 'top',
+    offset: 10,
     triggerType: 'hover',
     onShow: () => { },
     onHide: () => { }
@@ -23,10 +24,24 @@ class Popover {
                 this._triggerEl.addEventListener(ev, () => {
                     this.show()
                 })
+                this._targetEl.addEventListener(ev, () => {
+                    this.show()
+                })
             })
             triggerEvents.hideEvents.forEach(ev => {
                 this._triggerEl.addEventListener(ev, () => {
-                    this.hide()
+                    setTimeout(() => {
+                        if (!this._targetEl.matches(':hover')) {
+                            this.hide()
+                        }
+                    }, 100)
+                })
+                this._targetEl.addEventListener(ev, () => {
+                    setTimeout(() => {
+                        if (!this._triggerEl.matches(':hover')) {
+                            this.hide()
+                        }
+                    }, 100)
                 })
             })
         }
@@ -39,7 +54,7 @@ class Popover {
                 {
                     name: 'offset',
                     options: {
-                        offset: [0, 8],
+                        offset: [0, this._options.offset],
                     },
                 },
             ],
@@ -111,9 +126,11 @@ function initPopover() {
         const targetEl = document.getElementById(triggerEl.getAttribute('data-popover-target'))
         const triggerType = triggerEl.getAttribute('data-popover-trigger');
         const placement = triggerEl.getAttribute('data-popover-placement');
+        const offset = triggerEl.getAttribute('data-popover-offset');
 
         new Popover(targetEl, triggerEl, {
             placement: placement ? placement : Default.placement,
+            offset: offset ? parseInt(offset) : Default.offset,
             triggerType: triggerType ? triggerType : Default.triggerType
         })
     })

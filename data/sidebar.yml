@@ -80,6 +80,17 @@
     - title: Range
     - title: Floating Label
 
+- title: Typography
+  pages:
+    - title: Headings
+    - title: Paragraphs
+    - title: Blockquote
+    - title: Images
+    - title: Lists
+    - title: Links
+    - title: Formatting
+    - title: Horizontal rule
+
 - title: Plugins
   pages:
     - title: Datepicker

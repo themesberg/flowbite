@@ -59,6 +59,8 @@
     - title: KBD
       new: true
     - title: Progress
+    - title: Popover
+      new: true
     - title: Tables
       new: true
     - title: Spinner

@@ -7,8 +7,8 @@ toc: true
 
 previous: KBD (Keyboard)
 previousLink: components/kbd/
-next: Tables
-nextLink: components/tables/
+next: Popover
+nextLink: components/popover/
 ---
 
 The progress bar component can be used as an indicator to show the completion rate of data sets or it can be used as an animated loader component. There are multiple sizes, colors, and styles available.

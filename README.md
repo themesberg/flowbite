@@ -312,7 +312,7 @@ Flowbite is an open source collection of UI components built with the utility cl
   <tr>
     <td width="33.3333%">KBD (keyboard)</td>
     <td width="33.3333%">Drawer (offcanvas)</td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">Popover</td>
   </tr>
   <tr>
     <td width="33.3333%">
@@ -325,7 +325,11 @@ Flowbite is an open source collection of UI components built with the utility cl
             <img alt="Tailwind CSS Drawer (offcanvas)" src="https://flowbite.s3.amazonaws.com/github/drawer.jpg">
         </a>
     </td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/popover/">
+            <img alt="Tailwind CSS Popover" src="https://flowbite.s3.amazonaws.com/github/popover.jpg">
+        </a>
+    </td>
   </tr>
 </table>
 

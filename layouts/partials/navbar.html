@@ -1,4 +1,4 @@
-<header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white border-b border-gray-200 dark:border-gray-600 dark:bg-gray-800">
+<header class="fixed top-0 z-40 w-full">
   <div
       id='banner'
       tabIndex='-1'
@@ -23,28 +23,30 @@
         </p>
       </div>
   </div>
-  <div class="flex justify-between items-center py-3 px-3 mx-auto w-full max-w-8xl lg:px-4">
-    <div class="flex items-center">
+  <nav class="bg-white border-b border-gray-200 dark:border-gray-600 dark:bg-gray-800">
+    <div class="flex justify-between items-center py-3 px-3 mx-auto w-full max-w-8xl lg:px-4">
       <button id="toggleSidebarMobile" aria-expanded="true" aria-controls="sidebar" class="p-2 mr-2 text-gray-600 rounded cursor-pointer lg:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
         <svg id="toggleSidebarMobileHamburger" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
         <svg id="toggleSidebarMobileClose" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
       </button>
-      <div class="flex justify-between items-center">
-        <a href="{{ .Site.Params.homepage }}/" class="flex">
-          <img src="/docs/images/logo.svg" class="mr-3 h-8" alt="FlowBite Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-        </a>
+      <div class="flex items-center">
+        <div class="flex justify-between items-center">
+          <a href="{{ .Site.Params.homepage }}/" class="flex">
+            <img src="/docs/images/logo.svg" class="mr-3 h-8" alt="FlowBite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+          </a>
+        </div>
+        <div id="docsearch" class="ml-6 xl:ml-16 xl:pl-4"></div>
       </div>
-      <div id="docsearch" class="ml-6 xl:ml-16 xl:pl-4"></div>
-    </div>
-
     <div class="flex items-center">
       <ul id="flowbiteMenu" class="hidden flex-col pt-6 lg:flex-row lg:self-center lg:py-0 lg:flex">
         <li class="mb-3 lg:px-2 xl:px-3 lg:mb-0">
-          <a href="{{ "getting-started/quickstart/" | relURL }}" class="text-sm font-medium text-gray-900 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">Quickstart</a>
+          <a href="{{ .Site.Params.homepage }}/figma/" class="text-sm font-medium text-gray-900 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">Quickstart</a>
         </li>
         <li class="mb-3 lg:px-2 xl:px-3 lg:mb-0">
-          <a href="{{ .Site.Params.homepage }}/blocks/" class="text-sm font-medium text-gray-900 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">Blocks</a>
+          <button data-collapse-toggle="flowbite-pro-menu" class="inline-flex items-center text-sm font-medium text-gray-900 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
+            Flowbite Pro <svg class="ml-1 w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+          </button>
         </li>
         <li class="mb-3 lg:px-2 xl:px-3 lg:mb-0">
           <a href="{{ .Site.Params.homepage }}/figma/" class="text-sm font-medium text-gray-900 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">Figma</a>
@@ -53,7 +55,7 @@
           <a href="{{ .Site.Params.homepage }}/resources/" class="text-sm font-medium text-gray-900 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">Resources</a>
         </li>
         <li class="mb-3 lg:px-2 xl:px-3 lg:mb-0">
-          <a href="{{ .Site.Params.homepage }}/pro/" class="text-sm font-medium text-gray-900 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">Pro version</a>
+          <a href="{{ .Site.Params.homepage }}/resources/" class="text-sm font-medium text-gray-900 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">Pricing & FAQ</a>
         </li>
       </ul>
       <a href="https://github.com/themesberg/flowbite" data-tooltip-target="tooltip-github-2" class="hidden sm:inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1" >
@@ -81,8 +83,49 @@
           Toggle dark mode
           <div class="tooltip-arrow" data-popper-arrow></div>
       </div>
-      <a href="{{ .Site.Params.homepage }}/pro/#pricing"  class="md:hidden inline-flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-3">Pricing</a>
-      <a href="{{ .Site.Params.homepage }}/pro/#pricing"  class="hidden md:inline-flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-3">Pricing & FAQ</a>
+      <a href="{{ .Site.Params.homepage }}/login/"  class="inline-flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-3">Sign in <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a>
     </div>
   </div>
+  </nav>
+  <nav id="flowbite-pro-menu" class="hidden w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-600">
+    <div class="grid gap-4 py-4 px-3 mx-auto text-gray-900 lg:px-3 max-w-8xl dark:text-white md:grid-cols-2 lg:grid-cols-4">
+        <div class="col-span-2 lg:col-span-1">
+          <a href="#" class="block p-4 rounded-lg hover:bg-gray-50">
+              <h3 class="inline-flex items-center mb-2 font-semibold text-gray-900 dark:text-white"><svg class="mr-2 mb-px w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg> Flowbite Blocks</h3>
+              <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Jumpstart your web development with hundreds of beautiful components and sections built with Tailwind CSS.</p>
+              <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Easily customize the colors, fonts, and dark mode to match your design. Includes application, marketing, and e-commerce UI layouts.</p>
+              <span class="flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-400">
+                  Learn more <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              <span>
+          </a>
+        </div>
+        <div class="col-span-2 lg:col-span-1">
+          <a href="#" class="block p-4 rounded-lg hover:bg-gray-50">
+              <h3 class="inline-flex items-center mb-2 font-semibold text-gray-900 dark:text-white"><svg viewBox="0 0 38 57" class="inline mr-2 w-5 h-5" aria-hidden="true"><path fill="#1abcfe" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"></path><path fill="#0acf83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"></path><path fill="#ff7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"></path><path fill="#f24e1e" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"></path><path fill="#a259ff" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"></path></svg> Figma Design System</h3>
+              <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Prototype and design Tailwind CSS websites before coding with a profesionally-designed Figma design system － featuring over 1000+ component variants, responsive pages, dark mode, and auto-layout.</p>
+              <span class="flex items-center text-sm font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 dark:hover:text-purple-400">
+                Preview in Figma <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </span>
+          </a>
+        </div>
+        <div class="col-span-2 lg:col-span-1">
+          <a href="#" class="block p-4 rounded-lg hover:bg-gray-50">
+            <h3 class="inline-flex items-center mb-2 font-semibold text-gray-900 dark:text-white"><svg class="mr-2 mb-px w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path></svg> Flowbite Pages</h3>
+            <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Get started with a collection of ready-to-use pages built with Tailwind CSS for a dashboard layout, marketing landing pages, and more.</p>
+            <span class="flex items-center text-sm font-medium text-teal-600 hover:text-teal-800 dark:text-teal-500 dark:hover:text-teal-400">
+                View pages <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </span>
+          </a>
+        </div>
+        <div class="col-span-2 lg:col-span-1">
+          <a href="#" class="block p-4 rounded-lg hover:bg-gray-50">
+            <h3 class="inline-flex items-center mb-2 font-semibold text-gray-900 dark:text-white">Flowbite Pro</h3>
+            <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Get started with a collection of ready-to-use pages built with Tailwind CSS for a dashboard layout, marketing landing pages, and more.</p>
+            <span class="flex items-center text-sm font-medium text-teal-600 hover:text-teal-800 dark:text-teal-500 dark:hover:text-teal-400">
+                View pages <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </span>
+          </a>
+        </div>
+    </div>
+</nav>
 </header>

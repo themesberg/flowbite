@@ -2,7 +2,7 @@
 layout: home
 title: Tailwind CSS Images - Flowbite
 description: Use the typography plugin from Flowbite to apply styles to all inline elements like headings, paragraphs, lists, and images using a single format class
-group: components
+group: typography
 toc: true
 
 previous: List group
@@ -15,14 +15,14 @@ nextLink: components/modal/
 Use this default example of a checbkox element in a checked and unchecked state.
 
 {{< example id="default-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
-<img class="rounded-lg w-72 h-72" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="content gallery 3">
+<img class="w-72 h-72 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="content gallery 3">
 {{< /example >}}
 
 ## Raised (with shadow)
 Use this default example of a checbkox element in a checked and unchecked state.
 
 {{< example id="default-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
-<img class="rounded-full shadow-xl w-72 h-72" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="content gallery 3">
+<img class="w-72 h-72 rounded-full shadow-xl" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="content gallery 3">
 {{< /example >}}
 
 ## Rounded full
@@ -30,7 +30,7 @@ Use this default example of a checbkox element in a checked and unchecked state.
 Use this default example of a checbkox element in a checked and unchecked state.
 
 {{< example id="default-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
-<img class="rounded-full w-96 h-96" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" alt="content gallery 3">
+<img class="w-96 h-96 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" alt="content gallery 3">
 {{< /example >}}
 
 ## Text over image

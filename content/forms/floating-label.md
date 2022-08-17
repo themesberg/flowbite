@@ -7,8 +7,8 @@ toc: true
 
 previous: Range Slider
 previousLink: forms/range/
-next: Datepicker
-nextLink: plugins/datepicker/
+next: Headings
+nextLink: typography/headings/
 ---
 
 The floating label style was first pioneered by Google in its infamous Material UI design system and it's basically a label tag which floats just above the input field when it is being focused or already has content inside.

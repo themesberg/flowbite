@@ -68,9 +68,11 @@ Use the `srcset` attribute to set Retina-ready images with double resolution.
 <img srcset="/docs/images/examples/image-1.jpg 1x, /docs/images/examples/image-1@2x.jpg 2x" class="w-full max-w-xl h-auto rounded-lg" alt="image description">
 {{< /example >}}
 
-## Text image
+## Image card
 
-{{< example id="image-grayscale-example" class="flex justify-center" github="typography/images.md" show_dark=true >}}
+Use this example to make the image a card item with a link and a short text description.
+
+{{< example id="image-card-example" class="flex justify-center" github="typography/images.md" show_dark=true >}}
 <figure class="relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
   <a href="#">
     <img class="rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" alt="image description">

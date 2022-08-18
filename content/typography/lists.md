@@ -1,23 +1,25 @@
 ---
 layout: home
 title: Tailwind CSS Lists - Flowbite
-description: Use the typography plugin from Flowbite to apply styles to all inline elements like headings, paragraphs, lists, and images using a single format class
+description: Use the list component to show an unordered or ordered list of items based on multiple styles, layouts, and variants built with Tailwind CSS and Flowbite
 group: typography
 toc: true
 
-previous: List group
-previousLink: components/list-group/
-next: Modals
-nextLink: components/modal/
+previous: Video
+previousLink: typography/video/
+next: Links
+nextLink: typography/links/
 ---
+
+Get started with a collection of list components built with Tailwind CSS for ordered and unordered lists with bullets, numbers, or icons and other styles and layouts to show a list of items inside an article or throughout your web page.
 
 ## Unordored list
 
-Use this default example of a checbkox element in a checked and unchecked state.
+Use this example to create a default unordered list of items using the `list-disc` class.
 
-{{< example id="default-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="unordered-list-example" github="typography/lists.md" show_dark=true >}}
 <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Password requirements:</h2>
-<ul role="list" class="space-y-1 max-w-md list-disc list-inside text-gray-500 dark:text-gray-400">
+<ul class="space-y-1 max-w-md list-disc list-inside text-gray-500 dark:text-gray-400">
     <li>
         At least 10 characters (and up to 100 characters)
     </li>
@@ -25,16 +27,18 @@ Use this default example of a checbkox element in a checked and unchecked state.
         At least one lowercase character
     </li>
     <li>
-        nclusion of at least one special character, e.g., ! @ # ?
+        Inclusion of at least one special character, e.g., ! @ # ?
     </li>
 </ul>
 {{< /example >}}
 
-### Icon
+### Icons
 
-{{< example id="default-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
+This example can be used to apply custom icons instead of the default bullets for the list items.
+
+{{< example id="unordered-list-icon-example" github="typography/lists.md" show_dark=true >}}
 <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Password requirements:</h2>
-<ul role="list" class="space-y-1 max-w-md list-inside text-gray-500 dark:text-gray-400">
+<ul class="space-y-1 max-w-md list-inside text-gray-500 dark:text-gray-400">
     <li class="flex items-center">
         <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
         At least 10 characters
@@ -51,7 +55,10 @@ Use this default example of a checbkox element in a checked and unchecked state.
 {{< /example >}}
 
 ### Nested
-{{< example id="default-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
+
+Use this example to nested another list of items inside the parent list element.
+
+{{< example id="unordered-list-nested-example" github="typography/lists.md" show_dark=true >}}
 <ul class="space-y-4 list-disc list-inside text-gray-500 dark:text-gray-400">
     <li>
         List item one
@@ -80,13 +87,32 @@ Use this default example of a checbkox element in a checked and unchecked state.
 </ul>
 {{< /example >}}
 
+### Unstyled
+
+Use the `list-none` class to disable the list style bullets or numbers.
+
+{{< example id="unordered-list-unstyled-example" github="typography/lists.md" show_dark=true >}}
+<h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Password requirements:</h2>
+<ul class="space-y-1 max-w-md list-none list-inside text-gray-500 dark:text-gray-400">
+    <li>
+        At least 10 characters (and up to 100 characters)
+    </li>
+    <li>
+        At least one lowercase character
+    </li>
+    <li>
+        Inclusion of at least one special character, e.g., ! @ # ?
+    </li>
+</ul>
+{{< /example >}}
+
 ## Ordered list
 
-Use this default example of a checbkox element in a checked and unchecked state.
+Use the `<ol>` tag to create an ordered list of items with numbers.
 
-{{< example id="default-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="ordered-list-example" github="typography/lists.md" show_dark=true >}}
 <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Top students:</h2>
-<ol role="list" class="space-y-1 max-w-md list-decimal list-inside text-gray-500 dark:text-gray-400">
+<ol class="space-y-1 max-w-md list-decimal list-inside text-gray-500 dark:text-gray-400">
     <li>
         <span class="font-semibold text-gray-900 dark:text-white">Bonnie Green</span> with <span class="font-semibold text-gray-900 dark:text-white">70</span> points
     </li>
@@ -101,9 +127,9 @@ Use this default example of a checbkox element in a checked and unchecked state.
 
 ### Nested
 
-Use this default example of a checbkox element in a checked and unchecked state.
+This example can be used to nest multiple lists into each other.
 
-{{< example id="default-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="ordered-list-nested-example" github="typography/lists.md" show_dark=true >}}
 <ol class="space-y-4 list-decimal list-inside text-gray-500 dark:text-gray-400">
    <li>
       List item one
@@ -132,12 +158,67 @@ Use this default example of a checbkox element in a checked and unchecked state.
 </ol>
 {{< /example >}}
 
-## Default
+## Description list
 
-Use this default example of a checbkox element in a checked and unchecked state.
+Create a description list by using the `<dl>` tag and set the term and name with the following example.
 
-{{< example id="default-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
-<ul role="list" class="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
+{{< example id="description-list-example" github="typography/lists.md" show_dark=true >}}
+<dl class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
+    <div class="flex flex-col pb-3">
+        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Email address</dt>
+        <dd class="text-lg font-semibold">yourname@flowbite.com</dd>
+    </div>
+    <div class="flex flex-col py-3">
+        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Home address</dt>
+        <dd class="text-lg font-semibold">92 Miles Drive, Newark, NJ 07103, California, USA</dd>
+    </div>
+    <div class="flex flex-col pt-3">
+        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Phone number</dt>
+        <dd class="text-lg font-semibold">+00 123 456 789 / +12 345 678</dd>
+    </div>
+</dl>
+{{< /example >}}
+
+## List with icons
+
+Use this example to create a list of items with custom SVG icons instead of the default bullets.
+
+{{< example id="list-icons-example" github="typography/lists.md" show_dark=true >}}
+<ul class="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400">
+    <li class="flex items-center space-x-3">
+        <!-- Icon -->
+        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+        <span>Individual configuration</span>
+    </li>
+    <li class="flex items-center space-x-3">
+        <!-- Icon -->
+        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+        <span>No setup, or hidden fees</span>
+    </li>
+    <li class="flex items-center space-x-3">
+        <!-- Icon -->
+        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+        <span>Team size: <span class="font-semibold text-gray-900 dark:text-white">1 developer</span></span>
+    </li>
+    <li class="flex items-center space-x-3">
+        <!-- Icon -->
+        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+        <span>Premium support: <span class="font-semibold text-gray-900 dark:text-white">6 months</span></span>
+    </li>
+    <li class="flex items-center space-x-3">
+        <!-- Icon -->
+        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+        <span>Free updates: <span class="font-semibold text-gray-900 dark:text-white">6 months</span></span>
+    </li>
+</ul>
+{{< /example >}}
+
+## Advanced layout
+
+This example can be used to show more details for each list item such as the user's name, email and profile picture.
+
+{{< example id="list-advanced-layout-example" github="typography/lists.md" show_dark=true >}}
+<ul class="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
    <li class="pb-3 sm:pb-4">
       <div class="flex items-center space-x-4">
          <div class="flex-shrink-0">
@@ -231,66 +312,11 @@ Use this default example of a checbkox element in a checked and unchecked state.
 </ul>
 {{< /example >}}
 
-## Description list
+## Horizontal list
 
-Use this default example of a checbkox element in a checked and unchecked state.
+Use this example to create a horizontally aligned list of items.
 
-{{< example id="default-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
-<dl class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
-    <div class="flex flex-col pb-3">
-        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Email address</dt>
-        <dd class="text-lg font-semibold">yourname@flowbite.com</dd>
-    </div>
-    <div class="flex flex-col py-3">
-        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Home address</dt>
-        <dd class="text-lg font-semibold">92 Miles Drive, Newark, NJ 07103, California, USA</dd>
-    </div>
-    <div class="flex flex-col pt-3">
-        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Phone number</dt>
-        <dd class="text-lg font-semibold">+00 123 456 789 / +12 345 678</dd>
-    </div>
-</dl>
-{{< /example >}}
-
-## With icons
-
-Use this default example of a checbkox element in a checked and unchecked state.
-
-{{< example id="default-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
-<ul role="list" class="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400">
-    <li class="flex items-center space-x-3">
-        <!-- Icon -->
-        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-        <span>Individual configuration</span>
-    </li>
-    <li class="flex items-center space-x-3">
-        <!-- Icon -->
-        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-        <span>No setup, or hidden fees</span>
-    </li>
-    <li class="flex items-center space-x-3">
-        <!-- Icon -->
-        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-        <span>Team size: <span class="font-semibold text-gray-900 dark:text-white">1 developer</span></span>
-    </li>
-    <li class="flex items-center space-x-3">
-        <!-- Icon -->
-        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-        <span>Premium support: <span class="font-semibold text-gray-900 dark:text-white">6 months</span></span>
-    </li>
-    <li class="flex items-center space-x-3">
-        <!-- Icon -->
-        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-        <span>Free updates: <span class="font-semibold text-gray-900 dark:text-white">6 months</span></span>
-    </li>
-</ul>
-{{< /example >}}
-
-## Horizontal
-
-Use this default example of a checbkox element in a checked and unchecked state.
-
-{{< example id="default-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
+{{< example id="horizontal-list-example" github="typography/lists.md" show_dark=true >}}
 <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
     <li>
         <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>

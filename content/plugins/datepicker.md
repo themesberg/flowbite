@@ -6,8 +6,8 @@ group: plugins
 toc: true
 requires_js: true
 
-previous: Floating Label
-previousLink: forms/floating-label/
+previous: Horizontal Rule
+previousLink: typography/horizontal-rule/
 ---
 
 The Tailwind CSS datepicker component developed by Flowbite is built with vanilla JavaScript and using the utility-first classes from Tailwind. The datepicker features both inline and a date range picker functionality and some extra options such as autohide, custom format, positioning, and more.

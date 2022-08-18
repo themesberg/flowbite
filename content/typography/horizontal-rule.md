@@ -5,10 +5,10 @@ description: Use the typography plugin from Flowbite to apply styles to all inli
 group: typography
 toc: true
 
-previous: List group
-previousLink: components/list-group/
-next: Modals
-nextLink: components/modal/
+previous: Text
+previousLink: typography/text/
+next: Datepicker
+nextLink: plugins/datepicker/
 ---
 
 ## Default

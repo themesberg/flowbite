@@ -1,14 +1,14 @@
 ---
 layout: home
 title: Tailwind CSS Links - Flowbite
-description: Use the typography plugin from Flowbite to apply styles to all inline elements like headings, paragraphs, lists, and images using a single format class
+description: The link component can be used to set hyperlinks from one page to another or to an external website when clicking on an inline text item, button, or card
 group: typography
 toc: true
 
-previous: List group
-previousLink: components/list-group/
-next: Modals
-nextLink: components/modal/
+previous: Lists
+previousLink: typography/lists/
+next: Text
+nextLink: typography/text/
 ---
 
 ## Default

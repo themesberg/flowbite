@@ -5,8 +5,8 @@ description: Use the KBD component as an inline element to denote textual user i
 group: components
 toc: true
 
-previous: Timeline
-previousLink: components/timeline/
+previous: Video
+previousLink: components/video/
 next: Progress bar
 nextLink: components/progress/
 ---

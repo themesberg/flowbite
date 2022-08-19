@@ -18,7 +18,7 @@ Make sure that you have included Flowbite as a plugin inside your Tailwind CSS p
 
 ## Checkbox example
 
-Use this default example of a checbkox element in a checked and unchecked state.
+Use this default example of a checkbox element in a checked and unchecked state.
 
 {{< example id="default-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex items-center mb-4">

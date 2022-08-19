@@ -56,6 +56,7 @@
     - title: Pagination
     - title: Rating
     - title: Timeline
+    - title: Video
     - title: KBD
       new: true
     - title: Progress
@@ -81,6 +82,17 @@
     - title: Toggle
     - title: Range
     - title: Floating Label
+
+- title: Typography
+  pages:
+    - title: Headings
+    - title: Paragraphs
+    - title: Blockquote
+    - title: Images
+    - title: Lists
+    - title: Links
+    - title: Text
+    - title: HR
 
 - title: Plugins
   pages:

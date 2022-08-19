@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Tailwind CSS Horizontal Rule (HR) - Flowbite
+title: Tailwind CSS Horizontal Line (HR) - Flowbite
 description: Use the typography plugin from Flowbite to apply styles to all inline elements like headings, paragraphs, lists, and images using a single format class
 group: typography
 toc: true

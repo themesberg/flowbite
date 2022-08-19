@@ -7,8 +7,8 @@ toc: true
 
 previous: Blockquote
 previousLink: typography/blockquote/
-next: Video
-nextLink: typography/video/
+next: Lists
+nextLink: typography/lists/
 ---
 
 Get started with a collection of responsive image components coded with the utility classes from Tailwind CSS that you can use inside articles, cards, sections, and other components based on multiple styles, sizes, layouts, and hover animations.

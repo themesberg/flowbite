@@ -5,8 +5,8 @@ description: Use the list component to show an unordered or ordered list of item
 group: typography
 toc: true
 
-previous: Video
-previousLink: typography/video/
+previous: Images
+previousLink: typography/images/
 next: Links
 nextLink: typography/links/
 ---

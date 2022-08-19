@@ -56,6 +56,7 @@
     - title: Pagination
     - title: Rating
     - title: Timeline
+    - title: Video
     - title: KBD
       new: true
     - title: Progress
@@ -88,7 +89,6 @@
     - title: Paragraphs
     - title: Blockquote
     - title: Images
-    - title: Video
     - title: Lists
     - title: Links
     - title: Text

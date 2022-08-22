@@ -87,6 +87,16 @@ Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking chang
   {{< requires_react >}}
 </div>
 
+## WindiCSS
+
+Flowbite also works with WindiCSS. Just include the WindiCSS version of the Flowbite plugin inside the `windi.config.js` file.
+
+```bash
+plugins: [
+    require('flowbite/plugin-windicss')
+],
+```
+
 ## React
 
 If you're using React as a front-end library you can also use the components from Flowbite including the interactive ones such as the dropdowns, modals, and tooltips as long as you install Tailwind CSS and Flowbite in an existing project.

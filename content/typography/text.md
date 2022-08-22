@@ -49,6 +49,18 @@ This example can be used to the font weight of an inline text element using the 
 <p class="text-4xl font-black text-gray-900 dark:text-white">Aa</p>
 {{< /example >}}
 
+## Text color
+
+Use the `text-{color}` classes from Tailwind CSS to set the color of the inline text.
+
+{{< example id="text-color-example" class="space-y-2" github="typography/text.md" show_dark=true >}}
+<p class="text-blue-600">This text is in the blue color.</p>
+<p class="text-green-500">This text is in the green color.</p>
+<p class="text-red-600">This text is in the red color.</p>
+<p class="text-purple-600">This text is in the purple color.</p>
+<p class="text-teal-600">This text is in the teal color.</p>
+{{< /example >}}
+
 ## Letter spacing
 
 Increase or decrease the spacing between letters using the `tracking-{type}` class.

@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Laravel - Flowbite
-description: Learn how to install Tailwind CSS with Flowbite using Laravel Mix and start building modern websites with the most popular PHP framework in the world
+description: Learn how to install and use FlowbiteTailwind CSS components in your Laravel projects.
 group: getting-started
 toc: true
 requires_laravel: true
@@ -16,53 +16,23 @@ Laravel is the most popular PHP web framework based on the model-view-controller
 
 Use the officially recommended Tailwind CSS utility-first framework and the UI components from Flowbite to enhance your front-end development process.
 
-## Install Tailwind CSS with Laravel
+## Requirements
 
-Make sure that you have <a href="https://getcomposer.org/" rel="nofollow">Composer</a> and <a href="https://nodejs.org/en/" rel="nofollow">Node.js</a> installed locally on your computer.
+These instructions assume you have a working Laravel 9+ project with Tailwind installed. If not, follow the [Laravel installation guide](https://laravel.com/docs/9.x/installation) and the instructions for [setting up Tailwind CSS in a Laravel project](https://tailwindcss.com/docs/guides/laravel).
 
-Follow the next steps to install Tailwind CSS and Flowbite with Laravel Mix. 
+**Note:** New Laravel projects, as of version 9.19, use [Vite](https://vitejs.dev/) as the default front-end bundler.
 
-1. Require the Laravel Installer globally using Composer:
+## Installation
 
-```bash
-composer global require laravel/installer
-```
-
-Make sure to place the vendor bin directory in your PATH. Here's how you can do it based on each OS:
-
-- macOS: `export PATH="$PATH:$HOME/.composer/vendor/bin"`
-- Windows: `set PATH=%PATH%;%USERPROFILE%\AppData\Roaming\Composer\vendor\bin`
-- Linux: `export PATH="~/.config/composer/vendor/bin:$PATH"`
-
-2. Create a new project using Laravel's CLI:
+1. Install the Flowbite package:
 
 ```bash
-laravel new awesome-project
-
-cd awesome-project
+npm install -D flowbite
 ```
 
-You can now access the Laravel application on `http://localhost:8000`.
-
-This command will initialize a blank Laravel project that you can get started with.
-
-3. Install Tailwind CSS and Flowbite using NPM:
-
-```javascript
-npm install -D tailwindcss postcss autoprefixer flowbite
-```
-
-4. Create a Tailwind CSS config file:
+2. Add the view paths and require Flowbite as a plugin inside `tailwind.config.js`:
 
 ```bash
-npx tailwindcss init
-```
-
-A new `tailwind.config.js` file will be created inside your root folder.
-
-5. Add the view paths and require Flowbite as a plugin inside `tailwind.config.js`:
-
-```javascript
 module.exports = {
     content: [
       "./resources/**/*.blade.php",
@@ -79,47 +49,63 @@ module.exports = {
   }
 ```
 
-This will tell the compiler from Tailwind what files to look for to properly apply the classes inside the final CSS file and it will also install the extra plugin options from Flowbite.
+3. Import the Flowbite Javascript files:
 
-6. Add Tailwind CSS to your Laravel Mix configuration by requiring it inside the `webpack.mix.js` file:
+*Option 1*: Include the files in your HTML
 
 ```javascript
-mix.js("resources/js/app.js", "public/js")
-  .postCss("resources/css/app.css", "public/css", [
-
-    // add here
-    require("tailwindcss"),
-
-  ]);
-```
-
-7. Add the directives inside the `./resources/css/app.css` file:
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-8. Include the `app.css` file inside the `<head>` tag of your view templates:
-
-```html
-<link href="/css/app.css" rel="stylesheet">
-```
-
-9. Require the `flowbite.js` file before the end of the `<body>` tag:
-
-```html
 <script src="../path/to/flowbite/dist/flowbite.js"></script>
 ```
 
-Alternatively, you can also include the JavaScript file using CDN:
+or import from a CDN
 
-```html
-<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
+```javascript
+<script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
 ```
 
-Now that you've set everything up start up a local development server using `php artisan serve` and run the build process for Webpack by using `npm run watch`.
+**Option 2**: Import the module in resources/js/app.js
+
+```javascript
+import "./bootstrap";
+import "flowbite";
+```
+
+4. Start the Vite build process:
+```bash
+npm run dev
+```
+
+## Using Flowbite components in Laravel
+[Laravel Blade components](https://laravel.com/docs/9.x/blade#components) are a great way to extract Flowbite components for better reusability. Here’s an example Blade component that uses the [Flowbite default card](https://flowbite.com/docs/components/card/) with a named slot for the card title and a default slot for the card body.
+
+### Example Blade card component:
+
+`resources/views/components/card.blade.php`
+
+```html
+<a href="#" 
+     class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md 
+     hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+    
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900    
+               dark:text-white">
+        {{ $title }}
+    </h5>
+    
+     <p class="font-normal text-gray-700 dark:text-gray-400">{{ $slot }}</p>
+</a>
+```
+
+### Using the Blade card component in your view:
+
+```html
+<x-card>
+    <x-slot:title>Noteworthy technology acquisitions 2022</x-slot:title>
+    Here are the biggest enterprise technology acquisitions of 2022 so far, in  
+    reverse chronological order.
+</x-card>
+```
+
 
 ## Flowbite components
 

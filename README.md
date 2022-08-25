@@ -463,6 +463,10 @@ For casual chatting with others using the library:
 
 💬 [Join the Flowbite Discord Server](https://discord.gg/4eeurUVvTy)
 
+Video tutorials and presentations using Flowbite:
+
+🎥 [Subscribe to our YouTube channel](https://www.youtube.com/channel/UC_Ms4V2kYDsh7F_CSsHyQ6A)
+
 ## Figma
 
 If you need the Figma files for the components you can check out our website for more information:

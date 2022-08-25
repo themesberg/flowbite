@@ -227,8 +227,12 @@ Please reach out to us via the <a href="https://github.com/themesberg/flowbite">
 
 Feel free to join our <a href="https://discord.gg/4eeurUVvTy" rel="nofollow">community on Discord</a> to receive help, contribute to the project, or just discuss about Flowbite, Tailwind CSS, and web development in general.
 
+## YouTube channel
+
+You can also subscribe to the official [Flowbite YouTube channel](https://www.youtube.com/channel/UC_Ms4V2kYDsh7F_CSsHyQ6A) to view tutorials on how you can use the Flowbite ecosystem to design and build websites.
+
 ## Authors
 
-- <a href="https://twitter.com/zoltanszogyenyi" rel="nofollow">Zoltán Szőgyényi</a> (web developer)
+- <a href="https://twitter.com/zoltanszogyenyi">Zoltán Szőgyényi</a> (web developer)
 - <a href="https://twitter.com/RobertTanislav" rel="nofollow">Robert Tanislav</a> (web designer)
 - <a href="https://twitter.com/victorcordos" rel="nofollow">Victor Cordos</a> (web developer)

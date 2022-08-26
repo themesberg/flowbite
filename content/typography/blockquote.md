@@ -52,8 +52,6 @@ Use this example to show an icon above the blockquote text content.
 </blockquote>
 {{< /example >}}
 
-aria-hidden="true"
-
 ## Paragraph context
 
 Use this example to show a blockquote component between multiple paragraph elements.

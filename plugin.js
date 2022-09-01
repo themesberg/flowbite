@@ -361,48 +361,48 @@ module.exports = plugin(function ({ addBase, theme }) {
             'border-style': 'solid',
             'border-color': colors.gray[600],
         },
-        [`[role="tooltip"][data-popper-placement^='top'] > [data-popper-arrow]:before`]: {
+        [`[data-popover][role="tooltip"][data-popper-placement^='top'] > [data-popper-arrow]:before`]: {
             'border-bottom-width': '1px',
             'border-right-width': '1px'
         },
-        [`[role="tooltip"][data-popper-placement^='top'] > [data-popper-arrow]:after`]: {
+        [`[data-popover][role="tooltip"][data-popper-placement^='top'] > [data-popper-arrow]:after`]: {
             'border-bottom-width': '1px',
             'border-right-width': '1px'
         },
-        [`[role="tooltip"][data-popper-placement^='right'] > [data-popper-arrow]:before`]: {
+        [`[data-popover][role="tooltip"][data-popper-placement^='right'] > [data-popper-arrow]:before`]: {
             'border-bottom-width': '1px',
             'border-left-width': '1px'
         },
-        [`[role="tooltip"][data-popper-placement^='right'] > [data-popper-arrow]:after`]: {
+        [`[data-popover][role="tooltip"][data-popper-placement^='right'] > [data-popper-arrow]:after`]: {
             'border-bottom-width': '1px',
             'border-left-width': '1px'
         },
-        [`[role="tooltip"][data-popper-placement^='bottom'] > [data-popper-arrow]:before`]: {
+        [`[data-popover][role="tooltip"][data-popper-placement^='bottom'] > [data-popper-arrow]:before`]: {
             'border-top-width': '1px',
             'border-left-width': '1px'
         },
-        [`[role="tooltip"][data-popper-placement^='bottom'] > [data-popper-arrow]:after`]: {
+        [`[data-popover][role="tooltip"][data-popper-placement^='bottom'] > [data-popper-arrow]:after`]: {
             'border-top-width': '1px',
             'border-left-width': '1px'
         },
-        [`[role="tooltip"][data-popper-placement^='left'] > [data-popper-arrow]:before`]: {
+        [`[data-popover][role="tooltip"][data-popper-placement^='left'] > [data-popper-arrow]:before`]: {
             'border-top-width': '1px',
             'border-right-width': '1px'
         },
-        [`[role="tooltip"][data-popper-placement^='left'] > [data-popper-arrow]:after`]: {
+        [`[data-popover][role="tooltip"][data-popper-placement^='left'] > [data-popper-arrow]:after`]: {
             'border-top-width': '1px',
             'border-right-width': '1px'
         },
-        [`[role="tooltip"][data-popper-placement^='top'] > [data-popper-arrow]`]: {
+        [`[data-popover][role="tooltip"][data-popper-placement^='top'] > [data-popper-arrow]`]: {
             bottom: '-5px'
         },
-        [`[role="tooltip"][data-popper-placement^='bottom'] > [data-popper-arrow]`]: {
+        [`[data-popover][role="tooltip"][data-popper-placement^='bottom'] > [data-popper-arrow]`]: {
             top: '-5px'
         },
-        [`[role="tooltip"][data-popper-placement^='left'] > [data-popper-arrow]`]: {
+        [`[data-popover][role="tooltip"][data-popper-placement^='left'] > [data-popper-arrow]`]: {
             right: '-5px'
         },
-        [`[role="tooltip"][data-popper-placement^='right'] > [data-popper-arrow]`]: {
+        [`[data-popover][role="tooltip"][data-popper-placement^='right'] > [data-popper-arrow]`]: {
             left: '-5px'
         },
         ['[role="tooltip"].invisible > [data-popper-arrow]:before']: {

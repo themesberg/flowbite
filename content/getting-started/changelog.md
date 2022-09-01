@@ -15,6 +15,10 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v1.5.3
+
+- fix popover / tooltip styles
+
 ### v1.5.2
 
 - add new Popover component

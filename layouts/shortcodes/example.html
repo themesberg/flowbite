@@ -117,6 +117,9 @@
                       <div class="tooltip-arrow" data-popper-arrow></div>
                   </div>
                 {{ end }}
+                <div class="hidden" data-clipboard-content>
+                  {{- $input -}}
+                </div>
               </div>
             </div>
           {{- highlight (trim $content "\n") $lang "" -}}

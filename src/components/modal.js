@@ -9,7 +9,6 @@ class Modal {
     constructor(targetEl = null, options = {}) {
         this._targetEl = targetEl
         this._options = { ...Default, ...options }
-        this._isHidden = true
         this._init()
     }
 
@@ -20,7 +19,7 @@ class Modal {
     }
 
     _createBackdrop() {
-        if (this._isHidden) {
+        if (this._isHidden()) {
             const backdropEl = document.createElement('div');
             backdropEl.setAttribute('modal-backdrop', '');
             backdropEl.classList.add(...this._options.backdropClasses.split(" "));
@@ -29,7 +28,7 @@ class Modal {
     }
 
     _destroyBackdropEl() {
-        if (!this._isHidden) {
+        if (!this._isHidden()) {
             document.querySelector('[modal-backdrop]').remove();
         }
     }
@@ -66,8 +65,12 @@ class Modal {
         }
     }
 
+    _isHidden() {
+        return this._targetEl.classList.contains('hidden')
+    }
+
     toggle() {
-        if (this._isHidden) {
+        if (this._isHidden()) {
             this.show()
         } else {
             this.hide()
@@ -79,25 +82,23 @@ class Modal {
 
     show() {
         this._targetEl.classList.add('flex')
-        this._targetEl.classList.remove('hidden')
         this._targetEl.setAttribute('aria-modal', 'true')
         this._targetEl.setAttribute('role', 'dialog')
         this._targetEl.removeAttribute('aria-hidden')
         this._createBackdrop()
-        this._isHidden = false
+        this._targetEl.classList.remove('hidden')
 
         // callback function
         this._options.onShow(this)
     }
 
     hide() {
-        this._targetEl.classList.add('hidden')
         this._targetEl.classList.remove('flex')
         this._targetEl.setAttribute('aria-hidden', 'true')
         this._targetEl.removeAttribute('aria-modal')
         this._targetEl.removeAttribute('role')
         this._destroyBackdropEl()
-        this._isHidden = true
+        this._targetEl.classList.add('hidden')
 
         // callback function
         this._options.onHide(this)

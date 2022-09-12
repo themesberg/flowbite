@@ -23,9 +23,6 @@ class Collapse {
         if (this._triggerEl) {
             if (this._triggerEl.hasAttribute('aria-expanded')) {
                 this._visible = this._triggerEl.getAttribute('aria-expanded') === 'true' ? true : false
-            } else {
-                // fix until v2 not to break previous single collapses which became dismiss
-                this._visible = this._targetEl.classList.contains(getPrefixedClassName('%p%hidden')) ? false : true
             }
 
             this._triggerEl.addEventListener('click', () => {
@@ -47,7 +44,8 @@ class Collapse {
     }
 
     expand() {
-        this._targetEl.classList.remove(getPrefixedAttribute('%p%hidden'))
+        this._targetEl.classList.remove(getPrefixedClassName('%p%hidden'))
+        console.log(this._targetEl)
         if(this._triggerEl) {
             this._triggerEl.setAttribute('aria-expanded', 'true')
         }
@@ -78,7 +76,7 @@ const initCollapse = (selector) => {
     })
 }
 
-const baseSelector = getPrefixedAttribute('collapse-toggle', '') // we need this to make legacy selectors with no prefix work pre v1.5
+const baseSelector = getPrefixedAttribute('collapse-toggle', '') // we need this to make legacy selectors with no prefix work pre v2.x
 const prefixSelector = getPrefixedAttribute('collapse-toggle', config.getSelectorsPrefix())
 
 if (document.readyState !== 'loading') {

@@ -12,12 +12,12 @@ next: Tooltips
 nextLink: components/tooltips/
 ---
 
-The toast component can be used to enhance your website's interactivity by pushing notifications to your visitors. You can choose from multiple styles, colors, sizes, and positions and even dismiss the component by using the `data-fb-collapse-toggle` data attribute from Flowbite.
+The toast component can be used to enhance your website's interactivity by pushing notifications to your visitors. You can choose from multiple styles, colors, sizes, and positions and even dismiss the component by using the `data-fb-dismiss-target` data attribute from Flowbite.
 
 
 ## Default toast
 
-Use this simple toast component with an icon, message, and dismissable close button to show alert messages to your website visitors. Make sure that you set the correct id for the `data-fb-collapse-toggle` data attribute to enable the dismissable feature.
+Use this simple toast component with an icon, message, and dismissable close button to show alert messages to your website visitors. Make sure that you set the correct id for the `data-fb-dismiss-target` data attribute to enable the dismissable feature.
 
 {{< example id="default-toast-example" class="flex justify-center" github="components/toast.md" show_dark=true >}}
 <div id="toast-default" class="flex items-center w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">

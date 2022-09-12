@@ -1,10 +1,14 @@
+import config from '../core/config'
+import { getPrefixedAttribute, getPrefixedDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
+
 const Default = {
     placement: 'left',
     bodyScrolling: false,
     backdrop: true,
     edge: false,
-    edgeOffset: 'bottom-[60px]',
-    backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-30',
+    edgeOffset: getPrefixedClassNames('%p%bottom-[60px]'),
+    backdropClasses: getPrefixedClassNames('%p%bg-gray-900 %p%bg-opacity-50 dark:%p%bg-opacity-80 %p%fixed %p%inset-0 %p%z-30'),
     onShow: () => { },
     onHide: () => { },
     onToggle: () => { }
@@ -22,12 +26,12 @@ class Drawer {
         // set initial accessibility attributes
         if (this._targetEl) {
             this._targetEl.setAttribute('aria-hidden', 'true')
-            this._targetEl.classList.add('transition-transform')
+            this._targetEl.classList.add(getPrefixedClassName('%p%transition-transform'))
         }
 
         // set base placement classes
         this._getPlacementClasses(this._options.placement).base.map(c => {
-            this._targetEl.classList.add(c)
+            this._targetEl.classList.add(getPrefixedClassName(`%p%${c}`))
         })
 
         // hide by default
@@ -42,17 +46,17 @@ class Drawer {
         // based on the edge option show placement classes
         if (this._options.edge) {
             this._getPlacementClasses(this._options.placement + '-edge').active.map(c => {
-                this._targetEl.classList.remove(c)
+                this._targetEl.classList.remove(getPrefixedClassName(`%p%${c}`))
             })
             this._getPlacementClasses(this._options.placement + '-edge').inactive.map(c => {
-                this._targetEl.classList.add(c)
+                this._targetEl.classList.add(getPrefixedClassName(`%p%${c}`))
             })
         } else {
             this._getPlacementClasses(this._options.placement).active.map(c => {
-                this._targetEl.classList.remove(c)
+                this._targetEl.classList.remove(getPrefixedClassName(`%p%${c}`))
             })
             this._getPlacementClasses(this._options.placement).inactive.map(c => {
-                this._targetEl.classList.add(c)
+                this._targetEl.classList.add(getPrefixedClassName(`%p%${c}`))
             })
         }
 
@@ -63,7 +67,7 @@ class Drawer {
 
         // enable body scroll
         if (!this._options.bodyScrolling) {
-            document.body.classList.remove('overflow-hidden')
+            document.body.classList.remove(getPrefixedClassName('%p%overflow-hidden'))
         }
 
         // destroy backdrop
@@ -80,17 +84,17 @@ class Drawer {
     show() {
         if (this._options.edge) {
             this._getPlacementClasses(this._options.placement + '-edge').active.map(c => {
-                this._targetEl.classList.add(c)
+                this._targetEl.classList.add(getPrefixedClassName(`%p%${c}`))
             })
             this._getPlacementClasses(this._options.placement + '-edge').inactive.map(c => {
-                this._targetEl.classList.remove(c)
+                this._targetEl.classList.remove(getPrefixedClassName(`%p%${c}`))
             })
         } else {
             this._getPlacementClasses(this._options.placement).active.map(c => {
-                this._targetEl.classList.add(c)
+                this._targetEl.classList.add(getPrefixedClassName(`%p%${c}`))
             })
             this._getPlacementClasses(this._options.placement).inactive.map(c => {
-                this._targetEl.classList.remove(c)
+                this._targetEl.classList.remove(getPrefixedClassName(`%p%${c}`))
             })
         }
 
@@ -101,7 +105,7 @@ class Drawer {
 
         // disable body scroll
         if (!this._options.bodyScrolling) {
-            document.body.classList.add('overflow-hidden')
+            document.body.classList.add(getPrefixedClassName('%p%overflow-hidden'))
         }
 
         // show backdrop
@@ -145,39 +149,39 @@ class Drawer {
         switch (placement) {
             case 'top':
                 return {
-                    base: ['top-0', 'left-0', 'right-0'],
-                    active: ['transform-none'],
-                    inactive: ['-translate-y-full']
+                    base: [getPrefixedClassName('%p%top-0'), getPrefixedClassName('%p%left-0'), getPrefixedClassName('%p%right-0')],
+                    active: [getPrefixedClassName('%p%transform-none')],
+                    inactive: [getPrefixedClassName('-%p%translate-y-full')]
                 }
             case 'right':
                 return {
-                    base: ['right-0', 'top-0'],
-                    active: ['transform-none'],
-                    inactive: ['translate-x-full']
+                    base: [getPrefixedClassName('%p%right-0'), getPrefixedClassName('%p%top-0')],
+                    active: [getPrefixedClassName('%p%transform-none')],
+                    inactive: [getPrefixedClassName('%p%translate-x-full')]
                 }
             case 'bottom':
                 return {
-                    base: ['bottom-0', 'left-0', 'right-0'],
-                    active: ['transform-none'],
-                    inactive: ['translate-y-full']
+                    base: [getPrefixedClassName('%p%bottom-0'), getPrefixedClassName('%p%left-0'), getPrefixedClassName('%p%right-0')],
+                    active: [getPrefixedClassName('%p%transform-none')],
+                    inactive: [getPrefixedClassName('%p%translate-y-full')]
                 }
             case 'left':
                 return {
-                    base: ['left-0', 'top-0'],
-                    active: ['transform-none'],
-                    inactive: ['-translate-x-full']
+                    base: [getPrefixedClassName('%p%left-0'), getPrefixedClassName('%p%top-0')],
+                    active: [getPrefixedClassName('%p%transform-none')],
+                    inactive: [getPrefixedClassName('-%p%translate-x-full')]
                 }
             case 'bottom-edge':
                 return {
-                    base: ['left-0', 'top-0'],
-                    active: ['transform-none'],
-                    inactive: ['translate-y-full', this._options.edgeOffset]
+                    base: [getPrefixedClassName('%p%left-0'), getPrefixedClassName('%p%top-0')],
+                    active: [getPrefixedClassName('%p%transform-none')],
+                    inactive: [getPrefixedClassName('%p%translate-y-full'), this._options.edgeOffset]
                 }
             default:
                 return {
-                    base: ['left-0', 'top-0'],
-                    active: ['transform-none'],
-                    inactive: ['-translate-x-full']
+                    base: [getPrefixedClassName('%p%left-0'), getPrefixedClassName('%p%top-0')],
+                    active: [getPrefixedClassName('%p%transform-none')],
+                    inactive: [getPrefixedClassName('-%p%translate-x-full')]
                 }
         }
     }
@@ -192,19 +196,20 @@ const getDrawerInstance = (id, instances) => {
     return false
 }
 
-function initDrawer() {
+
+const initDrawer = (selectors) => {
     let drawerInstances = []
-    document.querySelectorAll('[data-drawer-target]').forEach(triggerEl => {
+    document.querySelectorAll(`[${selectors.target}]`).forEach(triggerEl => {
         // mandatory
-        const targetEl = document.getElementById(triggerEl.getAttribute('data-drawer-target'))
+        const targetEl = document.getElementById(triggerEl.getAttribute(selectors.target))
         const drawerId = targetEl.id
 
         // optional
-        const placement = triggerEl.getAttribute('data-drawer-placement')
-        const bodyScrolling = triggerEl.getAttribute('data-drawer-body-scrolling')
-        const backdrop = triggerEl.getAttribute('data-drawer-backdrop')
-        const edge = triggerEl.getAttribute('data-drawer-edge')
-        const edgeOffset = triggerEl.getAttribute('data-drawer-edge-offset')
+        const placement = triggerEl.getAttribute(selectors.placement)
+        const bodyScrolling = triggerEl.getAttribute(selectors.bodyScrolling)
+        const backdrop = triggerEl.getAttribute(selectors.backdrop)
+        const edge = triggerEl.getAttribute(selectors.edge)
+        const edgeOffset = triggerEl.getAttribute(selectors.edgeOffset)
         
         let drawer = null
         if (getDrawerInstance(drawerId, drawerInstances)) {
@@ -225,8 +230,8 @@ function initDrawer() {
         }
     })
 
-    document.querySelectorAll('[data-drawer-toggle]').forEach(triggerEl => {
-        const targetEl = document.getElementById(triggerEl.getAttribute('data-drawer-toggle'))
+    document.querySelectorAll(`[${selectors.toggle}]`).forEach(triggerEl => {
+        const targetEl = document.getElementById(triggerEl.getAttribute(selectors.toggle))
         const drawerId = targetEl.id
         const drawer = getDrawerInstance(drawerId, drawerInstances)
 
@@ -239,8 +244,8 @@ function initDrawer() {
         })
     })
 
-    document.querySelectorAll('[data-drawer-dismiss]').forEach(triggerEl => {
-        const targetEl = document.getElementById(triggerEl.getAttribute('data-drawer-dismiss'))
+    document.querySelectorAll(`[${selectors.dismiss}]`).forEach(triggerEl => {
+        const targetEl = document.getElementById(triggerEl.getAttribute(selectors.dismiss))
         const drawerId = targetEl.id
         const drawer = getDrawerInstance(drawerId, drawerInstances)
 
@@ -249,8 +254,8 @@ function initDrawer() {
         })
     })
 
-    document.querySelectorAll('[data-drawer-show]').forEach(triggerEl => {
-        const targetEl = document.getElementById(triggerEl.getAttribute('data-drawer-show'))
+    document.querySelectorAll(`[${selectors.show}]`).forEach(triggerEl => {
+        const targetEl = document.getElementById(triggerEl.getAttribute(selectors.show))
         const drawerId = targetEl.id
         const drawer = getDrawerInstance(drawerId, drawerInstances)
 
@@ -260,12 +265,29 @@ function initDrawer() {
     })
 }
 
+const selectors = {
+    target: 'drawer-target',
+    toggle: 'drawer-toggle',
+    dismiss: 'drawer-dismiss',
+    show: 'drawer-show',
+    placement: 'drawer-placement',
+    bodyScrolling: 'drawer-body-scrolling',
+    backdrop: 'drawer-backdrop',
+    edge: 'drawer-edge',
+    edgeOffset: 'drawer-edge-offset'
+}
+
+const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
+
 if (document.readyState !== 'loading') {
     // DOMContentLoaded event were already fired. Perform explicit initialization now
-    initDrawer()
+    initDrawer(baseSelectors)
+    initDrawer(prefixSelectors)
 } else {
     // DOMContentLoaded event not yet fired, attach initialization process to it
-    document.addEventListener('DOMContentLoaded', initDrawer)
+    document.addEventListener('DOMContentLoaded', initDrawer(baseSelectors))
+    document.addEventListener('DOMContentLoaded', initDrawer(prefixSelectors))
 }
 
 export default Drawer

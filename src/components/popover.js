@@ -1,4 +1,7 @@
+import config from '../core/config'
 import { createPopper } from '@popperjs/core';
+import { getPrefixedDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedClassNames } from '../helpers/class-name'
 
 const Default = {
     placement: 'top',
@@ -82,8 +85,8 @@ class Popover {
     }
 
     show() {
-        this._targetEl.classList.remove('opacity-0', 'invisible')
-        this._targetEl.classList.add('opacity-100', 'visible')
+        this._targetEl.classList.remove(...getPrefixedClassNames('%p%opacity-0 %p%invisible').split(' '))
+        this._targetEl.classList.add(...getPrefixedClassNames('%p%opacity-100 %p%visible').split(' '))
 
         // Enable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -102,8 +105,8 @@ class Popover {
     }
 
     hide() {
-        this._targetEl.classList.remove('opacity-100', 'visible')
-        this._targetEl.classList.add('opacity-0', 'invisible')
+        this._targetEl.classList.remove(...getPrefixedClassNames('%p%opacity-100 %p%visible').split(' '))
+        this._targetEl.classList.add(...getPrefixedClassNames('%p%opacity-0 %p%invisible').split(' '))
 
         // Disable the event listeners
         this._popperInstance.setOptions(options => ({
@@ -121,12 +124,12 @@ class Popover {
 
 window.Popover = Popover;
 
-function initPopover() {
-    document.querySelectorAll('[data-popover-target]').forEach(triggerEl => {
-        const targetEl = document.getElementById(triggerEl.getAttribute('data-popover-target'))
-        const triggerType = triggerEl.getAttribute('data-popover-trigger');
-        const placement = triggerEl.getAttribute('data-popover-placement');
-        const offset = triggerEl.getAttribute('data-popover-offset');
+const initPopover = (selectors) => {
+    document.querySelectorAll(`[${selectors.main}]`).forEach(triggerEl => {
+        const targetEl = document.getElementById(triggerEl.getAttribute(selectors.main))
+        const triggerType = triggerEl.getAttribute(selectors.trigger);
+        const placement = triggerEl.getAttribute(selectors.placement);
+        const offset = triggerEl.getAttribute(selectors.offset);
 
         new Popover(targetEl, triggerEl, {
             placement: placement ? placement : Default.placement,
@@ -136,12 +139,24 @@ function initPopover() {
     })
 }
 
+const selectors = {
+	main: 'popover-target',
+	trigger: 'popover-trigger',
+	placement: 'popover-placement',
+	offset: 'popover-offset'
+}
+
+const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
+
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initPopover()
+	initPopover(baseSelectors)
+	initPopover(prefixSelectors)
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initPopover)
+	document.addEventListener('DOMContentLoaded', initPopover(baseSelectors))
+	document.addEventListener('DOMContentLoaded', initPopover(prefixSelectors))
 }
 
 export default Popover

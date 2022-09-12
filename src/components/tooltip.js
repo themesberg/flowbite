@@ -1,7 +1,7 @@
 import config from '../core/config'
-import { getPrefixedDataAttributes } from '../helpers/data-attribute'
 import { createPopper } from '@popperjs/core';
-import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
+import { getPrefixedDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedClassNames } from '../helpers/class-name'
 
 const Default = {
     placement: 'top',

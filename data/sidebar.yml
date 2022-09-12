@@ -24,6 +24,8 @@
     - title: Theming
     - title: Colors
     - title: Icons
+    - title: Prefix
+      new: true
     - title: Optimization
 
 - title: Components

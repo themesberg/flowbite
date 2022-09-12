@@ -289,8 +289,8 @@ Flowbite is an open source collection of UI components built with the utility cl
   </tr>
   <tr>
     <td width="33.3333%">Floating Label</td>
-    <td width="33.3333%"></td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">Mega Menu</td>
+    <td width="33.3333%">Skeleton</td>
   </tr>
   <tr>
     <td width="33.3333%">
@@ -298,8 +298,104 @@ Flowbite is an open source collection of UI components built with the utility cl
             <img alt="Tailwind CSS Floating Label" src="https://flowbite.s3.amazonaws.com/github/floating-label.jpg">
         </a>
     </td>
-    <td width="33.3333%"></td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/mega-menu/">
+            <img alt="Tailwind CSS Mega Menu" src="https://flowbite.s3.amazonaws.com/github/mega-menu.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/skeleton/">
+            <img alt="Tailwind CSS Skeleton" src="https://flowbite.s3.amazonaws.com/github/skeleton.jpg">
+        </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">KBD (keyboard)</td>
+    <td width="33.3333%">Drawer (offcanvas)</td>
+    <td width="33.3333%">Popover</td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/kbd/">
+            <img alt="Tailwind CSS KBD (Keyboard)" src="https://flowbite.s3.amazonaws.com/github/kbd.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/drawer/">
+            <img alt="Tailwind CSS Drawer (offcanvas)" src="https://flowbite.s3.amazonaws.com/github/drawer.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/popover/">
+            <img alt="Tailwind CSS Popover" src="https://flowbite.s3.amazonaws.com/github/popover.jpg">
+        </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Video</td>
+    <td width="33.3333%">Heading</td>
+    <td width="33.3333%">Paragraph</td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/video/">
+            <img alt="Tailwind CSS Video" src="https://flowbite.s3.amazonaws.com/github/video.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/typography/headings/">
+            <img alt="Tailwind CSS Heading" src="https://flowbite.s3.amazonaws.com/github/heading.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/typography/paragraphs/">
+            <img alt="Tailwind CSS Paragraph" src="https://flowbite.s3.amazonaws.com/github/paragraph.jpg">
+        </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Blockquote</td>
+    <td width="33.3333%">Image</td>
+    <td width="33.3333%">List</td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/typography/blockquote/">
+            <img alt="Tailwind CSS Blockquote" src="https://flowbite.s3.amazonaws.com/github/blockquote.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/typography/images/">
+            <img alt="Tailwind CSS Image" src="https://flowbite.s3.amazonaws.com/github/image.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/typography/lists/">
+            <img alt="Tailwind CSS List" src="https://flowbite.s3.amazonaws.com/github/list.jpg">
+        </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Link</td>
+    <td width="33.3333%">Text</td>
+    <td width="33.3333%">Horizontal line (HR)</td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/typography/links/">
+            <img alt="Tailwind CSS Link" src="https://flowbite.s3.amazonaws.com/github/link.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/typography/text/">
+            <img alt="Tailwind CSS Text" src="https://flowbite.s3.amazonaws.com/github/text.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/typography/hr/">
+            <img alt="Tailwind CSS HR" src="https://flowbite.s3.amazonaws.com/github/hr.jpg">
+        </a>
+    </td>
   </tr>
 </table>
 
@@ -366,6 +462,10 @@ If you need help or just want to discuss about the library join the community on
 For casual chatting with others using the library:
 
 💬 [Join the Flowbite Discord Server](https://discord.gg/4eeurUVvTy)
+
+Video tutorials and presentations using Flowbite:
+
+🎥 [Subscribe to our YouTube channel](https://www.youtube.com/channel/UC_Ms4V2kYDsh7F_CSsHyQ6A)
 
 ## Figma
 

@@ -10,8 +10,10 @@ import Carousel from './components/carousel'
 import Dismiss from './components/dismiss'
 import Dropdown from './components/dropdown'
 import Modal from './components/modal'
+import Drawer from './components/drawer'
 import Tabs from './components/tabs'
 import Tooltip from './components/tooltip'
+import Popover from './components/popover'
 
 export default {
     Config,
@@ -21,6 +23,8 @@ export default {
     Dismiss,
     Dropdown,
     Modal,
+    Drawer,
     Tabs,
     Tooltip,
+    Popover
 }

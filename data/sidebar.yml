@@ -3,12 +3,15 @@
     - title: Introduction
     - title: Quickstart
     - title: React
+    - title: Next.js
+      slug: next-js
+      new: true
     - title: Vue
     - title: Laravel
     - title: Svelte
     - title: Rails
-      new: true
     - title: Django
+    - title: Flask
       new: true
     # - title: Angular
     - title: License
@@ -28,15 +31,14 @@
     - title: Alerts
     - title: Accordion
     - title: Avatar
-      new: true
     - title: Badge
     - title: Breadcrumb
     - title: Buttons
     - title: Button group
     - title: Card
     - title: Carousel
-      new: true
     - title: Dropdowns
+      new: true
     - title: Forms
     - title: List Group
     - title: Typography
@@ -47,12 +49,21 @@
       new: true
     - title: Footer
     - title: Sidebar
+    - title: Drawer
+      new: true
+    - title: Skeleton
+      new: true
     - title: Pagination
     - title: Rating
-      new: true
     - title: Timeline
+    - title: Video
+    - title: KBD
+      new: true
     - title: Progress
+    - title: Popover
+      new: true
     - title: Tables
+      new: true
     - title: Spinner
     - title: Toast
     - title: Tooltips
@@ -65,11 +76,23 @@
     - title: Select
     - title: Textarea
     - title: Checkbox
+      new: true
     - title: Radio
+      new: true
     - title: Toggle
     - title: Range
-      new: true
     - title: Floating Label
+
+- title: Typography
+  pages:
+    - title: Headings
+    - title: Paragraphs
+    - title: Blockquote
+    - title: Images
+    - title: Lists
+    - title: Links
+    - title: Text
+    - title: HR
 
 - title: Plugins
   pages:

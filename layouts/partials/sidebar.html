@@ -1,5 +1,5 @@
-<div id="navWrapper" class="overflow-hidden overflow-y-auto z-20 h-full bg-white scrolling-touch max-w-2xs lg:h-screen lg:block lg:sticky top:24 lg:top-12 dark:bg-gray-900 lg:mr-0">
-  <nav id="nav" class="pt-16 px-1 pl-3 lg:pl-0 lg:pt-2 overflow-y-auto font-medium text-base lg:text-sm pb-10 lg:pb-20 sticky?lg:h-(screen-18)" aria-label="Docs navigation">
+<div id="navWrapper" class="overflow-y-auto z-20 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-3rem)] lg:block lg:sticky top:24 lg:top-28 dark:bg-gray-900 lg:mr-0">
+  <nav id="nav" class="pt-16 px-1 pl-3 lg:pl-0 lg:pt-2 font-normal text-base lg:text-sm pb-10 lg:pb-20 sticky?lg:h-(screen-18)" aria-label="Docs navigation">
     {{- $url := split .Permalink "/" -}}
     {{- $page_slug := index $url (sub (len $url) 2) -}}
 
@@ -21,19 +21,24 @@
           <h5 class="mb-2 text-sm font-semibold tracking-wide text-gray-900 uppercase lg:text-xs dark:text-white">{{ $group.title }}</h5>
           <ul class="py-1 list-unstyled fw-normal small">
             {{- range $doc := $group.pages -}}
-              {{- $doc_slug := $doc.title | urlize -}}
+              {{- $doc_slug := "" -}}
+              {{- if $doc.slug -}}
+                {{- $doc_slug = $doc.slug -}}
+              {{- else -}}
+                {{- $doc_slug = $doc.title | urlize -}}
+              {{- end -}}
               {{- $is_active := and $is_active_group (eq $page_slug $doc_slug) -}}
               {{- $href := printf "/docs/%s/%s/" $group_slug $doc_slug }}
               <li>
-                <a href="{{ $href }}" class="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-400 dark:hover:text-white {{ if $is_active }} text-blue-700 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-500{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }} {{ if ( eq $doc.new true) }}<span class="bg-blue-100 text-blue-800 text-2xs font-semibold ml-2 px-1.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-900">NEW</span>{{ end }}</a>
+                <a href="{{ $href }}" data-sidebar-item class="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-400 dark:hover:text-white {{ if $is_active }} text-blue-700 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-500{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }} {{ if ( eq $doc.new true) }}<span class="bg-blue-100 text-blue-800 text-2xs font-semibold ml-2 px-1.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-900">NEW</span>{{ end }}</a>
               </li>
             {{- end }}
           </ul>
         </li>
       {{- else }}
-        <li class="my-3 mx-4 border-top"></li>
+        <li class="mx-4 my-3 border-top"></li>
         <li>
-          <a href="/{{ $group_slug }}/" class="d-inline-flex align-items-center {{ if $is_active_group }} active{{ end }}"{{ if $is_active_group }} aria-current="page"{{ end }}>
+          <a href="/{{ $group_slug }}/" data-sidebar-item class="d-inline-flex align-items-center {{ if $is_active_group }} active{{ end }}"{{ if $is_active_group }} aria-current="page"{{ end }}>
             {{ $group.title }}
           </a>
         </li>

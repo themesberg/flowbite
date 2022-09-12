@@ -6,8 +6,8 @@ group: getting-started
 toc: true
 requires_vue: true
 
-previous: React
-previousLink: getting-started/react/
+previous: Next.js
+previousLink: getting-started/next-js/
 next: Laravel
 nextLink: getting-started/laravel/
 ---
@@ -85,7 +85,6 @@ module.exports = {
     ]
 
 }
-
 ```
 8. Import the Flowbite JavaScript file inside your main `./src/main.js` file:
 
@@ -128,12 +127,12 @@ Here's an example of a modal component that you can use by adding inside your `A
   </button>
 
   <!-- Main modal -->
-  <div id="default-modal" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed right-0 left-0 top-4 z-50 justify-center items-center h-modal md:h-full md:inset-0">
-      <div class="relative px-4 w-full max-w-2xl h-full md:h-auto">
+  <div id="default-modal" aria-hidden="true" class="fixed left-0 right-0 z-50 items-center justify-center hidden overflow-x-hidden overflow-y-auto top-4 h-modal md:h-full md:inset-0">
+      <div class="relative w-full h-full max-w-2xl px-4 md:h-auto">
           <!-- Modal content -->
           <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
               <!-- Modal header -->
-              <div class="flex justify-between items-start p-5 rounded-t border-b dark:border-gray-600">
+              <div class="flex items-start justify-between p-5 border-b rounded-t dark:border-gray-600">
                   <h3 class="text-xl font-semibold text-gray-900 lg:text-2xl dark:text-white">
                       Terms of Service
                   </h3>
@@ -151,9 +150,9 @@ Here's an example of a modal component that you can use by adding inside your `A
                   </p>
               </div>
               <!-- Modal footer -->
-              <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
-                  <button data-fb-modal-toggle="default-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
-                  <button data-fb-modal-toggle="default-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600">Decline</button>
+              <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                  <button data-modal-toggle="default-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
+                  <button data-modal-toggle="default-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600">Decline</button>
               </div>
           </div>
       </div>

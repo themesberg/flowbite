@@ -18,7 +18,7 @@ It includes all of the commonly used components that a website requires, such as
 
 All of the elements are built using the utility classes from Tailwind CSS and vanilla JavaScript.
 
-<iframe width="100%" class="my-8 rounded-lg shadow-lg yt-video" src="https://www.youtube.com/embed/4bnJG2UDr9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" class="my-8 rounded-lg shadow-lg yt-video" src="https://www.youtube.com/embed/KaLxCiilHns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Here's a quick overview of the Flowbite ecosystem including the open source Tailwind components library, the Figma design files, and the pro version.
 
@@ -45,7 +45,7 @@ Here's a quick overview of the Flowbite ecosystem including the open source Tail
 
 One of the disadvantages of Tailwind CSS compared to other frameworks is that it doesn't have a base set of components. This makes it really hard to quickly prototype a user interface. 
 
-<span class="font-semibold text-gray-700 dark:text-gray-200">This is where Flowbite comes into play</span>: it's basically Tailwind CSS, but you get all of the components that you would normally get with a classic CSS framework like Bootstrap or Bulma.
+This is where Flowbite comes into play: it's basically Tailwind CSS, but you get all of the components that you would normally get with a classic CSS framework like Bootstrap or Bulma.
 
 There are at least 19 types of components including buttons, alerts, breadcrumbs, pagination, and navbars. Flowbite also includes some custom JavaScript that enables interactive components, such as dropdowns, modals, tooltips, and many more. 
 
@@ -140,6 +140,16 @@ If you're using React as a front-end library you can also use the components fro
 Learn how to <a href="{{< ref "getting-started/react" >}}">install Tailwind CSS and Flowbite with React</a>.
 
 <div class="mt-8 -mb-5">
+  {{< requires_nextjs >}}
+</div>
+
+## Next.js
+
+If you're using React as a front-end library and Next.js as a framework you can also use the components from Flowbite React such as the modals, dropdowns, and navbars to speed up your development time coupled with the utility classes from Tailwind CSS.
+
+Learn how to <a href="{{< ref "getting-started/next-js" >}}">install Tailwind CSS and Flowbite with Next.js and React</a>.
+
+<div class="mt-8 -mb-5">
   {{< requires_vue >}}
 </div>
 
@@ -189,9 +199,19 @@ Check out the Django integration guide with Tailwind CSS and Flowbite to set up 
 
 Learn how to <a href="{{< ref "getting-started/django" >}}">install Tailwind CSS and Flowbite with Django</a>.
 
+<div class="mt-8 -mb-5">
+  {{< requires_flask >}}
+</div>
+
+## Flask
+
+Check out the Flask integration guide with Tailwind CSS and Flowbite to set up all technologies and start developing with a micro framework combined with the UI components from Flowbite.
+
+Learn how to <a href="{{< ref "getting-started/flask" >}}">install Tailwind CSS and Flowbite with Flask</a>.
+
 ## Pro version
 
-If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite]("{{< param homepage >}}/pro/") which includes fully coded pages and layouts for application, marketing, and e-commerce user interfaces.
+If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite]({{< param homepage >}}/pro/) which includes fully coded pages and layouts for application, marketing, and e-commerce user interfaces.
 
 ## Licensing
 
@@ -207,8 +227,12 @@ Please reach out to us via the <a href="https://github.com/themesberg/flowbite">
 
 Feel free to join our <a href="https://discord.gg/4eeurUVvTy" rel="nofollow">community on Discord</a> to receive help, contribute to the project, or just discuss about Flowbite, Tailwind CSS, and web development in general.
 
+## YouTube channel
+
+You can also subscribe to the official [Flowbite YouTube channel](https://www.youtube.com/channel/UC_Ms4V2kYDsh7F_CSsHyQ6A) to view tutorials on how you can use the Flowbite ecosystem to design and build websites.
+
 ## Authors
 
-- <a href="https://twitter.com/zoltanszogyenyi" rel="nofollow">Zoltán Szőgyényi</a> (web developer)
+- <a href="https://twitter.com/zoltanszogyenyi">Zoltán Szőgyényi</a> (web developer)
 - <a href="https://twitter.com/RobertTanislav" rel="nofollow">Robert Tanislav</a> (web designer)
 - <a href="https://twitter.com/victorcordos" rel="nofollow">Victor Cordos</a> (web developer)

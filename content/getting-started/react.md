@@ -8,8 +8,8 @@ requires_react: true
 
 previous: Quickstart
 previousLink: getting-started/quickstart/
-next: Vue
-nextLink: getting-started/vue/
+next: Next.js
+nextLink: getting-started/next-js/
 ---
 
 React is one of the most popular front-end libraries in the world used by websites such as Facebook, Instagram, Yahoo Mail, Dropbox, and more built by the Meta (formerly Facebook) company.

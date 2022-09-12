@@ -2,6 +2,7 @@
 import './docs.css';
 import docsearch from '@docsearch/js';
 
+// Algolia docsearch
 docsearch({
   container: '#docsearch',
   appId: 'JUWZAHYJQ9',
@@ -10,7 +11,8 @@ docsearch({
   placeholder: 'Search documentation'
 });
 
-function fallbackCopyTextToClipboard(text) {
+// copy to clipboard
+const fallbackCopyTextToClipboard = text => {
   var textArea = document.createElement("textarea");
   textArea.value = text;
 
@@ -33,7 +35,8 @@ function fallbackCopyTextToClipboard(text) {
 
   document.body.removeChild(textArea);
 }
-function copyTextToClipboard(text) {
+
+const copyTextToClipboard = text => {
   if (!navigator.clipboard) {
     fallbackCopyTextToClipboard(text);
     return;
@@ -45,8 +48,9 @@ function copyTextToClipboard(text) {
   });
 }
 
-function initiateCopyToClipboard(element) {
-  var textToCopy = element.getElementsByClassName("code-preview")[0].innerHTML;
+const initiateCopyToClipboard = element => {
+  var textToCopy = element.querySelector('[data-clipboard-content]').innerHTML;
+  console.log(element.querySelector('[data-clipboard-content]').innerHTML)
   var button = element.getElementsByClassName("copy-to-clipboard-button")[0];
   var alert = document.getElementById('copied-code-alert');
   var copyText = button.getElementsByClassName('copy-text')[0];
@@ -64,182 +68,291 @@ function initiateCopyToClipboard(element) {
   });
 }
 
-function initiateToggleDarkState(element) {
+const updateiFrameDarkMode = (iFrame, theme) => {
+  let html = iFrame.contentDocument.querySelector('html')
+
+  if (theme === 'dark') {
+    html.classList.add('dark')
+  } else {
+    html.classList.remove('dark')
+  }
+}
+
+const updatePreviewThemeToggleButton = (buttonEl, theme) => {
+
+  const moonIconEl = buttonEl.querySelector('[data-toggle-icon="moon"]')
+  const sunIconEl = buttonEl.querySelector('[data-toggle-icon="sun"]')
+  const tooltipId = buttonEl.getAttribute('data-tooltip-target')
+  let buttonTextEl = null
+  if (tooltipId) {
+    buttonTextEl = document.getElementById(buttonEl.getAttribute('data-tooltip-target'))
+  }
+
+  if (theme === 'dark') {
+    buttonEl.setAttribute('data-toggle-dark', 'dark');
+    moonIconEl.classList.add('hidden');
+    sunIconEl.classList.remove('hidden');
+    if (tooltipId) {
+      buttonTextEl.textContent = 'Toggle light mode';
+    }
+  } else {
+    buttonEl.setAttribute('data-toggle-dark', 'light');
+    moonIconEl.classList.remove('hidden');
+    sunIconEl.classList.add('hidden');
+    if (tooltipId) {
+      buttonTextEl.textContent = 'Toggle dark mode';
+    }
+  }
+
+}
+
+const initiateToggleDarkState = element => {
   var codePreviewWrapper = element.getElementsByClassName('code-preview-wrapper')[0];
+  var iframeCodeEl = element.getElementsByClassName('iframe-code')[0];
   var button = element.getElementsByClassName("toggle-dark-state-example")[0];
-  var moonIcon = element.querySelector('[data-toggle-icon="moon"]');
-  var sunIcon = element.querySelector('[data-toggle-icon="sun"]');
+  var fullViewButton = element.getElementsByClassName("toggle-full-view")[0];
+  var tabletViewButton = element.getElementsByClassName("toggle-tablet-view")[0];
+  var mobileViewButton = element.getElementsByClassName("toggle-mobile-view")[0];
 
   if (button) {
     button.addEventListener('click', function () {
-
       var state = button.getAttribute('data-toggle-dark');
 
       if (state === 'light') {
         codePreviewWrapper.classList.add('dark');
-        button.setAttribute('data-toggle-dark', 'dark');
-        moonIcon.classList.add('hidden');
-        sunIcon.classList.remove('hidden');
+        updatePreviewThemeToggleButton(button, 'dark')
+        updateiFrameDarkMode(iframeCodeEl, 'dark')
       }
       if (state === 'dark') {
         codePreviewWrapper.classList.remove('dark');
-        button.setAttribute('data-toggle-dark', 'light');
-        moonIcon.classList.remove('hidden');
-        sunIcon.classList.add('hidden');
+        updatePreviewThemeToggleButton(button, 'light')
+        updateiFrameDarkMode(iframeCodeEl, 'light')
       }
+    })
+  }
+
+  if (mobileViewButton) {
+    mobileViewButton.addEventListener('click', () => {
+      const theme = button.getAttribute('data-toggle-dark');
+      iframeCodeEl.classList.add('max-w-sm')
+      iframeCodeEl.classList.add('max-w-lg')
+      iframeCodeEl.contentWindow.location.reload();
+      iframeCodeEl.classList.add('opacity-0')
+      iframeCodeEl.onload = () => {
+        updateiFrameHeight(iframeCodeEl)
+        updateiFrameDarkMode(iframeCodeEl, theme)
+      }
+      setTimeout(() => {
+        iframeCodeEl.classList.remove('opacity-0')
+      }, 500)
+    })
+  }
+  if (tabletViewButton) {
+    tabletViewButton.addEventListener('click', () => {
+      const theme = button.getAttribute('data-toggle-dark');
+      iframeCodeEl.classList.add('max-w-lg')
+      iframeCodeEl.classList.remove('max-w-sm')
+      iframeCodeEl.contentWindow.location.reload();
+      iframeCodeEl.classList.add('opacity-0')
+      iframeCodeEl.onload = () => {
+        updateiFrameHeight(iframeCodeEl)
+        updateiFrameDarkMode(iframeCodeEl, theme)
+      }
+      setTimeout(() => {
+        iframeCodeEl.classList.remove('opacity-0')
+      }, 500)
+    })
+  }
+  if (fullViewButton) {
+    fullViewButton.addEventListener('click', () => {
+      const theme = button.getAttribute('data-toggle-dark');
+      iframeCodeEl.classList.remove('max-w-sm', 'max-w-lg')
+      iframeCodeEl.contentWindow.location.reload();
+      iframeCodeEl.classList.add('opacity-0')
+      iframeCodeEl.onload = () => {
+        updateiFrameHeight(iframeCodeEl)
+        updateiFrameDarkMode(iframeCodeEl, theme)
+      }
+      setTimeout(() => {
+        iframeCodeEl.classList.remove('opacity-0')
+      }, 500)
     })
   }
 
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+const updateiFrameHeight = iFrame => {
+  setTimeout(() => {
+    iFrame.nextElementSibling.classList.add('hidden')
+    iFrame.style.height = iFrame.contentWindow.document.body.scrollHeight + 40 + 'px'
+  }, 500)
+}
 
+const updateiFrameCodeElsDarkMode = (theme) => {
+  const iframeCodeEls = document.querySelectorAll('.iframe-code')
+  iframeCodeEls.forEach(i => {
+    updateiFrameDarkMode(i, theme)
+  })
+}
+
+const initializeCodeExamples = (theme) => {
+  const codeExampleEls = document.querySelectorAll('.code-example')
+
+  codeExampleEls.forEach(c => {
+    const iframe = c.querySelector('.iframe-code')
+    updateiFrameHeight(iframe)
+    updateiFrameDarkMode(iframe, theme)
+    initiateCopyToClipboard(c)
+  })
+}
+
+const updateButtonThemeToggleEls = (theme) => {
+  const buttonThemeToggleEls = document.querySelectorAll('.toggle-dark-state-example')
+  buttonThemeToggleEls.forEach(b => {
+    updatePreviewThemeToggleButton(b, theme)
+  })
+}
+
+window.addEventListener('load', () => {
+
+  // set menu item location scroll
+  const currentHref = window.location.href;
+  const sidebarItemEls = document.querySelectorAll('[data-sidebar-item]')
+  const sidenav = document.getElementById('navWrapper')
+  const sidenavHeight = sidenav.clientHeight
+
+  sidebarItemEls.forEach(s => {
+    if (s.href === currentHref) {
+      const itemHeight = s.clientHeight
+      sidenav.scrollTop = s.offsetTop - (sidenavHeight / 2) + (itemHeight / 2)
+    }
+  })
+
+  // toggle dark mode
+  var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+  var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+  // Change the icons inside the button based on previous settings
+  if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    themeToggleLightIcon.classList.remove('hidden');
+    initializeCodeExamples('dark')
+    updateButtonThemeToggleEls('dark')
+  } else {
+    themeToggleDarkIcon.classList.remove('hidden');
+    initializeCodeExamples('light')
+    updateButtonThemeToggleEls('light')
+  }
+
+  var themeToggleBtn = document.getElementById('theme-toggle');
+
+  themeToggleBtn.addEventListener('click', function () {
+
+    // toggle icons
+    themeToggleDarkIcon.classList.toggle('hidden');
+    themeToggleLightIcon.classList.toggle('hidden');
+
+    // if set via local storage previously
+    if (localStorage.getItem('color-theme')) {
+      if (localStorage.getItem('color-theme') === 'light') {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+        updateiFrameCodeElsDarkMode('dark')
+        updateButtonThemeToggleEls('dark')
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+        updateiFrameCodeElsDarkMode('light')
+        updateButtonThemeToggleEls('light')
+      }
+
+      // if NOT set via local storage previously
+    } else {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+        updateiFrameCodeElsDarkMode('light')
+        updateButtonThemeToggleEls('light')
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+        updateiFrameCodeElsDarkMode('dark')
+        updateButtonThemeToggleEls('dark')
+      }
+    }
+
+  });
+
+  // sidebar functionality
+  const sidebar = document.getElementById('sidebar');
+
+  const toggleSidebarMobile = (sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose) => {
+    sidebar.classList.toggle('hidden');
+    sidebarBackdrop.classList.toggle('hidden');
+    toggleSidebarMobileHamburger.classList.toggle('hidden');
+    toggleSidebarMobileClose.classList.toggle('hidden');
+  }
+
+  const toggleSidebarMobileEl = document.getElementById('toggleSidebarMobile');
+  const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+  const toggleSidebarMobileHamburger = document.getElementById('toggleSidebarMobileHamburger');
+  const toggleSidebarMobileClose = document.getElementById('toggleSidebarMobileClose');
+
+  toggleSidebarMobileEl.addEventListener('click', () => {
+    toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
+  });
+
+  sidebarBackdrop.addEventListener('click', () => {
+    toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
+  });
+
+
+  // current year
   document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-  var codeExamples = document.getElementsByClassName("code-example");
-  for (var i = 0; i < codeExamples.length; i++) {
-    initiateCopyToClipboard(codeExamples.item(i));
-    initiateToggleDarkState(codeExamples.item(i));
-  }
-
-});
-
-var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-
-// Change the icons inside the button based on previous settings
-if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  themeToggleLightIcon.classList.remove('hidden');
-} else {
-  themeToggleDarkIcon.classList.remove('hidden');
-}
-
-var themeToggleBtn = document.getElementById('theme-toggle');
-
-themeToggleBtn.addEventListener('click', function () {
-
-  // toggle icons
-  themeToggleDarkIcon.classList.toggle('hidden');
-  themeToggleLightIcon.classList.toggle('hidden');
-
-  // if set via local storage previously
-  if (localStorage.getItem('color-theme')) {
-    if (localStorage.getItem('color-theme') === 'light') {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('color-theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('color-theme', 'light');
-    }
-
-    // if NOT set via local storage previously
-  } else {
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('color-theme', 'light');
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('color-theme', 'dark');
-    }
-  }
-
-});
-
-const sidebar = document.getElementById('sidebar');
-
-const toggleSidebarMobile = (sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose) => {
-  sidebar.classList.toggle('hidden');
-  sidebarBackdrop.classList.toggle('hidden');
-  toggleSidebarMobileHamburger.classList.toggle('hidden');
-  toggleSidebarMobileClose.classList.toggle('hidden');
-}
-
-const toggleSidebarMobileEl = document.getElementById('toggleSidebarMobile');
-const sidebarBackdrop = document.getElementById('sidebarBackdrop');
-const toggleSidebarMobileHamburger = document.getElementById('toggleSidebarMobileHamburger');
-const toggleSidebarMobileClose = document.getElementById('toggleSidebarMobileClose');
-
-toggleSidebarMobileEl.addEventListener('click', () => {
-  toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
-});
-
-sidebarBackdrop.addEventListener('click', () => {
-  toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
-});
-
-// Prevent anchor elements with empty fragments from linking to the top of the page 
-document.querySelectorAll('.code-example [href="#"]').forEach((event) => {
-  event.addEventListener('click', (event) => {
-    event.preventDefault();
+  // copy to clipboard
+  var codeExamples = document.querySelectorAll('.code-example');
+  codeExamples.forEach(c => {
+    initiateToggleDarkState(c);
   })
-})
+  // toc menu item activation
+  const deactivateMenuEl = el => {
+    el.classList.remove('!border-blue-700', '!after:opacity-100', '!text-blue-700', 'dark:!border-blue-500', 'dark:!text-blue-500')
+  }
 
+  const allMenuEls = document.querySelectorAll('#TableOfContents [href]')
+  const activateMenuEl = el => {
+    allMenuEls.forEach(el => {
+      deactivateMenuEl(el)
+    })
+    el.classList.add('!border-blue-700', '!after:opacity-100', '!text-blue-700', 'dark:!border-blue-500', 'dark:!text-blue-500')
+  }
 
-const _carbonOptimize = {
-  isRefreshAble: function () {
-    return !(
-      typeof document.addEventListener === 'undefined' ||
-      this.browserSupport().hidden === undefined
-    );
-  },
-  browserSupport: function () {
-    let hidden;
-    let visibilityChange;
-    if (typeof document.hidden !== 'undefined') {
-      // Opera 12.10 and Firefox 18 and later support
-      hidden = 'hidden';
-      visibilityChange = 'visibilitychange';
-    } else if (typeof document.msHidden !== 'undefined') {
-      hidden = 'msHidden';
-      visibilityChange = 'msvisibilitychange';
-    } else if (
-      typeof document.webkitHidden !== 'undefined'
-    ) {
-      hidden = 'webkitHidden';
-      visibilityChange = 'webkitvisibilitychange';
-    }
-    return {
-      hidden: hidden,
-      visibilityChange: visibilityChange,
-    };
-  },
-  handleVisibilityChange: function () {
-    const isElementInViewport = function (el) {
-      let element = document.querySelector(el);
-      let bounding = element.getBoundingClientRect();
-      let isVisible;
+  // anchor change activate menu element
+  let anchorChanged = false;
+  window.addEventListener('hashchange', () => {
+    anchorChanged = true;
+    const menuEl = document.querySelector(`#TableOfContents [href="${location.hash}"]`)
+    activateMenuEl(menuEl)
+    setTimeout(() => {
+      anchorChanged = false;
+    }, 99)
+  })
 
-      if (
-        bounding.top >= 0 &&
-        bounding.left >= 0 &&
-        bounding.right <= window.innerWidth &&
-        bounding.bottom <= window.innerHeight
-      ) {
-        isVisible = true;
-      } else {
-        isVisible = false;
+  // toc on scroll activation
+  const contentAnchorTags = document.querySelectorAll('#mainContent > h2 > span[id], #mainContent > h3 > span[id], #mainContent > h4 > span[id], #mainContent > h5 > span[id], #mainContent > h6 > span[id]')
+  contentAnchorTags.forEach(anchorEl => {
+    window.addEventListener('scroll', () => {
+      var element = anchorEl;
+      var position = element.getBoundingClientRect();
+
+      // checking whether fully visible
+      if (position.top + 140 >= 0 && position.bottom + 140 <= window.innerHeight) {
+        const menuEl = document.querySelector(`#TableOfContents [href="#${element.id}"]`)
+        if (!anchorChanged) {
+          activateMenuEl(menuEl)
+        }
       }
-      return isVisible;
-    };
+    });
+  })
 
-    if (!document.hidden) {
-      if (
-        typeof _carbonads !== 'undefined' &&
-        isElementInViewport('#carbonads')
-      ) {
-        _carbonads.refresh();
-      }
-    }
-  },
-  init: function () {
-    if (this.isRefreshAble()) {
-      document.addEventListener(
-        this.browserSupport().visibilityChange,
-        this.handleVisibilityChange,
-        false
-      );
-    }
-  },
-};
-
-_carbonOptimize.init();
+});

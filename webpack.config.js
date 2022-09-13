@@ -6,13 +6,10 @@ const path = require('path');
 module.exports = {
   entry: {
     datepicker: path.resolve(__dirname, 'src/plugins/datepicker.js'),
-    flowbite: path.resolve(__dirname, 'src/flowbite.js'),
+    flowbite: path.resolve(__dirname, 'src/flowbite.ts'),
     docs: path.resolve(__dirname, 'src/docs.js')
   },
-  output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, 'static/'),
-  },
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -50,7 +47,11 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.css']
+    extensions: ['.tsx', '.ts', '.js', '.jsx', '.css']
+  },
+  output: {
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'static/'),
   },
   plugins: [
     new MiniCssExtractPlugin(),

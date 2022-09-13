@@ -10,6 +10,9 @@ const Default = {
 }
 
 class Collapse {
+
+    
+
     constructor(targetEl = null, options) {
         this._targetEl = targetEl
         this._triggerEl = options ? options.triggerEl : Default.triggerEl

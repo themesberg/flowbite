@@ -2,7 +2,14 @@ import config from '../core/config'
 import { getPrefixedAttribute } from '../helpers/data-attribute'
 import { getPrefixedClassName } from '../helpers/class-name'
 
-const Default = {
+interface CollapseOptions {
+    triggerEl: Element,
+    onCollapse?(callback: any): any,
+    onExpand?(callback: any): any,
+    onToggle?(callback: any): any,
+}
+
+const defaultOptions: CollapseOptions = {
     triggerEl: null,
     onCollapse: () => { },
     onExpand: () => { },
@@ -10,13 +17,15 @@ const Default = {
 }
 
 class Collapse {
+    _targetEl: Element;
+    _triggerEl: Element;
+    _options: CollapseOptions;
+    _visible: boolean;
 
-    
-
-    constructor(targetEl = null, options) {
+    constructor(targetEl: Element, options: CollapseOptions) {
         this._targetEl = targetEl
-        this._triggerEl = options ? options.triggerEl : Default.triggerEl
-        this._options = { ...Default, ...options }
+        this._triggerEl = options ? options.triggerEl : defaultOptions.triggerEl
+        this._options = { ...defaultOptions, ...options }
         this._visible = false
         this._init()
     }
@@ -37,7 +46,7 @@ class Collapse {
 
     collapse() {
         this._targetEl.classList.add(getPrefixedClassName('%p%hidden'))
-        if(this._triggerEl) {
+        if (this._triggerEl) {
             this._triggerEl.setAttribute('aria-expanded', 'false')
         }
         this._visible = false
@@ -49,7 +58,7 @@ class Collapse {
     expand() {
         this._targetEl.classList.remove(getPrefixedClassName('%p%hidden'))
         console.log(this._targetEl)
-        if(this._triggerEl) {
+        if (this._triggerEl) {
             this._triggerEl.setAttribute('aria-expanded', 'true')
         }
         this._visible = true
@@ -64,13 +73,14 @@ class Collapse {
         } else {
             this.expand()
         }
+        this._options.onToggle(this)
     }
 
 }
 
 window.Collapse = Collapse;
 
-const initCollapse = (selector) => {
+const initCollapse = (selector: string) => {
     document.querySelectorAll(`[${selector}]`).forEach(triggerEl => {
         const targetEl = document.getElementById(triggerEl.getAttribute(selector))
         new Collapse(targetEl, {
@@ -79,17 +89,17 @@ const initCollapse = (selector) => {
     })
 }
 
-const baseSelector = getPrefixedAttribute('collapse-toggle', '') // we need this to make legacy selectors with no prefix work pre v2.x
-const prefixSelector = getPrefixedAttribute('collapse-toggle', config.getSelectorsPrefix())
+const baseSelector: string = getPrefixedAttribute('collapse-toggle', '') // we need this to make legacy selectors with no prefix work pre v2.x
+const prefixSelector: string = getPrefixedAttribute('collapse-toggle', config.getSelectorsPrefix())
 
 if (document.readyState !== 'loading') {
-	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initCollapse(baseSelector)
-	initCollapse(prefixSelector)
+    // DOMContentLoaded event were already fired. Perform explicit initialization now
+    initCollapse(baseSelector)
+    initCollapse(prefixSelector)
 } else {
-	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initCollapse(baseSelector))
-	document.addEventListener('DOMContentLoaded', initCollapse(prefixSelector))
+    // DOMContentLoaded event not yet fired, attach initialization process to it
+    document.addEventListener('DOMContentLoaded', initCollapse(baseSelector))
+    document.addEventListener('DOMContentLoaded', initCollapse(prefixSelector))
 }
 
 export default Collapse

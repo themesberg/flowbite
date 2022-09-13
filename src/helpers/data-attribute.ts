@@ -1,4 +1,4 @@
-export const getPrefixedAttribute = (value, prefix = null) => {
+export const getPrefixedAttribute = (value: string, prefix?: string) => {
     if (prefix === null || prefix === '') {
         return `data-${value}`
     }
@@ -6,10 +6,14 @@ export const getPrefixedAttribute = (value, prefix = null) => {
     return `data-${prefix}${value}`
 }
 
-export const getPrefixedDataAttributes = (values, prefix) => {
-    const prefixedValues = {}
+interface prefixedValues {
+    [key: string]: any
+}
+
+export const getPrefixedDataAttributes = (values: Array<string>, prefix?: string) => {
+    const prefixedObjects: prefixedValues = {}
     for (const key in values) {
-        prefixedValues[key] = getPrefixedAttribute(values[key], prefix)
+        prefixedObjects[key] = getPrefixedAttribute(values[key], prefix)
     }
-    return prefixedValues
+    return prefixedObjects
 }

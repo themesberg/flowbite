@@ -2,23 +2,58 @@ import config from '../core/config'
 import { getPrefixedDataAttributes } from '../helpers/data-attribute'
 import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
 
-const Default = {
+interface carouselItem {
+    position: number,
+    el: Element
+}
+
+interface indicatorItem {
+    position: number,
+    el: Element
+}
+
+interface carouselOptions {
+    defaultPosition?: number,
+    interval?: number,
+    indicators?: {
+        items: indicatorItem[],
+        activeClasses?: string,
+        inactiveClasses?: string
+    }
+    onNext?(callback: any): any,
+    onPrev?(callback: any): any,
+    onChange?(callback: any): any,
+}
+
+interface rotationItemsInterface {
+    left: carouselItem,
+    middle: carouselItem,
+    right: carouselItem
+}
+
+const defaultOptions: carouselOptions = {
     defaultPosition: 0,
     indicators: {
         items: [],
         activeClasses: getPrefixedClassNames('%p%bg-white dark:%p%bg-gray-800'),
         inactiveClasses: getPrefixedClassNames('%p%bg-white/50 dark:%p%bg-gray-800/50 hover:%p%bg-white dark:hover:%p%bg-gray-800')
     },
-    interval: 3000,
+    interval: 0,
     onNext: () => { },
     onPrev: () => { },
     onChange: () => { }
 }
 
 class Carousel {
-    constructor(items = [], options = {}) {
+    _items: carouselItem[]
+    _options: carouselOptions
+    _activeItem: carouselItem
+    _indicators: indicatorItem[]
+    _interval: ReturnType<typeof setInterval>
+
+    constructor(items: carouselItem[], options: carouselOptions) {
         this._items = items
-        this._options = { ...Default, ...options, indicators : { ...Default.indicators, ...options.indicators } }
+        this._options = { ...defaultOptions, ...options, indicators: { ...defaultOptions.indicators, ...options.indicators } }
         this._activeItem = this.getItem(this._options.defaultPosition)
         this._indicators = this._options.indicators.items
         this._interval = null
@@ -47,7 +82,7 @@ class Carousel {
         })
     }
 
-    getItem(position) {
+    getItem(position: number) {
         return this._items[position]
     }
 
@@ -55,9 +90,9 @@ class Carousel {
      * Slide to the element based on id
      * @param {*} position 
      */
-    slideTo(position) {
+    slideTo(position: number) {
         const nextItem = this._items[position]
-        const rotationItems = {
+        const rotationItems: rotationItemsInterface = {
             'left': nextItem.position === 0 ? this._items[this._items.length - 1] : this._items[nextItem.position - 1],
             'middle': nextItem,
             'right': nextItem.position === this._items.length - 1 ? this._items[0] : this._items[nextItem.position + 1]
@@ -116,7 +151,7 @@ class Carousel {
      * This method applies the transform classes based on the left, middle, and right rotation carousel items
      * @param {*} rotationItems 
      */
-    _rotate(rotationItems) {
+    _rotate(rotationItems: rotationItemsInterface) {
         // reset
         this._items.map(item => {
             item.el.classList.add(getPrefixedClassName('%p%hidden'))
@@ -162,7 +197,7 @@ class Carousel {
      * Set the currently active item and data attribute
      * @param {*} position 
      */
-    _setActiveItem(position) {
+    _setActiveItem(position: number) {
         this._activeItem = this._items[position]
 
         // update the indicators if available
@@ -182,15 +217,15 @@ class Carousel {
 
 window.Carousel = Carousel;
 
-const initCarousel = (selectors) => {
+const initCarousel = (selectors: selectorOptions) => {
     document.querySelectorAll(`[${selectors.main}]`).forEach(carouselEl => {
-        const interval = carouselEl.getAttribute(selectors.interval)
+        const interval = parseInt(carouselEl.getAttribute(selectors.interval))
         const slide = carouselEl.getAttribute(selectors.main) === 'slide' ? true : false
 
-        const items = []
+        const items: carouselItem[] = []
         let defaultPosition = 0
         if (carouselEl.querySelectorAll(`[${selectors.item}]`).length) {
-            [...carouselEl.querySelectorAll(`[${selectors.item}]`)].map((carouselItemEl, position) => {
+            carouselEl.querySelectorAll(`[${selectors.item}]`).forEach((carouselItemEl, position) => {
                 items.push({
                     position: position,
                     el: carouselItemEl
@@ -202,11 +237,11 @@ const initCarousel = (selectors) => {
             })
         }
 
-        const indicators = [];
+        const indicators: indicatorItem[] = [];
         if (carouselEl.querySelectorAll(`[${selectors.slide}]`).length) {
-            [...carouselEl.querySelectorAll(`[${selectors.slide}]`)].map((indicatorEl) => {
+            carouselEl.querySelectorAll(`[${selectors.slide}]`).forEach((indicatorEl) => {
                 indicators.push({
-                    position: indicatorEl.getAttribute(selectors.slide),
+                    position: parseInt(indicatorEl.getAttribute(selectors.slide)),
                     el: indicatorEl
                 })
             })
@@ -217,7 +252,7 @@ const initCarousel = (selectors) => {
             indicators: {
                 items: indicators
             },
-            interval: interval ? interval : Default.interval
+            interval: interval ? interval : defaultOptions.interval
         })
 
         if (slide) {
@@ -243,26 +278,30 @@ const initCarousel = (selectors) => {
     })
 }
 
-const selectors = {
-	main: 'carousel',
-	interval: 'carousel-interval',
+interface selectorOptions {
+    [key: string]: string
+}
+
+const selectorValues: selectorOptions = {
+    main: 'carousel',
+    interval: 'carousel-interval',
     item: 'carousel-item',
     slide: 'carousel-slide-to',
     next: 'carousel-next',
     prev: 'carousel-prev'
 }
 
-const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
-const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
+const baseSelectors = getPrefixedDataAttributes(selectorValues, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectorValues, config.getSelectorsPrefix())
 
 if (document.readyState !== 'loading') {
-	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initCarousel(baseSelectors)
-	initCarousel(prefixSelectors)
+    // DOMContentLoaded event were already fired. Perform explicit initialization now
+    initCarousel(baseSelectors)
+    initCarousel(prefixSelectors)
 } else {
-	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initCarousel(baseSelectors))
-	document.addEventListener('DOMContentLoaded', initCarousel(prefixSelectors))
+    // DOMContentLoaded event not yet fired, attach initialization process to it
+    document.addEventListener('DOMContentLoaded', () => initCarousel(baseSelectors))
+    document.addEventListener('DOMContentLoaded', () => initCarousel(prefixSelectors))
 }
 
 export default Carousel

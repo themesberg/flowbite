@@ -8,6 +8,13 @@
         "jsx": "react",
         "allowJs": true,
         "moduleResolution": "node",
-        "typeRoots": ["./node_modules/@types", "./src/types"]
+        "typeRoots": [
+            "./node_modules/@types",
+            "./src/types"
+        ],
+        "lib": [
+            "ES2021.String",
+            "DOM"
+        ]
     }
 }

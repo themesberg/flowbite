@@ -23,7 +23,6 @@ class Carousel {
         this._indicators = this._options.indicators.items
         this._interval = null
         this._init()
-
     }
 
     /**

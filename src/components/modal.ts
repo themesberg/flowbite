@@ -47,9 +47,6 @@ class Modal {
     }
 
     _handleOutsideClick(target) {
-        console.log(target)
-        console.log(this._options.backdrop)
-        console.log(this._targetEl.id)
         if (this._options.backdrop === 'dynamic') {
             if (target === this._targetEl || target === this._backdropEl) {
                 this.hide()
@@ -170,7 +167,6 @@ const initModal = (selectors) => {
                 placement: placement ? placement : Default.placement,
                 backdrop: backdrop ? backdrop : Default.backdrop
             })
-            console.log(modal)
             modalInstances.push({
                 id: modalId,
                 object: modal

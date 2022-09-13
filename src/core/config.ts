@@ -1,5 +1,5 @@
-import fbConfig from '../../flowbite.config'
-import twConfig from '../../tailwind.config'
+import * as fbConfig from '../../flowbite.config'
+import * as twConfig from '../../tailwind.config'
 
 const Default = {
     flowbiteConfig: {
@@ -11,7 +11,10 @@ const Default = {
 }
 
 class Config {
-    constructor(fbConfig, twConfig) {
+    fbConfig: any;
+    twConfig: any;
+
+    constructor(fbConfig: any, twConfig: any) {
         this.fbConfig = { ...Default.flowbiteConfig, ...fbConfig }
         this.twConfig = { ...Default.tailwindConfig, ...twConfig }
     }

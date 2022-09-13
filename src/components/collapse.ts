@@ -3,7 +3,7 @@ import { getPrefixedAttribute } from '../helpers/data-attribute'
 import { getPrefixedClassName } from '../helpers/class-name'
 
 interface CollapseOptions {
-    triggerEl: Element,
+    triggerEl?: Element,
     onCollapse?(callback: any): any,
     onExpand?(callback: any): any,
     onToggle?(callback: any): any,
@@ -15,7 +15,6 @@ const defaultOptions: CollapseOptions = {
     onExpand: () => { },
     onToggle: () => { }
 }
-
 class Collapse {
     _targetEl: Element;
     _triggerEl: Element;
@@ -57,7 +56,6 @@ class Collapse {
 
     expand() {
         this._targetEl.classList.remove(getPrefixedClassName('%p%hidden'))
-        console.log(this._targetEl)
         if (this._triggerEl) {
             this._triggerEl.setAttribute('aria-expanded', 'true')
         }
@@ -98,8 +96,8 @@ if (document.readyState !== 'loading') {
     initCollapse(prefixSelector)
 } else {
     // DOMContentLoaded event not yet fired, attach initialization process to it
-    document.addEventListener('DOMContentLoaded', initCollapse(baseSelector))
-    document.addEventListener('DOMContentLoaded', initCollapse(prefixSelector))
+    document.addEventListener('DOMContentLoaded', () => { initCollapse(baseSelector) })
+    document.addEventListener('DOMContentLoaded', () => { initCollapse(prefixSelector) })
 }
 
 export default Collapse

@@ -2,7 +2,15 @@ import config from '../core/config'
 import { getPrefixedAttribute } from '../helpers/data-attribute'
 import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
 
-const Default = {
+interface DismissOptions {
+    triggerEl?: Element,
+    transition?: string,
+    duration?: number,
+    timing?: string,
+    onHide?(callback: any, el: Element): any,
+}
+
+const defaultOptions: DismissOptions = {
     triggerEl: null,
     transition: getPrefixedClassName('%p%transition-opacity'),
     duration: 300,
@@ -11,10 +19,14 @@ const Default = {
 }
 
 class Dismiss {
-    constructor(targetEl = null, options = {}) {
+    _targetEl: Element
+    _triggerEl: Element
+    _options: DismissOptions
+
+    constructor(targetEl: Element, options: DismissOptions) {
         this._targetEl = targetEl
-        this._triggerEl = options ? options.triggerEl : Default.triggerEl
-        this._options = { ...Default, ...options }
+        this._triggerEl = options ? options.triggerEl : defaultOptions.triggerEl
+        this._options = { ...defaultOptions, ...options }
         this._init()
     }
 
@@ -39,27 +51,28 @@ class Dismiss {
 
 window.Dismiss = Dismiss;
 
-const initDismiss = (selector) => {
+const initDismiss = (selector: string) => {
     document.querySelectorAll(`[${selector}]`).forEach(triggerEl => {
         const targetEl = document.querySelector(triggerEl.getAttribute(selector))
+        console.log(targetEl)
 
         new Dismiss(targetEl, {
-            triggerEl
+            triggerEl: triggerEl
         })
     })
 }
 
-const baseSelector = getPrefixedAttribute('dismiss-target', '') // we need this to make legacy selectors with no prefix work pre v1.5
-const prefixSelector = getPrefixedAttribute('dismiss-target', config.getSelectorsPrefix())
+const baseSelector: string = getPrefixedAttribute('dismiss-target', '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelector: string = getPrefixedAttribute('dismiss-target', config.getSelectorsPrefix())
 
 if (document.readyState !== 'loading') {
-	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initDismiss(baseSelector)
-	initDismiss(prefixSelector)
+    // DOMContentLoaded event were already fired. Perform explicit initialization now
+    initDismiss(baseSelector)
+    initDismiss(prefixSelector)
 } else {
-	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initDismiss(baseSelector))
-	document.addEventListener('DOMContentLoaded', initDismiss(prefixSelector))
+    // DOMContentLoaded event not yet fired, attach initialization process to it
+    document.addEventListener('DOMContentLoaded', () => { initDismiss(baseSelector) })
+    document.addEventListener('DOMContentLoaded', () => { initDismiss(prefixSelector) })
 }
 
 export default Dismiss

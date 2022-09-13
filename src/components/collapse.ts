@@ -16,10 +16,10 @@ const defaultOptions: CollapseOptions = {
     onToggle: () => { }
 }
 class Collapse {
-    _targetEl: Element;
-    _triggerEl: Element;
-    _options: CollapseOptions;
-    _visible: boolean;
+    _targetEl: Element
+    _triggerEl: Element
+    _options: CollapseOptions
+    _visible: boolean
 
     constructor(targetEl: Element, options: CollapseOptions) {
         this._targetEl = targetEl

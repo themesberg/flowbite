@@ -1,8 +1,21 @@
 import config from '../core/config'
-import { getPrefixedAttribute, getPrefixedDataAttributes } from '../helpers/data-attribute'
+import { getPrefixedDataAttributes } from '../helpers/data-attribute'
 import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
 
-const Default = {
+interface DrawerOptions {
+    triggerEl?: Element,
+    placement?: string,
+    bodyScrolling?: boolean,
+    backdrop?: boolean,
+    edge?: boolean,
+    edgeOffset?: string,
+    backdropClasses?: string,
+    onShow?(callback: any): any,
+    onHide?(callback: any): any,
+    onToggle?(callback: any): any,
+}
+
+const defaultOptions: DrawerOptions = {
     placement: 'left',
     bodyScrolling: false,
     backdrop: true,
@@ -15,9 +28,14 @@ const Default = {
 }
 
 class Drawer {
-    constructor(targetEl = null, options) {
+
+    _targetEl: Element
+    _options: DrawerOptions
+    _visible: boolean
+
+    constructor(targetEl: Element, options: DrawerOptions) {
         this._targetEl = targetEl
-        this._options = { ...Default, ...options }
+        this._options = { ...defaultOptions, ...options }
         this._visible = false
         this._init()
     }
@@ -145,7 +163,7 @@ class Drawer {
         }
     }
 
-    _getPlacementClasses(placement) {
+    _getPlacementClasses(placement: string) {
         switch (placement) {
             case 'top':
                 return {
@@ -189,16 +207,20 @@ class Drawer {
 
 window.Drawer = Drawer;
 
-const getDrawerInstance = (id, instances) => {
+const getDrawerInstance = (id: string, instances: drawerInstance[]) => {
     if (instances.some(drawerInstance => drawerInstance.id === id)) {
         return instances.find(drawerInstance => drawerInstance.id === id)
     }
-    return false
+    return null
 }
 
+interface drawerInstance {
+    id: string,
+    object: Drawer
+}
 
-const initDrawer = (selectors) => {
-    let drawerInstances = []
+const initDrawer = (selectors: selectorOptions) => {
+    let drawerInstances: drawerInstance[] = []
     document.querySelectorAll(`[${selectors.target}]`).forEach(triggerEl => {
         // mandatory
         const targetEl = document.getElementById(triggerEl.getAttribute(selectors.target))
@@ -210,24 +232,18 @@ const initDrawer = (selectors) => {
         const backdrop = triggerEl.getAttribute(selectors.backdrop)
         const edge = triggerEl.getAttribute(selectors.edge)
         const edgeOffset = triggerEl.getAttribute(selectors.edgeOffset)
-        
-        let drawer = null
-        if (getDrawerInstance(drawerId, drawerInstances)) {
-            drawer = getDrawerInstance(drawerId, drawerInstances)
-            drawer = drawer.object
-        } else {
-            drawer = new Drawer(targetEl, {
-                placement: placement ? placement : Default.placement,
-                bodyScrolling: bodyScrolling ? bodyScrolling === 'true' ? true : false : Default.bodyScrolling,
-                backdrop: backdrop ? backdrop === 'true' ? true : false : Default.backdrop,
-                edge: edge ? edge === 'true' ? true : false : Default.edge,
-                edgeOffset: edgeOffset ? edgeOffset : Default.edgeOffset
-            })
-            drawerInstances.push({
-                id: drawerId,
-                object: drawer
-            })
-        }
+
+        const drawer = new Drawer(targetEl, {
+            placement: placement ? placement : defaultOptions.placement,
+            bodyScrolling: bodyScrolling ? bodyScrolling === 'true' ? true : false : defaultOptions.bodyScrolling,
+            backdrop: backdrop ? backdrop === 'true' ? true : false : defaultOptions.backdrop,
+            edge: edge ? edge === 'true' ? true : false : defaultOptions.edge,
+            edgeOffset: edgeOffset ? edgeOffset : defaultOptions.edgeOffset
+        })
+        drawerInstances.push({
+            id: drawerId,
+            object: drawer
+        })
     })
 
     document.querySelectorAll(`[${selectors.toggle}]`).forEach(triggerEl => {
@@ -265,7 +281,11 @@ const initDrawer = (selectors) => {
     })
 }
 
-const selectors = {
+interface selectorOptions {
+    [key: string]: string
+}
+
+const selectorValues: selectorOptions = {
     target: 'drawer-target',
     toggle: 'drawer-toggle',
     dismiss: 'drawer-dismiss',
@@ -277,8 +297,8 @@ const selectors = {
     edgeOffset: 'drawer-edge-offset'
 }
 
-const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
-const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
+const baseSelectors = getPrefixedDataAttributes(selectorValues, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectorValues, config.getSelectorsPrefix())
 
 if (document.readyState !== 'loading') {
     // DOMContentLoaded event were already fired. Perform explicit initialization now
@@ -286,8 +306,8 @@ if (document.readyState !== 'loading') {
     initDrawer(prefixSelectors)
 } else {
     // DOMContentLoaded event not yet fired, attach initialization process to it
-    document.addEventListener('DOMContentLoaded', initDrawer(baseSelectors))
-    document.addEventListener('DOMContentLoaded', initDrawer(prefixSelectors))
+    document.addEventListener('DOMContentLoaded', () => { initDrawer(baseSelectors) })
+    document.addEventListener('DOMContentLoaded', () => { initDrawer(prefixSelectors) })
 }
 
 export default Drawer

@@ -7,10 +7,10 @@ export const getPrefixedAttribute = (value: string, prefix?: string) => {
 }
 
 interface prefixedValues {
-    [key: string]: any
+    [key: string]: string
 }
 
-export const getPrefixedDataAttributes = (values: Array<string>, prefix?: string) => {
+export const getPrefixedDataAttributes = (values: prefixedValues, prefix?: string) => {
     const prefixedObjects: prefixedValues = {}
     for (const key in values) {
         prefixedObjects[key] = getPrefixedAttribute(values[key], prefix)

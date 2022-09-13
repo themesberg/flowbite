@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html", "./src/**/*.js"],
+  content: ["./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html", "./src/**/*.js", "./src/**/*.ts"],
   // prefix: 'fb-',
   safelist: [
     'w-64',

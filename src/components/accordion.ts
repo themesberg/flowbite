@@ -2,7 +2,24 @@ import config from '../core/config'
 import { getPrefixedDataAttributes } from '../helpers/data-attribute'
 import { getPrefixedClassName, getPrefixedClassNames } from '../helpers/class-name'
 
-const Default = {
+interface accordionOptions {
+	alwaysOpen?: boolean,
+	activeClasses?: string,
+	inactiveClasses?: string,
+	onOpen?(callback: any, item: itemInterface): any,
+    onClose?(callback: any, item: itemInterface): any,
+    onToggle?(callback: any, item: itemInterface): any,
+}
+
+interface itemInterface {
+	id: string,
+	triggerEl: Element,
+	targetEl: Element,
+	iconEl?: Element,
+	active: boolean
+}
+
+const defaultOptions: accordionOptions = {
 	alwaysOpen: false,
 	activeClasses: getPrefixedClassNames('%p%bg-gray-100 dark:%p%bg-gray-800 %p%text-gray-900 dark:%p%text-white'),
 	inactiveClasses: getPrefixedClassNames('%p%text-gray-500 dark:%p%text-gray-400'),
@@ -12,9 +29,13 @@ const Default = {
 }
 
 class Accordion {
-	constructor(items = [], options = {}) {
+
+	_items: itemInterface[]
+	_options: accordionOptions
+
+	constructor(items: itemInterface[], options: accordionOptions) {
 		this._items = items
-		this._options = { ...Default, ...options }
+		this._options = { ...defaultOptions, ...options }
 		this._init()
 	}
 
@@ -34,11 +55,11 @@ class Accordion {
 		}
 	}
 
-	getItem(id) {
+	getItem(id: string) {
 		return this._items.filter(item => item.id === id)[0]
 	}
 
-	open(id) {
+	open(id: string) {
 		const item = this.getItem(id)
 
 		// don't hide other accordions if always open
@@ -48,7 +69,7 @@ class Accordion {
 					i.triggerEl.classList.remove(...this._options.activeClasses.split(" "))
 					i.triggerEl.classList.add(...this._options.inactiveClasses.split(" "))
 					i.targetEl.classList.add(getPrefixedClassName('%p%hidden'))
-					i.triggerEl.setAttribute('aria-expanded', false)
+					i.triggerEl.setAttribute('aria-expanded', 'false')
 					i.active = false
 
 					// rotate icon if set
@@ -62,7 +83,7 @@ class Accordion {
 		// show active item
 		item.triggerEl.classList.add(...this._options.activeClasses.split(" "))
 		item.triggerEl.classList.remove(...this._options.inactiveClasses.split(" "))
-		item.triggerEl.setAttribute('aria-expanded', true)
+		item.triggerEl.setAttribute('aria-expanded', 'true')
 		item.targetEl.classList.remove(getPrefixedClassName('%p%hidden'))
 		item.active = true
 
@@ -75,7 +96,7 @@ class Accordion {
 		this._options.onOpen(this, item)
 	}
 
-	toggle(id) {
+	toggle(id: string) {
 		const item = this.getItem(id)
 
 		if (item.active) {
@@ -88,13 +109,13 @@ class Accordion {
 		this._options.onToggle(this, item)
 	}
 
-	close(id) {
+	close(id: string) {
 		const item = this.getItem(id)
 
 		item.triggerEl.classList.remove(...this._options.activeClasses.split(" "))
 		item.triggerEl.classList.add(...this._options.inactiveClasses.split(" "))
 		item.targetEl.classList.add(getPrefixedClassName('%p%hidden'))
-		item.triggerEl.setAttribute('aria-expanded', false)
+		item.triggerEl.setAttribute('aria-expanded', 'false')
 		item.active = false
 
 		// rotate icon if set
@@ -110,7 +131,7 @@ class Accordion {
 
 window.Accordion = Accordion;
 
-const initAccordion = (selectors) => {
+const initAccordion = (selectors: selectorOptions) => {
 
 	document.querySelectorAll(`[${selectors.main}]`).forEach(accordionEl => {
 
@@ -118,7 +139,7 @@ const initAccordion = (selectors) => {
 		const activeClasses = accordionEl.getAttribute(selectors.active)
 		const inactiveClasses = accordionEl.getAttribute(selectors.inactive)
 
-		const items = []
+		const items: itemInterface[] = []
 		accordionEl.querySelectorAll(`[${selectors.target}]`).forEach(el => {
 			const item = {
 				id: el.getAttribute(selectors.target),
@@ -132,13 +153,17 @@ const initAccordion = (selectors) => {
 
 		new Accordion(items, {
 			alwaysOpen: alwaysOpen === 'open' ? true : false,
-			activeClasses: activeClasses ? activeClasses : Default.activeClasses,
-			inactiveClasses: inactiveClasses ? inactiveClasses : Default.inactiveClasses
+			activeClasses: activeClasses ? activeClasses : defaultOptions.activeClasses,
+			inactiveClasses: inactiveClasses ? inactiveClasses : defaultOptions.inactiveClasses
 		})
 	})
 }
 
-const selectors = {
+interface selectorOptions {
+    [key: string]: string
+}
+
+const selectorValues: selectorOptions = {
 	main: 'accordion',
 	active: 'active-classes',
 	inactive: 'inactive-classes',
@@ -146,8 +171,8 @@ const selectors = {
 	icon: 'accordion-icon'
 }
 
-const baseSelectors = getPrefixedDataAttributes(selectors, '') // we need this to make legacy selectors with no prefix work pre v1.5
-const prefixSelectors = getPrefixedDataAttributes(selectors, config.getSelectorsPrefix())
+const baseSelectors = getPrefixedDataAttributes(selectorValues, '') // we need this to make legacy selectors with no prefix work pre v1.5
+const prefixSelectors = getPrefixedDataAttributes(selectorValues, config.getSelectorsPrefix())
 
 if (document.readyState !== 'loading') {
 	// DOMContentLoaded event were already fired. Perform explicit initialization now
@@ -155,8 +180,8 @@ if (document.readyState !== 'loading') {
 	initAccordion(prefixSelectors)
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initAccordion(baseSelectors))
-	document.addEventListener('DOMContentLoaded', initAccordion(prefixSelectors))
+	document.addEventListener('DOMContentLoaded', () => { initAccordion(baseSelectors) })
+	document.addEventListener('DOMContentLoaded', () => { initAccordion(prefixSelectors) })
 }
 
 export default Accordion

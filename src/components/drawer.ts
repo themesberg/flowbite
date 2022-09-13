@@ -199,7 +199,7 @@ class Drawer {
                 return {
                     base: [getPrefixedClassName('%p%left-0'), getPrefixedClassName('%p%top-0')],
                     active: [getPrefixedClassName('%p%transform-none')],
-                    inactive: [getPrefixedClassName('-%p%translate-x-full')]
+                    inactive: [getPrefixedClassName('-translate-x-full')]
                 }
         }
     }

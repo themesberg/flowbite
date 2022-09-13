@@ -1,5 +1,3 @@
-import './flowbite.css';
-
 // config
 import Config from './core/config'
 

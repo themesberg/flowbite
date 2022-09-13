@@ -29,8 +29,7 @@
   "homepage": "https://flowbite.com",
   "contributors": [
     "Zoltán Szőgyényi (https://twitter.com/zoltanszogyenyi)",
-    "Robert Tanislav (https://twitter.com/roberttanislav)",
-    "Victor Cordos (https://twitter.com/victorcordos)"
+    "Robert Tanislav (https://twitter.com/roberttanislav)"
   ],
   "scripts": {
     "start": "NODE_ENV=development run-p start:*",

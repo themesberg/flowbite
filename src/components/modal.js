@@ -22,7 +22,7 @@ class Modal {
     _createBackdrop() {
         if (this._isHidden) {
             const backdropEl = document.createElement('div');
-            backdropEl.setAttribute('modal-backdrop', '');
+            backdropEl.setAttribute('modal-backdrop', this._targetEl.id);
             backdropEl.classList.add(...this._options.backdropClasses.split(" "));
             document.querySelector('body').append(backdropEl);
         }
@@ -30,7 +30,7 @@ class Modal {
 
     _destroyBackdropEl() {
         if (!this._isHidden) {
-            document.querySelector('[modal-backdrop]').remove();
+            document.querySelector(`[modal-backdrop=${this._targetEl.id}]`).remove();
         }
     }
 

@@ -30,7 +30,7 @@ class Modal {
 
     _destroyBackdropEl() {
         if (!this._isHidden) {
-            document.querySelector(`[modal-backdrop=${this._targetEl.id}]`).remove();
+            document.querySelector(`[modal-backdrop="${this._targetEl.id}"]`).remove();
         }
     }
 

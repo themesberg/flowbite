@@ -441,7 +441,7 @@ This is an example where the body scrolling behaviour is disabled when the drawe
 
 ### Enabled
 
-Get started with this example in order to enable body scrolling even if the drawer component is visible by using the `data-drawer-body-scrolling="false"` data attribute.
+Get started with this example in order to enable body scrolling even if the drawer component is visible by using the `data-drawer-body-scrolling="true"` data attribute.
 
 {{< example id="drawer-body-scrolling-example" github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
 <!-- drawer init and toggle -->

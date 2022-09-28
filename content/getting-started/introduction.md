@@ -234,5 +234,4 @@ You can also subscribe to the official [Flowbite YouTube channel](https://www.yo
 ## Authors
 
 - <a href="https://twitter.com/zoltanszogyenyi">Zoltán Szőgyényi</a> (web developer)
-- <a href="https://twitter.com/RobertTanislav" rel="nofollow">Robert Tanislav</a> (web designer)
-- <a href="https://twitter.com/victorcordos" rel="nofollow">Victor Cordos</a> (web developer)
+- <a href="https://twitter.com/RobertTanislav">Robert Tanislav</a> (web designer)

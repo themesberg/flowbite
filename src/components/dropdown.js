@@ -101,7 +101,7 @@ class Dropdown {
 
 window.Dropdown = Dropdown;
 
-function initDropdown() {
+function initDropdown(parent = document) {
     document.querySelectorAll('[data-dropdown-toggle]').forEach(triggerEl => {
         const targetEl = document.getElementById(triggerEl.getAttribute('data-dropdown-toggle'))
         const placement = triggerEl.getAttribute('data-dropdown-placement')
@@ -117,7 +117,9 @@ if (document.readyState !== 'loading') {
 	initDropdown()
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initDropdown)
+	document.addEventListener('DOMContentLoaded', () => initDropdown())
 }
 
+window.flowbite = window.flowbite || {};
+window.flowbite.initDropdown = initDropdown;
 export default Dropdown

@@ -179,8 +179,8 @@ class Carousel {
 
 window.Carousel = Carousel;
 
-function initCarousel() {
-    document.querySelectorAll('[data-carousel]').forEach(carouselEl => {
+function initCarousel(parent = document) {
+    parent.querySelectorAll('[data-carousel]').forEach(carouselEl => {
         const interval = carouselEl.getAttribute('data-carousel-interval')
         const slide = carouselEl.getAttribute('data-carousel') === 'slide' ? true : false
 
@@ -245,7 +245,9 @@ if (document.readyState !== 'loading') {
 	initCarousel()
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initCarousel)
+	document.addEventListener('DOMContentLoaded', () => initCarousel())
 }
 
+window.flowbite = window.flowbite || {};
+window.flowbite.initCarousel = initCarousel;
 export default Carousel

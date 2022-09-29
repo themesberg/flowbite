@@ -106,8 +106,8 @@ class Accordion {
 
 window.Accordion = Accordion;
 
-function initAccordion() {
-	document.querySelectorAll('[data-accordion]').forEach(accordionEl => {
+function initAccordion(parent = document) {
+	parent.querySelectorAll('[data-accordion]').forEach(accordionEl => {
 
 		const alwaysOpen = accordionEl.getAttribute('data-accordion')
 		const activeClasses = accordionEl.getAttribute('data-active-classes')
@@ -138,7 +138,9 @@ if (document.readyState !== 'loading') {
 	initAccordion()
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initAccordion)
+	document.addEventListener('DOMContentLoaded', () => initAccordion())
 }
 
+window.flowbite = window.flowbite || {}
+window.flowbite.initAccordion = initAccordion
 export default Accordion

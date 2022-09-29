@@ -121,8 +121,8 @@ class Popover {
 
 window.Popover = Popover;
 
-function initPopover() {
-    document.querySelectorAll('[data-popover-target]').forEach(triggerEl => {
+function initPopover(parent = document) {
+    parent.querySelectorAll('[data-popover-target]').forEach(triggerEl => {
         const targetEl = document.getElementById(triggerEl.getAttribute('data-popover-target'))
         const triggerType = triggerEl.getAttribute('data-popover-trigger');
         const placement = triggerEl.getAttribute('data-popover-placement');
@@ -141,7 +141,9 @@ if (document.readyState !== 'loading') {
 	initPopover()
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initPopover)
+	document.addEventListener('DOMContentLoaded', () => initPopover())
 }
 
+window.flowbite = window.flowbite || {};
+window.flowbite.initPopover = initPopover;
 export default Popover

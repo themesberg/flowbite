@@ -35,8 +35,8 @@ class Dismiss {
 
 window.Dismiss = Dismiss;
 
-function initDismiss() {
-    document.querySelectorAll('[data-dismiss-target]').forEach(triggerEl => {
+function initDismiss(parent = document) {
+    parent.querySelectorAll('[data-dismiss-target]').forEach(triggerEl => {
         const targetEl = document.querySelector(triggerEl.getAttribute('data-dismiss-target'))
 
         new Dismiss(targetEl, {
@@ -50,7 +50,9 @@ if (document.readyState !== 'loading') {
 	initDismiss()
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initDismiss)
+	document.addEventListener('DOMContentLoaded', () => initDismiss())
 }
 
+window.flowbite = window.flowbite || {};
+window.flowbite.initDismiss = initDismiss;
 export default Dismiss

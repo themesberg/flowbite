@@ -114,9 +114,9 @@ const getModalInstance = (id, instances) => {
     return false
 }
 
-function initModal() {
+function initModal(parent = document) {
     let modalInstances = []
-    document.querySelectorAll('[data-modal-toggle]').forEach(el => {
+    parent.querySelectorAll('[data-modal-toggle]').forEach(el => {
         const modalId = el.getAttribute('data-modal-toggle');
         const modalEl = document.getElementById(modalId);
         const placement = modalEl.getAttribute('data-modal-placement')
@@ -156,7 +156,9 @@ if (document.readyState !== 'loading') {
 	initModal()
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initModal)
+	document.addEventListener('DOMContentLoaded', () => initModal())
 }
 
+window.flowbite = window.flowbite || {};
+window.flowbite.initModal = initModal;
 export default Modal

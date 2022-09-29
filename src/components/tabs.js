@@ -78,8 +78,8 @@ class Tabs {
 
 window.Tabs = Tabs;
 
-function initTabs() {
-    document.querySelectorAll('[data-tabs-toggle]').forEach(triggerEl => {
+function initTabs(parent = document) {
+    parent.querySelectorAll('[data-tabs-toggle]').forEach(triggerEl => {
 
         const tabElements = []
         let defaultTabId = null
@@ -107,7 +107,9 @@ if (document.readyState !== 'loading') {
 	initTabs()
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initTabs)
+	document.addEventListener('DOMContentLoaded', () => initTabs())
 }
 
+window.flowbite = window.flowbite || {};
+window.flowbite.initTabs = initTabs;
 export default Tabs

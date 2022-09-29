@@ -192,9 +192,9 @@ const getDrawerInstance = (id, instances) => {
     return false
 }
 
-function initDrawer() {
+function initDrawer(parent = document) {
     let drawerInstances = []
-    document.querySelectorAll('[data-drawer-target]').forEach(triggerEl => {
+    parent.querySelectorAll('[data-drawer-target]').forEach(triggerEl => {
         // mandatory
         const targetEl = document.getElementById(triggerEl.getAttribute('data-drawer-target'))
         const drawerId = targetEl.id
@@ -265,7 +265,9 @@ if (document.readyState !== 'loading') {
     initDrawer()
 } else {
     // DOMContentLoaded event not yet fired, attach initialization process to it
-    document.addEventListener('DOMContentLoaded', initDrawer)
+    document.addEventListener('DOMContentLoaded', () => initDrawer())
 }
 
+window.flowbite = window.flowbite || {};
+window.flowbite.initDrawer = initDrawer;
 export default Drawer

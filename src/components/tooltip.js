@@ -106,8 +106,8 @@ class Tooltip {
 
 window.Tooltip = Tooltip;
 
-function initTooltip() {
-    document.querySelectorAll('[data-tooltip-target]').forEach(triggerEl => {
+function initTooltip(parent = document) {
+    parent.querySelectorAll('[data-tooltip-target]').forEach(triggerEl => {
         const targetEl = document.getElementById(triggerEl.getAttribute('data-tooltip-target'))
         const triggerType = triggerEl.getAttribute('data-tooltip-trigger');
         const placement = triggerEl.getAttribute('data-tooltip-placement');
@@ -124,7 +124,9 @@ if (document.readyState !== 'loading') {
 	initTooltip()
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initTooltip)
+	document.addEventListener('DOMContentLoaded', () => initTooltip())
 }
 
+window.flowbite = window.flowbite || {};
+window.flowbite.initTooltip = initTooltip;
 export default Tooltip

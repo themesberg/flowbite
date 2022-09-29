@@ -65,8 +65,8 @@ class Collapse {
 
 window.Collapse = Collapse;
 
-function initCollapse() {
-    document.querySelectorAll('[data-collapse-toggle]').forEach(triggerEl => {
+function initCollapse(parent = document) {
+    parent.querySelectorAll('[data-collapse-toggle]').forEach(triggerEl => {
         const targetEl = document.getElementById(triggerEl.getAttribute('data-collapse-toggle'))
         new Collapse(targetEl, {
             triggerEl: triggerEl
@@ -79,7 +79,9 @@ if (document.readyState !== 'loading') {
 	initCollapse()
 } else {
 	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initCollapse)
+	document.addEventListener('DOMContentLoaded', () => initCollapse())
 }
 
+window.flowbite = window.flowbite || {};
+window.flowbite.initCollapse = initCollapse;
 export default Collapse

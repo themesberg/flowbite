@@ -2894,7 +2894,7 @@ var getDatepickerOptions = function getDatepickerOptions(datepickerEl) {
   var options = {};
 
   if (buttons) {
-    options.todayBtn = true;
+    // options.todayBtn = true;
     options.clearBtn = true;
   }
 
@@ -2917,17 +2917,24 @@ var getDatepickerOptions = function getDatepickerOptions(datepickerEl) {
   return options;
 };
 
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('[datepicker]').forEach(function (datepickerEl) {
+function initDatepicker() {
+  var parent = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document;
+  parent.querySelectorAll('[datepicker]').forEach(function (datepickerEl) {
     new Datepicker(datepickerEl, getDatepickerOptions(datepickerEl));
   });
-  document.querySelectorAll('[inline-datepicker]').forEach(function (datepickerEl) {
+  parent.querySelectorAll('[inline-datepicker]').forEach(function (datepickerEl) {
     new Datepicker(datepickerEl, getDatepickerOptions(datepickerEl));
   });
-  document.querySelectorAll('[date-rangepicker]').forEach(function (datepickerEl) {
+  parent.querySelectorAll('[date-rangepicker]').forEach(function (datepickerEl) {
     new DateRangePicker(datepickerEl, getDatepickerOptions(datepickerEl));
   });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  return initDatepicker();
 });
+flowbite = window.flowbite || {};
+window.flowbite.initDatepicker = initDatepicker;
 /******/ })()
 ;
 //# sourceMappingURL=datepicker.js.map

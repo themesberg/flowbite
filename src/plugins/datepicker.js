@@ -11,7 +11,7 @@ const getDatepickerOptions = (datepickerEl) => {
 
     let options = {};
     if (buttons) {
-        options.todayBtn = true;
+        // options.todayBtn = true;
         options.clearBtn = true;
     }
     if (autohide) {
@@ -30,16 +30,21 @@ const getDatepickerOptions = (datepickerEl) => {
     return options;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[datepicker]').forEach(function (datepickerEl) {
+function initDatepicker(parent = document) {
+    parent.querySelectorAll('[datepicker]').forEach(function (datepickerEl) {
         new Datepicker(datepickerEl, getDatepickerOptions(datepickerEl));
     });
-    
-    document.querySelectorAll('[inline-datepicker]').forEach(function (datepickerEl) {
+
+    parent.querySelectorAll('[inline-datepicker]').forEach(function (datepickerEl) {
         new Datepicker(datepickerEl, getDatepickerOptions(datepickerEl));
     });
-    
-    document.querySelectorAll('[date-rangepicker]').forEach(function (datepickerEl) {
+
+    parent.querySelectorAll('[date-rangepicker]').forEach(function (datepickerEl) {
         new DateRangePicker(datepickerEl, getDatepickerOptions(datepickerEl));
     });
-});
+}
+
+document.addEventListener('DOMContentLoaded', () => initDatepicker());
+
+flowbite = window.flowbite || {};
+window.flowbite.initDatepicker = initDatepicker;

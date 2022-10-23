@@ -2891,6 +2891,8 @@ var getDatepickerOptions = function getDatepickerOptions(datepickerEl) {
   var format = datepickerEl.hasAttribute('datepicker-format');
   var orientation = datepickerEl.hasAttribute('datepicker-orientation');
   var title = datepickerEl.hasAttribute('datepicker-title');
+  var optionalSideRange = datepickerEl.hasAttribute('datepicker-optional-side-range');
+  var weekStart = datepickerEl.hasAttribute('datepicker-week-start');
   var options = {};
 
   if (buttons) {
@@ -2912,6 +2914,16 @@ var getDatepickerOptions = function getDatepickerOptions(datepickerEl) {
 
   if (title) {
     options.title = datepickerEl.getAttribute('datepicker-title');
+  }
+
+  if (optionalSideRange) {
+    options.allowOneSidedRange = true;
+  }
+
+  if (weekStart) {
+    options.weekStart = parseInt(datepickerEl.getAttribute('datepicker-week-start'));
+  } else {
+    options.weekStart = 1;
   }
 
   return options;

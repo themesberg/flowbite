@@ -8,6 +8,8 @@ const getDatepickerOptions = (datepickerEl) => {
     const format = datepickerEl.hasAttribute('datepicker-format');
     const orientation = datepickerEl.hasAttribute('datepicker-orientation');
     const title = datepickerEl.hasAttribute('datepicker-title');
+    const optionalSideRange = datepickerEl.hasAttribute('datepicker-optional-side-range');
+    const weekStart = datepickerEl.hasAttribute('datepicker-week-start');
 
     let options = {};
     if (buttons) {
@@ -26,6 +28,16 @@ const getDatepickerOptions = (datepickerEl) => {
     if (title) {
         options.title = datepickerEl.getAttribute('datepicker-title');
     }
+    if (optionalSideRange) {
+        options.allowOneSidedRange = true;
+    }
+    if (weekStart) {
+        options.weekStart = parseInt(datepickerEl.getAttribute('datepicker-week-start'));
+    } else {
+        options.weekStart = 1;
+    }
+
+
 
     return options;
 }

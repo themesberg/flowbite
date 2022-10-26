@@ -79,7 +79,7 @@ Use this example to make the image a card item with a link and a short text desc
   </a>
   <figcaption class="absolute bottom-6 px-4 text-lg text-white">
       <p>Do you want to get notified when a new component is added to Flowbite?</p>
-  </figcatpion>
+  </figcaption>
 </figure>
 {{< /example >}}
 

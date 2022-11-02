@@ -54,6 +54,8 @@
     - title: Skeleton
       new: true
     - title: Pagination
+    - title: Speed Dial
+      new: true
     - title: Rating
     - title: Timeline
     - title: Video

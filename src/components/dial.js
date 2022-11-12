@@ -109,10 +109,14 @@ function initDial() {
     document.querySelectorAll('[data-dial-init]').forEach(parentEl => {
         const triggerEl = parentEl.querySelector('[data-dial-toggle]')
         const targetEl = document.getElementById(triggerEl.getAttribute('data-dial-toggle'))
+        const triggerType = triggerEl.getAttribute('data-dial-trigger')
+
+        console.log(triggerType)
 
         new Dial(parentEl, {
             targetEl: targetEl,
-            triggerEl: triggerEl
+            triggerEl: triggerEl,
+            triggerType: triggerType ? triggerType : Default.triggerType
         })
     })
 }

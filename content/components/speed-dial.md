@@ -351,13 +351,13 @@ nextLink: components/rating/
 
 ### Top right
 
-{{< example id="default-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
+{{< example id="top-right-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
 <div data-dial-init class="fixed right-8 top-8 group">
-    <button type="button" data-dial-toggle="speed-dial-menu-default" aria-controls="speed-dial-menu-default" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+    <button type="button" data-dial-toggle="speed-dial-menu-top-right" aria-controls="speed-dial-menu-top-right" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
         <svg aria-hidden="true" class="w-8 h-8 transition-transform group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
         <span class="sr-only">Open actions menu</span>
     </button>
-    <div id="speed-dial-menu-default" class="flex flex-col items-center hidden mt-4 space-y-2">
+    <div id="speed-dial-menu-top-right" class="flex flex-col items-center hidden mt-4 space-y-2">
         <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
             <svg aria-hidden="true" class="w-6 h-6 -ml-px " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"></path></svg>
             <span class="sr-only">Share</span>
@@ -396,9 +396,9 @@ nextLink: components/rating/
 
 ### Bottom right
 
-{{< example id="default-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
+{{< example id="bottom-right-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
 <div data-dial-init class="fixed right-8 bottom-8 group">
-    <div id="speed-dial-menu-default" class="flex flex-col items-center hidden mb-4 space-y-2">
+    <div id="speed-dial-menu-bottom-right" class="flex flex-col items-center hidden mb-4 space-y-2">
         <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
             <svg aria-hidden="true" class="w-6 h-6 -ml-px " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"></path></svg>
             <span class="sr-only">Share</span>
@@ -432,7 +432,7 @@ nextLink: components/rating/
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
     </div>
-    <button type="button" data-dial-toggle="speed-dial-menu-default" aria-controls="speed-dial-menu-default" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+    <button type="button" data-dial-toggle="speed-dial-menu-bottom-right" aria-controls="speed-dial-menu-bottom-right" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
         <svg aria-hidden="true" class="w-8 h-8 transition-transform group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
         <span class="sr-only">Open actions menu</span>
     </button>
@@ -441,9 +441,9 @@ nextLink: components/rating/
 
 ### Bottom left
 
-{{< example id="default-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
+{{< example id="bottom-left-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
 <div data-dial-init class="fixed left-8 bottom-8 group">
-    <div id="speed-dial-menu-default" class="flex flex-col items-center hidden mb-4 space-y-2">
+    <div id="speed-dial-menu-bottom-left" class="flex flex-col items-center hidden mb-4 space-y-2">
         <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
             <svg aria-hidden="true" class="w-6 h-6 -ml-px " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"></path></svg>
             <span class="sr-only">Share</span>
@@ -477,7 +477,7 @@ nextLink: components/rating/
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
     </div>
-    <button type="button" data-dial-toggle="speed-dial-menu-default" aria-controls="speed-dial-menu-default" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+    <button type="button" data-dial-toggle="speed-dial-menu-bottom-left" aria-controls="speed-dial-menu-bottom-left" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
         <svg aria-hidden="true" class="w-8 h-8 transition-transform group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
         <span class="sr-only">Open actions menu</span>
     </button>
@@ -486,13 +486,13 @@ nextLink: components/rating/
 
 ### Top left
 
-{{< example id="default-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
+{{< example id="top-left-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
 <div data-dial-init class="fixed left-8 top-8 group">
-    <button type="button" data-dial-toggle="speed-dial-menu-default" aria-controls="speed-dial-menu-default" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+    <button type="button" data-dial-toggle="speed-dial-menu-top-left" aria-controls="speed-dial-menu-top-left" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
         <svg aria-hidden="true" class="w-8 h-8 transition-transform group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
         <span class="sr-only">Open actions menu</span>
     </button>
-    <div id="speed-dial-menu-default" class="flex flex-col items-center hidden mt-4 space-y-2">
+    <div id="speed-dial-menu-top-left" class="flex flex-col items-center hidden mt-4 space-y-2">
         <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
             <svg aria-hidden="true" class="w-6 h-6 -ml-px " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"></path></svg>
             <span class="sr-only">Share</span>
@@ -535,9 +535,9 @@ nextLink: components/rating/
 
 The default alignment of the menu items of the speed dial is vertical using the `flex-col` utility class.
 
-{{< example id="default-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
+{{< example id="vertical-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
 <div data-dial-init class="fixed right-8 bottom-8 group">
-    <div id="speed-dial-menu-default" class="flex flex-col items-center hidden mb-4 space-y-2">
+    <div id="speed-dial-menu-vertical" class="flex flex-col items-center hidden mb-4 space-y-2">
         <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
             <svg aria-hidden="true" class="w-6 h-6 -ml-px " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"></path></svg>
             <span class="sr-only">Share</span>
@@ -571,7 +571,7 @@ The default alignment of the menu items of the speed dial is vertical using the 
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
     </div>
-    <button type="button" data-dial-toggle="speed-dial-menu-default" aria-controls="speed-dial-menu-default" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+    <button type="button" data-dial-toggle="speed-dial-menu-vertical" aria-controls="speed-dial-menu-vertical" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
         <svg aria-hidden="true" class="w-8 h-8 transition-transform group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
         <span class="sr-only">Open actions menu</span>
     </button>
@@ -582,9 +582,9 @@ The default alignment of the menu items of the speed dial is vertical using the 
 
 Horizontally align the speed dial menu items by using the flexbox utility classes from Tailwind CSS.
 
-{{< example id="default-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
+{{< example id="horizontal-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
 <div data-dial-init class="fixed flex right-8 bottom-8 group">
-    <div id="speed-dial-menu-default" class="flex items-center hidden mr-4 space-x-2">
+    <div id="speed-dial-menu-horizontal" class="flex items-center hidden mr-4 space-x-2">
         <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="top" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
             <svg aria-hidden="true" class="w-6 h-6 -ml-px " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"></path></svg>
             <span class="sr-only">Share</span>
@@ -618,7 +618,7 @@ Horizontally align the speed dial menu items by using the flexbox utility classe
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
     </div>
-    <button type="button" data-dial-toggle="speed-dial-menu-default" aria-controls="speed-dial-menu-default" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+    <button type="button" data-dial-toggle="speed-dial-menu-horizontal" aria-controls="speed-dial-menu-horizontal" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
         <svg aria-hidden="true" class="w-8 h-8 transition-transform group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
         <span class="sr-only">Open actions menu</span>
     </button>
@@ -629,9 +629,9 @@ Horizontally align the speed dial menu items by using the flexbox utility classe
 
 ### Hover
 
-{{< example id="default-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
+{{< example id="hover-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
 <div data-dial-init class="fixed right-8 bottom-8 group">
-    <div id="speed-dial-menu-default" class="flex flex-col items-center hidden mb-4 space-y-2">
+    <div id="speed-dial-menu-hover" class="flex flex-col items-center hidden mb-4 space-y-2">
         <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
             <svg aria-hidden="true" class="w-6 h-6 -ml-px " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"></path></svg>
             <span class="sr-only">Share</span>
@@ -665,7 +665,7 @@ Horizontally align the speed dial menu items by using the flexbox utility classe
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
     </div>
-    <button type="button" data-dial-toggle="speed-dial-menu-default" data-dial-trigger="hover" aria-controls="speed-dial-menu-default" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+    <button type="button" data-dial-toggle="speed-dial-menu-hover" data-dial-trigger="hover" aria-controls="speed-dial-menu-hover" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
         <svg aria-hidden="true" class="w-8 h-8 transition-transform group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
         <span class="sr-only">Open actions menu</span>
     </button>
@@ -674,9 +674,9 @@ Horizontally align the speed dial menu items by using the flexbox utility classe
 
 ### Click
 
-{{< example id="default-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
+{{< example id="click-speed-dial-example" class="flex justify-center pt-24 h-96" github="components/speed-dial.md" show_dark=true >}}
 <div data-dial-init class="fixed right-8 bottom-8 group">
-    <div id="speed-dial-menu-default" class="flex flex-col items-center hidden mb-4 space-y-2">
+    <div id="speed-dial-menu-click" class="flex flex-col items-center hidden mb-4 space-y-2">
         <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
             <svg aria-hidden="true" class="w-6 h-6 -ml-px " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"></path></svg>
             <span class="sr-only">Share</span>
@@ -710,9 +710,260 @@ Horizontally align the speed dial menu items by using the flexbox utility classe
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
     </div>
-    <button type="button" data-dial-toggle="speed-dial-menu-default" data-dial-trigger="click" aria-controls="speed-dial-menu-default" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+    <button type="button" data-dial-toggle="speed-dial-menu-click" data-dial-trigger="click" aria-controls="speed-dial-menu-click" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
         <svg aria-hidden="true" class="w-8 h-8 transition-transform group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
         <span class="sr-only">Open actions menu</span>
     </button>
 </div>
 {{< /example >}}
+
+## JavaScript behaviour
+
+The Popover API from Flowbite can be used to create an object that will show a pop-up box relative to the main trigger element based on the parameters, options, and methods that you provide.
+
+### Object parameters
+
+Create a new Popover object with the object parameters like the trigger element, the popover content element, and extra options to set the placement and offset.
+
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="bg-gray-50 dark:bg-gray-700">
+            <tr class="text-xs font-medium uppercase">
+                <th scope="col" class="px-6 py-3">
+                    Parameter
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Type
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Required
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">targetEl</code>
+                </td>
+                <td class="px-6 py-4">
+                    Element
+                </td>
+                <td class="px-6 py-4">
+                    Required
+                </td>
+                <td class="px-6 py-4">
+                    Set the popover component as the target element.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
+                </td>
+                <td class="px-6 py-4">
+                    Element
+                </td>
+                <td class="px-6 py-4">
+                    Required
+                </td>
+                <td class="px-6 py-4">
+                    Set an element to trigger the popover when clicking or hovering (ie. a button, text).
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">options</code>
+                </td>
+                <td class="px-6 py-4">
+                    Object
+                </td>
+                <td class="px-6 py-4">
+                    Optional
+                </td>
+                <td class="px-6 py-4">
+                    Use the options parameter to set the positioning of the popover element, trigger type, offset, and more.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+### Options
+
+Use the following options as the third parameter for the Popover object to set the positioning, offset, and the trigger type (hover or click).
+
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="bg-gray-50 dark:bg-gray-700">
+            <tr class="text-xs font-medium uppercase">
+                <th scope="col" class="px-6 py-3">
+                    Option
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Type
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">placement</code>
+                </td>
+                <td class="px-6 py-4 font-medium">
+                    String
+                </td>
+                <td class="px-6 py-4">
+                    Set the position of the popover element relative to the trigger element choosing from <code class="text-purple-600 dark:text-purple-400">top|right|bottom|left</code>.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">triggerType</code>
+                </td>
+                <td class="px-6 py-4 font-medium">
+                    String
+                </td>
+                <td class="px-6 py-4">
+                    Set the event type that will trigger the popover content choosing between <code class="text-purple-600 dark:text-purple-400">hover|click</code>.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">offset</code>
+                </td>
+                <td class="px-6 py-4 font-medium">
+                    Integer
+                </td>
+                <td class="px-6 py-4">
+                    Set the offset distance between the popover and the trigger element.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">onHide</code>
+                </td>
+                <td class="px-6 py-4 font-medium">
+                    Function
+                </td>
+                <td class="px-6 py-4">
+                    Set a callback function when the popover is hidden.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">onShow</code>
+                </td>
+                <td class="px-6 py-4 font-medium">
+                    Function
+                </td>
+                <td class="px-6 py-4">
+                    Set a callback function when the popover is shown.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+### Methods
+
+Use the methods from the Popover object to programatically show or hide the popover from directly JavaScript.
+
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="bg-gray-50 dark:bg-gray-700">
+            <tr class="text-xs font-medium uppercase">
+                <th scope="col" class="px-6 py-3">
+                    Method
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">show()</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method on the Popover object to show the popover content.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">hide()</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method on the Popover object to hide the popover content.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+### Example
+
+Use following JavaScript as an example to learn how to initialize, set the options, and use the methods for the Popover object.
+
+First of all, set the target element as the popover itself and the trigger element which can be a button or text element.
+
+After that you can also set the options object to change the placement and trigger type of the popover, alongside with the callback functions.
+
+```javascript
+// set the popover content element
+const targetEl = document.getElementById('popoverContent');
+
+// set the element that trigger the popover using hover or click
+const triggerEl = document.getElementById('popoverButton');
+
+// options with default values
+const options = {
+  placement: 'bottom',
+  triggerType: 'hover',
+  offset: 10,
+  onHide: () => {
+      console.log('popover is shown');
+  },
+  onShow: () => {
+      console.log('popover is hidden');
+  }
+};
+```
+
+Create a new Popover object based on the options above.
+
+```javascript
+/*
+* targetEl: required
+* triggerEl: required
+* options: optional
+*/
+const popover = new Popover(targetEl, triggerEl, options);
+```
+
+Use the `show` and `hide` methods on the Popover object to programatically show and hide the popover element using JavaScript.
+
+```javascript
+// show the popover
+popover.show();
+
+// hide the popover
+popover.hide();
+```
+
+### HTML Markup
+
+Use the following HTML code for the JavaScript example above.
+
+```html
+<button id="popoverButton" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default popover</button>
+<div data-popover id="popoverContent" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-700">
+    Popover content
+    <div class="popover-arrow" data-popper-arrow></div>
+</div>
+```

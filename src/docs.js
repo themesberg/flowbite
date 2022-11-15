@@ -49,7 +49,7 @@ const copyTextToClipboard = text => {
 }
 
 const initiateCopyToClipboard = element => {
-  var textToCopy = element.querySelector('[data-clipboard-content]').innerHTML;
+  var textToCopy = element.querySelector('[data-clipboard-content]').getAttribute('data-clipboard-content');
   var button = element.getElementsByClassName("copy-to-clipboard-button")[0];
   var alert = document.getElementById('copied-code-alert');
   var copyText = button.getElementsByClassName('copy-text')[0];

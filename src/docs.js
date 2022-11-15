@@ -67,6 +67,21 @@ const initiateCopyToClipboard = element => {
   });
 }
 
+const initiateExpandCode = element => {
+  var expandCodeButton = element.querySelector('[data-expand-code]')
+  var codeWrapperEl = element.querySelector('[data-code-wrapper]')
+  var codeWrapperHeight = codeWrapperEl.offsetHeight
+
+  if (codeWrapperHeight > 250) {
+    expandCodeButton.classList.remove('hidden')
+  }
+
+  expandCodeButton.addEventListener('click', () => {
+    codeWrapperEl.classList.remove('max-h-72')
+    expandCodeButton.classList.add('hidden')
+  })
+}
+
 const updateiFrameDarkMode = (iFrame, theme) => {
   let html = iFrame.contentDocument.querySelector('html')
 
@@ -202,6 +217,7 @@ const initializeCodeExamples = (theme) => {
     updateiFrameHeight(iframe)
     updateiFrameDarkMode(iframe, theme)
     initiateCopyToClipboard(c)
+    initiateExpandCode(c)
   })
 }
 

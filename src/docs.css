@@ -218,7 +218,7 @@ pre[class*="language-"] {
 }
 
 .token.operator {
-	@apply text-gray-500 dark:text-gray-400;
+	@apply text-gray-500 dark:text-gray-400 dark:bg-gray-800;
 }
 
 .token.entity {

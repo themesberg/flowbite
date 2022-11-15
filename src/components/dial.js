@@ -17,8 +17,6 @@ class Dial {
 
     _init() {
 
-        console.log(this)
-
         if (this._triggerEl) {
             const triggerEvents = this._getTriggerEvents()
             triggerEvents.showEvents.forEach(ev => {

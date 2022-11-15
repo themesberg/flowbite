@@ -279,7 +279,7 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
         </div>
     </nav>
 
-    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 </body>
 
 </html>

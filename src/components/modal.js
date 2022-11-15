@@ -1,6 +1,7 @@
 const Default = {
     placement: 'center',
     backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+    backdrop: 'dynamic',
     onHide: () => { },
     onShow: () => { },
     onToggle: () => { }
@@ -10,13 +11,19 @@ class Modal {
         this._targetEl = targetEl
         this._options = { ...Default, ...options }
         this._isHidden = true
+        this._backdropEl = null
         this._init()
     }
 
     _init() {
-        this._getPlacementClasses().map(c => {
-            this._targetEl.classList.add(c)
-        })
+        if (this._targetEl) {
+            this._getPlacementClasses().map(c => {
+                this._targetEl.classList.add(c)
+            })
+            this._targetEl.addEventListener('click', ev => {
+                this._handleOutsideClick(ev.target)
+            })
+        }
     }
 
     _createBackdrop() {
@@ -25,12 +32,21 @@ class Modal {
             backdropEl.setAttribute('modal-backdrop', '');
             backdropEl.classList.add(...this._options.backdropClasses.split(" "));
             document.querySelector('body').append(backdropEl);
+            this._backdropEl = backdropEl
         }
     }
 
     _destroyBackdropEl() {
         if (!this._isHidden) {
             document.querySelector('[modal-backdrop]').remove();
+        }
+    }
+
+    _handleOutsideClick(target) {
+        if (this._options.backdrop === 'dynamic') {
+            if (target === this._targetEl || target === this._backdropEl) {
+                this.hide()
+            }
         }
     }
 
@@ -86,6 +102,9 @@ class Modal {
         this._createBackdrop()
         this._isHidden = false
 
+        // prevent body scroll
+        document.body.classList.add('overflow-hidden')
+
         // callback function
         this._options.onShow(this)
     }
@@ -99,8 +118,15 @@ class Modal {
         this._destroyBackdropEl()
         this._isHidden = true
 
+        // re-apply body scroll
+        document.body.classList.remove('overflow-hidden')
+
         // callback function
         this._options.onHide(this)
+    }
+
+    isHidden() {
+        return this._isHidden
     }
 
 }
@@ -114,12 +140,13 @@ const getModalInstance = (id, instances) => {
     return false
 }
 
-function initModal() {
+const initModal = (selectors) => {
     let modalInstances = []
-    document.querySelectorAll('[data-modal-toggle]').forEach(el => {
-        const modalId = el.getAttribute('data-modal-toggle');
+    document.querySelectorAll(`[${selectors.main}]`).forEach(el => {
+        const modalId = el.getAttribute(selectors.main);
         const modalEl = document.getElementById(modalId);
-        const placement = modalEl.getAttribute('data-modal-placement')
+        const placement = modalEl.getAttribute(selectors.placement)
+        const backdrop = modalEl.getAttribute(selectors.backdrop)
 
         if (modalEl) {
             if (!modalEl.hasAttribute('aria-hidden') && !modalEl.hasAttribute('aria-modal')) {
@@ -133,15 +160,17 @@ function initModal() {
             modal = modal.object
         } else {
             modal = new Modal(modalEl, {
-                placement: placement ? placement : Default.placement
+                placement: placement ? placement : Default.placement,
+                backdrop: backdrop ? backdrop : Default.backdrop
             })
+
             modalInstances.push({
                 id: modalId,
                 object: modal
             })
         }
 
-        if (modalEl.hasAttribute('data-modal-show') && modalEl.getAttribute('data-modal-show') === 'true') {
+        if (modalEl.hasAttribute(selectors.show) && modalEl.getAttribute(selectors.show) === 'true') {
             modal.show();
         }
 
@@ -151,12 +180,19 @@ function initModal() {
     })
 }
 
+const selectors = {
+    main: 'data-modal-toggle',
+    placement: 'data-modal-placement',
+    show: 'data-modal-show',
+    backdrop: 'data-modal-backdrop'
+}
+
 if (document.readyState !== 'loading') {
-	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initModal()
+    // DOMContentLoaded event were already fired. Perform explicit initialization now
+    initModal(selectors)
 } else {
-	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initModal)
+    // DOMContentLoaded event not yet fired, attach initialization process to it
+    document.addEventListener('DOMContentLoaded', initModal(selectors))
 }
 
 export default Modal

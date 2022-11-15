@@ -11,6 +11,7 @@ import Drawer from './components/drawer'
 import Tabs from './components/tabs'
 import Tooltip from './components/tooltip'
 import Popover from './components/popover'
+import Dial from './components/dial'
 
 export default {
     Accordion,
@@ -22,5 +23,6 @@ export default {
     Drawer,
     Tabs,
     Tooltip,
-    Popover
+    Popover,
+    Dial
 }

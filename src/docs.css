@@ -139,7 +139,7 @@ pre[class*="language-"] {
 }
 
 /* when after preview */
-.code-preview-wrapper + .code-syntax-wrapper > .code-syntax .highlight pre[class*="language-"],
+.code-preview-wrapper + .code-syntax-wrapper > .code-syntax > .relative > [data-code-wrapper] > .highlight pre[class*="language-"],
 .code-preview-wrapper + .code-syntax-wrapper > .code-syntax {
 	overflow: auto;
 	@apply mt-0 rounded-none;
@@ -149,7 +149,7 @@ pre[class*="language-"] {
 	@apply mb-4;
 }
 
-.code-preview-wrapper + .code-syntax-wrapper > .code-syntax > .highlight > pre[class*="language-"] {
+.code-preview-wrapper + .code-syntax-wrapper > .code-syntax > .relative > [data-code-wrapper] > .highlight > pre[class*="language-"] {
 	@apply p-4 m-0 bg-gray-50 dark:bg-gray-800;
 }
 
@@ -218,7 +218,7 @@ pre[class*="language-"] {
 }
 
 .token.operator {
-	@apply text-gray-500 dark:text-gray-400;
+	@apply text-gray-500 dark:text-gray-400 dark:bg-gray-800;
 }
 
 .token.entity {

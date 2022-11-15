@@ -97,7 +97,7 @@ Modify the `src/app.html` by adding `flowbite.js` as the following:
     </head>
   <body>
     <div id="svelte">%svelte.body%</div>
-    <script src="https://unpkg.com/flowbite@1.3.2/dist/flowbite.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
   </body>
 </html>
 ```
@@ -106,7 +106,7 @@ Modify the `src/app.html` by adding `flowbite.js` as the following:
 
 This method uses the CDN and using Flowbite unpurged CDN JS/CSS. You don’t need to install TailwindCSS nor Flowbite.
 The Flowbite contains Tailwind CSS v3.0.1. So you can add CSS and JS link in the src/app.html. Place `flowbite.min.css` in 
-the head and `flowbite.min.js` just before the body tag.
+the head and `flowbite.js` just before the body tag.
 
 ```html
 <!DOCTYPE html>
@@ -121,7 +121,7 @@ the head and `flowbite.min.js` just before the body tag.
   </head>
   <body>
     <div id="svelte">%svelte.body%</div>
-   <script src="https://unpkg.com/flowbite@1.3.2/dist/flowbite.js"></script>
+   <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
   </body>
 </html>
 ```

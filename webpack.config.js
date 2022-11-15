@@ -1,6 +1,7 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const { SourceMapDevToolPlugin } = require("webpack");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
+const TerserPlugin = require("terser-webpack-plugin")
+const { SourceMapDevToolPlugin } = require("webpack")
 const path = require('path');
 
 module.exports = {
@@ -59,10 +60,12 @@ module.exports = {
     }),
   ],
   optimization: {
+    minimize: true,
     minimizer: [
       // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
       // `...`,
       new CssMinimizerPlugin(),
+      new TerserPlugin()
     ],
   }
 };

@@ -34,7 +34,7 @@
     - title: Badge
     - title: Breadcrumb
     - title: Buttons
-    - title: Button group
+    - title: Button Group
     - title: Card
     - title: Carousel
     - title: Dropdowns
@@ -54,6 +54,8 @@
     - title: Skeleton
       new: true
     - title: Pagination
+    - title: Speed Dial
+      new: true
     - title: Rating
     - title: Timeline
     - title: Video

@@ -49,8 +49,7 @@ const copyTextToClipboard = text => {
 }
 
 const initiateCopyToClipboard = element => {
-  var textToCopy = element.querySelector('[data-clipboard-content]').innerHTML;
-  console.log(element.querySelector('[data-clipboard-content]').innerHTML)
+  var textToCopy = element.querySelector('[data-clipboard-content]').getAttribute('data-clipboard-content');
   var button = element.getElementsByClassName("copy-to-clipboard-button")[0];
   var alert = document.getElementById('copied-code-alert');
   var copyText = button.getElementsByClassName('copy-text')[0];
@@ -66,6 +65,21 @@ const initiateCopyToClipboard = element => {
       copyText.innerHTML = 'Copy';
     }, 3000);
   });
+}
+
+const initiateExpandCode = element => {
+  var expandCodeButton = element.querySelector('[data-expand-code]')
+  var codeWrapperEl = element.querySelector('[data-code-wrapper]')
+  var codeWrapperHeight = codeWrapperEl.offsetHeight
+
+  if (codeWrapperHeight > 250) {
+    expandCodeButton.classList.remove('hidden')
+  }
+
+  expandCodeButton.addEventListener('click', () => {
+    codeWrapperEl.classList.remove('max-h-72')
+    expandCodeButton.classList.add('hidden')
+  })
 }
 
 const updateiFrameDarkMode = (iFrame, theme) => {
@@ -203,6 +217,7 @@ const initializeCodeExamples = (theme) => {
     updateiFrameHeight(iframe)
     updateiFrameDarkMode(iframe, theme)
     initiateCopyToClipboard(c)
+    initiateExpandCode(c)
   })
 }
 

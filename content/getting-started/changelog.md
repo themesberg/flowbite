@@ -15,6 +15,17 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v1.5.4
+
+- released new Speed Dial component
+- modals now close by default when clicking outside
+- add new static options to modals to prevent closing when clicking outside
+- add expand code feature to the docs
+- normalize colors for all label inputs
+- remove "for" and "id" attributes from toggle switch components
+- improve hover and focus style of the hamburger icons
+- update to Tailwind CSS v3.2.2
+
 ### v1.5.3
 
 - fix popover / tooltip styles

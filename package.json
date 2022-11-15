@@ -1,6 +1,6 @@
 {
   "name": "flowbite",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "The most popular library of interactive components built with Tailwind CSS",
   "keywords": [
     "flowbite",
@@ -41,7 +41,8 @@
     "build:css:min": "NPM_ENV=production npx postcss src/flowbite.css  > dist/flowbite.min.css",
     "build:css": "NPM_ENV=development npx postcss src/flowbite.css  > dist/flowbite.css",
     "build:js": "run-s build:webpack && copyfiles --flat static/flowbite.js dist && copyfiles --flat static/flowbite.js.map dist && copyfiles --flat static/datepicker.js dist && copyfiles --flat static/datepicker.js.map dist",
-    "build:npm": "run-s build:css:min build:css build:js"
+    "build:js:min": "NPM_ENV=production run-s build:webpack && copyfiles --flat static/flowbite.js dist && copyfiles --flat static/flowbite.js.map dist && copyfiles --flat static/datepicker.js dist && copyfiles --flat static/datepicker.js.map dist",
+    "build:npm": "run-s build:css:min build:css build:js build:js:min"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
@@ -68,6 +69,7 @@
     "source-map-loader": "^2.0.0",
     "style-loader": "^2.0.0",
     "tailwindcss": "^3.2.2",
+    "terser-webpack-plugin": "^5.3.6",
     "webpack": "^5.47.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2",

@@ -1,6 +1,4 @@
 const Default = {
-    targetEl: null,
-    triggerEl: null,
     triggerType: 'hover',
     onShow: () => { },
     onHide: () => { },
@@ -8,10 +6,10 @@ const Default = {
 }
 
 class Dial {
-    constructor(parentEl = null, options) {
+    constructor(parentEl = null, triggerEl = null, targetEl = null, options) {
         this._parentEl = parentEl
-        this._triggerEl = options ? options.triggerEl : Default.triggerEl
-        this._targetEl = options ? options.targetEl : Default.targetEl
+        this._triggerEl = triggerEl
+        this._targetEl = targetEl
         this._options = { ...Default, ...options }
         this._visible = false
         this._init()
@@ -32,16 +30,9 @@ class Dial {
                 })
             })
             triggerEvents.hideEvents.forEach(ev => {
-                this._triggerEl.addEventListener(ev, () => {
+                this._parentEl.addEventListener(ev, () => {
                     setTimeout(() => {
-                        if (!this._targetEl.matches(':hover')) {
-                            this.hide()
-                        }
-                    }, 100)
-                })
-                this._targetEl.addEventListener(ev, () => {
-                    setTimeout(() => {
-                        if (!this._triggerEl.matches(':hover')) {
+                        if (!this._parentEl.matches(':hover')) {
                             this.hide()
                         }
                     }, 100)
@@ -53,7 +44,7 @@ class Dial {
 
     hide() {
         this._targetEl.classList.add('hidden')
-        if(this._triggerEl) {
+        if (this._triggerEl) {
             this._triggerEl.setAttribute('aria-expanded', 'false')
         }
         this._visible = false
@@ -64,13 +55,21 @@ class Dial {
 
     show() {
         this._targetEl.classList.remove('hidden')
-        if(this._triggerEl) {
+        if (this._triggerEl) {
             this._triggerEl.setAttribute('aria-expanded', 'true')
         }
         this._visible = true
 
         // callback function
         this._options.onShow(this)
+    }
+
+    toggle() {
+        if (this._visible) {
+            this.hide()
+        } else {
+            this.show()
+        }
     }
 
     _getTriggerEvents() {
@@ -93,14 +92,6 @@ class Dial {
         }
     }
 
-    toggle() {
-        if (this._visible) {
-            this.hide()
-        } else {
-            this.show()
-        }
-    }
-
 }
 
 window.Dial = Dial;
@@ -111,22 +102,18 @@ function initDial() {
         const targetEl = document.getElementById(triggerEl.getAttribute('data-dial-toggle'))
         const triggerType = triggerEl.getAttribute('data-dial-trigger')
 
-        console.log(triggerType)
-
-        new Dial(parentEl, {
-            targetEl: targetEl,
-            triggerEl: triggerEl,
+        new Dial(parentEl, triggerEl, targetEl, {
             triggerType: triggerType ? triggerType : Default.triggerType
         })
     })
 }
 
 if (document.readyState !== 'loading') {
-	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initDial()
+    // DOMContentLoaded event were already fired. Perform explicit initialization now
+    initDial()
 } else {
-	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initDial)
+    // DOMContentLoaded event not yet fired, attach initialization process to it
+    document.addEventListener('DOMContentLoaded', initDial)
 }
 
 export default Dial

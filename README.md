@@ -397,6 +397,20 @@ Flowbite is an open source collection of UI components built with the utility cl
         </a>
     </td>
   </tr>
+  <tr>
+    <td width="33.3333%">Speed Dial</td>
+    <td width="33.3333%"></td>
+    <td width="33.3333%"></td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/speed-dial/">
+            <img alt="Tailwind CSS Speed Dial" src="https://flowbite.s3.amazonaws.com/github/dial.jpg">
+        </a>
+    </td>
+    <td width="33.3333%"></td>
+    <td width="33.3333%"></td>
+  </tr>
 </table>
 
 ## Getting started

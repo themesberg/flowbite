@@ -844,7 +844,7 @@ Create a new Speed Diual object with the object parameters like the trigger elem
 
 ### Options
 
-Use the following options as the third parameter for the Popover object to set the positioning, offset, and the trigger type (hover or click).
+Use the following options as the third parameter for the Speed Dial object to set the trigger type (hover or click).
 
 <div class="overflow-x-auto relative my-10 shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">

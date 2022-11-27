@@ -12,7 +12,7 @@ next: Ruby on Rails
 nextLink: getting-started/rails/
 ---
 
-Svelte is a modern and growing front-end compiler. Developers build boilerplate-free components using languages HTML, CSS and JavaScript. Svelte compiles your code to tiny, framework-less vanilla JS. 
+Svelte is a modern and growing front-end compiler. Developers build boilerplate-free components using languages HTML, CSS and JavaScript. Svelte compiles your code to tiny, framework-less vanilla JS.
 
 ## Install SvelteKit and Tailwind CSS
 
@@ -74,7 +74,7 @@ plugins: [
   ],
 ```
 
-Update `src/__layout.svelte` by adding `flowbite.css`:
+Update `src/+layout.svelte` by adding `flowbite.css`:
 
 ```bash
 <script>
@@ -93,8 +93,8 @@ Modify the `src/app.html` by adding `flowbite.js` as the following:
     <meta name="description" content="" />
     <link rel="icon" href="%svelte.assets%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-	%svelte.head%
-    </head>
+    %svelte.head%
+  </head>
   <body>
     <div id="svelte">%svelte.body%</div>
     <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
@@ -105,7 +105,7 @@ Modify the `src/app.html` by adding `flowbite.js` as the following:
 ## Method 3 Using CDN
 
 This method uses the CDN and using Flowbite unpurged CDN JS/CSS. You don’t need to install TailwindCSS nor Flowbite.
-The Flowbite contains Tailwind CSS v3.0.1. So you can add CSS and JS link in the src/app.html. Place `flowbite.min.css` in 
+The Flowbite contains Tailwind CSS v3.0.1. So you can add CSS and JS link in the src/app.html. Place `flowbite.min.css` in
 the head and `flowbite.js` just before the body tag.
 
 ```html
@@ -116,21 +116,27 @@ the head and `flowbite.js` just before the body tag.
     <meta name="description" content="" />
     <link rel="icon" href="%svelte.assets%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.min.css" />
-  %svelte.head%
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.min.css"
+    />
+    %svelte.head%
   </head>
   <body>
     <div id="svelte">%svelte.body%</div>
-   <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
   </body>
 </html>
 ```
 
-If you want it only in a certain directories, create `src/your-dir/__layout.svelte` and add the Flowbite CSS in the `svelte:head` section.
+If you want it only in a certain directories, create `src/your-dir/+layout.svelte` and add the Flowbite CSS in the `svelte:head` section.
 
 ```html
 <svelte:head>
-<link rel="stylesheet" href="https://unpkg.com/flowbite@1.3.2/dist/flowbite.min.css" /></svelte:head> 
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/flowbite@1.3.2/dist/flowbite.min.css"
+/></svelte:head>
 <slot />
 ```
 

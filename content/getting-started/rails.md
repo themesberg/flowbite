@@ -111,7 +111,13 @@ module.exports = {
 }
 ```
 
-10. Run the following command to include Flowbite's JavaScript inside the `importmap.rb` file:
+10. Add Flowbite's JavaScript in `app/javascript/application.js`:
+
+```javascript
+import "flowbite"
+```
+
+11. Run the following command to include Flowbite's JavaScript inside the `importmap.rb` file:
 
 ```bash
 ./bin/importmap pin flowbite

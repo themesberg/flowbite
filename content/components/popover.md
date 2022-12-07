@@ -61,7 +61,7 @@ Use this example to show more information about a user profile when hovering ove
             <li class="mr-2">
                 <a href="#" class="hover:underline">
                     <span class="font-semibold text-gray-900 dark:text-white">799</span>
-                    <spa>Following</span>
+                    <span>Following</span>
                 </a>
             </li>
             <li>

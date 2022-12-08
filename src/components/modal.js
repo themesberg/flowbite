@@ -23,6 +23,11 @@ class Modal {
             this._targetEl.addEventListener('click', ev => {
                 this._handleOutsideClick(ev.target)
             })
+            this._targetEl.addEventListener('keydown', ev => {
+                if (ev.key === 'Escape') {
+                    this.hide()
+                }
+            })
         }
     }
 
@@ -104,6 +109,13 @@ class Modal {
 
         // prevent body scroll
         document.body.classList.add('overflow-hidden')
+
+        // Add keyboard event listener to the document
+        document.addEventListener('keydown', ev => {
+            if (ev.key === 'Escape') {
+                this.hide()
+            }
+        })
 
         // callback function
         this._options.onShow(this)
@@ -191,7 +203,7 @@ const documentEventListers = ['load', 'turbo:load']
 
 // init modals on load
 documentEventListers.forEach(event => {
-	document.addEventListener(event, initModal(selectors))
+    document.addEventListener(event, initModal(selectors))
 })
 
 export default Modal

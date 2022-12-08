@@ -260,7 +260,11 @@ function initDrawer() {
     })
 }
 
-document.addEventListener('load', initDrawer())
-document.addEventListener('turbo:load', initDrawer())
+const documentEventListers = ['load', 'turbo:load']
+
+// init drawers on load
+documentEventListers.forEach(event => {
+	document.addEventListener(event, initDrawer())
+})
 
 export default Drawer

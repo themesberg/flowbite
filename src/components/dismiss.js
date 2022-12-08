@@ -45,7 +45,11 @@ function initDismiss() {
     })
 }
 
-document.addEventListener('load', initDismiss())
-document.addEventListener('turbo:load', initDismiss())
+const documentEventListers = ['load', 'turbo:load']
+
+// init dismiss on load
+documentEventListers.forEach(event => {
+	document.addEventListener(event, initDismiss())
+})
 
 export default Dismiss

@@ -119,7 +119,11 @@ function initTooltip() {
     })
 }
 
-document.addEventListener('load', initTooltip())
-document.addEventListener('turbo:load', initTooltip())
+const documentEventListers = ['load', 'turbo:load']
+
+// init tooltips on load
+documentEventListers.forEach(event => {
+	document.addEventListener(event, initTooltip())
+})
 
 export default Tooltip

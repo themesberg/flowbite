@@ -133,7 +133,11 @@ function initAccordion() {
 	})
 }
 
-document.addEventListener('load', initAccordion())
-document.addEventListener('turbo:load', initAccordion())
+const documentEventListers = ['load', 'turbo:load']
+
+// init accordion on load
+documentEventListers.forEach(event => {
+	document.addEventListener(event, initAccordion())
+})
 
 export default Accordion

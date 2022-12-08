@@ -74,7 +74,11 @@ function initCollapse() {
     })
 }
 
-document.addEventListener('load', initCollapse())
-document.addEventListener('turbo:load', initCollapse())
+const documentEventListers = ['load', 'turbo:load']
+
+// init collapse on load
+documentEventListers.forEach(event => {
+	document.addEventListener(event, initCollapse())
+})
 
 export default Collapse

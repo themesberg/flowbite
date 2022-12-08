@@ -187,7 +187,11 @@ const selectors = {
     backdrop: 'data-modal-backdrop'
 }
 
-document.addEventListener('load', initModal(selectors))
-document.addEventListener('turbo:load', initModal(selectors))
+const documentEventListers = ['load', 'turbo:load']
+
+// init modals on load
+documentEventListers.forEach(event => {
+	document.addEventListener(event, initModal(selectors))
+})
 
 export default Modal

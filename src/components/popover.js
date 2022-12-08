@@ -136,7 +136,11 @@ function initPopover() {
     })
 }
 
-document.addEventListener('load', initPopover())
-document.addEventListener('turbo:load', initPopover())
+const documentEventListers = ['load', 'turbo:load']
+
+// init popovers on load
+documentEventListers.forEach(event => {
+	document.addEventListener(event, initPopover())
+})
 
 export default Popover

@@ -112,7 +112,11 @@ function initDropdown() {
     })
 }
 
-document.addEventListener('load', initDropdown())
-document.addEventListener('turbo:load', initDropdown())
+const documentEventListers = ['load', 'turbo:load']
+
+// init dropdowns on load
+documentEventListers.forEach(event => {
+	document.addEventListener(event, initDropdown())
+})
 
 export default Dropdown

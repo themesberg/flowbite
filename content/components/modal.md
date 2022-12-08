@@ -24,7 +24,7 @@ Make sure that you also have `aria-hidden="true"` applied as an attribute when t
 
 You can also use the `data-modal-show="true"` attribute to show open the modal by default.
 
-{{< example id="default-modal-example"github="components/modal.md" show_dark=true iframeHeight="500" >}}
+{{< example id="default-modal-example"github="components/modal.md" class="flex justify-center" show_dark=true iframeHeight="500" >}}
 <!-- Modal toggle -->
 <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="defaultModal">
   Toggle modal
@@ -68,7 +68,7 @@ You can also use the `data-modal-show="true"` attribute to show open the modal b
 
 Use the `data-modal-backdrop="static"` data attribute to prevent the modal from closing when clicking outside of it. This can be used with situations where you want to force the user to choose an option such as a cookie notice or when taking a survey.
 
-{{< example class="dark:bg-gray-900" github="components/modal.md" iframeHeight="500" show_dark=true >}}
+{{< example class="dark:bg-gray-900" github="components/modal.md" class="flex justify-center" iframeHeight="500" show_dark=true >}}
 <!-- Modal toggle -->
 <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="staticModal">
   Toggle modal
@@ -111,7 +111,7 @@ Use the `data-modal-backdrop="static"` data attribute to prevent the modal from 
 
 You can use this modal example to show a pop-up decision dialog to your users especially when deleting an item and making sure if the user really wants to do that by double confirming.
 
-{{< example id="modal-popup-example" github="components/modal.md" show_dark=true iframeHeight="500" >}}
+{{< example id="modal-popup-example" github="components/modal.md" class="flex justify-center" show_dark=true iframeHeight="500" >}}
 <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="popup-modal">
   Toggle modal
 </button>
@@ -140,7 +140,7 @@ You can use this modal example to show a pop-up decision dialog to your users es
 
 Use this modal example with form input element to receive information from your users with the advantage of not having to link to another page but keeping the user on the currently active page. A great example would be a login or a register form.
 
-{{< example id="modal-form-example" github="components/modal.md" show_dark=true iframeHeight="500" >}}
+{{< example id="modal-form-example" github="components/modal.md" class="flex justify-center" show_dark=true iframeHeight="500" >}}
 <!-- Modal toggle -->
 <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="authentication-modal">
   Toggle modal
@@ -190,7 +190,7 @@ Use this modal example with form input element to receive information from your 
 
 Use this web3 modal component to show crypto wallet connection options like MetaMask or WalletConnect when building a website based on NFT authentication and collectibles.
 
-{{< example id="modal-crypto-example" github="components/modal.md" show_dark=true iframeHeight="600" >}}
+{{< example id="modal-crypto-example" github="components/modal.md" class="flex justify-center" show_dark=true iframeHeight="600" >}}
 <button type="button" data-modal-toggle="crypto-modal" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700">
   <svg aria-hidden="true" class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
   Connect wallet
@@ -262,7 +262,7 @@ Use this web3 modal component to show crypto wallet connection options like Meta
 
 You can use four different modal sizing options starting from small to extra large, but keep in mind that the width of these modals will remain the same when browsing on smaller devices.
 
-{{< example id="modal-sizes-example" github="components/modal.md" show_dark=true iframeHeight="800" >}}
+{{< example id="modal-sizes-example" github="components/modal.md" class="flex justify-center" show_dark=true iframeHeight="800" >}}
 <div class="block space-y-4 md:flex md:space-y-0 md:space-x-4">
     <!-- Modal toggle -->
     <button class="block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="small-modal">
@@ -430,7 +430,7 @@ Use the `data-modal-placement` data attribute on the modal element to set the po
 
 The default position is the center of the page.
 
-{{< example id="modal-placement-example" github="components/modal.md" show_dark=true iframeHeight="700">}}
+{{< example id="modal-placement-example" github="components/modal.md" class="flex justify-center" show_dark=true iframeHeight="700">}}
 <div class="block space-y-4 md:flex md:space-y-0 md:space-x-4">
     <!-- Modal toggle -->
     <button class="block w-full md:w-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="top-left-modal">

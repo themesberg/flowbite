@@ -240,7 +240,11 @@ function initCarousel() {
     })
 }
 
-document.addEventListener('load', initCarousel())
-document.addEventListener('turbo:load', initCarousel())
+const documentEventListers = ['load', 'turbo:load']
+
+// init carousel on load
+documentEventListers.forEach(event => {
+	document.addEventListener(event, initCarousel())
+})
 
 export default Carousel

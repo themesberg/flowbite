@@ -106,7 +106,11 @@ function initDial() {
     })
 }
 
-document.addEventListener('load', initDial())
-document.addEventListener('turbo:load', initDial())
+const documentEventListers = ['load', 'turbo:load']
+
+// init dial on load
+documentEventListers.forEach(event => {
+	document.addEventListener(event, initDial())
+})
 
 export default Dial

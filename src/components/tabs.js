@@ -102,7 +102,11 @@ function initTabs() {
     })
 }
 
-document.addEventListener('load', initTabs())
-document.addEventListener('turbo:load', initTabs())
+const documentEventListers = ['load', 'turbo:load']
+
+// init tabs on load
+documentEventListers.forEach(event => {
+	document.addEventListener(event, initTabs())
+})
 
 export default Tabs

@@ -106,12 +106,7 @@ function initDial() {
     })
 }
 
-if (document.readyState !== 'loading') {
-    // DOMContentLoaded event were already fired. Perform explicit initialization now
-    initDial()
-} else {
-    // DOMContentLoaded event not yet fired, attach initialization process to it
-    document.addEventListener('DOMContentLoaded', initDial)
-}
+document.addEventListener('load', initDial())
+document.addEventListener('turbo:load', initDial())
 
 export default Dial

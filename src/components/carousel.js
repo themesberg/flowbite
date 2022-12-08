@@ -240,12 +240,7 @@ function initCarousel() {
     })
 }
 
-if (document.readyState !== 'loading') {
-	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initCarousel()
-} else {
-	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initCarousel)
-}
+document.addEventListener('load', initCarousel())
+document.addEventListener('turbo:load', initCarousel())
 
 export default Carousel

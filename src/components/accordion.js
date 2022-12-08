@@ -133,12 +133,7 @@ function initAccordion() {
 	})
 }
 
-if (document.readyState !== 'loading') {
-	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initAccordion()
-} else {
-	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initAccordion)
-}
+document.addEventListener('load', initAccordion())
+document.addEventListener('turbo:load', initAccordion())
 
 export default Accordion

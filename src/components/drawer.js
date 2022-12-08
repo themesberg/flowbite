@@ -260,12 +260,7 @@ function initDrawer() {
     })
 }
 
-if (document.readyState !== 'loading') {
-    // DOMContentLoaded event were already fired. Perform explicit initialization now
-    initDrawer()
-} else {
-    // DOMContentLoaded event not yet fired, attach initialization process to it
-    document.addEventListener('DOMContentLoaded', initDrawer)
-}
+document.addEventListener('load', initDrawer())
+document.addEventListener('turbo:load', initDrawer())
 
 export default Drawer

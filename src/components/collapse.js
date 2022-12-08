@@ -74,12 +74,7 @@ function initCollapse() {
     })
 }
 
-if (document.readyState !== 'loading') {
-	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initCollapse()
-} else {
-	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initCollapse)
-}
+document.addEventListener('load', initCollapse())
+document.addEventListener('turbo:load', initCollapse())
 
 export default Collapse

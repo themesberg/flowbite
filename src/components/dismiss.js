@@ -45,12 +45,7 @@ function initDismiss() {
     })
 }
 
-if (document.readyState !== 'loading') {
-	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initDismiss()
-} else {
-	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initDismiss)
-}
+document.addEventListener('load', initDismiss())
+document.addEventListener('turbo:load', initDismiss())
 
 export default Dismiss

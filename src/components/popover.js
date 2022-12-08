@@ -136,12 +136,7 @@ function initPopover() {
     })
 }
 
-if (document.readyState !== 'loading') {
-	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initPopover()
-} else {
-	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initPopover)
-}
+document.addEventListener('load', initPopover())
+document.addEventListener('turbo:load', initPopover())
 
 export default Popover

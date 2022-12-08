@@ -187,12 +187,7 @@ const selectors = {
     backdrop: 'data-modal-backdrop'
 }
 
-if (document.readyState !== 'loading') {
-    // DOMContentLoaded event were already fired. Perform explicit initialization now
-    initModal(selectors)
-} else {
-    // DOMContentLoaded event not yet fired, attach initialization process to it
-    document.addEventListener('DOMContentLoaded', initModal(selectors))
-}
+document.addEventListener('load', initModal(selectors))
+document.addEventListener('turbo:load', initModal(selectors))
 
 export default Modal

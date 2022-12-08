@@ -102,12 +102,7 @@ function initTabs() {
     })
 }
 
-if (document.readyState !== 'loading') {
-	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initTabs()
-} else {
-	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initTabs)
-}
+document.addEventListener('load', initTabs())
+document.addEventListener('turbo:load', initTabs())
 
 export default Tabs

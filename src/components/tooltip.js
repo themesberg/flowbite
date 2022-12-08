@@ -119,12 +119,7 @@ function initTooltip() {
     })
 }
 
-if (document.readyState !== 'loading') {
-	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initTooltip()
-} else {
-	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initTooltip)
-}
+document.addEventListener('load', initTooltip())
+document.addEventListener('turbo:load', initTooltip())
 
 export default Tooltip

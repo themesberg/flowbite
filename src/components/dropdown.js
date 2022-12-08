@@ -112,12 +112,7 @@ function initDropdown() {
     })
 }
 
-if (document.readyState !== 'loading') {
-	// DOMContentLoaded event were already fired. Perform explicit initialization now
-	initDropdown()
-} else {
-	// DOMContentLoaded event not yet fired, attach initialization process to it
-	document.addEventListener('DOMContentLoaded', initDropdown)
-}
+document.addEventListener('load', initDropdown())
+document.addEventListener('turbo:load', initDropdown())
 
 export default Dropdown

@@ -115,12 +115,17 @@ module.exports = {
 
 ```javascript
 import "flowbite"
+```
 
-// for turbo support import the flowbite.turbo.js file which uses "turbo:load" event listeners
+### Turbo load support
+
+For turbo load support you can import the `flowbite.turbo.js` file where the `turbo:load` event listeners are added.
+
+```javascript
 import "flowbite/src/flowbite.turbo.js"
 ```
 
-11. Run the following command to include Flowbite's JavaScript inside the `importmap.rb` file:
+1.  Run the following command to include Flowbite's JavaScript inside the `importmap.rb` file:
 
 ```bash
 ./bin/importmap pin flowbite
@@ -136,11 +141,11 @@ Alternatively, you can also include the script separately or using CDN:
 <link rel="stylesheet" href="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.css" />
 ```
 
-### Turbo load support CDN
-
 For turbo support you can include `flowbite.turbo.js` which add the `turbo:load` event listener on the window for the data attributes:
 
+```html
 <script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.turbo.js"></script>
+```
 
 Now you can use interactive components such as modals, dropdowns, navbars, and more.
 

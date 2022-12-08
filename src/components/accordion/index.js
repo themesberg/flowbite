@@ -106,7 +106,7 @@ class Accordion {
 
 window.Accordion = Accordion;
 
-function initAccordion() {
+export function initAccordions() {
 	document.querySelectorAll('[data-accordion]').forEach(accordionEl => {
 
 		const alwaysOpen = accordionEl.getAttribute('data-accordion')
@@ -132,18 +132,5 @@ function initAccordion() {
 		})
 	})
 }
-
-const windowEventListeners = ['load'];
-
-// add "turbo:load" event listener if Turbo is enabled
-if (typeof Rails !== 'undefined' && Rails.application.config.action_controller.use_turbo_stream) {
-    windowEventListeners.pop(); // remove "load" event
-    windowEventListeners.push("turbo:load");
-}
-
-// init collapse on load
-windowEventListeners.forEach((event) => {
-    window.addEventListener(event, initAccordion);
-});
 
 export default Accordion

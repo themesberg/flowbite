@@ -198,8 +198,7 @@ const getDrawerInstance = (id, instances) => {
     return false
 }
 
-function initDrawer() {
-    console.log('init')
+export function initDrawers() {
     let drawerInstances = []
     document.querySelectorAll('[data-drawer-target]').forEach(triggerEl => {
         // mandatory
@@ -266,18 +265,5 @@ function initDrawer() {
         })
     })
 }
-
-const windowEventListeners = ['load'];
-
-// add "turbo:load" event listener if Turbo is enabled
-if (typeof Rails !== 'undefined' && Rails.application.config.action_controller.use_turbo_stream) {
-    windowEventListeners.pop(); // remove "load" event
-    windowEventListeners.push("turbo:load");
-}
-
-// init collapse on load
-windowEventListeners.forEach((event) => {
-    window.addEventListener(event, initDrawer);
-});
 
 export default Drawer

@@ -105,7 +105,7 @@ module.exports = {
 module.exports = {
 
     content: [
-        "./node_modules/flowbite/**/*.js"
+        './node_modules/flowbite/**/*.js'
     ]
 
 }
@@ -115,6 +115,9 @@ module.exports = {
 
 ```javascript
 import "flowbite"
+
+// for turbo support import the flowbite.turbo.js file which uses "turbo:load" event listeners
+import "flowbite/src/flowbite.turbo.js"
 ```
 
 11. Run the following command to include Flowbite's JavaScript inside the `importmap.rb` file:
@@ -127,13 +130,20 @@ Alternatively, you can also include the script separately or using CDN:
 
 ```html
 // relative path
-<script src="../path/to/flowbite/dist/flowbite.js"></script>
+<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
 
 // CDN
 <link rel="stylesheet" href="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.css" />
 ```
 
+### Turbo load support CDN
+
+For turbo support you can include `flowbite.turbo.js` which add the `turbo:load` event listener on the window for the data attributes:
+
+<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.turbo.js"></script>
+
 Now you can use interactive components such as modals, dropdowns, navbars, and more.
+
 ## Building your project
 
 Run the following command to start a local server and build the source files:
@@ -143,6 +153,8 @@ Run the following command to start a local server and build the source files:
 ```
 
 This will create a local server and you will be able to access the pages on `localhost:3000`.
+
+You can also run `rails tailwindcss:build` to compile Tailwind CSS.
 
 ## Create a homepage
 
@@ -154,7 +166,7 @@ First of all, you need to delete the default `index.html` file inside the `publi
 
 ```html
 <button data-tooltip-target="tooltip-default" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default tooltip</button>
-<div id="tooltip-default" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+<div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Tooltip content
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>

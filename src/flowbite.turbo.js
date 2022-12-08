@@ -14,7 +14,7 @@ import Popover, { initPopovers } from './components/popover'
 import Dial, { initDials } from './components/dial'
 import Events from './dom/events'
 
-const events = new Events('load', [initAccordions, initCollapses, initCarousels, initDismisses, initDropdowns, initModals, initDrawers, initTabs, initTooltips, initPopovers, initDials])
+const events = new Events('turbo:load', [initAccordions, initCollapses, initCarousels, initDismisses, initDropdowns, initModals, initDrawers, initTabs, initTooltips, initPopovers, initDials])
 events.init()
 
 export default {

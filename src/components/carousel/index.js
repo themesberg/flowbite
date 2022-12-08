@@ -19,7 +19,6 @@ class Carousel {
         this._indicators = this._options.indicators.items
         this._interval = null
         this._init()
-
     }
 
     /**
@@ -179,7 +178,7 @@ class Carousel {
 
 window.Carousel = Carousel;
 
-function initCarousel() {
+export function initCarousels() {
     document.querySelectorAll('[data-carousel]').forEach(carouselEl => {
         const interval = carouselEl.getAttribute('data-carousel-interval')
         const slide = carouselEl.getAttribute('data-carousel') === 'slide' ? true : false
@@ -239,18 +238,5 @@ function initCarousel() {
 
     })
 }
-
-const windowEventListeners = ['load'];
-
-// add "turbo:load" event listener if Turbo is enabled
-if (typeof Rails !== 'undefined' && Rails.application.config.action_controller.use_turbo_stream) {
-    windowEventListeners.pop(); // remove "load" event
-    windowEventListeners.push("turbo:load");
-}
-
-// init collapse on load
-windowEventListeners.forEach((event) => {
-    window.addEventListener(event, initCarousel);
-});
 
 export default Carousel

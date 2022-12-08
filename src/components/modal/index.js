@@ -152,13 +152,13 @@ const getModalInstance = (id, instances) => {
     return false
 }
 
-const initModal = (selectors) => {
+export function initModals() {
     let modalInstances = []
-    document.querySelectorAll(`[${selectors.main}]`).forEach(el => {
-        const modalId = el.getAttribute(selectors.main);
+    document.querySelectorAll('[data-modal-toggle]').forEach(el => {
+        const modalId = el.getAttribute('data-modal-toggle');
         const modalEl = document.getElementById(modalId);
-        const placement = modalEl.getAttribute(selectors.placement)
-        const backdrop = modalEl.getAttribute(selectors.backdrop)
+        const placement = modalEl.getAttribute('data-modal-placement')
+        const backdrop = modalEl.getAttribute('data-modal-backdrop')
 
         if (modalEl) {
             if (!modalEl.hasAttribute('aria-hidden') && !modalEl.hasAttribute('aria-modal')) {
@@ -182,7 +182,7 @@ const initModal = (selectors) => {
             })
         }
 
-        if (modalEl.hasAttribute(selectors.show) && modalEl.getAttribute(selectors.show) === 'true') {
+        if (modalEl.hasAttribute('data-modal-show') && modalEl.getAttribute('data-modal-show') === 'true') {
             modal.show();
         }
 
@@ -191,25 +191,5 @@ const initModal = (selectors) => {
         })
     })
 }
-
-const selectors = {
-    main: 'data-modal-toggle',
-    placement: 'data-modal-placement',
-    show: 'data-modal-show',
-    backdrop: 'data-modal-backdrop'
-}
-
-const windowEventListeners = ['load'];
-
-// add "turbo:load" event listener if Turbo is enabled
-if (typeof Rails !== 'undefined' && Rails.application.config.action_controller.use_turbo_stream) {
-    windowEventListeners.pop(); // remove "load" event
-    windowEventListeners.push("turbo:load");
-}
-
-// init collapse on load
-windowEventListeners.forEach((event) => {
-    window.addEventListener(event, initModal(selectors));
-});
 
 export default Modal

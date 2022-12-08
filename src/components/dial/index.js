@@ -94,7 +94,7 @@ class Dial {
 
 window.Dial = Dial;
 
-function initDial() {
+export function initDials() {
     document.querySelectorAll('[data-dial-init]').forEach(parentEl => {
         const triggerEl = parentEl.querySelector('[data-dial-toggle]')
         const targetEl = document.getElementById(triggerEl.getAttribute('data-dial-toggle'))
@@ -105,18 +105,5 @@ function initDial() {
         })
     })
 }
-
-const windowEventListeners = ['load'];
-
-// add "turbo:load" event listener if Turbo is enabled
-if (typeof Rails !== 'undefined' && Rails.application.config.action_controller.use_turbo_stream) {
-    windowEventListeners.pop(); // remove "load" event
-    windowEventListeners.push("turbo:load");
-}
-
-// init collapse on load
-windowEventListeners.forEach((event) => {
-    window.addEventListener(event, initDial);
-});
 
 export default Dial

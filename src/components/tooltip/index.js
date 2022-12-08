@@ -106,7 +106,7 @@ class Tooltip {
 
 window.Tooltip = Tooltip;
 
-function initTooltip() {
+export function initTooltips() {
     document.querySelectorAll('[data-tooltip-target]').forEach(triggerEl => {
         const targetEl = document.getElementById(triggerEl.getAttribute('data-tooltip-target'))
         const triggerType = triggerEl.getAttribute('data-tooltip-trigger');
@@ -118,18 +118,5 @@ function initTooltip() {
         })
     })
 }
-
-const windowEventListeners = ['load'];
-
-// add "turbo:load" event listener if Turbo is enabled
-if (typeof Rails !== 'undefined' && Rails.application.config.action_controller.use_turbo_stream) {
-    windowEventListeners.pop(); // remove "load" event
-    windowEventListeners.push("turbo:load");
-}
-
-// init collapse on load
-windowEventListeners.forEach((event) => {
-    window.addEventListener(event, initTooltip);
-});
 
 export default Tooltip

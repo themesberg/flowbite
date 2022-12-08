@@ -40,7 +40,7 @@ class Dismiss {
 
 window.Dismiss = Dismiss;
 
-function initDismiss() {
+export function initDismisses() {
     document.querySelectorAll('[data-dismiss-target]').forEach(triggerEl => {
         const targetEl = document.querySelector(
             triggerEl.getAttribute('data-dismiss-target')
@@ -50,18 +50,5 @@ function initDismiss() {
         });
     });
 }
-
-const windowEventListeners = ['load'];
-
-// add "turbo:load" event listener if Turbo is enabled
-if (typeof Rails !== 'undefined' && Rails.application.config.action_controller.use_turbo_stream) {
-    windowEventListeners.pop(); // remove "load" event
-    windowEventListeners.push("turbo:load");
-}
-
-// init collapse on load
-windowEventListeners.forEach((event) => {
-    window.addEventListener(event, initDismiss);
-});
 
 export default Dismiss;

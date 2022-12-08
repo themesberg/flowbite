@@ -101,7 +101,7 @@ class Dropdown {
 
 window.Dropdown = Dropdown;
 
-function initDropdown() {
+export function initDropdowns() {
     document.querySelectorAll('[data-dropdown-toggle]').forEach(triggerEl => {
         const targetEl = document.getElementById(triggerEl.getAttribute('data-dropdown-toggle'))
         const placement = triggerEl.getAttribute('data-dropdown-placement')
@@ -111,18 +111,5 @@ function initDropdown() {
         })
     })
 }
-
-const windowEventListeners = ['load'];
-
-// add "turbo:load" event listener if Turbo is enabled
-if (typeof Rails !== 'undefined' && Rails.application.config.action_controller.use_turbo_stream) {
-    windowEventListeners.pop(); // remove "load" event
-    windowEventListeners.push("turbo:load");
-}
-
-// init collapse on load
-windowEventListeners.forEach((event) => {
-    window.addEventListener(event, initDropdown);
-});
 
 export default Dropdown

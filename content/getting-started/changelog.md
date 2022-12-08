@@ -15,6 +15,11 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v1.5.5
+
+- added support for Ruby on Rails 7 import map with turbo
+- improved event listeners for interactive components
+
 ### v1.5.4
 
 - released new Speed Dial component

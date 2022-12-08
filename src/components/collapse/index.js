@@ -64,8 +64,7 @@ class Collapse {
 
 window.Collapse = Collapse;
 
-function initCollapse() {
-    console.log('load collapse')
+export function initCollapses() {
     document
         .querySelectorAll("[data-collapse-toggle]")
         .forEach((triggerEl) => {
@@ -83,18 +82,5 @@ function initCollapse() {
             });
         });
 }
-
-const windowEventListeners = ['load'];
-
-// add "turbo:load" event listener if Turbo is enabled
-if (typeof Rails !== 'undefined' && Rails.application.config.action_controller.use_turbo_stream) {
-    windowEventListeners.pop(); // remove "load" event
-    windowEventListeners.push("turbo:load");
-}
-
-// init collapse on load
-windowEventListeners.forEach((event) => {
-    window.addEventListener(event, initCollapse);
-});
 
 export default Collapse;

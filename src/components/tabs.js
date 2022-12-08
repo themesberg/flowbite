@@ -102,11 +102,17 @@ function initTabs() {
     })
 }
 
-const documentEventListers = ['load', 'turbo:load']
+const windowEventListeners = ['load'];
 
-// init tabs on load
-documentEventListers.forEach(event => {
-	document.addEventListener(event, initTabs())
-})
+// add "turbo:load" event listener if Turbo is enabled
+if (typeof Rails !== 'undefined' && Rails.application.config.action_controller.use_turbo_stream) {
+    windowEventListeners.pop(); // remove "load" event
+    windowEventListeners.push("turbo:load");
+}
+
+// init collapse on load
+windowEventListeners.forEach((event) => {
+    window.addEventListener(event, initTabs);
+});
 
 export default Tabs

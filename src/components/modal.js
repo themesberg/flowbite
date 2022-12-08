@@ -199,11 +199,17 @@ const selectors = {
     backdrop: 'data-modal-backdrop'
 }
 
-const documentEventListers = ['load', 'turbo:load']
+const windowEventListeners = ['load'];
 
-// init modals on load
-documentEventListers.forEach(event => {
-    document.addEventListener(event, initModal(selectors))
-})
+// add "turbo:load" event listener if Turbo is enabled
+if (typeof Rails !== 'undefined' && Rails.application.config.action_controller.use_turbo_stream) {
+    windowEventListeners.pop(); // remove "load" event
+    windowEventListeners.push("turbo:load");
+}
+
+// init collapse on load
+windowEventListeners.forEach((event) => {
+    window.addEventListener(event, initModal(selectors));
+});
 
 export default Modal

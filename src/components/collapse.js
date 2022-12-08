@@ -2,83 +2,99 @@ const Default = {
     triggerEl: null,
     onCollapse: () => { },
     onExpand: () => { },
-    onToggle: () => { }
-}
+    onToggle: () => { },
+};
 
 class Collapse {
-    constructor(targetEl = null, options) {
-        this._targetEl = targetEl
-        this._triggerEl = options ? options.triggerEl : Default.triggerEl
-        this._options = { ...Default, ...options }
-        this._visible = false
-        this._init()
+    constructor(targetEl = null, options = {}) {
+        this._targetEl = targetEl;
+        this._triggerEl = options.triggerEl || Default.triggerEl;
+        this._options = { ...Default, ...options };
+        this._visible = false;
+        this._init();
     }
 
     _init() {
-
         if (this._triggerEl) {
-            if (this._triggerEl.hasAttribute('aria-expanded')) {
-                this._visible = this._triggerEl.getAttribute('aria-expanded') === 'true' ? true : false
+            if (this._triggerEl.hasAttribute("aria-expanded")) {
+                this._visible =
+                    this._triggerEl.getAttribute("aria-expanded") === "true";
             } else {
                 // fix until v2 not to break previous single collapses which became dismiss
-                this._visible = this._targetEl.classList.contains('hidden') ? false : true
+                this._visible = !this._targetEl.classList.contains("hidden");
             }
 
-            this._triggerEl.addEventListener('click', () => {
-                this._visible ? this.collapse() : this.expand()
-            })
+            this._triggerEl.addEventListener("click", () => {
+                this._visible ? this.collapse() : this.expand();
+            });
         }
-
     }
 
     collapse() {
-        this._targetEl.classList.add('hidden')
-        if(this._triggerEl) {
-            this._triggerEl.setAttribute('aria-expanded', 'false')
+        this._targetEl.classList.add("hidden");
+        if (this._triggerEl) {
+            this._triggerEl.setAttribute("aria-expanded", "false");
         }
-        this._visible = false
+        this._visible = false;
 
         // callback function
-        this._options.onCollapse(this)
+        this._options.onCollapse(this);
     }
 
     expand() {
-        this._targetEl.classList.remove('hidden')
-        if(this._triggerEl) {
-            this._triggerEl.setAttribute('aria-expanded', 'true')
+        this._targetEl.
+            classList.remove("hidden");
+        if (this._triggerEl) {
+            this._triggerEl.setAttribute("aria-expanded", "true");
         }
-        this._visible = true
+        this._visible = true;
 
         // callback function
-        this._options.onExpand(this)
+        this._options.onExpand(this);
     }
 
     toggle() {
         if (this._visible) {
-            this.collapse()
+            this.collapse();
         } else {
-            this.expand()
+            this.expand();
         }
     }
-
 }
 
 window.Collapse = Collapse;
 
 function initCollapse() {
-    document.querySelectorAll('[data-collapse-toggle]').forEach(triggerEl => {
-        const targetEl = document.getElementById(triggerEl.getAttribute('data-collapse-toggle'))
-        new Collapse(targetEl, {
-            triggerEl: triggerEl
-        })
-    })
+    console.log('load collapse')
+    document
+        .querySelectorAll("[data-collapse-toggle]")
+        .forEach((triggerEl) => {
+            const targetEl = document.getElementById(
+                triggerEl.getAttribute("data-collapse-toggle")
+            );
+
+            // check if the target element exists
+            if (!targetEl) {
+                return;
+            }
+
+            new Collapse(targetEl, {
+                triggerEl,
+            });
+        });
 }
 
-const documentEventListers = ['load', 'turbo:load']
+const windowEventListeners = ['load'];
+
+// add "turbo:load" event listener if Turbo is enabled
+if (typeof Rails !== 'undefined' && Rails.application.config.action_controller.use_turbo_stream) {
+    windowEventListeners.pop(); // remove "load" event
+    windowEventListeners.push("turbo:load");
+}
 
 // init collapse on load
-documentEventListers.forEach(event => {
-	document.addEventListener(event, initCollapse())
-})
+windowEventListeners.forEach((event) => {
+    window.addEventListener(event, initCollapse);
+});
 
-export default Collapse
+export default Collapse;

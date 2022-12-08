@@ -30,8 +30,14 @@ class Drawer {
             this._targetEl.classList.add(c)
         })
 
-        // hide by default
-        this.hide()
+        // add keyboard event listener to document
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') { // if 'Escape' key is pressed
+                if (this.isVisible()) { // if the Drawer is visible
+                    this.hide() // hide the Drawer
+                }
+            }
+        })
     }
 
     isVisible() {
@@ -193,6 +199,7 @@ const getDrawerInstance = (id, instances) => {
 }
 
 function initDrawer() {
+    console.log('init')
     let drawerInstances = []
     document.querySelectorAll('[data-drawer-target]').forEach(triggerEl => {
         // mandatory
@@ -260,11 +267,17 @@ function initDrawer() {
     })
 }
 
-const documentEventListers = ['load', 'turbo:load']
+const windowEventListeners = ['load'];
 
-// init drawers on load
-documentEventListers.forEach(event => {
-	document.addEventListener(event, initDrawer())
-})
+// add "turbo:load" event listener if Turbo is enabled
+if (typeof Rails !== 'undefined' && Rails.application.config.action_controller.use_turbo_stream) {
+    windowEventListeners.pop(); // remove "load" event
+    windowEventListeners.push("turbo:load");
+}
+
+// init collapse on load
+windowEventListeners.forEach((event) => {
+    window.addEventListener(event, initDrawer);
+});
 
 export default Drawer

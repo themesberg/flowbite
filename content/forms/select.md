@@ -43,6 +43,23 @@ Apply the `multiple` attribute to the select component to allow users to select 
 </select>
 {{< /example >}}
 
+## Size attribute
+
+Use the size attribute for the select component to specify the number of visible options in the list.
+
+{{< example id="select-size-example" github="forms/select.md" show_dark=true >}}
+<label for="years" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+<select id="years" size="5" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+  <option>2016</option>
+  <option>2017</option>
+  <option>2018</option>
+  <option>2019</option>
+  <option>2020</option>
+  <option>2021</option>
+  <option>2022</option>
+</select>
+{{< /example >}}
+
 ## Disabled state
 
 Apply the `disable` state to the select component to disallow the selection of new options.

@@ -22,7 +22,7 @@ class Tooltip implements TooltipInterface {
     _options: TooltipOptions;
     _popperInstance: any;
 
-    constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: object = {}) {
+    constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: TooltipOptions = Default) {
         this._targetEl = targetEl
         this._triggerEl = triggerEl
         this._options = { ...Default, ...options }

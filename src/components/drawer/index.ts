@@ -25,7 +25,7 @@ class Drawer implements DrawerInterface {
     _options: DrawerOptions;
     _visible: boolean;
 
-    constructor(targetEl: HTMLElement | null = null, options: object = {}) {
+    constructor(targetEl: HTMLElement | null = null, options: DrawerOptions = Default) {
         this._targetEl = targetEl
         this._options = { ...Default, ...options }
         this._visible = false
@@ -236,7 +236,7 @@ export function initDrawers() {
                 backdrop: backdrop ? backdrop === 'true' ? true : false : Default.backdrop,
                 edge: edge ? edge === 'true' ? true : false : Default.edge,
                 edgeOffset: edgeOffset ? edgeOffset : Default.edgeOffset
-            })
+            } as DrawerOptions)
             drawerInstances.push({
                 id: drawerId,
                 object: drawer

@@ -19,7 +19,7 @@ class Dismiss implements DismissInterface {
     _triggerEl: HTMLElement | null;
     _options: DismissOptions;
 
-    constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: object = {}) {
+    constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: DismissOptions = Default) {
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };

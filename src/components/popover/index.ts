@@ -23,7 +23,7 @@ class Popover implements PopoverInterface {
     _options: PopoverOptions;
     _popperInstance: any;
 
-    constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: object = {}) {
+    constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: PopoverOptions = Default) {
         this._targetEl = targetEl
         this._triggerEl = triggerEl
         this._options = { ...Default, ...options }

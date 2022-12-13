@@ -14,7 +14,7 @@ class Accordion implements AccordionInterface {
 	_items: AccordionItem[];
 	_options: AccordionOptions;
 
-	constructor(items: AccordionItem[] = [], options: Partial<AccordionOptions> = {}) {
+	constructor(items: AccordionItem[] = [], options: AccordionOptions = Default) {
 		this._items = items
 		this._options = { ...Default, ...options }
 		this._init()

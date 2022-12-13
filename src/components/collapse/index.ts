@@ -19,7 +19,7 @@ class Collapse implements CollapseInterface {
     _options: CollapseOptions;
     _visible: boolean;
 
-    constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: object = {}) {
+    constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: CollapseOptions = Default) {
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };

@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "lib": ["dom"],
         "outDir": "./dist/",
         "sourceMap": true,
         "noImplicitAny": true,

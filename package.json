@@ -1,6 +1,6 @@
 {
   "name": "flowbite",
-  "version": "1.5.5",
+  "version": "1.6.0",
   "description": "The most popular library of interactive components built with Tailwind CSS",
   "keywords": [
     "flowbite",
@@ -42,12 +42,15 @@
     "build:css": "NPM_ENV=development npx postcss src/flowbite.css  > dist/flowbite.css",
     "build:js": "run-s build:webpack && copyfiles --flat static/flowbite.js dist && copyfiles --flat static/flowbite.js.map dist && copyfiles --flat static/datepicker.js dist && copyfiles --flat static/datepicker.js.map dist",
     "build:js:min": "NPM_ENV=production run-s build:webpack && copyfiles --flat static/flowbite.js dist && copyfiles --flat static/flowbite.js.map dist && copyfiles --flat static/datepicker.js dist && copyfiles --flat static/datepicker.js.map dist && copyfiles --flat static/flowbite.turbo.js dist && copyfiles --flat static/flowbite.turbo.js.map dist",
-    "build:npm": "run-s build:css:min build:css build:js build:js:min"
+    "build:npm": "run-s build:css:min build:css build:js build:js:min",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.8",
     "@docsearch/js": "^3.0.0-alpha.42",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
     "autoprefixer": "^10.3.3",
     "babel-loader": "^8.2.2",
     "copyfiles": "^2.4.1",
@@ -55,6 +58,9 @@
     "css-loader": "^5.2.7",
     "css-minimizer-webpack-plugin": "^3.0.2",
     "cssnano": "^5.0.8",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "file-loader": "^6.2.0",
     "flowbite-datepicker": "^1.2.2",
     "mini-css-extract-plugin": "^1.3.3",
@@ -63,6 +69,7 @@
     "postcss-cli": "^8.3.1",
     "postcss-loader": "^4.3.0",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.8.1",
     "source-map-loader": "^2.0.0",
     "style-loader": "^2.0.0",
     "tailwindcss": "^3.2.2",

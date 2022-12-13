@@ -1,13 +1,13 @@
 // Import the AccordionItem and AccordionOptions interfaces
-import { AccordionItem, AccordionOptions } from './types';
+import { AccordionItem, AccordionOptions } from "./types";
 
 // Define the Accordion interface
 export interface AccordionInterface {
-    _items: AccordionItem[];
-    _options: AccordionOptions;
+  _items: AccordionItem[];
+  _options: AccordionOptions;
 
-    getItem(id: string): AccordionItem | undefined;
-    open(id: string): void;
-    toggle(id: string): void;
-    close(id: string): void;
+  getItem(id: string): AccordionItem | undefined;
+  open(id: string): void;
+  toggle(id: string): void;
+  close(id: string): void;
 }

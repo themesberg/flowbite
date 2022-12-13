@@ -6,11 +6,12 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    datepicker: path.resolve(__dirname, 'src/plugins/datepicker.js'),
-    flowbite: path.resolve(__dirname, 'src/flowbite.js'),
-    'flowbite.turbo': path.resolve(__dirname, 'src/flowbite.turbo.js'),
+    datepicker: path.resolve(__dirname, 'src/plugins/datepicker.ts'),
+    flowbite: path.resolve(__dirname, 'src/flowbite.ts'),
+    'flowbite.turbo': path.resolve(__dirname, 'src/flowbite.turbo.ts'),
     docs: path.resolve(__dirname, 'src/docs.js')
   },
+  devtool: 'inline-source-map',
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'static/'),
@@ -52,7 +53,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.css']
+    extensions: ['.tsx', '.ts', '.js', '.jsx', '.css']
   },
   plugins: [
     new MiniCssExtractPlugin(),
@@ -68,5 +69,6 @@ module.exports = {
       new CssMinimizerPlugin(),
       new TerserPlugin()
     ],
-  }
+  },
+  target: ["web", "es5"]
 };

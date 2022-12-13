@@ -1,6 +1,20 @@
 import { createPopper } from '@popperjs/core';
+import type { Placement, Options } from '@popperjs/core';
 
-const Default = {
+declare global {
+    interface Window {
+        Tooltip: typeof Tooltip;
+    }
+}
+
+type TooltipOptions = {
+    placement: string,
+    triggerType: string,
+    onShow: (tooltip: Tooltip) => void,
+    onHide: (tooltip: Tooltip) => void
+}
+
+const Default: TooltipOptions = {
     placement: 'top',
     triggerType: 'hover',
     onShow: () => { },
@@ -8,7 +22,13 @@ const Default = {
 }
 
 class Tooltip {
-    constructor(targetEl = null, triggerEl = null, options = {}) {
+
+    private _targetEl: HTMLElement | null;
+    private _triggerEl: HTMLElement | null;
+    private _options: TooltipOptions;
+    private _popperInstance: any;
+
+    constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: object = {}) {
         this._targetEl = targetEl
         this._triggerEl = triggerEl
         this._options = { ...Default, ...options }
@@ -16,7 +36,7 @@ class Tooltip {
         this._init()
     }
 
-    _init() {
+    private _init() {
         if (this._triggerEl) {
             const triggerEvents = this._getTriggerEvents()
             triggerEvents.showEvents.forEach(ev => {
@@ -32,9 +52,9 @@ class Tooltip {
         }
     }
 
-    _createPopperInstace() {
+    private _createPopperInstace() {
         return createPopper(this._triggerEl, this._targetEl, {
-            placement: this._options.placement,
+            placement: this._options.placement as Placement,
             modifiers: [
                 {
                     name: 'offset',
@@ -46,7 +66,7 @@ class Tooltip {
         });
     }
 
-    _getTriggerEvents() {
+    private _getTriggerEvents() {
         switch (this._options.triggerType) {
             case 'hover':
                 return {
@@ -71,7 +91,7 @@ class Tooltip {
         this._targetEl.classList.add('opacity-100', 'visible')
 
         // Enable the event listeners
-        this._popperInstance.setOptions(options => ({
+        this._popperInstance.setOptions((options: Options) => ({
             ...options,
             modifiers: [
                 ...options.modifiers,
@@ -91,7 +111,7 @@ class Tooltip {
         this._targetEl.classList.add('opacity-0', 'invisible')
 
         // Disable the event listeners
-        this._popperInstance.setOptions(options => ({
+        this._popperInstance.setOptions((options: Options) => ({
             ...options,
             modifiers: [
                 ...options.modifiers,
@@ -112,10 +132,10 @@ export function initTooltips() {
         const triggerType = triggerEl.getAttribute('data-tooltip-trigger');
         const placement = triggerEl.getAttribute('data-tooltip-placement');
 
-        new Tooltip(targetEl, triggerEl, {
+        new Tooltip(targetEl as HTMLElement, triggerEl as HTMLElement, {
             placement: placement ? placement : Default.placement,
             triggerType: triggerType ? triggerType : Default.triggerType
-        })
+        } as TooltipOptions)
     })
 }
 

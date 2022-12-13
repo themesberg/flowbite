@@ -4,7 +4,13 @@ declare global {
     }
 }
 
-const Default = {
+type CollapseOptions = {
+    onCollapse: (collapse: Collapse) => void,
+    onExpand: (collapse: Collapse) => void,
+    onToggle: (collapse: Collapse) => void
+}
+
+const Default: CollapseOptions = {
     onCollapse: () => { },
     onExpand: () => { },
     onToggle: () => { },
@@ -13,11 +19,7 @@ const Default = {
 class Collapse {
     private _targetEl: HTMLElement | null;
     private _triggerEl: HTMLElement | null;
-    private _options: {
-        onCollapse: (instance: Collapse) => void;
-        onExpand: (instance: Collapse) => void;
-        onToggle: (instance: Collapse) => void;
-    };
+    private _options: CollapseOptions;
     private _visible: boolean;
 
     constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: object = {}) {

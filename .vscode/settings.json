@@ -2,7 +2,4 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    "prettier.singleQuote": true,
-    "prettier.eslintIntegration": true,
-    "prettier.tabWidth": 4
 }

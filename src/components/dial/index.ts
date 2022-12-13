@@ -1,108 +1,108 @@
 const Default = {
-  triggerType: "hover",
-  onShow: () => {},
-  onHide: () => {},
-  onToggle: () => {},
+    triggerType: 'hover',
+    onShow: () => {},
+    onHide: () => {},
+    onToggle: () => {},
 };
 
 class Dial {
-  constructor(parentEl = null, triggerEl = null, targetEl = null, options) {
-    this._parentEl = parentEl;
-    this._triggerEl = triggerEl;
-    this._targetEl = targetEl;
-    this._options = { ...Default, ...options };
-    this._visible = false;
-    this._init();
-  }
-
-  _init() {
-    if (this._triggerEl) {
-      const triggerEvents = this._getTriggerEvents();
-      triggerEvents.showEvents.forEach((ev) => {
-        this._triggerEl.addEventListener(ev, () => {
-          this.show();
-        });
-        this._targetEl.addEventListener(ev, () => {
-          this.show();
-        });
-      });
-      triggerEvents.hideEvents.forEach((ev) => {
-        this._parentEl.addEventListener(ev, () => {
-          setTimeout(() => {
-            if (!this._parentEl.matches(":hover")) {
-              this.hide();
-            }
-          }, 100);
-        });
-      });
+    constructor(parentEl = null, triggerEl = null, targetEl = null, options) {
+        this._parentEl = parentEl;
+        this._triggerEl = triggerEl;
+        this._targetEl = targetEl;
+        this._options = { ...Default, ...options };
+        this._visible = false;
+        this._init();
     }
-  }
 
-  hide() {
-    this._targetEl.classList.add("hidden");
-    if (this._triggerEl) {
-      this._triggerEl.setAttribute("aria-expanded", "false");
+    _init() {
+        if (this._triggerEl) {
+            const triggerEvents = this._getTriggerEvents();
+            triggerEvents.showEvents.forEach((ev) => {
+                this._triggerEl.addEventListener(ev, () => {
+                    this.show();
+                });
+                this._targetEl.addEventListener(ev, () => {
+                    this.show();
+                });
+            });
+            triggerEvents.hideEvents.forEach((ev) => {
+                this._parentEl.addEventListener(ev, () => {
+                    setTimeout(() => {
+                        if (!this._parentEl.matches(':hover')) {
+                            this.hide();
+                        }
+                    }, 100);
+                });
+            });
+        }
     }
-    this._visible = false;
 
-    // callback function
-    this._options.onHide(this);
-  }
+    hide() {
+        this._targetEl.classList.add('hidden');
+        if (this._triggerEl) {
+            this._triggerEl.setAttribute('aria-expanded', 'false');
+        }
+        this._visible = false;
 
-  show() {
-    this._targetEl.classList.remove("hidden");
-    if (this._triggerEl) {
-      this._triggerEl.setAttribute("aria-expanded", "true");
+        // callback function
+        this._options.onHide(this);
     }
-    this._visible = true;
 
-    // callback function
-    this._options.onShow(this);
-  }
+    show() {
+        this._targetEl.classList.remove('hidden');
+        if (this._triggerEl) {
+            this._triggerEl.setAttribute('aria-expanded', 'true');
+        }
+        this._visible = true;
 
-  toggle() {
-    if (this._visible) {
-      this.hide();
-    } else {
-      this.show();
+        // callback function
+        this._options.onShow(this);
     }
-  }
 
-  _getTriggerEvents() {
-    switch (this._options.triggerType) {
-      case "hover":
-        return {
-          showEvents: ["mouseenter", "focus"],
-          hideEvents: ["mouseleave", "blur"],
-        };
-      case "click":
-        return {
-          showEvents: ["click", "focus"],
-          hideEvents: ["focusout", "blur"],
-        };
-      default:
-        return {
-          showEvents: ["mouseenter", "focus"],
-          hideEvents: ["mouseleave", "blur"],
-        };
+    toggle() {
+        if (this._visible) {
+            this.hide();
+        } else {
+            this.show();
+        }
     }
-  }
+
+    _getTriggerEvents() {
+        switch (this._options.triggerType) {
+            case 'hover':
+                return {
+                    showEvents: ['mouseenter', 'focus'],
+                    hideEvents: ['mouseleave', 'blur'],
+                };
+            case 'click':
+                return {
+                    showEvents: ['click', 'focus'],
+                    hideEvents: ['focusout', 'blur'],
+                };
+            default:
+                return {
+                    showEvents: ['mouseenter', 'focus'],
+                    hideEvents: ['mouseleave', 'blur'],
+                };
+        }
+    }
 }
 
 window.Dial = Dial;
 
 export function initDials() {
-  document.querySelectorAll("[data-dial-init]").forEach((parentEl) => {
-    const triggerEl = parentEl.querySelector("[data-dial-toggle]");
-    const targetEl = document.getElementById(
-      triggerEl.getAttribute("data-dial-toggle")
-    );
-    const triggerType = triggerEl.getAttribute("data-dial-trigger");
+    document.querySelectorAll('[data-dial-init]').forEach((parentEl) => {
+        const triggerEl = parentEl.querySelector('[data-dial-toggle]');
+        const targetEl = document.getElementById(
+            triggerEl.getAttribute('data-dial-toggle')
+        );
+        const triggerType = triggerEl.getAttribute('data-dial-trigger');
 
-    new Dial(parentEl, triggerEl, targetEl, {
-      triggerType: triggerType ? triggerType : Default.triggerType,
+        new Dial(parentEl, triggerEl, targetEl, {
+            triggerType: triggerType ? triggerType : Default.triggerType,
+        });
     });
-  });
 }
 
 export default Dial;

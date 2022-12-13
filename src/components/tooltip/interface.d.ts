@@ -1,11 +1,11 @@
-import { TooltipOptions } from "./types";
+import { TooltipOptions } from './types';
 
 export interface TooltipInterface {
-  _targetEl: HTMLElement | null;
-  _triggerEl: HTMLElement | null;
-  _options: TooltipOptions;
-  _popperInstance: any;
+    _targetEl: HTMLElement | null;
+    _triggerEl: HTMLElement | null;
+    _options: TooltipOptions;
+    _popperInstance: any;
 
-  show(): void;
-  hide(): void;
+    show(): void;
+    hide(): void;
 }

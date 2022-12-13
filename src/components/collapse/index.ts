@@ -1,20 +1,34 @@
+declare global {
+    interface Window {
+        Collapse: typeof Collapse;
+    }
+}
+
 const Default = {
-    triggerEl: null,
     onCollapse: () => { },
     onExpand: () => { },
     onToggle: () => { },
 };
 
 class Collapse {
-    constructor(targetEl = null, options = {}) {
+    private _targetEl: HTMLElement | null;
+    private _triggerEl: HTMLElement | null;
+    private _options: {
+        onCollapse: (instance: Collapse) => void;
+        onExpand: (instance: Collapse) => void;
+        onToggle: (instance: Collapse) => void;
+    };
+    private _visible: boolean;
+
+    constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: object = {}) {
         this._targetEl = targetEl;
-        this._triggerEl = options.triggerEl || Default.triggerEl;
+        this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
         this._visible = false;
         this._init();
     }
 
-    _init() {
+    private _init() {
         if (this._triggerEl) {
             if (this._triggerEl.hasAttribute("aria-expanded")) {
                 this._visible =
@@ -40,6 +54,7 @@ class Collapse {
         // callback function
         this._options.onCollapse(this);
     }
+
 
     expand() {
         this._targetEl.
@@ -77,9 +92,7 @@ export function initCollapses() {
                 return;
             }
 
-            new Collapse(targetEl, {
-                triggerEl,
-            });
+            new Collapse(targetEl, triggerEl as HTMLElement);
         });
 }
 

@@ -49,7 +49,18 @@ module.exports = {
         use: [{
           loader: 'file-loader',
         }]
-      }
+      },
+      {
+        test: /\.ts$/,
+        use: [
+            {
+                loader: 'ts-loader',
+                options: {
+                    transpileOnly: true
+                }
+            }
+        ]
+    }
     ],
   },
   resolve: {

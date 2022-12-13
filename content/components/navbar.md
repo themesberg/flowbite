@@ -687,6 +687,20 @@ Use the object parameters from the Collapse object to set the trigger element, t
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
+              </td>
+              <td class="px-6 py-4">
+                  Element
+              </td>
+              <td class="px-6 py-4">
+                  Optional
+              </td>
+              <td class="px-6 py-4">
+                  Pass the trigger element that will expand or collapse the target element based on click event. 
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">options</code>
               </td>
               <td class="px-6 py-4">
@@ -723,17 +737,6 @@ Use these optional options for the Dismiss object to set the transition, duratio
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
-              </td>
-              <td class="px-6 py-4">
-                  Element
-              </td>
-              <td class="px-6 py-4">
-                  Set an optional element object which will expand or collapse the target element when clicked.
-              </td>
-          </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">onCollapse</code>
@@ -831,7 +834,6 @@ const triggerEl = document.getElementById('triggerEl');
 
 // optional options with default values and callback functions
 const options = {
-  triggerEl: triggerEl,
   onCollapse: () => {
       console.log('element has been collapsed')
   },
@@ -851,7 +853,7 @@ Next step is to create a new instance of a Collapse object using the parameters 
 * targetEl: required
 * options: optional
 */
-const collapse = new Collapse(targetEl, options);
+const collapse = new Collapse(targetEl, triggerEl, options);
 ```
 
 Now you can programatically expand or collapse the target element using the methods of the Collapse object.
@@ -865,14 +867,6 @@ collapse.collapse();
 
 // toggle the visibility of the target element
 collapse.toggle();
-```
-
-Alternatively, you can also use the Collapse object without the trigger element.
-
-```javascript
-const targetEl = document.getElementById('targetEl');
-
-const collapse = new Collapse(targetEl);
 ```
 
 ### HTML Markup

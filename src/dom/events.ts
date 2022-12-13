@@ -1,5 +1,8 @@
 class Events {
-    constructor(eventType, eventFunctions = []) {
+    private _eventType: string;
+    private _eventFunctions: EventListener[];
+
+    constructor(eventType: string, eventFunctions: EventListener[] = []) {
         this._eventType = eventType;
         this._eventFunctions = eventFunctions;
     }
@@ -9,7 +12,7 @@ class Events {
             window.addEventListener(this._eventType, eventFunction);
         });
     }
-    
+
 }
 
-export default Events
+export default Events;

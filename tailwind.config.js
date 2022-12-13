@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html", "./src/**/*.js"],
+  content: ["./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html", "./src/**/*.ts"],
   safelist: [
     'w-64',
     'w-1/2',

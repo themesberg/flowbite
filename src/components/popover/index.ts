@@ -1,6 +1,15 @@
 import { createPopper } from '@popperjs/core';
+import type { Placement, Options } from '@popperjs/core';
+import { PopoverOptions } from './types';
+import { PopoverInterface } from './interface';
 
-const Default = {
+declare global {
+    interface Window {
+        Popover: typeof Popover;
+    }
+}
+
+const Default: PopoverOptions = {
     placement: 'top',
     offset: 10,
     triggerType: 'hover',
@@ -8,8 +17,13 @@ const Default = {
     onHide: () => { }
 }
 
-class Popover {
-    constructor(targetEl = null, triggerEl = null, options = {}) {
+class Popover implements PopoverInterface {
+    _targetEl: HTMLElement;
+    _triggerEl: HTMLElement;
+    _options: PopoverOptions;
+    _popperInstance: any;
+
+    constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: object = {}) {
         this._targetEl = targetEl
         this._triggerEl = triggerEl
         this._options = { ...Default, ...options }
@@ -49,7 +63,7 @@ class Popover {
 
     _createPopperInstace() {
         return createPopper(this._triggerEl, this._targetEl, {
-            placement: this._options.placement,
+            placement: this._options.placement as Placement,
             modifiers: [
                 {
                     name: 'offset',
@@ -86,7 +100,7 @@ class Popover {
         this._targetEl.classList.add('opacity-100', 'visible')
 
         // Enable the event listeners
-        this._popperInstance.setOptions(options => ({
+        this._popperInstance.setOptions((options: Options) => ({
             ...options,
             modifiers: [
                 ...options.modifiers,
@@ -106,7 +120,7 @@ class Popover {
         this._targetEl.classList.add('opacity-0', 'invisible')
 
         // Disable the event listeners
-        this._popperInstance.setOptions(options => ({
+        this._popperInstance.setOptions((options: Options) => ({
             ...options,
             modifiers: [
                 ...options.modifiers,
@@ -128,11 +142,11 @@ export function initPopovers() {
         const placement = triggerEl.getAttribute('data-popover-placement');
         const offset = triggerEl.getAttribute('data-popover-offset');
 
-        new Popover(targetEl, triggerEl, {
+        new Popover(targetEl as HTMLElement, triggerEl as HTMLElement, {
             placement: placement ? placement : Default.placement,
             offset: offset ? parseInt(offset) : Default.offset,
             triggerType: triggerType ? triggerType : Default.triggerType
-        })
+        } as PopoverOptions)
     })
 }
 

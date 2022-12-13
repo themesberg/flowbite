@@ -1,4 +1,5 @@
 import { DismissOptions } from './types';
+import { DismissInterface } from './interface';
 
 declare global {
     interface Window {
@@ -13,10 +14,10 @@ const Default: DismissOptions = {
     onHide: () => { }
 };
 
-class Dismiss {
-    private _targetEl: HTMLElement | null;
-    private _triggerEl: HTMLElement | null;
-    private _options: DismissOptions;
+class Dismiss implements DismissInterface {
+    _targetEl: HTMLElement | null;
+    _triggerEl: HTMLElement | null;
+    _options: DismissOptions;
 
     constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: object = {}) {
         this._targetEl = targetEl;

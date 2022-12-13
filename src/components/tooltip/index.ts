@@ -1,17 +1,12 @@
 import { createPopper } from '@popperjs/core';
 import type { Placement, Options } from '@popperjs/core';
+import { TooltipOptions } from './types';
+import { TooltipInterface } from './interface';
 
 declare global {
     interface Window {
         Tooltip: typeof Tooltip;
     }
-}
-
-type TooltipOptions = {
-    placement: string,
-    triggerType: string,
-    onShow: (tooltip: Tooltip) => void,
-    onHide: (tooltip: Tooltip) => void
 }
 
 const Default: TooltipOptions = {
@@ -21,11 +16,11 @@ const Default: TooltipOptions = {
     onHide: () => { }
 }
 
-class Tooltip {
-    private _targetEl: HTMLElement | null;
-    private _triggerEl: HTMLElement | null;
-    private _options: TooltipOptions;
-    private _popperInstance: any;
+class Tooltip implements TooltipInterface {
+    _targetEl: HTMLElement | null;
+    _triggerEl: HTMLElement | null;
+    _options: TooltipOptions;
+    _popperInstance: any;
 
     constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: object = {}) {
         this._targetEl = targetEl

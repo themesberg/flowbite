@@ -1,4 +1,5 @@
 import { CollapseOptions } from "./types";
+import { CollapseInterface } from './interface'
 
 declare global {
     interface Window {
@@ -12,11 +13,11 @@ const Default: CollapseOptions = {
     onToggle: () => { },
 };
 
-class Collapse {
-    private _targetEl: HTMLElement | null;
-    private _triggerEl: HTMLElement | null;
-    private _options: CollapseOptions;
-    private _visible: boolean;
+class Collapse implements CollapseInterface {
+    _targetEl: HTMLElement | null;
+    _triggerEl: HTMLElement | null;
+    _options: CollapseOptions;
+    _visible: boolean;
 
     constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: object = {}) {
         this._targetEl = targetEl;
@@ -90,7 +91,7 @@ export function initCollapses() {
                 return;
             }
 
-            new Collapse(targetEl, triggerEl as HTMLElement);
+            new Collapse(targetEl as HTMLElement, triggerEl as HTMLElement);
         });
 }
 

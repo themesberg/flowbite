@@ -1,10 +1,5 @@
 import { AccordionItem, AccordionOptions } from './types'
-
-declare global {
-    interface Window {
-        Accordion: typeof Accordion;
-    }
-}
+import { AccordionInterface } from './interface'
 
 const Default = {
 	alwaysOpen: false,
@@ -15,7 +10,7 @@ const Default = {
 	onToggle: () => { }
 }
 
-class Accordion {
+class Accordion implements AccordionInterface {
 	_items: AccordionItem[];
 	_options: AccordionOptions;
 

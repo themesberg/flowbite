@@ -1,14 +1,9 @@
+import { DismissOptions } from './types';
+
 declare global {
     interface Window {
         Dismiss: typeof Dismiss;
     }
-}
-
-type DismissOptions = {
-    transition: string,
-    duration: number,
-    timing: string,
-    onHide: (dismiss: Dismiss, targetEl: HTMLElement) => void
 }
 
 const Default: DismissOptions = {

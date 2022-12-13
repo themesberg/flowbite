@@ -22,7 +22,6 @@ const Default: TooltipOptions = {
 }
 
 class Tooltip {
-
     private _targetEl: HTMLElement | null;
     private _triggerEl: HTMLElement | null;
     private _options: TooltipOptions;

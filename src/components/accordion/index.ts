@@ -1,3 +1,11 @@
+import { AccordionItem, AccordionOptions } from './types'
+
+declare global {
+    interface Window {
+        Accordion: typeof Accordion;
+    }
+}
+
 const Default = {
 	alwaysOpen: false,
 	activeClasses: 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white',
@@ -8,13 +16,16 @@ const Default = {
 }
 
 class Accordion {
-	constructor(items = [], options = {}) {
+	_items: AccordionItem[];
+	_options: AccordionOptions;
+
+	constructor(items: AccordionItem[] = [], options: Partial<AccordionOptions> = {}) {
 		this._items = items
 		this._options = { ...Default, ...options }
 		this._init()
 	}
 
-	_init() {
+	private _init() {
 		if (this._items.length) {
 			// show accordion item based on click
 			this._items.map(item => {
@@ -30,11 +41,11 @@ class Accordion {
 		}
 	}
 
-	getItem(id) {
+	getItem(id: string) {
 		return this._items.filter(item => item.id === id)[0]
 	}
 
-	open(id) {
+	open(id: string) {
 		const item = this.getItem(id)
 
 		// don't hide other accordions if always open
@@ -44,7 +55,7 @@ class Accordion {
 					i.triggerEl.classList.remove(...this._options.activeClasses.split(" "))
 					i.triggerEl.classList.add(...this._options.inactiveClasses.split(" "))
 					i.targetEl.classList.add('hidden')
-					i.triggerEl.setAttribute('aria-expanded', false)
+					i.triggerEl.setAttribute('aria-expanded', 'false')
 					i.active = false
 
 					// rotate icon if set
@@ -58,7 +69,7 @@ class Accordion {
 		// show active item
 		item.triggerEl.classList.add(...this._options.activeClasses.split(" "))
 		item.triggerEl.classList.remove(...this._options.inactiveClasses.split(" "))
-		item.triggerEl.setAttribute('aria-expanded', true)
+		item.triggerEl.setAttribute('aria-expanded', 'true')
 		item.targetEl.classList.remove('hidden')
 		item.active = true
 
@@ -71,7 +82,7 @@ class Accordion {
 		this._options.onOpen(this, item)
 	}
 
-	toggle(id) {
+	toggle(id: string) {
 		const item = this.getItem(id)
 
 		if (item.active) {
@@ -84,13 +95,13 @@ class Accordion {
 		this._options.onToggle(this, item)
 	}
 
-	close(id) {
+	close(id: string) {
 		const item = this.getItem(id)
 
 		item.triggerEl.classList.remove(...this._options.activeClasses.split(" "))
 		item.triggerEl.classList.add(...this._options.inactiveClasses.split(" "))
 		item.targetEl.classList.add('hidden')
-		item.triggerEl.setAttribute('aria-expanded', false)
+		item.triggerEl.setAttribute('aria-expanded', 'false')
 		item.active = false
 
 		// rotate icon if set
@@ -108,12 +119,11 @@ window.Accordion = Accordion;
 
 export function initAccordions() {
 	document.querySelectorAll('[data-accordion]').forEach(accordionEl => {
-
 		const alwaysOpen = accordionEl.getAttribute('data-accordion')
 		const activeClasses = accordionEl.getAttribute('data-active-classes')
 		const inactiveClasses = accordionEl.getAttribute('data-inactive-classes')
 
-		const items = []
+		const items = [] as AccordionItem[];
 		accordionEl.querySelectorAll('[data-accordion-target]').forEach(el => {
 			const item = {
 				id: el.getAttribute('data-accordion-target'),
@@ -121,7 +131,7 @@ export function initAccordions() {
 				targetEl: document.querySelector(el.getAttribute('data-accordion-target')),
 				iconEl: el.querySelector('[data-accordion-icon]'),
 				active: el.getAttribute('aria-expanded') === 'true' ? true : false
-			}
+			} as AccordionItem
 			items.push(item)
 		})
 
@@ -129,7 +139,7 @@ export function initAccordions() {
 			alwaysOpen: alwaysOpen === 'open' ? true : false,
 			activeClasses: activeClasses ? activeClasses : Default.activeClasses,
 			inactiveClasses: inactiveClasses ? inactiveClasses : Default.inactiveClasses
-		})
+		} as AccordionOptions)
 	})
 }
 

@@ -1,13 +1,9 @@
+import { CollapseOptions } from "./types";
+
 declare global {
     interface Window {
         Collapse: typeof Collapse;
     }
-}
-
-type CollapseOptions = {
-    onCollapse: (collapse: Collapse) => void,
-    onExpand: (collapse: Collapse) => void,
-    onToggle: (collapse: Collapse) => void
 }
 
 const Default: CollapseOptions = {

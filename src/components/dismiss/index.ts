@@ -1,5 +1,17 @@
-const Default = {
-    triggerEl: null,
+declare global {
+    interface Window {
+        Dismiss: typeof Dismiss;
+    }
+}
+
+type DismissOptions = {
+    transition: string,
+    duration: number,
+    timing: string,
+    onHide: (dismiss: Dismiss, targetEl: HTMLElement) => void
+}
+
+const Default: DismissOptions = {
     transition: 'transition-opacity',
     duration: 300,
     timing: 'ease-out',
@@ -7,14 +19,18 @@ const Default = {
 };
 
 class Dismiss {
-    constructor(targetEl = null, options = {}) {
+    private _targetEl: HTMLElement | null;
+    private _triggerEl: HTMLElement | null;
+    private _options: DismissOptions;
+
+    constructor(targetEl: HTMLElement | null = null, triggerEl: HTMLElement | null = null, options: object = {}) {
         this._targetEl = targetEl;
-        this._triggerEl = options.triggerEl || Default.triggerEl;
+        this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
         this._init();
     }
 
-    _init() {
+    private _init() {
         if (this._triggerEl) {
             this._triggerEl.addEventListener('click', () => {
                 this.hide();
@@ -45,9 +61,7 @@ export function initDismisses() {
         const targetEl = document.querySelector(
             triggerEl.getAttribute('data-dismiss-target')
         );
-        new Dismiss(targetEl, {
-            triggerEl
-        });
+        new Dismiss(targetEl as HTMLElement, triggerEl as HTMLElement);
     });
 }
 

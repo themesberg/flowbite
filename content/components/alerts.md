@@ -378,6 +378,20 @@ The parameters for the Dismiss object can be used to programatically initialize 
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
+              </td>
+              <td class="px-6 py-4">
+                  Element
+              </td>
+              <td class="px-6 py-4">
+                  Optional
+              </td>
+              <td class="px-6 py-4">
+                  Pass the element object that will trigger the targetEl dismission on click.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">options</code>
               </td>
               <td class="px-6 py-4">
@@ -414,17 +428,6 @@ Use these optional options for the Dismiss object to set the transition, duratio
           </tr>
       </thead>
       <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
-              </td>
-              <td class="px-6 py-4">
-                  Element
-              </td>
-              <td class="px-6 py-4">
-                  Set an optional element object which will dismiss the target element when being clicked.
-              </td>
-          </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">transition</code>
@@ -512,9 +515,11 @@ First of all, you should set the required target element and optionally set a tr
 // target element that will be dismissed
 const targetEl = document.getElementById('targetElement');
 
+// optional trigger element
+const triggerEl = document.getElementById('triggerElement');
+
 // options object
 const options = {
-  triggerEl: document.getElementById('triggerElement'),
   transition: 'transition-opacity',
   duration: 1000,
   timing: 'ease-out',
@@ -532,9 +537,10 @@ Create a new Dismiss object based on the options set above.
 ```javascript
 /*
 * targetEl: required
+* triggerEl: optional
 * options: optional
 */
-const dismiss = new Dismiss(targetEl, options);
+const dismiss = new Dismiss(targetEl, triggerEl, options);
 ```
 
 You can now use the methods on the Dismiss object.
@@ -548,10 +554,10 @@ dismiss.hide();
 
 Use this HTML code for the JavaScript code example above.
 
-```html
+<!-- ```html -->
 <button id="triggerElement" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Hide alert</button>
 
 <div id="targetElement" class="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800" role="alert">
   <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
 </div>
-```
+<!-- ``` -->

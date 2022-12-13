@@ -1,4 +1,13 @@
-const Default = {
+import { DrawerInstance, DrawerOptions, PlacementClasses } from './types'
+import { DrawerInterface } from './interface'
+
+declare global {
+    interface Window {
+        Drawer: typeof Drawer;
+    }
+}
+
+const Default: DrawerOptions = {
     placement: 'left',
     bodyScrolling: false,
     backdrop: true,
@@ -10,8 +19,13 @@ const Default = {
     onToggle: () => { }
 }
 
-class Drawer {
-    constructor(targetEl = null, options) {
+class Drawer implements DrawerInterface {
+    _targetEl: HTMLElement;
+    _triggerEl: HTMLElement;
+    _options: DrawerOptions;
+    _visible: boolean;
+
+    constructor(targetEl: HTMLElement | null = null, options: object = {}) {
         this._targetEl = targetEl
         this._options = { ...Default, ...options }
         this._visible = false
@@ -147,7 +161,7 @@ class Drawer {
         }
     }
 
-    _getPlacementClasses(placement) {
+    _getPlacementClasses(placement: string): PlacementClasses {
         switch (placement) {
             case 'top':
                 return {
@@ -191,15 +205,14 @@ class Drawer {
 
 window.Drawer = Drawer;
 
-const getDrawerInstance = (id, instances) => {
+const getDrawerInstance = (id: string, instances: DrawerInstance[]) => {
     if (instances.some(drawerInstance => drawerInstance.id === id)) {
         return instances.find(drawerInstance => drawerInstance.id === id)
     }
-    return false
 }
 
 export function initDrawers() {
-    let drawerInstances = []
+    let drawerInstances = [] as DrawerInstance[]
     document.querySelectorAll('[data-drawer-target]').forEach(triggerEl => {
         // mandatory
         const targetEl = document.getElementById(triggerEl.getAttribute('data-drawer-target'))

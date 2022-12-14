@@ -1,5 +1,8 @@
 import { createPopper } from '@popperjs/core';
-import type { Placement, Options } from '@popperjs/core';
+import type {
+    Options as PopperOptions,
+    Instance as PopperInstance,
+} from '@popperjs/core';
 import { TooltipOptions } from './types';
 import { TooltipInterface } from './interface';
 
@@ -20,7 +23,7 @@ class Tooltip implements TooltipInterface {
     _targetEl: HTMLElement | null;
     _triggerEl: HTMLElement | null;
     _options: TooltipOptions;
-    _popperInstance: any;
+    _popperInstance: PopperInstance;
 
     constructor(
         targetEl: HTMLElement | null = null,
@@ -30,7 +33,7 @@ class Tooltip implements TooltipInterface {
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
-        this._popperInstance = this._createPopperInstace();
+        this._popperInstance = this._createPopperInstance();
         this._init();
     }
 
@@ -50,9 +53,9 @@ class Tooltip implements TooltipInterface {
         }
     }
 
-    private _createPopperInstace() {
+    private _createPopperInstance() {
         return createPopper(this._triggerEl, this._targetEl, {
-            placement: this._options.placement as Placement,
+            placement: this._options.placement,
             modifiers: [
                 {
                     name: 'offset',
@@ -89,7 +92,7 @@ class Tooltip implements TooltipInterface {
         this._targetEl.classList.add('opacity-100', 'visible');
 
         // Enable the event listeners
-        this._popperInstance.setOptions((options: Options) => ({
+        this._popperInstance.setOptions((options: PopperOptions) => ({
             ...options,
             modifiers: [
                 ...options.modifiers,
@@ -109,7 +112,7 @@ class Tooltip implements TooltipInterface {
         this._targetEl.classList.add('opacity-0', 'invisible');
 
         // Disable the event listeners
-        this._popperInstance.setOptions((options: Options) => ({
+        this._popperInstance.setOptions((options: PopperOptions) => ({
             ...options,
             modifiers: [
                 ...options.modifiers,

@@ -1,7 +1,8 @@
 import { PopoverInterface } from './interface';
+import type { Placement } from '@popperjs/core';
 
 export declare type PopoverOptions = {
-    placement: string;
+    placement: Placement;
     offset: number;
     triggerType: string;
     onShow: (tooltip: PopoverInterface) => void;

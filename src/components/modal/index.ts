@@ -217,7 +217,7 @@ export function initModals() {
     const modalInstances = [] as ModalInstance[];
 
     document.querySelectorAll('[data-modal-target]').forEach(($triggerEl) => {
-        const modalId = $triggerEl.getAttribute('data-modal-toggle');
+        const modalId = $triggerEl.getAttribute('data-modal-target');
         const $modalEl = document.getElementById(modalId);
         const placement = $modalEl.getAttribute('data-modal-placement');
         const backdrop = $modalEl.getAttribute('data-modal-backdrop');

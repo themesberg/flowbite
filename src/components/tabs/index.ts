@@ -1,4 +1,13 @@
-const Default = {
+import { TabItem, TabsOptions } from './types';
+import { TabsInterface } from './interface';
+
+declare global {
+    interface Window {
+        Tabs: typeof Tabs;
+    }
+}
+
+const Default: TabsOptions = {
     defaultTabId: null,
     activeClasses:
         'text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500',
@@ -7,8 +16,12 @@ const Default = {
     onShow: () => {},
 };
 
-class Tabs {
-    constructor(items = [], options = {}) {
+class Tabs implements TabsInterface {
+    _items: TabItem[];
+    _activeTab: TabItem;
+    _options: TabsOptions;
+
+    constructor(items: TabItem[] = [], options: TabsOptions = Default) {
         this._items = items;
         this._activeTab = options ? this.getTab(options.defaultTabId) : null;
         this._options = { ...Default, ...options };
@@ -38,15 +51,15 @@ class Tabs {
         return this._activeTab;
     }
 
-    _setActiveTab(tab) {
+    _setActiveTab(tab: TabItem) {
         this._activeTab = tab;
     }
 
-    getTab(id) {
+    getTab(id: string) {
         return this._items.filter((t) => t.id === id)[0];
     }
 
-    show(id, forceShow = false) {
+    show(id: string, forceShow = false) {
         const tab = this.getTab(id);
 
         // don't do anything if already active
@@ -55,7 +68,7 @@ class Tabs {
         }
 
         // hide other tabs
-        this._items.map((t) => {
+        this._items.map((t: TabItem) => {
             if (t !== tab) {
                 t.triggerEl.classList.remove(
                     ...this._options.activeClasses.split(' ')
@@ -64,7 +77,7 @@ class Tabs {
                     ...this._options.inactiveClasses.split(' ')
                 );
                 t.targetEl.classList.add('hidden');
-                t.triggerEl.setAttribute('aria-selected', false);
+                t.triggerEl.setAttribute('aria-selected', 'false');
             }
         });
 
@@ -73,7 +86,7 @@ class Tabs {
         tab.triggerEl.classList.remove(
             ...this._options.inactiveClasses.split(' ')
         );
-        tab.triggerEl.setAttribute('aria-selected', true);
+        tab.triggerEl.setAttribute('aria-selected', 'true');
         tab.targetEl.classList.remove('hidden');
 
         this._setActiveTab(tab);
@@ -86,27 +99,30 @@ class Tabs {
 window.Tabs = Tabs;
 
 export function initTabs() {
-    document.querySelectorAll('[data-tabs-toggle]').forEach((triggerEl) => {
-        const tabElements = [];
+    document.querySelectorAll('[data-tabs-toggle]').forEach(($triggerEl) => {
+        const tabItems: TabItem[] = [];
         let defaultTabId = null;
-        triggerEl.querySelectorAll('[role="tab"]').forEach((el) => {
-            const isActive = el.getAttribute('aria-selected') === 'true';
-            const tab = {
-                id: el.getAttribute('data-tabs-target'),
-                triggerEl: el,
-                targetEl: document.querySelector(
-                    el.getAttribute('data-tabs-target')
-                ),
-            };
-            tabElements.push(tab);
+        $triggerEl
+            .querySelectorAll('[role="tab"]')
+            .forEach(($triggerEl: HTMLElement) => {
+                const isActive =
+                    $triggerEl.getAttribute('aria-selected') === 'true';
+                const tab: TabItem = {
+                    id: $triggerEl.getAttribute('data-tabs-target'),
+                    triggerEl: $triggerEl,
+                    targetEl: document.querySelector(
+                        $triggerEl.getAttribute('data-tabs-target')
+                    ),
+                };
+                tabItems.push(tab);
 
-            if (isActive) {
-                defaultTabId = tab.id;
-            }
-        });
-        new Tabs(tabElements, {
+                if (isActive) {
+                    defaultTabId = tab.id;
+                }
+            });
+        new Tabs(tabItems, {
             defaultTabId: defaultTabId,
-        });
+        } as TabsOptions);
     });
 }
 

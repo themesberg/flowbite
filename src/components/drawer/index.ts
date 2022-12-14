@@ -60,10 +60,6 @@ class Drawer implements DrawerInterface {
         });
     }
 
-    isVisible() {
-        return this._visible;
-    }
-
     hide() {
         // based on the edge option show placement classes
         if (this._options.edge) {
@@ -225,6 +221,14 @@ class Drawer implements DrawerInterface {
                 };
         }
     }
+
+    isHidden() {
+        return !this._visible;
+    }
+
+    isVisible() {
+        return this._visible;
+    }
 }
 
 window.Drawer = Drawer;
@@ -237,85 +241,84 @@ const getDrawerInstance = (id: string, instances: DrawerInstance[]) => {
 
 export function initDrawers() {
     const drawerInstances = [] as DrawerInstance[];
-    document.querySelectorAll('[data-drawer-target]').forEach((triggerEl) => {
+    document.querySelectorAll('[data-drawer-target]').forEach(($triggerEl) => {
         // mandatory
-        const targetEl = document.getElementById(
-            triggerEl.getAttribute('data-drawer-target')
+        const $targetEl = document.getElementById(
+            $triggerEl.getAttribute('data-drawer-target')
         );
-        const drawerId = targetEl.id;
+        const drawerId = $targetEl.id;
 
         // optional
-        const placement = triggerEl.getAttribute('data-drawer-placement');
-        const bodyScrolling = triggerEl.getAttribute(
+        const placement = $triggerEl.getAttribute('data-drawer-placement');
+        const bodyScrolling = $triggerEl.getAttribute(
             'data-drawer-body-scrolling'
         );
-        const backdrop = triggerEl.getAttribute('data-drawer-backdrop');
-        const edge = triggerEl.getAttribute('data-drawer-edge');
-        const edgeOffset = triggerEl.getAttribute('data-drawer-edge-offset');
+        const backdrop = $triggerEl.getAttribute('data-drawer-backdrop');
+        const edge = $triggerEl.getAttribute('data-drawer-edge');
+        const edgeOffset = $triggerEl.getAttribute('data-drawer-edge-offset');
 
-        let drawer = null;
-        if (getDrawerInstance(drawerId, drawerInstances)) {
-            drawer = getDrawerInstance(drawerId, drawerInstances);
-            drawer = drawer.object;
-        } else {
-            drawer = new Drawer(targetEl, {
-                placement: placement ? placement : Default.placement,
-                bodyScrolling: bodyScrolling
-                    ? bodyScrolling === 'true'
-                        ? true
-                        : false
-                    : Default.bodyScrolling,
-                backdrop: backdrop
-                    ? backdrop === 'true'
-                        ? true
-                        : false
-                    : Default.backdrop,
-                edge: edge ? (edge === 'true' ? true : false) : Default.edge,
-                edgeOffset: edgeOffset ? edgeOffset : Default.edgeOffset,
-            } as DrawerOptions);
+        if (!getDrawerInstance(drawerId, drawerInstances)) {
             drawerInstances.push({
                 id: drawerId,
-                object: drawer,
+                object: new Drawer($targetEl, {
+                    placement: placement ? placement : Default.placement,
+                    bodyScrolling: bodyScrolling
+                        ? bodyScrolling === 'true'
+                            ? true
+                            : false
+                        : Default.bodyScrolling,
+                    backdrop: backdrop
+                        ? backdrop === 'true'
+                            ? true
+                            : false
+                        : Default.backdrop,
+                    edge: edge
+                        ? edge === 'true'
+                            ? true
+                            : false
+                        : Default.edge,
+                    edgeOffset: edgeOffset ? edgeOffset : Default.edgeOffset,
+                } as DrawerOptions),
             });
         }
     });
 
-    document.querySelectorAll('[data-drawer-toggle]').forEach((triggerEl) => {
+    document.querySelectorAll('[data-drawer-toggle]').forEach(($triggerEl) => {
         const targetEl = document.getElementById(
-            triggerEl.getAttribute('data-drawer-toggle')
+            $triggerEl.getAttribute('data-drawer-toggle')
         );
         const drawerId = targetEl.id;
         const drawer = getDrawerInstance(drawerId, drawerInstances);
 
-        triggerEl.addEventListener('click', () => {
-            if (drawer.object.isVisible()) {
+        $triggerEl.addEventListener('click', () => {
+            drawer.object.toggle();
+        });
+    });
+
+    document
+        .querySelectorAll('[data-drawer-dismiss], [data-drawer-hide]')
+        .forEach(($triggerEl) => {
+            const $targetEl = document.getElementById(
+                $triggerEl.getAttribute('data-drawer-dismiss')
+                    ? $triggerEl.getAttribute('data-drawer-dismiss')
+                    : $triggerEl.getAttribute('data-drawer-hide')
+            );
+            const drawerId = $targetEl.id;
+            const drawer = getDrawerInstance(drawerId, drawerInstances);
+
+            $triggerEl.addEventListener('click', () => {
                 drawer.object.hide();
-            } else {
-                drawer.object.show();
-            }
+            });
         });
-    });
 
-    document.querySelectorAll('[data-drawer-dismiss]').forEach((triggerEl) => {
-        const targetEl = document.getElementById(
-            triggerEl.getAttribute('data-drawer-dismiss')
+    document.querySelectorAll('[data-drawer-show]').forEach(($triggerEl) => {
+        const $targetEl = document.getElementById(
+            $triggerEl.getAttribute('data-drawer-show')
         );
-        const drawerId = targetEl.id;
+        const drawerId = $targetEl.id;
         const drawer = getDrawerInstance(drawerId, drawerInstances);
 
-        triggerEl.addEventListener('click', () => {
-            drawer.object.hide();
-        });
-    });
-
-    document.querySelectorAll('[data-drawer-show]').forEach((triggerEl) => {
-        const targetEl = document.getElementById(
-            triggerEl.getAttribute('data-drawer-show')
-        );
-        const drawerId = targetEl.id;
-        const drawer = getDrawerInstance(drawerId, drawerInstances);
-
-        triggerEl.addEventListener('click', () => {
+        $triggerEl.addEventListener('click', () => {
             drawer.object.show();
         });
     });

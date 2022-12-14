@@ -10,6 +10,7 @@ export interface DrawerInterface {
     // methods
     _init(): void;
     isVisible(): boolean;
+    isHidden(): boolean;
     hide(): void;
     show(): void;
     toggle(): void;

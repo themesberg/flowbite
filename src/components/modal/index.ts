@@ -89,7 +89,6 @@ class Modal implements ModalInterface {
     }
 
     _removeModalCloseEventListeners() {
-        console.log('remove event listeners');
         if (this._options.backdrop === 'dynamic') {
             this._targetEl.removeEventListener(
                 'click',
@@ -282,8 +281,6 @@ export function initModals() {
             });
         }
     });
-
-    window.modalInstances = modalInstances;
 }
 
 export default Modal;

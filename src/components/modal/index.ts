@@ -1,4 +1,13 @@
-const Default = {
+import { ModalInstance, ModalOptions } from './types';
+import { ModalInterface } from './interface';
+
+declare global {
+    interface Window {
+        Modal: typeof Modal;
+    }
+}
+
+const Default: ModalOptions = {
     placement: 'center',
     backdropClasses:
         'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
@@ -7,8 +16,19 @@ const Default = {
     onShow: () => {},
     onToggle: () => {},
 };
-class Modal {
-    constructor(targetEl = null, options = {}) {
+
+class Modal implements ModalInterface {
+    _targetEl: HTMLElement | null;
+    _options: ModalOptions;
+    _isHidden: boolean;
+    _backdropEl: HTMLElement | null;
+    _clickOutsideEventListener: EventListenerOrEventListenerObject;
+    _keydownEventListener: EventListenerOrEventListenerObject;
+
+    constructor(
+        targetEl: HTMLElement | null = null,
+        options: ModalOptions = Default
+    ) {
         this._targetEl = targetEl;
         this._options = { ...Default, ...options };
         this._isHidden = true;
@@ -20,14 +40,6 @@ class Modal {
         if (this._targetEl) {
             this._getPlacementClasses().map((c) => {
                 this._targetEl.classList.add(c);
-            });
-            this._targetEl.addEventListener('click', (ev) => {
-                this._handleOutsideClick(ev.target);
-            });
-            this._targetEl.addEventListener('keydown', (ev) => {
-                if (ev.key === 'Escape') {
-                    this.hide();
-                }
             });
         }
     }
@@ -50,11 +62,54 @@ class Modal {
         }
     }
 
-    _handleOutsideClick(target) {
+    _setupModalCloseEventListeners() {
         if (this._options.backdrop === 'dynamic') {
-            if (target === this._targetEl || target === this._backdropEl) {
+            this._clickOutsideEventListener = (ev: MouseEvent) => {
+                console.log('click outside');
+                this._handleOutsideClick(ev.target);
+            };
+            this._targetEl.addEventListener(
+                'click',
+                this._clickOutsideEventListener,
+                true
+            );
+        }
+
+        this._keydownEventListener = (ev: KeyboardEvent) => {
+            console.log('keydown');
+            if (ev.key === 'Escape') {
                 this.hide();
             }
+        };
+        document.body.addEventListener(
+            'keydown',
+            this._keydownEventListener,
+            true
+        );
+    }
+
+    _removeModalCloseEventListeners() {
+        console.log('remove event listeners');
+        if (this._options.backdrop === 'dynamic') {
+            this._targetEl.removeEventListener(
+                'click',
+                this._clickOutsideEventListener,
+                true
+            );
+        }
+        document.body.removeEventListener(
+            'keydown',
+            this._keydownEventListener,
+            true
+        );
+    }
+
+    _handleOutsideClick(target: EventTarget) {
+        if (
+            target === this._targetEl ||
+            (target === this._backdropEl && this.isVisible())
+        ) {
+            this.hide();
         }
     }
 
@@ -101,42 +156,48 @@ class Modal {
     }
 
     show() {
-        this._targetEl.classList.add('flex');
-        this._targetEl.classList.remove('hidden');
-        this._targetEl.setAttribute('aria-modal', 'true');
-        this._targetEl.setAttribute('role', 'dialog');
-        this._targetEl.removeAttribute('aria-hidden');
-        this._createBackdrop();
-        this._isHidden = false;
+        if (this.isHidden) {
+            this._targetEl.classList.add('flex');
+            this._targetEl.classList.remove('hidden');
+            this._targetEl.setAttribute('aria-modal', 'true');
+            this._targetEl.setAttribute('role', 'dialog');
+            this._targetEl.removeAttribute('aria-hidden');
+            this._createBackdrop();
+            this._isHidden = false;
 
-        // prevent body scroll
-        document.body.classList.add('overflow-hidden');
+            // prevent body scroll
+            document.body.classList.add('overflow-hidden');
 
-        // Add keyboard event listener to the document
-        document.addEventListener('keydown', (ev) => {
-            if (ev.key === 'Escape') {
-                this.hide();
-            }
-        });
+            // Add keyboard event listener to the document
+            this._setupModalCloseEventListeners();
 
-        // callback function
-        this._options.onShow(this);
+            // callback function
+            this._options.onShow(this);
+        }
     }
 
     hide() {
-        this._targetEl.classList.add('hidden');
-        this._targetEl.classList.remove('flex');
-        this._targetEl.setAttribute('aria-hidden', 'true');
-        this._targetEl.removeAttribute('aria-modal');
-        this._targetEl.removeAttribute('role');
-        this._destroyBackdropEl();
-        this._isHidden = true;
+        if (this.isVisible) {
+            this._targetEl.classList.add('hidden');
+            this._targetEl.classList.remove('flex');
+            this._targetEl.setAttribute('aria-hidden', 'true');
+            this._targetEl.removeAttribute('aria-modal');
+            this._targetEl.removeAttribute('role');
+            this._destroyBackdropEl();
+            this._isHidden = true;
 
-        // re-apply body scroll
-        document.body.classList.remove('overflow-hidden');
+            // re-apply body scroll
+            document.body.classList.remove('overflow-hidden');
 
-        // callback function
-        this._options.onHide(this);
+            this._removeModalCloseEventListeners();
+
+            // callback function
+            this._options.onHide(this);
+        }
+    }
+
+    isVisible() {
+        return !this._isHidden;
     }
 
     isHidden() {
@@ -146,57 +207,83 @@ class Modal {
 
 window.Modal = Modal;
 
-const getModalInstance = (id, instances) => {
+const getModalInstance = (id: string, instances: ModalInstance[]) => {
     if (instances.some((modalInstance) => modalInstance.id === id)) {
         return instances.find((modalInstance) => modalInstance.id === id);
     }
-    return false;
+    return null;
 };
 
 export function initModals() {
-    const modalInstances = [];
-    document.querySelectorAll('[data-modal-toggle]').forEach((el) => {
-        const modalId = el.getAttribute('data-modal-toggle');
-        const modalEl = document.getElementById(modalId);
-        const placement = modalEl.getAttribute('data-modal-placement');
-        const backdrop = modalEl.getAttribute('data-modal-backdrop');
+    const modalInstances = [] as ModalInstance[];
 
-        if (modalEl) {
-            if (
-                !modalEl.hasAttribute('aria-hidden') &&
-                !modalEl.hasAttribute('aria-modal')
-            ) {
-                modalEl.setAttribute('aria-hidden', 'true');
-            }
-        }
+    document.querySelectorAll('[data-modal-target]').forEach(($triggerEl) => {
+        const modalId = $triggerEl.getAttribute('data-modal-toggle');
+        const $modalEl = document.getElementById(modalId);
+        const placement = $modalEl.getAttribute('data-modal-placement');
+        const backdrop = $modalEl.getAttribute('data-modal-backdrop');
 
-        let modal = null;
-        if (getModalInstance(modalId, modalInstances)) {
-            modal = getModalInstance(modalId, modalInstances);
-            modal = modal.object;
-        } else {
-            modal = new Modal(modalEl, {
-                placement: placement ? placement : Default.placement,
-                backdrop: backdrop ? backdrop : Default.backdrop,
-            });
-
+        if (!getModalInstance(modalId, modalInstances)) {
             modalInstances.push({
                 id: modalId,
-                object: modal,
+                object: new Modal(
+                    $modalEl as HTMLElement,
+                    {
+                        placement: placement ? placement : Default.placement,
+                        backdrop: backdrop ? backdrop : Default.backdrop,
+                    } as ModalOptions
+                ),
             });
         }
-
-        if (
-            modalEl.hasAttribute('data-modal-show') &&
-            modalEl.getAttribute('data-modal-show') === 'true'
-        ) {
-            modal.show();
-        }
-
-        el.addEventListener('click', () => {
-            modal.toggle();
-        });
     });
+
+    document.querySelectorAll('[data-modal-toggle]').forEach(($triggerEl) => {
+        const $targetEl = document.getElementById(
+            $triggerEl.getAttribute('data-modal-toggle')
+        );
+        const modalId = $targetEl.id;
+        const modal: ModalInstance = getModalInstance(modalId, modalInstances);
+
+        if (modal) {
+            $triggerEl.addEventListener('click', () => {
+                modal.object.toggle();
+            });
+        }
+    });
+
+    document.querySelectorAll('[data-modal-show]').forEach(($triggerEl) => {
+        const $targetEl = document.getElementById(
+            $triggerEl.getAttribute('data-modal-show')
+        );
+        const modalId = $targetEl.id;
+        const modal: ModalInstance = getModalInstance(modalId, modalInstances);
+
+        if (modal) {
+            $triggerEl.addEventListener('click', () => {
+                if (modal.object.isHidden) {
+                    modal.object.show();
+                }
+            });
+        }
+    });
+
+    document.querySelectorAll('[data-modal-hide]').forEach(($triggerEl) => {
+        const $targetEl = document.getElementById(
+            $triggerEl.getAttribute('data-modal-hide')
+        );
+        const modalId = $targetEl.id;
+        const modal: ModalInstance = getModalInstance(modalId, modalInstances);
+
+        if (modal) {
+            $triggerEl.addEventListener('click', () => {
+                if (modal.object.isVisible) {
+                    modal.object.hide();
+                }
+            });
+        }
+    });
+
+    window.modalInstances = modalInstances;
 }
 
 export default Modal;

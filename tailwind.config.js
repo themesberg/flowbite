@@ -4,6 +4,7 @@ module.exports = {
         './content/**/*.md',
         './content/**/*.html',
         './src/**/*.ts',
+        './src/**/*.js',
     ],
     safelist: [
         'w-64',

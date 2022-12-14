@@ -290,9 +290,11 @@ export function initDrawers() {
         const drawerId = targetEl.id;
         const drawer = getDrawerInstance(drawerId, drawerInstances);
 
-        $triggerEl.addEventListener('click', () => {
-            drawer.object.toggle();
-        });
+        if (drawer) {
+            $triggerEl.addEventListener('click', () => {
+                drawer.object.toggle();
+            });
+        }
     });
 
     document
@@ -306,9 +308,11 @@ export function initDrawers() {
             const drawerId = $targetEl.id;
             const drawer = getDrawerInstance(drawerId, drawerInstances);
 
-            $triggerEl.addEventListener('click', () => {
-                drawer.object.hide();
-            });
+            if (drawer) {
+                $triggerEl.addEventListener('click', () => {
+                    drawer.object.hide();
+                });
+            }
         });
 
     document.querySelectorAll('[data-drawer-show]').forEach(($triggerEl) => {
@@ -318,10 +322,14 @@ export function initDrawers() {
         const drawerId = $targetEl.id;
         const drawer = getDrawerInstance(drawerId, drawerInstances);
 
-        $triggerEl.addEventListener('click', () => {
-            drawer.object.show();
-        });
+        if (drawer) {
+            $triggerEl.addEventListener('click', () => {
+                drawer.object.show();
+            });
+        }
     });
+
+    console.log(drawerInstances);
 }
 
 export default Drawer;

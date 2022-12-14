@@ -68,7 +68,8 @@ class Dropdown implements DropdownInterface {
     }
 
     _setupClickOutsideListener() {
-        this._clickOutsideEventListener = (ev) => {
+        this._clickOutsideEventListener = (ev: MouseEvent) => {
+            console.log('click dropdown');
             this._handleClickOutside(ev, this._targetEl);
         };
         document.body.addEventListener(
@@ -95,14 +96,12 @@ class Dropdown implements DropdownInterface {
             this._visible
         ) {
             this.hide();
-            this._removeClickOutsideListener();
         }
     }
 
     toggle() {
         if (this._visible) {
             this.hide();
-            this._removeClickOutsideListener();
         } else {
             this.show();
         }
@@ -145,6 +144,8 @@ class Dropdown implements DropdownInterface {
         }));
 
         this._visible = false;
+
+        this._removeClickOutsideListener();
 
         // callback function
         this._options.onHide(this);

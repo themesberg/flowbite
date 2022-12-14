@@ -15,6 +15,16 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v1.5.6
+
+- migrated code to TypeScript & introduced types and interfaces
+- integrated ESlint and Prettier
+- fixed event listeners stacking up for all interactive components
+
+Breaking changes:
+
+- modals no longer get initialised via `data-modal-toggle` and you need to switch to `data-modal-target={modalID}` where the value is the id of the modal
+
 ### v1.5.5
 
 - added support for Ruby on Rails 7 import map with turbo

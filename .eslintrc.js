@@ -1,7 +1,7 @@
 module.exports = {
     root: true,
     parser: '@typescript-eslint/parser',
-    plugins: ['@typescript-eslint'],
+    plugins: ['@typescript-eslint', 'tailwindcss'],
     env: {
         node: true,
         browser: true,
@@ -12,5 +12,14 @@ module.exports = {
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended',
+        'plugin:tailwindcss/recommended'
     ],
+    rules: {
+      'tailwindcss/classnames-order': [
+        'warn',
+        {
+          officialSorting: true,
+        },
+      ],
+    }
 };

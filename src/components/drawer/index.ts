@@ -1,12 +1,6 @@
 import { DrawerInstance, DrawerOptions, PlacementClasses } from './types';
 import { DrawerInterface } from './interface';
 
-declare global {
-    interface Window {
-        Drawer: typeof Drawer;
-    }
-}
-
 const Default: DrawerOptions = {
     placement: 'left',
     bodyScrolling: false,

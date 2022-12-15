@@ -1,7 +1,7 @@
 import { AccordionItem, AccordionOptions } from './types';
 import { AccordionInterface } from './interface';
 
-const Default = {
+const Default: AccordionOptions = {
     alwaysOpen: false,
     activeClasses: 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white',
     inactiveClasses: 'text-gray-500 dark:text-gray-400',

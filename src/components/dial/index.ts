@@ -1,12 +1,6 @@
 import { DialOptions, TriggerType } from './types';
 import { DialInterface } from './interface';
 
-declare global {
-    interface Window {
-        Dial: typeof Dial;
-    }
-}
-
 const Default: DialOptions = {
     triggerType: 'hover',
     onShow: () => {},

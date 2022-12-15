@@ -6,7 +6,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        datepicker: path.resolve(__dirname, 'src/plugins/datepicker.ts'),
+        datepicker: path.resolve(__dirname, 'src/plugins/datepicker.js'),
         flowbite: path.resolve(__dirname, 'src/flowbite.ts'),
         'flowbite.turbo': path.resolve(__dirname, 'src/flowbite.turbo.ts'),
         docs: path.resolve(__dirname, 'src/docs.js'),

@@ -6,12 +6,6 @@ import type {
 import { TooltipOptions } from './types';
 import { TooltipInterface } from './interface';
 
-declare global {
-    interface Window {
-        Tooltip: typeof Tooltip;
-    }
-}
-
 const Default: TooltipOptions = {
     placement: 'top',
     triggerType: 'hover',

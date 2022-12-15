@@ -1,12 +1,6 @@
 import { ModalInstance, ModalOptions } from './types';
 import { ModalInterface } from './interface';
 
-declare global {
-    interface Window {
-        Modal: typeof Modal;
-    }
-}
-
 const Default: ModalOptions = {
     placement: 'center',
     backdropClasses:

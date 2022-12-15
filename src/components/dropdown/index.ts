@@ -6,12 +6,6 @@ import type {
 import { DropdownInterface } from './interface';
 import { DropdownOptions } from './types';
 
-declare global {
-    interface Window {
-        Dropdown: typeof Dropdown;
-    }
-}
-
 const Default: DropdownOptions = {
     placement: 'bottom',
     triggerType: 'click',

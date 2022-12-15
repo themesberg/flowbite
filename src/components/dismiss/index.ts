@@ -1,12 +1,6 @@
 import { DismissOptions } from './types';
 import { DismissInterface } from './interface';
 
-declare global {
-    interface Window {
-        Dismiss: typeof Dismiss;
-    }
-}
-
 const Default: DismissOptions = {
     transition: 'transition-opacity',
     duration: 300,

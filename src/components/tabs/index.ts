@@ -1,12 +1,6 @@
 import { TabItem, TabsOptions } from './types';
 import { TabsInterface } from './interface';
 
-declare global {
-    interface Window {
-        Tabs: typeof Tabs;
-    }
-}
-
 const Default: TabsOptions = {
     defaultTabId: null,
     activeClasses:

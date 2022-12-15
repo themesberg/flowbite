@@ -6,12 +6,6 @@ import type {
 import { PopoverOptions } from './types';
 import { PopoverInterface } from './interface';
 
-declare global {
-    interface Window {
-        Popover: typeof Popover;
-    }
-}
-
 const Default: PopoverOptions = {
     placement: 'top',
     offset: 10,

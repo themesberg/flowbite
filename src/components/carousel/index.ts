@@ -6,12 +6,6 @@ import {
 } from './types';
 import { CarouselInterface } from './interface';
 
-declare global {
-    interface Window {
-        Carousel: typeof Carousel;
-    }
-}
-
 const Default: CarouselOptions = {
     defaultPosition: 0,
     indicators: {

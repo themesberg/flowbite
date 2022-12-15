@@ -1,12 +1,6 @@
 import { CollapseOptions } from './types';
 import { CollapseInterface } from './interface';
 
-declare global {
-    interface Window {
-        Collapse: typeof Collapse;
-    }
-}
-
 const Default: CollapseOptions = {
     onCollapse: () => {},
     onExpand: () => {},

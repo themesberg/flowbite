@@ -85,7 +85,14 @@ module.exports = {
             // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
             // `...`,
             new CssMinimizerPlugin(),
-            new TerserPlugin(),
+            new TerserPlugin({
+                extractComments: false,
+                terserOptions: {
+                    format: {
+                        comments: false,
+                    },
+                },
+            }),
         ],
     },
     target: ['web', 'es5'],

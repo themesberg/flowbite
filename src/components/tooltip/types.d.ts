@@ -7,3 +7,5 @@ export declare type TooltipOptions = {
     onShow: (tooltip: TooltipInterface) => void;
     onHide: (tooltip: TooltipInterface) => void;
 };
+
+export {};

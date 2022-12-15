@@ -22,3 +22,5 @@ export declare type DrawerInstance = {
     id: string;
     object: DrawerInterface;
 };
+
+export {};

@@ -16,3 +16,5 @@ export interface DropdownInterface {
     show(): void;
     hide(): void;
 }
+
+export {};

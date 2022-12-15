@@ -13,3 +13,5 @@ export declare type DialOptions = {
     onHide: (dial: DialInterface) => void;
     onToggle: (dial: DialInterface) => void;
 };
+
+export {};

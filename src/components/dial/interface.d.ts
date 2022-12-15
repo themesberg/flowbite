@@ -15,3 +15,5 @@ export interface DialInterface {
     toggle(): void;
     _getTriggerEventTypes(triggerType: TriggerType): TriggerEventTypes;
 }
+
+export {};

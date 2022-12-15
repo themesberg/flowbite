@@ -18,3 +18,5 @@ export interface DrawerInterface {
     _destroyBackdropEl(): void;
     _getPlacementClasses(placement: string): PlacementClasses;
 }
+
+export {};

@@ -5,3 +5,5 @@ export declare type CollapseOptions = {
     onExpand: (collapse: CollapseInterface) => void;
     onToggle: (collapse: CollapseInterface) => void;
 };
+
+export {};

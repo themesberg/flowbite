@@ -8,10 +8,9 @@ const path = require('path');
 module.exports = {
     entry: {
         datepicker: path.resolve(__dirname, 'src/plugins/datepicker.js'),
-        flowbite: path.resolve(__dirname, 'src/flowbite.umd.ts'),
-        'flowbite.udm.min': path.resolve(__dirname, 'src/flowbite.umd.ts'),
-        'flowbite.esm.min': path.resolve(__dirname, 'src/flowbite.esm.ts'),
-        'flowbite.turbo': path.resolve(__dirname, 'src/flowbite.turbo.ts'),
+        flowbite: path.resolve(__dirname, 'src/index.umd.ts'),
+        'flowbite.esm.min': path.resolve(__dirname, 'src/index.esm.ts'),
+        'flowbite.turbo': path.resolve(__dirname, 'src/index.turbo.ts'),
         docs: path.resolve(__dirname, 'src/docs.js'),
     },
     devtool: 'inline-source-map',

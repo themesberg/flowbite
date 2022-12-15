@@ -10,3 +10,5 @@ export interface TooltipInterface {
     show(): void;
     hide(): void;
 }
+
+export {};

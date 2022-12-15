@@ -11,3 +11,5 @@ export interface TabsInterface {
     getTab(id: string): TabItem;
     show(id: string, forceShow?: boolean): void;
 }
+
+export {};

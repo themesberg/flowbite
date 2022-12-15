@@ -11,3 +11,5 @@ export interface AccordionInterface {
     toggle(id: string): void;
     close(id: string): void;
 }
+
+export {};

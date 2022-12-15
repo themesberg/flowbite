@@ -8,3 +8,5 @@ export declare type PopoverOptions = {
     onShow: (tooltip: PopoverInterface) => void;
     onHide: (tooltip: PopoverInterface) => void;
 };
+
+export {};

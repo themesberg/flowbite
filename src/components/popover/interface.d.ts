@@ -10,3 +10,5 @@ export interface PopoverInterface {
     show(): void;
     hide(): void;
 }
+
+export {};

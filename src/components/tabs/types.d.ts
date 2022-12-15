@@ -12,3 +12,5 @@ export declare type TabItem = {
     triggerEl: HTMLElement;
     targetEl: HTMLElement;
 };
+
+export {};

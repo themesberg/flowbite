@@ -7,3 +7,5 @@ export interface DismissInterface {
 
     hide(): void;
 }
+
+export {};

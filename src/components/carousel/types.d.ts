@@ -28,3 +28,5 @@ export declare type CarouselOptions = {
     onPrev: (carousel: CarouselInterface) => void;
     onChange: (carousel: CarouselInterface) => void;
 };
+
+export {};

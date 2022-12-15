@@ -10,3 +10,5 @@ export interface CollapseInterface {
     expand(): void;
     toggle(): void;
 }
+
+export {};

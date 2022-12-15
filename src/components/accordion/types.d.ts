@@ -16,3 +16,5 @@ export declare type AccordionOptions = {
     onClose: (accordion: AccordionInterface, item: AccordionItem) => void;
     onToggle: (accordion: AccordionInterface, item: AccordionItem) => void;
 };
+
+export {};

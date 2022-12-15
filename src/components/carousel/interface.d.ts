@@ -29,3 +29,5 @@ export interface CarouselInterface {
     cycle(): void;
     pause(): void;
 }
+
+export {};

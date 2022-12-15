@@ -19,7 +19,7 @@ Use this example to create a default unordered list of items using the `list-dis
 
 {{< example id="unordered-list-example" github="typography/lists.md" show_dark=true >}}
 <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Password requirements:</h2>
-<ul class="space-y-1 max-w-md list-disc list-inside text-gray-500 dark:text-gray-400">
+<ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
     <li>
         At least 10 characters (and up to 100 characters)
     </li>
@@ -38,7 +38,7 @@ This example can be used to apply custom icons instead of the default bullets fo
 
 {{< example id="unordered-list-icon-example" github="typography/lists.md" show_dark=true >}}
 <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Password requirements:</h2>
-<ul class="space-y-1 max-w-md list-inside text-gray-500 dark:text-gray-400">
+<ul class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
     <li class="flex items-center">
         <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
         At least 10 characters
@@ -59,7 +59,7 @@ This example can be used to apply custom icons instead of the default bullets fo
 Use this example to nested another list of items inside the parent list element.
 
 {{< example id="unordered-list-nested-example" github="typography/lists.md" show_dark=true >}}
-<ul class="space-y-4 list-disc list-inside text-gray-500 dark:text-gray-400">
+<ul class="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400">
     <li>
         List item one
         <ol class="pl-5 mt-2 space-y-1 list-decimal list-inside">
@@ -93,7 +93,7 @@ Use the `list-none` class to disable the list style bullets or numbers.
 
 {{< example id="unordered-list-unstyled-example" github="typography/lists.md" show_dark=true >}}
 <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Password requirements:</h2>
-<ul class="space-y-1 max-w-md list-none list-inside text-gray-500 dark:text-gray-400">
+<ul class="max-w-md space-y-1 text-gray-500 list-none list-inside dark:text-gray-400">
     <li>
         At least 10 characters (and up to 100 characters)
     </li>
@@ -112,7 +112,7 @@ Use the `<ol>` tag to create an ordered list of items with numbers.
 
 {{< example id="ordered-list-example" github="typography/lists.md" show_dark=true >}}
 <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Top students:</h2>
-<ol class="space-y-1 max-w-md list-decimal list-inside text-gray-500 dark:text-gray-400">
+<ol class="max-w-md space-y-1 text-gray-500 list-decimal list-inside dark:text-gray-400">
     <li>
         <span class="font-semibold text-gray-900 dark:text-white">Bonnie Green</span> with <span class="font-semibold text-gray-900 dark:text-white">70</span> points
     </li>
@@ -130,7 +130,7 @@ Use the `<ol>` tag to create an ordered list of items with numbers.
 This example can be used to nest multiple lists into each other.
 
 {{< example id="ordered-list-nested-example" github="typography/lists.md" show_dark=true >}}
-<ol class="space-y-4 list-decimal list-inside text-gray-500 dark:text-gray-400">
+<ol class="space-y-4 text-gray-500 list-decimal list-inside dark:text-gray-400">
    <li>
       List item one
       <ul class="pl-5 mt-2 space-y-1 list-disc list-inside">
@@ -317,7 +317,7 @@ This example can be used to show more details for each list item such as the use
 Use this example to create a horizontally aligned list of items.
 
 {{< example id="horizontal-list-example" github="typography/lists.md" show_dark=true >}}
-<ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+<ul class="flex flex-wrap items-center justify-center mb-6 text-gray-900 dark:text-white">
     <li>
         <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
     </li>

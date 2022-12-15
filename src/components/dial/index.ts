@@ -1,12 +1,32 @@
-const Default = {
+import { DialOptions, TriggerType } from './types';
+import { DialInterface } from './interface';
+
+declare global {
+    interface Window {
+        Dial: typeof Dial;
+    }
+}
+
+const Default: DialOptions = {
     triggerType: 'hover',
     onShow: () => {},
     onHide: () => {},
     onToggle: () => {},
 };
 
-class Dial {
-    constructor(parentEl = null, triggerEl = null, targetEl = null, options) {
+class Dial implements DialInterface {
+    _parentEl: HTMLElement;
+    _triggerEl: HTMLElement;
+    _targetEl: HTMLElement;
+    _options: DialOptions;
+    _visible: boolean;
+
+    constructor(
+        parentEl: HTMLElement | null = null,
+        triggerEl: HTMLElement | null = null,
+        targetEl: HTMLElement | null = null,
+        options: DialOptions = Default
+    ) {
         this._parentEl = parentEl;
         this._triggerEl = triggerEl;
         this._targetEl = targetEl;
@@ -17,8 +37,10 @@ class Dial {
 
     _init() {
         if (this._triggerEl) {
-            const triggerEvents = this._getTriggerEvents();
-            triggerEvents.showEvents.forEach((ev) => {
+            const triggerEventTypes = this._getTriggerEventTypes(
+                this._options.triggerType
+            );
+            triggerEventTypes.show.forEach((ev: string) => {
                 this._triggerEl.addEventListener(ev, () => {
                     this.show();
                 });
@@ -26,8 +48,9 @@ class Dial {
                     this.show();
                 });
             });
-            triggerEvents.hideEvents.forEach((ev) => {
+            triggerEventTypes.hide.forEach((ev: string) => {
                 this._parentEl.addEventListener(ev, () => {
+                    console.log('click');
                     setTimeout(() => {
                         if (!this._parentEl.matches(':hover')) {
                             this.hide();
@@ -68,22 +91,30 @@ class Dial {
         }
     }
 
-    _getTriggerEvents() {
-        switch (this._options.triggerType) {
+    isHidden() {
+        return !this._visible;
+    }
+
+    isVisible() {
+        return this._visible;
+    }
+
+    _getTriggerEventTypes(triggerType: TriggerType) {
+        switch (triggerType) {
             case 'hover':
                 return {
-                    showEvents: ['mouseenter', 'focus'],
-                    hideEvents: ['mouseleave', 'blur'],
+                    show: ['mouseenter', 'focus'],
+                    hide: ['mouseleave', 'blur'],
                 };
             case 'click':
                 return {
-                    showEvents: ['click', 'focus'],
-                    hideEvents: ['focusout', 'blur'],
+                    show: ['click', 'focus'],
+                    hide: ['focusout', 'blur'],
                 };
             default:
                 return {
-                    showEvents: ['mouseenter', 'focus'],
-                    hideEvents: ['mouseleave', 'blur'],
+                    show: ['mouseenter', 'focus'],
+                    hide: ['mouseleave', 'blur'],
                 };
         }
     }
@@ -92,16 +123,21 @@ class Dial {
 window.Dial = Dial;
 
 export function initDials() {
-    document.querySelectorAll('[data-dial-init]').forEach((parentEl) => {
-        const triggerEl = parentEl.querySelector('[data-dial-toggle]');
-        const targetEl = document.getElementById(
-            triggerEl.getAttribute('data-dial-toggle')
+    document.querySelectorAll('[data-dial-init]').forEach(($parentEl) => {
+        const $triggerEl = $parentEl.querySelector('[data-dial-toggle]');
+        const $targetEl = document.getElementById(
+            $triggerEl.getAttribute('data-dial-toggle')
         );
-        const triggerType = triggerEl.getAttribute('data-dial-trigger');
+        const triggerType = $triggerEl.getAttribute('data-dial-trigger');
 
-        new Dial(parentEl, triggerEl, targetEl, {
-            triggerType: triggerType ? triggerType : Default.triggerType,
-        });
+        new Dial(
+            $parentEl as HTMLElement,
+            $triggerEl as HTMLElement,
+            $targetEl as HTMLElement,
+            {
+                triggerType: triggerType ? triggerType : Default.triggerType,
+            } as DialOptions
+        );
     });
 }
 

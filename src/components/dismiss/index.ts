@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { DismissOptions } from './types';
+import type { DismissOptions } from './types';
 import { DismissInterface } from './interface';
 
 const Default: DismissOptions = {

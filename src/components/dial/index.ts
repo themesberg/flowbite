@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { DialOptions, TriggerType } from './types';
+import type { DialOptions, TriggerType } from './types';
 import { DialInterface } from './interface';
 
 const Default: DialOptions = {

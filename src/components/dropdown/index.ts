@@ -4,8 +4,8 @@ import type {
     Options as PopperOptions,
     Instance as PopperInstance,
 } from '@popperjs/core';
+import type { DropdownOptions } from './types';
 import { DropdownInterface } from './interface';
-import { DropdownOptions } from './types';
 
 const Default: DropdownOptions = {
     placement: 'bottom',

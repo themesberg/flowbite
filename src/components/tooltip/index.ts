@@ -4,7 +4,7 @@ import type {
     Options as PopperOptions,
     Instance as PopperInstance,
 } from '@popperjs/core';
-import { TooltipOptions } from './types';
+import type { TooltipOptions } from './types';
 import { TooltipInterface } from './interface';
 
 const Default: TooltipOptions = {

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { CollapseOptions } from './types';
+import type { CollapseOptions } from './types';
 import { CollapseInterface } from './interface';
 
 const Default: CollapseOptions = {

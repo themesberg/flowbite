@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { TabItem, TabsOptions } from './types';
+import type { TabItem, TabsOptions } from './types';
 import { TabsInterface } from './interface';
 
 const Default: TabsOptions = {

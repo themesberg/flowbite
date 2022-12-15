@@ -4,7 +4,7 @@ import type {
     Options as PopperOptions,
     Instance as PopperInstance,
 } from '@popperjs/core';
-import { PopoverOptions } from './types';
+import type { PopoverOptions } from './types';
 import { PopoverInterface } from './interface';
 
 const Default: PopoverOptions = {

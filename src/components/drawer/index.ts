@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { DrawerInstance, DrawerOptions, PlacementClasses } from './types';
 import { DrawerInterface } from './interface';
 

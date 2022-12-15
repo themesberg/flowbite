@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { DismissOptions } from './types';
 import { DismissInterface } from './interface';
 

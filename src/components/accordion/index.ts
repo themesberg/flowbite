@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { AccordionItem, AccordionOptions } from './types';
 import { AccordionInterface } from './interface';
 

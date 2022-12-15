@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { DialOptions, TriggerType } from './types';
 import { DialInterface } from './interface';
 

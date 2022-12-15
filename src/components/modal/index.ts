@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { ModalInstance, ModalOptions } from './types';
 import { ModalInterface } from './interface';
 

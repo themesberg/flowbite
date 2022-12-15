@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { createPopper } from '@popperjs/core';
 import type {
     Options as PopperOptions,

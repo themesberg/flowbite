@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { CollapseOptions } from './types';
 import { CollapseInterface } from './interface';
 

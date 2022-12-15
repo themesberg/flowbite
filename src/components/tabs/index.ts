@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { TabItem, TabsOptions } from './types';
 import { TabsInterface } from './interface';
 

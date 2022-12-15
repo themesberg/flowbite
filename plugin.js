@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const svgToDataUri = require('mini-svg-data-uri');
 const plugin = require('tailwindcss/plugin');
 const defaultTheme = require('tailwindcss/defaultTheme');
@@ -168,7 +169,6 @@ module.exports = plugin(
                 'line-height': 'inherit',
             },
             [`[type='file']:focus`]: {
-                outline: `1px solid ButtonText`,
                 outline: `1px auto inherit`,
             },
             [[`input[type=file]::file-selector-button`]]: {

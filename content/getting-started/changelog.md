@@ -15,7 +15,7 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
-### v1.5.6
+### v1.6.0
 
 - migrated code to TypeScript & introduced types and interfaces
 - integrated ESlint and Prettier

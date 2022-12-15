@@ -2,17 +2,17 @@
   pages:
     - title: Introduction
     - title: Quickstart
+    - title: TypeScript
+      new: true
     - title: React
     - title: Next.js
       slug: next-js
-      new: true
     - title: Vue
     - title: Laravel
     - title: Svelte
     - title: Rails
     - title: Django
     - title: Flask
-      new: true
     # - title: Angular
     - title: License
     - title: Changelog

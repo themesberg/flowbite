@@ -111,43 +111,35 @@ module.exports = {
 }
 ```
 
-10. Add Flowbite's JavaScript in `app/javascript/application.js`:
-
-```javascript
-import "flowbite"
-```
-
 ### Turbo load support
 
-For turbo load support you can import the `flowbite.turbo.js` file where the `turbo:load` event listeners are added.
+In order to support turbo load from Ruby on Rails 7 you have to pin the `flowbite.turbo.js` file from a CDN where the `turbo:load` event listeners are added instead of `load`.
 
-```javascript
-import "flowbite/src/flowbite.turbo.js"
-```
-
-1.  Run the following command to include Flowbite's JavaScript inside the `importmap.rb` file:
+1. Add the following line inside your `importmap.rb` file:
 
 ```bash
-./bin/importmap pin flowbite
+pin "flowbite", to: "https://unpkg.com/flowbite@1.5.5/dist/flowbite.turbo.js"
 ```
 
-Alternatively, you can also include the script separately or using CDN:
+2. Then you need to import `flowbite` inside your `application.js` file:
+
+```javascript
+import 'flowbite';
+```
+
+This will enable the interactive elements like dropdowns, modals, and navbars work by hooking the event listeners and actions to the data attributes whenever a new page is loaded in your application.
+
+### Include via CDN
+
+Alternatively, you can also include the script by using CDN:
 
 ```html
-// relative path
-<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
+// include via CDN
+<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.turbo.js"></script>
 
-// CDN
+// this is not recommended, please compile via Tailwind CSS to purge classes
 <link rel="stylesheet" href="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.css" />
 ```
-
-For turbo support you can include `flowbite.turbo.js` which add the `turbo:load` event listener on the window for the data attributes:
-
-```html
-<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.turbo.js"></script>
-```
-
-Now you can use interactive components such as modals, dropdowns, navbars, and more.
 
 ## Building your project
 

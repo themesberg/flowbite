@@ -8,5 +8,15 @@ export * from './components/dropdown/types';
 export * from './components/modal/types';
 export * from './components/popover/types';
 export * from './components/tabs/types';
+export * from './components/tooltip/types';
 
-export {};
+export { AccordionInterface } from './components/accordion/interface';
+export { CarouselInterface } from './components/carousel/interface';
+export { CollapseInterface } from './components/collapse/interface';
+export { DialInterface } from './components/dial/interface';
+export { DismissInterface } from './components/dismiss/interface';
+export { DrawerInterface } from './components/drawer/interface';
+export { DropdownInterface } from './components/dropdown/interface';
+export { ModalInterface } from './components/modal/interface';
+export { PopoverInterface } from './components/popover/interface';
+export { TabsInterface } from './components/tabs/interface';

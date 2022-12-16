@@ -1,6 +1,6 @@
 import { TabItem, TabsOptions } from './types';
 
-export interface TabsInterface {
+export declare interface TabsInterface {
     _items: TabItem[];
     _activeTab: TabItem;
     _options: TabsOptions;
@@ -11,5 +11,3 @@ export interface TabsInterface {
     getTab(id: string): TabItem;
     show(id: string, forceShow?: boolean): void;
 }
-
-export {};

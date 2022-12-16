@@ -5,7 +5,7 @@ import {
     RotationItems,
 } from './types';
 
-export interface CarouselInterface {
+export declare interface CarouselInterface {
     _items: CarouselItem[];
     _indicators: IndicatorItem[];
     _activeItem: CarouselItem;
@@ -29,5 +29,3 @@ export interface CarouselInterface {
     cycle(): void;
     pause(): void;
 }
-
-export {};

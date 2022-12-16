@@ -1,6 +1,6 @@
 import { ModalOptions } from './types';
 
-export interface ModalInterface {
+export declare interface ModalInterface {
     // The HTMLElement that will be used as the modal container
     _targetEl: HTMLElement | null;
 
@@ -50,5 +50,3 @@ export interface ModalInterface {
     // return true if modal is visible
     isVisible(): boolean;
 }
-
-export {};

@@ -1,6 +1,6 @@
 import { DialOptions, TriggerEventTypes, TriggerType } from './types';
 
-export interface DialInterface {
+export declare interface DialInterface {
     _parentEl: HTMLElement;
     _triggerEl: HTMLElement;
     _targetEl: HTMLElement;
@@ -15,5 +15,3 @@ export interface DialInterface {
     toggle(): void;
     _getTriggerEventTypes(triggerType: TriggerType): TriggerEventTypes;
 }
-
-export {};

@@ -1,5 +1,3 @@
-import './flowbite.css';
-
 // core components
 import { initAccordions } from './components/accordion';
 import { initCarousels } from './components/carousel';

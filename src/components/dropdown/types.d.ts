@@ -9,5 +9,3 @@ export declare type DropdownOptions = {
     onShow: (tooltip: DropdownInterface) => void;
     onHide: (tooltip: DropdownInterface) => void;
 };
-
-export {};

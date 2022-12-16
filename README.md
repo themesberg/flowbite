@@ -501,6 +501,6 @@ Get access to all premium features including the Figma design system, access to 
 
 ## Copyright and license
 
-The Flowbite name and logos are trademarks of Crafty Dwarf Inc. 
+The Flowbite name and logos are trademarks of Bergside Inc. 
 
 📝 [Read about the licensing terms](https://flowbite.com/docs/getting-started/license/)

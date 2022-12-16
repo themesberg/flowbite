@@ -6,5 +6,3 @@ export declare type DismissOptions = {
     timing: string;
     onHide: (dismiss: DismissInterface, targetEl: HTMLElement) => void;
 };
-
-export {};

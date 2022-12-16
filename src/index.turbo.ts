@@ -1,4 +1,3 @@
-import './flowbite.css';
 
 // core components
 import Accordion, { initAccordions } from './components/accordion';

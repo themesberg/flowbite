@@ -1,6 +1,6 @@
 import { CollapseOptions } from './types';
 
-export interface CollapseInterface {
+export declare interface CollapseInterface {
     _targetEl: HTMLElement | null;
     _triggerEl: HTMLElement | null;
     _options: CollapseOptions;
@@ -10,5 +10,3 @@ export interface CollapseInterface {
     expand(): void;
     toggle(): void;
 }
-
-export {};

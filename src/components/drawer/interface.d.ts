@@ -1,6 +1,6 @@
 import { DrawerOptions, PlacementClasses } from './types';
 
-export interface DrawerInterface {
+export declare interface DrawerInterface {
     // properties
     _targetEl: HTMLElement;
     _triggerEl: HTMLElement;
@@ -18,5 +18,3 @@ export interface DrawerInterface {
     _destroyBackdropEl(): void;
     _getPlacementClasses(placement: string): PlacementClasses;
 }
-
-export {};

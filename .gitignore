@@ -1,5 +1,6 @@
 node_modules/
 dist/
+lib/
 build/
 _gh_pages/
 static/*.css

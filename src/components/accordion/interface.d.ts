@@ -2,7 +2,7 @@
 import { AccordionItem, AccordionOptions } from './types';
 
 // Define the Accordion interface
-export interface AccordionInterface {
+export declare interface AccordionInterface {
     _items: AccordionItem[];
     _options: AccordionOptions;
 
@@ -11,5 +11,3 @@ export interface AccordionInterface {
     toggle(id: string): void;
     close(id: string): void;
 }
-
-export {};

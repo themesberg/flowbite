@@ -7,15 +7,20 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        datepicker: path.resolve(__dirname, 'src/plugins/datepicker.js'),
         flowbite: path.resolve(__dirname, 'src/index.umd.ts'),
-        'flowbite.esm.min': path.resolve(__dirname, 'src/index.esm.ts'),
+        'flowbite.min': path.resolve(__dirname, 'src/index.umd.ts'),
         'flowbite.turbo': path.resolve(__dirname, 'src/index.turbo.ts'),
+        'flowbite.turbo.min': path.resolve(__dirname, 'src/index.turbo.ts'),
+        datepicker: path.resolve(__dirname, 'src/plugins/datepicker.js'),
+        'datepicker.min': path.resolve(__dirname, 'src/plugins/datepicker.js'),
         docs: path.resolve(__dirname, 'src/docs.js'),
     },
     devtool: 'inline-source-map',
     output: {
         filename: '[name].js',
+        libraryTarget: 'umd',
+        library: 'Flowbite',
+        umdNamedDefine: true,
         path: path.resolve(__dirname, 'static/'),
     },
     module: {
@@ -87,6 +92,7 @@ module.exports = {
             // `...`,
             new CssMinimizerPlugin(),
             new TerserPlugin({
+                include: /\.min\.(css|js)$/,
                 extractComments: false,
                 terserOptions: {
                     format: {

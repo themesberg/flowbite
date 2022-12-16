@@ -1,4 +1,5 @@
 // css for docs
+import './flowbite.css';
 import './docs.css';
 import docsearch from '@docsearch/js';
 

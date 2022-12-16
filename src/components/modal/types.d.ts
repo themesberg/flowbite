@@ -25,5 +25,3 @@ export declare type ModalInstance = {
     id: string;
     object: ModalInterface;
 };
-
-export {};

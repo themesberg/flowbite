@@ -129,16 +129,32 @@ import 'flowbite';
 
 This will enable the interactive elements like dropdowns, modals, and navbars work by hooking the event listeners and actions to the data attributes whenever a new page is loaded in your application.
 
+### Standard JS (no turbo)
+
+If you decide not to use turbo load then you can follow these steps:
+
+1. Run this command to pin Flowbite in your `importmap.rb` file:
+
+```bash
+./bin/importmap pin flowbite
+```
+
+2. Then you need to include Flowbite inside your `application.js` file:
+
+```javascript
+import 'flowbite';
+```
+
 ### Include via CDN
 
-Alternatively, you can also include the script by using CDN:
+Alternatively to all of the above you can also include the JavaScript via CDN:
 
 ```html
-// include via CDN
+// include via CDN for turbo support
 <script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.turbo.js"></script>
 
-// this is not recommended, please compile via Tailwind CSS to purge classes
-<link rel="stylesheet" href="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.css" />
+// include via CDN without turbo support
+<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
 ```
 
 ## Building your project

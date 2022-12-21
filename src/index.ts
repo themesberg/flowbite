@@ -12,6 +12,7 @@ import { initTabs } from './components/tabs';
 import { initTooltips } from './components/tooltip';
 import Events from './dom/events';
 
+// init all component events
 const events = new Events('load', [
     initAccordions,
     initCarousels,
@@ -27,6 +28,7 @@ const events = new Events('load', [
 ]);
 events.init();
 
+// export all components
 export { default as Accordion } from './components/accordion';
 export { default as Carousel } from './components/carousel';
 export { default as Collapse } from './components/collapse';
@@ -38,3 +40,16 @@ export { default as Modal } from './components/modal';
 export { default as Popover } from './components/popover';
 export { default as Tabs } from './components/tabs';
 export { default as Tooltip } from './components/tooltip';
+
+// export all types
+export * from './components/accordion/types';
+export * from './components/carousel/types';
+export * from './components/collapse/types';
+export * from './components/dial/types';
+export * from './components/dismiss/types';
+export * from './components/drawer/types';
+export * from './components/dropdown/types';
+export * from './components/modal/types';
+export * from './components/popover/types';
+export * from './components/tabs/types';
+export * from './components/tooltip/types';

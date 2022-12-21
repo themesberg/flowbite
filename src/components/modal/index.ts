@@ -211,6 +211,7 @@ const getModalInstance = (id: string, instances: ModalInstance[]) => {
 export function initModals() {
     const modalInstances = [] as ModalInstance[];
 
+    // initiate modal based on data-modal-target
     document.querySelectorAll('[data-modal-target]').forEach(($triggerEl) => {
         const modalId = $triggerEl.getAttribute('data-modal-target');
         const $modalEl = document.getElementById(modalId);
@@ -231,20 +232,40 @@ export function initModals() {
         }
     });
 
+    // support pre v1.6.0 data-modal-toggle initialisation
     document.querySelectorAll('[data-modal-toggle]').forEach(($triggerEl) => {
-        const $targetEl = document.getElementById(
-            $triggerEl.getAttribute('data-modal-toggle')
-        );
-        const modalId = $targetEl.id;
-        const modal: ModalInstance = getModalInstance(modalId, modalInstances);
+        const modalId = $triggerEl.getAttribute('data-modal-toggle');
+        const $modalEl = document.getElementById(modalId);
+        const placement = $modalEl.getAttribute('data-modal-placement');
+        const backdrop = $modalEl.getAttribute('data-modal-backdrop');
+
+        let modal: ModalInstance = getModalInstance(modalId, modalInstances);
+        if (!getModalInstance(modalId, modalInstances)) {
+            modal = {
+                id: modalId,
+                object: new Modal(
+                    $modalEl as HTMLElement,
+                    {
+                        placement: placement ? placement : Default.placement,
+                        backdrop: backdrop ? backdrop : Default.backdrop,
+                    } as ModalOptions
+                ),
+            };
+            modalInstances.push(modal);
+        }
 
         if (modal) {
             $triggerEl.addEventListener('click', () => {
                 modal.object.toggle();
             });
+        } else {
+            console.error(
+                `Modal with id ${modalId} does not exist. Please check your markup.`
+            );
         }
     });
 
+    // show modal on click if exists based on id
     document.querySelectorAll('[data-modal-show]').forEach(($triggerEl) => {
         const $targetEl = document.getElementById(
             $triggerEl.getAttribute('data-modal-show')
@@ -258,9 +279,14 @@ export function initModals() {
                     modal.object.show();
                 }
             });
+        } else {
+            console.error(
+                `Modal with id ${modalId} does not exist. Please check your markup.`
+            );
         }
     });
 
+    // hide modal on click if exists based on id
     document.querySelectorAll('[data-modal-hide]').forEach(($triggerEl) => {
         const $targetEl = document.getElementById(
             $triggerEl.getAttribute('data-modal-hide')
@@ -274,8 +300,14 @@ export function initModals() {
                     modal.object.hide();
                 }
             });
+        } else {
+            console.error(
+                `Modal with id ${modalId} does not exist. Please check your markup.`
+            );
         }
     });
+
+    console.log(modalInstances);
 }
 
 export default Modal;

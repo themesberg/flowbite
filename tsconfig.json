@@ -2,8 +2,10 @@
     "compilerOptions": {
         "lib": ["dom", "es2015"],
         "outDir": "./lib/cjs/",
+        "rootDir": "./src/",
         "sourceMap": true,
         "declaration": true,
+        "declarationMap": true,
         "noImplicitAny": true,
         "module": "commonjs",
         "target": "es5",

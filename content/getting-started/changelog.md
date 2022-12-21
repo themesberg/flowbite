@@ -23,7 +23,7 @@ We strive to keep a good accountability of all of the version changes that we ma
 
 Breaking changes:
 
-- modals no longer get initialised via `data-modal-toggle` and you need to switch to `data-modal-target={modalID}` where the value is the id of the modal
+- modals no longer get initialized via `data-modal-toggle` and you need to switch to `data-modal-target={modalID}` where the value is the id of the modal
 
 ### v1.5.5
 

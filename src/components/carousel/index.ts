@@ -47,7 +47,7 @@ class Carousel implements CarouselInterface {
     }
 
     /**
-     * Initialise carousel and items based on active one
+     * initialize carousel and items based on active one
      */
     _init() {
         this._items.map((item: CarouselItem) => {

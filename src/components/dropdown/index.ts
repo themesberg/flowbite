@@ -64,7 +64,6 @@ class Dropdown implements DropdownInterface {
 
     _setupClickOutsideListener() {
         this._clickOutsideEventListener = (ev: MouseEvent) => {
-            console.log('click dropdown');
             this._handleClickOutside(ev, this._targetEl);
         };
         document.body.addEventListener(
@@ -150,32 +149,42 @@ class Dropdown implements DropdownInterface {
 window.Dropdown = Dropdown;
 
 export function initDropdowns() {
-    document.querySelectorAll('[data-dropdown-toggle]').forEach((triggerEl) => {
-        const targetEl = document.getElementById(
-            triggerEl.getAttribute('data-dropdown-toggle')
-        );
-        const placement = triggerEl.getAttribute('data-dropdown-placement');
-        const offsetSkidding = triggerEl.getAttribute(
-            'data-dropdown-offset-skidding'
-        );
-        const offsetDistance = triggerEl.getAttribute(
-            'data-dropdown-offset-distance'
-        );
+    document
+        .querySelectorAll('[data-dropdown-toggle]')
+        .forEach(($triggerEl) => {
+            const dropdownId = $triggerEl.getAttribute('data-dropdown-toggle');
+            const $dropdownEl = document.getElementById(dropdownId);
 
-        new Dropdown(
-            targetEl as HTMLElement,
-            triggerEl as HTMLElement,
-            {
-                placement: placement ? placement : Default.placement,
-                offsetSkidding: offsetSkidding
-                    ? parseInt(offsetSkidding)
-                    : Default.offsetSkidding,
-                offsetDistance: offsetDistance
-                    ? parseInt(offsetDistance)
-                    : Default.offsetDistance,
-            } as DropdownOptions
-        );
-    });
+            if ($dropdownEl) {
+                const placement = $triggerEl.getAttribute(
+                    'data-dropdown-placement'
+                );
+                const offsetSkidding = $triggerEl.getAttribute(
+                    'data-dropdown-offset-skidding'
+                );
+                const offsetDistance = $triggerEl.getAttribute(
+                    'data-dropdown-offset-distance'
+                );
+
+                new Dropdown(
+                    $dropdownEl as HTMLElement,
+                    $triggerEl as HTMLElement,
+                    {
+                        placement: placement ? placement : Default.placement,
+                        offsetSkidding: offsetSkidding
+                            ? parseInt(offsetSkidding)
+                            : Default.offsetSkidding,
+                        offsetDistance: offsetDistance
+                            ? parseInt(offsetDistance)
+                            : Default.offsetDistance,
+                    } as DropdownOptions
+                );
+            } else {
+                console.error(
+                    `The dropdown element with id "${dropdownId}" does not exist. Please check the data-dropdown-toggle attribute.`
+                );
+            }
+        });
 }
 
 export default Dropdown;

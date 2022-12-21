@@ -26,7 +26,7 @@ class Collapse implements CollapseInterface {
         this._init();
     }
 
-    private _init() {
+    _init() {
         if (this._triggerEl) {
             if (this._triggerEl.hasAttribute('aria-expanded')) {
                 this._visible =
@@ -76,18 +76,24 @@ class Collapse implements CollapseInterface {
 window.Collapse = Collapse;
 
 export function initCollapses() {
-    document.querySelectorAll('[data-collapse-toggle]').forEach((triggerEl) => {
-        const targetEl = document.getElementById(
-            triggerEl.getAttribute('data-collapse-toggle')
-        );
+    document
+        .querySelectorAll('[data-collapse-toggle]')
+        .forEach(($triggerEl) => {
+            const targetId = $triggerEl.getAttribute('data-collapse-toggle');
+            const $targetEl = document.getElementById(targetId);
 
-        // check if the target element exists
-        if (!targetEl) {
-            return;
-        }
-
-        new Collapse(targetEl as HTMLElement, triggerEl as HTMLElement);
-    });
+            // check if the target element exists
+            if ($targetEl) {
+                new Collapse(
+                    $targetEl as HTMLElement,
+                    $triggerEl as HTMLElement
+                );
+            } else {
+                console.error(
+                    `The target element with id "${targetId}" does not exist. Please check the data-collapse-toggle attribute.`
+                );
+            }
+        });
 }
 
 export default Collapse;

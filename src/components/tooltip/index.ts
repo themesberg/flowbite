@@ -32,7 +32,7 @@ class Tooltip implements TooltipInterface {
         this._init();
     }
 
-    private _init() {
+    _init() {
         if (this._triggerEl) {
             const triggerEvents = this._getTriggerEvents();
             triggerEvents.showEvents.forEach((ev) => {
@@ -123,21 +123,29 @@ class Tooltip implements TooltipInterface {
 window.Tooltip = Tooltip;
 
 export function initTooltips() {
-    document.querySelectorAll('[data-tooltip-target]').forEach((triggerEl) => {
-        const targetEl = document.getElementById(
-            triggerEl.getAttribute('data-tooltip-target')
-        );
-        const triggerType = triggerEl.getAttribute('data-tooltip-trigger');
-        const placement = triggerEl.getAttribute('data-tooltip-placement');
+    document.querySelectorAll('[data-tooltip-target]').forEach(($triggerEl) => {
+        const tooltipId = $triggerEl.getAttribute('data-tooltip-target');
+        const $tooltipEl = document.getElementById(tooltipId);
 
-        new Tooltip(
-            targetEl as HTMLElement,
-            triggerEl as HTMLElement,
-            {
-                placement: placement ? placement : Default.placement,
-                triggerType: triggerType ? triggerType : Default.triggerType,
-            } as TooltipOptions
-        );
+        if ($tooltipEl) {
+            const triggerType = $triggerEl.getAttribute('data-tooltip-trigger');
+            const placement = $triggerEl.getAttribute('data-tooltip-placement');
+
+            new Tooltip(
+                $tooltipEl as HTMLElement,
+                $triggerEl as HTMLElement,
+                {
+                    placement: placement ? placement : Default.placement,
+                    triggerType: triggerType
+                        ? triggerType
+                        : Default.triggerType,
+                } as TooltipOptions
+            );
+        } else {
+            console.error(
+                `The tooltip element with id "${tooltipId}" does not exist. Please check the data-tooltip-target attribute.`
+            );
+        }
     });
 }
 

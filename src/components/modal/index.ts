@@ -60,7 +60,6 @@ class Modal implements ModalInterface {
     _setupModalCloseEventListeners() {
         if (this._options.backdrop === 'dynamic') {
             this._clickOutsideEventListener = (ev: MouseEvent) => {
-                console.log('click outside');
                 this._handleOutsideClick(ev.target);
             };
             this._targetEl.addEventListener(
@@ -71,7 +70,6 @@ class Modal implements ModalInterface {
         }
 
         this._keydownEventListener = (ev: KeyboardEvent) => {
-            console.log('keydown');
             if (ev.key === 'Escape') {
                 this.hide();
             }
@@ -336,8 +334,6 @@ export function initModals() {
             );
         }
     });
-
-    console.log(modalInstances);
 }
 
 export default Modal;

@@ -5,5 +5,6 @@ export declare interface DismissInterface {
     _triggerEl: HTMLElement | null;
     _options: DismissOptions;
 
+    _init(): void;
     hide(): void;
 }

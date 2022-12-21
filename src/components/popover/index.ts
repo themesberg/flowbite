@@ -138,23 +138,31 @@ class Popover implements PopoverInterface {
 window.Popover = Popover;
 
 export function initPopovers() {
-    document.querySelectorAll('[data-popover-target]').forEach((triggerEl) => {
-        const targetEl = document.getElementById(
-            triggerEl.getAttribute('data-popover-target')
-        );
-        const triggerType = triggerEl.getAttribute('data-popover-trigger');
-        const placement = triggerEl.getAttribute('data-popover-placement');
-        const offset = triggerEl.getAttribute('data-popover-offset');
+    document.querySelectorAll('[data-popover-target]').forEach(($triggerEl) => {
+        const popoverID = $triggerEl.getAttribute('data-popover-target');
+        const $popoverEl = document.getElementById(popoverID);
 
-        new Popover(
-            targetEl as HTMLElement,
-            triggerEl as HTMLElement,
-            {
-                placement: placement ? placement : Default.placement,
-                offset: offset ? parseInt(offset) : Default.offset,
-                triggerType: triggerType ? triggerType : Default.triggerType,
-            } as PopoverOptions
-        );
+        if ($popoverEl) {
+            const triggerType = $triggerEl.getAttribute('data-popover-trigger');
+            const placement = $triggerEl.getAttribute('data-popover-placement');
+            const offset = $triggerEl.getAttribute('data-popover-offset');
+
+            new Popover(
+                $popoverEl as HTMLElement,
+                $triggerEl as HTMLElement,
+                {
+                    placement: placement ? placement : Default.placement,
+                    offset: offset ? parseInt(offset) : Default.offset,
+                    triggerType: triggerType
+                        ? triggerType
+                        : Default.triggerType,
+                } as PopoverOptions
+            );
+        } else {
+            console.error(
+                `The popover element with id "${popoverID}" does not exist. Please check the data-popover-target attribute.`
+            );
+        }
     });
 }
 

@@ -45,7 +45,6 @@ class Dial implements DialInterface {
             });
             triggerEventTypes.hide.forEach((ev: string) => {
                 this._parentEl.addEventListener(ev, () => {
-                    console.log('click');
                     setTimeout(() => {
                         if (!this._parentEl.matches(':hover')) {
                             this.hide();
@@ -120,19 +119,34 @@ window.Dial = Dial;
 export function initDials() {
     document.querySelectorAll('[data-dial-init]').forEach(($parentEl) => {
         const $triggerEl = $parentEl.querySelector('[data-dial-toggle]');
-        const $targetEl = document.getElementById(
-            $triggerEl.getAttribute('data-dial-toggle')
-        );
-        const triggerType = $triggerEl.getAttribute('data-dial-trigger');
 
-        new Dial(
-            $parentEl as HTMLElement,
-            $triggerEl as HTMLElement,
-            $targetEl as HTMLElement,
-            {
-                triggerType: triggerType ? triggerType : Default.triggerType,
-            } as DialOptions
-        );
+        if ($triggerEl) {
+            const dialId = $triggerEl.getAttribute('data-dial-toggle');
+            const $dialEl = document.getElementById(dialId);
+
+            if ($dialEl) {
+                const triggerType =
+                    $triggerEl.getAttribute('data-dial-trigger');
+                new Dial(
+                    $parentEl as HTMLElement,
+                    $triggerEl as HTMLElement,
+                    $dialEl as HTMLElement,
+                    {
+                        triggerType: triggerType
+                            ? triggerType
+                            : Default.triggerType,
+                    } as DialOptions
+                );
+            } else {
+                console.error(
+                    `Dial with id ${dialId} does not exist. Are you sure that the data-dial-toggle attribute points to the correct modal id?`
+                );
+            }
+        } else {
+            console.error(
+                `Dial with id ${$parentEl.id} does not have a trigger element. Are you sure that the data-dial-toggle attribute exists?`
+            );
+        }
     });
 }
 

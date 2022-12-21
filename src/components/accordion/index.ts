@@ -125,26 +125,26 @@ class Accordion implements AccordionInterface {
 window.Accordion = Accordion;
 
 export function initAccordions() {
-    document.querySelectorAll('[data-accordion]').forEach((accordionEl) => {
-        const alwaysOpen = accordionEl.getAttribute('data-accordion');
-        const activeClasses = accordionEl.getAttribute('data-active-classes');
-        const inactiveClasses = accordionEl.getAttribute(
+    document.querySelectorAll('[data-accordion]').forEach(($accordionEl) => {
+        const alwaysOpen = $accordionEl.getAttribute('data-accordion');
+        const activeClasses = $accordionEl.getAttribute('data-active-classes');
+        const inactiveClasses = $accordionEl.getAttribute(
             'data-inactive-classes'
         );
 
         const items = [] as AccordionItem[];
-        accordionEl
+        $accordionEl
             .querySelectorAll('[data-accordion-target]')
-            .forEach((el) => {
+            .forEach(($triggerEl) => {
                 const item = {
-                    id: el.getAttribute('data-accordion-target'),
-                    triggerEl: el,
+                    id: $triggerEl.getAttribute('data-accordion-target'),
+                    triggerEl: $triggerEl,
                     targetEl: document.querySelector(
-                        el.getAttribute('data-accordion-target')
+                        $triggerEl.getAttribute('data-accordion-target')
                     ),
-                    iconEl: el.querySelector('[data-accordion-icon]'),
+                    iconEl: $triggerEl.querySelector('[data-accordion-icon]'),
                     active:
-                        el.getAttribute('aria-expanded') === 'true'
+                        $triggerEl.getAttribute('aria-expanded') === 'true'
                             ? true
                             : false,
                 } as AccordionItem;

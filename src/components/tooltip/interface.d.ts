@@ -7,6 +7,7 @@ export declare interface TooltipInterface {
     _options: TooltipOptions;
     _popperInstance: PopperInstance;
 
+    _init(): void;
     show(): void;
     hide(): void;
 }

@@ -25,7 +25,7 @@ class Dismiss implements DismissInterface {
         this._init();
     }
 
-    private _init() {
+    _init() {
         if (this._triggerEl) {
             this._triggerEl.addEventListener('click', () => {
                 this.hide();
@@ -52,11 +52,17 @@ class Dismiss implements DismissInterface {
 window.Dismiss = Dismiss;
 
 export function initDismisses() {
-    document.querySelectorAll('[data-dismiss-target]').forEach((triggerEl) => {
-        const targetEl = document.querySelector(
-            triggerEl.getAttribute('data-dismiss-target')
-        );
-        new Dismiss(targetEl as HTMLElement, triggerEl as HTMLElement);
+    document.querySelectorAll('[data-dismiss-target]').forEach(($triggerEl) => {
+        const targetId = $triggerEl.getAttribute('data-dismiss-target');
+        const $dismissEl = document.querySelector(targetId);
+
+        if ($dismissEl) {
+            new Dismiss($dismissEl as HTMLElement, $triggerEl as HTMLElement);
+        } else {
+            console.error(
+                `The dismiss element with id "${targetId}" does not exist. Please check the data-dismiss-target attribute.`
+            );
+        }
     });
 }
 

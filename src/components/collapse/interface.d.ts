@@ -6,6 +6,7 @@ export declare interface CollapseInterface {
     _options: CollapseOptions;
     _visible: boolean;
 
+    _init(): void;
     collapse(): void;
     expand(): void;
     toggle(): void;

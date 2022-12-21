@@ -289,6 +289,10 @@ export function initDrawers() {
             $triggerEl.addEventListener('click', () => {
                 drawer.object.toggle();
             });
+        } else {
+            console.error(
+                `Drawer with id ${drawerId} not found. Did you forget to add the data-drawer-target attribute to the drawer element?`
+            );
         }
     });
 
@@ -307,6 +311,10 @@ export function initDrawers() {
                 $triggerEl.addEventListener('click', () => {
                     drawer.object.hide();
                 });
+            } else {
+                console.error(
+                    `Drawer with id ${drawerId} not found. Did you forget to add the data-drawer-target attribute to the drawer element?`
+                );
             }
         });
 
@@ -321,6 +329,10 @@ export function initDrawers() {
             $triggerEl.addEventListener('click', () => {
                 drawer.object.show();
             });
+        } else {
+            console.error(
+                `Drawer with id ${drawerId} not found. Did you forget to add the data-drawer-target attribute to the drawer element?`
+            );
         }
     });
 

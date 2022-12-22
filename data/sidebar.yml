@@ -38,7 +38,6 @@
     - title: Card
     - title: Carousel
     - title: Dropdowns
-      new: true
     - title: Forms
     - title: List Group
     - title: Typography
@@ -46,13 +45,10 @@
     - title: Tabs
     - title: Navbar
     - title: Mega menu
-      new: true
     - title: Footer
     - title: Sidebar
     - title: Drawer
-      new: true
     - title: Skeleton
-      new: true
     - title: Pagination
     - title: Speed Dial
       new: true
@@ -60,12 +56,9 @@
     - title: Timeline
     - title: Video
     - title: KBD
-      new: true
     - title: Progress
     - title: Popover
-      new: true
     - title: Tables
-      new: true
     - title: Spinner
     - title: Toast
     - title: Tooltips
@@ -78,9 +71,7 @@
     - title: Select
     - title: Textarea
     - title: Checkbox
-      new: true
     - title: Radio
-      new: true
     - title: Toggle
     - title: Range
     - title: Floating Label

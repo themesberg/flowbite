@@ -79,11 +79,57 @@ console.log(text);
 
 This code already uses a type declaration which will help us verify if the compiler works properly.
 
+### Webpack bundler
+
+6. Install Webpack and the necessary plugins by executing the following command in your terminal:
+
+```bash
+npm i -D webpack webpack-cli typescript ts-loader
+```
+
+7. Create a new `webpack.config.js` file and add the following content:
+
+```javascript
+//webpack.config.js
+const path = require('path');
+
+module.exports = {
+  mode: "development",
+  devtool: "inline-source-map",
+  entry: {
+    main: "./src/index.ts",
+  },
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    filename: "app-bundle.js" // <--- Will be compiled to this single file
+  },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"],
+  },
+  module: {
+    rules: [
+      { 
+        test: /\.tsx?$/,
+        loader: "ts-loader"
+      }
+    ]
+  }
+};
+```
+
+8. Run the following command to watch for changes and compile the TypeScript source code into browser-compatible JavaScript code:
+
+```bash
+npx webpack --watch
+```
+
+This will generate an `app-bundle.js` named JavaScript file that you can now include inside your HTML templates. To check out if it works you can now open the `index.html` file inside your browsers.
+
 ### CommonJS
 
 By default the compiled code will be CJS as specified in the `tsconfig.json` file.
 
-6. Compile the code by running the following command in your terminal:
+Compile the code by running the following command in your terminal:
 
 ```bash
 npx tsc
@@ -199,3 +245,6 @@ module.exports = {
 
 }
 ```
+
+<!-- to do: how to use components -->
+<!-- to do: flowbite types -->

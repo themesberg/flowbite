@@ -252,7 +252,7 @@ export function initModals() {
                 modalId,
                 modalInstances
             );
-            if (!getModalInstance(modalId, modalInstances)) {
+            if (!modal) {
                 modal = {
                     id: modalId,
                     object: new Modal(

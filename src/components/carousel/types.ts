@@ -17,14 +17,14 @@ export declare type RotationItems = {
 };
 
 export declare type CarouselOptions = {
-    defaultPosition: number;
-    indicators: {
-        items: IndicatorItem[];
-        activeClasses: string;
-        inactiveClasses: string;
+    defaultPosition?: number;
+    indicators?: {
+        items?: IndicatorItem[];
+        activeClasses?: string;
+        inactiveClasses?: string;
     };
-    interval: number;
-    onNext: (carousel: CarouselInterface) => void;
-    onPrev: (carousel: CarouselInterface) => void;
-    onChange: (carousel: CarouselInterface) => void;
+    interval?: number;
+    onNext?: (carousel: CarouselInterface) => void;
+    onPrev?: (carousel: CarouselInterface) => void;
+    onChange?: (carousel: CarouselInterface) => void;
 };

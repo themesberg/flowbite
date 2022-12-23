@@ -13,12 +13,12 @@ export declare type modalPlacement =
     | 'bottom-right';
 
 export declare type ModalOptions = {
-    placement: modalPlacement;
-    backdropClasses: string;
-    backdrop: modalBackdrop;
-    onShow: (modal: ModalInterface) => void;
-    onHide: (modal: ModalInterface) => void;
-    onToggle: (modal: ModalInterface) => void;
+    placement?: modalPlacement;
+    backdropClasses?: string;
+    backdrop?: modalBackdrop;
+    onShow?: (modal: ModalInterface) => void;
+    onHide?: (modal: ModalInterface) => void;
+    onToggle?: (modal: ModalInterface) => void;
 };
 
 export declare type ModalInstance = {

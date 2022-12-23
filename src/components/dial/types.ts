@@ -8,8 +8,8 @@ export declare type TriggerEventTypes = {
 };
 
 export declare type DialOptions = {
-    triggerType: TriggerType;
-    onShow: (dial: DialInterface) => void;
-    onHide: (dial: DialInterface) => void;
-    onToggle: (dial: DialInterface) => void;
+    triggerType?: TriggerType;
+    onShow?: (dial: DialInterface) => void;
+    onHide?: (dial: DialInterface) => void;
+    onToggle?: (dial: DialInterface) => void;
 };

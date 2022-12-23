@@ -53,3 +53,16 @@ export * from './components/modal/types';
 export * from './components/popover/types';
 export * from './components/tabs/types';
 export * from './components/tooltip/types';
+
+// export all interfaces
+export * from './components/accordion/interface';
+export * from './components/carousel/interface';
+export * from './components/collapse/interface';
+export * from './components/dial/interface';
+export * from './components/dismiss/interface';
+export * from './components/drawer/interface';
+export * from './components/dropdown/interface';
+export * from './components/modal/interface';
+export * from './components/popover/interface';
+export * from './components/tabs/interface';
+export * from './components/tooltip/interface';

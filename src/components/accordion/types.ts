@@ -9,10 +9,10 @@ export declare type AccordionItem = {
 };
 
 export declare type AccordionOptions = {
-    alwaysOpen: boolean;
-    activeClasses: string;
-    inactiveClasses: string;
-    onOpen: (accordion: AccordionInterface, item: AccordionItem) => void;
-    onClose: (accordion: AccordionInterface, item: AccordionItem) => void;
-    onToggle: (accordion: AccordionInterface, item: AccordionItem) => void;
+    alwaysOpen?: boolean;
+    activeClasses?: string;
+    inactiveClasses?: string;
+    onOpen?: (accordion: AccordionInterface, item: AccordionItem) => void;
+    onClose?: (accordion: AccordionInterface, item: AccordionItem) => void;
+    onToggle?: (accordion: AccordionInterface, item: AccordionItem) => void;
 };

@@ -40,6 +40,8 @@
     - title: Dropdowns
       new: true
     - title: Forms
+    - title: Indicators
+      new: true
     - title: List Group
     - title: Typography
     - title: Modal

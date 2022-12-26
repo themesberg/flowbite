@@ -385,3 +385,5 @@ modal.show();
 Using the types from TypeScript with the Flowbite components will ensure a more scalable and bug-free code down the line.
 
 ## TypeScript Starter Project
+
+We have built a [Tailwind CSS TypeScript Starter](https://github.com/themesberg/tailwind-typescript-starter) project on GitHub that uses the configuration above with some pre-built scripts and examples that can help you to get started faster.

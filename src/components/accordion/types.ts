@@ -4,8 +4,8 @@ export declare type AccordionItem = {
     id: string;
     triggerEl: HTMLElement;
     targetEl: HTMLElement;
-    iconEl: HTMLElement | null;
-    active: boolean;
+    iconEl?: HTMLElement | null;
+    active?: boolean;
 };
 
 export declare type AccordionOptions = {

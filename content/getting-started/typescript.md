@@ -315,7 +315,7 @@ const $buttonElement: HTMLElement = document.querySelector('#button');
 const $modalElement: HTMLElement = document.querySelector('#modal');
 
 // create a new modal component
-const modal = new Modal($modalElement);
+const modal: ModalInterface = new Modal($modalElement);
 
 // toggle the visibility of the modal when clicking on the button
 $buttonElement.addEventListener('click', () => modal.toggle());

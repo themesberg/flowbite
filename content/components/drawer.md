@@ -1027,7 +1027,7 @@ First of all, create a new JavaScript element object for the first parameter of 
 
 ```javascript
 // set the drawer menu element
-const targetEl = document.getElementById('drawer-js-example');
+const $targetEl = document.getElementById('drawer-js-example');
 
 // options with default values
 const options = {
@@ -1056,7 +1056,7 @@ Initialize the Drawer positioning by creating a new object:
 * targetEl: required
 * options: optional
 */
-const drawer = new Drawer(targetEl, options);
+const drawer = new Drawer($targetEl, options);
 ```
 
 Use the `show` and `hide` methods to show and hide the drawer component directly from JavaScript.
@@ -1100,4 +1100,46 @@ Use the following HTML code for the JavaScript example above.
       <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Get access <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a>
    </div>
 </div>
+```
+
+### TypeScript
+
+If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScript configuration</a> from Flowbite then you can import the types for the Drawer (off-canvas) class, parameters and its options. 
+
+Here's an example that applies the types from Flowbite to the code above:
+
+```javascript
+import { Drawer } from "flowbite";
+import type { DrawerOptions, DrawerInterface } from "flowbite";
+
+// set the drawer menu element
+const $targetEl: HTMLElement = document.getElementById('drawer-js-example');
+
+// options with default values
+const options: DrawerOptions = {
+  placement: 'right',
+  backdrop: true,
+  bodyScrolling: false,
+  edge: false,
+  edgeOffset: '',
+  backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-30',
+  onHide: () => {
+      console.log('drawer is hidden');
+  },
+  onShow: () => {
+      console.log('drawer is shown');
+  },
+  onToggle: () => {
+      console.log('drawer has been toggled');
+  }
+};
+
+/*
+* $targetEl: required
+* options: optional
+*/
+const drawer: DrawerInterface = new Drawer($targetEl, options);
+
+// show the drawer
+drawer.show();
 ```

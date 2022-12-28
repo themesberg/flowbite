@@ -800,7 +800,7 @@ First of all, create a new JavaScript element object for the first parameter of 
 
 ```javascript
 // set the modal menu element
-const targetEl = document.getElementById('modalEl');
+const $targetEl = document.getElementById('modalEl');
 
 // options with default values
 const options = {
@@ -825,10 +825,10 @@ Create a new Modal object based on the options above.
 import { Flowbite } from 'flowbite';
 
 /*
-* targetEl: required
+* $targetEl: required
 * options: optional
 */
-const modal = new Flowbite.Modal(targetEl, options);
+const modal = new Flowbite.Modal($targetEl, options);
 ```
 
 Use the `show` and `hide` methods to show and hide the modal component directly from JavaScript.
@@ -893,4 +893,36 @@ Use the following HTML code for the JavaScript example above.
         </div>
     </div>
 </div>
+```
+
+### TypeScript
+
+If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScript configuration</a> from Flowbite then you can import the types for the Modal class, parameters and its options. 
+
+Here's an example that applies the types from Flowbite to the code above:
+
+```javascript
+import { Modal } from 'flowbite'
+import type { ModalOptions, ModalInterface } from 'flowbite'
+
+const $modalElement: HTMLElement = document.querySelector('#modalEl');
+
+const modalOptions: ModalOptions = {
+    placement: 'bottom-right',
+    backdrop: 'dynamic',
+    backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+    onHide: () => {
+        console.log('modal is hidden');
+    },
+    onShow: () => {
+        console.log('modal is shown');
+    },
+    onToggle: () => {
+        console.log('modal has been toggled');
+    }
+}
+
+const modal: ModalInterface = new Modal($modalElement, modalOptions);
+
+modal.show();
 ```

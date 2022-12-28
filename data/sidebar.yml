@@ -69,6 +69,8 @@
     - title: Tables
       new: true
     - title: Spinner
+    - title: Stepper
+      new: true
     - title: Toast
     - title: Tooltips
 

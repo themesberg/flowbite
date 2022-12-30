@@ -39,6 +39,8 @@
     - title: Carousel
     - title: Dropdowns
     - title: Forms
+    - title: Indicators
+      new: true
     - title: List Group
     - title: Typography
     - title: Modal
@@ -60,6 +62,8 @@
     - title: Popover
     - title: Tables
     - title: Spinner
+    - title: Stepper
+      new: true
     - title: Toast
     - title: Tooltips
 

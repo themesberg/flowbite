@@ -8,8 +8,8 @@ requires_js: true
 
 previous: Dropdowns
 previousLink: components/dropdowns/
-next: List group
-nextLink: components/list-group/
+next: Indicators
+nextLink: components/indicators/
 ---
 
 Get started with these custom Tailwind CSS form components to gather information from your users using input text elements, checkboxes, radios, textareas, selects, file uploads, toggle switches, and more.

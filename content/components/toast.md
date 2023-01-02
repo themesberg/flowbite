@@ -6,8 +6,8 @@ group: components
 requires_js: true
 toc: true
 
-previous: Spinner
-previousLink: components/spinner/
+previous: Stepper
+previousLink: components/stepper/
 next: Tooltips
 nextLink: components/tooltips/
 ---

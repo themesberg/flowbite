@@ -5,8 +5,8 @@ description: Use the list group component to display a series of items, buttons 
 group: components
 toc: true
 
-previous: Forms
-previousLink: components/forms/
+previous: Indicators
+previousLink: components/indicators/
 next: Typography
 nextLink: components/typography/
 ---

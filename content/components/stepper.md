@@ -85,7 +85,7 @@ Use this example to show an extra subtitle next to the number and the title of t
             2
         </span>
         <span>
-            <h3 class="font-medium leading-tight">User info</h3>
+            <h3 class="font-medium leading-tight">Company info</h3>
             <p class="text-sm">Step details here<p>
         </span>
     </li>
@@ -94,7 +94,7 @@ Use this example to show an extra subtitle next to the number and the title of t
             3
         </span>
         <span>
-            <h3 class="font-medium leading-tight">User info</h3>
+            <h3 class="font-medium leading-tight">Payment info</h3>
             <p class="text-sm">Step details here<p>
         </span>
     </li>

@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Indicators - Flowbite
-description: Show contextual information to your users using alert elements based on Tailwind CSS
+description: Use the indicator component to show a number count, account status, or as a loading label positioned relative to the parent component coded with Tailwind CSS
 group: components
 toc: true
 
@@ -11,12 +11,17 @@ next: List group
 nextLink: components/list-group/
 ---
 
+The indicator component can be used as a small element positioned absolutely relative to another component such as a button or card and show a number count, account status (red for offline, green for online) and other useful information.
+
+Check out the following examples for multiple sizes, colors, positionings, styles, and more all coded with Tailwind CSS and Flowbite.
+
 ## Default indicator
 
+Use this example to create a simple indicator with mulitple colors and position it anywhere on the website.
 
 {{< example id="default-example" class="flex items-center space-x-3" github="components/badge.md" show_dark=true >}}
 <span class="flex w-3 h-3 bg-gray-200 rounded-full"></span>
-<span class="flex w-3 h-3 bg-gray-900 rounded-full"></span>
+<span class="flex w-3 h-3 bg-gray-900 rounded-full dark:bg-gray-700"></span>
 <span class="flex w-3 h-3 bg-blue-600 rounded-full"></span>
 <span class="flex w-3 h-3 bg-green-500 rounded-full"></span>
 <span class="flex w-3 h-3 bg-red-500 rounded-full"></span>
@@ -28,6 +33,7 @@ nextLink: components/list-group/
 
 ## Indicator count
 
+This example can be used to show a number count inside the indicator and position it relative to a button component.
 
 {{< example id="notification-example" github="components/badge.md" show_dark=true >}}
 <button type="button" class="relative inline-flex items-center p-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -41,17 +47,23 @@ nextLink: components/list-group/
 
 ## Status indicator 
 
+Use this example to show a status indicator for the currently logged in user by showing red for offline and green for online.
 
-{{< example id="status-example" github="components/badge.md" show_dark=true >}}
+{{< example id="status-example" github="components/badge.md" class="flex items-center space-x-4" show_dark=true >}}
 <div class="relative">
     <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="profile image">
     <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+</div>
+<div class="relative">
+    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="profile image">
+    <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
 </div>
 {{< /example >}}
 
 
 ## Badge indicator 
 
+This example can be used to add an indicator inside of a badge component.
 
 {{< example id="badge-example" github="components/badge.md" show_dark=true >}}
 <ul role="list" class="divide-y divide-gray-200 w-96 dark:divide-gray-700">
@@ -98,6 +110,7 @@ nextLink: components/list-group/
 
 ## Stepper indicator 
 
+You can also use the indicators inside of a stepper component when completing a form element.
 
 {{< example id="stepper-example" class="space-y-8" github="components/badge.md" show_dark=true >}}
 <ol class="items-center sm:flex">
@@ -192,8 +205,9 @@ nextLink: components/list-group/
 </ol>
 {{< /example >}}
 
-## Loading indicator 
+## Loading indicator
 
+Use this animated loading indicator when content inside of a card is still loading.
 
 {{< example id="loading-example" class="space-y-8" github="components/badge.md" show_dark=true >}}
 <div class="flex items-center justify-center w-56 h-56 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
@@ -201,8 +215,9 @@ nextLink: components/list-group/
 </div>
 {{< /example >}}
 
-## Positions
+## Indicator position
 
+Use these examples to position the indicator component anywhere relative to the parent element.
 
 {{< example id="loading-example" class="flex items-center justify-center space-y-8" github="components/badge.md" show_dark=true >}}
 <div class="relative w-56 h-56 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">

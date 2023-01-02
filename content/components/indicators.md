@@ -113,41 +113,41 @@ This example can be used to add an indicator inside of a badge component.
 You can also use the indicators inside of a stepper component when completing a form element.
 
 {{< example id="stepper-example" class="space-y-8" github="components/badge.md" show_dark=true >}}
-<ol class="items-center sm:flex">
-    <li class="relative w-full mb-6 sm:mb-0">
+<ol class="items-center flex">
+    <li class="relative w-full mb-6">
         <div class="flex items-center">
             <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
                 <svg aria-hidden="true" class="w-4 h-4 text-blue-600 dark:text-blue-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
             </div>
-            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+            <div class="flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
         <div class="mt-3">
             <h3 class="font-medium text-gray-900 dark:text-white">Step 1</h3>
         </div>
     </li>
-    <li class="relative w-full mb-6 sm:mb-0">
+    <li class="relative w-full mb-6">
         <div class="flex items-center">
             <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
                 <svg aria-hidden="true" class="w-4 h-4 text-blue-600 dark:text-blue-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
             </div>
-            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+            <div class="flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
         <div class="mt-3">
             <h3 class="font-medium text-gray-900 dark:text-white">Step 2</h3>
         </div>
     </li>
-    <li class="relative w-full mb-6 sm:mb-0">
+    <li class="relative w-full mb-6">
         <div class="flex items-center">
             <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
                 <svg aria-hidden="true" class="w-4 h-4 text-blue-600 dark:text-blue-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
             </div>
-            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+            <div class="flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
         <div class="mt-3">
             <h3 class="font-medium text-gray-900 dark:text-white">Step 2</h3>
         </div>
     </li>
-    <li class="relative w-full mb-6 sm:mb-0">
+    <li class="relative w-full mb-6">
         <div class="flex items-center">
             <div class="z-10 flex items-center justify-center w-6 h-6 bg-gray-200 rounded-full ring-0 ring-white dark:bg-gray-700 sm:ring-8 dark:ring-gray-900 shrink-0">
                 <svg aria-hidden="true" class="w-3 h-3 text-gray-800 dark:text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -158,41 +158,41 @@ You can also use the indicators inside of a stepper component when completing a 
         </div>
     </li>
 </ol>
-<ol class="items-center sm:flex">
-    <li class="relative w-full mb-6 sm:mb-0">
+<ol class="items-center flex">
+    <li class="relative w-full mb-6">
         <div class="flex items-center">
             <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
                 <span class="flex w-3 h-3 bg-blue-600 rounded-full"></span>
             </div>
-            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+            <div class="flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
         <div class="mt-3">
             <h3 class="font-medium text-gray-900 dark:text-white">Step 1</h3>
         </div>
     </li>
-    <li class="relative w-full mb-6 sm:mb-0">
+    <li class="relative w-full mb-6">
         <div class="flex items-center">
             <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
                 <span class="flex w-3 h-3 bg-blue-600 rounded-full"></span>
             </div>
-            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+            <div class="flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
         <div class="mt-3">
             <h3 class="font-medium text-gray-900 dark:text-white">Step 2</h3>
         </div>
     </li>
-    <li class="relative w-full mb-6 sm:mb-0">
+    <li class="relative w-full mb-6">
         <div class="flex items-center">
             <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
                 <span class="flex w-3 h-3 bg-blue-600 rounded-full"></span>
             </div>
-            <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+            <div class="flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
         </div>
         <div class="mt-3">
             <h3 class="font-medium text-gray-900 dark:text-white">Step 2</h3>
         </div>
     </li>
-    <li class="relative w-full mb-6 sm:mb-0">
+    <li class="relative w-full mb-6">
         <div class="flex items-center">
             <div class="z-10 flex items-center justify-center w-6 h-6 bg-gray-200 rounded-full ring-0 ring-white dark:bg-gray-700 sm:ring-8 dark:ring-gray-900 shrink-0">
                 <span class="flex w-3 h-3 bg-gray-900 rounded-full dark:bg-gray-300"></span>

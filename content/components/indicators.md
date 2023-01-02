@@ -66,7 +66,7 @@ Use this example to show a status indicator for the currently logged in user by 
 This example can be used to add an indicator inside of a badge component.
 
 {{< example id="badge-example" github="components/badge.md" show_dark=true >}}
-<ul role="list" class="divide-y divide-gray-200 w-96 dark:divide-gray-700">
+<ul role="list" class="max-w-sm divide-y divide-gray-200 dark:divide-gray-700">
     <li class="py-3 sm:py-4">
         <div class="flex items-center space-x-3">
             <div class="flex-shrink-0">

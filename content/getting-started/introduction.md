@@ -76,7 +76,7 @@ module.exports = {
 3. Require the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
 
 ```html
-<script src="../path/to/flowbite/dist/flowbite.js"></script>
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 ```
 
 4. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
@@ -110,7 +110,7 @@ Require the following minified stylesheet inside the `head` tag:
 And include the following javascript file before the end of the `body` element:
 
 ```html
-<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
+<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
 ```
 
 Please remember that the best way to work with Tailwind CSS and Flowbite is by purging the CSS classes.
@@ -128,6 +128,16 @@ Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking chang
 The components from Flowbite are first conceptualized and designed in Figma using the latest features such as variants, auto-layout, grids, responsive layouts, and more.
 
 Learn more by checking out <a href="{{< param homepage >}}/figma/">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
+
+<div class="mt-8 -mb-5">
+  {{< requires_typescript >}}
+</div>
+
+## TypeScript
+
+If you want to use types for the interactive elements you can do that because since `v1.6.0` Flowbite also supports TypeScript.
+
+Learn how to <a href="{{< ref "getting-started/typescript" >}}">install Tailwind CSS and Flowbite with TypeScript</a>.
 
 <div class="mt-8 -mb-5">
   {{< requires_react >}}

@@ -97,7 +97,7 @@ Modify the `src/app.html` by adding `flowbite.js` as the following:
     </head>
   <body>
     <div id="svelte">%svelte.body%</div>
-    <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+    <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
   </body>
 </html>
 ```
@@ -121,7 +121,7 @@ the head and `flowbite.js` just before the body tag.
   </head>
   <body>
     <div id="svelte">%svelte.body%</div>
-   <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+   <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
   </body>
 </html>
 ```

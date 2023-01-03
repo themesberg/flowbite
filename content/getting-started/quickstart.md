@@ -38,7 +38,7 @@ module.exports = {
 3. Include the main JavaScript file to make interactive elements work:
 
 ```html
-<script src="../path/to/flowbite/dist/flowbite.js"></script>
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 ```
 
 4. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
@@ -59,6 +59,16 @@ If you use Webpack or other bundlers you can also import it like this:
 import 'flowbite';
 ```
 
+You can also import components one by one like this:
+
+```javascript
+import { Modal } from 'flowbite';
+
+const modal = new Modal(...parameters);
+```
+
+Check out the JavaScript behaviour section of each component's page to learn how you can use this.
+
 ## Include via CDN
 
 The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.
@@ -72,7 +82,7 @@ Require the following minified stylesheet inside the `head` tag:
 And include the following JavaScript file before the end of the `body` element:
 
 ```html
-<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
+<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
 ```
 
 ## Tailwind CSS 2.0
@@ -82,6 +92,16 @@ Flowbite works with the 2.x version of Tailwind CSS.
 ## Tailwind CSS 3.0
 
 Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking changes when using the components from Flowbite.
+
+<div class="mt-8 -mb-5">
+  {{< requires_typescript >}}
+</div>
+
+## TypeScript
+
+If you want to use types for the interactive elements you can do that because since `v1.6.0` Flowbite also supports TypeScript.
+
+Learn how to <a href="{{< ref "getting-started/typescript" >}}">install Tailwind CSS and Flowbite with TypeScript</a>.
 
 <div class="mt-8 -mb-5">
   {{< requires_react >}}

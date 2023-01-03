@@ -20,12 +20,13 @@ We strive to keep a good accountability of all of the version changes that we ma
 - migrated code to TypeScript & introduced types and interfaces
 - integrated ESlint and Prettier
 - fixed event listeners stacking up for all interactive components
+- improved NPM build scripts
 
 Breaking changes:
 
 - modals no longer get initialized via `data-modal-toggle` and you need to switch to `data-modal-target={modalID}` where the value is the id of the modal
 
-### v1.5.5
+### v1.6.0
 
 - added support for Ruby on Rails 7 import map with turbo
 - improved event listeners for interactive components

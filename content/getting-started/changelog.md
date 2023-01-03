@@ -21,6 +21,10 @@ We strive to keep a good accountability of all of the version changes that we ma
 - integrated ESlint and Prettier
 - fixed event listeners stacking up for all interactive components
 - improved NPM build scripts
+- new stepper component
+- new indicator component
+- new breadcrumb components
+- new spinner examples
 
 Breaking changes:
 

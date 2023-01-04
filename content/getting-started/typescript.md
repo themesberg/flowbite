@@ -137,7 +137,24 @@ module.exports = {
 npx webpack --watch
 ```
 
-This will generate an `app-bundle.js` named JavaScript file that you can now include inside your HTML templates. To check out if it works you can now open the `index.html` file inside your browsers.
+This will generate an `app-bundle.js` named JavaScript file that you can now include inside your HTML templates. To check out if it works you can create a new `index.html` file and open it inside your browser.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body>
+    <h1 class="text-4xl">Hello Tailwind CSS!</h1>
+    <script src="./dist/app-bundle.js"></script>
+</body>
+</html>
+```
 
 ### CommonJS
 
@@ -207,7 +224,7 @@ In our case we will look for all TypeScript files inside the `src/` folder and a
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 ```
 
-12. Create a new `index.html` file inside the root folder of your project with the following basic setup where we include all of the compiled code:
+12. Open the `index.html` file inside the root folder of your project with the following basic setup where we include all of the compiled code including the new `output.css` file:
 
 ```html
 <!DOCTYPE html>
@@ -221,7 +238,7 @@ npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 </head>
 <body>
     <h1 class="text-4xl">Hello Tailwind CSS!</h1>
-    <script src="./lib/cjs/index.js"></script>
+    <script src="./dist/app-bundle.js"></script>
 </body>
 </html>
 ```

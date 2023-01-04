@@ -82,7 +82,7 @@ Here's a breakdown of what each option key-value pair represents:
 
 After setting up the TypeScript configuration file we can now write some code.
 
-1. Set up the folder structure for your TypeScript files by creating a new `src/` folder and creating an `index.ts` file inside of it with the following code:
+5. Set up the folder structure for your TypeScript files by creating a new `src/` folder and creating an `index.ts` file inside of it with the following code:
 
 ```javascript
 const text: string = 'Hello TypeScript';
@@ -178,7 +178,7 @@ npx tsc -m es6 --outDir lib/esm
 
 Now that we have succesfully configured TypeScript and also compiled the source code we have to install and configure Tailwind CSS.
 
-7. Run the following command to install and require Tailwind CSS in your `package.json` file:
+Run the following command to install and require Tailwind CSS in your `package.json` file:
 
 ```bash
 npm install -D tailwindcss
@@ -186,13 +186,13 @@ npm install -D tailwindcss
 
 ## Install Tailwind CSS
 
-8. Create a new `tailwind.config.js` file by running the following command:
+9. Create a new `tailwind.config.js` file by running the following command:
 
 ```bash
 npx tailwindcss init
 ```
 
-9. Based on your source template files make sure you include all of the relevant paths in the `content` area of your Tailwind CSS configuration file:
+10. Based on your source template files make sure you include all of the relevant paths in the `content` area of your Tailwind CSS configuration file:
 
 ```javascript
 /** @type {import('tailwindcss').Config} */
@@ -210,7 +210,7 @@ module.exports = {
 
 In our case we will look for all TypeScript files inside the `src/` folder and all of the HTML files inside the project relative to the root.
 
-10. Create a new `input.css` file inside the `src/` folder and import all of the basic Tailwind CSS directives:
+11. Create a new `input.css` file inside the `src/` folder and import all of the basic Tailwind CSS directives:
 
 ```css
 @tailwind base;
@@ -218,13 +218,13 @@ In our case we will look for all TypeScript files inside the `src/` folder and a
 @tailwind utilities;
 ```
 
-11. Compile the code when changes are made by using the following command:
+12. Compile the code when changes are made by using the following command:
 
 ```bash
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 ```
 
-12. Open the `index.html` file inside the root folder of your project with the following basic setup where we include all of the compiled code including the new `output.css` file:
+13. Open the `index.html` file inside the root folder of your project with the following basic setup where we include all of the compiled code including the new `output.css` file:
 
 ```html
 <!DOCTYPE html>

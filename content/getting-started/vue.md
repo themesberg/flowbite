@@ -54,7 +54,7 @@ module.exports = {
 }
 ```
 
-4. Create a new `./src/index.css` file and add the Tailwind directives:
+5. Create a new `./src/index.css` file and add the Tailwind directives:
 
 ```css
 @tailwind base;
@@ -62,7 +62,7 @@ module.exports = {
 @tailwind utilities;
 ```
 
-5. Import the newly created CSS file inside your `./src/main.js` file:
+6. Import the newly created CSS file inside your `./src/main.js` file:
 
 ```javascript
 import { createApp } from 'vue'
@@ -74,13 +74,13 @@ import './index.css'
 createApp(App).mount('#app')
 ```
 
-6. Install Flowbite by running the following command in your terminal:
+7. Install Flowbite by running the following command in your terminal:
 
 ```bash
 npm install flowbite
 ```
 
-7. Require Flowbite as a plugin inside your `tailwind.config.js` file:
+8. Require Flowbite as a plugin inside your `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
@@ -92,7 +92,7 @@ module.exports = {
 }
 ```
 
-8. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
+9. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
@@ -104,7 +104,7 @@ module.exports = {
 }
 ```
 
-9. Start a local server on `localhost:3000/` by running the following command in your terminal:
+10. Start a local server on `localhost:3000/` by running the following command in your terminal:
 
 ```bash
 npm run dev

@@ -32,7 +32,7 @@ Use the following badge elements to indicate counts or labels inside or outside 
 
 ## Large badges
 
-Use the `text-sm` to create a larger variant of the badges.
+Use the `text-sm` utility class and increase the paddings to create a larger variant of the badges.
 
 {{< example id="badge-sizes-example" github="components/badge.md" show_dark=true >}}
 <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Default</span>
@@ -47,9 +47,9 @@ Use the `text-sm` to create a larger variant of the badges.
 
 ## Bordered badge
 
-Use the following badge elements to indicate counts or labels inside or outside components.
+This example can be used to add a border accent to the badge component.
 
-{{< example id="default-badge-example" github="components/badge.md" show_dark=true >}}
+{{< example id="bordered-badge-example" github="components/badge.md" show_dark=true >}}
 <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">Default</span>
 <span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-400 border border-gray-500">Dark</span>
 <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400">Red</span>
@@ -63,9 +63,9 @@ Use the following badge elements to indicate counts or labels inside or outside 
 
 ## Pills badge
 
-Use the following badge elements to indicate counts or labels inside or outside components.
+Use this example to make the corners even more rounded like pills for the badge component.
 
-{{< example id="default-badge-example" github="components/badge.md" show_dark=true >}}
+{{< example id="pills-badge-example" github="components/badge.md" show_dark=true >}}
 <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">Default</span>
 <span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300">Dark</span>
 <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">Red</span>
@@ -102,7 +102,7 @@ You can also use SVG icons inside the badge elements.
 
 ## Notification badge
 
-You can also use SVG icons inside the badge elements.
+Use the following example to show a badge inside of a button component.
 
 {{< example id="badge-notification-example" github="components/badge.md" show_dark=true >}}
 <button type="button" class="relative inline-flex items-center p-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">

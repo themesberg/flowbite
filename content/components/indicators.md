@@ -31,6 +31,17 @@ Use this example to create a simple indicator with mulitple colors and position 
 <span class="flex w-3 h-3 bg-teal-500 rounded-full"></span>
 {{< /example >}}
 
+## Legend indicator
+
+Use this example to create a simple indicator with mulitple colors and position it anywhere on the website.
+
+{{< example id="default-indicator-example" class="flex items-center space-x-3" github="components/indicators.md" show_dark=true >}}
+<span class="text-sm font-medium text-gray-900 dark:text-white flex items-center"><span class="flex w-2.5 h-2.5 bg-blue-600 rounded-full mr-1.5"></span>Visitors</span>
+<span class="text-sm font-medium text-gray-900 dark:text-white flex items-center"><span class="flex w-2.5 h-2.5 bg-purple-500 rounded-full mr-1.5"></span>Revenue</span>
+<span class="text-sm font-medium text-gray-900 dark:text-white flex items-center"><span class="flex w-2.5 h-2.5 bg-indigo-500 rounded-full mr-1.5"></span>Sessions</span>
+<span class="text-sm font-medium text-gray-900 dark:text-white flex items-center"><span class="flex w-2.5 h-2.5 bg-teal-400 rounded-full mr-1.5"></span>Conversion Rate</span>
+{{< /example >}}
+
 ## Indicator count
 
 This example can be used to show a number count inside the indicator and position it relative to a button component.

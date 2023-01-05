@@ -36,10 +36,10 @@ Use this example to create a simple indicator with mulitple colors and position 
 This example can be used as a legend indicator for charts to also add a text next to the bullet point.
 
 {{< example id="legend-indicator-example" class="flex items-center space-x-3" github="components/indicators.md" show_dark=true >}}
-<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white"><span class="flex w-2.5 h-2.5 bg-blue-600 rounded-full mr-1.5"></span>Visitors</span>
-<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white"><span class="flex w-2.5 h-2.5 bg-purple-500 rounded-full mr-1.5"></span>Revenue</span>
-<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white"><span class="flex w-2.5 h-2.5 bg-indigo-500 rounded-full mr-1.5"></span>Sessions</span>
-<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white"><span class="flex w-2.5 h-2.5 bg-teal-400 rounded-full mr-1.5"></span>Conversion Rate</span>
+<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white"><span class="flex w-2.5 h-2.5 bg-blue-600 rounded-full mr-1.5 flex-shrink-0"></span>Visitors</span>
+<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white"><span class="flex w-2.5 h-2.5 bg-purple-500 rounded-full mr-1.5 flex-shrink-0"></span>Sessions</span>
+<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white"><span class="flex w-2.5 h-2.5 bg-indigo-500 rounded-full mr-1.5 flex-shrink-0"></span>Customers</span>
+<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white"><span class="flex w-2.5 h-2.5 bg-teal-400 rounded-full mr-1.5 flex-shrink-0"></span>Revenue</span>
 {{< /example >}}
 
 ## Indicator count

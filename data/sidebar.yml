@@ -8,6 +8,9 @@
     - title: Next.js
       slug: next-js
     - title: Vue
+    - title: Nuxt.js
+      slug: nuxt-js
+      new: true
     - title: Laravel
     - title: Svelte
     - title: Rails

@@ -399,8 +399,8 @@ Flowbite is an open source collection of UI components built with the utility cl
   </tr>
   <tr>
     <td width="33.3333%">Speed Dial</td>
-    <td width="33.3333%"></td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">Stepper</td>
+    <td width="33.3333%">Indicators</td>
   </tr>
   <tr>
     <td width="33.3333%">
@@ -408,8 +408,16 @@ Flowbite is an open source collection of UI components built with the utility cl
             <img alt="Tailwind CSS Speed Dial" src="https://flowbite.s3.amazonaws.com/github/dial.jpg">
         </a>
     </td>
-    <td width="33.3333%"></td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/stepper/">
+            <img alt="Tailwind CSS Stepper" src="https://flowbite.s3.amazonaws.com/github/stepper.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/indicators/">
+            <img alt="Tailwind CSS Indicators" src="https://flowbite.s3.amazonaws.com/github/indicators.jpg">
+        </a>
+    </td>
   </tr>
 </table>
 
@@ -424,7 +432,7 @@ Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" >Node.js
 1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
-npm i flowbite
+npm install flowbite --save
 ```
 
 2. Require Flowbite as a plugin inside the `tailwind.config.js` file:
@@ -439,7 +447,19 @@ module.exports = {
 }
 ```
 
-3. Include the main JavaScript file to make interactive elements work:
+3. Make sure that you add the template path to the `tailwind.config.js` file:
+
+```javascript
+module.exports = {
+
+    content: [
+        "./node_modules/flowbite/**/*.js"
+    ]
+
+}
+```
+
+4. Include the main JavaScript file to make interactive elements work:
 
 ```html
 <script src="../path/to/flowbite/dist/flowbite.js"></script>
@@ -461,11 +481,15 @@ Require the following minified stylesheet inside the `head` tag:
 <link rel="stylesheet" href="https://unpkg.com/flowbite@latest/dist/flowbite.min.css" />
 ```
 
-And include the following javascript file before the end of the `body` element:
+And include the following javascript file before the end of the `body` tag:
 
 ```html
-<script src="https://unpkg.com/flowbite@latest/dist/flowbite.js"></script>
+<script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
 ```
+
+## TypeScript
+
+Flowbite supports types and interfaces for TypeScript projects and you can learn more on how to work with Tailwind CSS, Flowbite, and TypeScript on the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/) inside the documentation.
 
 ## Community
 

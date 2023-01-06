@@ -51,8 +51,7 @@ npm install --save-dev @nuxtjs/tailwindcss
 2. Configure the Nuxt.js configuration file to include the Tailwind module:
 
 ```javascript
-// nuxt.config.{js|ts}
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// nuxt.config.{js,ts}
 export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss'
@@ -77,7 +76,6 @@ npx tailwindcss init
 5. Set up the template paths for your Nuxt.js project inside the Tailwind CSS configuration file:
 
 ```javascript
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -93,9 +91,40 @@ module.exports = {
 }
 ```
 
-Now Tailwind CSS is configured in your project and if you add the utility classes anywhere in your Vue template files the CSS will be generated and included.
+Tailwind CSS is now configured in your project and if you add the utility classes anywhere in your Vue template files the CSS will be generated and included.
 
 ## Install Flowbite
+
+After installing both Nuxt.js and Tailwind CSS inside your project we can proceed by installing Flowbite.
+
+1. Install Flowbite via NPM and save it in your `package.json` file:
+
+```bash
+npm install flowbite --save
+```
+
+2. Require Flowbite as a plugin inside your `tailwind.config.js` file:
+
+```javascript
+module.exports = {
+  // other options ...
+  plugins: [
+    require('flowbite')
+  ],
+}
+```
+
+3. Add the source JavaScript files of Flowbite to the `tailwind.config.js` template path:
+
+```javascript
+module.exports = {
+  content: [
+    // other files...
+    "./node_modules/flowbite.{js,ts}"
+  ],
+}
+
+```
 
 ## Flowbite Components
 

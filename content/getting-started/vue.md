@@ -191,7 +191,7 @@ You can check out the available methods and options for the Flowbite API by scro
 
 ## Vue 3 Starter Project
 
-We have also created a [starter project on GitHub](https://github.com/themesberg/flowbite-vue-starter) based on this guide to show you how to use all of the available components from Flowbite with a Vue 3 and Tailwind CSS configuration.
+We have also created a [starter project on GitHub](https://github.com/themesberg/tailwind-vue-starter) based on this guide to show you how to use all of the available components from Flowbite with a Vue 3 and Tailwind CSS configuration.
 
 ## Flowbite Vue Library
 

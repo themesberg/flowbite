@@ -146,7 +146,9 @@ class Dropdown implements DropdownInterface {
     }
 }
 
-window.Dropdown = Dropdown;
+if (typeof window !== 'undefined') {
+    window.Dropdown = Dropdown;
+}
 
 export function initDropdowns() {
     document

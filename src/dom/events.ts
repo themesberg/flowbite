@@ -9,7 +9,9 @@ class Events {
 
     init() {
         this._eventFunctions.forEach((eventFunction) => {
-            window.addEventListener(this._eventType, eventFunction);
+            if (typeof window !== 'undefined') {
+                window.addEventListener(this._eventType, eventFunction);
+            }
         });
     }
 }

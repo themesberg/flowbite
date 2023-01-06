@@ -197,7 +197,9 @@ class Modal implements ModalInterface {
     }
 }
 
-window.Modal = Modal;
+if (typeof window !== 'undefined') {
+    window.Modal = Modal;
+}
 
 const getModalInstance = (id: string, instances: ModalInstance[]) => {
     if (instances.some((modalInstance) => modalInstance.id === id)) {

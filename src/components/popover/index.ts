@@ -135,7 +135,9 @@ class Popover implements PopoverInterface {
     }
 }
 
-window.Popover = Popover;
+if (typeof window !== 'undefined') {
+    window.Popover = Popover;
+}
 
 export function initPopovers() {
     document.querySelectorAll('[data-popover-target]').forEach(($triggerEl) => {

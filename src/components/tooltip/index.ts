@@ -120,7 +120,9 @@ class Tooltip implements TooltipInterface {
     }
 }
 
-window.Tooltip = Tooltip;
+if (typeof window !== 'undefined') {
+    window.Tooltip = Tooltip;
+}
 
 export function initTooltips() {
     document.querySelectorAll('[data-tooltip-target]').forEach(($triggerEl) => {

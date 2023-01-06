@@ -91,7 +91,9 @@ class Tabs implements TabsInterface {
     }
 }
 
-window.Tabs = Tabs;
+if (typeof window !== 'undefined') {
+    window.Tabs = Tabs;
+}
 
 export function initTabs() {
     document.querySelectorAll('[data-tabs-toggle]').forEach(($triggerEl) => {

@@ -13,6 +13,8 @@ module.exports = {
         'flowbite.turbo.min': path.resolve(__dirname, 'src/index.turbo.ts'),
         datepicker: path.resolve(__dirname, 'src/plugins/datepicker.js'),
         'datepicker.min': path.resolve(__dirname, 'src/plugins/datepicker.js'),
+        'datepicker.turbo': path.resolve(__dirname, 'src/plugins/datepicker.turbo.js'),
+        'datepicker.turbo.min': path.resolve(__dirname, 'src/plugins/datepicker.turbo.js'),
         docs: path.resolve(__dirname, 'src/docs.js'),
     },
     devtool: 'inline-source-map',

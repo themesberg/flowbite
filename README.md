@@ -432,7 +432,7 @@ Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" >Node.js
 1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
-npm install flowbite --save
+npm install flowbite
 ```
 
 2. Require Flowbite as a plugin inside the `tailwind.config.js` file:

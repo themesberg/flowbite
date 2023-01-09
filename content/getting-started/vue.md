@@ -8,8 +8,8 @@ requires_vue: true
 
 previous: Next.js
 previousLink: getting-started/next-js/
-next: Laravel
-nextLink: getting-started/laravel/
+next: Nuxt.js
+nextLink: getting-started/nuxt-js/
 ---
 
 Vue.js is a popular front-end library used by websites such as Behance, Nintendo, Gitlab, Font Awesome, and more that you can use to build modern web applications. 

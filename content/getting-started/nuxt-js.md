@@ -20,7 +20,7 @@ If you follow this guide you will learn how to install the latest version of Nux
 
 ## Create a Nuxt.js project
 
-Before continuing this guide make sure that you have Node.js and NPM installed on your local machine.
+Before continuing make sure that you have Node.js and NPM installed on your local machine.
 
 1. Create a new Nuxt.js project by running the following command in your terminal:
 
@@ -34,7 +34,7 @@ npx nuxi init project-name
 npm install
 ```
 
-3. Run the following command to start a local development server on `http://localhost:3000/ `:
+3. Run the following command to start a local development server on `http://localhost:3000/`:
 
 ```bash
 npm run dev

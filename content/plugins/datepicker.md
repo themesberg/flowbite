@@ -31,7 +31,7 @@ If you'd like to manually be able to manipulate the datepicker component using J
 
 ### Turbo load support 
 
-In order to support turbo load from Ruby on Rails 7, you have to include the `datepicker.tubro.js` file either from NPM or CDN into your project.
+In order to support turbo load from Ruby on Rails 7, you have to include the `datepicker.turbo.js` file either from NPM or CDN into your project.
 
 Follow the [quickstart guide]({{< ref "getting-started/rails" >}}) and then include the following JavaScript file:
 

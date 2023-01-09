@@ -91,6 +91,7 @@
     "webpack": "^5.47.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2",
+    "windicss": "^3.5.6",
     "yarn": "^1.22.10"
   },
   "dependencies": {

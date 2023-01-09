@@ -81,19 +81,7 @@ module.exports = {
 
 This will tell the compiler from Tailwind what files to look for to properly apply the classes inside the final CSS file and it will also install the extra plugin options from Flowbite.
 
-6. Add Tailwind CSS to your Laravel Mix configuration by requiring it inside the `webpack.mix.js` file:
-
-```javascript
-mix.js("resources/js/app.js", "public/js")
-  .postCss("resources/css/app.css", "public/css", [
-
-    // add here
-    require("tailwindcss"),
-
-  ]);
-```
-
-7. Add the directives inside the `./resources/css/app.css` file:
+6. Add the directives inside the `./resources/css/app.css` file:
 
 ```css
 @tailwind base;
@@ -101,13 +89,13 @@ mix.js("resources/js/app.js", "public/js")
 @tailwind utilities;
 ```
 
-8. Include the `app.css` file inside the `<head>` tag of your view templates:
+7. Make sure your compiled CSS is included in the `<head>` then start using Tailwind’s utility classes to style your content.
 
-```html
-<link href="/css/app.css" rel="stylesheet">
+```js
+@vite('resources/css/app.css')
 ```
 
-9. Require the `flowbite.js` file before the end of the `<body>` tag:
+8. Require the `flowbite.js` file before the end of the `<body>` tag:
 
 ```html
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
@@ -119,7 +107,7 @@ Alternatively, you can also include the JavaScript file using CDN:
 <script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
 ```
 
-Now that you've set everything up start up a local development server using `php artisan serve` and run the build process for Webpack by using `npm run watch`.
+Now that you've set everything up start up a local development server using `php artisan serve` and run the build process for Vite by using `npm run dev`.
 
 ## Flowbite components
 

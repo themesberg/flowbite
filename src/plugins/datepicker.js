@@ -1,5 +1,6 @@
 import Datepicker from 'flowbite-datepicker/Datepicker';
 import DateRangePicker from 'flowbite-datepicker/DateRangePicker';
+import Events from "../dom/events";
 
 const getDatepickerOptions = (datepickerEl) => {
     const buttons = datepickerEl.hasAttribute('datepicker-buttons');
@@ -31,7 +32,7 @@ const getDatepickerOptions = (datepickerEl) => {
     return options;
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+export function initDatepickers() {
     document.querySelectorAll('[datepicker]').forEach(function (datepickerEl) {
         new Datepicker(datepickerEl, getDatepickerOptions(datepickerEl));
     });
@@ -50,4 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 getDatepickerOptions(datepickerEl)
             );
         });
-});
+};
+
+
+const events = new Events('DOMContentLoaded', [
+    initDatepickers,
+]);
+events.init();

@@ -36,3 +36,16 @@ export * from './components/modal/interface';
 export * from './components/popover/interface';
 export * from './components/tabs/interface';
 export * from './components/tooltip/interface';
+
+// export init functions
+export { initAccordions } from './components/accordion';
+export { initCarousels } from './components/carousel';
+export { initCollapses } from './components/collapse';
+export { initDials } from './components/dial';
+export { initDismisses } from './components/dismiss';
+export { initDrawers } from './components/drawer';
+export { initDropdowns } from './components/dropdown';
+export { initModals } from './components/modal';
+export { initPopovers } from './components/popover';
+export { initTabs } from './components/tabs';
+export { initTooltips } from './components/tooltip';

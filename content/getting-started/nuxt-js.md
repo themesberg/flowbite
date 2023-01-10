@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Nuxt.js - Flowbite
-description: Learn how to install Tailwind CSS with Flowbite for your Nuxt.js project and start developing with the most popular Vue-based framework inspired by Next.js
+description: Learn how to install Tailwind CSS with Flowbite for your Nuxt 3 project and start developing with the most popular Vue-based framework inspired by Next.js
 group: getting-started
 toc: true
 requires_nuxtjs: true
@@ -16,7 +16,7 @@ Nuxt.js is a free and open-source JavaScript framework based on Vue.js that help
 
 The framework was inspired by Vercel's Next.js framework built with React and it is being used by large companies such as Ecosia, Upwork, NASA, Appsumo, and CDN JS.
 
-If you follow this guide you will learn how to install the latest version of Nuxt.js (v3) with Tailwind CSS and Flowbite and also show you how to use the TypeScript version.
+If you follow this guide you will learn how to install the latest version 3 of Nuxt.js with Tailwind CSS and Flowbite and also show you how to use the TypeScript version.
 
 ## Create a Nuxt.js project
 

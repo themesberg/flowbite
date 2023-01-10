@@ -157,6 +157,16 @@ Alternatively to all of the above you can also include the JavaScript via CDN:
 <script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
 ```
 
+### Datepicker
+
+In order to support turbo load from Ruby on Rails 7, you have to include the `datepicker.turbo.js` file either from NPM or CDN into your project.
+
+Include the following JavaScript file to support the datepicker component:
+
+```bash
+pin "flowbite-datepicker", to: "https://unpkg.com/flowbite@{{< current_version >}}/dist/datepicker.turbo.js"
+```
+
 ## Building your project
 
 Run the following command to start a local server and build the source files:

@@ -118,7 +118,7 @@ In order to support turbo load from Ruby on Rails 7 you have to pin the `flowbit
 1. Add the following line inside your `importmap.rb` file:
 
 ```bash
-pin "flowbite", to: "https://unpkg.com/flowbite@1.6.0/dist/flowbite.turbo.js"
+pin "flowbite", to: "https://unpkg.com/flowbite@1.6.1/dist/flowbite.turbo.js"
 ```
 
 2. Then you need to import `flowbite` inside your `application.js` file:

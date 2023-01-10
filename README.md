@@ -465,11 +465,21 @@ module.exports = {
 <script src="../path/to/flowbite/dist/flowbite.js"></script>
 ```
 
-If you use Webpack or other bundlers you can also import it like this:
+If you use Webpack or other bundlers you can also import it like this to automatically include all of the data attribute event listeners from Flowbite.
 
 ```javascript
-import 'flowbite';
+import 'flowbite/dist/flowbite.min.js';
 ```
+
+You can also import components one by one like this and use the components programatically based on JavaScript API.
+
+```javascript
+import { Modal } from 'flowbite';
+
+const modal = new Modal(...parameters);
+```
+
+Check out the JavaScript behaviour section of each component's page to learn how you can use this.
 
 ### Include via CDN
 

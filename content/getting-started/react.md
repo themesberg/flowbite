@@ -59,7 +59,7 @@ module.exports = {
 5. Install Flowbite and Flowbite React by running the following command in your terminal:
 
 ```bash
-npm i flowbite flowbite-react
+npm install flowbite flowbite-react
 ```
 
 6. Require Flowbite as a plugin inside your `tailwind.config.js` file:

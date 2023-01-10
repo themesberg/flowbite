@@ -225,7 +225,7 @@ Flowbite is an open source library of interactive components built on top of Tai
 1. Install Flowbite as a dependency using NPM:
 
 ```bash
-npm i flowbite
+npm install flowbite
 ```
 
 2. Require Flowbite as a plugin inside the `tailwind.config.js` file:

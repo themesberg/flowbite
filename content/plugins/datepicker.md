@@ -153,7 +153,7 @@ If you would like to enable dark mode for the datepicker please follow the [dark
 If you want to use the **Tailwind Datepicker** plugin using JavaScript you will need to include it into your project via NPM:
 
 ```bash
-npm i flowbite-datepicker --save
+npm install flowbite-datepicker --save
 ```
 
 After you've installed the NPM library, you will need to import the `Datepicker` module:

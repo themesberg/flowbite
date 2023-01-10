@@ -20,7 +20,7 @@ Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow">Node.js<
 1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
-npm i flowbite
+npm install flowbite
 ```
 
 2. Require Flowbite as a plugin inside the `tailwind.config.js` file:
@@ -53,13 +53,13 @@ module.exports = {
 }
 ```
 
-If you use Webpack or other bundlers you can also import it like this:
+If you use Webpack or other bundlers you can also import it like this to automatically include all of the data attribute event listeners from Flowbite.
 
 ```javascript
-import 'flowbite';
+import 'flowbite/dist/flowbite.min.js';
 ```
 
-You can also import components one by one like this:
+You can also import components one by one like this and use the components programatically based on JavaScript API.
 
 ```javascript
 import { Modal } from 'flowbite';

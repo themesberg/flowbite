@@ -114,7 +114,9 @@ class Dial implements DialInterface {
     }
 }
 
-window.Dial = Dial;
+if (typeof window !== 'undefined') {
+    window.Dial = Dial;
+}
 
 export function initDials() {
     document.querySelectorAll('[data-dial-init]').forEach(($parentEl) => {

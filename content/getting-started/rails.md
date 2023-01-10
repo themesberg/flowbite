@@ -118,7 +118,7 @@ In order to support turbo load from Ruby on Rails 7 you have to pin the `flowbit
 1. Add the following line inside your `importmap.rb` file:
 
 ```bash
-pin "flowbite", to: "https://unpkg.com/flowbite@1.6.0/dist/flowbite.turbo.js"
+pin "flowbite", to: "https://unpkg.com/flowbite@1.6.1/dist/flowbite.turbo.js"
 ```
 
 2. Then you need to import `flowbite` inside your `application.js` file:
@@ -155,6 +155,16 @@ Alternatively to all of the above you can also include the JavaScript via CDN:
 
 // include via CDN without turbo support
 <script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
+```
+
+### Datepicker
+
+In order to support turbo load from Ruby on Rails 7, you have to include the `datepicker.turbo.js` file either from NPM or CDN into your project.
+
+Include the following JavaScript file to support the datepicker component:
+
+```bash
+pin "flowbite-datepicker", to: "https://unpkg.com/flowbite@{{< current_version >}}/dist/datepicker.turbo.js"
 ```
 
 ## Building your project

@@ -20,7 +20,7 @@ Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow">Node.js<
 1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
-npm i flowbite
+npm install flowbite
 ```
 
 2. Require Flowbite as a plugin inside the `tailwind.config.js` file:
@@ -53,13 +53,13 @@ module.exports = {
 }
 ```
 
-If you use Webpack or other bundlers you can also import it like this:
+If you use Webpack or other bundlers you can also import it like this to automatically include all of the data attribute event listeners from Flowbite.
 
 ```javascript
-import 'flowbite';
+import 'flowbite/dist/flowbite.min.js';
 ```
 
-You can also import components one by one like this:
+You can also import components one by one like this and use the components programatically based on JavaScript API.
 
 ```javascript
 import { Modal } from 'flowbite';
@@ -97,16 +97,6 @@ Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking chang
   {{< requires_typescript >}}
 </div>
 
-## TypeScript
-
-If you want to use types for the interactive elements you can do that because since `v1.6.0` Flowbite also supports TypeScript.
-
-Learn how to <a href="{{< ref "getting-started/typescript" >}}">install Tailwind CSS and Flowbite with TypeScript</a>.
-
-<div class="mt-8 -mb-5">
-  {{< requires_react >}}
-</div>
-
 ## WindiCSS
 
 Flowbite also works with WindiCSS. Just include the WindiCSS version of the Flowbite plugin inside the `windi.config.js` file.
@@ -117,11 +107,25 @@ plugins: [
 ],
 ```
 
+## TypeScript
+
+If you want to use types for the interactive elements you can do that because since `v1.6.0` Flowbite also supports TypeScript.
+
+Learn how to <a href="{{< ref "getting-started/typescript" >}}">install Tailwind CSS and Flowbite with TypeScript</a>.
+
+<div class="mt-8 -mb-5">
+  {{< requires_react >}}
+</div>
+
 ## React
 
 If you're using React as a front-end library you can also use the components from Flowbite including the interactive ones such as the dropdowns, modals, and tooltips as long as you install Tailwind CSS and Flowbite in an existing project.
 
 Learn how to <a href="{{< ref "getting-started/react" >}}">install Tailwind CSS and Flowbite with React</a>.
+
+<div class="mt-8 -mb-5">
+  {{< requires_nextjs >}}
+</div>
 
 ## Next.js
 
@@ -138,6 +142,16 @@ Learn how to <a href="{{< ref "getting-started/next-js" >}}">install Tailwind CS
 The components from Flowbite can also be used any new or existing Vue 3 projects as long as you install Tailwind CSS and Flowbite.
 
 Learn how to <a href="{{< ref "getting-started/vue" >}}">install Tailwind CSS and Flowbite with Vue.js</a>.
+
+<div class="mt-8 -mb-5">
+  {{< requires_nuxtjs >}}
+</div>
+
+## Nuxt.js
+
+If you're using Vue 3 as a front-end library and Nuxt.js as a framework you can also use the components from Flowbite Vue such as the modals, dropdowns, and navbars to speed up your development time coupled with the utility classes from Tailwind CSS.
+
+Learn how to <a href="{{< ref "getting-started/nuxt-js" >}}">install Tailwind CSS and Flowbite with Nuxt.js and Vue 3</a>.
 
 <div class="mt-8 -mb-5">
   {{< requires_laravel >}}
@@ -169,11 +183,19 @@ If you're using a Ruby on Rails project you can install Tailwind CSS with Flowbi
 
 Learn how to <a href="{{< ref "getting-started/rails" >}}">install Tailwind CSS and Flowbite with Ruby on Rails</a>.
 
+<div class="mt-8 -mb-5">
+  {{< requires_django >}}
+</div>
+
 ## Django
 
 Check out the Django integration guide with Tailwind CSS and Flowbite to set up all technologies and start developing even faster using the UI components from Flowbite.
 
 Learn how to <a href="{{< ref "getting-started/django" >}}">install Tailwind CSS and Flowbite with Django</a>.
+
+<div class="mt-8 -mb-5">
+  {{< requires_flask >}}
+</div>
 
 ## Flask
 

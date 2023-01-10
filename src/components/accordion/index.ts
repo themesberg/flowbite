@@ -122,7 +122,9 @@ class Accordion implements AccordionInterface {
     }
 }
 
-window.Accordion = Accordion;
+if (typeof window !== 'undefined') {
+    window.Accordion = Accordion;
+}
 
 export function initAccordions() {
     document.querySelectorAll('[data-accordion]').forEach(($accordionEl) => {

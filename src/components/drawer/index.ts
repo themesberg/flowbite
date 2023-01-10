@@ -226,7 +226,9 @@ class Drawer implements DrawerInterface {
     }
 }
 
-window.Drawer = Drawer;
+if (typeof window !== 'undefined') {
+    window.Drawer = Drawer;
+}
 
 const getDrawerInstance = (id: string, instances: DrawerInstance[]) => {
     if (instances.some((drawerInstance) => drawerInstance.id === id)) {

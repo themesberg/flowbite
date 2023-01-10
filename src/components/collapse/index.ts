@@ -73,7 +73,9 @@ class Collapse implements CollapseInterface {
     }
 }
 
-window.Collapse = Collapse;
+if (typeof window !== 'undefined') {
+    window.Collapse = Collapse;
+}
 
 export function initCollapses() {
     document

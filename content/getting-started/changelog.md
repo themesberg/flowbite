@@ -15,6 +15,16 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v1.6.1
+
+- Nuxt.js integration guide + starter kit
+- Add data attribute initialisation support for Vue 3 and Nuxt.js
+- Remove event listeners from basic `index.js` file and keep it only for `index.umd.js`
+- Fix drawer flickering issue
+- Update Laravel integration guide with Vite (thanks to [@CorWinDev](https://github.com/CorwinDev) for the PR)
+- Fixed checkbox dark mode focus state (thanks to [@CorWinDev](https://github.com/CorwinDev) for the PR)
+- Added Datepicker turbo load support for Ruby on Rails 7 (thanks to [@travisgalloway](https://github.com/travisgalloway) for the PR)
+
 ### v1.6.0
 
 - migrated code to TypeScript & introduced types and interfaces
@@ -30,7 +40,7 @@ Breaking changes:
 
 - modals no longer get initialized via `data-modal-toggle` and you need to switch to `data-modal-target={modalID}` where the value is the id of the modal
 
-### v1.6.0
+### v1.5.5
 
 - added support for Ruby on Rails 7 import map with turbo
 - improved event listeners for interactive components

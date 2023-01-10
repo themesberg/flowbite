@@ -172,7 +172,7 @@ Now that you have a working Flask and Tailwind CSS configuration you can also in
 1. Install Flowbite as a dependency using NPM:
 
 ```bash
-npm i flowbite
+npm install flowbite
 ```
 
 2. Require Flowbite as a plugin inside the `tailwind.config.js` file:
@@ -279,7 +279,7 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
         </div>
     </nav>
 
-    <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
+    <script src="https://unpkg.com/flowbite@1.6.1/dist/flowbite.min.js"></script>
 </body>
 
 </html>

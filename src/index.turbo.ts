@@ -1,4 +1,3 @@
-
 // core components
 import Accordion, { initAccordions } from './components/accordion';
 import Carousel, { initCarousels } from './components/carousel';

@@ -29,16 +29,6 @@ Alternatively you can also use CDN to include the datepicker JavaScript.
 
 If you'd like to manually be able to manipulate the datepicker component using JavaScript then you should <a href="#javascript">install the plugin using NPM</a> and include it into your JavaScript code.
 
-### Turbo load support 
-
-In order to support turbo load from Ruby on Rails 7, you have to include the `datepicker.tubro.js` file either from NPM or CDN into your project.
-
-Follow the [quickstart guide]({{< ref "getting-started/rails" >}}) and then include the following JavaScript file:
-
-```ruby
-pin "flowbite-datepicker", to: "https://unpkg.com/flowbite@{{< current_version >}}/dist/datepicker.turbo.js"
-```
-
 ## Datepicker example
 
 Use the following example of an input element to create a datepicker component. All you need to do is to add the `datepicker` data attribute to any `input` element.
@@ -163,7 +153,7 @@ If you would like to enable dark mode for the datepicker please follow the [dark
 If you want to use the **Tailwind Datepicker** plugin using JavaScript you will need to include it into your project via NPM:
 
 ```bash
-npm i flowbite-datepicker --save
+npm install flowbite-datepicker --save
 ```
 
 After you've installed the NPM library, you will need to import the `Datepicker` module:
@@ -194,4 +184,14 @@ const dateRangePickerEl = document.getElementById('dateRangePickerId');
 new DateRangePicker(dateRangePickerEl, {
     // options
 }); 
+```
+
+## Turbo load support 
+
+In order to support turbo load from Ruby on Rails 7, you have to include the `datepicker.turbo.js` file either from NPM or CDN into your project.
+
+Follow the [quickstart guide]({{< ref "getting-started/rails" >}}) and then include the following JavaScript file:
+
+```ruby
+pin "flowbite-datepicker", to: "https://unpkg.com/flowbite@{{< current_version >}}/dist/datepicker.turbo.js"
 ```

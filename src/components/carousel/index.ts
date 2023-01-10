@@ -189,9 +189,11 @@ class Carousel implements CarouselInterface {
      * Set an interval to cycle through the carousel items
      */
     cycle() {
-        this._intervalInstance = window.setInterval(() => {
-            this.next();
-        }, this._intervalDuration);
+        if (typeof window !== 'undefined') {
+            this._intervalInstance = window.setInterval(() => {
+                this.next();
+            }, this._intervalDuration);
+        }
     }
 
     /**
@@ -238,7 +240,9 @@ class Carousel implements CarouselInterface {
     }
 }
 
-window.Carousel = Carousel;
+if (typeof window !== 'undefined') {
+    window.Carousel = Carousel;
+}
 
 export function initCarousels() {
     document.querySelectorAll('[data-carousel]').forEach(($carouselEl) => {

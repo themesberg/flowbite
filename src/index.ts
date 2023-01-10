@@ -1,33 +1,3 @@
-// core components
-import { initAccordions } from './components/accordion';
-import { initCarousels } from './components/carousel';
-import { initCollapses } from './components/collapse';
-import { initDials } from './components/dial';
-import { initDismisses } from './components/dismiss';
-import { initDrawers } from './components/drawer';
-import { initDropdowns } from './components/dropdown';
-import { initModals } from './components/modal';
-import { initPopovers } from './components/popover';
-import { initTabs } from './components/tabs';
-import { initTooltips } from './components/tooltip';
-import Events from './dom/events';
-
-// init all component events
-const events = new Events('load', [
-    initAccordions,
-    initCarousels,
-    initCollapses,
-    initDismisses,
-    initDropdowns,
-    initModals,
-    initDrawers,
-    initTabs,
-    initTooltips,
-    initPopovers,
-    initDials,
-]);
-events.init();
-
 // export all components
 export { default as Accordion } from './components/accordion';
 export { default as Carousel } from './components/carousel';
@@ -66,3 +36,16 @@ export * from './components/modal/interface';
 export * from './components/popover/interface';
 export * from './components/tabs/interface';
 export * from './components/tooltip/interface';
+
+// export init functions
+export { initAccordions } from './components/accordion';
+export { initCarousels } from './components/carousel';
+export { initCollapses } from './components/collapse';
+export { initDials } from './components/dial';
+export { initDismisses } from './components/dismiss';
+export { initDrawers } from './components/drawer';
+export { initDropdowns } from './components/dropdown';
+export { initModals } from './components/modal';
+export { initPopovers } from './components/popover';
+export { initTabs } from './components/tabs';
+export { initTooltips } from './components/tooltip';

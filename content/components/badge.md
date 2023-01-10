@@ -150,7 +150,7 @@ Alternatively you can also use badges which indicate only a SVG icon.
 
 ## Dismissable badges
 
-Use the `data-dimiss-target` data attribute to dismiss the current badge where the value is the id of the target element using a transition animation.
+Use the `data-dismiss-target` data attribute to dismiss the current badge where the value is the id of the target element using a transition animation.
 
 {{< example id="badge-dismiss-example" github="components/badge.md" show_dark=true >}}
 <span id="badge-dismiss-default" class="inline-flex items-center px-2 py-1 mr-2 text-sm font-medium text-blue-800 bg-blue-100 rounded dark:bg-blue-900 dark:text-blue-300">

@@ -139,7 +139,7 @@ Let's use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Moda
 <template>
     <div>
         <div class="flex justify-center p-4">
-            <button id="button" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Show modal</button>
+            <button id="button" data-modal-toggle="modal" data-modal-target="modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Show modal</button>
         </div>
 
         <div id="modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
@@ -151,7 +151,7 @@ Let's use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Moda
                         <h3 class="text-xl font-semibold text-gray-900 lg:text-2xl dark:text-white">
                             Terms of Service
                         </h3>
-                        <button id="closeButton" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                        <button id="closeButton" data-modal-hide="modal" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
                         </button>
                     </div>
@@ -175,6 +175,70 @@ Let's use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Moda
     </div>
 </template>
 ```
+
+### Data attributes
+
+You can automatically make the interactive components work by importing the init functions from the Flowbite package using the onMounted lifecycle method from Nuxt.js.
+
+For example, here's how would initialize all of the modals inside your Vue template:
+
+```javascript
+<script setup>
+import { onMounted } from 'vue'
+import { initModals } from 'flowbite'
+
+// initialize components based on data attribute selectors
+onMounted(() => {
+    initModals();
+})
+</script>
+
+<template>
+    // Modal HTML markup with data attributes from Flowbite
+</template>
+```
+
+Here's a full list of available functions to use to initialise the components:
+
+```javascript
+<script setup>
+import { onMounted } from 'vue'
+import { 
+    initAccordions, 
+    initCarousels, 
+    initCollapses, 
+    initDials, 
+    initDismisses, 
+    initDrawers, 
+    initDropdowns, 
+    initDropdowns, 
+    initModals, 
+    initPopovers, 
+    initTabs, 
+    initTooltips } from 'flowbite'
+
+// initialize components based on data attribute selectors
+onMounted(() => {
+    initAccordions();
+    initCarousels();
+    initCollapses();
+    initDials();
+    initDismisses();
+    initDrawers();
+    initDropdowns();
+    initModals();
+    initPopovers();
+    initTabs();
+    initTooltips();
+})
+</script>
+```
+
+Although this will make sure all of the interactive components will work with data attributes from Flowbite, we actually recommend only initialising the ones that you use for every page to optimize load speed.
+
+Check out the [starter guide's](https://github.com/themesberg/tailwind-nuxt-starter) `Events.vue` file to see it in action.
+
+### JavaScript API
 
 To make the component interactive we need to import the Modal object from Flowbite and setup the object parameters, options, and methods to show or hide the modal based on the button click.
 

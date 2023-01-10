@@ -47,4 +47,4 @@ Attribution: the documentation code was initially forked from [Bootstrap](https:
 
 ## Pro version
 
-The pro version is licensed under the [EULA]("{{< param homepage >}}/license/") from our website.
+The pro version is licensed under the [EULA](https://flowbite.com/license/) from our website.

@@ -129,6 +129,18 @@ The components from Flowbite are first conceptualized and designed in Figma usin
 
 Learn more by checking out <a href="{{< param homepage >}}/figma/">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
 
+## WindiCSS
+
+Flowbite also works with WindiCSS.
+
+Just include the WindiCSS version of the Flowbite plugin inside the `windi.config.js` file.
+
+```bash
+plugins: [
+    require('flowbite/plugin-windicss')
+],
+```
+
 <div class="mt-8 -mb-5">
   {{< requires_typescript >}}
 </div>

@@ -97,16 +97,6 @@ Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking chang
   {{< requires_typescript >}}
 </div>
 
-## TypeScript
-
-If you want to use types for the interactive elements you can do that because since `v1.6.0` Flowbite also supports TypeScript.
-
-Learn how to <a href="{{< ref "getting-started/typescript" >}}">install Tailwind CSS and Flowbite with TypeScript</a>.
-
-<div class="mt-8 -mb-5">
-  {{< requires_react >}}
-</div>
-
 ## WindiCSS
 
 Flowbite also works with WindiCSS. Just include the WindiCSS version of the Flowbite plugin inside the `windi.config.js` file.
@@ -116,6 +106,16 @@ plugins: [
     require('flowbite/plugin-windicss')
 ],
 ```
+
+## TypeScript
+
+If you want to use types for the interactive elements you can do that because since `v1.6.0` Flowbite also supports TypeScript.
+
+Learn how to <a href="{{< ref "getting-started/typescript" >}}">install Tailwind CSS and Flowbite with TypeScript</a>.
+
+<div class="mt-8 -mb-5">
+  {{< requires_react >}}
+</div>
 
 ## React
 

@@ -24,11 +24,11 @@ For full documentation, visit [flowbite.com](https://flowbite.com/).
   - [Install using `npm`](#install-using-npm)
   - [Include via CDN](#include-via-cdn)
 - [Components](#components)
-- [Community](#community)
 - [TypeScript](#typescript)
 - [Figma Design System](#figma-design-system)
-- [Flowbite Blocks](#blocks)
+- [Flowbite Blocks](#flowbite-blocks)
 - [Flowbite Pro](#pro-version)
+- [Community](#community)
 - [Copyright and license](#copyright-and-license)
 
 ## Getting started
@@ -510,6 +510,28 @@ Flowbite is an open source collection of UI components built with the utility cl
   </tr>
 </table>
 
+## TypeScript
+
+Flowbite supports types and interfaces for TypeScript projects and you can learn more on how to work with Tailwind CSS, Flowbite, and TypeScript on the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/) inside the documentation.
+
+## Figma Design System
+
+If you need the Figma files for the components you can check out our website for more information:
+
+🎨 [Get access to the Figma design files](https://flowbite.com/figma/)
+
+## Flowbite Blocks
+
+Check out Flowbite Blocks to get access to over 250+ website sections coded in Tailwind CSS and Flowbite:
+
+📦 [Check out Flowbite Blocks](https://flowbite.com/blocks/)
+
+## Pro version
+
+Get access to all premium features including the Figma design system, access to all Flowbite Block sections and a dashboard UI interface:
+
+💎 [Check out Flowbite Pro](https://flowbite.com/pro/)
+
 ## Community
 
 If you need help or just want to discuss about the library join the community on Github:
@@ -523,28 +545,6 @@ For casual chatting with others using the library:
 Video tutorials and presentations using Flowbite:
 
 🎥 [Subscribe to our YouTube channel](https://www.youtube.com/channel/UC_Ms4V2kYDsh7F_CSsHyQ6A)
-
-## TypeScript
-
-Flowbite supports types and interfaces for TypeScript projects and you can learn more on how to work with Tailwind CSS, Flowbite, and TypeScript on the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/) inside the documentation.
-
-## Figma design system
-
-If you need the Figma files for the components you can check out our website for more information:
-
-🎨 [Get access to the Figma design files](https://flowbite.com/figma/)
-
-## Blocks
-
-Check out Flowbite Blocks to get access to over 250+ website sections coded in Tailwind CSS and Flowbite:
-
-📦 [Check out Flowbite Blocks](https://flowbite.com/blocks/)
-
-## Pro version
-
-Get access to all premium features including the Figma design system, access to all Flowbite Block sections and a dashboard UI interface:
-
-💎 [Check out Flowbite Pro](https://flowbite.com/pro/)
 
 ## Copyright and license
 

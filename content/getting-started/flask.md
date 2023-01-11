@@ -208,7 +208,7 @@ module.exports = {
 4. Include Flowbite's JavaScript file inside the `index.html` file just before the end of the `<body>` tag using CDN or by including it directly from the `node_modules/` folder:
 
 ```html
-<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
 ```
 
 Now that you have Flowbite also configured you can explore all of the components by browsing the sidebar menu on the left side of the documentation.
@@ -279,7 +279,7 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
         </div>
     </nav>
 
-    <script src="https://unpkg.com/flowbite@1.6.1/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
 </body>
 
 </html>

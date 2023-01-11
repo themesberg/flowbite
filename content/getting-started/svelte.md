@@ -97,7 +97,7 @@ Modify the `src/app.html` by adding `flowbite.js` as the following:
     </head>
   <body>
     <div id="svelte">%svelte.body%</div>
-    <script src="https://unpkg.com/flowbite@1.6.1/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
   </body>
 </html>
 ```
@@ -116,12 +116,12 @@ the head and `flowbite.js` just before the body tag.
     <meta name="description" content="" />
     <link rel="icon" href="%svelte.assets%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.css"  rel="stylesheet" />
   %svelte.head%
   </head>
   <body>
     <div id="svelte">%svelte.body%</div>
-   <script src="https://unpkg.com/flowbite@1.6.1/dist/flowbite.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
   </body>
 </html>
 ```
@@ -130,7 +130,8 @@ If you want it only in a certain directories, create `src/your-dir/__layout.svel
 
 ```html
 <svelte:head>
-<link rel="stylesheet" href="https://unpkg.com/flowbite@1.3.2/dist/flowbite.min.css" /></svelte:head> 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.css"  rel="stylesheet" />
+</svelte:head> 
 <slot />
 ```
 

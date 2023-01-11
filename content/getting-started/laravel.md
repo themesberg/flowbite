@@ -104,7 +104,7 @@ This will tell the compiler from Tailwind what files to look for to properly app
 Alternatively, you can also include the JavaScript file using CDN:
 
 ```html
-<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
 ```
 
 Now that you've set everything up start up a local development server using `php artisan serve` and run the build process for Vite by using `npm run dev`.

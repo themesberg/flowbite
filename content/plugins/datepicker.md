@@ -24,7 +24,7 @@ Follow the [quickstart guide]({{< ref "getting-started/quickstart" >}}) and then
 Alternatively you can also use CDN to include the datepicker JavaScript.
 
 ```html
-<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/datepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/datepicker.min.js"></script>
 ```
 
 If you'd like to manually be able to manipulate the datepicker component using JavaScript then you should <a href="#javascript">install the plugin using NPM</a> and include it into your JavaScript code.
@@ -35,7 +35,7 @@ Use the following example of an input element to create a datepicker component. 
 
 {{< example id="default-datepicker-example" class="dark:bg-gray-800" github="plugins/datepicker.md" show_dark=true iframeHeight="430" initDatepicker=true >}}
 <div class="relative">
-  <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
     <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
   </div>
   <input datepicker type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
@@ -57,14 +57,14 @@ Use the `date-rangepicker` data attribute and the following markup to initialize
 {{< example id="datepicker-range-example" class="dark:bg-gray-800" github="plugins/datepicker.md" show_dark=true iframeHeight="430" initDatepicker=true >}}
 <div date-rangepicker class="flex items-center">
   <div class="relative">
-    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
         <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
     </div>
     <input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date start">
   </div>
   <span class="mx-4 text-gray-500">to</span>
   <div class="relative">
-    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
         <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
     </div>
     <input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end">
@@ -82,7 +82,7 @@ If you want the datepicker to dissapear right after clicking on a date then you 
 
 {{< example id="datepicker-autohide-example" class="dark:bg-gray-800" github="plugins/datepicker.md" show_dark=true iframeHeight="430" initDatepicker=true >}}
 <div class="relative">
-  <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
     <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
   </div>
   <input datepicker datepicker-autohide type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
@@ -98,7 +98,7 @@ By adding the `datepicker-buttons` data attribute you will enable the `today` an
 
 {{< example id="datepicker-action-example" class="dark:bg-gray-800" github="plugins/datepicker.md" show_dark=true iframeHeight="470" initDatepicker=true >}}
 <div class="relative">
-  <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
     <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
   </div>
   <input datepicker datepicker-buttons type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
@@ -111,7 +111,7 @@ If you want to use a custom format such as `mm/dd/yyyy`then you can use the `dat
 
 {{< example id="datepicker-date-format-example" class="dark:bg-gray-800" github="plugins/datepicker.md" show_dark=true iframeHeight="430" initDatepicker=true >}}
 <div class="relative">
-  <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
     <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
   </div>
   <input datepicker datepicker-format="mm/dd/yyyy" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
@@ -124,7 +124,7 @@ You can override the default positioning algorithm by using the `datepicker-orie
 
 {{< example id="datepicker-orientation-example" class="dark:bg-gray-800" github="plugins/datepicker.md" show_dark=true iframeHeight="430" initDatepicker=true >}}
 <div class="relative">
-  <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
     <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
   </div>
   <input datepicker datepicker-orientation="bottom right" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
@@ -137,7 +137,7 @@ You can also add a title to the datepicker by using the `datepicker-title="{titl
 
 {{< example id="datepicker-title-example" class="dark:bg-gray-800" github="plugins/datepicker.md" show_dark=true iframeHeight="480" initDatepicker=true >}}
 <div class="relative">
-  <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
     <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
   </div>
   <input datepicker datepicker-title="Flowbite datepicker" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
@@ -192,6 +192,12 @@ In order to support turbo load from Ruby on Rails 7, you have to include the `da
 
 Follow the [quickstart guide]({{< ref "getting-started/rails" >}}) and then include the following JavaScript file:
 
-```ruby
-pin "flowbite-datepicker", to: "https://unpkg.com/flowbite@{{< current_version >}}/dist/datepicker.turbo.js"
+```bash
+pin "flowbite-datepicker", to: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/datepicker.turbo.min.js"
+```
+
+Don't forget to also import it inside your `application.js` file:
+
+```javascript
+import 'flowbite-datepicker';
 ```

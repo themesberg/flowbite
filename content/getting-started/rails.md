@@ -118,7 +118,7 @@ In order to support turbo load from Ruby on Rails 7 you have to pin the `flowbit
 1. Add the following line inside your `importmap.rb` file:
 
 ```bash
-pin "flowbite", to: "https://unpkg.com/flowbite@1.6.1/dist/flowbite.turbo.js"
+pin "flowbite", to: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.turbo.min.js"
 ```
 
 2. Then you need to import `flowbite` inside your `application.js` file:
@@ -151,10 +151,10 @@ Alternatively to all of the above you can also include the JavaScript via CDN:
 
 ```html
 // include via CDN for turbo support
-<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.turbo.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.turbo.min.js"></script>
 
 // include via CDN without turbo support
-<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
 ```
 
 ### Datepicker
@@ -164,7 +164,13 @@ In order to support turbo load from Ruby on Rails 7, you have to include the `da
 Include the following JavaScript file to support the datepicker component:
 
 ```bash
-pin "flowbite-datepicker", to: "https://unpkg.com/flowbite@{{< current_version >}}/dist/datepicker.turbo.js"
+pin "flowbite-datepicker", to: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/datepicker.turbo.min.js"
+```
+
+Don't forget to also import it inside your `application.js` file:
+
+```javascript
+import 'flowbite-datepicker';
 ```
 
 ## Building your project
@@ -197,7 +203,7 @@ First of all, you need to delete the default `index.html` file inside the `publi
 
 4. Create a new controller called `pages_controller.rb` inside the `app/controllers/` directory and add the following code inside of it:
 
-```ruby
+```bash
 class PagesController < ApplicationController
   def home
   end
@@ -206,7 +212,7 @@ end
 
 5. Set the homepage as the root page inside the `routes.rb` file inside the `config/` directory:
 
-```ruby
+```bash
 root to: 'pages#home'
 ```
 

@@ -18,6 +18,19 @@
 
 For full documentation, visit [flowbite.com](https://flowbite.com/).
 
+## Table of Contents
+
+- [Getting started](#getting-started)
+  - [Require via `npm`](#require-via-npm)
+  - [Include via CDN](#include-via-cdn)
+- [Components](#components)
+- [Community](#community)
+- [TypeScript](#typescript)
+- [Figma](#figma)
+- [Flowbite Blocks](#blocks)
+- [Flowbite Pro](#pro-version)
+- [Copyright and license](#copyright-and-license)
+
 ## Getting started
 
 Flowbite can be included as a plugin into an existing Tailwind CSS project and it is supposed to help you build websites faster by having a set of web components to work with built with the utility classes from Tailwind CSS.
@@ -80,7 +93,7 @@ Check out the JavaScript behaviour section of each component's page to learn how
 
 ### Include via CDN
 
-The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.
+The quickest way to get started working with Flowbite is to simply include the CSS and JavaScript into your project via CDN.
 
 Require the following minified stylesheet inside the `head` tag:
 
@@ -93,10 +106,6 @@ And include the following javascript file before the end of the `body` tag:
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.1/flowbite.min.js"></script>
 ```
-
-## TypeScript
-
-Flowbite supports types and interfaces for TypeScript projects and you can learn more on how to work with Tailwind CSS, Flowbite, and TypeScript on the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/) inside the documentation.
 
 ## Components
 
@@ -514,6 +523,10 @@ For casual chatting with others using the library:
 Video tutorials and presentations using Flowbite:
 
 🎥 [Subscribe to our YouTube channel](https://www.youtube.com/channel/UC_Ms4V2kYDsh7F_CSsHyQ6A)
+
+## TypeScript
+
+Flowbite supports types and interfaces for TypeScript projects and you can learn more on how to work with Tailwind CSS, Flowbite, and TypeScript on the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/) inside the documentation.
 
 ## Figma
 

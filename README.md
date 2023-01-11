@@ -21,7 +21,7 @@ For full documentation, visit [flowbite.com](https://flowbite.com/).
 ## Table of Contents
 
 - [Getting started](#getting-started)
-  - [Require via `npm`](#require-via-npm)
+  - [Install via `npm`](#require-via-npm)
   - [Include via CDN](#include-via-cdn)
 - [Components](#components)
 - [Community](#community)
@@ -35,7 +35,7 @@ For full documentation, visit [flowbite.com](https://flowbite.com/).
 
 Flowbite can be included as a plugin into an existing Tailwind CSS project and it is supposed to help you build websites faster by having a set of web components to work with built with the utility classes from Tailwind CSS.
 
-### Require via NPM
+### Install via NPM
 
 Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" >Node.js</a> and <a href="https://tailwindcss.com/" rel="nofollow" >Tailwind CSS</a> installed. 
 

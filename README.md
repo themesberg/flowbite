@@ -18,6 +18,86 @@
 
 For full documentation, visit [flowbite.com](https://flowbite.com/).
 
+## Getting started
+
+Flowbite can be included as a plugin into an existing Tailwind CSS project and it is supposed to help you build websites faster by having a set of web components to work with built with the utility classes from Tailwind CSS.
+
+### Require via NPM
+
+Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" >Node.js</a> and <a href="https://tailwindcss.com/" rel="nofollow" >Tailwind CSS</a> installed. 
+
+1. Install Flowbite as a dependency using NPM by running the following command:
+
+```bash
+npm install flowbite
+```
+
+2. Require Flowbite as a plugin inside the `tailwind.config.js` file:
+
+```javascript
+module.exports = {
+
+    plugins: [
+        require('flowbite/plugin')
+    ]
+
+}
+```
+
+3. Make sure that you add the template path to the `tailwind.config.js` file:
+
+```javascript
+module.exports = {
+
+    content: [
+        "./node_modules/flowbite/**/*.js"
+    ]
+
+}
+```
+
+4. Include the main JavaScript file to make interactive elements work:
+
+```html
+<script src="../path/to/flowbite/dist/flowbite.js"></script>
+```
+
+If you use Webpack or other bundlers you can also import it like this to automatically include all of the data attribute event listeners from Flowbite.
+
+```javascript
+import 'flowbite/dist/flowbite.min.js';
+```
+
+You can also import components one by one like this and use the components programatically based on JavaScript API.
+
+```javascript
+import { Modal } from 'flowbite';
+
+const modal = new Modal(...parameters);
+```
+
+Check out the JavaScript behaviour section of each component's page to learn how you can use this.
+
+### Include via CDN
+
+The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.
+
+Require the following minified stylesheet inside the `head` tag:
+
+```html
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.1/flowbite.min.css"  rel="stylesheet" />
+```
+
+And include the following javascript file before the end of the `body` tag:
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.1/flowbite.min.js"></script>
+```
+
+## TypeScript
+
+Flowbite supports types and interfaces for TypeScript projects and you can learn more on how to work with Tailwind CSS, Flowbite, and TypeScript on the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/) inside the documentation.
+
 ## Components
 
 Flowbite is an open source collection of UI components built with the utility classes from Tailwind CSS that you can use as a starting point when coding user interfaces and websites.
@@ -420,86 +500,6 @@ Flowbite is an open source collection of UI components built with the utility cl
     </td>
   </tr>
 </table>
-
-## Getting started
-
-Flowbite can be included as a plugin into an existing Tailwind CSS project and it is supposed to help you build websites faster by having a set of web components to work with built with the utility classes from Tailwind CSS.
-
-### Require via NPM
-
-Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" >Node.js</a> and <a href="https://tailwindcss.com/" rel="nofollow" >Tailwind CSS</a> installed. 
-
-1. Install Flowbite as a dependency using NPM by running the following command:
-
-```bash
-npm install flowbite
-```
-
-2. Require Flowbite as a plugin inside the `tailwind.config.js` file:
-
-```javascript
-module.exports = {
-
-    plugins: [
-        require('flowbite/plugin')
-    ]
-
-}
-```
-
-3. Make sure that you add the template path to the `tailwind.config.js` file:
-
-```javascript
-module.exports = {
-
-    content: [
-        "./node_modules/flowbite/**/*.js"
-    ]
-
-}
-```
-
-4. Include the main JavaScript file to make interactive elements work:
-
-```html
-<script src="../path/to/flowbite/dist/flowbite.js"></script>
-```
-
-If you use Webpack or other bundlers you can also import it like this to automatically include all of the data attribute event listeners from Flowbite.
-
-```javascript
-import 'flowbite/dist/flowbite.min.js';
-```
-
-You can also import components one by one like this and use the components programatically based on JavaScript API.
-
-```javascript
-import { Modal } from 'flowbite';
-
-const modal = new Modal(...parameters);
-```
-
-Check out the JavaScript behaviour section of each component's page to learn how you can use this.
-
-### Include via CDN
-
-The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.
-
-Require the following minified stylesheet inside the `head` tag:
-
-```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.1/flowbite.min.css"  rel="stylesheet" />
-```
-
-And include the following javascript file before the end of the `body` tag:
-
-```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.1/flowbite.min.js"></script>
-```
-
-## TypeScript
-
-Flowbite supports types and interfaces for TypeScript projects and you can learn more on how to work with Tailwind CSS, Flowbite, and TypeScript on the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/) inside the documentation.
 
 ## Community
 

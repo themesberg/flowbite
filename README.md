@@ -26,7 +26,7 @@ For full documentation, visit [flowbite.com](https://flowbite.com/).
 - [Components](#components)
 - [Community](#community)
 - [TypeScript](#typescript)
-- [Figma](#figma)
+- [Figma Design System](#figma-design-system)
 - [Flowbite Blocks](#blocks)
 - [Flowbite Pro](#pro-version)
 - [Copyright and license](#copyright-and-license)
@@ -528,7 +528,7 @@ Video tutorials and presentations using Flowbite:
 
 Flowbite supports types and interfaces for TypeScript projects and you can learn more on how to work with Tailwind CSS, Flowbite, and TypeScript on the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/) inside the documentation.
 
-## Figma
+## Figma design system
 
 If you need the Figma files for the components you can check out our website for more information:
 

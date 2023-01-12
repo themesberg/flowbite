@@ -15,7 +15,7 @@ Flowbite is a library of components built on top of the utility-classes from Tai
 
 ## Getting started
 
-Flowbite can be installed via NPM and installed as a Tailwind CSS plugin and use the JavaScript API via the data attributes interface or programatically to power the interactive UI components.
+Flowbite can be easily integrated into your project through NPM. It functions as a plugin for Tailwind CSS and offers both a data attributes interface and a JavaScript API for powering interactive UI components.
 
 ### Require via NPM
 

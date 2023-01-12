@@ -190,29 +190,29 @@ Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowb
 
 ### JavaScript Frameworks
 
-Flowbite supports most of the major frameworks and libraries such as React, Vue 3, Next.js, Nuxt.js, and more. The open-source community even built standalone libraries for these technologies that you can browse here:
+The open-source community built standalone libraries for React, Vue, Svelte, and Angular which you can check out:
 
-- [Flowbite React](https://github.com/themesberg/flowbite-react)
-- [Flowbite Vue](https://github.com/themesberg/flowbite-vue)
-- [Flowbite Svelte](https://github.com/themesberg/flowbite-svelte)
-- [Flowbite Angular](https://github.com/themesberg/flowbite-angular)
+- [🌀 Flowbite React Library](https://github.com/themesberg/flowbite-react)
+- [🍀 Flowbite Vue Library](https://github.com/themesberg/flowbite-vue)
+- [🎸 Flowbite Svelte Library](https://github.com/themesberg/flowbite-svelte)
+- [📕 Flowbite Angular Library](https://github.com/themesberg/flowbite-angular)
 
-The main library also has integration guides which you can select from here:
+We also wrote integration guides for the following front-end frameworks and libraries:
 
-- [Flowbite with React guide](https://flowbite.com/docs/getting-started/react/)
-- [Flowbite with Next.js guide](https://flowbite.com/docs/getting-started/next-js/)
-- [Flowbite with Vue guide](https://flowbite.com/docs/getting-started/vue/)
-- [Flowbite with Nuxt.js guide](https://flowbite.com/docs/getting-started/nuxt-js/)
-- [Flowbite with Svelte guide](https://flowbite.com/docs/getting-started/svelte/)
+- [📝 Flowbite with React guide](https://flowbite.com/docs/getting-started/react/)
+- [📝 Flowbite with Next.js guide](https://flowbite.com/docs/getting-started/next-js/)
+- [📝 Flowbite with Vue guide](https://flowbite.com/docs/getting-started/vue/)
+- [📝 Flowbite with Nuxt.js guide](https://flowbite.com/docs/getting-started/nuxt-js/)
+- [📝 Flowbite with Svelte guide](https://flowbite.com/docs/getting-started/svelte/)
 
 ### Back-end Frameworks
 
 Flowbite has a great integration with most of the back-end frameworks because it relies on vanilla JavaScript:
 
-- [Flowbite Laravel](https://flowbite.com/docs/getting-started/laravel/)
-- [Flowbite Ruby on Rails 7](https://flowbite.com/docs/getting-started/rails/)
-- [Flowbite Django](https://flowbite.com/docs/getting-started/django/)
-- [Flowbite Flask](https://flowbite.com/docs/getting-started/flask/)
+- [📚 Using Flowbite with Laravel](https://flowbite.com/docs/getting-started/laravel/)
+- [🚊 Using Flowbite with Ruby on Rails 7](https://flowbite.com/docs/getting-started/rails/)
+- [🐸 Using Flowbite with Django](https://flowbite.com/docs/getting-started/django/)
+- [🌶 Using Flowbite with Flask](https://flowbite.com/docs/getting-started/flask/)
 
 ### Include via CDN
 

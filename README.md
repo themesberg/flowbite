@@ -190,7 +190,7 @@ Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowb
 
 ### JavaScript Frameworks
 
-The open-source community built standalone libraries for React, Vue, Svelte, and Angular which you can check out:
+The awesome open-source community also built and currently maintains the following standalone libraries for React, Vue, Svelte, and Angular:
 
 - [🌀 Flowbite React Library](https://github.com/themesberg/flowbite-react)
 - [🍀 Flowbite Vue Library](https://github.com/themesberg/flowbite-vue)

@@ -73,13 +73,7 @@ module.exports = {
 }
 ```
 
-3. Require the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
-
-```html
-<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-```
-
-4. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
+3. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
@@ -91,21 +85,77 @@ module.exports = {
 }
 ```
 
-If you use Webpack or other bundlers you can also import it like this to automatically include all of the data attribute event listeners from Flowbite.
+4. Require the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
+
+```html
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+```
+
+### Bundled JavaScript
+
+One of the most popular way of using Flowbite is to include the bundled Javascript file which is UMD ready using a bundler such as Webpack or Parcel which makes sure that all of the data attributes and functionality will work out-of-the-box.
+
+You can directly import the main JavaScript file inside your bundled `app-bundle.js` file like this:
 
 ```javascript
 import 'flowbite';
 ```
 
-You can also import components one by one like this and use the components programatically based on JavaScript API.
+This file has access to all of the components and it automatically applies event listeners to the data attributes.
+
+### Data attributes
+
+The preferred way to use the interactive UI components from Flowbite is via the data attributes interface which allows us to add functionality via the HTML element attributes and most of the examples on our documentation applies this strategy.
+
+For example, to set up a modal component all you need to do is use `data-modal-target` and `data-modal-{toggle|show|hide}` to toggle, show, or hide the component by clicking on any trigger element.
+
+### ESM and CJS
+
+Flowbite also offers an API for using the components programatically and it supports both CJS and ESM for JavaScript which can be helpful if you need to expand the default capabilities of the data attributes interface and get access to function callbacks.
+
+Here's an example how you can import and create a new Modal component inside JavaScript:
 
 ```javascript
-import { Modal } from 'flowbite';
+import { Modal } from 'flowbite'
 
-const modal = new Modal(...parameters);
+const $modalElement = document.querySelector('#modalEl');
+
+const modalOptions = {
+    placement: 'bottom-right',
+    backdrop: 'dynamic',
+    backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+    onHide: () => {
+        console.log('modal is hidden');
+    },
+    onShow: () => {
+        console.log('modal is shown');
+    },
+    onToggle: () => {
+        console.log('modal has been toggled');
+    }
+}
+
+const modal = new Modal($modalElement, modalOptions);
+
+modal.show();
 ```
 
 Check out the JavaScript behaviour section of each component's page to learn how you can use this.
+
+### TypeScript
+
+Flowbite supports type declarations for the interactive UI components including object interfaces and parameter types. Check out the following examples to learn how you can use types with Flowbite.
+
+Additionally to our code above, we will now import some relevant types from the Flowbite package, namely the `ModalOptions` and `ModalInterface`:
+
+```javascript
+import { Modal } from 'flowbite'
+import type { ModalOptions, ModalInterface } from 'flowbite'
+
+// other code
+```
+
+Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/).
 
 ### Include via CDN
 
@@ -150,16 +200,6 @@ plugins: [
 The components from Flowbite are first conceptualized and designed in Figma using the latest features such as variants, auto-layout, grids, responsive layouts, and more.
 
 Learn more by checking out <a href="{{< param homepage >}}/figma/">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
-
-<div class="mt-8 -mb-5">
-  {{< requires_typescript >}}
-</div>
-
-## TypeScript
-
-If you want to use types for the interactive elements you can do that because since `v1.6.0` Flowbite also supports TypeScript.
-
-Learn how to <a href="{{< ref "getting-started/typescript" >}}">install Tailwind CSS and Flowbite with TypeScript</a>.
 
 <div class="mt-8 -mb-5">
   {{< requires_react >}}

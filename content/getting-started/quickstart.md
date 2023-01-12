@@ -13,7 +13,11 @@ nextLink: getting-started/react/
 
 Flowbite is a library of components built on top of the utility-classes from Tailwind CSS and it also includes a JavaScript file that makes interactive elements works, such as modals, dropdowns, and more. Learn how to get started by following this quickstart guide.
 
-## Require via NPM
+## Getting started
+
+Flowbite can be installed via NPM and installed as a Tailwind CSS plugin and use the JavaScript API via the data attributes interface or programatically to power the interactive UI components.
+
+### Require via NPM
 
 Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow">Node.js</a> and <a href="https://tailwindcss.com/" rel="nofollow">Tailwind CSS</a> installed. 
 
@@ -35,13 +39,7 @@ module.exports = {
 }
 ```
 
-3. Include the main JavaScript file to make interactive elements work:
-
-```html
-<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-```
-
-4. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
+3. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
@@ -53,30 +51,87 @@ module.exports = {
 }
 ```
 
-If you use Webpack or other bundlers you can also import it like this to automatically include all of the data attribute event listeners from Flowbite.
+4. Require the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
+
+```html
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+```
+
+
+### Bundled JavaScript
+
+One of the most popular way of using Flowbite is to include the bundled Javascript file which is UMD ready using a bundler such as Webpack or Parcel which makes sure that all of the data attributes and functionality will work out-of-the-box.
+
+You can directly import the main JavaScript file inside your bundled `app-bundle.js` file like this:
 
 ```javascript
 import 'flowbite';
 ```
 
-You can also import components one by one like this and use the components programatically based on JavaScript API.
+This file has access to all of the components and it automatically applies event listeners to the data attributes.
+
+### Data attributes
+
+The preferred way to use the interactive UI components from Flowbite is via the data attributes interface which allows us to add functionality via the HTML element attributes and most of the examples on our documentation applies this strategy.
+
+For example, to set up a modal component all you need to do is use `data-modal-target` and `data-modal-{toggle|show|hide}` to toggle, show, or hide the component by clicking on any trigger element.
+
+### ESM and CJS
+
+Flowbite also offers an API for using the components programatically and it supports both CJS and ESM for JavaScript which can be helpful if you need to expand the default capabilities of the data attributes interface and get access to function callbacks.
+
+Here's an example how you can import and create a new Modal component inside JavaScript:
 
 ```javascript
-import { Modal } from 'flowbite';
+import { Modal } from 'flowbite'
 
-const modal = new Modal(...parameters);
+const $modalElement = document.querySelector('#modalEl');
+
+const modalOptions = {
+    placement: 'bottom-right',
+    backdrop: 'dynamic',
+    backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+    onHide: () => {
+        console.log('modal is hidden');
+    },
+    onShow: () => {
+        console.log('modal is shown');
+    },
+    onToggle: () => {
+        console.log('modal has been toggled');
+    }
+}
+
+const modal = new Modal($modalElement, modalOptions);
+
+modal.show();
 ```
 
 Check out the JavaScript behaviour section of each component's page to learn how you can use this.
 
-## Include via CDN
+### TypeScript
+
+Flowbite supports type declarations for the interactive UI components including object interfaces and parameter types. Check out the following examples to learn how you can use types with Flowbite.
+
+Additionally to our code above, we will now import some relevant types from the Flowbite package, namely the `ModalOptions` and `ModalInterface`:
+
+```javascript
+import { Modal } from 'flowbite'
+import type { ModalOptions, ModalInterface } from 'flowbite'
+
+// other code
+```
+
+Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/).
+
+### Include via CDN
 
 The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.
 
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.css"  rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.css" rel="stylesheet" />
 ```
 
 And include the following JavaScript file before the end of the `body` element:
@@ -92,10 +147,6 @@ Flowbite works with the 2.x version of Tailwind CSS.
 ## Tailwind CSS 3.0
 
 Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking changes when using the components from Flowbite.
-
-<div class="mt-8 -mb-5">
-  {{< requires_typescript >}}
-</div>
 
 ## WindiCSS
 

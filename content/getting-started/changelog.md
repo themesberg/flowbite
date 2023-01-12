@@ -15,6 +15,11 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v1.6.2
+
+- add event listeners for data attributes back to `index.ts`
+- fix import maps for `flowbite.turbo.min.js.map` for Ruby on Rails
+
 ### v1.6.1
 
 - Nuxt.js integration guide + starter kit

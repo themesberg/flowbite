@@ -20,14 +20,16 @@ For full documentation, visit [flowbite.com](https://flowbite.com/).
 
 ## Table of Contents
 
+- [Documentation](#documentation)
+- [Table of Contents](#table-of-contents)
 - [Getting started](#getting-started)
-  - [Install using `npm`](#install-using-npm)
+  - [Install using NPM](#install-using-npm)
   - [Include via CDN](#include-via-cdn)
 - [Components](#components)
 - [TypeScript](#typescript)
 - [Figma Design System](#figma-design-system)
 - [Flowbite Blocks](#flowbite-blocks)
-- [Flowbite Pro](#pro-version)
+- [Pro version](#pro-version)
 - [Community](#community)
 - [Copyright and license](#copyright-and-license)
 
@@ -98,13 +100,13 @@ The quickest way to get started working with Flowbite is to simply include the C
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.1/flowbite.min.css"  rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css"  rel="stylesheet" />
 ```
 
 And include the following javascript file before the end of the `body` tag:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.1/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
 ```
 
 ## Components

@@ -13,15 +13,10 @@
 </p>
 
 ------
-
-## Documentation
-
-For full documentation, visit [flowbite.com](https://flowbite.com/).
-
 ## Table of Contents
 
-- [Documentation](#documentation)
 - [Table of Contents](#table-of-contents)
+- [Documentation](#documentation)
 - [Getting started](#getting-started)
   - [Install using NPM](#install-using-npm)
   - [Include via CDN](#include-via-cdn)
@@ -35,6 +30,10 @@ For full documentation, visit [flowbite.com](https://flowbite.com/).
 - [Pro version](#pro-version)
 - [Community](#community)
 - [Copyright and license](#copyright-and-license)
+
+## Documentation
+
+For full documentation, visit [flowbite.com](https://flowbite.com/).
 
 ## Getting started
 

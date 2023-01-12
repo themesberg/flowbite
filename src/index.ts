@@ -1,3 +1,32 @@
+import Events from './dom/events';
+import { initAccordions } from './components/accordion';
+import { initCollapses } from './components/collapse';
+import { initCarousels } from './components/carousel';
+import { initDismisses } from './components/dismiss';
+import { initDropdowns } from './components/dropdown';
+import { initModals } from './components/modal';
+import { initDrawers } from './components/drawer';
+import { initTabs } from './components/tabs';
+import { initTooltips } from './components/tooltip';
+import { initPopovers } from './components/popover';
+import { initDials } from './components/dial';
+
+// setup events for data attributes
+const events = new Events('load', [
+    initAccordions,
+    initCollapses,
+    initCarousels,
+    initDismisses,
+    initDropdowns,
+    initModals,
+    initDrawers,
+    initTabs,
+    initTooltips,
+    initPopovers,
+    initDials,
+]);
+events.init();
+
 // export all components
 export { default as Accordion } from './components/accordion';
 export { default as Carousel } from './components/carousel';

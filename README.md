@@ -24,6 +24,8 @@
   - [Data attributes](#data-attributes)
   - [ESM and CJS](#esm-and-cjs)
   - [TypeScript](#typescript)
+  - [JavaScript Frameworks](#javascript-frameworks)
+  - [Back-end Frameworks](#back-end-frameworks)
 - [Components](#components)
 - [Figma Design System](#figma-design-system)
 - [Flowbite Blocks](#flowbite-blocks)

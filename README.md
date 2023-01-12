@@ -202,6 +202,24 @@ import type { ModalOptions, ModalInterface } from 'flowbite'
 // other code
 ```
 
+Generally speaking, all of the components have an interface definition that you can use whenever you create a new object to make sure that you're using the correct types for parameters and methods.
+
+When creating a new modal you can set the `ModalInterface` as the main type:
+
+```javascript
+const modal: ModalInterface = new Modal($modalElement, modalOptions);
+```
+
+Flowbite also supports type definitions for the options object so if you want to set the placement of the modal based on types, here's how you would do that:
+
+```javascript
+const modalOptions: ModalOptions = {
+    placement: 'top-right'
+}
+
+const modal: ModalInterface = new Modal($modalElement, modalOptions);
+```
+
 Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/).
 
 ### JavaScript Frameworks

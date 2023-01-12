@@ -56,7 +56,7 @@ module.exports = {
 If you use Webpack or other bundlers you can also import it like this to automatically include all of the data attribute event listeners from Flowbite.
 
 ```javascript
-import 'flowbite/dist/flowbite.min.js';
+import 'flowbite';
 ```
 
 You can also import components one by one like this and use the components programatically based on JavaScript API.
@@ -106,6 +106,12 @@ plugins: [
     require('flowbite/plugin-windicss')
 ],
 ```
+
+## Figma design system
+
+The components from Flowbite are first conceptualized and designed in Figma using the latest features such as variants, auto-layout, grids, responsive layouts, and more.
+
+Learn more by checking out <a href="{{< param homepage >}}/figma/">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
 
 ## TypeScript
 

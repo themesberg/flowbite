@@ -78,7 +78,7 @@ module.exports = {
 If you use Webpack or other bundlers you can also import it like this to automatically include all of the data attribute event listeners from Flowbite.
 
 ```javascript
-import 'flowbite/dist/flowbite.min.js';
+import 'flowbite';
 ```
 
 You can also import components one by one like this and use the components programatically based on JavaScript API.

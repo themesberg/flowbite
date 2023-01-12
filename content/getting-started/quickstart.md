@@ -57,6 +57,23 @@ module.exports = {
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 ```
 
+### Include via CDN
+
+The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.
+
+Require the following minified stylesheet inside the `head` tag:
+
+```html
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.css" rel="stylesheet" />
+```
+
+And include the following JavaScript file before the end of the `body` element:
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
+```
+
+Please remember that the best way to work with Tailwind CSS and Flowbite is by purging the CSS classes.
 
 ### Bundled JavaScript
 
@@ -123,22 +140,6 @@ import type { ModalOptions, ModalInterface } from 'flowbite'
 ```
 
 Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/).
-
-### Include via CDN
-
-The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.
-
-Require the following minified stylesheet inside the `head` tag:
-
-```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.css" rel="stylesheet" />
-```
-
-And include the following JavaScript file before the end of the `body` element:
-
-```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
-```
 
 ## Tailwind CSS 2.0
 

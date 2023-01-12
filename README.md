@@ -81,6 +81,22 @@ module.exports = {
 <script src="../path/to/flowbite/dist/flowbite.js"></script>
 ```
 
+### Include via CDN
+
+The quickest way to get started working with Flowbite is to simply include the CSS and JavaScript into your project via CDN.
+
+Require the following minified stylesheet inside the `head` tag:
+
+```html
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
+```
+
+And include the following javascript file before the end of the `body` tag:
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
+```
+
 ### Bundled JavaScript
 
 One of the most popular way of using Flowbite is to include the bundled Javascript file which is UMD ready using a bundler such as Webpack or Parcel which makes sure that all of the data attributes and functionality will work out-of-the-box.
@@ -213,22 +229,6 @@ Flowbite has a great integration with most of the back-end frameworks because it
 - [🚊 Using Flowbite with Ruby on Rails 7](https://flowbite.com/docs/getting-started/rails/)
 - [🐸 Using Flowbite with Django](https://flowbite.com/docs/getting-started/django/)
 - [🌶 Using Flowbite with Flask](https://flowbite.com/docs/getting-started/flask/)
-
-### Include via CDN
-
-The quickest way to get started working with Flowbite is to simply include the CSS and JavaScript into your project via CDN.
-
-Require the following minified stylesheet inside the `head` tag:
-
-```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
-```
-
-And include the following javascript file before the end of the `body` tag:
-
-```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
-```
 
 ## Components
 

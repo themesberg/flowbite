@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Astro - FlowBite
-description: Learn how to install Astro with Tailwind CSS and FlowBite and start building modern websites with the most popular static site generator in the world
+description: Learn how to install Astro with Tailwind CSS and FlowBite and start building modern websites with the fast, content-focused web framework
 group: getting-started
 toc: true
 requires_typescript: true
@@ -12,7 +12,7 @@ next: Svelte
 nextLink: getting-started/svelte/
 ---
 
-<a href="https://astro.build" rel="nofollow">Astro</a> is an all-in-one static site generator that uses modern web technologies to build blazing fast websites.
+<a href="https://astro.build" rel="nofollow">Astro</a> is an all-in-one web framework for building fast, content-focused websites.
 
 ## Install Tailwind CSS with Astro
 

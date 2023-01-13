@@ -206,7 +206,7 @@ Released on September 28th, 2021.
 - fix the responsive scroll issue for modals (if the content was larger than the viewport, elements inside the modal were unaccessible)
 - create a new component called list group which got separated from the button group component
 - improve navigation bar markup by requiring only one list of pages to prevent duplicate content
-- add the possibility to programatically show or hide elements using the `toggleCollapse` global function
+- add the possibility to programmatically show or hide elements using the `toggleCollapse` global function
 
 ### v1.0.2
 

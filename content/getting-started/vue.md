@@ -114,7 +114,7 @@ If you want to build the project then you can run `npm run build`.
 
 ## Flowbite components
 
-Now that you have succesfully installed Vue 3, Tailwind CSS and Flowbite you can start importing and using the components from Flowbite such as the navbars, modals, dropdowns, and more.
+Now that you have successfully installed Vue 3, Tailwind CSS and Flowbite you can start importing and using the components from Flowbite such as the navbars, modals, dropdowns, and more.
 
 We can use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Modal component</a> as an example and copy the HTML markup and add it inside our Vue 3 template file:
 
@@ -217,7 +217,7 @@ onMounted(() => {
 </script>
 ```
 
-Even though this will make sure all of the interactive components will work with data attributes from Flowbite, we actually recommend only initialising the ones that you use for every page to optimize load speed.
+Even though this will make sure all of the interactive components will work with data attributes from Flowbite, we actually recommend only initializing the ones that you use for every page to optimize load speed.
 
 Check out the [starter guide's](https://github.com/themesberg/tailwind-vue-starter) `Events.vue` file to see it in action.
 
@@ -246,7 +246,7 @@ onMounted(() => {
         $buttonElement.addEventListener('click', () => modal.toggle());
         $closeButton.addEventListener('click', () => modal.hide());
         
-        // programatically show
+        // programmatically show
         // modal.show();
     }
 })

@@ -383,7 +383,7 @@ The **Dismiss** class from Flowbite can be used to create an object that will hi
 
 ### Object parameters
 
-The parameters for the Dismiss object can be used to programatically initialize and manipulate the behaviour of the dismissal of the target element.
+The parameters for the Dismiss object can be used to programmatically initialize and manipulate the behaviour of the dismissal of the target element.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -520,7 +520,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
 
 ### Methods
 
-Use the following methods on the Dismiss object to programatically manipulate the behaviour.
+Use the following methods on the Dismiss object to programmatically manipulate the behaviour.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -640,6 +640,6 @@ const options: DismissOptions = {
 */
 const dismiss: DismissInterface = new Dismiss($targetEl, $triggerEl, options);
 
-// programatically hide it
+// programmatically hide it
 dismiss.hide();
 ```

@@ -176,7 +176,7 @@ If you want to compile for ESM instead of CJS you can use the following command 
 npx tsc -m es6 --outDir lib/esm
 ```
 
-Now that we have succesfully configured TypeScript and also compiled the source code we have to install and configure Tailwind CSS.
+Now that we have successfully configured TypeScript and also compiled the source code we have to install and configure Tailwind CSS.
 
 Run the following command to install and require Tailwind CSS in your `package.json` file:
 
@@ -283,7 +283,7 @@ module.exports = {
 
 Now that you have set up TypeScript, Tailwind CSS, and Flowbite you can start using this stack to build scalable websites using a large collection of UI components from Flowbite which support type declarations.
 
-One example would be to use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Modal component</a> and using its methods and options to programatically show or hide the element.
+One example would be to use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Modal component</a> and using its methods and options to programmatically show or hide the element.
 
 First of all we need to make sure that we have the correct HTML element set up in our templates - we can use this markup and add it inside the `index.html` file:
 
@@ -360,7 +360,7 @@ import type { ModalOptions, ModalInterface } from 'flowbite'
 // other code
 ```
 
-Generally speaking, all of the components have an interface definition that you can use whenever you create a new object to make sure that you're using the correct types for parameters and methods.
+Generally speaking, all of the components have an interface definition that you can use whenever you create a new object to make sure that you're using the correct types of parameters and methods.
 
 When creating a new modal you can set the `ModalInterface` as the main type:
 

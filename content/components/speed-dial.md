@@ -912,7 +912,7 @@ Use the following options as the third parameter for the Speed Dial object to se
 
 ### Methods
 
-Use the methods from the Speed Dial object to programatically show or hide the component from directly JavaScript.
+Use the methods from the Speed Dial object to programmatically show or hide the component from directly JavaScript.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -1000,7 +1000,7 @@ Create a new Speed Dial object based on the options above.
 const dial = new Dial($parentEl, $triggerEl, $targetEl, options);
 ```
 
-Use the `show`, `hide`, or `toggle` methods on the Speed Dial object to programatically show and hide the speed dial component using JavaScript.
+Use the `show`, `hide`, or `toggle` methods on the Speed Dial object to programmatically show and hide the speed dial component using JavaScript.
 
 ```javascript
 // show the speed dial

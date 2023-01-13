@@ -269,7 +269,7 @@ Use the following options as the third parameter for the Tooltip class to set th
 
 ### Methods
 
-Use the methods from the Tooltip object to programatically show or hide the tooltip from JavaScript.
+Use the methods from the Tooltip object to programmatically show or hide the tooltip from JavaScript.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -343,7 +343,7 @@ Create a new Tooltip object based on the options above.
 const tooltip = new Tooltip($targetEl, $triggerEl, options);
 ```
 
-Use the `show` and `hide` methods on the Tooltip object to programatically show and hide the tooltip element using JavaScript.
+Use the `show` and `hide` methods on the Tooltip object to programmatically show and hide the tooltip element using JavaScript.
 
 ```javascript
 // show the tooltip

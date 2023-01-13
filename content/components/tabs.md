@@ -329,7 +329,7 @@ Use the following options as the second parameter for the Tabs object to set the
 
 ### Methods
 
-Use the methods from the Tabs object to programatically change the current active tab using JavaScript.
+Use the methods from the Tabs object to programmatically change the current active tab using JavaScript.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">

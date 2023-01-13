@@ -12,6 +12,8 @@
       slug: nuxt-js
       new: true
     - title: Laravel
+    - title: Astro
+      new: true
     - title: Svelte
     - title: Rails
     - title: Django

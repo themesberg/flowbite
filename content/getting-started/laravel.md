@@ -8,8 +8,8 @@ requires_laravel: true
 
 previous: Nuxt.js
 previousLink: getting-started/nuxt-js/
-next: Svelte
-nextLink: getting-started/svelte/
+next: Astro
+nextLink: getting-started/astro/
 ---
 
 Laravel is the most popular PHP web framework based on the model-view-controller (MCV) model that helps you build modern web applications and API's.
@@ -42,6 +42,12 @@ laravel new awesome-project
 cd awesome-project
 ```
 
+Start the development server using the following command:
+
+```bash
+php artisan serve
+```
+
 You can now access the Laravel application on `http://localhost:8000`.
 
 This command will initialize a blank Laravel project that you can get started with.
@@ -55,7 +61,7 @@ npm install -D tailwindcss postcss autoprefixer flowbite
 4. Create a Tailwind CSS config file:
 
 ```bash
-npx tailwindcss init
+npx tailwindcss init -p
 ```
 
 A new `tailwind.config.js` file will be created inside your root folder.

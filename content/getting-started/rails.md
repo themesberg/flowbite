@@ -112,7 +112,10 @@ module.exports = {
 ```
 
 ### Turbo load support
-#### Importmap
+
+Flowbite provides custom event listeners for turbo load support if you import the `flowbite.turbo.js` file. Check out the following guides to learn more how to integrate the JavasScript file that powers the interactive components with Importmap or ESBuild.
+
+### Importmap
 
 Importmap is the default way of handling JavaScript on Rails 7. In order to support turbo load from importmaps you have to pin the `flowbite.turbo.js` file from a CDN where the `turbo:load` event listeners are added instead of `load`.
 
@@ -130,7 +133,7 @@ import 'flowbite';
 
 This will enable the interactive elements like dropdowns, modals, and navbars work by hooking the event listeners and actions to the data attributes whenever a new page is loaded in your application.
 
-#### ESBuild
+### ESBuild
 If you use ESBuild to Bundle your JavaScript on Rails, you will need to import a version of Flowbite which supports the `turbo:load` event listeners instead of `load`. To do this **add the line below** to your `application.js` file:
 
 ```javascript

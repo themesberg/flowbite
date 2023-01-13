@@ -414,7 +414,7 @@ Use the following options as the second parameter for the Accordion object to cu
 
 ### Methods
 
-Use the object methods on the Accordion object to programatically open, close, or toggle the visibility of a given accordion item.
+Use the object methods on the Accordion object to programmatically open, close, or toggle the visibility of a given accordion item.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -518,7 +518,7 @@ Create a new Accordion object using the options set above as the parameters.
 const accordion = new Accordion(accordionItems, options);
 ```
 
-Now you can access the object methods to programatically open, close, and toggle the accordion items based on the unique identifier.
+Now you can access the object methods to programmatically open, close, and toggle the accordion items based on the unique identifier.
 
 ```javascript
 // open accordion item based on id

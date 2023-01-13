@@ -361,7 +361,7 @@ Use these options for the Carousel object to set the default position, interval,
 
 ### Methods
 
-Use the following methods on the Carousel object to programatically manipulate the behaviour.
+Use the following methods on the Carousel object to programmatically manipulate the behaviour.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -422,7 +422,7 @@ Use the following methods on the Carousel object to programatically manipulate t
 
 ### Example
 
-Check out the following example to learn how to programatically create a new Carousel object by passing the parameters, using the methods, and the callback functions.
+Check out the following example to learn how to programmatically create a new Carousel object by passing the parameters, using the methods, and the callback functions.
 
 ```javascript
 const items = [

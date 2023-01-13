@@ -519,7 +519,7 @@ Use the following options as the third parameter for the Popover object to set t
 
 ### Methods
 
-Use the methods from the Popover object to programatically show or hide the popover from directly JavaScript.
+Use the methods from the Popover object to programmatically show or hide the popover from directly JavaScript.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -594,7 +594,7 @@ Create a new Popover object based on the options above.
 const popover = new Popover($targetEl, $triggerEl, options);
 ```
 
-Use the `show` and `hide` methods on the Popover object to programatically show and hide the popover element using JavaScript.
+Use the `show` and `hide` methods on the Popover object to programmatically show and hide the popover element using JavaScript.
 
 ```javascript
 // show the popover

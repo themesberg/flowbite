@@ -12,7 +12,7 @@ next: Laravel
 nextLink: getting-started/laravel/
 ---
 
-Nuxt.js is a free and open-source JavaScript framework based on Vue.js that helps you developer modern web applications using SSR (server-side rendering) which provides a faster load, better SEO (search engine optimization), and better caching capabilities.
+Nuxt.js is a free and open-source JavaScript framework based on Vue.js that helps you develop modern web applications using SSR (server-side rendering) which provides a faster load, better SEO (search engine optimization), and better caching capabilities.
 
 The framework was inspired by Vercel's Next.js framework built with React and it is being used by large companies such as Ecosia, Upwork, NASA, Appsumo, and CDN JS.
 
@@ -131,7 +131,7 @@ module.exports = {
 
 ## Flowbite Components
 
-Now that you have succesfully installed Nuxt.js, Tailwind CSS and Flowbite you can start importing and using components from the open-source library of [Flowbite](https://flowbite.com) such as modals, navbars, tables, dropdowns, and more.
+Now that you have successfully installed Nuxt.js, Tailwind CSS and Flowbite you can start importing and using components from the open-source library of [Flowbite](https://flowbite.com) such as modals, navbars, tables, dropdowns, and more.
 
 Let's use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Modal component</a> as an example and copy-paste the markup from the documentation inside your `app.vue` page:
 
@@ -234,13 +234,13 @@ onMounted(() => {
 </script>
 ```
 
-Although this will make sure all of the interactive components will work with data attributes from Flowbite, we actually recommend only initialising the ones that you use for every page to optimize load speed.
+Although this will make sure all of the interactive components will work with data attributes from Flowbite, we actually recommend only initializing the ones that you use for every page to optimize load speed.
 
 Check out the [starter guide's](https://github.com/themesberg/tailwind-nuxt-starter) `Events.vue` file to see it in action.
 
 ### JavaScript API
 
-To make the component interactive we need to import the Modal object from Flowbite and setup the object parameters, options, and methods to show or hide the modal based on the button click.
+To make the component interactive we need to import the Modal object from Flowbite and set up the object parameters, options, and methods to show or hide the modal based on the button click.
 
 ```javascript
 <script setup>
@@ -271,7 +271,7 @@ onMounted(() => {
 </script>
 ```
 
-As you can see we use the onMounted() lifecycle method from Vue 3 to query for the elements that we need to create a modal component and then programatically use the methods such as showing or hiding the modal.
+As you can see we use the onMounted() lifecycle method from Vue 3 to query for the elements that we need to create a modal component and then programmatically use the methods such as showing or hiding the modal.
 
 ```javascript
 // add your own logic and then show the modal
@@ -281,11 +281,11 @@ modal.show();
 modal.hide();
 ```
 
-Every interactive component page that requires JavaScript has a documentation on Flowbite showing you the available parameters, options, and methods that you can use.
+Every interactive component page that requires JavaScript has documentation on Flowbite showing you the available parameters, options, and methods that you can use.
 
 ### Using types
 
-Flowbite also supports TypeScript as of v1.6.0 and it allows use to use type declarations and interfaces for the objects, parameters, and option values for the JavaScript API.
+Flowbite also supports TypeScript as of v1.6.0 and it allows us to use type declarations and interfaces for the objects, parameters, and option values for the JavaScript API.
 
 You can import these types or interfaces like this:
 
@@ -296,7 +296,7 @@ import type { ModalOptions, ModalInterface } from 'flowbite'
 // other code
 ```
 
-Generally speaking, all of the components have an interface definition that you can use whenever you create a new object to make sure that you’re using the correct types for parameters and methods.
+Generally speaking, all of the components have an interface definition that you can use whenever you create a new object to make sure that you’re using the correct types of parameters and methods.
 
 When creating a new modal you can set the ModalInterface as the main type:
 
@@ -314,7 +314,7 @@ const modalOptions: ModalOptions = {
 const modal: ModalInterface = new Modal($modalElement, modalOptions);
 ```
 
-Using types can be very benefitial because it makes sure that you only use the allowed types and values for the options that are available. For example, if you used a value such as `yellow` for the placement object, which is a color, TypeScript will throw an error because it does not meet the type requirements from Flowbite.
+Using types can be very beneficial because it makes sure that you only use the allowed types and values for the options that are available. For example, if you used a value such as `yellow` for the placement object, which is a color, TypeScript will throw an error because it does not meet the type requirements from Flowbite.
 
 Here's the full code using types with TypeScript:
 

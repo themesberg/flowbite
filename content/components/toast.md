@@ -213,4 +213,4 @@ You can set your own distance for the `top-*|right-*|bottom-*|left-*` positionin
 
 ## JavaScript behaviour
 
-Please check out the <a href="{{< ref "components/alerts" >}}#javascript-behaviour">Dismiss object</a> documentation to learn how to programatically work with the toast component directly from JavaScript.
+Please check out the <a href="{{< ref "components/alerts" >}}#javascript-behaviour">Dismiss object</a> documentation to learn how to programmatically work with the toast component directly from JavaScript.

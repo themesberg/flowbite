@@ -1204,7 +1204,7 @@ Use the following options as the third parameter for the Dropdown class to set t
 
 ### Methods
 
-Use the methods from the Dropdown object to programatically show or hide the dropdown menu directly from JavaScript.
+Use the methods from the Dropdown object to programmatically show or hide the dropdown menu directly from JavaScript.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">

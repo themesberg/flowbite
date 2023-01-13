@@ -95,7 +95,7 @@ For example, to set up a modal component all you need to do is use `data-modal-t
 
 ### ESM and CJS
 
-Flowbite also offers an API for using the components programatically and it supports both CJS and ESM for JavaScript which can be helpful if you need to expand the default capabilities of the data attributes interface and get access to function callbacks.
+Flowbite also offers an API for using the components programmatically and it supports both CJS and ESM for JavaScript which can be helpful if you need to expand the default capabilities of the data attributes interface and get access to function callbacks.
 
 Here's an example how you can import and create a new Modal component inside JavaScript:
 

@@ -158,7 +158,7 @@ You can view more examples by browsing the [components from Flowbite](#component
 
 ### ESM and CJS
 
-Flowbite also offers an API for using the components programatically and it supports both CJS and ESM for JavaScript which can be helpful if you need to expand the default capabilities of the data attributes interface and get access to function callbacks.
+Flowbite also offers an API for using the components programmatically and it supports both CJS and ESM for JavaScript which can be helpful if you need to expand the default capabilities of the data attributes interface and get access to function callbacks.
 
 Here's an example how you can import and create a new Modal component inside JavaScript:
 
@@ -202,7 +202,7 @@ import type { ModalOptions, ModalInterface } from 'flowbite'
 // other code
 ```
 
-Generally speaking, all of the components have an interface definition that you can use whenever you create a new object to make sure that you're using the correct types for parameters and methods.
+Generally speaking, all of the components have an interface definition that you can use whenever you create a new object to make sure that you're using the correct types of parameters and methods.
 
 When creating a new modal you can set the `ModalInterface` as the main type:
 

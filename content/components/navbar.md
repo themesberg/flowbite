@@ -776,7 +776,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
 
 ### Methods
 
-Use the following methods on the Dismiss object to programatically manipulate the behaviour.
+Use the following methods on the Dismiss object to programmatically manipulate the behaviour.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -857,7 +857,7 @@ Next step is to create a new instance of a Collapse object using the parameters 
 const collapse = new Collapse($targetEl, $triggerEl, options);
 ```
 
-Now you can programatically expand or collapse the target element using the methods of the Collapse object.
+Now you can programmatically expand or collapse the target element using the methods of the Collapse object.
 
 ```javascript
 // show the target element

@@ -2151,7 +2151,7 @@ Use this example of a table where we show a data set of users and showing a prof
                 </td>
                 <td class="px-6 py-4">
                     <div class="flex items-center">
-                        <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
+                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 mr-2"></div> Online
                     </div>
                 </td>
                 <td class="px-6 py-4">
@@ -2177,7 +2177,7 @@ Use this example of a table where we show a data set of users and showing a prof
                 </td>
                 <td class="px-6 py-4">
                     <div class="flex items-center">
-                        <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
+                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 mr-2"></div> Online
                     </div>
                 </td>
                 <td class="px-6 py-4">
@@ -2203,7 +2203,7 @@ Use this example of a table where we show a data set of users and showing a prof
                 </td>
                 <td class="px-6 py-4">
                     <div class="flex items-center">
-                        <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
+                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 mr-2"></div> Online
                     </div>
                 </td>
                 <td class="px-6 py-4">
@@ -2229,7 +2229,7 @@ Use this example of a table where we show a data set of users and showing a prof
                 </td>
                 <td class="px-6 py-4">
                     <div class="flex items-center">
-                        <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
+                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 mr-2"></div> Online
                     </div>
                 </td>
                 <td class="px-6 py-4">
@@ -2472,7 +2472,7 @@ Use this example to show a modal with a form where you can edit table data by cl
                 </td>
                 <td class="px-6 py-4">
                     <div class="flex items-center">
-                        <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
+                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 mr-2"></div> Online
                     </div>
                 </td>
                 <td class="px-6 py-4">
@@ -2499,7 +2499,7 @@ Use this example to show a modal with a form where you can edit table data by cl
                 </td>
                 <td class="px-6 py-4">
                     <div class="flex items-center">
-                        <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
+                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 mr-2"></div> Online
                     </div>
                 </td>
                 <td class="px-6 py-4">
@@ -2526,7 +2526,7 @@ Use this example to show a modal with a form where you can edit table data by cl
                 </td>
                 <td class="px-6 py-4">
                     <div class="flex items-center">
-                        <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
+                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 mr-2"></div> Online
                     </div>
                 </td>
                 <td class="px-6 py-4">
@@ -2553,7 +2553,7 @@ Use this example to show a modal with a form where you can edit table data by cl
                 </td>
                 <td class="px-6 py-4">
                     <div class="flex items-center">
-                        <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Online
+                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 mr-2"></div> Online
                     </div>
                 </td>
                 <td class="px-6 py-4">

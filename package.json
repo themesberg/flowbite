@@ -109,7 +109,8 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.9.3",
-    "mini-svg-data-uri": "^1.4.3"
+    "mini-svg-data-uri": "^1.4.3",
+    "child_process": "^1.0.2"
   },
   "files": [
     "lib",

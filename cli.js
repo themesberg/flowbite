@@ -4,10 +4,7 @@ const debug = process.argv.includes("--debug");
 const fs = require("fs");
 
 if (process.argv.includes("-h") || process.argv.includes("--help") || process.argv.length == 2) {
-    if (process.argv.includes("add")) {
-        console.log("\x1b[0;34m Flowbite CLI \x1b[0m\n\nUsage:\n flowbite add [options]\n\nOptions:\n  -h, --help\t\tShow this help\n  -v, --version\t\tShow the version\n  --debug\t\tShow debug messages");
-        process.exit(1);
-    } else if (process.argv.includes("init")) {
+    if (process.argv.includes("init")) {
         console.log("\x1b[0;34m Flowbite CLI \x1b[0m\n\nUsage:\nflowbite init [options]\n\nOptions:\n  -h, --help\t\tShow this help\n  -d, --default\t\tCreates a default tailwind.config.js without Flowbite installed\n  -p --postcss\t\tAdd postcss to your project\n  --debug\t\tShow debug messages");
         process.exit(1);
     } else {

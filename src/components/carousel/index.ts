@@ -54,7 +54,7 @@ class Carousel implements CarouselInterface {
             item.el.classList.add(
                 'absolute',
                 'inset-0',
-                'transition-all',
+                'transition-transform',
                 'transform'
             );
         });

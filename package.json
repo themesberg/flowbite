@@ -114,6 +114,8 @@
   "files": [
     "lib",
     "dist",
-    "plugin.js"
-  ]
+    "plugin.js",
+    "cli.js"
+  ],
+  "bin": "cli.js"
 }

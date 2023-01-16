@@ -194,7 +194,6 @@ import {
     initDismisses, 
     initDrawers, 
     initDropdowns, 
-    initDropdowns, 
     initModals, 
     initPopovers, 
     initTabs, 

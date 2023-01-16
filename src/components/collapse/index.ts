@@ -37,7 +37,7 @@ class Collapse implements CollapseInterface {
             }
 
             this._triggerEl.addEventListener('click', () => {
-                this._visible ? this.collapse() : this.expand();
+                this.toggle();
             });
         }
     }
@@ -70,6 +70,8 @@ class Collapse implements CollapseInterface {
         } else {
             this.expand();
         }
+        // callback function
+        this._options.onToggle(this);
     }
 }
 

@@ -11,12 +11,12 @@ if (
 ) {
     if (process.argv.includes('init')) {
         console.log(
-            '\x1b[0;34mFlowbite CLI \x1b[0m\n\nUsage:\nflowbite init [options]\n\nOptions:\n  -h, --help\t\tShow this help\n  -d, --default\t\tCreates a default tailwind.config.js without Flowbite installed\n  -p --postcss\t\tAdd postcss to your project\n  --debug\t\tShow debug messages'
+            '\x1b[0;34mFlowbite CLI \x1b[0m\n\nUsage:\nflowbite init [options]\n\nOptions:\n  -h, --help\t\tShow this help\n  -d, --default\t\tCreates a default tailwind.config.js without Flowbite installed\n  -p --postcss\t\tInitialize a postcss.config.js file\n  --debug\t\tShow debug messages'
         );
         process.exit(1);
     } else {
         console.log(
-            '\x1b[0;34m Flowbite CLI \x1b[0m\n\nUsage:\n\n flowbite init [options]\n\nOptions:\n  -h, --help\t\tShow this help\n  -v, --version\t\tShow the version\n  --debug\t\tShow debug messages'
+            '\x1b[0;34m Flowbite CLI \x1b[0m\n\nUsage:\n\n flowbite init [options]\n\nOptions:\n  -h, --help\t\tShow this help\n  -v, --version\t\tShow the version\n  --debug\t\tShow debug messages\n  -p --postcss\t\tInitialize a postcss.config.js file'
         );
         process.exit(1);
     }

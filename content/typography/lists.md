@@ -13,7 +13,7 @@ nextLink: typography/links/
 
 Get started with a collection of list components built with Tailwind CSS for ordered and unordered lists with bullets, numbers, or icons and other styles and layouts to show a list of items inside an article or throughout your web page.
 
-## Unordored list
+## Unordered list
 
 Use this example to create a default unordered list of items using the `list-disc` class.
 

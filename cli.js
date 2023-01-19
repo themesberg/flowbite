@@ -11,7 +11,7 @@ if (
 ) {
     if (process.argv.includes('init')) {
         console.log(
-            '\x1b[0;34m Flowbite CLI \x1b[0m\n\nUsage:\nflowbite init [options]\n\nOptions:\n  -h, --help\t\tShow this help\n  -d, --default\t\tCreates a default tailwind.config.js without Flowbite installed\n  -p --postcss\t\tAdd postcss to your project\n  --debug\t\tShow debug messages'
+            '\x1b[0;34mFlowbite CLI \x1b[0m\n\nUsage:\nflowbite init [options]\n\nOptions:\n  -h, --help\t\tShow this help\n  -d, --default\t\tCreates a default tailwind.config.js without Flowbite installed\n  -p --postcss\t\tAdd postcss to your project\n  --debug\t\tShow debug messages'
         );
         process.exit(1);
     } else {
@@ -23,7 +23,9 @@ if (
 }
 
 if (process.argv.includes('-v') || process.argv.includes('--version')) {
-    console.log('Flowbite v' + require('../package.json').version);
+    console.log(
+        '\x1b[0;34mFlowbite v' + require('./package.json').version + '\x1b[0m'
+    );
     process.exit(1);
 }
 
@@ -58,8 +60,11 @@ async function updateTailwindConfig() {
     // Read the file and replace plugins:[ with plugins: [require("flowbite")
     const data = fs.readFileSync('tailwind.config.js', 'utf8');
     // Check if the plugin is already added
-    if (data.includes("require('flowbite')")) {
-        log('Flowbite plugin already added to tailwind.config.js', true);
+    if (
+        data.includes("require('flowbite')") &&
+        data.includes('./node_modules/flowbite/**/*.js')
+    ) {
+        log('Flowbite has already been installed in tailwind.config.js.', true);
         process.exit(1);
     }
 
@@ -77,12 +82,19 @@ async function updateTailwindConfig() {
         log('Dependencies installed');
         updateTailwindConfig();
     }
-
-    var result = data
-        .replace('plugins: [', "plugins: [require('flowbite'),")
-        .replace('content: [', "content: ['./node_modules/flowbite/**/*.js',");
+    var result = data;
+    if (!data.includes("require('flowbite')")) {
+        result = data.replace('plugins: [', "plugins: [require('flowbite'),");
+        log('Flowbite plugin added to tailwind.config.js');
+    }
+    if (!data.includes('./node_modules/flowbite/**/*.js')) {
+        result = result.replace(
+            'content: [',
+            "content: ['./node_modules/flowbite/**/*.js',"
+        );
+        log('Flowbite node_modules added to tailwind.config.js');
+    }
     fs.writeFileSync('tailwind.config.js', result, 'utf8');
-    log('Flowbite plugin added to tailwind.config.js');
 }
 
 async function postCss() {
@@ -154,15 +166,19 @@ async function init() {
         process.exit(1);
     }
     if (fs.existsSync('tailwind.config.js')) {
-        log('tailwind.config.js already exists');
-        updateTailwindConfig();
+        await updateTailwindConfig();
+        log('Flowbite has been installed in tailwind.config.js', true);
     } else {
         await createTailwindConfig();
         await updateTailwindConfig();
+        log(
+            'Created new tailwind.config.js file with Flowbite installed.',
+            true
+        );
     }
     if (process.argv.includes('-p') || process.argv.includes('--postcss')) {
         await postCss();
-        log('postcss.config.js created', true);
+        log('Created postcss.config.js file', true);
     }
-    log('tailwind.config.js created with Flowbite plugin', true);
+    process.exit(1);
 }

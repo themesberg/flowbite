@@ -39,15 +39,56 @@ class Dropdown implements DropdownInterface {
 
     _init() {
         if (this._triggerEl) {
-            this._triggerEl.addEventListener('click', () => {
-                this.toggle();
-            });
+            const triggerEvents = this._getTriggerEvents();
+
+            // click event handling for trigger element
+            if (this._options.triggerType === 'click') {
+                triggerEvents.showEvents.forEach((ev) => {
+                    this._triggerEl.addEventListener(ev, () => {
+                        this.toggle();
+                    });
+                });
+            }
+
+            // hover event handling for trigger element
+            if (this._options.triggerType === 'hover') {
+                console.log(triggerEvents);
+                triggerEvents.showEvents.forEach((ev) => {
+                    this._triggerEl.addEventListener(ev, () => {
+                        if (ev === 'click') {
+                            this.toggle();
+                        } else {
+                            this.show();
+                        }
+                    });
+                    this._targetEl.addEventListener(ev, () => {
+                        this.show();
+                    });
+                });
+                triggerEvents.hideEvents.forEach((ev) => {
+                    this._triggerEl.addEventListener(ev, () => {
+                        setTimeout(() => {
+                            if (!this._targetEl.matches(':hover')) {
+                                this.hide();
+                            }
+                        }, 100);
+                    });
+                    this._targetEl.addEventListener(ev, () => {
+                        setTimeout(() => {
+                            if (!this._triggerEl.matches(':hover')) {
+                                this.hide();
+                            }
+                        }, 100);
+                    });
+                });
+            }
         }
     }
 
     _createPopperInstance() {
         return createPopper(this._triggerEl, this._targetEl, {
             placement: this._options.placement,
+            // boundariesElement: this._createBoundary(),
             modifiers: [
                 {
                     name: 'offset',
@@ -91,6 +132,35 @@ class Dropdown implements DropdownInterface {
         ) {
             this.hide();
         }
+    }
+
+    _getTriggerEvents() {
+        switch (this._options.triggerType) {
+            case 'hover':
+                return {
+                    showEvents: ['mouseenter', 'click'],
+                    hideEvents: ['mouseleave'],
+                };
+            case 'click':
+                return {
+                    showEvents: ['click'],
+                    hideEvents: [],
+                };
+            default:
+                return {
+                    showEvents: ['click'],
+                    hideEvents: [],
+                };
+        }
+    }
+
+    _createBoundary() {
+        // create a new div element
+        const boundary = document.createElement('div');
+        boundary.classList.add('dropdown-boundary');
+        // append the boundary element to the parent of the trigger and target elements
+        this._triggerEl.parentNode.appendChild(boundary);
+        return boundary;
     }
 
     toggle() {
@@ -167,12 +237,18 @@ export function initDropdowns() {
                 const offsetDistance = $triggerEl.getAttribute(
                     'data-dropdown-offset-distance'
                 );
+                const triggerType = $triggerEl.getAttribute(
+                    'data-dropdown-trigger'
+                );
 
                 new Dropdown(
                     $dropdownEl as HTMLElement,
                     $triggerEl as HTMLElement,
                     {
                         placement: placement ? placement : Default.placement,
+                        triggerType: triggerType
+                            ? triggerType
+                            : Default.triggerType,
                         offsetSkidding: offsetSkidding
                             ? parseInt(offsetSkidding)
                             : Default.offsetSkidding,

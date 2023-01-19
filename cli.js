@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-/* eslint-disable @typescript-eslint/no-var-requires */
+
 // Check if --debug is passed
 const debug = process.argv.includes('--debug');
 const fs = require('fs');
@@ -23,7 +23,7 @@ if (
 }
 
 if (process.argv.includes('-v') || process.argv.includes('--version')) {
-    console.log('Create-Flowbite ' + require('../package.json').version);
+    console.log('Flowbite v' + require('../package.json').version);
     process.exit(1);
 }
 

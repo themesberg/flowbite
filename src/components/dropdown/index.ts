@@ -52,7 +52,6 @@ class Dropdown implements DropdownInterface {
 
             // hover event handling for trigger element
             if (this._options.triggerType === 'hover') {
-                console.log(triggerEvents);
                 triggerEvents.showEvents.forEach((ev) => {
                     this._triggerEl.addEventListener(ev, () => {
                         if (ev === 'click') {
@@ -88,7 +87,6 @@ class Dropdown implements DropdownInterface {
     _createPopperInstance() {
         return createPopper(this._triggerEl, this._targetEl, {
             placement: this._options.placement,
-            // boundariesElement: this._createBoundary(),
             modifiers: [
                 {
                     name: 'offset',
@@ -152,15 +150,6 @@ class Dropdown implements DropdownInterface {
                     hideEvents: [],
                 };
         }
-    }
-
-    _createBoundary() {
-        // create a new div element
-        const boundary = document.createElement('div');
-        boundary.classList.add('dropdown-boundary');
-        // append the boundary element to the parent of the trigger and target elements
-        this._triggerEl.parentNode.appendChild(boundary);
-        return boundary;
     }
 
     toggle() {

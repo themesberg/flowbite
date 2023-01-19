@@ -45,11 +45,9 @@ class Dial implements DialInterface {
             });
             triggerEventTypes.hide.forEach((ev: string) => {
                 this._parentEl.addEventListener(ev, () => {
-                    setTimeout(() => {
-                        if (!this._parentEl.matches(':hover')) {
-                            this.hide();
-                        }
-                    }, 100);
+                    if (!this._parentEl.matches(':hover')) {
+                        this.hide();
+                    }
                 });
             });
         }

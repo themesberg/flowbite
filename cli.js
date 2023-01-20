@@ -43,14 +43,14 @@ function createTailwindConfig() {
         log('tailwind.config.js already exists.');
         return;
     }
-    const data = `
-module.exports = {
-  content: [],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}`;
+    const data = `module.exports = {
+    content: [],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+};
+`;
     // Write the file
     fs.writeFileSync('tailwind.config.js', data, 'utf8');
     log('tailwind.config.js created.');
@@ -61,7 +61,7 @@ async function updateTailwindConfig() {
     const data = fs.readFileSync('tailwind.config.js', 'utf8');
     // Check if the plugin is already added
     if (
-        data.includes("require('flowbite')") &&
+        data.includes("require('flowbite/plugin')") &&
         data.includes('./node_modules/flowbite/**/*.js')
     ) {
         log('Flowbite has already been installed in tailwind.config.js.', true);
@@ -83,8 +83,11 @@ async function updateTailwindConfig() {
         updateTailwindConfig();
     }
     var result = data;
-    if (!data.includes("require('flowbite')")) {
-        result = data.replace('plugins: [', "plugins: [require('flowbite'),");
+    if (!data.includes("require('flowbite/plugin')")) {
+        result = data.replace(
+            'plugins: [',
+            "plugins: [require('flowbite/plugin'),"
+        );
         log('Flowbite plugin added to tailwind.config.js.');
     }
     if (!data.includes('./node_modules/flowbite/**/*.js')) {
@@ -104,13 +107,13 @@ async function postCss() {
         log('Installing tailwindcss and autoprefixer...');
         await run('npm install -D tailwindcss postcss autoprefixer');
         // Create postcss.config.js
-        const data = `
-module.exports = {
+        const data = `module.exports = {
     plugins: {
         tailwindcss: {},
         autoprefixer: {},
     },
-};`;
+};
+`;
         fs.writeFileSync('postcss.config.js', data, 'utf8');
         log('postcss.config.js created.');
     } else {

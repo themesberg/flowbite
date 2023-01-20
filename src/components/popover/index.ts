@@ -13,6 +13,7 @@ const Default: PopoverOptions = {
     triggerType: 'hover',
     onShow: () => {},
     onHide: () => {},
+    onToggle: () => {},
 };
 
 class Popover implements PopoverInterface {
@@ -20,6 +21,7 @@ class Popover implements PopoverInterface {
     _triggerEl: HTMLElement;
     _options: PopoverOptions;
     _popperInstance: PopperInstance;
+    _visible: boolean;
 
     constructor(
         targetEl: HTMLElement | null = null,
@@ -30,6 +32,7 @@ class Popover implements PopoverInterface {
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
         this._popperInstance = this._createPopperInstance();
+        this._visible = false;
         this._init();
     }
 
@@ -89,12 +92,30 @@ class Popover implements PopoverInterface {
                     showEvents: ['click', 'focus'],
                     hideEvents: ['focusout', 'blur'],
                 };
+            case 'none':
+                return {
+                    showEvents: [],
+                    hideEvents: [],
+                };
             default:
                 return {
                     showEvents: ['mouseenter', 'focus'],
                     hideEvents: ['mouseleave', 'blur'],
                 };
         }
+    }
+
+    isVisible() {
+        return this._visible;
+    }
+
+    toggle() {
+        if (this.isVisible()) {
+            this.hide();
+        } else {
+            this.show();
+        }
+        this._options.onToggle(this);
     }
 
     show() {
@@ -113,6 +134,9 @@ class Popover implements PopoverInterface {
         // Update its position
         this._popperInstance.update();
 
+        // set visibility to true
+        this._visible = true;
+
         // callback function
         this._options.onShow(this);
     }
@@ -129,6 +153,9 @@ class Popover implements PopoverInterface {
                 { name: 'eventListeners', enabled: false },
             ],
         }));
+
+        // set visibility to false
+        this._visible = false;
 
         // callback function
         this._options.onHide(this);

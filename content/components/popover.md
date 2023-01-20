@@ -477,7 +477,7 @@ Use the following options as the third parameter for the Popover object to set t
                     String
                 </td>
                 <td class="px-6 py-4">
-                    Set the event type that will trigger the popover content choosing between <code class="text-purple-600 dark:text-purple-400">hover|click</code>.
+                    Set the event type that will trigger the popover content choosing between <code class="text-purple-600 dark:text-purple-400">hover|click|none</code>.
                 </td>
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -511,6 +511,17 @@ Use the following options as the third parameter for the Popover object to set t
                 </td>
                 <td class="px-6 py-4">
                     Set a callback function when the popover is shown.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">onToggle</code>
+                </td>
+                <td class="px-6 py-4 font-medium">
+                    Function
+                </td>
+                <td class="px-6 py-4">
+                    Set a callback function when the popover visibility has been toggled.
                 </td>
             </tr>
         </tbody>
@@ -550,6 +561,22 @@ Use the methods from the Popover object to programmatically show or hide the pop
                     Use this method on the Popover object to hide the popover content.
                 </td>
             </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">toggle()</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method on the Popover object to toggle the visibility of the popover content.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">isVisible()</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this function to check if the popover is visible or not.
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -579,6 +606,9 @@ const options = {
   },
   onShow: () => {
       console.log('popover is hidden');
+  },
+  onToggle: () => {
+      console.log('popover is toggled');
   }
 };
 ```
@@ -602,13 +632,19 @@ popover.show();
 
 // hide the popover
 popover.hide();
+
+// toggle the popover
+popover.toggle();
+
+// check if popover is visible
+popover.isVisible();
 ```
 
 ### HTML Markup
 
 Use the following HTML code for the JavaScript example above.
 
-```html
+<!-- ```html -->
 <button id="popoverButton" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default popover</button>
 <div data-popover id="popoverContent" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
     <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
@@ -619,7 +655,7 @@ Use the following HTML code for the JavaScript example above.
     </div>
     <div data-popper-arrow></div>
 </div>
-```
+<!-- ``` -->
 
 ### TypeScript
 
@@ -647,6 +683,9 @@ const options: PopoverOptions = {
   },
   onShow: () => {
       console.log('popover is hidden');
+  },
+  onToggle: () => {
+      console.log('popover is toggled');
   }
 };
 

@@ -870,7 +870,7 @@ Use the following options as the third parameter for the Speed Dial object to se
                     String
                 </td>
                 <td class="px-6 py-4">
-                    Set the event type that will trigger the speed dial choosing between <code class="text-purple-600 dark:text-purple-400">hover|click</code>.
+                    Set the event type that will trigger the speed dial choosing between <code class="text-purple-600 dark:text-purple-400">hover|click|none</code>.
                 </td>
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">

@@ -1,10 +1,10 @@
 import { DialInterface } from './interface';
 
-export declare type TriggerType = 'click' | 'hover';
+export declare type TriggerType = 'click' | 'hover' | 'none';
 
 export declare type TriggerEventTypes = {
-    show: string[];
-    hide: string[];
+    showEvents: string[];
+    hideEvents: string[];
 };
 
 export declare type DialOptions = {

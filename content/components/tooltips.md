@@ -238,7 +238,7 @@ Use the following options as the third parameter for the Tooltip class to set th
                     String
                 </td>
                 <td class="px-6 py-4">
-                    Set the event type that will trigger the tooltip content choosing between <code class="text-purple-600 dark:text-purple-400">hover|click</code>.
+                    Set the event type that will trigger the tooltip content choosing between <code class="text-purple-600 dark:text-purple-400">hover|click|none</code>.
                 </td>
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -261,6 +261,17 @@ Use the following options as the third parameter for the Tooltip class to set th
                 </td>
                 <td class="px-6 py-4">
                     Set a callback function when the tooltip is shown.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">onToggle</code>
+                </td>
+                <td class="px-6 py-4 font-medium">
+                    Function
+                </td>
+                <td class="px-6 py-4">
+                    Set a callback function when the tooltip visibility is toggled.
                 </td>
             </tr>
         </tbody>
@@ -300,6 +311,14 @@ Use the methods from the Tooltip object to programmatically show or hide the too
                     Use this method on the Tooltip object to hide the tooltip content.
                 </td>
             </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">toggle()</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method on the Tooltip object to toggle the visibility of the tooltip content.
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -328,6 +347,9 @@ const options = {
   },
   onShow: () => {
       console.log('tooltip is hidden');
+  },
+  onToggle: () => {
+      console.log('tooltip is toggled');
   }
 };
 ```
@@ -351,6 +373,9 @@ tooltip.show();
 
 // hide the tooltip
 tooltip.hide();
+
+// toggle the tooltip
+tooltip.toggle();
 ```
 
 ### HTML Markup
@@ -390,6 +415,9 @@ const options: TooltipOptions = {
   },
   onShow: () => {
       console.log('tooltip is hidden');
+  },
+  onToggle: () => {
+      console.log('tooltip is toggled');
   }
 };
 

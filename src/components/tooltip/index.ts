@@ -12,6 +12,7 @@ const Default: TooltipOptions = {
     triggerType: 'hover',
     onShow: () => {},
     onHide: () => {},
+    onToggle: () => {},
 };
 
 class Tooltip implements TooltipInterface {
@@ -19,6 +20,7 @@ class Tooltip implements TooltipInterface {
     _triggerEl: HTMLElement | null;
     _options: TooltipOptions;
     _popperInstance: PopperInstance;
+    _visible: boolean;
 
     constructor(
         targetEl: HTMLElement | null = null,
@@ -29,6 +31,7 @@ class Tooltip implements TooltipInterface {
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
         this._popperInstance = this._createPopperInstance();
+        this._visible = false;
         this._init();
     }
 
@@ -48,7 +51,7 @@ class Tooltip implements TooltipInterface {
         }
     }
 
-    private _createPopperInstance() {
+    _createPopperInstance() {
         return createPopper(this._triggerEl, this._targetEl, {
             placement: this._options.placement,
             modifiers: [
@@ -62,7 +65,7 @@ class Tooltip implements TooltipInterface {
         });
     }
 
-    private _getTriggerEvents() {
+    _getTriggerEvents() {
         switch (this._options.triggerType) {
             case 'hover':
                 return {
@@ -74,11 +77,28 @@ class Tooltip implements TooltipInterface {
                     showEvents: ['click', 'focus'],
                     hideEvents: ['focusout', 'blur'],
                 };
+            case 'none':
+                return {
+                    showEvents: [],
+                    hideEvents: [],
+                };
             default:
                 return {
                     showEvents: ['mouseenter', 'focus'],
                     hideEvents: ['mouseleave', 'blur'],
                 };
+        }
+    }
+
+    isVisible() {
+        return this._visible;
+    }
+
+    toggle() {
+        if (this.isVisible()) {
+            this.hide();
+        } else {
+            this.show();
         }
     }
 
@@ -98,6 +118,9 @@ class Tooltip implements TooltipInterface {
         // Update its position
         this._popperInstance.update();
 
+        // set visibility
+        this._visible = true;
+
         // callback function
         this._options.onShow(this);
     }
@@ -114,6 +137,9 @@ class Tooltip implements TooltipInterface {
                 { name: 'eventListeners', enabled: false },
             ],
         }));
+
+        // set visibility
+        this._visible = false;
 
         // callback function
         this._options.onHide(this);

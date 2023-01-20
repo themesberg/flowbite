@@ -1,4 +1,4 @@
-import { PopoverOptions } from './types';
+import { PopoverOptions, TriggerType, TriggerEventTypes } from './types';
 import type { Instance as PopperInstance } from '@popperjs/core';
 
 export declare interface PopoverInterface {
@@ -7,6 +7,9 @@ export declare interface PopoverInterface {
     _options: PopoverOptions;
     _popperInstance: PopperInstance;
 
+    _getTriggerEvents(triggerType: TriggerType): TriggerEventTypes;
+    isVisible(): boolean;
     show(): void;
     hide(): void;
+    toggle(): void;
 }

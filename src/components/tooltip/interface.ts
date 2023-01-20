@@ -1,4 +1,4 @@
-import { TooltipOptions } from './types';
+import { TooltipOptions, TriggerType, TriggerEventTypes } from './types';
 import type { Instance as PopperInstance } from '@popperjs/core';
 
 export declare interface TooltipInterface {
@@ -8,6 +8,9 @@ export declare interface TooltipInterface {
     _popperInstance: PopperInstance;
 
     _init(): void;
+    _getTriggerEvents(triggerType: TriggerType): TriggerEventTypes;
+    isVisible(): boolean;
     show(): void;
     hide(): void;
+    toggle(): void;
 }

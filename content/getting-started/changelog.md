@@ -15,6 +15,13 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v1.6.3
+
+- Added dropdown hover functionality with delay option and examples ([issue #208](https://github.com/themesberg/flowbite/issues/208))
+- Fixed clicking outside of the Popover component not closing when using the "click" trigger type ([issue #242](https://github.com/themesberg/flowbite/issues/242))
+- Introduced the "none" option for Tooltip, Speed Dial, Popover and Dropdown components for trigger type ([issue #181](https://github.com/themesberg/flowbite/issues/181))
+- Improved the Flowbite installation experience by using a custom CLI to update the `tailwind.config.js` file (thanks for the PR [@CorwinDev](https://github.com/CorwinDev))
+
 ### v1.6.2
 
 - add event listeners for data attributes back to `index.ts`

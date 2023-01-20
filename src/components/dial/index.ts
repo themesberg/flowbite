@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import type { DialOptions, TriggerType } from './types';
+import type { DialOptions, DialTriggerType } from './types';
 import { DialInterface } from './interface';
 
 const Default: DialOptions = {
@@ -91,7 +91,7 @@ class Dial implements DialInterface {
         return this._visible;
     }
 
-    _getTriggerEventTypes(triggerType: TriggerType) {
+    _getTriggerEventTypes(triggerType: DialTriggerType) {
         switch (triggerType) {
             case 'hover':
                 return {

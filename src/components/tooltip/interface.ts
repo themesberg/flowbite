@@ -1,4 +1,8 @@
-import { TooltipOptions, TriggerType, TriggerEventTypes } from './types';
+import {
+    TooltipOptions,
+    TooltipTriggerType,
+    TooltipTriggerEventTypes,
+} from './types';
 import type { Instance as PopperInstance } from '@popperjs/core';
 
 export declare interface TooltipInterface {
@@ -13,7 +17,9 @@ export declare interface TooltipInterface {
     _setupClickOutsideListener(): void;
     _removeClickOutsideListener(): void;
     _handleClickOutside(ev: Event, targetEl: HTMLElement): void;
-    _getTriggerEvents(triggerType: TriggerType): TriggerEventTypes;
+    _getTriggerEvents(
+        triggerType: TooltipTriggerType
+    ): TooltipTriggerEventTypes;
     isVisible(): boolean;
     show(): void;
     hide(): void;

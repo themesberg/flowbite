@@ -21,6 +21,7 @@ class Popover implements PopoverInterface {
     _triggerEl: HTMLElement;
     _options: PopoverOptions;
     _popperInstance: PopperInstance;
+    _clickOutsideEventListener: EventListenerOrEventListenerObject;
     _visible: boolean;
 
     constructor(
@@ -38,32 +39,37 @@ class Popover implements PopoverInterface {
 
     _init() {
         if (this._triggerEl) {
-            const triggerEvents = this._getTriggerEvents();
-            triggerEvents.showEvents.forEach((ev) => {
-                this._triggerEl.addEventListener(ev, () => {
-                    this.show();
-                });
-                this._targetEl.addEventListener(ev, () => {
-                    this.show();
-                });
-            });
-            triggerEvents.hideEvents.forEach((ev) => {
-                this._triggerEl.addEventListener(ev, () => {
-                    setTimeout(() => {
-                        if (!this._targetEl.matches(':hover')) {
-                            this.hide();
-                        }
-                    }, 100);
-                });
-                this._targetEl.addEventListener(ev, () => {
-                    setTimeout(() => {
-                        if (!this._triggerEl.matches(':hover')) {
-                            this.hide();
-                        }
-                    }, 100);
-                });
-            });
+            this._setupEventListeners();
         }
+    }
+
+    _setupEventListeners() {
+        const triggerEvents = this._getTriggerEvents();
+
+        triggerEvents.showEvents.forEach((ev) => {
+            this._triggerEl.addEventListener(ev, () => {
+                this.show();
+            });
+            this._targetEl.addEventListener(ev, () => {
+                this.show();
+            });
+        });
+        triggerEvents.hideEvents.forEach((ev) => {
+            this._triggerEl.addEventListener(ev, () => {
+                setTimeout(() => {
+                    if (!this._targetEl.matches(':hover')) {
+                        this.hide();
+                    }
+                }, 100);
+            });
+            this._targetEl.addEventListener(ev, () => {
+                setTimeout(() => {
+                    if (!this._triggerEl.matches(':hover')) {
+                        this.hide();
+                    }
+                }, 100);
+            });
+        });
     }
 
     _createPopperInstance() {
@@ -105,6 +111,37 @@ class Popover implements PopoverInterface {
         }
     }
 
+    _setupClickOutsideListener() {
+        this._clickOutsideEventListener = (ev: MouseEvent) => {
+            this._handleClickOutside(ev, this._targetEl);
+        };
+        document.body.addEventListener(
+            'click',
+            this._clickOutsideEventListener,
+            true
+        );
+    }
+
+    _removeClickOutsideListener() {
+        document.body.removeEventListener(
+            'click',
+            this._clickOutsideEventListener,
+            true
+        );
+    }
+
+    _handleClickOutside(ev: Event, targetEl: HTMLElement) {
+        const clickedEl = ev.target as Node;
+        if (
+            clickedEl !== targetEl &&
+            !targetEl.contains(clickedEl) &&
+            !this._triggerEl.contains(clickedEl) &&
+            this.isVisible()
+        ) {
+            this.hide();
+        }
+    }
+
     isVisible() {
         return this._visible;
     }
@@ -131,6 +168,9 @@ class Popover implements PopoverInterface {
             ],
         }));
 
+        // handle click outside
+        this._setupClickOutsideListener();
+
         // Update its position
         this._popperInstance.update();
 
@@ -153,6 +193,9 @@ class Popover implements PopoverInterface {
                 { name: 'eventListeners', enabled: false },
             ],
         }));
+
+        // handle click outside
+        this._removeClickOutsideListener();
 
         // set visibility to false
         this._visible = false;

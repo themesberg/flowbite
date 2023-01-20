@@ -6,7 +6,9 @@ export declare interface PopoverInterface {
     _triggerEl: HTMLElement | null;
     _options: PopoverOptions;
     _popperInstance: PopperInstance;
+    _clickOutsideEventListener: EventListenerOrEventListenerObject;
 
+    _setupEventListeners(): void;
     _getTriggerEvents(triggerType: TriggerType): TriggerEventTypes;
     isVisible(): boolean;
     show(): void;

@@ -20,6 +20,7 @@ We strive to keep a good accountability of all of the version changes that we ma
 - Added dropdown hover functionality with delay option and examples ([issue #208](https://github.com/themesberg/flowbite/issues/208))
 - Fixed clicking outside of the Popover component not closing when using the "click" trigger type ([issue #242](https://github.com/themesberg/flowbite/issues/242))
 - Introduced the "none" option for Tooltip, Speed Dial, Popover and Dropdown components for trigger type ([issue #181](https://github.com/themesberg/flowbite/issues/181))
+- Fixed Tooltip and Popover click events on Safari browsers when using mobile devices ([issue #246](https://github.com/themesberg/flowbite/issues/246) and [issue #413](https://github.com/themesberg/flowbite/issues/413))
 - Improved the Flowbite installation experience by using a custom CLI to update the `tailwind.config.js` file (thanks for the PR [@CorwinDev](https://github.com/CorwinDev))
 
 ### v1.6.2

@@ -20,6 +20,7 @@ class Tooltip implements TooltipInterface {
     _triggerEl: HTMLElement | null;
     _options: TooltipOptions;
     _popperInstance: PopperInstance;
+    _clickOutsideEventListener: EventListenerOrEventListenerObject;
     _visible: boolean;
 
     constructor(
@@ -37,18 +38,22 @@ class Tooltip implements TooltipInterface {
 
     _init() {
         if (this._triggerEl) {
-            const triggerEvents = this._getTriggerEvents();
-            triggerEvents.showEvents.forEach((ev) => {
-                this._triggerEl.addEventListener(ev, () => {
-                    this.show();
-                });
-            });
-            triggerEvents.hideEvents.forEach((ev) => {
-                this._triggerEl.addEventListener(ev, () => {
-                    this.hide();
-                });
-            });
+            this._setupEventListeners();
         }
+    }
+
+    _setupEventListeners() {
+        const triggerEvents = this._getTriggerEvents();
+        triggerEvents.showEvents.forEach((ev) => {
+            this._triggerEl.addEventListener(ev, () => {
+                this.show();
+            });
+        });
+        triggerEvents.hideEvents.forEach((ev) => {
+            this._triggerEl.addEventListener(ev, () => {
+                this.hide();
+            });
+        });
     }
 
     _createPopperInstance() {
@@ -90,6 +95,37 @@ class Tooltip implements TooltipInterface {
         }
     }
 
+    _setupClickOutsideListener() {
+        this._clickOutsideEventListener = (ev: MouseEvent) => {
+            this._handleClickOutside(ev, this._targetEl);
+        };
+        document.body.addEventListener(
+            'click',
+            this._clickOutsideEventListener,
+            true
+        );
+    }
+
+    _removeClickOutsideListener() {
+        document.body.removeEventListener(
+            'click',
+            this._clickOutsideEventListener,
+            true
+        );
+    }
+
+    _handleClickOutside(ev: Event, targetEl: HTMLElement) {
+        const clickedEl = ev.target as Node;
+        if (
+            clickedEl !== targetEl &&
+            !targetEl.contains(clickedEl) &&
+            !this._triggerEl.contains(clickedEl) &&
+            this.isVisible()
+        ) {
+            this.hide();
+        }
+    }
+
     isVisible() {
         return this._visible;
     }
@@ -115,6 +151,9 @@ class Tooltip implements TooltipInterface {
             ],
         }));
 
+        // handle click outside
+        this._setupClickOutsideListener();
+
         // Update its position
         this._popperInstance.update();
 
@@ -137,6 +176,9 @@ class Tooltip implements TooltipInterface {
                 { name: 'eventListeners', enabled: false },
             ],
         }));
+
+        // handle click outside
+        this._removeClickOutsideListener();
 
         // set visibility
         this._visible = false;

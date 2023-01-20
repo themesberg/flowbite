@@ -9,6 +9,9 @@ export declare interface PopoverInterface {
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
 
     _setupEventListeners(): void;
+    _setupClickOutsideListener(): void;
+    _removeClickOutsideListener(): void;
+    _handleClickOutside(ev: Event, targetEl: HTMLElement): void;
     _getTriggerEvents(triggerType: TriggerType): TriggerEventTypes;
     isVisible(): boolean;
     show(): void;

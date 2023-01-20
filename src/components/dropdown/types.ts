@@ -16,4 +16,5 @@ export declare type DropdownOptions = {
     delay?: number;
     onShow?: (tooltip: DropdownInterface) => void;
     onHide?: (tooltip: DropdownInterface) => void;
+    onToggle?: (tooltip: DropdownInterface) => void;
 };

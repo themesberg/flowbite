@@ -1272,6 +1272,17 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set a callback function when the dropdown has been shown.
               </td>
           </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">onToggle</code>
+              </td>
+              <td class="px-6 py-4 font-medium">
+                  Function
+              </td>
+              <td class="px-6 py-4">
+                  Set a callback function when the dropdown visibility has been toggled.
+              </td>
+          </tr>
       </tbody>
   </table>
 </div>
@@ -1309,6 +1320,14 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method on the Dropdown object to hide the dropdown menu.
               </td>
           </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">toggle()</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method on the Dropdown object to toggle the visibility of the dropdown menu.
+              </td>
+          </tr>
       </tbody>
   </table>
 </div>
@@ -1340,6 +1359,9 @@ const options = {
   },
   onShow: () => {
       console.log('dropdown has been shown');
+  },
+  onToggle: () => {
+      console.log('dropdown has been toggled');
   }
 };
 ```
@@ -1363,13 +1385,16 @@ dropdown.show();
 
 // hide the dropdown menu
 dropdown.hide();
+
+// toggle the dropdown menu
+dropdown.toggle();
 ```
 
 ### HTML markup
 
 Use the following HTML code for the JavaScript example above.
 
-<!-- ```html -->
+```html
 <button id="dropdownButton" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg aria-hidden="true" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 <!-- Dropdown menu -->
 <div id="dropdownMenu" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700">
@@ -1388,7 +1413,7 @@ Use the following HTML code for the JavaScript example above.
       </li>
     </ul>
 </div>
-<!-- ``` -->
+```
 
 ### TypeScript
 
@@ -1409,13 +1434,18 @@ const $triggerEl: HTMLElement = document.getElementById('dropdownButton');
 // options with default values
 const options: DropdownOptions = {
   placement: 'bottom',
+  triggerType: 'click',
   offsetSkidding: 0,
   offsetDistance: 10,
+  delay: 300,
   onHide: () => {
       console.log('dropdown has been hidden');
   },
   onShow: () => {
       console.log('dropdown has been shown');
+  },
+  onToggle: () => {
+      console.log('dropdown has been toggled');
   }
 };
 

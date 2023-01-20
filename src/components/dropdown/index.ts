@@ -15,6 +15,7 @@ const Default: DropdownOptions = {
     delay: 300,
     onShow: () => {},
     onHide: () => {},
+    onToggle: () => {},
 };
 
 class Dropdown implements DropdownInterface {
@@ -170,6 +171,7 @@ class Dropdown implements DropdownInterface {
         } else {
             this.show();
         }
+        this._options.onToggle(this);
     }
 
     show() {

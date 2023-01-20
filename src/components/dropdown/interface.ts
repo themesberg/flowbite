@@ -11,6 +11,9 @@ export declare interface DropdownInterface {
 
     _init(): void;
     _createPopperInstance(): PopperInstance;
+    _setupEventListeners(): void;
+    _setupClickOutsideListener(): void;
+    _removeClickOutsideListener(): void;
     _handleClickOutside(ev: Event, targetEl: HTMLElement): void;
     _getTriggerEvents(triggerType: TriggerType): TriggerEventTypes;
     toggle(): void;

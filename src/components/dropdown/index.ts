@@ -12,6 +12,7 @@ const Default: DropdownOptions = {
     triggerType: 'click',
     offsetSkidding: 0,
     offsetDistance: 10,
+    delay: 300,
     onShow: () => {},
     onHide: () => {},
 };
@@ -39,48 +40,54 @@ class Dropdown implements DropdownInterface {
 
     _init() {
         if (this._triggerEl) {
-            const triggerEvents = this._getTriggerEvents();
+            this._setupEventListeners();
+        }
+    }
 
-            // click event handling for trigger element
-            if (this._options.triggerType === 'click') {
-                triggerEvents.showEvents.forEach((ev) => {
-                    this._triggerEl.addEventListener(ev, () => {
+    _setupEventListeners() {
+        const triggerEvents = this._getTriggerEvents();
+
+        // click event handling for trigger element
+        if (this._options.triggerType === 'click') {
+            triggerEvents.showEvents.forEach((ev) => {
+                this._triggerEl.addEventListener(ev, () => {
+                    this.toggle();
+                });
+            });
+        }
+
+        // hover event handling for trigger element
+        if (this._options.triggerType === 'hover') {
+            triggerEvents.showEvents.forEach((ev) => {
+                this._triggerEl.addEventListener(ev, () => {
+                    if (ev === 'click') {
                         this.toggle();
-                    });
-                });
-            }
-
-            // hover event handling for trigger element
-            if (this._options.triggerType === 'hover') {
-                triggerEvents.showEvents.forEach((ev) => {
-                    this._triggerEl.addEventListener(ev, () => {
-                        if (ev === 'click') {
-                            this.toggle();
-                        } else {
+                    } else {
+                        setTimeout(() => {
                             this.show();
+                        }, this._options.delay);
+                    }
+                });
+                this._targetEl.addEventListener(ev, () => {
+                    this.show();
+                });
+            });
+            triggerEvents.hideEvents.forEach((ev) => {
+                this._triggerEl.addEventListener(ev, () => {
+                    setTimeout(() => {
+                        if (!this._targetEl.matches(':hover')) {
+                            this.hide();
                         }
-                    });
-                    this._targetEl.addEventListener(ev, () => {
-                        this.show();
-                    });
+                    }, this._options.delay);
                 });
-                triggerEvents.hideEvents.forEach((ev) => {
-                    this._triggerEl.addEventListener(ev, () => {
-                        setTimeout(() => {
-                            if (!this._targetEl.matches(':hover')) {
-                                this.hide();
-                            }
-                        }, 100);
-                    });
-                    this._targetEl.addEventListener(ev, () => {
-                        setTimeout(() => {
-                            if (!this._triggerEl.matches(':hover')) {
-                                this.hide();
-                            }
-                        }, 100);
-                    });
+                this._targetEl.addEventListener(ev, () => {
+                    setTimeout(() => {
+                        if (!this._triggerEl.matches(':hover')) {
+                            this.hide();
+                        }
+                    }, this._options.delay);
                 });
-            }
+            });
         }
     }
 
@@ -142,6 +149,11 @@ class Dropdown implements DropdownInterface {
             case 'click':
                 return {
                     showEvents: ['click'],
+                    hideEvents: [],
+                };
+            case 'none':
+                return {
+                    showEvents: [],
                     hideEvents: [],
                 };
             default:
@@ -229,6 +241,7 @@ export function initDropdowns() {
                 const triggerType = $triggerEl.getAttribute(
                     'data-dropdown-trigger'
                 );
+                const delay = $triggerEl.getAttribute('data-dropdown-delay');
 
                 new Dropdown(
                     $dropdownEl as HTMLElement,
@@ -244,6 +257,7 @@ export function initDropdowns() {
                         offsetDistance: offsetDistance
                             ? parseInt(offsetDistance)
                             : Default.offsetDistance,
+                        delay: delay ? parseInt(delay) : Default.delay,
                     } as DropdownOptions
                 );
             } else {

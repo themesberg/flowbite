@@ -45,13 +45,40 @@ The `dropdownId` is the id of the dropdown menu element.
 
 ## Dropdown hover
 
-Use the `data-dropdown-trigger="{hover|click}"` data attribute options to set whether the dropdown should be shown when hovering or clicking on the trigger element (ie. button).
+Use the `data-dropdown-trigger="{hover|click}"` data attribute options to set whether the dropdown should be shown when hovering or clicking on the trigger element (ie. button). 
+
+There's a 300ms default delay when showing or hiding the dropdown due to UI/UX reasons and how it may affect the interaction with other components on the page. Generally, we recommend using the `click` method.
 
 {{< example id="dropdown-hover-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="240" >}}
 <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown hover <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 <!-- Dropdown menu -->
 <div id="dropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700">
     <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+      </li>
+    </ul>
+</div>
+{{< /example >}}
+
+### Delay duration
+
+You can use the `data-dropdown-delay={miliseconds}` data attribute to set they delay on when to show or hide the dropdown menu when using hover. You may want to use this depending on how the users interact with your interface. In this example we add 500 miliseconds instead of the default 300.
+
+{{< example id="dropdown-delay-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="240" >}}
+<button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" data-dropdown-trigger="hover" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown hover <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+<!-- Dropdown menu -->
+<div id="dropdownDelay" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700">
+    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDelayButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
       </li>
@@ -1181,6 +1208,17 @@ Use the following options as the third parameter for the Dropdown class to set t
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">triggerType</code>
+              </td>
+              <td class="px-6 py-4 font-medium">
+                  String
+              </td>
+              <td class="px-6 py-4">
+                  The possible options are click, hover, or none and these will set based on which event the dropdown will be shown.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">offsetDistance</code>
               </td>
               <td class="px-6 py-4 font-medium">
@@ -1199,6 +1237,17 @@ Use the following options as the third parameter for the Dropdown class to set t
               </td>
               <td class="px-6 py-4">
                   Set the number of pixels the dropdown menu should be offset relative to the trigger element on the Y horizontal axis.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">delay</code>
+              </td>
+              <td class="px-6 py-4 font-medium">
+                  Number
+              </td>
+              <td class="px-6 py-4">
+                  Set the miliseconds for which the showing or hiding of the dropdown will be delayed for when using the hover trigger type.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -1282,8 +1331,10 @@ const $triggerEl = document.getElementById('dropdownButton');
 // options with default values
 const options = {
   placement: 'bottom',
+  triggerType: 'click',
   offsetSkidding: 0,
   offsetDistance: 10,
+  delay: 300,
   onHide: () => {
       console.log('dropdown has been hidden');
   },
@@ -1318,7 +1369,7 @@ dropdown.hide();
 
 Use the following HTML code for the JavaScript example above.
 
-```html
+<!-- ```html -->
 <button id="dropdownButton" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg aria-hidden="true" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 <!-- Dropdown menu -->
 <div id="dropdownMenu" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700">
@@ -1337,7 +1388,7 @@ Use the following HTML code for the JavaScript example above.
       </li>
     </ul>
 </div>
-```
+<!-- ``` -->
 
 ### TypeScript
 

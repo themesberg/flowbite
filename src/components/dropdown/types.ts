@@ -1,11 +1,11 @@
 import { DropdownInterface } from './interface';
 import type { Placement } from '@popperjs/core';
 
-export declare type TriggerType = 'click' | 'hover';
+export declare type TriggerType = 'click' | 'hover' | 'none';
 
 export declare type TriggerEventTypes = {
-    show: string[];
-    hide: string[];
+    showEvents: string[];
+    hideEvents: string[];
 };
 
 export declare type DropdownOptions = {
@@ -13,6 +13,7 @@ export declare type DropdownOptions = {
     triggerType?: TriggerType;
     offsetSkidding?: number;
     offsetDistance?: number;
+    delay?: number;
     onShow?: (tooltip: DropdownInterface) => void;
     onHide?: (tooltip: DropdownInterface) => void;
 };

@@ -134,7 +134,7 @@ class Dropdown implements DropdownInterface {
             clickedEl !== targetEl &&
             !targetEl.contains(clickedEl) &&
             !this._triggerEl.contains(clickedEl) &&
-            this._visible
+            this.isVisible()
         ) {
             this.hide();
         }
@@ -166,12 +166,16 @@ class Dropdown implements DropdownInterface {
     }
 
     toggle() {
-        if (this._visible) {
+        if (this.isVisible()) {
             this.hide();
         } else {
             this.show();
         }
         this._options.onToggle(this);
+    }
+
+    isVisible() {
+        return this._visible;
     }
 
     show() {

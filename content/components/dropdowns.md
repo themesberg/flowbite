@@ -1214,7 +1214,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   String
               </td>
               <td class="px-6 py-4">
-                  The possible options are click, hover, or none and these will set based on which event the dropdown will be shown.
+                  Set the event type that will trigger the dropdown menu choosing between <code class="text-purple-600 dark:text-purple-400">hover|click|none</code>.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -1328,6 +1328,14 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method on the Dropdown object to toggle the visibility of the dropdown menu.
               </td>
           </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">isVisible()</code>
+              </td>
+              <td class="px-6 py-4">
+                  Returns true or false based on the visibility of the dropdown.
+              </td>
+          </tr>
       </tbody>
   </table>
 </div>
@@ -1388,6 +1396,9 @@ dropdown.hide();
 
 // toggle the dropdown menu
 dropdown.toggle();
+
+// check if dropdown is visible/open
+dropdown.isVisible();
 ```
 
 ### HTML markup

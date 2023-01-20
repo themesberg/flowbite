@@ -16,6 +16,7 @@ export declare interface DropdownInterface {
     _removeClickOutsideListener(): void;
     _handleClickOutside(ev: Event, targetEl: HTMLElement): void;
     _getTriggerEvents(triggerType: TriggerType): TriggerEventTypes;
+    isVisible(): boolean;
     toggle(): void;
     show(): void;
     hide(): void;

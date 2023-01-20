@@ -186,6 +186,10 @@ new DateRangePicker(dateRangePickerEl, {
 }); 
 ```
 
+## React support
+
+One of our community members built the React version of the Flowbite Datepicker and you can learn more about it on <a href="https://github.com/OMikkel/tailwind-datepicker-react" rel="nofollow">this repository on GitHub</a>.
+
 ## Turbo load support 
 
 In order to support turbo load from Ruby on Rails 7, you have to include the `datepicker.turbo.js` file either from NPM or CDN into your project.

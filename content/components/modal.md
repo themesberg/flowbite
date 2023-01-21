@@ -696,6 +696,17 @@ Use the following options as the second parameter for the Modal object to set th
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">closable</code>
+                </td>
+                <td class="px-6 py-4">
+                    Boolean
+                </td>
+                <td class="px-6 py-4">
+                    Set to <code class="text-purple-600 dark:text-purple-400">false</code> to disable the close button and escape key.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onHide</code>
                 </td>
                 <td class="px-6 py-4">
@@ -807,6 +818,7 @@ const options = {
   placement: 'bottom-right',
   backdrop: 'dynamic',
   backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+  closable: true,
   onHide: () => {
       console.log('modal is hidden');
   },

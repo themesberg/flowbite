@@ -7,6 +7,7 @@ const Default: ModalOptions = {
     backdropClasses:
         'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
     backdrop: 'dynamic',
+    closable: true,
     onHide: () => {},
     onShow: () => {},
     onToggle: () => {},
@@ -58,6 +59,7 @@ class Modal implements ModalInterface {
     }
 
     _setupModalCloseEventListeners() {
+        if (this._options.closable === false) return;
         if (this._options.backdrop === 'dynamic') {
             this._clickOutsideEventListener = (ev: MouseEvent) => {
                 this._handleOutsideClick(ev.target);
@@ -82,6 +84,7 @@ class Modal implements ModalInterface {
     }
 
     _removeModalCloseEventListeners() {
+        if(this._options.closable === false) return;
         if (this._options.backdrop === 'dynamic') {
             this._targetEl.removeEventListener(
                 'click',

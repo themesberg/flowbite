@@ -42,25 +42,31 @@ laravel new awesome-project
 cd awesome-project
 ```
 
+3. Start the development server using the following command:
+
+```bash
+php artisan serve
+```
+
 You can now access the Laravel application on `http://localhost:8000`.
 
 This command will initialize a blank Laravel project that you can get started with.
 
-3. Install Tailwind CSS and Flowbite using NPM:
+4. Install Tailwind CSS and Flowbite using NPM:
 
 ```javascript
 npm install -D tailwindcss postcss autoprefixer flowbite
 ```
 
-4. Create a Tailwind CSS config file:
+5. Create a Tailwind CSS config file:
 
 ```bash
-npx tailwindcss init
+npx tailwindcss init -p
 ```
 
 A new `tailwind.config.js` file will be created inside your root folder.
 
-5. Add the view paths and require Flowbite as a plugin inside `tailwind.config.js`:
+6. Add the view paths and require Flowbite as a plugin inside `tailwind.config.js`:
 
 ```javascript
 module.exports = {
@@ -81,7 +87,7 @@ module.exports = {
 
 This will tell the compiler from Tailwind what files to look for to properly apply the classes inside the final CSS file and it will also install the extra plugin options from Flowbite.
 
-6. Add the directives inside the `./resources/css/app.css` file:
+7. Add the directives inside the `./resources/css/app.css` file:
 
 ```css
 @tailwind base;
@@ -89,13 +95,13 @@ This will tell the compiler from Tailwind what files to look for to properly app
 @tailwind utilities;
 ```
 
-7. Make sure your compiled CSS is included in the `<head>` then start using Tailwind’s utility classes to style your content.
+8. Make sure your compiled CSS is included in the `<head>` then start using Tailwind’s utility classes to style your content.
 
 ```js
 @vite('resources/css/app.css')
 ```
 
-8. Require the `flowbite.js` file before the end of the `<body>` tag:
+9. Require the `flowbite.js` file before the end of the `<body>` tag:
 
 ```html
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>

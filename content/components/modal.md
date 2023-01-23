@@ -702,7 +702,7 @@ Use the following options as the second parameter for the Modal object to set th
                     Boolean
                 </td>
                 <td class="px-6 py-4">
-                    Set to <code class="text-purple-600 dark:text-purple-400">false</code> to disable the close button and escape key.
+                    Set to <code class="text-purple-600 dark:text-purple-400">false</code> to disable closing the modal on hitting ESC or clicking on the backdrop.
                 </td>
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -834,13 +834,13 @@ const options = {
 Create a new Modal object based on the options above.
 
 ```javascript
-import { Flowbite } from 'flowbite';
+import { Modal } from 'flowbite';
 
 /*
 * $targetEl: required
 * options: optional
 */
-const modal = new Flowbite.Modal($targetEl, options);
+const modal = new Modal($targetEl, options);
 ```
 
 Use the `show` and `hide` methods to show and hide the modal component directly from JavaScript.
@@ -923,6 +923,7 @@ const modalOptions: ModalOptions = {
     placement: 'bottom-right',
     backdrop: 'dynamic',
     backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+    closable: true,
     onHide: () => {
         console.log('modal is hidden');
     },

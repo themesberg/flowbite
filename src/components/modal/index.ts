@@ -59,7 +59,6 @@ class Modal implements ModalInterface {
     }
 
     _setupModalCloseEventListeners() {
-        if (this._options.closable === false) return;
         if (this._options.backdrop === 'dynamic') {
             this._clickOutsideEventListener = (ev: MouseEvent) => {
                 this._handleOutsideClick(ev.target);
@@ -84,7 +83,6 @@ class Modal implements ModalInterface {
     }
 
     _removeModalCloseEventListeners() {
-        if(this._options.closable === false) return;
         if (this._options.backdrop === 'dynamic') {
             this._targetEl.removeEventListener(
                 'click',
@@ -164,7 +162,9 @@ class Modal implements ModalInterface {
             document.body.classList.add('overflow-hidden');
 
             // Add keyboard event listener to the document
-            this._setupModalCloseEventListeners();
+            if (this._options.closable) {
+                this._setupModalCloseEventListeners();
+            }
 
             // callback function
             this._options.onShow(this);
@@ -184,7 +184,9 @@ class Modal implements ModalInterface {
             // re-apply body scroll
             document.body.classList.remove('overflow-hidden');
 
-            this._removeModalCloseEventListeners();
+            if (this._options.closable) {
+                this._removeModalCloseEventListeners();
+            }
 
             // callback function
             this._options.onHide(this);

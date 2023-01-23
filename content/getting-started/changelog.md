@@ -21,8 +21,8 @@ We strive to keep a good accountability of all of the version changes that we ma
 - Fixed clicking outside of the Popover component not closing when using the "click" trigger type ([issue #242](https://github.com/themesberg/flowbite/issues/242))
 - Introduced the "none" option for Tooltip, Speed Dial, Popover and Dropdown components for trigger type ([issue #181](https://github.com/themesberg/flowbite/issues/181))
 - Fixed Tooltip and Popover click events on Safari browsers when using mobile devices ([issue #246](https://github.com/themesberg/flowbite/issues/246) and [issue #413](https://github.com/themesberg/flowbite/issues/413))
-- Improved the Flowbite installation experience by using a custom CLI to update the `tailwind.config.js` file (thanks for the PR [@CorwinDev](https://github.com/CorwinDev))
 - Improve the consistency of the dropdown components across the whole documentation using `border-lg` ([issue #276](https://github.com/themesberg/flowbite/issues/276))
+- Added the optional closable option to the Modal component preventing it from being closed when hitting the ESC button (thanks for the PR [@CorwinDev](https://github.com/CorwinDev))
 
 ### v1.6.2
 

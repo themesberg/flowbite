@@ -61,34 +61,36 @@ Flowbite is technically a plugin that can be included into any existing Tailwind
 npm install flowbite
 ```
 
-2. Include Flowbite as a plugin inside the `tailwind.config.js` file:
+2. Use the Flowbite CLI and run the following command to set up Flowbite in the `tailwind.config.js` file:
+
+```bash
+npx flowbite init
+```
+
+This will either generate a new default Tailwnd configuration file with Flowbite installed or set up Flowbite inside an existing Tailwind CSS project:
 
 ```javascript
 module.exports = {
 
-    plugins: [
-        require('flowbite/plugin')
-    ]
+  // other options ...
+
+  content: [
+    // other templates paths...
+    "./node_modules/flowbite/**/*.js"
+  ]
+
+  plugins: [
+    // other plugins...
+    require('flowbite/plugin')
+  ],
 
 }
 ```
 
-3. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
-
-```javascript
-module.exports = {
-
-    content: [
-        "./node_modules/flowbite/**/*.js"
-    ]
-
-}
-```
-
-4. Require the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
+3. Include the main JavaScript file to make interactive elements work:
 
 ```html
-<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+<script src="../path/to/flowbite/dist/flowbite.js"></script>
 ```
 
 ### Include via CDN

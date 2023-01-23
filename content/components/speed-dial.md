@@ -991,6 +991,8 @@ const options = {
 Create a new Speed Dial object based on the options above.
 
 ```javascript
+import { Dial } from 'flowbite';
+
 /*
 * $parentEl: required
 * $targetEl: required

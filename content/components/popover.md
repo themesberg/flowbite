@@ -616,6 +616,8 @@ const options = {
 Create a new Popover object based on the options above.
 
 ```javascript
+import { Popover } from 'flowbite';
+
 /*
 * $targetEl: required
 * $triggerEl: required

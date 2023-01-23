@@ -1377,6 +1377,8 @@ const options = {
 Create a new Dropdown object based on the options above.
 
 ```javascript
+import { Dropdown } from 'flowbite';
+
 /*
 * $targetEl: required
 * $triggerEl: required

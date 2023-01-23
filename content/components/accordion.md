@@ -511,6 +511,8 @@ const options = {
 Create a new Accordion object using the options set above as the parameters.
 
 ```javascript
+import { Accordion } from 'flowbite';
+
 /*
 * accordionItems: array of accordion item objects
 * options: optional

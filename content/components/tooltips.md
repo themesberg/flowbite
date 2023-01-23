@@ -357,6 +357,8 @@ const options = {
 Create a new Tooltip object based on the options above.
 
 ```javascript
+import { Tooltip } from 'flowbite';
+
 /*
 * $targetEl: required
 * $triggerEl: required

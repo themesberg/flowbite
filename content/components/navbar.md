@@ -849,6 +849,8 @@ const options = {
 Next step is to create a new instance of a Collapse object using the parameters we have set above.
 
 ```javascript
+import { Collapse } from 'flowbite';
+
 /*
 * $targetEl: required
 * $triggerEl: optional

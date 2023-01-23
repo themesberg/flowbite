@@ -577,6 +577,8 @@ const options = {
 Create a new Dismiss object based on the options set above.
 
 ```javascript
+import { Dismiss } from 'flowbite';
+
 /*
 * $targetEl: required
 * $triggerEl: optional

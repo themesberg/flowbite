@@ -7,6 +7,7 @@ const Default: ModalOptions = {
     backdropClasses:
         'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
     backdrop: 'dynamic',
+    closable: true,
     onHide: () => {},
     onShow: () => {},
     onToggle: () => {},
@@ -161,7 +162,9 @@ class Modal implements ModalInterface {
             document.body.classList.add('overflow-hidden');
 
             // Add keyboard event listener to the document
-            this._setupModalCloseEventListeners();
+            if (this._options.closable) {
+                this._setupModalCloseEventListeners();
+            }
 
             // callback function
             this._options.onShow(this);
@@ -181,7 +184,9 @@ class Modal implements ModalInterface {
             // re-apply body scroll
             document.body.classList.remove('overflow-hidden');
 
-            this._removeModalCloseEventListeners();
+            if (this._options.closable) {
+                this._removeModalCloseEventListeners();
+            }
 
             // callback function
             this._options.onHide(this);

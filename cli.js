@@ -63,7 +63,7 @@ async function updateTailwindConfig() {
     var config;
     try {
         // Try to read the config file
-        config = await require(process.cwd() + '\\tailwind.config.js');
+        config = await require('./tailwind.config.js');
     } catch (e) {
         log('Error: Invalid tailwind.config.js file.', true);
         process.exit(1);
@@ -109,23 +109,22 @@ async function updateTailwindConfig() {
         log('Flowbite node_modules added to tailwind.config.js.');
     }
 
-    var end = JSON.stringify(config, null, 4).replace(/"([^"]+)":/g, '$1:');
-    // Add the new plugin to the current plugins
-    end = end.replace(
-        /"require\('flowbite\/plugin'\)"/g,
-        "require('flowbite/plugin')"
-    );
-
     // Updates the file
     var result = data.replace(
-        /module.exports\s*=\s*\{(.*)$/gs,
-        'module.exports = ' +
-            end
-                .replace(
-                    /plugins: \[[\s\S]*\]/,
-                    `plugins: [${currentPlugins.join(', ')}]`
-                )
-                .replace(/"/g, "'")
+        /plugins\s*:\s*\[(.*)]/gs,
+        'plugins: [' + currentPlugins.join(', ') + ']'
+    );
+
+    // Add " to all the content paths
+    var content = config.content.map((path, index) => {
+        // Check if index is the last one
+        if (index === config.content.length - 1)
+            return "\n        '" + path + "'\n    ";
+        return "\n        '" + path + "'";
+    });
+    result = result.replace(
+        /content\s*:\s*\[(.*?)]/gs,
+        'content: [' + content.join(',') + ']'
     );
 
     // Write the file

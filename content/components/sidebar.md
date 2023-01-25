@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Sidebar - Flowbite
-description: Use the sidebar component to show a list of menu items and multi-level dropdown items on either side of the page to navigate on your website
+description: Use the sidebar component to show a list of menu items and multi-level menu items on either side of the page to navigate on your website
 group: components
 toc: true
 
@@ -11,7 +11,7 @@ next: Drawer
 nextLink: components/drawer/
 ---
 
-The sidebar component can be used as a complementary element relative to the navbar shown on either the left or right side of the page used for the navigation on your web application, including menu items, multi-level dropdown items, call to actions elements, and more.
+The sidebar component can be used as a complementary element relative to the navbar shown on either the left or right side of the page used for the navigation on your web application, including menu items, multi-level menu items, call to actions elements, and more.
 
 ## Default sidebar
 
@@ -87,7 +87,7 @@ Use this example to show a responsive list of menu items inside the sidebar with
   {{< requires_js >}}
 </div>
 
-## Multi-level dropdown 
+## Multi-level menu 
 
 Use this sidebar example to create multi-level menu items by applying the `data-collapse-toggle="id"` data attribute from Flowbite and toggle the second-level menu item.
 

@@ -23,6 +23,7 @@ We strive to keep a good accountability of all of the version changes that we ma
 - Fixed Tooltip and Popover click events on Safari browsers when using mobile devices ([issue #246](https://github.com/themesberg/flowbite/issues/246) and [issue #413](https://github.com/themesberg/flowbite/issues/413))
 - Improve the consistency of the dropdown components across the whole documentation using `border-lg` ([issue #276](https://github.com/themesberg/flowbite/issues/276))
 - Added the optional closable option to the Modal component preventing it from being closed when hitting the ESC button (thanks for the PR [@CorwinDev](https://github.com/CorwinDev))
+- Improved sidebar component examples by including a hamburger icon and multiple layouts
 
 ### v1.6.2
 

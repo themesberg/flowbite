@@ -101,7 +101,7 @@ This will tell the compiler from Tailwind what files to look for to properly app
 @vite(['resources/css/app.css','resources/js/app.js'])
 ```
 
-9. Import the Flowbite JavaScript package inside the ./resources/js/app.js file to enable the interactive components such as modals, dropdowns, navbars, and more.
+9. Import the Flowbite JavaScript package inside the `./resources/js/app.js` file to enable the interactive components such as modals, dropdowns, navbars, and more.
 
 ```javascript
 import 'flowbite';

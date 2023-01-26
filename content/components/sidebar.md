@@ -18,15 +18,15 @@ The sidebar component can be used as a complementary element relative to the nav
 Use this example to show a responsive list of menu items inside the sidebar with icons and labels.
 
 {{< example id="default-sidebar-example" github="components/sidebar.md" bodyClass="!m-0" iframeHeight="640" iframeMaxHeight="640" show_dark=true >}}
-<button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 ml-3 mt-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+<button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
    <span class="sr-only">Open sidebar</span>
    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
    </svg>
 </button>
 
-<aside id="default-sidebar" class="w-64 fixed left-0 top-0 h-screen transition-transform -translate-x-full sm:translate-x-0 z-40" aria-label="Sidebar">
-   <div class="px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 h-full">
+<aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
       <ul class="space-y-2">
          <li>
             <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -76,34 +76,51 @@ Use this example to show a responsive list of menu items inside the sidebar with
    </div>
 </aside>
 
-<div class="sm:ml-64 p-4">
-   <div class="border-dashed border-gray-200 dark:border-gray-700 border-2 rounded-lg h-screen p-4">
+<div class="p-4 sm:ml-64">
+   <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
       <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
       </div>
-      <div class="flex items-center justify-center bg-gray-50 rounded h-48 mb-4 dark:bg-gray-800">
-         <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
       </div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-700">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+      </div>
+      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
       </div>
    </div>
@@ -119,15 +136,15 @@ Use this example to show a responsive list of menu items inside the sidebar with
 Use this sidebar example to create multi-level menu items by applying the `data-collapse-toggle="id"` data attribute from Flowbite and toggle the second-level menu item.
 
 {{< example id="sidebar-multi-level-example" github="components/sidebar.md" bodyClass="!m-0" iframeHeight="640" iframeMaxHeight="640" show_dark=true >}}
-<button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar" aria-controls="sidebar-multi-level-sidebar" type="button" class="inline-flex items-center p-2 ml-3 mt-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+<button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar" aria-controls="sidebar-multi-level-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
    <span class="sr-only">Open sidebar</span>
    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
    </svg>
 </button>
 
-<aside id="sidebar-multi-level-sidebar" class="w-64 fixed left-0 top-0 h-screen transition-transform -translate-x-full sm:translate-x-0 z-40" aria-label="Sidebar">
-   <div class="px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 h-full">
+<aside id="sidebar-multi-level-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
       <ul class="space-y-2">
          <li>
             <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -195,34 +212,51 @@ Use this sidebar example to create multi-level menu items by applying the `data-
    </div>
 </aside>
 
-<div class="sm:ml-64 p-4">
-   <div class="border-dashed border-gray-200 dark:border-gray-700 border-2 rounded-lg h-screen p-4">
+<div class="p-4 sm:ml-64">
+   <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
       <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
       </div>
-      <div class="flex items-center justify-center bg-gray-50 rounded h-48 mb-4 dark:bg-gray-800">
-         <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
       </div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-700">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+      </div>
+      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
       </div>
    </div>
@@ -235,15 +269,15 @@ Use this sidebar example to create multi-level menu items by applying the `data-
 Separate the content inside the sidebar component by applying a border separator between the two menus.
 
 {{< example id="sidebar-separator-example" github="components/sidebar.md" bodyClass="!m-0" iframeHeight="640" iframeMaxHeight="640" show_dark=true >}}
-<button data-drawer-target="separator-sidebar" data-drawer-toggle="separator-sidebar" aria-controls="separator-sidebar" type="button" class="inline-flex items-center p-2 ml-3 mt-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+<button data-drawer-target="separator-sidebar" data-drawer-toggle="separator-sidebar" aria-controls="separator-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
    <span class="sr-only">Open sidebar</span>
    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
    </svg>
 </button>
 
-<aside id="separator-sidebar" class="w-64 fixed left-0 top-0 h-screen transition-transform -translate-x-full sm:translate-x-0 z-40" aria-label="Sidebar">
-   <div class="px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 h-full">
+<aside id="separator-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
       <ul class="space-y-2">
          <li>
             <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -319,34 +353,51 @@ Separate the content inside the sidebar component by applying a border separator
    </div>
 </aside>
 
-<div class="sm:ml-64 p-4">
-   <div class="border-dashed border-gray-200 dark:border-gray-700 border-2 rounded-lg h-screen p-4">
+<div class="p-4 sm:ml-64">
+   <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
       <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
       </div>
-      <div class="flex items-center justify-center bg-gray-50 rounded h-48 mb-4 dark:bg-gray-800">
-         <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
       </div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-700">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+      </div>
+      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
       </div>
    </div>
@@ -358,15 +409,15 @@ Separate the content inside the sidebar component by applying a border separator
 Use this example to add a CTA button inside the sidebar component and encourage your users to visit the dedicated page.
 
 {{< example id="sidebar-cta-button-example" github="components/sidebar.md" bodyClass="!m-0" iframeHeight="640" iframeMaxHeight="640" show_dark=true >}}
-<button data-drawer-target="cta-button-sidebar" data-drawer-toggle="cta-button-sidebar" aria-controls="cta-button-sidebar" type="button" class="inline-flex items-center p-2 ml-3 mt-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+<button data-drawer-target="cta-button-sidebar" data-drawer-toggle="cta-button-sidebar" aria-controls="cta-button-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
    <span class="sr-only">Open sidebar</span>
    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
    </svg>
 </button>
 
-<aside id="cta-button-sidebar" class="w-64 fixed left-0 top-0 h-screen transition-transform -translate-x-full sm:translate-x-0 z-40" aria-label="Sidebar">
-   <div class="px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 h-full">
+<aside id="cta-button-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
       <ul class="space-y-2">
          <li>
             <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -429,34 +480,51 @@ Use this example to add a CTA button inside the sidebar component and encourage 
    </div>
 </aside>
 
-<div class="sm:ml-64 p-4">
-   <div class="border-dashed border-gray-200 dark:border-gray-700 border-2 rounded-lg h-screen p-4">
+<div class="p-4 sm:ml-64">
+   <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
       <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
       </div>
-      <div class="flex items-center justify-center bg-gray-50 rounded h-48 mb-4 dark:bg-gray-800">
-         <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
       </div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-700">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+      </div>
+      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
       </div>
    </div>
@@ -468,15 +536,15 @@ Use this example to add a CTA button inside the sidebar component and encourage 
 Show the logo of your brand and link back to the homepage from the top part of the sidebar. 
 
 {{< example id="sidebar-logo-example" github="components/sidebar.md" bodyClass="!m-0" iframeHeight="640" iframeMaxHeight="640" show_dark=true >}}
-<button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 ml-3 mt-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+<button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
    <span class="sr-only">Open sidebar</span>
    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
    </svg>
 </button>
 
-<aside id="logo-sidebar" class="w-64 fixed left-0 top-0 h-screen transition-transform -translate-x-full sm:translate-x-0 z-40" aria-label="Sidebar">
-   <div class="px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 h-full">
+<aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
       <a href="{{< param homepage >}}/" class="flex items-center pl-2.5 mb-5">
          <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-7" alt="Flowbite Logo" />
          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -530,34 +598,51 @@ Show the logo of your brand and link back to the homepage from the top part of t
    </div>
 </aside>
 
-<div class="sm:ml-64 p-4">
-   <div class="border-dashed border-gray-200 dark:border-gray-700 border-2 rounded-lg h-screen p-4">
+<div class="p-4 sm:ml-64">
+   <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
       <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
       </div>
-      <div class="flex items-center justify-center bg-gray-50 rounded h-48 mb-4 dark:bg-gray-800">
-         <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
       </div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-700">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+      </div>
+      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
       </div>
    </div>
@@ -569,7 +654,7 @@ Show the logo of your brand and link back to the homepage from the top part of t
 Use this example to show a navbar together with a sidebar layout for your web application.
 
 {{< example id="sidebar-logo-example" github="components/sidebar.md" bodyClass="!m-0" iframeHeight="640" iframeMaxHeight="640" show_dark=true >}}
-<nav class="fixed z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 top-0">
+<nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
   <div class="px-3 py-3 lg:px-5 lg:pl-3">
     <div class="flex items-center justify-between">
       <div class="flex items-center justify-start">
@@ -622,8 +707,8 @@ Use this example to show a navbar together with a sidebar layout for your web ap
   </div>
 </nav>
 
-<aside id="logo-sidebar" class="w-64 fixed left-0 top-0 h-screen transition-transform -translate-x-full sm:translate-x-0 z-40 pt-20 border-r border-gray-200 bg-white dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
-   <div class="px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800 h-full">
+<aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+   <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
       <ul class="space-y-2">
          <li>
             <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -673,34 +758,51 @@ Use this example to show a navbar together with a sidebar layout for your web ap
    </div>
 </aside>
 
-<div class="sm:ml-64 p-4">
-   <div class="border-dashed border-gray-200 dark:border-gray-700 border-2 rounded-lg h-screen p-4 mt-14">
+<div class="p-4 sm:ml-64">
+   <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
       <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-24 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
       </div>
-      <div class="flex items-center justify-center bg-gray-50 rounded h-48 mb-4 dark:bg-gray-800">
-         <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
       </div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-800">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
-         <div class="flex items-center justify-center bg-gray-50 rounded h-28 dark:bg-gray-700">
-            <p class="text-gray-400 text-2xl dark:text-gray-500">+</p>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+      </div>
+      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+         <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+         </div>
+         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
          </div>
       </div>
    </div>
@@ -720,7 +822,7 @@ Use this example to show the navigation as an off-canvas drawer component when c
 </div>
 
 <!-- drawer component -->
-<div id="drawer-navigation" class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-navigation-label">
+<div id="drawer-navigation" class="fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-navigation-label">
     <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">Menu</h5>
     <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>

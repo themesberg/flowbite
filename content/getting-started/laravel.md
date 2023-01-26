@@ -95,16 +95,16 @@ This will tell the compiler from Tailwind what files to look for to properly app
 @tailwind utilities;
 ```
 
-8. Make sure your compiled CSS is included in the `<head>` then start using Tailwind’s utility classes to style your content.
-
-```js
-@vite('resources/css/app.css')
-```
-
-9. Require the `flowbite.js` file before the end of the `<body>` tag:
+8. Make sure your compiled CSS and JS is included in the `<head>` then start using Tailwind’s utility classes to style your content.
 
 ```html
-<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+@vite(['resources/css/app.css','resources/js/app.js'])
+```
+
+9. Import the Flowbite JavaScript package inside the ./resources/js/app.js file to enable the interactive components such as modals, dropdowns, navbars, and more.
+
+```js
+import 'flowbite';
 ```
 
 Alternatively, you can also include the JavaScript file using CDN:
@@ -113,7 +113,7 @@ Alternatively, you can also include the JavaScript file using CDN:
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
 ```
 
-Now that you've set everything up start up a local development server using `php artisan serve` and run the build process for Vite by using `npm run dev`.
+Now that you've set everything up start up a local development server using `php artisan serve` and run the build process for Vite by using `npm run dev` or build it for production using `npm run build`.
 
 ## Flowbite components
 

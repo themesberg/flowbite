@@ -16,7 +16,22 @@ React is one of the most popular front-end libraries in the world used by websit
 
 Coupled with Tailwind CSS and the React components from Flowbite you will be able to develop applications faster than ever based on the [Flowbite React](https://flowbite-react.com) library.
 
-## Install Tailwind CSS with React
+## Create a new project
+
+The latest recommended way of creating a new React application is to use a front-end tooling software such as Vite or Parcel, but you can also use a more classic method such as Create React App.
+
+### Using Vite React
+
+1. Create a new React project using Vite by running the following two commands:
+
+```bash
+npm create vite@latest my-project -- --template react
+cd my-project
+```
+
+Now that the project has been created you can start a local development server by running `npm run dev` and use the `npm run build` command to create an optimized build for production use.
+
+### Create React App
 
 Follow the next steps to install Tailwind CSS and Flowbite with Create React App.
 
@@ -27,19 +42,23 @@ npx create-react-app my-project
 cd my-project
 ```
 
-2. Install Tailwind CSS by running the following two commands:
+You can now run `npm run start` to start a local server and `npm run build` to create a production build.
+
+## Install Tailwind CSS
+
+Install Tailwind CSS by running the following two commands:
 
 ```bash
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
 
-3. Configure the template paths inside the `tailwind.config.js` file:
+2. Configure the template paths inside the `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     extend: {},
@@ -48,7 +67,7 @@ module.exports = {
 }
 ```
 
-4. Set up the Tailwind directives inside the `./src/index.css` file:
+3. Set up the Tailwind directives inside the `./src/index.css` file:
 
 ```css
 @tailwind base;
@@ -56,13 +75,15 @@ module.exports = {
 @tailwind utilities;
 ```
 
-5. Install Flowbite and Flowbite React by running the following command in your terminal:
+## Install Flowbite
+
+4. Install Flowbite and Flowbite React by running the following command in your terminal:
 
 ```bash
 npm install flowbite flowbite-react
 ```
 
-6. Require Flowbite as a plugin inside your `tailwind.config.js` file:
+5. Require Flowbite as a plugin inside your `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
@@ -74,7 +95,7 @@ module.exports = {
 }
 ```
 
-7. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
+6. Additionally to your own `content` data you should add the Flowbite source paths to apply the classes from the interactive elements in the `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
@@ -86,8 +107,6 @@ module.exports = {
 
 }
 ```
-
-Now you can start the server by running `npm run start` or build the project using `npm run build`.
 
 ## React components
 

@@ -13,7 +13,7 @@ nextLink: getting-started/changelog/
 
 ## Copyright
 
-The Flowbite name and logos are trademarks of Bergside Inc.
+The Flowbite name and logos are trademarks of Bergside Inc. Learn more about the [Flowbite Brand Guideline](https://flowbite.com/brand/).
 
 ## Released code
 

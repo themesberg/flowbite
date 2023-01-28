@@ -685,6 +685,7 @@ Video tutorials and presentations using Flowbite:
 
 ## Copyright and license
 
-The Flowbite name and logos are trademarks of Bergside Inc. 
+The Flowbite name and logos are trademarks of Bergside Inc.
 
 📝 [Read about the licensing terms](https://flowbite.com/docs/getting-started/license/)
+📀 [Brand guideline and trademark usage agreement](https://flowbite.com/brand/)

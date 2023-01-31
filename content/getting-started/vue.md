@@ -6,8 +6,8 @@ group: getting-started
 toc: true
 requires_vue: true
 
-previous: Next.js
-previousLink: getting-started/next-js/
+previous: Remix
+previousLink: getting-started/remix/
 next: Nuxt.js
 nextLink: getting-started/nuxt-js/
 ---

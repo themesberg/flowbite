@@ -7,6 +7,8 @@
     - title: React
     - title: Next.js
       slug: next-js
+    - title: Remix
+      new: true
     - title: Vue
     - title: Nuxt.js
       slug: nuxt-js

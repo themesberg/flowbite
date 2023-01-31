@@ -235,6 +235,7 @@ We also wrote integration guides for the following front-end frameworks and libr
 
 - [📝 Flowbite with React guide](https://flowbite.com/docs/getting-started/react/)
 - [📝 Flowbite with Next.js guide](https://flowbite.com/docs/getting-started/next-js/)
+- [📝 Flowbite with Remix guide](https://flowbite.com/docs/getting-started/remix/)
 - [📝 Flowbite with Vue guide](https://flowbite.com/docs/getting-started/vue/)
 - [📝 Flowbite with Nuxt.js guide](https://flowbite.com/docs/getting-started/nuxt-js/)
 - [📝 Flowbite with Svelte guide](https://flowbite.com/docs/getting-started/svelte/)

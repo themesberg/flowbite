@@ -14,9 +14,9 @@ nextLink: getting-started/vue/
 
 [Remix](https://remix.run/) is a new and increasingly popular full-stack web framework based on React that allows you to build websites with quicker page load by leveraging distributed systems and using the native Web Fetch API to load content from the server.
 
-The Remix framework is being used by hundreds of thousands of developers and large companies one of which is Shopify which actually acquired it on the October 31st, 2022.
+The Remix framework is being used by hundreds of thousands of developers and large companies one of which is Shopify which actually acquired it on October 31st, 2022.
 
-Follow the next steps in this guide to learn how to create a new Remix project and install and setup Tailwind CSS together with the UI components from Flowbite.
+Follow the next steps in this guide to learn how to create a new Remix project and install and se tup Tailwind CSS together with the UI components from Flowbite.
 
 ## Requirements
 

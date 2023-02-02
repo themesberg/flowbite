@@ -10,7 +10,7 @@
     - title: Remix
       new: true
     - title: Vue
-    - title: Nuxt.js
+    - title: Nuxt
       slug: nuxt-js
       new: true
     - title: Laravel

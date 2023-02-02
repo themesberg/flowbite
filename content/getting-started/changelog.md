@@ -32,8 +32,8 @@ We strive to keep a good accountability of all of the version changes that we ma
 
 ### v1.6.1
 
-- Nuxt.js integration guide + starter kit
-- Add data attribute initialisation support for Vue 3 and Nuxt.js
+- Nuxt integration guide + starter kit
+- Add data attribute initialisation support for Vue 3 and Nuxt
 - Remove event listeners from basic `index.js` file and keep it only for `index.umd.js`
 - Fix drawer flickering issue
 - Update Laravel integration guide with Vite (thanks to [@CorWinDev](https://github.com/CorwinDev) for the PR)

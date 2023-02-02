@@ -6,7 +6,7 @@ group: getting-started
 toc: true
 requires_laravel: true
 
-previous: Nuxt.js
+previous: Nuxt
 previousLink: getting-started/nuxt-js/
 next: Svelte
 nextLink: getting-started/svelte/

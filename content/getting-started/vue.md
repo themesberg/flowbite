@@ -8,7 +8,7 @@ requires_vue: true
 
 previous: Remix
 previousLink: getting-started/remix/
-next: Nuxt.js
+next: Nuxt
 nextLink: getting-started/nuxt-js/
 ---
 

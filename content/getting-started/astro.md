@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Astro - FlowBite
-description: Learn how to install Astro with Tailwind CSS and FlowBite and start building modern websites with the fast, content-focused web framework
+description: Learn how to install Astro with Tailwind CSS and Flowbite and start building modern websites with a lightning fast and content-focused web framework
 group: getting-started
 toc: true
 requires_astro: true
@@ -12,59 +12,87 @@ next: Svelte
 nextLink: getting-started/svelte/
 ---
 
-[Astro](https://astro.build/) is an all-in-one web framework for building fast, content-focused websites.
+[Astro](https://astro.build) is a full stack web framework for building lightning fast and content-focused websites featuring component islands, server-first API design, edge-ready deployments and supports hundreds of integrations with technologies like Tailwind CSS, Flowbite, React, Vue, Svelte, and more.
+
+The Astro framework is used by thousands of reputable companies and projects such as Firebase, NordVPN, The Guardian, Trivago and others and it also received a $7M seed investment funding in the beginning of 2022 which guarantees countinuous support and development of the technology.
+
+Follow the next steps in this tutorial to learn how to create a new Astro project, install Tailwind CSS and learn how to leveragae the UI components from Flowbite to build websites even quicker.
 
 ## Requirements
 
-Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow">Node.js</a> installed locally on your computer.
+Before you continue make sure that you have [Node.js](https://nodejs.org/en/) (`v16.12.0` or higher) installed on your local machine and production server to install all required dependencies.
 
-Follow the next steps to install Tailwind CSS and FlowBite with Astro. 
+We also highly recommend you to use VS Code as your standard editor and to install the official [language support extension for Astro](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode) from the VS Marketplace released by the original authors.
 
 ## Create a new project
 
-1. Create a new project using Astro's CLI:
+1. Create a new Astro project running the following command using NPM:
 
 ```bash
-npm init astro
+npm create astro@latest
 ```
 
-2. Select the default template and install the dependencies:
+This command will prompt you some questions and will create a local project based on your answers.
+
+2. Run the following command to start a local development server:
 
 ```bash
-cd awesome-project
+npm run dev
 ```
+
+This will make the project accesible via the browser on `http://localhost:3000`.
+
+3. To create a production build of the project run the following command in your terminal:
+
+```bash
+npm run build
+```
+
+One of the biggest advantages of Astro is the small build size that will be available once deployed to production via the build command - this way the website should load much quicker than using older technologies.
 
 ## Install Tailwind CSS
 
-3. Install Tailwind CSS using Astro's build-in CLI:
+Now that you have installed and configured a working Astro project we can proceed with installing the Tailwind CSS integration based on the official package.
+
+1. Run the following command to install Tailwind CSS and create a configuration file using the NPX command:
 
 ```bash
-npm run astro add tailwind
+npx astro add tailwind
 ```
+
+This command will automatically install Tailwind CSS in the `package.json` file, it will also configure the compilation process and create a new `tailwind.config.cjs` file that configures the template paths.
+
+Now you can write Tailwind CSS classes inside any of the template files and the changes will be applied by generating a `base.css` file and including it into every page.
 
 ## Install Flowbite
 
-4. Install FlowBite using NPM:
+After you've installed both Astro and Tailwind CSS you can also choose to use the free and open-source UI components from Flowbite to make developing websites and user interfaces even faster with interactive elements like navbars, modals, dropdowns, and more.
+
+1. Install Flowbite using NPM inside your terminal:
 
 ```bash
-npm install -D flowbite
+npm install flowbite
 ```
 
-5. Require the FlowBite in tailwind.config.js 
+2. Install the Flowbite plugin for Tailwind CSS inside the `tailwind.config.cjs` file and set up the template paths for the source JavaScript files and dynamic classes.
 
 ```javascript
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [
-        './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'
-    ],
-    theme: {
-      extend: {},
-    },
-    plugins: [
-        require('flowbite/plugin')
-    ],
-  }
-``` 
+	content: [
+		'./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+		'./node_modules/flowbite/**/*.js'
+	],
+	theme: {
+		extend: {},
+	},
+	plugins: [
+		require('flowbite/plugin')
+	],
+}
+```
+
+
 
 ## Flowbite components
 

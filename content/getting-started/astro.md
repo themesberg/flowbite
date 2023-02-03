@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Tailwind CSS Astro - FlowBite
+title: Tailwind CSS Astro - Flowbite
 description: Learn how to install Astro with Tailwind CSS and Flowbite and start building modern websites with a lightning fast and content-focused web framework
 group: getting-started
 toc: true

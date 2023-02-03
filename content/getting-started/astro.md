@@ -14,11 +14,13 @@ nextLink: getting-started/svelte/
 
 [Astro](https://astro.build/) is an all-in-one web framework for building fast, content-focused websites.
 
-## Install Tailwind CSS with Astro
+## Requirements
 
 Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow">Node.js</a> installed locally on your computer.
 
 Follow the next steps to install Tailwind CSS and FlowBite with Astro. 
+
+## Create a new project
 
 1. Create a new project using Astro's CLI:
 
@@ -32,11 +34,15 @@ npm init astro
 cd awesome-project
 ```
 
+## Install Tailwind CSS
+
 3. Install Tailwind CSS using Astro's build-in CLI:
 
 ```bash
 npm run astro add tailwind
 ```
+
+## Install Flowbite
 
 4. Install FlowBite using NPM:
 
@@ -59,3 +65,7 @@ module.exports = {
     ],
   }
 ``` 
+
+## Flowbite components
+
+## Astro starter project

@@ -7,8 +7,10 @@
     - title: React
     - title: Next.js
       slug: next-js
+    - title: Remix
+      new: true
     - title: Vue
-    - title: Nuxt.js
+    - title: Nuxt
       slug: nuxt-js
       new: true
     - title: Laravel
@@ -33,8 +35,8 @@
 
 - title: Components
   pages:
-    - title: Alerts
     - title: Accordion
+    - title: Alerts
     - title: Avatar
     - title: Badge
     - title: Breadcrumb
@@ -42,35 +44,35 @@
     - title: Button Group
     - title: Card
     - title: Carousel
+    - title: Drawer
     - title: Dropdowns
+    - title: Footer
+    - title: Sidebar
     - title: Forms
     - title: Indicators
       new: true
+    - title: KBD
     - title: List Group
-    - title: Typography
-    - title: Modal
-    - title: Tabs
-    - title: Navbar
     - title: Mega menu
-    - title: Footer
-    - title: Sidebar
-    - title: Drawer
-    - title: Skeleton
+    - title: Modal
+    - title: Navbar
     - title: Pagination
+    - title: Popover
+    - title: Progress
+    - title: Rating
+    - title: Skeleton
+    - title: Spinner
     - title: Speed Dial
       new: true
-    - title: Rating
-    - title: Timeline
-    - title: Video
-    - title: KBD
-    - title: Progress
-    - title: Popover
-    - title: Tables
-    - title: Spinner
     - title: Stepper
       new: true
+    - title: Tabs
+    - title: Tables
+    - title: Timeline
     - title: Toast
     - title: Tooltips
+    - title: Typography
+    - title: Video
 
 - title: Forms
   pages:

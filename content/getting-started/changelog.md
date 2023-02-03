@@ -15,6 +15,16 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v1.6.3
+
+- Added dropdown hover functionality with delay option and examples ([issue #208](https://github.com/themesberg/flowbite/issues/208))
+- Fixed clicking outside of the Popover component not closing when using the "click" trigger type ([issue #242](https://github.com/themesberg/flowbite/issues/242))
+- Introduced the "none" option for Tooltip, Speed Dial, Popover and Dropdown components for trigger type ([issue #181](https://github.com/themesberg/flowbite/issues/181))
+- Fixed Tooltip and Popover click events on Safari browsers when using mobile devices ([issue #246](https://github.com/themesberg/flowbite/issues/246) and [issue #413](https://github.com/themesberg/flowbite/issues/413))
+- Improve the consistency of the dropdown components across the whole documentation using `border-lg` ([issue #276](https://github.com/themesberg/flowbite/issues/276))
+- Added the optional closable option to the Modal component preventing it from being closed when hitting the ESC button (thanks for the PR [@CorwinDev](https://github.com/CorwinDev))
+- Improved sidebar component examples by including a hamburger icon and multiple layouts
+
 ### v1.6.2
 
 - add event listeners for data attributes back to `index.ts`
@@ -22,8 +32,8 @@ We strive to keep a good accountability of all of the version changes that we ma
 
 ### v1.6.1
 
-- Nuxt.js integration guide + starter kit
-- Add data attribute initialisation support for Vue 3 and Nuxt.js
+- Nuxt integration guide + starter kit
+- Add data attribute initialisation support for Vue 3 and Nuxt
 - Remove event listeners from basic `index.js` file and keep it only for `index.umd.js`
 - Fix drawer flickering issue
 - Update Laravel integration guide with Vite (thanks to [@CorWinDev](https://github.com/CorwinDev) for the PR)

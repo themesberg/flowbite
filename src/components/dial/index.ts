@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import type { DialOptions, TriggerType } from './types';
+import type { DialOptions, DialTriggerType } from './types';
 import { DialInterface } from './interface';
 
 const Default: DialOptions = {
@@ -35,7 +35,7 @@ class Dial implements DialInterface {
             const triggerEventTypes = this._getTriggerEventTypes(
                 this._options.triggerType
             );
-            triggerEventTypes.show.forEach((ev: string) => {
+            triggerEventTypes.showEvents.forEach((ev: string) => {
                 this._triggerEl.addEventListener(ev, () => {
                     this.show();
                 });
@@ -43,13 +43,11 @@ class Dial implements DialInterface {
                     this.show();
                 });
             });
-            triggerEventTypes.hide.forEach((ev: string) => {
+            triggerEventTypes.hideEvents.forEach((ev: string) => {
                 this._parentEl.addEventListener(ev, () => {
-                    setTimeout(() => {
-                        if (!this._parentEl.matches(':hover')) {
-                            this.hide();
-                        }
-                    }, 100);
+                    if (!this._parentEl.matches(':hover')) {
+                        this.hide();
+                    }
                 });
             });
         }
@@ -93,22 +91,27 @@ class Dial implements DialInterface {
         return this._visible;
     }
 
-    _getTriggerEventTypes(triggerType: TriggerType) {
+    _getTriggerEventTypes(triggerType: DialTriggerType) {
         switch (triggerType) {
             case 'hover':
                 return {
-                    show: ['mouseenter', 'focus'],
-                    hide: ['mouseleave', 'blur'],
+                    showEvents: ['mouseenter', 'focus'],
+                    hideEvents: ['mouseleave', 'blur'],
                 };
             case 'click':
                 return {
-                    show: ['click', 'focus'],
-                    hide: ['focusout', 'blur'],
+                    showEvents: ['click', 'focus'],
+                    hideEvents: ['focusout', 'blur'],
+                };
+            case 'none':
+                return {
+                    showEvents: [],
+                    hideEvents: [],
                 };
             default:
                 return {
-                    show: ['mouseenter', 'focus'],
-                    hide: ['mouseleave', 'blur'],
+                    showEvents: ['mouseenter', 'focus'],
+                    hideEvents: ['mouseleave', 'blur'],
                 };
         }
     }

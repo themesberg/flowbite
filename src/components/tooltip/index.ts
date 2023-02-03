@@ -12,6 +12,7 @@ const Default: TooltipOptions = {
     triggerType: 'hover',
     onShow: () => {},
     onHide: () => {},
+    onToggle: () => {},
 };
 
 class Tooltip implements TooltipInterface {
@@ -19,6 +20,8 @@ class Tooltip implements TooltipInterface {
     _triggerEl: HTMLElement | null;
     _options: TooltipOptions;
     _popperInstance: PopperInstance;
+    _clickOutsideEventListener: EventListenerOrEventListenerObject;
+    _visible: boolean;
 
     constructor(
         targetEl: HTMLElement | null = null,
@@ -29,26 +32,31 @@ class Tooltip implements TooltipInterface {
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
         this._popperInstance = this._createPopperInstance();
+        this._visible = false;
         this._init();
     }
 
     _init() {
         if (this._triggerEl) {
-            const triggerEvents = this._getTriggerEvents();
-            triggerEvents.showEvents.forEach((ev) => {
-                this._triggerEl.addEventListener(ev, () => {
-                    this.show();
-                });
-            });
-            triggerEvents.hideEvents.forEach((ev) => {
-                this._triggerEl.addEventListener(ev, () => {
-                    this.hide();
-                });
-            });
+            this._setupEventListeners();
         }
     }
 
-    private _createPopperInstance() {
+    _setupEventListeners() {
+        const triggerEvents = this._getTriggerEvents();
+        triggerEvents.showEvents.forEach((ev) => {
+            this._triggerEl.addEventListener(ev, () => {
+                this.show();
+            });
+        });
+        triggerEvents.hideEvents.forEach((ev) => {
+            this._triggerEl.addEventListener(ev, () => {
+                this.hide();
+            });
+        });
+    }
+
+    _createPopperInstance() {
         return createPopper(this._triggerEl, this._targetEl, {
             placement: this._options.placement,
             modifiers: [
@@ -62,7 +70,7 @@ class Tooltip implements TooltipInterface {
         });
     }
 
-    private _getTriggerEvents() {
+    _getTriggerEvents() {
         switch (this._options.triggerType) {
             case 'hover':
                 return {
@@ -74,11 +82,59 @@ class Tooltip implements TooltipInterface {
                     showEvents: ['click', 'focus'],
                     hideEvents: ['focusout', 'blur'],
                 };
+            case 'none':
+                return {
+                    showEvents: [],
+                    hideEvents: [],
+                };
             default:
                 return {
                     showEvents: ['mouseenter', 'focus'],
                     hideEvents: ['mouseleave', 'blur'],
                 };
+        }
+    }
+
+    _setupClickOutsideListener() {
+        this._clickOutsideEventListener = (ev: MouseEvent) => {
+            this._handleClickOutside(ev, this._targetEl);
+        };
+        document.body.addEventListener(
+            'click',
+            this._clickOutsideEventListener,
+            true
+        );
+    }
+
+    _removeClickOutsideListener() {
+        document.body.removeEventListener(
+            'click',
+            this._clickOutsideEventListener,
+            true
+        );
+    }
+
+    _handleClickOutside(ev: Event, targetEl: HTMLElement) {
+        const clickedEl = ev.target as Node;
+        if (
+            clickedEl !== targetEl &&
+            !targetEl.contains(clickedEl) &&
+            !this._triggerEl.contains(clickedEl) &&
+            this.isVisible()
+        ) {
+            this.hide();
+        }
+    }
+
+    isVisible() {
+        return this._visible;
+    }
+
+    toggle() {
+        if (this.isVisible()) {
+            this.hide();
+        } else {
+            this.show();
         }
     }
 
@@ -95,8 +151,14 @@ class Tooltip implements TooltipInterface {
             ],
         }));
 
+        // handle click outside
+        this._setupClickOutsideListener();
+
         // Update its position
         this._popperInstance.update();
+
+        // set visibility
+        this._visible = true;
 
         // callback function
         this._options.onShow(this);
@@ -114,6 +176,12 @@ class Tooltip implements TooltipInterface {
                 { name: 'eventListeners', enabled: false },
             ],
         }));
+
+        // handle click outside
+        this._removeClickOutsideListener();
+
+        // set visibility
+        this._visible = false;
 
         // callback function
         this._options.onHide(this);

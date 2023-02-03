@@ -487,6 +487,8 @@ const options = {
 Create a new carousel object using the options set above.
 
 ```javascript
+import { Carousel } from 'flowbite';
+
 const carousel = new Carousel(items, options);
 ```
 

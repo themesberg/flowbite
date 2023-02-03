@@ -6,9 +6,9 @@ group: getting-started
 toc: true
 requires_vue: true
 
-previous: Next.js
-previousLink: getting-started/next-js/
-next: Nuxt.js
+previous: Remix
+previousLink: getting-started/remix/
+next: Nuxt
 nextLink: getting-started/nuxt-js/
 ---
 
@@ -193,7 +193,6 @@ import {
     initDials, 
     initDismisses, 
     initDrawers, 
-    initDropdowns, 
     initDropdowns, 
     initModals, 
     initPopovers, 

@@ -12,8 +12,10 @@ const Default: DropdownOptions = {
     triggerType: 'click',
     offsetSkidding: 0,
     offsetDistance: 10,
+    delay: 300,
     onShow: () => {},
     onHide: () => {},
+    onToggle: () => {},
 };
 
 class Dropdown implements DropdownInterface {
@@ -39,8 +41,53 @@ class Dropdown implements DropdownInterface {
 
     _init() {
         if (this._triggerEl) {
-            this._triggerEl.addEventListener('click', () => {
-                this.toggle();
+            this._setupEventListeners();
+        }
+    }
+
+    _setupEventListeners() {
+        const triggerEvents = this._getTriggerEvents();
+
+        // click event handling for trigger element
+        if (this._options.triggerType === 'click') {
+            triggerEvents.showEvents.forEach((ev) => {
+                this._triggerEl.addEventListener(ev, () => {
+                    this.toggle();
+                });
+            });
+        }
+
+        // hover event handling for trigger element
+        if (this._options.triggerType === 'hover') {
+            triggerEvents.showEvents.forEach((ev) => {
+                this._triggerEl.addEventListener(ev, () => {
+                    if (ev === 'click') {
+                        this.toggle();
+                    } else {
+                        setTimeout(() => {
+                            this.show();
+                        }, this._options.delay);
+                    }
+                });
+                this._targetEl.addEventListener(ev, () => {
+                    this.show();
+                });
+            });
+            triggerEvents.hideEvents.forEach((ev) => {
+                this._triggerEl.addEventListener(ev, () => {
+                    setTimeout(() => {
+                        if (!this._targetEl.matches(':hover')) {
+                            this.hide();
+                        }
+                    }, this._options.delay);
+                });
+                this._targetEl.addEventListener(ev, () => {
+                    setTimeout(() => {
+                        if (!this._triggerEl.matches(':hover')) {
+                            this.hide();
+                        }
+                    }, this._options.delay);
+                });
             });
         }
     }
@@ -87,18 +134,48 @@ class Dropdown implements DropdownInterface {
             clickedEl !== targetEl &&
             !targetEl.contains(clickedEl) &&
             !this._triggerEl.contains(clickedEl) &&
-            this._visible
+            this.isVisible()
         ) {
             this.hide();
         }
     }
 
+    _getTriggerEvents() {
+        switch (this._options.triggerType) {
+            case 'hover':
+                return {
+                    showEvents: ['mouseenter', 'click'],
+                    hideEvents: ['mouseleave'],
+                };
+            case 'click':
+                return {
+                    showEvents: ['click'],
+                    hideEvents: [],
+                };
+            case 'none':
+                return {
+                    showEvents: [],
+                    hideEvents: [],
+                };
+            default:
+                return {
+                    showEvents: ['click'],
+                    hideEvents: [],
+                };
+        }
+    }
+
     toggle() {
-        if (this._visible) {
+        if (this.isVisible()) {
             this.hide();
         } else {
             this.show();
         }
+        this._options.onToggle(this);
+    }
+
+    isVisible() {
+        return this._visible;
     }
 
     show() {
@@ -167,18 +244,26 @@ export function initDropdowns() {
                 const offsetDistance = $triggerEl.getAttribute(
                     'data-dropdown-offset-distance'
                 );
+                const triggerType = $triggerEl.getAttribute(
+                    'data-dropdown-trigger'
+                );
+                const delay = $triggerEl.getAttribute('data-dropdown-delay');
 
                 new Dropdown(
                     $dropdownEl as HTMLElement,
                     $triggerEl as HTMLElement,
                     {
                         placement: placement ? placement : Default.placement,
+                        triggerType: triggerType
+                            ? triggerType
+                            : Default.triggerType,
                         offsetSkidding: offsetSkidding
                             ? parseInt(offsetSkidding)
                             : Default.offsetSkidding,
                         offsetDistance: offsetDistance
                             ? parseInt(offsetDistance)
                             : Default.offsetDistance,
+                        delay: delay ? parseInt(delay) : Default.delay,
                     } as DropdownOptions
                 );
             } else {

@@ -409,6 +409,8 @@ const options = {
 Create a new Tabs object based on the parameters we've previously set.
 
 ```javascript
+import { Tabs } from 'flowbite';
+
 /*
 * tabElements: array of tab objects
 * options: optional

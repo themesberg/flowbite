@@ -88,13 +88,13 @@ The quickest way to get started working with Flowbite is to simply include the C
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
 ```
 
 And include the following javascript file before the end of the `body` tag:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
 ```
 
 ### Bundled JavaScript
@@ -235,8 +235,9 @@ We also wrote integration guides for the following front-end frameworks and libr
 
 - [📝 Flowbite with React guide](https://flowbite.com/docs/getting-started/react/)
 - [📝 Flowbite with Next.js guide](https://flowbite.com/docs/getting-started/next-js/)
+- [📝 Flowbite with Remix guide](https://flowbite.com/docs/getting-started/remix/)
 - [📝 Flowbite with Vue guide](https://flowbite.com/docs/getting-started/vue/)
-- [📝 Flowbite with Nuxt.js guide](https://flowbite.com/docs/getting-started/nuxt-js/)
+- [📝 Flowbite with Nuxt guide](https://flowbite.com/docs/getting-started/nuxt-js/)
 - [📝 Flowbite with Svelte guide](https://flowbite.com/docs/getting-started/svelte/)
 
 ### Back-end Frameworks
@@ -659,7 +660,7 @@ If you need the Figma files for the components you can check out our website for
 
 ## Flowbite Blocks
 
-Check out Flowbite Blocks to get access to over 250+ website sections coded in Tailwind CSS and Flowbite:
+Check out Flowbite Blocks to get access to over 270+ website sections coded in Tailwind CSS and Flowbite:
 
 📦 [Check out Flowbite Blocks](https://flowbite.com/blocks/)
 
@@ -685,6 +686,7 @@ Video tutorials and presentations using Flowbite:
 
 ## Copyright and license
 
-The Flowbite name and logos are trademarks of Bergside Inc. 
+The Flowbite name and logos are trademarks of Bergside Inc.
 
-📝 [Read about the licensing terms](https://flowbite.com/docs/getting-started/license/)
+- 📝 [Read about the licensing terms](https://flowbite.com/docs/getting-started/license/)
+- 📀 [Brand guideline and trademark usage agreement](https://flowbite.com/brand/)

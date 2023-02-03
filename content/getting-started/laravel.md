@@ -6,7 +6,7 @@ group: getting-started
 toc: true
 requires_laravel: true
 
-previous: Nuxt.js
+previous: Nuxt
 previousLink: getting-started/nuxt-js/
 next: Astro
 nextLink: getting-started/astro/
@@ -52,13 +52,13 @@ You can now access the Laravel application on `http://localhost:8000`.
 
 This command will initialize a blank Laravel project that you can get started with.
 
-3. Install Tailwind CSS and Flowbite using NPM:
+4. Install Tailwind CSS and Flowbite using NPM:
 
 ```javascript
 npm install -D tailwindcss postcss autoprefixer flowbite
 ```
 
-4. Create a Tailwind CSS config file:
+5. Create a Tailwind CSS config file:
 
 ```bash
 npx tailwindcss init -p
@@ -66,7 +66,7 @@ npx tailwindcss init -p
 
 A new `tailwind.config.js` file will be created inside your root folder.
 
-5. Add the view paths and require Flowbite as a plugin inside `tailwind.config.js`:
+6. Add the view paths and require Flowbite as a plugin inside `tailwind.config.js`:
 
 ```javascript
 module.exports = {
@@ -87,7 +87,7 @@ module.exports = {
 
 This will tell the compiler from Tailwind what files to look for to properly apply the classes inside the final CSS file and it will also install the extra plugin options from Flowbite.
 
-6. Add the directives inside the `./resources/css/app.css` file:
+7. Add the directives inside the `./resources/css/app.css` file:
 
 ```css
 @tailwind base;
@@ -95,16 +95,16 @@ This will tell the compiler from Tailwind what files to look for to properly app
 @tailwind utilities;
 ```
 
-7. Make sure your compiled CSS is included in the `<head>` then start using Tailwind’s utility classes to style your content.
+8. Make sure your compiled CSS and JS is included in the `<head>` then start using Tailwind’s utility classes to style your content.
 
-```js
-@vite('resources/css/app.css')
+```javascript
+@vite(['resources/css/app.css','resources/js/app.js'])
 ```
 
-8. Require the `flowbite.js` file before the end of the `<body>` tag:
+9. Import the Flowbite JavaScript package inside the `./resources/js/app.js` file to enable the interactive components such as modals, dropdowns, navbars, and more.
 
-```html
-<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+```javascript
+import 'flowbite';
 ```
 
 Alternatively, you can also include the JavaScript file using CDN:
@@ -113,7 +113,7 @@ Alternatively, you can also include the JavaScript file using CDN:
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
 ```
 
-Now that you've set everything up start up a local development server using `php artisan serve` and run the build process for Vite by using `npm run dev`.
+Now that you've set everything up start up a local development server using `php artisan serve` and run the build process for Vite by using `npm run dev` or build it for production using `npm run build`.
 
 ## Flowbite components
 

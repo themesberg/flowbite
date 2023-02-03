@@ -236,11 +236,11 @@ Learn how to <a href="{{< ref "getting-started/vue" >}}">install Tailwind CSS an
   {{< requires_nuxtjs >}}
 </div>
 
-## Nuxt.js
+## Nuxt
 
-If you're using Vue 3 as a front-end library and Nuxt.js as a framework you can also use the components from Flowbite Vue such as the modals, dropdowns, and navbars to speed up your development time coupled with the utility classes from Tailwind CSS.
+If you're using Vue 3 as a front-end library and Nuxt as a framework you can also use the components from Flowbite Vue such as the modals, dropdowns, and navbars to speed up your development time coupled with the utility classes from Tailwind CSS.
 
-Learn how to <a href="{{< ref "getting-started/nuxt-js" >}}">install Tailwind CSS and Flowbite with Nuxt.js and Vue 3</a>.
+Learn how to <a href="{{< ref "getting-started/nuxt-js" >}}">install Tailwind CSS and Flowbite with Nuxt and Vue 3</a>.
 
 <div class="mt-8 -mb-5">
   {{< requires_laravel >}}

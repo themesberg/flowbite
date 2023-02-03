@@ -1,4 +1,4 @@
-import { DialOptions, TriggerEventTypes, TriggerType } from './types';
+import { DialOptions, DialTriggerEventTypes, DialTriggerType } from './types';
 
 export declare interface DialInterface {
     _parentEl: HTMLElement;
@@ -13,5 +13,5 @@ export declare interface DialInterface {
     hide(): void;
     show(): void;
     toggle(): void;
-    _getTriggerEventTypes(triggerType: TriggerType): TriggerEventTypes;
+    _getTriggerEventTypes(triggerType: DialTriggerType): DialTriggerEventTypes;
 }

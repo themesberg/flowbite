@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Tailwind CSS Nuxt.js - Flowbite
+title: Tailwind CSS Nuxt - Flowbite
 description: Learn how to install Tailwind CSS with Flowbite for your Nuxt 3 project and start developing with the most popular Vue-based framework inspired by Next.js
 group: getting-started
 toc: true
@@ -12,17 +12,17 @@ next: Laravel
 nextLink: getting-started/laravel/
 ---
 
-Nuxt.js is a free and open-source JavaScript framework based on Vue.js that helps you develop modern web applications using SSR (server-side rendering) which provides a faster load, better SEO (search engine optimization), and better caching capabilities.
+[Nuxt](https://nuxt.com/) is a free and open-source JavaScript framework based on Vue.js that helps you develop modern web applications using SSR (server-side rendering) which provides a faster load, better SEO (search engine optimization), and better caching capabilities.
 
 The framework was inspired by Vercel's Next.js framework built with React and it is being used by large companies such as Ecosia, Upwork, NASA, Appsumo, and CDN JS.
 
-If you follow this guide you will learn how to install the latest version 3 of Nuxt.js with Tailwind CSS and Flowbite and also show you how to use the TypeScript version.
+If you follow this guide you will learn how to install the latest version 3 of Nuxt with Tailwind CSS and Flowbite and also show you how to use the TypeScript version.
 
-## Create a Nuxt.js project
+## Create a Nuxt project
 
 Before continuing make sure that you have Node.js and NPM installed on your local machine.
 
-1. Create a new Nuxt.js project by running the following command in your terminal:
+1. Create a new Nuxt project by running the following command in your terminal:
 
 ```bash
 npx nuxi init project-name
@@ -40,11 +40,11 @@ npm install
 npm run dev
 ```
 
-This will make the Nuxt.js project accessible via the browser.
+This will make the Nuxt project accessible via the browser.
 
 ## Install Tailwind CSS
 
-Now that you have locally set up a Nuxt.js project we will proceed by installing Tailwind CSS.
+Now that you have locally set up a Nuxt project we will proceed by installing Tailwind CSS.
 
 1. Require and install the NuxtTailwind module by installing it via NPM:
 
@@ -52,7 +52,7 @@ Now that you have locally set up a Nuxt.js project we will proceed by installing
 npm install --save-dev @nuxtjs/tailwindcss
 ```
 
-2. Configure the Nuxt.js configuration file to include the Tailwind module:
+2. Configure the Nuxt configuration file to include the Tailwind module:
 
 ```javascript
 // nuxt.config.{js,ts}
@@ -77,7 +77,7 @@ npx tailwindcss init
 @tailwind utilities;
 ```
 
-5. Set up the template paths for your Nuxt.js project inside the Tailwind CSS configuration file:
+5. Set up the template paths for your Nuxt project inside the Tailwind CSS configuration file:
 
 ```javascript
 module.exports = {
@@ -99,7 +99,7 @@ Tailwind CSS is now configured in your project and if you add the utility classe
 
 ## Install Flowbite
 
-After installing both Nuxt.js and Tailwind CSS inside your project we can proceed by installing Flowbite.
+After installing both Nuxt and Tailwind CSS inside your project we can proceed by installing Flowbite.
 
 1. Install Flowbite via NPM and save it in your `package.json` file:
 
@@ -131,7 +131,7 @@ module.exports = {
 
 ## Flowbite Components
 
-Now that you have successfully installed Nuxt.js, Tailwind CSS and Flowbite you can start importing and using components from the open-source library of [Flowbite](https://flowbite.com) such as modals, navbars, tables, dropdowns, and more.
+Now that you have successfully installed Nuxt, Tailwind CSS and Flowbite you can start importing and using components from the open-source library of [Flowbite](https://flowbite.com) such as modals, navbars, tables, dropdowns, and more.
 
 Let's use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Modal component</a> as an example and copy-paste the markup from the documentation inside your `app.vue` page:
 
@@ -178,7 +178,7 @@ Let's use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Moda
 
 ### Data attributes
 
-You can automatically make the interactive components work by importing the init functions from the Flowbite package using the onMounted lifecycle method from Nuxt.js.
+You can automatically make the interactive components work by importing the init functions from the Flowbite package using the onMounted lifecycle method from Nuxt.
 
 For example, here's how would initialize all of the modals inside your Vue template:
 
@@ -210,7 +210,6 @@ import {
     initDials, 
     initDismisses, 
     initDrawers, 
-    initDropdowns, 
     initDropdowns, 
     initModals, 
     initPopovers, 
@@ -337,10 +336,10 @@ modal.show();
 
 Learn more about using <a href="{{< ref "getting-started/typescript" >}}#javascript-behaviour">Flowbite with TypeScript</a> on the official docs page.
 
-## Nuxt.js Starter Project
+## Nuxt Starter Project
 
-We have created a free and open-source [Tailwind CSS and Nuxt.js starter project](https://github.com/themesberg/tailwind-nuxt-starter) showcasing all of the interactive UI components from Flowbite to help you get started building web applications.
+We have created a free and open-source [Tailwind CSS and Nuxt starter project](https://github.com/themesberg/tailwind-nuxt-starter) showcasing all of the interactive UI components from Flowbite to help you get started building web applications.
 
 ## Flowbite Vue Library
 
-We also started working on a [standalone Flowbite Vue 3 UI component library](https://github.com/themesberg/flowbite-vue) which when launched in a stable version will be the recommended way of working in a Vue 3 or Nuxt.js environment. Contributions are more than welcome!
+We also started working on a [standalone Flowbite Vue 3 UI component library](https://github.com/themesberg/flowbite-vue) which when launched in a stable version will be the recommended way of working in a Vue 3 or Nuxt environment. Contributions are more than welcome!

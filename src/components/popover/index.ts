@@ -13,6 +13,7 @@ const Default: PopoverOptions = {
     triggerType: 'hover',
     onShow: () => {},
     onHide: () => {},
+    onToggle: () => {},
 };
 
 class Popover implements PopoverInterface {
@@ -20,6 +21,8 @@ class Popover implements PopoverInterface {
     _triggerEl: HTMLElement;
     _options: PopoverOptions;
     _popperInstance: PopperInstance;
+    _clickOutsideEventListener: EventListenerOrEventListenerObject;
+    _visible: boolean;
 
     constructor(
         targetEl: HTMLElement | null = null,
@@ -30,37 +33,43 @@ class Popover implements PopoverInterface {
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
         this._popperInstance = this._createPopperInstance();
+        this._visible = false;
         this._init();
     }
 
     _init() {
         if (this._triggerEl) {
-            const triggerEvents = this._getTriggerEvents();
-            triggerEvents.showEvents.forEach((ev) => {
-                this._triggerEl.addEventListener(ev, () => {
-                    this.show();
-                });
-                this._targetEl.addEventListener(ev, () => {
-                    this.show();
-                });
-            });
-            triggerEvents.hideEvents.forEach((ev) => {
-                this._triggerEl.addEventListener(ev, () => {
-                    setTimeout(() => {
-                        if (!this._targetEl.matches(':hover')) {
-                            this.hide();
-                        }
-                    }, 100);
-                });
-                this._targetEl.addEventListener(ev, () => {
-                    setTimeout(() => {
-                        if (!this._triggerEl.matches(':hover')) {
-                            this.hide();
-                        }
-                    }, 100);
-                });
-            });
+            this._setupEventListeners();
         }
+    }
+
+    _setupEventListeners() {
+        const triggerEvents = this._getTriggerEvents();
+
+        triggerEvents.showEvents.forEach((ev) => {
+            this._triggerEl.addEventListener(ev, () => {
+                this.show();
+            });
+            this._targetEl.addEventListener(ev, () => {
+                this.show();
+            });
+        });
+        triggerEvents.hideEvents.forEach((ev) => {
+            this._triggerEl.addEventListener(ev, () => {
+                setTimeout(() => {
+                    if (!this._targetEl.matches(':hover')) {
+                        this.hide();
+                    }
+                }, 100);
+            });
+            this._targetEl.addEventListener(ev, () => {
+                setTimeout(() => {
+                    if (!this._triggerEl.matches(':hover')) {
+                        this.hide();
+                    }
+                }, 100);
+            });
+        });
     }
 
     _createPopperInstance() {
@@ -89,12 +98,61 @@ class Popover implements PopoverInterface {
                     showEvents: ['click', 'focus'],
                     hideEvents: ['focusout', 'blur'],
                 };
+            case 'none':
+                return {
+                    showEvents: [],
+                    hideEvents: [],
+                };
             default:
                 return {
                     showEvents: ['mouseenter', 'focus'],
                     hideEvents: ['mouseleave', 'blur'],
                 };
         }
+    }
+
+    _setupClickOutsideListener() {
+        this._clickOutsideEventListener = (ev: MouseEvent) => {
+            this._handleClickOutside(ev, this._targetEl);
+        };
+        document.body.addEventListener(
+            'click',
+            this._clickOutsideEventListener,
+            true
+        );
+    }
+
+    _removeClickOutsideListener() {
+        document.body.removeEventListener(
+            'click',
+            this._clickOutsideEventListener,
+            true
+        );
+    }
+
+    _handleClickOutside(ev: Event, targetEl: HTMLElement) {
+        const clickedEl = ev.target as Node;
+        if (
+            clickedEl !== targetEl &&
+            !targetEl.contains(clickedEl) &&
+            !this._triggerEl.contains(clickedEl) &&
+            this.isVisible()
+        ) {
+            this.hide();
+        }
+    }
+
+    isVisible() {
+        return this._visible;
+    }
+
+    toggle() {
+        if (this.isVisible()) {
+            this.hide();
+        } else {
+            this.show();
+        }
+        this._options.onToggle(this);
     }
 
     show() {
@@ -110,8 +168,14 @@ class Popover implements PopoverInterface {
             ],
         }));
 
+        // handle click outside
+        this._setupClickOutsideListener();
+
         // Update its position
         this._popperInstance.update();
+
+        // set visibility to true
+        this._visible = true;
 
         // callback function
         this._options.onShow(this);
@@ -129,6 +193,12 @@ class Popover implements PopoverInterface {
                 { name: 'eventListeners', enabled: false },
             ],
         }));
+
+        // handle click outside
+        this._removeClickOutsideListener();
+
+        // set visibility to false
+        this._visible = false;
 
         // callback function
         this._options.onHide(this);

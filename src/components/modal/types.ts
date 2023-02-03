@@ -16,6 +16,7 @@ export declare type ModalOptions = {
     placement?: modalPlacement;
     backdropClasses?: string;
     backdrop?: modalBackdrop;
+    closable?: boolean;
     onShow?: (modal: ModalInterface) => void;
     onHide?: (modal: ModalInterface) => void;
     onToggle?: (modal: ModalInterface) => void;

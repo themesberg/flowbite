@@ -8,8 +8,8 @@ requires_laravel: true
 
 previous: Nuxt
 previousLink: getting-started/nuxt-js/
-next: Svelte
-nextLink: getting-started/svelte/
+next: Astro
+nextLink: getting-started/astro/
 ---
 
 Laravel is the most popular PHP web framework based on the model-view-controller (MCV) model that helps you build modern web applications and API's.
@@ -42,7 +42,7 @@ laravel new awesome-project
 cd awesome-project
 ```
 
-3. Start the development server using the following command:
+Start the development server using the following command:
 
 ```bash
 php artisan serve

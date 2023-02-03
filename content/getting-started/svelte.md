@@ -6,8 +6,8 @@ group: getting-started
 toc: true
 requires_svelte: true
 
-previous: Laravel
-previousLink: getting-started/laravel/
+previous: Astro
+previousLink: getting-started/astro/
 next: Ruby on Rails
 nextLink: getting-started/rails/
 ---

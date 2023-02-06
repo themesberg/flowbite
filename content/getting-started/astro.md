@@ -12,11 +12,11 @@ next: Svelte
 nextLink: getting-started/svelte/
 ---
 
-[Astro](https://astro.build) is a full stack web framework for building lightning fast and content-focused websites featuring component islands, server-first API design, edge-ready deployments and supports hundreds of integrations with technologies like Tailwind CSS, Flowbite, React, Vue, Svelte, and more.
+[Astro](https://astro.build) is a full-stack web framework for building lightning-fast and content-focused websites featuring component islands, server-first API design, edge-ready deployments and supports hundreds of integrations with technologies like Tailwind CSS, Flowbite, React, Vue, Svelte, and more.
 
-The Astro framework is used by thousands of reputable companies and projects such as Firebase, NordVPN, The Guardian, Trivago and others and it also received a $7M seed investment funding in the beginning of 2022 which guarantees countinuous support and development of the technology.
+The Astro framework is used by thousands of reputable companies and projects such as Firebase, NordVPN, The Guardian, Trivago and others and it also received a $7M seed investment funding at the beginning of 2022 which guarantees continuous support and development of the technology.
 
-Follow the next steps in this tutorial to learn how to create a new Astro project, install Tailwind CSS and learn how to leveragae the UI components from Flowbite to build websites even quicker.
+Follow the next steps in this tutorial to learn how to create a new Astro project, install Tailwind CSS and learn how to leverage the UI components from Flowbite to build websites even quicker.
 
 ## Requirements
 
@@ -32,7 +32,7 @@ We also highly recommend you to use VS Code as your standard editor and to insta
 npm create astro@latest
 ```
 
-This command will prompt you some questions and will create a local project based on your answers.
+This command will prompt you with some questions and will create a local project based on your answers.
 
 2. Run the following command to start a local development server:
 
@@ -40,7 +40,7 @@ This command will prompt you some questions and will create a local project base
 npm run dev
 ```
 
-This will make the project accesible via the browser on `http://localhost:3000`.
+This will make the project accessible via the browser on `http://localhost:3000`.
 
 3. To create a production build of the project run the following command in your terminal:
 
@@ -62,7 +62,7 @@ npx astro add tailwind
 
 This command will automatically install Tailwind CSS in the `package.json` file, it will also configure the compilation process and create a new `tailwind.config.cjs` file that configures the template paths.
 
-Now you can write Tailwind CSS classes inside any of the template files and the changes will be applied by generating a `base.css` file and including it into every page.
+Now you can write Tailwind CSS classes inside any of the template files and the changes will be applied by generating a `base.css` file and including it on every page.
 
 ## Install Flowbite
 
@@ -108,7 +108,7 @@ This allows you to use the data attributes from the Flowbite component examples 
 
 ### ESM/CJS imports
 
-Alternatively you can import standalone components such as the Modal and set up the event listeners yourself in a local `<script>` tag for the Astro files. 
+Alternatively, you can import standalone components such as the Modal and set up the event listeners yourself in a local `<script>` tag for the Astro files. 
 
 Since version 1.6.0 Flowbite also supports type declarations and interfaces in TypeScript which allows you to integrate with the Astro ecosystem even better as they clearly recommend TypeScript over JavaScript.
 
@@ -180,7 +180,7 @@ Make sure that you have the necessary HTML markup for the event listeners and el
 </Layout>
 ```
 
-In this example the modal will be shown when the button is clicked and the modal component will also be initialized based on the options that you've provided.
+In this example, the modal will be shown when the button is clicked and the modal component will also be initialized based on the options that you've provided.
 
 You can browse the full collection of the Flowbite components and check the "JavaScript Behaviour" section of the page to learn all of the options, methods, and objects that you can leverage.
 

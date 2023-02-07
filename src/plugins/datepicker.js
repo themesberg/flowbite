@@ -1,15 +1,15 @@
 import Datepicker from 'flowbite-datepicker/Datepicker';
 import DateRangePicker from 'flowbite-datepicker/DateRangePicker';
+import Events from '../dom/events';
 
 const getDatepickerOptions = (datepickerEl) => {
-
     const buttons = datepickerEl.hasAttribute('datepicker-buttons');
     const autohide = datepickerEl.hasAttribute('datepicker-autohide');
     const format = datepickerEl.hasAttribute('datepicker-format');
     const orientation = datepickerEl.hasAttribute('datepicker-orientation');
     const title = datepickerEl.hasAttribute('datepicker-title');
 
-    let options = {};
+    const options = {};
     if (buttons) {
         options.todayBtn = true;
         options.clearBtn = true;
@@ -21,25 +21,37 @@ const getDatepickerOptions = (datepickerEl) => {
         options.format = datepickerEl.getAttribute('datepicker-format');
     }
     if (orientation) {
-        options.orientation = datepickerEl.getAttribute('datepicker-orientation');
+        options.orientation = datepickerEl.getAttribute(
+            'datepicker-orientation'
+        );
     }
     if (title) {
         options.title = datepickerEl.getAttribute('datepicker-title');
     }
 
     return options;
-}
+};
 
-document.addEventListener('DOMContentLoaded', () => {
+export function initDatepickers() {
     document.querySelectorAll('[datepicker]').forEach(function (datepickerEl) {
         new Datepicker(datepickerEl, getDatepickerOptions(datepickerEl));
     });
-    
-    document.querySelectorAll('[inline-datepicker]').forEach(function (datepickerEl) {
-        new Datepicker(datepickerEl, getDatepickerOptions(datepickerEl));
-    });
-    
-    document.querySelectorAll('[date-rangepicker]').forEach(function (datepickerEl) {
-        new DateRangePicker(datepickerEl, getDatepickerOptions(datepickerEl));
-    });
-});
+
+    document
+        .querySelectorAll('[inline-datepicker]')
+        .forEach(function (datepickerEl) {
+            new Datepicker(datepickerEl, getDatepickerOptions(datepickerEl));
+        });
+
+    document
+        .querySelectorAll('[date-rangepicker]')
+        .forEach(function (datepickerEl) {
+            new DateRangePicker(
+                datepickerEl,
+                getDatepickerOptions(datepickerEl)
+            );
+        });
+}
+
+const events = new Events('DOMContentLoaded', [initDatepickers]);
+events.init();

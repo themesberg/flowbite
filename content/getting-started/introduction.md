@@ -23,19 +23,19 @@ All of the elements are built using the utility classes from Tailwind CSS and va
 Here's a quick overview of the Flowbite ecosystem including the open source Tailwind components library, the Figma design files, and the pro version.
 
 <div class="mt-10 lg:grid lg:grid-cols-2 lg:gap-8">
-    <a href="{{< ref "getting-started/quickstart" >}}" class="block p-6 mb-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
+    <a href="{{< ref "getting-started/quickstart" >}}" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Quickstart</h3>
         <p class="font-normal text-gray-700 dark:text-gray-400">Learn how to get started by downloading and configuring Flowbite locally on your machine and start developing.</p>
     </a>
-    <a href="{{< ref "components/alerts" >}}" class="block p-6 mb-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
+    <a href="{{< ref "components/alerts" >}}" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Components</h3>
         <p class="font-normal text-gray-700 dark:text-gray-400">Explore the Tailwind CSS elements such as buttons, navbars, alerts, dropdowns and use them to build your website.</p>
     </a>
-    <a href="{{< param homepage >}}/figma/" class="block p-6 mb-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
+    <a href="{{< param homepage >}}/figma/" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Figma design files</h3>
         <p class="font-normal text-gray-700 dark:text-gray-400">Prototype and design your website before coding with the Flowbite Figma file which is based on the Tailwind CSS classes.</p>
     </a>
-    <a href="{{< param homepage >}}/pro/" class="block p-6 mb-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
+    <a href="{{< param homepage >}}/pro/" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Upgrade to Pro</h3>
         <p class="font-normal text-gray-700 dark:text-gray-400">Take your Figma and Tailwind CSS development to the next level with thousands more elements and pages with Flowbite Pro.</p>
     </a>
@@ -58,7 +58,7 @@ Flowbite is technically a plugin that can be included into any existing Tailwind
 1. Install the latest version of Flowbite using NPM:
 
 ```bash
-npm i flowbite
+npm install flowbite
 ```
 
 2. Include Flowbite as a plugin inside the `tailwind.config.js` file:
@@ -73,13 +73,7 @@ module.exports = {
 }
 ```
 
-3. Require the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
-
-```html
-<script src="../path/to/flowbite/dist/flowbite.js"></script>
-```
-
-4. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
+3. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
@@ -91,10 +85,10 @@ module.exports = {
 }
 ```
 
-If you use Webpack or other bundlers you can also import it like this:
+4. Require the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
 
-```javascript
-import 'flowbite';
+```html
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 ```
 
 ### Include via CDN
@@ -104,16 +98,82 @@ If you want to quickly test out Flowbite you can easily include the following CS
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.css"  rel="stylesheet" />
 ```
 
 And include the following javascript file before the end of the `body` element:
 
 ```html
-<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
 ```
 
 Please remember that the best way to work with Tailwind CSS and Flowbite is by purging the CSS classes.
+
+### Bundled JavaScript
+
+One of the most popular way of using Flowbite is to include the bundled Javascript file which is UMD ready using a bundler such as Webpack or Parcel which makes sure that all of the data attributes and functionality will work out-of-the-box.
+
+You can directly import the main JavaScript file inside your bundled `app-bundle.js` file like this:
+
+```javascript
+import 'flowbite';
+```
+
+This file has access to all of the components and it automatically applies event listeners to the data attributes.
+
+### Data attributes
+
+The preferred way to use the interactive UI components from Flowbite is via the data attributes interface which allows us to add functionality via the HTML element attributes and most of the examples on our documentation applies this strategy.
+
+For example, to set up a modal component all you need to do is use `data-modal-target` and `data-modal-{toggle|show|hide}` to toggle, show, or hide the component by clicking on any trigger element.
+
+### ESM and CJS
+
+Flowbite also offers an API for using the components programmatically and it supports both CJS and ESM for JavaScript which can be helpful if you need to expand the default capabilities of the data attributes interface and get access to function callbacks.
+
+Here's an example how you can import and create a new Modal component inside JavaScript:
+
+```javascript
+import { Modal } from 'flowbite'
+
+const $modalElement = document.querySelector('#modalEl');
+
+const modalOptions = {
+    placement: 'bottom-right',
+    backdrop: 'dynamic',
+    backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+    onHide: () => {
+        console.log('modal is hidden');
+    },
+    onShow: () => {
+        console.log('modal is shown');
+    },
+    onToggle: () => {
+        console.log('modal has been toggled');
+    }
+}
+
+const modal = new Modal($modalElement, modalOptions);
+
+modal.show();
+```
+
+Check out the JavaScript behaviour section of each component's page to learn how you can use this.
+
+### TypeScript
+
+Flowbite supports type declarations for the interactive UI components including object interfaces and parameter types. Check out the following examples to learn how you can use types with Flowbite.
+
+Additionally to our code above, we will now import some relevant types from the Flowbite package, namely the `ModalOptions` and `ModalInterface`:
+
+```javascript
+import { Modal } from 'flowbite'
+import type { ModalOptions, ModalInterface } from 'flowbite'
+
+// other code
+```
+
+Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/).
 
 ## Tailwind CSS 2.0
 
@@ -123,7 +183,19 @@ Flowbite is fully compatible with the 2.x versions of Tailwind CSS.
 
 Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking changes when using the components from Flowbite.
 
-## Figma
+## WindiCSS
+
+Flowbite also works with WindiCSS.
+
+Just include the WindiCSS version of the Flowbite plugin inside the `windi.config.js` file.
+
+```bash
+plugins: [
+    require('flowbite/plugin-windicss')
+],
+```
+
+## Figma design system
 
 The components from Flowbite are first conceptualized and designed in Figma using the latest features such as variants, auto-layout, grids, responsive layouts, and more.
 
@@ -158,6 +230,17 @@ Learn how to <a href="{{< ref "getting-started/next-js" >}}">install Tailwind CS
 The components from Flowbite can also be used any new or existing Vue 3 projects as long as you install Tailwind CSS and Flowbite.
 
 Learn how to <a href="{{< ref "getting-started/vue" >}}">install Tailwind CSS and Flowbite with Vue.js</a>.
+
+
+<div class="mt-8 -mb-5">
+  {{< requires_nuxtjs >}}
+</div>
+
+## Nuxt
+
+If you're using Vue 3 as a front-end library and Nuxt as a framework you can also use the components from Flowbite Vue such as the modals, dropdowns, and navbars to speed up your development time coupled with the utility classes from Tailwind CSS.
+
+Learn how to <a href="{{< ref "getting-started/nuxt-js" >}}">install Tailwind CSS and Flowbite with Nuxt and Vue 3</a>.
 
 <div class="mt-8 -mb-5">
   {{< requires_laravel >}}

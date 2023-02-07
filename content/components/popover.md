@@ -232,7 +232,7 @@ Dynamically show the password strength progress when creating a new password pos
   </div>
   <div class="flex items-start mb-6">
     <div class="flex items-center h-5">
-      <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
+      <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required>
     </div>
     <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
   </div>
@@ -477,7 +477,7 @@ Use the following options as the third parameter for the Popover object to set t
                     String
                 </td>
                 <td class="px-6 py-4">
-                    Set the event type that will trigger the popover content choosing between <code class="text-purple-600 dark:text-purple-400">hover|click</code>.
+                    Set the event type that will trigger the popover content choosing between <code class="text-purple-600 dark:text-purple-400">hover|click|none</code>.
                 </td>
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -513,13 +513,24 @@ Use the following options as the third parameter for the Popover object to set t
                     Set a callback function when the popover is shown.
                 </td>
             </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">onToggle</code>
+                </td>
+                <td class="px-6 py-4 font-medium">
+                    Function
+                </td>
+                <td class="px-6 py-4">
+                    Set a callback function when the popover visibility has been toggled.
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
 
 ### Methods
 
-Use the methods from the Popover object to programatically show or hide the popover from directly JavaScript.
+Use the methods from the Popover object to programmatically show or hide the popover from directly JavaScript.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -550,6 +561,22 @@ Use the methods from the Popover object to programatically show or hide the popo
                     Use this method on the Popover object to hide the popover content.
                 </td>
             </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">toggle()</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method on the Popover object to toggle the visibility of the popover content.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">isVisible()</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this function to check if the popover is visible or not.
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -564,10 +591,10 @@ After that you can also set the options object to change the placement and trigg
 
 ```javascript
 // set the popover content element
-const targetEl = document.getElementById('popoverContent');
+const $targetEl = document.getElementById('popoverContent');
 
 // set the element that trigger the popover using hover or click
-const triggerEl = document.getElementById('popoverButton');
+const $triggerEl = document.getElementById('popoverButton');
 
 // options with default values
 const options = {
@@ -579,6 +606,9 @@ const options = {
   },
   onShow: () => {
       console.log('popover is hidden');
+  },
+  onToggle: () => {
+      console.log('popover is toggled');
   }
 };
 ```
@@ -586,15 +616,17 @@ const options = {
 Create a new Popover object based on the options above.
 
 ```javascript
+import { Popover } from 'flowbite';
+
 /*
-* targetEl: required
-* triggerEl: required
+* $targetEl: required
+* $triggerEl: required
 * options: optional
 */
-const popover = new Popover(targetEl, triggerEl, options);
+const popover = new Popover($targetEl, $triggerEl, options);
 ```
 
-Use the `show` and `hide` methods on the Popover object to programatically show and hide the popover element using JavaScript.
+Use the `show` and `hide` methods on the Popover object to programmatically show and hide the popover element using JavaScript.
 
 ```javascript
 // show the popover
@@ -602,16 +634,71 @@ popover.show();
 
 // hide the popover
 popover.hide();
+
+// toggle the popover
+popover.toggle();
+
+// check if popover is visible
+popover.isVisible();
 ```
 
 ### HTML Markup
 
 Use the following HTML code for the JavaScript example above.
 
-```html
+<!-- ```html -->
 <button id="popoverButton" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default popover</button>
-<div data-popover id="popoverContent" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-700">
-    Popover content
-    <div class="popover-arrow" data-popper-arrow></div>
+<div data-popover id="popoverContent" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+        <h3 class="font-semibold text-gray-900 dark:text-white">Popover title</h3>
+    </div>
+    <div class="px-3 py-2">
+        <p>And here's some amazing content. It's very engaging. Right?</p>
+    </div>
+    <div data-popper-arrow></div>
 </div>
+<!-- ``` -->
+
+### TypeScript
+
+If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScript configuration</a> from Flowbite then you can import the types for the Popover class, parameters and its options. 
+
+Here's an example that applies the types from Flowbite to the code above:
+
+```javascript
+import { Popover } from "flowbite";
+import type { PopoverOptions, PopoverInterface } from "flowbite";
+
+// set the popover content element
+const $targetEl: HTMLElement = document.getElementById('popoverContent');
+
+// set the element that trigger the popover using hover or click
+const $triggerEl: HTMLElement = document.getElementById('popoverButton');
+
+// options with default values
+const options: PopoverOptions = {
+  placement: 'top',
+  triggerType: 'hover',
+  offset: 10,
+  onHide: () => {
+      console.log('popover is shown');
+  },
+  onShow: () => {
+      console.log('popover is hidden');
+  },
+  onToggle: () => {
+      console.log('popover is toggled');
+  }
+};
+
+if ($targetEl) {
+    /*
+    * targetEl: required
+    * triggerEl: required
+    * options: optional
+    */
+    const popover: PopoverInterface = new Popover($targetEl, $triggerEl, options);
+
+    popover.show();
+}
 ```

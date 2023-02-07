@@ -26,7 +26,7 @@ Here's a list of KBD components that you can use inside any other element.
 <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Caps Lock</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Esc</kbd>
 <kbd class="px-4 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Spacebar</kbd>
-<kbd class="px-2 py-1.5  text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Enter</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Enter</kbd>
 {{< /example >}}
 
 ## KBD inside text
@@ -44,41 +44,41 @@ Use this example by nesting an inline KBD component inside a paragraph.
 The KBD component can also be used inside table components to denote what type of key can be pressed for certain descriptions.
 
 {{< example id="kbd-table-example" github="components/kbd.md" show_dark=true >}}
-<div class="overflow-x-auto relative">
+<div class="relative overflow-x-auto">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-800 dark:text-gray-400">
             <tr>
-                <th scope="col" class="py-3 px-6">
+                <th scope="col" class="px-6 py-3">
                     Key
                 </th>
-                <th scope="col" class="py-3 px-6">
+                <th scope="col" class="px-6 py-3">
                     Description
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                <th scope="row" class="py-4 px-6 font-medium text-gray-500 whitespace-nowrap dark:text-gray-400">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-500 whitespace-nowrap dark:text-gray-400">
                     <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Shift</kbd>
                         <span class="mx-2">or</span>
                     <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Tab</kbd>
                 </th>
-                <td class="py-4 px-6">
+                <td class="px-6 py-4">
                     Navigate to interactive elements
                 </td>
             </tr>
             <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                <th scope="row" class="py-4 px-6 font-medium text-gray-500 whitespace-nowrap dark:text-gray-400">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-500 whitespace-nowrap dark:text-gray-400">
                     <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Enter</kbd>
                     <span class="mx-2">or</span>
                     <kbd class="px-4 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Spacebar</kbd>
                 </th>
-                <td class="py-4 px-6">
+                <td class="px-6 py-4">
                     Ensure elements with ARIA role="button" can be activated with both key commands.
                 </td>
             </tr>
             <tr class="bg-white dark:bg-gray-900">
-                <th scope="row" class="inline-flex items-center py-4 px-6 font-medium text-gray-500 dark:text-gray-400 whitespace-nowra">
+                <th scope="row" class="inline-flex items-center px-6 py-4 font-medium text-gray-500 dark:text-gray-400 whitespace-nowra">
                     <kbd class="inline-flex items-center mr-1 px-2 py-1.5 text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
                         <svg class="w-4 h-4" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M9.39 265.4l127.1-128C143.6 131.1 151.8 128 160 128s16.38 3.125 22.63 9.375l127.1 128c9.156 9.156 11.9 22.91 6.943 34.88S300.9 320 287.1 320H32.01c-12.94 0-24.62-7.781-29.58-19.75S.2333 274.5 9.39 265.4z"/></svg>
                         <span class="sr-only">Arrow key up</span>
@@ -97,7 +97,7 @@ The KBD component can also be used inside table components to denote what type o
                         <span class="sr-only">Arrow key right</span>
                     </kbd>
                 </th>
-                <td class="py-4 px-6">
+                <td class="px-6 py-4">
                     Choose and activate previous/next tab.
                 </td>
             </tr>

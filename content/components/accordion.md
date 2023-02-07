@@ -414,7 +414,7 @@ Use the following options as the second parameter for the Accordion object to cu
 
 ### Methods
 
-Use the object methods on the Accordion object to programatically open, close, or toggle the visibility of a given accordion item.
+Use the object methods on the Accordion object to programmatically open, close, or toggle the visibility of a given accordion item.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -511,6 +511,8 @@ const options = {
 Create a new Accordion object using the options set above as the parameters.
 
 ```javascript
+import { Accordion } from 'flowbite';
+
 /*
 * accordionItems: array of accordion item objects
 * options: optional
@@ -518,7 +520,7 @@ Create a new Accordion object using the options set above as the parameters.
 const accordion = new Accordion(accordionItems, options);
 ```
 
-Now you can access the object methods to programatically open, close, and toggle the accordion items based on the unique identifier.
+Now you can access the object methods to programmatically open, close, and toggle the accordion items based on the unique identifier.
 
 ```javascript
 // open accordion item based on id
@@ -579,4 +581,65 @@ Use the following HTML markup example for the JavaScript script above.
     </div>
   </div>
 </div>
+```
+
+### TypeScript
+
+If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScript configuration</a> from Flowbite then you can import the types for the Accordion object, parameters and its options. 
+
+Here's an example that applies the types from Flowbite to the code above:
+
+```javascript
+import { Accordion } from "flowbite";
+import type { AccordionOptions, AccordionItem, AccordionInterface } from "flowbite";
+
+// create an array of objects with the id, trigger element (eg. button), and the content element
+const accordionItems: AccordionItem[] = [
+    {
+        id: 'accordion-example-heading-1',
+        triggerEl: document.querySelector('#accordion-example-heading-1'),
+        targetEl: document.querySelector('#accordion-example-body-1'),
+        active: true
+    },
+    {
+        id: 'accordion-example-heading-2',
+        triggerEl: document.querySelector('#accordion-example-heading-2'),
+        targetEl: document.querySelector('#accordion-example-body-2'),
+        active: false
+    },
+    {
+        id: 'accordion-example-heading-3',
+        triggerEl: document.querySelector('#accordion-example-heading-3'),
+        targetEl: document.querySelector('#accordion-example-body-3'),
+        active: false
+    }
+];
+
+// options with default values
+const options: AccordionOptions = {
+    alwaysOpen: true,
+    activeClasses: 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white',
+    inactiveClasses: 'text-gray-500 dark:text-gray-400',
+    onOpen: (item) => {
+        console.log('accordion item has been shown');
+        console.log(item);
+    },
+    onClose: (item) => {
+        console.log('accordion item has been hidden');
+        console.log(item);
+    },
+    onToggle: (item) => {
+        console.log('accordion item has been toggled');
+        console.log(item);
+    },
+};
+
+/*
+* accordionItems: array of accordion item objects
+* options: optional
+*/
+const accordion: AccordionInterface = new Accordion(accordionItems, options);
+
+// open accordion item based on id
+accordion.open('accordion-example-heading-2');
 ```

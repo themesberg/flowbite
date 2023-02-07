@@ -15,6 +15,46 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v1.6.3
+
+- Added dropdown hover functionality with delay option and examples ([issue #208](https://github.com/themesberg/flowbite/issues/208))
+- Fixed clicking outside of the Popover component not closing when using the "click" trigger type ([issue #242](https://github.com/themesberg/flowbite/issues/242))
+- Introduced the "none" option for Tooltip, Speed Dial, Popover and Dropdown components for trigger type ([issue #181](https://github.com/themesberg/flowbite/issues/181))
+- Fixed Tooltip and Popover click events on Safari browsers when using mobile devices ([issue #246](https://github.com/themesberg/flowbite/issues/246) and [issue #413](https://github.com/themesberg/flowbite/issues/413))
+- Improve the consistency of the dropdown components across the whole documentation using `border-lg` ([issue #276](https://github.com/themesberg/flowbite/issues/276))
+- Added the optional closable option to the Modal component preventing it from being closed when hitting the ESC button (thanks for the PR [@CorwinDev](https://github.com/CorwinDev))
+- Improved sidebar component examples by including a hamburger icon and multiple layouts
+
+### v1.6.2
+
+- add event listeners for data attributes back to `index.ts`
+- fix import maps for `flowbite.turbo.min.js.map` for Ruby on Rails
+
+### v1.6.1
+
+- Nuxt integration guide + starter kit
+- Add data attribute initialisation support for Vue 3 and Nuxt
+- Remove event listeners from basic `index.js` file and keep it only for `index.umd.js`
+- Fix drawer flickering issue
+- Update Laravel integration guide with Vite (thanks to [@CorWinDev](https://github.com/CorwinDev) for the PR)
+- Fixed checkbox dark mode focus state (thanks to [@CorWinDev](https://github.com/CorwinDev) for the PR)
+- Added Datepicker turbo load support for Ruby on Rails 7 (thanks to [@travisgalloway](https://github.com/travisgalloway) for the PR)
+
+### v1.6.0
+
+- migrated code to TypeScript & introduced types and interfaces
+- integrated ESlint and Prettier
+- fixed event listeners stacking up for all interactive components
+- improved NPM build scripts
+- new stepper component
+- new indicator component
+- new breadcrumb components
+- new spinner examples
+
+Breaking changes:
+
+- modals no longer get initialized via `data-modal-toggle` and you need to switch to `data-modal-target={modalID}` where the value is the id of the modal
+
 ### v1.5.5
 
 - added support for Ruby on Rails 7 import map with turbo
@@ -176,7 +216,7 @@ Released on September 28th, 2021.
 - fix the responsive scroll issue for modals (if the content was larger than the viewport, elements inside the modal were unaccessible)
 - create a new component called list group which got separated from the button group component
 - improve navigation bar markup by requiring only one list of pages to prevent duplicate content
-- add the possibility to programatically show or hide elements using the `toggleCollapse` global function
+- add the possibility to programmatically show or hide elements using the `toggleCollapse` global function
 
 ### v1.0.2
 

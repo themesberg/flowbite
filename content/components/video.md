@@ -77,7 +77,7 @@ Use the `h-{size}` class to set the height of the video player.
 Use the following example to make the video responsive across all devices and viewports.
 
 {{< example id="video-responsive-example" github="typography/video.md" show_dark=true >}}
-<video class="w-full max-w-full h-auto" controls>
+<video class="w-full h-auto max-w-full" controls>
   <source src="/docs/videos/flowbite.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -88,7 +88,7 @@ Use the following example to make the video responsive across all devices and vi
 Customize the video player appearance using the utility classes from Tailwind CSS such as `rounded-{size}` or `border` to set rounded corners and border.
 
 {{< example id="video-customize-example" github="typography/video.md" show_dark=true >}}
-<video class="w-full max-w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700" controls>
+<video class="w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700" controls>
   <source src="/docs/videos/flowbite.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

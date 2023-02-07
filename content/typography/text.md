@@ -28,9 +28,9 @@ Use this example to set the font size of inline text elements using the `text-{s
 <p class="text-4xl text-gray-900 dark:text-white">Aa</p>
 <p class="text-5xl text-gray-900 dark:text-white">Aa</p>
 <p class="text-6xl text-gray-900 dark:text-white">Aa</p>
-<p class="text-7xl text-gray-900 dark:text-white">Aa</p>
-<p class="text-8xl text-gray-900 dark:text-white">Aa</p>
-<p class="text-9xl text-gray-900 dark:text-white">Aa</p>
+<p class="text-gray-900 text-7xl dark:text-white">Aa</p>
+<p class="text-gray-900 text-8xl dark:text-white">Aa</p>
+<p class="text-gray-900 text-9xl dark:text-white">Aa</p>
 {{< /example >}}
 
 ## Font weight
@@ -39,7 +39,7 @@ This example can be used to the font weight of an inline text element using the 
 
 {{< example id="font-weight-example" class="flex items-center space-x-8" github="typography/text.md" show_dark=true >}}
 <p class="text-4xl font-thin text-gray-900 dark:text-white">Aa</p>
-<p class="text-4xl font-extralight text-gray-900 dark:text-white">Aa</p>
+<p class="text-4xl text-gray-900 font-extralight dark:text-white">Aa</p>
 <p class="text-4xl font-light text-gray-900 dark:text-white">Aa</p>
 <p class="text-4xl font-normal text-gray-900 dark:text-white">Aa</p>
 <p class="text-4xl font-medium text-gray-900 dark:text-white">Aa</p>

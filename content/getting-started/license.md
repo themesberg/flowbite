@@ -13,13 +13,13 @@ nextLink: getting-started/changelog/
 
 ## Copyright
 
-The Flowbite name and logos are trademarks of Crafty Dwarf Inc.
+The Flowbite name and logos are trademarks of Bergside Inc. Learn more about the [Flowbite Brand Guideline](https://flowbite.com/brand/).
 
 ## Released code
 
 The released code is licensed under the [MIT license](https://github.com/themesberg/flowbite/blob/main/README.md).
 
-Copyright (c) Themesberg (Crafty Dwarf Inc.)
+Copyright (c) Themesberg (Bergside Inc.)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -47,4 +47,4 @@ Attribution: the documentation code was initially forked from [Bootstrap](https:
 
 ## Pro version
 
-The pro version is licensed under the [EULA]("{{< param homepage >}}/license/") from our website.
+The pro version is licensed under the [EULA](https://flowbite.com/license/) from our website.

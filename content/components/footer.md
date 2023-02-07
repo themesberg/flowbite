@@ -21,7 +21,7 @@ Use this footer component to show a copyright notice and some helpful website li
 
 {{< example id="default-footer-example" github="components/footer.md" class="p-2" show_dark=true >}}
 <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
     </span>
     <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
         <li>
@@ -48,7 +48,7 @@ Use this component to show your brand's logo, a few website links and the copyri
 <footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900">
     <div class="sm:flex sm:items-center sm:justify-between">
         <a href="{{< param homepage >}}/" class="flex items-center mb-4 sm:mb-0">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-8" alt="Flowbite Logo" />
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
         </a>
         <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
@@ -67,7 +67,7 @@ Use this component to show your brand's logo, a few website links and the copyri
         </ul>
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 3 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
     </span>
 </footer>
 {{< /example >}}
@@ -81,7 +81,7 @@ This footer component can be used to show your brand's logo, multiple rows of we
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
             <a href="{{< param homepage >}}/" class="flex items-center">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-8" alt="FlowBite Logo" />
+                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
             </a>
         </div>
@@ -123,7 +123,7 @@ This footer component can be used to show your brand's logo, multiple rows of we
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
     <div class="sm:flex sm:items-center sm:justify-between">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
@@ -157,7 +157,7 @@ If you have a website with many pages you can use this footer component to show 
 
 {{< example id="footer-sitemap-example" github="components/footer.md" show_dark=true >}}
 <footer class="bg-white dark:bg-gray-900">
-    <div class="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
+    <div class="grid grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
         <div>
             <h2 class="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Company</h2>
             <ul class="text-gray-500 dark:text-gray-400">
@@ -224,8 +224,8 @@ If you have a website with many pages you can use this footer component to show 
             </ul>
         </div>
     </div>
-    <div class="py-6 px-4 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
-        <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2022 <a href="{{< param homepage >}}/">Flowbite™</a>. All Rights Reserved.
+    <div class="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2023 <a href="{{< param homepage >}}/">Flowbite™</a>. All Rights Reserved.
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center md:mt-0">
             <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
@@ -258,8 +258,8 @@ If you have a website with many pages you can use this footer component to show 
 Use this example to set create a sticky footer by using a fixed position to the bottom of the document page as the user scrolls up or down the main content area.
 
 {{< example id="footer-sticky-example" github="components/navbar.md" show_dark=true iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true >}}
-<footer class="fixed bottom-0 left-0 z-20 p-4 w-full bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+<footer class="fixed bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
     </span>
     <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
         <li>

@@ -8,8 +8,8 @@ requires_nextjs: true
 
 previous: React
 previousLink: getting-started/react/
-next: Vue
-nextLink: getting-started/vue/
+next: Remix
+nextLink: getting-started/remix/
 ---
 
 [Next.js](https://nextjs.org/) is a popular web development framework based on the React library that enables server-side rendering and generating static websites improving development time and website performance.

@@ -240,6 +240,7 @@ We also wrote integration guides for the following front-end frameworks and libr
 - [📝 Flowbite with Nuxt guide](https://flowbite.com/docs/getting-started/nuxt-js/)
 - [📝 Flowbite with Svelte guide](https://flowbite.com/docs/getting-started/svelte/)
 - [📝 Flowbite with Astro guide](https://flowbite.com/docs/getting-started/astro/)
+- [📝 Flowbite with Gatsby guide](https://flowbite.com/docs/getting-started/gatsby/)
 
 ### Back-end Frameworks
 

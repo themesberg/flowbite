@@ -12,10 +12,12 @@
     - title: Vue
     - title: Nuxt
       slug: nuxt-js
-    - title: Laravel
+    - title: Svelte
     - title: Astro
       new: true
-    - title: Svelte
+    - title: Gatsby
+      new: true
+    - title: Laravel
     - title: Rails
     - title: Django
     - title: Flask

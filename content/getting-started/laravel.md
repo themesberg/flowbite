@@ -6,10 +6,10 @@ group: getting-started
 toc: true
 requires_laravel: true
 
-previous: Nuxt
-previousLink: getting-started/nuxt-js/
-next: Astro
-nextLink: getting-started/astro/
+previous: Gatsby
+previousLink: getting-started/gatsby/
+next: Ruby on Rails
+nextLink: getting-started/rails/
 ---
 
 Laravel is the most popular PHP web framework based on the model-view-controller (MCV) model that helps you build modern web applications and API's.

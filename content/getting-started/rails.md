@@ -6,8 +6,8 @@ group: getting-started
 toc: true
 requires_rails: true
 
-previous: Svelte
-previousLink: getting-started/svelte/
+previous: Laravel
+previousLink: getting-started/laravel/
 next: Django
 nextLink: getting-started/django/
 ---

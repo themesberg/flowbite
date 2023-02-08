@@ -8,8 +8,8 @@ requires_nuxtjs: true
 
 previous: Vue
 previousLink: getting-started/vue/
-next: Laravel
-nextLink: getting-started/laravel/
+next: Svelte
+nextLink: getting-started/svelte/
 ---
 
 [Nuxt](https://nuxt.com/) is a free and open-source JavaScript framework based on Vue.js that helps you develop modern web applications using SSR (server-side rendering) which provides a faster load, better SEO (search engine optimization), and better caching capabilities.

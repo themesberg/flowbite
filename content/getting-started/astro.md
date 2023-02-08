@@ -6,10 +6,10 @@ group: getting-started
 toc: true
 requires_astro: true
 
-previous: Laravel
-previousLink: getting-started/laravel/
-next: Svelte
-nextLink: getting-started/svelte/
+previous: Svelte
+previousLink: getting-started/svelte/
+next: Gatsby
+nextLink: getting-started/gatsby/
 ---
 
 [Astro](https://astro.build) is a full-stack web framework for building lightning-fast and content-focused websites featuring component islands, server-first API design, edge-ready deployments and supports hundreds of integrations with technologies like Tailwind CSS, Flowbite, React, Vue, Svelte, and more.

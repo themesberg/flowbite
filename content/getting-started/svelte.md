@@ -6,10 +6,10 @@ group: getting-started
 toc: true
 requires_svelte: true
 
-previous: Astro
-previousLink: getting-started/astro/
-next: Ruby on Rails
-nextLink: getting-started/rails/
+previous: Nuxt
+previousLink: getting-started/nuxt-js/
+next: Astro
+nextLink: getting-started/astro/
 ---
 
 Svelte is a modern and growing front-end compiler. Developers build boilerplate-free components using languages HTML, CSS and JavaScript. Svelte compiles your code to tiny, framework-less vanilla JS. 

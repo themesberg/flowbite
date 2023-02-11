@@ -22,6 +22,7 @@ class Popover implements PopoverInterface {
     _options: PopoverOptions;
     _popperInstance: PopperInstance;
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
+    _keydownEventListener: EventListenerOrEventListenerObject;
     _visible: boolean;
 
     constructor(
@@ -111,6 +112,27 @@ class Popover implements PopoverInterface {
         }
     }
 
+    _setupKeydownListener() {
+        this._keydownEventListener = (ev: KeyboardEvent) => {
+            if (ev.key === 'Escape') {
+                this.hide();
+            }
+        };
+        document.body.addEventListener(
+            'keydown',
+            this._keydownEventListener,
+            true
+        );
+    }
+
+    _removeKeydownListener() {
+        document.body.removeEventListener(
+            'keydown',
+            this._keydownEventListener,
+            true
+        );
+    }
+
     _setupClickOutsideListener() {
         this._clickOutsideEventListener = (ev: MouseEvent) => {
             this._handleClickOutside(ev, this._targetEl);
@@ -171,6 +193,9 @@ class Popover implements PopoverInterface {
         // handle click outside
         this._setupClickOutsideListener();
 
+        // handle esc keydown
+        this._setupKeydownListener();
+
         // Update its position
         this._popperInstance.update();
 
@@ -196,6 +221,9 @@ class Popover implements PopoverInterface {
 
         // handle click outside
         this._removeClickOutsideListener();
+
+        // handle esc keydown
+        this._removeKeydownListener();
 
         // set visibility to false
         this._visible = false;

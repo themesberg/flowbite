@@ -127,13 +127,13 @@ export default IndexPage
 export const Head = () => <title>Home Page</title>
 ```
 
-8. Restart your server and run `npm run develop` to apply the changes and now the title should have the blue color instead of the default black from the browser.
+8. Restart your server and run `npm run develop` to apply the changes and now the title should have a blue color instead of the default black from the browser.
 
 ## Install Flowbite
 
 [Flowbite](https://flowbite.com) is a popular and open-source UI component library built on top of the Tailwind CSS framework featuring interactive elements such as dropdowns, modals, navbars, carousels, and more that can help you build websites even faster. 
 
-Flowbite also supports technologies and frameworks such as React, Vue, Svelte, Angular, and more. In this guide we will use the [Flowbite React](https://github.com/themesberg/flowbite-react) library because it matches the best with Gatsby.
+Flowbite also supports technologies and frameworks such as React, Vue, Svelte, Angular, and more. In this guide, we will use the [Flowbite React](https://github.com/themesberg/flowbite-react) library because it matches the best with Gatsby.
 
 1. The first step is to install the Flowbite and Flowbite React package via NPM:
 
@@ -163,7 +163,7 @@ Having these configured you can now start using the UI components from Flowbite.
 
 You can either use the core vanilla JS and static HTML components from the [Flowbite Library](https://flowbite.com/docs/getting-started/introduction/) or you can import dedicated React components such as the Alert, Modal, or Navbar from the [Flowbite React](https://github.com/themesberg/flowbite-react) library.
 
-Here's an example how you can import and use the Alert component:
+Here's an example of how you can import and use the Alert component:
 
 ```javascript
 import { Alert } from "flowbite-react";
@@ -214,7 +214,7 @@ export default IndexPage
 export const Head = () => <title>Home Page</title>
 ```
 
-This example will show a button which on the click event will show a dropdown menu item. You can browse the full list of components and options by checking out the [Flowbite React](https://github.com/themesberg/flowbite-react) library.
+This example will show a button that on the click event will show a dropdown menu item. You can browse the full list of components and options by checking out the [Flowbite React](https://github.com/themesberg/flowbite-react) library.
 
 ## Gatsby starter project
 

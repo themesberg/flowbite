@@ -74,7 +74,7 @@ plugins: [
   ],
 ```
 
-Update `src/__layout.svelte` by adding `flowbite.css`:
+Update `src/+layout.svelte` by adding `flowbite.css`:
 
 ```bash
 <script>
@@ -126,12 +126,13 @@ the head and `flowbite.js` just before the body tag.
 </html>
 ```
 
-If you want it only in a certain directories, create `src/your-dir/__layout.svelte` and add the Flowbite CSS in the `svelte:head` section.
+If you want it only in a certain directories, create `src/your-dir/+layout.svelte` and add the Flowbite CSS in the `svelte:head` section.
 
 ```html
 <svelte:head>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.css"  rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.css"  rel="stylesheet" />
 </svelte:head> 
+
 <slot />
 ```
 

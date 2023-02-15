@@ -11,10 +11,13 @@ export declare interface PopoverInterface {
     _options: PopoverOptions;
     _popperInstance: PopperInstance;
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
+    _keydownEventListener: EventListenerOrEventListenerObject;
 
     _setupEventListeners(): void;
     _setupClickOutsideListener(): void;
     _removeClickOutsideListener(): void;
+    _setupKeydownListener(): void;
+    _removeKeydownListener(): void;
     _handleClickOutside(ev: Event, targetEl: HTMLElement): void;
     _getTriggerEvents(
         triggerType: PopoverTriggerType

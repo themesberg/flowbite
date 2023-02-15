@@ -8,8 +8,8 @@ requires_gatsby: true
 
 previous: Astro
 previousLink: getting-started/astro/
-next: Laravel
-nextLink: getting-started/laravel/
+next: SolidJS
+nextLink: getting-started/solid-js/
 ---
 
 [Gatsby](https://www.gatsbyjs.com/) is a popular open-source static site generator framework built on top of Node.js, React, and GraphQL that allows you to build websites using content sources such as Markdown, MDX and leverages other headless CMS technologies such as WordPress, Drupal and more.

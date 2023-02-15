@@ -17,6 +17,9 @@
       new: true
     - title: Gatsby
       new: true
+    - title: SolidJS
+      slug: solid-js
+      new: true
     - title: Laravel
     - title: Rails
     - title: Django

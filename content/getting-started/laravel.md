@@ -6,8 +6,8 @@ group: getting-started
 toc: true
 requires_laravel: true
 
-previous: Gatsby
-previousLink: getting-started/gatsby/
+previous: SolidJS
+previousLink: getting-started/solid-js/
 next: Ruby on Rails
 nextLink: getting-started/rails/
 ---

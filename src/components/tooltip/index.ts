@@ -21,6 +21,7 @@ class Tooltip implements TooltipInterface {
     _options: TooltipOptions;
     _popperInstance: PopperInstance;
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
+    _keydownEventListener: EventListenerOrEventListenerObject;
     _visible: boolean;
 
     constructor(
@@ -95,6 +96,27 @@ class Tooltip implements TooltipInterface {
         }
     }
 
+    _setupKeydownListener() {
+        this._keydownEventListener = (ev: KeyboardEvent) => {
+            if (ev.key === 'Escape') {
+                this.hide();
+            }
+        };
+        document.body.addEventListener(
+            'keydown',
+            this._keydownEventListener,
+            true
+        );
+    }
+
+    _removeKeydownListener() {
+        document.body.removeEventListener(
+            'keydown',
+            this._keydownEventListener,
+            true
+        );
+    }
+
     _setupClickOutsideListener() {
         this._clickOutsideEventListener = (ev: MouseEvent) => {
             this._handleClickOutside(ev, this._targetEl);
@@ -154,6 +176,9 @@ class Tooltip implements TooltipInterface {
         // handle click outside
         this._setupClickOutsideListener();
 
+        // handle esc keydown
+        this._setupKeydownListener();
+
         // Update its position
         this._popperInstance.update();
 
@@ -179,6 +204,9 @@ class Tooltip implements TooltipInterface {
 
         // handle click outside
         this._removeClickOutsideListener();
+
+        // handle esc keydown
+        this._removeKeydownListener();
 
         // set visibility
         this._visible = false;

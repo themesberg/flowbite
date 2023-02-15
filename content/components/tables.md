@@ -44,7 +44,7 @@ Use the following example of a responsive table component to show multiple rows 
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4">
                     Laptop
@@ -122,7 +122,7 @@ Use this example to increase the readability of the data sets by alternating the
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4">
                     Laptop
@@ -236,7 +236,7 @@ Use this example to increase the readability of the table cells by alternating t
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
                     Laptop
@@ -338,7 +338,7 @@ Use the `hover:{bg-*}` utility class from Tailwind CSS to change the background 
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4">
                     Laptop
@@ -434,7 +434,7 @@ This example can be used to show the head of the table component with sortable i
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4">
                     Laptop
@@ -587,7 +587,7 @@ Improve accessibility by using a caption inside the table as a heading to better
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4">
                     Laptop
@@ -671,7 +671,7 @@ Use this example of a table component without any border between the table cells
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4">
                     Laptop
@@ -745,7 +745,7 @@ Use this example to apply a shadow border to the table component.
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4">
                     Laptop
@@ -849,7 +849,7 @@ Use this example where we apply `overflow-x-auto` to enable horizontal scrolling
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4">
                     Laptop
@@ -1226,7 +1226,7 @@ Use this example to show a search bar that can be used to query through data ins
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4">
                     Laptop
@@ -1457,7 +1457,7 @@ Use this example with a filter bar to select certain data sets inside the table 
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4">
                     Laptop
@@ -1633,7 +1633,7 @@ Paginate the table data when using larger data sets based on any given amount of
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4">
                     Laptop
@@ -1933,7 +1933,7 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4">
                     Laptop
@@ -2761,7 +2761,7 @@ Apply any color to the table element by using the `bg-{color}` and `text-{color}
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4">
                     Laptop
@@ -2878,7 +2878,7 @@ Use this example to apply a different color to every second row inside the table
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4">
                     Laptop
@@ -2995,7 +2995,7 @@ Use this example to apply a different color to every second column inside a colo
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4 bg-blue-500">
                     Laptop
@@ -3112,7 +3112,7 @@ Use this example to apply a different color to every second row inside the table
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                    Sliver
+                    Silver
                 </td>
                 <td class="px-6 py-4">
                     Laptop

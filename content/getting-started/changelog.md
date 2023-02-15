@@ -15,6 +15,12 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+<!-- ### v1.6.4
+
+- Adds close tooltips with esc key to meet WCAG (by [@daveholst](https://github.com/daveholst))
+- Astro integration guide
+- GatsbyJS integration guide -->
+
 ### v1.6.3
 
 - Added dropdown hover functionality with delay option and examples ([issue #208](https://github.com/themesberg/flowbite/issues/208))

@@ -24,12 +24,36 @@ Before getting started make sure that you have [Node.js](https://nodejs.org/en/)
 
 ## Create a new project
 
-By following the official guide from SolidJS you can execute the following command in your terminal to create a new SolidJS project using Vite Templates:
+1. Execute the following command in your terminal to create a new SolidJS project using Vite Templates:
 
 ```bash
 npx degit solidjs/templates/js my-application
 cd my-application
 ```
+
+This command will create a boilerplate project that sets up a basic project structure and dependency files.
+
+2. Install the project dependencies using NPM:
+
+```bash
+npm install
+```
+
+3. Execute the following command to create a local development server:
+
+```bash
+npm run dev
+```
+
+The newly created SolidJS project will now be accessible via the browser on `http://localhost:3000`.
+
+4. Create a production build by running the following command in your terminal or deployment pipeline:
+
+```bash
+npm run build
+```
+
+You now have a working SolidJS project configuration installed and can now proceed with installing Tailwind CSS and Flowbite to build web UI interfaces even faster.
 
 ## Install Tailwind CSS
 

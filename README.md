@@ -241,6 +241,7 @@ We also wrote integration guides for the following front-end frameworks and libr
 - [📝 Flowbite with Svelte guide](https://flowbite.com/docs/getting-started/svelte/)
 - [📝 Flowbite with Astro guide](https://flowbite.com/docs/getting-started/astro/)
 - [📝 Flowbite with Gatsby guide](https://flowbite.com/docs/getting-started/gatsby/)
+- [📝 Flowbite with SolidJS guide](https://flowbite.com/docs/getting-started/solid-js/)
 
 ### Back-end Frameworks
 

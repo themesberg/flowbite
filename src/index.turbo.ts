@@ -12,7 +12,7 @@ import Tabs, { initTabs } from './components/tabs';
 import Tooltip, { initTooltips } from './components/tooltip';
 import Events from './dom/events';
 
-const events = new Events('turbo:load', [
+const events = new Events('turbo:render', [
     initAccordions,
     initCollapses,
     initCarousels,

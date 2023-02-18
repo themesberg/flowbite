@@ -75,6 +75,7 @@
     "@typescript-eslint/parser": "^5.46.1",
     "autoprefixer": "^10.3.3",
     "babel-loader": "^8.2.2",
+    "child_process": "^1.0.2",
     "copyfiles": "^2.4.1",
     "core-js": "^3.8.1",
     "css-loader": "^5.2.7",
@@ -114,6 +115,8 @@
   "files": [
     "lib",
     "dist",
-    "plugin.js"
-  ]
+    "plugin.js",
+    "cli.js"
+  ],
+  "bin": "cli.js"
 }

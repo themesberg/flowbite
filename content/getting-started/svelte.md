@@ -19,26 +19,26 @@ Svelte is a modern and growing front-end compiler. Developers build boilerplate-
 Before anything make sure that you install SvelteKit and Tailwind CSS. If you already have them installed, you can proceed to the next step.
 
 ```bash
-npm init svelte@next sveltekit-demo
-cd sveltekit-demo
+npm create svelte@latest my-app
+cd my-app
 
-npm install
+pnpm install
 npx svelte-add@latest tailwindcss
 ```
 
-## Method 1: Using Flowbite-Svelte
+## Method 1: Using Flowbite-Svelte (Recommended)
 
 [Flowbite Svelte](https://flowbite-svelte.com) is an official Flowbite component library for Svelte. All interactivities are handled by Svelte.
 
-Install Flowbite-Svelte using NPM:
+Install Flowbite, Flowbite-Svelte, and dependencies using PNPM:
 
 ```bash
-npm i -D flowbite-svelte
+pnpm i flowbite flowbite-svelte classnames @popperjs/core
 ```
 
 Update the `tailwind.config.js` file with the following details:
 
-```bash
+```js
 const config = {
   content: [
     "./src/**/*.{html,js,svelte,ts}",
@@ -58,88 +58,16 @@ const config = {
 module.exports = config;
 ```
 
-## Method 2: Using Flowbite.js
+Now you are ready to go! Add the following to `src/routes/+page.svelte`.
 
-If you prefer using flowbite.js, after installing Tailwind CSS, install flowbite:
-
-```bash
-npm i -D flowbite
-```
-
-Update `tailwind.config.js` by adding the following:
-
-```bash
-plugins: [
-    require('flowbite/plugin')
-  ],
-```
-
-Update `src/__layout.svelte` by adding `flowbite.css`:
-
-```bash
+```html
 <script>
-  import "../app.css";
-  import "flowbite/dist/flowbite.css";
+	import { Alert } from 'flowbite-svelte';
 </script>
+
+<div class="p-8">
+	<Alert>
+		<span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
+	</Alert>
+</div>
 ```
-
-Modify the `src/app.html` by adding `flowbite.js` as the following:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="" />
-    <link rel="icon" href="%svelte.assets%/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-	%svelte.head%
-    </head>
-  <body>
-    <div id="svelte">%svelte.body%</div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
-  </body>
-</html>
-```
-
-## Method 3 Using CDN
-
-This method uses the CDN and using Flowbite unpurged CDN JS/CSS. You don’t need to install TailwindCSS nor Flowbite.
-The Flowbite contains Tailwind CSS v3.0.1. So you can add CSS and JS link in the src/app.html. Place `flowbite.min.css` in 
-the head and `flowbite.js` just before the body tag.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="" />
-    <link rel="icon" href="%svelte.assets%/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.css"  rel="stylesheet" />
-  %svelte.head%
-  </head>
-  <body>
-    <div id="svelte">%svelte.body%</div>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
-  </body>
-</html>
-```
-
-If you want it only in a certain directories, create `src/your-dir/__layout.svelte` and add the Flowbite CSS in the `svelte:head` section.
-
-```html
-<svelte:head>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.css"  rel="stylesheet" />
-</svelte:head> 
-<slot />
-```
-
-If you are using Flowbite.js, you need to add `rel="external"` to the link tag for pages using Flowbite interactivities.
-
-```bash
-<a rel="external" href="path">Path</a>
-```
-
-By default, the SvelteKit runtime intercepts clicks on `<a>` elements and bypasses the normal browser navigation for relative (same-origin) URLs that match one of your page routes. — SvelteKit doc
-Adding a rel=external attribute to a link will trigger a browser navigation when the link is clicked.

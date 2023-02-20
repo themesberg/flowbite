@@ -21,6 +21,7 @@
       slug: solid-js
       new: true
     - title: Laravel
+    - title: Symfony
     - title: Rails
     - title: Django
     - title: Flask

@@ -32,7 +32,7 @@ python -m pip install Flask
 
 Now that you have installed all of the required technologies you can now create a new Flask project.
 
-## Create a new project
+## Create a Flask project
 
 1. Run the following command in the terminal to create a new Flask project with the name `flowbite-flask`:
 

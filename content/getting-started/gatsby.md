@@ -22,7 +22,7 @@ By following this guide you will learn how to create a new Gatsby project, insta
 
 Before creating a new project make sure that you have [Node.js](https://nodejs.org/en/) (v18 or higher) installed on your local machine and production server because it will be required to install all of the three technologies.
 
-## Create a new project
+## Create a Gatsby project
 
 1. The first step in this guide is to create a new Gatsby project using the CLI interface via NPM:
 

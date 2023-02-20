@@ -24,7 +24,7 @@ Before you continue make sure that you have [Node.js](https://nodejs.org/en/) (`
 
 We also highly recommend you to use VS Code as your standard editor and to install the official [language support extension for Astro](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode) from the VS Marketplace released by the original authors.
 
-## Create a new project
+## Create an Astro project
 
 1. Create a new Astro project running the following command using NPM:
 

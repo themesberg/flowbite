@@ -22,7 +22,7 @@ By following the steps from this guide you will learn how to create a new projec
 
 Before getting started make sure that you have [Node.js](https://nodejs.org/en/) installed on your local machine to be able to install both SolidJS, Tailwind CSS and Flowbite.
 
-## Create a new project
+## Create a SolidJS project
 
 1. Execute the following command in your terminal to create a new SolidJS project using Vite Templates:
 

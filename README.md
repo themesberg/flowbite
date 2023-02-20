@@ -663,7 +663,7 @@ If you need the Figma files for the components you can check out our website for
 
 ## Flowbite Blocks
 
-Check out Flowbite Blocks to get access to over 270+ website sections coded in Tailwind CSS and Flowbite:
+Check out Flowbite Blocks to get access to over 290+ website sections coded in Tailwind CSS and Flowbite:
 
 📦 [Check out Flowbite Blocks](https://flowbite.com/blocks/)
 

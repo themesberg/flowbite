@@ -20,7 +20,31 @@ Follow the steps from this guide to learn how to create a new Symfony project on
 
 ## Requirements
 
+Make sure that before you get started you have both [PHP](https://www.php.net/) and [Node.js](https://nodejs.org/en/) installed on your local environment to make sure that Symfony, Tailwind CSS and Flowbite can be properly set up and configured.
+
 ## Create a Symfony project
+
+The most straightforward approach for creating a new Symfony project is to use the official [Symfony CLI](https://symfony.com/download) installer which you can easily install on macOS and Linux devices using Homebrew:
+
+```bash
+brew install symfony-cli/tap/symfony-cli
+```
+
+For devices running on Windows you can also install the Symfony CLI using Scoop:
+
+```bash
+scoop install symfony-cli
+```
+
+Now that you have the CLI available you can proceed by creating a new project.
+
+1. Create a new Symfony project by running the following command inside your terminal:
+
+```bash
+symfony new --webapp my_application
+```
+
+This command will create a new folder with a fresh Symfony project installation inside.
 
 ## Install Tailwind CSS
 

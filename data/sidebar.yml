@@ -3,12 +3,10 @@
     - title: Introduction
     - title: Quickstart
     - title: TypeScript
-      new: true
     - title: React
     - title: Next.js
       slug: next-js
     - title: Remix
-      new: true
     - title: Vue
     - title: Nuxt
       slug: nuxt-js
@@ -22,6 +20,7 @@
       new: true
     - title: Laravel
     - title: Symfony
+      new: true
     - title: Rails
     - title: Django
     - title: Flask

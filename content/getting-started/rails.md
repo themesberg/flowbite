@@ -6,8 +6,8 @@ group: getting-started
 toc: true
 requires_rails: true
 
-previous: Laravel
-previousLink: getting-started/laravel/
+previous: Symfony
+previousLink: getting-started/symfony/
 next: Django
 nextLink: getting-started/django/
 ---

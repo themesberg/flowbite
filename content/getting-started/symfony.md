@@ -12,7 +12,7 @@ next: Ruby on Rails
 nextLink: getting-started/rails/
 ---
 
-[Symfony](https://symfony.com/) is one of the definitive web application frameworks in the PHP ecosystem offering over 50 stadalone PHP components and a MVC framework for your web application that you can use to build complex applications, website pages and even API services.
+[Symfony](https://symfony.com/) is one of the definitive web application frameworks in the PHP ecosystem offering over 50 standalone PHP components and an MVC framework for your web application that you can use to build complex applications, website pages and even API services.
 
 The Symfony PHP framework was first launched as an open-source software back in 2005 by SensioLabs SAS and it is currently used by numerous companies and frameworks including Laravel, Spotify, BlaBlaCar, Trivago, Dailymotion and more.
 
@@ -310,9 +310,9 @@ import './bootstrap';
 import 'flowbite';
 ```
 
-This will enable all of the interactive and dynamic UI components such as the dropdowns, modals, navbars, and other to work out-of-the-box. Webpack will automatically bundle the final JavaScript file which improves speed and performance.
+This will enable all of the interactive and dynamic UI components such as the dropdowns, modals, navbars, and others to work out of the box. Webpack will automatically bundle the final JavaScript file which improves speed and performance.
 
-Check out the [Flowbite Quickstart](https://flowbite.com/docs/getting-started/quickstart/) guide to learn about the different ways you can set up the JS interactivity whether that's via CDN, using the data attributes interface, leveraging TypeScript or programatically working with the UI components and object classes.
+Check out the [Flowbite Quickstart](https://flowbite.com/docs/getting-started/quickstart/) guide to learn about the different ways you can set up the JS interactivity whether that's via CDN, using the data attributes interface, leveraging TypeScript or programmatically working with the UI components and object classes.
 
 ## Flowbite components
 
@@ -362,7 +362,7 @@ Let's start by adding a simple [modal authentication component](https://flowbite
 </div>
 ```
 
-After setting up the `data-modal-target="{modalId}"` and `data-modal-toggle="{modalId}"` data attributes for the button component and copy-pasting the modal example, clicking on the login button will now show a modal element with a user sign in form that you can use to authenticate users directly from your homepage.
+After setting up the `data-modal-target="{modalId}"` and `data-modal-toggle="{modalId}"` data attributes for the button component and copy-pasting the modal example, clicking on the login button will now show a modal element with a user sign-in form that you can use to authenticate users directly from your homepage.
 
 You can check out the full collection of UI components by visiting [Flowbite Blocks](https://flowbite.com/blocks/) and [Flowbite Library](https://flowbite.com/docs/getting-started/introduction/).
 

@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Tailwind CSS Symfony - Flowbite
+title: Tailwind CSS Symfony (PHP) - Flowbite
 description: Learn how to install Flowbite with Symfony and Tailwind CSS to use a free and open-source PHP web application framework developed by SensioLabs SAS
 group: getting-started
 toc: true

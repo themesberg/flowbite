@@ -6,8 +6,8 @@ group: getting-started
 toc: true
 requires_django: true
 
-previous: Ruby on Rails
-previousLink: getting-started/rails/
+previous: Phoenix (Elixir)
+previousLink: getting-started/phoenix/
 next: Flask
 nextLink: getting-started/flask/
 ---

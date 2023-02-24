@@ -8,8 +8,8 @@ requires_rails: true
 
 previous: Symfony
 previousLink: getting-started/symfony/
-next: Django
-nextLink: getting-started/django/
+next: Phoenix (Elixir)
+nextLink: getting-started/phoenix/
 ---
 
 [Ruby on Rails](https://rubyonrails.org/) is an open-source full-stack web application framework that runs server-side written in Ruby and built by the creators of Basecamp based on a model-view-controller architecture.

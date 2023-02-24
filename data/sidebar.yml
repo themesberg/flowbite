@@ -22,6 +22,8 @@
     - title: Symfony
       new: true
     - title: Rails
+    - title: Phoenix
+      new: true
     - title: Django
     - title: Flask
     # - title: Angular

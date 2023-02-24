@@ -21,7 +21,7 @@ By following this guide you will learn how to create a new Phoenix project power
 
 ## Requirements
 
-Before getting started you need to have both [Exilir](https://elixir-lang.org/), the [Hex](https://hex.pm/) package manager and [Node.js](https://nodejs.org/) installed on your local computer to be able to follow through this guide.
+Before getting started you need to have both [Elixir](https://elixir-lang.org/), the [Hex](https://hex.pm/) package manager, the [PostgreSQL](https://www.postgresql.org/) relational database server and [Node.js](https://nodejs.org/) installed on your local computer to be able to follow through this guide.
 
 ### Install Elixir
 
@@ -60,7 +60,26 @@ Now that you have both Elixir and Hex installed you need to set up the Phoenix a
 mix archive.install hex phx_new
 ```
 
+Make sure that you press "Yes" to all prompts.
+
 ## Create a Phoenix project
+
+Now that you have all of the required languages and tools installed you can create a new Phoenix project.
+
+1. Using the application generator, you can create a new Phoenix project and make sure that you press "Yes" when prompted to install the local dependencies:
+
+```bash
+mix phx.new project_name
+cd project_name/
+```
+
+This command will create a fresh installation of a Phoenix application with a folder structure that already includes examples of the MVC pattern including controllers, view templates, and data models.
+
+2. Create and configure your database by running the following command:
+
+```bash
+mix ecto.create
+```
 
 ## Install Tailwind CSS
 

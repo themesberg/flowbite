@@ -52,6 +52,22 @@ mix local.hex
 
 If you already had Hex locally installed this command will upgrade it to the latest version.
 
+### Install PostgreSQL
+
+To install the open-source PostgreSQL relational database server we recommend checking out the official [installation guides](https://wiki.postgresql.org/wiki/Detailed_installation_guides) where you can learn how to install the software based on your operational system and device.
+
+If you have Homebrew available you can install PostgreSQL via the terminal:
+
+```bash
+brew install postgresql
+```
+
+Alternatively, you can also use Scoop if you're running on a Windows device:
+
+```bash
+scoop install postgresql
+```
+
 ### App generator
 
 Now that you have both Elixir and Hex installed you need to set up the Phoenix application generator by running the following command in your terminal:

@@ -68,6 +68,18 @@ Alternatively, you can also use Scoop if you're running on a Windows device:
 scoop install postgresql
 ```
 
+After you've installed PostgreSQL you need to start the server:
+
+```bash
+brew services start postgresql
+```
+
+Additionally, you can connect via the terminal using:
+
+```bash
+psql postgres
+```
+
 ### App generator
 
 Now that you have both Elixir and Hex installed you need to set up the Phoenix application generator by running the following command in your terminal:
@@ -96,6 +108,24 @@ This command will create a fresh installation of a Phoenix application with a fo
 ```bash
 mix ecto.create
 ```
+
+Make sure that you have a `postgres` SUPERUSER and a `postgres` database. You can create them by first by running the following SQL command while logged into PostgreSQL via the terminal by running `psql postgres`:
+
+```bash
+CREATE USER postgres SUPERUSER;
+CREATE DATABASE postgres WITH OWNER postgres;
+exit
+```
+
+The `mix ecto.create` will create a new database for your Phoenix application.
+
+3. Create a local server by running the following command in your terminal:
+
+```bash
+mix phx.server
+```
+
+This will make the Phoenix project available via the browser on `http://localhost:4000`.
 
 ## Install Tailwind CSS
 

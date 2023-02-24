@@ -21,6 +21,45 @@ By following this guide you will learn how to create a new Phoenix project power
 
 ## Requirements
 
+Before getting started you need to have both [Exilir](https://elixir-lang.org/), the [Hex](https://hex.pm/) package manager and [Node.js](https://nodejs.org/) installed on your local computer to be able to follow through this guide.
+
+### Install Elixir
+
+If you're using macOS you can use Homebrew to install Elixir in your terminal:
+
+```bash
+brew install elixir
+```
+
+Alternatively, if you're on a Windows device you can install Elixir using Scoop:
+
+```bash
+scoop install erlang
+scoop install elixir
+```
+
+You can run `elixir -v` in your terminal to confirm that Elixir has been succesfully installed.
+
+Read more about the [Elixir installation guide](https://elixir-lang.org/install.html) for more details if needed.
+
+### Install Hex
+
+Make sure that the Hex package manager is also available. Install it by running the following command:
+
+```bash
+mix local.hex
+```
+
+If you already had Hex locally installed this command will upgrade it to the latest version.
+
+### App generator
+
+Now that you have both Elixir and Hex installed you need to set up the Phoenix application generator by running the following command in your terminal:
+
+```bash
+mix archive.install hex phx_new
+```
+
 ## Create a Phoenix project
 
 ## Install Tailwind CSS

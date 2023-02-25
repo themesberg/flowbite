@@ -250,6 +250,7 @@ Flowbite has a great integration with most of the back-end frameworks because it
 - [📚 Using Flowbite with Laravel](https://flowbite.com/docs/getting-started/laravel/)
 - [🎼 Using Flowbite with Symfony](https://flowbite.com/docs/getting-started/symfony/)
 - [🚊 Using Flowbite with Ruby on Rails 7](https://flowbite.com/docs/getting-started/rails/)
+- [🐉 Using Flowbite with Phoenix (Elixir)](https://flowbite.com/docs/getting-started/phoenix/)
 - [🐸 Using Flowbite with Django](https://flowbite.com/docs/getting-started/django/)
 - [🌶 Using Flowbite with Flask](https://flowbite.com/docs/getting-started/flask/)
 

@@ -53,7 +53,7 @@ If you already had Hex locally installed this command will upgrade it to the lat
 
 ### Install PostgreSQL
 
-To install the open-source PostgreSQL relational database server we recommend checking out the official [installation guides](https://wiki.postgresql.org/wiki/Detailed_installation_guides) where you can learn how to install the software based on your operational system and device.
+To install the open-source PostgreSQL relational database server we recommend checking out the official [installation guides](https://wiki.postgresql.org/wiki/Detailed_installation_guides) where you can learn how to install the software based on your operating system and device.
 
 If you have Homebrew available you can install PostgreSQL via the terminal:
 

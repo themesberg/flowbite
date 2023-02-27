@@ -12,12 +12,11 @@ next: Django
 nextLink: getting-started/django/
 ---
 
-[Phoenix](https://www.phoenixframework.org/) is a popular open-source web development framework based on the Elixir programming language that leverages the Model-View-Controller (MVC) architecture and it can be a viable alternative compared to oth
-er back-end framework languages such as Ruby on Rails, Django or even Flask.
+[Phoenix](https://www.phoenixframework.org/) is a popular open-source web development framework based on the Elixir programming language that leverages the Model-View-Controller (MVC) architecture and it can be a viable alternative compared to other back-end framework languages such as Ruby on Rails, Django, or even Flask.
 
-The Phoenix framework and the Elixir programming language is used by a quite a few well established companies and websites such as Pinterest, Moz, Financial Times, Toyota, and even Discord.
+The Phoenix framework and the Elixir programming language are used by quite a few well-established companies and websites such as Pinterest, Moz, Financial Times, Toyota, and even Discord.
 
-By following this guide you will learn how to create a new Phoenix project powered by Elixir, install and set up the Tailwind CSS framework and finally install Flowbite to leverage the open-source UI components.
+By following this guide you will learn how to create a new Phoenix project powered by Elixir, install and set up the Tailwind CSS framework, and finally install Flowbite to leverage the open-source UI components.
 
 ## Requirements
 
@@ -38,7 +37,7 @@ scoop install erlang
 scoop install elixir
 ```
 
-You can run `elixir -v` in your terminal to confirm that Elixir has been succesfully installed.
+You can run `elixir -v` in your terminal to confirm that Elixir has been successfully installed.
 
 Read more about the [Elixir installation guide](https://elixir-lang.org/install.html) for more details if needed.
 
@@ -111,7 +110,7 @@ This command will create a fresh installation of a Phoenix application with a fo
 mix ecto.create
 ```
 
-Make sure that you have a `postgres` SUPERUSER and a `postgres` database. You can create them by first by running the following SQL command while logged into PostgreSQL via the terminal by running `psql postgres`:
+Make sure that you have a `postgres` SUPERUSER and a `postgres` database. You can create them first by running the following SQL command while logged into PostgreSQL via the terminal by running `psql postgres`:
 
 ```bash
 CREATE USER postgres SUPERUSER;
@@ -159,7 +158,7 @@ config :tailwind, version: "3.2.7", default: [
 ]
 ```
 
-You can also set the version of Tailwind CSS that which you want to download.
+You can also set the version of Tailwind CSS that you want to download.
 
 3. Integrate the compilation of Tailwind CSS on deployment inside `mix.esx`:
 
@@ -264,7 +263,7 @@ You can also check out the [Flowbite Quickstart](https://flowbite.com/docs/getti
 
 Now that we have a Phoenix project with Tailwind CSS and Flowbite installed we can finally leverage the three technologies to build websites. 
 
-In this section you will learn how to set up a landing page using the [Flowbite Blocks](https://flowbite.com/blocks/) collection that relies on the open-source Flowbite Library UI components.
+In this section, you will learn how to set up a landing page using the [Flowbite Blocks](https://flowbite.com/blocks/) collection that relies on the open-source Flowbite Library UI components.
 
 1. Go to the `root.html.heex` file and change the default `<header>` tag with a [Flowbite Header](https://flowbite.com/blocks/marketing/header/) component:
 
@@ -392,7 +391,7 @@ Remove the default `container` class from the `app.html.heex` file to enable the
 </section>
 ```
 
-4. Furthermore, we can copy one of the [feature sections](https://flowbite.com/blocks/marketing/feature/) and add it next in line:
+4. Furthermore, we can copy one of the [feature sections](https://flowbite.com/blocks/marketing/feature/) and add it next in the line:
 
 ```html
 <section class="bg-white dark:bg-gray-900">
@@ -542,8 +541,8 @@ Remove the default `container` class from the `app.html.heex` file to enable the
 </footer>
 ```
 
-You can check out the full collection of website sections by browsing the [Flowbite Blocks](https://flowbite.com/blocks/) collection that includes not only marketing sections, but also application UI layouts, CRUD pages, blog templates, and more.
+You can check out the full collection of website sections by browsing the [Flowbite Blocks](https://flowbite.com/blocks/) collection which includes not only marketing sections, but also application UI layouts, CRUD pages, blog templates, and more.
 
 ## Phoenix starter project
 
-The awesome open-source community from Flowbite built a [Phoenix starter project](https://github.com/themesberg/tailwind-phoenix-starter) with Tailwind CSS and Flowbite already configured that you can use build websites even faster with the most popular utility-first CSS framework and the open-source UI components and website sections from Flowbite.
+The awesome open-source community from Flowbite built a [Phoenix starter project](https://github.com/themesberg/tailwind-phoenix-starter) with Tailwind CSS and Flowbite already configured so that you can use build websites even faster with the most popular utility-first CSS framework and the open-source UI components and website sections from Flowbite.

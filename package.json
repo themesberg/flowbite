@@ -114,6 +114,7 @@
   "files": [
     "lib",
     "dist",
-    "plugin.js"
+    "plugin.js",
+    "plugin-windicss.js"
   ]
 }

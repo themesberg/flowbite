@@ -655,6 +655,22 @@ Flowbite is an open source collection of UI components built with the utility cl
         </a>
     </td>
   </tr>
+  <tr>
+    <td width="33.3333%">Bottom bar</td>
+    <td width="33.3333%"></td>
+    <td width="33.3333%"></td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/bottom-bar/">
+            <img alt="Tailwind CSS Bottom Bar" src="https://flowbite.s3.amazonaws.com/github/bottom-bar.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+    </td>
+    <td width="33.3333%">
+    </td>
+  </tr>
 </table>
 
 ## Figma Design System

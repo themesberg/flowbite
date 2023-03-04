@@ -45,10 +45,11 @@
     - title: Alerts
     - title: Avatar
     - title: Badge
+    - title: Bottom Navigation
+      new: true
     - title: Breadcrumb
     - title: Buttons
     - title: Button Group
-    - title: Bottom Navigation
     - title: Card
     - title: Carousel
     - title: Drawer

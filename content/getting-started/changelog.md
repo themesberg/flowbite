@@ -17,9 +17,15 @@ We strive to keep a good accountability of all of the version changes that we ma
 
 <!-- ### v1.6.4
 
+- New bottom navigation component
+- Export initFlowbite to set up event listeners for all data attributes
 - Adds close tooltips with esc key to meet WCAG (by [@daveholst](https://github.com/daveholst))
 - Astro integration guide
-- GatsbyJS integration guide -->
+- GatsbyJS integration guide 
+- Symfony integration guide
+- SolidJS integration guide
+- Phoenix (Elixir) integration guide
+-->
 
 ### v1.6.3
 

@@ -662,8 +662,8 @@ Flowbite is an open source collection of UI components built with the utility cl
   </tr>
   <tr>
     <td width="33.3333%">
-        <a href="https://flowbite.com/docs/components/bottom-bar/">
-            <img alt="Tailwind CSS Bottom Bar" src="https://flowbite.s3.amazonaws.com/github/bottom-bar.jpg">
+        <a href="https://flowbite.com/docs/components/bottom-navigation/">
+            <img alt="Tailwind CSS Bottom Navigation Bar" src="https://flowbite.s3.amazonaws.com/github/bottom-navigation.jpg">
         </a>
     </td>
     <td width="33.3333%">

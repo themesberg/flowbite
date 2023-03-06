@@ -46,13 +46,19 @@ symfony new --webapp my_application
 
 This command will create a new folder with a fresh Symfony project installation inside.
 
-2. Install the recommended Symfony Webpack Encore bundle to enable front-end integration via Composer:
+2. Change the current working directory to the newly created project folder:
+
+```bash
+cd my_application
+```
+
+3. Install the recommended Symfony Webpack Encore bundle to enable front-end integration via Composer:
 
 ```bash
 composer require symfony/webpack-encore-bundle
 ```
 
-3. Run the following command in your terminal to start a local web server:
+4. Run the following command in your terminal to start a local web server:
 
 ```bash
 symfony server:start

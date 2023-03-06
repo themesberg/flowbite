@@ -5,8 +5,8 @@ description: Use the bottom navigation bar component to allow users to navigate 
 group: components
 toc: true
 
-previous: Badge
-previousLink: components/badge/
+previous: Banner
+previousLink: components/banner/
 next: Breadcrumbs
 nextLink: components/breadcrumb/
 ---

@@ -45,6 +45,8 @@
     - title: Alerts
     - title: Avatar
     - title: Badge
+    - title: Banner
+      new: true
     - title: Bottom Navigation
       new: true
     - title: Breadcrumb

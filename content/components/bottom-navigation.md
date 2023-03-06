@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Bottom Navigation - Flowbite
-description: Use the bottom navigation bar component to allow users to navigate through your website or create a control bar using a menu that is positioned to the bottom of the page
+description: Use the bottom navigation bar component to allow users to navigate through your website or create a control bar using a menu that is positioned at the bottom of the page
 group: components
 toc: true
 

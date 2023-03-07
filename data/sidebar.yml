@@ -45,6 +45,8 @@
     - title: Alerts
     - title: Avatar
     - title: Badge
+    - title: Banner
+      new: true
     - title: Bottom Navigation
       new: true
     - title: Breadcrumb
@@ -58,7 +60,6 @@
     - title: Sidebar
     - title: Forms
     - title: Indicators
-      new: true
     - title: KBD
     - title: List Group
     - title: Mega menu
@@ -71,9 +72,7 @@
     - title: Skeleton
     - title: Spinner
     - title: Speed Dial
-      new: true
     - title: Stepper
-      new: true
     - title: Tabs
     - title: Tables
     - title: Timeline

@@ -12,7 +12,7 @@ import Tabs, { initTabs } from './components/tabs';
 import Tooltip, { initTooltips } from './components/tooltip';
 import Events from './dom/events';
 
-const events = new Events('turbo:load', [
+const turboLoadEvents = new Events('turbo:load', [
     initAccordions,
     initCollapses,
     initCarousels,
@@ -25,7 +25,22 @@ const events = new Events('turbo:load', [
     initPopovers,
     initDials,
 ]);
-events.init();
+turboLoadEvents.init();
+
+const turboFrameLoadEvents = new Events('turbo:frame-load', [
+    initAccordions,
+    initCollapses,
+    initCarousels,
+    initDismisses,
+    initDropdowns,
+    initModals,
+    initDrawers,
+    initTabs,
+    initTooltips,
+    initPopovers,
+    initDials,
+]);
+turboFrameLoadEvents.init();
 
 export default {
     Accordion,

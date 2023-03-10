@@ -93,11 +93,11 @@ The preferred way to use the interactive UI components from Flowbite is via the 
 
 For example, to set up a modal component all you need to do is use `data-modal-target` and `data-modal-{toggle|show|hide}` to toggle, show, or hide the component by clicking on any trigger element.
 
-#### Init functions
+### Init functions
 
 You can also use the init functions to set up the event listeners yourself. Here's an example how you can do it with Vue or Nuxt:
 
-```
+```javascript
 <script setup>
 import { onMounted } from 'vue'
 import { initFlowbite } from 'flowbite'

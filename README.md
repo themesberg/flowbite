@@ -22,6 +22,7 @@
   - [Include via CDN](#include-via-cdn)
   - [Bundled JavaScript](#bundled-javascript)
   - [Data attributes](#data-attributes)
+    - [Init functions](#init-functions)
   - [ESM and CJS](#esm-and-cjs)
   - [TypeScript](#typescript)
   - [JavaScript Frameworks](#javascript-frameworks)
@@ -153,6 +154,28 @@ For example, to set up a modal component all you need to do is use `data-modal-t
     </div>
 </div>
 ```
+
+#### Init functions
+
+You can also use the init functions to set up the event listeners yourself. Here's an example how you can do it with Vue or Nuxt:
+
+```
+<script setup>
+import { onMounted } from 'vue'
+import { initFlowbite } from 'flowbite'
+
+// initialize components based on data attribute selectors
+onMounted(() => {
+    initFlowbite();
+})
+</script>
+
+<template>
+    // Modal HTML markup with data attributes from Flowbite
+</template>
+```
+
+The `initFlowbite` function sets up all of the init functions for dropdowns, modals, navbars, tooltips and so on to hook onto the data attributes. Alternatively, you can also initialise each component category class separately with `initDropdowns` or `initModals`.
 
 You can view more examples by browsing the [components from Flowbite](#components).
 

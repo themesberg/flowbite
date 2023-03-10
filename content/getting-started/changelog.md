@@ -15,17 +15,19 @@ nextLink: customize/configuration/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
-<!-- ### v1.6.4
+### v1.6.4
 
 - New bottom navigation component
+- New sticky banner component
 - Export initFlowbite to set up event listeners for all data attributes
+- Fix for Turbo Frame load events ([issue #88](https://github.com/themesberg/flowbite/issues/88))
+- Include WindiCSS on NPM (thanks to [@rgvillanueva28](https://github.com/rgvillanueva28))
 - Adds close tooltips with esc key to meet WCAG (by [@daveholst](https://github.com/daveholst))
 - Astro integration guide
 - GatsbyJS integration guide 
 - Symfony integration guide
 - SolidJS integration guide
 - Phoenix (Elixir) integration guide
--->
 
 ### v1.6.3
 

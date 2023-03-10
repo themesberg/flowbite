@@ -180,16 +180,16 @@ Let's use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Moda
 
 You can automatically make the interactive components work by importing the init functions from the Flowbite package using the onMounted lifecycle method from Nuxt.
 
-For example, here's how would initialize all of the modals inside your Vue template:
+For example, here's how would initialize all of interactive UI components (ie. modals) inside your Vue template:
 
 ```javascript
 <script setup>
 import { onMounted } from 'vue'
-import { initModals } from 'flowbite'
+import { initFlowbite } from 'flowbite'
 
 // initialize components based on data attribute selectors
 onMounted(() => {
-    initModals();
+    initFlowbite();
 })
 </script>
 
@@ -198,7 +198,7 @@ onMounted(() => {
 </template>
 ```
 
-Here's a full list of available functions to use to initialise the components:
+Alternatively, here's a full list of available functions to use to initialise the components separately:
 
 ```javascript
 <script setup>

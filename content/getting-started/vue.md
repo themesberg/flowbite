@@ -168,11 +168,11 @@ Here's an example how you can initialise the components based on data attributes
 ```javascript
 <script setup>
 import { onMounted } from 'vue'
-import { initModals } from 'flowbite'
+import { initFlowbite } from 'flowbite'
 
 // initialize components based on data attribute selectors
 onMounted(() => {
-    initModals();
+    initFlowbite();
 })
 </script>
 
@@ -181,7 +181,7 @@ onMounted(() => {
 </template>
 ```
 
-And here's the full list of available functions to use to initialise the components:
+Alternatively, here's the full list of available functions to use to initialise the components separately:
 
 ```javascript
 <script setup>

@@ -38,6 +38,9 @@ class Modal implements ModalInterface {
                 this._targetEl.classList.add(c);
             });
         }
+        else {
+            throw new Error(`TargetEl is required for the use of Modal component.`);
+        }
     }
 
     _createBackdrop() {

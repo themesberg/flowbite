@@ -33,4 +33,48 @@ describe('Modal class', () => {
         expect(modal._isHidden).toBe(true);
         expect(modal.isHidden()).toBe(true);
     });
+
+    test('should be closed if escape key is pressed', () => {
+        const event = new Event('keydown', { keyCode: 27 });
+        document.dispatchEvent(event);
+        expect(modal._isHidden).toBe(true);
+    });
+
+    test('if closable is false, escape key should not close it', () => {
+        modal._options.closable = false;
+        modal.show();
+        const event = new Event('keydown', { keyCode: 27 });
+        document.dispatchEvent(event);
+        expect(modal._isHidden).toBe(false);
+    });
+
+    test('if backdrop is dynamic, escape key should not close it', () => {
+        modal._options.backdrop = 'dynamic';
+        modal.show();
+        const event = new Event('keydown', { keyCode: 27 });
+        document.dispatchEvent(event);
+        expect(modal._isHidden).toBe(false);
+    });
+
+    test('if modal is open, clicking outside of it should close it', () => {
+        const event = new Event('click');
+        document.dispatchEvent(event);
+        expect(modal._isHidden).toBe(true);
+    });
+
+    test('if closable is false, clicking outside of it should not close it', () => {
+        modal._options.closable = false;
+        modal.show();
+        const event = new Event('click');
+        document.dispatchEvent(event);
+        expect(modal._isHidden).toBe(false);
+    });
+
+    test('if backdrop is dynamic, clicking outside of it should not close it', () => {
+        modal._options.backdrop = 'dynamic';
+        modal.show();
+        const event = new Event('click');
+        document.dispatchEvent(event);
+        expect(modal._isHidden).toBe(false);
+    });
 });

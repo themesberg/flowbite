@@ -77,4 +77,10 @@ describe('Modal class', () => {
         document.dispatchEvent(event);
         expect(modal._isHidden).toBe(false);
     });
+
+    test('should create backdrop element when shown', () => {
+        expect(modal._backdropEl).toBeNull();
+        modal.show();
+        expect(modal._backdropEl).not.toBeNull();
+    });
 });

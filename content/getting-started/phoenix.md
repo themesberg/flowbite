@@ -227,6 +227,7 @@ Now that you have installed both Phoenix and Tailwind CSS we can proceed by inst
 
 ## Install Flowbite
 
+### ESBuild
 [Flowbite](https://flowbite.com) is a free and open-source ecosystem of UI component libraries that use the utility-first classes from Tailwind CSS to leverage building interactive, accessible, and commonly used UI components such as dropdowns, navbars, modals, datepickers that can help you build websites even faster.
 
 1. Create a `package.json` file using `npm init` inside the `./assets/` folder and then install the Flowbite package using NPM:
@@ -270,7 +271,17 @@ import "flowbite/dist/flowbite.phoenix.js";
 
 // other Phoenix packages
 ```
+### Include via CDN
+
+Alternatively to all of the above you can also include the JavaScript via CDN:
+
+```html
+// include via CDN
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.phoenix.min.js"></script>
+```
+
 This will work for both LiveViews and regular Views.
+
 
 You can also check out the [Flowbite Quickstart](https://flowbite.com/docs/getting-started/quickstart/) guide to learn how you can set up the Javascript using CDN, via bundling or even using TypeScript.
 

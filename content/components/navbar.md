@@ -6,10 +6,10 @@ group: components
 toc: true
 requires_js: true
 
-previous: Tabs
-previousLink: components/tabs/
-next: Mega menu
-nextLink: components/mega-menu/
+previous: Modal
+previousLink: components/modal/
+next: Pagination
+nextLink: components/pagination/
 ---
 
 Get started with the responsive navbar component from Flowbite to quickly set up a navigation menu for your website and set up the logo, list of pages, CTA button, search input, user profile options with a dropdown, and more.

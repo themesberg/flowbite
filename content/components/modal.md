@@ -6,10 +6,10 @@ group: components
 toc: true
 requires_js: true
 
-previous: Typography
-previousLink: components/typography/
-next: Tabs
-nextLink: components/tabs/
+previous: Mega menu
+previousLink: components/mega-menu/
+next: Navbar
+nextLink: components/navbar/
 ---
 
 The modal component can be used as an interactive dialog on top of the main content area of the website to show notifications and gather information using form elements from your website users.

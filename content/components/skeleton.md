@@ -5,10 +5,10 @@ description: The skeleton component can be used as an alternative loading indica
 group: components
 toc: true
 
-previous: Drawer
-previousLink: components/drawer/
-next: Pagination
-nextLink: components/pagination/
+previous: Sidebar
+previousLink: components/sidebar/
+next: Speed Dial
+nextLink: components/speed-dial/
 ---
 
 Use the skeleton component to indicate a loading status with placeholder elements that look very similar to the type of content that is being loaded such as paragraphs, heading, images, videos, and more.

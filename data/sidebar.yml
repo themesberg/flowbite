@@ -57,8 +57,9 @@
     - title: Drawer
     - title: Dropdowns
     - title: Footer
-    - title: Sidebar
     - title: Forms
+    - title: Gallery
+      new: true
     - title: Indicators
     - title: KBD
     - title: List Group
@@ -69,12 +70,13 @@
     - title: Popover
     - title: Progress
     - title: Rating
+    - title: Sidebar
     - title: Skeleton
-    - title: Spinner
     - title: Speed Dial
+    - title: Spinner
     - title: Stepper
-    - title: Tabs
     - title: Tables
+    - title: Tabs
     - title: Timeline
     - title: Toast
     - title: Tooltips

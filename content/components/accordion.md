@@ -6,10 +6,10 @@ group: components
 toc: true
 requires_js: true
 
-previous: Alerts
-previousLink: components/alerts/
-next: Avatar
-nextLink: components/avatar/
+previous: Optimization
+previousLink: customize/optimization/
+next: Alerts
+nextLink: components/alerts/
 ---
 
 The accordion component is a collection of vertically collapsing header and body elements that can be used to show and hide information based on the Tailwind CSS utility classes and JavaScript from Flowbite.

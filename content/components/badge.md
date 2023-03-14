@@ -148,7 +148,7 @@ Alternatively you can also use badges which indicate only a SVG icon.
 </span>
 {{< /example >}}
 
-## Dismissable badges
+## Chips (dismissable badges)
 
 Use the `data-dismiss-target` data attribute to dismiss the current badge where the value is the id of the target element using a transition animation.
 

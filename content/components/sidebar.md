@@ -5,10 +5,10 @@ description: Use the sidebar component to show a list of menu items and multi-le
 group: components
 toc: true
 
-previous: Footer
-previousLink: components/footer/
-next: Drawer
-nextLink: components/drawer/
+previous: Rating
+previousLink: components/rating/
+next: Skeleton
+nextLink: components/skeleton/
 ---
 
 The sidebar component can be used as a complementary element relative to the navbar shown on either the left or right side of the page used for the navigation on your web application, including menu items, multi-level menu items, call to actions elements, and more.

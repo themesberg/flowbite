@@ -5,10 +5,10 @@ description: Use the progress bar component to show the completion rate of a dat
 group: components
 toc: true
 
-previous: KBD (Keyboard)
-previousLink: components/kbd/
-next: Popover
-nextLink: components/popover/
+previous: Popover
+previousLink: components/popover/
+next: Rating
+nextLink: components/rating/
 ---
 
 The progress bar component can be used as an indicator to show the completion rate of data sets or it can be used as an animated loader component. There are multiple sizes, colors, and styles available.

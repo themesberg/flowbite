@@ -5,10 +5,10 @@ description: Use the rating component to show reviews and testimonials from your
 group: components
 toc: true
 
-previous: Speed Dial
-previousLink: components/speed-dial/
-next: Timeline
-nextLink: components/timeline/
+previous: Progress bar
+previousLink: components/progress/
+next: Sidebar
+nextLink: components/sidebar/
 ---
 
 Get started with the rating component to show an aggregate of reviews and scores in the forms of stars or numbers using the utility classes from Tailwind CSS and components from Flowbite.

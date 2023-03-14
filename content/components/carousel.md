@@ -8,8 +8,8 @@ requires_js: true
 
 previous: Card
 previousLink: components/card/
-next: Dropdown
-nextLink: components/dropdowns/
+next: Drawer
+nextLink: components/drawer/
 ---
 
 The carousel component can be used to cycle through a set of elements using custom options, controls, and indicators based on the JavaScript object from Flowbite.

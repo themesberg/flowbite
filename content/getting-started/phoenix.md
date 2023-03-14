@@ -94,6 +94,7 @@ Make sure that you press "Yes" to all prompts.
 ## Create a Phoenix project
 
 Now that you have all of the required languages and tools installed you can create a new Phoenix project.
+This command will create a fresh installation of a Phoenix application with a folder structure that already includes examples of the MVC pattern including controllers, view templates, and data models.
 
 1. Using the application generator, you can create a new Phoenix project and make sure that you press "Yes" when prompted to install the local dependencies:
 

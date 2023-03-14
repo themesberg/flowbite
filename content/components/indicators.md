@@ -63,7 +63,7 @@ Use this example to show a status indicator for the currently logged in user by 
 {{< example id="status-indicator-example" github="components/indicators.md" class="flex items-center space-x-4" show_dark=true >}}
 <div class="relative">
     <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="profile image">
-    <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+    <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-500 border-2 border-white dark:border-gray-800 rounded-full"></span>
 </div>
 <div class="relative">
     <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="profile image">

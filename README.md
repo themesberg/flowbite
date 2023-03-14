@@ -681,7 +681,7 @@ Flowbite is an open source collection of UI components built with the utility cl
   <tr>
     <td width="33.3333%">Bottom Navigation</td>
     <td width="33.3333%">Sticky Banner</td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">Gallery (Masonry)</td>
   </tr>
   <tr>
     <td width="33.3333%">
@@ -695,6 +695,9 @@ Flowbite is an open source collection of UI components built with the utility cl
         </a>
     </td>
     <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/gallery/">
+            <img alt="Tailwind CSS Image Gallery (Masonry)" src="https://flowbite.s3.amazonaws.com/github/gallery.jpg">
+        </a>
     </td>
   </tr>
 </table>

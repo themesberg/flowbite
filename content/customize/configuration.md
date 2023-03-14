@@ -5,8 +5,8 @@ description: Learn how to customize the default Flowbite and Tailwind CSS option
 group: customize
 toc: true
 
-previous: Changelog
-previousLink: getting-started/changelog/
+previous: Flask
+previousLink: getting-started/flask/
 next: Dark mode
 nextLink: customize/dark-mode/
 ---

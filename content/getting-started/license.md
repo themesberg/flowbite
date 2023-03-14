@@ -5,8 +5,8 @@ description: Learn more about the licensing terms for Flowbite and Tailwind CSS
 group: getting-started
 toc: true
 
-previous: Flask
-previousLink: getting-started/flask/
+previous: TypeScript
+previousLink: getting-started/typescript/
 next: Changelog
 nextLink: getting-started/changelog/
 ---

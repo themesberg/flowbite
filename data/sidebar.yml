@@ -1,8 +1,15 @@
 - title: Getting started
+  slug: getting-started
   pages:
     - title: Introduction
     - title: Quickstart
     - title: TypeScript
+    - title: License
+    - title: Changelog
+
+- title: Integration guides
+  slug: getting-started
+  pages:
     - title: React
     - title: Next.js
       slug: next-js
@@ -26,11 +33,9 @@
       new: true
     - title: Django
     - title: Flask
-    # - title: Angular
-    - title: License
-    - title: Changelog
 
 - title: Customize
+  slug: customize
   pages:
     - title: Configuration
     - title: Dark mode
@@ -40,6 +45,7 @@
     - title: Optimization
 
 - title: Components
+  slug: components
   pages:
     - title: Accordion
     - title: Alerts
@@ -84,6 +90,7 @@
     - title: Video
 
 - title: Forms
+  slug: forms
   pages:
     - title: Input Field
     - title: File Input
@@ -97,6 +104,7 @@
     - title: Floating Label
 
 - title: Typography
+  slug: typography
   pages:
     - title: Headings
     - title: Paragraphs
@@ -108,5 +116,6 @@
     - title: HR
 
 - title: Plugins
+  slug: plugins
   pages:
     - title: Datepicker

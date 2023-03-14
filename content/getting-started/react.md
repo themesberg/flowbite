@@ -6,8 +6,8 @@ group: getting-started
 toc: true
 requires_react: true
 
-previous: TypeScript
-previousLink: getting-started/typescript/
+previous: Changelog
+previousLink: getting-started/changelog/
 next: Next.js
 nextLink: getting-started/next-js/
 ---

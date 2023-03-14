@@ -17,6 +17,8 @@ This component is recommended for usage within marketing UI interfaces and websi
 
 ## Default gallery
 
+Use this component to show a collection of images inside a gallery with three pictures on a row.
+
 {{< example id="default-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
     <div>
@@ -59,6 +61,8 @@ This component is recommended for usage within marketing UI interfaces and websi
 {{< /example >}}
 
 ## Masonry grid
+
+This example can be used to show the images inside a masongry grid layouts with four columns.
 
 {{< example id="masonry-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -111,6 +115,8 @@ This component is recommended for usage within marketing UI interfaces and websi
 
 ## Featured image
 
+This example can be used to feature the most important image and show a row of five pictures below.
+
 {{< example id="featured-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
 <div class="grid gap-4">
     <div>
@@ -138,6 +144,8 @@ This component is recommended for usage within marketing UI interfaces and websi
 
 ## Quad gallery
 
+Use this example to show four larger images with two items on a row.
+
 {{< example id="quad-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
 <div class="grid grid-cols-2 gap-2">
         <div>
@@ -156,6 +164,8 @@ This component is recommended for usage within marketing UI interfaces and websi
 {{< /example >}}
 
 ## Gallery with slider
+
+This example uses the [carousel slider](https://flowbite.com/docs/components/carousel/) functionality to show multiple images inside a slider gallery.
 
 {{< example id="slider-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
 <div id="gallery" class="relative w-full" data-carousel="slide">
@@ -200,6 +210,8 @@ This component is recommended for usage within marketing UI interfaces and websi
 
 ## Custom slider controls
 
+This example uses an alternative style for the control button for the carousel slider component.
+
 {{< example id="slider-controls-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
 <div id="custom-controls-gallery" class="relative w-full" data-carousel="slide">
     <!-- Carousel wrapper -->
@@ -242,10 +254,54 @@ This component is recommended for usage within marketing UI interfaces and websi
 </div>
 {{< /example >}}
 
-## Gallery with tags
+## Gallery with tag filters
 
-{{< example id="tags-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
+Use this example to show a list of tags and filter the images below based on the activately selected tag.
+
+{{< example id="tags-gallery-example" bodyClass="mt-0" github="components/gallery.md" show_dark=true >}}
+<div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
+    <button type="button" class="text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base px-5 py-2.5 text-center mr-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">All categories</button>
+    <button type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base px-5 py-2.5 text-center mr-3 mb-3 dark:text-white dark:focus:ring-gray-800">Shoes</button>
+    <button type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base px-5 py-2.5 text-center mr-3 mb-3 dark:text-white dark:focus:ring-gray-800">Bags</button>
+    <button type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base px-5 py-2.5 text-center mr-3 mb-3 dark:text-white dark:focus:ring-gray-800">Electronics</button>
+    <button type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base px-5 py-2.5 text-center mr-3 mb-3 dark:text-white dark:focus:ring-gray-800">Gaming</button>
+</div>
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
+    </div>
 </div>
 {{< /example >}}

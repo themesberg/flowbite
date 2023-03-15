@@ -62,7 +62,7 @@ Use this component to show a collection of images inside a gallery with three pi
 
 ## Masonry grid
 
-This example can be used to show the images inside a masongry grid layouts with four columns.
+This example can be used to show the images inside a masonry grid layouts with four columns.
 
 {{< example id="masonry-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -163,6 +163,10 @@ Use this example to show four larger images with two items on a row.
     </div>
 {{< /example >}}
 
+<div class="mt-8 -mb-5">
+  {{< requires_js >}}
+</div>
+
 ## Gallery with slider
 
 This example uses the [carousel slider](https://flowbite.com/docs/components/carousel/) functionality to show multiple images inside a slider gallery.
@@ -207,6 +211,10 @@ This example uses the [carousel slider](https://flowbite.com/docs/components/car
     </button>
 </div>
 {{< /example >}}
+
+<div class="mt-8 -mb-5">
+  {{< requires_js >}}
+</div>
 
 ## Custom slider controls
 

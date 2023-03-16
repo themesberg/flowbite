@@ -476,7 +476,7 @@ Here's an example that applies the types from Flowbite to the code above:
 
 ```javascript
 import { Tabs } from "flowbite";
-import type { TabsOptions, TabsInterface, TabItem } from "flowbit";
+import type { TabsOptions, TabsInterface, TabItem } from "flowbite";
 
 // create an array of objects with the id, trigger element (eg. button), and the content element
 const tabElements: TabItem[] = [

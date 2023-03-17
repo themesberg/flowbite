@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Theming - Flowbite
-description: Use the theming options from the configuration file to override the default utility classes from FlowBite
+description: Use the theming options from the Tailwind CSS configuration file to override the default utility classes from Flowbite and change colors, fonts, and the default class values
 group: customize
 toc: true
 
@@ -92,6 +92,33 @@ module.exports = {
       },
 
       // ...
+    }
+  }
+}
+```
+
+### Fonts
+
+You can add your own font by extending the default Tailwind CSS configuration file
+
+Make sure that you apply `antialiased` to the `<body>` tag of your document to enable font smoothing.
+
+```javascript
+tailwind.config = {
+  theme: {
+    fontFamily: {
+      'body': [
+        'Inter', 
+        'ui-sans-serif', 
+        'system-ui',
+        // other fallback fonts
+      ],
+      'sans': [
+        'Inter', 
+        'ui-sans-serif', 
+        'system-ui',
+        // other fallback fonts
+      ]
     }
   }
 }

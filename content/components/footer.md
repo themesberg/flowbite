@@ -24,7 +24,7 @@ Use this footer component to show a copyright notice and some helpful website li
     <div class="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-between">
       <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
     </span>
-    <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
         <li>
             <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
         </li>
@@ -54,7 +54,7 @@ Use this component to show your brand's logo, a few website links and the copyri
                 <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
             </a>
-            <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                 <li>
                     <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
                 </li>
@@ -70,7 +70,7 @@ Use this component to show your brand's logo, a few website links and the copyri
             </ul>
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 3 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
     </div>
 </footer>
 
@@ -93,7 +93,7 @@ This footer component can be used to show your brand's logo, multiple rows of we
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
-                  <ul class="text-gray-600 dark:text-gray-400">
+                  <ul class="text-gray-600 dark:text-gray-400 font-medium">
                       <li class="mb-4">
                           <a href="{{< param homepage >}}/" class="hover:underline">Flowbite</a>
                       </li>
@@ -104,7 +104,7 @@ This footer component can be used to show your brand's logo, multiple rows of we
               </div>
               <div>
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-                  <ul class="text-gray-600 dark:text-gray-400">
+                  <ul class="text-gray-600 dark:text-gray-400 font-medium">
                       <li class="mb-4">
                           <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
                       </li>
@@ -115,7 +115,7 @@ This footer component can be used to show your brand's logo, multiple rows of we
               </div>
               <div>
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                  <ul class="text-gray-600 dark:text-gray-400">
+                  <ul class="text-gray-600 dark:text-gray-400 font-medium">
                       <li class="mb-4">
                           <a href="#" class="hover:underline">Privacy Policy</a>
                       </li>
@@ -166,8 +166,8 @@ If you have a website with many pages you can use this footer component to show 
     <div class="mx-auto w-full container">
       <div class="grid grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
         <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Company</h2>
-            <ul class="text-gray-500 dark:text-gray-400">
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
                     <a href="#" class=" hover:underline">About</a>
                 </li>
@@ -183,8 +183,8 @@ If you have a website with many pages you can use this footer component to show 
             </ul>
         </div>
         <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Help center</h2>
-            <ul class="text-gray-500 dark:text-gray-400">
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
                     <a href="#" class="hover:underline">Discord Server</a>
                 </li>
@@ -200,8 +200,8 @@ If you have a website with many pages you can use this footer component to show 
             </ul>
         </div>
         <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Legal</h2>
-            <ul class="text-gray-500 dark:text-gray-400">
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
                     <a href="#" class="hover:underline">Privacy Policy</a>
                 </li>
@@ -214,8 +214,8 @@ If you have a website with many pages you can use this footer component to show 
             </ul>
         </div>
         <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Download</h2>
-            <ul class="text-gray-500 dark:text-gray-400">
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
                     <a href="#" class="hover:underline">iOS</a>
                 </li>
@@ -269,7 +269,7 @@ Use this example to set create a sticky footer by using a fixed position to the 
 <footer class="fixed bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
     <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
     </span>
-    <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
         <li>
             <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
         </li>

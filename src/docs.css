@@ -62,7 +62,7 @@
 }
 
 #mainContent > p {
-	@apply mb-4 text-base font-light text-gray-600 dark:text-gray-400;
+	@apply mb-4 text-base font-normal text-gray-600 dark:text-gray-400;
 }
 
 #mainContent > p > a,
@@ -102,7 +102,7 @@
 
 #mainContent > ul > li,
 #mainContent > ol > li {
-	@apply mb-4 text-base font-light text-gray-600 dark:text-gray-400;
+	@apply mb-4 text-base font-normal text-gray-600 dark:text-gray-400;
 }
 
 /* prism styles */
@@ -129,7 +129,7 @@ pre[class*="language-"] {
 	-ms-hyphens: none;
 	hyphens: none;
 
-	@apply font-light;
+	@apply font-normal;
 }
 
 /* without preview */

@@ -40,7 +40,7 @@ This example can be used to the font weight of an inline text element using the 
 {{< example id="font-weight-example" class="flex items-center space-x-8" github="typography/text.md" show_dark=true >}}
 <p class="text-4xl font-thin text-gray-900 dark:text-white">Aa</p>
 <p class="text-4xl text-gray-900 font-extralight dark:text-white">Aa</p>
-<p class="text-4xl font-light text-gray-900 dark:text-white">Aa</p>
+<p class="text-4xl text-gray-900 dark:text-white">Aa</p>
 <p class="text-4xl font-normal text-gray-900 dark:text-white">Aa</p>
 <p class="text-4xl font-medium text-gray-900 dark:text-white">Aa</p>
 <p class="text-4xl font-semibold text-gray-900 dark:text-white">Aa</p>
@@ -83,7 +83,7 @@ Set decoration for the inline text elements such as underline, line through or u
 Underline text by using the `underline` class or disable it using `no-underline`.
 
 {{< example id="text-underline-example" github="typography/text.md" show_dark=true >}}
-<p class="font-light text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-indigo-500">Link issues across Jira</a> and ingest data from other <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-blue-500">software development<a> tools, so your IT support and operations teams have richer contextual information to rapidly respond to <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-green-500">requests</a>, <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-red-500">incidents</a>, and <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-sky-500">changes</a>.</p>
+<p class="text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-indigo-500">Link issues across Jira</a> and ingest data from other <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-blue-500">software development<a> tools, so your IT support and operations teams have richer contextual information to rapidly respond to <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-green-500">requests</a>, <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-red-500">incidents</a>, and <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-sky-500">changes</a>.</p>
 {{< /example >}}
 
 ### Line through
@@ -234,7 +234,7 @@ This is some text. This is some text. This is some text.
 Update the text decoration style using the `decoration-{*}` classes from Tailwind CSS.
 
 {{< example id="text-decoration-style-example" github="typography/text.md" show_dark=true >}}
-<p class="font-light text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-indigo-500">Link issues across Jira</a> and ingest data from other <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-blue-500 decoration-double">software development<a> tools, so your IT support and operations teams have richer contextual information to rapidly respond to <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-green-500 decoration-dotted">requests</a>, <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-red-500 decoration-dashed">incidents</a>, and <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-sky-500 decoration-wavy">changes</a>.</p>
+<p class="text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-indigo-500">Link issues across Jira</a> and ingest data from other <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-blue-500 decoration-double">software development<a> tools, so your IT support and operations teams have richer contextual information to rapidly respond to <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-green-500 decoration-dotted">requests</a>, <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-red-500 decoration-dashed">incidents</a>, and <a href="#" class="font-semibold text-gray-900 underline dark:text-white decoration-sky-500 decoration-wavy">changes</a>.</p>
 {{< /example >}}
 
 ## Opacity

@@ -5,10 +5,10 @@ description: Show contextual information to your users using alert elements base
 group: components
 toc: true
 
-previous: Optimization
-previousLink: customize/optimization/
-next: Accordion
-nextLink: components/accordion/
+previous: Accordion
+previousLink: components/accordion/
+next: Avatar
+nextLink: components/avatar/
 ---
 
 The alert component can be used to provide information to your users such as success or error messages, but also highlighted information complementing the normal flow of paragraphs and headers on a page.

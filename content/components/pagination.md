@@ -5,10 +5,10 @@ description: Use the Tailwind CSS pagination element to indicate a series of con
 group: components
 toc: true
 
-previous: Skeleton
-previousLink: components/skeleton/
-next: Speed Dial
-nextLink: components/speed-dial/
+previous: Navbar
+previousLink: components/navbar/
+next: Popover
+nextLink: components/popover/
 ---
 
 The pagination component can be used to navigate across a series of content and data sets for various pages such as blog posts, products, and more. You can use multiple variants of this component with or without icons and even for paginating table data entries.

@@ -7,8 +7,8 @@ toc: true
 
 previous: Spinner
 previousLink: components/spinner/
-next: Toast
-nextLink: components/toast/
+next: Tables
+nextLink: components/tables/
 ---
 
 The stepper component can be used to show a numbered list of steps next to a form component to indicate the progress and number of steps that are required to complete and submit the form data.

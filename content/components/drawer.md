@@ -6,10 +6,10 @@ group: components
 requires_js: true
 toc: true
 
-previous: Sidebar
-previousLink: components/sidebar/
-next: Skeleton
-nextLink: components/skeleton/
+previous: Carousel
+previousLink: components/carousel/
+next: Dropdowns
+nextLink: components/dropdowns/
 ---
 
 Use the Drawer component (or "off-canvas") to show a fixed element relative to the document page from any side for navigation, contact forms, informational purposes or other user actions.

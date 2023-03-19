@@ -8,8 +8,8 @@ requires_typescript: true
 
 previous: Quickstart
 previousLink: getting-started/quickstart/
-next: React
-nextLink: getting-started/react/
+next: License
+nextLink: getting-started/license/
 ---
 
 [TypeScript](https://www.typescriptlang.org/) is a free and open-source programming language that helps improve the scalability, maintainability, and readability of code. It does this by adding optional static typing to JavaScript. 

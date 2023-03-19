@@ -5,10 +5,10 @@ description: Use the KBD component as an inline element to denote textual user i
 group: components
 toc: true
 
-previous: Video
-previousLink: components/video/
-next: Progress bar
-nextLink: components/progress/
+previous: Indicators
+previousLink: components/indicators/
+next: List group
+nextLink: components/list-group/
 ---
 
 The KBD (Keyboard) component can be used to indicate a textual user input from the keyboard inside other elements such as in text, tables, cards, and more.

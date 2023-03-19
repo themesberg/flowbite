@@ -7,8 +7,8 @@ toc: true
 
 previous: License
 previousLink: getting-started/license/
-next: Configuration
-nextLink: customize/configuration/
+next: React
+nextLink: getting-started/react/
 ---
 
 ## Changelog

@@ -5,10 +5,10 @@ description: Use the table component to show text, images, links, and other elem
 group: components
 toc: true
 
-previous: Popover
-previousLink: components/popover/
-next: Spinner
-nextLink: components/spinner/
+previous: Stepper
+previousLink: components/stepper/
+next: Tabs
+nextLink: components/tabs/
 ---
 
 The table component represents a set of structured elements made up of rows and columns as table cells that can be used to show data sets to your website users.

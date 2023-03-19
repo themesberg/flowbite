@@ -5,10 +5,10 @@ description: Use these responsive tabs components to create a secondary navigati
 group: components
 toc: true
 
-previous: Modal
-previousLink: components/modal/
-next: Navbar
-nextLink: components/navbar/
+previous: Tables
+previousLink: components/tables/
+next: Timeline
+nextLink: components/timeline/
 ---
 
 The tabs component can be used either as an extra navigational hierarchy complementing the main navbar or you can also use it to change content inside a container just below the tabs using the data attributes from Flowbite.

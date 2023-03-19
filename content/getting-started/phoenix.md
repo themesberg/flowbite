@@ -285,6 +285,48 @@ This will work for both LiveViews and regular Views.
 
 You can also check out the [Flowbite Quickstart](https://flowbite.com/docs/getting-started/quickstart/) guide to learn how you can set up the Javascript using CDN, via bundling or even using TypeScript.
 
+
+## Datepicker
+If you want to use the Tailwind Datepicker plugin using JavaScript you will need to include it into your project via NPM:
+```bash
+npm install flowbite-datepicker --save
+```
+
+After you've installed the NPM library, you will need to import the `Datepicker` module in your `app.js` file:
+
+```javascript
+import Datepicker from 'flowbite-datepicker/Datepicker';
+```
+
+
+Initialize a new element using the `Datepicker` constructor in `app.js` file and optionally add custom options based on your needs:
+
+```javascript
+Hooks = {}
+
+Hooks.Datepicker = {
+    mounted() {
+        const datepickerEl = this.el;
+        new Datepicker(datepickerEl, {
+            // options
+        });
+    },
+    updated() {
+        this.mounted();
+    }
+}
+```
+
+Add hooks to your livesocket:
+```javascript
+let liveSocket = new LiveSocket("/live", Socket, { params: { _csrf_token: csrfToken }, hooks: Hooks })
+```
+
+Then to your input field add the `Datepicker` `phx-hook` to initialize the datepicker:
+
+```html
+  <input phx-hook="Datepicker" id="myInput" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+```
 ## Flowbite components
 
 Now that we have a Phoenix project with Tailwind CSS and Flowbite installed we can finally leverage the three technologies to build websites. 

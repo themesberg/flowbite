@@ -372,6 +372,10 @@ After setting up the `data-modal-target="{modalId}"` and `data-modal-toggle="{mo
 
 You can check out the full collection of UI components by visiting [Flowbite Blocks](https://flowbite.com/blocks/) and [Flowbite Library](https://flowbite.com/docs/getting-started/introduction/).
 
+## Flowbite Bundle
+
+An unofficial [Flowbite Bundle](https://github.com/talesfromadev/flowbite-bundle) is available, providing an integrated form theme for Symfony as well as specific form types.
+
 ## Symfony starter project
 
 The awesome open-source community from Flowbite created a [Symfony and Tailwind CSS starter project](https://github.com/themesberg/tailwind-symfony-starter) that you can use to skip this integration guide and use it as starting point for your future Symfony, Tailwind CSS and Flowbite projects.

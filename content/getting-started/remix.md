@@ -22,7 +22,7 @@ Follow the next steps in this guide to learn how to create a new Remix project a
 
 Before getting started make sure you that have [Node.js](https://nodejs.org/en/) and NPM installed on your local machine to be able to install the required packages including Remix, Tailwind CSS and Flowbite.
 
-## Create a new project
+## Create a Remix project
 
 1. Run the following command in your terminal to set up a new Remix project:
 

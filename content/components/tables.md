@@ -5,10 +5,10 @@ description: Use the table component to show text, images, links, and other elem
 group: components
 toc: true
 
-previous: Popover
-previousLink: components/popover/
-next: Spinner
-nextLink: components/spinner/
+previous: Stepper
+previousLink: components/stepper/
+next: Tabs
+nextLink: components/tabs/
 ---
 
 The table component represents a set of structured elements made up of rows and columns as table cells that can be used to show data sets to your website users.
@@ -2591,7 +2591,7 @@ Use this example to show a modal with a form where you can edit table data by cl
         </tbody>
     </table>
     <!-- Edit user modal -->
-    <div id="editUserModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 items-center justify-center hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+    <div id="editUserModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 items-center justify-center hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
         <div class="relative w-full h-full max-w-2xl md:h-auto">
             <!-- Modal content -->
             <form action="#" class="relative bg-white rounded-lg shadow dark:bg-gray-700">

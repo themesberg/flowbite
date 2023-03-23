@@ -22,7 +22,7 @@ By following the steps from this guide you will learn how to create a new projec
 
 Before getting started make sure that you have [Node.js](https://nodejs.org/en/) installed on your local machine to be able to install both SolidJS, Tailwind CSS and Flowbite.
 
-## Create a new project
+## Create a SolidJS project
 
 1. Execute the following command in your terminal to create a new SolidJS project using Vite Templates:
 
@@ -188,7 +188,7 @@ function App() {
           Toggle Flowbite modal
         </button>
 
-        <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto text-base text-left md:inset-0 h-modal md:h-full">
+        <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto text-base text-left md:inset-0 h-[calc(100%-1rem)] md:h-full">
             <div class="relative w-full h-full max-w-2xl md:h-auto">
                 <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                     <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
@@ -250,7 +250,7 @@ Finally, let's add an [accordion component](https://flowbite.com/docs/components
         </button>
     </h2>
     <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
-        <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
         <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
         <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
         </div>
@@ -262,7 +262,7 @@ Finally, let's add an [accordion component](https://flowbite.com/docs/components
         </button>
     </h2>
     <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-        <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
+        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
         <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
         <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
         </div>
@@ -274,7 +274,7 @@ Finally, let's add an [accordion component](https://flowbite.com/docs/components
         </button>
     </h2>
     <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
-        <div class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700">
+        <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
         <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
         <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
         <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>

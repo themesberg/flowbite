@@ -78,3 +78,6 @@ export { initModals } from './components/modal';
 export { initPopovers } from './components/popover';
 export { initTabs } from './components/tabs';
 export { initTooltips } from './components/tooltip';
+
+// export all init functions
+export { initFlowbite } from './components/index';

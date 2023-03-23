@@ -22,6 +22,7 @@
   - [Include via CDN](#include-via-cdn)
   - [Bundled JavaScript](#bundled-javascript)
   - [Data attributes](#data-attributes)
+    - [Init functions](#init-functions)
   - [ESM and CJS](#esm-and-cjs)
   - [TypeScript](#typescript)
   - [JavaScript Frameworks](#javascript-frameworks)
@@ -88,13 +89,13 @@ The quickest way to get started working with Flowbite is to simply include the C
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
 ```
 
 And include the following javascript file before the end of the `body` tag:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 ```
 
 ### Bundled JavaScript
@@ -121,7 +122,7 @@ For example, to set up a modal component all you need to do is use `data-modal-t
 </button>
 
 <!-- Main modal -->
-<div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+<div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
     <div class="relative w-full h-full max-w-2xl md:h-auto">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -153,6 +154,28 @@ For example, to set up a modal component all you need to do is use `data-modal-t
     </div>
 </div>
 ```
+
+#### Init functions
+
+You can also use the init functions to set up the event listeners yourself. Here's an example how you can do it with Vue or Nuxt:
+
+```
+<script setup>
+import { onMounted } from 'vue'
+import { initFlowbite } from 'flowbite'
+
+// initialize components based on data attribute selectors
+onMounted(() => {
+    initFlowbite();
+})
+</script>
+
+<template>
+    // Modal HTML markup with data attributes from Flowbite
+</template>
+```
+
+The `initFlowbite` function sets up all of the init functions for dropdowns, modals, navbars, tooltips and so on to hook onto the data attributes. Alternatively, you can also initialise each component category class separately with `initDropdowns` or `initModals`.
 
 You can view more examples by browsing the [components from Flowbite](#components).
 
@@ -248,7 +271,9 @@ We also wrote integration guides for the following front-end frameworks and libr
 Flowbite has a great integration with most of the back-end frameworks because it relies on vanilla JavaScript:
 
 - [📚 Using Flowbite with Laravel](https://flowbite.com/docs/getting-started/laravel/)
+- [🎼 Using Flowbite with Symfony](https://flowbite.com/docs/getting-started/symfony/)
 - [🚊 Using Flowbite with Ruby on Rails 7](https://flowbite.com/docs/getting-started/rails/)
+- [🐉 Using Flowbite with Phoenix (Elixir)](https://flowbite.com/docs/getting-started/phoenix/)
 - [🐸 Using Flowbite with Django](https://flowbite.com/docs/getting-started/django/)
 - [🌶 Using Flowbite with Flask](https://flowbite.com/docs/getting-started/flask/)
 
@@ -653,6 +678,28 @@ Flowbite is an open source collection of UI components built with the utility cl
         </a>
     </td>
   </tr>
+  <tr>
+    <td width="33.3333%">Bottom Navigation</td>
+    <td width="33.3333%">Sticky Banner</td>
+    <td width="33.3333%">Gallery (Masonry)</td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/bottom-navigation/">
+            <img alt="Tailwind CSS Bottom Navigation Bar" src="https://flowbite.s3.amazonaws.com/github/bottom-bar.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/banner/">
+            <img alt="Tailwind CSS Bottom Sticky Banner" src="https://flowbite.s3.amazonaws.com/github/banner.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/gallery/">
+            <img alt="Tailwind CSS Image Gallery (Masonry)" src="https://flowbite.s3.amazonaws.com/github/gallery.jpg">
+        </a>
+    </td>
+  </tr>
 </table>
 
 ## Figma Design System
@@ -663,7 +710,7 @@ If you need the Figma files for the components you can check out our website for
 
 ## Flowbite Blocks
 
-Check out Flowbite Blocks to get access to over 270+ website sections coded in Tailwind CSS and Flowbite:
+Check out Flowbite Blocks to get access to over 310+ website sections coded in Tailwind CSS and Flowbite:
 
 📦 [Check out Flowbite Blocks](https://flowbite.com/blocks/)
 

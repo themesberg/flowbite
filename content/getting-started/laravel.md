@@ -8,8 +8,8 @@ requires_laravel: true
 
 previous: SolidJS
 previousLink: getting-started/solid-js/
-next: Ruby on Rails
-nextLink: getting-started/rails/
+next: Symfony
+nextLink: getting-started/symfony/
 ---
 
 Laravel is the most popular PHP web framework based on the model-view-controller (MCV) model that helps you build modern web applications and API's.

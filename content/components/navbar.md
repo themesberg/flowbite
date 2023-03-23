@@ -6,10 +6,10 @@ group: components
 toc: true
 requires_js: true
 
-previous: Tabs
-previousLink: components/tabs/
-next: Mega menu
-nextLink: components/mega-menu/
+previous: Modal
+previousLink: components/modal/
+next: Pagination
+nextLink: components/pagination/
 ---
 
 Get started with the responsive navbar component from Flowbite to quickly set up a navigation menu for your website and set up the logo, list of pages, CTA button, search input, user profile options with a dropdown, and more.
@@ -531,19 +531,19 @@ You can also use the dropdown element inside a navigation bar and add a second l
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
                         <div class="font-semibold">Online Stores</div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
                         <div class="font-semibold">Segmentation</div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
                         <div class="font-semibold">Marketing CRM</div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
                     </a>
                 </li>
             </ul>
@@ -551,19 +551,19 @@ You can also use the dropdown element inside a navigation bar and add a second l
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
                         <div class="font-semibold">Online Stores</div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
                         <div class="font-semibold">Segmentation</div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
                         <div class="font-semibold">Marketing CRM</div>
-                        <span class="text-sm font-light text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Connect with third-party tools that you're already using.</span>
                     </a>
                 </li>
             </ul>

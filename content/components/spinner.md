@@ -5,8 +5,8 @@ description: Use the spinner component as a loader indicator in your projects wh
 group: components
 toc: true
 
-previous: Tables
-previousLink: components/tables/
+previous: Speed Dial
+previousLink: components/speed-dial/
 next: Stepper
 nextLink: components/stepper/
 ---

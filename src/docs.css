@@ -21,7 +21,7 @@
 }
 
 #TableOfContents > ul {
-	@apply overflow-x-hidden font-normal text-gray-500 dark:text-gray-400;
+	@apply overflow-x-hidden font-medium text-gray-500 dark:text-gray-400;
 }
 
 #TableOfContents > ul > li {
@@ -29,7 +29,7 @@
 }
 
 #TableOfContents > ul > li > a {
-	@apply block pl-2.5 font-normal border-l border-white duration-200 hover:text-gray-900 transition-none dark:hover:text-white hover:border-gray-300 after:content-['#'] after:text-blue-700 dark:after:text-blue-500 dark:border-gray-900 dark:hover:border-gray-700 after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-100;
+	@apply block pl-2.5 font-medium border-l border-white duration-200 hover:text-gray-900 transition-none dark:hover:text-white hover:border-gray-300 after:content-['#'] after:text-blue-700 dark:after:text-blue-500 dark:border-gray-900 dark:hover:border-gray-700 after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-100;
 }
 
 #TableOfContents > ul > li > ul > li > a {
@@ -62,7 +62,7 @@
 }
 
 #mainContent > p {
-	@apply mb-4 text-base font-light text-gray-600 dark:text-gray-400;
+	@apply mb-4 text-base font-normal text-gray-600 dark:text-gray-400;
 }
 
 #mainContent > p > a,
@@ -102,7 +102,7 @@
 
 #mainContent > ul > li,
 #mainContent > ol > li {
-	@apply mb-4 text-base font-light text-gray-600 dark:text-gray-400;
+	@apply mb-4 text-base font-normal text-gray-600 dark:text-gray-400;
 }
 
 /* prism styles */
@@ -129,7 +129,7 @@ pre[class*="language-"] {
 	-ms-hyphens: none;
 	hyphens: none;
 
-	@apply font-light;
+	@apply font-normal;
 }
 
 /* without preview */

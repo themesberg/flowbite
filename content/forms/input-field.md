@@ -5,8 +5,8 @@ description: Get started with a collection of input fields built with Tailwind C
 group: forms
 toc: true
 
-previous: Tooltips
-previousLink: components/tooltips/
+previous: Video
+previousLink: components/video/
 next: File Input
 nextLink: forms/file-input/
 ---

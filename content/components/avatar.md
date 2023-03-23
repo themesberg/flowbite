@@ -5,8 +5,8 @@ description: Use the avatar component to show a visual representation of a user 
 group: components
 toc: true
 
-previous: Accordion
-previousLink: components/accordion/
+previous: Alerts
+previousLink: components/alerts/
 next: Badge
 nextLink: components/badge/
 ---

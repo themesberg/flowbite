@@ -22,7 +22,7 @@ By following this guide you will learn how to properly set up Tailwind CSS with 
 
 Make sure that you have [Node.js](https://nodejs.org/en/) installed on your computer to be able to install Next.js, Tailwind CSS and Flowbite using NPX and NPM.
 
-## Create a new project
+## Create a Next.js project
 
 1. Run the following command to create a new starter Next.js project:
 

@@ -6,8 +6,8 @@ group: getting-started
 toc: true
 requires_react: true
 
-previous: TypeScript
-previousLink: getting-started/typescript/
+previous: Changelog
+previousLink: getting-started/changelog/
 next: Next.js
 nextLink: getting-started/next-js/
 ---
@@ -16,7 +16,7 @@ React is one of the most popular front-end libraries in the world used by websit
 
 Coupled with Tailwind CSS and the React components from Flowbite you will be able to develop applications faster than ever based on the [Flowbite React](https://flowbite-react.com) library.
 
-## Create a new project
+## Create a React project
 
 The latest recommended way of creating a new React application is to use a front-end tooling software such as Vite or Parcel, but you can also use a more classic method such as Create React App.
 

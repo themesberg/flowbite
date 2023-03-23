@@ -7,8 +7,8 @@ toc: true
 
 previous: Introduction
 previousLink: getting-started/introduction/
-next: React
-nextLink: getting-started/react/
+next: TypeScript
+nextLink: getting-started/typescript/
 ---
 
 Flowbite is a library of components built on top of the utility-classes from Tailwind CSS and it also includes a JavaScript file that makes interactive elements works, such as modals, dropdowns, and more. Learn how to get started by following this quickstart guide.
@@ -92,6 +92,30 @@ This file has access to all of the components and it automatically applies event
 The preferred way to use the interactive UI components from Flowbite is via the data attributes interface which allows us to add functionality via the HTML element attributes and most of the examples on our documentation applies this strategy.
 
 For example, to set up a modal component all you need to do is use `data-modal-target` and `data-modal-{toggle|show|hide}` to toggle, show, or hide the component by clicking on any trigger element.
+
+### Init functions
+
+You can also use the init functions to set up the event listeners yourself. Here's an example how you can do it with Vue or Nuxt:
+
+```javascript
+<script setup>
+import { onMounted } from 'vue'
+import { initFlowbite } from 'flowbite'
+
+// initialize components based on data attribute selectors
+onMounted(() => {
+    initFlowbite();
+})
+</script>
+
+<template>
+    // Modal HTML markup with data attributes from Flowbite
+</template>
+```
+
+The `initFlowbite` function sets up all of the init functions for dropdowns, modals, navbars, tooltips and so on to hook onto the data attributes. Alternatively, you can also initialise each component category class separately with `initDropdowns` or `initModals`.
+
+You can view more examples by browsing the [components from Flowbite](#components).
 
 ### ESM and CJS
 

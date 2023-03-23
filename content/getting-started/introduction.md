@@ -12,11 +12,11 @@ nextLink: getting-started/quickstart/
 
 ## Introduction
 
-Flowbite is an open-source library of UI components based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.
+Flowbite is an open-source library of UI components based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, templates, and more.
 
 It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, but also some more advanced interactive elements such as datepickers. 
 
-All of the elements are built using the utility classes from Tailwind CSS and vanilla JavaScript.
+All of the elements are built using the utility classes from Tailwind CSS and vanilla JavaScript with support for TypeScript.
 
 <iframe width="100%" class="my-8 rounded-lg shadow-lg yt-video" src="https://www.youtube.com/embed/KaLxCiilHns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -47,7 +47,7 @@ One of the disadvantages of Tailwind CSS compared to other frameworks is that it
 
 This is where Flowbite comes into play: it's basically Tailwind CSS, but you get all of the components that you would normally get with a classic CSS framework like Bootstrap or Bulma.
 
-There are 52 types of UI components including buttons, alerts, breadcrumbs, pagination, and navbars. Flowbite also includes some custom JavaScript that enables interactive components, such as dropdowns, modals, tooltips, and many more. 
+There are over 56 types of UI components including buttons, alerts, breadcrumbs, pagination, and navbars. Flowbite also includes some custom JavaScript that enables interactive components, such as dropdowns, modals, tooltips, and many more. 
 
 ## Getting started
 
@@ -126,6 +126,30 @@ This file has access to all of the components and it automatically applies event
 The preferred way to use the interactive UI components from Flowbite is via the data attributes interface which allows us to add functionality via the HTML element attributes and most of the examples on our documentation applies this strategy.
 
 For example, to set up a modal component all you need to do is use `data-modal-target` and `data-modal-{toggle|show|hide}` to toggle, show, or hide the component by clicking on any trigger element.
+
+### Init functions
+
+You can also use the init functions to set up the event listeners yourself. Here's an example how you can do it with Vue or Nuxt:
+
+```javascript
+<script setup>
+import { onMounted } from 'vue'
+import { initFlowbite } from 'flowbite'
+
+// initialize components based on data attribute selectors
+onMounted(() => {
+    initFlowbite();
+})
+</script>
+
+<template>
+    // Modal HTML markup with data attributes from Flowbite
+</template>
+```
+
+The `initFlowbite` function sets up all of the init functions for dropdowns, modals, navbars, tooltips and so on to hook onto the data attributes. Alternatively, you can also initialise each component category class separately with `initDropdowns` or `initModals`.
+
+You can view more examples by browsing the [components from Flowbite](#components).
 
 ### ESM and CJS
 

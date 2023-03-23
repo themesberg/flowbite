@@ -5,10 +5,10 @@ description: Use the list group component to display a series of items, buttons 
 group: components
 toc: true
 
-previous: Indicators
-previousLink: components/indicators/
-next: Typography
-nextLink: components/typography/
+previous: KBD (Keyboard)
+previousLink: components/kbd/
+next: Mega menu
+nextLink: components/mega-menu/
 ---
 
 The list group component can be used to display a series of elements, buttons or links inside a single card component similar to a sidebar.

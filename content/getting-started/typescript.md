@@ -8,8 +8,8 @@ requires_typescript: true
 
 previous: Quickstart
 previousLink: getting-started/quickstart/
-next: React
-nextLink: getting-started/react/
+next: License
+nextLink: getting-started/license/
 ---
 
 [TypeScript](https://www.typescriptlang.org/) is a free and open-source programming language that helps improve the scalability, maintainability, and readability of code. It does this by adding optional static typing to JavaScript. 
@@ -290,7 +290,7 @@ First of all we need to make sure that we have the correct HTML element set up i
 ```html
 <button id="button" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Default</button>
 
-<div id="modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+<div id="modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
     <div class="relative w-full h-full max-w-2xl md:h-auto">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">

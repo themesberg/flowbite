@@ -7,8 +7,8 @@ toc: true
 
 previous: Spinner
 previousLink: components/spinner/
-next: Toast
-nextLink: components/toast/
+next: Tables
+nextLink: components/tables/
 ---
 
 The stepper component can be used to show a numbered list of steps next to a form component to indicate the progress and number of steps that are required to complete and submit the form data.
@@ -22,13 +22,13 @@ Use this example to show a list of form steps with a number and title of the ste
 {{< example id="default-stepper-example" github="components/stepper.md" show_dark=true >}}
 <ol class="flex items-center w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base">
     <li class="flex md:w-full items-center text-blue-600 dark:text-blue-500 sm:after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
-        <span class="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:font-light after:text-gray-200 dark:after:text-gray-500">
+        <span class="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
             <svg aria-hidden="true" class="w-4 h-4 mr-2 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
             Personal <span class="hidden sm:inline-flex sm:ml-2">Info</span>
         </span>
     </li>
     <li class="flex md:w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
-        <span class="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:font-light after:text-gray-200 dark:after:text-gray-500">
+        <span class="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
             <span class="mr-2">2</span>
             Account <span class="hidden sm:inline-flex sm:ml-2">Info</span>
         </span>
@@ -77,7 +77,7 @@ Use this example to show an extra subtitle next to the number and the title of t
         </span>
         <span>
             <h3 class="font-medium leading-tight">User info</h3>
-            <p class="text-sm">Step details here<p>
+            <p class="text-sm">Step details here</p>
         </span>
     </li>
     <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
@@ -86,7 +86,7 @@ Use this example to show an extra subtitle next to the number and the title of t
         </span>
         <span>
             <h3 class="font-medium leading-tight">Company info</h3>
-            <p class="text-sm">Step details here<p>
+            <p class="text-sm">Step details here</p>
         </span>
     </li>
     <li class="flex items-center text-gray-500 dark:text-gray-400 space-x-2.5">
@@ -95,7 +95,7 @@ Use this example to show an extra subtitle next to the number and the title of t
         </span>
         <span>
             <h3 class="font-medium leading-tight">Payment info</h3>
-            <p class="text-sm">Step details here<p>
+            <p class="text-sm">Step details here</p>
         </span>
     </li>
 </ol>

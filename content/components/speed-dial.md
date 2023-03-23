@@ -6,11 +6,11 @@ group: components
 toc: true
 requires_js: true
 
-previous: Pagination
-previousLink: components/pagination/
+previous: Skeleton
+previousLink: components/skeleton/
 
-next: Rating
-nextLink: components/rating/
+next: Spinner
+nextLink: components/spinner/
 ---
 
 Get started with the speed dial component to show a list of buttons or menu items positioned relative to the body in either corner as a quick way to allow certains actions to be made by your users.

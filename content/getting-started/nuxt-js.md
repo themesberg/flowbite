@@ -142,7 +142,7 @@ Let's use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Moda
             <button id="button" data-modal-toggle="modal" data-modal-target="modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Show modal</button>
         </div>
 
-        <div id="modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+        <div id="modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
             <div class="relative w-full h-full max-w-2xl md:h-auto">
                 <!-- Modal content -->
                 <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -180,16 +180,16 @@ Let's use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Moda
 
 You can automatically make the interactive components work by importing the init functions from the Flowbite package using the onMounted lifecycle method from Nuxt.
 
-For example, here's how would initialize all of the modals inside your Vue template:
+For example, here's how would initialize all of interactive UI components (ie. modals) inside your Vue template:
 
 ```javascript
 <script setup>
 import { onMounted } from 'vue'
-import { initModals } from 'flowbite'
+import { initFlowbite } from 'flowbite'
 
 // initialize components based on data attribute selectors
 onMounted(() => {
-    initModals();
+    initFlowbite();
 })
 </script>
 
@@ -198,7 +198,7 @@ onMounted(() => {
 </template>
 ```
 
-Here's a full list of available functions to use to initialise the components:
+Alternatively, here's a full list of available functions to use to initialise the components separately:
 
 ```javascript
 <script setup>

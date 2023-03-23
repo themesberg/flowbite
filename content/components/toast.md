@@ -6,8 +6,8 @@ group: components
 requires_js: true
 toc: true
 
-previous: Stepper
-previousLink: components/stepper/
+previous: Timeline
+previousLink: components/timeline/
 next: Tooltips
 nextLink: components/tooltips/
 ---
@@ -187,24 +187,24 @@ Use this interactive toast component to encourage users to make a certain action
 
 ## Positioning
 
-Use the `absolute` class from Tailwind CSS to position these toast components relative to the main content wrapper element from your document:
+Use the `fixed` class from Tailwind CSS to position these toast components relative to the main content wrapper element from your document:
 
-- Top left: `absolute top-5 left-5`
-- Top right: `absolute top-5 right-5`
-- Bottom left: `absolute bottom-5 left-5`
-- Bottom right: `absolute bottom-5 right-5`
+- Top left: `fixed top-5 left-5`
+- Top right: `fixed top-5 right-5`
+- Bottom left: `fixed bottom-5 left-5`
+- Bottom right: `fixed bottom-5 right-5`
 
 {{< example id="toast-positioning-example" github="components/toast.md" class="relative h-56" show_dark=true >}}
-<div id="toast-top-left" class="absolute flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow top-5 left-5 dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800" role="alert">
+<div id="toast-top-left" class="fixed flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow top-5 left-5 dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800" role="alert">
     <div class="text-sm font-normal">Top left positioning.</div>
 </div>
-<div id="toast-top-right" class="absolute flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow top-5 right-5 dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800" role="alert">
+<div id="toast-top-right" class="fixed flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow top-5 right-5 dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800" role="alert">
     <div class="text-sm font-normal">Top right positioning.</div>
 </div>
-<div id="toast-bottom-right" class="absolute flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow right-5 bottom-5 dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800" role="alert">
+<div id="toast-bottom-right" class="fixed flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow right-5 bottom-5 dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800" role="alert">
     <div class="text-sm font-normal">Bottom right positioning.</div>
 </div>
-<div id="toast-bottom-left" class="absolute flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow bottom-5 left-5 dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800" role="alert">
+<div id="toast-bottom-left" class="fixed flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow bottom-5 left-5 dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800" role="alert">
     <div class="text-sm font-normal">Bottom left positioning.</div>
 </div>
 {{< /example >}}

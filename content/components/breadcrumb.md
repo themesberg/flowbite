@@ -5,8 +5,8 @@ description: Show the location of the current page in a hierarchical structure u
 group: components
 toc: true
 
-previous: Badges
-previousLink: components/badge/
+previous: Bottom Navigation
+previousLink: components/bottom-navigation/
 next: Buttons
 nextLink: components/buttons/
 ---

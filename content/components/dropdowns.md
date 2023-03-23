@@ -6,10 +6,10 @@ group: components
 toc: true
 requires_js: true
 
-previous: Carousel
-previousLink: components/carousel/
-next: Forms
-nextLink: components/forms/
+previous: Drawer
+previousLink: components/drawer/
+next: Footer
+nextLink: components/footer/
 ---
 
 The dropdown component can be used to show a list of menu items when clicking on an element such as a button and hiding it when focusing outside of the triggering element.

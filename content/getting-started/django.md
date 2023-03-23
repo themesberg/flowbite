@@ -6,8 +6,8 @@ group: getting-started
 toc: true
 requires_django: true
 
-previous: Ruby on Rails
-previousLink: getting-started/rails/
+previous: Phoenix (Elixir)
+previousLink: getting-started/phoenix/
 next: Flask
 nextLink: getting-started/flask/
 ---
@@ -32,7 +32,7 @@ python -m pip install Django
 
 Now that you have all the required technologies installed you can start by creating a new Django project.
 
-## Create a new project
+## Create a Django project
 
 1. Run the following command in the terminal to create a new Django project with the name `myapp`:
 

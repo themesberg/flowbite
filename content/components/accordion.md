@@ -6,10 +6,10 @@ group: components
 toc: true
 requires_js: true
 
-previous: Alerts
-previousLink: components/alerts/
-next: Avatar
-nextLink: components/avatar/
+previous: Optimization
+previousLink: customize/optimization/
+next: Alerts
+nextLink: components/alerts/
 ---
 
 The accordion component is a collection of vertically collapsing header and body elements that can be used to show and hide information based on the Tailwind CSS utility classes and JavaScript from Flowbite.
@@ -36,7 +36,7 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
     </button>
   </h2>
   <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
-    <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
       <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
@@ -48,7 +48,7 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
     </button>
   </h2>
   <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-    <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
       <p class="text-gray-500 dark:text-gray-400">Check out the <a href="{{< param homepage >}}/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
@@ -60,7 +60,7 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
     </button>
   </h2>
   <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
-    <div class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
@@ -86,7 +86,7 @@ Use the `data-accordion="open"` option to keep previously opened accordion eleme
     </button>
   </h2>
   <div id="accordion-open-body-1" class="hidden" aria-labelledby="accordion-open-heading-1">
-    <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
       <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
@@ -98,7 +98,7 @@ Use the `data-accordion="open"` option to keep previously opened accordion eleme
     </button>
   </h2>
   <div id="accordion-open-body-2" class="hidden" aria-labelledby="accordion-open-heading-2">
-    <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
       <p class="text-gray-500 dark:text-gray-400">Check out the <a href="{{< param homepage >}}/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
@@ -110,7 +110,7 @@ Use the `data-accordion="open"` option to keep previously opened accordion eleme
     </button>
   </h2>
   <div id="accordion-open-body-3" class="hidden" aria-labelledby="accordion-open-heading-3">
-    <div class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
@@ -138,7 +138,7 @@ Here's an example where we apply the blue colors instead of gray:
     </button>
   </h2>
   <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
-    <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
       <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
@@ -150,7 +150,7 @@ Here's an example where we apply the blue colors instead of gray:
     </button>
   </h2>
   <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
-    <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
       <p class="text-gray-500 dark:text-gray-400">Check out the <a href="{{< param homepage >}}/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
@@ -162,7 +162,7 @@ Here's an example where we apply the blue colors instead of gray:
     </button>
   </h2>
   <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
-    <div class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
@@ -188,7 +188,7 @@ Use this example to remove the background color and rounded borders from the acc
     </button>
   </h2>
   <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
-    <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
       <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
@@ -200,7 +200,7 @@ Use this example to remove the background color and rounded borders from the acc
     </button>
   </h2>
   <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
-    <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
       <p class="text-gray-500 dark:text-gray-400">Check out the <a href="{{< param homepage >}}/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
@@ -212,7 +212,7 @@ Use this example to remove the background color and rounded borders from the acc
     </button>
   </h2>
   <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
-    <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
@@ -237,7 +237,7 @@ Use the `data-accordion-icon` data attribute to optionally set an element to rot
     </button>
   </h2>
   <div id="accordion-arrow-icon-body-1" aria-labelledby="accordion-arrow-icon-heading-1">
-    <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
       <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
@@ -249,7 +249,7 @@ Use the `data-accordion-icon` data attribute to optionally set an element to rot
     </button>
   </h2>
   <div id="accordion-arrow-icon-body-2" class="hidden" aria-labelledby="accordion-arrow-icon-heading-2">
-    <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
       <p class="text-gray-500 dark:text-gray-400">Check out the <a href="{{< param homepage >}}/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
@@ -261,7 +261,7 @@ Use the `data-accordion-icon` data attribute to optionally set an element to rot
     </button>
   </h2>
   <div id="accordion-arrow-icon-body-3" class="hidden" aria-labelledby="accordion-arrow-icon-heading-3">
-    <div class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700">
+    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
       <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>

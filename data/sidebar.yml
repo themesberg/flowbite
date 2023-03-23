@@ -1,14 +1,19 @@
 - title: Getting started
+  slug: getting-started
   pages:
     - title: Introduction
     - title: Quickstart
     - title: TypeScript
-      new: true
+    - title: License
+    - title: Changelog
+
+- title: Integration guides
+  slug: getting-started
+  pages:
     - title: React
     - title: Next.js
       slug: next-js
     - title: Remix
-      new: true
     - title: Vue
     - title: Nuxt
       slug: nuxt-js
@@ -21,14 +26,16 @@
       slug: solid-js
       new: true
     - title: Laravel
+    - title: Symfony
+      new: true
     - title: Rails
+    - title: Phoenix
+      new: true
     - title: Django
     - title: Flask
-    # - title: Angular
-    - title: License
-    - title: Changelog
 
 - title: Customize
+  slug: customize
   pages:
     - title: Configuration
     - title: Dark mode
@@ -38,11 +45,16 @@
     - title: Optimization
 
 - title: Components
+  slug: components
   pages:
     - title: Accordion
     - title: Alerts
     - title: Avatar
     - title: Badge
+    - title: Banner
+      new: true
+    - title: Bottom Navigation
+      new: true
     - title: Breadcrumb
     - title: Buttons
     - title: Button Group
@@ -51,10 +63,10 @@
     - title: Drawer
     - title: Dropdowns
     - title: Footer
-    - title: Sidebar
     - title: Forms
-    - title: Indicators
+    - title: Gallery
       new: true
+    - title: Indicators
     - title: KBD
     - title: List Group
     - title: Mega menu
@@ -64,14 +76,13 @@
     - title: Popover
     - title: Progress
     - title: Rating
+    - title: Sidebar
     - title: Skeleton
-    - title: Spinner
     - title: Speed Dial
-      new: true
+    - title: Spinner
     - title: Stepper
-      new: true
-    - title: Tabs
     - title: Tables
+    - title: Tabs
     - title: Timeline
     - title: Toast
     - title: Tooltips
@@ -79,6 +90,7 @@
     - title: Video
 
 - title: Forms
+  slug: forms
   pages:
     - title: Input Field
     - title: File Input
@@ -92,6 +104,7 @@
     - title: Floating Label
 
 - title: Typography
+  slug: typography
   pages:
     - title: Headings
     - title: Paragraphs
@@ -103,5 +116,6 @@
     - title: HR
 
 - title: Plugins
+  slug: plugins
   pages:
     - title: Datepicker

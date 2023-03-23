@@ -5,10 +5,10 @@ description: Use the video component to configure an embedded video player using
 group: components
 toc: true
 
-previous: Timeline
-previousLink: components/timeline/
-next: KBD (Keyboard)
-nextLink: components/kbd/
+previous: Typography
+previousLink: components/typography/
+next: Input field
+nextLink: forms/input-field/
 ---
 
 Get started with the video component to embed internal video source into a native HTML 5 video player and set custom options such as autoplay or muted to enhance the user experience.

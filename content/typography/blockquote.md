@@ -57,14 +57,14 @@ Use this example to show an icon above the blockquote text content.
 Use this example to show a blockquote component between multiple paragraph elements.
 
 {{< example id="blockquote-paragraph-example" github="typography/blockquote.md" show_dark=true >}}
-<p class="mb-3 font-light text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
+<p class="mb-3 text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
 <div class="grid grid-cols-1 md:gap-6 md:grid-cols-2">
-    <p class="mb-3 font-light text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
+    <p class="mb-3 text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
     <blockquote class="mb-3">
         <p class="text-xl italic font-semibold text-gray-900 dark:text-white">" Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application. "</p>
     </blockquote>
 </div>
-<p class="mb-3 font-light text-gray-500 dark:text-gray-400">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease, with a complete audit trail for every change.</p>
+<p class="mb-3 text-gray-500 dark:text-gray-400">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease, with a complete audit trail for every change.</p>
 {{< /example >}}
 
 ## User testimonial
@@ -81,7 +81,7 @@ This example can be used for user testimonials by mentioning the author and occu
         <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture">
         <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
             <cite class="pr-3 font-medium text-gray-900 dark:text-white">Micheal Gough</cite>
-            <cite class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">CEO at Google</cite>
+            <cite class="pl-3 text-sm text-gray-500 dark:text-gray-400">CEO at Google</cite>
         </div>
     </figcaption>
 </figure>
@@ -107,7 +107,7 @@ Use this example to show a user review with rating stars and the name and occupa
         <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="profile picture">
         <div class="flex items-center divide-x-2 divide-gray-300 dark:divide-gray-700">
             <cite class="pr-3 font-medium text-gray-900 dark:text-white">Bonnie Green</cite>
-            <cite class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">CTO at Flowbite</cite>
+            <cite class="pl-3 text-sm text-gray-500 dark:text-gray-400">CTO at Flowbite</cite>
         </div>
     </figcaption>
 </figure>

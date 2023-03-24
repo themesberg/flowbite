@@ -120,13 +120,13 @@ This command will create a fresh installation of a Phoenix application with a fo
     ```
     This command will create a fresh installation of a Phoenix application with a folder structure that already includes examples of the MVC pattern including controllers, view templates, and data models.
 
-2. Create and configure your database by running the following command:
+2. Run the command below to setup your generated Phoenix project. 
 
 ```bash
-mix ecto.create
+mix setup
 ```
 
-Make sure that you have a `postgres` SUPERUSER and a `postgres` database. You can create them first by running the following SQL command while logged into PostgreSQL via the terminal by running `psql postgres`:
+If you used a command that generates a Phoenix project with database configurations, make sure that you have a `postgres` SUPERUSER and a `postgres` database. You can create them first by running the following SQL command while logged into PostgreSQL via the terminal by running `psql postgres`:
 
 ```bash
 CREATE USER postgres SUPERUSER;
@@ -134,7 +134,7 @@ CREATE DATABASE postgres WITH OWNER postgres;
 exit
 ```
 
-The `mix ecto.create` will create a new database for your Phoenix application.
+The `mix ecto.setup` will create a new database for your Phoenix application.
 
 3. Create a local server by running the following command in your terminal:
 

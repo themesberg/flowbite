@@ -18,33 +18,37 @@ This page will guide you through installing Tailwind CSS with Flowbite for your 
 
 Svelte is a modern and growing front-end compiler. Developers build boilerplate-free components using languages HTML, CSS and JavaScript. Svelte compiles your code to tiny, framework-less vanilla JS.
 
-Flowbite-Svelte is an official Flowbite component library for Svelte that allows you to use interactive components with ease. Tailwind CSS, on the other hand, is a utility-first CSS framework that helps you quickly build custom user interfaces.
+Flowbite Svelte is an official Flowbite component library for Svelte that allows you to use interactive components with ease. Tailwind CSS, on the other hand, is a utility-first CSS framework that helps you quickly build custom user interfaces.
 
-Together, Tailwind CSS and Flowbite-Svelte can help you create modern and interactive web applications in a fraction of the time it would take to do it from scratch.
+Together, Tailwind CSS and Flowbite Svelte can help you create modern and interactive web applications in a fraction of the time it would take to do it from scratch.
 
 ## Install Svelte
 
-Before we can start using Tailwind CSS and Flowbite-Svelte, we need to install Svelte. There are two ways to do this: using SvelteKit or using Svelte.
+Before we can start using Tailwind CSS and Flowbite Svelte, we need to install Svelte. There are two ways to do this: using SvelteKit or using Svelte.
 
 ### SvelteKit
 
 To install SvelteKit, run the following commands:
 
-```sh
+```bash
 npm create svelte@latest my-app
 cd my-app
 pnpm i
 ```
 
+This will create a new SvelteKit application inside the `my-app` directory.
+
 ### Svelte
 
 To install Svelte, run the following commands:
 
-```sh
+```bash
 npm create vite@latest myapp -- --template svelte
 cd myapp
 pnpm i
 ```
+
+This command will create a new Svelte application using Vite.
 
 ## Install Tailwind CSS 
 
@@ -56,12 +60,13 @@ npx svelte-add@latest tailwindcss
 pnpm i
 ```
 
-## Install Flowbite, Flowbite-Svelte, and dependencies
+This command will add and configure Tailwind CSS inside your Svelte project.
 
-Now, we can install Flowbite, Flowbite-Svelte, and their dependencies.
-[Flowbite Svelte](https://flowbite-svelte.com) is an official Flowbite component library for Svelte. All interactivities are handled by Svelte.
+## Install Flowbite
 
-Install Flowbite, Flowbite-Svelte, and dependencies using pnpm:
+Now, we can install Flowbite with Svelte and their dependencies. [Flowbite Svelte](https://flowbite-svelte.com) is an official Flowbite UI component library recommended for usage with Svelte with native interactivity handles.
+
+Install the Flowbite packages and dependencies using `pnpm`:
 
 ```bash
 pnpm i flowbite flowbite-svelte classnames @popperjs/core
@@ -89,11 +94,11 @@ const config = {
 module.exports = config;
 ```
 
-## Using Flowbite-Svelte components
+This ensures that the Tailwind CSS compiler will know what dynamic classes have to be added and also configures some custom CSS from Flowbite.
 
-Now that everything is installed, we can start using Flowbite-Svelte components in our Svelte project.
+## Flowbite Svelte components
 
-### Navbar component
+Now that everything is installed, we can start using Flowbite Svelte components in our Svelte project.
 
 The navbar component is a great way to display a list of navigation links at the top of your page. Here's an example of how to use it:
 
@@ -124,11 +129,9 @@ The navbar component is a great way to display a list of navigation links at the
 </Navbar>
 ```
 
-The navbar component has several customization options, such as dropdowns, search bars, CTA buttons, and sticky navbars. For more examples, check out the [Flowbite-Svelte Navbar component page](https://flowbite-svelte.com/components/navbar).
+The navbar component has several customization options, such as dropdowns, search bars, CTA buttons, and sticky navbars. For more examples, check out the [navbar component page](https://flowbite-svelte.com/components/navbar).
 
-If you prefer a mega menu, go to [Flowbite-Svelte Mega menu page](https://flowbite-svelte.com/components/mega-menu).
-
-### Modal
+Alternatively, you can also choose of the [mega menu](https://flowbite-svelte.com/components/mega-menu) components from Flowbite Svelte.
 
 The modal component is perfect for showing interactive dialogs and notifications. Here's an example of how to use it:
 
@@ -153,9 +156,7 @@ The modal component is perfect for showing interactive dialogs and notifications
 </Modal>
 ```
 
-The modal component has various customization options, such as different types of modals, buttons, and other interactive elements. For more examples, check out the [Flowbite-Svelte Modal component page](https://flowbite-svelte.com/components/modal).
-
-### Footer component
+The modal component has various customization options, such as different types of modals, buttons, and other interactive elements. For more examples, check out the [modal component page](https://flowbite-svelte.com/components/modal).
 
 The footer component is a useful way to display valuable information to your users, such as sitemap links, a copyright notice, and a logo.
 
@@ -175,29 +176,40 @@ The footer component is a useful way to display valuable information to your use
 </Footer>
 ```
 
-The footer component also has several customization options, such as adding logos, social media links, and sitemap links. For more examples, check out the [Flowbite-Svelte Footer component page](https://flowbite-svelte.com/components/footer).
+The footer component also has several customization options, such as adding logos, social media links, and sitemap links. For more examples, check out the [footer component page](https://flowbite-svelte.com/components/footer).
 
-## Flowbite-Svelte starters
+## Flowbite Svelte starters
 
-If you want to get started with Flowbite-Svelte quickly and easily, there are several starter templates available:
+The awesome open-source community has created a couple of starter projects that you can use to get up and running with Flowbite Svelte quicker with templates and boilerplate starters:
 
 - [Flowbite SvelteKit starter](https://github.com/shinokada/flowbite-svelte-starter)
 - [Svelte TS starter](https://github.com/shinokada/svelte-ts-starter)
 - [Svelte starter](https://github.com/shinokada/svelte-starter)
 - [Laravel, Inertia, Svelte, Typescript with Flowbite starter](https://github.com/ZekyTheWolf/LIST-Starter)
 
-## Flowbite-Svelte layout example
+<!-- 
+chore: this repository needs to be updated with better UI/UX
 
-The responsive sidebar layout is a popular layout option for modern web applications that require a flexible and modern design. With Flowbite-Svelte, you can easily create a responsive sidebar. It allows you to display all the important links and features in a clean and organized way. With Flowbite-Svelte, you can create a responsive sidebar layout quickly and easily, making your web application development more efficient. For more information, check out the [Flowbite-Svelte Responsive Sidebar Layout page](https://flowbite-svelte.com/examples/sidebar-layout).
+## Flowbite Svelte layout example
 
-## Flowbite-Svelte-Blocks
+The responsive sidebar layout is a popular layout option for modern web applications that require a flexible and modern design. 
 
-[Flowbite-Svelte-Blocks](https://flowbite-svelte-blocks.vercel.app/) is a great resource for free UI components for marketing, applications, and publishers built with Flowbite-Svelte. There are various examples to explore, making it an excellent resource for inspiration and learning. Check it out at [Flowbite-Svelte-Blocks](https://flowbite-svelte-blocks.vercel.app/)
+With Flowbite-Svelte, you can easily create a responsive sidebar. It allows you to display all the important links and features in a clean and organized way. With Flowbite-Svelte, you can create a responsive sidebar layout quickly and easily, making your web application development more efficient. For more information, check out the [Flowbite-Svelte Responsive Sidebar Layout page](https://flowbite-svelte.com/examples/sidebar-layout). -->
 
-## More than 130 components available
+## Flowbite Svelte blocks
 
-Flowbite-Svelte offers more than 130 components, including interactive elements, navigation menus, modals, forms, footers, typograpy, and much more. These components are built with Svelte and Tailwind CSS, making them easy to use and customize in your web application. With Flowbite-Svelte, you can save time and effort by not having to build these components from scratch. Check out the [Flowbite-Svelte Components page](https://flowbite-svelte.com/) to explore all the available components.
+The [Flowbite Svelte Blocks](https://flowbite-svelte-blocks.vercel.app/) collection is a great resource for free UI components for marketing, applications, and publishers built with the Flowbite Svelte library. 
 
-## Conclusion
+There are various examples to explore, making it an excellent resource for inspiration and learning.
 
-Using Tailwind CSS with Flowbite-Svelte can significantly speed up your web application development. With this guide, you can easily install and use Flowbite-Svelte components in your Svelte project, providing interactive and customizable user interfaces. With Flowbite-Svelte-Blocks, you have access to various free UI components for inspiration and learning.
+## UI Component Library
+
+The [Flowbite Svelte library](https://github.com/themesberg/flowbite-svelte) offers more than 130 components, including interactive elements, navigation menus, modals, forms, footers, typograpy, and much more. These components are built with Svelte and Tailwind CSS, making them easy to use and customize in your web application. 
+
+You can save time and effort by not having to build these components from scratch. Check out the [Flowbite Svelte Library](https://flowbite-svelte.com/) to explore all the available components.
+
+## Contributing
+
+The [Flowbite Svelte](https://github.com/themesberg/flowbite-svelte) library on GitHub is an open-source project and many developers contribute to the project by adding new components and improving the current codebase. 
+
+Contributing is a great way by saying thank you or building up your developer portfolio.

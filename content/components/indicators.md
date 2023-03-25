@@ -7,8 +7,8 @@ toc: true
 
 previous: Gallery
 previousLink: components/gallery/
-next: KBD (Keyboard)
-nextLink: components/kbd/
+next: Jumbotron
+nextLink: components/jumbotron/
 ---
 
 The indicator component can be used as a small element positioned absolutely relative to another component such as a button or card and show a number count, account status (red for offline, green for online) and other useful information.

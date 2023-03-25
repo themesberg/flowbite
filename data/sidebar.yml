@@ -67,6 +67,8 @@
     - title: Gallery
       new: true
     - title: Indicators
+    - title: Jumbotron
+      new: true
     - title: KBD
     - title: List Group
     - title: Mega menu

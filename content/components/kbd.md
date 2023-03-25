@@ -5,8 +5,8 @@ description: Use the KBD component as an inline element to denote textual user i
 group: components
 toc: true
 
-previous: Indicators
-previousLink: components/indicators/
+previous: Jumbotron
+previousLink: components/jumbotron/
 next: List group
 nextLink: components/list-group/
 ---

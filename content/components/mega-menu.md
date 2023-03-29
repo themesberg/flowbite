@@ -22,7 +22,7 @@ Use this example to show a list of links aligned on three columns inside the meg
 
 {{< example id="default-mega-menu-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="300" >}}
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
-    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto px-4 py-2.5">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
         <a href="https://flowbite.com" class="flex items-center">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -132,7 +132,7 @@ This example of a mega menu dropdown can be used to also show an icon near the t
 
 {{< example id="mega-menu-icons-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="300" >}}
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
-    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto px-4 py-2.5">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
         <a href="https://flowbite.com" class="flex items-center">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -262,7 +262,7 @@ Use this example to show a mega menu dropdown that spans the entire width of the
 
 {{< example id="mega-menu-full-width-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="440" >}}
 <nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
-    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 py-2.5">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="https://flowbite.com" class="flex items-center">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -365,7 +365,7 @@ This example can be used to also show a CTA button or link next to the menu item
 
 {{< example id="mega-menu-full-width-cta-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="360" >}}
 <nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
-    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="https://flowbite.com" class="flex items-center">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -460,7 +460,7 @@ This example can be used to also show a CTA with a backdround image inside the d
 
 {{< example id="mega-menu-full-width-image-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="360" >}}
 <nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
-    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 py-2.5">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="https://flowbite.com" class="flex items-center">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>

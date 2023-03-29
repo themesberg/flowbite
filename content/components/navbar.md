@@ -19,8 +19,8 @@ Get started with the responsive navbar component from Flowbite to quickly set up
 Use this example of a navigation bar built with the utility classes from Tailwind CSS to enable users to navigate across the pages of your website.
 
 {{< example id="default-navbar-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="300" >}}
-<nav class="bg-white border-gray-200 rounded dark:bg-gray-900">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-4">
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="{{< param homepage >}}/" class="flex items-center">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -58,7 +58,7 @@ This example can be used to show a secondary dropdown menu when clicking on one 
 
 {{< example id="navbar-dropdown-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="320" >}}
 <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-4">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="#" class="flex items-center">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -113,7 +113,7 @@ Use this example to show multiple layers of dropdown menu by stacking them insid
 
 {{< example id="navbar-multi-dropdown-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="320" >}}
 <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-4">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="#" class="flex items-center">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -184,7 +184,7 @@ Use this example to keep the navbar positioned fixed to the top side as you scro
 
 {{< example id="navbar-sticky-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true >}}
 <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-4">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="https://flowbite.com/" class="flex items-center">
       <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo">
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -222,7 +222,7 @@ Use this example to show another subnav below the main navbar element.
 
 {{< example id="navbar-submenu-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true >}}
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
-    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 py-4">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="https://flowbite.com" class="flex items-center">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -260,8 +260,8 @@ Use this example to show another subnav below the main navbar element.
 Use this example of a navbar element to also show a search input element that you can integrate for a site-wide search.
 
 {{< example id="navbar-search-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="300" >}}
-<nav class="bg-white border-gray-200 rounded dark:bg-gray-900">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-4">
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="{{< param homepage >}}/" class="flex items-center">
       <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -311,8 +311,8 @@ Use this example of a navbar element to also show a search input element that yo
 Use the following navbar element to show a call to action button alongside the logo and page links.
 
 {{< example id="navbar-cta-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="300" >}}
-<nav class="bg-white border-gray-200 rounded dark:bg-gray-900">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-4">
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="{{< param homepage >}}/" class="flex items-center">
       <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -349,8 +349,8 @@ Use the following navbar element to show a call to action button alongside the l
 Get started with this example to show a language dropdown selector in the navbar component.
 
 {{< example id="navbar-language-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="320" >}}
-<nav class="bg-white border-gray-200 rounded dark:bg-gray-900">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-4">
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="{{< param homepage >}}/" class="flex items-center">
       <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -430,8 +430,8 @@ Get started with this example to show a language dropdown selector in the navbar
 Use this example to create a navigation bar with a user profile or button to toggle a dropdown menu.
 
 {{< example id="navbar-user-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="380" >}}
-<nav class="bg-white border-gray-200 rounded dark:bg-gray-900">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-4">
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="{{< param homepage >}}/" class="flex items-center">
       <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -496,7 +496,7 @@ You can also use the dropdown element inside a navigation bar and add a second l
 
 {{< example id="navbar-mega-menu" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="340" >}}
 <nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
-    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 py-4">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="https://flowbite.com" class="flex items-center">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -577,8 +577,8 @@ You can also use the dropdown element inside a navigation bar and add a second l
 Use this example to show a solid background for the navbar component instead of being transparent.
 
 {{< example id="navbar-solid-bg-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="320" >}}
-<nav class="border-gray-200 rounded bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-4">
+<nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="#" class="flex items-center">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -614,8 +614,8 @@ All of the navbar components from this page have a responsive hamburger menu inc
 Here's an example where you can show the hamburger icon and the menu on all screen sizes.
 
 {{< example id="navbar-hamburger-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="320" >}}
-<nav class="border-gray-200 rounded bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-4">
+<nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="#" class="flex items-center">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>

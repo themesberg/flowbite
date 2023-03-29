@@ -170,7 +170,7 @@ Get started with this example where the submit button is positioned inside the i
 
 Use this example to show a dropdown menu right next to the input field.
 
-{{< example id="input-field-dropdown-example" github="forms/input-field.md" show_dark=true iframeHeight="240" >}}
+{{< example id="input-field-dropdown-example" github="forms/input-field.md" show_dark=true iframeHeight="290" >}}
 <form>
     <div class="flex">
         <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>

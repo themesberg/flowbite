@@ -17,7 +17,7 @@ The button group component from Flowbite can be used to stack together multiple 
 
 Use the following code to stack together buttons into a single group.
 
-{{< example id="default-button-group-example" github="components/button-group.md" show_dark=true >}}
+{{< example id="default-button-group-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 <div class="inline-flex rounded-md shadow-sm" role="group">
   <button type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
     Profile
@@ -35,7 +35,7 @@ Use the following code to stack together buttons into a single group.
 
 You can also use the button group component as links.
 
-{{< example id="button-group-links-example" github="components/button-group.md" show_dark=true >}}
+{{< example id="button-group-links-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 <div class="inline-flex rounded-md shadow-sm">
   <a href="#" aria-current="page" class="px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
     Profile
@@ -53,7 +53,7 @@ You can also use the button group component as links.
 
 You can also use SVG icons inside the grouped buttons.
 
-{{< example id="button-group-icons-example" github="components/button-group.md" show_dark=true >}}
+{{< example id="button-group-icons-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 <div class="inline-flex rounded-md shadow-sm" role="group">
   <button type="button" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
     <svg aria-hidden="true" class="w-4 h-4 mr-2 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
@@ -74,7 +74,7 @@ You can also use SVG icons inside the grouped buttons.
 
 Group a series of buttons together on a single line or stack them in a vertical column.
 
-{{< example id="button-group-outline-example" github="components/button-group.md" show_dark=true >}}
+{{< example id="button-group-outline-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 <div class="inline-flex rounded-md shadow-sm" role="group">
   <button type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-l-lg hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700">
     Profile
@@ -92,7 +92,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 Group a series of buttons together on a single line or stack them in a vertical column.
 
-{{< example id="button-group-outline-icon-example" github="components/button-group.md" show_dark=true >}}
+{{< example id="button-group-outline-icon-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 <div class="inline-flex rounded-md shadow-sm" role="group">
   <button type="button" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-l-lg hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700">
     <svg aria-hidden="true" class="w-4 h-4 mr-2 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>

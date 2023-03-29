@@ -40,7 +40,7 @@ Get started with the default example of a search input component including and i
 
 Use this search component with a dropdown to let your users select a category in which they would like the search query to be targeted in.
 
-{{< example id="search-bar-dropdown-example" class="dark:bg-gray-800" github="forms/search-input.md" show_dark=true iframeHeight="240" >}}
+{{< example id="search-bar-dropdown-example" class="dark:bg-gray-800" github="forms/search-input.md" show_dark=true iframeHeight="290" >}}
 <form>
     <div class="flex">
         <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
@@ -100,7 +100,7 @@ Use the simplest form of a search input component with an icon and a search butt
 
 Use this example where you can select a country in which you want to search for an address or city.
 
-{{< example id="search-bar-location-example" class="dark:bg-gray-800" github="forms/search-input.md" show_dark=true iframeHeight="240" >}}
+{{< example id="search-bar-location-example" class="dark:bg-gray-800" github="forms/search-input.md" show_dark=true iframeHeight="290" >}}
 <form>
     <div class="flex">
         <label for="location-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>

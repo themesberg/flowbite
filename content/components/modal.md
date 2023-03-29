@@ -582,6 +582,15 @@ The default position is the center of the page.
 </div>
 {{< /example >}}
 
+## More examples
+
+You can check out more modal component examples from the following resources from Flowbite Blocks:
+
+- [CRUD read modals](https://flowbite.com/blocks/application/crud-read-modals/)
+- [CRUD create modals](https://flowbite.com/blocks/application/crud-create-modals/)
+- [CRUD update modals](https://flowbite.com/blocks/application/crud-update-modals/)
+- [Faceted search modals](https://flowbite.com/blocks/application/faceted-search-modals/)
+
 ## JavaScript behaviour
 
 The **Modal** class from Flowbite can be used to create an object that will launch an interactive modal based on the object parameters, options, and methods that you choose to apply.

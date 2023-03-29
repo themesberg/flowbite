@@ -200,6 +200,10 @@ You can use multiple tab components on a single page but make sure that the id's
 </div>
 {{< /example >}}
 
+### Customize active tab
+
+You can use the `aria-selected:{class}` selector to style the currently active tab button element.
+
 ## JavaScript behaviour
 
 The **Tabs** class from Flowbite can be used to create an object that will enable the interactive navigation between tabs and its content based on the parameters, options, methods, and callback functions that you apply.

@@ -208,7 +208,7 @@ const updateiFrameHeight = (iFrame) => {
     setTimeout(() => {
         iFrame.nextElementSibling.classList.add('hidden');
         iFrame.style.height =
-            iFrame.contentWindow.document.body.scrollHeight + 40 + 'px';
+            iFrame.contentWindow.document.body.scrollHeight + 'px';
     }, 500);
 };
 

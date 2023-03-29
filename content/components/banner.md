@@ -133,3 +133,7 @@ This example can be used to share important information with your website visito
     </div>
 </div>
 {{< /example >}}
+
+## More examples
+
+For more sticky banner examples you can check [banner sections](https://flowbite.com/blocks/marketing/banner/) from Flowbite Blocks.

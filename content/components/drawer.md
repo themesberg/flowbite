@@ -786,6 +786,14 @@ Use the `data-drawer-edge-offset="bottom-[*px]"` data attribute where you can ap
 </div>
 {{< /example >}}
 
+## More examples
+
+For more drawer component examples you can check out the following resources from Flowbite Blocks:
+
+- [CRUD read drawers](https://flowbite.com/blocks/application/crud-read-drawers/)
+- [CRUD create drawers](https://flowbite.com/blocks/application/crud-create-drawers/)
+- [CRUD update drawers](https://flowbite.com/blocks/application/crud-update-drawers/)
+
 ## JavaScript behaviour
 
 The Drawer API can be used to create an instance of the class, use methods to manipulate the component by showing or hiding it on demand and also set custom behaviour options for placement, enabling or disabling the backdrop element, enabling or disabling the body scroll, and more.

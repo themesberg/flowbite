@@ -20,12 +20,12 @@ Make sure that you have included the Flowbite JavaScript file inside your projec
 
 Use this example to show a list of links aligned on three columns inside the mega menu dropdown.
 
-{{< example id="default-mega-menu-example" github="components/mega-menu.md" show_dark=true iframeHeight="300" >}}
-<nav class="bg-white border-gray-200 px-2 md:px-4 py-2.5 dark:bg-gray-900">
-    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
+{{< example id="default-mega-menu-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="300" >}}
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto px-4 py-2.5">
         <a href="https://flowbite.com" class="flex items-center">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
         </a>
         <div class="flex items-center md:order-2">
             <a href="#" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Login</a>
@@ -35,7 +35,7 @@ Use this example to show a list of links aligned on three columns inside the meg
                 <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
             </button>
         </div>
-        <div id="mega-menu" class="items-center justify-between hidden w-full text-sm md:flex md:w-auto md:order-1">
+        <div id="mega-menu" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
             <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
                 <li>
                     <a href="#" class="block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Home</a>
@@ -130,12 +130,12 @@ Use this example to show a list of links aligned on three columns inside the meg
 
 This example of a mega menu dropdown can be used to also show an icon near the text of the link.
 
-{{< example id="mega-menu-icons-example" github="components/mega-menu.md" show_dark=true iframeHeight="300" >}}
-<nav class="bg-white border-gray-200 px-2 md:px-4 py-2.5 dark:bg-gray-900">
-    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
+{{< example id="mega-menu-icons-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="300" >}}
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto px-4 py-2.5">
         <a href="https://flowbite.com" class="flex items-center">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
         </a>
         <div class="flex items-center md:order-2">
             <a href="#" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Login</a>
@@ -146,7 +146,7 @@ This example of a mega menu dropdown can be used to also show an icon near the t
             </button>
         </div>
         <div id="mega-menu-icons" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
-            <ul class="flex flex-col mt-4 text-sm font-medium md:flex-row md:space-x-8 md:mt-0">
+            <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
                 <li>
                     <a href="#" class="block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Home</a>
                 </li>
@@ -260,19 +260,19 @@ This example of a mega menu dropdown can be used to also show an icon near the t
 
 Use this example to show a mega menu dropdown that spans the entire width of the document page.
 
-{{< example id="mega-menu-full-width-example" github="components/mega-menu.md" show_dark=true iframeHeight="440" >}}
+{{< example id="mega-menu-full-width-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="440" >}}
 <nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
-    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 py-2.5">
         <a href="https://flowbite.com" class="flex items-center">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
         </a>
         <button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mega-menu-full" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
         </button>
         <div id="mega-menu-full" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
-            <ul class="flex flex-col mt-4 text-sm font-medium md:flex-row md:space-x-8 md:mt-0">
+            <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
                 <li>
                     <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Home</a>
                 </li>
@@ -363,19 +363,19 @@ Use this example to show a mega menu dropdown that spans the entire width of the
 
 This example can be used to also show a CTA button or link next to the menu items inside the dropdown.
 
-{{< example id="mega-menu-full-width-cta-example" github="components/mega-menu.md" show_dark=true iframeHeight="360" >}}
+{{< example id="mega-menu-full-width-cta-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="360" >}}
 <nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
         <a href="https://flowbite.com" class="flex items-center">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
         </a>
         <button id="mega-menu-full-cta-button" data-collapse-toggle="mega-menu-full-cta" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mega-menu-full-cta" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
         </button>
         <div id="mega-menu-full-cta" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
-            <ul class="flex flex-col mt-4 text-sm font-medium md:flex-row md:space-x-8 md:mt-0">
+            <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
                 <li>
                     <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Home</a>
                 </li>
@@ -458,19 +458,19 @@ This example can be used to also show a CTA button or link next to the menu item
 
 This example can be used to also show a CTA with a backdround image inside the dropdown next to the other menu items and links.
 
-{{< example id="mega-menu-full-width-image-example" github="components/mega-menu.md" show_dark=true iframeHeight="360" >}}
+{{< example id="mega-menu-full-width-image-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="360" >}}
 <nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
-    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 py-2.5">
         <a href="https://flowbite.com" class="flex items-center">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
         </a>
         <button id="mega-menu-full-image-button" data-collapse-toggle="mega-menu-full-image" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mega-menu-full-image" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
         </button>
         <div id="mega-menu-full-image" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
-            <ul class="flex flex-col mt-4 text-sm font-medium md:flex-row md:space-x-8 md:mt-0">
+            <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
                 <li>
                     <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Home</a>
                 </li>
@@ -546,3 +546,7 @@ This example can be used to also show a CTA with a backdround image inside the d
     </div>
 </nav>
 {{< /example >}}
+
+## More examples
+
+You can check out more mega menu examples on the [header components](https://flowbite.com/blocks/marketing/header/) page from Flowbite Blocks.

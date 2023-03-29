@@ -3196,3 +3196,12 @@ Use this example to apply a different color to every second row inside the table
     </table>
 </div>
 {{< /example >}}
+
+## More examples
+
+You can check out more table component examples from the following resources from Flowbite Blocks:
+
+- [Advanced tables](https://flowbite.com/blocks/application/advanced-tables/)
+- [Table headers](https://flowbite.com/blocks/application/table-headers/)
+- [Table footers](https://flowbite.com/blocks/application/table-footers/)
+- [Pricing tables](https://flowbite.com/blocks/marketing/pricing/)

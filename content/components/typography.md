@@ -254,3 +254,7 @@ module.exports = {
   ],
 }
 ```
+
+## Blog templates
+
+You can check out the following [blog template](https://flowbite.com/blocks/publisher/blog-templates/) layouts from Flowbite Blocks that use the Typography plugin.

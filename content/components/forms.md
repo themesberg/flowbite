@@ -340,3 +340,16 @@ Use the following toggle switch component to ask for a yes or no type of input f
   <span class="ml-3 text-sm font-medium text-gray-400 dark:text-gray-500">Disabled toggle</span>
 </label>
 {{< /example >}}
+
+## More examples
+
+You can check out the following resources for more form components from Flowbite Blocks:
+
+- [Register forms](https://flowbite.com/blocks/marketing/register/)
+- [Login forms](https://flowbite.com/blocks/marketing/login/)
+- [Reset password forms](https://flowbite.com/blocks/marketing/reset-password/)
+- [Account recovery forms](https://flowbite.com/blocks/marketing/account-recovery/)
+- [Contact forms](https://flowbite.com/blocks/marketing/contact/)
+- [CRUD create forms](https://flowbite.com/blocks/application/crud-create-forms/)
+- [CRUD update forms](https://flowbite.com/blocks/application/crud-update-forms/)
+- [User onboarding forms](https://flowbite.com/blocks/marketing/user-onboarding/)

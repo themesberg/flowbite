@@ -138,7 +138,7 @@ export function initAccordions() {
         $accordionEl
             .querySelectorAll('[data-accordion-target]')
             .forEach(($triggerEl) => {
-                // Consider only items that are directly belong to $accordionEl
+                // Consider only items that directly belong to $accordionEl
                 // (to make nested accordions work).
                 if ($triggerEl.closest('[data-accordion]') === $accordionEl) {
                     const item = {

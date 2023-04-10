@@ -701,7 +701,7 @@ Flowbite is an open source collection of UI components built with the utility cl
     </td>
   </tr>
   <tr>
-    <td width="33.3333%">Bottom Navigation</td>
+    <td width="33.3333%">Jumbotron</td>
     <td width="33.3333%"></td>
     <td width="33.3333%"></td>
   </tr>

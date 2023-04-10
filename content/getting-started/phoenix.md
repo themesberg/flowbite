@@ -53,7 +53,7 @@ If you already had Hex locally installed this command will upgrade it to the lat
 
 ### Install PostgreSQL
 
-To install the open-source PostgreSQL relational database server we recommend checking out the official [installation guides](https://wiki.postgresql.org/wiki/Detailed_installation_guides) where you can learn how to install the software based on your operating system and device.
+To install the open-source PostgreSQL (optional) relational database server we recommend checking out the official [installation guides](https://wiki.postgresql.org/wiki/Detailed_installation_guides) where you can learn how to install the software based on your operating system and device.
 
 If you have Homebrew available you can install PostgreSQL via the terminal:
 
@@ -94,23 +94,43 @@ Make sure that you press "Yes" to all prompts.
 ## Create a Phoenix project
 
 Now that you have all of the required languages and tools installed you can create a new Phoenix project.
+This command will create a fresh installation of a Phoenix application with a folder structure that already includes examples of the MVC pattern including controllers, view templates, and data models.
 
-1. Using the application generator, you can create a new Phoenix project and make sure that you press "Yes" when prompted to install the local dependencies:
+Using the application generator, you can create a new Phoenix project and make sure that you press "Yes" when prompted to install the local dependencies.
+
+Use this command if you have Postgresql installed:
 
 ```bash
-mix phx.new project_name
-cd project_name/
+# requires Postgres installed on your machine
+mix phx.new my_app
+cd my_app/
+```
+
+Alternatively, use the command below to create a Phoenix project without database configurations or generate a project configured with SQLite:
+
+```bash
+# Create Phoenix project without database
+mix phx.new my_app --no-ecto
+cd my_app/
+```
+
+Or use this command to set up a database with SQLite preconfigured:
+
+```bash
+# Create Phoenix project with SQLite
+mix phx.new my_app --database sqlite3
+cd my_app/
 ```
 
 This command will create a fresh installation of a Phoenix application with a folder structure that already includes examples of the MVC pattern including controllers, view templates, and data models.
 
-2. Create and configure your database by running the following command:
+2. Run the command below to setup your generated Phoenix project:
 
 ```bash
-mix ecto.create
+mix setup
 ```
 
-Make sure that you have a `postgres` SUPERUSER and a `postgres` database. You can create them first by running the following SQL command while logged into PostgreSQL via the terminal by running `psql postgres`:
+If you used a command that generates a Phoenix project with database configurations, make sure that you have a `postgres` SUPERUSER and a `postgres` database. You can create them first by running the following SQL command while logged into PostgreSQL via the terminal by running `psql postgres`:
 
 ```bash
 CREATE USER postgres SUPERUSER;
@@ -118,7 +138,7 @@ CREATE DATABASE postgres WITH OWNER postgres;
 exit
 ```
 
-The `mix ecto.create` will create a new database for your Phoenix application.
+The `mix ecto.setup` will create a new database for your Phoenix application.
 
 3. Create a local server by running the following command in your terminal:
 
@@ -211,6 +231,7 @@ Now that you have installed both Phoenix and Tailwind CSS we can proceed by inst
 
 ## Install Flowbite
 
+### ESBuild
 [Flowbite](https://flowbite.com) is a free and open-source ecosystem of UI component libraries that use the utility-first classes from Tailwind CSS to leverage building interactive, accessible, and commonly used UI components such as dropdowns, navbars, modals, datepickers that can help you build websites even faster.
 
 1. Create a `package.json` file using `npm init` inside the `./assets/` folder and then install the Flowbite package using NPM:
@@ -243,21 +264,34 @@ module.exports = {
 }
 ```
 
-4. Finally, import the Flowbite JS package inside the default `./assets/js/app.js` file:
+4. Finally, import the Flowbite JS package inside the default `./assets/js/app.js` file.
+   
+Because of how Phoenix LiveView works, you will need to import a version of Flowbite which supports the `phx:page-loading-stop` event listeners instead of `load`. 
+
+This will enable the interactive elements like dropdowns, modals, and navbars to work by hooking the event listeners and actions to the data attributes whenever a new LiveView page is loaded, after a `navigate`, `patch` or `redirect`. To do this add the line below to your `app.js` file:
+
 
 ```javascript
-// Alternatively, you can `npm install some-package --prefix assets` and import
-// them using a path starting with the package name:
-//
-//     import "some-package"
-//
+// ...
 
-import "flowbite"
+import "flowbite/dist/flowbite.phoenix.js";
 
 // other Phoenix packages
 ```
+### Include via CDN
+
+Alternatively to all of the above you can also include the JavaScript via CDN:
+
+```html
+// include via CDN
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.phoenix.min.js"></script>
+```
+
+This will work for both LiveViews and regular Views.
+
 
 You can also check out the [Flowbite Quickstart](https://flowbite.com/docs/getting-started/quickstart/) guide to learn how you can set up the Javascript using CDN, via bundling or even using TypeScript.
+
 
 ## Flowbite components
 
@@ -542,6 +576,49 @@ Remove the default `container` class from the `app.html.heex` file to enable the
 ```
 
 You can check out the full collection of website sections by browsing the [Flowbite Blocks](https://flowbite.com/blocks/) collection which includes not only marketing sections, but also application UI layouts, CRUD pages, blog templates, and more.
+
+## Datepicker plugin
+
+If you want to use the <a href="{{< ref "plugins/datepicker" >}}">Flowbite Datepicker</a> plugin using JavaScript you will need to include it into your project via NPM:
+
+```bash
+npm install flowbite-datepicker --save
+```
+
+After you've installed the NPM library, you will need to import the `Datepicker` module in your `app.js` file:
+
+```javascript
+import Datepicker from 'flowbite-datepicker/Datepicker';
+```
+
+Initialize a new element using the `Datepicker` constructor in `app.js` file and optionally add custom options based on your needs:
+
+```javascript
+Hooks = {}
+
+Hooks.Datepicker = {
+    mounted() {
+        const datepickerEl = this.el;
+        new Datepicker(datepickerEl, {
+            // options
+        });
+    },
+    updated() {
+        this.mounted();
+    }
+}
+```
+
+Add hooks to your livesocket:
+```javascript
+let liveSocket = new LiveSocket("/live", Socket, { params: { _csrf_token: csrfToken }, hooks: Hooks })
+```
+
+Then to your input field add the `Datepicker` `phx-hook` to initialize the datepicker:
+
+```html
+  <input phx-hook="Datepicker" id="myInput" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+```
 
 ## Phoenix starter project
 

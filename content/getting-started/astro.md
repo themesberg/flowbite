@@ -146,8 +146,8 @@ Make sure that you have the necessary HTML markup for the event listeners and el
   </button>
   
   <!-- Main modal -->
-  <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
-    <div class="relative w-full h-full max-w-2xl md:h-auto">
+  <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full h-full max-w-2xl md:h-auto max-h-full">
       <!-- Modal content -->
       <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
         <!-- Modal header -->
@@ -187,3 +187,7 @@ You can browse the full collection of the Flowbite components and check the "Jav
 ## Astro starter project
 
 We also built a free and open-source [Flowbite and Astro starter project](https://github.com/themesberg/tailwind-astro-starter) on GitHub that you can use for reference and examples based on this integration guide to get started faster with working with Astro, Tailwind CSS and the UI components from Flowbite.
+
+## Astro admin dashboard
+
+You can check out our open-source [Astro admin dashboard](https://github.com/themesberg/flowbite-astro-admin-dashboard) project on GitHub to leverage CRUD layouts and API calls predefined with the Flowbite Library, Tailwind CSS framework and the Astro best practices and framework setup.

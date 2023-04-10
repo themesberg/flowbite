@@ -51,9 +51,9 @@ mix local.hex
 
 If you already had Hex locally installed this command will upgrade it to the latest version.
 
-### Install PostgreSQL (OPTIONAL)
+### Install PostgreSQL
 
-To install the open-source PostgreSQL relational database server we recommend checking out the official [installation guides](https://wiki.postgresql.org/wiki/Detailed_installation_guides) where you can learn how to install the software based on your operating system and device.
+To install the open-source PostgreSQL (optional) relational database server we recommend checking out the official [installation guides](https://wiki.postgresql.org/wiki/Detailed_installation_guides) where you can learn how to install the software based on your operating system and device.
 
 If you have Homebrew available you can install PostgreSQL via the terminal:
 
@@ -96,31 +96,35 @@ Make sure that you press "Yes" to all prompts.
 Now that you have all of the required languages and tools installed you can create a new Phoenix project.
 This command will create a fresh installation of a Phoenix application with a folder structure that already includes examples of the MVC pattern including controllers, view templates, and data models.
 
-1. Using the application generator, you can create a new Phoenix project and make sure that you press "Yes" when prompted to install the local dependencies:
+Using the application generator, you can create a new Phoenix project and make sure that you press "Yes" when prompted to install the local dependencies.
 
-    ### Use this command if you have Postgresql installed
-    ```bash
-    # requires Postgres installed on your machine
-    mix phx.new my_app
-    cd my_app/
+Use this command if you have Postgresql installed:
 
-    ```
-    ### Alternatively use the command below to create a Phoenix project without database configurations or generate a project configured with SQLite:
+```bash
+# requires Postgres installed on your machine
+mix phx.new my_app
+cd my_app/
+```
 
-    ```bash
-    # Create Phoenix project without database
-    mix phx.new my_app --no-ecto
-    cd my_app/
-    ```
-    ### OR
-    ```bash
-    # Create Phoenix project with SQLite
-    mix phx.new my_app --database sqlite3
-    cd my_app/
-    ```
-    This command will create a fresh installation of a Phoenix application with a folder structure that already includes examples of the MVC pattern including controllers, view templates, and data models.
+Alternatively, use the command below to create a Phoenix project without database configurations or generate a project configured with SQLite:
 
-2. Run the command below to setup your generated Phoenix project. 
+```bash
+# Create Phoenix project without database
+mix phx.new my_app --no-ecto
+cd my_app/
+```
+
+Or use this command to set up a database with SQLite preconfigured:
+
+```bash
+# Create Phoenix project with SQLite
+mix phx.new my_app --database sqlite3
+cd my_app/
+```
+
+This command will create a fresh installation of a Phoenix application with a folder structure that already includes examples of the MVC pattern including controllers, view templates, and data models.
+
+2. Run the command below to setup your generated Phoenix project:
 
 ```bash
 mix setup
@@ -261,7 +265,10 @@ module.exports = {
 ```
 
 4. Finally, import the Flowbite JS package inside the default `./assets/js/app.js` file.
-Because of how Phoenix LiveView works, you will need to import a version of Flowbite which supports the `phx:page-loading-stop` event listeners instead of `load`. This will enable the interactive elements like dropdowns, modals, and navbars to work by hooking the event listeners and actions to the data attributes whenever a new LiveView page is loaded, after a `navigate`, `patch` or `redirect`. To do this add the line below to your `app.js` file:
+   
+Because of how Phoenix LiveView works, you will need to import a version of Flowbite which supports the `phx:page-loading-stop` event listeners instead of `load`. 
+
+This will enable the interactive elements like dropdowns, modals, and navbars to work by hooking the event listeners and actions to the data attributes whenever a new LiveView page is loaded, after a `navigate`, `patch` or `redirect`. To do this add the line below to your `app.js` file:
 
 
 ```javascript
@@ -286,47 +293,6 @@ This will work for both LiveViews and regular Views.
 You can also check out the [Flowbite Quickstart](https://flowbite.com/docs/getting-started/quickstart/) guide to learn how you can set up the Javascript using CDN, via bundling or even using TypeScript.
 
 
-## Datepicker
-If you want to use the Tailwind Datepicker plugin using JavaScript you will need to include it into your project via NPM:
-```bash
-npm install flowbite-datepicker --save
-```
-
-After you've installed the NPM library, you will need to import the `Datepicker` module in your `app.js` file:
-
-```javascript
-import Datepicker from 'flowbite-datepicker/Datepicker';
-```
-
-
-Initialize a new element using the `Datepicker` constructor in `app.js` file and optionally add custom options based on your needs:
-
-```javascript
-Hooks = {}
-
-Hooks.Datepicker = {
-    mounted() {
-        const datepickerEl = this.el;
-        new Datepicker(datepickerEl, {
-            // options
-        });
-    },
-    updated() {
-        this.mounted();
-    }
-}
-```
-
-Add hooks to your livesocket:
-```javascript
-let liveSocket = new LiveSocket("/live", Socket, { params: { _csrf_token: csrfToken }, hooks: Hooks })
-```
-
-Then to your input field add the `Datepicker` `phx-hook` to initialize the datepicker:
-
-```html
-  <input phx-hook="Datepicker" id="myInput" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
-```
 ## Flowbite components
 
 Now that we have a Phoenix project with Tailwind CSS and Flowbite installed we can finally leverage the three technologies to build websites. 
@@ -610,6 +576,49 @@ Remove the default `container` class from the `app.html.heex` file to enable the
 ```
 
 You can check out the full collection of website sections by browsing the [Flowbite Blocks](https://flowbite.com/blocks/) collection which includes not only marketing sections, but also application UI layouts, CRUD pages, blog templates, and more.
+
+## Datepicker plugin
+
+If you want to use the <a href="{{< ref "plugins/datepicker" >}}">Flowbite Datepicker</a> plugin using JavaScript you will need to include it into your project via NPM:
+
+```bash
+npm install flowbite-datepicker --save
+```
+
+After you've installed the NPM library, you will need to import the `Datepicker` module in your `app.js` file:
+
+```javascript
+import Datepicker from 'flowbite-datepicker/Datepicker';
+```
+
+Initialize a new element using the `Datepicker` constructor in `app.js` file and optionally add custom options based on your needs:
+
+```javascript
+Hooks = {}
+
+Hooks.Datepicker = {
+    mounted() {
+        const datepickerEl = this.el;
+        new Datepicker(datepickerEl, {
+            // options
+        });
+    },
+    updated() {
+        this.mounted();
+    }
+}
+```
+
+Add hooks to your livesocket:
+```javascript
+let liveSocket = new LiveSocket("/live", Socket, { params: { _csrf_token: csrfToken }, hooks: Hooks })
+```
+
+Then to your input field add the `Datepicker` `phx-hook` to initialize the datepicker:
+
+```html
+  <input phx-hook="Datepicker" id="myInput" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+```
 
 ## Phoenix starter project
 

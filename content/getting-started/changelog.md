@@ -15,6 +15,16 @@ nextLink: getting-started/react/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### 1.6.5
+
+- New gallery component
+- New jumbotron component
+- LiveView support ([issue #486](https://github.com/themesberg/flowbite/issues/486)) for Phoenix by [@jmnda-dev](https://github.com/jmnda-dev)
+- Improve modal responsive behaviour by centering it vertically
+- Improve Svelte getting started guide by [@shinokada](https://github.com/shinokada)
+- Improve font smoothing by adding antialising to the docs and examples
+- Improve navbar spacings and font sizes to reflect Figma design system
+
 ### v1.6.4
 
 - New bottom navigation component

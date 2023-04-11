@@ -138,19 +138,25 @@ export function initAccordions() {
         $accordionEl
             .querySelectorAll('[data-accordion-target]')
             .forEach(($triggerEl) => {
-                const item = {
-                    id: $triggerEl.getAttribute('data-accordion-target'),
-                    triggerEl: $triggerEl,
-                    targetEl: document.querySelector(
-                        $triggerEl.getAttribute('data-accordion-target')
-                    ),
-                    iconEl: $triggerEl.querySelector('[data-accordion-icon]'),
-                    active:
-                        $triggerEl.getAttribute('aria-expanded') === 'true'
-                            ? true
-                            : false,
-                } as AccordionItem;
-                items.push(item);
+                // Consider only items that directly belong to $accordionEl
+                // (to make nested accordions work).
+                if ($triggerEl.closest('[data-accordion]') === $accordionEl) {
+                    const item = {
+                        id: $triggerEl.getAttribute('data-accordion-target'),
+                        triggerEl: $triggerEl,
+                        targetEl: document.querySelector(
+                            $triggerEl.getAttribute('data-accordion-target')
+                        ),
+                        iconEl: $triggerEl.querySelector(
+                            '[data-accordion-icon]'
+                        ),
+                        active:
+                            $triggerEl.getAttribute('aria-expanded') === 'true'
+                                ? true
+                                : false,
+                    } as AccordionItem;
+                    items.push(item);
+                }
             });
 
         new Accordion(items, {

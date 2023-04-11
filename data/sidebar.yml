@@ -21,16 +21,12 @@
     - title: Astro
       new: true
     - title: Gatsby
-      new: true
     - title: SolidJS
       slug: solid-js
-      new: true
     - title: Laravel
     - title: Symfony
-      new: true
     - title: Rails
     - title: Phoenix
-      new: true
     - title: Django
     - title: Flask
 

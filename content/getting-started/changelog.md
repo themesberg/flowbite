@@ -15,6 +15,10 @@ nextLink: getting-started/react/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### 1.6.6
+
+<!-- - add nested accordions feature ([#266](https://github.com/themesberg/flowbite/issues/266) issue fixed by (@jneuendorf)[https://github.com/jneuendorf]) -->
+
 ### 1.6.5
 
 - New gallery component

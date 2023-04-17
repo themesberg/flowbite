@@ -113,7 +113,7 @@ npm install flowbite
 module.exports = {
   // other options ...
   plugins: [
-    require('flowbite')
+    require('flowbite/plugin')
   ],
 }
 ```

@@ -299,10 +299,10 @@ Use the following options as the second parameter for the Tabs object to set the
                     <code class="text-blue-600 dark:text-blue-400">activeClasses</code>
                 </td>
                 <td class="px-6 py-4">
-                    Array
+                    String
                 </td>
                 <td class="px-6 py-4">
-                    Set an array of Tailwind CSS class names to apply for the active tab element.
+                    Set a string of Tailwind CSS class names to apply to the active tab element.
                 </td>
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -310,10 +310,10 @@ Use the following options as the second parameter for the Tabs object to set the
                     <code class="text-blue-600 dark:text-blue-400">inactiveClasses</code>
                 </td>
                 <td class="px-6 py-4">
-                    Array
+                    String
                 </td>
                 <td class="px-6 py-4">
-                    Apply an array of Tailwind CSS class names to apply for the inactive tab elements.
+                    Set a string of Tailwind CSS class names to apply to the inactive tab elements.
                 </td>
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">

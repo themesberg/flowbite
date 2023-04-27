@@ -18,7 +18,7 @@ This page will guide you through installing Tailwind CSS with Flowbite for your 
 
 Svelte is a modern and growing front-end compiler. Developers build boilerplate-free components using languages HTML, CSS and JavaScript. Svelte compiles your code to tiny, framework-less vanilla JS.
 
-Flowbite Svelte is an official Flowbite component library for Svelte that allows you to use interactive components with ease. Tailwind CSS, on the other hand, is a utility-first CSS framework that helps you quickly build custom user interfaces.
+[Flowbite Svelte](https://flowbite-svelte.com/) is an official Flowbite component library for Svelte that allows you to use interactive components with ease. Tailwind CSS, on the other hand, is a utility-first CSS framework that helps you quickly build custom user interfaces.
 
 Together, Tailwind CSS and Flowbite Svelte can help you create modern and interactive web applications in a fraction of the time it would take to do it from scratch.
 
@@ -129,9 +129,9 @@ The navbar component is a great way to display a list of navigation links at the
 </Navbar>
 ```
 
-The navbar component has several customization options, such as dropdowns, search bars, CTA buttons, and sticky navbars. For more examples, check out the [navbar component page](https://flowbite-svelte.com/components/navbar).
+The navbar component has several customization options, such as dropdowns, search bars, CTA buttons, and sticky navbars. For more examples, check out the [navbar component page](https://flowbite-svelte.com/docs/components/navbar).
 
-Alternatively, you can also choose of the [mega menu](https://flowbite-svelte.com/components/mega-menu) components from Flowbite Svelte.
+Alternatively, you can also choose of the [mega menu](https://flowbite-svelte.com/docs/components/mega-menu) components from Flowbite Svelte.
 
 The modal component is perfect for showing interactive dialogs and notifications. Here's an example of how to use it:
 
@@ -156,7 +156,7 @@ The modal component is perfect for showing interactive dialogs and notifications
 </Modal>
 ```
 
-The modal component has various customization options, such as different types of modals, buttons, and other interactive elements. For more examples, check out the [modal component page](https://flowbite-svelte.com/components/modal).
+The modal component has various customization options, such as different types of modals, buttons, and other interactive elements. For more examples, check out the [modal component page](https://flowbite-svelte.com/docs/components/modal).
 
 The footer component is a useful way to display valuable information to your users, such as sitemap links, a copyright notice, and a logo.
 
@@ -176,7 +176,7 @@ The footer component is a useful way to display valuable information to your use
 </Footer>
 ```
 
-The footer component also has several customization options, such as adding logos, social media links, and sitemap links. For more examples, check out the [footer component page](https://flowbite-svelte.com/components/footer).
+The footer component also has several customization options, such as adding logos, social media links, and sitemap links. For more examples, check out the [footer component page](https://flowbite-svelte.com/docs/components/footer).
 
 ## Flowbite Svelte starters
 

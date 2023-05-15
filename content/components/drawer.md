@@ -793,6 +793,7 @@ For more drawer component examples you can check out the following resources fro
 - [CRUD read drawers](https://flowbite.com/blocks/application/crud-read-drawers/)
 - [CRUD create drawers](https://flowbite.com/blocks/application/crud-create-drawers/)
 - [CRUD update drawers](https://flowbite.com/blocks/application/crud-update-drawers/)
+- [Application shell layouts](https://flowbite.com/blocks/application/shells/)
 
 ## JavaScript behaviour
 

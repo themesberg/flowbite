@@ -650,6 +650,7 @@ You can check out more navbar component examples from the following resources fr
 
 - [Headers for marketing](https://flowbite.com/blocks/marketing/header/)
 - [Navbars for dashboard](https://flowbite.com/blocks/application/navbar/)
+- [Application shell layouts](https://flowbite.com/blocks/application/shells/)
 
 ## JavaScript behaviour
 

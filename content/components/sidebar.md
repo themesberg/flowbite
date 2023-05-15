@@ -899,7 +899,7 @@ Use this example to show the navigation as an off-canvas drawer component when c
 
 ## More examples
 
-You can check out more [sidenav component](https://flowbite.com/blocks/application/sidenav/) examples from Flowbite Blocks.
+You can check out more [sidenav component](https://flowbite.com/blocks/application/sidenav/) examples and [application shell layouts](https://flowbite.com/blocks/application/shells/) from Flowbite Blocks.
 
 ## Dashboard Layout
 

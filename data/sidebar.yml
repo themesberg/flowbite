@@ -56,6 +56,8 @@
     - title: Button Group
     - title: Card
     - title: Carousel
+    - title: Device Mockups
+      new: true
     - title: Drawer
     - title: Dropdowns
     - title: Footer

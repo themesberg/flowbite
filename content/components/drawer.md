@@ -6,8 +6,8 @@ group: components
 requires_js: true
 toc: true
 
-previous: Carousel
-previousLink: components/carousel/
+previous: Device mockups
+previousLink: components/device-mockups/
 next: Dropdowns
 nextLink: components/dropdowns/
 ---

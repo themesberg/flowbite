@@ -87,9 +87,11 @@ This example can be used to show a screenshot of your application inside a lapto
 
 ## Desktop mockup
 
+Use this example to show a preview of your applicaiton inside a desktop device such as an iMac.
+
 {{< example id="desktop-mockup" github="components/device-mockups.md" show_dark=true >}}
 <div class="relative mx-auto border-gray-800 dark:border-gray-800 dark:bg-gray-800 border-[16px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
-    <div class="rounded-xl overflow-hidden h-[140px] md:h-[262px] bg-white dark:bg-gray-800">
+    <div class="rounded-xl overflow-hidden h-[140px] md:h-[262px]">
         <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/screen-image-imac.png" class="dark:hidden h-[140px] md:h-[262px] w-full rounded-xl" alt="">
         <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/screen-image-imac-dark.png" class="hidden dark:block h-[140px] md:h-[262px] w-full rounded-xl" alt="">
     </div>
@@ -100,13 +102,15 @@ This example can be used to show a screenshot of your application inside a lapto
 
 ## Smartwatch mockup
 
+This component can be used to showcase applications built for smartwatches.
+
 {{< example id="smartwatch-mockup" github="components/device-mockups.md" show_dark=true >}}
 <div class="relative mx-auto bg-gray-800 dark:bg-gray-700 rounded-t-[2.5rem] h-[63px] max-w-[133px]"></div>
 <div class="relative mx-auto border-gray-900 dark:bg-gray-800 dark:border-gray-800 border-[10px] rounded-[2.5rem] h-[213px] w-[208px]">
     <div class="h-[41px] w-[6px] bg-gray-800 dark:bg-gray-800 absolute -right-[16px] top-[40px] rounded-r-lg"></div>
     <div class="h-[32px] w-[6px] bg-gray-800 dark:bg-gray-800 absolute -right-[16px] top-[88px] rounded-r-lg"></div>
-    <div class="rounded-[2.5rem] overflow-hidden h-[193px] w-[188px] bg-white dark:bg-gray-800">
-        <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/watch-screen-image.png" class="dark:hidden h-[193px] w-[188px]" alt="">
+    <div class="rounded-[2.5rem] overflow-hidden h-[193px] w-[188px]">
+        <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/watch-screen-image.png" class="dark:hidden h-[193px] w-[188px" alt="">
         <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/watch-screen-image-dark.png" class="hidden dark:block h-[193px] w-[188px]" alt="">
     </div>
 </div>

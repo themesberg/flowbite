@@ -101,8 +101,8 @@ This example can be used to show a screenshot of your application inside a lapto
 ## Smartwatch mockup
 
 {{< example id="smartwatch-mockup" github="components/device-mockups.md" show_dark=true >}}
-<div class="relative mx-auto bg-gray-800 rounded-t-[2.5rem] h-[63px] max-w-[133px]"></div>
-<div class="relative mx-auto border-gray-900 dark:bg-gray-700 dark:border-gray-700 border-[10px] rounded-[2.5rem] h-[213px] w-[208px]">
+<div class="relative mx-auto bg-gray-800 dark:bg-gray-700 rounded-t-[2.5rem] h-[63px] max-w-[133px]"></div>
+<div class="relative mx-auto border-gray-900 dark:bg-gray-800 dark:border-gray-800 border-[10px] rounded-[2.5rem] h-[213px] w-[208px]">
     <div class="h-[41px] w-[6px] bg-gray-800 dark:bg-gray-800 absolute -right-[16px] top-[40px] rounded-r-lg"></div>
     <div class="h-[32px] w-[6px] bg-gray-800 dark:bg-gray-800 absolute -right-[16px] top-[88px] rounded-r-lg"></div>
     <div class="rounded-[2.5rem] overflow-hidden h-[193px] w-[188px] bg-white dark:bg-gray-800">
@@ -110,5 +110,5 @@ This example can be used to show a screenshot of your application inside a lapto
         <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/watch-screen-image-dark.png" class="hidden dark:block h-[193px] w-[188px]" alt="">
     </div>
 </div>
-<div class="relative mx-auto bg-gray-800 rounded-b-[2.5rem] h-[63px] max-w-[133px]"></div>
+<div class="relative mx-auto bg-gray-800 dark:bg-gray-700 rounded-b-[2.5rem] h-[63px] max-w-[133px]"></div>
 {{< /example >}}

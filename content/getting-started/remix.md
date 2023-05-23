@@ -51,7 +51,7 @@ Now that you have a Remix project configured you can proceed by installing [Tail
 1. Install Tailwind CSS via NPM:
 
 ```bash
-npm install -D tailwindcss concurrently
+npm install -D tailwindcss
 ```
 
 2. Create a new `tailwind.config.js` by running the following command:
@@ -95,15 +95,23 @@ export function links() {
 }
 ```
 
-6. Update your `package.json` file by making sure that Tailwind CSS will also be compiled:
+6. Update your `remix.config.js` file to enable remix built-in tailwind support:
+```javascript
+/** @type {import('@remix-run/dev').AppConfig} */
+module.exports = {
+  ignoredRouteFiles: ["**/.*"],
+  tailwind: true,
+  serverModuleFormat: "cjs",
+};
+```
+
+7. Update your `package.json` file by making sure that Tailwind CSS will also be compiled:
 
 ```javascript
 {
   "scripts": {
-    "build": "npm run build:css && remix build",
-    "build:css": "tailwindcss -m -i ./css/app.css -o app/css/app.css",
-    "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
-    "dev:css": "tailwindcss -w -i ./css/app.css -o app/css/app.css"
+    "build": "remix build",
+    "dev": "remix dev",
   }
 }
 ```

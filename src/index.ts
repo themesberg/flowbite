@@ -10,6 +10,7 @@ import { initTabs } from './components/tabs';
 import { initTooltips } from './components/tooltip';
 import { initPopovers } from './components/popover';
 import { initDials } from './components/dial';
+import './components/index';
 
 // setup events for data attributes
 const events = new Events('load', [

@@ -10,6 +10,7 @@ import Modal, { initModals } from './components/modal';
 import Popover, { initPopovers } from './components/popover';
 import Tabs, { initTabs } from './components/tabs';
 import Tooltip, { initTooltips } from './components/tooltip';
+import './components/index';
 import Events from './dom/events';
 
 const liveViewLoadEvents = new Events('phx:page-loading-stop', [

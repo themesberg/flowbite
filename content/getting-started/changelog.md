@@ -17,7 +17,10 @@ We strive to keep a good accountability of all of the version changes that we ma
 
 ### 1.6.6
 
-<!-- - add nested accordions feature ([#266](https://github.com/themesberg/flowbite/issues/266) issue fixed by (@jneuendorf)[https://github.com/jneuendorf]) -->
+- new device mockups component
+- add nested accordions feature ([#266](https://github.com/themesberg/flowbite/issues/266) issue fixed by (@jneuendorf)[https://github.com/jneuendorf])
+- make init functions (ie. `initDropdowns`, `initFlowbite`) available via the `window` object
+- fix Nuxt.js documentation config path for Tailwind CSS
 
 ### 1.6.5
 

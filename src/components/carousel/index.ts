@@ -240,10 +240,6 @@ class Carousel implements CarouselInterface {
     }
 }
 
-if (typeof window !== 'undefined') {
-    window.Carousel = Carousel;
-}
-
 export function initCarousels() {
     document.querySelectorAll('[data-carousel]').forEach(($carouselEl) => {
         const interval = $carouselEl.getAttribute('data-carousel-interval');
@@ -318,6 +314,11 @@ export function initCarousels() {
             });
         }
     });
+}
+
+if (typeof window !== 'undefined') {
+    window.Carousel = Carousel;
+    window.initCarousels = initCarousels;
 }
 
 export default Carousel;

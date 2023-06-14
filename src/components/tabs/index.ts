@@ -91,10 +91,6 @@ class Tabs implements TabsInterface {
     }
 }
 
-if (typeof window !== 'undefined') {
-    window.Tabs = Tabs;
-}
-
 export function initTabs() {
     document.querySelectorAll('[data-tabs-toggle]').forEach(($triggerEl) => {
         const tabItems: TabItem[] = [];
@@ -121,6 +117,11 @@ export function initTabs() {
             defaultTabId: defaultTabId,
         } as TabsOptions);
     });
+}
+
+if (typeof window !== 'undefined') {
+    window.Tabs = Tabs;
+    window.initTabs = initTabs;
 }
 
 export default Tabs;

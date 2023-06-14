@@ -23,5 +23,17 @@ declare global {
         Popover: typeof Popover;
         Tabs: typeof Tabs;
         Tooltip: typeof Tooltip;
+        initAccordions: () => void;
+        initCarousels: () => void;
+        initCollapses: () => void;
+        initDials: () => void;
+        initDismisses: () => void;
+        initDrawers: () => void;
+        initDropdowns: () => void;
+        initModals: () => void;
+        initPopovers: () => void;
+        initTabs: () => void;
+        initTooltips: () => void;
+        initFlowbite: () => void;
     }
 }

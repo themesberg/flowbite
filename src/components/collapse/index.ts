@@ -75,10 +75,6 @@ class Collapse implements CollapseInterface {
     }
 }
 
-if (typeof window !== 'undefined') {
-    window.Collapse = Collapse;
-}
-
 export function initCollapses() {
     document
         .querySelectorAll('[data-collapse-toggle]')
@@ -98,6 +94,11 @@ export function initCollapses() {
                 );
             }
         });
+}
+
+if (typeof window !== 'undefined') {
+    window.Collapse = Collapse;
+    window.initCollapses = initCollapses;
 }
 
 export default Collapse;

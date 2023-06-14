@@ -122,10 +122,6 @@ class Accordion implements AccordionInterface {
     }
 }
 
-if (typeof window !== 'undefined') {
-    window.Accordion = Accordion;
-}
-
 export function initAccordions() {
     document.querySelectorAll('[data-accordion]').forEach(($accordionEl) => {
         const alwaysOpen = $accordionEl.getAttribute('data-accordion');
@@ -169,6 +165,11 @@ export function initAccordions() {
                 : Default.inactiveClasses,
         } as AccordionOptions);
     });
+}
+
+if (typeof window !== 'undefined') {
+    window.Accordion = Accordion;
+    window.initAccordions = initAccordions;
 }
 
 export default Accordion;

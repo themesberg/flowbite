@@ -233,10 +233,6 @@ class Popover implements PopoverInterface {
     }
 }
 
-if (typeof window !== 'undefined') {
-    window.Popover = Popover;
-}
-
 export function initPopovers() {
     document.querySelectorAll('[data-popover-target]').forEach(($triggerEl) => {
         const popoverID = $triggerEl.getAttribute('data-popover-target');
@@ -264,6 +260,11 @@ export function initPopovers() {
             );
         }
     });
+}
+
+if (typeof window !== 'undefined') {
+    window.Popover = Popover;
+    window.initPopovers = initPopovers;
 }
 
 export default Popover;

@@ -49,10 +49,6 @@ class Dismiss implements DismissInterface {
     }
 }
 
-if (typeof window !== 'undefined') {
-    window.Dismiss = Dismiss;
-}
-
 export function initDismisses() {
     document.querySelectorAll('[data-dismiss-target]').forEach(($triggerEl) => {
         const targetId = $triggerEl.getAttribute('data-dismiss-target');
@@ -66,6 +62,11 @@ export function initDismisses() {
             );
         }
     });
+}
+
+if (typeof window !== 'undefined') {
+    window.Dismiss = Dismiss;
+    window.initDismisses = initDismisses;
 }
 
 export default Dismiss;

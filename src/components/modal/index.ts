@@ -202,10 +202,6 @@ class Modal implements ModalInterface {
     }
 }
 
-if (typeof window !== 'undefined') {
-    window.Modal = Modal;
-}
-
 const getModalInstance = (id: string, instances: ModalInstance[]) => {
     if (instances.some((modalInstance) => modalInstance.id === id)) {
         return instances.find((modalInstance) => modalInstance.id === id);
@@ -341,6 +337,11 @@ export function initModals() {
             );
         }
     });
+}
+
+if (typeof window !== 'undefined') {
+    window.Modal = Modal;
+    window.initModals = initModals;
 }
 
 export default Modal;

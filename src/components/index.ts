@@ -23,3 +23,7 @@ export function initFlowbite() {
     initPopovers();
     initDials();
 }
+
+if (typeof window !== 'undefined') {
+    window.initFlowbite = initFlowbite;
+}

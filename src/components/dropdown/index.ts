@@ -223,10 +223,6 @@ class Dropdown implements DropdownInterface {
     }
 }
 
-if (typeof window !== 'undefined') {
-    window.Dropdown = Dropdown;
-}
-
 export function initDropdowns() {
     document
         .querySelectorAll('[data-dropdown-toggle]')
@@ -272,6 +268,11 @@ export function initDropdowns() {
                 );
             }
         });
+}
+
+if (typeof window !== 'undefined') {
+    window.Dropdown = Dropdown;
+    window.initDropdowns = initDropdowns;
 }
 
 export default Dropdown;

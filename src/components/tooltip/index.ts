@@ -216,10 +216,6 @@ class Tooltip implements TooltipInterface {
     }
 }
 
-if (typeof window !== 'undefined') {
-    window.Tooltip = Tooltip;
-}
-
 export function initTooltips() {
     document.querySelectorAll('[data-tooltip-target]').forEach(($triggerEl) => {
         const tooltipId = $triggerEl.getAttribute('data-tooltip-target');
@@ -245,6 +241,11 @@ export function initTooltips() {
             );
         }
     });
+}
+
+if (typeof window !== 'undefined') {
+    window.Tooltip = Tooltip;
+    window.initTooltips = initTooltips;
 }
 
 export default Tooltip;

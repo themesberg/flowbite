@@ -117,10 +117,6 @@ class Dial implements DialInterface {
     }
 }
 
-if (typeof window !== 'undefined') {
-    window.Dial = Dial;
-}
-
 export function initDials() {
     document.querySelectorAll('[data-dial-init]').forEach(($parentEl) => {
         const $triggerEl = $parentEl.querySelector('[data-dial-toggle]');
@@ -153,6 +149,11 @@ export function initDials() {
             );
         }
     });
+}
+
+if (typeof window !== 'undefined') {
+    window.Dial = Dial;
+    window.initDials = initDials;
 }
 
 export default Dial;

@@ -226,10 +226,6 @@ class Drawer implements DrawerInterface {
     }
 }
 
-if (typeof window !== 'undefined') {
-    window.Drawer = Drawer;
-}
-
 const getDrawerInstance = (id: string, instances: DrawerInstance[]) => {
     if (instances.some((drawerInstance) => drawerInstance.id === id)) {
         return instances.find((drawerInstance) => drawerInstance.id === id);
@@ -363,6 +359,11 @@ export function initDrawers() {
             );
         }
     });
+}
+
+if (typeof window !== 'undefined') {
+    window.Drawer = Drawer;
+    window.initDrawers = initDrawers;
 }
 
 export default Drawer;

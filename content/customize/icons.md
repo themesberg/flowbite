@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Icons - Flowbite
-description: Use this set of SVG powered icons for Tailwind CSS and FlowBite
+description: Use a free and open-source set of SVG icons built for Tailwind CSS and the Flowbite UI component library featuring hundreds of solid and outline styles
 group: customize
 toc: true
 
@@ -13,7 +13,7 @@ nextLink: customize/optimization/
 
 ## SVG icons
 
-The icons used in FlowBite are the SVG-powered <a href="https://heroicons.dev/">Hero Icons</a> built by one of the creators of Tailwind CSS.
+The icons used in Flowbite can be found at the [Flowbite Icons](https://flowbite/icons/) page where you can configure the options, styles and code format (raw SVG or JSX for React) when integrating the icons into your project.
 
 ```html
 <!-- A few examples from Hero Icons -->
@@ -36,4 +36,6 @@ The icons used in FlowBite are the SVG-powered <a href="https://heroicons.dev/">
 </div>
 ```
 
-Alternatively, you can check out a list of the <a href="https://themesberg.com/blog/open-source/10-open-source-free-svg-icon-libraries">top 10 open source SVG icon libraries</a>.
+## Figma support
+
+The open-source SVG icons used in the Flowbite Library also has a [Figma Icons File](https://www.figma.com/community/file/1253280241668899805/Flowbite-Icons) that you can use to collaborate with designers and use them for designing websites and web applications and then copying the SVG or JSX code from our website.

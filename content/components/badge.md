@@ -81,8 +81,8 @@ Use this example to make the corners even more rounded like pills for the badge 
 You can also use badges as anchor elements to link to another page.
 
 {{< example id="badge-links-example" class="flex justify-center" github="components/badge.md" show_dark=true >}}
-<a href="#" class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">Badge link</a>
-<a href="#" class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">Badge link</a>
+<a href="#" class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400 inline-flex items-center justify-center">Badge link</a>
+<a href="#" class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400 inline-flex items-center justify-center">Badge link</a>
 {{< /example >}}
 
 ## Badges with icon

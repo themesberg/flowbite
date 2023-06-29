@@ -70,7 +70,7 @@ It is also possible to display a list of button element inside the list group co
 
 ## List group with icons
 
-Use the following example to create a list of buttons as a menu together with SVG icons.
+Use the following example to create a list of buttons as a menu together with [SVG icons](https://flowbite.com/icons/).
 
 {{< example id="list-group-icons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 <div class="w-48 text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">

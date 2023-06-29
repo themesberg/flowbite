@@ -47,7 +47,7 @@ Use the following list of pagination items powered by Tailwind CSS utility class
 
 ## Pagination with icons
 
-The following pagination component example shows how you can use SVG icons instead of text to show the previous and next pages.
+The following pagination component example shows how you can use [SVG icons](https://flowbite.com/icons/) instead of text to show the previous and next pages.
 
 {{< example id="pagination-icons-example" class="flex justify-center" github="components/pagination.md" show_dark=true >}}
 <nav aria-label="Page navigation example">

@@ -41,7 +41,7 @@ Use this example to set a link inside a paragraph with an underline style.
 
 ## Icon link
 
-This example can be used to set a custom SVG icon inside the hyperlink element.
+This example can be used to set a custom [SVG icon](https://flowbite.com/icons/) inside the hyperlink element.
 
 {{< example id="link-icon-example" class="flex justify-center" github="typography/links.md" show_dark=true >}}
 <p class="text-gray-500 dark:text-gray-400">500,000 people & companies have made over a million apps with Glide. <a href="#" class="inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline">

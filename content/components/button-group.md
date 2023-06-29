@@ -51,7 +51,7 @@ You can also use the button group component as links.
 
 ## Group buttons with icons
 
-You can also use SVG icons inside the grouped buttons.
+You can also use [SVG icons](https://flowbite.com/icons/) inside the grouped buttons.
 
 {{< example id="button-group-icons-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 <div class="inline-flex rounded-md shadow-sm" role="group">

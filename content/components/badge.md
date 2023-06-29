@@ -87,7 +87,7 @@ You can also use badges as anchor elements to link to another page.
 
 ## Badges with icon
 
-You can also use SVG icons inside the badge elements.
+You can also use [SVG icons](https://flowbite.com/icons/) inside the badge elements.
 
 {{< example id="badge-icons-example" class="flex justify-center" github="components/badge.md" show_dark=true >}}
 <span class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded mr-2 dark:bg-gray-700 dark:text-gray-400 border border-gray-500">

@@ -181,7 +181,7 @@ Create a description list by using the `<dl>` tag and set the term and name with
 
 ## List with icons
 
-Use this example to create a list of items with custom SVG icons instead of the default bullets.
+Use this example to create a list of items with [custom SVG icons](https://flowbite.com/icons/) instead of the default bullets.
 
 {{< example id="list-icons-example" github="typography/lists.md" show_dark=true >}}
 <ul class="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400">

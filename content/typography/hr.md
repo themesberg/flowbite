@@ -35,7 +35,7 @@ Use this example to show a shorter version of the horizontal line.
 
 ## Icon HR
 
-This example can be used to set a custom SVG icon in the middle of the HR element.
+This example can be used to set a custom [SVG icon](https://flowbite.com/icons/) in the middle of the HR element.
 
 {{< example id="hr-icon-example" class="text-center" github="typography/hr.md" show_dark=true >}}
 <p class="text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>

@@ -69,7 +69,7 @@ Now, we can install Flowbite with Svelte and their dependencies. [Flowbite Svelt
 Install the Flowbite packages and dependencies using `pnpm`:
 
 ```bash
-pnpm i flowbite flowbite-svelte classnames @popperjs/core
+pnpm i flowbite flowbite-svelte tailwind-merge @popperjs/core
 ```
 
 We also need to update the `tailwind.config.js` file with the following details:
@@ -81,14 +81,20 @@ const config = {
     "./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}",
   ],
 
-  theme: {
-    extend: {},
-  },
-
   plugins: [
     require('flowbite/plugin')
   ],
+
   darkMode: 'class',
+  
+  theme: {
+    extend: {
+      colors: {
+        // flowbite-svelte
+        primary: { 50: '#FFF5F2', 100: '#FFF1EE', 200: '#FFE4DE', 300: '#FFD5CC', 400: '#FFBCAD', 500: '#FE795D', 600: '#EF562F', 700: '#EB4F27', 800: '#CC4522', 900: '#A5371B'},
+      }
+    }
+  }
 };
 
 module.exports = config;

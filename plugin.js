@@ -67,14 +67,16 @@ module.exports = plugin(
             },
             ['select:not([size])']: {
                 'background-image': `url("${svgToDataUri(
-                    `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><path stroke="${theme(
+                    `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="${theme(
                         'colors.gray.500',
                         colors.gray[500]
-                    )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 8l4 4 4-4"/></svg>`
+                    )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                  </svg>`
                 )}")`,
-                'background-position': `right ${spacing[2]} center`,
+                'background-position': `right ${spacing[3]} center`,
                 'background-repeat': `no-repeat`,
-                'background-size': `1.5em 1.5em`,
+                'background-size': `0.75em 0.75em`,
                 'padding-right': spacing[10],
                 'print-color-adjust': `exact`,
             },

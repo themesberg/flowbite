@@ -22,6 +22,7 @@ We strive to keep a good accountability of all of the version changes that we ma
 - improved spacing and alignment for all buttons with icons
 - improved examples for popovers, toasts, and modals
 - updated docs and website icons
+- update Svelte docs for Svelte 4.0
 
 ### 1.6.6
 

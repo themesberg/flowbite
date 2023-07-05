@@ -15,6 +15,15 @@ nextLink: getting-started/react/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### 1.7.0
+
+- integrate new [Flowbite Icons](https://flowbite.com/icons/) with all UI components
+- added new pagination examples and sizes
+- improved spacing and alignment for all buttons with icons
+- improved examples for popovers, toasts, and modals
+- updated docs and website icons
+- update Svelte docs for Svelte 4.0
+
 ### 1.6.6
 
 - new device mockups component

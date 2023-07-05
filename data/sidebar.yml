@@ -18,8 +18,9 @@
     - title: Nuxt
       slug: nuxt-js
     - title: Svelte
-    - title: Astro
+    - title: Angular
       new: true
+    - title: Astro
     - title: Gatsby
     - title: SolidJS
       slug: solid-js

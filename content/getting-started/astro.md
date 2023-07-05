@@ -6,8 +6,8 @@ group: getting-started
 toc: true
 requires_astro: true
 
-previous: Svelte
-previousLink: getting-started/svelte/
+previous: Angular
+previousLink: getting-started/angular/
 next: Gatsby
 nextLink: getting-started/gatsby/
 ---

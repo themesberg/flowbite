@@ -18,3 +18,20 @@ The framework was released by the Google team in 2010 and it is used by websites
 
 Follow this guide to learn how to set up a new Angular project with Tailwind CSS and integrate the open-source UI components from the Flowbite Library.
 
+## Create Angular project
+
+## Install Tailwind CSS
+
+## Install Flowbite
+
+## UI components
+
+### Data attributes
+
+### JavaScript API
+
+### Using TypeScript
+
+## Angular Starter Project
+
+## Flowbite Angular Library

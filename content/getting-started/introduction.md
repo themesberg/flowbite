@@ -301,6 +301,16 @@ If you're using a Svelte application you can install a standalone Flowbite Svelt
 Learn how to <a href="{{< ref "getting-started/svelte" >}}">install Tailwind CSS and Flowbite with Svelte</a>.
 
 <div class="mt-8 -mb-5">
+  {{< requires_angular >}}
+</div>
+
+## Angular
+
+You can read our official guide to learn how to set up a new Angular project together with Tailwind CSS and Flowbite to start building advanced web applications with Google's framework.
+
+Learn how to <a href="{{< ref "getting-started/angular" >}}">install Tailwind CSS and Flowbite with Angular</a>.
+
+<div class="mt-8 -mb-5">
   {{< requires_ruby >}}
 </div>
 

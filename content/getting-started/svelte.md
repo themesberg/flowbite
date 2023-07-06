@@ -8,8 +8,8 @@ requires_svelte: true
 
 previous: Nuxt
 previousLink: getting-started/nuxt-js/
-next: Astro
-nextLink: getting-started/astro/
+next: Angular
+nextLink: getting-started/angular/
 ---
 
 This page will guide you through installing Tailwind CSS with Flowbite for your Svelte project, so you can start developing modern web applications using interactive elements based on utility classes.

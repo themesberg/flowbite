@@ -31,15 +31,29 @@
     - title: Django
     - title: Flask
 
-- title: Customize
+- title: Customization
   slug: customize
   pages:
     - title: Configuration
     - title: Dark mode
     - title: Theming
     - title: Colors
+    - title: Font
     - title: Icons
+    - title: Spacing
     - title: Optimization
+
+- title: Structure
+  slug: structure
+  pages:
+    - title: Breakpoints
+    - title: Containers
+    - title: Columns
+    - title: Rows
+    - title: Flex
+    - title: Grid
+    - title: Position
+    - title: Layout
 
 - title: Components
   slug: components

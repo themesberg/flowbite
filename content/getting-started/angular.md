@@ -55,7 +55,7 @@ Now that you've succesfully installed and configured an Angular project we can p
 3. Install Tailwind CSS and Post CSS via NPM by running the following command:
 
 ```bash
-npm install tailwindcss postcss autoprefixer --save-dev
+npm install tailwindcss --save-dev
 ```
 
 This command will install all the dependencies of Tailwind CSS available in your `package.json` file.

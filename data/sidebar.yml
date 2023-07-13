@@ -13,6 +13,9 @@
     - title: React
     - title: Next.js
       slug: next-js
+    - title: Meteor.js
+      slug: meteor-js
+      new: true
     - title: Remix
     - title: Vue
     - title: Nuxt

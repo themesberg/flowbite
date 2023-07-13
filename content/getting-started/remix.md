@@ -7,7 +7,7 @@ toc: true
 requires_remix: true
 
 previous: Next.js
-previousLink: getting-started/next-js/
+previousLink: getting-started/meteor-js/
 next: Vue
 nextLink: getting-started/vue/
 ---

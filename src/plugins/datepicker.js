@@ -4,6 +4,7 @@ import Events from '../dom/events';
 
 const getDatepickerOptions = (datepickerEl) => {
     const buttons = datepickerEl.hasAttribute('datepicker-buttons');
+    const selectToday = datepickerEl.hasAttribute('datepicker-today-select');
     const autohide = datepickerEl.hasAttribute('datepicker-autohide');
     const format = datepickerEl.hasAttribute('datepicker-format');
     const orientation = datepickerEl.hasAttribute('datepicker-orientation');
@@ -13,6 +14,9 @@ const getDatepickerOptions = (datepickerEl) => {
     if (buttons) {
         options.todayBtn = true;
         options.clearBtn = true;
+        if (selectToday) {
+            options.todayBtnMode = 1;
+        }
     }
     if (autohide) {
         options.autohide = true;

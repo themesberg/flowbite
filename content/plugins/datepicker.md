@@ -101,7 +101,7 @@ If you want the datepicker to dissapear right after clicking on a date then you 
 
 By adding the `datepicker-buttons` data attribute you will enable the `today` and `clear` buttons with the following features:
 
-- Clicking on the `today` button will browse back to the current day/month/year
+- Clicking on the `today` button will browse back to the current day/month/year. If you want the button to additionally select today's date, add `datepicker-today-select` data attribute.
 - Clicking on the `clear` button will reset all selections
 
 {{< example id="datepicker-action-example" class="flex justify-center dark:bg-gray-900" github="plugins/datepicker.md" show_dark=true iframeHeight="530" initDatepicker=true >}}

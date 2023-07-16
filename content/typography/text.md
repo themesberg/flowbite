@@ -91,7 +91,7 @@ Underline text by using the `underline` class or disable it using `no-underline`
 Set a strikethrough line on a text element using the `line-through` class.
 
 {{< example id="text-line-through-example" github="typography/text.md" show_dark=true >}}
-<span class="text-lg font-medium text-gray-900 line-through dark:text-white">$109</span><span class="ml-3 text-lg font-medium">$79</span>
+<span class="text-lg font-medium text-gray-900 line-through dark:text-white">$109</span><span class="ml-3 text-lg font-medium text-gray-900 dark:text-white">$79</span>
 {{< /example >}}
 
 ### Uppercase

@@ -207,6 +207,26 @@ import type { ModalOptions, ModalInterface } from 'flowbite'
 
 Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/).
 
+## Figma Design System
+
+The components from Flowbite are first conceptualized and designed in Figma using the latest features such as variants, auto-layout, grids, responsive layouts, and more.
+
+Learn more by checking out <a href="{{< param homepage >}}/figma/">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
+
+## Flowbite SVG Icons
+
+Check out a free and open-source collection of over 430 SVG icons with solid and outline styles to integrate with the UI components from Flowbite.
+
+Learn more by browsing the <a href="{{< param homepage >}}/icons/">Flowbite Icons</a> page and interface to directly copy-paste the icons into your project as raw SVGs or React (JSX) code.
+
+## Pro version
+
+If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite]({{< param homepage >}}/pro/) which includes fully coded pages and layouts for application, marketing, and e-commerce user interfaces.
+
+## Enhance UI book
+
+If you want to learn and improve your design skills as a developer we recommend you to check out the [Enhance UI](https://www.enhanceui.com/) book that will also help you be able to use the Flowbite Ecosystem to its fullest by teaching you the fundamentals of UI/UX.
+
 ## Tailwind CSS 2.0
 
 Flowbite is fully compatible with the 2.x versions of Tailwind CSS.
@@ -227,21 +247,9 @@ plugins: [
 ],
 ```
 
-## Figma design system
-
-The components from Flowbite are first conceptualized and designed in Figma using the latest features such as variants, auto-layout, grids, responsive layouts, and more.
-
-Learn more by checking out <a href="{{< param homepage >}}/figma/">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
-
 <div class="mt-8 -mb-5">
   {{< requires_react >}}
 </div>
-
-## Flowbite SVG Icons
-
-Check out a free and open-source collection of over 430 SVG icons with solid and outline styles to integrate with the UI components from Flowbite.
-
-Learn more by browsing the <a href="{{< param homepage >}}/icons/">Flowbite Icons</a> page and interface to directly copy-paste the icons into your project as raw SVGs or React (JSX) code.
 
 ## React
 
@@ -339,10 +347,6 @@ Learn how to <a href="{{< ref "getting-started/django" >}}">install Tailwind CSS
 Check out the Flask integration guide with Tailwind CSS and Flowbite to set up all technologies and start developing with a micro framework combined with the UI components from Flowbite.
 
 Learn how to <a href="{{< ref "getting-started/flask" >}}">install Tailwind CSS and Flowbite with Flask</a>.
-
-## Pro version
-
-If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite]({{< param homepage >}}/pro/) which includes fully coded pages and layouts for application, marketing, and e-commerce user interfaces.
 
 ## Licensing
 

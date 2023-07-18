@@ -745,6 +745,12 @@ Get access to all premium features including the Figma design system, access to 
 
 💎 [Check out Flowbite Pro](https://flowbite.com/pro/)
 
+## Learn design with Enhance UI
+
+If you want to ugprade your design skills as a developer we recommend you to check out the Enhance UI book that will teach you the fundamentals of UI/UX and can help you learn how to use the Flowbite Ecosystem to its fullest:
+
+📖 [Learn with Enhance UI](https://www.enhanceui.com/)
+
 ## Community
 
 If you need help or just want to discuss about the library join the community on Github:

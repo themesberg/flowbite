@@ -44,7 +44,7 @@ Now that you have all the libraries installed you can copy-paste the chart examp
 
 Use this example to show a basic area chart by setting the `type="area"` option in JavaScript:
 
-{{< example id="default-datepicker-example" class="flex justify-center dark:bg-gray-900" github="plugins/datepicker.md" show_dark=true charts=true disable_init_js=true >}}
+{{< example id="default-area-chart" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-md w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
   <div class="flex justify-between">
     <div>

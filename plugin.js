@@ -567,6 +567,7 @@ module.exports = plugin(
     },
     {
         safelist: [
+            // datepicker classes
             'w-64',
             'w-1/2',
             'rounded-l-lg',
@@ -579,6 +580,8 @@ module.exports = plugin(
             'h-9',
             'leading-9',
             'shadow-lg',
+
+            // chart classes
             { pattern: /^apexcharts-.*$/ },
         ],
         darkMode: 'class', // or 'media' or 'class',

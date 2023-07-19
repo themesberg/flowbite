@@ -8,7 +8,7 @@ const [baseFontSize, { lineHeight: baseLineHeight }] =
 const { spacing, borderWidth, borderRadius } = defaultTheme;
 
 module.exports = plugin(
-    function ({ addBase, theme }) {
+    function ({ addBase, addUtilities, theme }) {
         addBase({
             [[
                 "[type='text']",
@@ -281,7 +281,7 @@ module.exports = plugin(
                 width: spacing[6],
             },
             // remove from v2.x+
-            ['.toggle-bg:after']: {
+            [['.toggle-bg:after']]: {
                 content: '""',
                 position: 'absolute',
                 top: spacing[0.5],
@@ -298,11 +298,11 @@ module.exports = plugin(
                 'box-shadow':
                     'var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color)',
             },
-            ['input:checked + .toggle-bg:after']: {
+            [['input:checked + .toggle-bg:after']]: {
                 transform: 'translateX(100%);',
                 'border-color': 'white',
             },
-            ['input:checked + .toggle-bg']: {
+            [['input:checked + .toggle-bg']]: {
                 background: theme('colors.blue.600', colors.gray[600]),
                 'border-color': theme('colors.blue.600', colors.gray[600]),
             },
@@ -313,10 +313,10 @@ module.exports = plugin(
                 height: '8px',
                 background: 'inherit',
             },
-            ['.tooltip-arrow']: {
+            [['.tooltip-arrow']]: {
                 visibility: 'hidden',
             },
-            ['.tooltip-arrow:before']: {
+            [['.tooltip-arrow:before']]: {
                 content: '""',
                 visibility: 'visible',
                 transform: 'rotate(45deg)',
@@ -461,6 +461,106 @@ module.exports = plugin(
             },
             ['[role="tooltip"].invisible > [data-popper-arrow]:after']: {
                 visibility: 'hidden',
+            },
+        });
+        addUtilities({
+            '.apexcharts-tooltip': {
+                backgroundColor: 'white !important',
+                color: `${theme(
+                    'colors.gray.500',
+                    colors.gray[500]
+                )} !important`,
+                borderColor: 'transparent !important',
+                borderRadius: '0.375rem !important',
+                boxShadow:
+                    '0 2px 4px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.05) !important',
+            },
+            '.dark .apexcharts-tooltip': {
+                backgroundColor: `${theme(
+                    'colors.gray.700',
+                    colors.gray[700]
+                )} !important`,
+                color: `${theme(
+                    'colors.gray.400',
+                    colors.gray[400]
+                )} !important`,
+                borderColor: 'transparent !importan',
+                borderRadius: '0.375rem !importan',
+                boxShadow:
+                    '0 2px 4px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.05) !importan',
+            },
+            '.apexcharts-tooltip .apexcharts-tooltip-title': {
+                paddingTop: '0.5re !importanm',
+                paddingBottom: '0.5rem !importan',
+                paddingLeft: '1rem !importan',
+                paddingRight: '1rem !importan',
+                backgroundColor: `${theme(
+                    'colors.gray.100',
+                    colors.gray[100]
+                )} !important`,
+                borderColor: `${theme(
+                    'colors.gray.200',
+                    colors.gray[200]
+                )} !important`,
+            },
+            '.dark .apexcharts-tooltip .apexcharts-tooltip-title': {
+                backgroundColor: `${theme(
+                    'colors.gray.600',
+                    colors.gray[600]
+                )} !important`,
+                borderColor: `${theme(
+                    'colors.gray.500',
+                    colors.gray[500]
+                )} !important`,
+            },
+            '.apexcharts-xaxistooltip': {
+                color: `${theme(
+                    'colors.gray.500',
+                    colors.gray[500]
+                )} !important`,
+                borderColor: 'transparent !important',
+                backgroundColor: 'white !important',
+                borderRadius: '0.375rem !important',
+                boxShadow:
+                    '0 2px 4px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.05) !important',
+            },
+            '.dark .apexcharts-xaxistooltip': {
+                color: `${theme(
+                    'colors.gray.400',
+                    colors.gray[400]
+                )} !important`,
+                backgroundColor: `${theme(
+                    'colors.gray.700',
+                    colors.gray[700]
+                )} !important`,
+            },
+            '.apexcharts-tooltip .apexcharts-tooltip-text-y-label': {
+                color: `${theme(
+                    'colors.gray.500',
+                    colors.gray[500]
+                )} !important`,
+            },
+            '.dark .apexcharts-tooltip .apexcharts-tooltip-text-y-label': {
+                color: `${theme(
+                    'colors.gray.400',
+                    colors.gray[400]
+                )} !important`,
+            },
+            '.apexcharts-tooltip .apexcharts-tooltip-text-y-value': {
+                color: `${theme(
+                    'colors.gray.900',
+                    colors.gray[900]
+                )} !important`,
+            },
+            '.dark .apexcharts-tooltip .apexcharts-tooltip-text-y-value': {
+                color: 'white !important',
+            },
+            '.apexcharts-xaxistooltip-text': {
+                fontWeight: '500 !important',
+                fontSize: '0.875rem !important',
+            },
+            '.apexcharts-xaxistooltip:before, .apexcharts-xaxistooltip:after': {
+                border: '0 !important',
             },
         });
     },

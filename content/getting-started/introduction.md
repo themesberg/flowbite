@@ -223,9 +223,9 @@ Learn more by browsing the <a href="{{< param homepage >}}/icons/">Flowbite Icon
 
 If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite]({{< param homepage >}}/pro/) which includes fully coded pages and layouts for application, marketing, and e-commerce user interfaces.
 
-## Enhance UI book
+## Learn Design Concepts
 
-If you want to learn and improve your design skills as a developer we recommend you to check out the [Enhance UI](https://www.enhanceui.com/) book that will also help you be able to use the Flowbite Ecosystem to its fullest by teaching you the fundamentals of UI/UX.
+If you want to create even better Flowbite pages, learn design fundamentals from [Teach Me Design - Enhance UI](https://www.enhanceui.com/), a book that covers color theory, typography, UI and UX so you can make the most to implement the Flowbite Ecosystem!
 
 ## Tailwind CSS 2.0
 

@@ -8,7 +8,7 @@ const [baseFontSize, { lineHeight: baseLineHeight }] =
 const { spacing, borderWidth, borderRadius } = defaultTheme;
 
 module.exports = plugin(
-    function ({ addBase, addUtilities, theme }) {
+    function ({ addBase, addComponents, theme }) {
         addBase({
             [[
                 "[type='text']",
@@ -463,7 +463,8 @@ module.exports = plugin(
                 visibility: 'hidden',
             },
         });
-        addUtilities({
+
+        addComponents({
             '.apexcharts-tooltip': {
                 backgroundColor: 'white !important',
                 color: `${theme(
@@ -484,16 +485,16 @@ module.exports = plugin(
                     'colors.gray.400',
                     colors.gray[400]
                 )} !important`,
-                borderColor: 'transparent !importan',
-                borderRadius: '0.375rem !importan',
+                borderColor: 'transparent !important',
+                borderRadius: '0.375rem !important',
                 boxShadow:
-                    '0 2px 4px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.05) !importan',
+                    '0 2px 4px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.05) !important',
             },
             '.apexcharts-tooltip .apexcharts-tooltip-title': {
                 paddingTop: '0.5re !importanm',
-                paddingBottom: '0.5rem !importan',
-                paddingLeft: '1rem !importan',
-                paddingRight: '1rem !importan',
+                paddingBottom: '0.5rem !important',
+                paddingLeft: '1rem !important',
+                paddingRight: '1rem !important',
                 backgroundColor: `${theme(
                     'colors.gray.100',
                     colors.gray[100]
@@ -565,6 +566,21 @@ module.exports = plugin(
         });
     },
     {
+        safelist: [
+            'w-64',
+            'w-1/2',
+            'rounded-l-lg',
+            'rounded-r-lg',
+            'bg-gray-200',
+            'grid-cols-4',
+            'grid-cols-7',
+            'h-6',
+            'leading-6',
+            'h-9',
+            'leading-9',
+            'shadow-lg',
+            { pattern: /^apexcharts-.*$/ },
+        ],
         darkMode: 'class', // or 'media' or 'class',
         theme: {
             extend: {

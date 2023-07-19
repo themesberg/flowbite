@@ -6,9 +6,16 @@ group: plugins
 toc: true
 requires_js: true
 
+next: Datepicker
+nextLink: plugins/datepicker/
+
 previous: Horizontal line (HR)
 previousLink: typography/hr/
 ---
+
+## Default area chart
+
+Use this example to show a basic area chart by setting the `type="area"` option in JavaScript:
 
 {{< example id="default-datepicker-example" class="flex justify-center dark:bg-gray-900" github="plugins/datepicker.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-md w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
@@ -73,6 +80,7 @@ previousLink: typography/hr/
 </div>
 
 <script>
+  // ApexCharts options and config
   window.addEventListener("load", function() {
     let options = {
       chart: {
@@ -142,3 +150,4 @@ previousLink: typography/hr/
   });
 </script>
 {{< /example >}}
+

@@ -119,4 +119,6 @@
 - title: Plugins
   slug: plugins
   pages:
+    - title: Charts
+      new: true
     - title: Datepicker

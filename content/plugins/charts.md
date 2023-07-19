@@ -119,6 +119,7 @@ previousLink: typography/hr/
         },
       ],
       xaxis: {
+        categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
         labels: {
           show: false,
         },

@@ -13,6 +13,33 @@ previous: Horizontal line (HR)
 previousLink: typography/hr/
 ---
 
+The chart components from the Flowbite Library are open-source under the MIT license and they are styled with the utility classes from Tailwind CSS and based on the open-source [ApexCharts](https://apexcharts.com/) library.
+
+We provide an extensive collection responsive chart types such as area, bar, column, pie, and radial that can help you visualize complex data inside graphs for your users in admin dashboard layouts and more.
+
+You can also easily customize the colors, sizes, and options of these charts either via Tailwind CSS directly or via the JavaScript options from the ApexCharts library. Dark mode is also supported by default.
+
+## Getting started
+
+Before continuing make sure that you have Tailwind CSS, Flowbite and ApexCharts installed in your project.
+
+1. Follow the [quickstart guide]({{< ref "getting-started/quickstart" >}}) from Flowbite to set up the styles and functionality
+2. Make sure that you have ApexCharts installed and configured din your project:
+
+Install ApexChart via NPM and save it in your `package.json` file:
+
+```bash
+npm install apexcharts --save
+``` 
+
+Alternatively, you can also just include the CDN link:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+```
+
+Now that you have all the libraries installed you can copy-paste the chart examples below in your code.
+
 ## Default area chart
 
 Use this example to show a basic area chart by setting the `type="area"` option in JavaScript:

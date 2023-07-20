@@ -185,6 +185,195 @@ Use this example to show a basic area chart by setting the `type="area"` option 
 
 ## Bar chart
 
+{{< example id="default-area-chart" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
+<div class="max-w-md w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+  <div class="flex justify-between">
+    <div>
+      <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">3.4k</h5>
+      <p class="text-base font-normal text-gray-500 dark:text-gray-400">Leads generated per week</p>
+    </div>
+    <div
+      class="flex items-center px-2.5 py-0.5 text-base font-semibold text-red-500 dark:text-red-500 text-center">
+      4%
+      <svg class="w-3 h-3 ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1v12m0 0 4-4m-4 4L1 9"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Line Chart -->
+  <div id="sales-by-category"></div>
+  <div class="flex justify-between pt-5 items-center border-gray-200 border-t dark:border-gray-700">
+    <!-- Button -->
+    <button
+      id="dropdownDefaultButton"
+      data-dropdown-toggle="lastDaysdropdown"
+      data-dropdown-placement="bottom"
+      class="text-sm font-medium text-gray-500 dark:text-gray-400 leading-tight text-center inline-flex items-center hover:text-blue-700 dark:hover:text-white"
+      type="button">
+      Last 7 days
+      <svg
+        class="w-5 h-5 ml-1"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"></path>
+      </svg>
+    </button>
+    <!-- Dropdown menu -->
+    <div
+      id="lastDaysdropdown"
+      class="hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 overflow-hidden">
+      <ul class="text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+        <li>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+            >Last 14 days</a
+          >
+        </li>
+        <li>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+            >Last 30 days</a
+          >
+        </li>
+        <li>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+            >Previous month</a
+          >
+        </li>
+      </ul>
+    </div>
+    <a
+      href="#"
+      class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 dark:hover:text-blue-500  hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2">
+      Users Report
+      <svg
+        class="w-5 h-5 ml-1"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <path
+          fill-rule="evenodd"
+          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<script>
+  // ApexCharts options and config
+  window.addEventListener("load", function() {
+    const options = {
+          colors: ["#1A56DB", "#FDBA8C"],
+          series: [
+            {
+              name: "Organic",
+              foreColor: "#1A56DB",
+              data: [
+                { x: "Monday", y: 231 },
+                { x: "Tuesday", y: 122 },
+                { x: "Wednesday", y: 63 },
+                { x: "Thursday", y: 421 },
+                { x: "Friday", y: 122 },
+                { x: "Saturday", y: 323 },
+                { x: "Sunday", y: 111 },
+              ],
+            },
+            {
+              name: "Social media",
+              color: "#FDBA8C",
+              data: [
+                { x: "Monday", y: 232 },
+                { x: "Tuesday", y: 113 },
+                { x: "Wednesday", y: 341 },
+                { x: "Thursday", y: 224 },
+                { x: "Friday", y: 522 },
+                { x: "Saturday", y: 411 },
+                { x: "Sunday", y: 243 },
+              ],
+            },
+          ],
+          chart: {
+            horizontal: false,
+            type: "bar",
+            height: "420px",
+            fontFamily: "Inter, sans-serif",
+            toolbar: {
+              show: false,
+            },
+          },
+          plotOptions: {
+            bar: {
+              columnWidth: "70%",
+              borderRadiusApplication: "end",
+              borderRadius: 8,
+            },
+          },
+          tooltip: {
+            shared: true,
+            intersect: false,
+            style: {
+              fontFamily: "Inter, sans-serif",
+            },
+          },
+          states: {
+            hover: {
+              filter: {
+                type: "darken",
+                value: 1,
+              },
+            },
+          },
+          stroke: {
+            show: true,
+            width: 0,
+            colors: ["transparent"],
+          },
+          grid: {
+            show: false,
+          },
+          dataLabels: {
+            enabled: false,
+          },
+          legend: {
+            show: false,
+          },
+          xaxis: {
+            floating: false,
+            labels: {
+              show: true,
+              style: {
+                cssClass: "fill-gray-500 dark:fill-gray-400",
+              },
+            },
+            axisBorder: {
+              show: false,
+            },
+            axisTicks: {
+              show: false,
+            },
+          },
+          yaxis: {
+            show: false,
+          },
+          fill: {
+            opacity: 1,
+          },
+        }
+
+        if(document.getElementById("sales-by-category")) {
+          const chart = new ApexCharts(document.getElementById("sales-by-category"), options);
+          chart.render();
+        }
+  });
+</script>
+{{< /example >}}
+
 ## Pie chart
 
 ## Radial chart

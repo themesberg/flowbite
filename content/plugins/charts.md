@@ -23,7 +23,8 @@ You can also easily customize the colors, sizes, and options of these charts eit
 
 Before continuing make sure that you have Tailwind CSS, Flowbite and ApexCharts installed in your project.
 
-1. Follow the [quickstart guide]({{< ref "getting-started/quickstart" >}}) from Flowbite to set up the styles and functionality
+1. Follow the [quickstart guide]({{< ref "getting-started/quickstart" >}}) from Flowbite to set up the styles and functionality.
+
 2. Make sure that you have ApexCharts installed and configured din your project:
 
 Install ApexChart via NPM and save it in your `package.json` file:
@@ -40,7 +41,7 @@ Alternatively, you can also just include the CDN link:
 
 Now that you have all the libraries installed you can copy-paste the chart examples below in your code.
 
-## Default area chart
+## Area chart
 
 Use this example to show a basic area chart by setting the `type="area"` option in JavaScript:
 
@@ -152,6 +153,11 @@ Use this example to show a basic area chart by setting the `type="area"` option 
           data: [6500, 6418, 6456, 6526, 6356, 6456],
           color: "#1A56DB",
         },
+        {
+          name: "Sales",
+          data: [6500, 6418, 6456, 6526, 6356, 6456],
+          color: "#1A16DC",
+        },
       ],
       xaxis: {
         categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
@@ -177,4 +183,14 @@ Use this example to show a basic area chart by setting the `type="area"` option 
   });
 </script>
 {{< /example >}}
+
+## Line chart
+
+## Column chart
+
+## Bar chart
+
+## Pie chart
+
+## Radial chart
 

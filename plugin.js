@@ -472,9 +472,15 @@ module.exports = plugin(
                     colors.gray[500]
                 )} !important`,
                 borderColor: 'transparent !important',
-                borderRadius: '0.375rem !important',
+                borderRadius: `${theme(
+                    'borderRadius.DEFAULT',
+                    borderRadius.DEFAULT
+                )} !important`,
+                padding: `${theme('spacing.3', spacing[3])} !important`,
                 boxShadow:
                     '0 2px 4px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.05) !important',
+                display: 'grid',
+                gap: `${theme('spacing.3', spacing[3])} !important`,
             },
             '.dark .apexcharts-tooltip': {
                 backgroundColor: `${theme(
@@ -486,7 +492,6 @@ module.exports = plugin(
                     colors.gray[400]
                 )} !important`,
                 borderColor: 'transparent !important',
-                borderRadius: '0.375rem !important',
                 boxShadow:
                     '0 2px 4px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.05) !important',
             },
@@ -520,25 +525,36 @@ module.exports = plugin(
                     colors.gray[500]
                 )} !important`,
                 borderColor: 'transparent !important',
-                backgroundColor: 'white !important',
-                borderRadius: '0.375rem !important',
+                backgroundColor: `${theme(
+                    'colors.gray.50',
+                    colors.gray[50]
+                )} !important`,
+                borderRadius: `${theme(
+                    'borderRadius.DEFAULT',
+                    borderRadius.DEFAULT
+                )} !important`,
                 boxShadow:
                     '0 2px 4px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.05) !important',
             },
             '.dark .apexcharts-xaxistooltip': {
+                padding: `${theme('spacing.3', spacing[3])} !important`,
                 color: `${theme(
                     'colors.gray.400',
                     colors.gray[400]
                 )} !important`,
                 backgroundColor: `${theme(
-                    'colors.gray.700',
-                    colors.gray[700]
+                    'colors.gray.600',
+                    colors.gray[600]
                 )} !important`,
             },
             '.apexcharts-tooltip .apexcharts-tooltip-text-y-label': {
                 color: `${theme(
                     'colors.gray.500',
                     colors.gray[500]
+                )} !important`,
+                fontSize: `${theme(
+                    'fontSize.sm',
+                    defaultTheme.fontSize.sm
                 )} !important`,
             },
             '.dark .apexcharts-tooltip .apexcharts-tooltip-text-y-label': {
@@ -552,17 +568,41 @@ module.exports = plugin(
                     'colors.gray.900',
                     colors.gray[900]
                 )} !important`,
+                fontSize: `${theme(
+                    'fontSize.sm',
+                    defaultTheme.fontSize.sm
+                )} !important`,
             },
             '.dark .apexcharts-tooltip .apexcharts-tooltip-text-y-value': {
                 color: 'white !important',
             },
             '.apexcharts-xaxistooltip-text': {
-                fontWeight: '500 !important',
-                fontSize: '0.875rem !important',
+                fontWeight: `${theme(
+                    'fontWeight.normal',
+                    defaultTheme.fontWeight.normal
+                )} !important`,
+                fontSize: `${theme(
+                    'fontSize.sm',
+                    defaultTheme.fontSize.sm
+                )} !important`,
             },
-            '.apexcharts-xaxistooltip:before, .apexcharts-xaxistooltip:after': {
-                border: '0 !important',
+            '.apexcharts-xaxistooltip:after, .apexcharts-xaxistooltip:before': {
+                borderBottomColor: `${theme(
+                    'colors.gray.50',
+                    colors.gray[50]
+                )} !important`,
             },
+            '.dark .apexcharts-xaxistooltip:after, .dark .apexcharts-xaxistooltip:before':
+                {
+                    borderBottomColor: `${theme(
+                        'colors.gray.600',
+                        colors.gray[600]
+                    )} !important`,
+                },
+            '.apexcharts-tooltip-series-group.apexcharts-active, .apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-y-group':
+                {
+                    padding: '0 !important',
+                },
         });
     },
     {

@@ -605,6 +605,32 @@ module.exports = plugin(
                 {
                     padding: '0 !important',
                 },
+            '.apexcharts-legend-text': {
+                fontSize: `${theme(
+                    'fontSize.xs',
+                    defaultTheme.fontSize.xs
+                )} !important`,
+                fontWeight: `${theme(
+                    'fontWeight.medium',
+                    defaultTheme.fontWeight.medium
+                )} !important`,
+                paddingLeft: `${theme('spacing.5', spacing[5])} !important`,
+                color: `${theme(
+                    'colors.gray.500',
+                    colors.gray[500]
+                )} !important`,
+            },
+            '.dark .apexcharts-legend-text': {
+                color: `${theme(
+                    'colors.gray.400',
+                    colors.gray[400]
+                )} !important`,
+            },
+            '.apexcharts-legend-series': {
+                marginLeft: `${theme('spacing.2', spacing[2])} !important`,
+                marginRight: `${theme('spacing.2', spacing[2])} !important`,
+                marginBottom: `${theme('spacing.1', spacing[1])} !important`,
+            },
         });
     },
     {

@@ -68,7 +68,7 @@ Use this example to show a basic area chart by setting the `type="area"` option 
         id="dropdownDefaultButton"
         data-dropdown-toggle="lastDaysdropdown"
         data-dropdown-placement="bottom"
-        class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 text-center inline-flex items-center hover:text-blue-700 dark:hover:text-white"
+        class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 text-center inline-flex items-center dark:hover:text-white"
         type="button">
         Last 7 days
         <svg class="w-2.5 m-2.5 ml-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -153,14 +153,9 @@ Use this example to show a basic area chart by setting the `type="area"` option 
           data: [6500, 6418, 6456, 6526, 6356, 6456],
           color: "#1A56DB",
         },
-        {
-          name: "Sales",
-          data: [6500, 6418, 6456, 6526, 6356, 6456],
-          color: "#1A16DC",
-        },
       ],
       xaxis: {
-        categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
+        categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
         labels: {
           show: false,
         },
@@ -173,6 +168,11 @@ Use this example to show a basic area chart by setting the `type="area"` option 
       },
       yaxis: {
         show: false,
+        labels: {
+          formatter: function (value) {
+            return '$' + value;
+          }
+        }
       },
     }
 

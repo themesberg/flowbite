@@ -43,9 +43,9 @@ Now that you have all the libraries installed you can copy-paste the chart examp
 
 ## Area chart
 
-Use this example to show a basic area chart by setting the `type="area"` option in JavaScript:
+Use this example to show a basic area chart by setting the `type: "area"` option in JavaScript:
 
-{{< example id="default-area-chart" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
+{{< example id="default-area-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-md w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
   <div class="flex justify-between">
     <div>
@@ -60,7 +60,7 @@ Use this example to show a basic area chart by setting the `type="area"` option 
       </svg>
     </div>
   </div>
-  <div id="main-chart"></div>
+  <div id="area-chart"></div>
   <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">
     <div class="flex justify-between items-center pt-5">
       <!-- Button -->
@@ -171,8 +171,8 @@ Use this example to show a basic area chart by setting the `type="area"` option 
       },
     }
 
-    if (document.getElementById("main-chart")) {
-      const chart = new ApexCharts(document.getElementById("main-chart"), options)
+    if (document.getElementById("area-chart")) {
+      const chart = new ApexCharts(document.getElementById("area-chart"), options)
       chart.render()
     }
   });
@@ -183,9 +183,9 @@ Use this example to show a basic area chart by setting the `type="area"` option 
 
 ## Column chart
 
-## Bar chart
+You can represent multiple data entries using columns by setting the `type: "bar"` option and also by updating the `horizontal` key value to `false` in JavaScript to adjust them vertically as columns:
 
-{{< example id="default-area-chart" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
+{{< example id="column-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-md w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
   <div class="flex justify-between">
     <div>
@@ -194,75 +194,58 @@ Use this example to show a basic area chart by setting the `type="area"` option 
     </div>
     <div
       class="flex items-center px-2.5 py-0.5 text-base font-semibold text-red-500 dark:text-red-500 text-center">
-      4%
+      22.3%
       <svg class="w-3 h-3 ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1v12m0 0 4-4m-4 4L1 9"/>
       </svg>
     </div>
   </div>
 
-  <!-- Line Chart -->
-  <div id="sales-by-category"></div>
-  <div class="flex justify-between pt-5 items-center border-gray-200 border-t dark:border-gray-700">
-    <!-- Button -->
-    <button
-      id="dropdownDefaultButton"
-      data-dropdown-toggle="lastDaysdropdown"
-      data-dropdown-placement="bottom"
-      class="text-sm font-medium text-gray-500 dark:text-gray-400 leading-tight text-center inline-flex items-center hover:text-blue-700 dark:hover:text-white"
-      type="button">
-      Last 7 days
-      <svg
-        class="w-5 h-5 ml-1"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true">
-        <path
-          clip-rule="evenodd"
-          fill-rule="evenodd"
-          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"></path>
-      </svg>
-    </button>
-    <!-- Dropdown menu -->
-    <div
-      id="lastDaysdropdown"
-      class="hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 overflow-hidden">
-      <ul class="text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-        <li>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-            >Last 14 days</a
-          >
-        </li>
-        <li>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-            >Last 30 days</a
-          >
-        </li>
-        <li>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-            >Previous month</a
-          >
-        </li>
-      </ul>
+  <div id="column-chart"></div>
+    <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">
+      <div class="flex justify-between items-center pt-5">
+        <!-- Button -->
+        <button
+          id="dropdownDefaultButton"
+          data-dropdown-toggle="lastDaysdropdown"
+          data-dropdown-placement="bottom"
+          class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 text-center inline-flex items-center dark:hover:text-white"
+          type="button">
+          Last 7 days
+          <svg class="w-2.5 m-2.5 ml-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+          </svg>
+        </button>
+        <!-- Dropdown menu -->
+        <div id="lastDaysdropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Yesterday</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Today</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 7 days</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 30 days</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 90 days</a>
+              </li>
+            </ul>
+        </div>
+        <a
+          href="#"
+          class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 dark:hover:text-blue-500  hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2">
+          Leads Report
+          <svg class="w-2.5 h-2.5 ml-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+          </svg>
+        </a>
+      </div>
     </div>
-    <a
-      href="#"
-      class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 dark:hover:text-blue-500  hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2">
-      Users Report
-      <svg
-        class="w-5 h-5 ml-1"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true">
-        <path
-          fill-rule="evenodd"
-          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-          clip-rule="evenodd"></path>
-      </svg>
-    </a>
-  </div>
 </div>
 
 <script>
@@ -273,33 +256,32 @@ Use this example to show a basic area chart by setting the `type="area"` option 
           series: [
             {
               name: "Organic",
-              foreColor: "#1A56DB",
+              color: "#1A56DB",
               data: [
-                { x: "Monday", y: 231 },
-                { x: "Tuesday", y: 122 },
-                { x: "Wednesday", y: 63 },
-                { x: "Thursday", y: 421 },
-                { x: "Friday", y: 122 },
-                { x: "Saturday", y: 323 },
-                { x: "Sunday", y: 111 },
+                { x: "Mon", y: 231 },
+                { x: "Tue", y: 122 },
+                { x: "Wed", y: 63 },
+                { x: "Thu", y: 421 },
+                { x: "Fri", y: 122 },
+                { x: "Sat", y: 323 },
+                { x: "Sun", y: 111 },
               ],
             },
             {
               name: "Social media",
               color: "#FDBA8C",
               data: [
-                { x: "Monday", y: 232 },
-                { x: "Tuesday", y: 113 },
-                { x: "Wednesday", y: 341 },
-                { x: "Thursday", y: 224 },
-                { x: "Friday", y: 522 },
-                { x: "Saturday", y: 411 },
-                { x: "Sunday", y: 243 },
+                { x: "Mon", y: 232 },
+                { x: "Tue", y: 113 },
+                { x: "Wed", y: 341 },
+                { x: "Thu", y: 224 },
+                { x: "Fri", y: 522 },
+                { x: "Sat", y: 411 },
+                { x: "Sun", y: 243 },
               ],
             },
           ],
           chart: {
-            horizontal: false,
             type: "bar",
             height: "420px",
             fontFamily: "Inter, sans-serif",
@@ -309,6 +291,7 @@ Use this example to show a basic area chart by setting the `type="area"` option 
           },
           plotOptions: {
             bar: {
+              horizontal: false,
               columnWidth: "70%",
               borderRadiusApplication: "end",
               borderRadius: 8,
@@ -366,13 +349,17 @@ Use this example to show a basic area chart by setting the `type="area"` option 
           },
         }
 
-        if(document.getElementById("sales-by-category")) {
-          const chart = new ApexCharts(document.getElementById("sales-by-category"), options);
+        if(document.getElementById("column-chart")) {
+          const chart = new ApexCharts(document.getElementById("column-chart"), options);
           chart.render();
         }
   });
 </script>
 {{< /example >}}
+
+## Bar chart
+
+
 
 ## Pie chart
 

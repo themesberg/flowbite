@@ -211,7 +211,7 @@ You can add multiple data sets by using the `series` object and setting a name, 
     </div>
   </div>
   <div id="main-chart"></div>
-  <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">
+  <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between mt-5">
     <div class="flex justify-between items-center pt-5">
       <!-- Button -->
       <button
@@ -359,7 +359,7 @@ If you want to format and prefix your data with something such as a currency sig
     </div>
   </div>
   <div id="main-chart"></div>
-  <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">
+  <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between mt-5">
     <div class="flex justify-between items-center pt-5">
       <!-- Button -->
       <button

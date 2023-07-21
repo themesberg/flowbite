@@ -32,28 +32,28 @@ For more information on how to install Meteor.js, check out the [official instal
 
 ## Create a Meteor.js project
 
-The easiest way to create a new Meteor.js project is by first installed the CLI globally:
+The easiest way to create a new Meteor.js project is by first installing the CLI globally:
 
 ```bash
 npm install -g meteor
 ```
 
-After you have `meteor` installed globally you can go ahead and create a new project:
+After you have `meteor` available in your terminal you can go ahead and create a new project:
 
 ```bash
 meteor create flowbite-app --tailwind      
 cd flowbite-app
 ```
 
-This will create a new `meteor` project with `tailwindcss` support. 
-
-No extra configuration needed as we added the `--tailwind` flag when setting up the project.
+This will create a new `meteor` project with `tailwindcss` support and no extra configuration is needed as we added the `--tailwind` flag when setting up the project.
 
 Now that you have created a new Meteor.js project with Tailwind CSS configured automatically we can proceed with installing Flowbite and Flowbite React to start leveraging the open-source UI components.
 
 ## Install Flowbite
 
-1. Install Flowbite and Flowbite React via NPM:
+[Flowbite](https://flowbite.com/) is an open-source UI component library based on the Tailwind CSS utility-first framework featuring hundreds of components like dropdowns, modals, navbars, datepickers, and more that you can leverage to quickly build modern web applications.
+
+1. The first step is to install Flowbite and Flowbite React via NPM:
 
 ```bash
 npm install --save flowbite flowbite-react
@@ -76,7 +76,7 @@ module.exports = {
 
 ```
 
-3. Now that you have installed the packages you can start importing the UI components:
+3. Now that you have installed the Flowbite packages you can start importing the UI components:
 
 ```javascript
 import { Alert } from "flowbite-react";
@@ -90,7 +90,7 @@ The code above will import the `<Alert>` component that you can use to send feed
 
 ## Flowbite UI components
 
-To get you started you can check out the full collection of React components from the [Flowbite React website](https://flowbite-react.com/) and browse the documentation for the source code of each component.
+To get you started you can check out the full collection of React components from the [Flowbite React repository](https://github.com/themesberg/flowbite-react) and [browse the documentation](https://www.flowbite-react.com/docs/getting-started/introduction) for the source code of each component.
 
 Here's an example of how you can use the modal and button components by importing them from the Flowbite React package inside your Meteor.js project:
 
@@ -199,4 +199,4 @@ To learn more about Flowbite React make sure to check out to the [repository](ht
 
 ## Meteor.js starter project
 
-The Flowbite community has created an open-source Meteor.js starter project that has Tailwind CSS and Flowbite React set up beforehand and you can go ahead and clone it by checking out the [repository on GitHub](https://github.com/meteor/flowbite-meteor-starter).
+The Flowbite and Meteor community has created an open-source Meteor.js starter project that has Tailwind CSS and Flowbite React set up beforehand and you can go ahead and clone it by checking out the official [repository on GitHub](https://github.com/meteor/flowbite-meteor-starter).

@@ -32,6 +32,7 @@
 - [Flowbite Blocks](#flowbite-blocks)
 - [Flowbite Icons](#flowbite-icons)
 - [Pro version](#pro-version)
+- [Learn Design Concepts](#learn-design-concepts)
 - [Community](#community)
 - [Copyright and license](#copyright-and-license)
 
@@ -745,9 +746,9 @@ Get access to all premium features including the Figma design system, access to 
 
 💎 [Check out Flowbite Pro](https://flowbite.com/pro/)
 
-## Learn design with Enhance UI
+## Learn Design Concepts
 
-If you want to ugprade your design skills as a developer we recommend you to check out the Enhance UI book that will teach you the fundamentals of UI/UX and can help you learn how to use the Flowbite Ecosystem to its fullest:
+If you want to create even better Flowbite pages, learn design fundamentals from Teach Me Design - Enhance UI, a book that covers color theory, typography, UI and UX so you can make the most to implement the Flowbite Ecosystem!
 
 📖 [Learn with Enhance UI](https://www.enhanceui.com/)
 

@@ -225,7 +225,7 @@ If you want to take your Tailwind development workflow to the next level you can
 
 ## Learn Design Concepts
 
-If you want to create even better Flowbite pages, learn design fundamentals from [Teach Me Design - Enhance UI](https://www.enhanceui.com/), a book that covers color theory, typography, UI and UX so you can make the most to implement the Flowbite Ecosystem!
+If you want to create even better Flowbite pages, learn design fundamentals from [Teach Me Design - Enhance UI](https://www.enhanceui.com/?ref=flowbite-introduction), a book that covers color theory, typography, UI and UX so you can make the most to implement the Flowbite Ecosystem!
 
 ## Tailwind CSS 2.0
 

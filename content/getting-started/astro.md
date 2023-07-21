@@ -8,8 +8,8 @@ requires_astro: true
 
 previous: Angular
 previousLink: getting-started/angular/
-next: Gatsby
-nextLink: getting-started/gatsby/
+next: Remix
+nextLink: getting-started/remix/
 ---
 
 [Astro](https://astro.build) is a full-stack web framework for building lightning-fast and content-focused websites featuring component islands, server-first API design, edge-ready deployments and supports hundreds of integrations with technologies like Tailwind CSS, Flowbite, React, Vue, Svelte, and more.

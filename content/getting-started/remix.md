@@ -6,10 +6,10 @@ group: getting-started
 toc: true
 requires_remix: true
 
-previous: Next.js
-previousLink: getting-started/meteor-js/
-next: Vue
-nextLink: getting-started/vue/
+previous: Astro
+previousLink: getting-started/astro/
+next: Meteor.js
+nextLink: getting-started/meteor-js/
 ---
 
 [Remix](https://remix.run/) is a new and increasingly popular full-stack web framework based on React that allows you to build websites with quicker page load by leveraging distributed systems and using the native Web Fetch API to load content from the server.

@@ -23,7 +23,7 @@ You can also easily customize the colors, sizes, and options of these charts eit
 
 Before continuing make sure that you have Tailwind CSS, Flowbite and ApexCharts installed in your project.
 
-1. Follow the [quickstart guide]({{< ref "getting-started/quickstart" >}}) from Flowbite to set up the styles and functionality.
+1. Follow the <a href="{{< ref "getting-started/quickstart" >}}">quickstart guide</a> from Flowbite to set up the styles and functionality
 
 2. Make sure that you have ApexCharts installed and configured din your project:
 

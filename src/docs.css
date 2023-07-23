@@ -67,13 +67,17 @@
 
 #mainContent > p > a,
 #mainContent > ul > li > a,
-#mainContent > ol > li > a {
+#mainContent > ol > li > a,
+#mainContent > ul > li > p > a,
+#mainContent > ol > li > p > a {
 	@apply font-medium text-gray-700 underline dark:text-gray-300 decoration-1 underline-offset-2 decoration-blue-600 dark:decoration-blue-500;
 }
 
 #mainContent > p > a:hover,
 #mainContent > ul > li > a:hover,
-#mainContent > ol > li > a:hover {
+#mainContent > ol > li > a:hover,
+#mainContent > ul > li > p > a:hover,
+#mainContent > ol > li > p > a:hover {
 	@apply text-gray-900 decoration-2 dark:text-white;
 }
 

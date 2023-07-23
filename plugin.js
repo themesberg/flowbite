@@ -465,195 +465,170 @@ module.exports = plugin(
         });
 
         addComponents({
-            '.apexcharts-tooltip': {
-                backgroundColor: 'white !important',
-                color: `${theme(
-                    'colors.gray.500',
-                    colors.gray[500]
-                )} !important`,
-                border: '0 !important',
+            '.apexcharts-canvas .apexcharts-tooltip.apexcharts-active': {
+                backgroundColor: 'white',
+                color: `${theme('colors.gray.500', colors.gray[500])}`,
+                border: '0',
                 borderRadius: `${theme(
                     'borderRadius.DEFAULT',
                     borderRadius.DEFAULT
-                )} !important`,
-                // padding: `${theme('spacing.3', spacing[3])} !important`,
-                boxShadow: `${theme('boxShadow.md', boxShadow.md)} !important`,
+                )}`,
+                // padding: `${theme('spacing.3', spacing[3])}`,
+                boxShadow: `${theme('boxShadow.md', boxShadow.md)}`,
             },
-            '.dark .apexcharts-tooltip': {
+            '.dark .apexcharts-canvas .apexcharts-tooltip': {
                 backgroundColor: `${theme(
                     'colors.gray.700',
                     colors.gray[700]
-                )} !important`,
-                color: `${theme(
-                    'colors.gray.400',
-                    colors.gray[400]
-                )} !important`,
-                borderColor: 'transparent !important',
-                boxShadow: `${theme('boxShadow.md', boxShadow.md)} !important`,
+                )}`,
+                color: `${theme('colors.gray.400', colors.gray[400])}`,
+                borderColor: 'transparent',
+                boxShadow: `${theme('boxShadow.md', boxShadow.md)}`,
             },
-            '.apexcharts-tooltip .apexcharts-tooltip-title': {
-                paddingTop: `${theme('spacing.2', spacing[2])} !important`,
-                paddingBottom: `${theme('spacing.2', spacing[2])} !important`,
-                paddingRight: `${theme('spacing.3', spacing[3])} !important`,
-                paddingLeft: `${theme('spacing.3', spacing[3])} !important`,
-                marginBottom: `${theme('spacing.3', spacing[3])} !important`,
-                backgroundColor: `${theme(
-                    'colors.gray.100',
-                    colors.gray[100]
-                )} !important`,
-                borderBottomColor: `${theme(
-                    'colors.gray.200',
-                    colors.gray[200]
-                )} !important`,
-                fontSize: `${theme(
-                    'fontSize.sm',
-                    defaultTheme.fontSize.sm
-                )} !important`,
-                fontWeight: `${theme(
-                    'fontWeight.normal',
-                    defaultTheme.fontWeight.normal
-                )} !important`,
-                color: `${theme(
-                    'colors.gray.500',
-                    colors.gray[500]
-                )} !important`,
-            },
-            '.dark .apexcharts-tooltip .apexcharts-tooltip-title': {
-                backgroundColor: `${theme(
-                    'colors.gray.600',
-                    colors.gray[600]
-                )} !important`,
-                borderColor: `${theme(
-                    'colors.gray.500',
-                    colors.gray[500]
-                )} !important`,
-                color: `${theme(
-                    'colors.gray.400',
-                    colors.gray[400]
-                )} !important`,
-            },
-            '.apexcharts-xaxistooltip': {
-                color: `${theme(
-                    'colors.gray.500',
-                    colors.gray[500]
-                )} !important`,
-                paddingTop: `${theme('spacing.2', spacing[2])} !important`,
-                paddingBottom: `${theme('spacing.2', spacing[2])} !important`,
-                paddingRight: `${theme('spacing.3', spacing[3])} !important`,
-                paddingLeft: `${theme('spacing.3', spacing[3])} !important`,
-                borderColor: `transparent !important`,
-                backgroundColor: 'white !important',
+            '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title':
+                {
+                    paddingTop: `${theme('spacing.2', spacing[2])}`,
+                    paddingBottom: `${theme('spacing.2', spacing[2])}`,
+                    paddingRight: `${theme('spacing.3', spacing[3])}`,
+                    paddingLeft: `${theme('spacing.3', spacing[3])}`,
+                    marginBottom: `${theme('spacing.3', spacing[3])}`,
+                    backgroundColor: `${theme(
+                        'colors.gray.100',
+                        colors.gray[100]
+                    )}`,
+                    borderBottomColor: `${theme(
+                        'colors.gray.200',
+                        colors.gray[200]
+                    )}`,
+                    fontSize: `${theme(
+                        'fontSize.sm',
+                        defaultTheme.fontSize.sm
+                    )}`,
+                    fontWeight: `${theme(
+                        'fontWeight.normal',
+                        defaultTheme.fontWeight.normal
+                    )}`,
+                    color: `${theme('colors.gray.500', colors.gray[500])}`,
+                },
+            '.dark .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title':
+                {
+                    backgroundColor: `${theme(
+                        'colors.gray.600',
+                        colors.gray[600]
+                    )}`,
+                    borderColor: `${theme(
+                        'colors.gray.500',
+                        colors.gray[500]
+                    )}`,
+                    color: `${theme('colors.gray.400', colors.gray[400])}`,
+                },
+            '.apexcharts-canvas .apexcharts-xaxistooltip': {
+                color: `${theme('colors.gray.500', colors.gray[500])}`,
+                paddingTop: `${theme('spacing.2', spacing[2])}`,
+                paddingBottom: `${theme('spacing.2', spacing[2])}`,
+                paddingRight: `${theme('spacing.3', spacing[3])}`,
+                paddingLeft: `${theme('spacing.3', spacing[3])}`,
+                borderColor: `transparent`,
+                backgroundColor: 'white',
                 borderRadius: `${theme(
                     'borderRadius.DEFAULT',
                     borderRadius.DEFAULT
-                )} !important`,
-                boxShadow: `${theme('boxShadow.md', boxShadow.md)} !important`,
+                )}`,
+                boxShadow: `${theme('boxShadow.md', boxShadow.md)}`,
             },
-            '.dark .apexcharts-xaxistooltip': {
-                color: `${theme(
-                    'colors.gray.400',
-                    colors.gray[400]
-                )} !important`,
+            '.dark .apexcharts-canvas .apexcharts-xaxistooltip': {
+                color: `${theme('colors.gray.400', colors.gray[400])}`,
                 backgroundColor: `${theme(
                     'colors.gray.700',
                     colors.gray[700]
-                )} !important`,
+                )}`,
             },
-            '.apexcharts-tooltip .apexcharts-tooltip-text-y-label': {
-                color: `${theme(
-                    'colors.gray.500',
-                    colors.gray[500]
-                )} !important`,
-                fontSize: `${theme(
-                    'fontSize.sm',
-                    defaultTheme.fontSize.sm
-                )} !important`,
-            },
-            '.dark .apexcharts-tooltip .apexcharts-tooltip-text-y-label': {
-                color: `${theme(
-                    'colors.gray.400',
-                    colors.gray[400]
-                )} !important`,
-            },
-            '.apexcharts-tooltip .apexcharts-tooltip-text-y-value': {
-                color: `${theme(
-                    'colors.gray.900',
-                    colors.gray[900]
-                )} !important`,
-                fontSize: `${theme(
-                    'fontSize.sm',
-                    defaultTheme.fontSize.sm
-                )} !important`,
-            },
-            '.dark .apexcharts-tooltip .apexcharts-tooltip-text-y-value': {
-                color: 'white !important',
-            },
-            '.apexcharts-xaxistooltip-text': {
+            '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-label':
+                {
+                    color: `${theme('colors.gray.500', colors.gray[500])}`,
+                    fontSize: `${theme(
+                        'fontSize.sm',
+                        defaultTheme.fontSize.sm
+                    )}`,
+                },
+            '.dark .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-label':
+                {
+                    color: `${theme('colors.gray.400', colors.gray[400])}`,
+                },
+            '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-value':
+                {
+                    color: `${theme('colors.gray.900', colors.gray[900])}`,
+                    fontSize: `${theme(
+                        'fontSize.sm',
+                        defaultTheme.fontSize.sm
+                    )}`,
+                },
+            '.dark .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-value':
+                {
+                    color: 'white',
+                },
+            '.apexcharts-canvas .apexcharts-xaxistooltip-text': {
                 fontWeight: `${theme(
                     'fontWeight.normal',
                     defaultTheme.fontWeight.normal
-                )} !important`,
-                fontSize: `${theme(
-                    'fontSize.sm',
-                    defaultTheme.fontSize.sm
-                )} !important`,
+                )}`,
+                fontSize: `${theme('fontSize.sm', defaultTheme.fontSize.sm)}`,
             },
-            '.apexcharts-xaxistooltip:after, .apexcharts-xaxistooltip:before': {
-                borderBottomColor: 'white !important',
+            '.apexcharts-canvas .apexcharts-xaxistooltip:after, .apexcharts-canvas .apexcharts-xaxistooltip:before':
+                {
+                    borderBottomColor: 'white',
+                },
+            '.apexcharts-canvas .apexcharts-xaxistooltip:after': {
+                borderWidth: '8px',
+                marginLeft: '-8px',
             },
-            '.apexcharts-xaxistooltip:after': {
-                borderWidth: '8px !important',
-                marginLeft: '-8px !important',
+            '.apexcharts-canvas .apexcharts-xaxistooltip:before': {
+                borderWidth: '10px',
+                marginLeft: '-10px',
             },
-            '.apexcharts-xaxistooltip:before': {
-                borderWidth: '10px !important',
-                marginLeft: '-10px !important',
-            },
-            '.dark .apexcharts-xaxistooltip:after, .dark .apexcharts-xaxistooltip:before':
+            '.dark .apexcharts-canvas .apexcharts-xaxistooltip:after, .dark .apexcharts-canvas .apexcharts-xaxistooltip:before':
                 {
                     borderBottomColor: `${theme(
                         'colors.gray.700',
                         colors.gray[700]
-                    )} !important`,
+                    )}`,
                 },
-            '.apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-y-group':
+            '.apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-y-group':
                 {
-                    padding: '0 !important',
+                    padding: '0',
                 },
-            '.apexcharts-tooltip-series-group.apexcharts-active': {
-                paddingLeft: `${theme('spacing.3', spacing[3])} !important`,
-                paddingRight: `${theme('spacing.3', spacing[3])} !important`,
-                paddingBottom: `${theme('spacing.3', spacing[3])} !important`,
-            },
-            '.apexcharts-tooltip-series-group.apexcharts-active:first-of-type':
+            '.apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active':
                 {
-                    paddingTop: `${theme('spacing.3', spacing[3])} !important`,
+                    paddingLeft: `${theme('spacing.3', spacing[3])}`,
+                    paddingRight: `${theme('spacing.3', spacing[3])}`,
+                    paddingBottom: `${theme('spacing.3', spacing[3])}`,
                 },
-            '.apexcharts-legend-text': {
-                fontSize: `${theme(
-                    'fontSize.xs',
-                    defaultTheme.fontSize.xs
-                )} !important`,
+            '.apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active:first-of-type':
+                {
+                    paddingTop: `${theme('spacing.3', spacing[3])}`,
+                },
+            '.apexcharts-canvas .apexcharts-legend-text': {
+                fontSize: `${theme('fontSize.xs', defaultTheme.fontSize.xs)}`,
                 fontWeight: `${theme(
                     'fontWeight.medium',
                     defaultTheme.fontWeight.medium
-                )} !important`,
-                paddingLeft: `${theme('spacing.5', spacing[5])} !important`,
+                )}`,
+                paddingLeft: `${theme('spacing.5', spacing[5])}`,
                 color: `${theme(
                     'colors.gray.500',
                     colors.gray[500]
                 )} !important`,
             },
-            '.dark .apexcharts-legend-text': {
+            '.dark .apexcharts-canvas .apexcharts-legend-text': {
                 color: `${theme(
                     'colors.gray.400',
                     colors.gray[400]
                 )} !important`,
             },
-            '.apexcharts-legend-series': {
-                marginLeft: `${theme('spacing.2', spacing[2])} !important`,
-                marginRight: `${theme('spacing.2', spacing[2])} !important`,
-                marginBottom: `${theme('spacing.1', spacing[1])} !important`,
+            '.apexcharts-canvas .apexcharts-legend-series': {
+                marginLeft: `${theme('spacing.2', spacing[2])}`,
+                marginRight: `${theme('spacing.2', spacing[2])}`,
+                marginBottom: `${theme('spacing.1', spacing[1])}`,
             },
         });
     },

@@ -750,7 +750,7 @@ Get access to all premium features including the Figma design system, access to 
 
 If you want to create even better Flowbite pages, learn design fundamentals from Teach Me Design - Enhance UI, a book that covers color theory, typography, UI and UX so you can make the most to implement the Flowbite Ecosystem!
 
-📖 [Learn with Enhance UI](https://www.enhanceui.com/)
+📖 [Learn with Enhance UI](https://www.enhanceui.com/?ref=flowbite-github)
 
 ## Community
 

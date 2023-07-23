@@ -61,13 +61,13 @@ const initiateCopyToClipboard = (element) => {
     var copyText = button.getElementsByClassName('copy-text')[0];
     button.addEventListener('click', function () {
         copyTextToClipboard(textToCopy);
-        alert.classList.remove('opacity-0');
-        alert.classList.add('opacity-100');
+        alert.classList.remove('opacity-0', 'hidden');
+        alert.classList.add('opacity-100', 'flex');
         copyText.innerHTML = 'Copied';
 
         setTimeout(function () {
-            alert.classList.add('opacity-0');
-            alert.classList.remove('opacity-100');
+            alert.classList.add('opacity-0', 'hidden');
+            alert.classList.remove('opacity-100', 'flex');
             copyText.innerHTML = 'Copy';
         }, 3000);
     });

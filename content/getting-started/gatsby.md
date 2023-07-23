@@ -6,8 +6,8 @@ group: getting-started
 toc: true
 requires_gatsby: true
 
-previous: Astro
-previousLink: getting-started/astro/
+previous: Meteor.js
+previousLink: getting-started/meteor-js/
 next: SolidJS
 nextLink: getting-started/solid-js/
 ---

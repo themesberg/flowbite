@@ -71,5 +71,11 @@ module.exports = {
             backgroundColor: ['active'],
         },
     },
-    plugins: [require('./plugin')],
+    plugins: [
+        require('./plugin')({
+            charts: true,
+            forms: true,
+            tooltips: true,
+        }),
+    ],
 };

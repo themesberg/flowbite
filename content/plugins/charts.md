@@ -23,9 +23,20 @@ You can also easily customize the colors, sizes, and options of these charts eit
 
 Before continuing make sure that you have Tailwind CSS, Flowbite and ApexCharts installed in your project.
 
-1. Follow the <a href="{{< ref "getting-started/quickstart" >}}">quickstart guide</a> from Flowbite to set up the styles via the plugin and functionality
+1. Follow the <a href="{{< ref "getting-started/quickstart" >}}">quickstart guide</a> from Flowbite to install the plugin styles and functionality
 
-2. Make sure that you have ApexCharts installed and configured din your project:
+2. Enable charts within the Flowbite Plugin option from the Tailwind CSS configuration file:
+
+```javascript
+plugins: [
+  require('flowbite/plugin')({
+      charts: true,
+  }),
+  // ... other plugins
+]
+```
+
+3. Make sure that you have ApexCharts installed and configured din your project:
 
 Install ApexChart via NPM and save it in your `package.json` file:
 

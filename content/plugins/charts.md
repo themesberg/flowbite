@@ -359,13 +359,13 @@ You can represent multiple data entries using columns by setting the `type: "bar
 
 ## Bar chart
 
-
-
 ## Pie chart
 
-Set the JavaScript API option to `type: "donut"` and copy the options from the example below to style the elements such as the data series, legends and labels for the x and y axis. 
+## Donut chart
 
-{{< example id="pie-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
+Set the JavaScript API option to `type: "donut"` to create a donut chart type and copy the options from the example below to style the elements such as the data series, legends and labels for the x and y axis. 
+
+{{< example id="donut-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-md w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
   <div class="flex justify-between">
     <div class="flex items-center">
@@ -391,7 +391,7 @@ Set the JavaScript API option to `type: "donut"` and copy the options from the e
   </div>
 
   <!-- Line Chart -->
-  <div class="py-6" id="pie-chart"></div>
+  <div class="py-6" id="donut-chart"></div>
 
   <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">
     <div class="flex justify-between items-center pt-5">
@@ -520,8 +520,8 @@ Set the JavaScript API option to `type: "donut"` and copy the options from the e
         }
       }
 
-      if (document.getElementById("pie-chart")) {
-        const chart = new ApexCharts(document.getElementById("pie-chart"), getChartOptions());
+      if (document.getElementById("donut-chart")) {
+        const chart = new ApexCharts(document.getElementById("donut-chart"), getChartOptions());
         chart.render();
       }
   });

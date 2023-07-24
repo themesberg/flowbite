@@ -179,7 +179,7 @@ Use this example to show a basic area chart by setting the `type: "area"` option
 </script>
 {{< /example >}}
 
-## Line chart
+## Line chart 🚧
 
 ## Column chart
 
@@ -357,13 +357,13 @@ You can represent multiple data entries using columns by setting the `type: "bar
 </script>
 {{< /example >}}
 
-## Bar chart
+## Bar chart 🚧
 
-## Pie chart
+## Pie chart 🚧
 
 ## Donut chart
 
-Set the JavaScript API option to `type: "donut"` to create a donut chart type and copy the options from the example below to style the elements such as the data series, legends and labels for the x and y axis. 
+Set the JavaScript API option to `type: "donut"` to create a donut chart and copy the options from the example below to style the elements such as the data series, legends and labels for the X and Y axis. 
 
 {{< example id="donut-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-md w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
@@ -528,9 +528,9 @@ Set the JavaScript API option to `type: "donut"` to create a donut chart type an
 </script>
 {{< /example >}}
 
-## Radial chart
+## Radial chart 🚧
 
-## Options
+## Options 🚧
 
 ### Data series
 

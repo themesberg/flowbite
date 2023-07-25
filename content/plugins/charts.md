@@ -182,7 +182,7 @@ Use this example to show a basic area chart by setting the `type: "area"` option
       },
     }
 
-    if (document.getElementById("area-chart")) {
+    if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') {
       const chart = new ApexCharts(document.getElementById("area-chart"), options)
       chart.render()
     }
@@ -360,7 +360,7 @@ You can represent multiple data entries using columns by setting the `type: "bar
           },
         }
 
-        if(document.getElementById("column-chart")) {
+        if(document.getElementById("column-chart") && typeof ApexCharts !== 'undefined') {
           const chart = new ApexCharts(document.getElementById("column-chart"), options);
           chart.render();
         }
@@ -531,7 +531,7 @@ Set the JavaScript API option to `type: "donut"` to create a donut chart and cop
         }
       }
 
-      if (document.getElementById("donut-chart")) {
+      if (document.getElementById("donut-chart") && typeof ApexCharts !== 'undefined') {
         const chart = new ApexCharts(document.getElementById("donut-chart"), getChartOptions());
         chart.render();
       }
@@ -668,7 +668,7 @@ To create a radial chart with multiple data entries you need to set the `type: "
         }
       }
       
-      if (document.getElementById("radial-chart")) {
+      if (document.getElementById("radial-chart") && typeof ApexCharts !== 'undefined') {
         var chart = new ApexCharts(document.querySelector("#radial-chart"), getChartOptions());
         chart.render();
       }
@@ -818,7 +818,7 @@ You can add multiple data sets by using the `series` object and setting a name, 
       },
     }
 
-    if (document.getElementById("main-chart")) {
+    if (document.getElementById("main-chart") && typeof ApexCharts !== 'undefined') {
       const chart = new ApexCharts(document.getElementById("main-chart"), options);
       chart.render();
     }
@@ -966,7 +966,7 @@ If you want to format and prefix your data with something such as a currency sig
       },
     }
 
-    if (document.getElementById("main-chart")) {
+    if (document.getElementById("main-chart") && typeof ApexCharts !== 'undefined') {
       const chart = new ApexCharts(document.getElementById("main-chart"), options)
       chart.render()
     }

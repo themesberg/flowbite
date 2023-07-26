@@ -783,6 +783,18 @@ module.exports = plugin.withOptions(
                             )} !important`,
                             filter: `none !important`,
                         },
+                    '.apexcharts-gridline': {
+                        stroke: `${theme(
+                            'colors.gray.200',
+                            colors.gray[200]
+                        )} !important`,
+                    },
+                    '.dark .apexcharts-gridline': {
+                        stroke: `${theme(
+                            'colors.gray.700',
+                            colors.gray[700]
+                        )} !important`,
+                    },
                 });
             }
         };

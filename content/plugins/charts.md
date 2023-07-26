@@ -376,7 +376,7 @@ You can represent multiple data entries using columns by setting the `type: "bar
     <div>
       <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">$8,630</h5>
       <!-- <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">56.1% profit rate</h5> -->
-      <p class="text-base font-normal text-gray-500 dark:text-gray-400">Income and expenses</p>
+      <p class="text-base font-normal text-gray-500 dark:text-gray-400">Income and expense</p>
     </div>
     <div
       class="flex items-center px-2.5 py-0.5 text-base font-semibold text-red-500 dark:text-red-500 text-center">
@@ -397,7 +397,7 @@ You can represent multiple data entries using columns by setting the `type: "bar
           data-dropdown-placement="bottom"
           class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 text-center inline-flex items-center dark:hover:text-white"
           type="button">
-          Last 7 days
+          Last 6 months
           <svg class="w-2.5 m-2.5 ml-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
           </svg>
@@ -420,12 +420,18 @@ You can represent multiple data entries using columns by setting the `type: "bar
               <li>
                 <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 90 days</a>
               </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 6 months</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last year</a>
+              </li>
             </ul>
         </div>
         <a
           href="#"
           class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 dark:hover:text-blue-500  hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2">
-          Leads Report
+          Revenue Report
           <svg class="w-2.5 h-2.5 ml-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
           </svg>
@@ -437,27 +443,16 @@ You can represent multiple data entries using columns by setting the `type: "bar
 <script>
   // ApexCharts options and config
   window.addEventListener("load", function() {
-    var colors
-    if (document.documentElement.classList.contains("dark")) {
-      colors = {
-        text: "#9CA3AF",
-      }
-    } else {
-      colors = {
-        text: "#6B7280",
-      }
-    }
-
     var options = {
       series: [
         {
           name: "Income",
           color: "#1C64F2",
-          data: ["1620", "1820", "1420", "1650", "2120"],
+          data: ["1420", "1620", "1820", "1420", "1650", "2120"],
         },
         {
           name: "Expense",
-          data: ["810", "866", "788", "1100", "1200"],
+          data: ["788", "810", "866", "788", "1100", "1200"],
           color: "#16BDCA",
         }
       ],
@@ -468,13 +463,13 @@ You can represent multiple data entries using columns by setting the `type: "bar
         type: "bar",
         width: "100%",
         height: 400,
-        foreColor: colors.text,
         toolbar: {
           show: false,
         },
         padding: {
           left: 0,
           right: 0,
+          top: 0
         }
       },
       fill: {
@@ -498,11 +493,6 @@ You can represent multiple data entries using columns by setting the `type: "bar
       dataLabels: {
         enabled: false,
       },
-      stroke: {
-        show: true,
-        width: 0,
-        colors: ["#fff"],
-      },
       tooltip: {
         shared: true,
         intersect: false,
@@ -514,13 +504,13 @@ You can represent multiple data entries using columns by setting the `type: "bar
         labels: {
           show: false,
         },
-        categories: ["August", "September", "October", "November", "December"],
+        categories: ["July", "August", "September", "October", "November", "December"],
         axisTicks: {
           show: false,
         },
         axisBorder: {
           show: false,
-        }
+        },
       },
       yaxis: {
         labels: {
@@ -532,11 +522,11 @@ You can represent multiple data entries using columns by setting the `type: "bar
       },
       grid: {
         show: true,
-        borderColor: "#E5E7EB",
-        strokeDashArray: 10,
+        strokeDashArray: 4,
         padding: {
           left: 0,
           right: 0,
+          top: 0
         },
       }
     }

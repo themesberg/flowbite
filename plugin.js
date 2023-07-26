@@ -7,12 +7,12 @@ const [baseFontSize, { lineHeight: baseLineHeight }] =
     defaultTheme.fontSize.base;
 const { spacing, borderWidth, borderRadius, boxShadow } = defaultTheme;
 
-module.exports = plugin.withOptions(function (options = {}) {
+module.exports = plugin.withOptions(
+    function (options = {}) {
         // Enable forms and tooltip by default if not specified in options
         const { charts = false, forms = true, tooltips = true } = options;
 
-        return function({ addBase, addComponents, theme }) {
-
+        return function ({ addBase, addComponents, theme }) {
             // tooltip and popover styles
             if (tooltips) {
                 addBase({
@@ -56,18 +56,22 @@ module.exports = plugin.withOptions(function (options = {}) {
                             'border-top-width': '1px',
                             'border-right-width': '1px',
                         },
-                    [`.tooltip[data-popper-placement^='top'] > .tooltip-arrow`]: {
-                        bottom: '-4px',
-                    },
-                    [`.tooltip[data-popper-placement^='bottom'] > .tooltip-arrow`]: {
-                        top: '-4px',
-                    },
-                    [`.tooltip[data-popper-placement^='left'] > .tooltip-arrow`]: {
-                        right: '-4px',
-                    },
-                    [`.tooltip[data-popper-placement^='right'] > .tooltip-arrow`]: {
-                        left: '-4px',
-                    },
+                    [`.tooltip[data-popper-placement^='top'] > .tooltip-arrow`]:
+                        {
+                            bottom: '-4px',
+                        },
+                    [`.tooltip[data-popper-placement^='bottom'] > .tooltip-arrow`]:
+                        {
+                            top: '-4px',
+                        },
+                    [`.tooltip[data-popper-placement^='left'] > .tooltip-arrow`]:
+                        {
+                            right: '-4px',
+                        },
+                    [`.tooltip[data-popper-placement^='right'] > .tooltip-arrow`]:
+                        {
+                            left: '-4px',
+                        },
                     ['.tooltip.invisible > .tooltip-arrow:before']: {
                         visibility: 'hidden',
                     },
@@ -166,12 +170,14 @@ module.exports = plugin.withOptions(function (options = {}) {
                         {
                             left: '-5px',
                         },
-                    ['[role="tooltip"].invisible > [data-popper-arrow]:before']: {
-                        visibility: 'hidden',
-                    },
-                    ['[role="tooltip"].invisible > [data-popper-arrow]:after']: {
-                        visibility: 'hidden',
-                    },
+                    ['[role="tooltip"].invisible > [data-popper-arrow]:before']:
+                        {
+                            visibility: 'hidden',
+                        },
+                    ['[role="tooltip"].invisible > [data-popper-arrow]:after']:
+                        {
+                            visibility: 'hidden',
+                        },
                 });
             }
 
@@ -197,7 +203,10 @@ module.exports = plugin.withOptions(function (options = {}) {
                     ]]: {
                         appearance: 'none',
                         'background-color': '#fff',
-                        'border-color': theme('colors.gray.500', colors.gray[500]),
+                        'border-color': theme(
+                            'colors.gray.500',
+                            colors.gray[500]
+                        ),
                         'border-width': borderWidth['DEFAULT'],
                         'border-radius': borderRadius.none,
                         'padding-top': spacing[2],
@@ -220,7 +229,10 @@ module.exports = plugin.withOptions(function (options = {}) {
                             '--tw-ring-offset-shadow': `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
                             '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
                             'box-shadow': `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)`,
-                            'border-color': theme('colors.blue.600', colors.blue[600]),
+                            'border-color': theme(
+                                'colors.blue.600',
+                                colors.blue[600]
+                            ),
                         },
                     },
                     [['input::placeholder', 'textarea::placeholder']]: {
@@ -269,7 +281,10 @@ module.exports = plugin.withOptions(function (options = {}) {
                         width: spacing[4],
                         color: theme('colors.blue.600', colors.blue[600]),
                         'background-color': '#fff',
-                        'border-color': theme('colors.gray.500', colors.gray[500]),
+                        'border-color': theme(
+                            'colors.gray.500',
+                            colors.gray[500]
+                        ),
                         'border-width': borderWidth['DEFAULT'],
                         '--tw-shadow': '0 0 #0000',
                     },
@@ -285,7 +300,10 @@ module.exports = plugin.withOptions(function (options = {}) {
                         '--tw-ring-inset': 'var(--tw-empty,/*!*/ /*!*/)',
                         '--tw-ring-offset-width': '2px',
                         '--tw-ring-offset-color': '#fff',
-                        '--tw-ring-color': theme('colors.blue.600', colors.blue[600]),
+                        '--tw-ring-color': theme(
+                            'colors.blue.600',
+                            colors.blue[600]
+                        ),
                         '--tw-ring-offset-shadow': `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
                         '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
                         'box-shadow': `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)`,
@@ -370,14 +388,20 @@ module.exports = plugin.withOptions(function (options = {}) {
                         'margin-inline-start': '-1rem',
                         'margin-inline-end': '1rem',
                         '&:hover': {
-                            background: theme('colors.gray.700', colors.gray[700]),
+                            background: theme(
+                                'colors.gray.700',
+                                colors.gray[700]
+                            ),
                         },
                     },
                     [[`.dark input[type=file]::file-selector-button`]]: {
                         color: 'white',
                         background: theme('colors.gray.600', colors.gray[600]),
                         '&:hover': {
-                            background: theme('colors.gray.500', colors.gray[500]),
+                            background: theme(
+                                'colors.gray.500',
+                                colors.gray[500]
+                            ),
                         },
                     },
                     [[`input[type="range"]::-webkit-slider-thumb`]]: {
@@ -394,7 +418,9 @@ module.exports = plugin.withOptions(function (options = {}) {
                     [[`input[type="range"]:disabled::-webkit-slider-thumb`]]: {
                         background: theme('colors.gray.400', colors.gray[400]),
                     },
-                    [[`.dark input[type="range"]:disabled::-webkit-slider-thumb`]]: {
+                    [[
+                        `.dark input[type="range"]:disabled::-webkit-slider-thumb`,
+                    ]]: {
                         background: theme('colors.gray.500', colors.gray[500]),
                     },
                     [[`input[type="range"]:focus::-webkit-slider-thumb`]]: {
@@ -407,7 +433,8 @@ module.exports = plugin.withOptions(function (options = {}) {
                         'box-shadow':
                             'var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)',
                         '--tw-ring-opacity': 1,
-                        '--tw-ring-color': 'rgb(164 202 254 / var(--tw-ring-opacity))',
+                        '--tw-ring-color':
+                            'rgb(164 202 254 / var(--tw-ring-opacity))',
                     },
                     [[`input[type="range"]::-moz-range-thumb`]]: {
                         height: spacing[5],
@@ -423,9 +450,13 @@ module.exports = plugin.withOptions(function (options = {}) {
                     [[`input[type="range"]:disabled::-moz-range-thumb`]]: {
                         background: theme('colors.gray.400', colors.gray[400]),
                     },
-                    [[`.dark input[type="range"]:disabled::-moz-range-thumb`]]: {
-                        background: theme('colors.gray.500', colors.gray[500]),
-                    },
+                    [[`.dark input[type="range"]:disabled::-moz-range-thumb`]]:
+                        {
+                            background: theme(
+                                'colors.gray.500',
+                                colors.gray[500]
+                            ),
+                        },
                     [[`input[type="range"]::-moz-range-progress`]]: {
                         background: theme('colors.blue.500', colors.blue[500]),
                     },
@@ -455,7 +486,10 @@ module.exports = plugin.withOptions(function (options = {}) {
                         top: spacing[0.5],
                         left: spacing[0.5],
                         background: 'white',
-                        'border-color': theme('colors.gray.300', colors.gray[300]),
+                        'border-color': theme(
+                            'colors.gray.300',
+                            colors.gray[300]
+                        ),
                         'border-width': borderWidth['DEFAULT'],
                         'border-radius': borderRadius.full,
                         height: theme('height.5'),
@@ -472,16 +506,18 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                     [['input:checked + .toggle-bg']]: {
                         background: theme('colors.blue.600', colors.gray[600]),
-                        'border-color': theme('colors.blue.600', colors.gray[600]),
+                        'border-color': theme(
+                            'colors.blue.600',
+                            colors.gray[600]
+                        ),
                     },
-                })
+                });
             }
 
             // chart styles
             if (charts) {
-                console.log('trying to add')
                 addComponents({
-                    '.apexcharts-canvas .apexcharts-tooltip.apexcharts-active': {
+                    '.apexcharts-canvas .apexcharts-tooltip': {
                         backgroundColor: 'white',
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
                         border: '0',
@@ -524,7 +560,10 @@ module.exports = plugin.withOptions(function (options = {}) {
                                 'fontWeight.normal',
                                 defaultTheme.fontWeight.normal
                             )}`,
-                            color: `${theme('colors.gray.500', colors.gray[500])}`,
+                            color: `${theme(
+                                'colors.gray.500',
+                                colors.gray[500]
+                            )}`,
                         },
                     '.dark .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title':
                         {
@@ -536,7 +575,10 @@ module.exports = plugin.withOptions(function (options = {}) {
                                 'colors.gray.500',
                                 colors.gray[500]
                             )}`,
-                            color: `${theme('colors.gray.400', colors.gray[400])}`,
+                            color: `${theme(
+                                'colors.gray.400',
+                                colors.gray[400]
+                            )}`,
                         },
                     '.apexcharts-canvas .apexcharts-xaxistooltip': {
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
@@ -561,7 +603,10 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                     '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-label':
                         {
-                            color: `${theme('colors.gray.500', colors.gray[500])}`,
+                            color: `${theme(
+                                'colors.gray.500',
+                                colors.gray[500]
+                            )}`,
                             fontSize: `${theme(
                                 'fontSize.sm',
                                 defaultTheme.fontSize.sm
@@ -569,11 +614,17 @@ module.exports = plugin.withOptions(function (options = {}) {
                         },
                     '.dark .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-label':
                         {
-                            color: `${theme('colors.gray.400', colors.gray[400])}`,
+                            color: `${theme(
+                                'colors.gray.400',
+                                colors.gray[400]
+                            )}`,
                         },
                     '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-value':
                         {
-                            color: `${theme('colors.gray.900', colors.gray[900])}`,
+                            color: `${theme(
+                                'colors.gray.900',
+                                colors.gray[900]
+                            )}`,
                             fontSize: `${theme(
                                 'fontSize.sm',
                                 defaultTheme.fontSize.sm
@@ -643,7 +694,10 @@ module.exports = plugin.withOptions(function (options = {}) {
                             paddingTop: `${theme('spacing.3', spacing[3])}`,
                         },
                     '.apexcharts-canvas .apexcharts-legend-text': {
-                        fontSize: `${theme('fontSize.xs', defaultTheme.fontSize.xs)}`,
+                        fontSize: `${theme(
+                            'fontSize.xs',
+                            defaultTheme.fontSize.xs
+                        )}`,
                         fontWeight: `${theme(
                             'fontWeight.medium',
                             defaultTheme.fontWeight.medium
@@ -674,7 +728,10 @@ module.exports = plugin.withOptions(function (options = {}) {
                     '.apexcharts-canvas .apexcharts-legend-series': {
                         marginLeft: `${theme('spacing.2', spacing[2])}`,
                         marginRight: `${theme('spacing.2', spacing[2])}`,
-                        marginBottom: `${theme('spacing.1', spacing[1])} !important`,
+                        marginBottom: `${theme(
+                            'spacing.1',
+                            spacing[1]
+                        )} !important`,
                         display: 'flex',
                         alignItems: 'center',
                     },
@@ -713,10 +770,24 @@ module.exports = plugin.withOptions(function (options = {}) {
                                 colors.gray[400]
                             )} !important`,
                         },
+                    '.apexcharts-canvas .apexcharts-datalabels .apexcharts-text.apexcharts-pie-label':
+                        {
+                            fontSize: `${theme('fontSize.xs')} !important`,
+                            fontWeight: `${theme(
+                                'fontWeight.semibold',
+                                defaultTheme.fontWeight.semibold
+                            )} !important`,
+                            textShadow: `${theme(
+                                'boxShadow.none',
+                                boxShadow.none
+                            )} !important`,
+                            filter: `none !important`,
+                        },
                 });
             }
-        }
-    }, function (options) {
+        };
+    },
+    function (options) {
         return {
             safelist: [
                 // datepicker classes
@@ -732,7 +803,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 'h-9',
                 'leading-9',
                 'shadow-lg',
-    
+
                 // chart classes
                 { pattern: /^apexcharts-.*$/ },
             ],
@@ -873,4 +944,5 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
             },
         };
-    });
+    }
+);

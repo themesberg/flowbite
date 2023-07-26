@@ -370,7 +370,184 @@ You can represent multiple data entries using columns by setting the `type: "bar
 
 ## Bar chart 🚧
 
-## Pie chart 🚧
+{{< example id="bar-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
+<div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+  <div class="flex justify-between">
+    <div>
+      <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">3.4k</h5>
+      <p class="text-base font-normal text-gray-500 dark:text-gray-400">Leads generated per week</p>
+    </div>
+    <div
+      class="flex items-center px-2.5 py-0.5 text-base font-semibold text-red-500 dark:text-red-500 text-center">
+      22.3%
+      <svg class="w-3 h-3 ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1v12m0 0 4-4m-4 4L1 9"/>
+      </svg>
+    </div>
+  </div>
+
+  <div id="bar-chart"></div>
+    <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">
+      <div class="flex justify-between items-center pt-5">
+        <!-- Button -->
+        <button
+          id="dropdownDefaultButton"
+          data-dropdown-toggle="lastDaysdropdown"
+          data-dropdown-placement="bottom"
+          class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 text-center inline-flex items-center dark:hover:text-white"
+          type="button">
+          Last 7 days
+          <svg class="w-2.5 m-2.5 ml-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+          </svg>
+        </button>
+        <!-- Dropdown menu -->
+        <div id="lastDaysdropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Yesterday</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Today</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 7 days</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 30 days</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 90 days</a>
+              </li>
+            </ul>
+        </div>
+        <a
+          href="#"
+          class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 dark:hover:text-blue-500  hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2">
+          Leads Report
+          <svg class="w-2.5 h-2.5 ml-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+</div>
+
+<script>
+  // ApexCharts options and config
+  window.addEventListener("load", function() {
+    var colors
+    if (document.documentElement.classList.contains("dark")) {
+      colors = {
+        text: "#9CA3AF",
+      }
+    } else {
+      colors = {
+        text: "#6B7280",
+      }
+    }
+    var toolbarIconSrc = document.documentElement.classList.contains("dark")
+      ? "icons/download-dark.png"
+      : "icons/download.png"
+
+    var options = {
+      series: [
+        {
+          name: "Subscriptions",
+          data: ["25000", "22000", "15000", "5000", "2120"],
+          color: "#1C64F2",
+        },
+        {
+          name: "Individual products",
+          color: "#16BDCA",
+          data: ["29000", "20000", "17000", "4060", "1120"],
+        },
+      ],
+      chart: {
+        sparkline: {
+          enabled: false,
+        },
+        type: "bar",
+        width: "100%",
+        height: 400,
+        foreColor: colors.text,
+        toolbar: {
+          show: false,
+        },
+        padding: {
+          left: 0,
+          right: 0,
+        }
+      },
+      fill: {
+        opacity: 1,
+      },
+      plotOptions: {
+        bar: {
+          horizontal: true,
+          columnWidth: "100%",
+          borderRadiusApplication: "end",
+          borderRadius: 6,
+          dataLabels: {
+            position: "top",
+          },
+        },
+      },
+      legend: {
+        show: true,
+        position: "top",
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        show: true,
+        width: 0,
+        colors: ["#fff"],
+      },
+      tooltip: {
+        shared: false,
+        intersect: false,
+      },
+      xaxis: {
+        labels: {
+          show: false
+        },
+        categories: ["August", "September", "October", "November", "December"],
+        axisTicks: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+      },
+      yaxis: {
+        show: true,
+        categories: ["0$", "4000$", "15000$", "20000$", "25000$", "30000$", "35000$"],
+        labels: {
+          show: false
+        },
+      },
+      grid: {
+        show: true,
+        borderColor: "#E5E7EB",
+        strokeDashArray: 10,
+        padding: {
+          left: 0,
+          right: 0,
+        },
+      }
+    }
+
+    if(document.getElementById("bar-chart") && typeof ApexCharts !== 'undefined') {
+      const chart = new ApexCharts(document.getElementById("bar-chart"), options);
+      chart.render();
+    }
+  });
+</script>
+{{< /example >}}
+
+## Pie chart
 
 Create a pie chart with multiple data series by setting the `type: "pie"` chart type option via JavaScript and copy the following HTML markup code and options from below:
 

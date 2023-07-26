@@ -57,7 +57,7 @@ Now that you have all the libraries installed you can copy-paste the chart examp
 Use this example to show a basic area chart by setting the `type: "area"` option in JavaScript:
 
 {{< example id="default-area-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
-<div class="max-w-md w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+<div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
   <div class="flex justify-between">
     <div>
       <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">32.4k</h5>
@@ -197,7 +197,7 @@ Use this example to show a basic area chart by setting the `type: "area"` option
 You can represent multiple data entries using columns by setting the `type: "bar"` option and also by updating the `horizontal` key value to `false` in JavaScript to adjust them vertically as columns:
 
 {{< example id="column-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
-<div class="max-w-md w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+<div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
   <div class="flex justify-between">
     <div>
       <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">3.4k</h5>
@@ -373,7 +373,7 @@ You can represent multiple data entries using columns by setting the `type: "bar
 ## Pie chart 🚧
 
 {{< example id="pie-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
-<div class="max-w-md w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+<div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
   <div class="flex justify-between">
     <div class="flex items-center">
       <div class="flex justify-center items-center">
@@ -450,15 +450,15 @@ You can represent multiple data entries using columns by setting the `type: "bar
   window.addEventListener("load", function() {
     const getChartOptions = () => {
         return {
-          series: [52, 21, 16, 11],
-          colors: ["#1C64F2", "#16BDCA", "#FDBA8C", "#E74694"],
+          series: [52.3, 26.5, 20.2],
+          colors: ["#1C64F2", "#16BDCA", "#9061F9"],
           chart: {
-            height: 320,
+            height: 420,
             width: "100%",
             type: "pie",
           },
           stroke: {
-            colors: ["transparent"],
+            colors: ["white"],
             lineCap: "",
           },
           plotOptions: {
@@ -472,7 +472,7 @@ You can represent multiple data entries using columns by setting the `type: "bar
               }
             },
           },
-          labels: ["Direct", "Organic search", "Referrals", "Email marketing"],
+          labels: ["Direct", "Organic search", "Referrals"],
           dataLabels: {
             enabled: true,
             style: {
@@ -519,7 +519,7 @@ You can represent multiple data entries using columns by setting the `type: "bar
 Set the JavaScript API option to `type: "donut"` to create a donut chart and copy the options from the example below to style the elements such as the data series, legends and labels for the X and Y axis. 
 
 {{< example id="donut-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
-<div class="max-w-md w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+<div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
   <div class="flex justify-between">
     <div class="flex items-center">
       <div class="flex justify-center items-center">
@@ -686,7 +686,7 @@ Set the JavaScript API option to `type: "donut"` to create a donut chart and cop
 To create a radial chart with multiple data entries you need to set the `type: "radialBar"` when initialising a new chart and introduce multiple series and labels to the options and copy the following code:
 
 {{< example id="radial-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
-<div class="max-w-md w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+<div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
   <div class="flex justify-between">
     <div class="flex items-center">
       <div class="flex justify-center items-center">
@@ -825,7 +825,7 @@ To create a radial chart with multiple data entries you need to set the `type: "
 You can add multiple data sets by using the `series` object and setting a name, array of data and custom color of choice. In this example we added two data series based on a blue and purple color.
 
 {{< example id="default-area-chart" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
-<div class="max-w-md w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+<div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
   <div class="flex justify-between">
     <div>
       <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">$12,423</h5>
@@ -973,7 +973,7 @@ You can add multiple data sets by using the `series` object and setting a name, 
 If you want to format and prefix your data with something such as a currency sign you can do that by using the `formatter` function. For example, here we use the euro ("€") sign instead of the dollar ("$").
 
 {{< example id="default-area-chart" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
-<div class="max-w-md w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+<div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
   <div class="flex justify-between">
     <div>
       <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">$12,423</h5>

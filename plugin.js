@@ -520,7 +520,7 @@ module.exports = plugin.withOptions(
                     '.apexcharts-canvas .apexcharts-tooltip': {
                         backgroundColor: 'white',
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
-                        border: '0',
+                        border: '0 !important',
                         borderRadius: `${theme(
                             'borderRadius.DEFAULT',
                             borderRadius.DEFAULT

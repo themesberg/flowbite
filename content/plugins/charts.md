@@ -25,7 +25,7 @@ Before continuing make sure that you have Tailwind CSS, Flowbite and ApexCharts 
 
 1. Follow the <a href="{{< ref "getting-started/quickstart" >}}">quickstart guide</a> from Flowbite to install the plugin styles and functionality
 
-2. Set charts to true within the Flowbite Plugin option from the Tailwind CSS configuration file:
+2. Set charts to true within the Flowbite Plugin opton from the Tailwind CSS configuration file:
 
 ```javascript
 plugins: [
@@ -371,6 +371,8 @@ You can represent multiple data entries using columns by setting the `type: "bar
 ## Bar chart 🚧
 
 ## Pie chart 🚧
+
+Create a pie chart with multiple data series by setting the `type: "pie"` chart type option via JavaScript and copy the following HTML markup code and options from below:
 
 {{< example id="pie-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">

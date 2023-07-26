@@ -374,12 +374,13 @@ You can represent multiple data entries using columns by setting the `type: "bar
 <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
   <div class="flex justify-between">
     <div>
-      <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">3.4k</h5>
-      <p class="text-base font-normal text-gray-500 dark:text-gray-400">Leads generated per week</p>
+      <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">$8,630</h5>
+      <!-- <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">56.1% profit rate</h5> -->
+      <p class="text-base font-normal text-gray-500 dark:text-gray-400">Income and expenses</p>
     </div>
     <div
       class="flex items-center px-2.5 py-0.5 text-base font-semibold text-red-500 dark:text-red-500 text-center">
-      22.3%
+      12.6%
       <svg class="w-3 h-3 ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1v12m0 0 4-4m-4 4L1 9"/>
       </svg>
@@ -446,22 +447,19 @@ You can represent multiple data entries using columns by setting the `type: "bar
         text: "#6B7280",
       }
     }
-    var toolbarIconSrc = document.documentElement.classList.contains("dark")
-      ? "icons/download-dark.png"
-      : "icons/download.png"
 
     var options = {
       series: [
         {
-          name: "Subscriptions",
-          data: ["25000", "22000", "15000", "5000", "2120"],
+          name: "Income",
           color: "#1C64F2",
+          data: ["1620", "1820", "1420", "1650", "2120"],
         },
         {
-          name: "Individual products",
+          name: "Expense",
+          data: ["810", "866", "788", "1100", "1200"],
           color: "#16BDCA",
-          data: ["29000", "20000", "17000", "4060", "1120"],
-        },
+        }
       ],
       chart: {
         sparkline: {
@@ -495,7 +493,7 @@ You can represent multiple data entries using columns by setting the `type: "bar
       },
       legend: {
         show: true,
-        position: "top",
+        position: "bottom",
       },
       dataLabels: {
         enabled: false,
@@ -506,12 +504,15 @@ You can represent multiple data entries using columns by setting the `type: "bar
         colors: ["#fff"],
       },
       tooltip: {
-        shared: false,
+        shared: true,
         intersect: false,
+        formatter: function (value) {
+          return "$" + value
+        }
       },
       xaxis: {
         labels: {
-          show: false
+          show: false,
         },
         categories: ["August", "September", "October", "November", "December"],
         axisTicks: {
@@ -519,14 +520,15 @@ You can represent multiple data entries using columns by setting the `type: "bar
         },
         axisBorder: {
           show: false,
-        },
+        }
       },
       yaxis: {
-        show: true,
-        categories: ["0$", "4000$", "15000$", "20000$", "25000$", "30000$", "35000$"],
         labels: {
-          show: false
-        },
+          show: false,
+          formatter: function (value) {
+            return "$" + value
+          }
+        }
       },
       grid: {
         show: true,

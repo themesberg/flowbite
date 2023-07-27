@@ -1318,7 +1318,15 @@ You can add multiple data sets by using the `series` object and setting a name, 
 </script>
 {{< /example >}}
 
-### Formatting data
+### Labels 🚧
+
+### Tooltip 🚧
+
+### Grid 🚧
+
+### Legends 🚧
+
+### Formatting data 🚧
 
 If you want to format and prefix your data with something such as a currency sign you can do that by using the `formatter` function. For example, here we use the euro ("€") sign instead of the dollar ("$").
 
@@ -1465,3 +1473,7 @@ If you want to format and prefix your data with something such as a currency sig
   });
 </script>
 {{< /example >}}
+
+## JavaScript behaviour 🚧
+
+## More examples 🚧

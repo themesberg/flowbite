@@ -265,7 +265,7 @@ Use this example to show a basic area chart by setting the `type: "area"` option
     </div>
   </div>
   <div id="line-chart"></div>
-  <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between mt-3">
+  <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between mt-2.5">
     <div class="pt-5">      
       <a href="#" class="px-5 py-2.5 text-sm font-medium text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         <svg class="w-3.5 h-3.5 text-white mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
@@ -327,13 +327,20 @@ Use this example to show a basic area chart by setting the `type: "area"` option
           color: "#7E3AF2",
         },
       ],
+      legend: {
+        show: false
+      },
       stroke: {
         curve: 'smooth'
       },
       xaxis: {
         categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
         labels: {
-          show: false,
+          show: true,
+          style: {
+            fontFamily: "Inter, sans-serif",
+            cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+          }
         },
         axisBorder: {
           show: false,
@@ -505,8 +512,9 @@ You can represent multiple data entries using columns by setting the `type: "bar
             labels: {
               show: true,
               style: {
-                cssClass: "fill-gray-500 dark:fill-gray-400",
-              },
+                fontFamily: "Inter, sans-serif",
+                cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+              }
             },
             axisBorder: {
               show: false,

@@ -368,7 +368,9 @@ You can represent multiple data entries using columns by setting the `type: "bar
 </script>
 {{< /example >}}
 
-## Bar chart 🚧
+## Bar chart
+
+Create a horizontal bar chart with as many data series as you like by setting the `type: "bar"` chart type via JavaScript and copy the example below into your project. You can enable or disable the labels on the X or Y axis by setting `show` to `false` for the `xaxis` and `yaxis` objects of the chart options.
 
 {{< example id="bar-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
@@ -465,11 +467,6 @@ You can represent multiple data entries using columns by setting the `type: "bar
         height: 400,
         toolbar: {
           show: false,
-        },
-        padding: {
-          left: 0,
-          right: 0,
-          top: 0
         }
       },
       fill: {
@@ -502,9 +499,16 @@ You can represent multiple data entries using columns by setting the `type: "bar
       },
       xaxis: {
         labels: {
-          show: false,
+          show: true,
+          style: {
+            fontFamily: "Inter, sans-serif",
+            cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+          },
+          formatter: function(value) {
+            return "$" + value
+          }
         },
-        categories: ["July", "August", "September", "October", "November", "December"],
+        categories: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         axisTicks: {
           show: false,
         },
@@ -514,9 +518,10 @@ You can represent multiple data entries using columns by setting the `type: "bar
       },
       yaxis: {
         labels: {
-          show: false,
-          formatter: function (value) {
-            return "$" + value
+          show: true,
+          style: {
+            fontFamily: "Inter, sans-serif",
+            cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
           }
         }
       },
@@ -524,10 +529,13 @@ You can represent multiple data entries using columns by setting the `type: "bar
         show: true,
         strokeDashArray: 4,
         padding: {
-          left: 0,
-          right: 0,
+          left: 2,
+          right: 2,
           top: 0
         },
+      },
+      fill: {
+        opacity: 1,
       }
     }
 

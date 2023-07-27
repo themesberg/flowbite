@@ -1170,6 +1170,8 @@ To create a radial chart with multiple data entries you need to set the `type: "
 
 ## Options 🚧
 
+Learn more about how you can customize the charts including the data, labels, legend indicators, size and appearance of the graphs, and other options by checking out the examples below.
+
 ### Data series
 
 You can add multiple data sets by using the `series` object and setting a name, array of data and custom color of choice. In this example we added two data series based on a blue and purple color.

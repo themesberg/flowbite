@@ -189,8 +189,8 @@ Use this example to show a basic area chart by setting the `type: "area"` option
     }
 
     if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') {
-      const chart = new ApexCharts(document.getElementById("area-chart"), options)
-      chart.render()
+      const chart = new ApexCharts(document.getElementById("area-chart"), options);
+      chart.render();
     }
   });
 </script>
@@ -363,8 +363,8 @@ To create a double line chart check the example below by setting the chart type 
     }
 
     if (document.getElementById("line-chart") && typeof ApexCharts !== 'undefined') {
-      const chart = new ApexCharts(document.getElementById("line-chart"), options)
-      chart.render()
+      const chart = new ApexCharts(document.getElementById("line-chart"), options);
+      chart.render();
     }
   });
 </script>
@@ -559,19 +559,30 @@ Create a horizontal bar chart with as many data series as you like by setting th
 
 {{< example id="bar-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
-  <div class="flex justify-between">
+  <div class="flex justify-between border-gray-200 border-b dark:border-gray-700 pb-3">
+    <dl>
+      <dt class="text-base font-normal text-gray-500 dark:text-gray-400 pb-1">Profit</dt>
+      <dd class="leading-none text-3xl font-bold text-gray-900 dark:text-white">$5,405</dd>
+    </dl>
     <div>
-      <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">$8,630</h5>
-      <!-- <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">56.1% profit rate</h5> -->
-      <p class="text-base font-normal text-gray-500 dark:text-gray-400">Income and expense</p>
+      <span class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-green-900 dark:text-green-300">
+        <svg class="w-2.5 h-2.5 mr-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+        </svg>
+        Profit rate 23.5%
+      </span>
     </div>
-    <div
-      class="flex items-center px-2.5 py-0.5 text-base font-semibold text-red-500 dark:text-red-500 text-center">
-      12.6%
-      <svg class="w-3 h-3 ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1v12m0 0 4-4m-4 4L1 9"/>
-      </svg>
-    </div>
+  </div>
+
+  <div class="grid grid-cols-2 pt-3">
+    <dl>
+      <dt class="text-base font-normal text-gray-500 dark:text-gray-400 pb-1">Income</dt>
+      <dd class="leading-none text-xl font-bold text-green-500 dark:text-green-400">$23,635</dd>
+    </dl>
+    <dl>
+      <dt class="text-base font-normal text-gray-500 dark:text-gray-400 pb-1">Expense</dt>
+      <dd class="leading-none text-xl font-bold text-red-600 dark:text-red-500">-$18,230</dd>
+    </dl>
   </div>
 
   <div id="bar-chart"></div>
@@ -634,13 +645,13 @@ Create a horizontal bar chart with as many data series as you like by setting th
       series: [
         {
           name: "Income",
-          color: "#1C64F2",
+          color: "#31C48D",
           data: ["1420", "1620", "1820", "1420", "1650", "2120"],
         },
         {
           name: "Expense",
           data: ["788", "810", "866", "788", "1100", "1200"],
-          color: "#16BDCA",
+          color: "#F05252",
         }
       ],
       chart: {
@@ -2299,8 +2310,8 @@ If you want to format and prefix your data with something such as a currency sig
     }
 
     if (document.getElementById("main-chart") && typeof ApexCharts !== 'undefined') {
-      const chart = new ApexCharts(document.getElementById("main-chart"), options)
-      chart.render()
+      const chart = new ApexCharts(document.getElementById("main-chart"), options);
+      chart.render();
     }
   });
 </script>
@@ -2461,6 +2472,47 @@ You can set the size (width and height) of the chart by passing the `width: {siz
 </script>
 {{< /example >}}
 
-## JavaScript behaviour 🚧
+## JavaScript behaviour
 
-## More examples 🚧
+With the charts from Flowbite and through the API of ApexCharts you can programatically configure and handle the behaviour of the components by using the methods directly on the chart object.
+
+For example, here's how you can initialize a new chart with an options object and call the `render()` function:
+
+```javascript
+var chart = new ApexCharts(el, options);
+chart.render();
+```
+
+You can also update the options or data on demand. Here's an example how you can add or remove data:
+
+```javascript
+var chart = new ApexCharts(el, options);
+
+chart.updateSeries([{
+  data: [342, 442, 311, 421, 212]
+}]);
+```
+
+You can also toggle the visibility of a data series by calling the `toggleSeries()` method:
+
+```javascript
+var chart = new ApexCharts(el, {
+  series: [{
+    name: 'Developer Edition'
+    data: [342, 442, 311, 421, 212]
+  }, {
+    name: 'Designer Edition'
+    data: [342, 442, 311, 421, 212]
+  }]
+});
+
+chart.toggleSeries('Designer Edition');
+```
+
+You can read more about all of the methods by checking out the official <a href="https://apexcharts.com/docs/methods/#render" rel="nofollow">ApexCharts documentation</a>.
+
+## More examples
+
+Check out more chart examples built with Flowbite, Tailwind CSS and Flowbite with these resources:
+
+- [Flowbite Admin Dashboard](https://github.com/themesberg/flowbite-admin-dashboard)

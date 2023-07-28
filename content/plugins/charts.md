@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Charts - Flowbite
-description: Use the chart and graph components built with Tailwind CSS and ApexCharts and choose from line, area, bar, column, pie, and radial charts and customize them using JavaScript
+description: Use the chart and graph components from Flowbite built with Tailwind CSS and ApexCharts and choose from line, area, bar, column, pie, and radial charts and customize them using JavaScript
 group: plugins
 toc: true
 requires_js: true

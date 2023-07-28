@@ -196,7 +196,9 @@ Use this example to show a basic area chart by setting the `type: "area"` option
 </script>
 {{< /example >}}
 
-## Line chart 🚧
+## Line chart
+
+To create a double line chart check the example below by setting the chart type to `type: "line"` and copy the HTML markup and JS options to automatically style and populate the chart with data:
 
 {{< example id="line-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
@@ -1180,7 +1182,7 @@ To create a radial chart with multiple data entries you need to set the `type: "
 </script>
 {{< /example >}}
 
-## Options 🚧
+## Options
 
 Learn more about how you can customize the charts including the data, labels, legend indicators, size and appearance of the graphs, and other options by checking out the examples below.
 
@@ -1987,7 +1989,7 @@ Add a grid layout of dashed lines to improve the readability of the data entries
 </script>
 {{< /example >}}
 
-### Data labels 🚧
+### Data labels
 
 Show data points on the chart by enable the `dataLabels: {enabled: true}` object when configuring the options via JavaScript and customize the appearance based on the following example:
 

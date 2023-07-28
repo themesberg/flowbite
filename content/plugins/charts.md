@@ -1342,11 +1342,13 @@ You can add multiple data sets by using the `series` object and setting a name, 
 </script>
 {{< /example >}}
 
-### Labels 🚧
+### Labels
+
+Show labels for the X and Y axis by enabling the `xaxis: {show: true}` and `yaxis: {show: true}` and customize the appearance of the labels by adding Tailwind CSS utility classes to the `cssClass` object based on the following example:
 
 {{< example id="labels-example-chart" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
-<div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
-  <div class="flex justify-between">
+<div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800">
+  <div class="flex justify-between p-4 md:p-6 pb-0 md:pb-0">
     <div>
       <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">$12,423</h5>
       <p class="text-base font-normal text-gray-500 dark:text-gray-400">Sales this week</p>
@@ -1359,8 +1361,8 @@ You can add multiple data sets by using the `series` object and setting a name, 
       </svg>
     </div>
   </div>
-  <div id="labels-chart"></div>
-  <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between mt-5">
+  <div id="labels-chart" class="px-2.5"></div>
+  <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between mt-5 p-4 md:p-6 pt-0 md:pt-0">
     <div class="flex justify-between items-center pt-5">
       <!-- Button -->
       <button
@@ -1410,7 +1412,9 @@ You can add multiple data sets by using the `series` object and setting a name, 
   // ApexCharts options and config
   window.addEventListener("load", function() {
     let options = {
+      // set the labels option to true to show the labels on the X and Y axis
       xaxis: {
+        show: true,
         categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
         labels: {
           show: true,
@@ -1465,11 +1469,6 @@ You can add multiple data sets by using the `series` object and setting a name, 
         toolbar: {
           show: false,
         },
-        padding: {
-          left: 0,
-          right: 0,
-          top: 0
-        },
       },
       tooltip: {
         enabled: true,
@@ -1497,12 +1496,6 @@ You can add multiple data sets by using the `series` object and setting a name, 
       },
       grid: {
         show: false,
-        strokeDashArray: 4,
-        padding: {
-          left: 2,
-          right: 2,
-          top: 0
-        },
       },
     }
 
@@ -1514,7 +1507,7 @@ You can add multiple data sets by using the `series` object and setting a name, 
 </script>
 {{< /example >}}
 
-### Legends 🚧
+### Legends
 
 Automatically show the legend indicators of the chart by setting the `legend: { show: true }` value when configuring the options via JavaScript. You can also set position of the legend by using the `position: {x}` option inside the legend object to place it to the top or bottom side of the chart.  
 
@@ -1672,7 +1665,7 @@ Automatically show the legend indicators of the chart by setting the `legend: { 
 </script>
 {{< /example >}}
 
-### Tooltip 🚧
+### Tooltip
 
 Enable the tooltip that is shown when hovering over a data set by setting `{tooltip: {enabled: true}}` and customize the tooltip component via the following options:
 
@@ -1994,7 +1987,9 @@ Add a grid layout of dashed lines to improve the readability of the data entries
 </script>
 {{< /example >}}
 
-### Format data 🚧
+### Data labels 🚧
+
+### Format data
 
 If you want to format and prefix your data with something such as a currency sign you can do that by using the `formatter` function. For example, here we use the euro ("€") sign instead of the dollar ("$").
 
@@ -2149,7 +2144,7 @@ If you want to format and prefix your data with something such as a currency sig
 </script>
 {{< /example >}}
 
-### Chart size 🚧
+### Chart size
 
 You can set the size (width and height) of the chart by passing the `width: {size}` and `height: {size}` options via JavaScript to the chart object using pixels or percentages:
 

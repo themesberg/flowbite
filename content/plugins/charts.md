@@ -920,7 +920,7 @@ In this example we also show how you can set event listeners on the UI component
         </div>
       </div>
       <div>
-        <button type="button" data-tooltip-target="data-tooltip" data-tooltip-placement="bottom" class="hidden sm:inline-flex items-center justify-center text-gray-500 w-10 h-10 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm"><svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
+        <button type="button" data-tooltip-target="data-tooltip" data-tooltip-placement="bottom" class="hidden sm:inline-flex items-center justify-center text-gray-500 w-8 h-8 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm"><svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
   </svg><span class="sr-only">Download data</span>
         </button>
@@ -1123,7 +1123,7 @@ To create a radial chart with multiple data entries you need to set the `type: "
 
 {{< example id="radial-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
-  <div class="flex justify-between">
+  <div class="flex justify-between mb-3">
     <div class="flex items-center">
       <div class="flex justify-center items-center">
         <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white pr-1">Your team's progress</h5>
@@ -1146,8 +1146,47 @@ To create a radial chart with multiple data entries you need to set the `type: "
     </div>
   </div>
 
-  <!-- Line Chart -->
-  <div class="py-6" id="radial-chart"></div>
+  <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
+    <div class="grid grid-cols-3 gap-3 mb-2">
+      <dl class="bg-orange-50 dark:bg-gray-600 rounded-lg flex flex-col items-center justify-center h-[78px]">
+        <dt class="w-8 h-8 rounded-full bg-orange-100 dark:bg-gray-500 text-orange-600 dark:text-orange-300 text-sm font-medium flex items-center justify-center mb-1">12</dt>
+        <dd class="text-orange-600 dark:text-orange-300 text-sm font-medium">To do</dd>
+      </dl>
+      <dl class="bg-teal-50 dark:bg-gray-600 rounded-lg flex flex-col items-center justify-center h-[78px]">
+        <dt class="w-8 h-8 rounded-full bg-teal-100 dark:bg-gray-500 text-teal-600 dark:text-teal-300 text-sm font-medium flex items-center justify-center mb-1">23</dt>
+        <dd class="text-teal-600 dark:text-teal-300 text-sm font-medium">In progress</dd>
+      </dl>
+      <dl class="bg-blue-50 dark:bg-gray-600 rounded-lg flex flex-col items-center justify-center h-[78px]">
+        <dt class="w-8 h-8 rounded-full bg-blue-100 dark:bg-gray-500 text-blue-600 dark:text-blue-300 text-sm font-medium flex items-center justify-center mb-1">64</dt>
+        <dd class="text-blue-600 dark:text-blue-300 text-sm font-medium">Done</dd>
+      </dl>
+    </div>
+    <button data-collapse-toggle="more-details" type="button" class="hover:underline text-xs text-gray-500 dark:text-gray-400 font-medium inline-flex items-center">Show more details <svg class="w-2 h-2 ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+      </svg>
+    </button>
+    <div id="more-details" class="border-gray-200 border-t dark:border-gray-600 pt-3 mt-3 space-y-2 hidden">
+      <dl class="flex items-center justify-between">
+        <dt class="text-gray-500 dark:text-gray-400 text-sm font-normal">Average task completion rate:</dt>
+        <dd class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-green-900 dark:text-green-300">
+          <svg class="w-2.5 h-2.5 mr-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+          </svg> 57%
+        </dd>
+      </dl>
+      <dl class="flex items-center justify-between">
+        <dt class="text-gray-500 dark:text-gray-400 text-sm font-normal">Days until sprint ends:</dt>
+        <dd class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-gray-600 dark:text-gray-300">13 days</dd>
+      </dl>
+      <dl class="flex items-center justify-between">
+        <dt class="text-gray-500 dark:text-gray-400 text-sm font-normal">Next meeting:</dt>
+        <dd class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-gray-600 dark:text-gray-300">Thursday</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- Radial Chart -->
+  <div class="pb-6 pt-3" id="radial-chart"></div>
 
   <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">
     <div class="flex justify-between items-center pt-5">
@@ -1221,6 +1260,16 @@ To create a radial chart with multiple data entries you need to set the `type: "
                 margin: 0,
                 size: "32%",
               }
+            },
+          },
+          grid: {
+            show: false,
+            strokeDashArray: 4,
+            padding: {
+              left: 2,
+              right: 2,
+              top: 0,
+              bottom: 0,
             },
           },
           labels: ["Done", "In progress", "To do"],

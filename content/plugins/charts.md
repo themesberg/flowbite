@@ -891,11 +891,14 @@ Create a pie chart with multiple data series by setting the `type: "pie"` chart 
 
 ## Donut chart
 
-Set the JavaScript API option to `type: "donut"` to create a donut chart and copy the options from the example below to style the elements such as the data series, legends and labels for the X and Y axis. 
+Set the JavaScript API option to `type: "donut"` to create a donut chart and copy the options from the example below to style the elements such as the data series, legends and labels for the X and Y axis.
+
+In this example we also show how you can set event listeners on the UI components from Flowbite to update the data series from the chart by clicking the device checkboxes.
 
 {{< example id="donut-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
-  <div class="flex justify-between">
+  
+  <div class="flex justify-between mb-3">
     <div class="flex items-center">
       <div class="flex justify-center items-center">
         <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white pr-1">Website traffic</h5>
@@ -914,6 +917,23 @@ Set the JavaScript API option to `type: "donut"` to create a donut chart and cop
             </div>
             <div data-popper-arrow></div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="flex" id="devices">
+      <div class="flex items-center mr-4">
+          <input id="desktop" type="checkbox" value="desktop" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+          <label for="desktop" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Desktop</label>
+      </div>
+      <div class="flex items-center mr-4">
+          <input id="tablet" type="checkbox" value="tablet" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+          <label for="tablet" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tablet</label>
+      </div>
+      <div class="flex items-center mr-4">
+          <input id="mobile" type="checkbox" value="mobile" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+          <label for="mobile" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Mobile</label>
       </div>
     </div>
   </div>
@@ -1051,6 +1071,37 @@ Set the JavaScript API option to `type: "donut"` to create a donut chart and cop
       if (document.getElementById("donut-chart") && typeof ApexCharts !== 'undefined') {
         const chart = new ApexCharts(document.getElementById("donut-chart"), getChartOptions());
         chart.render();
+
+        // Get all the checkboxes by their class name
+        const checkboxes = document.querySelectorAll('#devices input[type="checkbox"]');
+
+        // Function to handle the checkbox change event
+        function handleCheckboxChange(event, chart) {
+            const checkbox = event.target;
+            if (checkbox.checked) {
+                switch(checkbox.value) {
+                  case 'desktop':
+                    chart.updateSeries([15.1, 22.5, 4.4, 8.4]);
+                    break;
+                  case 'tablet':
+                    chart.updateSeries([25.1, 26.5, 1.4, 3.4]);
+                    break;
+                  case 'mobile':
+                    chart.updateSeries([45.1, 27.5, 8.4, 2.4]);
+                    break;
+                  default:
+                    chart.updateSeries([55.1, 28.5, 1.4, 5.4]);
+                }
+
+            } else {
+                chart.updateSeries([35.1, 23.5, 2.4, 5.4]);
+            }
+        }
+
+        // Attach the event listener to each checkbox
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', (event) => handleCheckboxChange(event, chart));
+        });
       }
   });
 </script>

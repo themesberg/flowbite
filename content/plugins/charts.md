@@ -532,7 +532,7 @@ You can represent multiple data entries using columns by setting the `type: "bar
             padding: {
               left: 2,
               right: 2,
-              top: 0
+              top: -14
             },
           },
           dataLabels: {
@@ -594,7 +594,7 @@ Create a horizontal bar chart with as many data series as you like by setting th
     </div>
   </div>
 
-  <div class="grid grid-cols-2 pt-3">
+  <div class="grid grid-cols-2 py-3">
     <dl>
       <dt class="text-base font-normal text-gray-500 dark:text-gray-400 pb-1">Income</dt>
       <dd class="leading-none text-xl font-bold text-green-500 dark:text-green-400">$23,635</dd>
@@ -747,7 +747,7 @@ Create a horizontal bar chart with as many data series as you like by setting th
         padding: {
           left: 2,
           right: 2,
-          top: 0
+          top: -20
         },
       },
       fill: {
@@ -845,7 +845,7 @@ Create a pie chart with multiple data series by setting the `type: "pie"` chart 
   window.addEventListener("load", function() {
     const getChartOptions = () => {
         return {
-          series: [52.3, 26.5, 20.2],
+          series: [52.8, 26.8, 20.4],
           colors: ["#1C64F2", "#16BDCA", "#9061F9"],
           chart: {
             height: 420,
@@ -1067,6 +1067,11 @@ In this example we also show how you can set event listeners on the UI component
               },
             },
           },
+          grid: {
+            padding: {
+              top: -2,
+            },
+          },
           labels: ["Direct", "Sponsor", "Affiliate", "Email marketing"],
           dataLabels: {
             enabled: false,
@@ -1206,7 +1211,7 @@ To create a radial chart with multiple data entries you need to set the `type: "
   </div>
 
   <!-- Radial Chart -->
-  <div class="pb-6 pt-3" id="radial-chart"></div>
+  <div class="py-6" id="radial-chart"></div>
 
   <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">
     <div class="flex justify-between items-center pt-5">
@@ -1288,8 +1293,8 @@ To create a radial chart with multiple data entries you need to set the `type: "
             padding: {
               left: 2,
               right: 2,
-              top: 0,
-              bottom: 0,
+              top: -23,
+              bottom: -20,
             },
           },
           labels: ["Done", "In progress", "To do"],
@@ -1656,7 +1661,7 @@ Automatically show the legend indicators of the chart by setting the `legend: { 
 
 {{< example id="legend-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
-  <div class="flex justify-between">
+  <div class="flex justify-between mb-5">
     <div>
       <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">$12,423</h5>
       <p class="text-base font-normal text-gray-500 dark:text-gray-400">Sales this week</p>
@@ -1775,7 +1780,7 @@ Automatically show the legend indicators of the chart by setting the `legend: { 
         padding: {
           left: 2,
           right: 2,
-          top: 0
+          top: -26
         },
       },
       xaxis: {
@@ -1817,7 +1822,7 @@ Enable the tooltip that is shown when hovering over a data set by setting `{tool
 
 {{< example id="tooltip-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
-  <div class="flex justify-between">
+  <div class="flex justify-between mb-5">
     <div>
       <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">$12,423</h5>
       <p class="text-base font-normal text-gray-500 dark:text-gray-400">Sales this week</p>
@@ -1897,7 +1902,7 @@ Enable the tooltip that is shown when hovering over a data set by setting `{tool
         padding: {
           left: 2,
           right: 2,
-          top: 0
+          top: -26
         },
       },
       series: [
@@ -1978,7 +1983,7 @@ Add a grid layout of dashed lines to improve the readability of the data entries
 
 {{< example id="grid-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
-  <div class="flex justify-between">
+  <div class="flex justify-between mb-5">
     <div>
       <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">$12,423</h5>
       <p class="text-base font-normal text-gray-500 dark:text-gray-400">Sales this week</p>
@@ -2049,7 +2054,7 @@ Add a grid layout of dashed lines to improve the readability of the data entries
         padding: {
           left: 2,
           right: 2,
-          top: 0
+          top: -26
         },
       },
       series: [
@@ -2136,7 +2141,7 @@ Show data points on the chart by enable the `dataLabels: {enabled: true}` object
 
 {{< example id="data-labels-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
-  <div class="flex justify-between">
+  <div class="flex justify-between mb-5">
     <div>
       <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">$12,423</h5>
       <p class="text-base font-normal text-gray-500 dark:text-gray-400">Sales this week</p>
@@ -2214,7 +2219,7 @@ Show data points on the chart by enable the `dataLabels: {enabled: true}` object
         padding: {
           left: 16,
           right: 16,
-          top: 0
+          top: -26
         },
       },
       series: [
@@ -2298,7 +2303,7 @@ If you want to format and prefix your data with something such as a currency sig
 
 {{< example id="default-area-chart" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
-  <div class="flex justify-between">
+  <div class="flex justify-between mb-5">
     <div>
       <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">€12,423</h5>
       <p class="text-base font-normal text-gray-500 dark:text-gray-400">Sales this week</p>
@@ -2410,7 +2415,7 @@ If you want to format and prefix your data with something such as a currency sig
         padding: {
           left: 2,
           right: 2,
-          top: 0
+          top: -26
         },
       },
       series: [
@@ -2453,7 +2458,7 @@ You can set the size (width and height) of the chart by passing the `width: {siz
 
 {{< example id="size-example-chart" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
-  <div class="flex justify-between">
+  <div class="flex justify-between mb-5">
     <div>
       <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">$12,423</h5>
       <p class="text-base font-normal text-gray-500 dark:text-gray-400">Sales this week</p>
@@ -2557,7 +2562,7 @@ You can set the size (width and height) of the chart by passing the `width: {siz
         padding: {
           left: 2,
           right: 2,
-          top: 0
+          top: -26
         },
       },
       series: [

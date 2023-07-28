@@ -693,6 +693,9 @@ module.exports = plugin.withOptions(
                         {
                             paddingTop: `${theme('spacing.3', spacing[3])}`,
                         },
+                    '.apexcharts-canvas .apexcharts-legend': {
+                        padding: '0 !important',
+                    },
                     '.apexcharts-canvas .apexcharts-legend-text': {
                         fontSize: `${theme(
                             'fontSize.xs',

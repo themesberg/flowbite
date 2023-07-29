@@ -13,6 +13,7 @@ const Default: DropdownOptions = {
     offsetSkidding: 0,
     offsetDistance: 10,
     delay: 300,
+    ignoreClickOutsideClass: false,
     onShow: () => {},
     onHide: () => {},
     onToggle: () => {},
@@ -130,10 +131,29 @@ class Dropdown implements DropdownInterface {
 
     _handleClickOutside(ev: Event, targetEl: HTMLElement) {
         const clickedEl = ev.target as Node;
+
+        // Ignore clicks on the trigger element (ie. a datepicker input)
+        const ignoreClickOutsideClass = this._options.ignoreClickOutsideClass;
+
+        let isIgnored = false;
+        if (ignoreClickOutsideClass) {
+            const ignoredClickOutsideEls = document.querySelectorAll(
+                `.${ignoreClickOutsideClass}`
+            );
+            ignoredClickOutsideEls.forEach((el) => {
+                if (el.contains(clickedEl)) {
+                    isIgnored = true;
+                    return;
+                }
+            });
+        }
+
+        // Ignore clicks on the target element (ie. dropdown itself)
         if (
             clickedEl !== targetEl &&
             !targetEl.contains(clickedEl) &&
             !this._triggerEl.contains(clickedEl) &&
+            !isIgnored &&
             this.isVisible()
         ) {
             this.hide();
@@ -244,6 +264,9 @@ export function initDropdowns() {
                     'data-dropdown-trigger'
                 );
                 const delay = $triggerEl.getAttribute('data-dropdown-delay');
+                const ignoreClickOutsideClass = $triggerEl.getAttribute(
+                    'data-dropdown-ignore-click-outside-class'
+                );
 
                 new Dropdown(
                     $dropdownEl as HTMLElement,
@@ -260,6 +283,9 @@ export function initDropdowns() {
                             ? parseInt(offsetDistance)
                             : Default.offsetDistance,
                         delay: delay ? parseInt(delay) : Default.delay,
+                        ignoreClickOutsideClass: ignoreClickOutsideClass
+                            ? ignoreClickOutsideClass
+                            : Default.ignoreClickOutsideClass,
                     } as DropdownOptions
                 );
             } else {

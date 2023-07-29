@@ -25,7 +25,7 @@ Before continuing make sure that you have Tailwind CSS, Flowbite and ApexCharts 
 
 1. Follow the <a href="{{< ref "getting-started/quickstart" >}}">quickstart guide</a> from Flowbite to install the plugin styles and functionality
 
-2. Set charts to true within the Flowbite Plugin opton from the Tailwind CSS configuration file:
+2. Set charts to true within the Flowbite Plugin options from the Tailwind CSS configuration file:
 
 ```javascript
 plugins: [
@@ -36,7 +36,7 @@ plugins: [
 ]
 ```
 
-3. Make sure that you have ApexCharts installed and configured din your project:
+3. Make sure that you have ApexCharts installed and configured in your project:
 
 Install ApexChart via NPM and save it in your `package.json` file:
 

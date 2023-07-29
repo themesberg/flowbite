@@ -7,8 +7,8 @@ toc: true
 
 previous: Text
 previousLink: typography/text/
-next: Datepicker
-nextLink: plugins/datepicker/
+next: Charts
+nextLink: plugins/charts/
 ---
 
 The HR component can be used to separate content using a horizontal line by adding space between elements based on multiple styles, variants, and layouts.

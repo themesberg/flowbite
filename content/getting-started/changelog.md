@@ -15,6 +15,13 @@ nextLink: getting-started/react/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### 1.8.0
+
+- added new chart components
+- enable or disable styles via the Flowbite Plugin
+- addded new API option to the dropdowns to prevent closing when clicking on certain elements
+- small bug fixes and improvements overall
+
 ### 1.7.0
 
 - integrate new [Flowbite Icons](https://flowbite.com/icons/) with all UI components

@@ -924,6 +924,40 @@ You can also use the dropdown element inside a navigation bar and add a second l
 </nav>
 {{< /example >}}
 
+## Dropdown datepicker
+
+Use this example to show a date range picker inside a dropdown menu. Use the `data-dropdown-ignore-click-outside-class={class}` option to keep the dropdown menu open when interacting with the datepicker component by setting the element's parent class name.
+
+{{< example id="dropdown-datepicker-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="520" >}}
+<button id="dateRangeButton" data-dropdown-toggle="dateRangeDropdown" data-dropdown-ignore-click-outside-class="datepicker" type="button" class="inline-flex items-center text-blue-700 dark:text-blue-600 font-medium hover:underline">31 Nov - 31 Dev <svg class="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+  </svg>
+</button>
+<div id="dateRangeDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-80 lg:w-96 dark:bg-gray-700 dark:divide-gray-600">
+    <div class="p-3" aria-labelledby="dateRangeButton">
+      <div date-rangepicker datepicker-autohide class="flex items-center">
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                </svg>
+            </div>
+            <input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Start date">
+          </div>
+          <span class="mx-2 text-gray-500 dark:text-gray-400">to</span>
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                </svg>
+            </div>
+            <input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="End date">
+        </div>
+      </div>
+    </div>
+</div>
+{{< /example >}}
+
 ## Sizes
 
 The dropdown menus work with buttons of all sizes including smaller or larger ones.
@@ -1338,6 +1372,17 @@ Use the following options as the third parameter for the Dropdown class to set t
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">ignoreClickOutsideClass</code>
+              </td>
+              <td class="px-6 py-4 font-medium">
+                  String
+              </td>
+              <td class="px-6 py-4">
+                  Set a class for one or more elements that when they are clicked should ignore closing the dropdown (ie. offcanvas datepicker).
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">onHide</code>
               </td>
               <td class="px-6 py-4 font-medium">
@@ -1448,6 +1493,7 @@ const options = {
   offsetSkidding: 0,
   offsetDistance: 10,
   delay: 300,
+  ignoreClickOutsideClass: false,
   onHide: () => {
       console.log('dropdown has been hidden');
   },

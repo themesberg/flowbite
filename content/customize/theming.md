@@ -48,6 +48,24 @@ module.exports = {
 }
 ```
 
+## Flowbite Plugin
+
+Use the custom styles from Flowbite by including the plugin inside the `tailwind.config.js` file:
+
+```javascript
+```javascript
+plugins: [
+  require('flowbite/plugin')({
+      charts: true,
+      forms: true,
+      tooltips: true
+  }),
+  // ... other plugins
+]
+```
+
+You can enable or disable styles for the charts, forms or tooltips by setting a `true` or `false` value.
+
 ## Theme structure
 
 Some of the more widely used `theme` keys are `screens`, `colors`, and `spacing` as one of the core utility classes.

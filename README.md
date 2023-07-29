@@ -705,7 +705,7 @@ Flowbite is an open source collection of UI components built with the utility cl
   <tr>
     <td width="33.3333%">Jumbotron</td>
     <td width="33.3333%">Device mockups</td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">Charts</td>
   </tr>
   <tr>
     <td width="33.3333%">
@@ -718,7 +718,11 @@ Flowbite is an open source collection of UI components built with the utility cl
             <img alt="Tailwind CSS Device Mockups" src="https://flowbite.s3.amazonaws.com/github/device-mockups.jpg">
         </a>
     </td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/plugins/charts/">
+            <img alt="Tailwind CSS Charts" src="https://flowbite.s3.amazonaws.com/github/charts.jpg">
+        </a>
+    </td>
   </tr>
 </table>
 

@@ -202,7 +202,7 @@ To create a double line chart check the example below by setting the chart type 
 
 {{< example id="line-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true >}}
 <div class="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
-  <div class="flex justify-between">
+  <div class="flex justify-between mb-5">
     <div class="grid gap-4 grid-cols-2">
       <div>
         <h5 class="inline-flex items-center text-gray-500 dark:text-gray-400 leading-none font-normal mb-2">Clicks
@@ -320,7 +320,7 @@ To create a double line chart check the example below by setting the chart type 
         padding: {
           left: 2,
           right: 2,
-          top: 0
+          top: -26
         },
       },
       series: [

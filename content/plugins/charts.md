@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Charts - Flowbite
-description: Use the chart and graph components from Flowbite built with Tailwind CSS and ApexCharts and choose from line, area, bar, column, pie, and radial charts and customize them using JavaScript
+description: Use the chart and graph components from Flowbite built with Tailwind CSS and ApexCharts to choose from line, area, bar, column, pie, and radial charts and customize them using JavaScript
 group: plugins
 toc: true
 requires_js: true
@@ -15,7 +15,7 @@ previousLink: typography/hr/
 
 The chart components from the Flowbite Library are open-source under the MIT license and they are styled with the utility classes from Tailwind CSS and based on the open-source [ApexCharts](https://apexcharts.com/) library.
 
-We provide an extensive collection responsive chart types such as area, bar, column, pie, and radial that can help you visualize complex data inside graphs for your users in admin dashboard layouts and more.
+We provide an extensive collection of responsive chart types such as area, bar, column, pie, and radial that can help you visualize complex data inside graphs in admin dashboard layouts, analytics, diagrams, and more.
 
 You can also easily customize the colors, sizes, and options of these charts either via Tailwind CSS directly or via the JavaScript options from the ApexCharts library. Dark mode is also supported by default.
 

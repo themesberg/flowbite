@@ -804,26 +804,31 @@ module.exports = plugin.withOptions(
             }
         };
     },
-    function (options) {
-        return {
-            safelist: [
-                // datepicker classes
-                'w-64',
-                'w-1/2',
-                'rounded-l-lg',
-                'rounded-r-lg',
-                'bg-gray-200',
-                'grid-cols-4',
-                'grid-cols-7',
-                'h-6',
-                'leading-6',
-                'h-9',
-                'leading-9',
-                'shadow-lg',
+    function (options = {}) {
+        // Enable forms and tooltip by default if not specified in options
+        const { charts = false, forms = true, tooltips = true } = options;
 
-                // chart classes
-                { pattern: /^apexcharts-.*$/ },
-            ],
+        const safelist = [
+            'w-64',
+            'w-1/2',
+            'rounded-l-lg',
+            'rounded-r-lg',
+            'bg-gray-200',
+            'grid-cols-4',
+            'grid-cols-7',
+            'h-6',
+            'leading-6',
+            'h-9',
+            'leading-9',
+            'shadow-lg',
+        ];
+
+        if (charts) {
+            safelist.push({ pattern: /^apexcharts-.*$/ });
+        }
+
+        return {
+            safelist: safelist,
             darkMode: 'class', // or 'media' or 'class',
             theme: {
                 extend: {

@@ -15,6 +15,10 @@ nextLink: getting-started/react/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### 1.8.1
+
+- fix `apexcharts` safelist warning in console
+
 ### 1.8.0
 
 - added new chart components

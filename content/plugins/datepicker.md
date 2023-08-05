@@ -50,6 +50,37 @@ Use the `inline-datepicker` and `data-date` data attributes to initalize and set
 <div inline-datepicker data-date="02/25/2022"></div>
 {{< /example >}}
 
+To get the selected date using event listener:
+
+```
+// Get a reference to the datepicker element
+const datepickerDiv = document.querySelector("[inline-datepicker]");
+
+// Function to handle date changes
+function handleDateChange(event) {
+  const selectedDate = event.target.getAttribute("data-date");
+
+  if (selectedDate) {
+    // Create a new Date object using the timestamp
+    const date = new Date(Number(selectedDate));
+    // Get the various components of the date
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1; // Months are zero-based, so add 1
+    const day = date.getDate();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    // Create a formatted string
+    const formattedDate = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    console.log(formattedDate); // e.g. 2022-02-16 00:00:00
+  }
+}
+
+// Attach a click event listener to the datepicker element
+datepickerDiv.addEventListener("click", handleDateChange);
+```
+
 ## Date range picker
 
 Use the `date-rangepicker` data attribute and the following markup to initialize two datepickers as a range.

@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Laravel - Flowbite
-description: Learn how to install Tailwind CSS with Flowbite using Laravel Mix and start building modern websites with the most popular PHP framework in the world
+description: Learn how to install Tailwind CSS with Flowbite in a Laravel PHP project and start building modern websites with the most popular PHP framework in the world
 group: getting-started
 toc: true
 requires_laravel: true
@@ -12,9 +12,9 @@ next: Symfony
 nextLink: getting-started/symfony/
 ---
 
-Laravel is the most popular PHP web framework based on the model-view-controller (MCV) model that helps you build modern web applications and API's.
+Laravel is the most popular PHP web framework that helps you build modern web applications and API's.
 
-Use the officially recommended Tailwind CSS utility-first framework and the UI components from Flowbite to enhance your front-end development process.
+Use the Tailwind CSS utility-first framework and UI components from Flowbite to enhance your front-end development process.
 
 ## Install Tailwind CSS with Laravel
 
@@ -113,7 +113,7 @@ Alternatively, you can also include the JavaScript file using CDN:
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
 ```
 
-Now that you've set everything up start up a local development server using `php artisan serve` and run the build process for Vite by using `npm run dev` or build it for production using `npm run build`.
+10. Run the build process for Vite using `npm run dev`. Use `npm run build` for production builds.
 
 ## Flowbite components
 

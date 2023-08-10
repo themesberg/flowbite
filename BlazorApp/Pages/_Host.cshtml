@@ -1,0 +1,25 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Web
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@namespace BlazorApp.Pages
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="~/" />
+    <link href="~/css/app.min.css" rel="stylesheet" />
+    <link href="Flowbite.Blazor.styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+<body>
+
+    <component type="typeof(App)" render-mode="ServerPrerendered" />
+
+
+    <script src="_framework/blazor.server.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+</html>

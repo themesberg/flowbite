@@ -1,0 +1,12 @@
+node_modules/
+dist/
+lib/
+build/
+_gh_pages/
+static/*.css
+static/*.js
+static/*.map
+.DS_Store
+yarn-error.log.DS_Store
+/.idea
+bin/

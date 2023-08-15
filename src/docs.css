@@ -395,7 +395,7 @@ code.language-html .token.comment{
 /* Search */
 
 .DocSearch-Button {
-	@apply hidden p-2 m-0 w-52 h-auto bg-gray-50 rounded-lg border border-gray-300 border-solid shadow-none md:flex hover:bg-gray-100 xl:w-64 hover:shadow-none focus:shadow-none dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600;
+	@apply p-2 m-0 md:w-52 items-center justify-center focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 md:justify-between h-[40px] w-[40px] md:bg-gray-50 rounded-lg border md:border-gray-300 md:border-solid shadow-none xl:pl-4 flex hover:bg-gray-100 dark:focus:bg-gray-600 xl:w-64 hover:shadow-none focus:shadow-none dark:md:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600;
 }
 
 .DocSearch-Button-Placeholder {
@@ -403,15 +403,24 @@ code.language-html .token.comment{
 }
 
 .DocSearch-Search-Icon {
-	@apply w-3 h-3 text-gray-500 md:mr-1 dark:text-gray-400;
+	@apply w-4 h-4 md:w-3 md:h-3 md:mr-1 text-transparent !important;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><path stroke="%236A7280" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/></svg>');
+}
+
+.dark .DocSearch-Search-Icon {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><path stroke="%239BA3AF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/></svg>');
 }
 
 .DocSearch-Button-Keys {
 	@apply items-center min-w-0;
 }
 
+.DocSearch-Button-Key:first-child {
+  @apply mr-px text-base;
+}
+
 .DocSearch-Button-Key {
-	@apply pt-1 pb-0 m-0 w-auto text-xs font-normal text-gray-500 bg-none shadow-none dark:text-gray-400;
+	@apply w-auto pt-1 pb-0 m-0 text-xs font-normal text-gray-500 shadow-none bg-none dark:text-gray-400;
 }
 
 .DocSearch-Button .DocSearch-Search-Icon {
@@ -475,7 +484,7 @@ code.language-html .token.comment{
 }
 
 .DocSearch-Hit a {
-	@apply bg-gray-50 rounded-lg shadow-none dark:bg-gray-600 dark:hover:bg-blue-600;
+	@apply rounded-lg shadow-none bg-gray-50 dark:bg-gray-600 dark:hover:bg-blue-600;
 }
 
 .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-Select-Icon,

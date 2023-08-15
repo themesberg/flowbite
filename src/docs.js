@@ -12,6 +12,14 @@ docsearch({
     placeholder: 'Search documentation',
 });
 
+docsearch({
+    container: '#docsearch-mobile',
+    appId: 'JUWZAHYJQ9',
+    indexName: 'flowbite',
+    apiKey: '63250f7f96b4ea48c49dbd149aab687c',
+    placeholder: 'Search documentation',
+});
+
 // copy to clipboard
 const fallbackCopyTextToClipboard = (text) => {
     var textArea = document.createElement('textarea');

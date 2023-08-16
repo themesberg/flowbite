@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Qwik - Flowbite
-description: Learn how to install Flowbite with Phoenix and Tailwind CSS to start building rich and interactive web applications based on the Elixir programming language
+description: Learn how to create a Qwik project together with Tailwind CSS and Flowbite to instantly build scalable and interactive web apps together with UI components
 group: getting-started
 toc: true
 requires_qwik: true

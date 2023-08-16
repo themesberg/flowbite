@@ -19,3 +19,31 @@ The framework was first released on July 18th, 2021 by Adam Bradley and Miško H
 By following this guide you will learn how to create a new Qwik project, install and configure Tailwind CSS and proceed by installing Flowbite to start leveraging the open-source UI components to build interactive and instant-loading websites faster.
 
 ## Requirements
+
+Before getting started make sure that you have [Node.js v16.8](https://nodejs.org/en) or higher available on your local machine and we also recommend to install the [Qwik VS Code Extension](https://marketplace.visualstudio.com/items?itemName=johnreemar.vscode-qwik-snippets) to enable Qwik snippets.
+
+## Create a Qwik project
+
+1. Create a new project by running the following command in your terminal:
+
+```bash
+npm create qwik@latest
+```
+
+The custom CLI (command line interface) from Qwik will prompt you with some questions on how you want your project to be configured - follow the steps until you have a fully working directory.
+
+2. Start a local development server by running:
+
+```bash
+npm run start
+```
+
+You should now be able to access a boilerplate Qwik project on `http://localhost:5173/` from your local browser and start developing with the framework.
+
+## Install Tailwind CSS
+
+## Install Flowbite
+
+## UI components
+
+## Qwik starter project

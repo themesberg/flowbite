@@ -8,8 +8,8 @@ requires_solidjs: true
 
 previous: Gatsby
 previousLink: getting-started/gatsby/
-next: Laravel
-nextLink: getting-started/laravel/
+next: Qwik
+nextLink: getting-started/qwik/
 ---
 
 [SolidJS](https://www.solidjs.com/) is a popular and open-source declarative JavaScript library that empowers reactive UI interfaces for the web that ensures a performant benchmark, leverages the flexibility of JSX and also provides support for TypeScript, Astro, and Vite.

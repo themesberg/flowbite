@@ -42,6 +42,22 @@ You should now be able to access a boilerplate Qwik project on `http://localhost
 
 ## Install Tailwind CSS
 
+Tailwind CSS is a popular utility-first CSS framework that allows you to quickly build website user interfaces by directly writing the CSS and styles in your HTML templates via the rich collection of utility classes.
+
+The easiest way to set up Tailwind CSS within your Qwik project is to run a starter script command:
+
+```bash
+npm run qwik add tailwind
+```
+
+This command will automatically set up the following:
+
+- install Tailwind CSS and its dependencies
+- create a boilerplate `tailwind.config.js` and `postcss.config.js` file
+- modify the `src/global.css` file to import the Tailwind modules
+
+By restarting the sever you will now be able to use the utility-first classes from Tailwind CSS.
+
 ## Install Flowbite
 
 ## UI components

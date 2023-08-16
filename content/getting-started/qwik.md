@@ -60,6 +60,47 @@ By restarting the sever you will now be able to use the utility-first classes fr
 
 ## Install Flowbite
 
+[Flowbite](https://flowbite.com) is a popular open-source UI component library that is built on top of the Tailwind CSS framework leveraging the utility-first class approach with custom interactive JavaScript that allows you to use and customize a collection of components like dropdowns, navbars, modals, and more.
+
+Follow the next steps to install and set up Flowbite in your Qwik project:
+
+1. Install Flowbite via NPM inside your terminal:
+
+```bash
+npm install flowbite
+```
+
+2. Require the Flowbite Plugin inside your `tailwind.config.js` configuration file:
+
+```javascript
+module.exports = {
+
+    plugins: [
+        require('flowbite/plugin')
+    ]
+
+}
+```
+
+3. Set up the template paths for the dynamic classes file inside the configuration file:
+
+```javascript
+module.exports = {
+
+    content: [
+        "./node_modules/flowbite/**/*.js"
+    ]
+
+}
+```
+
+4. Finally, import the Flowbite JavaScript file inside your Qwik project to start using interactive components:
+
+```javascript
+```
+
+Congratulations! Now you can start using all of the UI components from the Flowbite Library inside your Qwik project together with Tailwind CSS and build websites and user interfaces even faster.
+
 ## UI components
 
 ## Qwik starter project

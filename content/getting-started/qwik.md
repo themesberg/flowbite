@@ -74,29 +74,76 @@ npm install flowbite
 
 ```javascript
 module.exports = {
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    require('flowbite/plugin') // add this line
+  ],
+};
 
-    plugins: [
-        require('flowbite/plugin')
-    ]
-
-}
 ```
 
 3. Set up the template paths for the dynamic classes file inside the configuration file:
 
 ```javascript
 module.exports = {
+  content: [
+    './src/**/*.{js,ts,jsx,tsx,mdx}', 
+    './node_modules/flowbite/**/*.js' // add this line
+],
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    require('flowbite/plugin')
+  ],
+};
 
-    content: [
-        "./node_modules/flowbite/**/*.js"
-    ]
-
-}
 ```
 
-4. Finally, import the Flowbite JavaScript file inside your Qwik project to start using interactive components:
+4. Finally, in the `src/root.tsx` file import the Flowbite JavaScript file inside your Qwik project to start using interactive components that require JavaScript such as the navbars, dropdowns, drawers, and more:
 
 ```javascript
+import { component$, useVisibleTask$ } from "@builder.io/qwik";
+import {
+  QwikCityProvider,
+  RouterOutlet,
+  ServiceWorkerRegister,
+} from "@builder.io/qwik-city";
+import { RouterHead } from "./components/router-head/router-head";
+import 'flowbite';
+
+import "./global.css";
+import { initFlowbite } from "flowbite";
+
+export default component$(() => {
+  /**
+   * The root of a QwikCity site always start with the <QwikCityProvider> component,
+   * immediately followed by the document's <head> and <body>.
+   *
+   * Don't remove the `<head>` and `<body>` elements.
+   */
+
+  useVisibleTask$(() => {
+    initFlowbite();
+  });
+
+  return (
+    <QwikCityProvider>
+      <head>
+        <meta charSet="utf-8" />
+        <link rel="manifest" href="/manifest.json" />
+        <RouterHead />
+        <ServiceWorkerRegister />
+      </head>
+      <body lang="en">
+        <RouterOutlet />
+      </body>
+    </QwikCityProvider>
+  );
+});
 ```
 
 Congratulations! Now you can start using all of the UI components from the Flowbite Library inside your Qwik project together with Tailwind CSS and build websites and user interfaces even faster.

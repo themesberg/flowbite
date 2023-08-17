@@ -27,7 +27,9 @@
     - title: Gatsby
     - title: SolidJS
       slug: solid-js
+    - title: Qwik
     - title: Laravel
+      new: true
     - title: Symfony
     - title: Rails
     - title: Phoenix
@@ -52,25 +54,20 @@
     - title: Avatar
     - title: Badge
     - title: Banner
-      new: true
     - title: Bottom Navigation
-      new: true
     - title: Breadcrumb
     - title: Buttons
     - title: Button Group
     - title: Card
     - title: Carousel
     - title: Device Mockups
-      new: true
     - title: Drawer
     - title: Dropdowns
     - title: Footer
     - title: Forms
     - title: Gallery
-      new: true
     - title: Indicators
     - title: Jumbotron
-      new: true
     - title: KBD
     - title: List Group
     - title: Mega menu

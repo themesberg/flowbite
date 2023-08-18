@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Datepicker - Flowbite
-description: Start receiving date and time data from your users using this free datepicker element based on Tailwind utility-classes and vanilla JavaScript
+description: Start receiving date and time data from your users using this free datepicker element based on the Tailwind CSS utility-classes and vanilla JavaScript
 group: plugins
 toc: true
 requires_js: true

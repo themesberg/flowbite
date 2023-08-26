@@ -448,11 +448,11 @@ code.language-html .token.comment{
 }
 
 .DocSearch-Modal {
-	@apply shadow-none dark:bg-gray-700;
+	@apply mx-auto mt-[1rem] max-h-[calc(100vh-2rem)] w-full max-w-[calc(100vw-2rem)] overflow-hidden shadow-none rounded-lg lg:mt-[4rem] lg:max-h-none lg:max-w-xl;
 }
 
 .DocSearch-SearchBar {
-	@apply p-0 border-b border-gray-100 dark:border-gray-600;
+	@apply p-0 border-b border-gray-100 dark:border-gray-600 dark:bg-gray-700;
 }
 
 .DocSearch-Form {

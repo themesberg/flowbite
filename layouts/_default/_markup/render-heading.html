@@ -1,0 +1,11 @@
+<!-- <h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }}
+{{- if and (ge .Level .Page.Site.Params.anchors.min) (le .Level .Page.Site.Params.anchors.max) }}{{" " -}}
+<a class="anchor-link" href="#{{ .Anchor | safeURL }}" aria-label="Link to this section: {{ .Text | safeHTML }}"></a>
+{{- end -}}
+</h{{ .Level }}> -->
+<h{{ .Level }} class="relative group">{{ .Text | safeHTML }}
+<span id="{{ .Anchor | safeURL }}" class="absolute -top-[140px]"></span>
+{{- if and (ge .Level 2) (le .Level 4) }}{{" " -}}
+<a class="ml-2 text-blue-700 opacity-0 transition-opacity dark:text-blue-500 group-hover:opacity-100" href="#{{ .Anchor | safeURL }}" aria-label="Link to this section: {{ .Text | safeHTML }}">#</a>
+{{- end -}}
+</h{{ .Level }}>

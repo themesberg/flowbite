@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "lib": ["dom", "es2015"],
+        "outDir": "./lib/cjs/",
+        "rootDir": "./src/",
+        "sourceMap": true,
+        "declaration": true,
+        "declarationMap": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "es5",
+        "jsx": "react",
+        "allowJs": true,
+        "moduleResolution": "node"
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "dist", "lib"]
+}

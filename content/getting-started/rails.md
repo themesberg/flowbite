@@ -6,10 +6,10 @@ group: getting-started
 toc: true
 requires_rails: true
 
-previous: Svelte
-previousLink: getting-started/svelte/
-next: License
-nextLink: getting-started/license/
+previous: Symfony
+previousLink: getting-started/symfony/
+next: Phoenix (Elixir)
+nextLink: getting-started/phoenix/
 ---
 
 [Ruby on Rails](https://rubyonrails.org/) is an open-source full-stack web application framework that runs server-side written in Ruby and built by the creators of Basecamp based on a model-view-controller architecture.
@@ -105,29 +105,85 @@ module.exports = {
 module.exports = {
 
     content: [
-        "./node_modules/flowbite/**/*.js"
+        './node_modules/flowbite/**/*.js'
     ]
 
 }
 ```
 
-10. Run the following command to include Flowbite's JavaScript inside the `importmap.rb` file:
+### Turbo load support
+
+Flowbite provides custom event listeners for turbo load support if you import the `flowbite.turbo.js` file. Check out the following guides to learn more how to integrate the JavasScript file that powers the interactive components with Importmap or ESBuild.
+
+### Importmap
+
+Importmap is the default way of handling JavaScript on Rails 7. In order to support turbo load from importmaps you have to pin the `flowbite.turbo.js` file from a CDN where the `turbo:load` event listeners are added instead of `load`.
+
+1. Add the following line inside your `importmap.rb` file:
+
+```bash
+pin "flowbite", to: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.turbo.min.js"
+```
+
+2. Then you need to import `flowbite` inside your `application.js` file:
+
+```javascript
+import 'flowbite';
+```
+
+This will enable the interactive elements like dropdowns, modals, and navbars work by hooking the event listeners and actions to the data attributes whenever a new page is loaded in your application.
+
+### ESBuild
+If you use ESBuild to Bundle your JavaScript on Rails, you will need to import a version of Flowbite which supports the `turbo:load` event listeners instead of `load`. To do this **add the line below** to your `application.js` file:
+
+```javascript
+import "flowbite/dist/flowbite.turbo.js";
+```
+
+### Standard JS (no turbo)
+
+If you decide not to use turbo load then you can follow these steps:
+
+1. Run this command to pin Flowbite in your `importmap.rb` file:
 
 ```bash
 ./bin/importmap pin flowbite
 ```
 
-Alternatively, you can also include the script separately or using CDN:
+2. Then you need to include Flowbite inside your `application.js` file:
 
-```html
-// relative path
-<script src="../path/to/flowbite/dist/flowbite.js"></script>
-
-// CDN
-<link rel="stylesheet" href="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.min.css" />
+```javascript
+import 'flowbite';
 ```
 
-Now you can use interactive components such as modals, dropdowns, navbars, and more.
+### Include via CDN
+
+Alternatively to all of the above you can also include the JavaScript via CDN:
+
+```html
+// include via CDN for turbo support
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.turbo.min.js"></script>
+
+// include via CDN without turbo support
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
+```
+
+### Datepicker
+
+In order to support turbo load from Ruby on Rails 7, you have to include the `datepicker.turbo.js` file either from NPM or CDN into your project.
+
+Include the following JavaScript file to support the datepicker component:
+
+```bash
+pin "flowbite-datepicker", to: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/datepicker.turbo.min.js"
+```
+
+Don't forget to also import it inside your `application.js` file:
+
+```javascript
+import 'flowbite-datepicker';
+```
+
 ## Building your project
 
 Run the following command to start a local server and build the source files:
@@ -137,6 +193,8 @@ Run the following command to start a local server and build the source files:
 ```
 
 This will create a local server and you will be able to access the pages on `localhost:3000`.
+
+You can also run `rails tailwindcss:build` to compile Tailwind CSS.
 
 ## Create a homepage
 
@@ -148,7 +206,7 @@ First of all, you need to delete the default `index.html` file inside the `publi
 
 ```html
 <button data-tooltip-target="tooltip-default" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default tooltip</button>
-<div id="tooltip-default" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+<div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Tooltip content
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
@@ -156,7 +214,7 @@ First of all, you need to delete the default `index.html` file inside the `publi
 
 4. Create a new controller called `pages_controller.rb` inside the `app/controllers/` directory and add the following code inside of it:
 
-```ruby
+```bash
 class PagesController < ApplicationController
   def home
   end
@@ -165,7 +223,7 @@ end
 
 5. Set the homepage as the root page inside the `routes.rb` file inside the `config/` directory:
 
-```ruby
+```bash
 root to: 'pages#home'
 ```
 

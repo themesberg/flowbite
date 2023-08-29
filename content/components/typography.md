@@ -1,188 +1,260 @@
 ---
 layout: home
 title: Tailwind CSS Typography - Flowbite
-description: Use the typography and the utility classes from Tailwind CSS to style text with FlowBite
+description: Use the typography plugin from Flowbite to apply styles to all inline elements like headings, paragraphs, lists, and images using a single format class
 group: components
 toc: true
 
-previous: List group
-previousLink: components/list-group/
-next: Modals
-nextLink: components/modal/
+previous: Tooltips
+previousLink: components/tooltips/
+next: Video
+nextLink: components/video/
 ---
 
-The typography for FlowBite is completely based on the utility classes from Tailwind CSS.
+Get started with the [Flowbite Typography](https://github.com/themesberg/flowbite-typography) plugin forked from the official [Tailwind CSS Typography](https://tailwindcss.com/docs/typography-plugin) plugin to set a custom `format` class to a wrapper element to apply styles to all inline child elements such as headings, paragraphs, images, lists, and more and apply font sizes, font weights, colors, and spacings.
 
-We have listed some of the commonly used typography classes that we use throughout the FlowBite UI, however, you can also check out all of the utility classes on the [Tailwind CSS documentation](https://tailwindcss.com/docs/font-family) directly.
+You can check out this [live demo](https://flowbite.com/plugins/typography/) to see how content inside an article will render like.
 
-## Font Size
+## Getting started
 
-Use the following `text-{size}` utility classes from Tailwind to set the font size for any text element.
+Make sure that you have both [Node.js](https://nodejs.org/) and [Tailwind CSS](https://tailwindcss.com/) already installed in your project.
 
-{{< example github="components/typography.md" show_dark=true >}}
-<p class="text-xs dark:text-white">Flowbite</p>
-<p class="text-sm dark:text-white">FlowBite</p>
-<p class="text-base dark:text-white">FlowBite</p>
-<p class="text-lg dark:text-white">FlowBite</p>
-<p class="text-xl dark:text-white">FlowBite</p>
-<p class="text-2xl dark:text-white">FlowBite</p>
-<p class="text-3xl dark:text-white">FlowBite</p>
-<p class="text-4xl dark:text-white">FlowBite</p>
-<p class="text-5xl dark:text-white">FlowBite</p>
-<p class="text-6xl dark:text-white">FlowBite</p>
-<p class="text-7xl dark:text-white">FlowBite</p>
-<p class="text-8xl dark:text-white">FlowBite</p>
-<p class="text-9xl dark:text-white">FlowBite</p>
-{{< /example >}}
+1. Install the Flowbite Typography plugin via NPM:
 
-## Font Weight
-
-Use the following `font-{weight}` utility classes to set the font weight for any text element.
-
-{{< preview github="components/typography.md" show_dark=true >}}
-<p class="text-4xl font-thin dark:text-white">FlowBite</p>
-<p class="text-4xl font-extralight dark:text-white">FlowBite</p>
-<p class="text-4xl font-light dark:text-white">FlowBite</p>
-<p class="text-4xl font-normal dark:text-white">FlowBite</p>
-<p class="text-4xl font-medium dark:text-white">FlowBite</p>
-<p class="text-4xl font-semibold dark:text-white">FlowBite</p>
-<p class="text-4xl font-bold dark:text-white">FlowBite</p>
-<p class="text-4xl font-extrabold dark:text-white">FlowBite</p>
-<p class="text-4xl font-black dark:text-white">FlowBite</p>
-{{< /preview >}}
-
-```html
-<p class="font-thin dark:text-white">FlowBite</p>
-<p class="font-extralight dark:text-white">FlowBite</p>
-<p class="font-light dark:text-white">FlowBite</p>
-<p class="font-normal dark:text-white">FlowBite</p>
-<p class="font-medium dark:text-white">FlowBite</p>
-<p class="font-semibold dark:text-white">FlowBite</p>
-<p class="font-bold dark:text-white">FlowBite</p>
-<p class="font-extrabold dark:text-white">FlowBite</p>
-<p class="font-black dark:text-white">FlowBite</p>
+```bash
+npm i -D flowbite-typography
 ```
 
-## Line Height
+2. Require the plugin inside the `tailwind.config.js` file:
 
-Use the following `leading-{type}` utility classes to set the line height for any text element.
-
-{{< preview github="components/typography.md" show_dark=true >}}
-<span class="font-normal text-blue-700 dark:text-blue-500">.leading-none</span>
-<p class="mb-4 leading-none text-gray-700 dark:text-gray-400">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
-<span class="font-normal text-blue-700 dark:text-blue-500">.leading-tight</span>
-<p class="mb-4 leading-tight text-gray-700 dark:text-gray-400">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
-<span class="font-normal text-blue-700 dark:text-blue-500">.leading-snug</span>
-<p class="mb-4 leading-snug text-gray-700 dark:text-gray-400">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
-<span class="font-normal text-blue-700 dark:text-blue-500">.leading-normal</span>
-<p class="mb-4 leading-normal text-gray-700 dark:text-gray-400">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
-<span class="font-normal text-blue-700 dark:text-blue-500">.leading-relaxed</span>
-<p class="mb-4 leading-relaxed text-gray-700 dark:text-gray-400">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
-<span class="font-normal text-blue-700 dark:text-blue-500">.leading-loose</span>
-<p class="mb-4 leading-loose text-gray-700 dark:text-gray-400">Themesberg was created to bring quality code and templates together. They use unique and new design trends created solely by their team and innovate the process of developers by their products.</p>
-{{< /preview >}}
-
-```html
-<p class="leading-none dark:text-gray-400">Themesberg was created to bring quality ...</p>
-<p class="leading-tight dark:text-gray-400">Themesberg was created to bring quality ...</p>
-<p class="leading-snug dark:text-gray-400">Themesberg was created to bring quality ...</p>
-<p class="leading-normal dark:text-gray-400">Themesberg was created to bring quality ...</p>
-<p class="leading-relaxed dark:text-gray-400">Themesberg was created to bring quality ...</p>
-<p class="leading-loose dark:text-gray-400">Themesberg was created to bring quality ...</p>
+```javascript
+module.exports = {
+  theme: {
+    // ...
+  },
+  plugins: [
+    require('flowbite-typography'),
+    // ...
+  ],
+}
 ```
 
-## Lists
+## Basic usage
 
-Use the following code to create list items with ordered and unordered lists.
+Once you have installed the plugin inside your project you can add the `format` class to a wrapper element and use any type of inline elements such as headings, paragraphs, images, lists, captions, links, and tables.
 
-{{< preview github="components/typography.md" show_dark=true >}}
-<span class="font-normal text-blue-700 dark:text-blue-500">.list-disc</span>
-<ul class="pl-4 mb-6 list-disc text-gray-700 dark:text-gray-400">
-    <li>Design</li>
-    <li>Develop</li>
-    <li>Test</li>
-</ul>
-
-<span class="font-normal text-blue-700 dark:text-blue-500">.list-decimal</span>
-<ol class="pl-4 mb-6 list-decimal text-gray-700 dark:text-gray-400">
-    <li>Design</li>
-    <li>Develop</li>
-    <li>Test</li>
-</ol>
-
-<span class="font-normal text-blue-700 dark:text-blue-500">.list-default</span>
-<ul class="text-gray-700 dark:text-gray-400">
-    <li>Design</li>
-    <li>Develop</li>
-    <li>Test</li>
-</ul>
-{{< /preview >}}
+All of these elements will be automatically styled with proper spacing, font sizing, font weight, colors, and more based on recommended UI/UX readability and accessibility standards.
 
 ```html
-<ul class="list-disc dark:text-gray-400">
-    <li>Design</li>
-    <li>Develop</li>
-    <li>Test</li>
-</ul>
+<article class="format lg:format-lg">
+    <h1>Prototyping from A to Z: best practices for successful prototypes</h1>
+    <p class="lead">Flowbite is an open-source library of UI components built with the utility-first classes from Tailwind CSS. It also includes interactive elements such as dropdowns, modals, datepickers.</p>
+    <p>Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way, you can think things through before committing to an actual design project.</p>
+    <p>But then I found a <a href="#">component library based on Tailwind CSS called Flowbite</a>. It comes with the most commonly used UI components, such as buttons, navigation bars, cards, form elements, and more which are conveniently built with the utility classes from Tailwind CSS.</p>
+    
+    ...
 
-<ol class="list-decimal dark:text-gray-400">
-    <li>Design</li>
-    <li>Develop</li>
-    <li>Test</li>
-</ol>
-
-<ul class=" dark:text-gray-400">
-    <li>Design</li>
-    <li>Develop</li>
-    <li>Test</li>
-</ul>
+    <h2>When does design come in handy?</h2>
+    <p>While it might seem like extra work at a first glance, here are some key moments in which prototyping will come in handy:</p>
+    <ol>
+        <li><strong>Usability testing</strong>. Does your user know how to exit out of screens? Can they follow your intended user journey and buy something from the site you’ve designed? By running a usability test, you’ll be able to see how users will interact with your design once it’s live;</li>
+        <li><strong>Involving stakeholders</strong>. Need to check if your GDPR consent boxes are displaying properly? Pass your prototype to your data protection team and they can test it for real;</li>
+        <li><strong>Impressing a client</strong>. Prototypes can help explain or even sell your idea by providing your client with a hands-on experience;</li>
+        <li><strong>Communicating your vision</strong>. By using an interactive medium to preview and test design elements, designers and developers can understand each other — and the project — better.</li>
+    </ol>
+</article>
 ```
 
-## List position
+You can also set the `lg:format-lg` class to set increase font sizes and spacings for larger viewport devices.
 
-Use the `list-inside` and `list-outside` classes to set the list item position inside a list component.
+## Link colors
 
-{{< preview github="components/typography.md" show_dark=true >}}
-<span class="font-normal text-blue-700 dark:text-blue-500">.list-inside</span>
-<ul class="mt-2 mb-6 list-disc list-inside text-green-700 bg-green-100 rounded-lg dark:bg-gray-700 dark:text-green-500">
-    <li>Design</li>
-    <li>Develop</li>
-    <li>Test</li>
-</ul>
-<span class="font-normal text-blue-700 dark:text-blue-500">.list-outside</span>
-<ul class="mt-2 list-disc list-outside text-green-700 bg-green-100 rounded-lg dark:bg-gray-700 dark:text-green-500">
-    <li>Design</li>
-    <li>Develop</li>
-    <li>Test</li>
-</ul>
-{{< /preview >}}
+You can update the default blue link color to anything you'd like by setting the `format-{color}` class:
 
 ```html
-<ul class="list-disc list-inside dark:text-gray-400">
-    <li>Design</li>
-    <li>Develop</li>
-    <li>Test</li>
-</ul>
-
-<ul class="list-disc list-outside dark:text-gray-400">
-    <li>Design</li>
-    <li>Develop</li>
-    <li>Test</li>
-</ul>
+<article class="format lg:format-lg format-red">
+    <h1>Prototyping from A to Z: best practices for successful prototypes</h1>
+    <p class="lead">Flowbite is an open-source library of UI components built with the utility-first classes from Tailwind CSS. It also includes interactive elements such as dropdowns, modals, datepickers.</p>
+    <p>Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way, you can think things through before committing to an actual design project.</p>
+    <p>But then I found a <a href="#">component library based on Tailwind CSS called Flowbite</a>. It comes with the most commonly used UI components, such as buttons, navigation bars, cards, form elements, and more which are conveniently built with the utility classes from Tailwind CSS.</p>
+</article>
 ```
+## Dark mode
 
-## Text Decoration
-
-You can use the following classes to set the text decoration for any inline text element.
-
-{{< preview github="components/typography.md" show_dark=true >}}
-<span class="font-normal text-blue-700 dark:text-blue-500">.underline</span>
-<p class="mt-2 mb-4 underline dark:text-gray-400">please read our terms and services</p>
-<span class="font-normal text-blue-700 dark:text-blue-500">.line-through</span>
-<p class="mt-2 mb-4 line-through dark:text-gray-400">please read our terms and services</p>
-{{< /preview >}}
+Enable dark mode for the typography by using the `dark:format-invert` class on the article wrapper element:
 
 ```html
-<p class="underline dark:text-gray-400">please read our terms and services</p>
-<p class="line-through dark:text-gray-400">please read our terms and services</p>
+<article class="format lg:format-lg dark:format-invert">
+    <h1>The content inside this article will invert when switching to dark mode</h1>
+    <p class="lead">Flowbite is an open-source library of UI components built with the utility-first classes from Tailwind CSS. It also includes interactive elements such as dropdowns, modals, datepickers.</p>
+    <p>Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way, you can think things through before committing to an actual design project.</p>
+    <p>But then I found a <a href="#">component library based on Tailwind CSS called Flowbite</a>. It comes with the most commonly used UI components, such as buttons, navigation bars, cards, form elements, and more which are conveniently built with the utility classes from Tailwind CSS.</p>
+    
+    ...
+
+    <h2>When does design come in handy?</h2>
+    <p>While it might seem like extra work at a first glance, here are some key moments in which prototyping will come in handy:</p>
+    <ol>
+        <li><strong>Usability testing</strong>. Does your user know how to exit out of screens? Can they follow your intended user journey and buy something from the site you’ve designed? By running a usability test, you’ll be able to see how users will interact with your design once it’s live;</li>
+        <li><strong>Involving stakeholders</strong>. Need to check if your GDPR consent boxes are displaying properly? Pass your prototype to your data protection team and they can test it for real;</li>
+        <li><strong>Impressing a client</strong>. Prototypes can help explain or even sell your idea by providing your client with a hands-on experience;</li>
+        <li><strong>Communicating your vision</strong>. By using an interactive medium to preview and test design elements, designers and developers can understand each other — and the project — better.</li>
+    </ol>
+</article>
 ```
+
+## Max width
+
+Override the default maximum width by setting a custom `max-w-{size}` class next to the `format` class:
+
+```html
+<article class="max-w-none format lg:format-lg format-red">
+    <h1>Prototyping from A to Z: best practices for successful prototypes</h1>
+    <p class="lead">Flowbite is an open-source library of UI components built with the utility-first classes from Tailwind CSS. It also includes interactive elements such as dropdowns, modals, datepickers.</p>
+    <p>Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way, you can think things through before committing to an actual design project.</p>
+    <p>But then I found a <a href="#">component library based on Tailwind CSS called Flowbite</a>. It comes with the most commonly used UI components, such as buttons, navigation bars, cards, form elements, and more which are conveniently built with the utility classes from Tailwind CSS.</p>
+</article>
+```
+
+## Disable format
+
+If you want to disable formatting inside the typography content you can use the `not-format` class:
+
+```html
+<article class="format lg:format-lg dark:format-invert">
+    <h1>The content inside this article will invert when switching to dark mode</h1>
+    <p class="lead">Flowbite is an open-source library of UI components built with the utility-first classes from Tailwind CSS. It also includes interactive elements such as dropdowns, modals, datepickers.</p>
+    <p>Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way, you can think things through before committing to an actual design project.</p>
+    <p>But then I found a <a href="#">component library based on Tailwind CSS called Flowbite</a>. It comes with the most commonly used UI components, such as buttons, navigation bars, cards, form elements, and more which are conveniently built with the utility classes from Tailwind CSS.</p>
+    
+    ...
+
+    <!-- content that won't have styles applied -->
+    <div class="not-format">
+        <h2>When does design come in handy?</h2>
+        <p>While it might seem like extra work at a first glance, here are some key moments in which prototyping will come in handy:</p>
+        <ol>
+            <li><strong>Usability testing</strong>. Does your user know how to exit out of screens? Can they follow your intended user journey and buy something from the site you’ve designed? By running a usability test, you’ll be able to see how users will interact with your design once it’s live;</li>
+            <li><strong>Involving stakeholders</strong>. Need to check if your GDPR consent boxes are displaying properly? Pass your prototype to your data protection team and they can test it for real;</li>
+            <li><strong>Impressing a client</strong>. Prototypes can help explain or even sell your idea by providing your client with a hands-on experience;</li>
+            <li><strong>Communicating your vision</strong>. By using an interactive medium to preview and test design elements, designers and developers can understand each other — and the project — better.</li>
+        </ol>
+    </div>
+</article>
+```
+
+## Options
+
+Extend the plugin's options inside the Tailwind configuration file to set your own colors, class name, and more.
+
+### Custom colors
+
+You can set your own colors by extending the typography plugin inside the `tailwind.config.js` file:
+
+```javascript
+module.exports = {
+  theme: {
+    extend: {
+      typography: ({ theme }) => ({
+        orange: {
+          css: {
+            '--tw-prose-body': theme('colors.orange[500]'),
+            '--tw-prose-headings': theme('colors.orange[900]'),
+            '--tw-prose-lead': theme('colors.orange[500]'),
+            '--tw-prose-links': theme('colors.orange[600]'),
+            '--tw-prose-bold': theme('colors.orange[900]'),
+            '--tw-prose-counters': theme('colors.orange[500]'),
+            '--tw-prose-bullets': theme('colors.orange[500]'),
+            '--tw-prose-hr': theme('colors.orange[200]'),
+            '--tw-prose-quotes': theme('colors.orange[900]'),
+            '--tw-prose-quote-borders': theme('colors.orange[300]'),
+            '--tw-prose-captions': theme('colors.orange[700]'),
+            '--tw-prose-code': theme('colors.orange[900]'),
+            '--tw-prose-code-bg': theme('colors.orange[50]'),
+            '--tw-prose-pre-code': theme('colors.orange[100]'),
+            '--tw-prose-pre-bg': theme('colors.orange[900]'),
+            '--tw-prose-th-borders': theme('colors.orange[300]'),
+            '--tw-prose-td-borders': theme('colors.orange[200]'),
+            '--tw-format-th-bg': theme('colors.orange[50]'),
+            '--tw-prose-invert-body': theme('colors.orange[200]'),
+            '--tw-prose-invert-headings': theme('colors.white'),
+            '--tw-prose-invert-lead': theme('colors.orange[300]'),
+            '--tw-prose-invert-links': theme('colors.white'),
+            '--tw-prose-invert-bold': theme('colors.white'),
+            '--tw-prose-invert-counters': theme('colors.orange[400]'),
+            '--tw-prose-invert-bullets': theme('colors.orange[600]'),
+            '--tw-prose-invert-hr': theme('colors.orange[700]'),
+            '--tw-prose-invert-quotes': theme('colors.pink[100]'),
+            '--tw-prose-invert-quote-borders': theme('colors.orange[700]'),
+            '--tw-prose-invert-captions': theme('colors.orange[400]'),
+            '--tw-prose-invert-code': theme('colors.white'),
+            '--tw-prose-invert-pre-code': theme('colors.orange[300]'),
+            '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
+            '--tw-prose-invert-th-borders': theme('colors.orange[600]'),
+            '--tw-prose-invert-td-borders': theme('colors.orange[700]'),
+            '--tw-format-invert-th-bg': theme('colors.orange[700]'),
+          },
+        },
+      }),
+    },
+  },
+  plugins: [
+    require('flowbite-typography'),
+    // ...
+  ],
+}
+```
+
+Now you can use the `format-red` class and apply these styles.
+
+### Wrapper class
+
+Change the default `format` class to your own choosing by updating the `tailwind.config.js` file:
+
+```javascript
+module.exports = {
+  theme: {
+    // ...
+  },
+  plugins: [
+    require('flowbite-typography')({
+      className: 'custom-class',
+    }),
+  ]
+  ...
+}
+```
+
+### Custom CSS
+
+You can also customize the default CSS by extending the `css` key value pair from the Tailwind configuration file:
+
+```javascript
+module.exports = {
+  theme: {
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            color: '#666',
+            a: {
+              color: '#3182ce',
+              '&:hover': {
+                color: '#2c5282',
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  plugins: [
+    require('flowbite-typography'),
+    // ...
+  ],
+}
+```
+
+## Blog templates
+
+You can check out the following [blog template](https://flowbite.com/blocks/publisher/blog-templates/) layouts from Flowbite Blocks that use the Typography plugin.

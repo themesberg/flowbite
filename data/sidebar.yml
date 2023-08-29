@@ -1,18 +1,43 @@
 - title: Getting started
+  slug: getting-started
   pages:
     - title: Introduction
     - title: Quickstart
-    - title: React
-    - title: Vue
-    - title: Laravel
-    - title: Svelte
-    - title: Rails
-      new: true
-    # - title: Angular
+    - title: TypeScript
     - title: License
     - title: Changelog
 
+- title: Integration guides
+  slug: getting-started
+  pages:
+    - title: React
+    - title: Next.js
+      slug: next-js
+    - title: Vue
+    - title: Nuxt
+      slug: nuxt-js
+    - title: Svelte
+    - title: Angular
+      new: true
+    - title: Astro
+    - title: Remix
+    - title: Meteor.js
+      slug: meteor-js
+      new: true
+    - title: Gatsby
+    - title: SolidJS
+      slug: solid-js
+    - title: Qwik
+    - title: Laravel
+      new: true
+    - title: Symfony
+    - title: Rails
+    - title: Phoenix
+    - title: Django
+    - title: Flask
+
 - title: Customize
+  slug: customize
   pages:
     - title: Configuration
     - title: Dark mode
@@ -22,35 +47,51 @@
     - title: Optimization
 
 - title: Components
+  slug: components
   pages:
-    - title: Alerts
     - title: Accordion
+    - title: Alerts
     - title: Avatar
     - title: Badge
+    - title: Banner
+    - title: Bottom Navigation
     - title: Breadcrumb
     - title: Buttons
-    - title: Button group
+    - title: Button Group
     - title: Card
     - title: Carousel
+    - title: Device Mockups
+    - title: Drawer
     - title: Dropdowns
-    - title: Forms
-    - title: List Group
-    - title: Typography
-    - title: Modal
-    - title: Tabs
-    - title: Navbar
     - title: Footer
-    - title: Sidebar
+    - title: Forms
+    - title: Gallery
+    - title: Indicators
+    - title: Jumbotron
+    - title: KBD
+    - title: List Group
+    - title: Mega menu
+    - title: Modal
+    - title: Navbar
     - title: Pagination
-    - title: Rating
-    - title: Timeline
+    - title: Popover
     - title: Progress
-    - title: Tables
+    - title: Rating
+    - title: Sidebar
+    - title: Skeleton
+    - title: Speed Dial
     - title: Spinner
+    - title: Stepper
+    - title: Tables
+    - title: Tabs
+    - title: Timeline
     - title: Toast
     - title: Tooltips
+    - title: Typography
+    - title: Video
 
 - title: Forms
+  slug: forms
   pages:
     - title: Input Field
     - title: File Input
@@ -65,6 +106,21 @@
     - title: Autocomplete
       new: true
 
-- title: Plugins
+- title: Typography
+  slug: typography
   pages:
+    - title: Headings
+    - title: Paragraphs
+    - title: Blockquote
+    - title: Images
+    - title: Lists
+    - title: Links
+    - title: Text
+    - title: HR
+
+- title: Plugins
+  slug: plugins
+  pages:
+    - title: Charts
+      new: true
     - title: Datepicker

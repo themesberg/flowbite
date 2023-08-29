@@ -5,21 +5,21 @@ description: Learn more about the licensing terms for Flowbite and Tailwind CSS
 group: getting-started
 toc: true
 
-previous: Ruby on Rails
-previousLink: getting-started/rails/
+previous: TypeScript
+previousLink: getting-started/typescript/
 next: Changelog
 nextLink: getting-started/changelog/
 ---
 
 ## Copyright
 
-The Flowbite name and logos are trademarks of Crafty Dwarf Inc.
+The Flowbite name and logos are trademarks of Bergside Inc. Learn more about the [Flowbite Brand Guideline](https://flowbite.com/brand/).
 
 ## Released code
 
 The released code is licensed under the [MIT license](https://github.com/themesberg/flowbite/blob/main/README.md).
 
-Copyright (c) Themesberg (Crafty Dwarf Inc.)
+Copyright (c) Themesberg (Bergside Inc.)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -43,7 +43,7 @@ SOFTWARE.
 
 The docs code is licensed under the [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
 
-**Attribution**: the documentation code was initially forked from [Bootstrap](https://github.com/twbs/bootstrap) created by the [Bootstrap authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter Inc.](https://twitter.com/) and changes have been made since then to adapt to the Tailwind CSS and Flowbite ecosystem and technologies.
+Attribution: the documentation code was initially forked from [Bootstrap](https://github.com/twbs/bootstrap) created by the [Bootstrap authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter Inc.](https://twitter.com/) and changes have been made since then to adapt to the Tailwind CSS and Flowbite ecosystem and technologies.
 
 ## Pro version
 

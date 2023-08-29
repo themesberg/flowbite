@@ -7,13 +7,142 @@ toc: true
 
 previous: License
 previousLink: getting-started/license/
-next: Configuration
-nextLink: customize/configuration/
+next: React
+nextLink: getting-started/react/
 ---
 
 ## Changelog
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
+
+### 1.8.1
+
+- fix `apexcharts` safelist warning in console
+
+### 1.8.0
+
+- added new chart components
+- enable or disable styles via the Flowbite Plugin
+- addded new API option to the dropdowns to prevent closing when clicking on certain elements
+- small bug fixes and improvements overall
+
+### 1.7.0
+
+- integrate new [Flowbite Icons](https://flowbite.com/icons/) with all UI components
+- added new pagination examples and sizes
+- improved spacing and alignment for all buttons with icons
+- improved examples for popovers, toasts, and modals
+- updated docs and website icons
+- update Svelte docs for Svelte 4.0
+
+### 1.6.6
+
+- new device mockups component
+- add nested accordions feature ([#266](https://github.com/themesberg/flowbite/issues/266) issue fixed by (@jneuendorf)[https://github.com/jneuendorf])
+- make init functions (ie. `initDropdowns`, `initFlowbite`) available via the `window` object
+- fix Nuxt.js documentation config path for Tailwind CSS
+
+### 1.6.5
+
+- New gallery component
+- New jumbotron component
+- LiveView support ([issue #486](https://github.com/themesberg/flowbite/issues/486)) for Phoenix by [@jmnda-dev](https://github.com/jmnda-dev)
+- Improve modal responsive behaviour by centering it vertically
+- Improve Svelte getting started guide by [@shinokada](https://github.com/shinokada)
+- Improve font smoothing by adding antialising to the docs and examples
+- Improve navbar spacings and font sizes to reflect Figma design system
+
+### v1.6.4
+
+- New bottom navigation component
+- New sticky banner component
+- Export initFlowbite to set up event listeners for all data attributes
+- Fix for Turbo Frame load events ([issue #88](https://github.com/themesberg/flowbite/issues/88))
+- Include WindiCSS on NPM (thanks to [@rgvillanueva28](https://github.com/rgvillanueva28))
+- Adds close tooltips with esc key to meet WCAG (by [@daveholst](https://github.com/daveholst))
+- Astro integration guide
+- GatsbyJS integration guide 
+- Symfony integration guide
+- SolidJS integration guide
+- Phoenix (Elixir) integration guide
+
+### v1.6.3
+
+- Added dropdown hover functionality with delay option and examples ([issue #208](https://github.com/themesberg/flowbite/issues/208))
+- Fixed clicking outside of the Popover component not closing when using the "click" trigger type ([issue #242](https://github.com/themesberg/flowbite/issues/242))
+- Introduced the "none" option for Tooltip, Speed Dial, Popover and Dropdown components for trigger type ([issue #181](https://github.com/themesberg/flowbite/issues/181))
+- Fixed Tooltip and Popover click events on Safari browsers when using mobile devices ([issue #246](https://github.com/themesberg/flowbite/issues/246) and [issue #413](https://github.com/themesberg/flowbite/issues/413))
+- Improve the consistency of the dropdown components across the whole documentation using `border-lg` ([issue #276](https://github.com/themesberg/flowbite/issues/276))
+- Added the optional closable option to the Modal component preventing it from being closed when hitting the ESC button (thanks for the PR [@CorwinDev](https://github.com/CorwinDev))
+- Improved sidebar component examples by including a hamburger icon and multiple layouts
+
+### v1.6.2
+
+- add event listeners for data attributes back to `index.ts`
+- fix import maps for `flowbite.turbo.min.js.map` for Ruby on Rails
+
+### v1.6.1
+
+- Nuxt integration guide + starter kit
+- Add data attribute initialisation support for Vue 3 and Nuxt
+- Remove event listeners from basic `index.js` file and keep it only for `index.umd.js`
+- Fix drawer flickering issue
+- Update Laravel integration guide with Vite (thanks to [@CorWinDev](https://github.com/CorwinDev) for the PR)
+- Fixed checkbox dark mode focus state (thanks to [@CorWinDev](https://github.com/CorwinDev) for the PR)
+- Added Datepicker turbo load support for Ruby on Rails 7 (thanks to [@travisgalloway](https://github.com/travisgalloway) for the PR)
+
+### v1.6.0
+
+- migrated code to TypeScript & introduced types and interfaces
+- integrated ESlint and Prettier
+- fixed event listeners stacking up for all interactive components
+- improved NPM build scripts
+- new stepper component
+- new indicator component
+- new breadcrumb components
+- new spinner examples
+
+Breaking changes:
+
+- modals no longer get initialized via `data-modal-toggle` and you need to switch to `data-modal-target={modalID}` where the value is the id of the modal
+
+### v1.5.5
+
+- added support for Ruby on Rails 7 import map with turbo
+- improved event listeners for interactive components
+
+### v1.5.4
+
+- released new Speed Dial component
+- modals now close by default when clicking outside
+- add new static options to modals to prevent closing when clicking outside
+- add expand code feature to the docs
+- normalize colors for all label inputs
+- remove "for" and "id" attributes from toggle switch components
+- improve hover and focus style of the hamburger icons
+- update to Tailwind CSS v3.2.2
+
+### v1.5.3
+
+- fix popover / tooltip styles
+
+### v1.5.2
+
+- add new Popover component
+
+### v1.5.1
+
+- fix drawer js build
+
+### v1.5.0
+
+- added new Drawer component
+- added new Skeleton component
+- added new KBD component
+- added new Dropdown and Table components
+- added new Checkbox and Radio examples
+- update documentation code and component preview
+- update table of contents of the docs
 
 ### v1.4.7
 
@@ -138,7 +267,7 @@ Released on September 28th, 2021.
 - fix the responsive scroll issue for modals (if the content was larger than the viewport, elements inside the modal were unaccessible)
 - create a new component called list group which got separated from the button group component
 - improve navigation bar markup by requiring only one list of pages to prevent duplicate content
-- add the possibility to programatically show or hide elements using the `toggleCollapse` global function
+- add the possibility to programmatically show or hide elements using the `toggleCollapse` global function
 
 ### v1.0.2
 

@@ -1,13 +1,17 @@
-<div id="copied-code-alert" class="fixed flex p-4 transition-opacity bg-gray-100 border border-gray-200 rounded-lg opacity-0 right-5 bottom-5 dark:border-gray-700 dshadow-sm dark:bg-gray-800">
+<aside class="fixed z-50 hidden right-5 bottom-5 sm:block">
+    <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7D4KQE&placement=flowbitedesign" id="_carbonads_js"></script>
+  </aside>
+
+<aside id="copied-code-alert" class="fixed z-50 p-4 hidden transition-opacity bg-gray-100 border border-gray-200 rounded-lg opacity-0 bottom-5 left-5 dark:border-gray-700 dshadow-sm dark:bg-gray-800" aria-label="Copied to clipboard success message">
     <svg class="w-5 h-5 text-green-700 dark:text-green-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
     <p class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300">Copied code to clipboard!</p>
-</div>
+</aside>
 
-<footer class="py-12 bg-white xl:py-24 dark:bg-gray-800">
+<footer class="py-12 bg-gray-50 xl:pt-24 dark:bg-gray-800">
     <div class="w-full px-4 mx-auto max-w-8xl">
         <div class="grid gap-12 xl:grid-cols-6 xl:gap-24">
             <div class="col-span-2">
-                <a href="https://flowbite.com" class="flex mb-5">
+                <a href="{{ .Site.Params.homepage }}/" class="flex mb-5">
                     <img src="/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
                 </a>
@@ -18,20 +22,24 @@
                 <h3 class="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">Resources</h3>
                 <ul>
                     <li class="mb-4">
-                        <a href="https://flowbite.com"
-                            class="font-normal text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Flowbite</a>
+                        <a href="{{ .Site.Params.homepage }}/"
+                            class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Documentation</a>
                     </li>
                     <li class="mb-4">
-                        <a href="https://www.figma.com/?ref=flowbite.com" rel="noreferrer nofollow"
-                            class="font-normal text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Figma</a>
+                        <a href="https://flowbite.com/blocks/"
+                            class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Flowbite Blocks</a>
                     </li>
                     <li class="mb-4">
-                        <a href="https://tailwindcss.com/?ref=flowbite.com" rel="noreferrer nofollow"
-                            class="font-normal text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Tailwind CSS</a>
+                        <a href="https://flowbite.com/figma/"
+                            class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Figma Design</a>
                     </li>
                     <li class="mb-4">
-                        <a href="https://flowbite.com/pro/" rel="noreferrer nofollow"
-                            class="font-normal text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Pro version</a>
+                        <a href="https://flowbite.com/icons/"
+                            class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Flowbite Icons</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="{{ .Site.Params.homepage }}/pro/"
+                            class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Pro version</a>
                     </li>
                 </ul>
             </div>
@@ -39,12 +47,19 @@
                 <h3 class="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">Help and support</h3>
                 <ul>
                     <li class="mb-4">
-                        <a href="https://themesberg.com/contact/" rel="noreferrer nofollow"
-                            class="font-normal text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Contact us</a>
+                        <a href="{{ .Site.Params.homepage }}/contact/" rel="noreferrer nofollow"
+                            class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Contact us</a>
                     </li>
                     <li class="mb-4">
                         <a href="https://github.com/themesberg/flowbite/discussions" rel="noreferrer nofollow"
-                            class="font-normal text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Github discussions</a>
+                            class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Github discussions</a>
+                    </li>
+                    <li class="mb-4 flex items-center">
+                        <a href="https://flowbite.com/work-with-us/"
+                            class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Work with us </a>
+                        <span class='bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ml-2'>
+                        New
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -53,15 +68,15 @@
                 <ul>
                     <li class="mb-4">
                         <a href="https://discord.gg/4eeurUVvTy" rel="noreferrer nofollow"
-                            class="font-normal text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Discord</a>
+                            class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Discord</a>
                     </li>
                     <li class="mb-4">
-                        <a href="https://github.com/themesberg" rel="noreferrer nofollow"
-                            class="font-normal text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Github</a>
+                        <a href="https://github.com/themesberg/flowbite"
+                            class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Github</a>
                     </li>
                     <li class="mb-4">
                         <a href="https://twitter.com/zoltanszogyenyi" rel="noreferrer nofollow"
-                            class="font-normal text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Twitter</a>
+                            class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Twitter</a>
                     </li>
                 </ul>
             </div>
@@ -69,21 +84,25 @@
                 <h3 class="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">Legal</h3>
                 <ul>
                     <li class="mb-4">
-                        <a href="https://flowbite.com/license/" class="font-normal text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">License (EULA)</a>
+                        <a href="{{ .Site.Params.homepage }}/license/" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">License (EULA)</a>
                     </li>
                     <li class="mb-4">
-                        <a href="https://themesberg.com/privacy-policy/" rel="noreferrer nofollow"
-                            class="font-normal text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Privacy Policy</a>
+                        <a href="https://flowbite.com/privacy-policy/"
+                            class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Privacy Policy</a>
                     </li>
                     <li class="mb-4">
-                        <a href="https://themesberg.com/terms-and-conditions/" rel="noreferrer nofollow"
-                            class="font-normal text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Terms & Conditions</a>
+                        <a href="https://flowbite.com/terms-and-conditions/"
+                            class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Terms & Conditions</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="https://flowbite.com/brand/"
+                            class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Brand guideline</a>
                     </li>
                 </ul>
             </div>
         </div>
         <hr class="my-8 border-gray-200 dark:border-gray-700 lg:my-12" />
-        <span class="block text-center text-gray-600 dark:text-gray-400 font-">© 2019-<span id="currentYear"></span> <a href="https://flowbite.com">Flowbite™</a> is a registered trademark. All Rights Reserved.
+        <span class="block text-center text-gray-600 dark:text-gray-400 font-">© 2019-<span id="currentYear"></span> <a href="{{ .Site.Params.homepage }}/">Flowbite™</a> is a registered trademark. All Rights Reserved.
         </span>
     </div>
 </footer>

@@ -6,10 +6,10 @@ group: getting-started
 toc: true
 requires_laravel: true
 
-previous: Vue
-previousLink: getting-started/vue/
-next: Svelte
-nextLink: getting-started/svelte/
+previous: Qwik
+previousLink: getting-started/qwik/
+next: Symfony
+nextLink: getting-started/symfony/
 ---
 
 Laravel is the most popular PHP web framework based on the model-view-controller (MCV) model that helps you build modern web applications and API's.
@@ -42,25 +42,31 @@ laravel new awesome-project
 cd awesome-project
 ```
 
+Start the development server using the following command:
+
+```bash
+php artisan serve
+```
+
 You can now access the Laravel application on `http://localhost:8000`.
 
 This command will initialize a blank Laravel project that you can get started with.
 
-3. Install Tailwind CSS and Flowbite using NPM:
+4. Install Tailwind CSS and Flowbite using NPM:
 
 ```javascript
 npm install -D tailwindcss postcss autoprefixer flowbite
 ```
 
-4. Create a Tailwind CSS config file:
+5. Create a Tailwind CSS config file:
 
 ```bash
-npx tailwindcss init
+npx tailwindcss init -p
 ```
 
 A new `tailwind.config.js` file will be created inside your root folder.
 
-5. Add the view paths and require Flowbite as a plugin inside `tailwind.config.js`:
+6. Add the view paths and require Flowbite as a plugin inside `tailwind.config.js`:
 
 ```javascript
 module.exports = {
@@ -79,19 +85,7 @@ module.exports = {
   }
 ```
 
-This will tell the compiler from Tailwidn what files to look for to properly apply the classes inside the final CSS file and it will also install the extra plugin options from Flowbite.
-
-6. Add Tailwind CSS to your Laravel Mix configuration by requiring it inside the `webpack.mix.js` file:
-
-```javascript
-mix.js("resources/js/app.js", "public/js")
-  .postCss("resources/css/app.css", "public/css", [
-
-    // add here
-    require("tailwindcss"),
-
-  ]);
-```
+This will tell the compiler from Tailwind what files to look for to properly apply the classes inside the final CSS file and it will also install the extra plugin options from Flowbite.
 
 7. Add the directives inside the `./resources/css/app.css` file:
 
@@ -101,25 +95,25 @@ mix.js("resources/js/app.js", "public/js")
 @tailwind utilities;
 ```
 
-8. Include the `app.css` file inside the `<head>` tag of your view templates:
+8. Make sure your compiled CSS and JS is included in the `<head>` then start using Tailwind’s utility classes to style your content.
 
-```html
-<link href="/css/app.css" rel="stylesheet">
+```javascript
+@vite(['resources/css/app.css','resources/js/app.js'])
 ```
 
-9. Require the `flowbite.js` file before the end of the `<body>` tag:
+9. Import the Flowbite JavaScript package inside the `./resources/js/app.js` file to enable the interactive components such as modals, dropdowns, navbars, and more.
 
-```html
-<script src="../path/to/flowbite/dist/flowbite.js"></script>
+```javascript
+import 'flowbite';
 ```
 
 Alternatively, you can also include the JavaScript file using CDN:
 
 ```html
-<script src="https://unpkg.com/flowbite@{{< current_version >}}/dist/flowbite.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
 ```
 
-Now that you've set everything up start up a local development server using `php artisan serve` and run the build process for Webpack by using `npm run watch`.
+Now that you've set everything up start up a local development server using `php artisan serve` and run the build process for Vite by using `npm run dev` or build it for production using `npm run build`.
 
 ## Flowbite components
 

@@ -325,6 +325,12 @@ export function initModals() {
                     if (modal.object.isVisible) {
                         modal.object.hide();
                     }
+                    const backdrop = document.querySelector('[modal-backdrop]');
+                    if (backdrop) {
+                        backdrop.remove();
+                    } else {
+                        console.error("Backdrop not found or already removed.");
+                    }
                 });
             } else {
                 console.error(

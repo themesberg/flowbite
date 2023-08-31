@@ -44,6 +44,7 @@ class Modal implements ModalInterface {
         if (this._isHidden) {
             const backdropEl = document.createElement('div');
             backdropEl.setAttribute('modal-backdrop', '');
+            backdropEl.setAttribute('modal-related-id', this._targetEl.id);
             backdropEl.classList.add(
                 ...this._options.backdropClasses.split(' ')
             );
@@ -325,11 +326,16 @@ export function initModals() {
                     if (modal.object.isVisible) {
                         modal.object.hide();
                     }
-                    const backdrop = document.querySelector('[modal-backdrop]');
-                    if (backdrop) {
-                        backdrop.remove();
-                    } else {
-                        console.error("Backdrop not found or already removed.");
+
+                    const backdrops =
+                        document.querySelectorAll('[modal-backdrop]');
+
+                    const targetBackdrop = Array.from(backdrops).find(
+                        (el) => el.getAttribute('modal-related-id') === modalId
+                    );
+
+                    if (targetBackdrop) {
+                        targetBackdrop.remove();
                     }
                 });
             } else {

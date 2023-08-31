@@ -55,10 +55,12 @@ class Modal implements ModalInterface {
 
     _destroyBackdropEl() {
         if (!this._isHidden) {
-            const backdrop = document.querySelector('[modal-backdrop]');
+            const targetBackdrop = document.querySelector(
+                `[modal-related-id="${this._targetEl.id}"]`
+            );
 
-            if (backdrop) {
-                backdrop.remove();
+            if (targetBackdrop) {
+                targetBackdrop.remove();
             }
         }
     }

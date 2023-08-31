@@ -327,11 +327,8 @@ export function initModals() {
                         modal.object.hide();
                     }
 
-                    const backdrops =
-                        document.querySelectorAll('[modal-backdrop]');
-
-                    const targetBackdrop = Array.from(backdrops).find(
-                        (el) => el.getAttribute('modal-related-id') === modalId
+                    const targetBackdrop = document.querySelector(
+                        `[modal-related-id="${modalId}"]`
                     );
 
                     if (targetBackdrop) {

@@ -42,14 +42,21 @@ class Modal implements ModalInterface {
 
     _createBackdrop() {
         if (this._isHidden) {
-            const backdropEl = document.createElement('div');
-            backdropEl.setAttribute('modal-backdrop', '');
-            backdropEl.setAttribute('modal-related-id', this._targetEl.id);
-            backdropEl.classList.add(
-                ...this._options.backdropClasses.split(' ')
-            );
-            document.querySelector('body').append(backdropEl);
-            this._backdropEl = backdropEl;
+            // Check if a modal-backdrop is already present
+            const existingBackdrop = document.querySelector('[modal-backdrop]');
+
+            if (!existingBackdrop) {
+                const backdropEl = document.createElement('div');
+                backdropEl.setAttribute('modal-backdrop', '');
+                backdropEl.setAttribute('modal-related-id', this._targetEl.id);
+                backdropEl.classList.add(
+                    ...this._options.backdropClasses.split(' ')
+                );
+                document.querySelector('body').append(backdropEl);
+                this._backdropEl = backdropEl;
+            } else {
+                this._backdropEl = null;
+            }
         }
     }
 

@@ -26,29 +26,33 @@ In this guide you will learn how to build a new Blazor Project, and how to integ
 You'll need to install and configure the .NET SDK, Tailwind CSS, Blazor and Flowbite into your application. Ensure you have installed NPM and Node.js on your local environment. Let's get started!
 
 ## Create a new Blazor project
+
 Start by downloading and installing the .NET SDK. The SDK allows us to develop apps with .NET frameworks. The Blazor website detects with version you'll need for your local environment. Visit www.microsoft.net to know which SDK supports your OS version and you machine's architecture.
 
 1. Start by installing the Microsoft package repository that contains the package signing key:
 
+```bash
 wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
+```
 
-2. Install the .NET SDK
+2. Install the .NET SDK:
 
-``` Bash
+```bash
 sudo apt-get update && \
   sudo apt-get install -y dotnet-sdk-7.0
   ```
 
 Open your terminal and run this command to confirm successful installation:
 
-```Bash
+```bash
 -$ dotnet
 ```
+
 This is the output you should see to confirm that you installed the .NET SDK successfully
 
-```Bash
+```bash
 Usage: dotnet [options]
 Usage: dotnet [path-to-application]
 
@@ -61,29 +65,30 @@ Options:
 path-to-application:
   The path to an application .dll file to execute.
 ```
+
 3. Create a New Blazor Project
 
 Run this command in your terminal to create a Blazor project. This command creates your project's scaffold and a directory called BlazorApp: 
 
-```Bash
+```bash
 dotnet new blazorserver -o BlazorApp --no-https -f net7.0
 ```
 Navigate into the BlazorApp directory:
 
-```Bash
+```bash
 cd BlazorApp
 ```
 
 Run this command in your terminal to launch your application and watch for changes:
 
-```Bash
+```bash
 dotnet watch
 ```
 Your terminal will show that your app is listening on http://localhost:<port number> and should launch on your web browser. You can also click on the port to run your application. 
 
 Congratulations you have now installed and ran your first Blazor project! In the next section, we will configure Tailwind CSS with Blazor
 
-## Install and configure Tailwind CSS in a Blazor Project
+## Install Tailwind CSS
 
 There are two ways to install Tailwind in a Blazor Project: By using Tailwind CLI or PostCSS. We will use PostCSS in this guide. PostCSS helps in transforming tailwindcss to styling that is relevant to your project. It also helps you remove unnecessary styling which helps in reducing the size of your files.  
 
@@ -91,32 +96,34 @@ There are two ways to install Tailwind in a Blazor Project: By using Tailwind CL
 
 2. Next, ensure that you're still in the BlazorApp Directory then run this command in your terminal:
 
-```Bash
+```bash
 npm install tailwindcss postcss autoprefixer postcss-cli
 ```
 
 3. Create & Configure the PostCSS file
-Create a postcss.config.js file in the BlazorApp directory or your root directory and add these configurations:
 
-```Bash
+Create a `postcss.config.js` file in the BlazorApp directory or your root directory and add these configurations:
+
+```bash
 module.exports = {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     }
   }
-  ```
-4. Configure Tailwind CSS
-Run this command in your root directory to generate a Tailwind config file. :
+```
+  
+1. Configure Tailwind CSS
 
-```Bash
+Run this command in your root directory to generate a Tailwind CSS configuration file:
+
+```bash
 npx tailwindcss init
 ```
 
 You'll now 'tell' Tailwind to watch for files containing Tailwind classes so that the .NET CLI can watch for changes in your project. For our Blazor project, the files that Tailwind needs to track are html, cshtml or Razor files. Add the template paths to the content section in your Tailwind config file:
 
-```Bash
-
+```bash
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./**/*.{razor,html,cshtml}"],
@@ -127,9 +134,9 @@ module.exports = {
 }
 ```
 
-5. Next, create an app.css file in the wwwroot folder (within the css folder that you did not delete earlier) Add these css directives to app.css:
+1. Next, create an app.css file in the `wwwroot/` folder (within the css folder that you did not delete earlier) Add these css directives to app.css:
 
-```Bash
+```bash
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -137,13 +144,13 @@ module.exports = {
 
 6. Go to your terminal and run the Tailwind CLI to generate the output CSS watch for changes in your project:
 
-```Bash
+```bash
 npx tailwindcss -i wwwroot/css/app.css -o wwwroot/css/app.min.css --watch
 ```
 
-7. Add a css reference to the host file in the Pages directory:
+7. Add a CSS reference to the host file in the Pages directory:
 
-```Bash
+```bash
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,38 +160,39 @@ npx tailwindcss -i wwwroot/css/app.css -o wwwroot/css/app.min.css --watch
     </head>
 ```
 
-8. Finally, run `dotnet watch` to start adding Taliwnd classes to your Blazor project. 
+8. Finally, run `dotnet watch` to start adding Tailwind classes to your Blazor project. 
 
 You have now successfully created:
+
 - A new Blazor project
 - Installed and configured Tailwind CSS with Blazor
 
 Up next, we'll install and configure Flowbite in our Blazor project. We'll also showcase how to use Flowbite components in a Blazor project through dropdown component demo. 
 
 ## Install Flowbite
-Flowbite-blazor is the official Flowbite compinent library for Blazor. Use the Flowbite-Blazor Starter to start using Flowbite components in your Blazor project. 
+
+Flowbite Blazor is the official Flowbite component library for Blazor. Use the Flowbite Blazor Starter to start using Flowbite components in your Blazor project. 
 
 1. Install Flowbite via NPM 
 
-```Bash
+```bash
 npm install flowbite
 ```
 
-2. Require flowbite in the Tailwind config file as a plugin:
+2. Require Flowbite in the Tailwind configuration file as a plugin:
 
-```Bash
+```bash
 module.exports = {
   // other options
   plugins: [
     require('flowbite/plugin')
   ],
 }
-
 ```
 
 3. Add the Flowbite source files to the content module to start applying classes from the Flowbite interactive elements:
 
-```Bash
+```bash
 module.exports = {
   content: [
     // other files...
@@ -194,9 +202,9 @@ module.exports = {
 }
 ```
 
-4. Add a script tag with this path before the end of the body tag in the host.cshtml page:
+4. Add a script tag with this path before the end of the body tag in the `host.cshtml` page:
 
-```Bash
+```bash
 ...
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
   </body>
@@ -205,12 +213,13 @@ module.exports = {
 
 You have successfully installed Flowbite and can start using the components to build your Blazor project.
 
-## Flowbite Components in a Blazor Project
+## UI components for Blazor
+
 Now that you have successfully installed Blazor.NET, Tailwind CSS and Flowbite, you can start using Flowbite's components such as navbars, buttons, and modals in your project.
 
-We'll use a dropdown component with the hover effect as an example. Copy/paste this [code block](https://flowbite.com/docs/components/dropdowns/) into your Pages/Index.razor file:
+We'll use a dropdown component with the hover effect as an example. Copy/paste this [code block](https://flowbite.com/docs/components/dropdowns/) into your `Pages/Index.razor` file:
 
-```Bash
+```bash
 @page "/"
 
 <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="{hover|click}" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown hover <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -233,10 +242,9 @@ We'll use a dropdown component with the hover effect as an example. Copy/paste t
       </li>
     </ul>
 </div>
-
 ```
 
-You have now successfully installed and configured Tailwind CSS and Flowbite into a Blazor project. [Learn more](https://github.com/themesberg/flowbite-blazor) about the Flowbite-Blazor library and how to customize it to your project.
+You have now successfully installed and configured Tailwind CSS and Flowbite into a Blazor project. [Learn more](https://github.com/themesberg/flowbite-blazor) about the Flowbite Blazor library and how to customize it to your project.
 
 
 

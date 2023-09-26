@@ -6,10 +6,10 @@ group: getting-started
 toc: true
 requires_blazor: true
 
-previous: 
-previousLink: 
-next: 
-nextLink: 
+previous: Flask
+previousLink: getting-started/flask/
+next: Configuration
+nextLink: customize/configuration/
 ---
 
 

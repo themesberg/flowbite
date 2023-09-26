@@ -8,8 +8,8 @@ requires_flask: true
 
 previous: Django
 previousLink: getting-started/django/
-next: Configuration
-nextLink: customize/configuration/
+next: Blazor (.NET)
+nextLink: getting-started/blazor/
 ---
 
 [Flask](https://flask.palletsprojects.com/) is an open-source micro web framework based on Python that allows you to quickly build websites using only a single Python file without requiring any other particular tools or libraries.

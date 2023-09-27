@@ -261,6 +261,12 @@ Copy and paste this [dropdown component example](https://flowbite.com/docs/compo
 
 Now that you've set up Flowbite with Blazor you can explore the whole collection of UI components from the [Flowbite Library](https://flowbite.com/docs/getting-started/introduction/) or use the [Flowbite Blocks](https://flowbite.com/blocks/) collection to start building websites.
 
+## WASM integration
+
+This guide does not include WebAssembly (WASM) support but you can still use Flowbite with Blazor WASM by setting up the [Flowbite init functions](https://flowbite.com/docs/getting-started/quickstart/#init-functions) using an [interop layer](https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-7.0) that ensures the DOM rendering before applying the event listeners via the data attributes API.
+
+Help needed: if you have experience with Blazor WASM and would like to contribute to this guide, then you can [edit this file on GitHub](https://github.com/themesberg/flowbite/blob/main/content/getting-started/blazor.md) and create a pull request. Thank you!
+
 ## Blazor starter project
 
 The open-source community created an [open-source Blazor starter project](https://github.com/themesberg/tailwind-blazor-starter) that you can clone and use as a starting point for building websites with Blazor, .NET, Tailwind CSS and Flowbite.

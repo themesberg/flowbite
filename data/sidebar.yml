@@ -35,6 +35,8 @@
     - title: Phoenix
     - title: Django
     - title: Flask
+    - title: Blazor
+      new: true
 
 - title: Customize
   slug: customize

@@ -29,7 +29,7 @@ You'll need to install and configure the .NET SDK, Tailwind CSS, Blazor and Flow
 
 ## Create a new Blazor project
 
-Start by downloading and installing the .NET SDK. The SDK allows us to develop apps with .NET frameworks. The Blazor website detects which version you'll need for your local environment. Visit Microsoft.net to know which SDK supports your OS version and you machine's architecture.
+Start by downloading and installing the .NET SDK. The SDK allows us to develop apps with .NET frameworks. The Blazor website detects which version you'll need for your local environment.
 
 1. Start by installing the Microsoft package repository that contains the package signing key:
 
@@ -39,11 +39,19 @@ sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
 ```
 
+If you're running on MacOS or another Linux distribution, visit the [Microsoft website](https://learn.microsoft.com/en-us/dotnet/core/install/macos) to know how to install the SDK on your local environment. .NET can be installed on Windows, MacOS, and Linux.
+
 2. Install the .NET SDK (software development kit):
 
 ```bash
 sudo apt-get update && \
 sudo apt-get install -y dotnet-sdk-7.0
+```
+
+You can also install the .NET SDK via HomeBrew:
+
+```bash
+brew install --cask dotnet
 ```
 
 Open your terminal and run this command to confirm a successful installation:
@@ -211,7 +219,7 @@ module.exports = {
 
 ```bash
     <!-- ... -->
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
   </body>
 </html>
 ```
@@ -222,17 +230,19 @@ You have successfully installed Flowbite and can start using the components to b
 
 Now that you have successfully installed Blazor.NET, Tailwind CSS and Flowbite, you can start using Flowbite's UI components such as navbars, buttons, and modals in your project.
 
-We'll use a dropdown element with the hover effect as an example. Copy/paste this [code block](https://flowbite.com/docs/components/dropdowns/) into your `Pages/Index.razor` file:
+Copy and paste this [dropdown component example](https://flowbite.com/docs/components/dropdowns/) into your `Pages/Index.razor` file:
 
 ```bash
 @page "/"
 
-<button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="{hover|click}" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown hover <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+<button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-  </svg></button>
+  </svg>
+</button>
+
 <!-- Dropdown menu -->
-<div id="dropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
       </li>
@@ -249,6 +259,10 @@ We'll use a dropdown element with the hover effect as an example. Copy/paste thi
 </div>
 ```
 
+Now that you've set up Flowbite with Blazor you can explore the whole collection of UI components from the [Flowbite Library](https://flowbite.com/docs/getting-started/introduction/) or use the [Flowbite Blocks](https://flowbite.com/blocks/) collection to start building websites.
+
 ## Blazor starter project
 
 The open-source community created an [open-source Blazor starter project](https://github.com/themesberg/tailwind-blazor-starter) that you can clone and use as a starting point for building websites with Blazor, .NET, Tailwind CSS and Flowbite.
+
+There's also an official [Flowbite Blazor](https://github.com/themesberg/flowbite-blazor) UI library that the open-source community is working on which should be the native solution for Blazor and .NET applications. Contributions are more than welcome!

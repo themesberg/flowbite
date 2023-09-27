@@ -29,7 +29,7 @@ You'll need to install and configure the .NET SDK, Tailwind CSS, Blazor and Flow
 
 ## Create a new Blazor project
 
-Start by downloading and installing the .NET SDK. The SDK allows us to develop apps with .NET frameworks. The Blazor website detects with version you'll need for your local environment. Visit Microsoft.net to know which SDK supports your OS version and you machine's architecture.
+Start by downloading and installing the .NET SDK. The SDK allows us to develop apps with .NET frameworks. The Blazor website detects which version you'll need for your local environment. Visit Microsoft.net to know which SDK supports your OS version and you machine's architecture.
 
 1. Start by installing the Microsoft package repository that contains the package signing key:
 
@@ -46,7 +46,7 @@ sudo apt-get update && \
 sudo apt-get install -y dotnet-sdk-7.0
 ```
 
-Open your terminal and run this command to confirm successful installation:
+Open your terminal and run this command to confirm a successful installation:
 
 ```bash
 -$ dotnet
@@ -89,7 +89,9 @@ dotnet watch
 ```
 Your terminal will show that your app is listening on `http://localhost:<port number>` and should launch on your web browser. You can also click on the port to run your application. 
 
-Congratulations! You have now installed and ran your first Blazor project. In the next section, we will configure Tailwind CSS with Blazor.
+Congratulations! You have now installed and ran your first Blazor project. 
+
+In the next section, we will configure Tailwind CSS with Blazor.
 
 ## Install Tailwind CSS
 
@@ -97,7 +99,7 @@ There are two ways to install Tailwind in a Blazor Project: by using the Tailwin
 
 PostCSS helps in transforming `tailwindcss` to styling that is relevant to your project. It also helps you remove unnecessary styling which helps in reducing the size of your files.  
 
-1. Start by removing the pre-installed stylesheets in the `wwwroot/` folder. Keep the CSS folder because that's what we'll use to store our Tailwind input & output CSS files.
+1. Start by removing the pre-installed stylesheets in the `wwwroot/` folder. Keep the CSS folder because that's what we'll use to store our Tailwind input & output CSS files
 
 2. Next, ensure that you're still in the BlazorApp Directory then run this command in your terminal:
 
@@ -105,7 +107,7 @@ PostCSS helps in transforming `tailwindcss` to styling that is relevant to your 
 npm install tailwindcss postcss autoprefixer postcss-cli
 ```
 
-3. Create and configure the PostCSS file:
+3. Create and configure the PostCSS file
 
 Create a `postcss.config.js` file in the BlazorApp directory or your root directory and add these configurations:
 
@@ -174,9 +176,9 @@ Up next, we'll install and configure Flowbite in our Blazor project. We'll also 
 
 ## Install Flowbite
 
-Flowbite Blazor is the official Flowbite UI component library for Blazor. Use the Flowbite Blazor Starter project to start using Flowbite components in your Blazor project. 
+Flowbite is an open-source UI component library that is built with Tailwind CSS and vanilla JavaScript. Here's how you can install and configure it by following these steps to make it work with our Blazor project:
 
-1. Install Flowbite via NPM:
+1. First, you need to install Flowbite via NPM:
 
 ```bash
 npm install flowbite
@@ -193,7 +195,7 @@ module.exports = {
 }
 ```
 
-3. Add the Flowbite source files to the content module to start applying classes from the interactive UI components:
+3. Add the Flowbite source files to the content module to start applying utility classes from the interactive UI components such as the dropdowns, modals, and navbars:
 
 ```bash
 module.exports = {
@@ -208,7 +210,7 @@ module.exports = {
 4. Add a script tag with this path before the end of the body tag in the `host.cshtml` page:
 
 ```bash
-...
+    <!-- ... -->
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
   </body>
 </html>

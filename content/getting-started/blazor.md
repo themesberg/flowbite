@@ -23,7 +23,7 @@ Blazor provides all the scaffolding, abstractions, tooling and optimizations you
 
 ## Requirements
 
-In this guide you will learn how to build a new Blazor Project, and how to integrate Flowbite UI components into your application. We'll use a modal component for this exercise to demonstrate a real use case. 
+In this guide, you will learn how to build a new Blazor Project, and how to integrate Flowbite UI components into your application. We'll use a modal component for this exercise to demonstrate a real use case. 
 
 You'll need to install and configure the .NET SDK, Tailwind CSS, Blazor and Flowbite into your application. Ensure you have installed NPM and Node.js on your local environment. Let's get started!
 
@@ -39,7 +39,7 @@ sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
 ```
 
-If you're running on MacOS or another Linux distribution, visit the [Microsoft website](https://learn.microsoft.com/en-us/dotnet/core/install/macos) to know how to install the SDK on your local environment. .NET can be installed on Windows, MacOS, and Linux.
+If you're running on MacOS or another Linux distribution, visit the [Microsoft website](https://learn.microsoft.com/en-us/dotnet/core/install/macos) to learn how to install the SDK on your local environment. .NET can be installed on Windows, MacOS, and Linux.
 
 2. Install the .NET SDK (software development kit):
 
@@ -97,7 +97,7 @@ dotnet watch
 ```
 Your terminal will show that your app is listening on `http://localhost:<port number>` and should launch on your web browser. You can also click on the port to run your application. 
 
-Congratulations! You have now installed and ran your first Blazor project. 
+Congratulations! You have now installed and run your first Blazor project. 
 
 In the next section, we will configure Tailwind CSS with Blazor.
 
@@ -134,7 +134,7 @@ Run this command in your root directory to generate a Tailwind CSS configuration
 npx tailwindcss init
 ```
 
-You'll now "tell" Tailwind to watch for files containing utility classes classes so that the .NET CLI can watch for changes in your project. For our Blazor project, the files that Tailwind needs to track are `.html`, `.cshtml` or Razor files. Add the template paths to the content section in your Tailwind config file:
+You'll now "tell" Tailwind to watch for files containing utility classes so that the .NET CLI can watch for changes in your project. For our Blazor project, the files that Tailwind needs to track are `.html`, `.cshtml` or Razor files. Add the template paths to the content section in your Tailwind config file:
 
 ```bash
 /** @type {import('tailwindcss').Config} */
@@ -147,7 +147,7 @@ module.exports = {
 }
 ```
 
-4. Next, create an `app.css` file in the `wwwroot/` folder (within the CSS folder that you did not delete earlier) Add these CSS directives to `app.css`:
+1. Next, create an `app.css` file in the `wwwroot/` folder (within the CSS folder that you did not delete earlier) Add these CSS directives to `app.css`:
 
 ```bash
 @tailwind base;

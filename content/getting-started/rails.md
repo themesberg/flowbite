@@ -182,6 +182,7 @@ Don't forget to also import it inside your `application.js` file:
 
 ```javascript
 import 'flowbite-datepicker';
+import 'flowbite/dist/datepicker.turbo.js';
 ```
 
 ## Building your project

@@ -70,7 +70,15 @@
         </div>
       {{ end }}
       </div>
-      <div class="flex justify-end col-span-1">   
+      <div class="flex justify-end col-span-1">  
+        <button {{ if $id }} data-tooltip-target="{{ $id }}-toggle-rtl"{{ end }} type="button" class="flex items-center w-9 h-9 mr-3 justify-center text-xs font-medium text-gray-700 bg-white border border-gray-200 rounded-lg toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+          RTL
+          <span class="sr-only">Toggle RTL</span>
+        </button> 
+        <div id="{{ $id }}-toggle-rtl" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <span class="toggle-dark-state-tooltip-text">Toggle RTL mode</span>
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
         {{- if eq $show_dark true -}}
           <button {{ if $id }} data-tooltip-target="{{ $id }}-toggle-dark-mode-tooltip"{{ end }} type="button" data-toggle-dark="light" class="flex items-center w-9 h-9 justify-center text-xs font-medium text-gray-700 bg-white border border-gray-200 rounded-lg toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
             <svg data-toggle-icon="moon" class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">

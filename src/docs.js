@@ -136,14 +136,16 @@ const updatePreviewThemeToggleButton = (darkModeButtonEl, theme) => {
         moonIconEl.classList.add('hidden');
         sunIconEl.classList.remove('hidden');
         if (tooltipId) {
-            buttonTextEl.textContent = 'Toggle light mode';
+            buttonTextEl.querySelector('.tooltip-text').textContent =
+                'Toggle light mode';
         }
     } else {
         darkModeButtonEl.setAttribute('data-toggle-dark', 'light');
         moonIconEl.classList.remove('hidden');
         sunIconEl.classList.add('hidden');
         if (tooltipId) {
-            buttonTextEl.textContent = 'Toggle dark mode';
+            buttonTextEl.querySelector('.tooltip-text').textContent =
+                'Toggle dark mode';
         }
     }
 };
@@ -171,12 +173,18 @@ const initiatePreviewState = (element) => {
                 RTLButton.setAttribute('data-toggle-direction', 'rtl');
                 updateiFrameRTL(iframeCodeEl, 'rtl');
                 RTLButton.textContent = 'RTL';
+                RTLButton.nextElementSibling.querySelector(
+                    '.tooltip-text'
+                ).textContent = 'Toggle RTL mode';
             }
 
             if (RTLstate === 'rtl') {
                 RTLButton.setAttribute('data-toggle-direction', 'ltr');
                 updateiFrameRTL(iframeCodeEl, 'ltr');
                 RTLButton.textContent = 'LTR';
+                RTLButton.nextElementSibling.querySelector(
+                    '.tooltip-text'
+                ).textContent = 'Toggle LTR mode';
             }
         });
     }

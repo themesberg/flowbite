@@ -75,7 +75,7 @@
           RTL
         </button> 
         <div id="{{ $id }}-toggle-rtl" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-            <span class="toggle-direction-state-tooltip-text">Toggle RTL mode</span>
+            <span class="tooltip-text">Toggle RTL mode</span>
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
         {{- if eq $show_dark true -}}
@@ -90,7 +90,7 @@
           </button>
           {{ if $id }}
           <div id="{{ $id }}-toggle-dark-mode-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-              <span class="toggle-dark-state-tooltip-text">Toggle dark mode</span>
+              <span class="tooltip-text">Toggle dark mode</span>
               <div class="tooltip-arrow" data-popper-arrow></div>
           </div>
           {{ end }}

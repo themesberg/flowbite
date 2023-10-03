@@ -172,19 +172,19 @@ const initiatePreviewState = (element) => {
             if (RTLstate === 'ltr') {
                 RTLButton.setAttribute('data-toggle-direction', 'rtl');
                 updateiFrameRTL(iframeCodeEl, 'rtl');
-                RTLButton.textContent = 'RTL';
+                RTLButton.textContent = 'LTR';
                 RTLButton.nextElementSibling.querySelector(
                     '.tooltip-text'
-                ).textContent = 'Toggle RTL mode';
+                ).textContent = 'Toggle LTR mode';
             }
 
             if (RTLstate === 'rtl') {
                 RTLButton.setAttribute('data-toggle-direction', 'ltr');
                 updateiFrameRTL(iframeCodeEl, 'ltr');
-                RTLButton.textContent = 'LTR';
+                RTLButton.textContent = 'RTL';
                 RTLButton.nextElementSibling.querySelector(
                     '.tooltip-text'
-                ).textContent = 'Toggle LTR mode';
+                ).textContent = 'Toggle RTL mode';
             }
         });
     }

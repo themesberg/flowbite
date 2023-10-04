@@ -6,6 +6,7 @@ import type {
 } from '@popperjs/core';
 import type { DropdownOptions } from './types';
 import { DropdownInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: DropdownOptions = {
     placement: 'bottom',
@@ -44,6 +45,7 @@ class Dropdown implements DropdownInterface {
         if (this._triggerEl) {
             this._setupEventListeners();
         }
+        instances.addInstance('Dropdown', this);
     }
 
     _setupEventListeners() {

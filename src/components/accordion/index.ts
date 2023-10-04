@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { AccordionItem, AccordionOptions } from './types';
 import { AccordionInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: AccordionOptions = {
     alwaysOpen: false,
@@ -37,6 +38,7 @@ class Accordion implements AccordionInterface {
                 });
             });
         }
+        instances.addInstance('Accordion', this);
     }
 
     getItem(id: string) {

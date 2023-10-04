@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { DialOptions, DialTriggerType } from './types';
 import { DialInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: DialOptions = {
     triggerType: 'hover',
@@ -51,6 +52,7 @@ class Dial implements DialInterface {
                 });
             });
         }
+        instances.addInstance('Dial', this);
     }
 
     hide() {

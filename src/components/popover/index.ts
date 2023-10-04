@@ -6,6 +6,7 @@ import type {
 } from '@popperjs/core';
 import type { PopoverOptions } from './types';
 import { PopoverInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: PopoverOptions = {
     placement: 'top',
@@ -42,6 +43,7 @@ class Popover implements PopoverInterface {
         if (this._triggerEl) {
             this._setupEventListeners();
         }
+        instances.addInstance('Popover', this);
     }
 
     _setupEventListeners() {

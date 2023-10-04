@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { ModalInstance, ModalOptions } from './types';
 import { ModalInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: ModalOptions = {
     placement: 'center',
@@ -38,6 +39,7 @@ class Modal implements ModalInterface {
                 this._targetEl.classList.add(c);
             });
         }
+        instances.addInstance('Modal', this);
     }
 
     _createBackdrop() {

@@ -6,6 +6,7 @@ import type {
     RotationItems,
 } from './types';
 import { CarouselInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: CarouselOptions = {
     defaultPosition: 0,
@@ -71,6 +72,7 @@ class Carousel implements CarouselInterface {
                 this.slideTo(position);
             });
         });
+        instances.addInstance('Carousel', this);
     }
 
     getItem(position: number) {

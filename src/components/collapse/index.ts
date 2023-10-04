@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { CollapseOptions } from './types';
 import { CollapseInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: CollapseOptions = {
     onCollapse: () => {},
@@ -40,6 +41,7 @@ class Collapse implements CollapseInterface {
                 this.toggle();
             });
         }
+        instances.addInstance('Collapse', this);
     }
 
     collapse() {

@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { DrawerInstance, DrawerOptions, PlacementClasses } from './types';
 import { DrawerInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: DrawerOptions = {
     placement: 'left',
@@ -53,6 +54,7 @@ class Drawer implements DrawerInterface {
                 }
             }
         });
+        instances.addInstance('Drawer', this);
     }
 
     hide() {

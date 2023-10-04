@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { DismissOptions } from './types';
 import { DismissInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: DismissOptions = {
     transition: 'transition-opacity',
@@ -31,6 +32,7 @@ class Dismiss implements DismissInterface {
                 this.hide();
             });
         }
+        instances.addInstance('Dismiss', this);
     }
 
     hide() {

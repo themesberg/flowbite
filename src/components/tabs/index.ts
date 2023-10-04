@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { TabItem, TabsOptions } from './types';
 import { TabsInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: TabsOptions = {
     defaultTabId: null,
@@ -40,6 +41,7 @@ class Tabs implements TabsInterface {
                 });
             });
         }
+        instances.addInstance('Tabs', this);
     }
 
     getActiveTab() {

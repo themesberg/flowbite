@@ -6,6 +6,7 @@ import type {
 } from '@popperjs/core';
 import type { TooltipOptions } from './types';
 import { TooltipInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: TooltipOptions = {
     placement: 'top',
@@ -41,6 +42,7 @@ class Tooltip implements TooltipInterface {
         if (this._triggerEl) {
             this._setupEventListeners();
         }
+        instances.addInstance('Tooltip', this);
     }
 
     _setupEventListeners() {

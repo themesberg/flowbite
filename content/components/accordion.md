@@ -6,8 +6,8 @@ group: components
 toc: true
 requires_js: true
 
-previous: Optimization
-previousLink: customize/optimization/
+previous: RTL (Right-To-Left)
+previousLink: customize/rtl/
 next: Alerts
 nextLink: components/alerts/
 ---

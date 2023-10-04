@@ -1,11 +1,27 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { AccordionItem, AccordionOptions } from './types';
 import { AccordionInterface } from './interface';
+import { getPrefixedDataAttributes } from '../../helpers/data-attribute';
+import {
+    getPrefixedClassName,
+    getPrefixedClassNames,
+} from '../../helpers/classname';
+
+console.log('plm');
+console.log(
+    getPrefixedClassNames(
+        '%p%bg-gray-100 dark:%p%bg-gray-800 %p%text-gray-900 dark:%p%text-white'
+    )
+);
 
 const Default: AccordionOptions = {
     alwaysOpen: false,
-    activeClasses: 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white',
-    inactiveClasses: 'text-gray-500 dark:text-gray-400',
+    activeClasses: getPrefixedClassNames(
+        '%p%bg-gray-100 dark:%p%bg-gray-800 %p%text-gray-900 dark:%p%text-white'
+    ),
+    inactiveClasses: getPrefixedClassNames(
+        '%p%text-gray-500 dark:%p%text-gray-400'
+    ),
     onOpen: () => {},
     onClose: () => {},
     onToggle: () => {},
@@ -56,13 +72,15 @@ class Accordion implements AccordionInterface {
                     i.triggerEl.classList.add(
                         ...this._options.inactiveClasses.split(' ')
                     );
-                    i.targetEl.classList.add('hidden');
+                    i.targetEl.classList.add(getPrefixedClassName('%p%hidden'));
                     i.triggerEl.setAttribute('aria-expanded', 'false');
                     i.active = false;
 
                     // rotate icon if set
                     if (i.iconEl) {
-                        i.iconEl.classList.remove('rotate-180');
+                        i.iconEl.classList.remove(
+                            getPrefixedClassName('%p%rotate-180')
+                        );
                     }
                 }
             });
@@ -74,12 +92,12 @@ class Accordion implements AccordionInterface {
             ...this._options.inactiveClasses.split(' ')
         );
         item.triggerEl.setAttribute('aria-expanded', 'true');
-        item.targetEl.classList.remove('hidden');
+        item.targetEl.classList.remove(getPrefixedClassName('%p%hidden'));
         item.active = true;
 
         // rotate icon if set
         if (item.iconEl) {
-            item.iconEl.classList.add('rotate-180');
+            item.iconEl.classList.add(getPrefixedClassName('%p%rotate-180'));
         }
 
         // callback function
@@ -108,13 +126,13 @@ class Accordion implements AccordionInterface {
         item.triggerEl.classList.add(
             ...this._options.inactiveClasses.split(' ')
         );
-        item.targetEl.classList.add('hidden');
+        item.targetEl.classList.add(getPrefixedClassName('%p%hidden'));
         item.triggerEl.setAttribute('aria-expanded', 'false');
         item.active = false;
 
         // rotate icon if set
         if (item.iconEl) {
-            item.iconEl.classList.remove('rotate-180');
+            item.iconEl.classList.remove(getPrefixedClassName('%p%rotate-180'));
         }
 
         // callback function

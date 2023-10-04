@@ -17,7 +17,7 @@ The avatar component can be used as a visual identifier for a user profile on yo
 
 Use this example to create a circle and rounded avatar on an image element.
 
-{{< example id="default-avatar-example" class="flex justify-center space-x-4" github="components/avatar.md" show_dark=true >}}
+{{< example id="default-avatar-example" class="flex justify-center gap-4" github="components/avatar.md" show_dark=true >}}
 <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Rounded avatar">
 <img class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Default avatar">
 {{< /example >}}
@@ -54,7 +54,7 @@ This example can be used to show the initials of the user's first and last name 
 
 Use this example to show a tooltip when hovering over the avatar.
 
-{{< example id="avatar-tooltip-example" class="flex items-center justify-center pt-8 space-x-4" github="components/avatar.md" show_dark=true >}}
+{{< example id="avatar-tooltip-example" class="flex items-center justify-center pt-8 gap-4" github="components/avatar.md" show_dark=true >}}
 <div>
   <div id="tooltip-jese" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
       Jese Leos
@@ -82,7 +82,7 @@ Use this example to show a tooltip when hovering over the avatar.
 
 Use a dot element relative to the avatar component as an indicator for the user (eg. online or offline status).
 
-{{< example id="avatar-dot-indicator-example" class="flex justify-center space-x-4" github="components/avatar.md" show_dark=true >}}
+{{< example id="avatar-dot-indicator-example" class="flex justify-center gap-4" github="components/avatar.md" show_dark=true >}}
 <div class="relative">
     <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="">
     <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
@@ -105,15 +105,15 @@ Use a dot element relative to the avatar component as an indicator for the user 
 
 Use this example if you want to stack a group of users by overlapping the avatar components.
 
-{{< example id="avatar-stacked-example" class="flex justify-center" github="components/avatar.md" show_dark=true >}}
-<div class="flex mb-5 -space-x-4">
-    <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-5.jpg" alt="">
+{{< example id="avatar-stacked-example" class="flex justify-center gap-4 rtl:gap-8" github="components/avatar.md" show_dark=true >}}
+<div class="flex -space-x-4">
+    <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800 rtl:-ml-4" src="/docs/images/people/profile-picture-5.jpg" alt="">
     <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-2.jpg" alt="">
     <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-3.jpg" alt="">
     <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-4.jpg" alt="">
 </div>
 <div class="flex -space-x-4">
-    <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-5.jpg" alt="">
+    <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800 rtl:-ml-4" src="/docs/images/people/profile-picture-5.jpg" alt="">
     <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-2.jpg" alt="">
     <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-3.jpg" alt="">
     <a class="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800" href="#">+99</a>
@@ -125,7 +125,7 @@ Use this example if you want to stack a group of users by overlapping the avatar
 This example can be used if you want to show additional information in the form of text elements such as the user's name and join date.
 
 {{< example id="avatar-text-example" class="flex justify-center" github="components/avatar.md" show_dark=true >}}
-<div class="flex items-center space-x-4">
+<div class="flex items-center gap-4">
     <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="">
     <div class="font-medium dark:text-white">
         <div>Jese Leos</div>
@@ -138,7 +138,7 @@ This example can be used if you want to show additional information in the form 
 
 Use this example if you want to show a dropdown menu when clicking on the avatar component.
 
-{{< example id="avatar-user-dropdown-example" class="flex justify-center space-x-4" github="components/avatar.md" show_dark=true iframeHeight="360" >}}
+{{< example id="avatar-user-dropdown-example" class="flex justify-center gap-4" github="components/avatar.md" show_dark=true iframeHeight="360" >}}
 <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" src="/docs/images/people/profile-picture-5.jpg" alt="User dropdown">
 
 <!-- Dropdown menu -->
@@ -168,7 +168,7 @@ Use this example if you want to show a dropdown menu when clicking on the avatar
 
 Choose from multiple sizing options for the avatar component from this example.
 
-{{< example id="avatar-sizes-example" class="flex flex-wrap items-center justify-center space-x-6" github="components/avatar.md" show_dark=true >}}
+{{< example id="avatar-sizes-example" class="flex flex-wrap items-center justify-center gap-6" github="components/avatar.md" show_dark=true >}}
 <img class="w-6 h-6 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Extra small avatar">
 <img class="w-8 h-8 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Small avatar">
 <img class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Medium avatar">

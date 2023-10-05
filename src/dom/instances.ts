@@ -28,9 +28,17 @@ class Instances {
         return this._instances[component][id];
     }
 
+    destroyAndRemoveInstance(component: string, id: string) {
+        this.destroyInstance(component, id);
+        this.removeInstance(component, id);
+    }
+
     removeInstance(component: string, id: string) {
-        this._instances[component][id].destroy();
         delete this._instances[component][id];
+    }
+
+    destroyInstance(component: string, id: string) {
+        this._instances[component][id].destroy();
     }
 
     generateRandomId() {

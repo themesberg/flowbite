@@ -71,6 +71,10 @@ class Tooltip implements TooltipInterface {
         }
     }
 
+    removeInstance() {
+        instances.removeInstance('Tooltip', this._targetEl.id);
+    }
+
     _setupEventListeners() {
         const triggerEvents = this._getTriggerEvents();
 

@@ -1,6 +1,4 @@
 /* TO DO:
-- accordion: add and refactor destroy and init
-    - add unique ID selector for accordion
 - carousel: add and refactor destroy and init
 - collapse: add and refactor destroy and init
 - dial: add and refactor destroy and init

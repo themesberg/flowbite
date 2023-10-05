@@ -42,7 +42,14 @@ class Accordion implements AccordionInterface {
     }
 
     destroy() {
-        instances.removeInstance('Accordion', this);
+        if (this._items.length) {
+            this._items.forEach((item) => {
+                item.triggerEl.removeEventListener(
+                    'click',
+                    this.toggle.bind(this, item.id)
+                );
+            });
+        }
     }
 
     getItem(id: string) {

@@ -75,9 +75,7 @@ class Carousel implements CarouselInterface {
         instances.addInstance('Carousel', this);
     }
 
-    destroy() {
-        instances.removeInstance('Carousel', this);
-    }
+    destroy() {}
 
     getItem(position: number) {
         return this._items[position];

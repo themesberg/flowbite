@@ -55,9 +55,7 @@ class Dial implements DialInterface {
         instances.addInstance('Dial', this, this._targetEl.id);
     }
 
-    destroy() {
-        instances.removeInstance('Dial', this);
-    }
+    destroy() {}
 
     hide() {
         this._targetEl.classList.add('hidden');

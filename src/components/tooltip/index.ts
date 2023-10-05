@@ -24,6 +24,8 @@ class Tooltip implements TooltipInterface {
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
     _keydownEventListener: EventListenerOrEventListenerObject;
     _visible: boolean;
+    _showHandler: EventListenerOrEventListenerObject;
+    _hideHandler: EventListenerOrEventListenerObject;
 
     constructor(
         targetEl: HTMLElement | null = null,
@@ -46,21 +48,46 @@ class Tooltip implements TooltipInterface {
     }
 
     destroy() {
-        this._popperInstance.destroy();
-        instances.removeInstance('Tooltip', this);
+        // remove event listeners associated with the trigger element
+        const triggerEvents = this._getTriggerEvents();
+
+        triggerEvents.showEvents.forEach((ev) => {
+            this._triggerEl.removeEventListener(ev, this._showHandler);
+        });
+
+        triggerEvents.hideEvents.forEach((ev) => {
+            this._triggerEl.removeEventListener(ev, this._hideHandler);
+        });
+
+        // remove event listeners for keydown
+        this._removeKeydownListener();
+
+        // remove event listeners for click outside
+        this._removeClickOutsideListener();
+
+        // destroy the Popper instance if you have one (assuming this._popperInstance is the Popper instance)
+        if (this._popperInstance) {
+            this._popperInstance.destroy();
+        }
     }
 
     _setupEventListeners() {
         const triggerEvents = this._getTriggerEvents();
+
+        this._showHandler = () => {
+            this.show();
+        };
+
+        this._hideHandler = () => {
+            this.hide();
+        };
+
         triggerEvents.showEvents.forEach((ev) => {
-            this._triggerEl.addEventListener(ev, () => {
-                this.show();
-            });
+            this._triggerEl.addEventListener(ev, this._showHandler);
         });
+
         triggerEvents.hideEvents.forEach((ev) => {
-            this._triggerEl.addEventListener(ev, () => {
-                this.hide();
-            });
+            this._triggerEl.addEventListener(ev, this._hideHandler);
         });
     }
 

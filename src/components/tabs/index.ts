@@ -44,9 +44,7 @@ class Tabs implements TabsInterface {
         instances.addInstance('Tabs', this);
     }
 
-    destroy() {
-        instances.removeInstance('Tabs', this);
-    }
+    destroy() {}
 
     getActiveTab() {
         return this._activeTab;

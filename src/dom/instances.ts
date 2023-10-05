@@ -28,10 +28,9 @@ class Instances {
         return this._instances[component][id];
     }
 
-    removeInstance(component: string, instance: any) {
-        this._instances[component] = this._instances[component].filter(
-            (i: any) => i !== instance
-        );
+    removeInstance(component: string, id: string) {
+        this._instances[component][id].destroy();
+        delete this._instances[component][id];
     }
 
     generateRandomId() {

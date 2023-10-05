@@ -35,9 +35,7 @@ class Dismiss implements DismissInterface {
         instances.addInstance('Dismiss', this, this._targetEl.id);
     }
 
-    destroy() {
-        instances.removeInstance('Dismiss', this);
-    }
+    destroy() {}
 
     hide() {
         this._targetEl.classList.add(

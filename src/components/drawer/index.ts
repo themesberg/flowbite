@@ -57,9 +57,7 @@ class Drawer implements DrawerInterface {
         instances.addInstance('Drawer', this, this._targetEl.id);
     }
 
-    destroy() {
-        instances.removeInstance('Drawer', this);
-    }
+    destroy() {}
 
     hide() {
         // based on the edge option show placement classes

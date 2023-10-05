@@ -48,7 +48,6 @@ class Popover implements PopoverInterface {
 
     destroy() {
         this._popperInstance.destroy();
-        instances.removeInstance('Popover', this);
     }
 
     _setupEventListeners() {

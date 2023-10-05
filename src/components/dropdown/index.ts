@@ -50,7 +50,6 @@ class Dropdown implements DropdownInterface {
 
     destroy() {
         this._popperInstance.destroy();
-        instances.removeInstance('Dropdown', this);
     }
 
     _setupEventListeners() {

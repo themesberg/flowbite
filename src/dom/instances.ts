@@ -1,3 +1,17 @@
+/* TO DO:
+- accordion: add and refactor destroy and init
+    - add unique ID selector for accordion
+- carousel: add and refactor destroy and init
+- collapse: add and refactor destroy and init
+- dial: add and refactor destroy and init
+- dismiss: add and refactor destroy and init
+- drawer: add and refactor destroy and init
+- dropdown: add and refactor destroy and init
+- modal: add and refactor destroy and init
+- tabs: add and refactor destroy and init
+    - add unique ID selector for tabs
+
+*/
 class Instances {
     private _instances: [];
 

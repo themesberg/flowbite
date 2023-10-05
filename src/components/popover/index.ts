@@ -25,6 +25,8 @@ class Popover implements PopoverInterface {
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
     _keydownEventListener: EventListenerOrEventListenerObject;
     _visible: boolean;
+    _showHandler: EventListenerOrEventListenerObject;
+    _hideHandler: EventListenerOrEventListenerObject;
 
     constructor(
         targetEl: HTMLElement | null = null,
@@ -34,48 +36,72 @@ class Popover implements PopoverInterface {
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
-        this._popperInstance = this._createPopperInstance();
+        this._popperInstance = null;
         this._visible = false;
-        this._init();
-    }
-
-    _init() {
-        if (this._triggerEl) {
-            this._setupEventListeners();
-        }
+        this.init();
         instances.addInstance('Popover', this, this._targetEl.id);
     }
 
+    init() {
+        if (this._triggerEl) {
+            this._setupEventListeners();
+            this._popperInstance = this._createPopperInstance();
+        }
+    }
+
     destroy() {
-        this._popperInstance.destroy();
+        // remove event listeners associated with the trigger element and target element
+        const triggerEvents = this._getTriggerEvents();
+
+        triggerEvents.showEvents.forEach((ev) => {
+            this._triggerEl.removeEventListener(ev, this._showHandler);
+            this._targetEl.removeEventListener(ev, this._showHandler);
+        });
+
+        triggerEvents.hideEvents.forEach((ev) => {
+            this._triggerEl.removeEventListener(ev, this._hideHandler);
+            this._targetEl.removeEventListener(ev, this._hideHandler);
+        });
+
+        // remove event listeners for keydown
+        this._removeKeydownListener();
+
+        // remove event listeners for click outside
+        this._removeClickOutsideListener();
+
+        // destroy the Popper instance if you have one (assuming this._popperInstance is the Popper instance)
+        if (this._popperInstance) {
+            this._popperInstance.destroy();
+        }
+    }
+
+    removeInstance() {
+        instances.removeInstance('Popover', this._targetEl.id);
     }
 
     _setupEventListeners() {
         const triggerEvents = this._getTriggerEvents();
 
+        this._showHandler = () => {
+            this.show();
+        };
+
+        this._hideHandler = () => {
+            setTimeout(() => {
+                if (!this._targetEl.matches(':hover')) {
+                    this.hide();
+                }
+            }, 100);
+        };
+
         triggerEvents.showEvents.forEach((ev) => {
-            this._triggerEl.addEventListener(ev, () => {
-                this.show();
-            });
-            this._targetEl.addEventListener(ev, () => {
-                this.show();
-            });
+            this._triggerEl.addEventListener(ev, this._showHandler);
+            this._targetEl.addEventListener(ev, this._showHandler);
         });
+
         triggerEvents.hideEvents.forEach((ev) => {
-            this._triggerEl.addEventListener(ev, () => {
-                setTimeout(() => {
-                    if (!this._targetEl.matches(':hover')) {
-                        this.hide();
-                    }
-                }, 100);
-            });
-            this._targetEl.addEventListener(ev, () => {
-                setTimeout(() => {
-                    if (!this._triggerEl.matches(':hover')) {
-                        this.hide();
-                    }
-                }, 100);
-            });
+            this._triggerEl.addEventListener(ev, this._hideHandler);
+            this._targetEl.addEventListener(ev, this._hideHandler);
         });
     }
 

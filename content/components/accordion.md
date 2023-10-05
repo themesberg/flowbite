@@ -141,7 +141,7 @@ Use the `data-active-classes` and `data-inactive-classes` to set the active and 
 
 Here's an example where we apply the blue colors instead of gray:
 
-{{< example id="accordion-color-options-example" github="components/accordion.md" show_dark=true >}}
+<!-- {{< example id="accordion-color-options-example" github="components/accordion.md" show_dark=true >}} -->
 <div id="accordion-color" data-accordion="collapse" data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white">
   <h2 id="accordion-color-heading-1">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-color-body-1" aria-expanded="true" aria-controls="accordion-color-body-1">
@@ -191,7 +191,7 @@ Here's an example where we apply the blue colors instead of gray:
     </div>
   </div>
 </div>
-{{< /example >}}
+<!-- {{< /example >}} -->
 
 ## Flush accordion
 
@@ -654,7 +654,7 @@ accordion.toggle('accordion-example-heading-3');
 Use the following HTML markup example for the JavaScript script above.
 
 ```html
-<div>
+<div id="accordion-example">
   <h2 id="accordion-example-heading-1">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" aria-expanded="true" aria-controls="accordion-example-body-1">
       <span>What is Flowbite?</span>
@@ -709,6 +709,8 @@ Here's an example that applies the types from Flowbite to the code above:
 import { Accordion } from "flowbite";
 import type { AccordionOptions, AccordionItem, AccordionInterface } from "flowbite";
 
+const accordionEl = document.querySelector('#accordion-example');
+
 // create an array of objects with the id, trigger element (eg. button), and the content element
 const accordionItems: AccordionItem[] = [
     {
@@ -754,8 +756,14 @@ const options: AccordionOptions = {
 * accordionItems: array of accordion item objects
 * options: optional
 */
-const accordion: AccordionInterface = new Accordion(accordionItems, options);
+const accordion: AccordionInterface = new Accordion(accordionEl, accordionItems, options);
 
 // open accordion item based on id
 accordion.open('accordion-example-heading-2');
+
+// destroy accordion
+accordion.destroy();
+
+// re-initialize accordion
+accordion.init();
 ```

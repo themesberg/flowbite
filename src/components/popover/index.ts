@@ -39,6 +39,7 @@ class Popover implements PopoverInterface {
         this._options = { ...Default, ...options };
         this._popperInstance = null;
         this._visible = false;
+        this._initialized = false;
         this.init();
         instances.addInstance('Popover', this, this._targetEl.id);
     }

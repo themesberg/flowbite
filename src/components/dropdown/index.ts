@@ -39,13 +39,13 @@ class Dropdown implements DropdownInterface {
         this._popperInstance = this._createPopperInstance();
         this._visible = false;
         this._init();
+        instances.addInstance('Dropdown', this, this._targetEl.id);
     }
 
     _init() {
         if (this._triggerEl) {
             this._setupEventListeners();
         }
-        instances.addInstance('Dropdown', this, this._targetEl.id);
     }
 
     destroy() {

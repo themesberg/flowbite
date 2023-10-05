@@ -23,6 +23,7 @@ class Accordion implements AccordionInterface {
         this._items = items;
         this._options = { ...Default, ...options };
         this._init();
+        instances.addInstance('Accordion', this);
     }
 
     private _init() {
@@ -38,7 +39,6 @@ class Accordion implements AccordionInterface {
                 });
             });
         }
-        instances.addInstance('Accordion', this);
     }
 
     destroy() {

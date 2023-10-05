@@ -25,6 +25,7 @@ class Collapse implements CollapseInterface {
         this._options = { ...Default, ...options };
         this._visible = false;
         this._init();
+        instances.addInstance('Collapse', this, this._targetEl.id);
     }
 
     _init() {
@@ -41,7 +42,6 @@ class Collapse implements CollapseInterface {
                 this.toggle();
             });
         }
-        instances.addInstance('Collapse', this, this._targetEl.id);
     }
 
     destroy() {}

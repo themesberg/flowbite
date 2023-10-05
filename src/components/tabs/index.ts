@@ -22,6 +22,7 @@ class Tabs implements TabsInterface {
         this._activeTab = options ? this.getTab(options.defaultTabId) : null;
         this._options = { ...Default, ...options };
         this._init();
+        instances.addInstance('Tabs', this);
     }
 
     _init() {
@@ -41,7 +42,6 @@ class Tabs implements TabsInterface {
                 });
             });
         }
-        instances.addInstance('Tabs', this);
     }
 
     destroy() {}

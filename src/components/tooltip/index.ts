@@ -35,16 +35,17 @@ class Tooltip implements TooltipInterface {
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
-        this._popperInstance = this._createPopperInstance();
+        this._popperInstance = null;
         this._visible = false;
         this._init();
+        instances.addInstance('Tooltip', this, this._targetEl.id);
     }
 
     _init() {
         if (this._triggerEl) {
             this._setupEventListeners();
+            this._popperInstance = this._createPopperInstance();
         }
-        instances.addInstance('Tooltip', this, this._targetEl.id);
     }
 
     destroy() {

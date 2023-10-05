@@ -29,7 +29,7 @@ class Instances {
     }
 
     destroyAndRemoveInstance(component: string, id: string) {
-        this.destroyInstance(component, id);
+        this.destroyInstanceObject(component, id);
         this.removeInstance(component, id);
     }
 
@@ -37,7 +37,7 @@ class Instances {
         delete this._instances[component][id];
     }
 
-    destroyInstance(component: string, id: string) {
+    destroyInstanceObject(component: string, id: string) {
         this._instances[component][id].destroy();
     }
 

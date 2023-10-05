@@ -31,6 +31,7 @@ class Modal implements ModalInterface {
         this._isHidden = true;
         this._backdropEl = null;
         this._init();
+        instances.addInstance('Modal', this, this._targetEl.id);
     }
 
     _init() {
@@ -39,7 +40,6 @@ class Modal implements ModalInterface {
                 this._targetEl.classList.add(c);
             });
         }
-        instances.addInstance('Modal', this, this._targetEl.id);
     }
 
     destroy() {}

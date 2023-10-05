@@ -30,6 +30,7 @@ class Drawer implements DrawerInterface {
         this._options = { ...Default, ...options };
         this._visible = false;
         this._init();
+        instances.addInstance('Drawer', this, this._targetEl.id);
     }
 
     _init() {
@@ -54,7 +55,6 @@ class Drawer implements DrawerInterface {
                 }
             }
         });
-        instances.addInstance('Drawer', this, this._targetEl.id);
     }
 
     destroy() {}

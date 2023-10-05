@@ -45,6 +45,7 @@ class Carousel implements CarouselInterface {
         this._intervalDuration = this._options.interval;
         this._intervalInstance = null;
         this._init();
+        instances.addInstance('Carousel', this);
     }
 
     /**
@@ -72,7 +73,6 @@ class Carousel implements CarouselInterface {
                 this.slideTo(position);
             });
         });
-        instances.addInstance('Carousel', this);
     }
 
     destroy() {}

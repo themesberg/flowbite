@@ -24,6 +24,7 @@ class Dismiss implements DismissInterface {
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
         this._init();
+        instances.addInstance('Dismiss', this, this._targetEl.id);
     }
 
     _init() {
@@ -32,7 +33,6 @@ class Dismiss implements DismissInterface {
                 this.hide();
             });
         }
-        instances.addInstance('Dismiss', this, this._targetEl.id);
     }
 
     destroy() {}

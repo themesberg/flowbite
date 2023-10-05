@@ -29,6 +29,7 @@ class Dial implements DialInterface {
         this._options = { ...Default, ...options };
         this._visible = false;
         this._init();
+        instances.addInstance('Dial', this, this._targetEl.id);
     }
 
     _init() {
@@ -52,7 +53,6 @@ class Dial implements DialInterface {
                 });
             });
         }
-        instances.addInstance('Dial', this, this._targetEl.id);
     }
 
     destroy() {}

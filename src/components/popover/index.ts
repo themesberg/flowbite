@@ -43,7 +43,12 @@ class Popover implements PopoverInterface {
         if (this._triggerEl) {
             this._setupEventListeners();
         }
-        instances.addInstance('Popover', this);
+        instances.addInstance('Popover', this, this._targetEl.id);
+    }
+
+    destroy() {
+        this._popperInstance.destroy();
+        instances.removeInstance('Popover', this);
     }
 
     _setupEventListeners() {

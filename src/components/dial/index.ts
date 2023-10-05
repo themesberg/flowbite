@@ -52,7 +52,11 @@ class Dial implements DialInterface {
                 });
             });
         }
-        instances.addInstance('Dial', this);
+        instances.addInstance('Dial', this, this._targetEl.id);
+    }
+
+    destroy() {
+        instances.removeInstance('Dial', this);
     }
 
     hide() {

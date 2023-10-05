@@ -19,20 +19,23 @@ class Instances {
 
     init() {}
 
-    addInstance(component: string, instance: any) {
-        this._instances[component].push(instance);
+    addInstance(component: string, instance: any, id?: string) {
+        this._instances[component][id ? id : this.generateRandomId()] =
+            instance;
     }
 
     getInstance(component: string, id: string) {
-        return this._instances[component].filter(
-            (instance: any) => instance.id === id
-        )[0];
+        return this._instances[component][id];
     }
 
-    removeInstance(component: string, id: string) {
+    removeInstance(component: string, instance: any) {
         this._instances[component] = this._instances[component].filter(
-            (instance: any) => instance.id !== id
+            (i: any) => i !== instance
         );
+    }
+
+    generateRandomId() {
+        return Math.random().toString(36).substr(2, 9);
     }
 }
 

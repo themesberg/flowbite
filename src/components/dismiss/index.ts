@@ -32,7 +32,11 @@ class Dismiss implements DismissInterface {
                 this.hide();
             });
         }
-        instances.addInstance('Dismiss', this);
+        instances.addInstance('Dismiss', this, this._targetEl.id);
+    }
+
+    destroy() {
+        instances.removeInstance('Dismiss', this);
     }
 
     hide() {

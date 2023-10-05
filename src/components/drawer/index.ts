@@ -54,7 +54,11 @@ class Drawer implements DrawerInterface {
                 }
             }
         });
-        instances.addInstance('Drawer', this);
+        instances.addInstance('Drawer', this, this._targetEl.id);
+    }
+
+    destroy() {
+        instances.removeInstance('Drawer', this);
     }
 
     hide() {

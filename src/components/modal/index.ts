@@ -39,7 +39,11 @@ class Modal implements ModalInterface {
                 this._targetEl.classList.add(c);
             });
         }
-        instances.addInstance('Modal', this);
+        instances.addInstance('Modal', this, this._targetEl.id);
+    }
+
+    destroy() {
+        instances.removeInstance('Modal', this);
     }
 
     _createBackdrop() {

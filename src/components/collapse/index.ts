@@ -41,7 +41,11 @@ class Collapse implements CollapseInterface {
                 this.toggle();
             });
         }
-        instances.addInstance('Collapse', this);
+        instances.addInstance('Collapse', this, this._targetEl.id);
+    }
+
+    destroy() {
+        instances.removeInstance('Collapse', this);
     }
 
     collapse() {

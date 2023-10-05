@@ -41,6 +41,10 @@ class Accordion implements AccordionInterface {
         instances.addInstance('Accordion', this);
     }
 
+    destroy() {
+        instances.removeInstance('Accordion', this);
+    }
+
     getItem(id: string) {
         return this._items.filter((item) => item.id === id)[0];
     }

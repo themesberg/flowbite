@@ -42,7 +42,12 @@ class Tooltip implements TooltipInterface {
         if (this._triggerEl) {
             this._setupEventListeners();
         }
-        instances.addInstance('Tooltip', this);
+        instances.addInstance('Tooltip', this, this._targetEl.id);
+    }
+
+    destroy() {
+        this._popperInstance.destroy();
+        instances.removeInstance('Tooltip', this);
     }
 
     _setupEventListeners() {

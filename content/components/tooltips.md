@@ -378,6 +378,12 @@ tooltip.hide();
 
 // toggle the tooltip
 tooltip.toggle();
+
+// destroy tooltip object (removes event listeners and off-canvas Popper.js)
+tooltip.destroy();
+
+// re-initialize tooltip object
+tooltip.init();
 ```
 
 ### HTML Markup

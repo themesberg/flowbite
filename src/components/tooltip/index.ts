@@ -24,6 +24,7 @@ class Tooltip implements TooltipInterface {
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
     _keydownEventListener: EventListenerOrEventListenerObject;
     _visible: boolean;
+    _initialized: boolean;
     _showHandler: EventListenerOrEventListenerObject;
     _hideHandler: EventListenerOrEventListenerObject;
 
@@ -37,38 +38,43 @@ class Tooltip implements TooltipInterface {
         this._options = { ...Default, ...options };
         this._popperInstance = null;
         this._visible = false;
-        this._init();
+        this._initialized = false;
+        this.init();
         instances.addInstance('Tooltip', this, this._targetEl.id);
     }
 
-    _init() {
-        if (this._triggerEl) {
+    init() {
+        if (this._triggerEl && !this._initialized) {
             this._setupEventListeners();
             this._popperInstance = this._createPopperInstance();
+            this._initialized = true;
         }
     }
 
     destroy() {
-        // remove event listeners associated with the trigger element
-        const triggerEvents = this._getTriggerEvents();
+        if (this._initialized) {
+            // remove event listeners associated with the trigger element
+            const triggerEvents = this._getTriggerEvents();
 
-        triggerEvents.showEvents.forEach((ev) => {
-            this._triggerEl.removeEventListener(ev, this._showHandler);
-        });
+            triggerEvents.showEvents.forEach((ev) => {
+                this._triggerEl.removeEventListener(ev, this._showHandler);
+            });
 
-        triggerEvents.hideEvents.forEach((ev) => {
-            this._triggerEl.removeEventListener(ev, this._hideHandler);
-        });
+            triggerEvents.hideEvents.forEach((ev) => {
+                this._triggerEl.removeEventListener(ev, this._hideHandler);
+            });
 
-        // remove event listeners for keydown
-        this._removeKeydownListener();
+            // remove event listeners for keydown
+            this._removeKeydownListener();
 
-        // remove event listeners for click outside
-        this._removeClickOutsideListener();
+            // remove event listeners for click outside
+            this._removeClickOutsideListener();
 
-        // destroy the Popper instance if you have one (assuming this._popperInstance is the Popper instance)
-        if (this._popperInstance) {
-            this._popperInstance.destroy();
+            // destroy the Popper instance if you have one (assuming this._popperInstance is the Popper instance)
+            if (this._popperInstance) {
+                this._popperInstance.destroy();
+            }
+            this._initialized = false;
         }
     }
 

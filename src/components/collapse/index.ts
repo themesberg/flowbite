@@ -32,7 +32,7 @@ class Collapse implements CollapseInterface {
     }
 
     init() {
-        if (this._triggerEl && !this._initialized) {
+        if (this._triggerEl && this._targetEl && !this._initialized) {
             if (this._triggerEl.hasAttribute('aria-expanded')) {
                 this._visible =
                     this._triggerEl.getAttribute('aria-expanded') === 'true';

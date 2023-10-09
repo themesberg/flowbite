@@ -33,7 +33,7 @@ class Dial implements DialInterface {
     }
 
     _init() {
-        if (this._triggerEl) {
+        if (this._triggerEl && this._targetEl) {
             const triggerEventTypes = this._getTriggerEventTypes(
                 this._options.triggerType
             );

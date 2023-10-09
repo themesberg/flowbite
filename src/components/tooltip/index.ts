@@ -44,7 +44,7 @@ class Tooltip implements TooltipInterface {
     }
 
     init() {
-        if (this._triggerEl && !this._initialized) {
+        if (this._triggerEl && this._targetEl && !this._initialized) {
             this._setupEventListeners();
             this._popperInstance = this._createPopperInstance();
             this._initialized = true;

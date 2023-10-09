@@ -49,7 +49,7 @@ class Dropdown implements DropdownInterface {
     }
 
     init() {
-        if (this._triggerEl && !this._initialized) {
+        if (this._triggerEl && this._targetEl && !this._initialized) {
             this._popperInstance = this._createPopperInstance();
             this._setupEventListeners();
             this._initialized = true;

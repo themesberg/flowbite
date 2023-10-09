@@ -14,6 +14,8 @@ class Dismiss implements DismissInterface {
     _targetEl: HTMLElement | null;
     _triggerEl: HTMLElement | null;
     _options: DismissOptions;
+    _initialized: boolean;
+    _clickHandler: EventListenerOrEventListenerObject;
 
     constructor(
         targetEl: HTMLElement | null = null,
@@ -23,19 +25,32 @@ class Dismiss implements DismissInterface {
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
-        this._init();
+        this._initialized = false;
+        this.init();
         instances.addInstance('Dismiss', this, this._targetEl.id);
     }
 
-    _init() {
-        if (this._triggerEl) {
-            this._triggerEl.addEventListener('click', () => {
+    init() {
+        if (this._triggerEl && this._targetEl && !this._initialized) {
+            this._clickHandler = () => {
                 this.hide();
-            });
+            };
+            this._triggerEl.addEventListener('click', this._clickHandler);
+            this._initialized = true;
         }
     }
 
-    destroy() {}
+    destroy() {
+        if (this._triggerEl && this._initialized) {
+            this._triggerEl.removeEventListener('click', this._clickHandler);
+            this._initialized = false;
+        }
+    }
+
+    removeInstance() {
+        this.destroy();
+        instances.removeInstance('Dismiss', this._targetEl.id);
+    }
 
     hide() {
         this._targetEl.classList.add(

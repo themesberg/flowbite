@@ -45,7 +45,7 @@ class Dropdown implements DropdownInterface {
         this._visible = false;
         this._initialized = false;
         this.init();
-        instances.addInstance('Dropdown', this, this._triggerEl.id);
+        instances.addInstance('Dropdown', this, this._targetEl.id);
     }
 
     init() {

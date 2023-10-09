@@ -1,10 +1,7 @@
 /* TO DO:
 - carousel: add and refactor destroy and init
-- collapse: add and refactor destroy and init
 - dial: add and refactor destroy and init
-- dismiss: add and refactor destroy and init
 - drawer: add and refactor destroy and init
-- dropdown: add and refactor destroy and init
 - modal: add and refactor destroy and init
 - tabs: add and refactor destroy and init
     - add unique ID selector for tabs
@@ -32,7 +29,7 @@ class Instances {
     init() {}
 
     addInstance(component: string, instance: any, id?: string) {
-        this._instances[component][id ? id : this.generateRandomId()] =
+        this._instances[component][id ? id : this._generateRandomId()] =
             instance;
     }
 

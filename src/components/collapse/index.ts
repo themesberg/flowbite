@@ -14,6 +14,8 @@ class Collapse implements CollapseInterface {
     _triggerEl: HTMLElement | null;
     _options: CollapseOptions;
     _visible: boolean;
+    _initialized: boolean;
+    _clickHandler: EventListenerOrEventListenerObject;
 
     constructor(
         targetEl: HTMLElement | null = null,
@@ -24,12 +26,13 @@ class Collapse implements CollapseInterface {
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
         this._visible = false;
-        this._init();
+        this._initialized = false;
+        this.init();
         instances.addInstance('Collapse', this, this._targetEl.id);
     }
 
-    _init() {
-        if (this._triggerEl) {
+    init() {
+        if (this._triggerEl && !this._initialized) {
             if (this._triggerEl.hasAttribute('aria-expanded')) {
                 this._visible =
                     this._triggerEl.getAttribute('aria-expanded') === 'true';
@@ -38,13 +41,26 @@ class Collapse implements CollapseInterface {
                 this._visible = !this._targetEl.classList.contains('hidden');
             }
 
-            this._triggerEl.addEventListener('click', () => {
+            this._clickHandler = () => {
                 this.toggle();
-            });
+            };
+
+            this._triggerEl.addEventListener('click', this._clickHandler);
+            this._initialized = true;
         }
     }
 
-    destroy() {}
+    destroy() {
+        if (this._triggerEl && this._initialized) {
+            this._triggerEl.removeEventListener('click', this._clickHandler);
+            this._initialized = false;
+        }
+    }
+
+    removeInstance() {
+        this.destroy();
+        instances.removeInstance('Collapse', this._targetEl.id);
+    }
 
     collapse() {
         this._targetEl.classList.add('hidden');

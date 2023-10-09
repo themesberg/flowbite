@@ -83,6 +83,7 @@ class Popover implements PopoverInterface {
     }
 
     removeInstance() {
+        this.destroy();
         instances.removeInstance('Popover', this._targetEl.id);
     }
 

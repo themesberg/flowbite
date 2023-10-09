@@ -66,6 +66,7 @@ class Accordion implements AccordionInterface {
     }
 
     removeInstance() {
+        this.destroy();
         instances.removeInstance('Accordion', this._accordionEl.id);
     }
 

@@ -79,6 +79,7 @@ class Tooltip implements TooltipInterface {
     }
 
     removeInstance() {
+        this.destroy();
         instances.removeInstance('Tooltip', this._targetEl.id);
     }
 

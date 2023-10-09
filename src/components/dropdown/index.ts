@@ -26,7 +26,12 @@ class Dropdown implements DropdownInterface {
     _options: DropdownOptions;
     _visible: boolean;
     _popperInstance: PopperInstance;
+    _initialized: boolean;
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
+    _hoverShowTriggerElHandler: EventListenerOrEventListenerObject;
+    _hoverShowTargetElHandler: EventListenerOrEventListenerObject;
+    _hoverHideHandler: EventListenerOrEventListenerObject;
+    _clickHandler: EventListenerOrEventListenerObject;
 
     constructor(
         targetElement: HTMLElement | null = null,
@@ -36,65 +41,110 @@ class Dropdown implements DropdownInterface {
         this._targetEl = targetElement;
         this._triggerEl = triggerElement;
         this._options = { ...Default, ...options };
-        this._popperInstance = this._createPopperInstance();
+        this._popperInstance = null;
         this._visible = false;
-        this._init();
-        instances.addInstance('Dropdown', this, this._targetEl.id);
+        this._initialized = false;
+        this.init();
+        instances.addInstance('Dropdown', this, this._triggerEl.id);
     }
 
-    _init() {
-        if (this._triggerEl) {
+    init() {
+        if (this._triggerEl && !this._initialized) {
+            this._popperInstance = this._createPopperInstance();
             this._setupEventListeners();
+            this._initialized = true;
         }
     }
 
     destroy() {
+        const triggerEvents = this._getTriggerEvents();
+
+        // Remove click event listeners for trigger element
+        if (this._options.triggerType === 'click') {
+            triggerEvents.showEvents.forEach((ev) => {
+                this._triggerEl.removeEventListener(ev, this._clickHandler);
+            });
+        }
+
+        // Remove hover event listeners for trigger and target elements
+        if (this._options.triggerType === 'hover') {
+            triggerEvents.showEvents.forEach((ev) => {
+                this._triggerEl.removeEventListener(
+                    ev,
+                    this._hoverShowTriggerElHandler
+                );
+                this._targetEl.removeEventListener(
+                    ev,
+                    this._hoverShowTargetElHandler
+                );
+            });
+
+            triggerEvents.hideEvents.forEach((ev) => {
+                this._triggerEl.removeEventListener(ev, this._hoverHideHandler);
+                this._targetEl.removeEventListener(ev, this._hoverHideHandler);
+            });
+        }
+
         this._popperInstance.destroy();
+        this._initialized = false;
+    }
+
+    removeInstance() {
+        this.destroy();
+        instances.removeInstance('Dropdown', this._targetEl.id);
     }
 
     _setupEventListeners() {
         const triggerEvents = this._getTriggerEvents();
 
+        this._clickHandler = () => {
+            this.toggle();
+        };
+
         // click event handling for trigger element
         if (this._options.triggerType === 'click') {
             triggerEvents.showEvents.forEach((ev) => {
-                this._triggerEl.addEventListener(ev, () => {
-                    this.toggle();
-                });
+                this._triggerEl.addEventListener(ev, this._clickHandler);
             });
         }
+
+        this._hoverShowTriggerElHandler = (ev) => {
+            if (ev === 'click') {
+                this.toggle();
+            } else {
+                setTimeout(() => {
+                    this.show();
+                }, this._options.delay);
+            }
+        };
+        this._hoverShowTargetElHandler = () => {
+            this.show();
+        };
+
+        this._hoverHideHandler = () => {
+            setTimeout(() => {
+                if (!this._targetEl.matches(':hover')) {
+                    this.hide();
+                }
+            }, this._options.delay);
+        };
 
         // hover event handling for trigger element
         if (this._options.triggerType === 'hover') {
             triggerEvents.showEvents.forEach((ev) => {
-                this._triggerEl.addEventListener(ev, () => {
-                    if (ev === 'click') {
-                        this.toggle();
-                    } else {
-                        setTimeout(() => {
-                            this.show();
-                        }, this._options.delay);
-                    }
-                });
-                this._targetEl.addEventListener(ev, () => {
-                    this.show();
-                });
+                this._triggerEl.addEventListener(
+                    ev,
+                    this._hoverShowTriggerElHandler
+                );
+                this._targetEl.addEventListener(
+                    ev,
+                    this._hoverShowTargetElHandler
+                );
             });
+
             triggerEvents.hideEvents.forEach((ev) => {
-                this._triggerEl.addEventListener(ev, () => {
-                    setTimeout(() => {
-                        if (!this._targetEl.matches(':hover')) {
-                            this.hide();
-                        }
-                    }, this._options.delay);
-                });
-                this._targetEl.addEventListener(ev, () => {
-                    setTimeout(() => {
-                        if (!this._triggerEl.matches(':hover')) {
-                            this.hide();
-                        }
-                    }, this._options.delay);
-                });
+                this._triggerEl.addEventListener(ev, this._hoverHideHandler);
+                this._targetEl.addEventListener(ev, this._hoverHideHandler);
             });
         }
     }

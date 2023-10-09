@@ -53,7 +53,7 @@ class Instances {
         this._instances[component][id].destroy();
     }
 
-    generateRandomId() {
+    _generateRandomId() {
         return Math.random().toString(36).substr(2, 9);
     }
 }

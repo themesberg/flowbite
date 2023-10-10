@@ -241,6 +241,8 @@ export function initDrawers() {
 
         if ($drawerEl) {
             // optional
+            if ($drawerEl.dataset.alreadyInitialed) return;
+            $drawerEl.dataset.alreadyInitialed = 'true';
             const placement = $triggerEl.getAttribute('data-drawer-placement');
             const bodyScrolling = $triggerEl.getAttribute(
                 'data-drawer-body-scrolling'

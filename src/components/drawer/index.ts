@@ -21,6 +21,8 @@ class Drawer implements DrawerInterface {
     _triggerEl: HTMLElement;
     _options: DrawerOptions;
     _visible: boolean;
+    _initialized: boolean;
+    _handleEscapeKey: EventListenerOrEventListenerObject;
 
     constructor(
         targetEl: HTMLElement | null = null,
@@ -29,35 +31,54 @@ class Drawer implements DrawerInterface {
         this._targetEl = targetEl;
         this._options = { ...Default, ...options };
         this._visible = false;
-        this._init();
+        this._initialized = false;
+        this.init();
         instances.addInstance('Drawer', this, this._targetEl.id);
     }
 
-    _init() {
+    init() {
         // set initial accessibility attributes
-        if (this._targetEl) {
+        if (this._targetEl && !this._initialized) {
             this._targetEl.setAttribute('aria-hidden', 'true');
             this._targetEl.classList.add('transition-transform');
-        }
 
-        // set base placement classes
-        this._getPlacementClasses(this._options.placement).base.map((c) => {
-            this._targetEl.classList.add(c);
-        });
+            // set base placement classes
+            this._getPlacementClasses(this._options.placement).base.map((c) => {
+                this._targetEl.classList.add(c);
+            });
 
-        // add keyboard event listener to document
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape') {
-                // if 'Escape' key is pressed
-                if (this.isVisible()) {
-                    // if the Drawer is visible
-                    this.hide(); // hide the Drawer
+            this._handleEscapeKey = (event: KeyboardEvent) => {
+                if (event.key === 'Escape') {
+                    // if 'Escape' key is pressed
+                    if (this.isVisible()) {
+                        // if the Drawer is visible
+                        this.hide(); // hide the Drawer
+                    }
                 }
-            }
-        });
+            };
+
+            // add keyboard event listener to document
+            document.addEventListener('keydown', this._handleEscapeKey);
+
+            this._initialized = true;
+        }
     }
 
-    destroy() {}
+    destroy() {
+        if (this._initialized) {
+            this.hide();
+
+            // Remove the keyboard event listener
+            document.removeEventListener('keydown', this._handleEscapeKey);
+
+            this._initialized = false;
+        }
+    }
+
+    removeInstance() {
+        this.destroy();
+        instances.removeInstance('Drawer', this._targetEl.id);
+    }
 
     hide() {
         // based on the edge option show placement classes

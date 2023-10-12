@@ -251,14 +251,7 @@ class Drawer implements DrawerInterface {
     }
 }
 
-const getDrawerInstance = (id: string, instances: DrawerInstance[]) => {
-    if (instances.some((drawerInstance) => drawerInstance.id === id)) {
-        return instances.find((drawerInstance) => drawerInstance.id === id);
-    }
-};
-
 export function initDrawers() {
-    const drawerInstances = [] as DrawerInstance[];
     document.querySelectorAll('[data-drawer-target]').forEach(($triggerEl) => {
         // mandatory
         const drawerId = $triggerEl.getAttribute('data-drawer-target');
@@ -276,31 +269,28 @@ export function initDrawers() {
                 'data-drawer-edge-offset'
             );
 
-            if (!getDrawerInstance(drawerId, drawerInstances)) {
-                drawerInstances.push({
-                    id: drawerId,
-                    object: new Drawer($drawerEl, {
-                        placement: placement ? placement : Default.placement,
-                        bodyScrolling: bodyScrolling
-                            ? bodyScrolling === 'true'
-                                ? true
-                                : false
-                            : Default.bodyScrolling,
-                        backdrop: backdrop
-                            ? backdrop === 'true'
-                                ? true
-                                : false
-                            : Default.backdrop,
-                        edge: edge
-                            ? edge === 'true'
-                                ? true
-                                : false
-                            : Default.edge,
-                        edgeOffset: edgeOffset
-                            ? edgeOffset
-                            : Default.edgeOffset,
-                    } as DrawerOptions),
-                });
+            if (
+                !instances.getInstance('Drawer', $drawerEl.getAttribute('id'))
+            ) {
+                new Drawer($drawerEl, {
+                    placement: placement ? placement : Default.placement,
+                    bodyScrolling: bodyScrolling
+                        ? bodyScrolling === 'true'
+                            ? true
+                            : false
+                        : Default.bodyScrolling,
+                    backdrop: backdrop
+                        ? backdrop === 'true'
+                            ? true
+                            : false
+                        : Default.backdrop,
+                    edge: edge
+                        ? edge === 'true'
+                            ? true
+                            : false
+                        : Default.edge,
+                    edgeOffset: edgeOffset ? edgeOffset : Default.edgeOffset,
+                } as DrawerOptions);
             }
         } else {
             console.error(
@@ -314,14 +304,15 @@ export function initDrawers() {
         const $drawerEl = document.getElementById(drawerId);
 
         if ($drawerEl) {
-            const drawer: DrawerInstance = getDrawerInstance(
-                drawerId,
-                drawerInstances
+            const drawer: DrawerInterface = instances.getInstance(
+                'Drawer',
+                $drawerEl.getAttribute('id')
             );
+            console.log(drawer);
 
             if (drawer) {
                 $triggerEl.addEventListener('click', () => {
-                    drawer.object.toggle();
+                    drawer.toggle();
                 });
             } else {
                 console.error(
@@ -344,11 +335,15 @@ export function initDrawers() {
             const $drawerEl = document.getElementById(drawerId);
 
             if ($drawerEl) {
-                const drawer = getDrawerInstance(drawerId, drawerInstances);
+                const drawer: DrawerInterface = instances.getInstance(
+                    'Drawer',
+                    $drawerEl.getAttribute('id')
+                );
+                console.log(drawer);
 
                 if (drawer) {
                     $triggerEl.addEventListener('click', () => {
-                        drawer.object.hide();
+                        drawer.hide();
                     });
                 } else {
                     console.error(
@@ -367,11 +362,16 @@ export function initDrawers() {
         const $drawerEl = document.getElementById(drawerId);
 
         if ($drawerEl) {
-            const drawer = getDrawerInstance(drawerId, drawerInstances);
+            const drawer: DrawerInterface = instances.getInstance(
+                'Drawer',
+                $drawerEl.getAttribute('id')
+            );
+
+            console.log(drawer);
 
             if (drawer) {
                 $triggerEl.addEventListener('click', () => {
-                    drawer.object.show();
+                    drawer.show();
                 });
             } else {
                 console.error(

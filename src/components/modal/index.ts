@@ -44,6 +44,11 @@ class Modal implements ModalInterface {
 
     destroy() {}
 
+    removeInstance() {
+        this.destroy();
+        instances.removeInstance('Modal', this._targetEl.id);
+    }
+
     _createBackdrop() {
         if (this._isHidden) {
             const backdropEl = document.createElement('div');
@@ -206,16 +211,7 @@ class Modal implements ModalInterface {
     }
 }
 
-const getModalInstance = (id: string, instances: ModalInstance[]) => {
-    if (instances.some((modalInstance) => modalInstance.id === id)) {
-        return instances.find((modalInstance) => modalInstance.id === id);
-    }
-    return null;
-};
-
 export function initModals() {
-    const modalInstances = [] as ModalInstance[];
-
     // initiate modal based on data-modal-target
     document.querySelectorAll('[data-modal-target]').forEach(($triggerEl) => {
         const modalId = $triggerEl.getAttribute('data-modal-target');
@@ -225,19 +221,14 @@ export function initModals() {
             const placement = $modalEl.getAttribute('data-modal-placement');
             const backdrop = $modalEl.getAttribute('data-modal-backdrop');
 
-            if (!getModalInstance(modalId, modalInstances)) {
-                modalInstances.push({
-                    id: modalId,
-                    object: new Modal(
-                        $modalEl as HTMLElement,
-                        {
-                            placement: placement
-                                ? placement
-                                : Default.placement,
-                            backdrop: backdrop ? backdrop : Default.backdrop,
-                        } as ModalOptions
-                    ),
-                });
+            if (instances.getInstance('Modal', $modalEl.getAttribute('id'))) {
+                new Modal(
+                    $modalEl as HTMLElement,
+                    {
+                        placement: placement ? placement : Default.placement,
+                        backdrop: backdrop ? backdrop : Default.backdrop,
+                    } as ModalOptions
+                );
             }
         } else {
             console.error(
@@ -255,28 +246,22 @@ export function initModals() {
             const placement = $modalEl.getAttribute('data-modal-placement');
             const backdrop = $modalEl.getAttribute('data-modal-backdrop');
 
-            let modal: ModalInstance = getModalInstance(
-                modalId,
-                modalInstances
+            let modal = instances.getInstance(
+                'Modal',
+                $modalEl.getAttribute('id')
             );
             if (!modal) {
-                modal = {
-                    id: modalId,
-                    object: new Modal(
-                        $modalEl as HTMLElement,
-                        {
-                            placement: placement
-                                ? placement
-                                : Default.placement,
-                            backdrop: backdrop ? backdrop : Default.backdrop,
-                        } as ModalOptions
-                    ),
-                };
-                modalInstances.push(modal);
+                modal = new Modal(
+                    $modalEl as HTMLElement,
+                    {
+                        placement: placement ? placement : Default.placement,
+                        backdrop: backdrop ? backdrop : Default.backdrop,
+                    } as ModalOptions
+                );
             }
 
             $triggerEl.addEventListener('click', () => {
-                modal.object.toggle();
+                modal.toggle();
             });
         } else {
             console.error(
@@ -291,14 +276,14 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            const modal: ModalInstance = getModalInstance(
-                modalId,
-                modalInstances
+            const modal = instances.getInstance(
+                'Modal',
+                $modalEl.getAttribute('id')
             );
             if (modal) {
                 $triggerEl.addEventListener('click', () => {
-                    if (modal.object.isHidden) {
-                        modal.object.show();
+                    if (modal.isHidden) {
+                        modal.show();
                     }
                 });
             } else {
@@ -319,15 +304,15 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            const modal: ModalInstance = getModalInstance(
-                modalId,
-                modalInstances
+            const modal = instances.getInstance(
+                'Modal',
+                $modalEl.getAttribute('id')
             );
 
             if (modal) {
                 $triggerEl.addEventListener('click', () => {
-                    if (modal.object.isVisible) {
-                        modal.object.hide();
+                    if (modal.isVisible) {
+                        modal.hide();
                     }
                 });
             } else {

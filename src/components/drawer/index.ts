@@ -308,7 +308,6 @@ export function initDrawers() {
                 'Drawer',
                 $drawerEl.getAttribute('id')
             );
-            console.log(drawer);
 
             if (drawer) {
                 $triggerEl.addEventListener('click', () => {
@@ -339,7 +338,6 @@ export function initDrawers() {
                     'Drawer',
                     $drawerEl.getAttribute('id')
                 );
-                console.log(drawer);
 
                 if (drawer) {
                     $triggerEl.addEventListener('click', () => {
@@ -366,8 +364,6 @@ export function initDrawers() {
                 'Drawer',
                 $drawerEl.getAttribute('id')
             );
-
-            console.log(drawer);
 
             if (drawer) {
                 $triggerEl.addEventListener('click', () => {

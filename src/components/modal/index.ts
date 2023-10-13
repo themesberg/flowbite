@@ -21,6 +21,7 @@ class Modal implements ModalInterface {
     _backdropEl: HTMLElement | null;
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
     _keydownEventListener: EventListenerOrEventListenerObject;
+    _initialized: boolean;
 
     constructor(
         targetEl: HTMLElement | null = null,
@@ -30,19 +31,25 @@ class Modal implements ModalInterface {
         this._options = { ...Default, ...options };
         this._isHidden = true;
         this._backdropEl = null;
-        this._init();
+        this._initialized = false;
+        this.init();
         instances.addInstance('Modal', this, this._targetEl.id);
     }
 
-    _init() {
-        if (this._targetEl) {
+    init() {
+        if (this._targetEl && !this._initialized) {
             this._getPlacementClasses().map((c) => {
                 this._targetEl.classList.add(c);
             });
+            this._initialized = true;
         }
     }
 
-    destroy() {}
+    destroy() {
+        if (this._initialized) {
+            this._initialized = false;
+        }
+    }
 
     removeInstance() {
         this.destroy();
@@ -167,13 +174,13 @@ class Modal implements ModalInterface {
             this._createBackdrop();
             this._isHidden = false;
 
-            // prevent body scroll
-            document.body.classList.add('overflow-hidden');
-
             // Add keyboard event listener to the document
             if (this._options.closable) {
                 this._setupModalCloseEventListeners();
             }
+
+            // prevent body scroll
+            document.body.classList.add('overflow-hidden');
 
             // callback function
             this._options.onShow(this);
@@ -282,10 +289,8 @@ export function initModals() {
             );
             if (modal) {
                 $triggerEl.addEventListener('click', () => {
-                    if (modal.isHidden) {
-                        modal.show();
+                    modal.show();
                     }
-                });
             } else {
                 console.error(
                     `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`
@@ -311,9 +316,7 @@ export function initModals() {
 
             if (modal) {
                 $triggerEl.addEventListener('click', () => {
-                    if (modal.isVisible) {
-                        modal.hide();
-                    }
+                    modal.hide();
                 });
             } else {
                 console.error(

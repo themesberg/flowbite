@@ -290,7 +290,7 @@ export function initModals() {
             if (modal) {
                 $triggerEl.addEventListener('click', () => {
                     modal.show();
-                    }
+                });
             } else {
                 console.error(
                     `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`

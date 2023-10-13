@@ -27,24 +27,45 @@ class Instances {
     }
 
     addInstance(component: string, instance: any, id?: string) {
+        if (this._instances[component][id]) {
+            console.warn(`Flowbite: Instance with ID ${id} already exists.`);
+            return;
+        }
+
         this._instances[component][id ? id : this._generateRandomId()] =
             instance;
     }
 
     getInstance(component: string, id: string) {
+        if (!this._instances[component][id]) {
+            console.warn(`Flowbite: Instance with ID ${id} does not exist.`);
+            return;
+        }
         return this._instances[component][id];
     }
 
     destroyAndRemoveInstance(component: string, id: string) {
+        if (!this._instances[component][id]) {
+            console.warn(`Flowbite: Instance with ID ${id} does not exist.`);
+            return;
+        }
         this.destroyInstanceObject(component, id);
         this.removeInstance(component, id);
     }
 
     removeInstance(component: string, id: string) {
-        delete this._instances[component][id];
+        if (!this._instances[component][id]) {
+            console.warn(`Flowbite: Instance with ID ${id} does not exist.`);
+            return;
+        }
+        this._instances[component][id].removeInstance();
     }
 
     destroyInstanceObject(component: string, id: string) {
+        if (!this._instances[component][id]) {
+            console.warn(`Flowbite: Instance with ID ${id} does not exist.`);
+            return;
+        }
         this._instances[component][id].destroy();
     }
 

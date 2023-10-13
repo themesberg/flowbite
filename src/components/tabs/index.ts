@@ -13,20 +13,28 @@ const Default: TabsOptions = {
 };
 
 class Tabs implements TabsInterface {
+    _accordionEl: HTMLElement;
     _items: TabItem[];
     _activeTab: TabItem;
     _options: TabsOptions;
+    _initialized: boolean;
 
-    constructor(items: TabItem[] = [], options: TabsOptions = Default) {
+    constructor(
+        accordionEl: HTMLElement | null = null,
+        items: TabItem[] = [],
+        options: TabsOptions = Default
+    ) {
+        this._accordionEl = accordionEl;
         this._items = items;
         this._activeTab = options ? this.getTab(options.defaultTabId) : null;
         this._options = { ...Default, ...options };
-        this._init();
-        instances.addInstance('Tabs', this);
+        this._initialized = false;
+        this.init();
+        instances.addInstance('Tabs', this, this._accordionEl.id);
     }
 
-    _init() {
-        if (this._items.length) {
+    init() {
+        if (this._items.length && !this._initialized) {
             // set the first tab as active if not set by explicitly
             if (!this._activeTab) {
                 this._setActiveTab(this._items[0]);
@@ -44,7 +52,16 @@ class Tabs implements TabsInterface {
         }
     }
 
-    destroy() {}
+    destroy() {
+        if (this._initialized) {
+            this._initialized = false;
+        }
+    }
+
+    removeInstance() {
+        this.destroy();
+        instances.removeInstance('Tabs', this._accordionEl.id);
+    }
 
     getActiveTab() {
         return this._activeTab;
@@ -96,10 +113,10 @@ class Tabs implements TabsInterface {
 }
 
 export function initTabs() {
-    document.querySelectorAll('[data-tabs-toggle]').forEach(($triggerEl) => {
+    document.querySelectorAll('[data-tabs-toggle]').forEach(($parentEl) => {
         const tabItems: TabItem[] = [];
         let defaultTabId = null;
-        $triggerEl
+        $parentEl
             .querySelectorAll('[role="tab"]')
             .forEach(($triggerEl: HTMLElement) => {
                 const isActive =
@@ -117,7 +134,8 @@ export function initTabs() {
                     defaultTabId = tab.id;
                 }
             });
-        new Tabs(tabItems, {
+        console.log(tabItems);
+        new Tabs($parentEl as HTMLElement, tabItems, {
             defaultTabId: defaultTabId,
         } as TabsOptions);
     });

@@ -57,7 +57,7 @@ class Carousel implements CarouselInterface {
      * initialize carousel and items based on active one
      */
     init() {
-        if (!this._initialized) {
+        if (this._items.length && !this._initialized) {
             this._items.map((item: CarouselItem) => {
                 item.el.classList.add(
                     'absolute',

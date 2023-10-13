@@ -23,17 +23,21 @@ const Default: CarouselOptions = {
 };
 
 class Carousel implements CarouselInterface {
+    _carouselEl: HTMLElement;
     _items: CarouselItem[];
     _indicators: IndicatorItem[];
     _activeItem: CarouselItem;
     _intervalDuration: number;
     _intervalInstance: number;
     _options: CarouselOptions;
+    _initialized: boolean;
 
     constructor(
+        carouselEl: HTMLElement | null = null,
         items: CarouselItem[] = [],
         options: CarouselOptions = Default
     ) {
+        this._carouselEl = carouselEl;
         this._items = items;
         this._options = {
             ...Default,
@@ -44,38 +48,52 @@ class Carousel implements CarouselInterface {
         this._indicators = this._options.indicators.items;
         this._intervalDuration = this._options.interval;
         this._intervalInstance = null;
-        this._init();
-        instances.addInstance('Carousel', this);
+        this._initialized = false;
+        this.init();
+        instances.addInstance('Carousel', this, this._carouselEl.id);
     }
 
     /**
      * initialize carousel and items based on active one
      */
-    _init() {
-        this._items.map((item: CarouselItem) => {
-            item.el.classList.add(
-                'absolute',
-                'inset-0',
-                'transition-transform',
-                'transform'
-            );
-        });
-
-        // if no active item is set then first position is default
-        if (this._getActiveItem()) {
-            this.slideTo(this._getActiveItem().position);
-        } else {
-            this.slideTo(0);
-        }
-
-        this._indicators.map((indicator, position) => {
-            indicator.el.addEventListener('click', () => {
-                this.slideTo(position);
+    init() {
+        if (!this._initialized) {
+            this._items.map((item: CarouselItem) => {
+                item.el.classList.add(
+                    'absolute',
+                    'inset-0',
+                    'transition-transform',
+                    'transform'
+                );
             });
-        });
+
+            // if no active item is set then first position is default
+            if (this._getActiveItem()) {
+                this.slideTo(this._getActiveItem().position);
+            } else {
+                this.slideTo(0);
+            }
+
+            this._indicators.map((indicator, position) => {
+                indicator.el.addEventListener('click', () => {
+                    this.slideTo(position);
+                });
+            });
+
+            this._initialized = true;
+        }
     }
 
-    destroy() {}
+    destroy() {
+        if (this._initialized) {
+            this._initialized = false;
+        }
+    }
+
+    removeInstance() {
+        this.destroy();
+        instances.removeInstance('Carousel', this._carouselEl.id);
+    }
 
     getItem(position: number) {
         return this._items[position];
@@ -286,7 +304,7 @@ export function initCarousels() {
             });
         }
 
-        const carousel = new Carousel(items, {
+        const carousel = new Carousel($carouselEl, items, {
             defaultPosition: defaultPosition,
             indicators: {
                 items: indicators,

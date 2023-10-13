@@ -26,8 +26,6 @@ class Instances {
         };
     }
 
-    init() {}
-
     addInstance(component: string, instance: any, id?: string) {
         this._instances[component][id ? id : this._generateRandomId()] =
             instance;

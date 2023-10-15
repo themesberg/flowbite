@@ -20,6 +20,7 @@ This component is recommended for usage within marketing UI interfaces and websi
 Use this component to show a collection of images inside a gallery with three pictures on a row.
 
 {{< example id="default-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
+
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
     <div>
         <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
@@ -65,6 +66,7 @@ Use this component to show a collection of images inside a gallery with three pi
 This example can be used to show the images inside a masonry grid layouts with four columns.
 
 {{< example id="masonry-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
+
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
     <div class="grid gap-4">
         <div>
@@ -118,6 +120,7 @@ This example can be used to show the images inside a masonry grid layouts with f
 This example can be used to feature the most important image and show a row of five pictures below.
 
 {{< example id="featured-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
+
 <div class="grid gap-4">
     <div>
         <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt="">
@@ -147,6 +150,7 @@ This example can be used to feature the most important image and show a row of f
 Use this example to show four larger images with two items on a row.
 
 {{< example id="quad-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
+
 <div class="grid grid-cols-2 gap-2">
         <div>
             <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
@@ -172,6 +176,7 @@ Use this example to show four larger images with two items on a row.
 This example uses the [carousel slider](https://flowbite.com/docs/components/carousel/) functionality to show multiple images inside a slider gallery.
 
 {{< example id="slider-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
+
 <div id="gallery" class="relative w-full" data-carousel="slide">
     <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
@@ -225,6 +230,7 @@ This example uses the [carousel slider](https://flowbite.com/docs/components/car
 This example uses an alternative style for the control button for the carousel slider component.
 
 {{< example id="slider-controls-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
+
 <div id="custom-controls-gallery" class="relative w-full" data-carousel="slide">
     <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
@@ -250,9 +256,9 @@ This example uses an alternative style for the control button for the carousel s
         </div>
     </div>
     <div class="flex justify-center items-center pt-4">
-        <button type="button" class="flex justify-center items-center mr-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+        <button type="button" class="flex justify-center items-center mr-4 rtl:mr-0 rtl:ml-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
             <span class="text-gray-400 hover:text-gray-900 dark:hover:text-white group-focus:text-gray-900 dark:group-focus:text-white">
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <svg class="rtl:rotate-180 w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
                 </svg>
                 <span class="sr-only">Previous</span>
@@ -260,7 +266,7 @@ This example uses an alternative style for the control button for the carousel s
         </button>
         <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-next>
             <span class="text-gray-400 hover:text-gray-900 dark:hover:text-white group-focus:text-gray-900 dark:group-focus:text-white">
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <svg class="rtl:rotate-180 w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                 </svg>
                 <span class="sr-only">Next</span>
@@ -275,6 +281,7 @@ This example uses an alternative style for the control button for the carousel s
 Use this example to show a list of tags and filter the images below based on the activately selected tag.
 
 {{< example id="tags-gallery-example" bodyClass="mt-0" github="components/gallery.md" show_dark=true >}}
+
 <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
     <button type="button" class="text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center mr-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">All categories</button>
     <button type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center mr-3 mb-3 dark:text-white dark:focus:ring-gray-800">Shoes</button>

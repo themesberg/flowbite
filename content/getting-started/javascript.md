@@ -11,3 +11,18 @@ previousLink: getting-started/quickstart/
 next: TypeScript
 nextLink: getting-started/typescript/
 ---
+
+## Create a new project
+
+## Install Tailwind CSS
+
+## Install Flowbite
+
+## Flowbite API
+
+## Data attributes
+## Instance manager
+
+## TypeScript support
+
+## JS frameworks

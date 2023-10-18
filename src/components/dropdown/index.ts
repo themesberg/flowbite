@@ -90,8 +90,12 @@ class Dropdown implements DropdownInterface {
     }
 
     removeInstance() {
-        this.destroy();
         instances.removeInstance('Dropdown', this._targetEl.id);
+    }
+
+    destroyAndRemoveInstance() {
+        this.destroy();
+        this.removeInstance();
     }
 
     _setupEventListeners() {

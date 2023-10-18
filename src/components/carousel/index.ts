@@ -91,8 +91,12 @@ class Carousel implements CarouselInterface {
     }
 
     removeInstance() {
-        this.destroy();
         instances.removeInstance('Carousel', this._carouselEl.id);
+    }
+
+    destroyAndRemoveInstance() {
+        this.destroy();
+        this.removeInstance();
     }
 
     getItem(position: number) {
@@ -304,7 +308,7 @@ export function initCarousels() {
             });
         }
 
-        const carousel = new Carousel($carouselEl, items, {
+        const carousel = new Carousel($carouselEl as HTMLElement, items, {
             defaultPosition: defaultPosition,
             indicators: {
                 items: indicators,

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import type { DrawerInstance, DrawerOptions, PlacementClasses } from './types';
+import type { DrawerOptions, PlacementClasses } from './types';
 import { DrawerInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -76,8 +76,12 @@ class Drawer implements DrawerInterface {
     }
 
     removeInstance() {
-        this.destroy();
         instances.removeInstance('Drawer', this._targetEl.id);
+    }
+
+    destroyAndRemoveInstance() {
+        this.destroy();
+        this.removeInstance();
     }
 
     hide() {

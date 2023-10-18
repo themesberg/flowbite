@@ -1,6 +1,8 @@
 import { TabItem, TabsOptions } from './types';
 
 export declare interface TabsInterface {
+    type: 'Tabs';
+
     _items: TabItem[];
     _activeTab: TabItem;
     _options: TabsOptions;
@@ -13,4 +15,5 @@ export declare interface TabsInterface {
 
     destroy(): void;
     removeInstance(): void;
+    destroyAndRemoveInstance(): void;
 }

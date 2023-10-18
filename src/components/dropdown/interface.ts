@@ -6,6 +6,8 @@ import {
 import type { Instance as PopperInstance } from '@popperjs/core';
 
 export declare interface DropdownInterface {
+    type: 'Dropdown';
+
     _targetEl: HTMLElement;
     _triggerEl: HTMLElement;
     _options: DropdownOptions;
@@ -30,4 +32,5 @@ export declare interface DropdownInterface {
 
     destroy(): void;
     removeInstance(): void;
+    destroyAndRemoveInstance(): void;
 }

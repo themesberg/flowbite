@@ -1,6 +1,8 @@
 import { CollapseOptions } from './types';
 
 export declare interface CollapseInterface {
+    type: 'Collapse';
+
     _targetEl: HTMLElement | null;
     _triggerEl: HTMLElement | null;
     _options: CollapseOptions;
@@ -13,4 +15,5 @@ export declare interface CollapseInterface {
 
     destroy(): void;
     removeInstance(): void;
+    destroyAndRemoveInstance(): void;
 }

@@ -63,6 +63,11 @@ class Tabs implements TabsInterface {
         instances.removeInstance('Tabs', this._accordionEl.id);
     }
 
+    destroyAndRemoveInstance() {
+        this.destroy();
+        this.removeInstance();
+    }
+
     getActiveTab() {
         return this._activeTab;
     }

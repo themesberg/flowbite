@@ -6,6 +6,8 @@ import {
 import type { Instance as PopperInstance } from '@popperjs/core';
 
 export declare interface PopoverInterface {
+    type: 'Popover';
+
     _targetEl: HTMLElement | null;
     _triggerEl: HTMLElement | null;
     _options: PopoverOptions;
@@ -30,4 +32,5 @@ export declare interface PopoverInterface {
 
     destroy(): void;
     removeInstance(): void;
+    destroyAndRemoveInstance(): void;
 }

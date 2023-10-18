@@ -1,6 +1,8 @@
 import { ModalOptions } from './types';
 
 export declare interface ModalInterface {
+    type: 'Modal';
+
     // The HTMLElement that will be used as the modal container
     _targetEl: HTMLElement | null;
 
@@ -52,4 +54,5 @@ export declare interface ModalInterface {
 
     destroy(): void;
     removeInstance(): void;
+    destroyAndRemoveInstance(): void;
 }

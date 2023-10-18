@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import type { ModalInstance, ModalOptions } from './types';
+import type { ModalOptions } from './types';
 import { ModalInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -52,8 +52,12 @@ class Modal implements ModalInterface {
     }
 
     removeInstance() {
-        this.destroy();
         instances.removeInstance('Modal', this._targetEl.id);
+    }
+
+    destroyAndRemoveInstance() {
+        this.destroy();
+        this.removeInstance();
     }
 
     _createBackdrop() {
@@ -253,7 +257,7 @@ export function initModals() {
             const placement = $modalEl.getAttribute('data-modal-placement');
             const backdrop = $modalEl.getAttribute('data-modal-backdrop');
 
-            let modal = instances.getInstance(
+            let modal: ModalInterface = instances.getInstance(
                 'Modal',
                 $modalEl.getAttribute('id')
             );
@@ -283,7 +287,7 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            const modal = instances.getInstance(
+            const modal: ModalInterface = instances.getInstance(
                 'Modal',
                 $modalEl.getAttribute('id')
             );
@@ -309,7 +313,7 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            const modal = instances.getInstance(
+            const modal: ModalInterface = instances.getInstance(
                 'Modal',
                 $modalEl.getAttribute('id')
             );

@@ -6,6 +6,8 @@ import {
 import type { Instance as PopperInstance } from '@popperjs/core';
 
 export declare interface TooltipInterface {
+    type: 'Tooltip';
+
     _targetEl: HTMLElement | null;
     _triggerEl: HTMLElement | null;
     _options: TooltipOptions;
@@ -30,4 +32,5 @@ export declare interface TooltipInterface {
 
     destroy(): void;
     removeInstance(): void;
+    destroyAndRemoveInstance(): void;
 }

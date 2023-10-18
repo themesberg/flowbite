@@ -113,7 +113,7 @@ class Dropdown implements DropdownInterface {
         }
 
         this._hoverShowTriggerElHandler = (ev) => {
-            if (ev === 'click') {
+            if (ev.type === 'click') {
                 this.toggle();
             } else {
                 setTimeout(() => {

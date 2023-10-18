@@ -6,8 +6,6 @@ import {
 } from './types';
 
 export declare interface CarouselInterface {
-    type: 'Carousel';
-
     _items: CarouselItem[];
     _indicators: IndicatorItem[];
     _activeItem: CarouselItem;

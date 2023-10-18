@@ -69,7 +69,7 @@ class Instances {
             console.warn(`Flowbite: Instance with ID ${id} does not exist.`);
             return;
         }
-        return this._instances[component][id];
+        return this._instances[component][id] as any;
     }
 
     destroyAndRemoveInstance(

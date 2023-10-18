@@ -1,8 +1,6 @@
 import { DrawerOptions, PlacementClasses } from './types';
 
 export declare interface DrawerInterface {
-    type: 'Drawer';
-
     // properties
     _targetEl: HTMLElement;
     _triggerEl: HTMLElement;

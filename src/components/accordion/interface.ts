@@ -3,8 +3,6 @@ import { AccordionItem, AccordionOptions } from './types';
 
 // Define the Accordion interface
 export declare interface AccordionInterface {
-    type: 'Accordion';
-
     _items: AccordionItem[];
     _options: AccordionOptions;
 

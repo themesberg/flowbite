@@ -1,8 +1,6 @@
 import { DialOptions, DialTriggerEventTypes, DialTriggerType } from './types';
 
 export declare interface DialInterface {
-    type: 'Dial';
-
     _parentEl: HTMLElement;
     _triggerEl: HTMLElement;
     _targetEl: HTMLElement;

@@ -37,7 +37,7 @@ class Tabs implements TabsInterface {
         if (this._items.length && !this._initialized) {
             // set the first tab as active if not set by explicitly
             if (!this._activeTab) {
-                this._setActiveTab(this._items[0]);
+                this.setActiveTab(this._items[0]);
             }
 
             // force show the first default tab
@@ -72,7 +72,7 @@ class Tabs implements TabsInterface {
         return this._activeTab;
     }
 
-    _setActiveTab(tab: TabItem) {
+    setActiveTab(tab: TabItem) {
         this._activeTab = tab;
     }
 
@@ -110,7 +110,7 @@ class Tabs implements TabsInterface {
         tab.triggerEl.setAttribute('aria-selected', 'true');
         tab.targetEl.classList.remove('hidden');
 
-        this._setActiveTab(tab);
+        this.setActiveTab(tab);
 
         // callback function
         this._options.onShow(this, tab);

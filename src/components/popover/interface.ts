@@ -13,6 +13,7 @@ export declare interface PopoverInterface {
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
     _keydownEventListener: EventListenerOrEventListenerObject;
 
+    init(): void;
     _setupEventListeners(): void;
     _setupClickOutsideListener(): void;
     _removeClickOutsideListener(): void;
@@ -26,4 +27,7 @@ export declare interface PopoverInterface {
     show(): void;
     hide(): void;
     toggle(): void;
+
+    destroy(): void;
+    removeInstance(): void;
 }

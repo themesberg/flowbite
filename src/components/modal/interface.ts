@@ -18,7 +18,7 @@ export declare interface ModalInterface {
     _keydownEventListener: EventListenerOrEventListenerObject;
 
     // Initializes the modal and sets up its event listeners
-    _init(): void;
+    init(): void;
 
     // Creates the modal's backdrop element and adds it to the DOM
     _createBackdrop(): void;
@@ -49,4 +49,7 @@ export declare interface ModalInterface {
 
     // return true if modal is visible
     isVisible(): boolean;
+
+    destroy(): void;
+    removeInstance(): void;
 }

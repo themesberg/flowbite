@@ -5,9 +5,12 @@ export declare interface TabsInterface {
     _activeTab: TabItem;
     _options: TabsOptions;
 
-    _init(): void;
+    init(): void;
     _setActiveTab(tab: TabItem): void;
     getActiveTab(): TabItem;
     getTab(id: string): TabItem;
     show(id: string, forceShow?: boolean): void;
+
+    destroy(): void;
+    removeInstance(): void;
 }

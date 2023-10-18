@@ -13,7 +13,7 @@ export declare interface CarouselInterface {
     _intervalInstance: number;
     _options: CarouselOptions;
 
-    _init(): void;
+    init(): void;
 
     getItem(position: number): CarouselItem;
 
@@ -28,4 +28,7 @@ export declare interface CarouselInterface {
     _rotate(rotationItems: RotationItems): void;
     cycle(): void;
     pause(): void;
+
+    destroy(): void;
+    removeInstance(): void;
 }

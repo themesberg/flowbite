@@ -27,4 +27,7 @@ export declare interface DropdownInterface {
     toggle(): void;
     show(): void;
     hide(): void;
+
+    destroy(): void;
+    removeInstance(): void;
 }

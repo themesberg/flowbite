@@ -13,7 +13,7 @@ export declare interface TooltipInterface {
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
     _keydownEventListener: EventListenerOrEventListenerObject;
 
-    _init(): void;
+    init(): void;
     _setupEventListeners(): void;
     _setupClickOutsideListener(): void;
     _removeClickOutsideListener(): void;
@@ -27,4 +27,7 @@ export declare interface TooltipInterface {
     show(): void;
     hide(): void;
     toggle(): void;
+
+    destroy(): void;
+    removeInstance(): void;
 }

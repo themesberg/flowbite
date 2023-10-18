@@ -1,32 +1,51 @@
-/* TO DO:
-- carousel: add and refactor destroy and init
-- dial: add and refactor destroy and init
-- drawer: add and refactor destroy and init
-- modal: add and refactor destroy and init
-- tabs: add and refactor destroy and init
-    - add unique ID selector for tabs
+import { AccordionInterface } from '../components/accordion/interface';
+import { CarouselInterface } from '../components/carousel/interface';
+import { CollapseInterface } from '../components/collapse/interface';
+import { DialInterface } from '../components/dial/interface';
+import { DismissInterface } from '../components/dismiss/interface';
+import { DrawerInterface } from '../components/drawer/interface';
+import { DropdownInterface } from '../components/dropdown/interface';
+import { ModalInterface } from '../components/modal/interface';
+import { PopoverInterface } from '../components/popover/interface';
+import { TabsInterface } from '../components/tabs/interface';
+import { TooltipInterface } from '../components/tooltip/interface';
 
-*/
 class Instances {
-    private _instances: [];
+    private _instances: {
+        Accordion: { [id: string]: AccordionInterface };
+        Carousel: { [id: string]: CarouselInterface };
+        Collapse: { [id: string]: CollapseInterface };
+        Dial: { [id: string]: DialInterface };
+        Dismiss: { [id: string]: DismissInterface };
+        Drawer: { [id: string]: DrawerInterface };
+        Dropdown: { [id: string]: DropdownInterface };
+        Modal: { [id: string]: ModalInterface };
+        Popover: { [id: string]: PopoverInterface };
+        Tabs: { [id: string]: TabsInterface };
+        Tooltip: { [id: string]: TooltipInterface };
+    };
 
     constructor() {
         this._instances = {
-            Accordion: [],
-            Carousel: [],
-            Collapse: [],
-            Dial: [],
-            Dismiss: [],
-            Drawer: [],
-            Dropdown: [],
-            Modal: [],
-            Popover: [],
-            Tabs: [],
-            Tooltip: [],
+            Accordion: {},
+            Carousel: {},
+            Collapse: {},
+            Dial: {},
+            Dismiss: {},
+            Drawer: {},
+            Dropdown: {},
+            Modal: {},
+            Popover: {},
+            Tabs: {},
+            Tooltip: {},
         };
     }
 
-    addInstance(component: string, instance: any, id?: string) {
+    addInstance(
+        component: keyof Instances['_instances'],
+        instance: any,
+        id?: string
+    ) {
         if (this._instances[component][id]) {
             console.warn(`Flowbite: Instance with ID ${id} already exists.`);
             return;
@@ -36,7 +55,7 @@ class Instances {
             instance;
     }
 
-    getInstance(component: string, id: string) {
+    getInstance(component: keyof Instances['_instances'], id: string) {
         if (!this._instances[component][id]) {
             console.warn(`Flowbite: Instance with ID ${id} does not exist.`);
             return;
@@ -44,7 +63,10 @@ class Instances {
         return this._instances[component][id];
     }
 
-    destroyAndRemoveInstance(component: string, id: string) {
+    destroyAndRemoveInstance(
+        component: keyof Instances['_instances'],
+        id: string
+    ) {
         if (!this._instances[component][id]) {
             console.warn(`Flowbite: Instance with ID ${id} does not exist.`);
             return;
@@ -53,7 +75,7 @@ class Instances {
         this.removeInstance(component, id);
     }
 
-    removeInstance(component: string, id: string) {
+    removeInstance(component: keyof Instances['_instances'], id: string) {
         if (!this._instances[component][id]) {
             console.warn(`Flowbite: Instance with ID ${id} does not exist.`);
             return;
@@ -61,7 +83,10 @@ class Instances {
         this._instances[component][id].removeInstance();
     }
 
-    destroyInstanceObject(component: string, id: string) {
+    destroyInstanceObject(
+        component: keyof Instances['_instances'],
+        id: string
+    ) {
         if (!this._instances[component][id]) {
             console.warn(`Flowbite: Instance with ID ${id} does not exist.`);
             return;

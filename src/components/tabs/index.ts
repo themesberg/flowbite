@@ -139,7 +139,7 @@ export function initTabs() {
                     defaultTabId = tab.id;
                 }
             });
-        console.log(tabItems);
+
         new Tabs($parentEl as HTMLElement, tabItems, {
             defaultTabId: defaultTabId,
         } as TabsOptions);

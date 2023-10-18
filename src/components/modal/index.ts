@@ -232,7 +232,9 @@ export function initModals() {
             const placement = $modalEl.getAttribute('data-modal-placement');
             const backdrop = $modalEl.getAttribute('data-modal-backdrop');
 
-            if (instances.getInstance('Modal', $modalEl.getAttribute('id'))) {
+            if (
+                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
+            ) {
                 new Modal(
                     $modalEl as HTMLElement,
                     {
@@ -257,11 +259,10 @@ export function initModals() {
             const placement = $modalEl.getAttribute('data-modal-placement');
             const backdrop = $modalEl.getAttribute('data-modal-backdrop');
 
-            let modal: ModalInterface = instances.getInstance(
-                'Modal',
-                $modalEl.getAttribute('id')
-            );
-            if (!modal) {
+            let modal: ModalInterface;
+            if (
+                !instances.instanceExists('Modal', $modalEl.getAttribute('id'))
+            ) {
                 modal = new Modal(
                     $modalEl as HTMLElement,
                     {
@@ -287,11 +288,13 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            const modal: ModalInterface = instances.getInstance(
-                'Modal',
-                $modalEl.getAttribute('id')
-            );
-            if (modal) {
+            if (
+                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
+            ) {
+                const modal: ModalInterface = instances.getInstance(
+                    'Modal',
+                    $modalEl.getAttribute('id')
+                );
                 $triggerEl.addEventListener('click', () => {
                     modal.show();
                 });
@@ -313,12 +316,13 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            const modal: ModalInterface = instances.getInstance(
-                'Modal',
-                $modalEl.getAttribute('id')
-            );
-
-            if (modal) {
+            if (
+                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
+            ) {
+                const modal: ModalInterface = instances.getInstance(
+                    'Modal',
+                    $modalEl.getAttribute('id')
+                );
                 $triggerEl.addEventListener('click', () => {
                     modal.hide();
                 });

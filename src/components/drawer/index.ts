@@ -274,7 +274,10 @@ export function initDrawers() {
             );
 
             if (
-                !instances.getInstance('Drawer', $drawerEl.getAttribute('id'))
+                !instances.instanceExists(
+                    'Drawer',
+                    $drawerEl.getAttribute('id')
+                )
             ) {
                 new Drawer($drawerEl, {
                     placement: placement ? placement : Default.placement,

@@ -100,6 +100,18 @@ class Instances {
         this._instances[component][id].destroy();
     }
 
+    instanceExists(component: keyof Instances['_instances'], id: string) {
+        if (!this._instances[component]) {
+            return false;
+        }
+
+        if (!this._instances[component][id]) {
+            return false;
+        }
+
+        return true;
+    }
+
     private _generateRandomId() {
         return Math.random().toString(36).substr(2, 9);
     }

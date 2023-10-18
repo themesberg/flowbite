@@ -46,6 +46,11 @@ class Instances {
         instance: any,
         id?: string
     ) {
+        if (!this._instances[component]) {
+            console.warn(`Flowbite: Component ${component} does not exist.`);
+            return false;
+        }
+
         if (this._instances[component][id]) {
             console.warn(`Flowbite: Instance with ID ${id} already exists.`);
             return;
@@ -56,6 +61,10 @@ class Instances {
     }
 
     getInstance(component: keyof Instances['_instances'], id: string) {
+        if (!this._componentAndInstanceCheck(component, id)) {
+            return;
+        }
+
         if (!this._instances[component][id]) {
             console.warn(`Flowbite: Instance with ID ${id} does not exist.`);
             return;
@@ -67,8 +76,7 @@ class Instances {
         component: keyof Instances['_instances'],
         id: string
     ) {
-        if (!this._instances[component][id]) {
-            console.warn(`Flowbite: Instance with ID ${id} does not exist.`);
+        if (!this._componentAndInstanceCheck(component, id)) {
             return;
         }
         this.destroyInstanceObject(component, id);
@@ -76,8 +84,7 @@ class Instances {
     }
 
     removeInstance(component: keyof Instances['_instances'], id: string) {
-        if (!this._instances[component][id]) {
-            console.warn(`Flowbite: Instance with ID ${id} does not exist.`);
+        if (!this._componentAndInstanceCheck(component, id)) {
             return;
         }
         this._instances[component][id].removeInstance();
@@ -87,15 +94,31 @@ class Instances {
         component: keyof Instances['_instances'],
         id: string
     ) {
-        if (!this._instances[component][id]) {
-            console.warn(`Flowbite: Instance with ID ${id} does not exist.`);
+        if (!this._componentAndInstanceCheck(component, id)) {
             return;
         }
         this._instances[component][id].destroy();
     }
 
-    _generateRandomId() {
+    private _generateRandomId() {
         return Math.random().toString(36).substr(2, 9);
+    }
+
+    private _componentAndInstanceCheck(
+        component: keyof Instances['_instances'],
+        id: string
+    ) {
+        if (!this._instances[component]) {
+            console.warn(`Flowbite: Component ${component} does not exist.`);
+            return false;
+        }
+
+        if (!this._instances[component][id]) {
+            console.warn(`Flowbite: Instance with ID ${id} already exists.`);
+            return false;
+        }
+
+        return true;
     }
 }
 

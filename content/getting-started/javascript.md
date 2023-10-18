@@ -19,7 +19,7 @@ Flowbite uses JavaScript to power the interactivity of the more complex UI compo
 There are two main ways you can use JavaScript to power the interactive UI components:
 
 - use the data attributes interface and include the Flowbite JavaScript via NPM or CDN
-- programatically create instances of the UI components and call methods and attach events to elements
+- programmatically create instances of the UI components and call methods and attach events to elements
 
 On this page you will learn how to leverage the Flowbite API to work with the interactivity part of the UI library and how you can customize the default behaviour of the UI components using JavaScript.
 
@@ -189,7 +189,7 @@ This is just one example that shows you how Flowbite leverages the data attribut
 
 ## Init functions
 
-If you want to programatically call the initialisation functions when using data attributes (for example, you might want to call it after the DOM re-rendered) then you can use the `initFlowbite()` function or the separate component initialisation functions such as `initModals()` or `initDropdowns()` wherever you want in your JS code:
+If you want to programmatically call the initialisation functions when using data attributes (for example, you might want to call it after the DOM re-rendered) then you can use the `initFlowbite()` function or the separate component initialisation functions such as `initModals()` or `initDropdowns()` wherever you want in your JS code:
 
 ```javascript
 <script type="application/javascript">
@@ -204,7 +204,7 @@ Basically, the `initFlowbite()` function parses your DOM for all of the data att
 
 ## Instance manager
 
-Since version `1.9.0`, the Flowbite JS API also provides a way to globally access all of the instances even if they were created via the data attributes interface. This allows you to programatically handle the components while also giving you the possibility to use the recommended and quick way of accessing the data attributes interface and UI component examples.
+Since version `1.9.0`, the Flowbite JS API also provides a way to globally access all of the instances even if they were created via the data attributes interface. This allows you to programmatically handle the components while also giving you the possibility to use the recommended and quick way of accessing the data attributes interface and UI component examples.
 
 After the DOM has rendered and the UI components from Flowbite have been initialised (either via CDN or the `initFlowbite()` function) you can use the following global object and methods to get access to the object instances:
 
@@ -219,7 +219,7 @@ As you can see, the `flowbiteInstances` global object has two main parameters:
 
 If you provide the wrong category or ID then the console will give you a warning.
 
-If you have provided the correct category and element ID then you can now access the object as if you've created it yourself and work with it programatically via JavaScript:
+If you have provided the correct category and element ID then you can now access the object as if you've created it yourself and work with it programmatically via JavaScript:
 
 ```javascript
 // show the modal
@@ -229,22 +229,28 @@ modal.show();
 modal.hide();
 ```
 
-You can even remove the instance form the instance manager and in the meantime destroy the object:
+You can even remove the instance form the instance manager:
 
 ```javascript
-// destroy the modal event listeners and remove the instance from flowbiteStorage
+// remove the instance object from the global flowbiteInstance manager
 modal.removeInstance();
+```
+
+You can also both destroy and remove the instance at the same time:
+
+```javascript
+modal.destroyAndRemoveInstance();
 ```
 
 This in turn will basically remove the object instance from the global `flowbiteStorage` instance manager - you might want to do this if you want to reset certain elements from the DOM in single page applications.
 
-Another example if you want to programatically show or hide a tooltip that was created via data attributes would be:
+Another example if you want to programmatically show or hide a tooltip that was created via data attributes would be:
 
 ```javascript
 const tooltip = flowbiteInstances.getInstance('Tooltip', 'tooltip-id');
 ```
 
-And now you can show or hide the tooltip programatically:
+And now you can show or hide the tooltip programmatically:
 
 ```javascript
 // show the tooltip
@@ -254,7 +260,7 @@ tooltip.show();
 tooltip.hide();
 ```
 
-You can even call the `destroy()` and `init()` methods to re-calculate the positioning of the tooltip:
+You can call the `destroy()` and `init()` methods to re-calculate the positioning of the tooltip:
 
 ```javascript
 // destroy the tooltip event listeners

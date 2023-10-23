@@ -60,6 +60,18 @@ class Instances {
             instance;
     }
 
+    getAllInstances() {
+        return this._instances;
+    }
+
+    getInstances(component: keyof Instances['_instances']) {
+        if (!this._instances[component]) {
+            console.warn(`Flowbite: Component ${component} does not exist.`);
+            return false;
+        }
+        return this._instances[component];
+    }
+
     getInstance(component: keyof Instances['_instances'], id: string) {
         if (!this._componentAndInstanceCheck(component, id)) {
             return;
@@ -139,5 +151,5 @@ const instances = new Instances();
 export default instances;
 
 if (typeof window !== 'undefined') {
-    window.flowbiteInstances = instances;
+    window.FlowbiteInstances = instances;
 }

@@ -309,7 +309,7 @@ Accordions can be nested. All of the mentioned options are supported.
 To enable nested accordions you need to wrap the nested accordion in an element with the `data-accordion` attribute and don't accidentally initialize an accordion with nested accordions' items (e.g. by using `$accordionBodyEl.querySelectorAll`), when using <a href="#javascript-behaviour">custom JavaScript</a>.
 
 {{< example id="accordion-nesting-example" github="components/accordion.md" show_dark=true >}}
-<div id="accordion-collapse" data-accordion="collapse">
+<div id="accordion-nested-parent" data-accordion="collapse">
   <h2 id="accordion-collapse-heading-1">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
       <span>What is Flowbite?</span>

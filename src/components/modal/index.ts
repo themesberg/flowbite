@@ -47,6 +47,7 @@ class Modal implements ModalInterface {
 
     destroy() {
         if (this._initialized) {
+            this.hide();
             this._initialized = false;
         }
     }

@@ -209,10 +209,10 @@ Since version `1.9.0`, the Flowbite JS API also provides a way to globally acces
 After the DOM has rendered and the UI components from Flowbite have been initialised (either via CDN or the `initFlowbite()` function) you can use the following global object and methods to get access to the object instances:
 
 ```javascript
-const modal = flowbiteInstances.getInstance('Modal', 'modal-id');
+const modal = FlowbiteInstances.getInstance('Modal', 'modal-id');
 ```
 
-As you can see, the `flowbiteInstances` global object has two main parameters:
+As you can see, the `FlowbiteInstances` global object has two main parameters:
 
 - the first parameter is the component type which can be `Modal`, `Carousel`, `Dropdown` (ie. the name of the object class)
 - the second parameter is the target ID or parent ID of the main element and it's always a string
@@ -232,7 +232,7 @@ modal.hide();
 You can even remove the instance form the instance manager:
 
 ```javascript
-// remove the instance object from the global flowbiteInstance manager
+// remove the instance object from the global FlowbiteInstances manager
 modal.removeInstance();
 ```
 
@@ -244,10 +244,10 @@ modal.destroyAndRemoveInstance();
 
 This in turn will basically remove the object instance from the global `flowbiteStorage` instance manager - you might want to do this if you want to reset certain elements from the DOM in single page applications.
 
-Another example if you want to programmatically show or hide a tooltip that was created via data attributes would be:
+Another example if you want to show or hide a tooltip that was created via data attributes would be:
 
 ```javascript
-const tooltip = flowbiteInstances.getInstance('Tooltip', 'tooltip-id');
+const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-id');
 ```
 
 And now you can show or hide the tooltip programmatically:
@@ -274,6 +274,18 @@ tooltip.show();
 ```
 
 A component is added to the `flowbiteStorage` global instance manager automatically when it's created via the `constructor` method of the object class, regardless of which component is being used from Flowbite.
+
+Finally, you can also access all of the instances by calling the following method:
+
+```javascript
+FlowbiteInstances.getAllInstances();
+```
+
+Alternatively, you can also get all of the instances from one component pool such as from the modals:
+
+```javascript
+FlowbiteInstance.getInstances('Modal');
+```
 
 ## TypeScript support
 

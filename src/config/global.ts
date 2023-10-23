@@ -35,6 +35,6 @@ declare global {
         initTabs: () => void;
         initTooltips: () => void;
         initFlowbite: () => void;
-        flowbiteInstances: any;
+        FlowbiteInstances: any;
     }
 }

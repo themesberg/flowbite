@@ -573,7 +573,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   Integer
               </td>
               <td class="px-6 py-4">
-                  Set the duration of the dismissing animation. The default value is <code class="text-purple-600 dark:text-purple-400">300</code> (300 miliseconds).
+                  Set the duration of the dismissing animation. The default value is <code class="text-purple-600 dark:text-purple-400">300</code> (300 milliseconds).
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">

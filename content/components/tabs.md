@@ -241,6 +241,20 @@ Create a new Tabs object with parameters such as an array of the tab and content
         <tbody>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">tabsElement</code>
+                </td>
+                <td class="px-6 py-4">
+                    Element
+                </td>
+                <td class="px-6 py-4">
+                    Required
+                </td>
+                <td class="px-6 py-4">
+                    Parent HTML element of the tabs component.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">items</code>
                 </td>
                 <td class="px-6 py-4">
@@ -383,6 +397,8 @@ Check out the following example to learn how to initialize and manipulate a Tabs
 First of all, create an array of objects that contains the id, trigger element, and content element of each tab, set the active tab based on the id, and optionally set a callback function after a new tab has been shown.
 
 ```javascript
+const tabsElement = document.getElementById('tabs-example');
+
 // create an array of objects with the id, trigger element (eg. button), and the content element
 const tabElements = [
     {
@@ -427,7 +443,7 @@ import { Tabs } from 'flowbite';
 * tabElements: array of tab objects
 * options: optional
 */
-const tabs = new Tabs(tabElements, options);
+const tabs = new Tabs(tabsElement, tabElements, options);
 ```
 
 Lastly, you can now use the methods on the Tabs object to show another tab element, get a tab element based on the id, or get the current active tab element.
@@ -449,7 +465,7 @@ You can use this HTML code as an example for the JavaScript code from above.
 
 ```html
 <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
-    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400" id="tabExample" role="tablist">
+    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400" id="tabs-example" role="tablist">
         <li class="mr-2" role="presentation">
             <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="profile-tab-example" type="button" role="tab" aria-controls="profile-example" aria-selected="false">Profile</button>
         </li>
@@ -490,6 +506,8 @@ Here's an example that applies the types from Flowbite to the code above:
 import { Tabs } from "flowbite";
 import type { TabsOptions, TabsInterface, TabItem } from "flowbite";
 
+const tabsElement: HTMLElement = document.getElementById('tabs-example');
+
 // create an array of objects with the id, trigger element (eg. button), and the content element
 const tabElements: TabItem[] = [
     {
@@ -528,7 +546,7 @@ const options: TabsOptions = {
 * tabElements: array of tab objects
 * options: optional
 */
-const tabs: TabsInterface = new Tabs(tabElements, options);
+const tabs: TabsInterface = new Tabs(tabsElement, tabElements, options);
 
 // open tab item based on id
 tabs.show('contacts');

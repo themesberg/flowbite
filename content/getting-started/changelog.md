@@ -15,7 +15,7 @@ nextLink: getting-started/react/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
-### v1.9.0
+### v2.0.0
 
 This update introduces a new instance manager feature that allows you manage all of the interactive components from a single place. This is useful if you want to programmatically show or hide a modal, popover, or tooltip. This also works if you use the data attributes interface.
 

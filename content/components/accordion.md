@@ -419,6 +419,20 @@ Create a new Accordion object by passing an array of accordion items and an opti
         <tbody>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">accordionEl</code>
+                </td>
+                <td class="px-6 py-4">
+                    Element
+                </td>
+                <td class="px-6 py-4">
+                    Required
+                </td>
+                <td class="px-6 py-4">
+                    The parent HTML element of the accordion component.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">items</code>
                 </td>
                 <td class="px-6 py-4">
@@ -582,6 +596,8 @@ To get started you need to create an array of accordion item objects including a
 Additionally, you can also set some options to change the default behaviour of the accordion, customize the styles, and set callback functions.
 
 ```javascript
+const accordionElement = document.getElementById('accordion-example');
+
 // create an array of objects with the id, trigger element (eg. button), and the content element
 const accordionItems = [
     {
@@ -633,7 +649,7 @@ import { Accordion } from 'flowbite';
 * accordionItems: array of accordion item objects
 * options: optional
 */
-const accordion = new Accordion(accordionItems, options);
+const accordion = new Accordion(accordionElement, accordionItems, options);
 ```
 
 Now you can access the object methods to programmatically open, close, and toggle the accordion items based on the unique identifier.

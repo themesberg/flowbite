@@ -204,7 +204,7 @@ Basically, the `initFlowbite()` function parses your DOM for all of the data att
 
 ## Instance manager
 
-Since version `1.9.0`, the Flowbite JS API also provides a way to globally access all of the instances even if they were created via the data attributes interface. This allows you to programmatically handle the components while also giving you the possibility to use the recommended and quick way of accessing the data attributes interface and UI component examples.
+Since version `2.0.0`, the Flowbite JS API also provides a way to globally access all of the instances even if they were created via the data attributes interface. This allows you to programmatically handle the components while also giving you the possibility to use the recommended and quick way of accessing the data attributes interface and UI component examples.
 
 After the DOM has rendered and the UI components from Flowbite have been initialised (either via CDN or the `initFlowbite()` function) you can use the following global object and methods to get access to the object instances:
 

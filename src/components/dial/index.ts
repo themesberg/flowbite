@@ -33,7 +33,7 @@ class Dial implements DialInterface {
         this._visible = false;
         this._initialized = false;
         this.init();
-        instances.addInstance('Dial', this, this._targetEl.id);
+        instances.addInstance('Dial', this, this._targetEl.id, true);
     }
 
     init() {

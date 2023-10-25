@@ -50,7 +50,7 @@ class Carousel implements CarouselInterface {
         this._intervalInstance = null;
         this._initialized = false;
         this.init();
-        instances.addInstance('Carousel', this, this._carouselEl.id);
+        instances.addInstance('Carousel', this, this._carouselEl.id, true);
     }
 
     /**

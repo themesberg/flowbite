@@ -27,7 +27,7 @@ class Dismiss implements DismissInterface {
         this._options = { ...Default, ...options };
         this._initialized = false;
         this.init();
-        instances.addInstance('Dismiss', this, this._targetEl.id);
+        instances.addInstance('Dismiss', this, this._targetEl.id, true);
     }
 
     init() {

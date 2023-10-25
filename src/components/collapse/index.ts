@@ -28,7 +28,7 @@ class Collapse implements CollapseInterface {
         this._visible = false;
         this._initialized = false;
         this.init();
-        instances.addInstance('Collapse', this, this._targetEl.id);
+        instances.addInstance('Collapse', this, this._targetEl.id, true);
     }
 
     init() {

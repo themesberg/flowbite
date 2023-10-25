@@ -40,7 +40,7 @@ class Tooltip implements TooltipInterface {
         this._visible = false;
         this._initialized = false;
         this.init();
-        instances.addInstance('Tooltip', this, this._targetEl.id);
+        instances.addInstance('Tooltip', this, this._targetEl.id, true);
     }
 
     init() {

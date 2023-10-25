@@ -33,7 +33,7 @@ class Drawer implements DrawerInterface {
         this._visible = false;
         this._initialized = false;
         this.init();
-        instances.addInstance('Drawer', this, this._targetEl.id);
+        instances.addInstance('Drawer', this, this._targetEl.id, true);
     }
 
     init() {

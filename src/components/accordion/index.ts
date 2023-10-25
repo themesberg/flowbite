@@ -29,7 +29,7 @@ class Accordion implements AccordionInterface {
         this._options = { ...Default, ...options };
         this._initialized = false;
         this.init();
-        instances.addInstance('Accordion', this, this._accordionEl.id);
+        instances.addInstance('Accordion', this, this._accordionEl.id, true);
     }
 
     init() {

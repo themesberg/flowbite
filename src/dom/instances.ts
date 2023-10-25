@@ -44,14 +44,15 @@ class Instances {
     addInstance(
         component: keyof Instances['_instances'],
         instance: any,
-        id?: string
+        id?: string,
+        forceOverride = false
     ) {
         if (!this._instances[component]) {
             console.warn(`Flowbite: Component ${component} does not exist.`);
             return false;
         }
 
-        if (this._instances[component][id]) {
+        if (this._instances[component][id] && !forceOverride) {
             console.warn(`Flowbite: Instance with ID ${id} already exists.`);
             return;
         }

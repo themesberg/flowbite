@@ -33,7 +33,7 @@ class Modal implements ModalInterface {
         this._backdropEl = null;
         this._initialized = false;
         this.init();
-        instances.addInstance('Modal', this, this._targetEl.id);
+        instances.addInstance('Modal', this, this._targetEl.id, true);
     }
 
     init() {
@@ -262,15 +262,24 @@ export function initModals() {
 
             let modal: ModalInterface;
             if (
-                !instances.instanceExists('Modal', $modalEl.getAttribute('id'))
+                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
             ) {
-                modal = new Modal(
-                    $modalEl as HTMLElement,
-                    {
-                        placement: placement ? placement : Default.placement,
-                        backdrop: backdrop ? backdrop : Default.backdrop,
-                    } as ModalOptions
+                modal = instances.getInstance(
+                    'Modal',
+                    $modalEl.getAttribute('id')
                 );
+            } else {
+                {
+                    modal = new Modal(
+                        $modalEl as HTMLElement,
+                        {
+                            placement: placement
+                                ? placement
+                                : Default.placement,
+                            backdrop: backdrop ? backdrop : Default.backdrop,
+                        } as ModalOptions
+                    );
+                }
             }
 
             $triggerEl.addEventListener('click', () => {

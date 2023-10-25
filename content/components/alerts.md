@@ -13,7 +13,7 @@ nextLink: components/avatar/
 
 The alert component can be used to provide information to your users such as success or error messages, but also highlighted information complementing the normal flow of paragraphs and headers on a page.
 
-Flowbite also includes dismissable alerts which can be hidden by the users by clicking on the close icon.
+Flowbite also includes dismissible alerts which can be hidden by the users by clicking on the close icon.
 
 ## Default alert
 
@@ -182,7 +182,7 @@ Use this example to show a list and a description inside an alert component.
 
 ## Dismissing
 
-Use the following alert elements that are also dismissable.
+Use the following alert elements that are also dismissible.
 
 {{< example id="alerts-dismissing-example" github="components/alerts.md" show_dark=true >}}
 <div id="alert-1" class="flex items-center p-4 mb-4 text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">

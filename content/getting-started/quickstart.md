@@ -57,6 +57,8 @@ module.exports = {
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 ```
 
+Learn more about the Flowbite JavaScript API and functionalities in the [JavaScript section](https://flowbite.com/docs/getting-started/javascript/).
+
 ### Include via CDN
 
 The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.

@@ -3,6 +3,8 @@
   pages:
     - title: Introduction
     - title: Quickstart
+    - title: JavaScript
+      new: true
     - title: TypeScript
     - title: License
     - title: Changelog

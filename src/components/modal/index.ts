@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import type { ModalInstance, ModalOptions } from './types';
+import type { ModalOptions } from './types';
 import { ModalInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: ModalOptions = {
     placement: 'center',
@@ -20,6 +21,7 @@ class Modal implements ModalInterface {
     _backdropEl: HTMLElement | null;
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
     _keydownEventListener: EventListenerOrEventListenerObject;
+    _initialized: boolean;
 
     constructor(
         targetEl: HTMLElement | null = null,
@@ -29,15 +31,34 @@ class Modal implements ModalInterface {
         this._options = { ...Default, ...options };
         this._isHidden = true;
         this._backdropEl = null;
-        this._init();
+        this._initialized = false;
+        this.init();
+        instances.addInstance('Modal', this, this._targetEl.id, true);
     }
 
-    _init() {
-        if (this._targetEl) {
+    init() {
+        if (this._targetEl && !this._initialized) {
             this._getPlacementClasses().map((c) => {
                 this._targetEl.classList.add(c);
             });
+            this._initialized = true;
         }
+    }
+
+    destroy() {
+        if (this._initialized) {
+            this.hide();
+            this._initialized = false;
+        }
+    }
+
+    removeInstance() {
+        instances.removeInstance('Modal', this._targetEl.id);
+    }
+
+    destroyAndRemoveInstance() {
+        this.destroy();
+        this.removeInstance();
     }
 
     _createBackdrop() {
@@ -158,13 +179,13 @@ class Modal implements ModalInterface {
             this._createBackdrop();
             this._isHidden = false;
 
-            // prevent body scroll
-            document.body.classList.add('overflow-hidden');
-
             // Add keyboard event listener to the document
             if (this._options.closable) {
                 this._setupModalCloseEventListeners();
             }
+
+            // prevent body scroll
+            document.body.classList.add('overflow-hidden');
 
             // callback function
             this._options.onShow(this);
@@ -202,16 +223,7 @@ class Modal implements ModalInterface {
     }
 }
 
-const getModalInstance = (id: string, instances: ModalInstance[]) => {
-    if (instances.some((modalInstance) => modalInstance.id === id)) {
-        return instances.find((modalInstance) => modalInstance.id === id);
-    }
-    return null;
-};
-
 export function initModals() {
-    const modalInstances = [] as ModalInstance[];
-
     // initiate modal based on data-modal-target
     document.querySelectorAll('[data-modal-target]').forEach(($triggerEl) => {
         const modalId = $triggerEl.getAttribute('data-modal-target');
@@ -221,19 +233,16 @@ export function initModals() {
             const placement = $modalEl.getAttribute('data-modal-placement');
             const backdrop = $modalEl.getAttribute('data-modal-backdrop');
 
-            if (!getModalInstance(modalId, modalInstances)) {
-                modalInstances.push({
-                    id: modalId,
-                    object: new Modal(
-                        $modalEl as HTMLElement,
-                        {
-                            placement: placement
-                                ? placement
-                                : Default.placement,
-                            backdrop: backdrop ? backdrop : Default.backdrop,
-                        } as ModalOptions
-                    ),
-                });
+            if (
+                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
+            ) {
+                new Modal(
+                    $modalEl as HTMLElement,
+                    {
+                        placement: placement ? placement : Default.placement,
+                        backdrop: backdrop ? backdrop : Default.backdrop,
+                    } as ModalOptions
+                );
             }
         } else {
             console.error(
@@ -251,14 +260,17 @@ export function initModals() {
             const placement = $modalEl.getAttribute('data-modal-placement');
             const backdrop = $modalEl.getAttribute('data-modal-backdrop');
 
-            let modal: ModalInstance = getModalInstance(
-                modalId,
-                modalInstances
-            );
-            if (!modal) {
-                modal = {
-                    id: modalId,
-                    object: new Modal(
+            let modal: ModalInterface;
+            if (
+                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
+            ) {
+                modal = instances.getInstance(
+                    'Modal',
+                    $modalEl.getAttribute('id')
+                );
+            } else {
+                {
+                    modal = new Modal(
                         $modalEl as HTMLElement,
                         {
                             placement: placement
@@ -266,13 +278,12 @@ export function initModals() {
                                 : Default.placement,
                             backdrop: backdrop ? backdrop : Default.backdrop,
                         } as ModalOptions
-                    ),
-                };
-                modalInstances.push(modal);
+                    );
+                }
             }
 
             $triggerEl.addEventListener('click', () => {
-                modal.object.toggle();
+                modal.toggle();
             });
         } else {
             console.error(
@@ -287,15 +298,15 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            const modal: ModalInstance = getModalInstance(
-                modalId,
-                modalInstances
-            );
-            if (modal) {
+            if (
+                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
+            ) {
+                const modal: ModalInterface = instances.getInstance(
+                    'Modal',
+                    $modalEl.getAttribute('id')
+                );
                 $triggerEl.addEventListener('click', () => {
-                    if (modal.object.isHidden) {
-                        modal.object.show();
-                    }
+                    modal.show();
                 });
             } else {
                 console.error(
@@ -315,16 +326,15 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            const modal: ModalInstance = getModalInstance(
-                modalId,
-                modalInstances
-            );
-
-            if (modal) {
+            if (
+                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
+            ) {
+                const modal: ModalInterface = instances.getInstance(
+                    'Modal',
+                    $modalEl.getAttribute('id')
+                );
                 $triggerEl.addEventListener('click', () => {
-                    if (modal.object.isVisible) {
-                        modal.object.hide();
-                    }
+                    modal.hide();
                 });
             } else {
                 console.error(

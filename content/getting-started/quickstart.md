@@ -7,8 +7,8 @@ toc: true
 
 previous: Introduction
 previousLink: getting-started/introduction/
-next: TypeScript
-nextLink: getting-started/typescript/
+next: JavaScript
+nextLink: getting-started/javascript/
 ---
 
 Flowbite is a library of components built on top of the utility-classes from Tailwind CSS and it also includes a JavaScript file that makes interactive elements works, such as modals, dropdowns, and more. Learn how to get started by following this quickstart guide.
@@ -56,6 +56,8 @@ module.exports = {
 ```html
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 ```
+
+Learn more about the Flowbite JavaScript API and functionalities in the [JavaScript section](https://flowbite.com/docs/getting-started/javascript/).
 
 ### Include via CDN
 

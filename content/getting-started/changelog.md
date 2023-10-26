@@ -15,18 +15,30 @@ nextLink: getting-started/react/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
-### 1.8.1
+### v2.0.0
+
+This update introduces a new instance manager feature that allows you manage all of the interactive components from a single place. This is useful if you want to programmatically show or hide a modal, popover, or tooltip. This also works if you use the data attributes interface.
+
+This change introduces a few breaking changes to the JavaScript API when creating objects:
+
+- new `$carouselEl` HTML element when creating a `Carousel` object as the first parameter
+- new `$accordion` HTML element when creating a `Accordion` object as the first parameter
+- new `$tabsEl` HTML element when creating a `Tabs` object as the first parameter
+
+The breaking changes do not apply to the data attributes interface, only for objects created programmatically via JavaScript.
+
+### v1.8.1
 
 - fix `apexcharts` safelist warning in console
 
-### 1.8.0
+### v1.8.0
 
 - added new chart components
 - enable or disable styles via the Flowbite Plugin
 - addded new API option to the dropdowns to prevent closing when clicking on certain elements
 - small bug fixes and improvements overall
 
-### 1.7.0
+### v1.7.0
 
 - integrate new [Flowbite Icons](https://flowbite.com/icons/) with all UI components
 - added new pagination examples and sizes
@@ -35,14 +47,14 @@ We strive to keep a good accountability of all of the version changes that we ma
 - updated docs and website icons
 - update Svelte docs for Svelte 4.0
 
-### 1.6.6
+### v1.6.6
 
 - new device mockups component
 - add nested accordions feature ([#266](https://github.com/themesberg/flowbite/issues/266) issue fixed by (@jneuendorf)[https://github.com/jneuendorf])
 - make init functions (ie. `initDropdowns`, `initFlowbite`) available via the `window` object
 - fix Nuxt.js documentation config path for Tailwind CSS
 
-### 1.6.5
+### v1.6.5
 
 - New gallery component
 - New jumbotron component

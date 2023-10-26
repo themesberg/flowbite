@@ -80,7 +80,7 @@ There's a 300ms default delay when showing or hiding the dropdown due to UI/UX r
 
 ### Delay duration
 
-You can use the `data-dropdown-delay={miliseconds}` data attribute to set they delay on when to show or hide the dropdown menu when using hover. You may want to use this depending on how the users interact with your interface. In this example we add 500 miliseconds instead of the default 300.
+You can use the `data-dropdown-delay={milliseconds}` data attribute to set they delay on when to show or hide the dropdown menu when using hover. You may want to use this depending on how the users interact with your interface. In this example we add 500 milliseconds instead of the default 300.
 
 {{< example id="dropdown-delay-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="300" >}}
 <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" data-dropdown-trigger="hover" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown hover <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -174,13 +174,13 @@ Use this example to show extra information outside of the list of menu items ins
 Use this example to enable multi-level dropdown menus by adding stacked elements inside of each other.
 
 {{< example id="dropdown-multi-level-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="350" >}}
-<button id="multiLevelDropdownButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+<button id="multiLevelDropdownButton" data-dropdown-toggle="multi-dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
   </svg>
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="multi-dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="multiLevelDropdownButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -1197,13 +1197,13 @@ Use the offset options on the dropdown component to set the distance and skiddin
 Use the `data-dropdown-offset-distance={pixels}` data attribute to set the number of pixels you want the dropdown menu to be offset from the trigger element.
 
 {{< example id="dropdown-offset-distance-example" class="flex flex-wrap justify-center" github="components/dropdowns.md" iframeHeight="320" show_dark=true >}}
-<button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset" data-dropdown-offset-distance="35" data-dropdown-offset-skidding="0" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+<button id="dropdownDistanceButton" data-dropdown-toggle="dropdownDistance" data-dropdown-offset-distance="35" data-dropdown-offset-skidding="0" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
   </svg>
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownOffset" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="dropdownDistance" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -1226,13 +1226,13 @@ Use the `data-dropdown-offset-distance={pixels}` data attribute to set the numbe
 The `data-dropdown-offset-skidding={pixels}` data attribute can be used to move up or down (or left and right) the dropdown menu along and relative to the trigger element.
 
 {{< example id="dropdown-offset-skidding-example" class="flex flex-wrap justify-center" github="components/dropdowns.md" iframeHeight="320" show_dark=true >}}
-<button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset" data-dropdown-offset-distance="10" data-dropdown-offset-skidding="100" data-dropdown-placement="right" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+<button id="dropdownSkiddingButton" data-dropdown-toggle="dropdownSkidding" data-dropdown-offset-distance="10" data-dropdown-offset-skidding="100" data-dropdown-placement="right" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
   </svg>
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownOffset" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="dropdownSkidding" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -1399,7 +1399,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Number
               </td>
               <td class="px-6 py-4">
-                  Set the miliseconds for which the showing or hiding of the dropdown will be delayed for when using the hover trigger type.
+                  Set the milliseconds for which the showing or hiding of the dropdown will be delayed for when using the hover trigger type.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">

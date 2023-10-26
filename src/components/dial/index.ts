@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { DialOptions, DialTriggerType } from './types';
 import { DialInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: DialOptions = {
     triggerType: 'hover',
@@ -15,6 +16,9 @@ class Dial implements DialInterface {
     _targetEl: HTMLElement;
     _options: DialOptions;
     _visible: boolean;
+    _initialized: boolean;
+    _showEventHandler: EventListenerOrEventListenerObject;
+    _hideEventHandler: EventListenerOrEventListenerObject;
 
     constructor(
         parentEl: HTMLElement | null = null,
@@ -27,30 +31,65 @@ class Dial implements DialInterface {
         this._targetEl = targetEl;
         this._options = { ...Default, ...options };
         this._visible = false;
-        this._init();
+        this._initialized = false;
+        this.init();
+        instances.addInstance('Dial', this, this._targetEl.id, true);
     }
 
-    _init() {
-        if (this._triggerEl) {
+    init() {
+        if (this._triggerEl && this._targetEl && !this._initialized) {
             const triggerEventTypes = this._getTriggerEventTypes(
                 this._options.triggerType
             );
+
+            this._showEventHandler = () => {
+                this.show();
+            };
+
             triggerEventTypes.showEvents.forEach((ev: string) => {
-                this._triggerEl.addEventListener(ev, () => {
-                    this.show();
-                });
-                this._targetEl.addEventListener(ev, () => {
-                    this.show();
-                });
+                this._triggerEl.addEventListener(ev, this._showEventHandler);
+                this._targetEl.addEventListener(ev, this._showEventHandler);
             });
+
+            this._hideEventHandler = () => {
+                if (!this._parentEl.matches(':hover')) {
+                    this.hide();
+                }
+            };
+
             triggerEventTypes.hideEvents.forEach((ev: string) => {
-                this._parentEl.addEventListener(ev, () => {
-                    if (!this._parentEl.matches(':hover')) {
-                        this.hide();
-                    }
-                });
+                this._parentEl.addEventListener(ev, this._hideEventHandler);
             });
+            this._initialized = true;
         }
+    }
+
+    destroy() {
+        if (this._initialized) {
+            const triggerEventTypes = this._getTriggerEventTypes(
+                this._options.triggerType
+            );
+
+            triggerEventTypes.showEvents.forEach((ev: string) => {
+                this._triggerEl.removeEventListener(ev, this._showEventHandler);
+                this._targetEl.removeEventListener(ev, this._showEventHandler);
+            });
+
+            triggerEventTypes.hideEvents.forEach((ev: string) => {
+                this._parentEl.removeEventListener(ev, this._hideEventHandler);
+            });
+
+            this._initialized = false;
+        }
+    }
+
+    removeInstance() {
+        instances.removeInstance('Dial', this._targetEl.id);
+    }
+
+    destroyAndRemoveInstance() {
+        this.destroy();
+        this.removeInstance();
     }
 
     hide() {

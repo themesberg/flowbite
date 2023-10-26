@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { AccordionItem, AccordionOptions } from './types';
 import { AccordionInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: AccordionOptions = {
     alwaysOpen: false,
@@ -12,31 +13,65 @@ const Default: AccordionOptions = {
 };
 
 class Accordion implements AccordionInterface {
+    _accordionEl: HTMLElement;
     _items: AccordionItem[];
     _options: AccordionOptions;
+    _clickHandler: EventListenerOrEventListenerObject;
+    _initialized: boolean;
 
     constructor(
+        accordionEl: HTMLElement | null = null,
         items: AccordionItem[] = [],
         options: AccordionOptions = Default
     ) {
+        this._accordionEl = accordionEl;
         this._items = items;
         this._options = { ...Default, ...options };
-        this._init();
+        this._initialized = false;
+        this.init();
+        instances.addInstance('Accordion', this, this._accordionEl.id, true);
     }
 
-    private _init() {
-        if (this._items.length) {
+    init() {
+        if (this._items.length && !this._initialized) {
             // show accordion item based on click
-            this._items.map((item) => {
+            this._items.forEach((item) => {
                 if (item.active) {
                     this.open(item.id);
                 }
 
-                item.triggerEl.addEventListener('click', () => {
+                const clickHandler = () => {
                     this.toggle(item.id);
-                });
+                };
+
+                item.triggerEl.addEventListener('click', clickHandler);
+
+                // Store the clickHandler in a property of the item for removal later
+                item.clickHandler = clickHandler;
             });
+            this._initialized = true;
         }
+    }
+
+    destroy() {
+        if (this._items.length && this._initialized) {
+            this._items.forEach((item) => {
+                item.triggerEl.removeEventListener('click', item.clickHandler);
+
+                // Clean up by deleting the clickHandler property from the item
+                delete item.clickHandler;
+            });
+            this._initialized = false;
+        }
+    }
+
+    removeInstance() {
+        instances.removeInstance('Accordion', this._accordionEl.id);
+    }
+
+    destroyAndRemoveInstance() {
+        this.destroy();
+        this.removeInstance();
     }
 
     getItem(id: string) {
@@ -155,7 +190,7 @@ export function initAccordions() {
                 }
             });
 
-        new Accordion(items, {
+        new Accordion($accordionEl as HTMLElement, items, {
             alwaysOpen: alwaysOpen === 'open' ? true : false,
             activeClasses: activeClasses
                 ? activeClasses

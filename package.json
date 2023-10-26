@@ -1,6 +1,6 @@
 {
   "name": "flowbite",
-  "version": "1.8.1",
+  "version": "2.0.0",
   "description": "The most popular library of interactive components built with Tailwind CSS",
   "keywords": [
     "flowbite",
@@ -45,8 +45,8 @@
   "bugs": "https://github.com/themesberg/flowbite/issues",
   "homepage": "https://flowbite.com",
   "contributors": [
-    "Zoltán Szőgyényi (https://twitter.com/zoltanszogyenyi)",
-    "Robert Tanislav (https://twitter.com/roberttanislav)"
+    "Zoltán Szőgyényi (https://x.com/zoltanszogyenyi)",
+    "Robert Tanislav (https://x.com/roberttanislav)"
   ],
   "author": "Bergside Inc.",
   "scripts": {

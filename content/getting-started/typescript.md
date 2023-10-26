@@ -6,8 +6,8 @@ group: getting-started
 toc: true
 requires_typescript: true
 
-previous: Quickstart
-previousLink: getting-started/quickstart/
+previous: JavaScript API
+previousLink: getting-started/javascript/
 next: License
 nextLink: getting-started/license/
 ---

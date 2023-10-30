@@ -84,7 +84,7 @@ Use this free example to show a text message for announcement with a CTA link, a
 
 <div id="marketing-banner" tabindex="-1" class="fixed z-50 flex flex-col md:flex-row justify-between w-[calc(100%-2rem)] p-4 -translate-x-1/2 bg-white border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6 dark:bg-gray-700 dark:border-gray-600">
     <div class="flex flex-col items-start mb-3 mr-4 rtl:mr-0 md:items-center md:flex-row md:mb-0">
-        <a href="https://flowbite.com/" class="flex items-center mb-2 border-gray-200 rtl:border-s-0  rtl:border-e md:pr-4 md:mr-4 rtl:mr-0 rtl:pr-0 md:border-r md:mb-0 dark:border-gray-600">
+        <a href="https://flowbite.com/" class="flex items-center mb-2 border-gray-200 rtl:border-s-0 rtl:border-e md:pr-4 md:mr-4 rtl:mr-0 rtl:pr-0 md:border-r md:mb-0 dark:border-gray-600">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-2 rtl:mr-0 rtl:ml-2" alt="Flowbite Logo">
             <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white rtl:ml-4">Flowbite</span>
         </a>

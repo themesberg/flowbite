@@ -57,6 +57,13 @@ class Instances {
             return;
         }
 
+        if (forceOverride && this._instances[component][id]) {
+            this._instances[component][id].destroy();
+            this._instances[component][id ? id : this._generateRandomId()] =
+                instance;
+            return;
+        }
+
         this._instances[component][id ? id : this._generateRandomId()] =
             instance;
     }
@@ -139,7 +146,7 @@ class Instances {
         }
 
         if (!this._instances[component][id]) {
-            console.warn(`Flowbite: Instance with ID ${id} already exists.`);
+            console.warn(`Flowbite: Instance with ID ${id} does not exist.`);
             return false;
         }
 

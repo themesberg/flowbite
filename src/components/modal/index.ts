@@ -233,18 +233,13 @@ export function initModals() {
             const placement = $modalEl.getAttribute('data-modal-placement');
             const backdrop = $modalEl.getAttribute('data-modal-backdrop');
 
-            if (
-                !instances.instanceExists('Modal', $modalEl.getAttribute('id'))
-            ) {
-                console.log(`modal ${$modalEl.getAttribute('id')} initialised`);
-                new Modal(
-                    $modalEl as HTMLElement,
-                    {
-                        placement: placement ? placement : Default.placement,
-                        backdrop: backdrop ? backdrop : Default.backdrop,
-                    } as ModalOptions
-                );
-            }
+            new Modal(
+                $modalEl as HTMLElement,
+                {
+                    placement: placement ? placement : Default.placement,
+                    backdrop: backdrop ? backdrop : Default.backdrop,
+                } as ModalOptions
+            );
         } else {
             console.error(
                 `Modal with id ${modalId} does not exist. Are you sure that the data-modal-target attribute points to the correct modal id?.`
@@ -270,7 +265,6 @@ export function initModals() {
                     $modalEl.getAttribute('id')
                 );
             } else {
-                console.log(`modal ${$modalEl.getAttribute('id')} initialised`);
                 modal = new Modal(
                     $modalEl as HTMLElement,
                     {

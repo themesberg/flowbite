@@ -273,35 +273,21 @@ export function initDrawers() {
                 'data-drawer-edge-offset'
             );
 
-            if (
-                !instances.instanceExists(
-                    'Drawer',
-                    $drawerEl.getAttribute('id')
-                )
-            ) {
-                console.log(
-                    `drawer ${$drawerEl.getAttribute('id')} initialised`
-                );
-                new Drawer($drawerEl, {
-                    placement: placement ? placement : Default.placement,
-                    bodyScrolling: bodyScrolling
-                        ? bodyScrolling === 'true'
-                            ? true
-                            : false
-                        : Default.bodyScrolling,
-                    backdrop: backdrop
-                        ? backdrop === 'true'
-                            ? true
-                            : false
-                        : Default.backdrop,
-                    edge: edge
-                        ? edge === 'true'
-                            ? true
-                            : false
-                        : Default.edge,
-                    edgeOffset: edgeOffset ? edgeOffset : Default.edgeOffset,
-                } as DrawerOptions);
-            }
+            new Drawer($drawerEl, {
+                placement: placement ? placement : Default.placement,
+                bodyScrolling: bodyScrolling
+                    ? bodyScrolling === 'true'
+                        ? true
+                        : false
+                    : Default.bodyScrolling,
+                backdrop: backdrop
+                    ? backdrop === 'true'
+                        ? true
+                        : false
+                    : Default.backdrop,
+                edge: edge ? (edge === 'true' ? true : false) : Default.edge,
+                edgeOffset: edgeOffset ? edgeOffset : Default.edgeOffset,
+            } as DrawerOptions);
         } else {
             console.error(
                 `Drawer with id ${drawerId} not found. Are you sure that the data-drawer-target attribute points to the correct drawer id?`

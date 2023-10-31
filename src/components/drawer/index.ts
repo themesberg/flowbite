@@ -256,6 +256,10 @@ class Drawer implements DrawerInterface {
 }
 
 export function initDrawers() {
+    // store drawers that have been initialized in this method run to avoid re-initialization
+    // when call initDrawers() multiple times it will only initialize drawers that have not been initialized yet
+    const drawerInstancesCreated: { [key: string]: DrawerInterface } = {};
+
     document.querySelectorAll('[data-drawer-target]').forEach(($triggerEl) => {
         // mandatory
         const drawerId = $triggerEl.getAttribute('data-drawer-target');
@@ -279,7 +283,7 @@ export function initDrawers() {
                     $drawerEl.getAttribute('id')
                 )
             ) {
-                new Drawer($drawerEl, {
+                drawerInstancesCreated[drawerId] = new Drawer($drawerEl, {
                     placement: placement ? placement : Default.placement,
                     bodyScrolling: bodyScrolling
                         ? bodyScrolling === 'true'
@@ -311,17 +315,16 @@ export function initDrawers() {
         const $drawerEl = document.getElementById(drawerId);
 
         if ($drawerEl) {
-            const drawer: DrawerInterface = instances.getInstance(
-                'Drawer',
-                $drawerEl.getAttribute('id')
-            );
-
-            if (drawer) {
+            if (drawerInstancesCreated[drawerId]) {
+                const drawer: DrawerInterface = instances.getInstance(
+                    'Drawer',
+                    $drawerEl.getAttribute('id')
+                );
                 $triggerEl.addEventListener('click', () => {
                     drawer.toggle();
                 });
             } else {
-                console.error(
+                console.warn(
                     `Drawer with id ${drawerId} has not been initialized. Please initialize it using the data-drawer-target attribute.`
                 );
             }
@@ -341,17 +344,16 @@ export function initDrawers() {
             const $drawerEl = document.getElementById(drawerId);
 
             if ($drawerEl) {
-                const drawer: DrawerInterface = instances.getInstance(
-                    'Drawer',
-                    $drawerEl.getAttribute('id')
-                );
-
-                if (drawer) {
+                if (drawerInstancesCreated[drawerId]) {
+                    const drawer: DrawerInterface = instances.getInstance(
+                        'Drawer',
+                        $drawerEl.getAttribute('id')
+                    );
                     $triggerEl.addEventListener('click', () => {
                         drawer.hide();
                     });
                 } else {
-                    console.error(
+                    console.warn(
                         `Drawer with id ${drawerId} has not been initialized. Please initialize it using the data-drawer-target attribute.`
                     );
                 }
@@ -367,17 +369,16 @@ export function initDrawers() {
         const $drawerEl = document.getElementById(drawerId);
 
         if ($drawerEl) {
-            const drawer: DrawerInterface = instances.getInstance(
-                'Drawer',
-                $drawerEl.getAttribute('id')
-            );
-
-            if (drawer) {
+            if (drawerInstancesCreated[drawerId]) {
+                const drawer: DrawerInterface = instances.getInstance(
+                    'Drawer',
+                    $drawerEl.getAttribute('id')
+                );
                 $triggerEl.addEventListener('click', () => {
                     drawer.show();
                 });
             } else {
-                console.error(
+                console.warn(
                     `Drawer with id ${drawerId} has not been initialized. Please initialize it using the data-drawer-target attribute.`
                 );
             }

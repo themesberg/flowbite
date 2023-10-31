@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { TabItem, TabsOptions } from './types';
 import { TabsInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: TabsOptions = {
     defaultTabId: null,
@@ -12,22 +13,31 @@ const Default: TabsOptions = {
 };
 
 class Tabs implements TabsInterface {
+    _accordionEl: HTMLElement;
     _items: TabItem[];
     _activeTab: TabItem;
     _options: TabsOptions;
+    _initialized: boolean;
 
-    constructor(items: TabItem[] = [], options: TabsOptions = Default) {
+    constructor(
+        accordionEl: HTMLElement | null = null,
+        items: TabItem[] = [],
+        options: TabsOptions = Default
+    ) {
+        this._accordionEl = accordionEl;
         this._items = items;
         this._activeTab = options ? this.getTab(options.defaultTabId) : null;
         this._options = { ...Default, ...options };
-        this._init();
+        this._initialized = false;
+        this.init();
+        instances.addInstance('Tabs', this, this._accordionEl.id, true);
     }
 
-    _init() {
-        if (this._items.length) {
+    init() {
+        if (this._items.length && !this._initialized) {
             // set the first tab as active if not set by explicitly
             if (!this._activeTab) {
-                this._setActiveTab(this._items[0]);
+                this.setActiveTab(this._items[0]);
             }
 
             // force show the first default tab
@@ -42,11 +52,27 @@ class Tabs implements TabsInterface {
         }
     }
 
+    destroy() {
+        if (this._initialized) {
+            this._initialized = false;
+        }
+    }
+
+    removeInstance() {
+        this.destroy();
+        instances.removeInstance('Tabs', this._accordionEl.id);
+    }
+
+    destroyAndRemoveInstance() {
+        this.destroy();
+        this.removeInstance();
+    }
+
     getActiveTab() {
         return this._activeTab;
     }
 
-    _setActiveTab(tab: TabItem) {
+    setActiveTab(tab: TabItem) {
         this._activeTab = tab;
     }
 
@@ -84,7 +110,7 @@ class Tabs implements TabsInterface {
         tab.triggerEl.setAttribute('aria-selected', 'true');
         tab.targetEl.classList.remove('hidden');
 
-        this._setActiveTab(tab);
+        this.setActiveTab(tab);
 
         // callback function
         this._options.onShow(this, tab);
@@ -92,10 +118,10 @@ class Tabs implements TabsInterface {
 }
 
 export function initTabs() {
-    document.querySelectorAll('[data-tabs-toggle]').forEach(($triggerEl) => {
+    document.querySelectorAll('[data-tabs-toggle]').forEach(($parentEl) => {
         const tabItems: TabItem[] = [];
         let defaultTabId = null;
-        $triggerEl
+        $parentEl
             .querySelectorAll('[role="tab"]')
             .forEach(($triggerEl: HTMLElement) => {
                 const isActive =
@@ -113,7 +139,8 @@ export function initTabs() {
                     defaultTabId = tab.id;
                 }
             });
-        new Tabs(tabItems, {
+
+        new Tabs($parentEl as HTMLElement, tabItems, {
             defaultTabId: defaultTabId,
         } as TabsOptions);
     });

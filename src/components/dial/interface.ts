@@ -7,11 +7,15 @@ export declare interface DialInterface {
     _options: DialOptions;
     _visible: boolean;
 
-    _init(): void;
+    init(): void;
     isVisible(): boolean;
     isHidden(): boolean;
     hide(): void;
     show(): void;
     toggle(): void;
     _getTriggerEventTypes(triggerType: DialTriggerType): DialTriggerEventTypes;
+
+    destroy(): void;
+    removeInstance(): void;
+    destroyAndRemoveInstance(): void;
 }

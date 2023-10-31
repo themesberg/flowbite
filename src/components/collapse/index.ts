@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { CollapseOptions } from './types';
 import { CollapseInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: CollapseOptions = {
     onCollapse: () => {},
@@ -13,6 +14,8 @@ class Collapse implements CollapseInterface {
     _triggerEl: HTMLElement | null;
     _options: CollapseOptions;
     _visible: boolean;
+    _initialized: boolean;
+    _clickHandler: EventListenerOrEventListenerObject;
 
     constructor(
         targetEl: HTMLElement | null = null,
@@ -23,11 +26,13 @@ class Collapse implements CollapseInterface {
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
         this._visible = false;
-        this._init();
+        this._initialized = false;
+        this.init();
+        instances.addInstance('Collapse', this, this._targetEl.id, true);
     }
 
-    _init() {
-        if (this._triggerEl) {
+    init() {
+        if (this._triggerEl && this._targetEl && !this._initialized) {
             if (this._triggerEl.hasAttribute('aria-expanded')) {
                 this._visible =
                     this._triggerEl.getAttribute('aria-expanded') === 'true';
@@ -36,10 +41,29 @@ class Collapse implements CollapseInterface {
                 this._visible = !this._targetEl.classList.contains('hidden');
             }
 
-            this._triggerEl.addEventListener('click', () => {
+            this._clickHandler = () => {
                 this.toggle();
-            });
+            };
+
+            this._triggerEl.addEventListener('click', this._clickHandler);
+            this._initialized = true;
         }
+    }
+
+    destroy() {
+        if (this._triggerEl && this._initialized) {
+            this._triggerEl.removeEventListener('click', this._clickHandler);
+            this._initialized = false;
+        }
+    }
+
+    removeInstance() {
+        instances.removeInstance('Collapse', this._targetEl.id);
+    }
+
+    destroyAndRemoveInstance() {
+        this.destroy();
+        this.removeInstance();
     }
 
     collapse() {

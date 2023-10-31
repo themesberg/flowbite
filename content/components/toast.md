@@ -16,7 +16,7 @@ The toast component can be used to enhance your website's interactivity by pushi
 
 ## Default toast
 
-Use this simple toast component with an icon, message, and dismissable close button to show alert messages to your website visitors. Make sure that you set the correct id for the `data-collapse-toggle` data attribute to enable the dismissable feature.
+Use this simple toast component with an icon, message, and dismissible close button to show alert messages to your website visitors. Make sure that you set the correct id for the `data-collapse-toggle` data attribute to enable the dismissible feature.
 
 {{< example id="default-toast-example" class="flex justify-center" github="components/toast.md" show_dark=true >}}
 

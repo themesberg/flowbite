@@ -309,7 +309,7 @@ Accordions can be nested. All of the mentioned options are supported.
 To enable nested accordions you need to wrap the nested accordion in an element with the `data-accordion` attribute and don't accidentally initialize an accordion with nested accordions' items (e.g. by using `$accordionBodyEl.querySelectorAll`), when using <a href="#javascript-behaviour">custom JavaScript</a>.
 
 {{< example id="accordion-nesting-example" github="components/accordion.md" show_dark=true >}}
-<div id="accordion-collapse" data-accordion="collapse">
+<div id="accordion-nested-parent" data-accordion="collapse">
   <h2 id="accordion-collapse-heading-1">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
       <span>What is Flowbite?</span>
@@ -417,6 +417,20 @@ Create a new Accordion object by passing an array of accordion items and an opti
             </tr>
         </thead>
         <tbody>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">accordionEl</code>
+                </td>
+                <td class="px-6 py-4">
+                    Element
+                </td>
+                <td class="px-6 py-4">
+                    Required
+                </td>
+                <td class="px-6 py-4">
+                    The parent HTML element of the accordion component.
+                </td>
+            </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">items</code>
@@ -582,6 +596,8 @@ To get started you need to create an array of accordion item objects including a
 Additionally, you can also set some options to change the default behaviour of the accordion, customize the styles, and set callback functions.
 
 ```javascript
+const accordionElement = document.getElementById('accordion-example');
+
 // create an array of objects with the id, trigger element (eg. button), and the content element
 const accordionItems = [
     {
@@ -633,7 +649,7 @@ import { Accordion } from 'flowbite';
 * accordionItems: array of accordion item objects
 * options: optional
 */
-const accordion = new Accordion(accordionItems, options);
+const accordion = new Accordion(accordionElement, accordionItems, options);
 ```
 
 Now you can access the object methods to programmatically open, close, and toggle the accordion items based on the unique identifier.
@@ -654,7 +670,7 @@ accordion.toggle('accordion-example-heading-3');
 Use the following HTML markup example for the JavaScript script above.
 
 ```html
-<div>
+<div id="accordion-example">
   <h2 id="accordion-example-heading-1">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" aria-expanded="true" aria-controls="accordion-example-body-1">
       <span>What is Flowbite?</span>
@@ -709,6 +725,8 @@ Here's an example that applies the types from Flowbite to the code above:
 import { Accordion } from "flowbite";
 import type { AccordionOptions, AccordionItem, AccordionInterface } from "flowbite";
 
+const accordionEl = document.querySelector('#accordion-example');
+
 // create an array of objects with the id, trigger element (eg. button), and the content element
 const accordionItems: AccordionItem[] = [
     {
@@ -754,8 +772,14 @@ const options: AccordionOptions = {
 * accordionItems: array of accordion item objects
 * options: optional
 */
-const accordion: AccordionInterface = new Accordion(accordionItems, options);
+const accordion: AccordionInterface = new Accordion(accordionEl, accordionItems, options);
 
 // open accordion item based on id
 accordion.open('accordion-example-heading-2');
+
+// destroy accordion
+accordion.destroy();
+
+// re-initialize accordion
+accordion.init();
 ```

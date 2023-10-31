@@ -1,11 +1,13 @@
 - title: Getting started
   slug: getting-started
   pages:
-      - title: Introduction
-      - title: Quickstart
-      - title: TypeScript
-      - title: License
-      - title: Changelog
+    - title: Introduction
+    - title: Quickstart
+    - title: JavaScript
+      new: true
+    - title: TypeScript
+    - title: License
+    - title: Changelog
 
 - title: Integration guides
   slug: getting-started

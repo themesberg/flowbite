@@ -1029,7 +1029,7 @@ In this example we also show how you can set event listeners on the UI component
     </div>
   </div>
 
-  <!-- Line Chart -->
+  <!-- Donut Chart -->
   <div class="py-6" id="donut-chart"></div>
 
   <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">

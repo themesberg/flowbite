@@ -689,6 +689,12 @@ popover.toggle();
 
 // check if popover is visible
 popover.isVisible();
+
+// destroy popover object (removes event listeners and off-canvas Popper.js)
+tooltip.destroy();
+
+// re-initialize popover object
+tooltip.init();
 ```
 
 ### HTML Markup

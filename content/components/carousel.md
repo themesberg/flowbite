@@ -268,6 +268,20 @@ Pass the object parameters for the Carousel object to set the carousel items and
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">carouselElement</code>
+              </td>
+              <td class="px-6 py-4">
+                  Element
+              </td>
+              <td class="px-6 py-4">
+                  Required
+              </td>
+              <td class="px-6 py-4">
+                  Parent HTML element of the carousel component.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">items</code>
               </td>
               <td class="px-6 py-4">
@@ -337,7 +351,7 @@ Use these options for the Carousel object to set the default position, interval,
                   Integer
               </td>
               <td class="px-6 py-4">
-                  Set the interval duration in miliseconds when the carousel is cycling.
+                  Set the interval duration in milliseconds when the carousel is cycling.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -454,6 +468,8 @@ Use the following methods on the Carousel object to programmatically manipulate 
 Check out the following example to learn how to programmatically create a new Carousel object by passing the parameters, using the methods, and the callback functions.
 
 ```javascript
+const carouselElement = document.getElementById('carousel-example');
+
 const items = [
     {
         position: 0,
@@ -519,7 +535,7 @@ Create a new carousel object using the options set above.
 ```javascript
 import { Carousel } from 'flowbite';
 
-const carousel = new Carousel(items, options);
+const carousel = new Carousel(carouselElement, items, options);
 ```
 
 Use the `next()` and `prev()` public methods on the carousel object to jump to the left or right carousel slide item based on the position of the current active item.
@@ -539,7 +555,7 @@ Use the `slideTo(position)` public method to jump to the carousel slide item wit
 carousel.slideTo(2);
 ```
 
-Use the `cycle()` method to start an automated cycling where the duration is the miliseconds of time between each slide and the `pause()` method to clear the cycle event.
+Use the `cycle()` method to start an automated cycling where the duration is the milliseconds of time between each slide and the `pause()` method to clear the cycle event.
 
 ```javascript
 // starts or resumes the carousel cycling (automated sliding)
@@ -554,7 +570,7 @@ carousel.pause();
 Here is an example of the HTML markup that you can use for the JavaScript example above. Please note that you should use the `hidden` class from Tailwind CSS to hide the carousel items by default.
 
 ```html
-<div class="relative w-full">
+<div id="carousel-example" class="relative w-full">
     <!-- Carousel wrapper -->
     <div
         class="relative h-56 overflow-hidden rounded-lg sm:h-64 xl:h-80 2xl:h-96"
@@ -710,6 +726,8 @@ import type {
     CarouselInterface,
 } from 'flowbite';
 
+const carouselElement: HTMLElement = document.getElementById('carousel-example');
+
 const items: CarouselItem[] = [
     {
         position: 0,
@@ -769,7 +787,7 @@ const options: CarouselOptions = {
     },
 };
 
-const carousel: CarouselInterface = new Carousel(items, options);
+const carousel: CarouselInterface = new Carousel(carouselElement, items, options);
 
 carousel.cycle();
 

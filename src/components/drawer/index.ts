@@ -273,21 +273,32 @@ export function initDrawers() {
                 'data-drawer-edge-offset'
             );
 
-            new Drawer($drawerEl, {
-                placement: placement ? placement : Default.placement,
-                bodyScrolling: bodyScrolling
-                    ? bodyScrolling === 'true'
-                        ? true
-                        : false
-                    : Default.bodyScrolling,
-                backdrop: backdrop
-                    ? backdrop === 'true'
-                        ? true
-                        : false
-                    : Default.backdrop,
-                edge: edge ? (edge === 'true' ? true : false) : Default.edge,
-                edgeOffset: edgeOffset ? edgeOffset : Default.edgeOffset,
-            } as DrawerOptions);
+            if (
+                !instances.instanceExists(
+                    'Drawer',
+                    $drawerEl.getAttribute('id')
+                )
+            ) {
+                new Drawer($drawerEl, {
+                    placement: placement ? placement : Default.placement,
+                    bodyScrolling: bodyScrolling
+                        ? bodyScrolling === 'true'
+                            ? true
+                            : false
+                        : Default.bodyScrolling,
+                    backdrop: backdrop
+                        ? backdrop === 'true'
+                            ? true
+                            : false
+                        : Default.backdrop,
+                    edge: edge
+                        ? edge === 'true'
+                            ? true
+                            : false
+                        : Default.edge,
+                    edgeOffset: edgeOffset ? edgeOffset : Default.edgeOffset,
+                } as DrawerOptions);
+            }
         } else {
             console.error(
                 `Drawer with id ${drawerId} not found. Are you sure that the data-drawer-target attribute points to the correct drawer id?`

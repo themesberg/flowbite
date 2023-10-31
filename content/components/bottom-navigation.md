@@ -554,7 +554,7 @@ Use this component to show control buttons for a video or audio that is playing 
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
             </div>
-            <div class="flex items-center justify-between space-x-2">
+            <div class="flex items-center justify-between space-x-2 rtl:space-x-reverse">
                 <span class="text-sm font-medium text-gray-500 dark:text-gray-400 rtl:ml-2">3:45</span>
                 <div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-800">
                     <div class="bg-blue-600 h-1.5 rounded-full" style="width: 65%"></div>

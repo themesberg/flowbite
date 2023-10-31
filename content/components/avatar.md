@@ -106,14 +106,14 @@ Use a dot element relative to the avatar component as an indicator for the user 
 Use this example if you want to stack a group of users by overlapping the avatar components.
 
 {{< example id="avatar-stacked-example" class="flex justify-center gap-4 rtl:gap-8" github="components/avatar.md" show_dark=true >}}
-<div class="flex -space-x-4">
-    <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800 rtl:-ml-4" src="/docs/images/people/profile-picture-5.jpg" alt="">
+<div class="flex -space-x-4 rtl:space-x-reverse">
+    <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-5.jpg" alt="">
     <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-2.jpg" alt="">
     <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-3.jpg" alt="">
     <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-4.jpg" alt="">
 </div>
-<div class="flex -space-x-4">
-    <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800 rtl:-ml-4" src="/docs/images/people/profile-picture-5.jpg" alt="">
+<div class="flex -space-x-4 rtl:space-x-reverse">
+    <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-5.jpg" alt="">
     <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-2.jpg" alt="">
     <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-3.jpg" alt="">
     <a class="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800" href="#">+99</a>

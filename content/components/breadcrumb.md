@@ -22,7 +22,7 @@ Use the following breadcrumb example to show the hierarchical structure of pages
 {{< example id="default-breadcrumb-example" class="flex justify-center" github="components/breadcrumb.md" show_dark=true >}}
 
 <nav class="flex" aria-label="Breadcrumb">
-  <ol class="inline-flex items-center space-x-1 md:space-x-3">
+  <ol class="inline-flex items-center space-x-1 md:space-x-3 rtl:space-x-reverse">
     <li class="inline-flex items-center">
       <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white rtl:ml-3">
         <svg class="w-3 h-3 mr-2.5 rtl:mr-0 rtl:ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -59,7 +59,7 @@ You can alternatively also use the breadcrumb components with a solid background
 
 <!-- Breadcrumb -->
 <nav class="flex px-5 py-3 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700" aria-label="Breadcrumb">
-  <ol class="inline-flex items-center space-x-1 md:space-x-3">
+  <ol class="inline-flex items-center space-x-1 md:space-x-3 rtl:space-x-reverse">
     <li class="inline-flex items-center">
       <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white rtl:ml-3">
         <svg class="w-3 h-3 mr-2.5 rtl:mr-0 rtl:ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -96,7 +96,7 @@ Use this example to show a list of items such as the branches from GitHub and a 
 
 <!-- Breadcrumb -->
 <nav class="justify-between px-4 py-3 text-gray-700 border border-gray-200 rounded-lg sm:flex sm:px-5 bg-gray-50 dark:bg-gray-800 dark:border-gray-700" aria-label="Breadcrumb">
-  <ol class="inline-flex items-center mb-3 space-x-1 md:space-x-3 sm:mb-0">
+  <ol class="inline-flex items-center mb-3 space-x-1 md:space-x-3 rtl:space-x-reverse sm:mb-0">
     <li>
       <div class="flex items-center rtl:ml-3">
         <a href="#" class="ml-1  rtl:ml-0 rtl:mr-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2 dark:text-gray-400 dark:hover:text-white">flowbite.com</a>

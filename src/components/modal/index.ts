@@ -224,6 +224,10 @@ class Modal implements ModalInterface {
 }
 
 export function initModals() {
+    // store modals that have been initialized in this method run to avoid re-initialization
+    // when call initModals() multiple times it will only initialize modals that have not been initialized yet
+    const modalInstancesCreated: { [key: string]: ModalInterface } = {};
+
     // initiate modal based on data-modal-target
     document.querySelectorAll('[data-modal-target]').forEach(($triggerEl) => {
         const modalId = $triggerEl.getAttribute('data-modal-target');
@@ -236,7 +240,7 @@ export function initModals() {
             if (
                 !instances.instanceExists('Modal', $modalEl.getAttribute('id'))
             ) {
-                new Modal(
+                modalInstancesCreated[modalId] = new Modal(
                     $modalEl as HTMLElement,
                     {
                         placement: placement ? placement : Default.placement,
@@ -257,30 +261,19 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            const placement = $modalEl.getAttribute('data-modal-placement');
-            const backdrop = $modalEl.getAttribute('data-modal-backdrop');
-
-            let modal: ModalInterface;
-            if (
-                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
-            ) {
-                modal = instances.getInstance(
+            if (modalInstancesCreated[modalId]) {
+                const modal: ModalInterface = instances.getInstance(
                     'Modal',
                     $modalEl.getAttribute('id')
                 );
+                $triggerEl.addEventListener('click', () => {
+                    modal.toggle();
+                });
             } else {
-                modal = new Modal(
-                    $modalEl as HTMLElement,
-                    {
-                        placement: placement ? placement : Default.placement,
-                        backdrop: backdrop ? backdrop : Default.backdrop,
-                    } as ModalOptions
+                console.warn(
+                    `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`
                 );
             }
-
-            $triggerEl.addEventListener('click', () => {
-                modal.toggle();
-            });
         } else {
             console.error(
                 `Modal with id ${modalId} does not exist. Are you sure that the data-modal-toggle attribute points to the correct modal id?`
@@ -294,9 +287,7 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            if (
-                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
-            ) {
+            if (modalInstancesCreated[modalId]) {
                 const modal: ModalInterface = instances.getInstance(
                     'Modal',
                     $modalEl.getAttribute('id')
@@ -305,7 +296,7 @@ export function initModals() {
                     modal.show();
                 });
             } else {
-                console.error(
+                console.warn(
                     `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`
                 );
             }
@@ -322,9 +313,7 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            if (
-                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
-            ) {
+            if (modalInstancesCreated[modalId]) {
                 const modal: ModalInterface = instances.getInstance(
                     'Modal',
                     $modalEl.getAttribute('id')
@@ -333,7 +322,7 @@ export function initModals() {
                     modal.hide();
                 });
             } else {
-                console.error(
+                console.warn(
                     `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`
                 );
             }

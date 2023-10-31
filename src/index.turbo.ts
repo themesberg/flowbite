@@ -12,8 +12,14 @@ import Tabs, { initTabs } from './components/tabs';
 import Tooltip, { initTooltips } from './components/tooltip';
 import './components/index';
 import Events from './dom/events';
+import instances from './dom/instances';
+
+function resetInstances() {
+    instances.reset();
+}
 
 const turboLoadEvents = new Events('turbo:load', [
+    resetInstances,
     initAccordions,
     initCollapses,
     initCarousels,

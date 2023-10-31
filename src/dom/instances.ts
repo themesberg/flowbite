@@ -96,9 +96,6 @@ class Instances {
         component: keyof Instances['_instances'],
         id: string
     ) {
-        if (!this._componentAndInstanceCheck(component, id)) {
-            return;
-        }
         this.destroyInstanceObject(component, id);
         this.removeInstance(component, id);
     }
@@ -108,6 +105,22 @@ class Instances {
             return;
         }
         this._instances[component][id].removeInstance();
+    }
+
+    reset() {
+        this._instances = {
+            Accordion: {},
+            Carousel: {},
+            Collapse: {},
+            Dial: {},
+            Dismiss: {},
+            Drawer: {},
+            Dropdown: {},
+            Modal: {},
+            Popover: {},
+            Tabs: {},
+            Tooltip: {},
+        };
     }
 
     destroyInstanceObject(

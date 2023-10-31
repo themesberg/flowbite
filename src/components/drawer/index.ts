@@ -279,6 +279,9 @@ export function initDrawers() {
                     $drawerEl.getAttribute('id')
                 )
             ) {
+                console.log(
+                    `drawer ${$drawerEl.getAttribute('id')} initialised`
+                );
                 new Drawer($drawerEl, {
                     placement: placement ? placement : Default.placement,
                     bodyScrolling: bodyScrolling

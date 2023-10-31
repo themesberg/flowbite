@@ -234,8 +234,9 @@ export function initModals() {
             const backdrop = $modalEl.getAttribute('data-modal-backdrop');
 
             if (
-                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
+                !instances.instanceExists('Modal', $modalEl.getAttribute('id'))
             ) {
+                console.log(`modal ${$modalEl.getAttribute('id')} initialised`);
                 new Modal(
                     $modalEl as HTMLElement,
                     {
@@ -269,17 +270,14 @@ export function initModals() {
                     $modalEl.getAttribute('id')
                 );
             } else {
-                {
-                    modal = new Modal(
-                        $modalEl as HTMLElement,
-                        {
-                            placement: placement
-                                ? placement
-                                : Default.placement,
-                            backdrop: backdrop ? backdrop : Default.backdrop,
-                        } as ModalOptions
-                    );
-                }
+                console.log(`modal ${$modalEl.getAttribute('id')} initialised`);
+                modal = new Modal(
+                    $modalEl as HTMLElement,
+                    {
+                        placement: placement ? placement : Default.placement,
+                        backdrop: backdrop ? backdrop : Default.backdrop,
+                    } as ModalOptions
+                );
             }
 
             $triggerEl.addEventListener('click', () => {

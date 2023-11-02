@@ -54,8 +54,7 @@ This example can be used to show a number count inside the indicator and positio
 </svg>
 <span class="sr-only">Notifications</span>
 Messages
-
-  <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900">8</div>
+  <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">8</div>
 </button>
 {{< /example >}}
 
@@ -67,11 +66,11 @@ Use this example to show a status indicator for the currently logged in user by 
 
 <div class="relative mr-4 rtl:mr-0 rtl:ml-4">
     <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="profile image">
-    <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-500 border-2 border-white dark:border-gray-800 rounded-full"></span>
+    <span class="top-0 start-7 absolute w-3.5 h-3.5 bg-green-500 border-2 border-white dark:border-gray-800 rounded-full"></span>
 </div>
 <div class="relative">
     <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="profile image">
-    <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-red-500 border-2 border-white dark:border-gray-800 rounded-full"></span>
+    <span class="top-0 start-7 absolute w-3.5 h-3.5 bg-red-500 border-2 border-white dark:border-gray-800 rounded-full"></span>
 </div>
 {{< /example >}}
 
@@ -83,8 +82,8 @@ This example can be used to add an indicator inside of a badge component.
 
 <ul role="list" class="max-w-sm divide-y divide-gray-200 dark:divide-gray-700">
     <li class="py-3 sm:py-4">
-        <div class="flex items-center">
-            <div class="flex-shrink-0 mr-3 rtl:mr-0 rtl:ml-3">
+        <div class="flex items-center space-x-3 rtl:space-x-reverse">
+            <div class="flex-shrink-0">
                 <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Neil image">
             </div>
             <div class="flex-1 min-w-0">
@@ -95,15 +94,15 @@ This example can be used to add an indicator inside of a badge component.
                     email@flowbite.com
                 </p>
             </div>
-            <span class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">
+            <span class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">
                 <span class="w-2 h-2 mr-1 rtl:mr-0 rtl:ml-1 bg-green-500 rounded-full"></span>
                 Available
             </span>
         </div>
     </li>
     <li class="py-3 sm:py-4">
-        <div class="flex items-center">
-            <div class="flex-shrink-0 mr-3 rtl:mr-0 rtl:ml-3 ">
+        <div class="flex items-center space-x-3 rtl:space-x-reverse">
+            <div class="flex-shrink-0">
                 <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-4.jpg" alt="Neil image">
             </div>
             <div class="flex-1 min-w-0">
@@ -114,7 +113,7 @@ This example can be used to add an indicator inside of a badge component.
                     email@flowbite.com
                 </p>
             </div>
-            <span class="inline-flex items-center bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">
+            <span class="inline-flex items-center bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">
                 <span class="w-2 h-2 mr-1 rtl:mr-0 rtl:ml-1 bg-red-500 rounded-full"></span>
                 Unavailable
             </span>

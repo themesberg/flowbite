@@ -260,6 +260,11 @@ module.exports = plugin.withOptions(
                         'padding-right': spacing[10],
                         'print-color-adjust': `exact`,
                     },
+                    [[`:is([dir=rtl]) select:not([size])`]]: {
+                        backgroundPosition: `left ${spacing[3]} center`,
+                        paddingRight: spacing[3],
+                        paddingLeft: 0,
+                    },
                     ['[multiple]']: {
                         'background-image': 'initial',
                         'background-position': 'initial',

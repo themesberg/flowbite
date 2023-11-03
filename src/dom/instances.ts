@@ -132,7 +132,7 @@ class Instances {
         return true;
     }
 
-    private _generateRandomId() {
+    _generateRandomId() {
         return Math.random().toString(36).substr(2, 9);
     }
 

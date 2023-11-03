@@ -55,12 +55,12 @@
 - title: Components
   slug: components
   pages:
-      - title: Accordion ✅
-      - title: Alerts ✅
-      - title: Avatar ✅
-      - title: Badge ✅
-      - title: Banner ✅
-      - title: Bottom Navigation ✅
+      - title: Accordion ✅✅
+      - title: Alerts ✅✅
+      - title: Avatar ✅✅
+      - title: Badge ✅✅
+      - title: Banner ✅✅
+      - title: Bottom Navigation ✅✅
       - title: Breadcrumb ✅
       - title: Buttons ✅
       - title: Button Group ✅
@@ -82,7 +82,7 @@
       - title: Pagination ✅
       - title: Popover ✅
       - title: Progress ✅
-      - title: Rating
+      - title: Rating ✅
       - title: Sidebar
       - title: Skeleton
       - title: Speed Dial

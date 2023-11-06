@@ -20,15 +20,15 @@ Check out the following examples for multiple sizes, colors, positionings, style
 Use this example to create a simple indicator with mulitple colors and position it anywhere on the website.
 
 {{< example id="default-indicator-example" class="flex items-center justify-center" github="components/indicators.md" show_dark=true >}}
-<span class="flex w-3 h-3 mr-3 rtl:mr-0 rtl:ml-3 bg-gray-200 rounded-full"></span>
-<span class="flex w-3 h-3 mr-3 rtl:mr-0 rtl:ml-3 bg-gray-900 rounded-full dark:bg-gray-700"></span>
-<span class="flex w-3 h-3 mr-3 rtl:mr-0 rtl:ml-3 bg-blue-600 rounded-full"></span>
-<span class="flex w-3 h-3 mr-3 rtl:mr-0 rtl:ml-3 bg-green-500 rounded-full"></span>
-<span class="flex w-3 h-3 mr-3 rtl:mr-0 rtl:ml-3 bg-red-500 rounded-full"></span>
-<span class="flex w-3 h-3 mr-3 rtl:mr-0 rtl:ml-3 bg-purple-500 rounded-full"></span>
-<span class="flex w-3 h-3 mr-3 rtl:mr-0 rtl:ml-3 bg-indigo-500 rounded-full"></span>
-<span class="flex w-3 h-3 mr-3 rtl:mr-0 rtl:ml-3 bg-yellow-300 rounded-full"></span>
-<span class="flex w-3 h-3 mr-3 rtl:mr-0 rtl:ml-3 bg-teal-500 rounded-full"></span>
+<span class="flex w-3 h-3 me-3 bg-gray-200 rounded-full"></span>
+<span class="flex w-3 h-3 me-3 bg-gray-900 rounded-full dark:bg-gray-700"></span>
+<span class="flex w-3 h-3 me-3 bg-blue-600 rounded-full"></span>
+<span class="flex w-3 h-3 me-3 bg-green-500 rounded-full"></span>
+<span class="flex w-3 h-3 me-3 bg-red-500 rounded-full"></span>
+<span class="flex w-3 h-3 me-3 bg-purple-500 rounded-full"></span>
+<span class="flex w-3 h-3 me-3 bg-indigo-500 rounded-full"></span>
+<span class="flex w-3 h-3 me-3 bg-yellow-300 rounded-full"></span>
+<span class="flex w-3 h-3 me-3 bg-teal-500 rounded-full"></span>
 {{< /example >}}
 
 ## Legend indicator
@@ -36,10 +36,10 @@ Use this example to create a simple indicator with mulitple colors and position 
 This example can be used as a legend indicator for charts to also add a text next to the bullet point.
 
 {{< example id="legend-indicator-example" class="flex items-center justify-center" github="components/indicators.md" show_dark=true >}}
-<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white mr-3 rtl:mr-0 rtl:ml-3"><span class="flex w-2.5 h-2.5 bg-blue-600 rounded-full mr-1.5 rtl:mr-0 rtl:ml-2 flex-shrink-0"></span>Visitors</span>
-<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white mr-3 rtl:mr-0 rtl:ml-3"><span class="flex w-2.5 h-2.5 bg-purple-500 rounded-full mr-1.5 rtl:mr-0 rtl:ml-2 flex-shrink-0"></span>Sessions</span>
-<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white mr-3 rtl:mr-0 rtl:ml-3"><span class="flex w-2.5 h-2.5 bg-indigo-500 rounded-full mr-1.5 rtl:mr-0 rtl:ml-2 flex-shrink-0"></span>Customers</span>
-<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white mr-3 rtl:mr-0 rtl:ml-3"><span class="flex w-2.5 h-2.5 bg-teal-500 rounded-full mr-1.5 rtl:mr-0 rtl:ml-2 flex-shrink-0"></span>Revenue</span>
+<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white me-3"><span class="flex w-2.5 h-2.5 bg-blue-600 rounded-full me-1.5 flex-shrink-0"></span>Visitors</span>
+<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white me-3"><span class="flex w-2.5 h-2.5 bg-purple-500 rounded-full me-1.5 flex-shrink-0"></span>Sessions</span>
+<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white me-3"><span class="flex w-2.5 h-2.5 bg-indigo-500 rounded-full me-1.5 flex-shrink-0"></span>Customers</span>
+<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white me-3"><span class="flex w-2.5 h-2.5 bg-teal-500 rounded-full me-1.5 flex-shrink-0"></span>Revenue</span>
 {{< /example >}}
 
 ## Indicator count
@@ -48,7 +48,7 @@ This example can be used to show a number count inside the indicator and positio
 
 {{< example id="indicator-count-example" github="components/indicators.md" class="flex items-center justify-center" show_dark=true >}}
 <button type="button" class="relative inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-<svg class="w-4 h-4 mr-2 rtl:mr-0 rtl:ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+<svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
 <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
 <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
 </svg>
@@ -64,7 +64,7 @@ Use this example to show a status indicator for the currently logged in user by 
 
 {{< example id="status-indicator-example" github="components/indicators.md" class="flex items-center justify-center" show_dark=true >}}
 
-<div class="relative mr-4 rtl:mr-0 rtl:ml-4">
+<div class="relative me-4">
     <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="profile image">
     <span class="top-0 start-7 absolute w-3.5 h-3.5 bg-green-500 border-2 border-white dark:border-gray-800 rounded-full"></span>
 </div>
@@ -95,7 +95,7 @@ This example can be used to add an indicator inside of a badge component.
                 </p>
             </div>
             <span class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">
-                <span class="w-2 h-2 mr-1 rtl:mr-0 rtl:ml-1 bg-green-500 rounded-full"></span>
+                <span class="w-2 h-2 me-1 bg-green-500 rounded-full"></span>
                 Available
             </span>
         </div>
@@ -114,7 +114,7 @@ This example can be used to add an indicator inside of a badge component.
                 </p>
             </div>
             <span class="inline-flex items-center bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">
-                <span class="w-2 h-2 mr-1 rtl:mr-0 rtl:ml-1 bg-red-500 rounded-full"></span>
+                <span class="w-2 h-2 me-1 bg-red-500 rounded-full"></span>
                 Unavailable
             </span>
         </div>

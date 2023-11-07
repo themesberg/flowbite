@@ -93,13 +93,13 @@
       - title: Timeline ✅
       - title: Toast ✅
       - title: Tooltips ✅
-      - title: Typography
-      - title: Video
+      - title: Typography ✅
+      - title: Video ✅
 
 - title: Forms
   slug: forms
   pages:
-      - title: Input Field
+      - title: Input Field ✅
       - title: File Input
       - title: Search Input
       - title: Select

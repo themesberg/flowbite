@@ -107,8 +107,8 @@
       - title: Checkbox ✅
       - title: Radio ✅
       - title: Toggle ✅
-      - title: Range
-      - title: Floating Label
+      - title: Range ✅
+      - title: Floating Label ✅
 
 - title: Typography
   slug: typography

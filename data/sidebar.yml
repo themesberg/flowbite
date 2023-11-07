@@ -105,7 +105,7 @@
       - title: Select ✅
       - title: Textarea ✅
       - title: Checkbox ✅
-      - title: Radio
+      - title: Radio ✅
       - title: Toggle
       - title: Range
       - title: Floating Label

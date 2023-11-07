@@ -86,9 +86,9 @@
       - title: Sidebar ✅
       - title: Skeleton ✅
       - title: Speed Dial ✅
-      - title: Spinner
-      - title: Stepper
-      - title: Tables
+      - title: Spinner ✅
+      - title: Stepper ✅
+      - title: Tables ✅
       - title: Tabs
       - title: Timeline
       - title: Toast

@@ -100,7 +100,7 @@
   slug: forms
   pages:
       - title: Input Field ✅
-      - title: File Input
+      - title: File Input ✅
       - title: Search Input
       - title: Select
       - title: Textarea

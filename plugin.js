@@ -401,7 +401,7 @@ module.exports = plugin.withOptions(
                     },
                     [[`:is([dir=rtl]) input[type=file]::file-selector-button`]]:
                         {
-                            paddingRight: spacing[4],
+                            paddingRight: spacing[8],
                             paddingLeft: spacing[4],
                         },
                     [[`.dark input[type=file]::file-selector-button`]]: {

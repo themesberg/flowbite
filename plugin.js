@@ -721,6 +721,10 @@ module.exports = plugin.withOptions(
                             colors.gray[500]
                         )} !important`,
                     },
+                    ':is([dir=rtl]) .apexcharts-canvas .apexcharts-legend-text':
+                        {
+                            paddingRight: `${theme('spacing.2', spacing[2])}`,
+                        },
                     '.apexcharts-canvas .apexcharts-legend-text:not(.apexcharts-inactive-legend):hover':
                         {
                             color: `${theme(

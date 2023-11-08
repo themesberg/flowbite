@@ -138,7 +138,54 @@ If you want to use pills as a style for the tabs component you can do so by usin
 Use this example to show a vertically aligned set of tabs on the left side of the page.
 
 {{< example id="tabs-vertical-example" github="components/tabs.md" show_dark=true >}}
+<div class="md:flex">
+    <div class="text-gray-500 sm:text-lg dark:text-gray-400 md:pe-6">
+        <ul class="block mb-3 lg:flex xl:space-y-4 xl:block w-full md:w-60 divide-y divide-gray-200 dark:divide-gray-700" id="verticalTab" role="tablist">
+            <li class="lg:me-2 xl:me-0" role="presentation">
+                <button class="p-4 w-full hover:bg-gray-100 dark:hover:bg-gray-700" id="vertical-1-tab" type="button" role="tab" aria-controls="vertical-1" aria-selected="true">
+                    <figcaption class="space-y-2">
+                        <div class="flex space-x-2.5 rtl:space-x-reverse">
+                            <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture">
+                            <div class="text-lg font-semibold text-gray-900 dark:text-white">Michael Gough</div>
+                        </div>
+                        <div class="text-sm font-light text-start text-gray-500 dark:text-gray-400">Web developer at Google</div>
+                    </figcaption>
+                </button>
+            </li>
+            <li class="lg:me-2 xl:me-0" role="presentation">
+                <button class="p-4 w-full hover:bg-gray-100 dark:hover:bg-gray-700" id="vertical-2-tab" type="button" role="tab" aria-controls="vertical-2" aria-selected="false">
+                    <figcaption class="space-y-2">
+                        <div class="flex space-x-2.5 rtl:space-x-reverse">
+                            <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
+                            <div class="text-lg font-semibold text-gray-900 dark:text-white">Bonnie Green</div>
+                        </div>
+                        <div class="text-sm font-light text-start text-gray-500 dark:text-gray-400">CEO at Facebook</div>
+                    </figcaption>
+                </button>
+            </li>
+            <li class="lg:me-2 xl:me-0" role="presentation">
+                <button class="p-4 w-full hover:bg-gray-100 dark:hover:bg-gray-700" id="vertical-3-tab" type="button" role="tab" aria-controls="vertical-3" aria-selected="false">
+                    <figcaption class="space-y-2">
+                        <div class="flex space-x-2.5 rtl:space-x-reverse">
+                            <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture">
+                            <div class="text-lg font-semibold text-gray-900 dark:text-white">Lana Byrd</div>
+                        </div>
+                        <div class="text-sm font-light text-start text-gray-500 dark:text-gray-400">CTO at Microsoft</div>
+                    </figcaption>
+                </button>
+            </li>
+        </ul>  
+    </div>
+    <div id="verticalTabContent">
+        <div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-700" id="vertical-1" role="tabpanel" aria-labelledby="vertical-1-tab">
+            <svg class="mb-3 h-6 text-gray-500 dark:text-gray-400" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"/></svg>  
+            <h3 class="mb-3 text-xl font-bold tracking-tight leading-tight text-gray-900 dark:text-white">It was a great experience!</h3>                          
+            <p class="mb-3 text-lg font-light leading-relaxed text-gray-500 dark:text-gray-400">Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application.</p>
+        </div>
+    </div>
+</div>
 {{< /example >}}
+
 
 ## Full width tabs
 

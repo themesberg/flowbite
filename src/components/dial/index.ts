@@ -12,8 +12,8 @@ const Default: DialOptions = {
 };
 
 const DefaultInstanceOptions: InstanceOptions = {
-    instanceId: null,
-    overrideExisting: true,
+    id: null,
+    override: true,
 };
 
 class Dial implements DialInterface {
@@ -43,10 +43,8 @@ class Dial implements DialInterface {
         instances.addInstance(
             'Dial',
             this,
-            instanceOptions.instanceId
-                ? instanceOptions.instanceId
-                : this._targetEl.id,
-            instanceOptions.overrideExisting
+            instanceOptions.id ? instanceOptions.id : this._targetEl.id,
+            instanceOptions.override
         );
     }
 

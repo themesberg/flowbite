@@ -652,6 +652,11 @@ const options = {
         console.log(item);
     },
 };
+
+const instanceOptions = {
+    id: 'accordion-example',
+    override: true
+};
 ```
 
 Create a new Accordion object using the options set above as the parameters.
@@ -660,10 +665,12 @@ Create a new Accordion object using the options set above as the parameters.
 import { Accordion } from 'flowbite';
 
 /*
-* accordionItems: array of accordion item objects
-* options: optional
+* accordionEl: HTML element (required)
+* accordionItems: array of accordion item objects (required)
+* options (optional)
+* instanceOptions (optional)
 */
-const accordion = new Accordion(accordionElement, accordionItems, options);
+const accordion = new Accordion(accordionElement, accordionItems, options, instanceOptions);
 ```
 
 Now you can access the object methods to programmatically open, close, and toggle the accordion items based on the unique identifier.
@@ -683,7 +690,7 @@ accordion.toggle('accordion-example-heading-3');
 
 Use the following HTML markup example for the JavaScript script above.
 
-```html
+<!-- ```html -->
 <div id="accordion-example">
   <h2 id="accordion-example-heading-1">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" aria-expanded="true" aria-controls="accordion-example-body-1">
@@ -727,7 +734,7 @@ Use the following HTML markup example for the JavaScript script above.
     </div>
   </div>
 </div>
-```
+<!-- ``` -->
 
 ### TypeScript
 
@@ -782,11 +789,18 @@ const options: AccordionOptions = {
     },
 };
 
+const instanceOptions: InstanceOptions = {
+    id: 'accordion-example',
+    override: true
+};
+
 /*
-* accordionItems: array of accordion item objects
+* accordionEl: HTML element (required)
+* accordionItems: array of accordion item objects (required)
 * options: optional
+* instanceOptions: optional
 */
-const accordion: AccordionInterface = new Accordion(accordionEl, accordionItems, options);
+const accordion: AccordionInterface = new Accordion(accordionEl, accordionItems, options, instanceOptions);
 
 // open accordion item based on id
 accordion.open('accordion-example-heading-2');

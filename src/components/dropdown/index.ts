@@ -22,8 +22,8 @@ const Default: DropdownOptions = {
 };
 
 const DefaultInstanceOptions: InstanceOptions = {
-    instanceId: null,
-    overrideExisting: true,
+    id: null,
+    override: true,
 };
 
 class Dropdown implements DropdownInterface {
@@ -55,10 +55,8 @@ class Dropdown implements DropdownInterface {
         instances.addInstance(
             'Dropdown',
             this,
-            instanceOptions.instanceId
-                ? instanceOptions.instanceId
-                : this._targetEl.id,
-            instanceOptions.overrideExisting
+            instanceOptions.id ? instanceOptions.id : this._targetEl.id,
+            instanceOptions.override
         );
     }
 

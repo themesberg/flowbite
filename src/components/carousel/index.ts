@@ -24,8 +24,8 @@ const Default: CarouselOptions = {
 };
 
 const DefaultInstanceOptions: InstanceOptions = {
-    instanceId: null,
-    overrideExisting: true,
+    id: null,
+    override: true,
 };
 
 class Carousel implements CarouselInterface {
@@ -60,10 +60,8 @@ class Carousel implements CarouselInterface {
         instances.addInstance(
             'Carousel',
             this,
-            instanceOptions.instanceId
-                ? instanceOptions.instanceId
-                : this._carouselEl.id,
-            instanceOptions.overrideExisting
+            instanceOptions.id ? instanceOptions.id : this._carouselEl.id,
+            instanceOptions.override
         );
     }
 

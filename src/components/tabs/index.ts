@@ -14,8 +14,8 @@ const Default: TabsOptions = {
 };
 
 const DefaultInstanceOptions: InstanceOptions = {
-    instanceId: null,
-    overrideExisting: true,
+    id: null,
+    override: true,
 };
 
 class Tabs implements TabsInterface {
@@ -41,10 +41,8 @@ class Tabs implements TabsInterface {
         instances.addInstance(
             'Tabs',
             this,
-            instanceOptions.instanceId
-                ? instanceOptions.instanceId
-                : this._tabsEl.id,
-            instanceOptions.overrideExisting
+            instanceOptions.id ? instanceOptions.id : this._tabsEl.id,
+            instanceOptions.override
         );
     }
 

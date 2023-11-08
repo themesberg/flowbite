@@ -293,8 +293,8 @@ When creating a new object you can also use the last parameter to set the `insta
 
 ```javascript
 const instanceOptions: InstanceOptions = {
-    instanceId: "my-unique-id",
-    overrideExisting: true,
+    id: "my-unique-id",
+    override: true,
 };
 
 const modal = new Modal($targetEl, options, instanceOptions);

@@ -653,6 +653,7 @@ const options = {
     },
 };
 
+// instance options object
 const instanceOptions = {
     id: 'accordion-example',
     override: true
@@ -790,6 +791,7 @@ const options: AccordionOptions = {
     },
 };
 
+// instance options object
 const instanceOptions: InstanceOptions = {
     id: 'accordion-example',
     override: true
@@ -798,8 +800,8 @@ const instanceOptions: InstanceOptions = {
 /*
 * accordionEl: HTML element (required)
 * accordionItems: array of accordion item objects (required)
-* options: optional
-* instanceOptions: optional
+* options (optional)
+* instanceOptions (optional)
 */
 const accordion: AccordionInterface = new Accordion(accordionEl, accordionItems, options, instanceOptions);
 

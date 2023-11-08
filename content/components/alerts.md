@@ -671,6 +671,7 @@ const options = {
   }
 };
 
+// instance options object
 const instanceOptions = {
   id: 'targetElement',
   override: true
@@ -683,10 +684,10 @@ Create a new Dismiss object based on the options set above.
 import { Dismiss } from 'flowbite';
 
 /*
-* $targetEl: required
-* $triggerEl: optional
-* options: optional
-* instanceOptions: optional
+* $targetEl (required)
+* $triggerEl (optional)
+* options (optional)
+* instanceOptions (optional)
 */
 const dismiss = new Dismiss($targetEl, $triggerEl, options, instanceOptions);
 ```
@@ -740,15 +741,17 @@ const options: DismissOptions = {
   }
 };
 
+// instance options object
 const instanceOptions: InstanceOptions = {
   id: 'targetElement',
   override: true
 };
 
 /*
-* targetEl: required
-* triggerEl: optional
-* options: optional
+* $targetEl (required)
+* $triggerEl (optional)
+* options (optional)
+* instanceOptions (optional)
 */
 const dismiss: DismissInterface = new Dismiss($targetEl, $triggerEl, options, instanceOptions);
 

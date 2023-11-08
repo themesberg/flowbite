@@ -1267,6 +1267,12 @@ const options = {
         console.log('drawer has been toggled');
     },
 };
+
+// instance options object
+const instanceOptions = {
+  id: 'drawer-js-example',
+  override: true
+};
 ```
 
 Initialize the Drawer positioning by creating a new object:
@@ -1275,10 +1281,11 @@ Initialize the Drawer positioning by creating a new object:
 import { Drawer } from 'flowbite';
 
 /*
- * targetEl: required
- * options: optional
+ * $targetEl (required)
+ * options (optional)
+ * instanceOptions (optional)
  */
-const drawer = new Drawer($targetEl, options);
+const drawer = new Drawer($targetEl, options, instanceOptions);
 ```
 
 Use the `show` and `hide` methods to show and hide the drawer component directly from JavaScript.
@@ -1430,11 +1437,18 @@ const options: DrawerOptions = {
     },
 };
 
+// instance options object
+const instanceOptions = {
+  id: 'drawer-js-example',
+  override: true
+};
+
 /*
- * $targetEl: required
- * options: optional
+ * $targetEl (required)
+ * options (optional)
+ * instanceOptions (optional)
  */
-const drawer: DrawerInterface = new Drawer($targetEl, options);
+const drawer: DrawerInterface = new Drawer($targetEl, options, instanceOptions);
 
 // show the drawer
 drawer.show();

@@ -1027,6 +1027,7 @@ Here's an example that applies the types from Flowbite to the code above:
 ```javascript
 import { Modal } from 'flowbite';
 import type { ModalOptions, ModalInterface } from 'flowbite';
+import type { InstanceOptions } from 'flowbite';
 
 const $modalElement: HTMLElement = document.querySelector('#modalEl');
 

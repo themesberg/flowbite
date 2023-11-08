@@ -139,6 +139,7 @@ export function initCollapses() {
                         {
                             id:
                                 $targetEl.getAttribute('id') +
+                                '_' +
                                 instances._generateRandomId(),
                         }
                     );

@@ -690,7 +690,7 @@ accordion.toggle('accordion-example-heading-3');
 
 Use the following HTML markup example for the JavaScript script above.
 
-<!-- ```html -->
+```html
 <div id="accordion-example">
   <h2 id="accordion-example-heading-1">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" aria-expanded="true" aria-controls="accordion-example-body-1">
@@ -734,7 +734,7 @@ Use the following HTML markup example for the JavaScript script above.
     </div>
   </div>
 </div>
-<!-- ``` -->
+```
 
 ### TypeScript
 
@@ -745,6 +745,7 @@ Here's an example that applies the types from Flowbite to the code above:
 ```javascript
 import { Accordion } from "flowbite";
 import type { AccordionOptions, AccordionItem, AccordionInterface } from "flowbite";
+import type { InstanceOptions } from 'flowbite';
 
 const accordionEl = document.querySelector('#accordion-example');
 

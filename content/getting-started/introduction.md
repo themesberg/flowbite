@@ -203,6 +203,7 @@ Additionally to our code above, we will now import some relevant types from the 
 ```javascript
 import { Modal } from 'flowbite'
 import type { ModalOptions, ModalInterface } from 'flowbite'
+import type { InstanceOptions } from 'flowbite';
 
 // other code
 ```

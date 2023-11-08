@@ -991,6 +991,7 @@ Here's an example that applies the types from Flowbite to the code above:
 ```javascript
 import { Collapse } from 'flowbite';
 import type { CollapseOptions, CollapseInterface } from 'flowbite';
+import type { InstanceOptions } from 'flowbite';
 
 // set the target element that will be collapsed or expanded (eg. navbar menu)
 const $targetEl: HTMLElement = document.getElementById('targetEl');

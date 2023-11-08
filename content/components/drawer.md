@@ -1405,6 +1405,7 @@ Here's an example that applies the types from Flowbite to the code above:
 ```javascript
 import { Drawer } from 'flowbite';
 import type { DrawerOptions, DrawerInterface } from 'flowbite';
+import type { InstanceOptions } from 'flowbite';
 
 // set the drawer menu element
 const $targetEl: HTMLElement = document.getElementById('drawer-js-example');

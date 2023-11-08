@@ -453,6 +453,7 @@ Here's an example that applies the types from Flowbite to the code above:
 ```javascript
 import { Tooltip } from 'flowbite';
 import type { TooltipOptions, TooltipInterface } from 'flowbite';
+import type { InstanceOptions } from 'flowbite';
 
 // set the tooltip content element
 const $targetEl: HTMLElement = document.getElementById('tooltipContent');

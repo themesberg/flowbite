@@ -1661,6 +1661,7 @@ Here's an example that applies the types from Flowbite to the code above:
 ```javascript
 import { Dropdown } from 'flowbite';
 import type { DropdownOptions, DropdownInterface } from 'flowbite';
+import type { InstanceOptions } from 'flowbite';
 
 // set the dropdown menu element
 const $targetEl: HTMLElement = document.getElementById('dropdownMenu');

@@ -618,6 +618,7 @@ Here's an example that applies the types from Flowbite to the code above:
 ```javascript
 import { Tabs } from 'flowbite';
 import type { TabsOptions, TabsInterface, TabItem } from 'flowbite';
+import type { InstanceOptions } from 'flowbite';
 
 const tabsElement: HTMLElement = document.getElementById('tabs-example');
 

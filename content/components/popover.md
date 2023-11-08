@@ -752,6 +752,7 @@ Here's an example that applies the types from Flowbite to the code above:
 ```javascript
 import { Popover } from 'flowbite';
 import type { PopoverOptions, PopoverInterface } from 'flowbite';
+import type { InstanceOptions } from 'flowbite';
 
 // set the popover content element
 const $targetEl: HTMLElement = document.getElementById('popoverContent');

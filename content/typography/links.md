@@ -28,7 +28,7 @@ Use this example to set default styles to an inline link element.
 This example can be used to set a hyperlink on a button component.
 
 {{< example id="link-button-example" class="flex justify-center" github="typography/links.md" show_dark=true >}}
-<a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Read more</a>
+<a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Read more</a>
 {{< /example >}}
 
 ## Paragraph

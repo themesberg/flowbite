@@ -827,6 +827,8 @@ module.exports = plugin.withOptions(
             'w-1/2',
             'rounded-l-lg',
             'rounded-r-lg',
+            'rounded-s-lg',
+            'rounded-e-lg',
             'bg-gray-200',
             'grid-cols-4',
             'grid-cols-7',

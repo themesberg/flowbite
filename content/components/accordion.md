@@ -70,7 +70,7 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
       <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-      <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+      <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
         <li><a href="{{< param homepage >}}/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
       </ul>
@@ -126,7 +126,7 @@ Use the `data-accordion="open"` option to keep previously opened accordion eleme
       <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-      <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+      <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
         <li><a href="{{< param homepage >}}/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
       </ul>
@@ -184,7 +184,7 @@ Here's an example where we apply the blue colors instead of gray:
       <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-      <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+      <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
         <li><a href="{{< param homepage >}}/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
       </ul>
@@ -240,7 +240,7 @@ Use this example to remove the background color and rounded borders from the acc
       <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-      <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+      <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
         <li><a href="{{< param homepage >}}/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
       </ul>
@@ -269,7 +269,7 @@ Use the `data-accordion-icon` data attribute to optionally set an element to rot
   <h2 id="accordion-arrow-icon-heading-2">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-arrow-icon-body-2" aria-expanded="false" aria-controls="accordion-arrow-icon-body-2">
       <span>Accordion with another icon</span>
-      <svg class="w-4 h-4 shrink-0 -mr-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+      <svg class="w-4 h-4 shrink-0 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.529 7.988a2.502 2.502 0 0 1 5 .191A2.441 2.441 0 0 1 10 10.582V12m-.01 3.008H10M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
       </svg>
     </button>
@@ -293,7 +293,7 @@ Use the `data-accordion-icon` data attribute to optionally set an element to rot
       <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-      <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+      <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
         <li><a href="{{< param homepage >}}/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
       </ul>
@@ -363,7 +363,7 @@ To enable nested accordions you need to wrap the nested accordion in an element 
           <div class="p-5 border border-gray-200 dark:border-gray-700">
             <p class="mb-2 text-gray-500 dark:text-gray-400">We actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
             <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-            <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+            <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
               <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
               <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
             </ul>
@@ -706,7 +706,7 @@ Use the following HTML markup example for the JavaScript script above.
       <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-      <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+      <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
         <li><a href="{{< param homepage >}}/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
       </ul>

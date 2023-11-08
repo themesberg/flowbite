@@ -33,7 +33,7 @@ Use this example to show a list of form steps with a number and title of the ste
     <li class="flex md:w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
         <span class="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
             <span class="me-2">2</span>
-            Account <span class="hidden sm:inline-flex sm:ml-2">Info</span>
+            Account <span class="hidden sm:inline-flex sm:ms-2">Info</span>
         </span>
     </li>
     <li class="flex items-center">
@@ -180,7 +180,7 @@ This example can be used to show the number of steps similar to how a breadcrumb
             1
         </span>
         Personal <span class="hidden sm:inline-flex sm:ms-2">Info</span>
-        <svg class="w-3 h-3 ms-2 sm:ml-4 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 10">
+        <svg class="w-3 h-3 ms-2 sm:ms-4 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 10">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 9 4-4-4-4M1 9l4-4-4-4"/>
         </svg>
     </li>

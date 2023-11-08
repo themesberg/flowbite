@@ -29,6 +29,7 @@ const DefaultInstanceOptions: InstanceOptions = {
 };
 
 class Carousel implements CarouselInterface {
+    _instanceId: string;
     _carouselEl: HTMLElement;
     _items: CarouselItem[];
     _indicators: IndicatorItem[];
@@ -44,6 +45,9 @@ class Carousel implements CarouselInterface {
         options: CarouselOptions = Default,
         instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : carouselEl.id;
         this._carouselEl = carouselEl;
         this._items = items;
         this._options = {
@@ -60,7 +64,7 @@ class Carousel implements CarouselInterface {
         instances.addInstance(
             'Carousel',
             this,
-            instanceOptions.id ? instanceOptions.id : this._carouselEl.id,
+            this._instanceId,
             instanceOptions.override
         );
     }
@@ -103,7 +107,7 @@ class Carousel implements CarouselInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Carousel', this._carouselEl.id);
+        instances.removeInstance('Carousel', this._instanceId);
     }
 
     destroyAndRemoveInstance() {

@@ -1090,7 +1090,7 @@ Create a new Speed Diual object with the object parameters like the trigger elem
                     Optional
                 </td>
                 <td class="px-6 py-4">
-                   Object of options that allows you to set a custom ID for the instance that is being added to the <a href="https://flowbite.com/docs/getting-started/javascript/#instance-manager" class="underline hover:no-underline">Instance Manager</a> and whether to override or not an existing instance.
+                   Object of options that allows you to set a custom ID for the instance that is being added to the <a href="https://flowbite.com/docs/getting-started/javascript/#instance-options" class="underline hover:no-underline">Instance Manager</a> and whether to override or not an existing instance.
                 </td>
             </tr>
         </tbody>

@@ -287,6 +287,25 @@ Alternatively, you can also get all of the instances from one component pool suc
 FlowbiteInstance.getInstances('Modal');
 ```
 
+## Instance options
+
+When creating a new object you can also use the last parameter to set the `instanceOptions` object through which you can set custom options for the Instance manager:
+
+```javascript
+const instanceOptions: InstanceOptions = {
+    instanceId: "my-unique-id",
+    overrideExisting: true,
+};
+
+const modal = new Modal($targetEl, options, instanceOptions);
+```
+
+In this example, the ID of the instance that you can get it from the `FlowbiteInstances` global instance manager object will be `my-unique-id` instead of the `$targetEl` unique ID.
+
+This can be used to override existing instances if you want to re-initialise the same component with different options, such as when using the collapse object for the same object ID.
+
+In our default UI components we use this when we want to toggle the mobile navigation both with the hamburger menu icon and the search icon, even though the target element is the same.
+
 ## TypeScript support
 
 Flowbite has support for type declarations of the Flowbite JS API which helps you to keep your code more maintainable and predictible by giving you safety constraints for the parameters and object methods that you're using through your application.

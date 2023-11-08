@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { DialOptions, DialTriggerType } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { DialInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -8,6 +9,11 @@ const Default: DialOptions = {
     onShow: () => {},
     onHide: () => {},
     onToggle: () => {},
+};
+
+const DefaultInstanceOptions: InstanceOptions = {
+    instanceId: null,
+    overrideExisting: true,
 };
 
 class Dial implements DialInterface {
@@ -24,7 +30,8 @@ class Dial implements DialInterface {
         parentEl: HTMLElement | null = null,
         triggerEl: HTMLElement | null = null,
         targetEl: HTMLElement | null = null,
-        options: DialOptions = Default
+        options: DialOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
         this._parentEl = parentEl;
         this._triggerEl = triggerEl;
@@ -33,7 +40,14 @@ class Dial implements DialInterface {
         this._visible = false;
         this._initialized = false;
         this.init();
-        instances.addInstance('Dial', this, this._targetEl.id, true);
+        instances.addInstance(
+            'Dial',
+            this,
+            instanceOptions.instanceId
+                ? instanceOptions.instanceId
+                : this._targetEl.id,
+            instanceOptions.overrideExisting
+        );
     }
 
     init() {

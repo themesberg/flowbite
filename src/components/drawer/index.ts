@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { DrawerOptions, PlacementClasses } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { DrawerInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -16,6 +17,11 @@ const Default: DrawerOptions = {
     onToggle: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    instanceId: null,
+    overrideExisting: true,
+};
+
 class Drawer implements DrawerInterface {
     _targetEl: HTMLElement;
     _triggerEl: HTMLElement;
@@ -26,14 +32,22 @@ class Drawer implements DrawerInterface {
 
     constructor(
         targetEl: HTMLElement | null = null,
-        options: DrawerOptions = Default
+        options: DrawerOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
         this._targetEl = targetEl;
         this._options = { ...Default, ...options };
         this._visible = false;
         this._initialized = false;
         this.init();
-        instances.addInstance('Drawer', this, this._targetEl.id, true);
+        instances.addInstance(
+            'Drawer',
+            this,
+            instanceOptions.instanceId
+                ? instanceOptions.instanceId
+                : this._targetEl.id,
+            instanceOptions.overrideExisting
+        );
     }
 
     init() {

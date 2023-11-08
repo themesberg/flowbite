@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { ModalOptions } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { ModalInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -14,6 +15,11 @@ const Default: ModalOptions = {
     onToggle: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    instanceId: null,
+    overrideExisting: true,
+};
+
 class Modal implements ModalInterface {
     _targetEl: HTMLElement | null;
     _options: ModalOptions;
@@ -25,7 +31,8 @@ class Modal implements ModalInterface {
 
     constructor(
         targetEl: HTMLElement | null = null,
-        options: ModalOptions = Default
+        options: ModalOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
         this._targetEl = targetEl;
         this._options = { ...Default, ...options };
@@ -33,7 +40,14 @@ class Modal implements ModalInterface {
         this._backdropEl = null;
         this._initialized = false;
         this.init();
-        instances.addInstance('Modal', this, this._targetEl.id, true);
+        instances.addInstance(
+            'Modal',
+            this,
+            instanceOptions.instanceId
+                ? instanceOptions.instanceId
+                : this._targetEl.id,
+            instanceOptions.overrideExisting
+        );
     }
 
     init() {

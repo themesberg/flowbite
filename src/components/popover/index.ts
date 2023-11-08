@@ -5,6 +5,7 @@ import type {
     Instance as PopperInstance,
 } from '@popperjs/core';
 import type { PopoverOptions } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { PopoverInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -15,6 +16,11 @@ const Default: PopoverOptions = {
     onShow: () => {},
     onHide: () => {},
     onToggle: () => {},
+};
+
+const DefaultInstanceOptions: InstanceOptions = {
+    instanceId: null,
+    overrideExisting: true,
 };
 
 class Popover implements PopoverInterface {
@@ -32,7 +38,8 @@ class Popover implements PopoverInterface {
     constructor(
         targetEl: HTMLElement | null = null,
         triggerEl: HTMLElement | null = null,
-        options: PopoverOptions = Default
+        options: PopoverOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
@@ -41,7 +48,14 @@ class Popover implements PopoverInterface {
         this._visible = false;
         this._initialized = false;
         this.init();
-        instances.addInstance('Popover', this, this._targetEl.id, true);
+        instances.addInstance(
+            'Popover',
+            this,
+            instanceOptions.instanceId
+                ? instanceOptions.instanceId
+                : this._targetEl.id,
+            instanceOptions.overrideExisting
+        );
     }
 
     init() {

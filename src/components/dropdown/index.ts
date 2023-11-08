@@ -5,6 +5,7 @@ import type {
     Instance as PopperInstance,
 } from '@popperjs/core';
 import type { DropdownOptions } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { DropdownInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -18,6 +19,11 @@ const Default: DropdownOptions = {
     onShow: () => {},
     onHide: () => {},
     onToggle: () => {},
+};
+
+const DefaultInstanceOptions: InstanceOptions = {
+    instanceId: null,
+    overrideExisting: true,
 };
 
 class Dropdown implements DropdownInterface {
@@ -36,7 +42,8 @@ class Dropdown implements DropdownInterface {
     constructor(
         targetElement: HTMLElement | null = null,
         triggerElement: HTMLElement | null = null,
-        options: DropdownOptions = Default
+        options: DropdownOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
         this._targetEl = targetElement;
         this._triggerEl = triggerElement;
@@ -45,7 +52,14 @@ class Dropdown implements DropdownInterface {
         this._visible = false;
         this._initialized = false;
         this.init();
-        instances.addInstance('Dropdown', this, this._targetEl.id, true);
+        instances.addInstance(
+            'Dropdown',
+            this,
+            instanceOptions.instanceId
+                ? instanceOptions.instanceId
+                : this._targetEl.id,
+            instanceOptions.overrideExisting
+        );
     }
 
     init() {

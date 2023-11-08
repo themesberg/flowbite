@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { DismissOptions } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { DismissInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -8,6 +9,11 @@ const Default: DismissOptions = {
     duration: 300,
     timing: 'ease-out',
     onHide: () => {},
+};
+
+const DefaultInstanceOptions: InstanceOptions = {
+    instanceId: null,
+    overrideExisting: true,
 };
 
 class Dismiss implements DismissInterface {
@@ -20,14 +26,22 @@ class Dismiss implements DismissInterface {
     constructor(
         targetEl: HTMLElement | null = null,
         triggerEl: HTMLElement | null = null,
-        options: DismissOptions = Default
+        options: DismissOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
         this._initialized = false;
         this.init();
-        instances.addInstance('Dismiss', this, this._targetEl.id, true);
+        instances.addInstance(
+            'Dismiss',
+            this,
+            instanceOptions.instanceId
+                ? instanceOptions.instanceId
+                : this._targetEl.id,
+            instanceOptions.overrideExisting
+        );
     }
 
     init() {

@@ -5,6 +5,7 @@ import type {
     IndicatorItem,
     RotationItems,
 } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { CarouselInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -22,6 +23,11 @@ const Default: CarouselOptions = {
     onChange: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    instanceId: null,
+    overrideExisting: true,
+};
+
 class Carousel implements CarouselInterface {
     _carouselEl: HTMLElement;
     _items: CarouselItem[];
@@ -35,7 +41,8 @@ class Carousel implements CarouselInterface {
     constructor(
         carouselEl: HTMLElement | null = null,
         items: CarouselItem[] = [],
-        options: CarouselOptions = Default
+        options: CarouselOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
         this._carouselEl = carouselEl;
         this._items = items;
@@ -50,7 +57,14 @@ class Carousel implements CarouselInterface {
         this._intervalInstance = null;
         this._initialized = false;
         this.init();
-        instances.addInstance('Carousel', this, this._carouselEl.id, true);
+        instances.addInstance(
+            'Carousel',
+            this,
+            instanceOptions.instanceId
+                ? instanceOptions.instanceId
+                : this._carouselEl.id,
+            instanceOptions.overrideExisting
+        );
     }
 
     /**

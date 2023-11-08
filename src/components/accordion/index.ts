@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { AccordionItem, AccordionOptions } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { AccordionInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -12,6 +13,11 @@ const Default: AccordionOptions = {
     onToggle: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    instanceId: null,
+    overrideExisting: true,
+};
+
 class Accordion implements AccordionInterface {
     _accordionEl: HTMLElement;
     _items: AccordionItem[];
@@ -22,14 +28,22 @@ class Accordion implements AccordionInterface {
     constructor(
         accordionEl: HTMLElement | null = null,
         items: AccordionItem[] = [],
-        options: AccordionOptions = Default
+        options: AccordionOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
         this._accordionEl = accordionEl;
         this._items = items;
         this._options = { ...Default, ...options };
         this._initialized = false;
         this.init();
-        instances.addInstance('Accordion', this, this._accordionEl.id, true);
+        instances.addInstance(
+            'Accordion',
+            this,
+            instanceOptions.instanceId
+                ? instanceOptions.instanceId
+                : this._accordionEl.id,
+            instanceOptions.overrideExisting
+        );
     }
 
     init() {

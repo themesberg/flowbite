@@ -5,6 +5,7 @@ import type {
     Instance as PopperInstance,
 } from '@popperjs/core';
 import type { TooltipOptions } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { TooltipInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -14,6 +15,11 @@ const Default: TooltipOptions = {
     onShow: () => {},
     onHide: () => {},
     onToggle: () => {},
+};
+
+const DefaultInstanceOptions: InstanceOptions = {
+    instanceId: null,
+    overrideExisting: true,
 };
 
 class Tooltip implements TooltipInterface {
@@ -31,7 +37,8 @@ class Tooltip implements TooltipInterface {
     constructor(
         targetEl: HTMLElement | null = null,
         triggerEl: HTMLElement | null = null,
-        options: TooltipOptions = Default
+        options: TooltipOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
@@ -40,7 +47,14 @@ class Tooltip implements TooltipInterface {
         this._visible = false;
         this._initialized = false;
         this.init();
-        instances.addInstance('Tooltip', this, this._targetEl.id, true);
+        instances.addInstance(
+            'Tooltip',
+            this,
+            instanceOptions.instanceId
+                ? instanceOptions.instanceId
+                : this._targetEl.id,
+            instanceOptions.overrideExisting
+        );
     }
 
     init() {

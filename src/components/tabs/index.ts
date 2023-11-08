@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { TabItem, TabsOptions } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { TabsInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -12,25 +13,39 @@ const Default: TabsOptions = {
     onShow: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    instanceId: null,
+    overrideExisting: true,
+};
+
 class Tabs implements TabsInterface {
-    _accordionEl: HTMLElement;
+    _tabsEl: HTMLElement;
     _items: TabItem[];
     _activeTab: TabItem;
     _options: TabsOptions;
     _initialized: boolean;
 
     constructor(
-        accordionEl: HTMLElement | null = null,
+        tabsEl: HTMLElement | null = null,
         items: TabItem[] = [],
-        options: TabsOptions = Default
+        options: TabsOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
-        this._accordionEl = accordionEl;
+        this._tabsEl = tabsEl;
         this._items = items;
         this._activeTab = options ? this.getTab(options.defaultTabId) : null;
         this._options = { ...Default, ...options };
         this._initialized = false;
         this.init();
-        instances.addInstance('Tabs', this, this._accordionEl.id, true);
+        instances.addInstance('Tabs', this, this._tabsEl.id, true);
+        instances.addInstance(
+            'Tabs',
+            this,
+            instanceOptions.instanceId
+                ? instanceOptions.instanceId
+                : this._tabsEl.id,
+            instanceOptions.overrideExisting
+        );
     }
 
     init() {
@@ -60,7 +75,7 @@ class Tabs implements TabsInterface {
 
     removeInstance() {
         this.destroy();
-        instances.removeInstance('Tabs', this._accordionEl.id);
+        instances.removeInstance('Tabs', this._tabsEl.id);
     }
 
     destroyAndRemoveInstance() {

@@ -1,7 +1,7 @@
 import { TabItem, TabsOptions } from './types';
 
 export declare interface TabsInterface {
-    _accordionEl: HTMLElement;
+    _tabsEl: HTMLElement;
     _items: TabItem[];
     _activeTab: TabItem;
     _options: TabsOptions;

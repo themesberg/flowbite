@@ -670,6 +670,11 @@ const options = {
     console.log(targetEl)
   }
 };
+
+const instanceOptions = {
+  id: 'targetElement',
+  override: true
+};
 ```
 
 Create a new Dismiss object based on the options set above.
@@ -681,8 +686,9 @@ import { Dismiss } from 'flowbite';
 * $targetEl: required
 * $triggerEl: optional
 * options: optional
+* instanceOptions: optional
 */
-const dismiss = new Dismiss($targetEl, $triggerEl, options);
+const dismiss = new Dismiss($targetEl, $triggerEl, options, instanceOptions);
 ```
 
 You can now use the methods on the Dismiss object.
@@ -713,6 +719,7 @@ Here's an example that applies the types from Flowbite to the code above:
 ```javascript
 import { Dismiss } from "flowbite";
 import type { DismissOptions, DismissInterface } from "flowbite";
+import type { InstanceOptions } from 'flowbite';
 
 // target element that will be dismissed
 const $targetEl: HTMLElement = document.getElementById('targetElement');
@@ -733,12 +740,17 @@ const options: DismissOptions = {
   }
 };
 
+const instanceOptions: InstanceOptions = {
+  id: 'targetElement',
+  override: true
+};
+
 /*
 * targetEl: required
 * triggerEl: optional
 * options: optional
 */
-const dismiss: DismissInterface = new Dismiss($targetEl, $triggerEl, options);
+const dismiss: DismissInterface = new Dismiss($targetEl, $triggerEl, options, instanceOptions);
 
 // programmatically hide it
 dismiss.hide();

@@ -53,6 +53,7 @@ export * from './components/modal/types';
 export * from './components/popover/types';
 export * from './components/tabs/types';
 export * from './components/tooltip/types';
+export * from './dom/events';
 
 // export all interfaces
 export * from './components/accordion/interface';

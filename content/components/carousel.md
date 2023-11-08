@@ -739,6 +739,7 @@ import type {
     CarouselOptions,
     CarouselInterface,
 } from 'flowbite';
+import type { InstanceOptions } from 'flowbite';
 
 const carouselElement: HTMLElement = document.getElementById('carousel-example');
 

@@ -1432,6 +1432,7 @@ Here's an example that applies the types from Flowbite to the code above:
 ```javascript
 import { Dial } from 'flowbite';
 import type { DialOptions, DialInterface } from 'flowbite';
+import type { InstanceOptions } from 'flowbite';
 
 // parent element wrapping the speed dial
 const $parentEl: HTMLElement = document.getElementById('dialParent');

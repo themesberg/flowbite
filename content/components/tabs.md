@@ -133,6 +133,13 @@ If you want to use pills as a style for the tabs component you can do so by usin
 </ul>
 {{< /example >}}
 
+## Vertical tabs
+
+Use this example to show a vertically aligned set of tabs on the left side of the page.
+
+{{< example id="tabs-vertical-example" github="components/tabs.md" show_dark=true >}}
+{{< /example >}}
+
 ## Full width tabs
 
 If you want to show the tabs on the full width relative to the parent element you can do so by using the full width tabs component example.

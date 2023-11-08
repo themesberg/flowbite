@@ -822,7 +822,7 @@ Use this example to show a list of notifications inside your application by prov
 This example can be used to show a list of menu items and options when a user is logged into your application.
 
 {{< example id="dropdown-avatar-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="370" >}}
-<button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" class="flex mx-3 text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
+<button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
 <span class="sr-only">Open user menu</span>
 <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="user photo">
 </button>

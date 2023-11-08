@@ -16,8 +16,8 @@ const Default: ModalOptions = {
 };
 
 const DefaultInstanceOptions: InstanceOptions = {
-    instanceId: null,
-    overrideExisting: true,
+    id: null,
+    override: true,
 };
 
 class Modal implements ModalInterface {
@@ -43,10 +43,8 @@ class Modal implements ModalInterface {
         instances.addInstance(
             'Modal',
             this,
-            instanceOptions.instanceId
-                ? instanceOptions.instanceId
-                : this._targetEl.id,
-            instanceOptions.overrideExisting
+            instanceOptions.id ? instanceOptions.id : this._targetEl.id,
+            instanceOptions.override
         );
     }
 

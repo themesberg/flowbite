@@ -12,8 +12,8 @@ const Default: DismissOptions = {
 };
 
 const DefaultInstanceOptions: InstanceOptions = {
-    instanceId: null,
-    overrideExisting: true,
+    id: null,
+    override: true,
 };
 
 class Dismiss implements DismissInterface {
@@ -37,10 +37,8 @@ class Dismiss implements DismissInterface {
         instances.addInstance(
             'Dismiss',
             this,
-            instanceOptions.instanceId
-                ? instanceOptions.instanceId
-                : this._targetEl.id,
-            instanceOptions.overrideExisting
+            instanceOptions.id ? instanceOptions.id : this._targetEl.id,
+            instanceOptions.override
         );
     }
 

@@ -18,8 +18,8 @@ const Default: TooltipOptions = {
 };
 
 const DefaultInstanceOptions: InstanceOptions = {
-    instanceId: null,
-    overrideExisting: true,
+    id: null,
+    override: true,
 };
 
 class Tooltip implements TooltipInterface {
@@ -50,10 +50,8 @@ class Tooltip implements TooltipInterface {
         instances.addInstance(
             'Tooltip',
             this,
-            instanceOptions.instanceId
-                ? instanceOptions.instanceId
-                : this._targetEl.id,
-            instanceOptions.overrideExisting
+            instanceOptions.id ? instanceOptions.id : this._targetEl.id,
+            instanceOptions.override
         );
     }
 

@@ -305,7 +305,7 @@ Create a new Tabs object with parameters such as an array of the tab and content
                     Optional
                 </td>
                 <td class="px-6 py-4">
-                   Object of options that allows you to set a custom ID for the instance that is being added to the <a href="https://flowbite.com/docs/getting-started/javascript/#instance-manager" class="underline hover:no-underline">Instance Manager</a> and whether to override or not an existing instance.
+                   Object of options that allows you to set a custom ID for the instance that is being added to the <a href="https://flowbite.com/docs/getting-started/javascript/#instance-options" class="underline hover:no-underline">Instance Manager</a> and whether to override or not an existing instance.
                 </td>
             </tr>
         </tbody>

@@ -1,4 +1,4 @@
 export declare type InstanceOptions = {
-    instanceId?: string;
-    overrideExisting?: boolean;
+    id?: string;
+    override?: boolean;
 };

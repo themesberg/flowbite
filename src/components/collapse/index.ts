@@ -11,8 +11,8 @@ const Default: CollapseOptions = {
 };
 
 const DefaultInstanceOptions: InstanceOptions = {
-    instanceId: null,
-    overrideExisting: true,
+    id: null,
+    override: true,
 };
 
 class Collapse implements CollapseInterface {
@@ -38,10 +38,8 @@ class Collapse implements CollapseInterface {
         instances.addInstance(
             'Collapse',
             this,
-            instanceOptions.instanceId
-                ? instanceOptions.instanceId
-                : this._targetEl.id,
-            instanceOptions.overrideExisting
+            instanceOptions.id ? instanceOptions.id : this._targetEl.id,
+            instanceOptions.override
         );
     }
 
@@ -139,7 +137,7 @@ export function initCollapses() {
                         $triggerEl as HTMLElement,
                         {},
                         {
-                            instanceId:
+                            id:
                                 $targetEl.getAttribute('id') +
                                 instances._generateRandomId(),
                         }

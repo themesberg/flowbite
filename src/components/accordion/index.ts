@@ -14,8 +14,8 @@ const Default: AccordionOptions = {
 };
 
 const DefaultInstanceOptions: InstanceOptions = {
-    instanceId: null,
-    overrideExisting: true,
+    id: null,
+    override: true,
 };
 
 class Accordion implements AccordionInterface {
@@ -36,13 +36,12 @@ class Accordion implements AccordionInterface {
         this._options = { ...Default, ...options };
         this._initialized = false;
         this.init();
+        console.log(instanceOptions);
         instances.addInstance(
             'Accordion',
             this,
-            instanceOptions.instanceId
-                ? instanceOptions.instanceId
-                : this._accordionEl.id,
-            instanceOptions.overrideExisting
+            instanceOptions.id ? instanceOptions.id : this._accordionEl.id,
+            instanceOptions.override
         );
     }
 

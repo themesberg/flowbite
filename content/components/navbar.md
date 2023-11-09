@@ -914,6 +914,12 @@ const options = {
         console.log('element has been toggled');
     },
 };
+
+const instanceOptions = {
+  id: 'targetEl',
+  override: true
+};
+
 ```
 
 Next step is to create a new instance of a Collapse object using the parameters we have set above.
@@ -926,7 +932,7 @@ import { Collapse } from 'flowbite';
  * $triggerEl: optional
  * options: optional
  */
-const collapse = new Collapse($targetEl, $triggerEl, options);
+const collapse = new Collapse($targetEl, $triggerEl, options, instanceOptions);
 ```
 
 Now you can programmatically expand or collapse the target element using the methods of the Collapse object.
@@ -947,15 +953,7 @@ collapse.toggle();
 Here is an example of the HTML markup that you can use for the JavaScript example above. Please note that you should use the `hidden` class from Tailwind CSS to hide the target element by default.
 
 ```html
-<!-- Trigger element -->
-<button
-    id="triggerEl"
-    aria-expanded="false"
-    type="button"
-    class="mb-2 me-2 rounded-lg bg-blue-700 px-5  py-4 text-center text-sm text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
->
-    Trigger collapse
-</button>
+<button type="button" id="triggerEl" aria-expanded="false" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Trigger collapse</button>
 
 <!-- Target element -->
 <div id="targetEl" class="hidden">
@@ -1012,15 +1010,23 @@ const options: CollapseOptions = {
     },
 };
 
+// instance options object
+const instanceOptions: InstanceOptions = {
+  id: 'targetEl',
+  override: true
+};
+
 /*
  * $targetEl: required
  * $triggerEl: optional
  * options: optional
+ * instanceOptions: optional
  */
 const collapse: CollapseInterface = new Collapse(
     $targetEl,
     $triggerEl,
-    options
+    options,
+    instanceOptions
 );
 
 // show the target element

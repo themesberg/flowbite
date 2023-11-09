@@ -640,6 +640,11 @@ module.exports = plugin.withOptions(
                                 defaultTheme.fontSize.sm
                             )}`,
                         },
+                    ':is([dir=rtl]) .apexcharts-tooltip .apexcharts-tooltip-marker':
+                        {
+                            marginRight: `${theme('spacing.0', spacing[0])}`,
+                            marginLeft: `${theme('spacing.1.5', spacing[1.5])}`,
+                        },
                     '.dark .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-value':
                         {
                             color: 'white',

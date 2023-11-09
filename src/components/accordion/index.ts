@@ -97,7 +97,7 @@ class Accordion implements AccordionInterface {
 
                     // rotate icon if set
                     if (i.iconEl) {
-                        i.iconEl.classList.remove('rotate-180');
+                        i.iconEl.classList.add('rotate-180');
                     }
                 }
             });
@@ -114,7 +114,7 @@ class Accordion implements AccordionInterface {
 
         // rotate icon if set
         if (item.iconEl) {
-            item.iconEl.classList.add('rotate-180');
+            item.iconEl.classList.remove('rotate-180');
         }
 
         // callback function
@@ -149,7 +149,7 @@ class Accordion implements AccordionInterface {
 
         // rotate icon if set
         if (item.iconEl) {
-            item.iconEl.classList.remove('rotate-180');
+            item.iconEl.classList.add('rotate-180');
         }
 
         // callback function

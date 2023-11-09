@@ -267,43 +267,6 @@ export function initModals() {
         }
     });
 
-    // support pre v1.6.0 data-modal-toggle initialization
-    document.querySelectorAll('[data-modal-toggle]').forEach(($triggerEl) => {
-        const modalId = $triggerEl.getAttribute('data-modal-toggle');
-        const $modalEl = document.getElementById(modalId);
-
-        if ($modalEl) {
-            const placement = $modalEl.getAttribute('data-modal-placement');
-            const backdrop = $modalEl.getAttribute('data-modal-backdrop');
-
-            let modal: ModalInterface;
-            if (
-                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
-            ) {
-                modal = instances.getInstance(
-                    'Modal',
-                    $modalEl.getAttribute('id')
-                );
-            } else {
-                modal = new Modal(
-                    $modalEl as HTMLElement,
-                    {
-                        placement: placement ? placement : Default.placement,
-                        backdrop: backdrop ? backdrop : Default.backdrop,
-                    } as ModalOptions
-                );
-            }
-
-            $triggerEl.addEventListener('click', () => {
-                modal.toggle();
-            });
-        } else {
-            console.error(
-                `Modal with id ${modalId} does not exist. Are you sure that the data-modal-toggle attribute points to the correct modal id?`
-            );
-        }
-    });
-
     // show modal on click if exists based on id
     document.querySelectorAll('[data-modal-show]').forEach(($triggerEl) => {
         const modalId = $triggerEl.getAttribute('data-modal-show');

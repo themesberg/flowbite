@@ -16,6 +16,7 @@ const DefaultInstanceOptions: InstanceOptions = {
 };
 
 class Collapse implements CollapseInterface {
+    _instanceId: string;
     _targetEl: HTMLElement | null;
     _triggerEl: HTMLElement | null;
     _options: CollapseOptions;
@@ -29,6 +30,9 @@ class Collapse implements CollapseInterface {
         options: CollapseOptions = Default,
         instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetEl.id;
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
@@ -38,7 +42,7 @@ class Collapse implements CollapseInterface {
         instances.addInstance(
             'Collapse',
             this,
-            instanceOptions.id ? instanceOptions.id : this._targetEl.id,
+            this._instanceId,
             instanceOptions.override
         );
     }
@@ -70,7 +74,7 @@ class Collapse implements CollapseInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Collapse', this._targetEl.id);
+        instances.removeInstance('Collapse', this._instanceId);
     }
 
     destroyAndRemoveInstance() {

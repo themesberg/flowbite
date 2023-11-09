@@ -19,6 +19,7 @@ const DefaultInstanceOptions: InstanceOptions = {
 };
 
 class Tabs implements TabsInterface {
+    _instanceId: string;
     _tabsEl: HTMLElement;
     _items: TabItem[];
     _activeTab: TabItem;
@@ -31,6 +32,7 @@ class Tabs implements TabsInterface {
         options: TabsOptions = Default,
         instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id ? instanceOptions.id : tabsEl.id;
         this._tabsEl = tabsEl;
         this._items = items;
         this._activeTab = options ? this.getTab(options.defaultTabId) : null;
@@ -41,7 +43,7 @@ class Tabs implements TabsInterface {
         instances.addInstance(
             'Tabs',
             this,
-            instanceOptions.id ? instanceOptions.id : this._tabsEl.id,
+            this._instanceId,
             instanceOptions.override
         );
     }
@@ -73,7 +75,7 @@ class Tabs implements TabsInterface {
 
     removeInstance() {
         this.destroy();
-        instances.removeInstance('Tabs', this._tabsEl.id);
+        instances.removeInstance('Tabs', this._instanceId);
     }
 
     destroyAndRemoveInstance() {

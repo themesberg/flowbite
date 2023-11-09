@@ -23,6 +23,7 @@ const DefaultInstanceOptions: InstanceOptions = {
 };
 
 class Tooltip implements TooltipInterface {
+    _instanceId: string;
     _targetEl: HTMLElement | null;
     _triggerEl: HTMLElement | null;
     _options: TooltipOptions;
@@ -40,6 +41,9 @@ class Tooltip implements TooltipInterface {
         options: TooltipOptions = Default,
         instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetEl.id;
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
@@ -50,7 +54,7 @@ class Tooltip implements TooltipInterface {
         instances.addInstance(
             'Tooltip',
             this,
-            instanceOptions.id ? instanceOptions.id : this._targetEl.id,
+            this._instanceId,
             instanceOptions.override
         );
     }
@@ -91,7 +95,7 @@ class Tooltip implements TooltipInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Tooltip', this._targetEl.id);
+        instances.removeInstance('Tooltip', this._instanceId);
     }
 
     destroyAndRemoveInstance() {

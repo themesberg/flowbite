@@ -19,6 +19,7 @@ const DefaultInstanceOptions: InstanceOptions = {
 };
 
 class Accordion implements AccordionInterface {
+    _instanceId: string;
     _accordionEl: HTMLElement;
     _items: AccordionItem[];
     _options: AccordionOptions;
@@ -31,16 +32,18 @@ class Accordion implements AccordionInterface {
         options: AccordionOptions = Default,
         instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : accordionEl.id;
         this._accordionEl = accordionEl;
         this._items = items;
         this._options = { ...Default, ...options };
         this._initialized = false;
         this.init();
-        console.log(instanceOptions);
         instances.addInstance(
             'Accordion',
             this,
-            instanceOptions.id ? instanceOptions.id : this._accordionEl.id,
+            this._instanceId,
             instanceOptions.override
         );
     }
@@ -79,7 +82,7 @@ class Accordion implements AccordionInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Accordion', this._accordionEl.id);
+        instances.removeInstance('Accordion', this._instanceId);
     }
 
     destroyAndRemoveInstance() {

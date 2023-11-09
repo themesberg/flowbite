@@ -21,6 +21,7 @@ const DefaultInstanceOptions: InstanceOptions = {
 };
 
 class Modal implements ModalInterface {
+    _instanceId: string;
     _targetEl: HTMLElement | null;
     _options: ModalOptions;
     _isHidden: boolean;
@@ -34,6 +35,9 @@ class Modal implements ModalInterface {
         options: ModalOptions = Default,
         instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetEl.id;
         this._targetEl = targetEl;
         this._options = { ...Default, ...options };
         this._isHidden = true;
@@ -43,7 +47,7 @@ class Modal implements ModalInterface {
         instances.addInstance(
             'Modal',
             this,
-            instanceOptions.id ? instanceOptions.id : this._targetEl.id,
+            this._instanceId,
             instanceOptions.override
         );
     }
@@ -65,7 +69,7 @@ class Modal implements ModalInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Modal', this._targetEl.id);
+        instances.removeInstance('Modal', this._instanceId);
     }
 
     destroyAndRemoveInstance() {

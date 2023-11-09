@@ -100,12 +100,14 @@ class Instances {
             return;
         }
         this.destroyInstanceObject(component, id);
+        this.removeInstance(component, id);
     }
 
     removeInstance(component: keyof Instances['_instances'], id: string) {
         if (!this._componentAndInstanceCheck(component, id)) {
             return;
         }
+        delete this._instances[component][id];
     }
 
     destroyInstanceObject(

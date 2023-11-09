@@ -24,6 +24,7 @@ const DefaultInstanceOptions: InstanceOptions = {
 };
 
 class Popover implements PopoverInterface {
+    _instanceId: string;
     _targetEl: HTMLElement;
     _triggerEl: HTMLElement;
     _options: PopoverOptions;
@@ -41,6 +42,9 @@ class Popover implements PopoverInterface {
         options: PopoverOptions = Default,
         instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetEl.id;
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
@@ -95,7 +99,7 @@ class Popover implements PopoverInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Popover', this._targetEl.id);
+        instances.removeInstance('Popover', this._instanceId);
     }
 
     destroyAndRemoveInstance() {

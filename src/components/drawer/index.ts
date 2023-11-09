@@ -23,6 +23,7 @@ const DefaultInstanceOptions: InstanceOptions = {
 };
 
 class Drawer implements DrawerInterface {
+    _instanceId: string;
     _targetEl: HTMLElement;
     _triggerEl: HTMLElement;
     _options: DrawerOptions;
@@ -35,6 +36,9 @@ class Drawer implements DrawerInterface {
         options: DrawerOptions = Default,
         instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetEl.id;
         this._targetEl = targetEl;
         this._options = { ...Default, ...options };
         this._visible = false;
@@ -43,7 +47,7 @@ class Drawer implements DrawerInterface {
         instances.addInstance(
             'Drawer',
             this,
-            instanceOptions.id ? instanceOptions.id : this._targetEl.id,
+            this._instanceId,
             instanceOptions.override
         );
     }
@@ -88,7 +92,7 @@ class Drawer implements DrawerInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Drawer', this._targetEl.id);
+        instances.removeInstance('Drawer', this._instanceId);
     }
 
     destroyAndRemoveInstance() {

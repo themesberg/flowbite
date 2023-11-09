@@ -17,6 +17,7 @@ const DefaultInstanceOptions: InstanceOptions = {
 };
 
 class Dismiss implements DismissInterface {
+    _instanceId: string;
     _targetEl: HTMLElement | null;
     _triggerEl: HTMLElement | null;
     _options: DismissOptions;
@@ -29,6 +30,9 @@ class Dismiss implements DismissInterface {
         options: DismissOptions = Default,
         instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetEl.id;
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
@@ -37,7 +41,7 @@ class Dismiss implements DismissInterface {
         instances.addInstance(
             'Dismiss',
             this,
-            instanceOptions.id ? instanceOptions.id : this._targetEl.id,
+            this._instanceId,
             instanceOptions.override
         );
     }
@@ -60,7 +64,7 @@ class Dismiss implements DismissInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Dismiss', this._targetEl.id);
+        instances.removeInstance('Dismiss', this._instanceId);
     }
 
     destroyAndRemoveInstance() {

@@ -27,6 +27,7 @@ const DefaultInstanceOptions: InstanceOptions = {
 };
 
 class Dropdown implements DropdownInterface {
+    _instanceId: string;
     _targetEl: HTMLElement;
     _triggerEl: HTMLElement;
     _options: DropdownOptions;
@@ -45,6 +46,9 @@ class Dropdown implements DropdownInterface {
         options: DropdownOptions = Default,
         instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetElement.id;
         this._targetEl = targetElement;
         this._triggerEl = triggerElement;
         this._options = { ...Default, ...options };
@@ -55,7 +59,7 @@ class Dropdown implements DropdownInterface {
         instances.addInstance(
             'Dropdown',
             this,
-            instanceOptions.id ? instanceOptions.id : this._targetEl.id,
+            this._instanceId,
             instanceOptions.override
         );
     }
@@ -102,7 +106,7 @@ class Dropdown implements DropdownInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Dropdown', this._targetEl.id);
+        instances.removeInstance('Dropdown', this._instanceId);
     }
 
     destroyAndRemoveInstance() {

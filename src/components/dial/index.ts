@@ -17,6 +17,7 @@ const DefaultInstanceOptions: InstanceOptions = {
 };
 
 class Dial implements DialInterface {
+    _instanceId: string;
     _parentEl: HTMLElement;
     _triggerEl: HTMLElement;
     _targetEl: HTMLElement;
@@ -33,6 +34,9 @@ class Dial implements DialInterface {
         options: DialOptions = Default,
         instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetEl.id;
         this._parentEl = parentEl;
         this._triggerEl = triggerEl;
         this._targetEl = targetEl;
@@ -43,7 +47,7 @@ class Dial implements DialInterface {
         instances.addInstance(
             'Dial',
             this,
-            instanceOptions.id ? instanceOptions.id : this._targetEl.id,
+            this._instanceId,
             instanceOptions.override
         );
     }
@@ -96,7 +100,7 @@ class Dial implements DialInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Dial', this._targetEl.id);
+        instances.removeInstance('Dial', this._instanceId);
     }
 
     destroyAndRemoveInstance() {

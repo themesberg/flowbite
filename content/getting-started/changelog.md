@@ -22,6 +22,8 @@ This update adds [full RTL support](https://flowbite.com/docs/customize/rtl/) to
 - updated to Tailwind CSS `v3.3.5`
 - added full RTL support to all UI components
 - updated the JS API and Instance Manager to allow setting custom id's
+- added new vertical tabs component example
+- added three next modal component examples
 - fixed responsive wrapping issues for the table components
 - other minor bug fixes and improvements
 

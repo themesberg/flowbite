@@ -503,6 +503,7 @@ const items = [
     },
 ];
 
+// options with default values
 const options = {
     defaultPosition: 1,
     interval: 3000,
@@ -542,6 +543,12 @@ const options = {
         console.log('new slider item has been shown');
     },
 };
+
+// instance options object
+const instanceOptions = {
+  id: 'carousel-example',
+  override: true
+};
 ```
 
 Create a new carousel object using the options set above.
@@ -549,7 +556,7 @@ Create a new carousel object using the options set above.
 ```javascript
 import { Carousel } from 'flowbite';
 
-const carousel = new Carousel(carouselElement, items, options);
+const carousel = new Carousel(carouselElement, items, options, instanceOptions);
 ```
 
 Use the `next()` and `prev()` public methods on the carousel object to jump to the left or right carousel slide item based on the position of the current active item.
@@ -762,6 +769,7 @@ const items: CarouselItem[] = [
     },
 ];
 
+// object options with default values
 const options: CarouselOptions = {
     defaultPosition: 1,
     interval: 3000,
@@ -802,7 +810,13 @@ const options: CarouselOptions = {
     },
 };
 
-const carousel: CarouselInterface = new Carousel(carouselElement, items, options);
+// instance options object
+const instanceOptions: InstanceOptions = {
+  id: 'carousel-example',
+  override: true
+};
+
+const carousel: CarouselInterface = new Carousel(carouselElement, items, options, instanceOptions);
 
 carousel.cycle();
 

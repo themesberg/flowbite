@@ -21,4 +21,12 @@ export declare interface DrawerInterface {
     destroy(): void;
     removeInstance(): void;
     destroyAndRemoveInstance(): void;
+
+    addEventListenerInstance(
+        element: HTMLElement,
+        type: string,
+        handler: EventListenerOrEventListenerObject
+    ): void;
+    removeAllEventListenerInstances(): void;
+    getAllEventListenerInstances(): void;
 }

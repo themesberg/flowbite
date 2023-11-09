@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { ModalOptions } from './types';
-import type { InstanceOptions } from '../../dom/types';
+import type { InstanceOptions, EventListenerInstance } from '../../dom/types';
 import { ModalInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -28,6 +28,7 @@ class Modal implements ModalInterface {
     _backdropEl: HTMLElement | null;
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
     _keydownEventListener: EventListenerOrEventListenerObject;
+    _eventListenerInstances: EventListenerInstance[] = [];
     _initialized: boolean;
 
     constructor(
@@ -63,7 +64,8 @@ class Modal implements ModalInterface {
 
     destroy() {
         if (this._initialized) {
-            this.hide();
+            this.removeAllEventListenerInstances();
+            this._destroyBackdropEl();
             this._initialized = false;
         }
     }
@@ -237,6 +239,32 @@ class Modal implements ModalInterface {
     isHidden() {
         return this._isHidden;
     }
+
+    addEventListenerInstance(
+        element: HTMLElement,
+        type: string,
+        handler: EventListenerOrEventListenerObject
+    ) {
+        this._eventListenerInstances.push({
+            element: element,
+            type: type,
+            handler: handler,
+        });
+    }
+
+    removeAllEventListenerInstances() {
+        this._eventListenerInstances.map((eventListenerInstance) => {
+            eventListenerInstance.element.removeEventListener(
+                eventListenerInstance.type,
+                eventListenerInstance.handler
+            );
+        });
+        this._eventListenerInstances = [];
+    }
+
+    getAllEventListenerInstances() {
+        return this._eventListenerInstances;
+    }
 }
 
 export function initModals() {
@@ -246,20 +274,16 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
+            console.log('add new modal' + modalId);
             const placement = $modalEl.getAttribute('data-modal-placement');
             const backdrop = $modalEl.getAttribute('data-modal-backdrop');
-
-            if (
-                !instances.instanceExists('Modal', $modalEl.getAttribute('id'))
-            ) {
-                new Modal(
-                    $modalEl as HTMLElement,
-                    {
-                        placement: placement ? placement : Default.placement,
-                        backdrop: backdrop ? backdrop : Default.backdrop,
-                    } as ModalOptions
-                );
-            }
+            new Modal(
+                $modalEl as HTMLElement,
+                {
+                    placement: placement ? placement : Default.placement,
+                    backdrop: backdrop ? backdrop : Default.backdrop,
+                } as ModalOptions
+            );
         } else {
             console.error(
                 `Modal with id ${modalId} does not exist. Are you sure that the data-modal-target attribute points to the correct modal id?.`
@@ -273,16 +297,21 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            if (
-                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
-            ) {
-                const modal: ModalInterface = instances.getInstance(
-                    'Modal',
-                    $modalEl.getAttribute('id')
-                );
-                $triggerEl.addEventListener('click', () => {
+            const modal: ModalInterface = instances.getInstance(
+                'Modal',
+                modalId
+            );
+
+            if (modal) {
+                const toggleModal = () => {
                     modal.toggle();
-                });
+                };
+                $triggerEl.addEventListener('click', toggleModal);
+                modal.addEventListenerInstance(
+                    $triggerEl as HTMLElement,
+                    'click',
+                    toggleModal
+                );
             } else {
                 console.error(
                     `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`
@@ -301,16 +330,21 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            if (
-                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
-            ) {
-                const modal: ModalInterface = instances.getInstance(
-                    'Modal',
-                    $modalEl.getAttribute('id')
-                );
-                $triggerEl.addEventListener('click', () => {
+            const modal: ModalInterface = instances.getInstance(
+                'Modal',
+                modalId
+            );
+
+            if (modal) {
+                const showModal = () => {
                     modal.show();
-                });
+                };
+                $triggerEl.addEventListener('click', showModal);
+                modal.addEventListenerInstance(
+                    $triggerEl as HTMLElement,
+                    'click',
+                    showModal
+                );
             } else {
                 console.error(
                     `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`
@@ -329,16 +363,21 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            if (
-                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
-            ) {
-                const modal: ModalInterface = instances.getInstance(
-                    'Modal',
-                    $modalEl.getAttribute('id')
-                );
-                $triggerEl.addEventListener('click', () => {
+            const modal: ModalInterface = instances.getInstance(
+                'Modal',
+                modalId
+            );
+
+            if (modal) {
+                const hideModal = () => {
                     modal.hide();
-                });
+                };
+                $triggerEl.addEventListener('click', hideModal);
+                modal.addEventListenerInstance(
+                    $triggerEl as HTMLElement,
+                    'click',
+                    hideModal
+                );
             } else {
                 console.error(
                     `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`

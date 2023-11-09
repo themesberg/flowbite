@@ -267,6 +267,34 @@ export function initModals() {
         }
     });
 
+    // toggle modal visibility
+    document.querySelectorAll('[data-modal-toggle]').forEach(($triggerEl) => {
+        const modalId = $triggerEl.getAttribute('data-modal-toggle');
+        const $modalEl = document.getElementById(modalId);
+
+        if ($modalEl) {
+            if (
+                instances.instanceExists('Modal', $modalEl.getAttribute('id'))
+            ) {
+                const modal: ModalInterface = instances.getInstance(
+                    'Modal',
+                    $modalEl.getAttribute('id')
+                );
+                $triggerEl.addEventListener('click', () => {
+                    modal.toggle();
+                });
+            } else {
+                console.error(
+                    `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`
+                );
+            }
+        } else {
+            console.error(
+                `Modal with id ${modalId} does not exist. Are you sure that the data-modal-toggle attribute points to the correct modal id?`
+            );
+        }
+    });
+
     // show modal on click if exists based on id
     document.querySelectorAll('[data-modal-show]').forEach(($triggerEl) => {
         const modalId = $triggerEl.getAttribute('data-modal-show');

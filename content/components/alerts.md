@@ -699,7 +699,7 @@ You can now use the methods on the Dismiss object.
 dismiss.hide();
 ```
 
-### HTML markup
+### HTML Markup
 
 Use this HTML code for the JavaScript code example above.
 

@@ -1591,7 +1591,7 @@ dropdown.toggle();
 dropdown.isVisible();
 ```
 
-### HTML markup
+### HTML Markup
 
 Use the following HTML code for the JavaScript example above.
 

@@ -1312,7 +1312,7 @@ Use the `isVisible` method to check the visibility of the drawer:
 drawer.isVisible();
 ```
 
-### HTML markup
+### HTML Markup
 
 Use the following HTML code for the JavaScript example above.
 

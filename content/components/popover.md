@@ -674,6 +674,12 @@ const options = {
         console.log('popover is toggled');
     },
 };
+
+// instance options object
+const instanceOptions = {
+  id: 'popoverContent',
+  override: true
+};
 ```
 
 Create a new Popover object based on the options above.
@@ -686,7 +692,7 @@ import { Popover } from 'flowbite';
  * $triggerEl: required
  * options: optional
  */
-const popover = new Popover($targetEl, $triggerEl, options);
+const popover = new Popover($targetEl, $triggerEl, options, instanceOptions);
 ```
 
 Use the `show` and `hide` methods on the Popover object to programmatically show and hide the popover element using JavaScript.
@@ -719,8 +725,7 @@ Use the following HTML code for the JavaScript example above.
 <button
     id="popoverButton"
     type="button"
-    class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
->
+    class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
     Default popover
 </button>
 <div
@@ -776,16 +781,24 @@ const options: PopoverOptions = {
     },
 };
 
+// instance options object
+const instanceOptions: InstanceOptions = {
+  id: 'popoverContent',
+  override: true
+};
+
 if ($targetEl) {
     /*
      * targetEl: required
      * triggerEl: required
      * options: optional
+     * instanceOptions: optional
      */
     const popover: PopoverInterface = new Popover(
         $targetEl,
         $triggerEl,
-        options
+        options,
+        instanceOptions
     );
 
     popover.show();

@@ -388,6 +388,13 @@ const options = {
         console.log('tooltip is toggled');
     },
 };
+
+
+// instance options with default values
+const instanceOptions = {
+  id: 'tooltipContent',
+  override: true
+};
 ```
 
 Create a new Tooltip object based on the options above.
@@ -400,7 +407,7 @@ import { Tooltip } from 'flowbite';
  * $triggerEl: required
  * options: optional
  */
-const tooltip = new Tooltip($targetEl, $triggerEl, options);
+const tooltip = new Tooltip($targetEl, $triggerEl, options, instanceOptions);
 ```
 
 Use the `show` and `hide` methods on the Tooltip object to programmatically show and hide the tooltip element using JavaScript.
@@ -430,8 +437,7 @@ Use the following HTML code for the JavaScript example above.
 <button
     id="tooltipButton"
     type="button"
-    class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
->
+    class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
     Default tooltip
 </button>
 <div
@@ -476,12 +482,18 @@ const options: TooltipOptions = {
     },
 };
 
+// instance options with default values
+const instanceOptions: InstanceOptions = {
+  id: 'tooltipContent',
+  override: true
+};
+
 /*
  * targetEl: required
  * triggerEl: required
  * options: optional
  */
-const tooltip: TooltipInterface = new Tooltip($targetEl, $triggerEl, options);
+const tooltip: TooltipInterface = new Tooltip($targetEl, $triggerEl, options, instanceOptions);
 
 // show the tooltip
 tooltip.show();

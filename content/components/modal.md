@@ -889,6 +889,12 @@ const options = {
         console.log('modal has been toggled');
     },
 };
+
+// instance options object
+const instanceOptions = {
+  id: 'modalEl',
+  override: true
+};
 ```
 
 Create a new Modal object based on the options above.
@@ -900,7 +906,7 @@ import { Modal } from 'flowbite';
  * $targetEl: required
  * options: optional
  */
-const modal = new Modal($targetEl, options);
+const modal = new Modal($targetEl, options, instanceOptions);
 ```
 
 Use the `show` and `hide` methods to show and hide the modal component directly from JavaScript.
@@ -1048,7 +1054,13 @@ const modalOptions: ModalOptions = {
     },
 };
 
-const modal: ModalInterface = new Modal($modalElement, modalOptions);
+// instance options object
+const instanceOptions: InstanceOptions = {
+  id: 'modalEl',
+  override: true
+};
+
+const modal: ModalInterface = new Modal($modalElement, modalOptions, instanceOptions);
 
 modal.show();
 ```

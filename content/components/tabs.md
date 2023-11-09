@@ -511,6 +511,12 @@ const options = {
         console.log('tab is shown');
     },
 };
+
+// instance options with default values
+const instanceOptions = {
+  id: 'tabs-example',
+  override: true
+};
 ```
 
 Create a new Tabs object based on the parameters we've previously set.
@@ -521,8 +527,9 @@ import { Tabs } from 'flowbite';
 /*
 * tabElements: array of tab objects
 * options: optional
+* instanceOptions: optional
 */
-const tabs = new Tabs(tabsElement, tabElements, options);
+const tabs = new Tabs(tabsElement, tabElements, options, instanceOptions);
 ```
 
 Lastly, you can now use the methods on the Tabs object to show another tab element, get a tab element based on the id, or get the current active tab element.
@@ -708,11 +715,17 @@ const options: TabsOptions = {
     },
 };
 
+// instance options with default values
+const instanceOptions: InstanceOptions = {
+  id: 'tabs-example',
+  override: true
+};
+
 /*
 * tabElements: array of tab objects
 * options: optional
 */
-const tabs: TabsInterface = new Tabs(tabsElement, tabElements, options);
+const tabs: TabsInterface = new Tabs(tabsElement, tabElements, options, instanceOptions);
 
 // open tab item based on id
 tabs.show('contacts');

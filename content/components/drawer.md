@@ -1438,7 +1438,7 @@ const options: DrawerOptions = {
 };
 
 // instance options object
-const instanceOptions = {
+const instanceOptions: InstanceOptions = {
   id: 'drawer-js-example',
   override: true
 };

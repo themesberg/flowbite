@@ -59,9 +59,6 @@ class Instances {
 
         if (override && this._instances[component][id]) {
             this._instances[component][id].destroy();
-            this._instances[component][id ? id : this._generateRandomId()] =
-                instance;
-            return;
         }
 
         this._instances[component][id ? id : this._generateRandomId()] =

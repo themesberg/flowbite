@@ -1241,6 +1241,12 @@ const options = {
         console.log('speed dial is toggled');
     },
 };
+
+// instance options with default values
+const instanceOptions = {
+  id: 'dialContent',
+  override: true
+};
 ```
 
 Create a new Speed Dial object based on the options above.
@@ -1253,8 +1259,9 @@ import { Dial } from 'flowbite';
  * $targetEl: required
  * $triggerEl: required
  * options: optional
+ * instanceOptions: optional
  */
-const dial = new Dial($parentEl, $triggerEl, $targetEl, options);
+const dial = new Dial($parentEl, $triggerEl, $targetEl, options, instanceOptions);
 ```
 
 Use the `show`, `hide`, or `toggle` methods on the Speed Dial object to programmatically show and hide the speed dial component using JavaScript.
@@ -1284,8 +1291,7 @@ Use the following HTML code for the JavaScript example above.
             type="button"
             data-tooltip-target="tooltip-share"
             data-tooltip-placement="left"
-            class="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 shadow-sm hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-400"
-        >
+            class="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 shadow-sm hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-400">
             <svg
                 class="h-5 w-5"
                 aria-hidden="true"
@@ -1311,8 +1317,7 @@ Use the following HTML code for the JavaScript example above.
             type="button"
             data-tooltip-target="tooltip-print"
             data-tooltip-placement="left"
-            class="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 shadow-sm hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-400"
-        >
+            class="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 shadow-sm hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-400">
             <svg
                 class="h-5 w-5"
                 aria-hidden="true"
@@ -1339,8 +1344,7 @@ Use the following HTML code for the JavaScript example above.
             type="button"
             data-tooltip-target="tooltip-download"
             data-tooltip-placement="left"
-            class="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 shadow-sm hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-400"
-        >
+            class="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 shadow-sm hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-400">
             <svg
                 class="h-5 w-5"
                 aria-hidden="true"
@@ -1369,8 +1373,7 @@ Use the following HTML code for the JavaScript example above.
             type="button"
             data-tooltip-target="tooltip-copy"
             data-tooltip-placement="left"
-            class="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 shadow-sm hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-400"
-        >
+            class="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 shadow-sm hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-400">
             <svg
                 class="h-5 w-5"
                 aria-hidden="true"
@@ -1401,8 +1404,7 @@ Use the following HTML code for the JavaScript example above.
         id="dialButton"
         aria-controls="speed-dial-menu-default"
         aria-expanded="false"
-        class="flex h-14 w-14 items-center justify-center rounded-full bg-blue-700 text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-    >
+        class="flex h-14 w-14 items-center justify-center rounded-full bg-blue-700 text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         <svg
             class="h-5 w-5 transition-transform group-hover:rotate-45"
             aria-hidden="true"
@@ -1455,6 +1457,12 @@ const options: DialOptions = {
     onToggle: () => {
         console.log('speed dial is toggled');
     },
+};
+
+// instance options with default values
+const instanceOptions: InstanceOptions = {
+  id: 'dialContent',
+  override: true
 };
 
 /*

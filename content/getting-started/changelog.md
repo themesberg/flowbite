@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Flowbite - Changelog
-description: Read more about the releases made for FlowBite from the official changelog
+description: Read more about the releases made for Flowbite from the official changelog
 group: getting-started
 toc: true
 
@@ -14,6 +14,18 @@ nextLink: getting-started/react/
 ## Changelog
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
+
+### v2.1.0
+
+This update adds [full RTL support](https://flowbite.com/docs/customize/rtl/) to all of the UI components from Flowbite and also provides and update to the Instance Manager API which now allows you to set custom id's as the 4th parameter of each object class.
+
+- updated to Tailwind CSS `v3.3.5`
+- added full RTL support to all UI components
+- updated the JS API and Instance Manager to allow setting custom id's
+- added new vertical tabs component example
+- added three next modal component examples
+- fixed responsive wrapping issues for the table components
+- other minor bug fixes and improvements
 
 ### v2.0.0
 

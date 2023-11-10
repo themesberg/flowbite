@@ -175,7 +175,7 @@ const $modalElement = document.querySelector('#modalEl');
 const modalOptions = {
     placement: 'bottom-right',
     backdrop: 'dynamic',
-    backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+    backdropClasses: 'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-40',
     onHide: () => {
         console.log('modal is hidden');
     },
@@ -203,6 +203,7 @@ Additionally to our code above, we will now import some relevant types from the 
 ```javascript
 import { Modal } from 'flowbite'
 import type { ModalOptions, ModalInterface } from 'flowbite'
+import type { InstanceOptions } from 'flowbite';
 
 // other code
 ```

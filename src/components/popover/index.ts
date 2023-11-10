@@ -5,6 +5,7 @@ import type {
     Instance as PopperInstance,
 } from '@popperjs/core';
 import type { PopoverOptions } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { PopoverInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -17,7 +18,13 @@ const Default: PopoverOptions = {
     onToggle: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    id: null,
+    override: true,
+};
+
 class Popover implements PopoverInterface {
+    _instanceId: string;
     _targetEl: HTMLElement;
     _triggerEl: HTMLElement;
     _options: PopoverOptions;
@@ -32,8 +39,12 @@ class Popover implements PopoverInterface {
     constructor(
         targetEl: HTMLElement | null = null,
         triggerEl: HTMLElement | null = null,
-        options: PopoverOptions = Default
+        options: PopoverOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetEl.id;
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
@@ -41,7 +52,12 @@ class Popover implements PopoverInterface {
         this._visible = false;
         this._initialized = false;
         this.init();
-        instances.addInstance('Popover', this, this._targetEl.id, true);
+        instances.addInstance(
+            'Popover',
+            this,
+            instanceOptions.id ? instanceOptions.id : this._targetEl.id,
+            instanceOptions.override
+        );
     }
 
     init() {
@@ -83,7 +99,7 @@ class Popover implements PopoverInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Popover', this._targetEl.id);
+        instances.removeInstance('Popover', this._instanceId);
     }
 
     destroyAndRemoveInstance() {

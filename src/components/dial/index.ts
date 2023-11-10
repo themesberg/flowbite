@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { DialOptions, DialTriggerType } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { DialInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -10,7 +11,13 @@ const Default: DialOptions = {
     onToggle: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    id: null,
+    override: true,
+};
+
 class Dial implements DialInterface {
+    _instanceId: string;
     _parentEl: HTMLElement;
     _triggerEl: HTMLElement;
     _targetEl: HTMLElement;
@@ -24,8 +31,12 @@ class Dial implements DialInterface {
         parentEl: HTMLElement | null = null,
         triggerEl: HTMLElement | null = null,
         targetEl: HTMLElement | null = null,
-        options: DialOptions = Default
+        options: DialOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetEl.id;
         this._parentEl = parentEl;
         this._triggerEl = triggerEl;
         this._targetEl = targetEl;
@@ -33,7 +44,12 @@ class Dial implements DialInterface {
         this._visible = false;
         this._initialized = false;
         this.init();
-        instances.addInstance('Dial', this, this._targetEl.id, true);
+        instances.addInstance(
+            'Dial',
+            this,
+            this._instanceId,
+            instanceOptions.override
+        );
     }
 
     init() {
@@ -84,7 +100,7 @@ class Dial implements DialInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Dial', this._targetEl.id);
+        instances.removeInstance('Dial', this._instanceId);
     }
 
     destroyAndRemoveInstance() {

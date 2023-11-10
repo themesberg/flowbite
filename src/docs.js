@@ -106,58 +106,101 @@ const updateiFrameDarkMode = (iFrame, theme) => {
     }
 };
 
-const updatePreviewThemeToggleButton = (buttonEl, theme) => {
-    const moonIconEl = buttonEl.querySelector('[data-toggle-icon="moon"]');
-    const sunIconEl = buttonEl.querySelector('[data-toggle-icon="sun"]');
-    const tooltipId = buttonEl.getAttribute('data-tooltip-target');
+const updateiFrameRTL = (iFrame, direction) => {
+    let html = iFrame.contentDocument.querySelector('html');
+
+    if (direction === 'rtl') {
+        html.setAttribute('dir', 'rtl');
+    } else {
+        html.removeAttribute('dir');
+    }
+};
+
+const updatePreviewThemeToggleButton = (darkModeButtonEl, theme) => {
+    const moonIconEl = darkModeButtonEl.querySelector(
+        '[data-toggle-icon="moon"]'
+    );
+    const sunIconEl = darkModeButtonEl.querySelector(
+        '[data-toggle-icon="sun"]'
+    );
+    const tooltipId = darkModeButtonEl.getAttribute('data-tooltip-target');
     let buttonTextEl = null;
     if (tooltipId) {
         buttonTextEl = document.getElementById(
-            buttonEl.getAttribute('data-tooltip-target')
+            darkModeButtonEl.getAttribute('data-tooltip-target')
         );
     }
 
     if (theme === 'dark') {
-        buttonEl.setAttribute('data-toggle-dark', 'dark');
+        darkModeButtonEl.setAttribute('data-toggle-dark', 'dark');
         moonIconEl.classList.add('hidden');
         sunIconEl.classList.remove('hidden');
         if (tooltipId) {
-            buttonTextEl.textContent = 'Toggle light mode';
+            buttonTextEl.querySelector('.tooltip-text').textContent =
+                'Toggle light mode';
         }
     } else {
-        buttonEl.setAttribute('data-toggle-dark', 'light');
+        darkModeButtonEl.setAttribute('data-toggle-dark', 'light');
         moonIconEl.classList.remove('hidden');
         sunIconEl.classList.add('hidden');
         if (tooltipId) {
-            buttonTextEl.textContent = 'Toggle dark mode';
+            buttonTextEl.querySelector('.tooltip-text').textContent =
+                'Toggle dark mode';
         }
     }
 };
 
-const initiateToggleDarkState = (element) => {
+const initiatePreviewState = (element) => {
     var codePreviewWrapper = element.getElementsByClassName(
         'code-preview-wrapper'
     )[0];
     var iframeCodeEl = element.getElementsByClassName('iframe-code')[0];
-    var button = element.getElementsByClassName('toggle-dark-state-example')[0];
+    var darkModeButton = element.getElementsByClassName(
+        'toggle-dark-state-example'
+    )[0];
     var fullViewButton = element.getElementsByClassName('toggle-full-view')[0];
     var tabletViewButton =
         element.getElementsByClassName('toggle-tablet-view')[0];
     var mobileViewButton =
         element.getElementsByClassName('toggle-mobile-view')[0];
+    var RTLButton = element.getElementsByClassName('toggle-rtl')[0];
 
-    if (button) {
-        button.addEventListener('click', function () {
-            var state = button.getAttribute('data-toggle-dark');
+    if (RTLButton) {
+        RTLButton.addEventListener('click', () => {
+            var RTLstate = RTLButton.getAttribute('data-toggle-direction');
+
+            if (RTLstate === 'ltr') {
+                RTLButton.setAttribute('data-toggle-direction', 'rtl');
+                updateiFrameRTL(iframeCodeEl, 'rtl');
+                RTLButton.textContent = 'LTR';
+                RTLButton.nextElementSibling.querySelector(
+                    '.tooltip-text'
+                ).textContent = 'Toggle LTR mode';
+            }
+
+            if (RTLstate === 'rtl') {
+                RTLButton.setAttribute('data-toggle-direction', 'ltr');
+                updateiFrameRTL(iframeCodeEl, 'ltr');
+                RTLButton.textContent = 'RTL';
+                RTLButton.nextElementSibling.querySelector(
+                    '.tooltip-text'
+                ).textContent = 'Toggle RTL mode';
+            }
+        });
+    }
+
+    if (darkModeButton) {
+        darkModeButton.addEventListener('click', function () {
+            var state = darkModeButton.getAttribute('data-toggle-dark');
 
             if (state === 'light') {
                 codePreviewWrapper.classList.add('dark');
-                updatePreviewThemeToggleButton(button, 'dark');
+                updatePreviewThemeToggleButton(darkModeButton, 'dark');
                 updateiFrameDarkMode(iframeCodeEl, 'dark');
             }
             if (state === 'dark') {
                 codePreviewWrapper.classList.remove('dark');
-                updatePreviewThemeToggleButton(button, 'light');
+                updatePreviewThemeToggleButton(darkModeButton, 'light');
                 updateiFrameDarkMode(iframeCodeEl, 'light');
             }
         });
@@ -165,7 +208,8 @@ const initiateToggleDarkState = (element) => {
 
     if (mobileViewButton) {
         mobileViewButton.addEventListener('click', () => {
-            const theme = button.getAttribute('data-toggle-dark');
+            const theme = darkModeButton.getAttribute('data-toggle-dark');
+            const direction = RTLButton.getAttribute('data-toggle-direction');
             iframeCodeEl.classList.add('max-w-sm');
             iframeCodeEl.classList.add('max-w-lg');
             iframeCodeEl.contentWindow.location.reload();
@@ -173,6 +217,7 @@ const initiateToggleDarkState = (element) => {
             iframeCodeEl.onload = () => {
                 updateiFrameHeight(iframeCodeEl);
                 updateiFrameDarkMode(iframeCodeEl, theme);
+                updateiFrameRTL(iframeCodeEl, direction);
             };
             setTimeout(() => {
                 iframeCodeEl.classList.remove('opacity-0');
@@ -181,7 +226,8 @@ const initiateToggleDarkState = (element) => {
     }
     if (tabletViewButton) {
         tabletViewButton.addEventListener('click', () => {
-            const theme = button.getAttribute('data-toggle-dark');
+            const theme = darkModeButton.getAttribute('data-toggle-dark');
+            const direction = RTLButton.getAttribute('data-toggle-direction');
             iframeCodeEl.classList.add('max-w-lg');
             iframeCodeEl.classList.remove('max-w-sm');
             iframeCodeEl.contentWindow.location.reload();
@@ -189,6 +235,7 @@ const initiateToggleDarkState = (element) => {
             iframeCodeEl.onload = () => {
                 updateiFrameHeight(iframeCodeEl);
                 updateiFrameDarkMode(iframeCodeEl, theme);
+                updateiFrameRTL(iframeCodeEl, direction);
             };
             setTimeout(() => {
                 iframeCodeEl.classList.remove('opacity-0');
@@ -197,13 +244,15 @@ const initiateToggleDarkState = (element) => {
     }
     if (fullViewButton) {
         fullViewButton.addEventListener('click', () => {
-            const theme = button.getAttribute('data-toggle-dark');
+            const theme = darkModeButton.getAttribute('data-toggle-dark');
+            const direction = RTLButton.getAttribute('data-toggle-direction');
             iframeCodeEl.classList.remove('max-w-sm', 'max-w-lg');
             iframeCodeEl.contentWindow.location.reload();
             iframeCodeEl.classList.add('opacity-0');
             iframeCodeEl.onload = () => {
                 updateiFrameHeight(iframeCodeEl);
                 updateiFrameDarkMode(iframeCodeEl, theme);
+                updateiFrameRTL(iframeCodeEl, direction);
             };
             setTimeout(() => {
                 iframeCodeEl.classList.remove('opacity-0');
@@ -372,7 +421,7 @@ window.addEventListener('load', () => {
     // copy to clipboard
     var codeExamples = document.querySelectorAll('.code-example');
     codeExamples.forEach((c) => {
-        initiateToggleDarkState(c);
+        initiatePreviewState(c);
     });
     // toc menu item activation
     const deactivateMenuEl = (el) => {

@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { CollapseOptions } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { CollapseInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -9,7 +10,13 @@ const Default: CollapseOptions = {
     onToggle: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    id: null,
+    override: true,
+};
+
 class Collapse implements CollapseInterface {
+    _instanceId: string;
     _targetEl: HTMLElement | null;
     _triggerEl: HTMLElement | null;
     _options: CollapseOptions;
@@ -20,15 +27,24 @@ class Collapse implements CollapseInterface {
     constructor(
         targetEl: HTMLElement | null = null,
         triggerEl: HTMLElement | null = null,
-        options: CollapseOptions = Default
+        options: CollapseOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetEl.id;
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
         this._visible = false;
         this._initialized = false;
         this.init();
-        instances.addInstance('Collapse', this, this._targetEl.id, true);
+        instances.addInstance(
+            'Collapse',
+            this,
+            this._instanceId,
+            instanceOptions.override
+        );
     }
 
     init() {
@@ -58,7 +74,7 @@ class Collapse implements CollapseInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Collapse', this._targetEl.id);
+        instances.removeInstance('Collapse', this._instanceId);
     }
 
     destroyAndRemoveInstance() {
@@ -108,10 +124,30 @@ export function initCollapses() {
 
             // check if the target element exists
             if ($targetEl) {
-                new Collapse(
-                    $targetEl as HTMLElement,
-                    $triggerEl as HTMLElement
-                );
+                if (
+                    !instances.instanceExists(
+                        'Collapse',
+                        $targetEl.getAttribute('id')
+                    )
+                ) {
+                    new Collapse(
+                        $targetEl as HTMLElement,
+                        $triggerEl as HTMLElement
+                    );
+                } else {
+                    // if instance exists already for the same target element then create a new one with a different trigger element
+                    new Collapse(
+                        $targetEl as HTMLElement,
+                        $triggerEl as HTMLElement,
+                        {},
+                        {
+                            id:
+                                $targetEl.getAttribute('id') +
+                                '_' +
+                                instances._generateRandomId(),
+                        }
+                    );
+                }
             } else {
                 console.error(
                     `The target element with id "${targetId}" does not exist. Please check the data-collapse-toggle attribute.`

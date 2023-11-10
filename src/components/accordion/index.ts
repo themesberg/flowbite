@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { AccordionItem, AccordionOptions } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { AccordionInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -12,7 +13,13 @@ const Default: AccordionOptions = {
     onToggle: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    id: null,
+    override: true,
+};
+
 class Accordion implements AccordionInterface {
+    _instanceId: string;
     _accordionEl: HTMLElement;
     _items: AccordionItem[];
     _options: AccordionOptions;
@@ -22,14 +29,23 @@ class Accordion implements AccordionInterface {
     constructor(
         accordionEl: HTMLElement | null = null,
         items: AccordionItem[] = [],
-        options: AccordionOptions = Default
+        options: AccordionOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : accordionEl.id;
         this._accordionEl = accordionEl;
         this._items = items;
         this._options = { ...Default, ...options };
         this._initialized = false;
         this.init();
-        instances.addInstance('Accordion', this, this._accordionEl.id, true);
+        instances.addInstance(
+            'Accordion',
+            this,
+            this._instanceId,
+            instanceOptions.override
+        );
     }
 
     init() {
@@ -66,7 +82,7 @@ class Accordion implements AccordionInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Accordion', this._accordionEl.id);
+        instances.removeInstance('Accordion', this._instanceId);
     }
 
     destroyAndRemoveInstance() {

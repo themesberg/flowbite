@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { DrawerOptions, PlacementClasses } from './types';
+import type { InstanceOptions, EventListenerInstance } from '../../dom/types';
 import { DrawerInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -9,31 +10,46 @@ const Default: DrawerOptions = {
     backdrop: true,
     edge: false,
     edgeOffset: 'bottom-[60px]',
-    backdropClasses:
-        'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-30',
+    backdropClasses: 'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-30',
     onShow: () => {},
     onHide: () => {},
     onToggle: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    id: null,
+    override: true,
+};
+
 class Drawer implements DrawerInterface {
+    _instanceId: string;
     _targetEl: HTMLElement;
     _triggerEl: HTMLElement;
     _options: DrawerOptions;
     _visible: boolean;
-    _initialized: boolean;
+    _eventListenerInstances: EventListenerInstance[] = [];
     _handleEscapeKey: EventListenerOrEventListenerObject;
+    _initialized: boolean;
 
     constructor(
         targetEl: HTMLElement | null = null,
-        options: DrawerOptions = Default
+        options: DrawerOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetEl.id;
         this._targetEl = targetEl;
         this._options = { ...Default, ...options };
         this._visible = false;
         this._initialized = false;
         this.init();
-        instances.addInstance('Drawer', this, this._targetEl.id, true);
+        instances.addInstance(
+            'Drawer',
+            this,
+            this._instanceId,
+            instanceOptions.override
+        );
     }
 
     init() {
@@ -66,7 +82,8 @@ class Drawer implements DrawerInterface {
 
     destroy() {
         if (this._initialized) {
-            this.hide();
+            this.removeAllEventListenerInstances();
+            this._destroyBackdropEl();
 
             // Remove the keyboard event listener
             document.removeEventListener('keydown', this._handleEscapeKey);
@@ -76,7 +93,7 @@ class Drawer implements DrawerInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Drawer', this._targetEl.id);
+        instances.removeInstance('Drawer', this._instanceId);
     }
 
     destroyAndRemoveInstance() {
@@ -253,6 +270,32 @@ class Drawer implements DrawerInterface {
     isVisible() {
         return this._visible;
     }
+
+    addEventListenerInstance(
+        element: HTMLElement,
+        type: string,
+        handler: EventListenerOrEventListenerObject
+    ) {
+        this._eventListenerInstances.push({
+            element: element,
+            type: type,
+            handler: handler,
+        });
+    }
+
+    removeAllEventListenerInstances() {
+        this._eventListenerInstances.map((eventListenerInstance) => {
+            eventListenerInstance.element.removeEventListener(
+                eventListenerInstance.type,
+                eventListenerInstance.handler
+            );
+        });
+        this._eventListenerInstances = [];
+    }
+
+    getAllEventListenerInstances() {
+        return this._eventListenerInstances;
+    }
 }
 
 export function initDrawers() {
@@ -262,7 +305,6 @@ export function initDrawers() {
         const $drawerEl = document.getElementById(drawerId);
 
         if ($drawerEl) {
-            // optional
             const placement = $triggerEl.getAttribute('data-drawer-placement');
             const bodyScrolling = $triggerEl.getAttribute(
                 'data-drawer-body-scrolling'
@@ -273,32 +315,21 @@ export function initDrawers() {
                 'data-drawer-edge-offset'
             );
 
-            if (
-                !instances.instanceExists(
-                    'Drawer',
-                    $drawerEl.getAttribute('id')
-                )
-            ) {
-                new Drawer($drawerEl, {
-                    placement: placement ? placement : Default.placement,
-                    bodyScrolling: bodyScrolling
-                        ? bodyScrolling === 'true'
-                            ? true
-                            : false
-                        : Default.bodyScrolling,
-                    backdrop: backdrop
-                        ? backdrop === 'true'
-                            ? true
-                            : false
-                        : Default.backdrop,
-                    edge: edge
-                        ? edge === 'true'
-                            ? true
-                            : false
-                        : Default.edge,
-                    edgeOffset: edgeOffset ? edgeOffset : Default.edgeOffset,
-                } as DrawerOptions);
-            }
+            new Drawer($drawerEl, {
+                placement: placement ? placement : Default.placement,
+                bodyScrolling: bodyScrolling
+                    ? bodyScrolling === 'true'
+                        ? true
+                        : false
+                    : Default.bodyScrolling,
+                backdrop: backdrop
+                    ? backdrop === 'true'
+                        ? true
+                        : false
+                    : Default.backdrop,
+                edge: edge ? (edge === 'true' ? true : false) : Default.edge,
+                edgeOffset: edgeOffset ? edgeOffset : Default.edgeOffset,
+            } as DrawerOptions);
         } else {
             console.error(
                 `Drawer with id ${drawerId} not found. Are you sure that the data-drawer-target attribute points to the correct drawer id?`
@@ -313,13 +344,19 @@ export function initDrawers() {
         if ($drawerEl) {
             const drawer: DrawerInterface = instances.getInstance(
                 'Drawer',
-                $drawerEl.getAttribute('id')
+                drawerId
             );
 
             if (drawer) {
-                $triggerEl.addEventListener('click', () => {
+                const toggleDrawer = () => {
                     drawer.toggle();
-                });
+                };
+                $triggerEl.addEventListener('click', toggleDrawer);
+                drawer.addEventListenerInstance(
+                    $triggerEl as HTMLElement,
+                    'click',
+                    toggleDrawer
+                );
             } else {
                 console.error(
                     `Drawer with id ${drawerId} has not been initialized. Please initialize it using the data-drawer-target attribute.`
@@ -343,13 +380,19 @@ export function initDrawers() {
             if ($drawerEl) {
                 const drawer: DrawerInterface = instances.getInstance(
                     'Drawer',
-                    $drawerEl.getAttribute('id')
+                    drawerId
                 );
 
                 if (drawer) {
-                    $triggerEl.addEventListener('click', () => {
+                    const hideDrawer = () => {
                         drawer.hide();
-                    });
+                    };
+                    $triggerEl.addEventListener('click', hideDrawer);
+                    drawer.addEventListenerInstance(
+                        $triggerEl as HTMLElement,
+                        'click',
+                        hideDrawer
+                    );
                 } else {
                     console.error(
                         `Drawer with id ${drawerId} has not been initialized. Please initialize it using the data-drawer-target attribute.`
@@ -369,13 +412,19 @@ export function initDrawers() {
         if ($drawerEl) {
             const drawer: DrawerInterface = instances.getInstance(
                 'Drawer',
-                $drawerEl.getAttribute('id')
+                drawerId
             );
 
             if (drawer) {
-                $triggerEl.addEventListener('click', () => {
+                const showDrawer = () => {
                     drawer.show();
-                });
+                };
+                $triggerEl.addEventListener('click', showDrawer);
+                drawer.addEventListenerInstance(
+                    $triggerEl as HTMLElement,
+                    'click',
+                    showDrawer
+                );
             } else {
                 console.error(
                     `Drawer with id ${drawerId} has not been initialized. Please initialize it using the data-drawer-target attribute.`

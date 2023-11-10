@@ -5,6 +5,7 @@ import type {
     Instance as PopperInstance,
 } from '@popperjs/core';
 import type { TooltipOptions } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { TooltipInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -16,7 +17,13 @@ const Default: TooltipOptions = {
     onToggle: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    id: null,
+    override: true,
+};
+
 class Tooltip implements TooltipInterface {
+    _instanceId: string;
     _targetEl: HTMLElement | null;
     _triggerEl: HTMLElement | null;
     _options: TooltipOptions;
@@ -31,8 +38,12 @@ class Tooltip implements TooltipInterface {
     constructor(
         targetEl: HTMLElement | null = null,
         triggerEl: HTMLElement | null = null,
-        options: TooltipOptions = Default
+        options: TooltipOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetEl.id;
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
@@ -40,7 +51,12 @@ class Tooltip implements TooltipInterface {
         this._visible = false;
         this._initialized = false;
         this.init();
-        instances.addInstance('Tooltip', this, this._targetEl.id, true);
+        instances.addInstance(
+            'Tooltip',
+            this,
+            this._instanceId,
+            instanceOptions.override
+        );
     }
 
     init() {
@@ -79,7 +95,7 @@ class Tooltip implements TooltipInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Tooltip', this._targetEl.id);
+        instances.removeInstance('Tooltip', this._instanceId);
     }
 
     destroyAndRemoveInstance() {

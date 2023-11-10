@@ -260,6 +260,11 @@ module.exports = plugin.withOptions(
                         'padding-right': spacing[10],
                         'print-color-adjust': `exact`,
                     },
+                    [[`:is([dir=rtl]) select:not([size])`]]: {
+                        backgroundPosition: `left ${spacing[3]} center`,
+                        paddingRight: spacing[3],
+                        paddingLeft: 0,
+                    },
                     ['[multiple]']: {
                         'background-image': 'initial',
                         'background-position': 'initial',
@@ -394,6 +399,11 @@ module.exports = plugin.withOptions(
                             ),
                         },
                     },
+                    [[`:is([dir=rtl]) input[type=file]::file-selector-button`]]:
+                        {
+                            paddingRight: spacing[8],
+                            paddingLeft: spacing[4],
+                        },
                     [[`.dark input[type=file]::file-selector-button`]]: {
                         color: 'white',
                         background: theme('colors.gray.600', colors.gray[600]),
@@ -630,6 +640,11 @@ module.exports = plugin.withOptions(
                                 defaultTheme.fontSize.sm
                             )}`,
                         },
+                    ':is([dir=rtl]) .apexcharts-tooltip .apexcharts-tooltip-marker':
+                        {
+                            marginRight: `${theme('spacing.0', spacing[0])}`,
+                            marginLeft: `${theme('spacing.1.5', spacing[1.5])}`,
+                        },
                     '.dark .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-value':
                         {
                             color: 'white',
@@ -711,6 +726,10 @@ module.exports = plugin.withOptions(
                             colors.gray[500]
                         )} !important`,
                     },
+                    ':is([dir=rtl]) .apexcharts-canvas .apexcharts-legend-text':
+                        {
+                            paddingRight: `${theme('spacing.2', spacing[2])}`,
+                        },
                     '.apexcharts-canvas .apexcharts-legend-text:not(.apexcharts-inactive-legend):hover':
                         {
                             color: `${theme(
@@ -813,6 +832,8 @@ module.exports = plugin.withOptions(
             'w-1/2',
             'rounded-l-lg',
             'rounded-r-lg',
+            'rounded-s-lg',
+            'rounded-e-lg',
             'bg-gray-200',
             'grid-cols-4',
             'grid-cols-7',

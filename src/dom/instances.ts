@@ -45,23 +45,20 @@ class Instances {
         component: keyof Instances['_instances'],
         instance: any,
         id?: string,
-        forceOverride = false
+        override = false
     ) {
         if (!this._instances[component]) {
             console.warn(`Flowbite: Component ${component} does not exist.`);
             return false;
         }
 
-        if (this._instances[component][id] && !forceOverride) {
+        if (this._instances[component][id] && !override) {
             console.warn(`Flowbite: Instance with ID ${id} already exists.`);
             return;
         }
 
-        if (forceOverride && this._instances[component][id]) {
-            this._instances[component][id].destroy();
-            this._instances[component][id ? id : this._generateRandomId()] =
-                instance;
-            return;
+        if (override && this._instances[component][id]) {
+            this._instances[component][id].destroyAndRemoveInstance();
         }
 
         this._instances[component][id ? id : this._generateRandomId()] =
@@ -107,7 +104,7 @@ class Instances {
         if (!this._componentAndInstanceCheck(component, id)) {
             return;
         }
-        this._instances[component][id].removeInstance();
+        delete this._instances[component][id];
     }
 
     destroyInstanceObject(
@@ -132,7 +129,7 @@ class Instances {
         return true;
     }
 
-    private _generateRandomId() {
+    _generateRandomId() {
         return Math.random().toString(36).substr(2, 9);
     }
 

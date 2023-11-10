@@ -25,6 +25,7 @@
     - [Init functions](#init-functions)
   - [ESM and CJS](#esm-and-cjs)
   - [TypeScript](#typescript)
+  - [RTL support](#rtl-support)
   - [JavaScript Frameworks](#javascript-frameworks)
   - [Back-end Frameworks](#back-end-frameworks)
 - [Components](#components)
@@ -91,13 +92,13 @@ The quickest way to get started working with Flowbite is to simply include the C
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.0/flowbite.min.css" rel="stylesheet" />
 ```
 
 And include the following javascript file before the end of the `body` tag:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.0/flowbite.min.js"></script>
 ```
 
 ### Bundled JavaScript
@@ -195,7 +196,7 @@ const $modalElement = document.querySelector('#modalEl');
 const modalOptions = {
     placement: 'bottom-right',
     backdrop: 'dynamic',
-    backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+    backdropClasses: 'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-40',
     onHide: () => {
         console.log('modal is hidden');
     },
@@ -246,6 +247,10 @@ const modal: ModalInterface = new Modal($modalElement, modalOptions);
 ```
 
 Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/).
+
+### RTL support
+
+All of the Flowbite UI components have native RTL support and you can easily set it up by using the `dir="rtl"` attribute on the HTML element. Read more about Flowbite and [RTL support here](https://flowbite.com/docs/customize/rtl/).
 
 ### JavaScript Frameworks
 

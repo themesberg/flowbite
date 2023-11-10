@@ -210,7 +210,7 @@ Use this modal example with form input element to receive information from your 
 
 ## Modal with CRUD
 
-Use this modal example with form input element to receive information from your users with the advantage of not having to link to another page but keeping the user on the currently active page. A great example would be a login or a register form.
+Use this example of a modal to use within CRUD (Create, Read, Update, Delete) operations to create new items, update existing ones, or delete them with a form inside of the modal.
 
 {{< example id="modal-crud-example" github="components/modal.md" class="flex justify-center" show_dark=true iframeHeight="600" >}}
 
@@ -274,7 +274,7 @@ Use this modal example with form input element to receive information from your 
 
 ## Modal with radio inputs
 
-Use this modal example with form input element to receive information from your users with the advantage of not having to link to another page but keeping the user on the currently active page. A great example would be a login or a register form.
+This example can be used to show a list of options to your users by using advanced radio inputs with a custom design.
 
 {{< example id="modal-radio-example" github="components/modal.md" class="flex justify-center" show_dark=true iframeHeight="600" >}}
 
@@ -346,7 +346,7 @@ Use this modal example with form input element to receive information from your 
 
 ## Modal with timeline
 
-Use this modal example with form input element to receive information from your users with the advantage of not having to link to another page but keeping the user on the currently active page. A great example would be a login or a register form.
+Use this example to show a timeline of events to your users with a modal. This can be used to show a changelog of your product or a timeline of events.
 
 {{< example id="modal-timeline-example" github="components/modal.md" class="flex justify-center" show_dark=true iframeHeight="600" >}}
 
@@ -416,7 +416,7 @@ Use this modal example with form input element to receive information from your 
 
 ## Modal with progress bar
 
-Use this modal example with form input element to receive information from your users with the advantage of not having to link to another page but keeping the user on the currently active page. A great example would be a login or a register form.
+This modal can be used to show the progress of a task to your users. It can be used to show the progress of a file upload or a task that is being processed.
 
 {{< example id="modal-progress-example" github="components/modal.md" class="flex justify-center" show_dark=true iframeHeight="600" >}}
 

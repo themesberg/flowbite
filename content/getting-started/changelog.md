@@ -17,7 +17,7 @@ We strive to keep a good accountability of all of the version changes that we ma
 
 ### v2.1.1
 
-- fixed the `InstanceOptions` type export for TypeScript
+- - fix the `InstanceOptions` and `EventListenerInstance` type exports for TypeScript
 
 ### v2.1.0
 

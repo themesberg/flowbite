@@ -15,6 +15,10 @@ nextLink: getting-started/react/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v2.1.1
+
+- fixed the `InstanceOptions` type export for TypeScript
+
 ### v2.1.0
 
 This update adds [full RTL support](https://flowbite.com/docs/customize/rtl/) to all of the UI components from Flowbite and also provides and update to the Instance Manager API which now allows you to set custom id's as the 4th parameter of each object class.

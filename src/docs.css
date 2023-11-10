@@ -444,7 +444,7 @@ code.language-html .token.comment{
 }
 
 .DocSearch-Container {
-	@apply bg-gray-900 bg-opacity-50 dark:bg-opacity-80;
+	@apply bg-gray-900/50 dark:bg-gray-900/80;
 }
 
 .DocSearch-Modal {

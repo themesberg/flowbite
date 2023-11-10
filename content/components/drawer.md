@@ -1256,7 +1256,7 @@ const options = {
     edge: false,
     edgeOffset: '',
     backdropClasses:
-        'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-30',
+        'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-30',
     onHide: () => {
         console.log('drawer is hidden');
     },
@@ -1425,7 +1425,7 @@ const options: DrawerOptions = {
     edge: false,
     edgeOffset: '',
     backdropClasses:
-        'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-30',
+        'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-30',
     onHide: () => {
         console.log('drawer is hidden');
     },

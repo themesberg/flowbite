@@ -292,6 +292,8 @@ FlowbiteInstance.getInstances('Modal');
 When creating a new object you can also use the last parameter to set the `instanceOptions` object through which you can set custom options for the Instance manager:
 
 ```javascript
+import type { InstanceOptions } from 'flowbite';
+
 const instanceOptions: InstanceOptions = {
     id: "my-unique-id",
     override: true,

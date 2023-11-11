@@ -503,7 +503,7 @@ The positioning of the speed dial component relative to the body element can be 
 
 ### Top right
 
-Use the `top-{*}` and `right-{*}` utility classes to set the position of the speed dial compoennt to the top right side of the document body.
+Use the `top-{*}` and `right-{*}` utility classes to set the position of the speed dial component to the top right side of the document body.
 
 {{< example id="top-right-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 
@@ -563,7 +563,7 @@ Use the `top-{*}` and `right-{*}` utility classes to set the position of the spe
 
 ### Bottom right
 
-Use the `bittin-{*}` and `right-{*}` utility classes to set the position of the speed dial compoennt to the bottom right side of the document body.
+Use the `bittin-{*}` and `right-{*}` utility classes to set the position of the speed dial component to the bottom right side of the document body.
 
 {{< example id="bottom-right-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 
@@ -624,7 +624,7 @@ Use the `bittin-{*}` and `right-{*}` utility classes to set the position of the 
 
 ### Bottom left
 
-Use the `bottom-{*}` and `left-{*}` utility classes to set the position of the speed dial compoennt to the bottom left side of the document body.
+Use the `bottom-{*}` and `left-{*}` utility classes to set the position of the speed dial component to the bottom left side of the document body.
 
 {{< example id="bottom-left-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 
@@ -685,7 +685,7 @@ Use the `bottom-{*}` and `left-{*}` utility classes to set the position of the s
 
 ### Top left
 
-Use the `top-{*}` and `left-{*}` utility classes to set the position of the speed dial compoennt to the top left side of the document body.
+Use the `top-{*}` and `left-{*}` utility classes to set the position of the speed dial component to the top left side of the document body.
 
 {{< example id="top-left-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 

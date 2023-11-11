@@ -131,7 +131,7 @@ Use this toast component to also show an "undo" button to reverse the action of 
 
 ## Toast message
 
-This component can be used to show messages and a CTA button when receiveing chat messages, comment notifications, and other use cases.
+This component can be used to show messages and a CTA button when receiving chat messages, comment notifications, and other use cases.
 
 {{< example id="toast-message-example" class="flex justify-center" github="components/toast.md" show_dark=true >}}
 
@@ -182,7 +182,7 @@ This component can be used to show notifications for an action from another user
         </div>
         <div class="ms-3 text-sm font-normal">
             <div class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</div>
-            <div class="text-sm font-normal">commmented on your photo</div> 
+            <div class="text-sm font-normal">commented on your photo</div> 
             <span class="text-xs font-medium text-blue-600 dark:text-blue-500">a few seconds ago</span>   
         </div>
     </div>

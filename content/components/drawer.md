@@ -1139,7 +1139,7 @@ Use the following options for the Drawer object to set the placement, enable or 
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">backdropClases</code>
+                    <code class="text-blue-600 dark:text-blue-400">backdropClasses</code>
                 </td>
                 <td class="px-6 py-4">
                     String

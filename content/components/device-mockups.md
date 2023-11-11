@@ -104,7 +104,7 @@ This example can be used to show a screenshot of your application inside a lapto
 
 ## Desktop mockup
 
-Use this example to show a preview of your applicaiton inside a desktop device such as an iMac.
+Use this example to show a preview of your application inside a desktop device such as an iMac.
 
 {{< example id="desktop-mockup" github="components/device-mockups.md" show_dark=true >}}
 <div class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[16px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">

@@ -12,7 +12,7 @@ nextLink: customize/optimization/
 
 RTL (right-to-left) is a bidirectional text format used for languages that are written from right to left such as Arabic, Hebrew, Persian, Urdu, and Yiddish. A rough estimate would be around over 500 million people that use RTL languages and it's one of the fastest growing populations on the internet.
 
-All of the UI components from Flowbite suppport RTL by primarily using the logical properties and values from CSS such as `ms-0` instead of `ml-0` or `pe-5` instead of `pr-5`. This feature requires Tailwind CSS v3.3.0 or higher and Flowbite v2.1.0 or higher.
+All of the UI components from Flowbite support RTL by primarily using the logical properties and values from CSS such as `ms-0` instead of `ml-0` or `pe-5` instead of `pr-5`. This feature requires Tailwind CSS v3.3.0 or higher and Flowbite v2.1.0 or higher.
 
 In this guide you will learn how to setup and configure bidirectional text formats (RTL and LTR) in your project using Tailwind CSS variants and the Flowbite UI components by changing the `dir` attribute on the `<html>` element.
 

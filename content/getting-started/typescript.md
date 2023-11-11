@@ -20,7 +20,7 @@ This guide will teach you how to set up Tailwind CSS and the Flowbite library wi
 
 ## Create a new project
 
-Follow the next steps to learn how to install TypeScript and Tailwind CSS in a local project. Before continuning make sure that you have Node.js installed locally on your computer.
+Follow the next steps to learn how to install TypeScript and Tailwind CSS in a local project. Before continuing make sure that you have Node.js installed locally on your computer.
 
 1. Create a new project and run the following command to create a `package.json` file in the root folder:
 
@@ -380,7 +380,7 @@ const modal: ModalInterface = new Modal($modalElement, modalOptions);
 
 Why are these types useful, though? Because if you don't set the correct value for the `placement` key, for example you set `right` instead of `top-right` or `bottom-right` TypeScript will throw an error saying that it is not a correct option.
 
-Here's the full code using the types from Flowbite for the modal defintion:
+Here's the full code using the types from Flowbite for the modal definition:
 
 ```javascript
 import { Modal } from 'flowbite'

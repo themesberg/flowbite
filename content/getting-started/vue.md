@@ -303,6 +303,6 @@ We have also created a [starter project on GitHub](https://github.com/themesberg
 
 ## Flowbite Vue Library
 
-We have started working on a dedicated [Flowbite Vue](https://github.com/themesberg/flowbite-vue) library which when it will be launched will be the recommeded way of using our components with Vue 3 because they are built specifically for usage within a Vue 3 environment. 
+We have started working on a dedicated [Flowbite Vue](https://github.com/themesberg/flowbite-vue) library which when it will be launched will be the recommended way of using our components with Vue 3 because they are built specifically for usage within a Vue 3 environment. 
 
 Even though progress has been great, we still expect a couple of months until we can make a stable release. Contributions are more than welcome!

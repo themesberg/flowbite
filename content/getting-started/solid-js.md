@@ -120,7 +120,7 @@ function App() {
 export default App;
 ```
 
-You now have both SolidJS and Tailwind CSS succesfully installed and configured in your local project and we can now proceed by setting up the UI components from Flowbite.
+You now have both SolidJS and Tailwind CSS successfully installed and configured in your local project and we can now proceed by setting up the UI components from Flowbite.
 
 ## Install Flowbite
 

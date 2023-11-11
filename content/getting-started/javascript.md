@@ -221,6 +221,13 @@ If you provide the wrong category or ID then the console will give you a warning
 
 If you have provided the correct category and element ID then you can now access the object as if you've created it yourself and work with it programmatically via JavaScript:
 
+Convenient methods exist for getting the instance objects of each component type:
+
+```javascript
+const modal = FlowbiteInstances.getModal('modal-id');
+const tooltip = FlowbiteInstances.getTooltip('tooltip-id');
+```
+
 ```javascript
 // show the modal
 modal.show();
@@ -285,6 +292,8 @@ Alternatively, you can also get all of the instances from one component pool suc
 
 ```javascript
 FlowbiteInstance.getInstances('Modal');
+// or
+FlowbiteInstance.getModalList();
 ```
 
 ## Instance options

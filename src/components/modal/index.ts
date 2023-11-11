@@ -295,10 +295,7 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            const modal: ModalInterface = instances.getInstance(
-                'Modal',
-                modalId
-            );
+            const modal: ModalInterface = instances.getModal(modalId);
 
             if (modal) {
                 const toggleModal = () => {
@@ -328,10 +325,7 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            const modal: ModalInterface = instances.getInstance(
-                'Modal',
-                modalId
-            );
+            const modal: ModalInterface = instances.getModal(modalId);
 
             if (modal) {
                 const showModal = () => {
@@ -361,10 +355,7 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            const modal: ModalInterface = instances.getInstance(
-                'Modal',
-                modalId
-            );
+            const modal: ModalInterface = instances.getModal(modalId);
 
             if (modal) {
                 const hideModal = () => {

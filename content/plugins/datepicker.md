@@ -46,7 +46,7 @@ Use the following example of an input element to create a datepicker component. 
 
 ## Inline datepicker
 
-Use the `inline-datepicker` and `data-date` data attributes to initalize and set the default date for an inline datepicker inside a block element such as a `div`.
+Use the `inline-datepicker` and `data-date` data attributes to initialize and set the default date for an inline datepicker inside a block element such as a `div`.
 
 {{< example id="datepicker-inline-example" class="flex justify-center dark:bg-gray-900" github="plugins/datepicker.md" show_dark=true initDatepicker=true >}}
 <div inline-datepicker data-date="02/25/2022"></div>
@@ -84,7 +84,7 @@ With the Tailwind Datepicker you can also add extra options using the custom dat
 
 ### Autohide
 
-If you want the datepicker to dissapear right after clicking on a date then you need to use the `datepicker-autohide` data attribute.
+If you want the datepicker to disappear right after clicking on a date then you need to use the `datepicker-autohide` data attribute.
 
 {{< example id="datepicker-autohide-example" class="flex justify-center dark:bg-gray-900" github="plugins/datepicker.md" show_dark=true iframeHeight="480" initDatepicker=true >}}
 <div class="relative max-w-sm">
@@ -193,7 +193,7 @@ If you want to use the **Tailwind Date Range Picker** you have to import the `Da
 import DateRangePicker from 'flowbite-datepicker/DateRangePicker';
 ```
 
-Then in the same fashion you can initalize a date range picker component by using the `DateRangePicker` constructor:
+Then in the same fashion you can initialize a date range picker component by using the `DateRangePicker` constructor:
 
 ```javascript
 const dateRangePickerEl = document.getElementById('dateRangePickerId');

@@ -159,7 +159,7 @@ Use the following examples to align the text content to the left, center, or rig
 Use the `text-left` class to align the text to the left side of the page.
 
 {{< example id="text-left-example" github="typography/text.md" show_dark=true >}}
-<p class="text-left rtl:text-right text-gray-500 dark:text-gray-400">Get started with an enterprise-level, profesionally designed, fully responsive, and HTML semantic set of web pages, sections and over 400+ components crafted with the utility classes from Tailwind CSS and based on the Flowbite component library</p>
+<p class="text-left rtl:text-right text-gray-500 dark:text-gray-400">Get started with an enterprise-level, professionally designed, fully responsive, and HTML semantic set of web pages, sections and over 400+ components crafted with the utility classes from Tailwind CSS and based on the Flowbite component library</p>
 {{< /example >}}
 
 ### Center
@@ -167,7 +167,7 @@ Use the `text-left` class to align the text to the left side of the page.
 Use the `text-center` class to align the text content to the center of the page.
 
 {{< example id="text-center-example" github="typography/text.md" show_dark=true >}}
-<p class="text-center text-gray-500 dark:text-gray-400">Get started with an enterprise-level, profesionally designed, fully responsive, and HTML semantic set of web pages, sections and over 400+ components crafted with the utility classes from Tailwind CSS and based on the Flowbite component library</p>
+<p class="text-center text-gray-500 dark:text-gray-400">Get started with an enterprise-level, professionally designed, fully responsive, and HTML semantic set of web pages, sections and over 400+ components crafted with the utility classes from Tailwind CSS and based on the Flowbite component library</p>
 {{< /example >}}
 
 ### Right
@@ -175,7 +175,7 @@ Use the `text-center` class to align the text content to the center of the page.
 Use the `text-right` class to align the text element to the right side of the page.
 
 {{< example id="text-right-example" github="typography/text.md" show_dark=true >}}
-<p class="text-right rtl:text-left text-gray-500 dark:text-gray-400">Get started with an enterprise-level, profesionally designed, fully responsive, and HTML semantic set of web pages, sections and over 400+ components crafted with the utility classes from Tailwind CSS and based on the Flowbite component library</p>
+<p class="text-right rtl:text-left text-gray-500 dark:text-gray-400">Get started with an enterprise-level, professionally designed, fully responsive, and HTML semantic set of web pages, sections and over 400+ components crafted with the utility classes from Tailwind CSS and based on the Flowbite component library</p>
 {{< /example >}}
 
 ### Text justify
@@ -183,7 +183,7 @@ Use the `text-right` class to align the text element to the right side of the pa
 Use the `text-justify` class to justify the text content.
 
 {{< example id="text-justify-example" github="typography/text.md" show_dark=true >}}
-<p class="text-justify text-gray-500 dark:text-gray-400">Get started with an enterprise-level, profesionally designed, fully responsive, and HTML semantic set of web pages, sections and over 400+ components crafted with the utility classes from Tailwind CSS and based on the Flowbite component library</p>
+<p class="text-justify text-gray-500 dark:text-gray-400">Get started with an enterprise-level, professionally designed, fully responsive, and HTML semantic set of web pages, sections and over 400+ components crafted with the utility classes from Tailwind CSS and based on the Flowbite component library</p>
 {{< /example >}}
 
 ## Whitespace

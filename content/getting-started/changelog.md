@@ -51,7 +51,7 @@ The breaking changes do not apply to the data attributes interface, only for obj
 
 - added new chart components
 - enable or disable styles via the Flowbite Plugin
-- addded new API option to the dropdowns to prevent closing when clicking on certain elements
+- added new API option to the dropdowns to prevent closing when clicking on certain elements
 - small bug fixes and improvements overall
 
 ### v1.7.0
@@ -77,7 +77,7 @@ The breaking changes do not apply to the data attributes interface, only for obj
 - LiveView support ([issue #486](https://github.com/themesberg/flowbite/issues/486)) for Phoenix by [@jmnda-dev](https://github.com/jmnda-dev)
 - Improve modal responsive behaviour by centering it vertically
 - Improve Svelte getting started guide by [@shinokada](https://github.com/shinokada)
-- Improve font smoothing by adding antialising to the docs and examples
+- Improve font smoothing by adding antialiasing to the docs and examples
 - Improve navbar spacings and font sizes to reflect Figma design system
 
 ### v1.6.4

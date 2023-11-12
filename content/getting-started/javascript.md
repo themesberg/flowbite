@@ -92,7 +92,7 @@ modal.isHidden();
 modal.isVisible();
 ```
 
-Please take into consideration that for this example you also need to have the appropiate HTML markup available on the page where the JS is loaded:
+Please take into consideration that for this example you also need to have the appropriate HTML markup available on the page where the JS is loaded:
 
 ```html
 <div id="modalEl" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -200,7 +200,7 @@ initFlowbite();
 </script>
 ```
 
-Basically, the `initFlowbite()` function parses your DOM for all of the data attributes and creates new instances of the appropiate components like modals or dropdowns and sets up the behaviour of the examples from the Flowbite Docs - applying the functionality of showing and hiding the components such as hiding the modal when clicking on the "X" (close) button.
+Basically, the `initFlowbite()` function parses your DOM for all of the data attributes and creates new instances of the appropriate components like modals or dropdowns and sets up the behaviour of the examples from the Flowbite Docs - applying the functionality of showing and hiding the components such as hiding the modal when clicking on the "X" (close) button.
 
 ## Instance manager
 
@@ -310,7 +310,7 @@ In our default UI components we use this when we want to toggle the mobile navig
 
 ## TypeScript support
 
-Flowbite has support for type declarations of the Flowbite JS API which helps you to keep your code more maintainable and predictible by giving you safety constraints for the parameters and object methods that you're using through your application.
+Flowbite has support for type declarations of the Flowbite JS API which helps you to keep your code more maintainable and predictable by giving you safety constraints for the parameters and object methods that you're using through your application.
 
 Learn more about Flowbite and TypeScript in the [introduction guide](https://flowbite.com/docs/getting-started/typescript/).
 

@@ -2670,7 +2670,7 @@ You can set the size (width and height) of the chart by passing the `width: {siz
 
 ## JavaScript behaviour
 
-With the charts from Flowbite and through the API of ApexCharts you can programatically configure and handle the behaviour of the components by using the methods directly on the chart object.
+With the charts from Flowbite and through the API of ApexCharts you can programmatically configure and handle the behaviour of the components by using the methods directly on the chart object.
 
 For example, here's how you can initialize a new chart with an options object and call the `render()` function:
 

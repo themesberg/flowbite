@@ -17,7 +17,7 @@ Check out the following examples for multiple sizes, colors, positionings, style
 
 ## Default indicator
 
-Use this example to create a simple indicator with mulitple colors and position it anywhere on the website.
+Use this example to create a simple indicator with multiple colors and position it anywhere on the website.
 
 {{< example id="default-indicator-example" class="flex items-center justify-center" github="components/indicators.md" show_dark=true >}}
 <span class="flex w-3 h-3 me-3 bg-gray-200 rounded-full"></span>

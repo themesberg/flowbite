@@ -154,7 +154,7 @@ These beautiful button elements with color shadows can be used since the release
 
 ## Social buttons
 
-Use these button styles when building social media login forms using Facebook, Twitter, GitHub, Google, and Apple. These buttons use the new `bg-[#hex]` utility classses from Tailwind CSS v3.0.
+Use these button styles when building social media login forms using Facebook, Twitter, GitHub, Google, and Apple. These buttons use the new `bg-[#hex]` utility classes from Tailwind CSS v3.0.
 
 {{< example id="button-social-example" class="flex flex-wrap" github="components/buttons.md" show_dark=true >}}
 <button type="button" class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 me-2 mb-2">

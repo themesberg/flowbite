@@ -11,7 +11,7 @@ next: Checkbox
 nextLink: forms/checkbox/
 ---
 
-The textarea component is a multi-line text field input that can be used to receive longer chuncks of text from the user in the form of a comment box, description field, and more.
+The textarea component is a multi-line text field input that can be used to receive longer chunks of text from the user in the form of a comment box, description field, and more.
 
 From the examples on this page you will find multiple styles and variants of the textarea component coded with the utility classes from Tailwind CSS including a WYSIWYG editor, comment box, chatroom textarea, all available in dark mode as well. 
 

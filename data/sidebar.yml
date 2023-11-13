@@ -66,6 +66,8 @@
       - title: Button Group
       - title: Card
       - title: Carousel
+      - title: Chat Bubble
+        new: true
       - title: Device Mockups
       - title: Drawer
       - title: Dropdowns

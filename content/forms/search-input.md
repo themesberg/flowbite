@@ -7,8 +7,8 @@ toc: true
 
 previous: File Input
 previousLink: forms/file-input/
-next: Select
-nextLink: forms/select/
+next: Number Input
+nextLink: forms/number-input/
 ---
 
 The search input component can be used to let your users search through your website using string queries and it comes in multiple styles, variants, and sizes built with the utility classes from Tailwind CSS.

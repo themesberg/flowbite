@@ -5,10 +5,10 @@ description: Use the number input component to set a numeric value inside a form
 group: components
 toc: true
 
-previous: Carousel
-previousLink: components/carousel/
-next: Drawer
-nextLink: components/drawer/
+previous: Search Input
+previousLink: forms/search-input/
+next: Select
+nextLink: components/select/
 ---
 
 

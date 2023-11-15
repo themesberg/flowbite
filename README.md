@@ -32,7 +32,9 @@
 - [Figma Design System](#figma-design-system)
 - [Flowbite Blocks](#flowbite-blocks)
 - [Flowbite Icons](#flowbite-icons)
+- [Flowbite GPT](#flowbite-gpt)
 - [Pro version](#pro-version)
+- [Hire us](#hire-us)
 - [Learn Design Concepts](#learn-design-concepts)
 - [Community](#community)
 - [Copyright and license](#copyright-and-license)
@@ -751,11 +753,23 @@ Start using over 430+ free and open-source collection of solid and outline SVG i
 
 🔍 [Check out the icons](https://flowbite.com/icons/)
 
+## Flowbite GPT
+
+We've developed a custom trained ChatGPT model that you can use to generate website sections and pages based on the resources from Flowbite and Tailwind CSS.
+
+🤖 [Generate with Flowbite GPT](https://chat.openai.com/g/g-y7yC35HB9-flowbite-gpt)
+
 ## Pro version
 
 Get access to all premium features including the Figma design system, access to all Flowbite Block sections and a dashboard UI interface:
 
 💎 [Check out Flowbite Pro](https://flowbite.com/pro/)
+
+## Hire us
+
+If you're ready to take your application to the next level you can work with us on your project with developers who have been using Flowbite and Tailwind CSS.
+
+🙋‍♂️ [Work with us](https://flowbite.com/work-with-us/)
 
 ## Learn Design Concepts
 

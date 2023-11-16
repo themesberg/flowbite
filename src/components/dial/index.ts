@@ -110,6 +110,7 @@ class Dial implements DialInterface {
 
     hide() {
         this._targetEl.classList.add('hidden');
+        this._targetEl.classList.remove('flex', 'flex-col');
         if (this._triggerEl) {
             this._triggerEl.setAttribute('aria-expanded', 'false');
         }
@@ -121,6 +122,7 @@ class Dial implements DialInterface {
 
     show() {
         this._targetEl.classList.remove('hidden');
+        this._targetEl.classList.add('flex', 'flex-col');
         if (this._triggerEl) {
             this._triggerEl.setAttribute('aria-expanded', 'true');
         }

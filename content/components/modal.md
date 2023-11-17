@@ -237,7 +237,7 @@ Use this example of a modal to use within CRUD (Create, Read, Update, Delete) op
                 </button>
             </div>
             <!-- Modal body -->
-            <form action="#" class="p-4 md:p-5">
+            <form class="p-4 md:p-5">
                 <div class="grid gap-4 mb-4 grid-cols-2">
                     <div class="col-span-2">
                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>

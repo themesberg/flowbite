@@ -20,7 +20,7 @@ This is an example of a form component including an email, password, checkbox, a
 
 {{< example id="default-form-example" github="components/forms.md" show_dark=true >}}
 
-<form action="#" class="max-w-sm mx-auto">
+<form class="max-w-sm mx-auto">
   <div class="mb-5">
     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
     <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required>
@@ -49,7 +49,7 @@ Use these form elements inspired by material design from Google to adjust the `l
 
 {{< example id="form-floating-label-example" github="components/forms.md" show_dark=true >}}
 
-<form action="#" class="max-w-md mx-auto">
+<form class="max-w-md mx-auto">
   <div class="relative z-0 w-full mb-5 group">
       <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
       <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
@@ -91,7 +91,7 @@ Use these form elements inspired by material design from Google to adjust the `l
 Use the following utility classes to create three different sizing options (large, base, and small) for your form input elements.
 
 {{< example id="form-sizes-example" github="components/forms.md" show_dark=true >}}
-<form action="#" class="max-w-sm mx-auto">
+<form class="max-w-sm mx-auto">
   <div class="mb-5">
       <label for="large-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Large input</label>
       <input type="text" id="large-input" class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -112,7 +112,7 @@ Use the following utility classes to create three different sizing options (larg
 Use the following utility classes to indicate a disabled form input item.
 
 {{< example id="form-disabled-example" github="components/forms.md" show_dark=true >}}
-<form action="#" class="max-w-sm mx-auto">
+<form class="max-w-sm mx-auto">
   <input type="text" id="disabled-input" aria-label="disabled input" class="mb-5 bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" value="Disabled input" disabled>
   <input type="text" id="disabled-input-2" aria-label="disabled input 2" class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" value="Disabled readonly input" disabled readonly>
 </form>
@@ -124,7 +124,7 @@ Alternatively, you can decide to apply a shadow styling using the `shadow-sm` cl
 
 {{< example id="form-shadow-example" github="components/forms.md" show_dark=true >}}
 
-<form action="#" class="max-w-sm mx-auto">
+<form class="max-w-sm mx-auto">
   <div class="mb-5">
     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
     <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required>
@@ -152,7 +152,7 @@ Alternatively, you can decide to apply a shadow styling using the `shadow-sm` cl
 Use the following markup to also add a helper text below your form input item. Usually used for newsletter signup elements.
 
 {{< example id="form-helper-text-example" github="components/forms.md" show_dark=true >}}
-<form action="#" class="max-w-sm mx-auto"> 
+<form class="max-w-sm mx-auto"> 
   <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
   <input type="email" id="email" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com">
 
@@ -165,7 +165,7 @@ Use the following markup to also add a helper text below your form input item. U
 Use the following Tailwind utility classes and [SVG icon](https://flowbite.com/icons/) to add an icon inside input form elements.
 
 {{< example id="form-input-icon-example" github="components/forms.md" show_dark=true >}}
-<form action="#" class="max-w-sm mx-auto">
+<form class="max-w-sm mx-auto">
   <label for="email-address-icon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Email</label>
   <div class="relative">
     <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
@@ -184,7 +184,7 @@ Use the following Tailwind utility classes and [SVG icon](https://flowbite.com/i
 Use this example to add a SVG icon or special character with an addon style to the input element.
 
 {{< example id="form-input-addon-example" github="components/forms.md" show_dark=true >}}
-<form action="#" class="max-w-sm mx-auto">
+<form class="max-w-sm mx-auto">
   <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
   <div class="flex">
     <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
@@ -202,7 +202,7 @@ Use this example to add a SVG icon or special character with an addon style to t
 Use the following two success and error styles when validation your forms.
 
 {{< example id="form-validation-example" github="components/forms.md" show_dark=true >}}
-<form action="#" class="max-w-sm mx-auto">
+<form class="max-w-sm mx-auto">
   <div class="mb-5">
     <label for="username-success" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">Your name</label>
     <input type="text" id="username-success" class="bg-green-50 border border-green-500 text-green-900 placeholder-green-700 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-green-100 dark:border-green-400" placeholder="Bonnie Green">
@@ -221,7 +221,7 @@ Use the following two success and error styles when validation your forms.
 Use the following code to create a textarea form element.
 
 {{< example id="form-textarea-example" github="components/forms.md" show_dark=true >}}
-<form action="#" class="max-w-sm mx-auto">
+<form class="max-w-sm mx-auto">
   <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label>
   <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
 </form>
@@ -232,7 +232,7 @@ Use the following code to create a textarea form element.
 Use the following select input element to show selectable list of items.
 
 {{< example id="form-select-input-example" github="components/forms.md" show_dark=true >}}
-<form action="#" class="max-w-sm mx-auto">
+<form class="max-w-sm mx-auto">
   <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select your country</label>
   <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
 
@@ -340,7 +340,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 Use the following Tailwind CSS file upload element to receive any type of file from users.
 
 {{< example id="form-file-input-example" github="components/forms.md" show_dark=true >}}
-<form action="#" class="max-w-lg mx-auto">
+<form class="max-w-lg mx-auto">
   <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="user_avatar">Upload file</label>
   <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
   <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help">A profile picture is useful to confirm your are logged into your account</div>

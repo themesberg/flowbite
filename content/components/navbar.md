@@ -789,7 +789,7 @@ Use the object parameters from the Collapse object to set the trigger element, t
 
 ### Options
 
-Use these optional options for the Dismiss object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
+Use these optional options for the Collapse object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">

@@ -562,11 +562,11 @@ These values will be enforced and validated whenever the user clicks on one of t
 
 ## JavaScript behaviour
 
-Use the **Collapse** class to create an object with a trigger and target element, where the target element will be collapsed or expanded based on the events dispatched on the trigger element. This can be used to toggle another element such as a dropdown menu or a hamburger navbar.
+Use the **InputCounter** object from the Flowbite JS API to create a number input component with increment and decrement buttons that can be used to increase or decrease the value of the input.
 
 ### Object parameters
 
-Use the object parameters from the Collapse object to set the trigger element, target element, and the options including callback functions.
+Use the object parameters from the InputCounter object to set the target, increment, and decrement elements as well as the options object.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -663,7 +663,7 @@ Use the object parameters from the Collapse object to set the trigger element, t
 
 ### Options
 
-Use these optional options for the Dismiss object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
+Use these optional options for the InputCounter object to set the minimum and maximum values of the input field and also to set callback functions for the increment and decrement events.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -731,7 +731,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
 
 ### Methods
 
-Use the following methods on the Dismiss object to programmatically manipulate the behaviour.
+Use the following methods of the InputCounter object to programmatically manipulate the behaviour of the input field.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -776,66 +776,68 @@ Use the following methods on the Dismiss object to programmatically manipulate t
 
 ### Example
 
-Check out the following example to learn how to initialize and use the methods of the **Collapse** object to manually expand and collapse elements on the page.
+Check out the following examples to learn how to create a new InputCounter object and how to set it up with custom options and programmatically use the methods available.
 
 First of all, you need to set the object parameters where the target element is required and the other two are optional.
 
 ```javascript
-// set the target element that will be collapsed or expanded (eg. navbar menu)
-const $targetEl = document.getElementById('targetEl');
+// set the target element of the input field
+const $targetEl = document.getElementById('counter-input');
 
-// optionally set a trigger element (eg. a button, hamburger icon)
-const $triggerEl = document.getElementById('triggerEl');
+// optionally set the increment and decrement elements
+const $incrementEl = document.getElementById('increment-button');
+
+const $decrementEl = document.getElementById('decrement-button');
 
 // optional options with default values and callback functions
 const options = {
-    onCollapse: () => {
-        console.log('element has been collapsed');
+    minValue: 0,
+    maxValue: null, // infinite
+    onIncrement: () => {
+        console.log('input field value has been incremented');
     },
-    onExpand: () => {
-        console.log('element has been expanded');
-    },
-    onToggle: () => {
-        console.log('element has been toggled');
-    },
+    onDecrement: () => {
+        console.log('input field value has been decremented');
+    }
 };
 
 const instanceOptions = {
-  id: 'targetEl',
+  id: 'counter-input',
   override: true
 };
 
 ```
 
-Next step is to create a new instance of a Collapse object using the parameters we have set above.
+Next step is to create a new instance of a InputCounter object using the parameters we have set above.
 
 ```javascript
-import { Collapse } from 'flowbite';
+import { InputCounter } from 'flowbite';
 
 /*
  * $targetEl: required
- * $triggerEl: optional
+ * $incrementEl: optional
+ * $decrementEl: optional
  * options: optional
  */
-const collapse = new Collapse($targetEl, $triggerEl, options, instanceOptions);
+const counterInput = new InputCounter($targetEl, $incrementEl, $decrementEl, options, instanceOptions);
 ```
 
-Now you can programmatically expand or collapse the target element using the methods of the Collapse object.
+Now you can programmatically increment or decrement the input field using the methods of the InputCounter object.
 
 ```javascript
-// show the target element
-collapse.expand();
+// get the current value of the input field
+counterInput.getCurrentValue();
 
-// hide the target element
-collapse.collapse();
+// increment the value of the input field
+counterInput.increment();
 
-// toggle the visibility of the target element
-collapse.toggle();
+// decrement the value of the input field
+counterInput.decrement();
 ```
 
 ### HTML Markup
 
-Here is an example of the HTML markup that you can use for the JavaScript example above. Please note that you should use the `hidden` class from Tailwind CSS to hide the target element by default.
+Here is an example of the HTML markup that you can use for the JavaScript example above.
 
 ```html
 <form class="max-w-xs mx-auto">
@@ -858,53 +860,59 @@ Here is an example of the HTML markup that you can use for the JavaScript exampl
 
 ### TypeScript
 
-If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScript configuration</a> from Flowbite then you can import the types for the Collapse object, parameters and its options.
+If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScript configuration</a> from Flowbite then you can import the types for the InputCounter object, parameters and its options.
 
 Here's an example that applies the types from Flowbite to the code above:
 
 ```javascript
-import { Collapse } from 'flowbite';
-import type { CollapseOptions, CollapseInterface } from 'flowbite';
+import { InputCounter } from 'flowbite';
+import type { InputCounterOptions, InputCounterInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';
 
-// set the target element that will be collapsed or expanded (eg. navbar menu)
-const $targetEl: HTMLElement = document.getElementById('targetEl');
+// set the target element of the input field
+const $targetEl: HTMLInputElement = document.getElementById('counter-input');
 
-// optionally set a trigger element (eg. a button, hamburger icon)
-const $triggerEl: HTMLElement = document.getElementById('triggerEl');
+// optionally set the increment and decrement elements
+const $incrementEl: HTMLElement = document.getElementById('increment-button');
+
+const $decrementEl: HTMLElement = document.getElementById('decrement-button');
 
 // optional options with default values and callback functions
-const options: CollapseOptions = {
-    onCollapse: () => {
-        console.log('element has been collapsed');
+const options: InputCounterOptions = {
+    minValue: 0,
+    maxValue: null, // infinite
+    onIncrement: () => {
+        console.log('input field value has been incremented');
     },
-    onExpand: () => {
-        console.log('element has been expanded');
-    },
-    onToggle: () => {
-        console.log('element has been toggled');
-    },
+    onDecrement: () => {
+        console.log('input field value has been decremented');
+    }
 };
 
 // instance options object
 const instanceOptions: InstanceOptions = {
-  id: 'targetEl',
+  id: 'counter-input',
   override: true
 };
 
 /*
  * $targetEl: required
- * $triggerEl: optional
+ * $incrementEl: optional
+ * $decrementEl: optional
  * options: optional
  * instanceOptions: optional
  */
-const collapse: CollapseInterface = new Collapse(
+const counterInput: InputCounterInterface = new InputCounter(
     $targetEl,
-    $triggerEl,
+    $incrementEl,
+    $decrementEl,
     options,
     instanceOptions
 );
 
-// show the target element
-collapse.expand();
+// increment the value of the input field
+counterInput.increment();
+
+// decrement the value of the input field
+counterInput.decrement();
 ```

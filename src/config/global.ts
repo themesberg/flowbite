@@ -23,6 +23,7 @@ declare global {
         Popover: typeof Popover;
         Tabs: typeof Tabs;
         Tooltip: typeof Tooltip;
+        InputCounter: typeof InputCounter;
         initAccordions: () => void;
         initCarousels: () => void;
         initCollapses: () => void;
@@ -34,6 +35,7 @@ declare global {
         initPopovers: () => void;
         initTabs: () => void;
         initTooltips: () => void;
+        initInputCounters: () => void;
         initFlowbite: () => void;
         FlowbiteInstances: any;
     }

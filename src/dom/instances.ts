@@ -9,6 +9,7 @@ import { ModalInterface } from '../components/modal/interface';
 import { PopoverInterface } from '../components/popover/interface';
 import { TabsInterface } from '../components/tabs/interface';
 import { TooltipInterface } from '../components/tooltip/interface';
+import { InputCounterInterface } from '../components/input-counter/interface';
 
 class Instances {
     private _instances: {
@@ -23,6 +24,7 @@ class Instances {
         Popover: { [id: string]: PopoverInterface };
         Tabs: { [id: string]: TabsInterface };
         Tooltip: { [id: string]: TooltipInterface };
+        InputCounter: { [id: string]: InputCounterInterface };
     };
 
     constructor() {
@@ -38,6 +40,7 @@ class Instances {
             Popover: {},
             Tabs: {},
             Tooltip: {},
+            InputCounter: {},
         };
     }
 

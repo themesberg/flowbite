@@ -751,7 +751,7 @@ Use the following methods of the InputCounter object to programmatically manipul
                   <code class="text-blue-600 dark:text-blue-400">getCurrentValue()</code>
               </td>
               <td class="px-6 py-4">
-                  Use this method on the Collapse object toggle the current visibility of the target element.
+                  Use this method to get the current value of the input field.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -759,7 +759,7 @@ Use the following methods of the InputCounter object to programmatically manipul
                   <code class="text-blue-600 dark:text-blue-400">increment()</code>
               </td>
               <td class="px-6 py-4">
-                  Use this method on the Collapse object to hide the target element.
+                  Use this method on the InputCounter object to increment the value of the input field.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -767,7 +767,7 @@ Use the following methods of the InputCounter object to programmatically manipul
                   <code class="text-blue-600 dark:text-blue-400">decrement()</code>
               </td>
               <td class="px-6 py-4">
-                  Use this method on the Collapse object to show the target element.
+                  Use this method on the InputCounter object to decrement the value of the input field.
               </td>
           </tr>
       </tbody>

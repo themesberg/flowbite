@@ -598,7 +598,7 @@ Use the object parameters from the InputCounter object to set the target, increm
                   Required
               </td>
               <td class="px-6 py-4">
-                  Pass the target element object that will be expanded or collapsed.
+                  Pass the target input field element that will be incremented or decremented based on click event.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -612,7 +612,7 @@ Use the object parameters from the InputCounter object to set the target, increm
                   Optional
               </td>
               <td class="px-6 py-4">
-                  Pass the trigger element that will expand or collapse the target element based on click event. 
+                  Pass the increment button element that will increase the value of the target element based on click event.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -626,7 +626,7 @@ Use the object parameters from the InputCounter object to set the target, increm
                   Optional
               </td>
               <td class="px-6 py-4">
-                  Pass the trigger element that will expand or collapse the target element based on click event. 
+                  Pass the decrement button element that will decrease the value of the target element based on click event.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -640,7 +640,7 @@ Use the object parameters from the InputCounter object to set the target, increm
                   Optional
               </td>
               <td class="px-6 py-4">
-                  Set these options to override the default transition, duration, and timing function of the collapse animation.
+                  Set these options to set the minimum and maximum value of the input field and the callback functions.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -689,7 +689,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
                   Integer
               </td>
               <td class="px-6 py-4">
-                  Set a callback function when the item has been collapsed.
+                  Set the minimum value of the input field.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -700,7 +700,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
                   Integer
               </td>
               <td class="px-6 py-4">
-                  Set a callback function when the item has been collapsed.
+                  Set the maximum value of the input field.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -711,7 +711,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
                   Function
               </td>
               <td class="px-6 py-4">
-                  Set a callback function when the item has been collapsed.
+                  Set a callback function when the item has been incremented.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -722,7 +722,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
                   Function
               </td>
               <td class="px-6 py-4">
-                  Set a callback function when the item has been expanded.
+                  Set a callback function when the item has been decremented.
               </td>
           </tr>
       </tbody>

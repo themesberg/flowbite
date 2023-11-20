@@ -3,6 +3,7 @@ layout: home
 title: Tailwind CSS Number Input - Flowbite
 description: Use the number input component to set a numeric value inside a form field based on multiple styles, variants, and layouts that can be used in product pages, forms, and more
 group: components
+requires_js: true
 toc: true
 
 previous: Search Input
@@ -11,9 +12,13 @@ next: Select
 nextLink: components/select/
 ---
 
+The number input component from Flowbite can be used to introduce numeric values inside a form such as for a quantity field, a ZIP code, a phone number, your credit card number, and more. All of the UI components are coded exclusively with Tailwind CSS.
+
+The examples on this page have basic functionality coded with JavaScript and the quantity input has a more advanced ability to increment and decrement the value with the help of the `data-input-counter` attribute from the Flowbite JS API.
 
 ## Default number input
 
+Use this component to set a number value inside a form field by applying the `type="number"` attribute.
 
 {{< example id="default-number-input" github="components/number-input.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
@@ -23,6 +28,8 @@ nextLink: components/select/
 {{< /example >}}
 
 ## ZIP code input
+
+Use this example with an icon and helper text to set a ZIP code value inside a form field by also applying the `pattern` attribute to validate the input using a regular expression for a 5 digit number.
 
 {{< example id="zip-code-number-input" github="components/number-input.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
@@ -42,6 +49,14 @@ nextLink: components/select/
 ## Phone number
 
 ## Control buttons
+
+Use this example with control buttons to increment and decrement the value inside the input field.
+
+If you have the [Flowbite JS](https://flowbite.com/docs/getting-started/quickstart/) installed in your project then you can use the `data-input-counter` data attribute to initialize the target input field and then use the following data attributes to target the buttons that will increment and decrement the value of the input field:
+
+- `data-input-counter` - initialize the input field
+- `data-input-counter-increment` - increment the value of the input field
+- `data-input-counter-decrement` - decrement the value of the input field
 
 {{< example id="control-number-input" github="components/number-input.md" show_dark=true >}}
 <form class="max-w-xs mx-auto">
@@ -64,6 +79,8 @@ nextLink: components/select/
 {{< /example >}}
 
 ## Control buttons with icon
+
+Use this example to also add an icon inside the input field to improve the user experience.
 
 {{< example id="control-icon-number-input" github="components/number-input.md" show_dark=true >}}
 <form class="max-w-xs mx-auto">
@@ -93,6 +110,8 @@ nextLink: components/select/
 
 ## Counter input
 
+Use this example as an alternative style to the control buttons example above.
+
 {{< example id="control-icon-number-input" github="components/number-input.md" show_dark=true >}}
 <form class="max-w-xs mx-auto">
     <label for="counter-input" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Choose quantity:</label>
@@ -113,6 +132,8 @@ nextLink: components/select/
 {{< /example >}}
 
 ## Currency input
+
+This component can be used to set a currency value inside a form field when you need to set a price.
 
 {{< example id="control-number-input" github="components/number-input.md" show_dark=true iframeHeight="290" >}}
 <form class="max-w-[18rem] mx-auto flex">
@@ -170,6 +191,8 @@ nextLink: components/select/
 
 ## Credit card input
 
+Use this component to set the information needed when making an online transaction with a credit card by adding the card number, expiration date, and security code. The component uses the [Flowbite Datepicker](https://flowbite.com/docs/plugins/datepicker/).
+
 {{< example id="zip-code-number-input" github="components/number-input.md" show_dark=true iframeHeight="540" >}}
 <form class="max-w-sm mx-auto">
     <label for="card-number-input" class="sr-only">Card number:</label>
@@ -199,6 +222,8 @@ nextLink: components/select/
 {{< /example >}}
 
 ## Pin code input
+
+Use this example of a pin code input to set a 6 digit code. This can be used when setting up a new account or when making a payment and the code is sent via phone or email.
 
 {{< example id="zip-code-number-input" github="components/number-input.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
@@ -244,6 +269,8 @@ nextLink: components/select/
 {{< /example >}}
 
 ## Number input with slider
+
+This example can be used to set the value of a number input field by sliding the range slider component or by typing the value in the input field. The component uses the [Flowbite Range Slider](https://flowbite.com/docs/plugins/range-slider/).
 
 {{< example id="zip-code-number-input" github="components/number-input.md" show_dark=true iframeHeight="290" disable_init_js="true" >}}
 <form class="max-w-[24rem] mx-auto">
@@ -319,6 +346,8 @@ nextLink: components/select/
 {{< /example >}}
 
 ## Convert currency
+
+Use this example of two number input fields and dropdowns to convert currency and even from fiat to crypto.
 
 {{< example id="control-number-input" github="components/number-input.md" show_dark=true iframeHeight="290" disable_init_js="true" >}}
 <form class="max-w-xl mx-auto">
@@ -435,6 +464,8 @@ nextLink: components/select/
 
 ## Advanced control buttons
 
+This example can be used to add multiple number input fields with quantity selectors and control buttons to use for E-commerce UI similar to projects like AirBnb or Booking.
+
 {{< example id="control-icon-number-input" github="components/number-input.md" show_dark=true >}}
 <form class="max-w-xs mx-auto">
     <label for="bedrooms-input" class="sr-only">Choose bedrooms number:</label>
@@ -502,6 +533,13 @@ nextLink: components/select/
 
 ## Min and max values
 
+By using the InputCounter object from the Flowbite JS API, you ca set the min and max values of a number input component by using the following data attributes:
+
+- `data-input-counter-min` - set the minimum value of the input
+- `data-input-counter-max` - set the maximum value of the input
+
+These values will be enforced and validated whenever the user clicks on one of the buttons or tries to introduce the value manually.
+
 {{< example id="control-number-min-max-input" github="components/number-input.md" show_dark=true >}}
 <form class="max-w-xs mx-auto">
     <label for="quantity-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choose quantity:</label>
@@ -511,7 +549,7 @@ nextLink: components/select/
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
             </svg>
         </button>
-        <input type="text" id="quantity-input" data-input-counter data-input-counter-min="1" data-input-counter-max="50" aria-describedby="helper-text-explanation" class="bg-gray-50 border-x-0 border-gray-300 h-11 text-center text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="999" required>
+        <input type="text" id="quantity-input" data-input-counter data-input-counter-min="1" data-input-counter-max="50" aria-describedby="helper-text-explanation" class="bg-gray-50 border-x-0 border-gray-300 h-11 text-center text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="999" value="5" required>
         <button type="button" id="increment-button" data-input-counter-increment="quantity-input" class="bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 border border-gray-300 rounded-e-lg p-3 h-11 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
             <svg class="w-3 h-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
@@ -522,4 +560,351 @@ nextLink: components/select/
 </form>
 {{< /example >}}
 
-## More examples
+## JavaScript behaviour
+
+Use the **Collapse** class to create an object with a trigger and target element, where the target element will be collapsed or expanded based on the events dispatched on the trigger element. This can be used to toggle another element such as a dropdown menu or a hamburger navbar.
+
+### Object parameters
+
+Use the object parameters from the Collapse object to set the trigger element, target element, and the options including callback functions.
+
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs  uppercase">
+              <th scope="col" class="px-6 py-3">
+                  Parameter
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Type
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Required
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">targetEl</code>
+              </td>
+              <td class="px-6 py-4">
+                  Element
+              </td>
+              <td class="px-6 py-4">
+                  Required
+              </td>
+              <td class="px-6 py-4">
+                  Pass the target element object that will be expanded or collapsed.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">incrementEl</code>
+              </td>
+              <td class="px-6 py-4">
+                  Element
+              </td>
+              <td class="px-6 py-4">
+                  Optional
+              </td>
+              <td class="px-6 py-4">
+                  Pass the trigger element that will expand or collapse the target element based on click event. 
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">decrementEl</code>
+              </td>
+              <td class="px-6 py-4">
+                  Element
+              </td>
+              <td class="px-6 py-4">
+                  Optional
+              </td>
+              <td class="px-6 py-4">
+                  Pass the trigger element that will expand or collapse the target element based on click event. 
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">options</code>
+              </td>
+              <td class="px-6 py-4">
+                Object
+              </td>
+              <td class="px-6 py-4">
+                  Optional
+              </td>
+              <td class="px-6 py-4">
+                  Set these options to override the default transition, duration, and timing function of the collapse animation.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
+                </td>
+                <td class="px-6 py-4">
+                    Object
+                </td>
+                <td class="px-6 py-4">
+                    Optional
+                </td>
+                <td class="px-6 py-4">
+                   Object of options that allows you to set a custom ID for the instance that is being added to the <a href="https://flowbite.com/docs/getting-started/javascript/#instance-options" class="underline hover:no-underline">Instance Manager</a> and whether to override or not an existing instance.
+                </td>
+            </tr>
+      </tbody>
+  </table>
+</div>
+
+### Options
+
+Use these optional options for the Dismiss object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
+
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs  uppercase">
+              <th scope="col" class="px-6 py-3">
+                  Option
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Type
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">minValue</code>
+              </td>
+              <td class="px-6 py-4 ">
+                  Integer
+              </td>
+              <td class="px-6 py-4">
+                  Set a callback function when the item has been collapsed.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">maxValue</code>
+              </td>
+              <td class="px-6 py-4 ">
+                  Integer
+              </td>
+              <td class="px-6 py-4">
+                  Set a callback function when the item has been collapsed.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">onIncrement</code>
+              </td>
+              <td class="px-6 py-4 ">
+                  Function
+              </td>
+              <td class="px-6 py-4">
+                  Set a callback function when the item has been collapsed.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">onDecrement</code>
+              </td>
+              <td class="px-6 py-4 ">
+                  Function
+              </td>
+              <td class="px-6 py-4">
+                  Set a callback function when the item has been expanded.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+### Methods
+
+Use the following methods on the Dismiss object to programmatically manipulate the behaviour.
+
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs  uppercase">
+              <th scope="col" class="px-6 py-3">
+                  Method
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">getCurrentValue()</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method on the Collapse object toggle the current visibility of the target element.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">increment()</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method on the Collapse object to hide the target element.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">decrement()</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method on the Collapse object to show the target element.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+### Example
+
+Check out the following example to learn how to initialize and use the methods of the **Collapse** object to manually expand and collapse elements on the page.
+
+First of all, you need to set the object parameters where the target element is required and the other two are optional.
+
+```javascript
+// set the target element that will be collapsed or expanded (eg. navbar menu)
+const $targetEl = document.getElementById('targetEl');
+
+// optionally set a trigger element (eg. a button, hamburger icon)
+const $triggerEl = document.getElementById('triggerEl');
+
+// optional options with default values and callback functions
+const options = {
+    onCollapse: () => {
+        console.log('element has been collapsed');
+    },
+    onExpand: () => {
+        console.log('element has been expanded');
+    },
+    onToggle: () => {
+        console.log('element has been toggled');
+    },
+};
+
+const instanceOptions = {
+  id: 'targetEl',
+  override: true
+};
+
+```
+
+Next step is to create a new instance of a Collapse object using the parameters we have set above.
+
+```javascript
+import { Collapse } from 'flowbite';
+
+/*
+ * $targetEl: required
+ * $triggerEl: optional
+ * options: optional
+ */
+const collapse = new Collapse($targetEl, $triggerEl, options, instanceOptions);
+```
+
+Now you can programmatically expand or collapse the target element using the methods of the Collapse object.
+
+```javascript
+// show the target element
+collapse.expand();
+
+// hide the target element
+collapse.collapse();
+
+// toggle the visibility of the target element
+collapse.toggle();
+```
+
+### HTML Markup
+
+Here is an example of the HTML markup that you can use for the JavaScript example above. Please note that you should use the `hidden` class from Tailwind CSS to hide the target element by default.
+
+```html
+<form class="max-w-xs mx-auto">
+    <label for="counter-input" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Choose quantity:</label>
+    <div class="relative flex items-center">
+        <button type="button" id="decrement-button" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
+            <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
+            </svg>
+        </button>
+        <input type="text" id="counter-input" class="flex-shrink-0 text-gray-900 dark:text-white border-0 bg-transparent text-sm font-normal focus:outline-none focus:ring-0 max-w-[2.5rem]" placeholder="" value="12" required>
+        <button type="button" id="increment-button" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
+            <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+            </svg>
+        </button>
+    </div>
+</form>
+```
+
+### TypeScript
+
+If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScript configuration</a> from Flowbite then you can import the types for the Collapse object, parameters and its options.
+
+Here's an example that applies the types from Flowbite to the code above:
+
+```javascript
+import { Collapse } from 'flowbite';
+import type { CollapseOptions, CollapseInterface } from 'flowbite';
+import type { InstanceOptions } from 'flowbite';
+
+// set the target element that will be collapsed or expanded (eg. navbar menu)
+const $targetEl: HTMLElement = document.getElementById('targetEl');
+
+// optionally set a trigger element (eg. a button, hamburger icon)
+const $triggerEl: HTMLElement = document.getElementById('triggerEl');
+
+// optional options with default values and callback functions
+const options: CollapseOptions = {
+    onCollapse: () => {
+        console.log('element has been collapsed');
+    },
+    onExpand: () => {
+        console.log('element has been expanded');
+    },
+    onToggle: () => {
+        console.log('element has been toggled');
+    },
+};
+
+// instance options object
+const instanceOptions: InstanceOptions = {
+  id: 'targetEl',
+  override: true
+};
+
+/*
+ * $targetEl: required
+ * $triggerEl: optional
+ * options: optional
+ * instanceOptions: optional
+ */
+const collapse: CollapseInterface = new Collapse(
+    $targetEl,
+    $triggerEl,
+    options,
+    instanceOptions
+);
+
+// show the target element
+collapse.expand();
+```

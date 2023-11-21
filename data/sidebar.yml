@@ -102,6 +102,8 @@
       - title: Input Field
       - title: File Input
       - title: Search Input
+      - title: Number Input
+        new: true
       - title: Select
       - title: Textarea
       - title: Checkbox

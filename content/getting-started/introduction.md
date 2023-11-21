@@ -222,9 +222,19 @@ Check out a free and open-source collection of over 430 SVG icons with solid and
 
 Learn more by browsing the <a href="{{< param homepage >}}/icons/">Flowbite Icons</a> page and interface to directly copy-paste the icons into your project as raw SVGs or React (JSX) code.
 
+## Flowbite GPT
+
+We've developed a custom trained ChatGPT model that you can use to generate website sections and pages based on the resources from Flowbite and Tailwind CSS.
+
+Start generating with [Flowbite GPT](https://chat.openai.com/g/g-y7yC35HB9-flowbite-gpt).
+
 ## Pro version
 
 If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite]({{< param homepage >}}/pro/) which includes fully coded pages and layouts for application, marketing, and e-commerce user interfaces.
+
+## Work with us
+
+If you're ready to take your application to the next level you can [work with us](https://flowbite.com/work-with-us/) on your project with developers who have been using Flowbite and Tailwind CSS.
 
 ## Learn Design Concepts
 

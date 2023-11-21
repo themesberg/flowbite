@@ -5,6 +5,7 @@ import { initDials } from './dial';
 import { initDismisses } from './dismiss';
 import { initDrawers } from './drawer';
 import { initDropdowns } from './dropdown';
+import { initInputCounters } from './input-counter';
 import { initModals } from './modal';
 import { initPopovers } from './popover';
 import { initTabs } from './tabs';
@@ -22,6 +23,7 @@ export function initFlowbite() {
     initTooltips();
     initPopovers();
     initDials();
+    initInputCounters();
 }
 
 if (typeof window !== 'undefined') {

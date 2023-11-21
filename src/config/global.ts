@@ -9,6 +9,7 @@ import Modal from '../components/modal';
 import Popover from '../components/popover';
 import Tabs from '../components/tabs';
 import Tooltip from '../components/tooltip';
+import InputCounter from '../components/input-counter';
 
 declare global {
     interface Window {

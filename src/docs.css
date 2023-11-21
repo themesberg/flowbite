@@ -145,7 +145,8 @@ pre[class*="language-"] {
 /* when after preview */
 .code-preview-wrapper + .code-syntax-wrapper > .code-syntax > .relative > [data-code-wrapper] > .highlight pre[class*="language-"],
 .code-preview-wrapper + .code-syntax-wrapper > .code-syntax {
-	overflow: hidden;
+	overflow-y: hidden;
+	overflow-x: scroll;
 	@apply mt-0 rounded-none;
 }
 

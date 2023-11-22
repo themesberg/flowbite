@@ -50,7 +50,7 @@ Use this example with an icon and helper text to set a ZIP code value inside a f
 
 Use this example to set a phone number inside a form field based on the `type="phone"` attribute and a dropdown menu to select the country code.
 
-{{< example id="phone-code-number-input" github="components/number-input.md" show_dark=true iframeHeight="360" disable_init_js="true" >}}
+{{< example id="phone-code-number-input" github="components/number-input.md" show_dark=true iframeHeight="360" >}}
 <form class="max-w-sm mx-auto">
     <div class="flex items-center">
         <button id="dropdown-phone-button" data-dropdown-toggle="dropdown-phone" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">

@@ -9,6 +9,7 @@ import Modal from '../components/modal';
 import Popover from '../components/popover';
 import Tabs from '../components/tabs';
 import Tooltip from '../components/tooltip';
+import InputCounter from '../components/input-counter';
 
 declare global {
     interface Window {
@@ -23,6 +24,7 @@ declare global {
         Popover: typeof Popover;
         Tabs: typeof Tabs;
         Tooltip: typeof Tooltip;
+        InputCounter: typeof InputCounter;
         initAccordions: () => void;
         initCarousels: () => void;
         initCollapses: () => void;
@@ -34,6 +36,7 @@ declare global {
         initPopovers: () => void;
         initTabs: () => void;
         initTooltips: () => void;
+        initInputCounters: () => void;
         initFlowbite: () => void;
         FlowbiteInstances: any;
     }

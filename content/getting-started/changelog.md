@@ -15,9 +15,14 @@ nextLink: getting-started/react/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v2.2.0
+
+- added new number input component examples
+- created a new InputCounter object for the Flowbite JS API
+
 ### v2.1.1
 
-- - fix the `InstanceOptions` and `EventListenerInstance` type exports for TypeScript
+- fix the `InstanceOptions` and `EventListenerInstance` type exports for TypeScript
 
 ### v2.1.0
 

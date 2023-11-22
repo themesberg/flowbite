@@ -5,8 +5,8 @@ description: Get started with the select component to allow the user to choose f
 group: forms
 toc: true
 
-previous: Search Input
-previousLink: forms/search-input/
+previous: Number Input
+previousLink: forms/number-input/
 next: Textarea
 nextLink: forms/textarea/
 ---

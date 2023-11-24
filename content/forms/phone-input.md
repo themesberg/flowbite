@@ -6,10 +6,10 @@ group: components
 requires_js: true
 toc: true
 
-previous: Search Input
-previousLink: forms/search-input/
+previous: Number Input
+previousLink: forms/number-input/
 next: Select
-nextLink: components/select/
+nextLink: forms/select/
 ---
 
 The phone number input component from Flowbite can be used to set a phone number inside a form field by using the native `type="tel"` attribute and also use a dropdown menu to select the country code.

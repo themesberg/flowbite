@@ -8,8 +8,8 @@ toc: true
 
 previous: Search Input
 previousLink: forms/search-input/
-next: Select
-nextLink: components/select/
+next: Phone Input
+nextLink: forms/phone-input/
 ---
 
 The number input component from Flowbite can be used to introduce numeric values inside a form such as for a quantity field, a ZIP code, a phone number, your credit card number, and more. All of the UI components are coded exclusively with Tailwind CSS.

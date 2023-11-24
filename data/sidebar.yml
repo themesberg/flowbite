@@ -104,6 +104,8 @@
       - title: Search Input
       - title: Number Input
         new: true
+      - title: Phone Input
+        new: true
       - title: Select
       - title: Textarea
       - title: Checkbox

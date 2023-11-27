@@ -201,7 +201,7 @@ Use this example to send a verification code to the user's phone number for auth
 
 Use this example to select one of your saved phone numbers from an application with a copy-paste feature.
 
-{{< example id="phone-verification-number-input" github="components/phone-input.md" show_dark=true iframeHeight="360" disable_init_js="true" >}}
+{{< example id="phone-select-number-input" github="components/phone-input.md" show_dark=true iframeHeight="360" disable_init_js="true" >}}
 <form class="max-w-sm mx-auto">
     <label for="phone-input" class="mb-2 text-sm font-medium text-gray-900 dark:text-white block">Primary phone number:</label>
     <div class="flex items-center">
@@ -271,9 +271,9 @@ Use this example to select one of your saved phone numbers from an application w
 
 ## Authentication 
 
-Use this example to send a verification code to the user's phone number for authentication.
+Use this example to authenticate users with a login form using a phone number instead of an email address.
 
-{{< example id="phone-verification-number-input" github="components/phone-input.md" show_dark=true iframeHeight="360" disable_init_js="true" >}}
+{{< example id="phone-auth-number-input" github="components/phone-input.md" show_dark=true iframeHeight="360" disable_init_js="true" >}}
 <form class="max-w-sm mx-auto">
     <label for="phone-input" class="mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone number:</label>
     <div class="flex items-center mt-2">
@@ -349,11 +349,11 @@ Use this example to send a verification code to the user's phone number for auth
 </form>
 {{< /example >}}
 
-## Verification code input (alternative)
+## Advanced phone verification
 
-Use this example to send a verification code to the user's phone number for authentication.
+Use this example to verify a phone number via SMS or phone call using a dropdown component.
 
-{{< example id="phone-verification-number-input" github="components/phone-input.md" show_dark=true iframeHeight="360" disable_init_js="true" >}}
+{{< example id="phone-code-alt-number-input" github="components/phone-input.md" show_dark=true iframeHeight="360" disable_init_js="true" >}}
 <form class="max-w-sm mx-auto">
     <div class="flex items-center mt-2">
         <button id="dropdown-phone-button" data-dropdown-toggle="dropdown-phone" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">

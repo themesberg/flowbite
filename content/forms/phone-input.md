@@ -343,7 +343,7 @@ Use this example to authenticate users with a login form using a phone number in
     </div>
     <div class="flex items-center mt-4 mb-4">
         <input id="terms" aria-describedby="terms" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
-        <label for="terms" class="font-light text-gray-500 dark:text-gray-300 ms-2 text-sm">I accept the <a class="font-medium text-bl-600 hover:underline dark:text-blue-500" href="#">Terms and Conditions</a></label>
+        <label for="terms" class="text-gray-500 dark:text-gray-300 ms-2 text-sm">I accept the <a class="font-medium text-blue-600 hover:underline dark:text-blue-500" href="#">Terms and Conditions</a></label>
     </div>
     <button type="submit" class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Sign Up</button>
 </form>

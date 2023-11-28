@@ -201,7 +201,7 @@ Use this example to send a verification code to the user's phone number for auth
 
 Use this example to select one of your saved phone numbers from an application with a copy-paste feature.
 
-{{< example id="phone-select-number-input" github="components/phone-input.md" show_dark=true iframeHeight="360" disable_init_js="true" >}}
+{{< example id="phone-select-number-input" github="components/phone-input.md" show_dark=true iframeHeight="390" disable_init_js="true" >}}
 <form class="max-w-sm mx-auto">
     <label for="phone-input" class="mb-2 text-sm font-medium text-gray-900 dark:text-white block">Primary phone number:</label>
     <div class="flex items-center">
@@ -273,7 +273,7 @@ Use this example to select one of your saved phone numbers from an application w
 
 Use this example to authenticate users with a login form using a phone number instead of an email address.
 
-{{< example id="phone-auth-number-input" github="components/phone-input.md" show_dark=true iframeHeight="360" disable_init_js="true" >}}
+{{< example id="phone-auth-number-input" github="components/phone-input.md" show_dark=true iframeHeight="390" disable_init_js="true" >}}
 <form class="max-w-sm mx-auto">
     <label for="phone-input" class="mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone number:</label>
     <div class="flex items-center mt-2">

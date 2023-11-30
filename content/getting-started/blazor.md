@@ -261,11 +261,66 @@ Copy and paste this [dropdown component example](https://flowbite.com/docs/compo
 
 Now that you've set up Flowbite with Blazor you can explore the whole collection of UI components from the [Flowbite Library](https://flowbite.com/docs/getting-started/introduction/) or use the [Flowbite Blocks](https://flowbite.com/blocks/) collection to start building websites.
 
-## WASM integration
 
-This guide does not include WebAssembly (WASM) support but you can still use Flowbite with Blazor WASM by setting up the [Flowbite init functions](https://flowbite.com/docs/getting-started/quickstart/#init-functions) using an [interop layer](https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-7.0) that ensures the DOM rendering before applying the event listeners via the data attributes API.
+## Using Flowbite in a Blazor WASM Application
 
-Help needed: if you have experience with Blazor WASM and would like to contribute to this guide, then you can [edit this file on GitHub](https://github.com/themesberg/flowbite/blob/main/content/getting-started/blazor.md) and create a pull request. Thank you!
+This will provide guidance regarding Flowbite initialization in a Blazor WebAssembly (WASM) application. The initialization should occur after the DOM is fully loaded. 
+
+### Interop in Lifecycle Methods 
+
+Interop is crucial in achieving this setup. By using `OnAfterRenderAsync` method, which is the last lifecycle method called every time a component is rendered, we can ensure Flowbite initialization happens at the right time. 
+
+⚠️ **Note**: Do bear in mind that at the time of this writing invoking the Flowbite initialization directly within `OnAfterRenderAsync` fails. Instead, it completes successfully and predictably when the initialization awaits a slight delay (see Step-1)
+
+### Using a Base Class 
+
+This example uses a base class to invoke the Flowbite initialization. Pages that use Flowbite components may then inherit from this class in order to ensure initialization is carried out.
+
+### Steps in Example
+
+Step 1: Create a base Razor class
+
+The first step is to create a base Razor class, `FlowbiteBase.razor`, which pages equipped with Flowbite components will inherit. This way, Flowbite initialization is ensured after the DOM is rendered.
+
+```csharp
+@inject IJSRuntime JSRuntime
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await Task.Delay(1); // delay for 1ms. Fails otherwise.
+            await JSRuntime.InvokeVoidAsync("setupFlowbite");
+        }
+    }
+}
+```
+
+Step 2: Set up Flowbite Function
+
+The next step is to add a JavaScript function, `setupFlowbite`, to the `index.html` file. This function is then called from `OnAfterRenderAsync` in Step-1.
+
+```javascript
+<script type="text/javascript">
+    window.setupFlowbite = function () {
+        initFlowbite();
+    }
+</script>
+```
+
+Step 3: Inherit from the FlowbiteBase.razor Base Class 
+
+The final step involves inheriting `FlowbiteBase.razor` in pages that require Flowbite initialization. The example below shows how `Index.razor` inherits the base class.
+
+```csharp
+@page "/"
+@inherits FlowbiteBase
+
+<PageTitle>Index</PageTitle>
+
+...
+```
 
 ## Blazor starter project
 

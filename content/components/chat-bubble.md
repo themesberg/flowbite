@@ -363,7 +363,7 @@ nextLink: components/drawer/
 </svg>
 Flowbite Pro Terms & Conditions
 </span>
-        <span class="flex text-sm font-normal text-gray-500 dark:text-gray-400 gap-2">12 Pages 
+        <span class="flex text-xs font-normal text-gray-500 dark:text-gray-400 gap-2">12 Pages 
           <svg xmlns="http://www.w3.org/2000/svg" class="self-center" width="3" height="4" viewBox="0 0 3 4" fill="none">
             <circle cx="1.5" cy="2" r="1.5" fill="#6B7280"/>
           </svg>
@@ -519,7 +519,7 @@ will really appreciate the improvements.</p>
             </svg>
             Flowbite Pro Terms & Conditions
           </span>
-          <span class="flex gap-2 text-sm font-normal text-gray-500 dark:text-gray-400"
+          <span class="flex gap-2 text-xs font-normal text-gray-500 dark:text-gray-400"
             >12 Pages
             <svg xmlns="http://www.w3.org/2000/svg" class="self-center" width="3" height="4" viewBox="0 0 3 4" fill="none">
               <circle cx="1.5" cy="2" r="1.5" fill="#6B7280" />

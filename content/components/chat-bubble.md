@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Chat Bubble - Flowbite
-description:
+description: Use the chat bubble component to show chat messages in your web application including voice notes, images, and other attachments based on multiple styles and variations
 group: components
 toc: true
 
@@ -51,7 +51,7 @@ nextLink: components/drawer/
 </div>
 {{< /example >}}
 
-## Outside chat bubble
+## Outline chat bubble
 
 {{< example id="outside-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
@@ -93,7 +93,7 @@ nextLink: components/drawer/
 </div>
 {{< /example >}}
 
-## Inside Voice note chat bubble
+## Voice note
 
 {{< example id="inside-voice-note-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">

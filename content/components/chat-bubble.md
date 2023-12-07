@@ -384,6 +384,8 @@ Use this example to show an image gallery based on a grid layout with the abilit
 </div>
 {{< /example >}}
 
+## URL sharing
+
 ## Outline chat bubble
 
 Use this example to show a text message with the user profile and timestamp outside the chat bubble.
@@ -428,7 +430,7 @@ Use this example to show a text message with the user profile and timestamp outs
 </div>
 {{< /example >}}
 
-## Voice note outline
+## Outline voice note
 
 This example can be used to show a voice note with the user profile and timestamp outside the chat bubble.
 
@@ -509,7 +511,7 @@ This example can be used to show a voice note with the user profile and timestam
 </div>
 {{< /example >}}
 
-## File attachment outline
+## Outline file attachment
 
 Use this example to show a file attachment with the user profile and timestamp outside the chat bubble.
 
@@ -593,7 +595,7 @@ Use this example to show a file attachment with the user profile and timestamp o
 </div>
 {{< /example >}}
 
-## Image attachment outline
+## Outline image attachment
 
 This example can be used to send an image attachment with the user profile outside the chat bubble.
 
@@ -651,7 +653,7 @@ This example can be used to send an image attachment with the user profile outsi
 </div>
 {{< /example >}}
 
-## Image gallery outline
+## Outline image gallery
 
 Use this example to show an image gallery with the user profile and timestamp outside the chat bubble.
 
@@ -755,6 +757,8 @@ Use this example to show an image gallery with the user profile and timestamp ou
    </div>
 </div>
 {{< /example >}}
+
+## Outline URL sharing
 
 ## Clean chat bubble
 
@@ -1005,3 +1009,5 @@ Use this example to show an image gallery with a transparent background as a cha
    </div>
 </div>
 {{< /example >}}
+
+## Clean URL sharing

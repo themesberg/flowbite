@@ -62,7 +62,7 @@ Use this example to show a simple chat bubble with a text message, user profile 
 
 This example can be used to show a voice note message with control buttons and a dropdown menu.
 
-{{< example id="inside-voice-note-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="380" >}}
+{{< example id="voice-note-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="380" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
    <div class="flex flex-col gap-2.5 w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
@@ -141,7 +141,7 @@ This example can be used to show a voice note message with control buttons and a
 
 Use this example to send a file attachment inside a chat bubble with the ability to download the file.
 
-{{< example id="download-outside-chat-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="380" >}}
+{{< example id="file-attachement-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="380" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie Green image">
    <div class="flex flex-col gap-1">
@@ -225,7 +225,7 @@ Use this example to send a file attachment inside a chat bubble with the ability
 
 This example can be used to show an image attachment with a download button when hovering over.
 
-{{< example id="download-outside-chat-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
+{{< example id="image-attachment-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie Green image">
    <div class="flex flex-col gap-1">
@@ -283,7 +283,7 @@ This example can be used to show an image attachment with a download button when
 
 Use this example to show an image gallery based on a grid layout with the ability to download images.
 
-{{< example id="download-outside-chat-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
+{{< example id="image-gallery-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie Green image">
    <div class="flex flex-col gap-1">
@@ -386,11 +386,55 @@ Use this example to show an image gallery based on a grid layout with the abilit
 
 ## URL sharing
 
+{{< example id="url-sharing-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="520" >}}
+<div class="flex items-start gap-2.5">
+   <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
+   <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+      <div class="flex items-center space-x-2 rtl:space-x-reverse">
+         <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
+         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      </div>
+      <p class="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Check out this open-source UI component library based on Tailwind CSS:</p>
+      <p class="text-sm font-normal pb-2.5 text-gray-900 dark:text-white"><a href="https://github.com/themesberg/flowbite" class="text-blue-700 dark:text-blue-500 underline hover:no-underline font-medium break-all">https://github.com/themesberg/flowbite</a></p>
+      <a href="#" class="bg-gray-50 dark:bg-gray-600 rounded-xl p-4 mb-2 hover:bg-gray-200 dark:hover:bg-gray-500">
+        <img src="https://flowbite.com/docs/images/og-image.png" class="rounded-lg mb-2" />
+        <span class="text-sm font-medium text-gray-900 dark:text-white mb-2">GitHub - themesberg/flowbite: The most popular and open source libra ...</span>
+        <span class="text-xs text-gray-500 dark:text-gray-400 font-normal">github.com</span>
+      </a>
+      <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+   </div>
+   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 dark:focus:ring-gray-600" type="button">
+      <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
+         <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
+      </svg>
+   </button>
+   <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 dark:divide-gray-600">
+      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+         <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reply</a>
+         </li>
+         <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forward</a>
+         </li>
+         <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Copy</a>
+         </li>
+         <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+         </li>
+         <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Delete</a>
+         </li>
+      </ul>
+   </div>
+</div>
+{{< /example >}}
+
 ## Outline chat bubble
 
 Use this example to show a text message with the user profile and timestamp outside the chat bubble.
 
-{{< example id="outside-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
+{{< example id="outline-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
    <div class="flex flex-col gap-1 w-full max-w-[320px]">
@@ -434,7 +478,7 @@ Use this example to show a text message with the user profile and timestamp outs
 
 This example can be used to show a voice note with the user profile and timestamp outside the chat bubble.
 
-{{< example id="voice-note-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
+{{< example id="outline-voice-note-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
     <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
     <div class="flex flex-col gap-1">
@@ -515,7 +559,7 @@ This example can be used to show a voice note with the user profile and timestam
 
 Use this example to show a file attachment with the user profile and timestamp outside the chat bubble.
 
-{{< example id="download-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
+{{< example id="outline-file-attachment-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
    <div class="flex flex-col gap-1">
@@ -599,7 +643,7 @@ Use this example to show a file attachment with the user profile and timestamp o
 
 This example can be used to send an image attachment with the user profile outside the chat bubble.
 
-{{< example id="download-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
+{{< example id="outline-image-attachment-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
    <div class="flex flex-col gap-1">
@@ -657,7 +701,7 @@ This example can be used to send an image attachment with the user profile outsi
 
 Use this example to show an image gallery with the user profile and timestamp outside the chat bubble.
 
-{{< example id="download-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
+{{< example id="outline-image-gallery-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
    <div class="flex flex-col gap-1">
@@ -764,7 +808,7 @@ Use this example to show an image gallery with the user profile and timestamp ou
 
 Use this example to show a text message with the user profile and timestamp with a transparent background.
 
-{{< example id="noframe-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
+{{< example id="clean-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
     <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
     <div class="flex flex-col w-full max-w-[320px] leading-1.5">
@@ -782,7 +826,7 @@ Use this example to show a text message with the user profile and timestamp with
 
 This example can be used to show a voice note with a transparent background.
 
-{{< example id="noframe-voice-note-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
+{{< example id="clean-voice-note-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
     <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
     <div class="flex flex-col gap-1">
@@ -839,7 +883,7 @@ This example can be used to show a voice note with a transparent background.
 
 Use this example to show a file attachment and a download button with a transparent background.
 
-{{< example id="noframe-pdf-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
+{{< example id="clean-file-attachment-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
    <img class="h-8 w-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image" />
    <div class="flex flex-col gap-2.5">
@@ -899,7 +943,7 @@ Use this example to show a file attachment and a download button with a transpar
 
 This example can be used to show an image and a download button with a transparent background.
 
-{{< example id="noframe-pdf-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
+{{< example id="clean-image-attachment-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
    <img class="h-8 w-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image" />
    <div class="flex flex-col gap-2.5">
@@ -933,7 +977,7 @@ This example can be used to show an image and a download button with a transpare
 
 Use this example to show an image gallery with a transparent background as a chat message.
 
-{{< example id="noframe-pdf-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
+{{< example id="clean-image-gallery-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
    <img class="h-8 w-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image" />
    <div class="flex flex-col gap-2.5">

@@ -44,7 +44,7 @@
   slug: customize
   pages:
       - title: Configuration
-      - title: Dark mode
+      - title: Dark Mode
       - title: Theming
       - title: Colors
       - title: Icons
@@ -78,7 +78,7 @@
       - title: Jumbotron
       - title: KBD
       - title: List Group
-      - title: Mega menu
+      - title: Mega Menu
       - title: Modal
       - title: Navbar
       - title: Pagination

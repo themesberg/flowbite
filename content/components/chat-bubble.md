@@ -806,6 +806,8 @@ Use this example to show an image gallery with the user profile and timestamp ou
 
 ## Outline URL preview sharing
 
+Use this example to show a URL preview with the user profile and timestamp outside the chat bubble.
+
 {{< example id="outline-url-sharing-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="520" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
@@ -1103,6 +1105,8 @@ Use this example to show an image gallery with a transparent background as a cha
 {{< /example >}}
 
 ## Clean URL preview sharing
+
+This example can be used to show a URL preview with a transparent background.
 
 {{< example id="clean-url-sharing-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="450" >}}
 <div class="flex items-start gap-2.5">

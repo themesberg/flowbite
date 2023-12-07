@@ -828,6 +828,7 @@ module.exports = plugin.withOptions(
         const { charts = false, forms = true, tooltips = true } = options;
 
         const safelist = [
+            'z-40',
             'w-64',
             'w-1/2',
             'rounded-l-lg',

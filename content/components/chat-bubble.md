@@ -384,7 +384,9 @@ Use this example to show an image gallery based on a grid layout with the abilit
 </div>
 {{< /example >}}
 
-## URL sharing
+## URL preview sharing
+
+Use this example to show a OG preview of the URL that is being shared inside the chat bubble.
 
 {{< example id="url-sharing-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="520" >}}
 <div class="flex items-start gap-2.5">
@@ -802,7 +804,7 @@ Use this example to show an image gallery with the user profile and timestamp ou
 </div>
 {{< /example >}}
 
-## Outline URL sharing
+## Outline URL preview sharing
 
 ## Clean chat bubble
 
@@ -1054,4 +1056,4 @@ Use this example to show an image gallery with a transparent background as a cha
 </div>
 {{< /example >}}
 
-## Clean URL sharing
+## Clean URL preview sharing

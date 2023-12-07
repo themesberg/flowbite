@@ -8,8 +8,8 @@ requires_js: true
 
 previous: Carousel
 previousLink: components/carousel/
-next: Drawer
-nextLink: components/drawer/
+next: Device mockups
+nextLink: components/device-mockups/
 ---
 
 The chat bubble component is the building block for creating chat interfaces where users can send messages to each other by text, voice notes, images, galleries and other attachments. These components are usually used in chat applications and social media platforms such as Facebook, Twitter/X, WhatsApp, and more.

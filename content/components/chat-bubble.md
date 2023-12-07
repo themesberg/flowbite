@@ -18,6 +18,8 @@ The examples below provide multiple variations of default, outline, and clean st
 
 ## Default chat bubble
 
+Use this example to show a simple chat bubble with a text message, user profile and a timestamp.
+
 {{< example id="chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="380" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
@@ -57,6 +59,8 @@ The examples below provide multiple variations of default, outline, and clean st
 {{< /example >}}
 
 ## Voice note message
+
+This example can be used to show a voice note message with control buttons and a dropdown menu.
 
 {{< example id="inside-voice-note-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="380" >}}
 <div class="flex items-start gap-2.5">
@@ -134,6 +138,8 @@ The examples below provide multiple variations of default, outline, and clean st
 {{< /example >}}
 
 ## File attachment
+
+Use this example to send a file attachment inside a chat bubble with the ability to download the file.
 
 {{< example id="download-outside-chat-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="380" >}}
 <div class="flex items-start gap-2.5">
@@ -217,6 +223,8 @@ The examples below provide multiple variations of default, outline, and clean st
 
 ## Image attachment
 
+This example can be used to show an image attachment with a download button when hovering over.
+
 {{< example id="download-outside-chat-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie Green image">
@@ -272,6 +280,8 @@ The examples below provide multiple variations of default, outline, and clean st
 {{< /example >}}
 
 ## Image gallery
+
+Use this example to show an image gallery based on a grid layout with the ability to download images.
 
 {{< example id="download-outside-chat-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
@@ -374,8 +384,9 @@ The examples below provide multiple variations of default, outline, and clean st
 </div>
 {{< /example >}}
 
-
 ## Outline chat bubble
+
+Use this example to show a text message with the user profile and timestamp outside the chat bubble.
 
 {{< example id="outside-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
@@ -418,6 +429,8 @@ The examples below provide multiple variations of default, outline, and clean st
 {{< /example >}}
 
 ## Voice note outline
+
+This example can be used to show a voice note with the user profile and timestamp outside the chat bubble.
 
 {{< example id="voice-note-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
@@ -497,6 +510,8 @@ The examples below provide multiple variations of default, outline, and clean st
 {{< /example >}}
 
 ## File attachment outline
+
+Use this example to show a file attachment with the user profile and timestamp outside the chat bubble.
 
 {{< example id="download-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
@@ -580,6 +595,8 @@ The examples below provide multiple variations of default, outline, and clean st
 
 ## Image attachment outline
 
+This example can be used to send an image attachment with the user profile outside the chat bubble.
+
 {{< example id="download-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
@@ -635,6 +652,8 @@ The examples below provide multiple variations of default, outline, and clean st
 {{< /example >}}
 
 ## Image gallery outline
+
+Use this example to show an image gallery with the user profile and timestamp outside the chat bubble.
 
 {{< example id="download-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
@@ -739,6 +758,8 @@ The examples below provide multiple variations of default, outline, and clean st
 
 ## Clean chat bubble
 
+Use this example to show a text message with the user profile and timestamp with a transparent background.
+
 {{< example id="noframe-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
     <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
@@ -754,6 +775,8 @@ The examples below provide multiple variations of default, outline, and clean st
 {{< /example >}}
 
 ## Clean voice note
+
+This example can be used to show a voice note with a transparent background.
 
 {{< example id="noframe-voice-note-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
@@ -809,6 +832,8 @@ The examples below provide multiple variations of default, outline, and clean st
 {{< /example >}}
 
 ## Clean file attachment
+
+Use this example to show a file attachment and a download button with a transparent background.
 
 {{< example id="noframe-pdf-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
@@ -868,6 +893,8 @@ The examples below provide multiple variations of default, outline, and clean st
 
 ## Clean image attachment
 
+This example can be used to show an image and a download button with a transparent background.
+
 {{< example id="noframe-pdf-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">
    <img class="h-8 w-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image" />
@@ -899,6 +926,8 @@ The examples below provide multiple variations of default, outline, and clean st
 {{< /example >}}
 
 ## Clean image gallery
+
+Use this example to show an image gallery with a transparent background as a chat message.
 
 {{< example id="noframe-pdf-chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="420" >}}
 <div class="flex items-start gap-2.5">

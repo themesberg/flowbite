@@ -4,6 +4,7 @@ title: Tailwind CSS Chat Bubble - Flowbite
 description: Use the chat bubble component to show chat messages in your web application including voice notes, images, galleries and other attachments based on multiple styles and variations
 group: components
 toc: true
+requires_js: true
 
 previous: Carousel
 previousLink: components/carousel/
@@ -11,7 +12,9 @@ next: Drawer
 nextLink: components/drawer/
 ---
 
+The chat bubble component is the building block for creating chat interfaces where users can send messages to each other by text, voice notes, images, galleries and other attachments. These components are usually used in chat applications and social media platforms such as Facebook, Twitter/X, WhatsApp, and more.
 
+The examples below provide multiple variations of default, outline, and clean styles coded with the utility classes from Tailwind CSS. Some of the components may require you to include the Flowbite JavaScript to enable the dropdowns and tooltips functionality.
 
 ## Default chat bubble
 

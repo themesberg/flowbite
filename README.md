@@ -736,7 +736,7 @@ Flowbite is an open source collection of UI components built with the utility cl
     <tr>
     <td width="33.3333%">Number Input</td>
     <td width="33.3333%">Phone Input</td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">Chat Bubble</td>
   </tr>
   <tr>
     <td width="33.3333%">
@@ -749,7 +749,11 @@ Flowbite is an open source collection of UI components built with the utility cl
             <img alt="Tailwind CSS Phone Input" src="https://flowbite.s3.amazonaws.com/github/phone-input.jpg">
         </a>
     </td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/chat-bubble/">
+            <img alt="Tailwind CSS Chat Bubble" src="https://flowbite.s3.amazonaws.com/github/chat-bubble.jpg">
+        </a>
+    </td>
   </tr>
 </table>
 

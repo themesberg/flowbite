@@ -284,9 +284,9 @@ To use Flowbite with Blazor WebAssembly (WASM), you will need to setup the [Flow
 And then override the `OnAfterRenderAsync` method:
 
 ```bash
-@code{
-    protected override async Task OnAfterRenderAsync(bool isFirstRender){
-        if(isFirstRender)
+@code {
+    protected override async Task OnAfterRenderAsync(bool isFirstRender) {
+        if (isFirstRender)
         {
            await Js.InvokeVoidAsync("window.initializeFlowbite");
         }

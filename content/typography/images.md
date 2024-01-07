@@ -28,7 +28,7 @@ This example can be used to add a caption for the image often used inside articl
 {{< example id="image-caption-example" class="flex justify-center" github="typography/images.md" show_dark=true >}}
 <figure class="max-w-lg">
   <img class="h-auto max-w-full rounded-lg" src="/docs/images/examples/image-3@2x.jpg" alt="image description">
-  <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Image caption</figcaption>
+  <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">ejvndnv eufewu3bf efefheufef eureufhuh rheufhuhfuefheufh eufheufheuhfeufh orih4orhuhf ewiuf9ewfhb4 eufheufheuhuef efuheufheufheufhue feufheuhfeuf fheeufh fef fhefu7ry4h fe8fhe28f</figcaption>
 </figure>
 {{< /example >}}
 

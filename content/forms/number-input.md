@@ -2,7 +2,7 @@
 layout: home
 title: Tailwind CSS Number Input - Flowbite
 description: Use the number input component to set a numeric value inside a form field based on multiple styles, variants, and layouts that can be used in product pages, forms, and more
-group: components
+group: forms
 requires_js: true
 toc: true
 

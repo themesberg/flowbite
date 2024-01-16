@@ -10,6 +10,7 @@ import Popover from '../components/popover';
 import Tabs from '../components/tabs';
 import Tooltip from '../components/tooltip';
 import InputCounter from '../components/input-counter';
+import Clipboard from '../components/clipboard';
 
 declare global {
     interface Window {
@@ -25,6 +26,7 @@ declare global {
         Tabs: typeof Tabs;
         Tooltip: typeof Tooltip;
         InputCounter: typeof InputCounter;
+        Clipboard: typeof Clipboard;
         initAccordions: () => void;
         initCarousels: () => void;
         initCollapses: () => void;
@@ -37,6 +39,7 @@ declare global {
         initTabs: () => void;
         initTooltips: () => void;
         initInputCounters: () => void;
+        initClipboards: () => void;
         initFlowbite: () => void;
         FlowbiteInstances: any;
     }

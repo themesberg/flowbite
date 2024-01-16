@@ -19,8 +19,7 @@ class Clipboard implements ClipboardInterface {
     _targetEl: HTMLInputElement | null;
     _options: ClipboardOptions;
     _initialized: boolean;
-    _incrementClickHandler: EventListenerOrEventListenerObject;
-    _decrementClickHandler: EventListenerOrEventListenerObject;
+    _triggerElClickHandler: EventListenerOrEventListenerObject;
     _inputHandler: EventListenerOrEventListenerObject;
 
     constructor(
@@ -40,7 +39,7 @@ class Clipboard implements ClipboardInterface {
 
         this.init();
         instances.addInstance(
-            'InputCounter',
+            'Clipboard',
             this,
             this._instanceId,
             instanceOptions.override
@@ -48,57 +47,16 @@ class Clipboard implements ClipboardInterface {
     }
 
     init() {
-        if (this._targetEl && !this._initialized) {
-            this._inputHandler = (event) => {
-                {
-                    const target = event.target as HTMLInputElement;
-
-                    // check if the value is numeric
-                    if (!/^\d*$/.test(target.value)) {
-                        // Regex to check if the value is numeric
-                        target.value = target.value.replace(/[^\d]/g, ''); // Remove non-numeric characters
-                    }
-
-                    // check for max value
-                    if (
-                        this._options.maxValue !== null &&
-                        parseInt(target.value) > this._options.maxValue
-                    ) {
-                        target.value = this._options.maxValue.toString();
-                    }
-
-                    // check for min value
-                    if (
-                        this._options.minValue !== null &&
-                        parseInt(target.value) < this._options.minValue
-                    ) {
-                        target.value = this._options.minValue.toString();
-                    }
-                }
+        if (this._targetEl && this._triggerEl && !this._initialized) {
+            this._triggerElClickHandler = () => {
+                this.copy();
             };
 
-            this._incrementClickHandler = () => {
-                this.increment();
-            };
-
-            this._decrementClickHandler = () => {
-                this.decrement();
-            };
-
-            // Add event listener to restrict input to numeric values only
-            this._targetEl.addEventListener('input', this._inputHandler);
-
-            if (this._incrementEl) {
-                this._incrementEl.addEventListener(
+            // clicking on the trigger element should copy the value of the target element
+            if (this._triggerEl) {
+                this._triggerEl.addEventListener(
                     'click',
-                    this._incrementClickHandler
-                );
-            }
-
-            if (this._decrementEl) {
-                this._decrementEl.addEventListener(
-                    'click',
-                    this._decrementClickHandler
+                    this._triggerElClickHandler
                 );
             }
 
@@ -107,19 +65,11 @@ class Clipboard implements ClipboardInterface {
     }
 
     destroy() {
-        if (this._targetEl && this._initialized) {
-            this._targetEl.removeEventListener('input', this._inputHandler);
-
-            if (this._incrementEl) {
-                this._incrementEl.removeEventListener(
+        if (this._triggerEl && this._targetEl && this._initialized) {
+            if (this._triggerEl) {
+                this._triggerEl.removeEventListener(
                     'click',
-                    this._incrementClickHandler
-                );
-            }
-            if (this._decrementEl) {
-                this._decrementEl.removeEventListener(
-                    'click',
-                    this._decrementClickHandler
+                    this._triggerElClickHandler
                 );
             }
             this._initialized = false;
@@ -127,7 +77,7 @@ class Clipboard implements ClipboardInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('InputCounter', this._instanceId);
+        instances.removeInstance('Clipboard', this._instanceId);
     }
 
     destroyAndRemoveInstance() {
@@ -135,20 +85,37 @@ class Clipboard implements ClipboardInterface {
         this.removeInstance();
     }
 
-    getCurrentValue() {
-        return parseInt(this._targetEl.value) || 0;
+    getTargetValue() {
+        return this._targetEl.value;
     }
 
-    copy() {}
+    copy() {
+        const textToCopy = this.getTargetValue();
+
+        // Create a temporary textarea element
+        const tempTextArea = document.createElement('textarea');
+        tempTextArea.value = textToCopy;
+        document.body.appendChild(tempTextArea);
+
+        // Select the text inside the textarea and copy it to the clipboard
+        tempTextArea.select();
+        document.execCommand('copy');
+
+        // Remove the temporary textarea
+        document.body.removeChild(tempTextArea);
+
+        return textToCopy;
+    }
 }
 
 export function initClipboards() {
     document
         .querySelectorAll('[data-copy-to-clipboard-target]')
         .forEach(($triggerEl) => {
-            const $targetEl = document.getElementById(
-                $triggerEl.getAttribute('data-copy-to-clipboard-target')
+            const targetId = $triggerEl.getAttribute(
+                'data-copy-to-clipboard-target'
             );
+            const $targetEl = document.getElementById(targetId);
 
             // check if the target element exists
             if ($targetEl) {
@@ -160,11 +127,7 @@ export function initClipboards() {
                 ) {
                     new Clipboard(
                         $triggerEl as HTMLElement,
-                        $targetEl as HTMLInputElement,
-                        {
-                            minValue: minValue ? parseInt(minValue) : null,
-                            maxValue: maxValue ? parseInt(maxValue) : null,
-                        } as ClipboardOptions
+                        $targetEl as HTMLInputElement
                     );
                 }
             } else {

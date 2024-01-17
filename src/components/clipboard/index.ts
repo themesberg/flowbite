@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import type { ClipboardOptions } from './types';
+import type { CopyClipboardOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
-import { ClipboardInterface } from './interface';
+import { CopyClipboardInterface } from './interface';
 import instances from '../../dom/instances';
 
-const Default: ClipboardOptions = {
+const Default: CopyClipboardOptions = {
     onCopy: () => {},
 };
 
@@ -13,11 +13,11 @@ const DefaultInstanceOptions: InstanceOptions = {
     override: true,
 };
 
-class Clipboard implements ClipboardInterface {
+class CopyClipboard implements CopyClipboardInterface {
     _instanceId: string;
     _triggerEl: HTMLElement | null;
     _targetEl: HTMLInputElement | null;
-    _options: ClipboardOptions;
+    _options: CopyClipboardOptions;
     _initialized: boolean;
     _triggerElClickHandler: EventListenerOrEventListenerObject;
     _inputHandler: EventListenerOrEventListenerObject;
@@ -25,7 +25,7 @@ class Clipboard implements ClipboardInterface {
     constructor(
         triggerEl: HTMLElement | null = null,
         targetEl: HTMLInputElement | null = null,
-        options: ClipboardOptions = Default,
+        options: CopyClipboardOptions = Default,
         instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
         this._instanceId = instanceOptions.id
@@ -39,7 +39,7 @@ class Clipboard implements ClipboardInterface {
 
         this.init();
         instances.addInstance(
-            'Clipboard',
+            'CopyClipboard',
             this,
             this._instanceId,
             instanceOptions.override
@@ -77,7 +77,7 @@ class Clipboard implements ClipboardInterface {
     }
 
     removeInstance() {
-        instances.removeInstance('Clipboard', this._instanceId);
+        instances.removeInstance('CopyClipboard', this._instanceId);
     }
 
     destroyAndRemoveInstance() {
@@ -104,11 +104,18 @@ class Clipboard implements ClipboardInterface {
         // Remove the temporary textarea
         document.body.removeChild(tempTextArea);
 
+        // callback function
+        this._options.onCopy(this);
+
         return textToCopy;
+    }
+
+    updateOnCopyCallback(callback: () => void) {
+        this._options.onCopy = callback;
     }
 }
 
-export function initClipboards() {
+export function initCopyClipboards() {
     document
         .querySelectorAll('[data-copy-to-clipboard-target]')
         .forEach(($triggerEl) => {
@@ -117,18 +124,15 @@ export function initClipboards() {
             );
             const $targetEl = document.getElementById(targetId);
 
-            console.log($triggerEl);
-            console.log($targetEl);
-
             // check if the target element exists
             if ($targetEl) {
                 if (
                     !instances.instanceExists(
-                        'Clipboard',
+                        'CopyClipboard',
                         $targetEl.getAttribute('id')
                     )
                 ) {
-                    new Clipboard(
+                    new CopyClipboard(
                         $triggerEl as HTMLElement,
                         $targetEl as HTMLInputElement
                     );
@@ -142,8 +146,8 @@ export function initClipboards() {
 }
 
 if (typeof window !== 'undefined') {
-    window.Clipboard = Clipboard;
-    window.initClipboards = initClipboards;
+    window.CopyClipboard = CopyClipboard;
+    window.initClipboards = initCopyClipboards;
 }
 
-export default Clipboard;
+export default CopyClipboard;

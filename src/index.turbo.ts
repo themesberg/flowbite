@@ -11,7 +11,7 @@ import Popover, { initPopovers } from './components/popover';
 import Tabs, { initTabs } from './components/tabs';
 import Tooltip, { initTooltips } from './components/tooltip';
 import InputCounter, { initInputCounters } from './components/input-counter';
-import Clipboard, { initClipboards } from './components/clipboard';
+import CopyClipboard, { initCopyClipboards } from './components/clipboard';
 import './components/index';
 import Events from './dom/events';
 
@@ -28,7 +28,7 @@ const turboLoadEvents = new Events('turbo:load', [
     initPopovers,
     initDials,
     initInputCounters,
-    initClipboards,
+    initCopyClipboards,
 ]);
 turboLoadEvents.init();
 
@@ -45,7 +45,7 @@ const turboFrameLoadEvents = new Events('turbo:frame-load', [
     initPopovers,
     initDials,
     initInputCounters,
-    initClipboards,
+    initCopyClipboards,
 ]);
 turboFrameLoadEvents.init();
 
@@ -62,6 +62,6 @@ export default {
     Tabs,
     Tooltip,
     InputCounter,
-    Clipboard,
+    CopyClipboard,
     Events,
 };

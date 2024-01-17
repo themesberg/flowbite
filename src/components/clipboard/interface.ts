@@ -1,9 +1,9 @@
-import { ClipboardOptions } from './types';
+import { CopyClipboardOptions } from './types';
 
-export declare interface ClipboardInterface {
+export declare interface CopyClipboardInterface {
     _triggerEl: HTMLElement | null;
     _targetEl: HTMLElement | null;
-    _options: ClipboardOptions;
+    _options: CopyClipboardOptions;
 
     init(): void;
     copy(): string;

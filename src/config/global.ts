@@ -26,7 +26,7 @@ declare global {
         Tabs: typeof Tabs;
         Tooltip: typeof Tooltip;
         InputCounter: typeof InputCounter;
-        Clipboard: typeof Clipboard;
+        CopyClipboard: typeof Clipboard;
         initAccordions: () => void;
         initCarousels: () => void;
         initCollapses: () => void;

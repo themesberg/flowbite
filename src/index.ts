@@ -11,7 +11,7 @@ import { initTooltips } from './components/tooltip';
 import { initPopovers } from './components/popover';
 import { initDials } from './components/dial';
 import { initInputCounters } from './components/input-counter';
-import { initClipboards } from './components/clipboard';
+import { initCopyClipboards } from './components/clipboard';
 import './components/index';
 
 // setup events for data attributes
@@ -28,7 +28,7 @@ const events = new Events('load', [
     initPopovers,
     initDials,
     initInputCounters,
-    initClipboards,
+    initCopyClipboards,
 ]);
 events.init();
 
@@ -45,7 +45,7 @@ export { default as Popover } from './components/popover';
 export { default as Tabs } from './components/tabs';
 export { default as Tooltip } from './components/tooltip';
 export { default as InputCounter } from './components/input-counter';
-export { default as Clipboard } from './components/clipboard';
+export { default as CopyClipboard } from './components/clipboard';
 
 // export all types
 export * from './components/accordion/types';
@@ -91,7 +91,7 @@ export { initPopovers } from './components/popover';
 export { initTabs } from './components/tabs';
 export { initTooltips } from './components/tooltip';
 export { initInputCounters } from './components/input-counter';
-export { initClipboards } from './components/clipboard';
+export { initCopyClipboards } from './components/clipboard';
 
 // export all init functions
 export { initFlowbite } from './components/index';

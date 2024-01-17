@@ -117,6 +117,9 @@ export function initClipboards() {
             );
             const $targetEl = document.getElementById(targetId);
 
+            console.log($triggerEl);
+            console.log($targetEl);
+
             // check if the target element exists
             if ($targetEl) {
                 if (

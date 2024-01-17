@@ -13,6 +13,7 @@ import Popover, { initPopovers } from './components/popover';
 import Tabs, { initTabs } from './components/tabs';
 import Tooltip, { initTooltips } from './components/tooltip';
 import InputCounter, { initInputCounters } from './components/input-counter';
+import Clipboard, { initClipboards } from './components/clipboard';
 import './components/index';
 import Events from './dom/events';
 
@@ -28,6 +29,7 @@ const events = new Events('load', [
     initTooltips,
     initPopovers,
     initDials,
+    initClipboards,
     initInputCounters,
 ]);
 events.init();
@@ -45,5 +47,6 @@ export default {
     Tabs,
     Tooltip,
     InputCounter,
+    Clipboard,
     Events,
 };

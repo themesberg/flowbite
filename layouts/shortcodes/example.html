@@ -127,16 +127,16 @@
             <div class="grid w-full grid-cols-2 border-b border-gray-200 bg-gray-50 rounded-t-md dark:bg-gray-700 dark:border-gray-600">
               <ul class="flex text-sm font-medium text-center text-gray-500 dark:text-gray-400">
                 <li>
-                  <span class="inline-block w-full p-2 px-3 text-gray-800 bg-gray-100 border-r border-gray-200 dark:text-white dark:bg-gray-800 dark:border-gray-600">HTML</span>
+                  <button type="button" data-toggle-html-code class="inline-block w-full p-2 px-3 text-gray-800 bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 border-r border-gray-200 dark:text-white dark:bg-gray-800 dark:border-gray-600">HTML</button>
                 </li>
                 {{ if $javascript }}
                   <li>
-                    <span class="inline-block w-full p-2 px-3 text-gray-800 bg-gray-100 border-r border-gray-200 dark:text-white dark:bg-gray-800 dark:border-gray-600">JavaScript</span>
+                    <button type="button" data-toggle-javascript-code class="inline-block w-full p-2 px-3 text-gray-800 bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 border-r border-gray-200 dark:text-white dark:bg-gray-800 dark:border-gray-600">JavaScript</button>
                   </li>
                 {{ end }}
               </ul>
               <div class="flex justify-end">
-                <button {{ if $id }} data-tooltip-target="{{ $id }}-copy-clipboard-tooltip" data-tooltip-placement="bottom"{{ end }} type="button" data-copy-state="copy" class="flex items-center px-3 py-2 text-xs font-medium text-gray-600 bg-gray-100 border-l border-gray-200 dark:border-gray-600 dark:text-gray-400 dark:bg-gray-800 hover:text-blue-700 dark:hover:text-white copy-to-clipboard-button">
+                <button {{ if $id }} data-tooltip-target="{{ $id }}-copy-clipboard-tooltip" data-clipboard-content-type="html" data-tooltip-placement="bottom"{{ end }} type="button" data-copy-state="copy" class="flex items-center px-3 py-2 text-xs font-medium text-gray-600 bg-gray-100 border-l border-gray-200 dark:border-gray-600 dark:text-gray-400 dark:bg-gray-800 hover:text-blue-700 dark:hover:text-white copy-to-clipboard-button">
                   <svg class="w-3.5 h-3.5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
                     <path d="M5 9V4.13a2.96 2.96 0 0 0-1.293.749L.879 7.707A2.96 2.96 0 0 0 .13 9H5Zm11.066-9H9.829a2.98 2.98 0 0 0-2.122.879L7 1.584A.987.987 0 0 0 6.766 2h4.3A3.972 3.972 0 0 1 15 6v10h1.066A1.97 1.97 0 0 0 18 14V2a1.97 1.97 0 0 0-1.934-2Z"/>
                     <path d="M11.066 4H7v5a2 2 0 0 1-2 2H0v7a1.969 1.969 0 0 0 1.933 2h9.133A1.97 1.97 0 0 0 13 18V6a1.97 1.97 0 0 0-1.934-2Z"/>
@@ -148,15 +148,21 @@
                       <div class="tooltip-arrow" data-popper-arrow></div>
                   </div>
                 {{ end }}
-                <div class="hidden" data-clipboard-content="{{- $content -}}">
+                <div class="hidden" data-clipboard-content-html="{{- $content -}}" data-clipboard-content-javascript="{{- $javascript -}}">
                   {{- $input -}}
                 </div>
               </div>
             </div>
           <div class="relative">
             <div data-code-wrapper class="overflow-hidden max-h-72" tabindex="-1">
-              {{- highlight (trim $content "\n") $lang "" -}}
-              {{- highlight (trim $javascript "\n") $lang "" -}}
+              <div data-code-wrapper-html>
+                {{- highlight (trim $content "\n") $lang "" -}}
+              </div>
+              {{ if $javascript }}
+                <div data-code-wrapper-javascript class="hidden">
+                  {{- highlight (trim $javascript "\n") "javascript" "" -}}
+                </div>
+              {{ end }}
             </div>
             <button data-expand-code type="button" class="hidden absolute bottom-0 left-0 py-2.5 px-5 w-full text-sm font-medium text-gray-900 bg-gray-100 border-t border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Expand code</button>
           </div>

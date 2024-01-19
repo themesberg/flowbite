@@ -20,7 +20,7 @@ The examples below provide multiple variations of default, outline, and clean st
 
 Use this example to copy the content of an input text field by clicking on a button.
 
-{{< example id="clipboard-example" class="flex justify-center" github="components/clipboard.md" show_dark=true iframeHeight="380" javascript=`
+{{< example id="clipboard-example" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
 const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'npm-install');
 const $defaultMessage = document.getElementById('default-message');
 const $successMessage = document.getElementById('success-message');
@@ -55,7 +55,7 @@ clipboard.updateOnCopyCallback((clipboard) => {
 
 This example can be used to copy the content of an input field by clicking on a button with an icon positioned inside the form element and also show a tooltip with a message when the text has been copied.
 
-{{< example id="clipboard-button-input-example" class="flex justify-center pt-8" github="components/clipboard.md" show_dark=true iframeHeight="380" javascript=`
+{{< example id="clipboard-button-input-example" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
 const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'npm-install-copy-button');
 const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-copy-npm-install-copy-button');
 
@@ -117,7 +117,7 @@ const resetToDefault = () => {
 
 ## Copy button with text
 
-{{< example id="clipboard-button-text-input-example" class="flex justify-center pt-8" github="components/clipboard.md" show_dark=true iframeHeight="380" javascript=`
+{{< example id="clipboard-button-text-input-example" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
 const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'npm-install-copy-text');
 
 const $defaultMessage = document.getElementById('default-message');

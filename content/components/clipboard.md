@@ -53,10 +53,12 @@ clipboard.updateOnCopyCallback((clipboard) => {
 
 ## Input with copy button
 
-Use this example to show an input field with a copy button with an icon on the right side.
+This example can be used to copy the content of an input field by clicking on a button with an icon positioned inside the form element and also show a tooltip with a message when the text has been copied.
 
 {{< example id="clipboard-button-input-example" class="flex justify-center pt-8" github="components/clipboard.md" show_dark=true iframeHeight="380" javascript=`
 const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'npm-install-copy-button');
+const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-copy-npm-install-copy-button');
+
 const $defaultIcon = document.getElementById('default-icon');
 const $successIcon = document.getElementById('success-icon');
 
@@ -64,23 +66,29 @@ const $defaultTooltipMessage = document.getElementById('default-tooltip-message'
 const $successTooltipMessage = document.getElementById('success-tooltip-message');
 
 clipboard.updateOnCopyCallback((clipboard) => {
-    $defaultIcon.classList.add('hidden');
-    $successIcon.classList.remove('hidden');
-    $defaultTooltipMessage.classList.add('hidden');
-    $successTooltipMessage.classList.remove('hidden');
-
-    const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-copy-npm-install-copy-button');
-    tooltip.show();
+    showSuccess();
 
     // reset to default state
     setTimeout(() => {
-        $defaultIcon.classList.remove('hidden');
-        $successIcon.classList.add('hidden');
-        $defaultTooltipMessage.classList.remove('hidden');
-        $successTooltipMessage.classList.add('hidden');
-        tooltip.hide();
+        resetToDefault();
     }, 2000);
 })
+
+const showSuccess = () => {
+    $defaultIcon.classList.add('hidden');
+    $successIcon.classList.remove('hidden');
+    $defaultTooltipMessage.classList.add('hidden');
+    $successTooltipMessage.classList.remove('hidden');    
+    tooltip.show();
+}
+
+const resetToDefault = () => {
+    $defaultIcon.classList.remove('hidden');
+    $successIcon.classList.add('hidden');
+    $defaultTooltipMessage.classList.remove('hidden');
+    $successTooltipMessage.classList.add('hidden');
+    tooltip.hide();
+}
 ` >}}
 <div class="mb-5 w-full max-w-[16rem]">
     <div class="relative">

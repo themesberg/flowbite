@@ -5,6 +5,8 @@ import { CopyClipboardInterface } from './interface';
 import instances from '../../dom/instances';
 
 const Default: CopyClipboardOptions = {
+    HTMLEntities: false,
+    contentType: 'input',
     onCopy: () => {},
 };
 
@@ -86,11 +88,24 @@ class CopyClipboard implements CopyClipboardInterface {
     }
 
     getTargetValue() {
-        return this._targetEl.value;
+        console.log(this._options.contentType);
+        if (this._options.contentType === 'input') {
+            return this._targetEl.value;
+        }
+
+        if (this._options.contentType === 'innerHTML') {
+            return this._targetEl.innerHTML;
+        }
     }
 
     copy() {
-        const textToCopy = this.getTargetValue();
+        let textToCopy = this.getTargetValue();
+
+        // Check if HTMLEntities option is enabled
+        if (this._options.HTMLEntities) {
+            // Encode the text using HTML entities
+            textToCopy = this.decodeHTML(textToCopy);
+        }
 
         // Create a temporary textarea element
         const tempTextArea = document.createElement('textarea');
@@ -104,10 +119,17 @@ class CopyClipboard implements CopyClipboardInterface {
         // Remove the temporary textarea
         document.body.removeChild(tempTextArea);
 
-        // callback function
+        // Callback function
         this._options.onCopy(this);
 
         return textToCopy;
+    }
+
+    // Function to encode text into HTML entities
+    decodeHTML(html: string) {
+        const textarea = document.createElement('textarea');
+        textarea.innerHTML = html;
+        return textarea.textContent;
     }
 
     updateOnCopyCallback(callback: () => void) {
@@ -123,6 +145,12 @@ export function initCopyClipboards() {
                 'data-copy-to-clipboard-target'
             );
             const $targetEl = document.getElementById(targetId);
+            const contentType = $triggerEl.getAttribute(
+                'data-copy-to-clipboard-content-type'
+            );
+            const htmlEntities = $triggerEl.getAttribute(
+                'data-copy-to-clipboard-html-entities'
+            );
 
             // check if the target element exists
             if ($targetEl) {
@@ -134,7 +162,16 @@ export function initCopyClipboards() {
                 ) {
                     new CopyClipboard(
                         $triggerEl as HTMLElement,
-                        $targetEl as HTMLInputElement
+                        $targetEl as HTMLInputElement,
+                        {
+                            HTMLEntities:
+                                htmlEntities && htmlEntities === 'true'
+                                    ? true
+                                    : Default.HTMLEntities,
+                            contentType: contentType
+                                ? contentType
+                                : Default.contentType,
+                        } as CopyClipboardOptions
                     );
                 }
             } else {

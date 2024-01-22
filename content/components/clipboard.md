@@ -39,7 +39,7 @@ clipboard.updateOnCopyCallback((clipboard) => {
 <div class="grid grid-cols-8 gap-2 w-full max-w-[23rem]">
     <label for="npm-install" class="sr-only">Label</label>
     <input id="npm-install" type="text" class="col-span-6 bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" value="npm install flowbite" disabled readonly>
-    <button data-copy-to-clipboard-target="npm-install" class="col-span-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 items-center inline-flex justify-center">
+    <button data-copy-to-clipboard-target="npm-install" data-copy-to-clipboard-content-type="input" class="col-span-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 items-center inline-flex justify-center">
         <span id="default-message">Copy</span>
         <span id="success-message" class="hidden inline-flex items-center">
             <svg class="w-3 h-3 text-white me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
@@ -94,7 +94,7 @@ const resetToDefault = () => {
     <div class="relative">
         <label for="npm-install-copy-button" class="sr-only">Label</label>
         <input id="npm-install-copy-button" type="text" class="col-span-6 bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" value="npm install flowbite" disabled readonly>
-        <button data-copy-to-clipboard-target="npm-install-copy-button" data-tooltip-target="tooltip-copy-npm-install-copy-button" class="absolute end-2 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg p-2 inline-flex items-center justify-center">
+        <button data-copy-to-clipboard-target="npm-install-copy-button" data-copy-to-clipboard-content-type="input" data-tooltip-target="tooltip-copy-npm-install-copy-button" class="absolute end-2 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg p-2 inline-flex items-center justify-center">
             <span id="default-icon">
                 <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
                     <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
@@ -146,7 +146,7 @@ const resetToDefault = () => {
     <div class="relative">
         <label for="npm-install-copy-text" class="sr-only">Label</label>
         <input id="npm-install-copy-text" type="text" class="col-span-6 bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" value="npm install flowbite" disabled readonly>
-        <button data-copy-to-clipboard-target="npm-install-copy-text" class="absolute end-2.5 top-1/2 -translate-y-1/2 text-gray-900 dark:text-gray-400 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-600 dark:hover:bg-gray-700 rounded-lg py-2 px-2.5 inline-flex items-center justify-center bg-white border-gray-200 border">
+        <button data-copy-to-clipboard-target="npm-install-copy-text" data-copy-to-clipboard-content-type="input" class="absolute end-2.5 top-1/2 -translate-y-1/2 text-gray-900 dark:text-gray-400 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-600 dark:hover:bg-gray-700 rounded-lg py-2 px-2.5 inline-flex items-center justify-center bg-white border-gray-200 border">
             <span id="default-message" class="inline-flex items-center">
                 <svg class="w-3 h-3 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
                     <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
@@ -210,7 +210,7 @@ const resetToDefault = () => {
         <div class="relative w-full">
             <input id="website-url" type="text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-e-0 border-gray-300 text-gray-500 dark:text-gray-400 text-sm border-s-0 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" value="https://flowbite.com" readonly disabled />
         </div>
-        <button data-tooltip-target="tooltip-website-url" data-copy-to-clipboard-target="website-url" class="flex-shrink-0 z-10 inline-flex items-center py-3 px-4 text-sm font-medium text-center text-white bg-blue-700 rounded-e-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 border border-blue-700 dark:border-blue-600 hover:border-blue-800 dark:hover:border-blue-700" type="button">
+        <button data-tooltip-target="tooltip-website-url" data-copy-to-clipboard-target="website-url" data-copy-to-clipboard-content-type="input" class="flex-shrink-0 z-10 inline-flex items-center py-3 px-4 text-sm font-medium text-center text-white bg-blue-700 rounded-e-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 border border-blue-700 dark:border-blue-600 hover:border-blue-800 dark:hover:border-blue-700" type="button">
             <span id="default-icon">
                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
                     <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
@@ -278,7 +278,7 @@ const resetToDefault = () => {
         <div class="relative w-full">
             <input id="url-shortener" type="text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-e-0 border-gray-300 text-gray-500 dark:text-gray-400 text-sm border-s-0 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" value="https://bit.ly/3U2SXcF" readonly disabled />
         </div>
-        <button data-tooltip-target="tooltip-url-shortener" data-copy-to-clipboard-target="url-shortener" class="flex-shrink-0 z-10 inline-flex items-center py-3 px-4 text-sm font-medium text-center text-gray-500 dark:text-gray-400 hover:text-gray-900 bg-gray-100 border border-gray-300 rounded-e-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:hover:text-white dark:border-gray-600" type="button">
+        <button data-tooltip-target="tooltip-url-shortener" data-copy-to-clipboard-target="url-shortener" data-copy-to-clipboard-content-type="input" class="flex-shrink-0 z-10 inline-flex items-center py-3 px-4 text-sm font-medium text-center text-gray-500 dark:text-gray-400 hover:text-gray-900 bg-gray-100 border border-gray-300 rounded-e-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:hover:text-white dark:border-gray-600" type="button">
             <span id="default-icon">
                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
                     <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
@@ -297,5 +297,73 @@ const resetToDefault = () => {
         </div>
     </div>
     <p id="helper-text-explanation" class="mt-2 text-sm text-gray-500 dark:text-gray-400">Make sure that your URL is valid</p>
+</div>
+{{< /example >}}
+
+## Copy source code block
+
+{{< example id="clipboard-source-block" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="480" javascript=`
+const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'code-block');
+
+const $defaultMessage = document.getElementById('default-message');
+const $successMessage = document.getElementById('success-message');
+
+clipboard.updateOnCopyCallback((clipboard) => {
+    showSuccess();
+
+    // reset to default state
+    setTimeout(() => {
+        resetToDefault();
+    }, 2000);
+})
+
+const showSuccess = () => {
+    $defaultMessage.classList.add('hidden');
+    $successMessage.classList.remove('hidden');
+}
+
+const resetToDefault = () => {
+    $defaultMessage.classList.remove('hidden');
+    $successMessage.classList.add('hidden');
+}
+` >}}
+<div class="w-full max-w-lg">
+    <div class="mb-2 flex justify-between items-center">
+        <p class="text-sm font-medium text-gray-900 dark:text-white">Card example with CTA button:</p>
+    </div>
+    <div class="relative bg-gray-50 rounded-lg dark:bg-gray-700 p-4 h-64">
+        <div class="overflow-scroll max-h-full">
+            <pre><code id="code-block" class="text-sm text-gray-500 dark:text-gray-400 whitespace-pre">&#x3C;div class=&#x22;grid grid-cols-8 gap-2 w-full max-w-[23rem]&#x22;&#x3E;
+    &#x3C;label for=&#x22;npm-install&#x22; class=&#x22;sr-only&#x22;&#x3E;Label&#x3C;/label&#x3E;
+    &#x3C;input id=&#x22;npm-install&#x22; type=&#x22;text&#x22; class=&#x22;col-span-6 bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500&#x22; value=&#x22;npm install flowbite&#x22; disabled readonly&#x3E;
+    &#x3C;button data-copy-to-clipboard-target=&#x22;npm-install&#x22; class=&#x22;col-span-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 items-center inline-flex justify-center&#x22;&#x3E;
+        &#x3C;span id=&#x22;default-message&#x22;&#x3E;Copy&#x3C;/span&#x3E;
+        &#x3C;span id=&#x22;success-message&#x22; class=&#x22;hidden inline-flex items-center&#x22;&#x3E;
+            &#x3C;svg class=&#x22;w-3 h-3 text-white me-1.5&#x22; aria-hidden=&#x22;true&#x22; xmlns=&#x22;http://www.w3.org/2000/svg&#x22; fill=&#x22;none&#x22; viewBox=&#x22;0 0 16 12&#x22;&#x3E;
+                &#x3C;path stroke=&#x22;currentColor&#x22; stroke-linecap=&#x22;round&#x22; stroke-linejoin=&#x22;round&#x22; stroke-width=&#x22;2&#x22; d=&#x22;M1 5.917 5.724 10.5 15 1.5&#x22;/&#x3E;
+            &#x3C;/svg&#x3E;
+            Copied!
+        &#x3C;/span&#x3E;
+    &#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+        </div>
+    <div class="absolute top-2 end-2 bg-gray-50 dark:bg-gray-700">
+        <button data-copy-to-clipboard-target="code-block" data-copy-to-clipboard-content-type="innerHTML" data-copy-to-clipboard-html-entities="true" class="text-gray-900 dark:text-gray-400 m-0.5 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-600 dark:hover:bg-gray-700 rounded-lg py-2 px-2.5 inline-flex items-center justify-center bg-white border-gray-200 border">
+            <span id="default-message" class="inline-flex items-center">
+                <svg class="w-3 h-3 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                    <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
+                </svg>
+                <span class="text-xs font-semibold">Copy code</span>
+            </span>
+            <span id="success-message" class="hidden inline-flex items-center">
+                <svg class="w-3 h-3 text-blue-700 dark:text-blue-500 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                </svg>
+                <span class="text-xs font-semibold text-blue-700 dark:text-blue-500">Copied</span>   
+            </span>
+        </button>
+    </div>
+    </div>
+    <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Configure Tailwind CSS and Flowbite before copying the code</p>
 </div>
 {{< /example >}}

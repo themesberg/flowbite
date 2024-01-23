@@ -96,6 +96,11 @@ class CopyClipboard implements CopyClipboardInterface {
         if (this._options.contentType === 'innerHTML') {
             return this._targetEl.innerHTML;
         }
+
+        if (this._options.contentType === 'textContent') {
+            console.log(this._targetEl.textContent);
+            return this._targetEl.textContent.replace(/\s+/g, ' ').trim();
+        }
     }
 
     copy() {

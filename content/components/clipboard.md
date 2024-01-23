@@ -333,19 +333,34 @@ const resetToDefault = () => {
     </div>
     <div class="relative bg-gray-50 rounded-lg dark:bg-gray-700 p-4 h-64">
         <div class="overflow-scroll max-h-full">
-            <pre><code id="code-block" class="text-sm text-gray-500 dark:text-gray-400 whitespace-pre">&#x3C;div class=&#x22;grid grid-cols-8 gap-2 w-full max-w-[23rem]&#x22;&#x3E;
-    &#x3C;label for=&#x22;npm-install&#x22; class=&#x22;sr-only&#x22;&#x3E;Label&#x3C;/label&#x3E;
-    &#x3C;input id=&#x22;npm-install&#x22; type=&#x22;text&#x22; class=&#x22;col-span-6 bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500&#x22; value=&#x22;npm install flowbite&#x22; disabled readonly&#x3E;
-    &#x3C;button data-copy-to-clipboard-target=&#x22;npm-install&#x22; class=&#x22;col-span-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 items-center inline-flex justify-center&#x22;&#x3E;
-        &#x3C;span id=&#x22;default-message&#x22;&#x3E;Copy&#x3C;/span&#x3E;
-        &#x3C;span id=&#x22;success-message&#x22; class=&#x22;hidden inline-flex items-center&#x22;&#x3E;
-            &#x3C;svg class=&#x22;w-3 h-3 text-white me-1.5&#x22; aria-hidden=&#x22;true&#x22; xmlns=&#x22;http://www.w3.org/2000/svg&#x22; fill=&#x22;none&#x22; viewBox=&#x22;0 0 16 12&#x22;&#x3E;
-                &#x3C;path stroke=&#x22;currentColor&#x22; stroke-linecap=&#x22;round&#x22; stroke-linejoin=&#x22;round&#x22; stroke-width=&#x22;2&#x22; d=&#x22;M1 5.917 5.724 10.5 15 1.5&#x22;/&#x3E;
-            &#x3C;/svg&#x3E;
-            Copied!
-        &#x3C;/span&#x3E;
-    &#x3C;/button&#x3E;
-&#x3C;/div&#x3E;</code></pre>
+            <pre><code id="code-block" class="text-sm text-gray-500 dark:text-gray-400 whitespace-pre">&#x27;use client&#x27;;
+
+import Link from &#x27;next/link&#x27;;
+import { Navbar } from &#x27;flowbite-react&#x27;;
+
+function Component() {
+  return (
+    &#x3C;Navbar fluid rounded&#x3E;
+      &#x3C;Navbar.Brand as={Link} href=&#x22;https://flowbite-react.com&#x22;&#x3E;
+        &#x3C;img src=&#x22;/favicon.svg&#x22; className=&#x22;mr-3 h-6 sm:h-9&#x22; alt=&#x22;Flowbite React Logo&#x22; /&#x3E;
+        &#x3C;span className=&#x22;self-center whitespace-nowrap text-xl font-semibold dark:text-white&#x22;&#x3E;Flowbite React&#x3C;/span&#x3E;
+      &#x3C;/Navbar.Brand&#x3E;
+      &#x3C;Navbar.Toggle /&#x3E;
+      &#x3C;Navbar.Collapse&#x3E;
+        &#x3C;Navbar.Link href=&#x22;#&#x22; active&#x3E;
+          Home
+        &#x3C;/Navbar.Link&#x3E;
+        &#x3C;Navbar.Link as={Link} href=&#x22;#&#x22;&#x3E;
+          About
+        &#x3C;/Navbar.Link&#x3E;
+        &#x3C;Navbar.Link href=&#x22;#&#x22;&#x3E;Services&#x3C;/Navbar.Link&#x3E;
+        &#x3C;Navbar.Link href=&#x22;#&#x22;&#x3E;Pricing&#x3C;/Navbar.Link&#x3E;
+        &#x3C;Navbar.Link href=&#x22;#&#x22;&#x3E;Contact&#x3C;/Navbar.Link&#x3E;
+      &#x3C;/Navbar.Collapse&#x3E;
+    &#x3C;/Navbar&#x3E;
+  );
+}
+</code></pre>
         </div>
     <div class="absolute top-2 end-2 bg-gray-50 dark:bg-gray-700">
         <button data-copy-to-clipboard-target="code-block" data-copy-to-clipboard-content-type="innerHTML" data-copy-to-clipboard-html-entities="true" class="text-gray-900 dark:text-gray-400 m-0.5 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-600 dark:hover:bg-gray-700 rounded-lg py-2 px-2.5 inline-flex items-center justify-center bg-white border-gray-200 border">
@@ -375,9 +390,14 @@ const clipboardAccountID = FlowbiteInstances.getInstance('CopyClipboard', 'accou
 const clipboardExternalID = FlowbiteInstances.getInstance('CopyClipboard', 'api-key');
 const clipboardRoleARN = FlowbiteInstances.getInstance('CopyClipboard', 'role-arn');
 
+const tooltipAccountID = FlowbiteInstances.getInstance('Tooltip', 'tooltip-account-id');
+const tooltipExternalID = FlowbiteInstances.getInstance('Tooltip', 'tooltip-api-key');
+const tooltipRoleARN = FlowbiteInstances.getInstance('Tooltip', 'tooltip-role-arn');
+
 const clipboards = [
     {
         clipboard: clipboardAccountID,
+        tooltip: tooltipAccountID,
         defaultMessage: document.getElementById('default-tooltip-message-account-id'),
         successMessage: document.getElementById('success-tooltip-message-account-id'),
         defaultIcon: document.getElementById('default-icon-account-id'),
@@ -385,6 +405,7 @@ const clipboards = [
     },
     {
         clipboard: clipboardExternalID,
+        tooltip: tooltipExternalID,
         defaultMessage: document.getElementById('default-tooltip-message-api-key'),
         successMessage: document.getElementById('success-tooltip-message-api-key'),
         defaultIcon: document.getElementById('default-icon-api-key'),
@@ -392,6 +413,7 @@ const clipboards = [
     },
     {
         clipboard: clipboardRoleARN,
+        tooltip: tooltipRoleARN,
         defaultMessage: document.getElementById('default-tooltip-message-role-arn'),
         successMessage: document.getElementById('success-tooltip-message-role-arn'),
         defaultIcon: document.getElementById('default-icon-role-arn'),
@@ -403,11 +425,13 @@ clipboards.forEach((item) => {
     item.clipboard.updateOnCopyCallback(() => {
         showSuccess(item.defaultMessage, item.successMessage);
         showSuccess(item.defaultIcon, item.successIcon);
+        item.tooltip.show();
 
         // reset to default state
         setTimeout(() => {
             resetToDefault(item.defaultMessage, item.successMessage);
             resetToDefault(item.defaultIcon, item.successIcon);
+            item.tooltip.hide();
         }, 2000);
     })
 })
@@ -422,7 +446,7 @@ const resetToDefault = ($defaultEl, $successEl) => {
     $successEl.classList.add('hidden');
 }
 ` >}}
-<div class="w-full max-w-lg bg-white dark:bg-gray-800 border-gray-200 shadow rounded-lg p-5">
+<div class="w-full max-w-lg bg-white dark:bg-gray-800 border-gray-200 border dark:border-gray-700 shadow rounded-lg p-5">
     <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Create a role with read only in-line policies</h2>
     <p class="text-gray-500 dark:text-gray-400 mb-6">To give Flowbite read access, please create an IAM Role following <a href="#" class="text-blue-700 dark:text-blue-500 underline hover:no-underline font-medium">trust relationship</a> and <a href="#" class="text-blue-700 dark:text-blue-500 underline hover:no-underline font-medium">inline policy</a>.</p>
     <label for="account-id" class="text-sm font-medium text-gray-900 dark:text-white mb-2 block">Flowbite account ID:</label>
@@ -492,5 +516,76 @@ const resetToDefault = ($defaultEl, $successEl) => {
         <button type="button" class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Cancel</button>
         <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Next step</button>
     </div>
+</div>
+{{< /example >}}
+
+## Copy contact details
+
+{{< example id="contact-details-clipboard" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="580" javascript=`
+const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'contact-details');
+const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-contact-details');
+
+const $defaultIcon = document.getElementById('default-icon-contact-details');
+const $successIcon = document.getElementById('success-icon-contact-details');
+
+const $defaultTooltipMessage = document.getElementById('default-tooltip-message-contact-details');
+const $successTooltipMessage = document.getElementById('success-tooltip-message-contact-details');
+
+clipboard.updateOnCopyCallback((clipboard) => {
+    showSuccess();
+
+    // reset to default state
+    setTimeout(() => {
+        resetToDefault();
+    }, 2000);
+})
+
+const showSuccess = () => {
+    $defaultIcon.classList.add('hidden');
+    $successIcon.classList.remove('hidden');
+    $defaultTooltipMessage.classList.add('hidden');
+    $successTooltipMessage.classList.remove('hidden');    
+    tooltip.show();
+}
+
+const resetToDefault = () => {
+    $defaultIcon.classList.remove('hidden');
+    $successIcon.classList.add('hidden');
+    $defaultTooltipMessage.classList.remove('hidden');
+    $successTooltipMessage.classList.add('hidden');
+    tooltip.hide();
+}
+` >}}
+<div class="w-full max-w-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow rounded-lg p-5">
+    <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Contact details</h2>
+    <address class="relative bg-gray-50 dark:bg-gray-700 dark:border-gray-600 p-4 rounded-lg border border-gray-200 not-italic grid grid-cols-2">
+        <div class="space-y-2 text-gray-500 dark:text-gray-400 leading-loose hidden sm:block">
+            Name <br />
+            Email <br />
+            Phone Number
+        </div>
+        <div id="contact-details" class="space-y-2 text-gray-900 dark:text-white font-medium leading-loose">
+            Bonnie Green <br />
+            name@flowbite.com <br />
+            + 12 345 67890
+        </div>
+        <button data-copy-to-clipboard-target="contact-details" data-copy-to-clipboard-content-type="textContent" data-tooltip-target="tooltip-contact-details" class="absolute end-2 top-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg p-2 inline-flex items-center justify-center">
+            <span id="default-icon-contact-details">
+                <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                    <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
+                </svg>
+            </span>
+            <span id="success-icon-contact-details" class="hidden inline-flex items-center">
+                <svg class="w-3.5 h-3.5 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                </svg>
+            </span>
+        </button>
+        <div id="tooltip-contact-details" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <span id="default-tooltip-message-contact-details">Copy to clipboard</span>
+            <span id="success-tooltip-message-contact-details" class="hidden">Copied!</span>
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+    </address>
 </div>
 {{< /example >}}

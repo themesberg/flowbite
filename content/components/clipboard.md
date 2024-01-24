@@ -954,7 +954,7 @@ $triggerEl.addEventListener('click', () => {
 });
 ```
 
-Now you can programmatically increment or decrement the input field using the methods of the InputCounter object.
+Now you can programmatically call the methods of the CopyClipboard component:
 
 ```javascript
 // get the value, inner HTML or text content of the target element
@@ -964,7 +964,7 @@ clipboard.getTargetValue();
 clipboard.copy();
 
 // update the on copy function callback
-counterInput.updateOnCopyCallback(() => {
+clipboard.updateOnCopyCallback(() => {
     // do something when the text has been copied to the clipboard
     console.log('updated on copy callback success message');
 });
@@ -1008,7 +1008,7 @@ const $triggerEl: HTMLElement = document.getElementById('copy-clipboard-button')
 const $targetEl: HTMLElement = document.getElementById('copy-text') as HTMLElement;
 
 // optional options with default values and callback functions
-const options: InputCounterOptions = {
+const options: CopyClipboardOptions = {
     contentType: 'input',
     htmlEntities: false, // infinite
     onCopy: () => {

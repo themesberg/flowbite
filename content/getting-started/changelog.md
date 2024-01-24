@@ -18,6 +18,7 @@ We strive to keep a good accountability of all of the version changes that we ma
 ### v2.3.0
 
 - added new "copy to clipboard" component and examples
+- added new JavaScript tab to the documentation examples
 - fixed carousel component behavior when there's only one image
 
 ### v2.2.0

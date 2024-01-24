@@ -708,3 +708,359 @@ Share course
     </div>
 </div>
 {{< /example >}}
+
+## JavaScript behaviour
+
+Use the **InputCounter** object from the Flowbite JS API to create a number input component with increment and decrement buttons that can be used to increase or decrease the value of the input.
+
+### Object parameters
+
+Use the object parameters from the InputCounter object to set the target, increment, and decrement elements as well as the options object.
+
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs  uppercase">
+              <th scope="col" class="px-6 py-3">
+                  Parameter
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Type
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Required
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">targetEl</code>
+              </td>
+              <td class="px-6 py-4">
+                  Element
+              </td>
+              <td class="px-6 py-4">
+                  Required
+              </td>
+              <td class="px-6 py-4">
+                  Pass the target input field element that will be incremented or decremented based on click event.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">incrementEl</code>
+              </td>
+              <td class="px-6 py-4">
+                  Element
+              </td>
+              <td class="px-6 py-4">
+                  Optional
+              </td>
+              <td class="px-6 py-4">
+                  Pass the increment button element that will increase the value of the target element based on click event.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">decrementEl</code>
+              </td>
+              <td class="px-6 py-4">
+                  Element
+              </td>
+              <td class="px-6 py-4">
+                  Optional
+              </td>
+              <td class="px-6 py-4">
+                  Pass the decrement button element that will decrease the value of the target element based on click event.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">options</code>
+              </td>
+              <td class="px-6 py-4">
+                Object
+              </td>
+              <td class="px-6 py-4">
+                  Optional
+              </td>
+              <td class="px-6 py-4">
+                  Set these options to set the minimum and maximum value of the input field and the callback functions.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
+                </td>
+                <td class="px-6 py-4">
+                    Object
+                </td>
+                <td class="px-6 py-4">
+                    Optional
+                </td>
+                <td class="px-6 py-4">
+                   Object of options that allows you to set a custom ID for the instance that is being added to the <a href="https://flowbite.com/docs/getting-started/javascript/#instance-options" class="underline hover:no-underline">Instance Manager</a> and whether to override or not an existing instance.
+                </td>
+            </tr>
+      </tbody>
+  </table>
+</div>
+
+### Options
+
+Use these optional options for the InputCounter object to set the minimum and maximum values of the input field and also to set callback functions for the increment and decrement events.
+
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs  uppercase">
+              <th scope="col" class="px-6 py-3">
+                  Option
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Type
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">minValue</code>
+              </td>
+              <td class="px-6 py-4 ">
+                  Integer
+              </td>
+              <td class="px-6 py-4">
+                  Set the minimum value of the input field.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">maxValue</code>
+              </td>
+              <td class="px-6 py-4 ">
+                  Integer
+              </td>
+              <td class="px-6 py-4">
+                  Set the maximum value of the input field.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">onIncrement</code>
+              </td>
+              <td class="px-6 py-4 ">
+                  Function
+              </td>
+              <td class="px-6 py-4">
+                  Set a callback function when the item has been incremented.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">onDecrement</code>
+              </td>
+              <td class="px-6 py-4 ">
+                  Function
+              </td>
+              <td class="px-6 py-4">
+                  Set a callback function when the item has been decremented.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+### Methods
+
+Use the following methods of the InputCounter object to programmatically manipulate the behaviour of the input field.
+
+<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+          <tr class="text-xs  uppercase">
+              <th scope="col" class="px-6 py-3">
+                  Method
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Description
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">getCurrentValue()</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method to get the current value of the input field.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">increment()</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method on the InputCounter object to increment the value of the input field.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">decrement()</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method on the InputCounter object to decrement the value of the input field.
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+### Example
+
+Check out the following examples to learn how to create a new InputCounter object and how to set it up with custom options and programmatically use the methods available.
+
+First of all, you need to set the object parameters where the target element is required and the other two are optional.
+
+```javascript
+// set the target element of the input field
+const $targetEl = document.getElementById('counter-input-example');
+
+// optionally set the increment and decrement elements
+const $incrementEl = document.getElementById('increment-button');
+
+const $decrementEl = document.getElementById('decrement-button');
+
+// optional options with default values and callback functions
+const options = {
+    minValue: 0,
+    maxValue: null, // infinite
+    onIncrement: () => {
+        console.log('input field value has been incremented');
+    },
+    onDecrement: () => {
+        console.log('input field value has been decremented');
+    }
+};
+
+const instanceOptions = {
+  id: 'counter-input-example',
+  override: true
+};
+```
+
+Next step is to create a new instance of a InputCounter object using the parameters we have set above.
+
+```javascript
+import { InputCounter } from 'flowbite';
+
+/*
+ * $targetEl: required
+ * $incrementEl: optional
+ * $decrementEl: optional
+ * options: optional
+ */
+const counterInput = new InputCounter($targetEl, $incrementEl, $decrementEl, options, instanceOptions);
+```
+
+Now you can programmatically increment or decrement the input field using the methods of the InputCounter object.
+
+```javascript
+// get the current value of the input field
+counterInput.getCurrentValue();
+
+// increment the value of the input field
+counterInput.increment();
+
+// decrement the value of the input field
+counterInput.decrement();
+```
+
+### HTML Markup
+
+Here is an example of the HTML markup that you can use for the JavaScript example above.
+
+```html
+<form class="max-w-xs mx-auto">
+    <label for="counter-input-example" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Choose quantity:</label>
+    <div class="relative flex items-center">
+        <button type="button" id="decrement-button" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
+            <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
+            </svg>
+        </button>
+        <input type="text" id="counter-input-example" class="flex-shrink-0 text-gray-900 dark:text-white border-0 bg-transparent text-sm font-normal focus:outline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="12" required>
+        <button type="button" id="increment-button" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
+            <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+            </svg>
+        </button>
+    </div>
+</form>
+```
+
+### TypeScript
+
+If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScript configuration</a> from Flowbite then you can import the types for the InputCounter object, parameters and its options.
+
+Here's an example that applies the types from Flowbite to the code above:
+
+```javascript
+import { InputCounter } from 'flowbite';
+import type { InputCounterOptions, InputCounterInterface } from 'flowbite';
+import type { InstanceOptions } from 'flowbite';
+
+// set the target element of the input field
+const $targetEl: HTMLInputElement = document.getElementById('counter-input-example') as HTMLInputElement;
+
+// optionally set the increment and decrement elements
+const $incrementEl: HTMLElement = document.getElementById('increment-button');
+
+const $decrementEl: HTMLElement = document.getElementById('decrement-button');
+
+// optional options with default values and callback functions
+const options: InputCounterOptions = {
+    minValue: 0,
+    maxValue: null, // infinite
+    onIncrement: () => {
+        console.log('input field value has been incremented');
+    },
+    onDecrement: () => {
+        console.log('input field value has been decremented');
+    }
+};
+
+// instance options object
+const instanceOptions: InstanceOptions = {
+  id: 'counter-input-example',
+  override: true
+};
+
+/*
+ * $targetEl: required
+ * $incrementEl: optional
+ * $decrementEl: optional
+ * options: optional
+ * instanceOptions: optional
+ */
+const counterInput: InputCounterInterface = new InputCounter(
+    $targetEl,
+    $incrementEl,
+    $decrementEl,
+    options,
+    instanceOptions
+);
+
+// increment the value of the input field
+counterInput.increment();
+
+// decrement the value of the input field
+counterInput.decrement();
+```

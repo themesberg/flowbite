@@ -523,9 +523,10 @@ Create a new Tabs object based on the parameters we've previously set.
 import { Tabs } from 'flowbite';
 
 /*
-* tabElements: array of tab objects
-* options: optional
-* instanceOptions: optional
+* tabsElement: parent element of the tabs component (required)
+* tabElements: array of tab objects (required)
+* options (optional)
+* instanceOptions (optional)
 */
 const tabs = new Tabs(tabsElement, tabElements, options, instanceOptions);
 ```
@@ -720,8 +721,10 @@ const instanceOptions: InstanceOptions = {
 };
 
 /*
-* tabElements: array of tab objects
-* options: optional
+* tabsElement: parent element of the tabs component (required)
+* tabElements: array of tab elements (required)
+* options (optional)
+* instanceOptions (optional)
 */
 const tabs: TabsInterface = new Tabs(tabsElement, tabElements, options, instanceOptions);
 

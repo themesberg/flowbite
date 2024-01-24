@@ -61,13 +61,23 @@ const copyTextToClipboard = (text) => {
 };
 
 const initiateCopyToClipboard = (element) => {
-    var textToCopy = element
-        .querySelector('[data-clipboard-content]')
-        .getAttribute('data-clipboard-content');
     var button = element.getElementsByClassName('copy-to-clipboard-button')[0];
+
     var alert = document.getElementById('copied-code-alert');
     var copyText = button.getElementsByClassName('copy-text')[0];
     button.addEventListener('click', function () {
+        var textToCopy = '';
+        if (
+            button.getAttribute('data-clipboard-content-type') === 'javascript'
+        ) {
+            textToCopy = element
+                .querySelector('[data-clipboard-content-javascript]')
+                .getAttribute('data-clipboard-content-javascript');
+        } else {
+            textToCopy = element
+                .querySelector('[data-clipboard-content-html]')
+                .getAttribute('data-clipboard-content-html');
+        }
         copyTextToClipboard(textToCopy);
         alert.classList.remove('opacity-0', 'hidden');
         alert.classList.add('opacity-100', 'flex');
@@ -79,6 +89,69 @@ const initiateCopyToClipboard = (element) => {
             copyText.innerHTML = 'Copy';
         }, 3000);
     });
+};
+
+const initiateToggleCodeTabs = (element) => {
+    const toggleHTMLCodeButton = element.querySelector(
+        '[data-toggle-html-code'
+    );
+    const toggleJavaScriptCodeButton = element.querySelector(
+        '[data-toggle-javascript-code'
+    );
+    const htmlCodeWrapper = element.querySelector('[data-code-wrapper-html]');
+    const javaScriptCodeWrapper = element.querySelector(
+        '[data-code-wrapper-javascript]'
+    );
+    const copyClipboardButton = element.getElementsByClassName(
+        'copy-to-clipboard-button'
+    )[0];
+
+    if (toggleJavaScriptCodeButton) {
+        toggleHTMLCodeButton.addEventListener('click', () => {
+            javaScriptCodeWrapper.classList.add('hidden');
+            htmlCodeWrapper.classList.remove('hidden');
+            copyClipboardButton.setAttribute(
+                'data-clipboard-content-type',
+                'html'
+            );
+            toggleHTMLCodeButton.classList.add(
+                '!bg-gray-200',
+                'dark:!bg-gray-700'
+            );
+            toggleJavaScriptCodeButton.classList.remove(
+                '!bg-gray-200',
+                'dark:!bg-gray-700'
+            );
+            expandCode(element);
+        });
+
+        toggleJavaScriptCodeButton.addEventListener('click', () => {
+            htmlCodeWrapper.classList.add('hidden');
+            javaScriptCodeWrapper.classList.remove('hidden');
+            copyClipboardButton.setAttribute(
+                'data-clipboard-content-type',
+                'javascript'
+            );
+            toggleHTMLCodeButton.classList.remove(
+                '!bg-gray-200',
+                'dark:!bg-gray-700'
+            );
+            toggleJavaScriptCodeButton.classList.add(
+                '!bg-gray-200',
+                'dark:!bg-gray-700'
+            );
+            expandCode(element);
+        });
+    }
+};
+
+const expandCode = (element) => {
+    var expandCodeButton = element.querySelector('[data-expand-code]');
+    var codeWrapperEl = element.querySelector('[data-code-wrapper]');
+
+    expandCodeButton.classList.remove('hidden');
+    codeWrapperEl.classList.remove('max-h-72');
+    expandCodeButton.classList.add('hidden');
 };
 
 const initiateExpandCode = (element) => {
@@ -285,6 +358,7 @@ const initializeCodeExamples = (theme) => {
         updateiFrameDarkMode(iframe, theme);
         initiateCopyToClipboard(c);
         initiateExpandCode(c);
+        initiateToggleCodeTabs(c);
     });
 };
 

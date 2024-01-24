@@ -217,6 +217,7 @@ class Carousel implements CarouselInterface {
             'hidden',
             'z-20'
         );
+
         rotationItems.left.el.classList.add('-translate-x-full', 'z-10');
 
         // currently active item

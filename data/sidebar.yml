@@ -68,6 +68,8 @@
       - title: Carousel
       - title: Chat Bubble
         new: true
+      - title: Clipboard
+        new: true
       - title: Device Mockups
       - title: Drawer
       - title: Dropdowns

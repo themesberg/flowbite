@@ -946,6 +946,14 @@ import { CopyClipboard } from 'flowbite';
 const clipboard = new CopyClipboard($triggerEl, $targetEl, options, instanceOptions);
 ```
 
+Set the event listeners on the button to copy the text from the input field:
+
+```javascript
+$triggerEl.addEventListener('click', () => {
+    clipboard.copy();
+});
+```
+
 Now you can programmatically increment or decrement the input field using the methods of the InputCounter object.
 
 ```javascript
@@ -984,59 +992,49 @@ Here is an example of the HTML markup that you can use for the JavaScript exampl
 
 ### TypeScript
 
-If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScript configuration</a> from Flowbite then you can import the types for the InputCounter object, parameters and its options.
+If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScript configuration</a> from Flowbite then you can import the types for the CopyClipboard object, parameters and its options.
 
 Here's an example that applies the types from Flowbite to the code above:
 
 ```javascript
-import { InputCounter } from 'flowbite';
-import type { InputCounterOptions, InputCounterInterface } from 'flowbite';
+import { CopyClipboard } from 'flowbite';
+import type { CopyClipboardOptions, CopyClipboardInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';
 
-// set the target element of the input field
-const $targetEl: HTMLInputElement = document.getElementById('counter-input-example') as HTMLInputElement;
+// set the trigger element which will be clicked (ie. a button or text)
+const $triggerEl: HTMLElement = document.getElementById('copy-clipboard-button') as HTMLElement;
 
-// optionally set the increment and decrement elements
-const $incrementEl: HTMLElement = document.getElementById('increment-button');
-
-const $decrementEl: HTMLElement = document.getElementById('decrement-button');
+// set the target element where the text will be copied from (ie. input field, code block)
+const $targetEl: HTMLElement = document.getElementById('copy-text') as HTMLElement;
 
 // optional options with default values and callback functions
 const options: InputCounterOptions = {
-    minValue: 0,
-    maxValue: null, // infinite
-    onIncrement: () => {
-        console.log('input field value has been incremented');
-    },
-    onDecrement: () => {
-        console.log('input field value has been decremented');
+    contentType: 'input',
+    htmlEntities: false, // infinite
+    onCopy: () => {
+        console.log('text copied successfully!');
     }
 };
 
 // instance options object
 const instanceOptions: InstanceOptions = {
-  id: 'counter-input-example',
+  id: 'copy-clipboard-example',
   override: true
 };
 
 /*
+ * $triggerEl: required
  * $targetEl: required
- * $incrementEl: optional
- * $decrementEl: optional
  * options: optional
  * instanceOptions: optional
  */
-const counterInput: InputCounterInterface = new InputCounter(
+const clipboard: CopyClipboardInterface = new CopyClipboard(
+    $triggerEl,
     $targetEl,
-    $incrementEl,
-    $decrementEl,
     options,
     instanceOptions
 );
 
-// increment the value of the input field
-counterInput.increment();
-
-// decrement the value of the input field
-counterInput.decrement();
+// copy the value of the target element
+clipboard.copy();
 ```

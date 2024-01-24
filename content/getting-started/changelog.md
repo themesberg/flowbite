@@ -15,6 +15,11 @@ nextLink: getting-started/react/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v2.3.0
+
+- added new "copy to clipboard" component and examples
+- fixed carousel component behavior when there's only one image
+
 ### v2.2.0
 
 - added new number input component examples

@@ -2,7 +2,7 @@
 layout: home
 title: Tailwind CSS Phone Input - Flowbite
 description: Use the phone number input component from Flowbite to set a phone number inside a form field and use a dropdown menu to select the country code based on various styles, sizes and colors
-group: components
+group: forms
 requires_js: true
 toc: true
 

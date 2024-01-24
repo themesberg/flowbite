@@ -870,6 +870,14 @@ Use the following methods from the CopyClipboard component to programmatically w
           </tr>
       </thead>
       <tbody>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">getTargetValue()</code>
+              </td>
+              <td class="px-6 py-4">
+                 Get the value of the target element (ie. input field, code block, address tag).
+              </td>
+          </tr>
         <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">copy()</code>
@@ -900,62 +908,58 @@ Use the following methods from the CopyClipboard component to programmatically w
 
 ### Example
 
-Check out the following examples to learn how to create a new InputCounter object and how to set it up with custom options and programmatically use the methods available.
-
-First of all, you need to set the object parameters where the target element is required and the other two are optional.
+Check out the following example to learn how to create a new CopyClipboard component via the Flowbite JavaScript API and set up the class, options, and methods to programmatically work with the component.
 
 ```javascript
-// set the target element of the input field
-const $targetEl = document.getElementById('counter-input-example');
+// set the trigger element such as a button or text field
+const $triggerEl = document.getElementById('copy-clipboard-button');
 
-// optionally set the increment and decrement elements
-const $incrementEl = document.getElementById('increment-button');
-
-const $decrementEl = document.getElementById('decrement-button');
+// set the trigger element such as an input field or code block
+const $targetEl = document.getElementById('copy-text');
 
 // optional options with default values and callback functions
 const options = {
-    minValue: 0,
-    maxValue: null, // infinite
-    onIncrement: () => {
-        console.log('input field value has been incremented');
-    },
-    onDecrement: () => {
-        console.log('input field value has been decremented');
+    contentType: 'input',
+    htmlEntities: false, // infinite
+    onCopy: () => {
+        console.log('text copied successfully!');
     }
 };
 
 const instanceOptions = {
-  id: 'counter-input-example',
+  id: 'copy-clipboard-example',
   override: true
 };
 ```
 
-Next step is to create a new instance of a InputCounter object using the parameters we have set above.
+Next step is to create a new instance of a CopyClipboard object using the parameters we have set above.
 
 ```javascript
-import { InputCounter } from 'flowbite';
+import { CopyClipboard } from 'flowbite';
 
 /*
+ * $triggerEl: required
  * $targetEl: required
- * $incrementEl: optional
- * $decrementEl: optional
  * options: optional
+ * instanceOptions: optional
  */
-const counterInput = new InputCounter($targetEl, $incrementEl, $decrementEl, options, instanceOptions);
+const clipboard = new CopyClipboard($triggerEl, $targetEl, options, instanceOptions);
 ```
 
 Now you can programmatically increment or decrement the input field using the methods of the InputCounter object.
 
 ```javascript
-// get the current value of the input field
-counterInput.getCurrentValue();
+// get the value, inner HTML or text content of the target element
+clipboard.getTargetValue();
 
-// increment the value of the input field
-counterInput.increment();
+// copy the target element text value
+clipboard.copy();
 
-// decrement the value of the input field
-counterInput.decrement();
+// update the on copy function callback
+counterInput.updateOnCopyCallback(() => {
+    // do something when the text has been copied to the clipboard
+    console.log('updated on copy callback success message');
+});
 ```
 
 ### HTML Markup
@@ -963,22 +967,19 @@ counterInput.decrement();
 Here is an example of the HTML markup that you can use for the JavaScript example above.
 
 ```html
-<form class="max-w-xs mx-auto">
-    <label for="counter-input-example" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Choose quantity:</label>
-    <div class="relative flex items-center">
-        <button type="button" id="decrement-button" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
-            <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
+<div class="grid grid-cols-8 gap-2 w-full max-w-[23rem]">
+    <label for="copy-text" class="sr-only">Label</label>
+    <input id="copy-text" type="text" class="col-span-6 bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" value="npm install flowbite" disabled readonly>
+    <button id="copy-clipboard-button" class="col-span-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 items-center inline-flex justify-center">
+        <span id="default-message">Copy</span>
+        <span id="success-message" class="hidden inline-flex items-center">
+            <svg class="w-3 h-3 text-white me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
             </svg>
-        </button>
-        <input type="text" id="counter-input-example" class="flex-shrink-0 text-gray-900 dark:text-white border-0 bg-transparent text-sm font-normal focus:outline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="12" required>
-        <button type="button" id="increment-button" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
-            <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-            </svg>
-        </button>
-    </div>
-</form>
+            Copied!
+        </span>
+    </button>
+</div>
 ```
 
 ### TypeScript

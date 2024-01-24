@@ -88,7 +88,6 @@ class CopyClipboard implements CopyClipboardInterface {
     }
 
     getTargetValue() {
-        console.log(this._options.contentType);
         if (this._options.contentType === 'input') {
             return this._targetEl.value;
         }

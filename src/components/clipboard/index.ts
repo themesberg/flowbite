@@ -5,7 +5,7 @@ import { CopyClipboardInterface } from './interface';
 import instances from '../../dom/instances';
 
 const Default: CopyClipboardOptions = {
-    HTMLEntities: false,
+    htmlEntities: false,
     contentType: 'input',
     onCopy: () => {},
 };
@@ -107,7 +107,7 @@ class CopyClipboard implements CopyClipboardInterface {
         let textToCopy = this.getTargetValue();
 
         // Check if HTMLEntities option is enabled
-        if (this._options.HTMLEntities) {
+        if (this._options.htmlEntities) {
             // Encode the text using HTML entities
             textToCopy = this.decodeHTML(textToCopy);
         }
@@ -169,10 +169,10 @@ export function initCopyClipboards() {
                         $triggerEl as HTMLElement,
                         $targetEl as HTMLInputElement,
                         {
-                            HTMLEntities:
+                            htmlEntities:
                                 htmlEntities && htmlEntities === 'true'
                                     ? true
-                                    : Default.HTMLEntities,
+                                    : Default.htmlEntities,
                             contentType: contentType
                                 ? contentType
                                 : Default.contentType,

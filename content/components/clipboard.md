@@ -711,11 +711,11 @@ Share course
 
 ## JavaScript behaviour
 
-Use the **InputCounter** object from the Flowbite JS API to create a number input component with increment and decrement buttons that can be used to increase or decrease the value of the input.
+Use the **CopyClipboard** object from the Flowbite JS API to create a component with a trigger element (ie. an input field, code blocks, address tag) and target element (ie. button or text) where the content of the target element is copied to the clipboard when the trigger element is clicked.
 
 ### Object parameters
 
-Use the object parameters from the InputCounter object to set the target, increment, and decrement elements as well as the options object.
+Use the object parameters from the CopyClipboard object to set options such as the content type of the text that is to be copied (ie. value of an input field, text content or inner HTML) and other options.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -738,6 +738,20 @@ Use the object parameters from the InputCounter object to set the target, increm
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
+              </td>
+              <td class="px-6 py-4">
+                  Element
+              </td>
+              <td class="px-6 py-4">
+                  Required
+              </td>
+              <td class="px-6 py-4">
+                  Pass the trigger element (ie. a button or text) that will trigger the copy to clipboard event when being clicked.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">targetEl</code>
               </td>
               <td class="px-6 py-4">
@@ -747,35 +761,7 @@ Use the object parameters from the InputCounter object to set the target, increm
                   Required
               </td>
               <td class="px-6 py-4">
-                  Pass the target input field element that will be incremented or decremented based on click event.
-              </td>
-          </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">incrementEl</code>
-              </td>
-              <td class="px-6 py-4">
-                  Element
-              </td>
-              <td class="px-6 py-4">
-                  Optional
-              </td>
-              <td class="px-6 py-4">
-                  Pass the increment button element that will increase the value of the target element based on click event.
-              </td>
-          </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">decrementEl</code>
-              </td>
-              <td class="px-6 py-4">
-                  Element
-              </td>
-              <td class="px-6 py-4">
-                  Optional
-              </td>
-              <td class="px-6 py-4">
-                  Pass the decrement button element that will decrease the value of the target element based on click event.
+                  Set the target element where the text that will be copied to the clipboard is located (ie. an input field, code block, address tag).
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -789,7 +775,7 @@ Use the object parameters from the InputCounter object to set the target, increm
                   Optional
               </td>
               <td class="px-6 py-4">
-                  Set these options to set the minimum and maximum value of the input field and the callback functions.
+                  Set these options to set the the content type, HTML decoder and callback function for the copy to clipboard event.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
@@ -812,7 +798,7 @@ Use the object parameters from the InputCounter object to set the target, increm
 
 ### Options
 
-Use these optional options for the InputCounter object to set the minimum and maximum values of the input field and also to set callback functions for the increment and decrement events.
+Use these optional options for the CopyClipboard object to set the content type from where the text will be copied from, an optional HTML decoder for code blocks and function callbacks to set success and default messages.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -832,46 +818,35 @@ Use these optional options for the InputCounter object to set the minimum and ma
       <tbody>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">minValue</code>
+                  <code class="text-blue-600 dark:text-blue-400">contentType</code>
               </td>
               <td class="px-6 py-4 ">
-                  Integer
+                  String
               </td>
               <td class="px-6 py-4">
-                  Set the minimum value of the input field.
+                  Set the source of the text that will be copied: input (default), innerHTML or textContent.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">maxValue</code>
+                  <code class="text-blue-600 dark:text-blue-400">htmlEntities</code>
               </td>
               <td class="px-6 py-4 ">
-                  Integer
+                  String
               </td>
               <td class="px-6 py-4">
-                  Set the maximum value of the input field.
+                  Set this option to true if you want to decode the HTML entities for code blocks. Default is false.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">onIncrement</code>
+                  <code class="text-blue-600 dark:text-blue-400">onCopy</code>
               </td>
               <td class="px-6 py-4 ">
                   Function
               </td>
               <td class="px-6 py-4">
-                  Set a callback function when the item has been incremented.
-              </td>
-          </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
-              <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">onDecrement</code>
-              </td>
-              <td class="px-6 py-4 ">
-                  Function
-              </td>
-              <td class="px-6 py-4">
-                  Set a callback function when the item has been decremented.
+                  Set a callback function when the text has been copied to the clipboard.
               </td>
           </tr>
       </tbody>
@@ -880,7 +855,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
 
 ### Methods
 
-Use the following methods of the InputCounter object to programmatically manipulate the behaviour of the input field.
+Use the following methods from the CopyClipboard component to programmatically work with the component such as copying the text on demand or updating the callback function.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -897,26 +872,26 @@ Use the following methods of the InputCounter object to programmatically manipul
       <tbody>
         <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">getCurrentValue()</code>
+                  <code class="text-blue-600 dark:text-blue-400">copy()</code>
               </td>
               <td class="px-6 py-4">
-                  Use this method to get the current value of the input field.
+                 Use this method to copy the text from the target element to the clipboard.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">increment()</code>
+                  <code class="text-blue-600 dark:text-blue-400">decodeHTML()</code>
               </td>
               <td class="px-6 py-4">
-                  Use this method on the InputCounter object to increment the value of the input field.
+                  Use this method to decode the HTML entities from the target element.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">decrement()</code>
+                  <code class="text-blue-600 dark:text-blue-400">updateOnCopyCallback()</code>
               </td>
               <td class="px-6 py-4">
-                  Use this method on the InputCounter object to decrement the value of the input field.
+                  Use this method to update the callback function that is called when the text has been copied to the clipboard.
               </td>
           </tr>
       </tbody>

@@ -244,6 +244,8 @@ const resetToDefault = () => {
 
 ## URL shortener input group
 
+Use this example to copy a shortened URL to the clipboard by clicking on a button with an icon positioned inside the input field and also show a tooltip with a message when the text has been copied.
+
 {{< example id="clipboard-url-shortener-example" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
 const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'url-shortener');
 const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-url-shortener');
@@ -311,6 +313,12 @@ const resetToDefault = () => {
 {{< /example >}}
 
 ## Copy source code block
+
+This example can be used to copy and paste code inside a `<pre>` and `<code>` block by clicking on a button with an icon position inside the block and also show a tooltip with a message when the text has been copied.
+
+You need to add an extra `data-copy-to-clipboard-content-type="innerHTML"` data attribute to the trigger element (ie. the button) to specify that the content that is to be copied is from the `innerHTML` of the target element (ie. the code block). 
+
+You also need to add the `data-copy-to-clipboard-html-entities="true"` option to the trigger element so that the copied text will be decoded from HTML entities to plain text that will work inside your code editor.
 
 {{< example id="clipboard-source-block" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="480" javascript=`
 const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'code-block');
@@ -394,6 +402,10 @@ function Component() {
 {{< /example >}}
 
 ## Card with API keys
+
+Use this example to show multiple input field elements that have the copy to clipboard button inside a card component for more complex applications where you need to copy API keys, account IDs and more.
+
+Make sure that you also apply the custom JavaScript code with the function callback to enable the success and default message states for each input field and copy button.
 
 {{< example id="clipboard-api-keys" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="580" javascript=`
 const clipboardAccountID = FlowbiteInstances.getInstance('CopyClipboard', 'account-id');
@@ -531,6 +543,10 @@ const resetToDefault = ($defaultEl, $successEl) => {
 
 ## Copy contact details
 
+This example can be used to copy the text content (ie. contact details) inside of the `<address>` field by clicking on the copy to clipboard button positioned inside of the address card.
+
+Make sure that you set the `data-copy-to-clipboard-content-type="textContent"` data attribute to the trigger element (ie. the button) to specify the source of the content that is to be copied.
+
 {{< example id="contact-details-clipboard" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="380" javascript=`
 const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'contact-details');
 const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-contact-details');
@@ -601,6 +617,8 @@ const resetToDefault = () => {
 {{< /example >}}
 
 ## Copy button with modal
+
+Use this example to show an input field where you can copy the URL of the current page and also show a modal with the copied URL when the copy button is clicked.
 
 {{< example id="copy-to-clipboard-modal" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="580" javascript=`
 const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'course-url');

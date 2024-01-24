@@ -5,8 +5,8 @@ description: Use the device mockups component to add content and screenshot prev
 group: components
 toc: true
 
-previous: Chat bubble
-previousLink: components/chat-bubble/
+previous: Clipboard
+previousLink: components/clipboard/
 next: Drawer
 nextLink: components/drawer/
 ---

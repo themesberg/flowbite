@@ -228,7 +228,7 @@ class Carousel implements CarouselInterface {
             'hidden',
             'z-10'
         );
-        rotationItems.middle.el.classList.add('translate-x-0', 'z-20');
+        rotationItems.middle.el.classList.add('translate-x-0', 'z-30');
 
         // right item (upcoming active)
         rotationItems.right.el.classList.remove(
@@ -236,9 +236,9 @@ class Carousel implements CarouselInterface {
             'translate-x-full',
             'translate-x-0',
             'hidden',
-            'z-20'
+            'z-30'
         );
-        rotationItems.right.el.classList.add('translate-x-full', 'z-10');
+        rotationItems.right.el.classList.add('translate-x-full', 'z-20');
     }
 
     /**

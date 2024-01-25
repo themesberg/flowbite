@@ -296,12 +296,6 @@ module.exports = {
 }
 ```
 
-### Turbo load support
-
-Flowbite provides custom event listeners for turbo load support if you import the `flowbite.turbo.js` file. Check out the following guides to learn more how to integrate the JavasScript file that powers the interactive components with Webpack Encore.
-
-### Standard JS
-
 Inside the `./assets/app.js` file you can import the Flowbite package to enable interactivity of the UI components:
 
 ```javascript
@@ -326,7 +320,9 @@ This will enable all of the interactive and dynamic UI components such as the dr
 
 Check out the [Flowbite Quickstart](https://flowbite.com/docs/getting-started/quickstart/) guide to learn about the different ways you can set up the JS interactivity whether that's via CDN, using the data attributes interface, leveraging TypeScript or programmatically working with the UI components and object classes.
 
-### Symfony UX Turbo support
+## Symfony UX Turbo
+
+Flowbite provides custom event listeners for turbo load support if you import the `flowbite.turbo.js` file. Check out the following guides to learn more how to integrate the JavasScript file that powers the interactive components with Webpack Encore.
 
 If you use Symfony UX Turbo, you will need to import a version of Flowbite which supports the `turbo:load` event listeners instead of `load`. To do this **add the lines below** to your `./assets/app.js` file:
 

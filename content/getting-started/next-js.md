@@ -8,8 +8,8 @@ requires_nextjs: true
 
 previous: React
 previousLink: getting-started/react/
-next: Remix
-nextLink: getting-started/remix/
+next: Vue
+nextLink: getting-started/vue/
 ---
 
 [Next.js](https://nextjs.org/) is a popular web development framework based on the React library that enables server-side rendering and generating static websites improving development time and website performance.
@@ -131,7 +131,7 @@ module.exports = {
  */
 module.exports = {
   content: [
-    "./node_modules/flowbite-react/**/*.js",
+    "./node_modules/flowbite-react/lib/**/*.js",
     "./pages/**/*.{ts,tsx}",
     "./public/**/*.html",
   ],

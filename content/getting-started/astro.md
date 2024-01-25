@@ -8,8 +8,8 @@ requires_astro: true
 
 previous: Angular
 previousLink: getting-started/angular/
-next: Gatsby
-nextLink: getting-started/gatsby/
+next: Remix
+nextLink: getting-started/remix/
 ---
 
 [Astro](https://astro.build) is a full-stack web framework for building lightning-fast and content-focused websites featuring component islands, server-first API design, edge-ready deployments and supports hundreds of integrations with technologies like Tailwind CSS, Flowbite, React, Vue, Svelte, and more.
@@ -101,7 +101,7 @@ To enable the interactive components you need to also include Flowbite's JavaScr
 In the `Layout.astro` file add the following script tag just before the end of the `<body>` tag:
 
 ```html
-<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 ```
 
 This allows you to use the data attributes from the Flowbite component examples and will make them interactive automatically without needing to write custom JavaScript and you can just copy-paste them from the Flowbite Docs.

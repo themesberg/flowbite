@@ -13,6 +13,7 @@ export declare type DropdownOptions = {
     triggerType?: DropdownTriggerType;
     offsetSkidding?: number;
     offsetDistance?: number;
+    ignoreClickOutsideClass?: string | boolean;
     delay?: number;
     onShow?: (tooltip: DropdownInterface) => void;
     onHide?: (tooltip: DropdownInterface) => void;

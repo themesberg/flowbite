@@ -50,7 +50,7 @@ Congratulations! Now you have a fully working Angular project installed and conf
 
 ## Install Tailwind CSS
 
-Now that you've succesfully installed and configured an Angular project we can proceed with installing the most popular utility-first CSS framework called Tailwind.
+Now that you've successfully installed and configured an Angular project we can proceed with installing the most popular utility-first CSS framework called Tailwind.
 
 3. Install Tailwind CSS and Post CSS via NPM by running the following command:
 
@@ -246,7 +246,7 @@ This example should also show a button that on the click event will show a dropd
 
 ### JavaScript API
 
-Alternatively to the data attributes strategy you can also choose to programatically set up the interactivity by directly importing the components from Flowbite and use the methods and options described in the documentation of Flowbite at the end of each page.
+Alternatively to the data attributes strategy you can also choose to programmatically set up the interactivity by directly importing the components from Flowbite and use the methods and options described in the documentation of Flowbite at the end of each page.
 
 For example, here's how you can set up a carousel component directly with JavaScript:
 
@@ -394,7 +394,7 @@ In this case the advantage is that you can control the behaviour of the componen
 
 ### Using TypeScript
 
-The Flowbite UI components also supports TypeScript and you can import the types and apply them when using the JavaScript API programatically.
+The Flowbite UI components also supports TypeScript and you can import the types and apply them when using the JavaScript API programmatically.
 
 For example, here's how you can import the types for the Carousel component:
 

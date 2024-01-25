@@ -1,2 +1,2 @@
-declare const plugin: { handler: () => void }
-export = plugin
+declare const plugin: { handler: () => void };
+export = plugin;

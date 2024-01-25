@@ -17,8 +17,3 @@ export declare type PlacementClasses = {
     active: string[];
     inactive: string[];
 };
-
-export declare type DrawerInstance = {
-    id: string;
-    object: DrawerInterface;
-};

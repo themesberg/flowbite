@@ -6,8 +6,8 @@ group: getting-started
 toc: true
 requires_laravel: true
 
-previous: SolidJS
-previousLink: getting-started/solid-js/
+previous: Qwik
+previousLink: getting-started/qwik/
 next: Symfony
 nextLink: getting-started/symfony/
 ---

@@ -11,9 +11,10 @@ export declare interface DropdownInterface {
     _options: DropdownOptions;
     _visible: boolean;
     _popperInstance: PopperInstance;
+    _initialized: boolean;
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
 
-    _init(): void;
+    init(): void;
     _createPopperInstance(): PopperInstance;
     _setupEventListeners(): void;
     _setupClickOutsideListener(): void;
@@ -26,4 +27,8 @@ export declare interface DropdownInterface {
     toggle(): void;
     show(): void;
     hide(): void;
+
+    destroy(): void;
+    removeInstance(): void;
+    destroyAndRemoveInstance(): void;
 }

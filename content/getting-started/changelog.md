@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Flowbite - Changelog
-description: Read more about the releases made for FlowBite from the official changelog
+description: Read more about the releases made for Flowbite from the official changelog
 group: getting-started
 toc: true
 
@@ -15,7 +15,57 @@ nextLink: getting-started/react/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
-### 1.7.0
+### v2.3.0
+
+- added new "copy to clipboard" component and examples
+- added new JavaScript tab to the documentation examples
+- fixed carousel component behavior when there's only one image
+
+### v2.2.0
+
+- added new number input component examples
+- created a new InputCounter object for the Flowbite JS API
+
+### v2.1.1
+
+- fix the `InstanceOptions` and `EventListenerInstance` type exports for TypeScript
+
+### v2.1.0
+
+This update adds [full RTL support](https://flowbite.com/docs/customize/rtl/) to all of the UI components from Flowbite and also provides and update to the Instance Manager API which now allows you to set custom id's as the 4th parameter of each object class.
+
+- updated to Tailwind CSS `v3.3.5`
+- added full RTL support to all UI components
+- updated the JS API and Instance Manager to allow setting custom id's
+- added new vertical tabs component example
+- added three next modal component examples
+- fixed responsive wrapping issues for the table components
+- other minor bug fixes and improvements
+
+### v2.0.0
+
+This update introduces a new instance manager feature that allows you manage all of the interactive components from a single place. This is useful if you want to programmatically show or hide a modal, popover, or tooltip. This also works if you use the data attributes interface.
+
+This change introduces a few breaking changes to the JavaScript API when creating objects:
+
+- new `$carouselEl` HTML element when creating a `Carousel` object as the first parameter
+- new `$accordion` HTML element when creating a `Accordion` object as the first parameter
+- new `$tabsEl` HTML element when creating a `Tabs` object as the first parameter
+
+The breaking changes do not apply to the data attributes interface, only for objects created programmatically via JavaScript.
+
+### v1.8.1
+
+- fix `apexcharts` safelist warning in console
+
+### v1.8.0
+
+- added new chart components
+- enable or disable styles via the Flowbite Plugin
+- added new API option to the dropdowns to prevent closing when clicking on certain elements
+- small bug fixes and improvements overall
+
+### v1.7.0
 
 - integrate new [Flowbite Icons](https://flowbite.com/icons/) with all UI components
 - added new pagination examples and sizes
@@ -24,21 +74,21 @@ We strive to keep a good accountability of all of the version changes that we ma
 - updated docs and website icons
 - update Svelte docs for Svelte 4.0
 
-### 1.6.6
+### v1.6.6
 
 - new device mockups component
 - add nested accordions feature ([#266](https://github.com/themesberg/flowbite/issues/266) issue fixed by (@jneuendorf)[https://github.com/jneuendorf])
 - make init functions (ie. `initDropdowns`, `initFlowbite`) available via the `window` object
 - fix Nuxt.js documentation config path for Tailwind CSS
 
-### 1.6.5
+### v1.6.5
 
 - New gallery component
 - New jumbotron component
 - LiveView support ([issue #486](https://github.com/themesberg/flowbite/issues/486)) for Phoenix by [@jmnda-dev](https://github.com/jmnda-dev)
 - Improve modal responsive behaviour by centering it vertically
 - Improve Svelte getting started guide by [@shinokada](https://github.com/shinokada)
-- Improve font smoothing by adding antialising to the docs and examples
+- Improve font smoothing by adding antialiasing to the docs and examples
 - Improve navbar spacings and font sizes to reflect Figma design system
 
 ### v1.6.4

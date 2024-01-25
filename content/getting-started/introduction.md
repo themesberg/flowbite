@@ -99,6 +99,8 @@ module.exports = {
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 ```
 
+Learn more about the Flowbite JavaScript API and functionalities in the [JavaScript section](https://flowbite.com/docs/getting-started/javascript/).
+
 ### Include via CDN
 
 If you want to quickly test out Flowbite you can easily include the following CSS and JavaScript files.
@@ -173,7 +175,7 @@ const $modalElement = document.querySelector('#modalEl');
 const modalOptions = {
     placement: 'bottom-right',
     backdrop: 'dynamic',
-    backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+    backdropClasses: 'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-40',
     onHide: () => {
         console.log('modal is hidden');
     },
@@ -201,11 +203,42 @@ Additionally to our code above, we will now import some relevant types from the 
 ```javascript
 import { Modal } from 'flowbite'
 import type { ModalOptions, ModalInterface } from 'flowbite'
+import type { InstanceOptions } from 'flowbite';
 
 // other code
 ```
 
 Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/).
+
+## Figma Design System
+
+The components from Flowbite are first conceptualized and designed in Figma using the latest features such as variants, auto-layout, grids, responsive layouts, and more.
+
+Learn more by checking out <a href="{{< param homepage >}}/figma/">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
+
+## Flowbite SVG Icons
+
+Check out a free and open-source collection of over 430 SVG icons with solid and outline styles to integrate with the UI components from Flowbite.
+
+Learn more by browsing the <a href="{{< param homepage >}}/icons/">Flowbite Icons</a> page and interface to directly copy-paste the icons into your project as raw SVGs or React (JSX) code.
+
+## Flowbite GPT
+
+We've developed a custom trained ChatGPT model that you can use to generate website sections and pages based on the resources from Flowbite and Tailwind CSS.
+
+Start generating with [Flowbite GPT](https://chat.openai.com/g/g-y7yC35HB9-flowbite-gpt).
+
+## Pro version
+
+If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite]({{< param homepage >}}/pro/) which includes fully coded pages and layouts for application, marketing, and e-commerce user interfaces.
+
+## Work with us
+
+If you're ready to take your application to the next level you can [work with us](https://flowbite.com/work-with-us/) on your project with developers who have been using Flowbite and Tailwind CSS.
+
+## Learn Design Concepts
+
+If you want to create even better Flowbite pages, learn design fundamentals from [Teach Me Design - Enhance UI](https://www.enhanceui.com/?ref=flowbite-introduction), a book that covers color theory, typography, UI and UX so you can make the most to implement the Flowbite Ecosystem!
 
 ## Tailwind CSS 2.0
 
@@ -227,21 +260,9 @@ plugins: [
 ],
 ```
 
-## Figma design system
-
-The components from Flowbite are first conceptualized and designed in Figma using the latest features such as variants, auto-layout, grids, responsive layouts, and more.
-
-Learn more by checking out <a href="{{< param homepage >}}/figma/">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
-
 <div class="mt-8 -mb-5">
   {{< requires_react >}}
 </div>
-
-## Flowbite SVG Icons
-
-Check out a free and open-source collection of over 430 SVG icons with solid and outline styles to integrate with the UI components from Flowbite.
-
-Learn more by browsing the <a href="{{< param homepage >}}/icons/">Flowbite Icons</a> page and interface to directly copy-paste the icons into your project as raw SVGs or React (JSX) code.
 
 ## React
 
@@ -339,10 +360,6 @@ Learn how to <a href="{{< ref "getting-started/django" >}}">install Tailwind CSS
 Check out the Flask integration guide with Tailwind CSS and Flowbite to set up all technologies and start developing with a micro framework combined with the UI components from Flowbite.
 
 Learn how to <a href="{{< ref "getting-started/flask" >}}">install Tailwind CSS and Flowbite with Flask</a>.
-
-## Pro version
-
-If you want to take your Tailwind development workflow to the next level you can check out the [pro version of Flowbite]({{< param homepage >}}/pro/) which includes fully coded pages and layouts for application, marketing, and e-commerce user interfaces.
 
 ## Licensing
 

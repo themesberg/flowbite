@@ -25,13 +25,17 @@
     - [Init functions](#init-functions)
   - [ESM and CJS](#esm-and-cjs)
   - [TypeScript](#typescript)
+  - [RTL support](#rtl-support)
   - [JavaScript Frameworks](#javascript-frameworks)
   - [Back-end Frameworks](#back-end-frameworks)
 - [Components](#components)
 - [Figma Design System](#figma-design-system)
 - [Flowbite Blocks](#flowbite-blocks)
 - [Flowbite Icons](#flowbite-icons)
+- [Flowbite GPT](#flowbite-gpt)
 - [Pro version](#pro-version)
+- [Hire us](#hire-us)
+- [Learn Design Concepts](#learn-design-concepts)
 - [Community](#community)
 - [Copyright and license](#copyright-and-license)
 
@@ -90,13 +94,13 @@ The quickest way to get started working with Flowbite is to simply include the C
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
 ```
 
 And include the following javascript file before the end of the `body` tag:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 ```
 
 ### Bundled JavaScript
@@ -194,7 +198,7 @@ const $modalElement = document.querySelector('#modalEl');
 const modalOptions = {
     placement: 'bottom-right',
     backdrop: 'dynamic',
-    backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+    backdropClasses: 'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-40',
     onHide: () => {
         console.log('modal is hidden');
     },
@@ -246,6 +250,10 @@ const modal: ModalInterface = new Modal($modalElement, modalOptions);
 
 Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/).
 
+### RTL support
+
+All of the Flowbite UI components have native RTL support and you can easily set it up by using the `dir="rtl"` attribute on the HTML element. Read more about Flowbite and [RTL support here](https://flowbite.com/docs/customize/rtl/).
+
 ### JavaScript Frameworks
 
 The awesome open-source community also built and currently maintains the following standalone libraries for React, Vue, Svelte, and Angular:
@@ -264,8 +272,10 @@ We also wrote integration guides for the following front-end frameworks and libr
 - [📝 Flowbite with Nuxt guide](https://flowbite.com/docs/getting-started/nuxt-js/)
 - [📝 Flowbite with Svelte guide](https://flowbite.com/docs/getting-started/svelte/)
 - [📝 Flowbite with Astro guide](https://flowbite.com/docs/getting-started/astro/)
+- [📝 Flowbite with MeteorJS guide](https://flowbite.com/docs/getting-started/meteor-js/)
 - [📝 Flowbite with Gatsby guide](https://flowbite.com/docs/getting-started/gatsby/)
 - [📝 Flowbite with SolidJS guide](https://flowbite.com/docs/getting-started/solid-js/)
+- [📝 Flowbite with Qwik guide](https://flowbite.com/docs/getting-started/qwik/)
 
 ### Back-end Frameworks
 
@@ -704,7 +714,7 @@ Flowbite is an open source collection of UI components built with the utility cl
   <tr>
     <td width="33.3333%">Jumbotron</td>
     <td width="33.3333%">Device mockups</td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">Charts</td>
   </tr>
   <tr>
     <td width="33.3333%">
@@ -717,7 +727,33 @@ Flowbite is an open source collection of UI components built with the utility cl
             <img alt="Tailwind CSS Device Mockups" src="https://flowbite.s3.amazonaws.com/github/device-mockups.jpg">
         </a>
     </td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/plugins/charts/">
+            <img alt="Tailwind CSS Charts" src="https://flowbite.s3.amazonaws.com/github/charts.jpg">
+        </a>
+    </td>
+  </tr>
+    <tr>
+    <td width="33.3333%">Number Input</td>
+    <td width="33.3333%">Phone Input</td>
+    <td width="33.3333%">Chat Bubble</td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/forms/number-input/">
+            <img alt="Tailwind CSS Number Input" src="https://flowbite.s3.amazonaws.com/github/number-input.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/forms/phone-input/">
+            <img alt="Tailwind CSS Phone Input" src="https://flowbite.s3.amazonaws.com/github/phone-input.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/chat-bubble/">
+            <img alt="Tailwind CSS Chat Bubble" src="https://flowbite.s3.amazonaws.com/github/chat-bubble.jpg">
+        </a>
+    </td>
   </tr>
 </table>
 
@@ -739,11 +775,29 @@ Start using over 430+ free and open-source collection of solid and outline SVG i
 
 🔍 [Check out the icons](https://flowbite.com/icons/)
 
+## Flowbite GPT
+
+We've developed a custom trained ChatGPT model that you can use to generate website sections and pages based on the resources from Flowbite and Tailwind CSS.
+
+🤖 [Generate with Flowbite GPT](https://chat.openai.com/g/g-y7yC35HB9-flowbite-gpt)
+
 ## Pro version
 
 Get access to all premium features including the Figma design system, access to all Flowbite Block sections and a dashboard UI interface:
 
 💎 [Check out Flowbite Pro](https://flowbite.com/pro/)
+
+## Hire us
+
+If you're ready to take your application to the next level you can work with us on your project with developers who have been using Flowbite and Tailwind CSS.
+
+🙋‍♂️ [Work with us](https://flowbite.com/work-with-us/)
+
+## Learn Design Concepts
+
+If you want to create even better Flowbite pages, learn design fundamentals from Teach Me Design - Enhance UI, a book that covers color theory, typography, UI and UX so you can make the most to implement the Flowbite Ecosystem!
+
+📖 [Learn with Enhance UI](https://www.enhanceui.com/?ref=flowbite-github)
 
 ## Community
 

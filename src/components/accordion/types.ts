@@ -6,6 +6,7 @@ export declare type AccordionItem = {
     targetEl: HTMLElement;
     iconEl?: HTMLElement | null;
     active?: boolean;
+    clickHandler?: EventListenerOrEventListenerObject;
 };
 
 export declare type AccordionOptions = {

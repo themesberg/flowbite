@@ -10,6 +10,8 @@ import Modal, { initModals } from './components/modal';
 import Popover, { initPopovers } from './components/popover';
 import Tabs, { initTabs } from './components/tabs';
 import Tooltip, { initTooltips } from './components/tooltip';
+import InputCounter, { initInputCounters } from './components/input-counter';
+import CopyClipboard, { initCopyClipboards } from './components/clipboard';
 import './components/index';
 import Events from './dom/events';
 
@@ -25,6 +27,8 @@ const liveViewLoadEvents = new Events('phx:page-loading-stop', [
     initTooltips,
     initPopovers,
     initDials,
+    initInputCounters,
+    initCopyClipboards,
 ]);
 liveViewLoadEvents.init();
 
@@ -40,6 +44,8 @@ const regularViewLoadEvents = new Events('load', [
     initTooltips,
     initPopovers,
     initDials,
+    initInputCounters,
+    initCopyClipboards,
 ]);
 regularViewLoadEvents.init();
 
@@ -55,5 +61,7 @@ export default {
     Popover,
     Tabs,
     Tooltip,
+    InputCounter,
+    CopyClipboard,
     Events,
 };

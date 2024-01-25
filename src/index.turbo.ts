@@ -11,6 +11,7 @@ import Popover from './components/popover';
 import Tabs from './components/tabs';
 import Tooltip from './components/tooltip';
 import InputCounter from './components/input-counter';
+import CopyClipboard from './components/clipboard';
 import { initFlowbite } from './components/index';
 import Events from './dom/events';
 
@@ -20,7 +21,7 @@ const afterRenderEvent = new Event('turbo:after-stream-render');
 addEventListener('turbo:before-stream-render', (event: CustomEvent) => {
     const originalRender = event.detail.render;
 
-    event.detail.render = function (streamElement) {
+    event.detail.render = function (streamElement: Element) {
         originalRender(streamElement);
         document.dispatchEvent(afterRenderEvent);
     };
@@ -50,5 +51,6 @@ export default {
     Tabs,
     Tooltip,
     InputCounter,
+    CopyClipboard,
     Events,
 };

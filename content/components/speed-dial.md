@@ -563,7 +563,7 @@ Use the `top-{*}` and `right-{*}` utility classes to set the position of the spe
 
 ### Bottom right
 
-Use the `bittin-{*}` and `right-{*}` utility classes to set the position of the speed dial component to the bottom right side of the document body.
+Use the `bottom-{*}` and `right-{*}` utility classes to set the position of the speed dial component to the bottom right side of the document body.
 
 {{< example id="bottom-right-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 

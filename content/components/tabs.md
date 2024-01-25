@@ -229,11 +229,13 @@ If you want to show the tabs on the full width relative to the parent element yo
 
 Use the dynamic tabs component to interactively show and hide the content below the tabs based on the currently active tab item. Make sure that you initialize the component by using the `data-tabs-toggle="{parentTabContentSelector}"` and also apply an `id` attribute to the same element.
 
-Each tab toggle button needs to have a `role="tab"` attribute and a `data-tabs-target="{tabContentSelector}"` to target the tab content element that will be shown when clicked.
+Each tab toggle button requires a `role="tab"` attribute and a `data-tabs-target="{tabContentSelector}"` to target the tab content element that will be shown when clicked.
 
 Use the `aria-selected="true"` data attribute so that Flowbite can target the currently active tab component and hide it when another is shown. If not set, it will show the first tab as active.
 
 Apply the `role="tabpanel"` data attribute to every tab content element and set the `id` attribute which will be equal to the `data-tabs-target={tabContentSelector}` from the tabs toggles.
+
+Use the `aria-selected:{class}` selector to style the currently active tab button element.
 
 You can use multiple tab components on a single page but make sure that the id's are different.
 
@@ -270,10 +272,6 @@ You can use multiple tab components on a single page but make sure that the id's
     </div>
 </div>
 {{< /example >}}
-
-### Customize active tab
-
-You can use the `aria-selected:{class}` selector to style the currently active tab button element.
 
 ## JavaScript behaviour
 
@@ -525,9 +523,10 @@ Create a new Tabs object based on the parameters we've previously set.
 import { Tabs } from 'flowbite';
 
 /*
-* tabElements: array of tab objects
-* options: optional
-* instanceOptions: optional
+* tabsElement: parent element of the tabs component (required)
+* tabElements: array of tab objects (required)
+* options (optional)
+* instanceOptions (optional)
 */
 const tabs = new Tabs(tabsElement, tabElements, options, instanceOptions);
 ```
@@ -722,8 +721,10 @@ const instanceOptions: InstanceOptions = {
 };
 
 /*
-* tabElements: array of tab objects
-* options: optional
+* tabsElement: parent element of the tabs component (required)
+* tabElements: array of tab elements (required)
+* options (optional)
+* instanceOptions (optional)
 */
 const tabs: TabsInterface = new Tabs(tabsElement, tabElements, options, instanceOptions);
 

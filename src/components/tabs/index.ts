@@ -60,7 +60,8 @@ class Tabs implements TabsInterface {
 
             // show tab content based on click
             this._items.map((tab) => {
-                tab.triggerEl.addEventListener('click', () => {
+                tab.triggerEl.addEventListener('click', (event) => {
+                    event.preventDefault();
                     this.show(tab.id);
                 });
             });

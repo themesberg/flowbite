@@ -196,6 +196,19 @@ class Carousel implements CarouselInterface {
             item.el.classList.add('hidden');
         });
 
+        // Handling the case when there is only one item
+        if (this._items.length === 1) {
+            rotationItems.middle.el.classList.remove(
+                '-translate-x-full',
+                'translate-x-full',
+                'translate-x-0',
+                'hidden',
+                'z-10'
+            );
+            rotationItems.middle.el.classList.add('translate-x-0', 'z-20');
+            return;
+        }
+
         // left item (previously active)
         rotationItems.left.el.classList.remove(
             '-translate-x-full',
@@ -204,6 +217,7 @@ class Carousel implements CarouselInterface {
             'hidden',
             'z-20'
         );
+
         rotationItems.left.el.classList.add('-translate-x-full', 'z-10');
 
         // currently active item
@@ -214,7 +228,7 @@ class Carousel implements CarouselInterface {
             'hidden',
             'z-10'
         );
-        rotationItems.middle.el.classList.add('translate-x-0', 'z-20');
+        rotationItems.middle.el.classList.add('translate-x-0', 'z-30');
 
         // right item (upcoming active)
         rotationItems.right.el.classList.remove(
@@ -222,9 +236,9 @@ class Carousel implements CarouselInterface {
             'translate-x-full',
             'translate-x-0',
             'hidden',
-            'z-20'
+            'z-30'
         );
-        rotationItems.right.el.classList.add('translate-x-full', 'z-10');
+        rotationItems.right.el.classList.add('translate-x-full', 'z-20');
     }
 
     /**

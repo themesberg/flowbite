@@ -10,6 +10,7 @@ import { PopoverInterface } from '../components/popover/interface';
 import { TabsInterface } from '../components/tabs/interface';
 import { TooltipInterface } from '../components/tooltip/interface';
 import { InputCounterInterface } from '../components/input-counter/interface';
+import { CopyClipboardInterface } from '../components/clipboard/interface';
 
 class Instances {
     private _instances: {
@@ -25,6 +26,7 @@ class Instances {
         Tabs: { [id: string]: TabsInterface };
         Tooltip: { [id: string]: TooltipInterface };
         InputCounter: { [id: string]: InputCounterInterface };
+        CopyClipboard: { [id: string]: CopyClipboardInterface };
     };
 
     constructor() {
@@ -41,6 +43,7 @@ class Instances {
             Tabs: {},
             Tooltip: {},
             InputCounter: {},
+            CopyClipboard: {},
         };
     }
 

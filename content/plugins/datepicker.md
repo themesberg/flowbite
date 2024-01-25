@@ -80,11 +80,11 @@ Use the `date-rangepicker` data attribute and the following markup to initialize
 
 ## Options
 
-With the Tailwind Datepicker you can also add extra options using the custom data attributes developed by Flowbite based on a Vanilla JS library.
+Learn more about the options that you can use with the Tailwind datepicker to enable features such as autohide, action buttons, date format, orientation, and more based on the vanilla JavaScript from Flowbite.
 
 ### Autohide
 
-If you want the datepicker to disappear right after clicking on a date then you need to use the `datepicker-autohide` data attribute.
+Use the `datepicker-autohide` data attribute to make the datepicker disappear right after selecting a date.
 
 {{< example id="datepicker-autohide-example" class="flex justify-center dark:bg-gray-900" github="plugins/datepicker.md" show_dark=true iframeHeight="480" initDatepicker=true >}}
 <div class="relative max-w-sm">
@@ -99,10 +99,10 @@ If you want the datepicker to disappear right after clicking on a date then you 
 
 ### Action buttons
 
-By adding the `datepicker-buttons` data attribute you will enable the `today` and `clear` buttons with the following features:
+By adding the `datepicker-buttons` data attribute you will enable the `today` and `clear` buttons:
 
-- Clicking on the `today` button will browse back to the current day/month/year.
-- Clicking on the `clear` button will reset all selections
+- clicking on the `today` button will browse back to the current day/month/year
+- clicking on the `clear` button will reset all selections
 
 If you want the button to additionally select today's date, add `datepicker-autoselect-today` data attribute.
 
@@ -168,7 +168,7 @@ If you would like to enable dark mode for the datepicker please follow the [dark
 
 ## JavaScript
 
-If you want to use the **Tailwind Datepicker** plugin using JavaScript you will need to include it into your project via NPM:
+If you want to use the **Tailwind Datepicker** plugin using JavaScript and programmatically initialize and call the available functions and methods, then you will need to include it into your project via NPM:
 
 ```bash
 npm install flowbite-datepicker --save
@@ -180,7 +180,7 @@ After you've installed the NPM library, you will need to import the `Datepicker`
 import Datepicker from 'flowbite-datepicker/Datepicker';
 ```
 
-Initialize a new element using the `Datepicker` constructor and optionally add custom options based on your needs:
+Initialize a new element using the `Datepicker` constructor and optionally add your own options based on your needs:
 
 ```javascript
 const datepickerEl = document.getElementById('datepickerId');

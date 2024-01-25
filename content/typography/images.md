@@ -125,10 +125,10 @@ Horizontally align the image to the center of the page using the `mx-auto` class
 
 ### Right
 
-Use the `ml-auto` class to align the image to the right side of the page.
+Use the `ml-auto` (or `ms-auto`) class to align the image to the right side of the page.
 
 {{< example id="image-right-example" github="typography/images.md" show_dark=true >}}
-<img class="h-auto max-w-lg ml-auto" src="/docs/images/examples/image-1@2x.jpg" alt="image description">
+<img class="h-auto max-w-lg ms-auto" src="/docs/images/examples/image-1@2x.jpg" alt="image description">
 {{< /example >}}
 
 ## Sizes

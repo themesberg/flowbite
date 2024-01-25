@@ -7,8 +7,8 @@ toc: true
 
 previous: Colors
 previousLink: customize/colors/
-next: Optimization
-nextLink: customize/optimization/
+next: RTL
+nextLink: customize/rtl/
 ---
 
 ## SVG icons

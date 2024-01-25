@@ -23,6 +23,8 @@
 {{- $skeletonPlaceholdersMarkup := "<div class='max-w-lg mx-auto'> <div role='status' class='my-7 animate-pulse'> <div class='h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-48 mb-4'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[460px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[500px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[450px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[380px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[460px]'></div><span class='sr-only'>Loading...</span> </div><div role='status' class='max-w-lg mb-7 animate-pulse'> <div class='flex items-center justify-center w-full h-48 bg-gray-300 rounded dark:bg-gray-700'> <svg class='w-12 h-12 text-gray-200' xmlns='http://www.w3.org/2000/svg' aria-hidden='true' fill='currentColor' viewBox='0 0 640 512'><path d='M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z'/></svg> </div><span class='sr-only'>Loading...</span> </div><div role='status' class='my-6 animate-pulse'> <div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[460px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[450px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[460px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[500px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[450px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[380px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[460px]'></div><span class='sr-only'>Loading...</span> </div><div role='status' class='my-6 animate-pulse'> <div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[460px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[450px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[460px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[500px] mb-2.5'></div><span class='sr-only'>Loading...</span> </div><div role='status' class='mb-6 mt-7 animate-pulse'> <div class='h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-48 mb-4'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[460px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[450px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[460px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[500px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[450px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[380px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[460px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[500px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[460px]'></div><span class='sr-only'>Loading...</span> </div><div role='status' class='my-6 animate-pulse'> <div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[460px] mb-2.5'></div><div class='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[450px] mb-2.5'></div><span class='sr-only'>Loading...</span> </div></div>" -}}
 {{- $skeletonPlaceholders := .Get "skeletonPlaceholders" | default false -}}
 
+{{ $javascript := .Get "javascript" | default "" | safeJS }}
+
 {{- $initDatepicker := .Get "initDatepicker" | default false -}}
 {{- $charts := .Get "charts" | default false -}}
 
@@ -70,7 +72,14 @@
         </div>
       {{ end }}
       </div>
-      <div class="flex justify-end col-span-1">   
+      <div class="flex justify-end col-span-1">  
+        <button {{ if $id }} data-tooltip-target="{{ $id }}-toggle-rtl"{{ end }} data-toggle-direction="ltr" type="button" class="toggle-rtl flex items-center w-9 h-9 mr-3 justify-center text-xs font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+          RTL
+        </button> 
+        <div id="{{ $id }}-toggle-rtl" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <span class="tooltip-text">Toggle RTL mode</span>
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
         {{- if eq $show_dark true -}}
           <button {{ if $id }} data-tooltip-target="{{ $id }}-toggle-dark-mode-tooltip"{{ end }} type="button" data-toggle-dark="light" class="flex items-center w-9 h-9 justify-center text-xs font-medium text-gray-700 bg-white border border-gray-200 rounded-lg toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
             <svg data-toggle-icon="moon" class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
@@ -83,7 +92,7 @@
           </button>
           {{ if $id }}
           <div id="{{ $id }}-toggle-dark-mode-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-              <span class="toggle-dark-state-tooltip-text">Toggle dark mode</span>
+              <span class="tooltip-text">Toggle dark mode</span>
               <div class="tooltip-arrow" data-popper-arrow></div>
           </div>
           {{ end }}
@@ -95,7 +104,7 @@
   <div class="code-preview-wrapper">
     <div{{ with .Get "id" }} id="{{ . }}"{{ end }} class="flex p-0 bg-white border-gray-200 bg-gradient-to-r code-preview dark:bg-gray-900 border-x dark:border-gray-600">
       <div class="w-full code-responsive-wrapper">
-        <iframe {{ if $id }}title="{{ replace $id "-" " "}}"{{ end }} class="w-full h-0 mx-auto bg-white dark:bg-gray-900 iframe-code" {{ if $iframeMaxHeight }}style='max-height: {{  sub (int $iframeMaxHeight) 40 }}px'{{ end }} srcdoc="<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap' rel='stylesheet'><link rel='stylesheet' href='{{ .Site.BaseURL }}flowbite.css?v=1.8.1a'></head><body {{ if $iframeHeight }}style='height: {{  sub (int $iframeHeight) 40 }}px'{{ end }} class='p-5 bg-white dark:bg-gray-900 antialiased {{ if $bodyClass }}{{ $bodyClass }}{{ end }}'><div id='exampleWrapper' class='{{ if $class }}{{ $class }}{{ end }}'>{{- $input | safeHTMLAttr -}}{{ if $skeletonPlaceholders }}{{ $skeletonPlaceholdersMarkup }}{{ end }}</div><script src='{{ .Site.BaseURL }}flowbite.min.js'></script><script src='{{ .Site.BaseURL }}datepicker.min.js'></script>{{ if $charts }}<script src='https://cdn.jsdelivr.net/npm/apexcharts'></script>{{ end }}<script>window.onload = function () { const anchorTags = document.querySelectorAll('a'); anchorTags.forEach(function(a){a.addEventListener('click', function(ev){ev.preventDefault();})}); {{ if not $disable_init_js }} const dropdownEl = document.querySelector('[data-dropdown-toggle]'); if (dropdownEl) {dropdownEl.click();} const modalEl = document.querySelector('[data-modal-toggle]'); if(modalEl) {modalEl.click(); } {{ if $initDatepicker }} const datepickerEl = document.querySelector('[datepicker]'); if (datepickerEl) { datepickerEl.focus({preventScroll: true}); } {{ end }} const dateRangePickerEl = document.querySelector('[data-rangepicker] input'); if (dateRangePickerEl) { dateRangePickerEl.focus(); } const drawerEl = document.querySelector('[data-drawer-show]'); if (drawerEl) { drawerEl.click(); } {{ end }} }</script></body></html>" frameborder="0"></iframe>
+        <iframe {{ if $id }}title="{{ replace $id "-" " "}}"{{ end }} class="w-full h-0 mx-auto bg-white dark:bg-gray-900 iframe-code" {{ if $iframeMaxHeight }}style='max-height: {{  sub (int $iframeMaxHeight) 40 }}px'{{ end }} srcdoc="<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap' rel='stylesheet'><link rel='stylesheet' href='{{ .Site.BaseURL }}flowbite.css?v=2.2.1a'></head><body {{ if $iframeHeight }}style='height: {{  sub (int $iframeHeight) 40 }}px'{{ end }} class='p-5 bg-white dark:bg-gray-900 antialiased {{ if $bodyClass }}{{ $bodyClass }}{{ end }}'><div id='exampleWrapper' class='{{ if $class }}{{ $class }}{{ end }}'>{{- $input | safeHTMLAttr -}}{{ if $skeletonPlaceholders }}{{ $skeletonPlaceholdersMarkup }}{{ end }}</div><script src='{{ .Site.BaseURL }}flowbite.min.js'></script><script src='{{ .Site.BaseURL }}datepicker.min.js'></script>{{ if $charts }}<script src='https://cdn.jsdelivr.net/npm/apexcharts'></script>{{ end }}<script>window.onload = function () { const anchorTags = document.querySelectorAll('a'); anchorTags.forEach(function(a){a.addEventListener('click', function(ev){ev.preventDefault();})}); {{ if not $disable_init_js }} const dropdownEl = document.querySelector('[data-dropdown-toggle]'); if (dropdownEl) {dropdownEl.click();} const modalEl = document.querySelector('[data-modal-toggle]'); if(modalEl) {modalEl.click(); } {{ if $initDatepicker }} const datepickerEl = document.querySelector('[datepicker]'); if (datepickerEl) { datepickerEl.focus({preventScroll: true}); } {{ end }} const dateRangePickerEl = document.querySelector('[data-rangepicker] input'); if (dateRangePickerEl) { dateRangePickerEl.focus(); } const drawerEl = document.querySelector('[data-drawer-show]'); if (drawerEl) { drawerEl.click(); } {{ end }} {{ if $javascript }} {{ $javascript }} {{ end }} }</script></body></html>" frameborder="0"></iframe>
         <div class="flex items-center justify-center w-full p-5 bg-white dark:bg-gray-900" data-component-loader>
           <div role="status">
             <svg aria-hidden="true" class="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -118,11 +127,16 @@
             <div class="grid w-full grid-cols-2 border-b border-gray-200 bg-gray-50 rounded-t-md dark:bg-gray-700 dark:border-gray-600">
               <ul class="flex text-sm font-medium text-center text-gray-500 dark:text-gray-400">
                 <li>
-                  <span class="inline-block w-full p-2 px-3 text-gray-800 bg-gray-100 border-r border-gray-200 dark:text-white dark:bg-gray-800 dark:border-gray-600">HTML</span>
+                  <button type="button" data-toggle-html-code class="inline-block w-full p-2 px-3 text-gray-800 bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 border-r border-gray-200 dark:text-white dark:bg-gray-800 dark:border-gray-600">HTML</button>
                 </li>
+                {{ if $javascript }}
+                  <li>
+                    <button type="button" data-toggle-javascript-code class="inline-block w-full p-2 px-3 text-gray-800 bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 border-r border-gray-200 dark:text-white dark:bg-gray-800 dark:border-gray-600">JavaScript</button>
+                  </li>
+                {{ end }}
               </ul>
               <div class="flex justify-end">
-                <button {{ if $id }} data-tooltip-target="{{ $id }}-copy-clipboard-tooltip" data-tooltip-placement="bottom"{{ end }} type="button" data-copy-state="copy" class="flex items-center px-3 py-2 text-xs font-medium text-gray-600 bg-gray-100 border-l border-gray-200 dark:border-gray-600 dark:text-gray-400 dark:bg-gray-800 hover:text-blue-700 dark:hover:text-white copy-to-clipboard-button">
+                <button {{ if $id }} data-tooltip-target="{{ $id }}-copy-clipboard-tooltip" data-clipboard-content-type="html" data-tooltip-placement="bottom"{{ end }} type="button" data-copy-state="copy" class="flex items-center px-3 py-2 text-xs font-medium text-gray-600 bg-gray-100 border-l border-gray-200 dark:border-gray-600 dark:text-gray-400 dark:bg-gray-800 hover:text-blue-700 dark:hover:text-white copy-to-clipboard-button">
                   <svg class="w-3.5 h-3.5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
                     <path d="M5 9V4.13a2.96 2.96 0 0 0-1.293.749L.879 7.707A2.96 2.96 0 0 0 .13 9H5Zm11.066-9H9.829a2.98 2.98 0 0 0-2.122.879L7 1.584A.987.987 0 0 0 6.766 2h4.3A3.972 3.972 0 0 1 15 6v10h1.066A1.97 1.97 0 0 0 18 14V2a1.97 1.97 0 0 0-1.934-2Z"/>
                     <path d="M11.066 4H7v5a2 2 0 0 1-2 2H0v7a1.969 1.969 0 0 0 1.933 2h9.133A1.97 1.97 0 0 0 13 18V6a1.97 1.97 0 0 0-1.934-2Z"/>
@@ -134,14 +148,21 @@
                       <div class="tooltip-arrow" data-popper-arrow></div>
                   </div>
                 {{ end }}
-                <div class="hidden" data-clipboard-content="{{- $content -}}">
+                <div class="hidden" data-clipboard-content-html="{{- $content -}}" data-clipboard-content-javascript="{{- $javascript -}}">
                   {{- $input -}}
                 </div>
               </div>
             </div>
           <div class="relative">
             <div data-code-wrapper class="overflow-hidden max-h-72" tabindex="-1">
-              {{- highlight (trim $content "\n") $lang "" -}}
+              <div data-code-wrapper-html>
+                {{- highlight (trim $content "\n") $lang "" -}}
+              </div>
+              {{ if $javascript }}
+                <div data-code-wrapper-javascript class="hidden">
+                  {{- highlight (trim $javascript "\n") "javascript" "" -}}
+                </div>
+              {{ end }}
             </div>
             <button data-expand-code type="button" class="hidden absolute bottom-0 left-0 py-2.5 px-5 w-full text-sm font-medium text-gray-900 bg-gray-100 border-t border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Expand code</button>
           </div>

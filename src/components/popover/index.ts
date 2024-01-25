@@ -5,7 +5,9 @@ import type {
     Instance as PopperInstance,
 } from '@popperjs/core';
 import type { PopoverOptions } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { PopoverInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: PopoverOptions = {
     placement: 'top',
@@ -16,7 +18,13 @@ const Default: PopoverOptions = {
     onToggle: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    id: null,
+    override: true,
+};
+
 class Popover implements PopoverInterface {
+    _instanceId: string;
     _targetEl: HTMLElement;
     _triggerEl: HTMLElement;
     _options: PopoverOptions;
@@ -24,52 +32,104 @@ class Popover implements PopoverInterface {
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
     _keydownEventListener: EventListenerOrEventListenerObject;
     _visible: boolean;
+    _initialized: boolean;
+    _showHandler: EventListenerOrEventListenerObject;
+    _hideHandler: EventListenerOrEventListenerObject;
 
     constructor(
         targetEl: HTMLElement | null = null,
         triggerEl: HTMLElement | null = null,
-        options: PopoverOptions = Default
+        options: PopoverOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetEl.id;
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
-        this._popperInstance = this._createPopperInstance();
+        this._popperInstance = null;
         this._visible = false;
-        this._init();
+        this._initialized = false;
+        this.init();
+        instances.addInstance(
+            'Popover',
+            this,
+            instanceOptions.id ? instanceOptions.id : this._targetEl.id,
+            instanceOptions.override
+        );
     }
 
-    _init() {
-        if (this._triggerEl) {
+    init() {
+        if (this._triggerEl && this._targetEl && !this._initialized) {
             this._setupEventListeners();
+            this._popperInstance = this._createPopperInstance();
+            this._initialized = true;
         }
+    }
+
+    destroy() {
+        if (this._initialized) {
+            // remove event listeners associated with the trigger element and target element
+            const triggerEvents = this._getTriggerEvents();
+
+            triggerEvents.showEvents.forEach((ev) => {
+                this._triggerEl.removeEventListener(ev, this._showHandler);
+                this._targetEl.removeEventListener(ev, this._showHandler);
+            });
+
+            triggerEvents.hideEvents.forEach((ev) => {
+                this._triggerEl.removeEventListener(ev, this._hideHandler);
+                this._targetEl.removeEventListener(ev, this._hideHandler);
+            });
+
+            // remove event listeners for keydown
+            this._removeKeydownListener();
+
+            // remove event listeners for click outside
+            this._removeClickOutsideListener();
+
+            // destroy the Popper instance if you have one (assuming this._popperInstance is the Popper instance)
+            if (this._popperInstance) {
+                this._popperInstance.destroy();
+            }
+
+            this._initialized = false;
+        }
+    }
+
+    removeInstance() {
+        instances.removeInstance('Popover', this._instanceId);
+    }
+
+    destroyAndRemoveInstance() {
+        this.destroy();
+        this.removeInstance();
     }
 
     _setupEventListeners() {
         const triggerEvents = this._getTriggerEvents();
 
+        this._showHandler = () => {
+            this.show();
+        };
+
+        this._hideHandler = () => {
+            setTimeout(() => {
+                if (!this._targetEl.matches(':hover')) {
+                    this.hide();
+                }
+            }, 100);
+        };
+
         triggerEvents.showEvents.forEach((ev) => {
-            this._triggerEl.addEventListener(ev, () => {
-                this.show();
-            });
-            this._targetEl.addEventListener(ev, () => {
-                this.show();
-            });
+            this._triggerEl.addEventListener(ev, this._showHandler);
+            this._targetEl.addEventListener(ev, this._showHandler);
         });
+
         triggerEvents.hideEvents.forEach((ev) => {
-            this._triggerEl.addEventListener(ev, () => {
-                setTimeout(() => {
-                    if (!this._targetEl.matches(':hover')) {
-                        this.hide();
-                    }
-                }, 100);
-            });
-            this._targetEl.addEventListener(ev, () => {
-                setTimeout(() => {
-                    if (!this._triggerEl.matches(':hover')) {
-                        this.hide();
-                    }
-                }, 100);
-            });
+            this._triggerEl.addEventListener(ev, this._hideHandler);
+            this._targetEl.addEventListener(ev, this._hideHandler);
         });
     }
 

@@ -142,10 +142,15 @@ pre[class*="language-"] {
 	@apply p-6 pt-6 m-0 mt-4 mb-8 text-sm bg-gray-50 rounded-xl dark:bg-gray-800;
 }
 
+[data-code-wrapper] .highlight pre[class*="language-"] {
+	@apply my-0;
+}
+
 /* when after preview */
 .code-preview-wrapper + .code-syntax-wrapper > .code-syntax > .relative > [data-code-wrapper] > .highlight pre[class*="language-"],
 .code-preview-wrapper + .code-syntax-wrapper > .code-syntax {
-	overflow: auto;
+	overflow-y: hidden;
+	overflow-x: scroll;
 	@apply mt-0 rounded-none;
 }
 
@@ -444,7 +449,7 @@ code.language-html .token.comment{
 }
 
 .DocSearch-Container {
-	@apply bg-gray-900 bg-opacity-50 dark:bg-opacity-80;
+	@apply bg-gray-900/50 dark:bg-gray-900/80;
 }
 
 .DocSearch-Modal {

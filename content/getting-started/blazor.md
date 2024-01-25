@@ -219,7 +219,7 @@ module.exports = {
 
 ```bash
     <!-- ... -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
   </body>
 </html>
 ```
@@ -263,9 +263,38 @@ Now that you've set up Flowbite with Blazor you can explore the whole collection
 
 ## WASM integration
 
-This guide does not include WebAssembly (WASM) support but you can still use Flowbite with Blazor WASM by setting up the [Flowbite init functions](https://flowbite.com/docs/getting-started/quickstart/#init-functions) using an [interop layer](https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-7.0) that ensures the DOM rendering before applying the event listeners via the data attributes API.
+To use Flowbite with Blazor WebAssembly (WASM), you will need to setup the [Flowbite init functions](https://flowbite.com/docs/getting-started/quickstart/#init-functions) using an [interop layer](https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-7.0) that ensures the DOM rendering before applying the event listeners via the data attributes API.
 
-Help needed: if you have experience with Blazor WASM and would like to contribute to this guide, then you can [edit this file on GitHub](https://github.com/themesberg/flowbite/blob/main/content/getting-started/blazor.md) and create a pull request. Thank you!
+1. First, you need to define the JS function to initialize Flowbite inside the `index.html` file:
+
+```html
+ <script>
+     window.initializeFlowbite = () => {
+         initFlowbite();
+     }
+ </script>
+```
+
+2. After that, in your `Mainlayout.razor` file, you need to implement the JS interop logic to invoke the JavaScript function `window.initializeFlowbite` by first injecting the `IJSRuntime` service into your component:
+
+```bash
+@inject IJSRuntime Js
+```
+
+And then override the `OnAfterRenderAsync` method:
+
+```bash
+@code {
+    protected override async Task OnAfterRenderAsync(bool isFirstRender) {
+        if (isFirstRender)
+        {
+           await Js.InvokeVoidAsync("window.initializeFlowbite");
+        }
+    }
+ }
+```
+
+Congratulations! You have now integrated the interactive JS components from Flowbite with a Blazor WASM.
 
 ## Blazor starter project
 

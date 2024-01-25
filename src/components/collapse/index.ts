@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { CollapseOptions } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { CollapseInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: CollapseOptions = {
     onCollapse: () => {},
@@ -8,26 +10,45 @@ const Default: CollapseOptions = {
     onToggle: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    id: null,
+    override: true,
+};
+
 class Collapse implements CollapseInterface {
+    _instanceId: string;
     _targetEl: HTMLElement | null;
     _triggerEl: HTMLElement | null;
     _options: CollapseOptions;
     _visible: boolean;
+    _initialized: boolean;
+    _clickHandler: EventListenerOrEventListenerObject;
 
     constructor(
         targetEl: HTMLElement | null = null,
         triggerEl: HTMLElement | null = null,
-        options: CollapseOptions = Default
+        options: CollapseOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetEl.id;
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
         this._visible = false;
-        this._init();
+        this._initialized = false;
+        this.init();
+        instances.addInstance(
+            'Collapse',
+            this,
+            this._instanceId,
+            instanceOptions.override
+        );
     }
 
-    _init() {
-        if (this._triggerEl) {
+    init() {
+        if (this._triggerEl && this._targetEl && !this._initialized) {
             if (this._triggerEl.hasAttribute('aria-expanded')) {
                 this._visible =
                     this._triggerEl.getAttribute('aria-expanded') === 'true';
@@ -36,10 +57,29 @@ class Collapse implements CollapseInterface {
                 this._visible = !this._targetEl.classList.contains('hidden');
             }
 
-            this._triggerEl.addEventListener('click', () => {
+            this._clickHandler = () => {
                 this.toggle();
-            });
+            };
+
+            this._triggerEl.addEventListener('click', this._clickHandler);
+            this._initialized = true;
         }
+    }
+
+    destroy() {
+        if (this._triggerEl && this._initialized) {
+            this._triggerEl.removeEventListener('click', this._clickHandler);
+            this._initialized = false;
+        }
+    }
+
+    removeInstance() {
+        instances.removeInstance('Collapse', this._instanceId);
+    }
+
+    destroyAndRemoveInstance() {
+        this.destroy();
+        this.removeInstance();
     }
 
     collapse() {
@@ -84,10 +124,30 @@ export function initCollapses() {
 
             // check if the target element exists
             if ($targetEl) {
-                new Collapse(
-                    $targetEl as HTMLElement,
-                    $triggerEl as HTMLElement
-                );
+                if (
+                    !instances.instanceExists(
+                        'Collapse',
+                        $targetEl.getAttribute('id')
+                    )
+                ) {
+                    new Collapse(
+                        $targetEl as HTMLElement,
+                        $triggerEl as HTMLElement
+                    );
+                } else {
+                    // if instance exists already for the same target element then create a new one with a different trigger element
+                    new Collapse(
+                        $targetEl as HTMLElement,
+                        $triggerEl as HTMLElement,
+                        {},
+                        {
+                            id:
+                                $targetEl.getAttribute('id') +
+                                '_' +
+                                instances._generateRandomId(),
+                        }
+                    );
+                }
             } else {
                 console.error(
                     `The target element with id "${targetId}" does not exist. Please check the data-collapse-toggle attribute.`

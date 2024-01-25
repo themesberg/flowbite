@@ -5,7 +5,9 @@ import type {
     IndicatorItem,
     RotationItems,
 } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { CarouselInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: CarouselOptions = {
     defaultPosition: 0,
@@ -21,18 +23,32 @@ const Default: CarouselOptions = {
     onChange: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    id: null,
+    override: true,
+};
+
 class Carousel implements CarouselInterface {
+    _instanceId: string;
+    _carouselEl: HTMLElement;
     _items: CarouselItem[];
     _indicators: IndicatorItem[];
     _activeItem: CarouselItem;
     _intervalDuration: number;
     _intervalInstance: number;
     _options: CarouselOptions;
+    _initialized: boolean;
 
     constructor(
+        carouselEl: HTMLElement | null = null,
         items: CarouselItem[] = [],
-        options: CarouselOptions = Default
+        options: CarouselOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : carouselEl.id;
+        this._carouselEl = carouselEl;
         this._items = items;
         this._options = {
             ...Default,
@@ -43,34 +59,60 @@ class Carousel implements CarouselInterface {
         this._indicators = this._options.indicators.items;
         this._intervalDuration = this._options.interval;
         this._intervalInstance = null;
-        this._init();
+        this._initialized = false;
+        this.init();
+        instances.addInstance(
+            'Carousel',
+            this,
+            this._instanceId,
+            instanceOptions.override
+        );
     }
 
     /**
      * initialize carousel and items based on active one
      */
-    _init() {
-        this._items.map((item: CarouselItem) => {
-            item.el.classList.add(
-                'absolute',
-                'inset-0',
-                'transition-transform',
-                'transform'
-            );
-        });
-
-        // if no active item is set then first position is default
-        if (this._getActiveItem()) {
-            this.slideTo(this._getActiveItem().position);
-        } else {
-            this.slideTo(0);
-        }
-
-        this._indicators.map((indicator, position) => {
-            indicator.el.addEventListener('click', () => {
-                this.slideTo(position);
+    init() {
+        if (this._items.length && !this._initialized) {
+            this._items.map((item: CarouselItem) => {
+                item.el.classList.add(
+                    'absolute',
+                    'inset-0',
+                    'transition-transform',
+                    'transform'
+                );
             });
-        });
+
+            // if no active item is set then first position is default
+            if (this._getActiveItem()) {
+                this.slideTo(this._getActiveItem().position);
+            } else {
+                this.slideTo(0);
+            }
+
+            this._indicators.map((indicator, position) => {
+                indicator.el.addEventListener('click', () => {
+                    this.slideTo(position);
+                });
+            });
+
+            this._initialized = true;
+        }
+    }
+
+    destroy() {
+        if (this._initialized) {
+            this._initialized = false;
+        }
+    }
+
+    removeInstance() {
+        instances.removeInstance('Carousel', this._instanceId);
+    }
+
+    destroyAndRemoveInstance() {
+        this.destroy();
+        this.removeInstance();
     }
 
     getItem(position: number) {
@@ -154,6 +196,19 @@ class Carousel implements CarouselInterface {
             item.el.classList.add('hidden');
         });
 
+        // Handling the case when there is only one item
+        if (this._items.length === 1) {
+            rotationItems.middle.el.classList.remove(
+                '-translate-x-full',
+                'translate-x-full',
+                'translate-x-0',
+                'hidden',
+                'z-10'
+            );
+            rotationItems.middle.el.classList.add('translate-x-0', 'z-20');
+            return;
+        }
+
         // left item (previously active)
         rotationItems.left.el.classList.remove(
             '-translate-x-full',
@@ -162,6 +217,7 @@ class Carousel implements CarouselInterface {
             'hidden',
             'z-20'
         );
+
         rotationItems.left.el.classList.add('-translate-x-full', 'z-10');
 
         // currently active item
@@ -172,7 +228,7 @@ class Carousel implements CarouselInterface {
             'hidden',
             'z-10'
         );
-        rotationItems.middle.el.classList.add('translate-x-0', 'z-20');
+        rotationItems.middle.el.classList.add('translate-x-0', 'z-30');
 
         // right item (upcoming active)
         rotationItems.right.el.classList.remove(
@@ -180,9 +236,9 @@ class Carousel implements CarouselInterface {
             'translate-x-full',
             'translate-x-0',
             'hidden',
-            'z-20'
+            'z-30'
         );
-        rotationItems.right.el.classList.add('translate-x-full', 'z-10');
+        rotationItems.right.el.classList.add('translate-x-full', 'z-20');
     }
 
     /**
@@ -282,7 +338,7 @@ export function initCarousels() {
             });
         }
 
-        const carousel = new Carousel(items, {
+        const carousel = new Carousel($carouselEl as HTMLElement, items, {
             defaultPosition: defaultPosition,
             indicators: {
                 items: indicators,

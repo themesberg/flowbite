@@ -10,4 +10,8 @@ export declare interface AccordionInterface {
     open(id: string): void;
     toggle(id: string): void;
     close(id: string): void;
+
+    destroy(): void;
+    removeInstance(): void;
+    destroyAndRemoveInstance(): void;
 }

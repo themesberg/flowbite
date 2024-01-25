@@ -12,6 +12,8 @@ import Modal, { initModals } from './components/modal';
 import Popover, { initPopovers } from './components/popover';
 import Tabs, { initTabs } from './components/tabs';
 import Tooltip, { initTooltips } from './components/tooltip';
+import InputCounter, { initInputCounters } from './components/input-counter';
+import CopyClipboard, { initCopyClipboards } from './components/clipboard';
 import './components/index';
 import Events from './dom/events';
 
@@ -27,6 +29,8 @@ const events = new Events('load', [
     initTooltips,
     initPopovers,
     initDials,
+    initCopyClipboards,
+    initInputCounters,
 ]);
 events.init();
 
@@ -42,5 +46,7 @@ export default {
     Popover,
     Tabs,
     Tooltip,
+    InputCounter,
+    CopyClipboard,
     Events,
 };

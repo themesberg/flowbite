@@ -1,47 +1,42 @@
 // core components
-import Accordion, { initAccordions } from './components/accordion';
-import Carousel, { initCarousels } from './components/carousel';
-import Collapse, { initCollapses } from './components/collapse';
-import Dial, { initDials } from './components/dial';
-import Dismiss, { initDismisses } from './components/dismiss';
-import Drawer, { initDrawers } from './components/drawer';
-import Dropdown, { initDropdowns } from './components/dropdown';
-import Modal, { initModals } from './components/modal';
-import Popover, { initPopovers } from './components/popover';
-import Tabs, { initTabs } from './components/tabs';
-import Tooltip, { initTooltips } from './components/tooltip';
-import './components/index';
+import Accordion from './components/accordion';
+import Carousel from './components/carousel';
+import Collapse from './components/collapse';
+import Dial from './components/dial';
+import Dismiss from './components/dismiss';
+import Drawer from './components/drawer';
+import Dropdown from './components/dropdown';
+import Modal from './components/modal';
+import Popover from './components/popover';
+import Tabs from './components/tabs';
+import Tooltip from './components/tooltip';
+import InputCounter from './components/input-counter';
+import CopyClipboard from './components/clipboard';
+import { initFlowbite } from './components/index';
 import Events from './dom/events';
 
-const turboLoadEvents = new Events('turbo:load', [
-    initAccordions,
-    initCollapses,
-    initCarousels,
-    initDismisses,
-    initDropdowns,
-    initModals,
-    initDrawers,
-    initTabs,
-    initTooltips,
-    initPopovers,
-    initDials,
-]);
+// Since turbo maintainers refuse to add this event, we'll add it ourselves
+// https://discuss.hotwired.dev/t/event-to-know-a-turbo-stream-has-been-rendered/1554/10
+const afterRenderEvent = new Event('turbo:after-stream-render');
+addEventListener('turbo:before-stream-render', (event: CustomEvent) => {
+    const originalRender = event.detail.render;
+
+    event.detail.render = function (streamElement: Element) {
+        originalRender(streamElement);
+        document.dispatchEvent(afterRenderEvent);
+    };
+});
+
+const turboLoadEvents = new Events('turbo:load', [initFlowbite]);
 turboLoadEvents.init();
 
-const turboFrameLoadEvents = new Events('turbo:frame-load', [
-    initAccordions,
-    initCollapses,
-    initCarousels,
-    initDismisses,
-    initDropdowns,
-    initModals,
-    initDrawers,
-    initTabs,
-    initTooltips,
-    initPopovers,
-    initDials,
-]);
+const turboFrameLoadEvents = new Events('turbo:frame-load', [initFlowbite]);
 turboFrameLoadEvents.init();
+
+const turboStreamLoadEvents = new Events('turbo:after-stream-render', [
+    initFlowbite,
+]);
+turboStreamLoadEvents.init();
 
 export default {
     Accordion,
@@ -55,5 +50,7 @@ export default {
     Popover,
     Tabs,
     Tooltip,
+    InputCounter,
+    CopyClipboard,
     Events,
 };

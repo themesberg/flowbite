@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import type { ModalInstance, ModalOptions } from './types';
+import type { ModalOptions } from './types';
+import type { InstanceOptions, EventListenerInstance } from '../../dom/types';
 import { ModalInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: ModalOptions = {
     placement: 'center',
-    backdropClasses:
-        'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+    backdropClasses: 'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-40',
     backdrop: 'dynamic',
     closable: true,
     onHide: () => {},
@@ -13,31 +14,68 @@ const Default: ModalOptions = {
     onToggle: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    id: null,
+    override: true,
+};
+
 class Modal implements ModalInterface {
+    _instanceId: string;
     _targetEl: HTMLElement | null;
     _options: ModalOptions;
     _isHidden: boolean;
     _backdropEl: HTMLElement | null;
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
     _keydownEventListener: EventListenerOrEventListenerObject;
+    _eventListenerInstances: EventListenerInstance[] = [];
+    _initialized: boolean;
 
     constructor(
         targetEl: HTMLElement | null = null,
-        options: ModalOptions = Default
+        options: ModalOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : targetEl.id;
         this._targetEl = targetEl;
         this._options = { ...Default, ...options };
         this._isHidden = true;
         this._backdropEl = null;
-        this._init();
+        this._initialized = false;
+        this.init();
+        instances.addInstance(
+            'Modal',
+            this,
+            this._instanceId,
+            instanceOptions.override
+        );
     }
 
-    _init() {
-        if (this._targetEl) {
+    init() {
+        if (this._targetEl && !this._initialized) {
             this._getPlacementClasses().map((c) => {
                 this._targetEl.classList.add(c);
             });
+            this._initialized = true;
         }
+    }
+
+    destroy() {
+        if (this._initialized) {
+            this.removeAllEventListenerInstances();
+            this._destroyBackdropEl();
+            this._initialized = false;
+        }
+    }
+
+    removeInstance() {
+        instances.removeInstance('Modal', this._instanceId);
+    }
+
+    destroyAndRemoveInstance() {
+        this.destroy();
+        this.removeInstance();
     }
 
     _createBackdrop() {
@@ -158,13 +196,13 @@ class Modal implements ModalInterface {
             this._createBackdrop();
             this._isHidden = false;
 
-            // prevent body scroll
-            document.body.classList.add('overflow-hidden');
-
             // Add keyboard event listener to the document
             if (this._options.closable) {
                 this._setupModalCloseEventListeners();
             }
+
+            // prevent body scroll
+            document.body.classList.add('overflow-hidden');
 
             // callback function
             this._options.onShow(this);
@@ -200,18 +238,35 @@ class Modal implements ModalInterface {
     isHidden() {
         return this._isHidden;
     }
+
+    addEventListenerInstance(
+        element: HTMLElement,
+        type: string,
+        handler: EventListenerOrEventListenerObject
+    ) {
+        this._eventListenerInstances.push({
+            element: element,
+            type: type,
+            handler: handler,
+        });
+    }
+
+    removeAllEventListenerInstances() {
+        this._eventListenerInstances.map((eventListenerInstance) => {
+            eventListenerInstance.element.removeEventListener(
+                eventListenerInstance.type,
+                eventListenerInstance.handler
+            );
+        });
+        this._eventListenerInstances = [];
+    }
+
+    getAllEventListenerInstances() {
+        return this._eventListenerInstances;
+    }
 }
 
-const getModalInstance = (id: string, instances: ModalInstance[]) => {
-    if (instances.some((modalInstance) => modalInstance.id === id)) {
-        return instances.find((modalInstance) => modalInstance.id === id);
-    }
-    return null;
-};
-
 export function initModals() {
-    const modalInstances = [] as ModalInstance[];
-
     // initiate modal based on data-modal-target
     document.querySelectorAll('[data-modal-target]').forEach(($triggerEl) => {
         const modalId = $triggerEl.getAttribute('data-modal-target');
@@ -220,21 +275,13 @@ export function initModals() {
         if ($modalEl) {
             const placement = $modalEl.getAttribute('data-modal-placement');
             const backdrop = $modalEl.getAttribute('data-modal-backdrop');
-
-            if (!getModalInstance(modalId, modalInstances)) {
-                modalInstances.push({
-                    id: modalId,
-                    object: new Modal(
-                        $modalEl as HTMLElement,
-                        {
-                            placement: placement
-                                ? placement
-                                : Default.placement,
-                            backdrop: backdrop ? backdrop : Default.backdrop,
-                        } as ModalOptions
-                    ),
-                });
-            }
+            new Modal(
+                $modalEl as HTMLElement,
+                {
+                    placement: placement ? placement : Default.placement,
+                    backdrop: backdrop ? backdrop : Default.backdrop,
+                } as ModalOptions
+            );
         } else {
             console.error(
                 `Modal with id ${modalId} does not exist. Are you sure that the data-modal-target attribute points to the correct modal id?.`
@@ -242,38 +289,32 @@ export function initModals() {
         }
     });
 
-    // support pre v1.6.0 data-modal-toggle initialization
+    // toggle modal visibility
     document.querySelectorAll('[data-modal-toggle]').forEach(($triggerEl) => {
         const modalId = $triggerEl.getAttribute('data-modal-toggle');
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            const placement = $modalEl.getAttribute('data-modal-placement');
-            const backdrop = $modalEl.getAttribute('data-modal-backdrop');
-
-            let modal: ModalInstance = getModalInstance(
-                modalId,
-                modalInstances
+            const modal: ModalInterface = instances.getInstance(
+                'Modal',
+                modalId
             );
-            if (!modal) {
-                modal = {
-                    id: modalId,
-                    object: new Modal(
-                        $modalEl as HTMLElement,
-                        {
-                            placement: placement
-                                ? placement
-                                : Default.placement,
-                            backdrop: backdrop ? backdrop : Default.backdrop,
-                        } as ModalOptions
-                    ),
-                };
-                modalInstances.push(modal);
-            }
 
-            $triggerEl.addEventListener('click', () => {
-                modal.object.toggle();
-            });
+            if (modal) {
+                const toggleModal = () => {
+                    modal.toggle();
+                };
+                $triggerEl.addEventListener('click', toggleModal);
+                modal.addEventListenerInstance(
+                    $triggerEl as HTMLElement,
+                    'click',
+                    toggleModal
+                );
+            } else {
+                console.error(
+                    `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`
+                );
+            }
         } else {
             console.error(
                 `Modal with id ${modalId} does not exist. Are you sure that the data-modal-toggle attribute points to the correct modal id?`
@@ -287,16 +328,21 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            const modal: ModalInstance = getModalInstance(
-                modalId,
-                modalInstances
+            const modal: ModalInterface = instances.getInstance(
+                'Modal',
+                modalId
             );
+
             if (modal) {
-                $triggerEl.addEventListener('click', () => {
-                    if (modal.object.isHidden) {
-                        modal.object.show();
-                    }
-                });
+                const showModal = () => {
+                    modal.show();
+                };
+                $triggerEl.addEventListener('click', showModal);
+                modal.addEventListenerInstance(
+                    $triggerEl as HTMLElement,
+                    'click',
+                    showModal
+                );
             } else {
                 console.error(
                     `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`
@@ -315,17 +361,21 @@ export function initModals() {
         const $modalEl = document.getElementById(modalId);
 
         if ($modalEl) {
-            const modal: ModalInstance = getModalInstance(
-                modalId,
-                modalInstances
+            const modal: ModalInterface = instances.getInstance(
+                'Modal',
+                modalId
             );
 
             if (modal) {
-                $triggerEl.addEventListener('click', () => {
-                    if (modal.object.isVisible) {
-                        modal.object.hide();
-                    }
-                });
+                const hideModal = () => {
+                    modal.hide();
+                };
+                $triggerEl.addEventListener('click', hideModal);
+                modal.addEventListenerInstance(
+                    $triggerEl as HTMLElement,
+                    'click',
+                    hideModal
+                );
             } else {
                 console.error(
                     `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`

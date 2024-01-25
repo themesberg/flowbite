@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { AccordionItem, AccordionOptions } from './types';
+import type { InstanceOptions } from '../../dom/types';
 import { AccordionInterface } from './interface';
+import instances from '../../dom/instances';
 
 const Default: AccordionOptions = {
     alwaysOpen: false,
@@ -11,32 +13,81 @@ const Default: AccordionOptions = {
     onToggle: () => {},
 };
 
+const DefaultInstanceOptions: InstanceOptions = {
+    id: null,
+    override: true,
+};
+
 class Accordion implements AccordionInterface {
+    _instanceId: string;
+    _accordionEl: HTMLElement;
     _items: AccordionItem[];
     _options: AccordionOptions;
+    _clickHandler: EventListenerOrEventListenerObject;
+    _initialized: boolean;
 
     constructor(
+        accordionEl: HTMLElement | null = null,
         items: AccordionItem[] = [],
-        options: AccordionOptions = Default
+        options: AccordionOptions = Default,
+        instanceOptions: InstanceOptions = DefaultInstanceOptions
     ) {
+        this._instanceId = instanceOptions.id
+            ? instanceOptions.id
+            : accordionEl.id;
+        this._accordionEl = accordionEl;
         this._items = items;
         this._options = { ...Default, ...options };
-        this._init();
+        this._initialized = false;
+        this.init();
+        instances.addInstance(
+            'Accordion',
+            this,
+            this._instanceId,
+            instanceOptions.override
+        );
     }
 
-    private _init() {
-        if (this._items.length) {
+    init() {
+        if (this._items.length && !this._initialized) {
             // show accordion item based on click
-            this._items.map((item) => {
+            this._items.forEach((item) => {
                 if (item.active) {
                     this.open(item.id);
                 }
 
-                item.triggerEl.addEventListener('click', () => {
+                const clickHandler = () => {
                     this.toggle(item.id);
-                });
+                };
+
+                item.triggerEl.addEventListener('click', clickHandler);
+
+                // Store the clickHandler in a property of the item for removal later
+                item.clickHandler = clickHandler;
             });
+            this._initialized = true;
         }
+    }
+
+    destroy() {
+        if (this._items.length && this._initialized) {
+            this._items.forEach((item) => {
+                item.triggerEl.removeEventListener('click', item.clickHandler);
+
+                // Clean up by deleting the clickHandler property from the item
+                delete item.clickHandler;
+            });
+            this._initialized = false;
+        }
+    }
+
+    removeInstance() {
+        instances.removeInstance('Accordion', this._instanceId);
+    }
+
+    destroyAndRemoveInstance() {
+        this.destroy();
+        this.removeInstance();
     }
 
     getItem(id: string) {
@@ -62,7 +113,7 @@ class Accordion implements AccordionInterface {
 
                     // rotate icon if set
                     if (i.iconEl) {
-                        i.iconEl.classList.remove('rotate-180');
+                        i.iconEl.classList.add('rotate-180');
                     }
                 }
             });
@@ -79,7 +130,7 @@ class Accordion implements AccordionInterface {
 
         // rotate icon if set
         if (item.iconEl) {
-            item.iconEl.classList.add('rotate-180');
+            item.iconEl.classList.remove('rotate-180');
         }
 
         // callback function
@@ -114,7 +165,7 @@ class Accordion implements AccordionInterface {
 
         // rotate icon if set
         if (item.iconEl) {
-            item.iconEl.classList.remove('rotate-180');
+            item.iconEl.classList.add('rotate-180');
         }
 
         // callback function
@@ -155,7 +206,7 @@ export function initAccordions() {
                 }
             });
 
-        new Accordion(items, {
+        new Accordion($accordionEl as HTMLElement, items, {
             alwaysOpen: alwaysOpen === 'open' ? true : false,
             activeClasses: activeClasses
                 ? activeClasses

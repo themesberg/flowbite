@@ -21,8 +21,3 @@ export declare type ModalOptions = {
     onHide?: (modal: ModalInterface) => void;
     onToggle?: (modal: ModalInterface) => void;
 };
-
-export declare type ModalInstance = {
-    id: string;
-    object: ModalInterface;
-};

@@ -1,5 +1,6 @@
 import { initAccordions } from './accordion';
 import { initCarousels } from './carousel';
+import { initCopyClipboards } from './clipboard';
 import { initCollapses } from './collapse';
 import { initDials } from './dial';
 import { initDismisses } from './dismiss';
@@ -24,6 +25,7 @@ export function initFlowbite() {
     initPopovers();
     initDials();
     initInputCounters();
+    initCopyClipboards();
 }
 
 if (typeof window !== 'undefined') {

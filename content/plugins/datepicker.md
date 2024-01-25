@@ -101,8 +101,10 @@ If you want the datepicker to dissapear right after clicking on a date then you 
 
 By adding the `datepicker-buttons` data attribute you will enable the `today` and `clear` buttons with the following features:
 
-- Clicking on the `today` button will browse back to the current day/month/year. If you want the button to additionally select today's date, add `datepicker-today-select` data attribute.
+- Clicking on the `today` button will browse back to the current day/month/year.
 - Clicking on the `clear` button will reset all selections
+
+If you want the button to additionally select today's date, add `datepicker-autoselect-today` data attribute.
 
 {{< example id="datepicker-action-example" class="flex justify-center dark:bg-gray-900" github="plugins/datepicker.md" show_dark=true iframeHeight="530" initDatepicker=true >}}
 <div class="relative max-w-sm">
@@ -111,7 +113,7 @@ By adding the `datepicker-buttons` data attribute you will enable the `today` an
         <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
       </svg>
   </div>
-  <input datepicker datepicker-buttons type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+  <input datepicker datepicker-buttons datepicker-autoselect-today type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
 </div>
 {{< /example >}}
 

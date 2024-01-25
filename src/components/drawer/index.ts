@@ -217,7 +217,10 @@ class Drawer implements DrawerInterface {
     }
 
     _destroyBackdropEl() {
-        if (this._visible && document.querySelector('[drawer-backdrop]') !== null) {
+        if (
+            this._visible &&
+            document.querySelector('[drawer-backdrop]') !== null
+        ) {
             document.querySelector('[drawer-backdrop]').remove();
         }
     }

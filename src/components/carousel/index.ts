@@ -84,8 +84,8 @@ class Carousel implements CarouselInterface {
             });
 
             // if no active item is set then first position is default
-            if (this._getActiveItem()) {
-                this.slideTo(this._getActiveItem().position);
+            if (this.getActiveItem()) {
+                this.slideTo(this.getActiveItem().position);
             } else {
                 this.slideTo(0);
             }
@@ -150,7 +150,7 @@ class Carousel implements CarouselInterface {
      * Based on the currently active item it will go to the next position
      */
     next() {
-        const activeItem = this._getActiveItem();
+        const activeItem = this.getActiveItem();
         let nextItem = null;
 
         // check if last item
@@ -170,7 +170,7 @@ class Carousel implements CarouselInterface {
      * Based on the currently active item it will go to the previous position
      */
     prev() {
-        const activeItem = this._getActiveItem();
+        const activeItem = this.getActiveItem();
         let prevItem = null;
 
         // check if first item

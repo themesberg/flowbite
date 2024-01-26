@@ -12,9 +12,9 @@ next: Symfony
 nextLink: getting-started/symfony/
 ---
 
-Laravel is the most popular PHP web framework that helps you build modern web applications and API's.
+Laravel is the most popular free and open-source PHP web framework that helps you build modern web applications and API's based on a model-view-controller (MVC) programming architecture. It's an iteration of the [Symfony](https://flowbite.com/docs/getting-started/symfony/) framework and it's being used by millions of developers and companies around the world.
 
-Use the Tailwind CSS utility-first framework and UI components from Flowbite to enhance your front-end development process.
+Check out this guide to learn how to set up a new Laravel project together with Tailwind CSS and the UI components from Flowbite to enhance your front-end development workflow.
 
 ## Install Tailwind CSS with Laravel
 

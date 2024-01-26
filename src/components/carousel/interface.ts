@@ -16,8 +16,8 @@ export declare interface CarouselInterface {
     init(): void;
 
     getItem(position: number): CarouselItem;
+    getActiveItem(): CarouselItem;
 
-    _getActiveItem(): CarouselItem;
     _setActiveItem(item: CarouselItem): void;
 
     slideTo(position: number): void;

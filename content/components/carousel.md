@@ -473,6 +473,22 @@ Use the following methods on the Carousel object to programmatically manipulate 
                   Use this method to stop the automatic cycling of the carousel component.
               </td>
           </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">getItem(position)</code>
+              </td>
+              <td class="px-6 py-4">
+                  Get the carousel item based on the position number that you set as a parameter.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">getActiveItem()</code>
+              </td>
+              <td class="px-6 py-4">
+                  Get the current active carousel item.
+              </td>
+          </tr>
       </tbody>
   </table>
 </div>

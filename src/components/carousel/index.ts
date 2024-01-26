@@ -262,7 +262,7 @@ class Carousel implements CarouselInterface {
     /**
      * Get the currently active item
      */
-    _getActiveItem() {
+    getActiveItem() {
         return this._activeItem;
     }
 

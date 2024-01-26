@@ -96,6 +96,7 @@ export function links() {
 ```
 
 6. Update your `remix.config.js` file to enable remix built-in tailwind support:
+   
 ```javascript
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {

@@ -136,6 +136,12 @@ class Tabs implements TabsInterface {
 export function initTabs() {
     document.querySelectorAll('[data-tabs-toggle]').forEach(($parentEl) => {
         const tabItems: TabItem[] = [];
+        const activeClasses = $parentEl.getAttribute(
+            'data-tabs-active-classes'
+        );
+        const inactiveClasses = $parentEl.getAttribute(
+            'data-tabs-inactive-classes'
+        );
         let defaultTabId = null;
         $parentEl
             .querySelectorAll('[role="tab"]')
@@ -158,6 +164,12 @@ export function initTabs() {
 
         new Tabs($parentEl as HTMLElement, tabItems, {
             defaultTabId: defaultTabId,
+            activeClasses: activeClasses
+                ? activeClasses
+                : Default.activeClasses,
+            inactiveClasses: inactiveClasses
+                ? inactiveClasses
+                : Default.inactiveClasses,
         } as TabsOptions);
     });
 }

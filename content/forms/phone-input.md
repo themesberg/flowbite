@@ -201,7 +201,41 @@ Use this example to send a verification code to the user's phone number for auth
 
 Use this example to select one of your saved phone numbers from an application with a copy-paste feature.
 
-{{< example id="phone-select-number-input" github="components/phone-input.md" show_dark=true disable_init_js="true" >}}
+{{< example id="phone-select-number-input" github="components/phone-input.md" show_dark=true disable_init_js="true" javascript=`
+const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'phone-numbers');
+const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-phone');
+
+const $defaultIcon = document.getElementById('copy-icon');
+const $successIcon = document.getElementById('copy-icon-success');
+
+const $defaultTooltipMessage = document.getElementById('tooltip-text');
+const $successTooltipMessage = document.getElementById('tooltip-text-success');
+
+clipboard.updateOnCopyCallback((clipboard) => {
+    showSuccess();
+
+    // reset to default state
+    setTimeout(() => {
+        resetToDefault();
+    }, 2000);
+})
+
+const showSuccess = () => {
+    $defaultIcon.classList.add('hidden');
+    $successIcon.classList.remove('hidden');
+    $defaultTooltipMessage.classList.add('hidden');
+    $successTooltipMessage.classList.remove('hidden');    
+    tooltip.show();
+}
+
+const resetToDefault = () => {
+    $defaultIcon.classList.remove('hidden');
+    $successIcon.classList.add('hidden');
+    $defaultTooltipMessage.classList.remove('hidden');
+    $successTooltipMessage.classList.add('hidden');
+    tooltip.hide();
+}
+` >}}
 <form class="max-w-sm mx-auto">
     <div class="mb-2 flex justify-between items-center">
         <label for="phone-numbers" class="text-sm font-medium text-gray-900 dark:text-white">Primary phone number:</label>
@@ -210,12 +244,12 @@ Use this example to select one of your saved phone numbers from an application w
     <div class="flex items-center">
         <div class="relative w-full">
             <select id="phone-numbers" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-e-0 border-gray-300 text-gray-900 text-sm rounded-s-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option selected value="primary">+1 234 456 7890</option>
-                <option value="secondary">+1 456 234 7890</option>
-                <option value="tertiary">+1 432 621 3163</option>
+                <option selected value="+1 234 456 7890">+1 234 456 7890</option>
+                <option value="+1 456 234 7890">+1 456 234 7890</option>
+                <option value="+1 432 621 3163">+1 432 621 3163</option>
             </select>
         </div>
-        <button id="copy-number" data-tooltip-target="tooltip-phone" class="flex-shrink-0 z-10 inline-flex items-center py-3 px-4 text-sm font-medium text-center text-gray-500 dark:text-gray-400 hover:text-gray-900 bg-gray-100 border border-gray-300 rounded-e-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:hover:text-white dark:border-gray-600" type="button">
+        <button id="copy-number" data-copy-to-clipboard-target="phone-numbers" data-tooltip-target="tooltip-phone" class="flex-shrink-0 z-10 inline-flex items-center py-3 px-4 text-sm font-medium text-center text-gray-500 dark:text-gray-400 hover:text-gray-900 bg-gray-100 border border-gray-300 rounded-e-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:hover:text-white dark:border-gray-600" type="button">
             <svg id="copy-icon" class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
                 <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
             </svg>
@@ -225,53 +259,12 @@ Use this example to select one of your saved phone numbers from an application w
         </button>
         <div id="tooltip-phone" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
             <span id="tooltip-text">Copy number</span>
+            <span id="tooltip-text-success">Copied!</span>
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
     </div>
     <p id="helper-text-explanation" class="mt-2 text-sm text-gray-500 dark:text-gray-400">Please set your primary phone number.</p>
 </form>
-
-
-<script>
-    function copyTextToClipboard(text) {
-        // Create a temporary textarea element
-        const tempTextArea = document.createElement("textarea");
-        tempTextArea.value = text;
-        document.body.appendChild(tempTextArea);
-
-        // Select the text inside the textarea and copy it to the clipboard
-        tempTextArea.select();
-        document.execCommand("copy");
-
-        // Remove the temporary textarea
-        document.body.removeChild(tempTextArea);
-    }
-
-    const copyNumberButton = document.getElementById("copy-number");
-    const phoneNumberSelect = document.getElementById("phone-numbers");
-
-    copyNumberButton.addEventListener("click", () => {
-        const selectedPhoneNumber = phoneNumberSelect.options[phoneNumberSelect.selectedIndex].text;
-        copyTextToClipboard(selectedPhoneNumber);
-
-        // show tooltip
-        FlowbiteInstances.getInstance('Tooltip', 'tooltip-phone').show();
-    
-        // show success message
-        document.getElementById('copy-icon').classList.add('hidden');
-        document.getElementById('copy-icon-success').classList.remove('hidden');
-        document.getElementById('tooltip-text').textContent = 'Copied!';
-
-        // reset initial messages
-        setTimeout(() => {
-            FlowbiteInstances.getInstance('Tooltip', 'tooltip-phone').hide();
-
-            document.getElementById('copy-icon').classList.remove('hidden');
-            document.getElementById('copy-icon-success').classList.add('hidden');
-            document.getElementById('tooltip-text').textContent = 'Copy number';
-        }, 2000);
-    })
-</script>
 {{< /example >}}
 
 ## Authentication form

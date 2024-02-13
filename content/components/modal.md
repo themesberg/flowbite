@@ -1117,6 +1117,30 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use this function to check if the modal is visible.
                 </td>
             </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">updateOnShow(callback)</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method to set a custom callback function when the modal has been shown.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method to set a custom callback function when the modal has been closed.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method to set a custom callback function when the modal visibility has been toggled.
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>

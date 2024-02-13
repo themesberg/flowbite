@@ -131,6 +131,10 @@ class Tabs implements TabsInterface {
         // callback function
         this._options.onShow(this, tab);
     }
+
+    updateOnShow(callback: () => void) {
+        this._options.onShow = callback;
+    }
 }
 
 export function initTabs() {

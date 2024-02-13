@@ -1206,6 +1206,30 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
                     Use this method on the Speed Dial object to toggle the visibility of the list of menu items or buttons.
                 </td>
             </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">updateOnShow()</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method to set a callback function when the dial has been shown.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">updateOnHide()</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method to set a callback function when the dial has been hidden.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">updateOnToggle()</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method to set a callback function when the dial visibility has been changed.
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>

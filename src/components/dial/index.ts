@@ -170,6 +170,18 @@ class Dial implements DialInterface {
                 };
         }
     }
+
+    updateOnShow(callback: () => void) {
+        this._options.onShow = callback;
+    }
+
+    updateOnHide(callback: () => void) {
+        this._options.onHide = callback;
+    }
+
+    updateOnToggle(callback: () => void) {
+        this._options.onToggle = callback;
+    }
 }
 
 export function initDials() {

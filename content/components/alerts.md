@@ -643,7 +643,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">updateOnHide()</code>
+                  <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
               </td>
               <td class="px-6 py-4">
                   Use this method to set the callback function when the item has been dismissed.

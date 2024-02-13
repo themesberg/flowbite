@@ -896,7 +896,7 @@ Use the following methods from the CopyClipboard component to programmatically w
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">updateOnCopyCallback()</code>
+                  <code class="text-blue-600 dark:text-blue-400">updateOnCopyCallback(callback)</code>
               </td>
               <td class="px-6 py-4">
                   Use this method to update the callback function that is called when the text has been copied to the clipboard.

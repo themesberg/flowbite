@@ -1208,7 +1208,7 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">updateOnShow()</code>
+                    <code class="text-blue-600 dark:text-blue-400">updateOnShow(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a callback function when the dial has been shown.
@@ -1216,7 +1216,7 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">updateOnHide()</code>
+                    <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a callback function when the dial has been hidden.
@@ -1224,7 +1224,7 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">updateOnToggle()</code>
+                    <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a callback function when the dial visibility has been changed.

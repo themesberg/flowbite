@@ -1516,6 +1516,30 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Returns true or false based on the visibility of the dropdown.
               </td>
           </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">updateOnShow(callback)</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method to set a callback function when the dropdown has been shown.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method to set a callback function when the dropdown has been hidden.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method to set a callback function when the dropdown visibility has been changed.
+              </td>
+          </tr>
       </tbody>
   </table>
 </div>

@@ -847,6 +847,22 @@ Use the following methods of the InputCounter object to programmatically manipul
                   Use this method on the InputCounter object to decrement the value of the input field.
               </td>
           </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">updateOnIncrement(callback)</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method to set a callback function whenever the input field has been incremented.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">updateOnDecrement(callback)</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method to set a callback function whenever the input field has been decremented.
+              </td>
+          </tr>
       </tbody>
   </table>
 </div>

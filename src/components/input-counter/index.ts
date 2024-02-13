@@ -170,6 +170,14 @@ class InputCounter implements InputCounterInterface {
         this._targetEl.value = (this.getCurrentValue() - 1).toString();
         this._options.onDecrement(this);
     }
+
+    updateOnIncrement(callback: () => void) {
+        this._options.onIncrement = callback;
+    }
+
+    updateOnDecrement(callback: () => void) {
+        this._options.onDecrement = callback;
+    }
 }
 
 export function initInputCounters() {

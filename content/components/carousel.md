@@ -489,6 +489,30 @@ Use the following methods on the Carousel object to programmatically manipulate 
                   Get the current active carousel item.
               </td>
           </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">updateOnNext(callback)</code>
+              </td>
+              <td class="px-6 py-4">
+                  Set a callback function when the next carousel item has been shown.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">updateOnPrev(callback)</code>
+              </td>
+              <td class="px-6 py-4">
+                  Set a callback function when the previous carousel item has been shown.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 font-medium">
+                  <code class="text-blue-600 dark:text-blue-400">updateOnChange(callback)</code>
+              </td>
+              <td class="px-6 py-4">
+                  Set a callback function when the the slide item inside the carousel has been changed.
+              </td>
+          </tr>
       </tbody>
   </table>
 </div>

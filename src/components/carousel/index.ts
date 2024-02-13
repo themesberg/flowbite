@@ -294,6 +294,18 @@ class Carousel implements CarouselInterface {
             this._indicators[position].el.setAttribute('aria-current', 'true');
         }
     }
+
+    updateOnNext(callback: () => void) {
+        this._options.onNext = callback;
+    }
+
+    updateOnPrev(callback: () => void) {
+        this._options.onPrev = callback;
+    }
+
+    updateOnChange(callback: () => void) {
+        this._options.onChange = callback;
+    }
 }
 
 export function initCarousels() {

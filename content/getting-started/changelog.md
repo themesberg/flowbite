@@ -19,7 +19,10 @@ We strive to keep a good accountability of all of the version changes that we ma
 
 - added new "copy to clipboard" component and examples
 - added new JavaScript tab to the documentation examples
+- update dependency to Tailwind CSS `v3.4.1`
 - fixed carousel component behavior when there's only one image
+- added new data attribute to set active and inactive classes for tabs
+- minor bug fixes and improvements
 
 ### v2.2.0
 

@@ -113,6 +113,18 @@ class Collapse implements CollapseInterface {
         // callback function
         this._options.onToggle(this);
     }
+
+    updateOnCollapse(callback: () => void) {
+        this._options.onCollapse = callback;
+    }
+
+    updateOnExpand(callback: () => void) {
+        this._options.onExpand = callback;
+    }
+
+    updateOnToggle(callback: () => void) {
+        this._options.onToggle = callback;
+    }
 }
 
 export function initCollapses() {

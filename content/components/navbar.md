@@ -885,6 +885,30 @@ Use the following methods on the Dismiss object to programmatically manipulate t
                   Use this method on the Collapse object toggle the current visibility of the target element.
               </td>
           </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">updateOnCollapse(callback)</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method to set a callback function when the item has been collapsed.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">updateOnExpand(callback)</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method to set a callback function when the item has been expanded.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method to set a callback function when the item has been toggled.
+              </td>
+          </tr>
       </tbody>
   </table>
 </div>

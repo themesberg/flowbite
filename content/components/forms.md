@@ -316,7 +316,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
   </div>
 
   <div class="flex items-center mb-4">
-    <input id="country-option-4" type="radio" name="countries" value="United Kingdom" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring:blue-300 dark:focus-ring-blue-600 dark:bg-gray-700 dark:border-gray-600">
+    <input id="country-option-4" type="radio" name="countries" value="United Kingdom" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus-ring-blue-600 dark:bg-gray-700 dark:border-gray-600">
     <label for="country-option-4" class="block ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
       United Kingdom
     </label>

@@ -86,6 +86,10 @@ class Dismiss implements DismissInterface {
         // callback function
         this._options.onHide(this, this._targetEl);
     }
+
+    updateOnHide(callback: () => void) {
+        this._options.onHide = callback;
+    }
 }
 
 export function initDismisses() {

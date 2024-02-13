@@ -355,6 +355,30 @@ Use the methods from the Tooltip object to programmatically show or hide the too
                     Use this method on the Tooltip object to toggle the visibility of the tooltip content.
                 </td>
             </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">updateOnShow(callback)</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method to set a custom callback function when the tooltip has been shown.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method to set a custom callback function when the tooltip has been hidden.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method to set a custom callback function when the tooltip visibility has been toggled.
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>

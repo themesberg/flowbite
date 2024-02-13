@@ -280,6 +280,18 @@ class Tooltip implements TooltipInterface {
         // callback function
         this._options.onHide(this);
     }
+
+    updateOnShow(callback: () => void) {
+        this._options.onShow = callback;
+    }
+
+    updateOnHide(callback: () => void) {
+        this._options.onHide = callback;
+    }
+
+    updateOnToggle(callback: () => void) {
+        this._options.onToggle = callback;
+    }
 }
 
 export function initTooltips() {

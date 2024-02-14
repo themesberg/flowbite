@@ -217,7 +217,7 @@ packages:
       convert-source-map: 1.8.0
       debug: 4.3.4
       gensync: 1.0.0-beta.2
-      json5: 2.2.1
+      json5: 2.3.0
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
@@ -2192,7 +2192,7 @@ packages:
       is-glob: 4.0.3
       normalize-path: 3.0.0
       path-is-absolute: 1.0.1
-      readdirp: 2.2.1_supports-color@6.1.0
+      readdirp: 2.3.0_supports-color@6.1.0
       upath: 1.2.0
     optionalDependencies:
       fsevents: 1.2.13
@@ -2873,7 +2873,7 @@ packages:
     engines: {node: '>=10.13.0'}
     dependencies:
       graceful-fs: 4.2.10
-      tapable: 2.2.1
+      tapable: 2.3.0
     dev: true
 
   /entities/2.2.0:
@@ -4004,7 +4004,7 @@ packages:
     resolution: {integrity: sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==}
     dev: true
 
-  /json5/2.2.1:
+  /json5/2.3.0:
     resolution: {integrity: sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==}
     engines: {node: '>=6'}
     hasBin: true
@@ -4081,7 +4081,7 @@ packages:
     dependencies:
       big.js: 5.2.2
       emojis-list: 3.0.0
-      json5: 2.2.1
+      json5: 2.3.0
     dev: true
 
   /locate-path/3.0.0:
@@ -5599,7 +5599,7 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /readdirp/2.2.1_supports-color@6.1.0:
+  /readdirp/2.3.0_supports-color@6.1.0:
     resolution: {integrity: sha512-1JU/8q+VgFZyxwrJ+SVIOsh+KywWGpds3NTqikiKpDMZWScmAYyKIgqkO+ARvNWJfXeXR1zxz7aHF4u4CyH6vQ==}
     engines: {node: '>=0.10'}
     dependencies:
@@ -6421,7 +6421,7 @@ packages:
       - ts-node
     dev: true
 
-  /tapable/2.2.1:
+  /tapable/2.3.0:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
     engines: {node: '>=6'}
     dev: true
@@ -6846,7 +6846,7 @@ packages:
       mime-types: 2.1.35
       neo-async: 2.6.2
       schema-utils: 3.1.1
-      tapable: 2.2.1
+      tapable: 2.3.0
       terser-webpack-plugin: 5.3.5_webpack@5.74.0
       watchpack: 2.4.0
       webpack-cli: 4.10.0_enc4da54mvzgn7gkchuyvuyzgu

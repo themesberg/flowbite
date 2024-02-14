@@ -22,6 +22,7 @@ We strive to keep a good accountability of all of the version changes that we ma
 - update dependency to Tailwind CSS `v3.4.1`
 - fixed carousel component behavior when there's only one image
 - added new data attribute to set active and inactive classes for tabs
+- Ruby on Rails integration fix for turbo load
 - minor bug fixes and improvements
 
 ### v2.2.0

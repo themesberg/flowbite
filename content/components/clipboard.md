@@ -1005,7 +1005,7 @@ import type { InstanceOptions } from 'flowbite';
 const $triggerEl: HTMLElement = document.getElementById('copy-clipboard-button') as HTMLElement;
 
 // set the target element where the text will be copied from (ie. input field, code block)
-const $targetEl: HTMLElement = document.getElementById('copy-text') as HTMLElement;
+const $targetEl: HTMLInputElement = document.getElementById('copy-text') as HTMLInputElement;
 
 // optional options with default values and callback functions
 const options: CopyClipboardOptions = {

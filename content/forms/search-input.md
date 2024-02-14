@@ -20,7 +20,7 @@ You will also find more advanced search components on this page including dropdo
 Get started with the default example of a search input component including and icon and submit button.
 
 {{< example id="default-search-bar-example" github="forms/search-input.md" show_dark=true >}}
-<form>   
+<form class="max-w-md mx-auto">   
     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div class="relative">
         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -43,7 +43,7 @@ Get started with the default example of a search input component including and i
 Use this search component with a dropdown to let your users select a category in which they would like the search query to be targeted in.
 
 {{< example id="search-bar-dropdown-example" github="forms/search-input.md" show_dark=true iframeHeight="290" >}}
-<form>
+<form class="max-w-lg mx-auto">
     <div class="flex">
         <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
         <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -83,7 +83,7 @@ Use this search component with a dropdown to let your users select a category in
 Use the simplest form of a search input component with an icon and a search button next to the text field.
 
 {{< example id="search-bar-simple-example" github="forms/search-input.md" show_dark=true >}}
-<form class="flex items-center">   
+<form class="flex items-center max-w-sm mx-auto">   
     <label for="simple-search" class="sr-only">Search</label>
     <div class="relative w-full">
         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -111,7 +111,7 @@ Use the simplest form of a search input component with an icon and a search butt
 Use this example where you can select a country in which you want to search for an address or city.
 
 {{< example id="search-bar-location-example" github="forms/search-input.md" show_dark=true iframeHeight="290" >}}
-<form>
+<form class="max-w-md mx-auto">
     <div class="flex">
         <label for="location-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
         <button id="dropdown-button-2" data-dropdown-toggle="dropdown-search-city" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-500 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
@@ -173,7 +173,7 @@ Use this example where you can select a country in which you want to search for 
 Get started with this example if you would like to enable voice search for your website and users.
 
 {{< example id="search-bar-voice-example" github="forms/search-input.md" show_dark=true >}}
-<form class="flex items-center">   
+<form class="flex items-center max-w-lg mx-auto">   
     <label for="voice-search" class="sr-only">Search</label>
     <div class="relative w-full">
         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">

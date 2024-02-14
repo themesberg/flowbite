@@ -1,5 +1,5 @@
 {
-  "name": "flowbite-v2.3.0",
+  "name": "flowbite",
   "version": "2.3.0",
   "description": "The most popular library of interactive components built with Tailwind CSS",
   "keywords": [
@@ -24,7 +24,7 @@
     "tailwind angular",
     "tailwind svelte",
     "tailwind django",
-    "Tailwind ruby on rails",
+    "tailwind ruby on rails",
     "tailwind laravel",
     "tailwind nuxt",
     "tailwind next",

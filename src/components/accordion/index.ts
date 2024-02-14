@@ -171,6 +171,18 @@ class Accordion implements AccordionInterface {
         // callback function
         this._options.onClose(this, item);
     }
+
+    updateOnOpen(callback: () => void) {
+        this._options.onOpen = callback;
+    }
+
+    updateOnClose(callback: () => void) {
+        this._options.onClose = callback;
+    }
+
+    updateOnToggle(callback: () => void) {
+        this._options.onToggle = callback;
+    }
 }
 
 export function initAccordions() {

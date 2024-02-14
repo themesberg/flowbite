@@ -597,6 +597,30 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this function to close an accordion item based on the id.
                 </td>
             </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">updateOnOpen(callback)</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method to set a callback function when an accordion item has been opened.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">updateOnClose(callback)</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method to set a callback function when an accordion item has been closed.
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium">
+                    <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
+                </td>
+                <td class="px-6 py-4">
+                    Use this method to set a callback function when an accordion item has been toggled.
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>

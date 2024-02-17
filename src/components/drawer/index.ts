@@ -357,10 +357,7 @@ export function initDrawers() {
         const $drawerEl = document.getElementById(drawerId);
 
         if ($drawerEl) {
-            const drawer: DrawerInterface = instances.getInstance(
-                'Drawer',
-                drawerId
-            );
+            const drawer: DrawerInterface = instances.getDrawer(drawerId);
 
             if (drawer) {
                 const toggleDrawer = () => {
@@ -393,10 +390,7 @@ export function initDrawers() {
             const $drawerEl = document.getElementById(drawerId);
 
             if ($drawerEl) {
-                const drawer: DrawerInterface = instances.getInstance(
-                    'Drawer',
-                    drawerId
-                );
+                const drawer: DrawerInterface = instances.getDrawer(drawerId);
 
                 if (drawer) {
                     const hideDrawer = () => {
@@ -425,10 +419,7 @@ export function initDrawers() {
         const $drawerEl = document.getElementById(drawerId);
 
         if ($drawerEl) {
-            const drawer: DrawerInterface = instances.getInstance(
-                'Drawer',
-                drawerId
-            );
+            const drawer: DrawerInterface = instances.getDrawer(drawerId);
 
             if (drawer) {
                 const showDrawer = () => {

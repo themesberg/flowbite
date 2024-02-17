@@ -83,6 +83,50 @@ class Instances {
         return this._instances[component];
     }
 
+    getModalList() {
+        return this.getInstances('Modal');
+    }
+
+    getAccordionList() {
+        return this.getInstances('Accordion');
+    }
+
+    getCarouselList() {
+        return this.getInstances('Carousel');
+    }
+
+    getCollapseList() {
+        return this.getInstances('Collapse');
+    }
+
+    getDialList() {
+        return this.getInstances('Dial');
+    }
+
+    getDismissList() {
+        return this.getInstances('Dismiss');
+    }
+
+    getDrawerList() {
+        return this.getInstances('Drawer');
+    }
+
+    getDropdownList() {
+        return this.getInstances('Dropdown');
+    }
+
+    getPopoverList() {
+        return this.getInstances('Popover');
+    }
+
+    getTabsList() {
+        return this.getInstances('Tabs');
+    }
+
+    getTooltipList() {
+        return this.getInstances('Tooltip');
+    }
+
     getInstance(component: keyof Instances['_instances'], id: string) {
         if (!this._componentAndInstanceCheck(component, id)) {
             return;
@@ -93,6 +137,50 @@ class Instances {
             return;
         }
         return this._instances[component][id] as any;
+    }
+
+    getModal(id: string): undefined|ModalInterface {
+        return this.getInstance('Modal', id);
+    }
+
+    getAccordion(id: string): undefined|AccordionInterface {
+        return this.getInstance('Accordion', id);
+    }
+
+    getCarousel(id: string): undefined|CarouselInterface {
+        return this.getInstance('Carousel', id);
+    }
+
+    getCollapse(id: string): undefined|CollapseInterface {
+        return this.getInstance('Collapse', id);
+    }
+
+    getDial(id: string): undefined|DialInterface {
+        return this.getInstance('Dial', id);
+    }
+
+    getDismiss(id: string): undefined|DismissInterface {
+        return this.getInstance('Dismiss', id);
+    }
+
+    getDrawer(id: string): undefined|DrawerInterface {
+        return this.getInstance('Drawer', id);
+    }
+
+    getDropdown(id: string): undefined|DropdownInterface {
+        return this.getInstance('Dropdown', id);
+    }
+
+    getPopover(id: string): undefined|PopoverInterface {
+        return this.getInstance('Popover', id);
+    }
+
+    getTabs(id: string): undefined|TabsInterface {
+        return this.getInstance('Tabs', id);
+    }
+
+    getTooltip(id: string): undefined|TooltipInterface {
+        return this.getInstance('Tooltip', id);
     }
 
     destroyAndRemoveInstance(

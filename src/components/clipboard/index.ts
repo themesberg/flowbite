@@ -3,6 +3,7 @@ import type { CopyClipboardOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
 import { CopyClipboardInterface } from './interface';
 import instances from '../../dom/instances';
+import { inclusiveQuerySelectorAll } from '../../dom/query';
 
 const Default: CopyClipboardOptions = {
     htmlEntities: false,
@@ -140,9 +141,8 @@ class CopyClipboard implements CopyClipboardInterface {
     }
 }
 
-export function initCopyClipboards() {
-    document
-        .querySelectorAll('[data-copy-to-clipboard-target]')
+export function initCopyClipboardsFrom(subtree: Document | Element) {
+    inclusiveQuerySelectorAll(subtree, '[data-copy-to-clipboard-target]')
         .forEach(($triggerEl) => {
             const targetId = $triggerEl.getAttribute(
                 'data-copy-to-clipboard-target'
@@ -183,6 +183,10 @@ export function initCopyClipboards() {
                 );
             }
         });
+}
+
+export function initCopyClipboards() {
+    initCopyClipboardsFrom(document);
 }
 
 if (typeof window !== 'undefined') {

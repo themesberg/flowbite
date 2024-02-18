@@ -8,6 +8,7 @@ import type { TooltipOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
 import { TooltipInterface } from './interface';
 import instances from '../../dom/instances';
+import { inclusiveQuerySelectorAll } from '../../dom/query';
 
 const Default: TooltipOptions = {
     placement: 'top',
@@ -282,8 +283,8 @@ class Tooltip implements TooltipInterface {
     }
 }
 
-export function initTooltips() {
-    document.querySelectorAll('[data-tooltip-target]').forEach(($triggerEl) => {
+export function initTooltipsFrom(subtree: Document | Element) {
+    inclusiveQuerySelectorAll(subtree, '[data-tooltip-target]').forEach(($triggerEl) => {
         const tooltipId = $triggerEl.getAttribute('data-tooltip-target');
         const $tooltipEl = document.getElementById(tooltipId);
 
@@ -307,6 +308,10 @@ export function initTooltips() {
             );
         }
     });
+}
+
+export function initTooltips() {
+    initTooltipsFrom(document);
 }
 
 if (typeof window !== 'undefined') {

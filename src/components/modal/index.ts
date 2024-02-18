@@ -3,6 +3,7 @@ import type { ModalOptions } from './types';
 import type { InstanceOptions, EventListenerInstance } from '../../dom/types';
 import { ModalInterface } from './interface';
 import instances from '../../dom/instances';
+import { inclusiveQuerySelectorAll } from '../../dom/query';
 
 const Default: ModalOptions = {
     placement: 'center',
@@ -266,9 +267,9 @@ class Modal implements ModalInterface {
     }
 }
 
-export function initModals() {
+export function initModalsFrom(subtree: Document | Element) {
     // initiate modal based on data-modal-target
-    document.querySelectorAll('[data-modal-target]').forEach(($triggerEl) => {
+    inclusiveQuerySelectorAll(subtree, '[data-modal-target]').forEach(($triggerEl) => {
         const modalId = $triggerEl.getAttribute('data-modal-target');
         const $modalEl = document.getElementById(modalId);
 
@@ -290,7 +291,7 @@ export function initModals() {
     });
 
     // toggle modal visibility
-    document.querySelectorAll('[data-modal-toggle]').forEach(($triggerEl) => {
+    inclusiveQuerySelectorAll(subtree, '[data-modal-toggle]').forEach(($triggerEl) => {
         const modalId = $triggerEl.getAttribute('data-modal-toggle');
         const $modalEl = document.getElementById(modalId);
 
@@ -323,7 +324,7 @@ export function initModals() {
     });
 
     // show modal on click if exists based on id
-    document.querySelectorAll('[data-modal-show]').forEach(($triggerEl) => {
+    inclusiveQuerySelectorAll(subtree, '[data-modal-show]').forEach(($triggerEl) => {
         const modalId = $triggerEl.getAttribute('data-modal-show');
         const $modalEl = document.getElementById(modalId);
 
@@ -356,7 +357,7 @@ export function initModals() {
     });
 
     // hide modal on click if exists based on id
-    document.querySelectorAll('[data-modal-hide]').forEach(($triggerEl) => {
+    inclusiveQuerySelectorAll(subtree, '[data-modal-hide]').forEach(($triggerEl) => {
         const modalId = $triggerEl.getAttribute('data-modal-hide');
         const $modalEl = document.getElementById(modalId);
 
@@ -387,6 +388,10 @@ export function initModals() {
             );
         }
     });
+}
+
+export function initModals() {
+    initModalsFrom(document);
 }
 
 if (typeof window !== 'undefined') {

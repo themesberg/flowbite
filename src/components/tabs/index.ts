@@ -3,6 +3,7 @@ import type { TabItem, TabsOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
 import { TabsInterface } from './interface';
 import instances from '../../dom/instances';
+import { inclusiveQuerySelectorAll } from '../../dom/query';
 
 const Default: TabsOptions = {
     defaultTabId: null,
@@ -133,8 +134,8 @@ class Tabs implements TabsInterface {
     }
 }
 
-export function initTabs() {
-    document.querySelectorAll('[data-tabs-toggle]').forEach(($parentEl) => {
+export function initTabsFrom(subtree: Document | Element) {
+    inclusiveQuerySelectorAll(subtree, '[data-tabs-toggle]').forEach(($parentEl) => {
         const tabItems: TabItem[] = [];
         const activeClasses = $parentEl.getAttribute(
             'data-tabs-active-classes'
@@ -172,6 +173,10 @@ export function initTabs() {
                 : Default.inactiveClasses,
         } as TabsOptions);
     });
+}
+
+export function initTabs() {
+    initTabsFrom(document);
 }
 
 if (typeof window !== 'undefined') {

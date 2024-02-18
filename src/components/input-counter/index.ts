@@ -3,6 +3,7 @@ import type { InputCounterOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
 import { InputCounterInterface } from './interface';
 import instances from '../../dom/instances';
+import { inclusiveQuerySelectorAll } from '../../dom/query';
 
 const Default: InputCounterOptions = {
     minValue: null,
@@ -172,8 +173,8 @@ class InputCounter implements InputCounterInterface {
     }
 }
 
-export function initInputCounters() {
-    document.querySelectorAll('[data-input-counter]').forEach(($targetEl) => {
+export function initInputCountersFrom(subtree: Document | Element) {
+    inclusiveQuerySelectorAll(subtree, '[data-input-counter]').forEach(($targetEl) => {
         const targetId = $targetEl.id;
 
         const $incrementEl = document.querySelector(
@@ -211,6 +212,10 @@ export function initInputCounters() {
             );
         }
     });
+}
+
+export function initInputCounters() {
+    initInputCountersFrom(document);
 }
 
 if (typeof window !== 'undefined') {

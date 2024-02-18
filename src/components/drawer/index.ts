@@ -3,6 +3,7 @@ import type { DrawerOptions, PlacementClasses } from './types';
 import type { InstanceOptions, EventListenerInstance } from '../../dom/types';
 import { DrawerInterface } from './interface';
 import instances from '../../dom/instances';
+import { inclusiveQuerySelectorAll } from '../../dom/query';
 
 const Default: DrawerOptions = {
     placement: 'left',
@@ -313,8 +314,8 @@ class Drawer implements DrawerInterface {
     }
 }
 
-export function initDrawers() {
-    document.querySelectorAll('[data-drawer-target]').forEach(($triggerEl) => {
+export function initDrawersFrom(subtree: Document | Element) {
+    inclusiveQuerySelectorAll(subtree, '[data-drawer-target]').forEach(($triggerEl) => {
         // mandatory
         const drawerId = $triggerEl.getAttribute('data-drawer-target');
         const $drawerEl = document.getElementById(drawerId);
@@ -451,6 +452,10 @@ export function initDrawers() {
             );
         }
     });
+}
+
+export function initDrawers() {
+    initDrawersFrom(document);
 }
 
 if (typeof window !== 'undefined') {

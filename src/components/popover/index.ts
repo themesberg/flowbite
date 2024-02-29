@@ -5,7 +5,7 @@ import type {
     Instance as PopperInstance,
 } from '@popperjs/core';
 import type { PopoverOptions } from './types';
-import type { InstanceOptions } from '../../dom/types';
+import type { InstanceOptions, RootElement } from '../../dom/types';
 import { PopoverInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -305,38 +305,41 @@ class Popover implements PopoverInterface {
     }
 }
 
-export function initPopovers() {
-    document.querySelectorAll('[data-popover-target]').forEach(($triggerEl) => {
-        const popoverID = $triggerEl.getAttribute('data-popover-target');
-        const $popoverEl = document.getElementById(popoverID);
+export function initPopovers($rootElement: RootElement = document) {
+    $rootElement
+        .querySelectorAll('[data-popover-target]')
+        .forEach(initPopoverByElement);
+}
 
-        if ($popoverEl) {
-            const triggerType = $triggerEl.getAttribute('data-popover-trigger');
-            const placement = $triggerEl.getAttribute('data-popover-placement');
-            const offset = $triggerEl.getAttribute('data-popover-offset');
+export function initPopoverByElement($triggerEl: Element) {
+    const popoverID = $triggerEl.getAttribute('data-popover-target');
+    const $popoverEl = document.getElementById(popoverID);
 
-            new Popover(
-                $popoverEl as HTMLElement,
-                $triggerEl as HTMLElement,
-                {
-                    placement: placement ? placement : Default.placement,
-                    offset: offset ? parseInt(offset) : Default.offset,
-                    triggerType: triggerType
-                        ? triggerType
-                        : Default.triggerType,
-                } as PopoverOptions
-            );
-        } else {
-            console.error(
-                `The popover element with id "${popoverID}" does not exist. Please check the data-popover-target attribute.`
-            );
-        }
-    });
+    if ($popoverEl) {
+        const triggerType = $triggerEl.getAttribute('data-popover-trigger');
+        const placement = $triggerEl.getAttribute('data-popover-placement');
+        const offset = $triggerEl.getAttribute('data-popover-offset');
+
+        new Popover(
+            $popoverEl as HTMLElement,
+            $triggerEl as HTMLElement,
+            {
+                placement: placement ? placement : Default.placement,
+                offset: offset ? parseInt(offset) : Default.offset,
+                triggerType: triggerType ? triggerType : Default.triggerType,
+            } as PopoverOptions
+        );
+    } else {
+        console.error(
+            `The popover element with id "${popoverID}" does not exist. Please check the data-popover-target attribute.`
+        );
+    }
 }
 
 if (typeof window !== 'undefined') {
     window.Popover = Popover;
     window.initPopovers = initPopovers;
+    window.initPopoverByElement = initPopoverByElement;
 }
 
 export default Popover;

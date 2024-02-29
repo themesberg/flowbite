@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { AccordionItem, AccordionOptions } from './types';
-import type { InstanceOptions } from '../../dom/types';
+import type { InstanceOptions, RootElement } from '../../dom/types';
 import { AccordionInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -185,54 +185,53 @@ class Accordion implements AccordionInterface {
     }
 }
 
-export function initAccordions() {
-    document.querySelectorAll('[data-accordion]').forEach(($accordionEl) => {
-        const alwaysOpen = $accordionEl.getAttribute('data-accordion');
-        const activeClasses = $accordionEl.getAttribute('data-active-classes');
-        const inactiveClasses = $accordionEl.getAttribute(
-            'data-inactive-classes'
-        );
+export function initAccordions($rootElement: RootElement = document) {
+    $rootElement
+        .querySelectorAll('[data-accordion]')
+        .forEach(initAccordionByElement);
+}
 
-        const items = [] as AccordionItem[];
-        $accordionEl
-            .querySelectorAll('[data-accordion-target]')
-            .forEach(($triggerEl) => {
-                // Consider only items that directly belong to $accordionEl
-                // (to make nested accordions work).
-                if ($triggerEl.closest('[data-accordion]') === $accordionEl) {
-                    const item = {
-                        id: $triggerEl.getAttribute('data-accordion-target'),
-                        triggerEl: $triggerEl,
-                        targetEl: document.querySelector(
-                            $triggerEl.getAttribute('data-accordion-target')
-                        ),
-                        iconEl: $triggerEl.querySelector(
-                            '[data-accordion-icon]'
-                        ),
-                        active:
-                            $triggerEl.getAttribute('aria-expanded') === 'true'
-                                ? true
-                                : false,
-                    } as AccordionItem;
-                    items.push(item);
-                }
-            });
+export function initAccordionByElement($accordionEl: HTMLElement) {
+    const alwaysOpen = $accordionEl.getAttribute('data-accordion');
+    const activeClasses = $accordionEl.getAttribute('data-active-classes');
+    const inactiveClasses = $accordionEl.getAttribute('data-inactive-classes');
 
-        new Accordion($accordionEl as HTMLElement, items, {
-            alwaysOpen: alwaysOpen === 'open' ? true : false,
-            activeClasses: activeClasses
-                ? activeClasses
-                : Default.activeClasses,
-            inactiveClasses: inactiveClasses
-                ? inactiveClasses
-                : Default.inactiveClasses,
-        } as AccordionOptions);
-    });
+    const items = [] as AccordionItem[];
+    $accordionEl
+        .querySelectorAll('[data-accordion-target]')
+        .forEach(($triggerEl) => {
+            // Consider only items that directly belong to $accordionEl
+            // (to make nested accordions work).
+            if ($triggerEl.closest('[data-accordion]') === $accordionEl) {
+                const item = {
+                    id: $triggerEl.getAttribute('data-accordion-target'),
+                    triggerEl: $triggerEl,
+                    targetEl: document.querySelector(
+                        $triggerEl.getAttribute('data-accordion-target')
+                    ),
+                    iconEl: $triggerEl.querySelector('[data-accordion-icon]'),
+                    active:
+                        $triggerEl.getAttribute('aria-expanded') === 'true'
+                            ? true
+                            : false,
+                } as AccordionItem;
+                items.push(item);
+            }
+        });
+
+    new Accordion($accordionEl as HTMLElement, items, {
+        alwaysOpen: alwaysOpen === 'open' ? true : false,
+        activeClasses: activeClasses ? activeClasses : Default.activeClasses,
+        inactiveClasses: inactiveClasses
+            ? inactiveClasses
+            : Default.inactiveClasses,
+    } as AccordionOptions);
 }
 
 if (typeof window !== 'undefined') {
     window.Accordion = Accordion;
     window.initAccordions = initAccordions;
+    window.initAccordionByElement = initAccordionByElement;
 }
 
 export default Accordion;

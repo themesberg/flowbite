@@ -5,7 +5,7 @@ import type {
     Instance as PopperInstance,
 } from '@popperjs/core';
 import type { DropdownOptions } from './types';
-import type { InstanceOptions } from '../../dom/types';
+import type { InstanceOptions, RootElement } from '../../dom/types';
 import { DropdownInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -331,62 +331,59 @@ class Dropdown implements DropdownInterface {
     }
 }
 
-export function initDropdowns() {
-    document
+export function initDropdowns($rootElement: RootElement = document) {
+    $rootElement
         .querySelectorAll('[data-dropdown-toggle]')
-        .forEach(($triggerEl) => {
-            const dropdownId = $triggerEl.getAttribute('data-dropdown-toggle');
-            const $dropdownEl = document.getElementById(dropdownId);
+        .forEach(initDropdownByElement);
+}
 
-            if ($dropdownEl) {
-                const placement = $triggerEl.getAttribute(
-                    'data-dropdown-placement'
-                );
-                const offsetSkidding = $triggerEl.getAttribute(
-                    'data-dropdown-offset-skidding'
-                );
-                const offsetDistance = $triggerEl.getAttribute(
-                    'data-dropdown-offset-distance'
-                );
-                const triggerType = $triggerEl.getAttribute(
-                    'data-dropdown-trigger'
-                );
-                const delay = $triggerEl.getAttribute('data-dropdown-delay');
-                const ignoreClickOutsideClass = $triggerEl.getAttribute(
-                    'data-dropdown-ignore-click-outside-class'
-                );
+export function initDropdownByElement($triggerEl: Element) {
+    const dropdownId = $triggerEl.getAttribute('data-dropdown-toggle');
+    const $dropdownEl = document.getElementById(dropdownId);
 
-                new Dropdown(
-                    $dropdownEl as HTMLElement,
-                    $triggerEl as HTMLElement,
-                    {
-                        placement: placement ? placement : Default.placement,
-                        triggerType: triggerType
-                            ? triggerType
-                            : Default.triggerType,
-                        offsetSkidding: offsetSkidding
-                            ? parseInt(offsetSkidding)
-                            : Default.offsetSkidding,
-                        offsetDistance: offsetDistance
-                            ? parseInt(offsetDistance)
-                            : Default.offsetDistance,
-                        delay: delay ? parseInt(delay) : Default.delay,
-                        ignoreClickOutsideClass: ignoreClickOutsideClass
-                            ? ignoreClickOutsideClass
-                            : Default.ignoreClickOutsideClass,
-                    } as DropdownOptions
-                );
-            } else {
-                console.error(
-                    `The dropdown element with id "${dropdownId}" does not exist. Please check the data-dropdown-toggle attribute.`
-                );
-            }
-        });
+    if ($dropdownEl) {
+        const placement = $triggerEl.getAttribute('data-dropdown-placement');
+        const offsetSkidding = $triggerEl.getAttribute(
+            'data-dropdown-offset-skidding'
+        );
+        const offsetDistance = $triggerEl.getAttribute(
+            'data-dropdown-offset-distance'
+        );
+        const triggerType = $triggerEl.getAttribute('data-dropdown-trigger');
+        const delay = $triggerEl.getAttribute('data-dropdown-delay');
+        const ignoreClickOutsideClass = $triggerEl.getAttribute(
+            'data-dropdown-ignore-click-outside-class'
+        );
+
+        new Dropdown(
+            $dropdownEl as HTMLElement,
+            $triggerEl as HTMLElement,
+            {
+                placement: placement ? placement : Default.placement,
+                triggerType: triggerType ? triggerType : Default.triggerType,
+                offsetSkidding: offsetSkidding
+                    ? parseInt(offsetSkidding)
+                    : Default.offsetSkidding,
+                offsetDistance: offsetDistance
+                    ? parseInt(offsetDistance)
+                    : Default.offsetDistance,
+                delay: delay ? parseInt(delay) : Default.delay,
+                ignoreClickOutsideClass: ignoreClickOutsideClass
+                    ? ignoreClickOutsideClass
+                    : Default.ignoreClickOutsideClass,
+            } as DropdownOptions
+        );
+    } else {
+        console.error(
+            `The dropdown element with id "${dropdownId}" does not exist. Please check the data-dropdown-toggle attribute.`
+        );
+    }
 }
 
 if (typeof window !== 'undefined') {
     window.Dropdown = Dropdown;
     window.initDropdowns = initDropdowns;
+    window.initDropdownByElement = initDropdownByElement;
 }
 
 export default Dropdown;

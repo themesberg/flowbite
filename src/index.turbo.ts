@@ -12,7 +12,7 @@ import Tabs from './components/tabs';
 import Tooltip from './components/tooltip';
 import InputCounter from './components/input-counter';
 import CopyClipboard from './components/clipboard';
-import { initFlowbite } from './components/index';
+import { initFlowbite } from './components';
 import Events from './dom/events';
 
 // Since turbo maintainers refuse to add this event, we'll add it ourselves
@@ -27,14 +27,16 @@ addEventListener('turbo:before-stream-render', (event: CustomEvent) => {
     };
 });
 
-const turboLoadEvents = new Events('turbo:load', [initFlowbite]);
+const turboLoadEvents = new Events('turbo:load', [() => initFlowbite()]);
 turboLoadEvents.init();
 
-const turboFrameLoadEvents = new Events('turbo:frame-load', [initFlowbite]);
+const turboFrameLoadEvents = new Events('turbo:frame-load', [
+    () => initFlowbite(),
+]);
 turboFrameLoadEvents.init();
 
 const turboStreamLoadEvents = new Events('turbo:after-stream-render', [
-    initFlowbite,
+    () => initFlowbite,
 ]);
 turboStreamLoadEvents.init();
 

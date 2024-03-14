@@ -6,8 +6,8 @@ group: components
 requires_js: true
 toc: true
 
-previous: Timeline
-previousLink: components/timeline/
+previous: Timepicker
+previousLink: components/timepicker/
 next: Tooltips
 nextLink: components/tooltips/
 ---

@@ -95,6 +95,8 @@
       - title: Tables
       - title: Tabs
       - title: Timeline
+      - title: Timepicker
+        new: true
       - title: Toast
       - title: Tooltips
       - title: Typography

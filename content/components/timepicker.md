@@ -14,7 +14,7 @@ nextLink: components/toast/
 
 ## Default timepicker
 
-{{< example id="timepicker-default-example" class="" github="components/timepicker.md" show_dark=true iframeHeight="180" >}}
+{{< example id="timepicker-default-example" class="" github="components/timepicker.md" show_dark=true >}}
 <form class="max-w-[8rem] mx-auto">
     <label for="time" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select time:</label>
     <div class="relative">

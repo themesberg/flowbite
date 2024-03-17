@@ -284,7 +284,7 @@ FlowbiteInstances.getAllInstances();
 Alternatively, you can also get all of the instances from one component pool such as from the modals:
 
 ```javascript
-FlowbiteInstance.getInstances('Modal');
+FlowbiteInstances.getInstances('Modal');
 ```
 
 ## Instance options

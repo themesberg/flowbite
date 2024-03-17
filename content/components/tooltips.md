@@ -57,7 +57,7 @@ You can use choose between dark and light version styles for the tooltip compone
 
 ## Placement
 
-The positioning of the tooltip element relative to the triggering element (eg. button, link) can be set using the `data-tooltip-placement="{top|right|bottom"left}"` data attribute.
+The positioning of the tooltip element relative to the triggering element (eg. button, link) can be set using the `data-tooltip-placement="{top|right|bottom|left}"` data attribute.
 
 {{< example id="tooltip-placement-example" class="flex flex-wrap justify-center py-8" github="components/tooltips.md" show_dark=true >}}
 

@@ -107,7 +107,7 @@ nextLink: components/toast/
 
 ## Timerange with dropdown
 
-{{< example id="timepicker-range-selector-dropdown-example" class="flex justify-center items-center" github="components/timepicker.md" show_dark=true iframeHeight="280" javascript=`
+{{< example id="timepicker-range-selector-dropdown-example" class="flex justify-center items-center" github="components/timepicker.md" show_dark=true iframeHeight="260" javascript=`
 const dropdown = FlowbiteInstances.getInstance('Dropdown', 'dropdownTimepicker');
 const $saveTimeButton = document.getElementById('saveTimeButton');
 

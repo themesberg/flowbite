@@ -7,8 +7,8 @@ toc: true
 
 previous: Tabs
 previousLink: components/tabs/
-next: Timepicker
-nextLink: components/timepicker/
+next: Toast
+nextLink: components/toast/
 ---
 
 The timeline component can be used to show series of data in a chronological order for use cases such as activity feeds, user actions, application updates, and more. Get started with multiple vertical timeline styles built with the utility classes from Tailwind CSS and Flowbite.

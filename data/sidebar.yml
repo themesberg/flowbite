@@ -95,8 +95,6 @@
       - title: Tables
       - title: Tabs
       - title: Timeline
-      - title: Timepicker
-        new: true
       - title: Toast
       - title: Tooltips
       - title: Typography
@@ -114,6 +112,8 @@
         new: true
       - title: Select
       - title: Textarea
+      - title: Timepicker
+        new: true
       - title: Checkbox
       - title: Radio
       - title: Toggle

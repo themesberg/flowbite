@@ -112,6 +112,8 @@
         new: true
       - title: Select
       - title: Textarea
+      - title: Timepicker
+        new: true
       - title: Checkbox
       - title: Radio
       - title: Toggle

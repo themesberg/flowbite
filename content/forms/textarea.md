@@ -7,8 +7,8 @@ toc: true
 
 previous: Select
 previousLink: forms/select/
-next: Checkbox
-nextLink: forms/checkbox/
+next: Timepicker
+nextLink: forms/timepicker/
 ---
 
 The textarea component is a multi-line text field input that can be used to receive longer chunks of text from the user in the form of a comment box, description field, and more.

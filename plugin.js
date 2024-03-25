@@ -242,8 +242,8 @@ module.exports = plugin.withOptions(
                     ['::-webkit-datetime-edit-fields-wrapper']: {
                         padding: '0',
                     },
-                    ['::-webkit-date-and-time-value']: {
-                        'min-height': '1.5em',
+                    ['input[type="time"]::-webkit-calendar-picker-indicator']: {
+                        background: 'none',
                     },
                     ['select:not([size])']: {
                         'background-image': `url("${svgToDataUri(

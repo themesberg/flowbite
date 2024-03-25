@@ -56,16 +56,35 @@ This example can be used to select a time via an input field where you can add a
 
 ## Timepicker with dropdown
 
-{{< example id="timepicker-dropdown-example" github="components/timepicker.md" show_dark=true >}}
-<form class="max-w-[8.5rem] mx-auto">
+Use this example to show a timepicker together with a dropdown menu where you can add options such as selecting the timezone or the duration of an event in minutes or hours.
+
+{{< example id="timepicker-dropdown-example" github="components/timepicker.md" iframeHeight="300" show_dark=true >}}
+<form class="max-w-[13rem] mx-auto">
     <label for="time" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select time:</label>
     <div class="flex">
         <input type="time" id="time" class="rounded-none rounded-s-lg bg-gray-50 border text-gray-900 leading-none focus:ring-blue-500 focus:border-blue-500 block flex-1 w-full text-sm border-gray-300 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" min="09:00" max="18:00" value="00:00" required>
-        <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-s-0 border-s-0 border-gray-300 rounded-e-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
-            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>
-            </svg>
-        </span>
+        <button id="dropdown-duration-button" data-dropdown-toggle="dropdown-duration" class="border-s-0 flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-e-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
+        Duration <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>
+        </button>
+        <div id="dropdown-duration" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-36 dark:bg-gray-700">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-duration-button">
+                <li>
+                    <button type="button" class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                        30 minutes
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                        1 hour
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                        2 hours
+                    </button>
+                </li>
+            </ul>
+        </div>
     </div>
 </form>
 {{< /example >}}

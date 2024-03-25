@@ -495,7 +495,7 @@ Use this example to show multiple time interval selections inside of a drawer co
       </svg>
       <span class="sr-only">Close menu</span>
    </button>
-   <form class="h-full max-h-full">
+   <form>
       <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700 mb-6">
          <div class="flex justify-between items-center mb-3">
             <span class="text-gray-900 dark:text-white text-base font-medium">Business hours</span>

@@ -12,31 +12,11 @@ import Tabs from './components/tabs';
 import Tooltip from './components/tooltip';
 import InputCounter from './components/input-counter';
 import CopyClipboard from './components/clipboard';
-import { initFlowbite } from './components/index';
+import { initAndObserveFlowbite } from './components';
 import Events from './dom/events';
 
-// Since turbo maintainers refuse to add this event, we'll add it ourselves
-// https://discuss.hotwired.dev/t/event-to-know-a-turbo-stream-has-been-rendered/1554/10
-const afterRenderEvent = new Event('turbo:after-stream-render');
-addEventListener('turbo:before-stream-render', (event: CustomEvent) => {
-    const originalRender = event.detail.render;
-
-    event.detail.render = function (streamElement: Element) {
-        originalRender(streamElement);
-        document.dispatchEvent(afterRenderEvent);
-    };
-});
-
-const turboLoadEvents = new Events('turbo:load', [initFlowbite]);
+const turboLoadEvents = new Events('turbo:load', [initAndObserveFlowbite]);
 turboLoadEvents.init();
-
-const turboFrameLoadEvents = new Events('turbo:frame-load', [initFlowbite]);
-turboFrameLoadEvents.init();
-
-const turboStreamLoadEvents = new Events('turbo:after-stream-render', [
-    initFlowbite,
-]);
-turboStreamLoadEvents.init();
 
 export default {
     Accordion,

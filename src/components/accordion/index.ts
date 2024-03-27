@@ -3,6 +3,7 @@ import type { AccordionItem, AccordionOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
 import { AccordionInterface } from './interface';
 import instances from '../../dom/instances';
+import { inclusiveQuerySelectorAll } from '../../dom/query';
 
 const Default: AccordionOptions = {
     alwaysOpen: false,
@@ -185,8 +186,8 @@ class Accordion implements AccordionInterface {
     }
 }
 
-export function initAccordions() {
-    document.querySelectorAll('[data-accordion]').forEach(($accordionEl) => {
+export function initAccordionsFrom(subtree: Document | Element) {
+    inclusiveQuerySelectorAll(subtree, '[data-accordion]').forEach(($accordionEl) => {
         const alwaysOpen = $accordionEl.getAttribute('data-accordion');
         const activeClasses = $accordionEl.getAttribute('data-active-classes');
         const inactiveClasses = $accordionEl.getAttribute(
@@ -228,6 +229,10 @@ export function initAccordions() {
                 : Default.inactiveClasses,
         } as AccordionOptions);
     });
+}
+
+export function initAccordions() {
+    initAccordionsFrom(document);
 }
 
 if (typeof window !== 'undefined') {

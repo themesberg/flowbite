@@ -137,7 +137,7 @@ $saveTimeButton.addEventListener('click', function() {
 
 <!-- Dropdown menu -->
 <div id="dropdownTimepicker" class="z-10 hidden bg-white rounded-lg shadow w-auto dark:bg-gray-700 p-3">
-    <div class="max-w-[16rem] mx-auto grid grid-cols-2 gap-4 mb-2">
+    <div class="w-[16rem] grid grid-cols-2 gap-4 mb-2">
         <div>
             <label for="start-time" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Start time:</label>
             <div class="relative">
@@ -229,7 +229,7 @@ This is an advanced example that you can use to show the details of an event and
          <img class="w-8 h-8 border border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-5.jpg" alt="">
          <img class="w-8 h-8 border border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-2.jpg" alt="">
          <img class="w-8 h-8 border border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-3.jpg" alt="">
-         <a class="flex items-center justify-center w-8 h-8 text-xs font-medium text-white bg-gray-700 border border-white rounded-full hover:bg-gray-600 dark:border-gray-800" href="#">+99</a>
+         <a class="flex items-center justify-center w-8 h-8 text-xs font-medium text-white bg-gray-700 border border-white rounded-full hover:bg-gray-600 dark:border-gray-800" href="#">+12</a>
       </div>
    </div>
    <div>

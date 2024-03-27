@@ -245,6 +245,9 @@ module.exports = plugin.withOptions(
                     ['input[type="time"]::-webkit-calendar-picker-indicator']: {
                         background: 'none',
                     },
+                    ['input::-webkit-date-and-time-value']: {
+                        textAlign: 'start',
+                    },
                     ['select:not([size])']: {
                         'background-image': `url("${svgToDataUri(
                             `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">

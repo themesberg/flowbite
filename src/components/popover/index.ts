@@ -120,6 +120,9 @@ class Popover implements PopoverInterface {
                     this.hide();
                 }
             }, 100);
+            setTimeout(() => {
+                this._targetEl.style.transform ='';
+            }, 100);
         };
 
         triggerEvents.showEvents.forEach((ev) => {

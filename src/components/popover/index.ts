@@ -121,7 +121,9 @@ class Popover implements PopoverInterface {
                 }
             }, 100);
             setTimeout(() => {
-                this._targetEl.style.transform ='';
+                if (!this._targetEl.matches(':hover')) {
+                    this._targetEl.style.transform ='';
+                }
             }, 100);
         };
 

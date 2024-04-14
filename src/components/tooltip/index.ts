@@ -113,7 +113,9 @@ class Tooltip implements TooltipInterface {
         this._hideHandler = () => {
             this.hide();
             setTimeout(() => {
-                this._targetEl.style.transform ='';
+                if (!this._targetEl.matches('.opacity-100.visible')) {
+                    this._targetEl.style.transform ='';
+                }
             }, 100);
         };
 

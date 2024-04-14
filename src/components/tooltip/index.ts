@@ -112,6 +112,9 @@ class Tooltip implements TooltipInterface {
 
         this._hideHandler = () => {
             this.hide();
+            setTimeout(() => {
+                this._targetEl.style.transform ='';
+            }, 100);
         };
 
         triggerEvents.showEvents.forEach((ev) => {

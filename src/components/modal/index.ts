@@ -81,7 +81,6 @@ class Modal implements ModalInterface {
     _createBackdrop() {
         if (this._isHidden) {
             const backdropEl = document.createElement('div');
-            backdropEl.setAttribute('modal-backdrop', '');
             backdropEl.classList.add(
                 ...this._options.backdropClasses.split(' ')
             );
@@ -91,8 +90,9 @@ class Modal implements ModalInterface {
     }
 
     _destroyBackdropEl() {
-        if (!this._isHidden) {
-            document.querySelector('[modal-backdrop]').remove();
+        if (!this._isHidden && this._backdropEl) {
+            this._backdropEl.remove();
+            this._backdropEl = null
         }
     }
 

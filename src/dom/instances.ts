@@ -12,6 +12,9 @@ import { TooltipInterface } from '../components/tooltip/interface';
 import { InputCounterInterface } from '../components/input-counter/interface';
 import { CopyClipboardInterface } from '../components/clipboard/interface';
 
+// plugins
+import { DatepickerInterface } from '../plugins/datepicker/interface';
+
 class Instances {
     private _instances: {
         Accordion: { [id: string]: AccordionInterface };
@@ -27,6 +30,7 @@ class Instances {
         Tooltip: { [id: string]: TooltipInterface };
         InputCounter: { [id: string]: InputCounterInterface };
         CopyClipboard: { [id: string]: CopyClipboardInterface };
+        Datepicker: { [id: string]: DatepickerInterface };
     };
 
     constructor() {
@@ -44,6 +48,7 @@ class Instances {
             Tooltip: {},
             InputCounter: {},
             CopyClipboard: {},
+            Datepicker: {},
         };
     }
 

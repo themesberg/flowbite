@@ -11,6 +11,7 @@ import Tabs from '../components/tabs';
 import Tooltip from '../components/tooltip';
 import InputCounter from '../components/input-counter';
 import Clipboard from '../components/clipboard';
+import Datepicker from '../plugins/datepicker';
 
 declare global {
     interface Window {
@@ -27,6 +28,7 @@ declare global {
         Tooltip: typeof Tooltip;
         InputCounter: typeof InputCounter;
         CopyClipboard: typeof Clipboard;
+        Datepicker: typeof Datepicker;
         initAccordions: () => void;
         initCarousels: () => void;
         initCollapses: () => void;
@@ -40,6 +42,7 @@ declare global {
         initTooltips: () => void;
         initInputCounters: () => void;
         initClipboards: () => void;
+        initDatepickers: () => void;
         initFlowbite: () => void;
         FlowbiteInstances: any;
     }

@@ -1,16 +1,13 @@
 import { DatepickerOptions } from './types';
+import Datepicker from 'flowbite-datepicker/Datepicker';
+import DateRangePicker from 'flowbite-datepicker/DateRangePicker';
 
 export declare interface DatepickerInterface {
-    _tabsEl: HTMLElement;
-    _items: TabItem[];
-    _activeTab: TabItem;
-    _options: TabsOptions;
+    _datepickerEl: HTMLElement;
+    _datepickerInstance: Datepicker | DateRangePicker | null;
+    _options: DatepickerOptions;
 
     init(): void;
-    setActiveTab(tab: TabItem): void;
-    getActiveTab(): TabItem;
-    getTab(id: string): TabItem;
-    show(id: string, forceShow?: boolean): void;
 
     destroy(): void;
     removeInstance(): void;

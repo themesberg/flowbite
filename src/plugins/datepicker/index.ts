@@ -1,19 +1,20 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
+import Datepicker from 'flowbite-datepicker/Datepicker';
+import DateRangePicker from 'flowbite-datepicker/DateRangePicker';
+
 import type { DatepickerOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
 import { DatepickerInterface } from './interface';
 import instances from '../../dom/instances';
 
-import Datepicker from 'flowbite-datepicker/Datepicker';
-import DateRangePicker from 'flowbite-datepicker/DateRangePicker';
-
 const Default: DatepickerOptions = {
-    defaultTabId: null,
-    activeClasses:
-        'text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500',
-    inactiveClasses:
-        'dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300',
-    onShow: () => {},
+    defaultDatepickerId: null,
+    autohide: false,
+    format: 'mm/dd/yyyy',
+    orientation: 'bottom',
+    buttons: false,
+    autoSelectToday: false,
+    title: null,
 };
 
 const DefaultInstanceOptions: InstanceOptions = {
@@ -43,7 +44,7 @@ class Datepicker implements DatepickerInterface {
         this.init();
         instances.addInstance('Datepicker', this, this._datepickerEl.id, true);
         instances.addInstance(
-            'Tabs',
+            'Datepicker',
             this,
             this._instanceId,
             instanceOptions.override
@@ -51,11 +52,13 @@ class Datepicker implements DatepickerInterface {
     }
 
     init() {
+        console.log('init datepicker');
         if (this._datepickerEl && !this._initialized) {
             this._datepickerInstance = new Datepicker(
                 this._datepickerEl,
-                this._options
+                this._getDatepickerOptions(this._options)
             );
+            console.log('init datepicker');
             this._initialized = true;
         }
     }
@@ -76,55 +79,79 @@ class Datepicker implements DatepickerInterface {
         this.removeInstance();
     }
 
-    updateOnShow(callback: () => void) {
-        this._options.onShow = callback;
+    _getDatepickerOptions(options: DatepickerOptions) {
+        const datepickerOptions = {} as Datepicker.Options;
+
+        if (options.buttons) {
+            datepickerOptions.todayBtn = true;
+            datepickerOptions.clearBtn = true;
+
+            if (options.autoSelectToday) {
+                datepickerOptions.todayBtnMode = true;
+            }
+        }
+
+        if (options.autohide) {
+            datepickerOptions.autohide = true;
+        }
+
+        if (options.format) {
+            datepickerOptions.format = options.format;
+        }
+
+        if (options.orientation) {
+            datepickerOptions.orientation = options.orientation;
+        }
+
+        if (options.title) {
+            datepickerOptions.title = options.title;
+        }
+
+        return datepickerOptions;
     }
 }
 
 export function initDatepickers() {
-    document.querySelectorAll('[datepicker]').forEach(($parentEl) => {
-        const tabItems: TabItem[] = [];
-        const activeClasses = $parentEl.getAttribute(
-            'data-tabs-active-classes'
-        );
-        const inactiveClasses = $parentEl.getAttribute(
-            'data-tabs-inactive-classes'
-        );
-        let defaultTabId = null;
-        $parentEl
-            .querySelectorAll('[role="tab"]')
-            .forEach(($triggerEl: HTMLElement) => {
-                const isActive =
-                    $triggerEl.getAttribute('aria-selected') === 'true';
-                const tab: TabItem = {
-                    id: $triggerEl.getAttribute('data-tabs-target'),
-                    triggerEl: $triggerEl,
-                    targetEl: document.querySelector(
-                        $triggerEl.getAttribute('data-tabs-target')
-                    ),
-                };
-                tabItems.push(tab);
-
-                if (isActive) {
-                    defaultTabId = tab.id;
-                }
-            });
-
-        new Tabs($parentEl as HTMLElement, tabItems, {
-            defaultTabId: defaultTabId,
-            activeClasses: activeClasses
-                ? activeClasses
-                : Default.activeClasses,
-            inactiveClasses: inactiveClasses
-                ? inactiveClasses
-                : Default.inactiveClasses,
-        } as TabsOptions);
+    console.log('fucking init this shit already');
+    document.querySelectorAll('[datepicker]').forEach(($datepickerEl) => {
+        console.log($datepickerEl);
+        if ($datepickerEl) {
+            const buttons = $datepickerEl.hasAttribute('datepicker-buttons');
+            const autoselectToday = $datepickerEl.hasAttribute(
+                'datepicker-autoselect-today'
+            );
+            const autohide = $datepickerEl.hasAttribute('datepicker-autohide');
+            const format = $datepickerEl.hasAttribute('datepicker-format');
+            const orientation = $datepickerEl.hasAttribute(
+                'datepicker-orientation'
+            );
+            const title = $datepickerEl.hasAttribute('datepicker-title');
+            new Datepicker(
+                $datepickerEl as HTMLElement,
+                {
+                    buttons: buttons ? buttons : Default.buttons,
+                    autoSelectToday: autoselectToday
+                        ? autoselectToday
+                        : Default.autoSelectToday,
+                    autohide: autohide ? autohide : Default.autohide,
+                    format: format ? format : Default.format,
+                    orientation: orientation
+                        ? orientation
+                        : Default.orientation,
+                    title: title ? title : Default.title,
+                } as DatepickerOptions
+            );
+        } else {
+            console.error(
+                `The datepicker element does not exist. Please check the datepicker attribute.`
+            );
+        }
     });
 }
 
 if (typeof window !== 'undefined') {
-    window.Tabs = Tabs;
-    window.initTabs = initTabs;
+    window.Datepicker = Datepicker;
+    window.initDatepickers = initDatepickers;
 }
 
-export default Tabs;
+export default Datepicker;

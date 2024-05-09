@@ -1,8 +1,11 @@
 import { DatepickerInterface } from './interface';
 
 export declare type DatepickerOptions = {
-    defaultTabId?: string;
-    activeClasses?: string;
-    inactiveClasses?: string;
-    onShow?: (tabs: TabsInterface, tab: TabItem) => void;
+    defaultDatepickerId?: string;
+    autohide?: boolean;
+    format?: string;
+    orientation?: string;
+    buttons?: boolean;
+    autoSelectToday?: boolean;
+    title?: string;
 };

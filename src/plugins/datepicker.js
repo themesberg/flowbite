@@ -1,5 +1,5 @@
-import initDatepickers from './datepicker/index';
-import Events from '../dom/events';
+// import initDatepickers from './datepicker/index';
+// import Events from '../dom/events';
 
 // const getDatepickerOptions = (datepickerEl) => {
 //     const buttons = datepickerEl.hasAttribute('datepicker-buttons');

@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import FlowbiteDatepicker from 'flowbite-datepicker/Datepicker';
-import FlowbiteDateRangePicker from 'flowbite-datepicker/DateRangePicker';
-
 import type { DatepickerOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
 import { DatepickerInterface } from './interface';
 import instances from '../../dom/instances';
+
+import FlowbiteDatepicker from 'flowbite-datepicker/Datepicker';
+import FlowbiteDateRangePicker from 'flowbite-datepicker/DateRangePicker';
 
 const Default: DatepickerOptions = {
     defaultDatepickerId: null,
@@ -57,7 +57,6 @@ class Datepicker implements DatepickerInterface {
                 this._datepickerEl,
                 this._getDatepickerOptions(this._options)
             );
-            console.log('init datepicker');
             this._initialized = true;
         }
     }
@@ -111,7 +110,6 @@ class Datepicker implements DatepickerInterface {
 }
 
 export function initDatepickers() {
-    console.log('fucking init this shit already');
     document.querySelectorAll('[datepicker]').forEach(($datepickerEl) => {
         console.log($datepickerEl);
         if ($datepickerEl) {
@@ -125,7 +123,7 @@ export function initDatepickers() {
                 'datepicker-orientation'
             );
             const title = $datepickerEl.hasAttribute('datepicker-title');
-            new FlowbiteDatepicker(
+            new Datepicker(
                 $datepickerEl as HTMLElement,
                 {
                     buttons: buttons ? buttons : Default.buttons,

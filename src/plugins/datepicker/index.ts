@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import Datepicker from 'flowbite-datepicker/Datepicker';
-import DateRangePicker from 'flowbite-datepicker/DateRangePicker';
+import FlowbiteDatepicker from 'flowbite-datepicker/Datepicker';
+import FlowbiteDateRangePicker from 'flowbite-datepicker/DateRangePicker';
 
 import type { DatepickerOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
@@ -25,7 +25,7 @@ const DefaultInstanceOptions: InstanceOptions = {
 class Datepicker implements DatepickerInterface {
     _instanceId: string;
     _datepickerEl: HTMLElement;
-    _datepickerInstance: Datepicker | DateRangePicker | null;
+    _datepickerInstance: FlowbiteDatepicker | FlowbiteDateRangePicker | null;
     _options: DatepickerOptions;
     _initialized: boolean;
 
@@ -42,7 +42,6 @@ class Datepicker implements DatepickerInterface {
         this._options = { ...Default, ...options };
         this._initialized = false;
         this.init();
-        instances.addInstance('Datepicker', this, this._datepickerEl.id, true);
         instances.addInstance(
             'Datepicker',
             this,
@@ -54,7 +53,7 @@ class Datepicker implements DatepickerInterface {
     init() {
         console.log('init datepicker');
         if (this._datepickerEl && !this._initialized) {
-            this._datepickerInstance = new Datepicker(
+            this._datepickerInstance = new FlowbiteDatepicker(
                 this._datepickerEl,
                 this._getDatepickerOptions(this._options)
             );
@@ -80,7 +79,7 @@ class Datepicker implements DatepickerInterface {
     }
 
     _getDatepickerOptions(options: DatepickerOptions) {
-        const datepickerOptions = {} as Datepicker.Options;
+        const datepickerOptions = {} as any;
 
         if (options.buttons) {
             datepickerOptions.todayBtn = true;
@@ -126,7 +125,7 @@ export function initDatepickers() {
                 'datepicker-orientation'
             );
             const title = $datepickerEl.hasAttribute('datepicker-title');
-            new Datepicker(
+            new FlowbiteDatepicker(
                 $datepickerEl as HTMLElement,
                 {
                     buttons: buttons ? buttons : Default.buttons,

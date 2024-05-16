@@ -1,10 +1,10 @@
 import { DatepickerOptions } from './types';
-import Datepicker from 'flowbite-datepicker/Datepicker';
-import DateRangePicker from 'flowbite-datepicker/DateRangePicker';
+import FlowbiteDatepicker from 'flowbite-datepicker/Datepicker';
+import FlowbiteDateRangePicker from 'flowbite-datepicker/DateRangePicker';
 
 export declare interface DatepickerInterface {
     _datepickerEl: HTMLElement;
-    _datepickerInstance: Datepicker | DateRangePicker | null;
+    _datepickerInstance: FlowbiteDatepicker | FlowbiteDateRangePicker | null;
     _options: DatepickerOptions;
 
     init(): void;

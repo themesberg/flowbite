@@ -14,5 +14,6 @@
         "moduleResolution": "node"
     },
     "include": ["src/**/*.ts"],
-    "exclude": ["node_modules", "dist", "lib"]
+    "exclude": ["node_modules", "dist", "lib"],
+    "typeRoots": ["./node_modules/@types", "./src"]
 }

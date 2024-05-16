@@ -1,11 +1,11 @@
 import { DatepickerInterface } from './interface';
 
-export declare type DatepickerOptions = {
-    defaultDatepickerId?: string;
+export interface DatepickerOptions {
+    defaultDatepickerId?: string | null;
     autohide?: boolean;
     format?: string;
     orientation?: string;
     buttons?: boolean;
     autoSelectToday?: boolean;
-    title?: string;
-};
+    title?: string | null;
+}

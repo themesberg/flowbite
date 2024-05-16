@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 declare module 'flowbite-datepicker/Datepicker' {
     export default class FlowbiteDatepicker {
         constructor(element: HTMLElement, options: any);

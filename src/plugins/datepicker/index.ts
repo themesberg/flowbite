@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { DatepickerOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
@@ -110,6 +111,7 @@ class Datepicker implements DatepickerInterface {
 }
 
 export function initDatepickers() {
+    console.log('init datepickers');
     document.querySelectorAll('[datepicker]').forEach(($datepickerEl) => {
         console.log($datepickerEl);
         if ($datepickerEl) {

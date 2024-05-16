@@ -8,6 +8,7 @@ class Events {
     }
 
     init() {
+        console.log(this._eventFunctions);
         this._eventFunctions.forEach((eventFunction) => {
             if (typeof window !== 'undefined') {
                 window.addEventListener(this._eventType, eventFunction);

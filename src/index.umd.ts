@@ -18,6 +18,8 @@ import Datepicker, { initDatepickers } from './plugins/datepicker';
 import './components/index';
 import Events from './dom/events';
 
+console.log(initDatepickers);
+
 const events = new Events('load', [
     initAccordions,
     initCollapses,

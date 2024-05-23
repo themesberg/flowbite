@@ -89,8 +89,6 @@ class Datepicker implements DatepickerInterface {
     _getDatepickerOptions(options: DatepickerOptions) {
         const datepickerOptions = {} as any;
 
-        // console.log(options.buttons);
-
         if (options.buttons) {
             datepickerOptions.todayBtn = true;
             datepickerOptions.clearBtn = true;
@@ -115,7 +113,6 @@ class Datepicker implements DatepickerInterface {
         if (options.title) {
             datepickerOptions.title = options.title;
         }
-        // console.log(datepickerOptions);
 
         return datepickerOptions;
     }
@@ -130,7 +127,6 @@ export function initDatepickers() {
             if ($datepickerEl) {
                 const buttons =
                     $datepickerEl.hasAttribute('datepicker-buttons');
-                console.log(buttons);
                 const autoselectToday = $datepickerEl.hasAttribute(
                     'datepicker-autoselect-today'
                 );

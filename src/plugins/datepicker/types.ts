@@ -8,4 +8,5 @@ export interface DatepickerOptions {
     buttons?: boolean;
     autoSelectToday?: boolean;
     title?: string | null;
+    rangePicker?: boolean | false;
 }

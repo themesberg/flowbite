@@ -16,6 +16,7 @@ const Default: DatepickerOptions = {
     buttons: false,
     autoSelectToday: false,
     title: null,
+    rangePicker: false,
 };
 
 const DefaultInstanceOptions: InstanceOptions = {
@@ -52,12 +53,19 @@ class Datepicker implements DatepickerInterface {
     }
 
     init() {
-        console.log('init datepicker');
         if (this._datepickerEl && !this._initialized) {
-            this._datepickerInstance = new FlowbiteDatepicker(
-                this._datepickerEl,
-                this._getDatepickerOptions(this._options)
-            );
+            if (this._options.rangePicker) {
+                this._datepickerInstance = new FlowbiteDateRangePicker(
+                    this._datepickerEl,
+                    this._getDatepickerOptions(this._options)
+                );
+            } else {
+                this._datepickerInstance = new FlowbiteDatepicker(
+                    this._datepickerEl,
+                    this._getDatepickerOptions(this._options)
+                );
+            }
+
             this._initialized = true;
         }
     }
@@ -80,6 +88,8 @@ class Datepicker implements DatepickerInterface {
 
     _getDatepickerOptions(options: DatepickerOptions) {
         const datepickerOptions = {} as any;
+
+        // console.log(options.buttons);
 
         if (options.buttons) {
             datepickerOptions.todayBtn = true;
@@ -105,31 +115,35 @@ class Datepicker implements DatepickerInterface {
         if (options.title) {
             datepickerOptions.title = options.title;
         }
+        // console.log(datepickerOptions);
 
         return datepickerOptions;
     }
 }
 
 export function initDatepickers() {
-    console.log('init datepickers');
     document
-        .querySelectorAll('[datepicker], [inline-datepicker]')
+        .querySelectorAll(
+            '[datepicker], [inline-datepicker], [date-rangepicker]'
+        )
         .forEach(($datepickerEl) => {
-            console.log($datepickerEl);
             if ($datepickerEl) {
                 const buttons =
                     $datepickerEl.hasAttribute('datepicker-buttons');
+                console.log(buttons);
                 const autoselectToday = $datepickerEl.hasAttribute(
                     'datepicker-autoselect-today'
                 );
                 const autohide = $datepickerEl.hasAttribute(
                     'datepicker-autohide'
                 );
-                const format = $datepickerEl.hasAttribute('datepicker-format');
-                const orientation = $datepickerEl.hasAttribute(
+                const format = $datepickerEl.getAttribute('datepicker-format');
+                const orientation = $datepickerEl.getAttribute(
                     'datepicker-orientation'
                 );
-                const title = $datepickerEl.hasAttribute('datepicker-title');
+                const title = $datepickerEl.getAttribute('datepicker-title');
+                const rangePicker =
+                    $datepickerEl.hasAttribute('date-rangepicker');
                 new Datepicker(
                     $datepickerEl as HTMLElement,
                     {
@@ -143,6 +157,9 @@ export function initDatepickers() {
                             ? orientation
                             : Default.orientation,
                         title: title ? title : Default.title,
+                        rangePicker: rangePicker
+                            ? rangePicker
+                            : Default.rangePicker,
                     } as DatepickerOptions
                 );
             } else {

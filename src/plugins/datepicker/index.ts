@@ -112,40 +112,45 @@ class Datepicker implements DatepickerInterface {
 
 export function initDatepickers() {
     console.log('init datepickers');
-    document.querySelectorAll('[datepicker]').forEach(($datepickerEl) => {
-        console.log($datepickerEl);
-        if ($datepickerEl) {
-            const buttons = $datepickerEl.hasAttribute('datepicker-buttons');
-            const autoselectToday = $datepickerEl.hasAttribute(
-                'datepicker-autoselect-today'
-            );
-            const autohide = $datepickerEl.hasAttribute('datepicker-autohide');
-            const format = $datepickerEl.hasAttribute('datepicker-format');
-            const orientation = $datepickerEl.hasAttribute(
-                'datepicker-orientation'
-            );
-            const title = $datepickerEl.hasAttribute('datepicker-title');
-            new Datepicker(
-                $datepickerEl as HTMLElement,
-                {
-                    buttons: buttons ? buttons : Default.buttons,
-                    autoSelectToday: autoselectToday
-                        ? autoselectToday
-                        : Default.autoSelectToday,
-                    autohide: autohide ? autohide : Default.autohide,
-                    format: format ? format : Default.format,
-                    orientation: orientation
-                        ? orientation
-                        : Default.orientation,
-                    title: title ? title : Default.title,
-                } as DatepickerOptions
-            );
-        } else {
-            console.error(
-                `The datepicker element does not exist. Please check the datepicker attribute.`
-            );
-        }
-    });
+    document
+        .querySelectorAll('[datepicker], [inline-datepicker]')
+        .forEach(($datepickerEl) => {
+            console.log($datepickerEl);
+            if ($datepickerEl) {
+                const buttons =
+                    $datepickerEl.hasAttribute('datepicker-buttons');
+                const autoselectToday = $datepickerEl.hasAttribute(
+                    'datepicker-autoselect-today'
+                );
+                const autohide = $datepickerEl.hasAttribute(
+                    'datepicker-autohide'
+                );
+                const format = $datepickerEl.hasAttribute('datepicker-format');
+                const orientation = $datepickerEl.hasAttribute(
+                    'datepicker-orientation'
+                );
+                const title = $datepickerEl.hasAttribute('datepicker-title');
+                new Datepicker(
+                    $datepickerEl as HTMLElement,
+                    {
+                        buttons: buttons ? buttons : Default.buttons,
+                        autoSelectToday: autoselectToday
+                            ? autoselectToday
+                            : Default.autoSelectToday,
+                        autohide: autohide ? autohide : Default.autohide,
+                        format: format ? format : Default.format,
+                        orientation: orientation
+                            ? orientation
+                            : Default.orientation,
+                        title: title ? title : Default.title,
+                    } as DatepickerOptions
+                );
+            } else {
+                console.error(
+                    `The datepicker element does not exist. Please check the datepicker attribute.`
+                );
+            }
+        });
 }
 
 if (typeof window !== 'undefined') {

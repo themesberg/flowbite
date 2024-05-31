@@ -202,6 +202,23 @@ initFlowbite();
 
 Basically, the `initFlowbite()` function parses your DOM for all of the data attributes and creates new instances of the appropriate components like modals or dropdowns and sets up the behaviour of the examples from the Flowbite Docs - applying the functionality of showing and hiding the components such as hiding the modal when clicking on the "X" (close) button.
 
+### Targeted initialisation
+
+All the initialisation functions can be called with an optional argument. This optional argument allows you to specify which node from the DOM you want to target for initialisation. It can be especially useful when content is created or loaded after the document has been parsed and needs to be made interactive.
+
+Consider the following example for [HTMX](https://htmx.org/):
+
+```javascript
+import { initFlowbite } from 'flowbite'
+
+// this method is called when new content is loaded
+htmx.onLoad(function (content) {
+    initFlowbite(content);
+})
+```
+
+**Be mindful that only the ***descendants*** of the node will be made interactive, and not the node itself.**
+
 ## Instance manager
 
 Since version `2.0.0`, the Flowbite JS API also provides a way to globally access all of the instances even if they were created via the data attributes interface. This allows you to programmatically handle the components while also giving you the possibility to use the recommended and quick way of accessing the data attributes interface and UI component examples.

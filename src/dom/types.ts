@@ -8,3 +8,5 @@ export declare type EventListenerInstance = {
     type: string;
     handler: EventListenerOrEventListenerObject;
 };
+
+export declare type RootElement = Element | HTMLElement | Document;

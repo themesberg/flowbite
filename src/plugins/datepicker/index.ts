@@ -95,17 +95,16 @@ class Datepicker implements DatepickerInterface {
         return this._datepickerInstance.getDate();
     }
 
+    setDate(date: any) {
+        this._datepickerInstance.setDate(date);
+    }
+
     show() {
         this._datepickerInstance.show();
     }
 
     hide() {
         this._datepickerInstance.hide();
-    }
-
-    toggle() {
-        console.log(this._datepickerInstance);
-        this._datepickerInstance.toggle();
     }
 
     _getDatepickerOptions(options: DatepickerOptions) {

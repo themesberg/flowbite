@@ -73,6 +73,7 @@ class Datepicker implements DatepickerInterface {
     destroy() {
         if (this._initialized) {
             this._initialized = false;
+            this._datepickerInstance.destroy();
         }
     }
 
@@ -84,6 +85,27 @@ class Datepicker implements DatepickerInterface {
     destroyAndRemoveInstance() {
         this.destroy();
         this.removeInstance();
+    }
+
+    getDatepickerInstance() {
+        return this._datepickerInstance;
+    }
+
+    getDate() {
+        return this._datepickerInstance.getDate();
+    }
+
+    show() {
+        this._datepickerInstance.show();
+    }
+
+    hide() {
+        this._datepickerInstance.hide();
+    }
+
+    toggle() {
+        console.log(this._datepickerInstance);
+        this._datepickerInstance.toggle();
     }
 
     _getDatepickerOptions(options: DatepickerOptions) {

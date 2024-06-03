@@ -92,11 +92,21 @@ class Datepicker implements DatepickerInterface {
     }
 
     getDate() {
-        return this._datepickerInstance.getDate();
+        if (this._options.rangePicker) {
+            return this._datepickerInstance.getDates();
+        }
+        {
+            return this._datepickerInstance.getDate();
+        }
     }
 
     setDate(date: any) {
-        this._datepickerInstance.setDate(date);
+        if (this._options.rangePicker) {
+            return this._datepickerInstance.setDates(date);
+        }
+        {
+            return this._datepickerInstance.setDate(date);
+        }
     }
 
     show() {

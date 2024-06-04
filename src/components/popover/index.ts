@@ -8,6 +8,7 @@ import type { PopoverOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
 import { PopoverInterface } from './interface';
 import instances from '../../dom/instances';
+import { inclusiveQuerySelectorAll } from '../../dom/query';
 
 const Default: PopoverOptions = {
     placement: 'top',
@@ -305,8 +306,8 @@ class Popover implements PopoverInterface {
     }
 }
 
-export function initPopovers() {
-    document.querySelectorAll('[data-popover-target]').forEach(($triggerEl) => {
+export function initPopoversFrom(subtree: Document | Element) {
+    inclusiveQuerySelectorAll(subtree, '[data-popover-target]').forEach(($triggerEl) => {
         const popoverID = $triggerEl.getAttribute('data-popover-target');
         const $popoverEl = document.getElementById(popoverID);
 
@@ -332,6 +333,10 @@ export function initPopovers() {
             );
         }
     });
+}
+
+export function initPopovers() {
+    initPopoversFrom(document);
 }
 
 if (typeof window !== 'undefined') {

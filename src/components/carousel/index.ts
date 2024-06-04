@@ -8,6 +8,7 @@ import type {
 import type { InstanceOptions } from '../../dom/types';
 import { CarouselInterface } from './interface';
 import instances from '../../dom/instances';
+import { inclusiveQuerySelectorAll } from '../../dom/query';
 
 const Default: CarouselOptions = {
     defaultPosition: 0,
@@ -308,8 +309,8 @@ class Carousel implements CarouselInterface {
     }
 }
 
-export function initCarousels() {
-    document.querySelectorAll('[data-carousel]').forEach(($carouselEl) => {
+export function initCarouselsFrom(subtree: Document | Element) {
+    inclusiveQuerySelectorAll(subtree, '[data-carousel]').forEach(($carouselEl) => {
         const interval = $carouselEl.getAttribute('data-carousel-interval');
         const slide =
             $carouselEl.getAttribute('data-carousel') === 'slide'
@@ -382,6 +383,10 @@ export function initCarousels() {
             });
         }
     });
+}
+
+export function initCarousels() {
+    initCarouselsFrom(document);
 }
 
 if (typeof window !== 'undefined') {

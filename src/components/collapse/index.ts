@@ -3,6 +3,7 @@ import type { CollapseOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
 import { CollapseInterface } from './interface';
 import instances from '../../dom/instances';
+import { inclusiveQuerySelectorAll } from '../../dom/query';
 
 const Default: CollapseOptions = {
     onCollapse: () => {},
@@ -127,9 +128,8 @@ class Collapse implements CollapseInterface {
     }
 }
 
-export function initCollapses() {
-    document
-        .querySelectorAll('[data-collapse-toggle]')
+export function initCollapsesFrom(subtree: Document | Element) {
+    inclusiveQuerySelectorAll(subtree, '[data-collapse-toggle]')
         .forEach(($triggerEl) => {
             const targetId = $triggerEl.getAttribute('data-collapse-toggle');
             const $targetEl = document.getElementById(targetId);
@@ -166,6 +166,10 @@ export function initCollapses() {
                 );
             }
         });
+}
+
+export function initCollapses() {
+    initCollapsesFrom(document);
 }
 
 if (typeof window !== 'undefined') {

@@ -8,6 +8,7 @@ import type { DropdownOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
 import { DropdownInterface } from './interface';
 import instances from '../../dom/instances';
+import { inclusiveQuerySelectorAll } from '../../dom/query';
 
 const Default: DropdownOptions = {
     placement: 'bottom',
@@ -331,9 +332,8 @@ class Dropdown implements DropdownInterface {
     }
 }
 
-export function initDropdowns() {
-    document
-        .querySelectorAll('[data-dropdown-toggle]')
+export function initDropdownsFrom(subtree: Document | Element) {
+    inclusiveQuerySelectorAll(subtree, '[data-dropdown-toggle]')
         .forEach(($triggerEl) => {
             const dropdownId = $triggerEl.getAttribute('data-dropdown-toggle');
             const $dropdownEl = document.getElementById(dropdownId);
@@ -382,6 +382,10 @@ export function initDropdowns() {
                 );
             }
         });
+}
+
+export function initDropdowns() {
+    initDropdownsFrom(document);
 }
 
 if (typeof window !== 'undefined') {

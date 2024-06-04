@@ -3,6 +3,7 @@ import type { DialOptions, DialTriggerType } from './types';
 import type { InstanceOptions } from '../../dom/types';
 import { DialInterface } from './interface';
 import instances from '../../dom/instances';
+import { inclusiveQuerySelectorAll } from '../../dom/query';
 
 const Default: DialOptions = {
     triggerType: 'hover',
@@ -184,8 +185,8 @@ class Dial implements DialInterface {
     }
 }
 
-export function initDials() {
-    document.querySelectorAll('[data-dial-init]').forEach(($parentEl) => {
+export function initDialsFrom(subtree: Document | Element) {
+    inclusiveQuerySelectorAll(subtree, '[data-dial-init]').forEach(($parentEl) => {
         const $triggerEl = $parentEl.querySelector('[data-dial-toggle]');
 
         if ($triggerEl) {
@@ -216,6 +217,10 @@ export function initDials() {
             );
         }
     });
+}
+
+export function initDials() {
+    initDialsFrom(document);
 }
 
 if (typeof window !== 'undefined') {

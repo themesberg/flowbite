@@ -3,6 +3,7 @@ import type { DismissOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
 import { DismissInterface } from './interface';
 import instances from '../../dom/instances';
+import { inclusiveQuerySelectorAll } from '../../dom/query';
 
 const Default: DismissOptions = {
     transition: 'transition-opacity',
@@ -92,8 +93,8 @@ class Dismiss implements DismissInterface {
     }
 }
 
-export function initDismisses() {
-    document.querySelectorAll('[data-dismiss-target]').forEach(($triggerEl) => {
+export function initDismissesFrom(subtree: Document | Element) {
+    inclusiveQuerySelectorAll(subtree, '[data-dismiss-target]').forEach(($triggerEl) => {
         const targetId = $triggerEl.getAttribute('data-dismiss-target');
         const $dismissEl = document.querySelector(targetId);
 
@@ -105,6 +106,10 @@ export function initDismisses() {
             );
         }
     });
+}
+
+export function initDismisses() {
+    initDismissesFrom(document);
 }
 
 if (typeof window !== 'undefined') {

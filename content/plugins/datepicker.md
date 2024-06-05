@@ -49,7 +49,7 @@ Use the following example of an input element to create a datepicker component. 
 Use the `inline-datepicker` and `data-date` data attributes to initialize and set the default date for an inline datepicker inside a block element such as a `div`.
 
 {{< example id="datepicker-inline-example" class="flex justify-center dark:bg-gray-900" github="plugins/datepicker.md" show_dark=true initDatepicker=true >}}
-<div id="datepicker-inline" inline-datepicker data-date="02/25/2022"></div>
+<div id="datepicker-inline" inline-datepicker data-date="02/25/2024"></div>
 {{< /example >}}
 
 ## Date range picker
@@ -129,6 +129,21 @@ If you want to use a custom format such as `mm/dd/yyyy`then you can use the `dat
       </svg>
   </div>
   <input id="datepicker-format" datepicker datepicker-format="mm/dd/yyyy" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+</div>
+{{< /example >}}
+
+### Max and min dates
+
+Use the `datepicker-min-date={format}` and `datepicker-max-date={format}` to set the minimum and maximum dates that can be selected inside the datepicker.
+
+{{< example id="datepicker-max-min-example" class="flex justify-center dark:bg-gray-900" github="plugins/datepicker.md" show_dark=true iframeHeight="480" initDatepicker=true >}}
+<div class="relative max-w-sm">
+  <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+      </svg>
+  </div>
+  <input id="datepicker-format" datepicker datepicker-min-date="06/04/2024" datepicker-max-date="05/05/2025" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
 </div>
 {{< /example >}}
 

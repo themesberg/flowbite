@@ -12,6 +12,8 @@ const Default: DatepickerOptions = {
     defaultDatepickerId: null,
     autohide: false,
     format: 'mm/dd/yyyy',
+    maxDate: null,
+    minDate: null,
     orientation: 'bottom',
     buttons: false,
     autoSelectToday: false,
@@ -137,6 +139,14 @@ class Datepicker implements DatepickerInterface {
             datepickerOptions.format = options.format;
         }
 
+        if (options.maxDate) {
+            datepickerOptions.maxDate = options.maxDate;
+        }
+
+        if (options.minDate) {
+            datepickerOptions.minDate = options.minDate;
+        }
+
         if (options.orientation) {
             datepickerOptions.orientation = options.orientation;
         }
@@ -144,6 +154,8 @@ class Datepicker implements DatepickerInterface {
         if (options.title) {
             datepickerOptions.title = options.title;
         }
+
+        console.log(datepickerOptions);
 
         return datepickerOptions;
     }
@@ -165,6 +177,12 @@ export function initDatepickers() {
                     'datepicker-autohide'
                 );
                 const format = $datepickerEl.getAttribute('datepicker-format');
+                const maxDate = $datepickerEl.getAttribute(
+                    'datepicker-max-date'
+                );
+                const minDate = $datepickerEl.getAttribute(
+                    'datepicker-min-date'
+                );
                 const orientation = $datepickerEl.getAttribute(
                     'datepicker-orientation'
                 );
@@ -180,6 +198,8 @@ export function initDatepickers() {
                             : Default.autoSelectToday,
                         autohide: autohide ? autohide : Default.autohide,
                         format: format ? format : Default.format,
+                        maxDate: maxDate ? maxDate : Default.maxDate,
+                        minDate: minDate ? minDate : Default.minDate,
                         orientation: orientation
                             ? orientation
                             : Default.orientation,

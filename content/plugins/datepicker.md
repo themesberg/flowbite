@@ -459,6 +459,14 @@ Use the following methods of the Datepicker object to programmatically manipulat
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 ">
+                  <code class="text-blue-600 dark:text-blue-400">getDatepickerInstance()</code>
+              </td>
+              <td class="px-6 py-4">
+                  Use this method to get the parent datepicker instance with the extended collection of methods and options.
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">updateOnShow(callback)</code>
               </td>
               <td class="px-6 py-4">
@@ -479,90 +487,86 @@ Use the following methods of the Datepicker object to programmatically manipulat
 
 ### Example
 
-Check out the following examples to learn how to create a new InputCounter object and how to set it up with custom options and programmatically use the methods available.
+Check out the following examples to learn how to use a basic HTML markup together with the Flowbite Datepicker API JS.
 
-First of all, you need to set the object parameters where the target element is required and the other two are optional.
+First of all, you need to select the datepicker element (it can be an input field or div for inline datepickers) and set up the options object.
 
 ```javascript
 // set the target element of the input field
-const $targetEl = document.getElementById('counter-input-example');
-
-// optionally set the increment and decrement elements
-const $incrementEl = document.getElementById('increment-button');
-
-const $decrementEl = document.getElementById('decrement-button');
+const $datepickerEl = document.getElementById('datepicker-custom');
 
 // optional options with default values and callback functions
 const options = {
-    minValue: 0,
-    maxValue: null, // infinite
-    onIncrement: () => {
-        console.log('input field value has been incremented');
-    },
-    onDecrement: () => {
-        console.log('input field value has been decremented');
-    }
+    defaultDatepickerId: null,
+    autohide: false,
+    format: 'mm/dd/yyyy',
+    maxDate: null,
+    minDate: null,
+    orientation: 'bottom',
+    buttons: false,
+    autoSelectToday: false,
+    title: null,
+    language: 'en',
+    rangePicker: false,
+    onShow: () => {},
+    onHide: () => {},
 };
 
 const instanceOptions = {
-  id: 'counter-input-example',
+  id: 'datepicker-custom-example',
   override: true
 };
 ```
 
-Next step is to create a new instance of a InputCounter object using the parameters we have set above.
+Next step is to create a new instance of a Datepicker object using the parameters we have set above.
 
 ```javascript
-import { InputCounter } from 'flowbite';
+import { Datepicker } from 'flowbite';
 
 /*
- * $targetEl: required
- * $incrementEl: optional
- * $decrementEl: optional
+ * $datepickerEl: required
  * options: optional
  */
-const counterInput = new InputCounter($targetEl, $incrementEl, $decrementEl, options, instanceOptions);
+const datepicker = new Datepicker($datepickerEl, options, instanceOptions);
 ```
 
-Now you can programmatically increment or decrement the input field using the methods of the InputCounter object.
+Use the following methods to show and hide the datepicker, set or get the currently selected date and get access to the instance.
 
 ```javascript
-// get the current value of the input field
-counterInput.getCurrentValue();
+// get the currently selected date (undefined if not selected)
+datepicker.getDate();
 
-// increment the value of the input field
-counterInput.increment();
+// set the date (or dates if date range picker)
+datepicker.setDate('05/31/2024');
 
-// decrement the value of the input field
-counterInput.decrement();
+// programatically show the datepicker
+datepicker.show();
+
+// programatically hide the datepicker
+datepicker.hide();
+
+// use this method to get the parent datepicker instance from https://mymth.github.io/vanillajs-datepicker/#/
+datepicker.getDatepickerInstance();
 ```
 
 ### HTML Markup
 
 Here is an example of the HTML markup that you can use for the JavaScript example above.
 
-```html
-<form class="max-w-xs mx-auto">
-    <label for="counter-input-example" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Choose quantity:</label>
-    <div class="relative flex items-center">
-        <button type="button" id="decrement-button" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
-            <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
-            </svg>
-        </button>
-        <input type="text" id="counter-input-example" class="flex-shrink-0 text-gray-900 dark:text-white border-0 bg-transparent text-sm font-normal focus:outline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="12" required />
-        <button type="button" id="increment-button" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
-            <svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-            </svg>
-        </button>
-    </div>
-</form>
-```
+<!-- ```html -->
+<div class="relative max-w-sm">
+  <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+    </svg>
+  </div>
+  <input id="datepicker-custom" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+</div>
+<!-- ``` -->
 
 ### TypeScript
 
-If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScript configuration</a> from Flowbite then you can import the types for the InputCounter object, parameters and its options.
+If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScript configuration</a> from Flowbite then you can import the types for the Datepicker object, parameters and its options.
 
 Here's an example that applies the types from Flowbite to the code above:
 

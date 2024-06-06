@@ -10,5 +10,9 @@ export interface DatepickerOptions {
     buttons?: boolean;
     autoSelectToday?: boolean;
     title?: string | null;
+    language?: string;
+    locales?: { [key: string]: any };
     rangePicker?: boolean | false;
+    onShow?: () => void;
+    onHide?: () => void;
 }

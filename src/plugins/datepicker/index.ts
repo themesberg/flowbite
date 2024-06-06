@@ -18,7 +18,10 @@ const Default: DatepickerOptions = {
     buttons: false,
     autoSelectToday: false,
     title: null,
+    language: 'en',
     rangePicker: false,
+    onShow: () => {},
+    onHide: () => {},
 };
 
 const DefaultInstanceOptions: InstanceOptions = {
@@ -67,6 +70,66 @@ class Datepicker implements DatepickerInterface {
                     this._getDatepickerOptions(this._options)
                 );
             }
+            if (this._options.language !== 'en') {
+                this._datepickerInstance.constructor.locales[
+                    this._options.language
+                ] = {
+                    days: [
+                        'Domingo',
+                        'Lunes',
+                        'Martes',
+                        'Miércoles',
+                        'Jueves',
+                        'Viernes',
+                        'Sábado',
+                    ],
+                    daysShort: [
+                        'Dom',
+                        'Lun',
+                        'Mar',
+                        'Mié',
+                        'Jue',
+                        'Vie',
+                        'Sáb',
+                    ],
+                    daysMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+                    months: [
+                        'Enero',
+                        'Febrero',
+                        'Marzo',
+                        'Abril',
+                        'Mayo',
+                        'Junio',
+                        'Julio',
+                        'Agosto',
+                        'Septiembre',
+                        'Octubre',
+                        'Noviembre',
+                        'Diciembre',
+                    ],
+                    monthsShort: [
+                        'Ene',
+                        'Feb',
+                        'Mar',
+                        'Abr',
+                        'May',
+                        'Jun',
+                        'Jul',
+                        'Ago',
+                        'Sep',
+                        'Oct',
+                        'Nov',
+                        'Dic',
+                    ],
+                    today: 'Hoy',
+                    monthsTitle: 'Meses',
+                    clear: 'Borrar',
+                    weekStart: 1,
+                    format: 'dd/mm/yyyy',
+                };
+            }
+            console.log(this._datepickerInstance);
+            this._datepickerInstance.refresh();
 
             this._initialized = true;
         }
@@ -113,10 +176,12 @@ class Datepicker implements DatepickerInterface {
 
     show() {
         this._datepickerInstance.show();
+        this._options.onShow(this);
     }
 
     hide() {
         this._datepickerInstance.hide();
+        this._options.onHide(this);
     }
 
     _getDatepickerOptions(options: DatepickerOptions) {
@@ -155,9 +220,19 @@ class Datepicker implements DatepickerInterface {
             datepickerOptions.title = options.title;
         }
 
-        console.log(datepickerOptions);
+        if (options.language) {
+            datepickerOptions.language = options.language;
+        }
 
         return datepickerOptions;
+    }
+
+    updateOnShow(callback: () => void) {
+        this._options.onShow = callback;
+    }
+
+    updateOnHide(callback: () => void) {
+        this._options.onHide = callback;
     }
 }
 
@@ -187,6 +262,9 @@ export function initDatepickers() {
                     'datepicker-orientation'
                 );
                 const title = $datepickerEl.getAttribute('datepicker-title');
+                const language = $datepickerEl.getAttribute(
+                    'datepicker-language'
+                );
                 const rangePicker =
                     $datepickerEl.hasAttribute('date-rangepicker');
                 new Datepicker(
@@ -204,6 +282,7 @@ export function initDatepickers() {
                             ? orientation
                             : Default.orientation,
                         title: title ? title : Default.title,
+                        language: language ? language : Default.language,
                         rangePicker: rangePicker
                             ? rangePicker
                             : Default.rangePicker,

@@ -13,6 +13,6 @@ export interface DatepickerOptions {
     language?: string;
     locales?: { [key: string]: any };
     rangePicker?: boolean | false;
-    onShow?: () => void;
-    onHide?: () => void;
+    onShow?: (Datepicker: DatepickerInterface) => void;
+    onHide?: (Datepicker: DatepickerInterface) => void;
 }

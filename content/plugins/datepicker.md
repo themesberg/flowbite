@@ -177,6 +177,10 @@ You can also add a title to the datepicker by using the `datepicker-title="{titl
 </div>
 {{< /example >}}
 
+### Custom colors
+
+You can set the `primary` color class which is by default set to blue to add your own colors.
+
 ### Language (i18n)
 
 {{< example id="datepicker-language-example" class="flex justify-center dark:bg-gray-900" github="plugins/datepicker.md" show_dark=true iframeHeight="530" initDatepicker=true javascript=``>}}
@@ -571,56 +575,61 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 Here's an example that applies the types from Flowbite to the code above:
 
 ```javascript
-import { InputCounter } from 'flowbite';
-import type { InputCounterOptions, InputCounterInterface } from 'flowbite';
+import { Datepicker } from 'flowbite';
+import type { DatepickerOptions, DatepickerInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';
 
-// set the target element of the input field
-const $targetEl: HTMLInputElement = document.getElementById('counter-input-example') as HTMLInputElement;
-
-// optionally set the increment and decrement elements
-const $incrementEl: HTMLElement = document.getElementById('increment-button');
-
-const $decrementEl: HTMLElement = document.getElementById('decrement-button');
+// set the target element of the input field or div
+const $datepickerEl: HTMLInputElement = document.getElementById('datepicker-custom') as HTMLInputElement;
 
 // optional options with default values and callback functions
-const options: InputCounterOptions = {
-    minValue: 0,
-    maxValue: null, // infinite
-    onIncrement: () => {
-        console.log('input field value has been incremented');
-    },
-    onDecrement: () => {
-        console.log('input field value has been decremented');
-    }
+const options = {
+    defaultDatepickerId: null,
+    autohide: false,
+    format: 'mm/dd/yyyy',
+    maxDate: null,
+    minDate: null,
+    orientation: 'bottom',
+    buttons: false,
+    autoSelectToday: false,
+    title: null,
+    language: 'en',
+    rangePicker: false,
+    onShow: () => {},
+    onHide: () => {},
 };
 
 // instance options object
 const instanceOptions: InstanceOptions = {
-  id: 'counter-input-example',
+  id: 'datepicker-custom-example',
   override: true
 };
 
 /*
- * $targetEl: required
- * $incrementEl: optional
- * $decrementEl: optional
+ * $datepickerEl: required
  * options: optional
  * instanceOptions: optional
  */
-const counterInput: InputCounterInterface = new InputCounter(
-    $targetEl,
-    $incrementEl,
-    $decrementEl,
+const datepicker: DatepickerInterface = new Datepicker(
+    $datepickerEl,
     options,
     instanceOptions
 );
 
-// increment the value of the input field
-counterInput.increment();
+// get the currently selected date (undefined if not selected)
+datepicker.getDate();
 
-// decrement the value of the input field
-counterInput.decrement();
+// set the date (or dates if date range picker)
+datepicker.setDate('05/31/2024');
+
+// programatically show the datepicker
+datepicker.show();
+
+// programatically hide the datepicker
+datepicker.hide();
+
+// use this method to get the parent datepicker instance from https://mymth.github.io/vanillajs-datepicker/#/
+datepicker.getDatepickerInstance();
 ```
 
 

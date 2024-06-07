@@ -632,8 +632,9 @@ datepicker.hide();
 datepicker.getDatepickerInstance();
 ```
 
+### Parent library
 
-If you want to use the **Tailwind Datepicker** plugin using JavaScript and programmatically initialize and call the available functions and methods, then you will need to include it into your project via NPM:
+If you want to directly use the main Datepicker plugin instance you can either install it via NPM and import it or use the `getDatepickertInstance()` method using our Instance Manager to call all of the extra options and methods from the [parent plugin library](https://github.com/themesberg/flowbite-datepicker):
 
 ```bash
 npm install flowbite-datepicker --save

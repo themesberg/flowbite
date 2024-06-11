@@ -8,7 +8,7 @@ export interface DatepickerOptions {
     minDate?: string | null;
     orientation?: string;
     buttons?: boolean;
-    autoSelectToday?: boolean;
+    autoSelectToday?: number;
     title?: string | null;
     language?: string;
     locales?: { [key: string]: any };

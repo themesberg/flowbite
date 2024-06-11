@@ -16,7 +16,7 @@ const Default: DatepickerOptions = {
     minDate: null,
     orientation: 'bottom',
     buttons: false,
-    autoSelectToday: false,
+    autoSelectToday: 0,
     title: null,
     language: 'en',
     rangePicker: false,
@@ -192,7 +192,7 @@ class Datepicker implements DatepickerInterface {
             datepickerOptions.clearBtn = true;
 
             if (options.autoSelectToday) {
-                datepickerOptions.todayBtnMode = true;
+                datepickerOptions.todayBtnMode = 1;
             }
         }
 

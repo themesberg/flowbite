@@ -119,7 +119,7 @@ If you want the button to additionally select today's date, add `datepicker-auto
 
 ### Date format
 
-If you want to use a custom format such as `mm/dd/yyyy`then you can use the `datepicker-format="{format}"` data attribute to change it.
+If you want to use a custom format such as `mm-dd-yyyy`then you can use the `datepicker-format="{format}"` data attribute to change it.
 
 {{< example id="datepicker-date-format-example" class="flex justify-center dark:bg-gray-900" github="plugins/datepicker.md" show_dark=true iframeHeight="480" initDatepicker=true >}}
 <div class="relative max-w-sm">
@@ -128,7 +128,7 @@ If you want to use a custom format such as `mm/dd/yyyy`then you can use the `dat
         <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
       </svg>
   </div>
-  <input id="datepicker-format" datepicker datepicker-format="mm/dd/yyyy" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+  <input id="datepicker-format" datepicker datepicker-format="mm-dd-yyyy" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
 </div>
 {{< /example >}}
 

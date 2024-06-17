@@ -105,9 +105,11 @@ Follow the steps of the next section in this tutorial to start using a library o
 npm install flowbite flowbite-react --save
 ```
 
-2. Require Flowbite as a plugin inside the `tailwind.config.js` file:
+2. Inside the `tailwind.config.js` file, add flowbite to the content paths so that the dynamic classes from the library will be compiled, and require Flowbite as a plugin:
 
 ```javascript
+const flowbite = require("flowbite-react/tailwind");
+
 /**
  * @type {import('@types/tailwindcss/tailwind-config').TailwindConfig}
  */
@@ -115,28 +117,10 @@ module.exports = {
   content: [
     "./pages/**/*.{ts,tsx}",
     "./public/**/*.html",
+    flowbite.content()
   ],
   plugins: [
-    require("flowbite/plugin")
-  ],
-  theme: {},
-};
-```
-
-3. Add the source code in the template paths to make sure that dynamic classes from the library will be compiled:
-
-```javascript
-/**
- * @type {import('@types/tailwindcss/tailwind-config').TailwindConfig}
- */
-module.exports = {
-  content: [
-    "./node_modules/flowbite-react/lib/**/*.js",
-    "./pages/**/*.{ts,tsx}",
-    "./public/**/*.html",
-  ],
-  plugins: [
-    require("flowbite/plugin")
+    flowbite.plugin()
   ],
   theme: {},
 };
@@ -151,6 +135,7 @@ To get you started you can check out the full collection of React components fro
 Here's an example of how you can use the alert component by importing it from the `flowbite-react` package:
 
 ```javascript
+"use client";
 import { Alert } from "flowbite-react";
 
 export default function MyPage() {
@@ -161,6 +146,7 @@ export default function MyPage() {
 Here's another example of how you can use the dropdown component:
 
 ```javascript
+"use client";
 import { Dropdown } from "flowbite-react";
 
 <Dropdown label="Dropdown button">
@@ -182,6 +168,7 @@ import { Dropdown } from "flowbite-react";
 Finally, another example on how you can use the navbar component:
 
 ```javascript
+"use client";
 import { Navbar } from "flowbite-react";
 
 <Navbar

@@ -14,17 +14,18 @@ The Tailwind CSS datepicker component developed by Flowbite is built with vanill
 
 ## Getting started
 
-If you want to use the datepicker component plugin from Flowbite you have to include the `datepicker.js` file either from NPM or CDN into your project.
+If you want to use the datepicker component plugin from Flowbite you have to include the Flowbite JavaScript file either via NPM or CDN. For versions before `2.3.0` please continue using the dedicated CDN and plugin.
 
 Follow the [quickstart guide]({{< ref "getting-started/quickstart" >}}) and then include the following JavaScript file:
 
 ```html
-<script src="../path/to/flowbite/dist/datepicker.js"></script>
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 ```
+
 Alternatively you can also use CDN to include the datepicker JavaScript.
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
 ```
 
 If you'd like to manually be able to manipulate the datepicker component using JavaScript then you should <a href="#javascript">install the plugin using NPM</a> and include it into your JavaScript code.
@@ -678,17 +679,16 @@ One of our community members built the React version of the Flowbite Datepicker 
 
 ### Turbo load support 
 
-In order to support turbo load from Ruby on Rails 7, you have to include the `datepicker.turbo.js` file either from NPM or CDN into your project.
+In order to support turbo load from Ruby on Rails 7, you have to include the `flowbite.turbo.js` file either from NPM or CDN into your project.
 
 Follow the [quickstart guide]({{< ref "getting-started/rails" >}}) and then include the following JavaScript file:
 
 ```bash
-pin "flowbite-datepicker", to: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/datepicker.turbo.min.js"
+pin "flowbite", to: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.turbo.min.js"
 ```
 
 Don't forget to also import it inside your `application.js` file:
 
 ```javascript
-import 'flowbite-datepicker';
-import 'flowbite/dist/datepicker.turbo.js';
+import "flowbite/dist/flowbite.turbo.js";
 ```

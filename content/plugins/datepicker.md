@@ -147,6 +147,8 @@ Use the `datepicker-min-date={format}` and `datepicker-max-date={format}` to set
 </div>
 {{< /example >}}
 
+### Disabled dates
+
 ### Orientation
 
 You can override the default positioning algorithm by using the `datepicker-orientation="{top|right|bottom|left}"` data attributes. You can even combine right with bottom or left with top.

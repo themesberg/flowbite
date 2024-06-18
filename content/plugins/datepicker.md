@@ -184,18 +184,7 @@ You can also add a title to the datepicker by using the `datepicker-title="{titl
 
 You can set the `primary` color class which is by default set to blue to add your own colors.
 
-### Language (i18n)
-
-{{< example id="datepicker-language-example" class="flex justify-center dark:bg-gray-900" github="plugins/datepicker.md" show_dark=true iframeHeight="530" initDatepicker=true javascript=``>}}
-<div class="relative max-w-sm">
-  <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-      </svg>
-  </div>
-  <input id="datepicker-title" datepicker datepicker-language="es" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
-</div>
-{{< /example >}}
+<!-- ### Language (i18n) -->
 
 ## Timepicker
 
@@ -560,7 +549,7 @@ datepicker.getDatepickerInstance();
 
 Here is an example of the HTML markup that you can use for the JavaScript example above.
 
-<!-- ```html -->
+```html
 <div class="relative max-w-sm">
   <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -569,7 +558,7 @@ Here is an example of the HTML markup that you can use for the JavaScript exampl
   </div>
   <input id="datepicker-custom" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
 </div>
-<!-- ``` -->
+```
 
 ### TypeScript
 

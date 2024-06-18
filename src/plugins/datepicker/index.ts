@@ -70,66 +70,6 @@ class Datepicker implements DatepickerInterface {
                     this._getDatepickerOptions(this._options)
                 );
             }
-            // if (this._options.language !== 'en') {
-            //     this._datepickerInstance.constructor.locales[
-            //         this._options.language
-            //     ] = {
-            //         days: [
-            //             'Domingo',
-            //             'Lunes',
-            //             'Martes',
-            //             'Miércoles',
-            //             'Jueves',
-            //             'Viernes',
-            //             'Sábado',
-            //         ],
-            //         daysShort: [
-            //             'Dom',
-            //             'Lun',
-            //             'Mar',
-            //             'Mié',
-            //             'Jue',
-            //             'Vie',
-            //             'Sáb',
-            //         ],
-            //         daysMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
-            //         months: [
-            //             'Enero',
-            //             'Febrero',
-            //             'Marzo',
-            //             'Abril',
-            //             'Mayo',
-            //             'Junio',
-            //             'Julio',
-            //             'Agosto',
-            //             'Septiembre',
-            //             'Octubre',
-            //             'Noviembre',
-            //             'Diciembre',
-            //         ],
-            //         monthsShort: [
-            //             'Ene',
-            //             'Feb',
-            //             'Mar',
-            //             'Abr',
-            //             'May',
-            //             'Jun',
-            //             'Jul',
-            //             'Ago',
-            //             'Sep',
-            //             'Oct',
-            //             'Nov',
-            //             'Dic',
-            //         ],
-            //         today: 'Hoy',
-            //         monthsTitle: 'Meses',
-            //         clear: 'Borrar',
-            //         weekStart: 1,
-            //         format: 'dd/mm/yyyy',
-            //     };
-            // }
-            // console.log(this._datepickerInstance);
-            // this._datepickerInstance.refresh();
 
             this._initialized = true;
         }
@@ -157,19 +97,33 @@ class Datepicker implements DatepickerInterface {
     }
 
     getDate() {
-        if (this._options.rangePicker) {
+        if (
+            this._options.rangePicker &&
+            this._datepickerInstance instanceof FlowbiteDateRangePicker
+        ) {
             return this._datepickerInstance.getDates();
         }
-        {
+
+        if (
+            !this._options.rangePicker &&
+            this._datepickerInstance instanceof FlowbiteDatepicker
+        ) {
             return this._datepickerInstance.getDate();
         }
     }
 
     setDate(date: any) {
-        if (this._options.rangePicker) {
+        if (
+            this._options.rangePicker &&
+            this._datepickerInstance instanceof FlowbiteDateRangePicker
+        ) {
             return this._datepickerInstance.setDates(date);
         }
-        {
+
+        if (
+            !this._options.rangePicker &&
+            this._datepickerInstance instanceof FlowbiteDatepicker
+        ) {
             return this._datepickerInstance.setDate(date);
         }
     }

@@ -437,7 +437,7 @@ Flowbite is an open source collection of UI components built with the utility cl
         </a>
     </td>
     <td width="33.3333%">
-        <a href="https://flowbite.com/docs/plugins/datepicker/">
+        <a href="https://flowbite.com/docs/components/datepicker/">
             <img alt="Tailwind CSS Datepicker" src="https://flowbite.s3.amazonaws.com/github/datepicker.jpg">
         </a>
     </td>

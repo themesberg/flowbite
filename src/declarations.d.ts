@@ -1,6 +1,8 @@
+// src/flowbite-datepicker-1.3.0.d.ts
 /* eslint-disable @typescript-eslint/no-explicit-any */
-declare module 'flowbite-datepicker/Datepicker' {
-    export default class FlowbiteDatepicker {
+
+declare module 'flowbite-datepicker-1.3.0' {
+    export class Datepicker {
         constructor(element: HTMLElement, options: any);
         destroy(): void;
         show(): void;
@@ -8,10 +10,8 @@ declare module 'flowbite-datepicker/Datepicker' {
         setDate(date: string): void;
         getDate(): string;
     }
-}
 
-declare module 'flowbite-datepicker/DateRangePicker' {
-    export default class FlowbiteDateRangePicker {
+    export class DateRangePicker {
         constructor(element: HTMLElement, options: any);
         destroy(): void;
         hide(): void;

@@ -12,7 +12,7 @@ import Tabs, { initTabs } from './components/tabs';
 import Tooltip, { initTooltips } from './components/tooltip';
 import InputCounter, { initInputCounters } from './components/input-counter';
 import CopyClipboard, { initCopyClipboards } from './components/clipboard';
-import Datepicker, { initDatepickers } from './plugins/datepicker';
+import Datepicker, { initDatepickers } from './components/datepicker';
 import './components/index';
 import Events from './dom/events';
 

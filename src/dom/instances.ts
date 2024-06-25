@@ -11,9 +11,7 @@ import { TabsInterface } from '../components/tabs/interface';
 import { TooltipInterface } from '../components/tooltip/interface';
 import { InputCounterInterface } from '../components/input-counter/interface';
 import { CopyClipboardInterface } from '../components/clipboard/interface';
-
-// plugins
-import { DatepickerInterface } from '../plugins/datepicker/interface';
+import { DatepickerInterface } from '../components/datepicker/interface';
 
 class Instances {
     private _instances: {

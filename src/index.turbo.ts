@@ -12,7 +12,7 @@ import Tabs from './components/tabs';
 import Tooltip from './components/tooltip';
 import InputCounter from './components/input-counter';
 import CopyClipboard from './components/clipboard';
-import Datepicker from './plugins/datepicker';
+import Datepicker from './components/datepicker';
 import { initFlowbite } from './components/index';
 import Events from './dom/events';
 

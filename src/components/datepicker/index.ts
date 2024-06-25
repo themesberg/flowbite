@@ -5,8 +5,10 @@ import type { InstanceOptions } from '../../dom/types';
 import { DatepickerInterface } from './interface';
 import instances from '../../dom/instances';
 
-import FlowbiteDatepicker from 'flowbite-datepicker/Datepicker';
-import FlowbiteDateRangePicker from 'flowbite-datepicker/DateRangePicker';
+import {
+    Datepicker as FlowbiteDatepicker,
+    DateRangePicker as FlowbiteDateRangePicker,
+} from 'flowbite-datepicker-1.3.0';
 
 const Default: DatepickerOptions = {
     defaultDatepickerId: null,

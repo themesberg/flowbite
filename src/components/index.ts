@@ -11,7 +11,7 @@ import { initModals } from './modal';
 import { initPopovers } from './popover';
 import { initTabs } from './tabs';
 import { initTooltips } from './tooltip';
-import { initDatepickers } from '../plugins/datepicker';
+import { initDatepickers } from './datepicker';
 
 export function initFlowbite() {
     initAccordions();

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { DatepickerInterface } from './interface';
 
 export interface DatepickerOptions {

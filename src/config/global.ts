@@ -11,7 +11,7 @@ import Tabs from '../components/tabs';
 import Tooltip from '../components/tooltip';
 import InputCounter from '../components/input-counter';
 import Clipboard from '../components/clipboard';
-import Datepicker from '../plugins/datepicker';
+import Datepicker from '../components/datepicker';
 
 declare global {
     interface Window {

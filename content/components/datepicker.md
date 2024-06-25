@@ -635,7 +635,7 @@ npm install flowbite-datepicker --save
 After you've installed the NPM library, you will need to import the `Datepicker` module:
 
 ```javascript
-import Datepicker from 'flowbite-datepicker/Datepicker';
+import Datepicker from 'flowbite-datepicker';
 ```
 
 Initialize a new element using the `Datepicker` constructor and optionally add your own options based on your needs:
@@ -650,7 +650,7 @@ new Datepicker(datepickerEl, {
 If you want to use the **Tailwind Date Range Picker** you have to import the `DateRangePicker` module:
 
 ```javascript
-import DateRangePicker from 'flowbite-datepicker/DateRangePicker';
+import DateRangePicker from 'flowbite-datepicker';
 ```
 
 Then in the same fashion you can initialize a date range picker component by using the `DateRangePicker` constructor:

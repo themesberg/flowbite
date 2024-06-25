@@ -6,9 +6,6 @@ group: plugins
 toc: true
 requires_js: true
 
-next: Datepicker
-nextLink: plugins/datepicker/
-
 previous: Horizontal line (HR)
 previousLink: typography/hr/
 ---

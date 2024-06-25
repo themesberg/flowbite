@@ -70,6 +70,7 @@
         new: true
       - title: Clipboard
         new: true
+      - title: Datepicker
       - title: Device Mockups
       - title: Drawer
       - title: Dropdowns
@@ -137,4 +138,3 @@
   pages:
       - title: Charts
         new: true
-      - title: Datepicker

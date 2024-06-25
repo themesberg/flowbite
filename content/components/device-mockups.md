@@ -5,8 +5,8 @@ description: Use the device mockups component to add content and screenshot prev
 group: components
 toc: true
 
-previous: Clipboard
-previousLink: components/clipboard/
+previous: Datepicker
+previousLink: components/datepicker/
 next: Drawer
 nextLink: components/drawer/
 ---

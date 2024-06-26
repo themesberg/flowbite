@@ -14,6 +14,7 @@ import { initInputCounters } from './components/input-counter';
 import { initCopyClipboards } from './components/clipboard';
 import { initDatepickers } from './components/datepicker';
 import './components/index';
+import './types/declarations';
 
 // setup events for data attributes
 const events = new Events('load', [

@@ -180,16 +180,33 @@ Let's use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Moda
 
 You can automatically make the interactive components work by importing the init functions from the Flowbite package using the onMounted lifecycle method from Nuxt.
 
-For example, here's how would initialize all of interactive UI components (ie. modals) inside your Vue template:
+When using Flowbite you need to make sure that the client side JavaScript is executed only after the page is fully loaded. This is why we recommend you to create a `useFlowbite.js` file inside the `composables` folder:
+
+```javascript
+// composables/useFlowbite.js
+
+export function useFlowbite(callback) {
+  if (process.client) {
+    import('flowbite').then((flowbite) => {
+      callback(flowbite);
+    });
+  }
+}
+```
+
+Then you can import the `useFlowbite` function inside your Nuxt page and use it to initialize the components:
 
 ```javascript
 <script setup>
 import { onMounted } from 'vue'
+import { useFlowbite } from '~/composables/useFlowbite';
 import { initFlowbite } from 'flowbite'
 
 // initialize components based on data attribute selectors
 onMounted(() => {
-    initFlowbite();
+    useFlowbite(() => {
+        initFlowbite();
+    })
 })
 </script>
 
@@ -203,6 +220,7 @@ Alternatively, here's a full list of available functions to use to initialise th
 ```javascript
 <script setup>
 import { onMounted } from 'vue'
+import { useFlowbite } from '~/composables/useFlowbite';
 import { 
     initAccordions, 
     initCarousels, 
@@ -218,17 +236,19 @@ import {
 
 // initialize components based on data attribute selectors
 onMounted(() => {
-    initAccordions();
-    initCarousels();
-    initCollapses();
-    initDials();
-    initDismisses();
-    initDrawers();
-    initDropdowns();
-    initModals();
-    initPopovers();
-    initTabs();
-    initTooltips();
+    useFlowbite(() => {
+        initAccordions();
+        initCarousels();
+        initCollapses();
+        initDials();
+        initDismisses();
+        initDrawers();
+        initDropdowns();
+        initModals();
+        initPopovers();
+        initTabs();
+        initTooltips();
+    })
 })
 </script>
 ```
@@ -245,27 +265,30 @@ To make the component interactive we need to import the Modal object from Flowbi
 <script setup>
 import { onMounted } from 'vue'
 import { Modal } from 'flowbite'
+import { useFlowbite } from '~/composables/useFlowbite';
 
 onMounted(() => {
-    // setup available elements
-    const $buttonElement = document.querySelector('#button');
-    const $modalElement = document.querySelector('#modal');
-    const $closeButton = document.querySelector('#closeButton');
+    useFlowbite(() => {
+        // setup available elements
+        const $buttonElement = document.querySelector('#button');
+        const $modalElement = document.querySelector('#modal');
+        const $closeButton = document.querySelector('#closeButton');
 
-    // set modal options
-    const modalOptions = {
-        backdropClasses: 'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-40'
-    }
+        // set modal options
+        const modalOptions = {
+            backdropClasses: 'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-40'
+        }
 
-    // create a new modal instance
-    if ($modalElement) {
-        const modal = new Modal($modalElement, modalOptions);
+        // create a new modal instance
+        if ($modalElement) {
+            const modal = new Modal($modalElement, modalOptions);
 
-        // set event listeners for the button to show the modal
-        $buttonElement.addEventListener('click', () => modal.toggle());
-        $closeButton.addEventListener('click', () => modal.hide());
+            // set event listeners for the button to show the modal
+            $buttonElement.addEventListener('click', () => modal.toggle());
+            $closeButton.addEventListener('click', () => modal.hide());
 
-    }
+        }
+    })
 })
 </script>
 ```

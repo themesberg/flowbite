@@ -234,7 +234,7 @@ Use this example to show or hide the timepicker when clicking on an trigger elem
 
 ## Inline timepicker buttons
 
-This is an advanced example that you can use to show the details of an event and select a date of the event based on the [Flowbite Datepicker](https://flowbite.com/docs/plugins/datepicker/) and select the time using a predefined set of time intervals based on checkbox elements.
+This is an advanced example that you can use to show the details of an event and select a date of the event based on the [Flowbite Datepicker](https://flowbite.com/docs/components/datepicker/) and select the time using a predefined set of time intervals based on checkbox elements.
 
 {{< example id="timepicker-inline-example" github="components/timepicker.md" show_dark=true >}}
 <h2 class="text-xl text-gray-900 dark:text-white font-bold mb-2">Digital Transformation</h2>
@@ -376,7 +376,7 @@ This is an advanced example that you can use to show the details of an event and
 
 ## Modal with timepicker
 
-Use this example to select a date and time inside of a modal component based on the [Flowbite Datepicker](https://flowbite.com/docs/plugins/datepicker/) and select a time interval using checkbox elements with predefined time values for event time scheduling.
+Use this example to select a date and time inside of a modal component based on the [Flowbite Datepicker](https://flowbite.com/docs/components/datepicker/) and select a time interval using checkbox elements with predefined time values for event time scheduling.
 
 {{< example id="timepicker-modal-example" github="components/timepicker.md" class="flex justify-center" show_dark=true iframeHeight="880" >}}
 <button type="button" data-modal-target="timepicker-modal" data-modal-toggle="timepicker-modal" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700">

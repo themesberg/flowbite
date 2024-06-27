@@ -8,8 +8,8 @@ requires_js: true
 
 previous: Chat Bubble
 previousLink: components/chat-bubble/
-next: Device mockups
-nextLink: components/device-mockups/
+next: Datepicker
+nextLink: components/datepicker/
 ---
 
 The copy to clipboard component allows you to copy text, lines of code, contact details or any other data to the clipboard with a single click on a trigger element such as a button. This component can be used to copy text from an input field, textarea, code block or even address fields in a form element.

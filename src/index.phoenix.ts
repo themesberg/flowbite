@@ -12,6 +12,7 @@ import Tabs, { initTabs } from './components/tabs';
 import Tooltip, { initTooltips } from './components/tooltip';
 import InputCounter, { initInputCounters } from './components/input-counter';
 import CopyClipboard, { initCopyClipboards } from './components/clipboard';
+import Datepicker, { initDatepickers } from './components/datepicker';
 import './components/index';
 import Events from './dom/events';
 
@@ -29,6 +30,7 @@ const liveViewLoadEvents = new Events('phx:page-loading-stop', [
     initDials,
     initInputCounters,
     initCopyClipboards,
+    initDatepickers,
 ]);
 liveViewLoadEvents.init();
 
@@ -46,6 +48,7 @@ const regularViewLoadEvents = new Events('load', [
     initDials,
     initInputCounters,
     initCopyClipboards,
+    initDatepickers,
 ]);
 regularViewLoadEvents.init();
 
@@ -63,5 +66,6 @@ export default {
     Tooltip,
     InputCounter,
     CopyClipboard,
+    Datepicker,
     Events,
 };

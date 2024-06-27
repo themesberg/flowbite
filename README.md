@@ -94,13 +94,13 @@ The quickest way to get started working with Flowbite is to simply include the C
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.0/flowbite.min.css" rel="stylesheet" />
 ```
 
 And include the following javascript file before the end of the `body` tag:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.0/flowbite.min.js"></script>
 ```
 
 ### Bundled JavaScript
@@ -437,7 +437,7 @@ Flowbite is an open source collection of UI components built with the utility cl
         </a>
     </td>
     <td width="33.3333%">
-        <a href="https://flowbite.com/docs/plugins/datepicker/">
+        <a href="https://flowbite.com/docs/components/datepicker/">
             <img alt="Tailwind CSS Datepicker" src="https://flowbite.s3.amazonaws.com/github/datepicker.jpg">
         </a>
     </td>

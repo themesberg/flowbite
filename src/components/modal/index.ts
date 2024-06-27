@@ -92,7 +92,7 @@ class Modal implements ModalInterface {
     _destroyBackdropEl() {
         if (!this._isHidden && this._backdropEl) {
             this._backdropEl.remove();
-            this._backdropEl = null
+            this._backdropEl = null;
         }
     }
 

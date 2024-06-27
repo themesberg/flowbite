@@ -18,7 +18,7 @@ Make sure to include <a href="{{< ref "getting-started/quickstart" >}}">Flowbite
 
 ## Dropdown example
 
-If you want to show a dropdown menu when clicking on an element make sure that you add the `data-dropdown-toggle="dropdownId"` data attribute to the element (ie. a button) that will trigger the dropdown menu.
+If you want to show a dropdown menu when clicking on an element make sure that you add the data attribute `data-dropdown-toggle="dropdownId"` to the element (ie. a button) that will trigger the dropdown menu.
 
 The `dropdownId` is the id of the dropdown menu element.
 

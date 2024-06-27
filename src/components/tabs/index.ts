@@ -39,7 +39,6 @@ class Tabs implements TabsInterface {
         this._options = { ...Default, ...options };
         this._initialized = false;
         this.init();
-        instances.addInstance('Tabs', this, this._tabsEl.id, true);
         instances.addInstance(
             'Tabs',
             this,

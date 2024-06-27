@@ -16,7 +16,7 @@ The Tailwind CSS datepicker component developed by Flowbite is built with vanill
 
 ## Getting started
 
-If you want to use the datepicker component from Flowbite you have to include the Flowbite JavaScript file either via NPM or CDN. For versions before `2.3.0` please continue using the dedicated CDN and component.
+If you want to use the datepicker component from Flowbite you have to include the Flowbite JavaScript file either via NPM or CDN. For versions before `2.4.0` please continue using the dedicated CDN and component.
 
 Follow the [quickstart guide]({{< ref "getting-started/quickstart" >}}) and then include the following JavaScript file:
 

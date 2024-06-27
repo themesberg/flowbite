@@ -8,7 +8,7 @@ import instances from '../../dom/instances';
 import {
     Datepicker as FlowbiteDatepicker,
     DateRangePicker as FlowbiteDateRangePicker,
-} from 'flowbite-datepicker-1.3.0';
+} from 'flowbite-datepicker';
 
 const Default: DatepickerOptions = {
     defaultDatepickerId: null,

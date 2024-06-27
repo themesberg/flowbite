@@ -575,7 +575,7 @@ import type { InstanceOptions } from 'flowbite';
 const $datepickerEl: HTMLInputElement = document.getElementById('datepicker-custom') as HTMLInputElement;
 
 // optional options with default values and callback functions
-const options = {
+const options: DatepickerOptions = {
     defaultDatepickerId: null,
     autohide: false,
     format: 'mm/dd/yyyy',
@@ -583,7 +583,7 @@ const options = {
     minDate: null,
     orientation: 'bottom',
     buttons: false,
-    autoSelectToday: false,
+    autoSelectToday: 0,
     title: null,
     language: 'en',
     rangePicker: false,

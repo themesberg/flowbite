@@ -122,7 +122,7 @@ Importmap is the default way of handling JavaScript on Rails 7. In order to supp
 1. Add the following line inside your `importmap.rb` file:
 
 ```bash
-pin "flowbite", to: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.turbo.min.js"
+pin "flowbite", to: "https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.turbo.min.js"
 ```
 
 2. Then you need to import `flowbite` inside your `application.js` file:
@@ -162,10 +162,10 @@ Alternatively to all of the above you can also include the JavaScript via CDN:
 
 ```html
 // include via CDN for turbo support
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.turbo.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.turbo.min.js"></script>
 
 // include via CDN without turbo support
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
 ```
 
 ### Datepicker
@@ -179,7 +179,7 @@ In order to support turbo load from Ruby on Rails 7, you have to include the `da
 Include the following JavaScript file to support the datepicker component:
 
 ```bash
-pin "flowbite-datepicker", to: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.turbo.min.js"
+pin "flowbite-datepicker", to: "https://cdn.jsdelivr.net/npm/flowbite@2.3.0/dist/datepicker.turbo.min.js"
 ```
 
 Don't forget to also import it inside your `application.js` file:

@@ -108,13 +108,13 @@ If you want to quickly test out Flowbite you can easily include the following CS
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.css"  rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.css"  rel="stylesheet" />
 ```
 
 And include the following javascript file before the end of the `body` element:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
 ```
 
 Please remember that the best way to work with Tailwind CSS and Flowbite is by purging the CSS classes.

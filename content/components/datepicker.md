@@ -27,7 +27,7 @@ Follow the [quickstart guide]({{< ref "getting-started/quickstart" >}}) and then
 Alternatively you can also use CDN to include the datepicker JavaScript.
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
 ```
 
 If you'd like to manually be able to manipulate the datepicker component using JavaScript then you should <a href="#javascript">install the component using NPM</a> and include it into your JavaScript code.
@@ -673,7 +673,7 @@ In order to support turbo load from Ruby on Rails 7, you have to include the `fl
 Follow the [quickstart guide]({{< ref "getting-started/rails" >}}) and then include the following JavaScript file:
 
 ```bash
-pin "flowbite", to: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.turbo.min.js"
+pin "flowbite", to: "https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.turbo.min.js"
 ```
 
 Don't forget to also import it inside your `application.js` file:

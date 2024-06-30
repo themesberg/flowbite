@@ -110,7 +110,7 @@ import 'flowbite';
 Alternatively, you can also include the JavaScript file using CDN:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
 ```
 
 10. Run the build process for Vite using `npm run dev`. Use `npm run build` for production builds.

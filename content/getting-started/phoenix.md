@@ -284,7 +284,7 @@ Alternatively to all of the above you can also include the JavaScript via CDN:
 
 ```html
 // include via CDN
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.phoenix.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.phoenix.min.js"></script>
 ```
 
 This will work for both LiveViews and regular Views.

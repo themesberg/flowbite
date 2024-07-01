@@ -372,10 +372,10 @@ Use these optional options for the Datepicker object to set options such as the 
                   <code class="text-blue-600 dark:text-blue-400">autoSelectToday</code>
               </td>
               <td class="px-6 py-4 ">
-                  Boolean
+                  Integer
               </td>
               <td class="px-6 py-4">
-                 If set to true then it will automatically have today's date preselected.
+                 If set to 1 then it will automatically have today's date preselected.
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800 dark:border-gray-700">

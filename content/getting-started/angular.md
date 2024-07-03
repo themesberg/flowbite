@@ -433,6 +433,8 @@ export class FlowbiteService {
 }
 ```
 
+**Important**: if you are using SSR make sure that this is the only way you're importing Flowbite in your Angular application to prevent the document object not being available on the server side.
+
 After that, you can use this service in your component to start using the Flowbite API and data attributes:
 
 ```javascript

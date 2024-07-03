@@ -194,6 +194,8 @@ export function useFlowbite(callback) {
 }
 ```
 
+**Important**: if you are using SSR make sure that this is the only way you're importing Flowbite in your Nuxt application to prevent the document object not being available on the server side.
+
 Then you can import the `useFlowbite` function inside your Nuxt page and use it to initialize the components:
 
 ```javascript

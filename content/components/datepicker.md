@@ -389,7 +389,7 @@ Use these optional options for the Datepicker object to set options such as the 
                  Set a custom title for the datepicker component. By default it's null.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <!-- <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">language</code>
               </td>
@@ -399,7 +399,7 @@ Use these optional options for the Datepicker object to set options such as the 
               <td class="px-6 py-4">
                  Set the language of the datepicker using country codes like `es`, `fr`, or `de`. By default it's set to english.
               </td>
-          </tr>
+          </tr> -->
       </tbody>
   </table>
 </div>
@@ -502,7 +502,6 @@ const options = {
     buttons: false,
     autoSelectToday: false,
     title: null,
-    language: 'en',
     rangePicker: false,
     onShow: () => {},
     onHide: () => {},
@@ -585,7 +584,6 @@ const options: DatepickerOptions = {
     buttons: false,
     autoSelectToday: 0,
     title: null,
-    language: 'en',
     rangePicker: false,
     onShow: () => {},
     onHide: () => {},

@@ -184,7 +184,11 @@ You can also add a title to the datepicker by using the `datepicker-title="{titl
 
 You can set the `primary` color class which is by default set to blue to add your own colors.
 
-<!-- ### Language (i18n) -->
+### Language (i18n)
+
+We are working on the API to provide language support for the datepicker. 
+
+Until then, please refer to this [solution from GitHub](https://github.com/themesberg/flowbite/issues/32#issuecomment-1420422922).
 
 ## Timepicker
 

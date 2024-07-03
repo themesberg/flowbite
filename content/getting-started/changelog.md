@@ -21,6 +21,13 @@ We strive to keep a good accountability of all of the version changes that we ma
 - updated the documentation for the datepicker component and related integration guides
 - minor visual bug fixes and improvements
 
+Note: if you're using Nuxt or Angular with SSR please check the new guides:
+
+- [Nuxt guide](https://flowbite.com/docs/getting-started/nuxt-js/#data-attributes)
+- [Angular guide](https://flowbite.com/docs/getting-started/angular/#using-with-angular-ssr)
+
+These should be the only ways you import Flowbite since we need to make sure that the client (ie. browser) is available.
+
 ### v2.3.0
 
 - added new "copy to clipboard" component and examples

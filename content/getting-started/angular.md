@@ -408,6 +408,57 @@ const carousel: CarouselInterface = new Carousel(items, options);
 
 You can read more about using [Flowbite and TypeScript](https://flowbite.com/docs/getting-started/typescript/) by following our documentation guide.
 
+## Using with Angular SSR
+
+To enable using Flowbite with SSR (Server-Side Rendering) you need to create a custom service that will handle the dynamic import of Flowbite:
+
+```javascript
+// src/app/services/flowbite.service.ts
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class FlowbiteService {
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
+
+  loadFlowbite(callback: (flowbite: any) => void) {
+    if (isPlatformBrowser(this.platformId)) {
+      import('flowbite').then(flowbite => {
+        callback(flowbite);
+      });
+    }
+  }
+}
+```
+
+After that, you can use this service in your component to start using the Flowbite API and data attributes:
+
+```javascript
+// src/app/components/some-component/some-component.component.ts
+import { Component, OnInit } from '@angular/core';
+import { FlowbiteService } from '../../services/flowbite.service';
+
+@Component({
+  selector: 'app-some-component',
+  templateUrl: './some-component.component.html',
+  styleUrls: ['./some-component.component.css']
+})
+export class SomeComponent implements OnInit {
+  constructor(private flowbiteService: FlowbiteService) {}
+
+  ngOnInit(): void {
+    this.flowbiteService.loadFlowbite(flowbite => {
+      // Your custom code here
+      console.log('Flowbite loaded', flowbite);
+    });
+  }
+}
+```
+
+This will prevent the "document is undefined" error that happens after upgrading to `v2.4.1` for SSR applications.
+
 ## Angular Starter Project
 
 We built a free and open-source [starter project](https://github.com/themesberg/tailwind-angular-starter) on GitHub that you can clone to use as a reference for this guide and for your own Angular web application configured with Flowbite and Tailwind CSS.

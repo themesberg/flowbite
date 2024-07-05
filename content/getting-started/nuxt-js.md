@@ -202,7 +202,6 @@ Then you can import the `useFlowbite` function inside your Nuxt page and use it 
 <script setup>
 import { onMounted } from 'vue'
 import { useFlowbite } from '~/composables/useFlowbite';
-import { initFlowbite } from 'flowbite'
 
 // initialize components based on data attribute selectors
 onMounted(() => {

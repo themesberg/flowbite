@@ -163,6 +163,59 @@ export class AppComponent implements OnInit {
 
 This will allow you to enable components such as the modals, navigation bars, dropdowns to dynamically set up the functionality via our data attributes interface.
 
+## Using with Angular SSR
+
+To enable using Flowbite with SSR (Server-Side Rendering) you need to create a custom service that will handle the dynamic import of Flowbite:
+
+```javascript
+// src/app/services/flowbite.service.ts
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class FlowbiteService {
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
+
+  loadFlowbite(callback: (flowbite: any) => void) {
+    if (isPlatformBrowser(this.platformId)) {
+      import('flowbite').then(flowbite => {
+        callback(flowbite);
+      });
+    }
+  }
+}
+```
+
+**Important**: if you are using SSR make sure that this is the only way you're importing Flowbite in your Angular application to prevent the document object not being available on the server side.
+
+After that, you can use this service in your component to start using the Flowbite API and data attributes:
+
+```javascript
+// src/app/components/some-component/some-component.component.ts
+import { Component, OnInit } from '@angular/core';
+import { FlowbiteService } from '../../services/flowbite.service';
+
+@Component({
+  selector: 'app-some-component',
+  templateUrl: './some-component.component.html',
+  styleUrls: ['./some-component.component.css']
+})
+export class SomeComponent implements OnInit {
+  constructor(private flowbiteService: FlowbiteService) {}
+
+  ngOnInit(): void {
+    this.flowbiteService.loadFlowbite(flowbite => {
+      // Your custom code here
+      console.log('Flowbite loaded', flowbite);
+    });
+  }
+}
+```
+
+This will prevent the "document is undefined" error that happens after upgrading to `v2.4.1` for SSR applications.
+
 ## UI components
 
 Now that you have installed all of the frameworks and libraries you can start using the whole collection of UI components and templates from the [Flowbite UI Library](https://flowbite.com/docs/getting-started/introduction/) and [Blocks](https://flowbite.com/blocks/marketing/feature/).
@@ -407,59 +460,6 @@ const carousel: CarouselInterface = new Carousel(items, options);
 ```
 
 You can read more about using [Flowbite and TypeScript](https://flowbite.com/docs/getting-started/typescript/) by following our documentation guide.
-
-## Using with Angular SSR
-
-To enable using Flowbite with SSR (Server-Side Rendering) you need to create a custom service that will handle the dynamic import of Flowbite:
-
-```javascript
-// src/app/services/flowbite.service.ts
-import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class FlowbiteService {
-  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
-
-  loadFlowbite(callback: (flowbite: any) => void) {
-    if (isPlatformBrowser(this.platformId)) {
-      import('flowbite').then(flowbite => {
-        callback(flowbite);
-      });
-    }
-  }
-}
-```
-
-**Important**: if you are using SSR make sure that this is the only way you're importing Flowbite in your Angular application to prevent the document object not being available on the server side.
-
-After that, you can use this service in your component to start using the Flowbite API and data attributes:
-
-```javascript
-// src/app/components/some-component/some-component.component.ts
-import { Component, OnInit } from '@angular/core';
-import { FlowbiteService } from '../../services/flowbite.service';
-
-@Component({
-  selector: 'app-some-component',
-  templateUrl: './some-component.component.html',
-  styleUrls: ['./some-component.component.css']
-})
-export class SomeComponent implements OnInit {
-  constructor(private flowbiteService: FlowbiteService) {}
-
-  ngOnInit(): void {
-    this.flowbiteService.loadFlowbite(flowbite => {
-      // Your custom code here
-      console.log('Flowbite loaded', flowbite);
-    });
-  }
-}
-```
-
-This will prevent the "document is undefined" error that happens after upgrading to `v2.4.1` for SSR applications.
 
 ## Angular Starter Project
 

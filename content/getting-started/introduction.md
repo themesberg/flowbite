@@ -45,7 +45,7 @@ Here's a quick overview of the Flowbite ecosystem including the open source Tail
     </a>
     <a href="{{< param homepage >}}/pro/" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Upgrade to Pro</h3>
-        <p class="font-normal text-gray-700 dark:text-gray-400">Check out over 410+ website sections and advanced UI components built with Tailwind CSS and the Flowbite Library.</p>
+        <p class="font-normal text-gray-700 dark:text-gray-400">Check out over 420+ website sections and advanced UI components built with Tailwind CSS and the Flowbite Library.</p>
     </a>
 </div>
 

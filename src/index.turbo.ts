@@ -24,7 +24,7 @@ addEventListener('turbo:before-stream-render', (event: CustomEvent) => {
 
     event.detail.render = function (streamElement: Element) {
         originalRender(streamElement);
-        document.dispatchEvent(afterRenderEvent);
+        window.dispatchEvent(afterRenderEvent);
     };
 });
 

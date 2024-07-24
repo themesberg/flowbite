@@ -3,6 +3,7 @@ const svgToDataUri = require('mini-svg-data-uri');
 const plugin = require('tailwindcss/plugin');
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
+const { transform } = require('typescript');
 const [baseFontSize, { lineHeight: baseLineHeight }] =
     defaultTheme.fontSize.base;
 const { spacing, borderWidth, borderRadius, boxShadow } = defaultTheme;
@@ -12,9 +13,9 @@ module.exports = plugin.withOptions(
         // Enable forms and tooltip by default if not specified in options
         const {
             charts = false,
+            datatables = false,
             forms = true,
             tooltips = true,
-            datatables = false,
         } = options;
 
         return function ({ addBase, addComponents, theme }) {
@@ -529,6 +530,7 @@ module.exports = plugin.withOptions(
                 });
             }
 
+            // datatable styles
             if (datatables) {
                 addComponents({
                     '.datatable-wrapper': {
@@ -537,9 +539,228 @@ module.exports = plugin.withOptions(
                     '.datatable-wrapper .datatable-top': {
                         display: 'flex',
                         justifyContent: 'space-between',
+                        flexDirection: 'row-reverse',
                         alignItems: 'center',
+                        marginBottom: `${theme('spacing.4', spacing[4])}`,
                     },
+                    '.datatable-wrapper .datatable-search .datatable-input': {
+                        color: `${theme('colors.gray.900', colors.gray[900])}`,
+                        fontSize: `${theme(
+                            'fontSize.sm',
+                            defaultTheme.fontSize.sm
+                        )}`,
+                        border: `1px solid ${theme('colors.gray.300')}`,
+                        borderRadius: `${theme(
+                            'borderRadius.lg',
+                            borderRadius.lg
+                        )}`,
+                        backgroundColor: `${theme(
+                            'colors.gray.50',
+                            colors.gray[50]
+                        )}`,
+                        minWidth: '16rem',
+                    },
+                    '.datatable-wrapper .datatable-top .datatable-dropdown': {
+                        color: `${theme('colors.gray.500', colors.gray[500])}`,
+                        fontSize: `${theme(
+                            'fontSize.sm',
+                            defaultTheme.fontSize.sm
+                        )}`,
+                    },
+                    '.datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
+                        {
+                            backgroundColor: `${theme('colors.gray.50')}`,
+                            color: `${theme(
+                                'colors.gray.900',
+                                colors.gray[900]
+                            )}`,
+                            fontSize: `${theme(
+                                'fontSize.sm',
+                                defaultTheme.fontSize.sm
+                            )}`,
+                            border: `1px solid ${theme('colors.gray.300')}`,
+                            borderRadius: `${theme(
+                                'borderRadius.lg',
+                                borderRadius.lg
+                            )}`,
+                            marginRight: `${theme('spacing.1', spacing[1])}`,
+                        },
+                    '.datatable-wrapper .datatable-search .datatable-input:focus':
+                        {
+                            borderColor: `${theme(
+                                'colors.blue.600',
+                                colors.blue[600]
+                            )}`,
+                        },
+                    '.datatable-wrapper .datatable-container': {
+                        overflowX: 'auto',
+                    },
+                    '.datatable-wrapper .datatable-table': {
+                        width: '100%',
+                        fontSize: `${theme(
+                            'fontSize.sm',
+                            defaultTheme.fontSize.sm
+                        )}`,
+                        color: `${theme('colors.gray.500', colors.gray[500])}`,
+                        textAlign: 'left',
+                    },
+                    '.datatable-wrapper .datatable-table thead': {
+                        fontSize: `${theme(
+                            'fontSize.xs',
+                            defaultTheme.fontSize.xs
+                        )}`,
+                        color: `${theme('colors.gray.700', colors.gray[700])}`,
+                        backgroundColor: `${theme(
+                            'colors.gray.50',
+                            colors.gray[50]
+                        )}`,
+                    },
+                    '.datatable-wrapper .datatable-table thead th': {
+                        whiteSpace: 'nowrap',
+                    },
+                    '.datatable-wrapper .datatable-table thead th, .datatable-wrapper .datatable-table tbody th, .datatable-wrapper .datatable-table tbody td':
+                        {
+                            width: 'auto !important',
+                            paddingTop: `${theme('spacing.3', spacing[3])}`,
+                            paddingBottom: `${theme('spacing.3', spacing[3])}`,
+                            paddingLeft: `${theme('spacing.6', spacing[6])}`,
+                            paddingRight: `${theme('spacing.6', spacing[6])}`,
+                        },
+                    '.datatable-wrapper .datatable-table thead th .datatable-sorter':
+                        {
+                            textTransform: 'uppercase',
+                        },
+                    '.datatable-wrapper .datatable-table tbody tr': {
+                        backgroundColor: 'white',
+                        borderBottom: `1px solid ${theme('colors.gray.200')}`,
+                    },
+                    '.datatable-wrapper .datatable-table .datatable-empty': {
+                        textAlign: 'center',
+                    },
+                    '.datatable-wrapper .datatable-bottom': {
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        marginTop: `${theme('spacing.4', spacing[4])}`,
+                    },
+                    '.datatable-wrapper .datatable-bottom .datatable-info': {
+                        color: `${theme('colors.gray.500', colors.gray[500])}`,
+                        fontSize: `${theme(
+                            'fontSize.sm',
+                            defaultTheme.fontSize.sm
+                        )}`,
+                    },
+                    '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list':
+                        {
+                            display: 'flex',
+                            alignItems: 'center',
+                            height: spacing[8],
+                            fontSize: `${theme(
+                                'fontSize.sm',
+                                defaultTheme.fontSize.sm
+                            )}`,
+                        },
+                    '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link':
+                        {
+                            display: 'flex',
+                            alignItems: 'center',
+                            color: `${theme(
+                                'colors.gray.500',
+                                colors.gray[500]
+                            )}`,
+                            fontWeight: `${theme('fontWeight.medium')}`,
+                            paddingLeft: `${theme('spacing.3', spacing[3])}`,
+                            paddingRight: `${theme('spacing.3', spacing[3])}`,
+                            height: spacing[8],
+                            fontSize: `${theme(
+                                'fontSize.sm',
+                                defaultTheme.fontSize.sm
+                            )}`,
+                            borderTop: `1px solid ${theme('colors.gray.300')}`,
+                            borderBottom: `1px solid ${theme(
+                                'colors.gray.300'
+                            )}`,
+                            borderRight: `1px solid ${theme(
+                                'colors.gray.300'
+                            )}`,
+                        },
+                    '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type, .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type':
+                        {
+                            position: 'relative',
+                        },
+                    '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link, .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link':
+                        {
+                            color: 'transparent',
+                        },
+                    '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link::after':
+                        {
+                            content: `url("${svgToDataUri(
+                                `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="${theme(
+                                        'colors.gray.500',
+                                        colors.gray[500]
+                                    )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 8-4 4 4 4"/>
+                                </svg>`
+                            )}")`,
+                            position: 'absolute',
+                            top: '50%',
+                            left: '50%',
+                            width: '1.3rem',
+                            height: '1.3rem',
+                            transform: 'translate(-50%, -50%)',
+                        },
+                    '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link::after':
+                        {
+                            content: `url("${svgToDataUri(
+                                `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                                <path stroke="${theme(
+                                    'colors.gray.500',
+                                    colors.gray[500]
+                                )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
+                                </svg>
+                                `
+                            )}")`,
+                            position: 'absolute',
+                            top: '50%',
+                            right: '50%',
+                            width: '1.3rem',
+                            height: '1.3rem',
+                            transform: 'translate(50%, -50%)',
+                        },
+                    '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link':
+                        {
+                            borderTopLeftRadius: `${theme(
+                                'borderRadius.lg',
+                                borderRadius.lg
+                            )}`,
+                            borderBottomLeftRadius: `${theme(
+                                'borderRadius.lg',
+                                borderRadius.lg
+                            )}`,
+                            borderLeft: `1px solid ${theme('colors.gray.300')}`,
+                        },
+                    '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link':
+                        {
+                            borderTopRightRadius: `${theme(
+                                'borderRadius.lg',
+                                borderRadius.lg
+                            )}`,
+                            borderBottomRightRadius: `${theme(
+                                'borderRadius.lg',
+                                borderRadius.lg
+                            )}`,
+                            borderLeft: 0,
+                        },
+                    '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link:hover':
+                        {
+                            backgroundColor: `${theme('colors.gray.50')}`,
+                            color: `${theme(
+                                'colors.gray.700',
+                                colors.gray[700]
+                            )}`,
+                        },
                 });
+                console.log('datatable styles added');
             }
 
             // chart styles
@@ -845,9 +1066,9 @@ module.exports = plugin.withOptions(
         // Enable forms and tooltip by default if not specified in options
         const {
             charts = false,
+            datatables = false,
             forms = true,
             tooltips = true,
-            datatables = false,
         } = options;
 
         const safelist = [
@@ -870,6 +1091,10 @@ module.exports = plugin.withOptions(
 
         if (charts) {
             safelist.push({ pattern: /^apexcharts-.*$/ });
+        }
+
+        if (charts) {
+            safelist.push({ pattern: /^datatable-.*$/ });
         }
 
         return {

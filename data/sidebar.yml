@@ -137,4 +137,5 @@
   slug: plugins
   pages:
       - title: Charts
+      - title: Datatables
         new: true

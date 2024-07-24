@@ -76,6 +76,7 @@ module.exports = {
             charts: true,
             forms: true,
             tooltips: true,
+            datatables: true,
         }),
     ],
 };

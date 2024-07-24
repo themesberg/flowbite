@@ -10,7 +10,12 @@ const { spacing, borderWidth, borderRadius, boxShadow } = defaultTheme;
 module.exports = plugin.withOptions(
     function (options = {}) {
         // Enable forms and tooltip by default if not specified in options
-        const { charts = false, forms = true, tooltips = true } = options;
+        const {
+            charts = false,
+            forms = true,
+            tooltips = true,
+            datatables = false,
+        } = options;
 
         return function ({ addBase, addComponents, theme }) {
             // tooltip and popover styles
@@ -524,6 +529,19 @@ module.exports = plugin.withOptions(
                 });
             }
 
+            if (datatables) {
+                addComponents({
+                    '.datatable-wrapper': {
+                        width: '100%',
+                    },
+                    '.datatable-wrapper .datatable-top': {
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                    },
+                });
+            }
+
             // chart styles
             if (charts) {
                 addComponents({
@@ -825,7 +843,12 @@ module.exports = plugin.withOptions(
     },
     function (options = {}) {
         // Enable forms and tooltip by default if not specified in options
-        const { charts = false, forms = true, tooltips = true } = options;
+        const {
+            charts = false,
+            forms = true,
+            tooltips = true,
+            datatables = false,
+        } = options;
 
         const safelist = [
             'z-40',

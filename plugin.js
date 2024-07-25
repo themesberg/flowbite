@@ -643,7 +643,7 @@ module.exports = plugin.withOptions(
                             'fontSize.xs',
                             defaultTheme.fontSize.xs
                         )}`,
-                        color: `${theme('colors.gray.700', colors.gray[700])}`,
+                        color: `${theme('colors.gray.500', colors.gray[500])}`,
                         backgroundColor: `${theme(
                             'colors.gray.50',
                             colors.gray[50]

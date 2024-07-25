@@ -14,25 +14,8 @@ previousLink: typography/hr/
 
 {{< example id="default-area-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("demo-table") && typeof simpleDatatables.DataTable !== 'undefined') {
-  let dataTable = new simpleDatatables.DataTable("#demo-table", {
-    perPageSelect: [5, 10, 15, ["All", -1]],
-        columns: [
-            {
-                select: 1,
-            },
-            {
-                select: 2,
-                sortSequence: ["desc", "asc"]
-            },
-            {
-                select: 3,
-                sortSequence: ["desc", "asc"]
-            },
-            {
-                select: 4,
-                sortSequence: ["desc", "asc"]
-            },
-        ]
+    let dataTable = new simpleDatatables.DataTable("#demo-table", {
+        perPageSelect: [5, 10, 15, ["All", -1]],
     });
 }
 ` >}}
@@ -74,6 +57,12 @@ if (document.getElementById("demo-table") && typeof simpleDatatables.DataTable !
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Flowbite</td>
+            <td>2021/25/09</td>
+            <td>269000</td>
+            <td>49%</td>
+        </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">React</td>
             <td>2013/24/05</td>

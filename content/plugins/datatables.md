@@ -167,3 +167,17 @@ if (document.getElementById("demo-table") && typeof simpleDatatables.DataTable !
     </tbody>
 </table>
 {{< /example >}}
+
+## Table search
+
+## Filtering data
+
+## Sorting data
+
+## Table pagination
+
+## Export files
+
+## Options
+
+## JavaScript behaviour

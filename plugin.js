@@ -560,6 +560,18 @@ module.exports = plugin.withOptions(
                         )}`,
                         minWidth: '16rem',
                     },
+                    '.dark .datatable-wrapper .datatable-search .datatable-input':
+                        {
+                            color: 'white',
+                            backgroundColor: `${theme(
+                                'colors.gray.700',
+                                colors.gray[700]
+                            )}`,
+                            border: `1px solid ${theme(
+                                'colors.gray.600',
+                                colors.gray[600]
+                            )}`,
+                        },
                     '.datatable-wrapper .datatable-top .datatable-dropdown': {
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
                         fontSize: `${theme(
@@ -567,6 +579,13 @@ module.exports = plugin.withOptions(
                             defaultTheme.fontSize.sm
                         )}`,
                     },
+                    '.dark .datatable-wrapper .datatable-top .datatable-dropdown':
+                        {
+                            color: `${theme(
+                                'colors.gray.400',
+                                colors.gray[400]
+                            )}`,
+                        },
                     '.datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
                         {
                             backgroundColor: `${theme('colors.gray.50')}`,
@@ -584,6 +603,18 @@ module.exports = plugin.withOptions(
                                 borderRadius.lg
                             )}`,
                             marginRight: `${theme('spacing.1', spacing[1])}`,
+                        },
+                    '.dark .datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
+                        {
+                            backgroundColor: `${theme(
+                                'colors.gray.700',
+                                colors.gray[700]
+                            )}`,
+                            border: `1px solid ${theme(
+                                'colors.gray.600',
+                                colors.gray[600]
+                            )}`,
+                            color: 'white',
                         },
                     '.datatable-wrapper .datatable-search .datatable-input:focus':
                         {
@@ -604,6 +635,9 @@ module.exports = plugin.withOptions(
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
                         textAlign: 'left',
                     },
+                    '.dark .datatable-wrapper .datatable-table': {
+                        color: `${theme('colors.gray.400', colors.gray[400])}`,
+                    },
                     '.datatable-wrapper .datatable-table thead': {
                         fontSize: `${theme(
                             'fontSize.xs',
@@ -613,6 +647,13 @@ module.exports = plugin.withOptions(
                         backgroundColor: `${theme(
                             'colors.gray.50',
                             colors.gray[50]
+                        )}`,
+                    },
+                    '.dark .datatable-wrapper .datatable-table thead': {
+                        color: `${theme('colors.gray.400', colors.gray[400])}`,
+                        backgroundColor: `${theme(
+                            'colors.gray.700',
+                            colors.gray[700]
                         )}`,
                     },
                     '.datatable-wrapper .datatable-table thead th': {
@@ -634,6 +675,10 @@ module.exports = plugin.withOptions(
                         backgroundColor: 'white',
                         borderBottom: `1px solid ${theme('colors.gray.200')}`,
                     },
+                    '.dark .datatable-wrapper .datatable-table tbody tr': {
+                        backgroundColor: `${theme('colors.gray.900')}`,
+                        borderBottom: `1px solid ${theme('colors.gray.700')}`,
+                    },
                     '.datatable-wrapper .datatable-table .datatable-empty': {
                         textAlign: 'center',
                     },
@@ -650,6 +695,13 @@ module.exports = plugin.withOptions(
                             defaultTheme.fontSize.sm
                         )}`,
                     },
+                    '.dark .datatable-wrapper .datatable-bottom .datatable-info':
+                        {
+                            color: `${theme(
+                                'colors.gray.400',
+                                colors.gray[400]
+                            )}`,
+                        },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list':
                         {
                             display: 'flex',
@@ -684,6 +736,17 @@ module.exports = plugin.withOptions(
                                 'colors.gray.300'
                             )}`,
                         },
+                    '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link':
+                        {
+                            color: `${theme(
+                                'colors.gray.400',
+                                colors.gray[400]
+                            )}`,
+                            borderColor: `${theme(
+                                'colors.gray.700',
+                                colors.gray[700]
+                            )}`,
+                        },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type, .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type':
                         {
                             position: 'relative',
@@ -709,6 +772,17 @@ module.exports = plugin.withOptions(
                             height: '1.3rem',
                             transform: 'translate(-50%, -50%)',
                         },
+                    '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link::after':
+                        {
+                            content: `url("${svgToDataUri(
+                                `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="${theme(
+                                        'colors.gray.400',
+                                        colors.gray[400]
+                                    )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 8-4 4 4 4"/>
+                                </svg>`
+                            )}")`,
+                        },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link::after':
                         {
                             content: `url("${svgToDataUri(
@@ -727,6 +801,18 @@ module.exports = plugin.withOptions(
                             height: '1.3rem',
                             transform: 'translate(50%, -50%)',
                         },
+                    '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link::after':
+                        {
+                            content: `url("${svgToDataUri(
+                                `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                                <path stroke="${theme(
+                                    'colors.gray.400',
+                                    colors.gray[400]
+                                )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
+                                </svg>
+                                `
+                            )}")`,
+                        },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link':
                         {
                             borderTopLeftRadius: `${theme(
@@ -738,6 +824,10 @@ module.exports = plugin.withOptions(
                                 borderRadius.lg
                             )}`,
                             borderLeft: `1px solid ${theme('colors.gray.300')}`,
+                        },
+                    '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link':
+                        {
+                            borderLeft: `1px solid ${theme('colors.gray.700')}`,
                         },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link':
                         {
@@ -759,8 +849,12 @@ module.exports = plugin.withOptions(
                                 colors.gray[700]
                             )}`,
                         },
+                    '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link:hover':
+                        {
+                            backgroundColor: `${theme('colors.gray.700')}`,
+                            color: 'white',
+                        },
                 });
-                console.log('datatable styles added');
             }
 
             // chart styles

@@ -9,6 +9,12 @@ previous: Charts
 previousLink: plugins/charts/
 ---
 
+The datatable component examples from Flowbite are open-source under the MIT License and they are based on the [simple-datatables](https://github.com/fiduswriter/simple-datatables) repository from GitHub which you need to install via NPM or CDN.
+
+This page provides multiple examples of datatable components where you can search, sort, filter, paginate and export table data up to thousands of entries coded with Tailwind CSS and leveraging JavaScript code provided by the parent library.
+
+All examples are responsive, dark mode and RTL support included and by installing the Flowbite plugin the custom styles will automatically be applied to the datatable components using Tailwind CSS.
+
 ## Default datatable
 
 {{< example id="default-area-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`

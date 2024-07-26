@@ -539,8 +539,9 @@ module.exports = plugin.withOptions(
                     '.datatable-wrapper .datatable-top': {
                         display: 'flex',
                         justifyContent: 'space-between',
-                        flexDirection: 'row-reverse',
-                        alignItems: 'center',
+                        flexDirection: 'column-reverse',
+                        alignItems: 'start',
+                        gap: `${theme('spacing.4', spacing[4])}`,
                         marginBottom: `${theme('spacing.4', spacing[4])}`,
                     },
                     '.datatable-wrapper .datatable-search .datatable-input': {
@@ -603,6 +604,7 @@ module.exports = plugin.withOptions(
                                 borderRadius.lg
                             )}`,
                             marginRight: `${theme('spacing.1', spacing[1])}`,
+                            minWidth: '4rem',
                         },
                     '.dark .datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
                         {
@@ -684,9 +686,11 @@ module.exports = plugin.withOptions(
                     },
                     '.datatable-wrapper .datatable-bottom': {
                         display: 'flex',
+                        flexDirection: 'column',
                         justifyContent: 'space-between',
-                        alignItems: 'center',
+                        alignItems: 'start',
                         marginTop: `${theme('spacing.4', spacing[4])}`,
+                        gap: `${theme('spacing.4', spacing[4])}`,
                     },
                     '.datatable-wrapper .datatable-bottom .datatable-info': {
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
@@ -898,6 +902,16 @@ module.exports = plugin.withOptions(
                             backgroundColor: `${theme('colors.gray.700')}`,
                             color: 'white',
                         },
+                    '@screen sm': {
+                        '.datatable-wrapper .datatable-top': {
+                            flexDirection: 'row-reverse',
+                            alignItems: 'center',
+                        },
+                        '.datatable-wrapper .datatable-bottom': {
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                        },
+                    },
                 });
             }
 

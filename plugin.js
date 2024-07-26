@@ -569,12 +569,12 @@ module.exports = plugin.withOptions(
                         {
                             color: 'white',
                             backgroundColor: `${theme(
-                                'colors.gray.700',
-                                colors.gray[700]
+                                'colors.gray.800',
+                                colors.gray[800]
                             )}`,
                             border: `1px solid ${theme(
-                                'colors.gray.600',
-                                colors.gray[600]
+                                'colors.gray.700',
+                                colors.gray[700]
                             )}`,
                         },
                     '.datatable-wrapper thead th .datatable-input': {
@@ -587,8 +587,8 @@ module.exports = plugin.withOptions(
                     },
                     '.dark .datatable-wrapper thead th .datatable-input': {
                         backgroundColor: `${theme(
-                            'colors.gray.600',
-                            colors.gray[600]
+                            'colors.gray.700',
+                            colors.gray[700]
                         )}`,
                         borderColor: `${theme(
                             'colors.gray.600',
@@ -632,12 +632,12 @@ module.exports = plugin.withOptions(
                     '.dark .datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
                         {
                             backgroundColor: `${theme(
-                                'colors.gray.700',
-                                colors.gray[700]
+                                'colors.gray.800',
+                                colors.gray[800]
                             )}`,
                             border: `1px solid ${theme(
-                                'colors.gray.600',
-                                colors.gray[600]
+                                'colors.gray.700',
+                                colors.gray[700]
                             )}`,
                             color: 'white',
                         },
@@ -681,8 +681,8 @@ module.exports = plugin.withOptions(
                     '.dark .datatable-wrapper .datatable-table thead': {
                         color: `${theme('colors.gray.400', colors.gray[400])}`,
                         backgroundColor: `${theme(
-                            'colors.gray.700',
-                            colors.gray[700]
+                            'colors.gray.800',
+                            colors.gray[800]
                         )}`,
                     },
                     '.datatable-wrapper .datatable-table thead th': {

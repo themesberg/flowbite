@@ -544,24 +544,28 @@ module.exports = plugin.withOptions(
                         gap: `${theme('spacing.4', spacing[4])}`,
                         marginBottom: `${theme('spacing.4', spacing[4])}`,
                     },
-                    '.datatable-wrapper .datatable-search .datatable-input': {
-                        color: `${theme('colors.gray.900', colors.gray[900])}`,
-                        fontSize: `${theme(
-                            'fontSize.sm',
-                            defaultTheme.fontSize.sm
-                        )}`,
-                        border: `1px solid ${theme('colors.gray.300')}`,
-                        borderRadius: `${theme(
-                            'borderRadius.lg',
-                            borderRadius.lg
-                        )}`,
-                        backgroundColor: `${theme(
-                            'colors.gray.50',
-                            colors.gray[50]
-                        )}`,
-                        minWidth: '16rem',
-                    },
-                    '.dark .datatable-wrapper .datatable-search .datatable-input':
+                    '.datatable-wrapper .datatable-search .datatable-input, .datatable-wrapper .datatable-input':
+                        {
+                            color: `${theme(
+                                'colors.gray.900',
+                                colors.gray[900]
+                            )}`,
+                            fontSize: `${theme(
+                                'fontSize.sm',
+                                defaultTheme.fontSize.sm
+                            )}`,
+                            border: `1px solid ${theme('colors.gray.300')}`,
+                            borderRadius: `${theme(
+                                'borderRadius.lg',
+                                borderRadius.lg
+                            )}`,
+                            backgroundColor: `${theme(
+                                'colors.gray.50',
+                                colors.gray[50]
+                            )}`,
+                            minWidth: '16rem',
+                        },
+                    '.dark .datatable-wrapper .datatable-search .datatable-input, .dark .datatable-wrapper .datatable-input':
                         {
                             color: 'white',
                             backgroundColor: `${theme(
@@ -573,6 +577,25 @@ module.exports = plugin.withOptions(
                                 colors.gray[600]
                             )}`,
                         },
+                    '.datatable-wrapper thead th .datatable-input': {
+                        backgroundColor: 'white',
+                        fontWeight: `${theme('fontWeight.normal')}`,
+                        color: `${theme('colors.gray.900', colors.gray[900])}`,
+                        paddingTop: `.35rem`,
+                        paddingBottom: `.35rem`,
+                        minWidth: '0',
+                    },
+                    '.dark .datatable-wrapper thead th .datatable-input': {
+                        backgroundColor: `${theme(
+                            'colors.gray.600',
+                            colors.gray[600]
+                        )}`,
+                        borderColor: `${theme(
+                            'colors.gray.600',
+                            colors.gray[600]
+                        )}`,
+                        color: 'white',
+                    },
                     '.datatable-wrapper .datatable-top .datatable-dropdown': {
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
                         fontSize: `${theme(
@@ -617,6 +640,10 @@ module.exports = plugin.withOptions(
                                 colors.gray[600]
                             )}`,
                             color: 'white',
+                        },
+                    '.datatable-wrapper .datatable-container thead tr.search-filtering-row th':
+                        {
+                            paddingTop: '0',
                         },
                     '.datatable-wrapper .datatable-search .datatable-input:focus':
                         {

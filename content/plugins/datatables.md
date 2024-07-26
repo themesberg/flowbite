@@ -15,7 +15,39 @@ This page provides multiple examples of datatable components where you can searc
 
 All examples are responsive, dark mode and RTL support included and by installing the Flowbite plugin the custom styles will automatically be applied to the datatable components using Tailwind CSS.
 
+## Getting started
+
+Before continuing make sure that you have Tailwind CSS, Flowbite, and Simple Datables in your project.
+
+1. Install Tailwind CSS and follow our <a href="{{< ref "getting-started/quickstart" >}}">quickstart guide</a> to install Flowbite and the official plugin
+2. Set the field `datatables` to the value `true` inside the `tailwind.config.js` file:
+
+```javascript
+plugins: [
+  require('flowbite/plugin')({
+      datatables: true,
+  }),
+  // ... other plugins
+]
+```
+
+3. Install the `simple-datatables` library using NPM:
+
+```bash
+npm install simple-datatables --save
+```
+
+Alternatively, you can also include it in your project using CDN:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3"></script>
+```
+
+Now that you have installed all libraries you can start copy-pasting the datatable components from Flowbite.
+
 ## Default datatable
+
+Use this example to enable table data searching, sorting, filtering, and pagination.
 
 {{< example id="default-area-chart-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("demo-table") && typeof simpleDatatables.DataTable !== 'undefined') {

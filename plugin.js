@@ -603,7 +603,7 @@ module.exports = plugin.withOptions(
                                 'borderRadius.lg',
                                 borderRadius.lg
                             )}`,
-                            marginEnd: `${theme('spacing.1', spacing[1])}`,
+                            marginRight: `${theme('spacing.1', spacing[1])}`,
                             minWidth: '4rem',
                         },
                     '.dark .datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
@@ -672,6 +672,17 @@ module.exports = plugin.withOptions(
                     '.datatable-wrapper .datatable-table thead th .datatable-sorter':
                         {
                             textTransform: 'uppercase',
+                        },
+                    '.datatable-wrapper .datatable-table thead th .datatable-sorter:hover':
+                        {
+                            color: `${theme(
+                                'colors.gray.900',
+                                colors.blue[900]
+                            )}`,
+                        },
+                    '.dark .datatable-wrapper .datatable-table thead th .datatable-sorter:hover':
+                        {
+                            color: 'white',
                         },
                     '.datatable-wrapper .datatable-table tbody tr': {
                         backgroundColor: 'white',

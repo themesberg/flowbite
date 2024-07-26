@@ -49,17 +49,17 @@ Make sure that in addition to the HTML markup you also copy the JavaScript code 
 
 ## Default datatable
 
-Use this example to enable table data searching, sorting, filtering, and pagination.
+Use this example to show table data with default sorting and pagination functionalities.
 
 {{< example id="default-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
-if (document.getElementById("demo-table") && typeof simpleDatatables.DataTable !== 'undefined') {
-    let dataTable = new simpleDatatables.DataTable("#demo-table", {
+if (document.getElementById("default-table") && typeof simpleDatatables.DataTable !== 'undefined') {
+    let dataTable = new simpleDatatables.DataTable("#default-table", {
         searchable: false,
         perPageSelect: false
     });
 }
 ` >}}
-<table id="demo-table">
+<table id="default-table">
     <thead>
         <tr>
             <th>

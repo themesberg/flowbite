@@ -1,13 +1,12 @@
 ---
 layout: home
 title: Tailwind CSS Datatables - Flowbite
-description: 
-group: plugins
+description: Use the datatable component to search, sort, filter, export and paginate table data of rows and columns for your web application coded with the utility classes from Tailwind CSS
 toc: true
 requires_js: true
 
-previous: Horizontal line (HR)
-previousLink: typography/hr/
+previous: Charts
+previousLink: plugins/charts/
 ---
 
 ## Default datatable

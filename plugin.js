@@ -603,7 +603,7 @@ module.exports = plugin.withOptions(
                                 'borderRadius.lg',
                                 borderRadius.lg
                             )}`,
-                            marginRight: `${theme('spacing.1', spacing[1])}`,
+                            marginEnd: `${theme('spacing.1', spacing[1])}`,
                             minWidth: '4rem',
                         },
                     '.dark .datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':

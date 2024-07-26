@@ -8,6 +8,8 @@ requires_js: true
 
 previous: Horizontal line (HR)
 previousLink: typography/hr/
+next: DataTables
+nextLink: plugins/datatables/
 ---
 
 The chart components from the Flowbite Library are open-source under the MIT license and they are styled with the utility classes from Tailwind CSS and based on the open-source [ApexCharts](https://apexcharts.com/) library.

@@ -696,7 +696,7 @@ module.exports = plugin.withOptions(
                             paddingLeft: `${theme('spacing.6', spacing[6])}`,
                             paddingRight: `${theme('spacing.6', spacing[6])}`,
                         },
-                    '.datatable-wrapper .datatable-table thead th .datatable-sorter':
+                    '.datatable-wrapper .datatable-table thead th .datatable-sorter, .datatable-wrapper .datatable-table thead th':
                         {
                             textTransform: 'uppercase',
                         },

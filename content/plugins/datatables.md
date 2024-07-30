@@ -757,10 +757,180 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
         </tr>
     </tbody>
 </table>
-
 {{< /example >}}
 
 ## Sorting data
+
+{{< example id="sorting-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
+if (document.getElementById("sorting-table") && typeof simpleDatatables.DataTable !== 'undefined') {
+    let dataTable = new simpleDatatables.DataTable("#sorting-table", {
+        searchable: false,
+        perPageSelect: false
+    });
+}
+` >}}
+<table id="sorting-table">
+    <thead>
+        <tr>
+            <th>
+                <span class="flex items-center">
+                    Country
+                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4"/>
+                    </svg>
+                </span>
+            </th>
+            <th>
+                <span class="flex items-center">
+                    GDP (in billions)
+                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4"/>
+                    </svg>
+                </span>
+            </th>
+            <th>
+                <span class="flex items-center">
+                    Population (in millions)
+                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4"/>
+                    </svg>
+                </span>
+            </th>
+            <th>
+                <span class="flex items-center">
+                    GDP per Capita
+                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4"/>
+                    </svg>
+                </span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">United States</td>
+            <td>21433</td>
+            <td>331</td>
+            <td>$64763</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">China</td>
+            <td>14342</td>
+            <td>1441</td>
+            <td>$9957</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Japan</td>
+            <td>5082</td>
+            <td>126</td>
+            <td>$40335</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Germany</td>
+            <td>3846</td>
+            <td>83</td>
+            <td>$46386</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">India</td>
+            <td>2875</td>
+            <td>1380</td>
+            <td>$2083</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">United Kingdom</td>
+            <td>2829</td>
+            <td>67</td>
+            <td>$42224</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">France</td>
+            <td>2716</td>
+            <td>65</td>
+            <td>$41723</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Italy</td>
+            <td>2001</td>
+            <td>60</td>
+            <td>$33350</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Canada</td>
+            <td>1643</td>
+            <td>38</td>
+            <td>$43237</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">South Korea</td>
+            <td>1631</td>
+            <td>52</td>
+            <td>$31365</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Russia</td>
+            <td>1460</td>
+            <td>144</td>
+            <td>$10139</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Brazil</td>
+            <td>1430</td>
+            <td>213</td>
+            <td>$6718</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Australia</td>
+            <td>1393</td>
+            <td>25</td>
+            <td>$55720</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Spain</td>
+            <td>1326</td>
+            <td>47</td>
+            <td>$28255</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Mexico</td>
+            <td>1194</td>
+            <td>129</td>
+            <td>$9255</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Indonesia</td>
+            <td>1158</td>
+            <td>273</td>
+            <td>$4241</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Netherlands</td>
+            <td>1010</td>
+            <td>17</td>
+            <td>$59412</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Saudi Arabia</td>
+            <td>804</td>
+            <td>35</td>
+            <td>$22914</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Turkey</td>
+            <td>761</td>
+            <td>84</td>
+            <td>$9060</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Switzerland</td>
+            <td>741</td>
+            <td>9</td>
+            <td>$82333</td>
+        </tr>
+    </tbody>
+</table>
+
+{{< /example >}}
 
 ## Table pagination
 

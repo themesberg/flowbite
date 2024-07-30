@@ -234,7 +234,8 @@ Set the `searchable` option to `true` to enable the search functionality for all
 {{< example id="search-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("search-table") && typeof simpleDatatables.DataTable !== 'undefined') {
     let dataTable = new simpleDatatables.DataTable("#search-table", {
-        searchable: true
+        searchable: true,
+        sortable: false
     });
 }
 ` >}}
@@ -244,33 +245,21 @@ if (document.getElementById("search-table") && typeof simpleDatatables.DataTable
             <th>
                 <span class="flex items-center">
                     Name
-                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4"/>
-                    </svg>
                 </span>
             </th>
             <th data-type="date" data-format="YYYY/DD/MM">
                 <span class="flex items-center">
                     Release Date
-                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4"/>
-                    </svg>
                 </span>
             </th>
             <th>
                 <span class="flex items-center">
                     NPM Downloads
-                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4"/>
-                    </svg>
                 </span>
             </th>
             <th>
                 <span class="flex items-center">
                     Growth
-                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4"/>
-                    </svg>
                 </span>
             </th>
         </tr>
@@ -407,6 +396,8 @@ if (document.getElementById("search-table") && typeof simpleDatatables.DataTable
 {{< /example >}}
 
 ## Filtering data
+
+To enable filtering data based on a search query for each column you need to copy the custom code from the JavaScript tab and the HTML structure of the table. Enabling search for each individual data column is an advanced way of letting users browse complex data.
 
 {{< example id="filter-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable !== 'undefined') {
@@ -761,11 +752,14 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
 
 ## Sorting data
 
+By setting the value `sortable` to `true` you'll enable all data rows from the datatable to be sortable by clicking on the table column heading. You can also disable it by setting the same option to `false`.
+
 {{< example id="sorting-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("sorting-table") && typeof simpleDatatables.DataTable !== 'undefined') {
     let dataTable = new simpleDatatables.DataTable("#sorting-table", {
         searchable: false,
-        perPageSelect: false
+        perPageSelect: false,
+        sortable: true
     });
 }
 ` >}}
@@ -782,7 +776,7 @@ if (document.getElementById("sorting-table") && typeof simpleDatatables.DataTabl
             </th>
             <th>
                 <span class="flex items-center">
-                    GDP (in billions)
+                    GDP
                     <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4"/>
                     </svg>
@@ -790,7 +784,7 @@ if (document.getElementById("sorting-table") && typeof simpleDatatables.DataTabl
             </th>
             <th>
                 <span class="flex items-center">
-                    Population (in millions)
+                    Population
                     <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4"/>
                     </svg>
@@ -809,122 +803,122 @@ if (document.getElementById("sorting-table") && typeof simpleDatatables.DataTabl
     <tbody>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">United States</td>
-            <td>21433</td>
-            <td>331</td>
+            <td>$21433 billion</td>
+            <td>331 million</td>
             <td>$64763</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">China</td>
-            <td>14342</td>
-            <td>1441</td>
+            <td>$14342 billion</td>
+            <td>1441 million</td>
             <td>$9957</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Japan</td>
-            <td>5082</td>
-            <td>126</td>
+            <td>$5082 billion</td>
+            <td>126 million</td>
             <td>$40335</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Germany</td>
-            <td>3846</td>
-            <td>83</td>
+            <td>$3846 billion</td>
+            <td>83 million</td>
             <td>$46386</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">India</td>
-            <td>2875</td>
-            <td>1380</td>
+            <td>$2875 billion</td>
+            <td>1380 million</td>
             <td>$2083</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">United Kingdom</td>
-            <td>2829</td>
-            <td>67</td>
+            <td>$2829 billion</td>
+            <td>67 million</td>
             <td>$42224</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">France</td>
-            <td>2716</td>
-            <td>65</td>
+            <td>$2716 billion</td>
+            <td>65 million</td>
             <td>$41723</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Italy</td>
-            <td>2001</td>
-            <td>60</td>
+            <td>$2001 billion</td>
+            <td>60 million</td>
             <td>$33350</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Canada</td>
-            <td>1643</td>
-            <td>38</td>
+            <td>$1643 billion</td>
+            <td>38 million</td>
             <td>$43237</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">South Korea</td>
-            <td>1631</td>
-            <td>52</td>
+            <td>$1631 billion</td>
+            <td>52 million</td>
             <td>$31365</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Russia</td>
-            <td>1460</td>
-            <td>144</td>
+            <td>$1460 billion</td>
+            <td>144 million</td>
             <td>$10139</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Brazil</td>
-            <td>1430</td>
-            <td>213</td>
+            <td>$1430 billion</td>
+            <td>213 million</td>
             <td>$6718</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Australia</td>
-            <td>1393</td>
-            <td>25</td>
+            <td>$1393 billion</td>
+            <td>25 million</td>
             <td>$55720</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Spain</td>
-            <td>1326</td>
-            <td>47</td>
+            <td>$1326 billion</td>
+            <td>47 million</td>
             <td>$28255</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Mexico</td>
-            <td>1194</td>
-            <td>129</td>
+            <td>$1194 billion</td>
+            <td>129 million</td>
             <td>$9255</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Indonesia</td>
-            <td>1158</td>
-            <td>273</td>
+            <td>$1158 billion</td>
+            <td>273 million</td>
             <td>$4241</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Netherlands</td>
-            <td>1010</td>
-            <td>17</td>
+            <td>$1010 billion</td>
+            <td>17 million</td>
             <td>$59412</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Saudi Arabia</td>
-            <td>804</td>
-            <td>35</td>
+            <td>$804 billion</td>
+            <td>35 million</td>
             <td>$22914</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Turkey</td>
-            <td>761</td>
-            <td>84</td>
+            <td>$761 billion</td>
+            <td>84 million</td>
             <td>$9060</td>
         </tr>
         <tr>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Switzerland</td>
-            <td>741</td>
-            <td>9</td>
+            <td>$741 billion</td>
+            <td>9 million</td>
             <td>$82333</td>
         </tr>
     </tbody>

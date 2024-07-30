@@ -700,14 +700,14 @@ module.exports = plugin.withOptions(
                         {
                             textTransform: 'uppercase',
                         },
-                    '.datatable-wrapper .datatable-table thead th .datatable-sorter:hover':
+                    '.datatable-wrapper .datatable-table thead th .datatable-sorter:hover, .datatable-wrapper .datatable-table thead th.datatable-ascending .datatable-sorter, .datatable-wrapper .datatable-table thead th.datatable-descending .datatable-sorter':
                         {
                             color: `${theme(
                                 'colors.gray.900',
                                 colors.blue[900]
                             )}`,
                         },
-                    '.dark .datatable-wrapper .datatable-table thead th .datatable-sorter:hover':
+                    '.dark .datatable-wrapper .datatable-table thead th .datatable-sorter:hover, .dark .datatable-wrapper .datatable-table thead th.datatable-ascending .datatable-sorter, .dark .datatable-wrapper .datatable-table thead th.datatable-descending .datatable-sorter':
                         {
                             color: 'white',
                         },

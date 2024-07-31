@@ -1168,11 +1168,47 @@ if (document.getElementById("pagination-table") && typeof simpleDatatables.DataT
 {{< example id="checkboxes-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("checkboxes-table") && typeof simpleDatatables.DataTable !== 'undefined') {
     const dataTable = new simpleDatatables.DataTable("#checkboxes-table", {
-        rowNavigation: true,
+        rowRender: (rowValue, tr, _index) => {
+            // console.log('tr' ', rowValue)
+            if (!tr.attributes) {
+                tr.attributes = {}
+            }
+            // tr.attributes["data-name"] = rowValue.cells[1].data
+            return tr
+        },
         columns: [
             {
                 select: 0,
-                sortable: false
+                sortable: false,
+                render: function(value, _td, _rowIndex, _cellIndex) {
+                    var checkboxDiv = document.createElement('div');
+                    checkboxDiv.className = 'flex items-center';
+                    
+                    var checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.className = 'w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600';
+                    
+                    // Set the checked property based on the value
+                    if (value === true) {
+                        console.log('Value is true, checkbox should be checked.');
+                        checkbox.checked = true;
+                    } else {
+                        console.log('Value is false or not true, checkbox should not be checked.');
+                        checkbox.checked = false;
+                    }
+                    
+                    var label = document.createElement('label');
+                    label.className = 'sr-only';
+                    label.textContent = 'select row';
+                    
+                    checkboxDiv.appendChild(checkbox);
+                    checkboxDiv.appendChild(label);
+                    
+                    // Debug: Log the outerHTML of the checkboxDiv
+                    console.log('Rendered HTML:', checkboxDiv.outerHTML);
+                    
+                    return checkboxDiv.outerHTML;
+                }
             }
         ]
     });
@@ -1180,45 +1216,41 @@ if (document.getElementById("checkboxes-table") && typeof simpleDatatables.DataT
     const checkboxes = dataTable.dom.querySelectorAll("tbody [type='checkbox']");
     dataTable.dom.addEventListener("click", event => {
         if (event.target.matches("tbody [type='checkbox']")) {
+            event.preventDefault()
+            event.stopPropagation()
+
             const $checkboxEl = event.target;
-            $rowEl = $checkboxEl.parentElement.parentElement.parentElement;
+            const $rowEl = event.target.parentElement.parentElement.parentElement;
 
             const index = parseInt($rowEl.dataset.index, 10)
-
-            const row = dataTable.data.data[index] // row data if you need it
-            const cell = row.cells[0] // cell data if you need it
-            console.log(row.cells)
-
-            if($checkboxEl.checked) {
-                $rowEl.classList.add("!bg-gray-50", "dark:!bg-gray-700")
+            const row = dataTable.data.data[index]
+            const cell = row.cells[0]
+            const checked = cell.data
+            if (Array.isArray(cell.data) && cell.data.length === 0) {
+                cell.data = true;
             } else {
-                $rowEl.classList.remove("!bg-gray-50", "dark:!bg-gray-700")
+                cell.data = !checked
             }
-            dataTable.update()
 
-            // Timeout used for the checkbox to have time to update and show as checked. It is not required.
-            // setTimeout(
-            //     () => console.log(JSON.stringify(row)),
-            //     0
-            // )
+            dataTable.update()
         }
     })
-    $checkboxAll.addEventListener('click', event => {
-        const $checkboxAll = event.target;
-        const $checkboxes = dataTable.dom.querySelectorAll('#checkboxes-table tbody input[type="checkbox"]');
+    // $checkboxAll.addEventListener('click', event => {
+    //     const $checkboxAll = event.target;
+    //     const $checkboxes = dataTable.dom.querySelectorAll('#checkboxes-table tbody input[type="checkbox"]');
 
-        $checkboxes.forEach($checkbox => {
-            if ($checkboxAll.checked) {
-                if (!$checkbox.checked) {
-                    $checkbox.click();
-                }
-            } else {
-                if ($checkbox.checked) {
-                    $checkbox.click();
-                }
-            }
-        });
-    });
+    //     $checkboxes.forEach($checkbox => {
+    //         if ($checkboxAll.checked) {
+    //             if (!$checkbox.checked) {
+    //                 $checkbox.click();
+    //             }
+    //         } else {
+    //             if ($checkbox.checked) {
+    //                 $checkbox.click();
+    //             }
+    //         }
+    //     });
+    // });
 }
 
 ` >}}
@@ -1267,12 +1299,7 @@ if (document.getElementById("checkboxes-table") && typeof simpleDatatables.DataT
     </thead>
     <tbody>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Flowbite</td>
             <td>2021/25/09</td>
             <td>269000</td>
@@ -1291,228 +1318,133 @@ if (document.getElementById("checkboxes-table") && typeof simpleDatatables.DataT
             <td>24%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Angular</td>
             <td>2010/20/09</td>
             <td>2800000</td>
             <td>17%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Vue</td>
             <td>2014/12/02</td>
             <td>3600000</td>
             <td>30%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Svelte</td>
             <td>2016/26/11</td>
             <td>1200000</td>
             <td>57%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Ember</td>
             <td>2011/08/12</td>
             <td>500000</td>
             <td>44%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Backbone</td>
             <td>2010/13/10</td>
             <td>300000</td>
             <td>9%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">jQuery</td>
             <td>2006/28/01</td>
             <td>6000000</td>
             <td>5%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Bootstrap</td>
             <td>2011/19/08</td>
             <td>1800000</td>
             <td>12%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Foundation</td>
             <td>2011/23/09</td>
             <td>700000</td>
             <td>8%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Bulma</td>
             <td>2016/24/10</td>
             <td>500000</td>
             <td>7%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Next.js</td>
             <td>2016/25/10</td>
             <td>2300000</td>
             <td>45%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Nuxt.js</td>
             <td>2016/16/10</td>
             <td>900000</td>
             <td>50%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Meteor</td>
             <td>2012/17/01</td>
             <td>1000000</td>
             <td>10%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Aurelia</td>
             <td>2015/08/07</td>
             <td>200000</td>
             <td>20%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Inferno</td>
             <td>2016/27/09</td>
             <td>100000</td>
             <td>35%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Preact</td>
             <td>2015/16/08</td>
             <td>600000</td>
             <td>28%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Lit</td>
             <td>2018/28/05</td>
             <td>400000</td>
             <td>60%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Alpine.js</td>
             <td>2019/02/11</td>
             <td>300000</td>
             <td>70%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Stimulus</td>
             <td>2018/06/03</td>
             <td>150000</td>
             <td>25%</td>
         </tr>
         <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
+            <td></td>
             <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Solid</td>
             <td>2021/05/07</td>
             <td>250000</td>

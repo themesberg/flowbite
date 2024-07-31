@@ -1168,8 +1168,15 @@ if (document.getElementById("pagination-table") && typeof simpleDatatables.DataT
 {{< example id="checkboxes-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("checkboxes-table") && typeof simpleDatatables.DataTable !== 'undefined') {
     const dataTable = new simpleDatatables.DataTable("#checkboxes-table", {
-        rowNavigation: true
+        rowNavigation: true,
+        columns: [
+            {
+                select: 0,
+                sortable: false
+            }
+        ]
     });
+    const $checkboxAll = document.getElementById('checkbox-all');
     const checkboxes = dataTable.dom.querySelectorAll("tbody [type='checkbox']");
     dataTable.dom.addEventListener("click", event => {
         if (event.target.matches("tbody [type='checkbox']")) {
@@ -1196,22 +1203,22 @@ if (document.getElementById("checkboxes-table") && typeof simpleDatatables.DataT
             // )
         }
     })
-    // document.getElementById('checkbox-all').addEventListener('click', event => {
-    //     const $checkboxAll = event.target;
-    //     const $checkboxes = dataTable.dom.querySelectorAll('#checkboxes-table tbody input[type="checkbox"]');
+    $checkboxAll.addEventListener('click', event => {
+        const $checkboxAll = event.target;
+        const $checkboxes = dataTable.dom.querySelectorAll('#checkboxes-table tbody input[type="checkbox"]');
 
-    //     $checkboxes.forEach($checkbox => {
-    //         if ($checkboxAll.checked) {
-    //             if (!$checkbox.checked) {
-    //                 $checkbox.click();
-    //             }
-    //         } else {
-    //             if ($checkbox.checked) {
-    //                 $checkbox.click();
-    //             }
-    //         }
-    //     });
-    // });
+        $checkboxes.forEach($checkbox => {
+            if ($checkboxAll.checked) {
+                if (!$checkbox.checked) {
+                    $checkbox.click();
+                }
+            } else {
+                if ($checkbox.checked) {
+                    $checkbox.click();
+                }
+            }
+        });
+    });
 }
 
 ` >}}

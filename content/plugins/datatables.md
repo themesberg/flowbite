@@ -1187,22 +1187,23 @@ if (document.getElementById("checkboxes-table") && typeof simpleDatatables.DataT
                     var checkbox = document.createElement('input');
                     checkbox.type = 'checkbox';
                     checkbox.className = 'w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600';
-                    
-                    // Set the checked property based on the value
-                    if (value === true) {
-                        console.log('Value is true, checkbox should be checked.');
-                        checkbox.checked = true;
-                    } else {
-                        console.log('Value is false or not true, checkbox should not be checked.');
-                        checkbox.checked = false;
-                    }
-                    
+
                     var label = document.createElement('label');
                     label.className = 'sr-only';
                     label.textContent = 'select row';
                     
                     checkboxDiv.appendChild(checkbox);
                     checkboxDiv.appendChild(label);
+
+                    // Set the checked property based on the value
+                    if (value === true) {
+                        console.log('Value is true, checkbox should be checked.');
+                        checkbox.checked = true;
+                        checkbox.setAttribute('checked', '')
+                    } else {
+                        checkbox.checked = false;
+                        checkbox.removeAttribute('checked', '')
+                    }
                     
                     // Debug: Log the outerHTML of the checkboxDiv
                     console.log('Rendered HTML:', checkboxDiv.outerHTML);
@@ -1229,10 +1230,11 @@ if (document.getElementById("checkboxes-table") && typeof simpleDatatables.DataT
             if (Array.isArray(cell.data) && cell.data.length === 0) {
                 cell.data = true;
             } else {
-                cell.data = !checked
+                cell.data = !checked;
             }
 
-            dataTable.update()
+            dataTable.update();
+            dataTable.refresh();
         }
     })
     // $checkboxAll.addEventListener('click', event => {

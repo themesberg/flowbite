@@ -1277,6 +1277,8 @@ module.exports = plugin.withOptions(
             'h-9',
             'leading-9',
             'shadow-lg',
+            '!bg-gray-50',
+            'dark:!bg-gray-700',
         ];
 
         if (charts) {

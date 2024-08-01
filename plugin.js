@@ -711,12 +711,23 @@ module.exports = plugin.withOptions(
                         {
                             color: 'white',
                         },
+                    '.datatable-wrapper .datatable-table tbody tr.selected': {
+                        backgroundColor: `${theme(
+                            'colors.gray.100',
+                            colors.gray[100]
+                        )}`,
+                    },
+                    '.dark .datatable-wrapper .datatable-table tbody tr.selected':
+                        {
+                            backgroundColor: `${theme(
+                                'colors.gray.700',
+                                colors.gray[700]
+                            )}`,
+                        },
                     '.datatable-wrapper .datatable-table tbody tr': {
-                        backgroundColor: 'white',
                         borderBottom: `1px solid ${theme('colors.gray.200')}`,
                     },
                     '.dark .datatable-wrapper .datatable-table tbody tr': {
-                        backgroundColor: `${theme('colors.gray.900')}`,
                         borderBottom: `1px solid ${theme('colors.gray.700')}`,
                     },
                     '.datatable-wrapper .datatable-table .datatable-empty': {

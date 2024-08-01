@@ -927,7 +927,9 @@ if (document.getElementById("sorting-table") && typeof simpleDatatables.DataTabl
 
 ## Table pagination
 
-Pagination is enabled by default for all datatables from Flowbite, however, you can disable it by setting the option `paging` to `false`. You can also use the `perPage` option to specify how many data rows to show by default. You can also set the `perPageSelect` option to set the selection options of the table.
+Pagination is enabled by default for all datatables from Flowbite, however, you can disable it by setting the option `paging` to `false`. Use the `perPage` option to specify how many data rows to show by default. 
+
+You can also set the `perPageSelect` option to set the selection options of the table.
 
 {{< example id="pagination-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("pagination-table") && typeof simpleDatatables.DataTable !== 'undefined') {
@@ -1465,11 +1467,15 @@ if (document.getElementById("checkboxes-table") && typeof simpleDatatables.DataT
 
 ## Selecting rows
 
+Use this example to enable the selection of rows by clicking anywhere one of the table row elements by copying setting the `multiselect` option to `true` and copying the JavaScript configuration from Flowbite.
+
+Use the `datatable.selectrow` event to write your own code and get the data from the selected table row.
+
 {{< example id="selection-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("selection-table") && typeof simpleDatatables.DataTable !== 'undefined') {
 
     let multiSelect = true;
-    let rowNavigation = true;
+    let rowNavigation = false;
     let table = null;
 
     const resetTable = function() {

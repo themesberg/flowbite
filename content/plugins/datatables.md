@@ -1760,7 +1760,7 @@ if (document.getElementById("export-table") && typeof simpleDatatables.DataTable
                         "<select class='" + options.classes.selector + "'></select> " + options.labels.perPage +
                     "</label>" +
                 "</div>" : ""
-            ) + "<button id='exportDropdownButton' data-dropdown-toggle='exportDropdown' type='button' class='flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 sm:w-auto'>" +
+            ) + "<button id='exportDropdownButton' type='button' class='flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 sm:w-auto'>" +
             "Export as" +
             "<svg class='-me-0.5 ms-1.5 h-4 w-4' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'>" +
                 "<path stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m19 9-7 7-7-7' />" +
@@ -1816,7 +1816,11 @@ if (document.getElementById("export-table") && typeof simpleDatatables.DataTable
             "<nav class='" + options.classes.pagination + "'></nav>" +
         "</div>"
     })
-    table.refresh();
+    const $exportButton = document.getElementById("exportDropdownButton");
+    const $exportDropdownEl = document.getElementById("exportDropdown");
+    const dropdown = new Dropdown($exportDropdownEl, $exportButton);
+    console.log(dropdown)
+
     document.getElementById("export-csv").addEventListener("click", () => {
         simpleDatatables.exportCSV(table, {
             download: true,

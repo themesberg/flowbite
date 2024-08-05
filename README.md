@@ -759,7 +759,7 @@ Flowbite is an open source collection of UI components built with the utility cl
     <tr>
     <td width="33.3333%">Copy to Clipboard</td>
     <td width="33.3333%">Timepicker</td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">DataTables</td>
   </tr>
   <tr>
     <td width="33.3333%">
@@ -772,7 +772,11 @@ Flowbite is an open source collection of UI components built with the utility cl
             <img alt="Tailwind CSS Timepicker" src="https://flowbite.s3.amazonaws.com/github/timepicker.jpg">
         </a>
     </td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/plugins/datatables/">
+            <img alt="Tailwind CSS DataTables" src="https://flowbite.s3.amazonaws.com/github/datatables.jpg">
+        </a>
+    </td>
   </tr>
 </table>
 

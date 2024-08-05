@@ -1165,306 +1165,6 @@ if (document.getElementById("pagination-table") && typeof simpleDatatables.DataT
 </table>
 {{< /example >}}
 
-## Checkbox selection
-
-{{< example id="checkboxes-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
-if (document.getElementById("checkboxes-table") && typeof simpleDatatables.DataTable !== 'undefined') {
-    const dataTable = new simpleDatatables.DataTable("#checkboxes-table", {
-        rowNavigation: true,
-        rowRender: (rowValue, tr, _index) => {
-            if (!tr.attributes) {
-                tr.attributes = {}
-            }
-            
-            if (tr.attributes.selected === true) {
-                // tr.classList.add('!bg-gray-50')
-            } else {
-            //    tr.classList.remove('!bg-gray-50')
-            }
-            return tr
-        },
-        columns: [
-            {
-                select: 0,
-                sortable: false,
-                render: function(value, _td, _rowIndex, _cellIndex) {
-                    var checkboxDiv = document.createElement('div');
-                    checkboxDiv.className = 'flex items-center';
-                    
-                    var checkbox = document.createElement('input');
-                    checkbox.type = 'checkbox';
-                    checkbox.className = 'w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600';
-
-                    var label = document.createElement('label');
-                    label.className = 'sr-only';
-                    label.textContent = 'select row';
-                    
-                    checkboxDiv.appendChild(checkbox);
-                    checkboxDiv.appendChild(label);
-
-                    // Set the checked property based on the value
-                    if (value === true) {
-                        console.log('Value is true, checkbox should be checked.');
-                        checkbox.checked = true;
-                        checkbox.setAttribute('checked', '')
-                    } else {
-                        checkbox.checked = false;
-                        checkbox.removeAttribute('checked', '')
-                    }
-                    
-                    // Debug: Log the outerHTML of the checkboxDiv
-                    console.log('Rendered HTML:', checkboxDiv.outerHTML);
-                    
-                    return checkboxDiv.outerHTML;
-                }
-            }
-        ]
-    });
-    // const $checkboxAll = document.getElementById('checkbox-all');
-    // const checkboxes = dataTable.dom.querySelectorAll("tbody [type='checkbox']");
-    // dataTable.dom.addEventListener("click", event => {
-    //     if (event.target.matches("tbody [type='checkbox']")) {
-    //         event.preventDefault()
-    //         event.stopPropagation()
-
-    //         const $checkboxEl = event.target;
-    //         const $rowEl = event.target.parentElement.parentElement.parentElement;
-
-    //         const index = parseInt($rowEl.dataset.index, 10)
-    //         const row = dataTable.data.data[index]
-    //         const cell = row.cells[0]
-    //         const checked = cell.data
-    //         if (Array.isArray(cell.data) && cell.data.length === 0) {
-    //             cell.data = true;
-    //             row.attributes["selected"] = true;
-    //         } else {
-    //             cell.data = !checked;
-    //             row.attributes["selected"] = !checked;
-    //         }
-
-    //         dataTable.update();
-    //         // dataTable.refresh();
-    //     }
-    // })
-    // $checkboxAll.addEventListener('change', event => {
-    //     const $checkboxAll = event.target;
-    //     const $checkboxes = dataTable.dom.querySelectorAll('#checkboxes-table tbody input[type="checkbox"]');
-
-    //     $checkboxes.forEach($checkbox => {
-    //         if ($checkboxAll.checked) {
-    //             if (!$checkbox.checked) {
-    //                 $checkbox.click();
-    //             }
-    //         } else {
-    //             if ($checkbox.checked) {
-    //                 $checkbox.click();
-    //             }
-    //         }
-    //     });
-    // });
-}
-
-` >}}
-<table id="checkboxes-table">
-    <thead>
-        <tr>
-            <th>
-                <div class="flex items-center">
-                    <input id="checkbox-all" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label for="checkbox-all" class="sr-only">checkbox</label>
-                </div>
-            </th>
-            <th>
-                <span class="flex items-center">
-                    Name
-                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4"/>
-                    </svg>
-                </span>
-            </th>
-            <th data-type="date" data-format="YYYY/DD/MM">
-                <span class="flex items-center">
-                    Release Date
-                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4"/>
-                    </svg>
-                </span>
-            </th>
-            <th>
-                <span class="flex items-center">
-                    NPM Downloads
-                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4"/>
-                    </svg>
-                </span>
-            </th>
-            <th>
-                <span class="flex items-center">
-                    Growth
-                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4"/>
-                    </svg>
-                </span>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Flowbite</td>
-            <td>2021/25/09</td>
-            <td>269000</td>
-            <td>49%</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label class="sr-only">select row</label>
-                </div>
-            </td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">React</td>
-            <td>2013/24/05</td>
-            <td>4500000</td>
-            <td>24%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Angular</td>
-            <td>2010/20/09</td>
-            <td>2800000</td>
-            <td>17%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Vue</td>
-            <td>2014/12/02</td>
-            <td>3600000</td>
-            <td>30%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Svelte</td>
-            <td>2016/26/11</td>
-            <td>1200000</td>
-            <td>57%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Ember</td>
-            <td>2011/08/12</td>
-            <td>500000</td>
-            <td>44%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Backbone</td>
-            <td>2010/13/10</td>
-            <td>300000</td>
-            <td>9%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">jQuery</td>
-            <td>2006/28/01</td>
-            <td>6000000</td>
-            <td>5%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Bootstrap</td>
-            <td>2011/19/08</td>
-            <td>1800000</td>
-            <td>12%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Foundation</td>
-            <td>2011/23/09</td>
-            <td>700000</td>
-            <td>8%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Bulma</td>
-            <td>2016/24/10</td>
-            <td>500000</td>
-            <td>7%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Next.js</td>
-            <td>2016/25/10</td>
-            <td>2300000</td>
-            <td>45%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Nuxt.js</td>
-            <td>2016/16/10</td>
-            <td>900000</td>
-            <td>50%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Meteor</td>
-            <td>2012/17/01</td>
-            <td>1000000</td>
-            <td>10%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Aurelia</td>
-            <td>2015/08/07</td>
-            <td>200000</td>
-            <td>20%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Inferno</td>
-            <td>2016/27/09</td>
-            <td>100000</td>
-            <td>35%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Preact</td>
-            <td>2015/16/08</td>
-            <td>600000</td>
-            <td>28%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Lit</td>
-            <td>2018/28/05</td>
-            <td>400000</td>
-            <td>60%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Alpine.js</td>
-            <td>2019/02/11</td>
-            <td>300000</td>
-            <td>70%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Stimulus</td>
-            <td>2018/06/03</td>
-            <td>150000</td>
-            <td>25%</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Solid</td>
-            <td>2021/05/07</td>
-            <td>250000</td>
-            <td>80%</td>
-        </tr>
-    </tbody>
-</table>
-{{< /example >}}
-
 ## Selecting rows
 
 Use this example to enable the selection of rows by clicking anywhere one of the table row elements by copying setting the `multiselect` option to `true` and copying the JavaScript configuration from Flowbite.
@@ -1706,6 +1406,8 @@ if (document.getElementById("selection-table") && typeof simpleDatatables.DataTa
 {{< /example >}}
 
 ## Export files
+
+If you want to enable the export of the table data, you can use the `simpleDatatables.exportCSV` function to export the data as a CSV file. The option is also available for TXT, JSON, and SQL formats.
 
 {{< example id="export-datatable-example" class="dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("export-table") && typeof simpleDatatables.DataTable !== 'undefined') {
@@ -2015,6 +1717,164 @@ if (document.getElementById("export-table") && typeof simpleDatatables.DataTable
 </table>
 {{< /example >}}
 
+## JavaScript behaviour
+
+Learn more about how you can customize the DataTables plugin such as changing the default options, customizing the table appearance, dynamically loading data, and more by checking the examples below.
+
+After installing the DataTables plugin either via NPM or CDN you can initialize by calling the `DataTable` constructor and passing the table selector as the first argument.
+
+```javascript
+// if you installed via CDN
+const dataTable = new simpleDatatables.DataTable("#default-table");
+
+// if you installed via NPM
+import { DataTable } from "simple-datatables";
+const dataTable = DataTable("#default-table");
+```
+
+You can pass an object of options as the second argument to customize the table appearance and behavior.
+
+```javascript
+const dataTable = new simpleDatatables.DataTable("#default-table", options);
+```
+
+After initializing the DataTable, you can access the instance methods and properties.
+
+Here's a full list of the <a href="https://fiduswriter.github.io/simple-datatables/documentation/#events" target="_blank" rel="nofollow">exposed methods and properties</a> from the simple-datatables repository.
+
 ## Options
 
-## JavaScript behaviour
+Check out some of the more commonly used options that you can pass to the DataTable instance.
+
+### Injecting data
+
+Use the `data` option to pass data from an array of arrays to the table using JavaScript.
+
+```javascript
+const customData = {
+	"headings": [
+		"Name",
+		"Company",
+		"Date",
+	],
+	"data": [
+		[
+			"Flowbite",
+			"Bergside",
+			"05/23/2023",
+		],
+		[
+			"Next.js",
+			"Vercel",
+			"03/12/2024",
+		],
+        ...
+	};
+
+const dataTable = new DataTable("#default-table", { data: customData });
+```
+
+This is a useful feature where instead of a hard coded array you can pass data from an API or a JSON file.
+
+### Apperance
+
+Use the following options to customize the appearance of the table such as adding a caption, custom classes, footer, header, updating the HTML rendering template, and enabling vertical scrolling, and more.
+
+```javascript
+const dataTable = new DataTable("#default-table", {
+    caption: "Flowbite is an open-source library",
+    classes: {
+        // add custom HTML classes, full list: https://fiduswriter.github.io/simple-datatables/documentation/classes
+        // we recommend keeping the default ones in addition to whatever you want to add because Flowbite hooks to the default classes for styles
+    },
+    footer: true, // enable or disable the footer
+    header: true, // enable or disable the header
+    labels: {
+        // add custom text for the labels, full list: https://fiduswriter.github.io/simple-datatables/documentation/labels
+    },
+    template: (options, dom) => {
+        // add custom HTML template for the table, full list: https://fiduswriter.github.io/simple-datatables/documentation/template
+    },
+    scrollY: "300px", // enable vertical scrolling
+}
+});
+```
+
+These options are useful if you want to add your own HTML elements inside the dynamically generated table header or footer as we used in the export a file example above.
+
+### Pagination
+
+Use these options to enable pagination, set the number of rows per page, and customize the appearance.
+
+```javascript
+const dataTable = new DataTable("#default-table", {
+    paging: true, // enable or disable pagination
+    perPage: 10, // set the number of rows per page
+    perPageSelect: [5, 10, 20, 50], // set the number of rows per page options
+    firstLast: true, // enable or disable the first and last buttons
+    nextPrev: true, // enable or disable the next and previous buttons
+}
+});
+```
+
+Pagination is a useful feature when you have a large dataset and you want to split it into multiple pages.
+
+### Searching
+
+These options can be used to enable searching, set the search placeholder, and customize the appearance.
+
+```javascript
+const dataTable = new DataTable("#default-table", {
+    searchable: true, // enable or disable searching
+    sensitivity: "base" // set the search sensitivity (base, accent, case, variant)
+    searchQuerySeparator: " ", // set the search query separator
+}
+});
+```
+
+The searching feature is great when you have a large dataset and you want to search for a specific row.
+
+### Sorting
+
+Use these options to enable sorting, set the default sort column, and customize the sort appearance.
+
+```javascript
+const dataTable = new DataTable("#default-table", {
+    sortable: true, // enable or disable sorting
+    locale: "en-US", // set the locale for sorting
+    numeric: true, // enable or disable numeric sorting
+    caseFirst: "false", // set the case first for sorting (upper, lower)
+    ignorePunctuation: true // enable or disable punctuation sorting
+}
+});
+```
+
+The sorting feature is useful when you want to sort the table rows based on a specific column.
+
+Here's the <a href="https://fiduswriter.github.io/simple-datatables/documentation/Options" target="_blank" rel="nofollow">full list of options</a> from the simple-datatables repository.
+
+## Methods
+
+Check out some of the common methods that you can use to interact with the DataTable instance.
+
+```javascript
+// programatically search the table where the "term" variable is the query string
+dataTable.search(term, columns);
+
+// add a new table row data to the table (considering you have four columns)
+dataTable.insert({
+    "Heading 1": "Cell 1",
+    "Heading 2": "Cell 2",
+    "Heading 3": "Cell 3",
+    "Heading 4": "Cell 4",
+});
+
+// updates the DOM of the table
+dataTable.update();
+```
+
+Here's a full list of the <a href="https://fiduswriter.github.io/simple-datatables/documentation/#methods" target="_blank" rel="nofollow">exposed methods and properties</a> from the simple-datatables repository.
+
+## License
+
+All of the examples above built by Flowbite are open-source and licensed under the MIT license. The simple-datatables repository is also open-source and licensed under the <a href="https://github.com/fiduswriter/simple-datatables/blob/main/LICENSE" target="_blank" rel="nofollow">GNU license</a>.

@@ -5,7 +5,7 @@ enableInlineShortcodes: true
 
 params:
   homepage: "https://flowbite.com"
-  current_version: 2.5.0
+  current_version: 2.5.1
   authors: Themesberg
   social_image_path: /docs/images/og-image.png
 

@@ -101,7 +101,7 @@ To enable the interactive components you need to also include Flowbite's JavaScr
 In the `Layout.astro` file add the following script tag just before the end of the `<body>` tag:
 
 ```html
-<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.0/dist/flowbite.min.js"></script>
+<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 ```
 
 This allows you to use the data attributes from the Flowbite component examples and will make them interactive automatically without needing to write custom JavaScript and you can just copy-paste them from the Flowbite Docs.

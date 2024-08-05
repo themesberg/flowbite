@@ -15,6 +15,10 @@ nextLink: getting-started/react/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v2.5.1
+
+- fix plugin import error for the config file
+
 ### v2.5.0
 
 - added new datatables plugin and examples

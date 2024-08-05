@@ -15,6 +15,11 @@ nextLink: getting-started/react/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v2.5.0
+
+- added new datatables plugin and examples
+- other minor bug fixes and improvements
+
 ### v2.4.1
 
 - the datepicker is now a core component of Flowbite and has API methods, events, and options

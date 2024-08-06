@@ -1808,24 +1808,23 @@ Use the `data` option to pass data from an array of arrays to the table using Ja
 
 ```javascript
 const customData = {
-	"headings": [
-		"Name",
-		"Company",
-		"Date",
-	],
-	"data": [
-		[
-			"Flowbite",
-			"Bergside",
-			"05/23/2023",
-		],
-		[
-			"Next.js",
-			"Vercel",
-			"03/12/2024",
-		],
-        ...
-	};
+    "headings": [
+        "Name",
+        "Company",
+        "Date",
+    ],
+    "data": [
+        [
+            "Flowbite",
+            "Bergside",
+            "05/23/2023",
+        ],
+        [
+            "Next.js",
+            "Vercel",
+            "03/12/2024",
+    ],
+};
 
 const dataTable = new DataTable("#default-table", { data: customData });
 ```
@@ -1852,7 +1851,6 @@ const dataTable = new DataTable("#default-table", {
         // add custom HTML template for the table, full list: https://fiduswriter.github.io/simple-datatables/documentation/template
     },
     scrollY: "300px", // enable vertical scrolling
-}
 });
 ```
 
@@ -1869,7 +1867,6 @@ const dataTable = new DataTable("#default-table", {
     perPageSelect: [5, 10, 20, 50], // set the number of rows per page options
     firstLast: true, // enable or disable the first and last buttons
     nextPrev: true, // enable or disable the next and previous buttons
-}
 });
 ```
 
@@ -1884,7 +1881,6 @@ const dataTable = new DataTable("#default-table", {
     searchable: true, // enable or disable searching
     sensitivity: "base" // set the search sensitivity (base, accent, case, variant)
     searchQuerySeparator: " ", // set the search query separator
-}
 });
 ```
 
@@ -1901,7 +1897,6 @@ const dataTable = new DataTable("#default-table", {
     numeric: true, // enable or disable numeric sorting
     caseFirst: "false", // set the case first for sorting (upper, lower)
     ignorePunctuation: true // enable or disable punctuation sorting
-}
 });
 ```
 

@@ -277,6 +277,7 @@ class Dropdown implements DropdownInterface {
     show() {
         this._targetEl.classList.remove('hidden');
         this._targetEl.classList.add('block');
+        this._targetEl.removeAttribute('aria-hidden');
 
         // Enable the event listeners
         this._popperInstance.setOptions((options: PopperOptions) => ({
@@ -300,6 +301,7 @@ class Dropdown implements DropdownInterface {
     hide() {
         this._targetEl.classList.remove('block');
         this._targetEl.classList.add('hidden');
+        this._targetEl.setAttribute('aria-hidden', 'true');
 
         // Disable the event listeners
         this._popperInstance.setOptions((options: PopperOptions) => ({

@@ -1831,7 +1831,7 @@ const dataTable = new DataTable("#default-table", { data: customData });
 
 This is a useful feature where instead of a hard coded array you can pass data from an API or a JSON file.
 
-### Apperance
+### Appearance
 
 Use the following options to customize the appearance of the table such as adding a caption, custom classes, footer, header, updating the HTML rendering template, and enabling vertical scrolling, and more.
 

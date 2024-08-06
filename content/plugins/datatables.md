@@ -1902,8 +1902,6 @@ const dataTable = new DataTable("#default-table", {
 
 The sorting feature is useful when you want to sort the table rows based on a specific column.
 
-Here's the <a href="https://fiduswriter.github.io/simple-datatables/documentation/Options" target="_blank" rel="nofollow">full list of options</a> from the simple-datatables repository.
-
 ## Methods
 
 Check out some of the common methods that you can use to interact with the DataTable instance.

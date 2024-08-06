@@ -131,7 +131,7 @@ module.exports = {
  */
 module.exports = {
   content: [
-    "./node_modules/flowbite-react/lib/**/*.js",
+    "./node_modules/flowbite-react/**/*.js",
     "./pages/**/*.{ts,tsx}",
     "./public/**/*.html",
   ],

@@ -55,7 +55,9 @@ class Drawer implements DrawerInterface {
     init() {
         // set initial accessibility attributes
         if (this._targetEl && !this._initialized) {
-            this._targetEl.setAttribute('aria-hidden', 'true');
+            if (this.isHidden()) {
+                this._targetEl.setAttribute('aria-hidden', 'true');
+            }
             this._targetEl.classList.add('transition-transform');
 
             // set base placement classes

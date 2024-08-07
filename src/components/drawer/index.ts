@@ -41,7 +41,11 @@ class Drawer implements DrawerInterface {
             : targetEl.id;
         this._targetEl = targetEl;
         this._options = { ...Default, ...options };
-        this._visible = false;
+
+
+        const smallViewportSize = getComputedStyle(document.body).getPropertyValue('--small-viewport') || '640px';
+        this._visible = !window.matchMedia(`(max-width: ${smallViewportSize})`).matches;
+
         this._initialized = false;
         this.init();
         instances.addInstance(

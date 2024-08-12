@@ -139,3 +139,5 @@
       - title: Charts
       - title: Datatables
         new: true
+      - title: WYSIWYG
+        new: true

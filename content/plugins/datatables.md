@@ -8,6 +8,9 @@ requires_js: true
 
 previous: Charts
 previousLink: plugins/charts/
+
+next: WYSIWYG
+nextLink: plugins/wysiwyg/
 ---
 
 The datatable component examples from Flowbite are open-source under the MIT License and they are based on the [simple-datatables](https://github.com/fiduswriter/simple-datatables) repository from GitHub which you need to install via NPM or CDN.

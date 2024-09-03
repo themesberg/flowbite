@@ -24,6 +24,16 @@ Before getting started make sure you that have [Node.js](https://nodejs.org/en/)
 
 ## Create a Remix project
 
+### Using the CLI
+
+Run the following command to scaffold a new [Flowbite React](https://flowbite-react.com/) project using [Remix](https://remix.run/):
+
+```bash
+npm create flowbite-react@latest -- --template remix
+```
+
+### Manual install
+
 1. Run the following command in your terminal to set up a new Remix project:
 
 ```bash
@@ -131,7 +141,7 @@ If you're running a local server with the `npm run dev` command, then the link s
 npm install flowbite-react
 ```
 
-2. Require Flowbite as a plugin inside the `tailwind.config.ts` file and configure the template paths:
+2. Import [Flowbite React](https://flowbite-react.com/) and add the `plugin` and the `content` path inside your `tailwind.config.ts` file:
 
 ```ts
 import flowbite from "flowbite-react/tailwind";
@@ -228,6 +238,7 @@ export default function Index() {
 }
 ```
 
-## Remix starter project
+## Starter templates
 
-The awesome Flowbite community has created a free and open-source [Remix starter project](https://github.com/themesberg/flowbite-react-template-remix) that you can use pre-configured with Tailwind CSS and the UI components from Flowbite.
+- [Github](https://github.com/themesberg/flowbite-react-template-remix)
+- [StackBlitz](https://stackblitz.com/edit/flowbite-react-template-remix)

@@ -219,3 +219,7 @@ The open-source community from Flowbite has created a few starter templates that
 
 - [Starter template on GitHub](https://github.com/themesberg/flowbite-react-template-nextjs)
 - [Starter template on StackBlitz](https://stackblitz.com/edit/flowbite-react-template-nextjs)
+
+## More examples
+
+You can additionally check out the [pro version of Flowbite](https://flowbite.com/pro/) to get access to over 300+ blocks, templates and an admin dashboard coded with Flowbite React and Tailwind CSS.

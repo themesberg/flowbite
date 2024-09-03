@@ -26,7 +26,7 @@ Before getting started make sure you that have [Node.js](https://nodejs.org/en/)
 
 ### Using the CLI
 
-Run the following command to scaffold a new [Flowbite React](https://flowbite-react.com/) project using [Remix](https://remix.run/):
+Run the following command to scaffold a new [Flowbite React](https://flowbite-react.com/) project using Remix:
 
 ```bash
 npm create flowbite-react@latest -- --template remix
@@ -107,7 +107,7 @@ export const links: LinksFunction = () => [
 
 You can verify the Tailwind CSS installation by editing the `./app/routes/_index.tsx` file:
 
-```tsx
+```js
 export default function Index() {
   return (
     <div>
@@ -133,7 +133,7 @@ If you're running a local server with the `npm run dev` command, then the link s
 
 ## Install Flowbite React
 
-[Flowbite React](https://github.com/themesberg/flowbite-react) is a free and open-source library of UI components based on the Flowbite design system that allows you to plug-and-play interactive and responsive React components such as modals, navbars, dropdowns, and more directly inside your Remix and Tailwind CSS configured project.
+[Flowbite React](https:/flowbite-react.com) is a free and open-source library of UI components based on the Flowbite design system that allows you to plug-and-play interactive and responsive React components such as modals, navbars, dropdowns, and more directly inside your Remix and Tailwind CSS configured project.
 
 1. The first step is to install Flowbite React via NPM:
 
@@ -141,7 +141,7 @@ If you're running a local server with the `npm run dev` command, then the link s
 npm install flowbite-react
 ```
 
-2. Import [Flowbite React](https://flowbite-react.com/) and add the `plugin` and the `content` path inside your `tailwind.config.ts` file:
+2. Import Flowbite React and add the `plugin` and the `content` path inside your `tailwind.config.ts` file:
 
 ```ts
 import flowbite from "flowbite-react/tailwind";
@@ -163,11 +163,11 @@ That's all that you need to do to leverage the UI component collection from the 
 
 ## Flowbite components
 
-The full collection of React components can be browsed either on the [GitHub repository](https://github.com/themesberg/flowbite) or the official [Flowbite React](https://flowbite-react.com/) website and you can copy-paste the examples directly into your application.
+The full collection of React components can be browsed either on the [GitHub repository](https://github.com/themesberg/flowbite) or the official [documentation](https://flowbite-react.com/docs/getting-started/introduction) and you can copy-paste the examples directly into your application.
 
 Here's an example of how you can use the Button and Tooltip component:
 
-```tsx
+```js
 import { Tooltip, Button } from "flowbite-react";
 
 export default function Index() {
@@ -184,7 +184,7 @@ export default function Index() {
 
 Another example would be using the Dropdown component:
 
-```tsx
+```js
 import { Dropdown } from "flowbite-react";
 
 export default function Index() {
@@ -204,7 +204,7 @@ export default function Index() {
 
 And finally, here's an example using the Navbar component:
 
-```tsx
+```js
 import { Navbar } from "flowbite-react";
 
 export default function Index() {
@@ -240,5 +240,7 @@ export default function Index() {
 
 ## Starter templates
 
-- [Github](https://github.com/themesberg/flowbite-react-template-remix)
-- [StackBlitz](https://stackblitz.com/edit/flowbite-react-template-remix)
+Check out the following open-source starter templates built with Flowbite React, Tailwind CSS and Remix:
+
+- [Starter template on Github](https://github.com/themesberg/flowbite-react-template-remix)
+- [Starter template on StackBlitz](https://stackblitz.com/edit/flowbite-react-template-remix)

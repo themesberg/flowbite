@@ -14,23 +14,25 @@ nextLink: getting-started/next-js/
 
 [React](https://react.dev/) is one of the most popular front-end libraries in the world used by websites such as Facebook, Instagram, Yahoo Mail, Dropbox, and more built by the Meta (formerly Facebook) company.
 
-Coupled with [Tailwind CSS](https://tailwindcss.com/) and the React components from Flowbite you will be able to develop applications faster than ever based on the [Flowbite React](https://flowbite-react.com) library.
+Coupled with Tailwind CSS and the React components from Flowbite you will be able to develop applications faster than ever based on the [Flowbite React](https://flowbite-react.com) library using advanced theming functionalities and React specific components and methodologies.
 
 ## Create a React project
 
-The latest recommended way of creating a new React application is to use a front-end tooling software such as [Vite](https://vitejs.dev/) or [Parcel](https://parceljs.org/).
+The latest recommended way of creating a new React application is to use a front-end tooling software such as Vite or Parcel since the React docs no longer recommends the `create-react-app` repository.
 
 ### Using the CLI
 
-Run the following command to scaffold a new [Flowbite React](https://flowbite-react.com/) project using [Vite](https://vitejs.dev/):
+Run the following command to scaffold a new Flowbite React project using [Vite](https://vitejs.dev/):
 
 ```bash
 npm create flowbite-react@latest -- --template vite
 ```
 
+Running this will create a new folder with all the necessary files for a React project with Flowbite.
+
 ### Using Vite React
 
-Create a new React project using [Vite](https://vitejs.dev/) by running the following two commands:
+Create a new React project using Vite by running the following two commands:
 
 ```bash
 npm create vite@latest my-project -- --template react-ts
@@ -41,7 +43,7 @@ Now that the project has been created you can start a local development server b
 
 ## Install Tailwind CSS
 
-1. Install [Tailwind CSS](https://tailwindcss.com/) by running the following two commands:
+1. Install Tailwind CSS by running the following two commands:
 
 ```bash
 npm install -D tailwindcss postcss autoprefixer
@@ -70,15 +72,15 @@ module.exports = {
 
 ## Install Flowbite React
 
-[Flowbite React](https://github.com/themesberg/flowbite-react) is an open-source set of interactive React components based on the Tailwind CSS utility-first framework featuring interactive elements such as modals, navbars, dropdowns, carousels, and more.
+Flowbite React is an open-source set of interactive React components based on the Tailwind CSS utility-first framework featuring interactive elements such as modals, navbars, dropdowns, carousels, and more.
 
-4. Install [Flowbite React](https://flowbite-react.com/) by running the following command in your terminal:
+4. Install Flowbite react by running the following command in your terminal:
 
 ```bash
 npm install flowbite-react
 ```
 
-5. Import [Flowbite React](https://flowbite-react.com/) and add the `plugin` and the `content` path inside your `tailwind.config.js` file:
+5. Import Flowbite React and add the `plugin` and the `content` path inside your `tailwind.config.js` file:
 
 ```javascript
 const flowbite = require("flowbite-react/tailwind");
@@ -102,5 +104,7 @@ You can check out the whole collection of Flowbite components built with React a
 
 ## Starter templates
 
-- [Github](https://github.com/themesberg/flowbite-react-template-vite)
-- [StackBlitz](https://stackblitz.com/edit/flowbite-react-template-vite)
+Use the following open-source starter templates that already have Tailwind CSS, React and Flowbite configured so you can get started with your project right away:
+
+- [Flowbite React Template on GitHub](https://github.com/themesberg/flowbite-react-template-vite)
+- [Flowbite React Template on StackBlitz](https://stackblitz.com/edit/flowbite-react-template-vite)

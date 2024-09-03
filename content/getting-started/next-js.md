@@ -16,32 +16,36 @@ nextLink: getting-started/vue/
 
 This technology is being used by hundreds of thousands of developers and companies such as Vercel, Netflix, TikTok, Twitch, Hulu, Nike and HBO Max since its original release in 2016.
 
-By following this guide you will learn how to properly set up [Tailwind CSS](https://tailwindcss.com/) with the [Flowbite React](https://flowbite-react.com/) components inside an existing or new [Next.js](https://nextjs.org/) project.
+By following this guide you will learn how to properly set up Tailwind CSS with the [Flowbite React](https://flowbite-react.com/) components inside an existing or new Next.js project.
 
 ## Requirements
 
-Make sure that you have [Node.js](https://nodejs.org/en/) installed on your computer to be able to install [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) and [Flowbite React](https://flowbite-react.com/) using `npx` and `npm` commands.
+Make sure that you have [Node.js](https://nodejs.org/en/) installed on your computer to be able to install Next.js, Tailwind CSS and Flowbite React using `npx` and `npm` commands.
 
 ## Create a Next.js project
 
+Follow the next steps to create a brand new Next.js project using the CLI or a manual installation.
+
 ### Using the CLI
 
-Run the following command to scaffold a new [Flowbite React](https://flowbite-react.com/) project using [Next.js](https://nextjs.org/):
+Run the following command to scaffold a new Flowbite React project using Next.js:
 
 ```bash
 npm create flowbite-react@latest -- --template nextjs
 ```
 
+Running this will automatically set up Flowbite React in a Next.js project environment.
+
 ### Manual install
 
-1. Run the following command to create a new starter [Next.js](https://nextjs.org/) project:
+1. Run the following command to create a new starter Next.js project:
 
 ```bash
 npx create-next-app@latest
 cd my-app
 ```
 
-This command will install all of the necessary dependencies and boilerplate files for a basic [Next.js](https://nextjs.org/) project.
+This command will install all of the necessary dependencies and boilerplate files for a basic Next.js project.
 
 2. Run the following command in your terminal to start a local server:
 
@@ -57,17 +61,19 @@ This will make local development accessible via the browser on `http://localhost
 npm run build
 ```
 
+Now that you have created a Next.js project you can proceed by setting up Tailwind CSS.
+
 ## Install Tailwind CSS
 
-After you have a working Next.js project the next step would be to follow the [installation guide](https://tailwindcss.com/docs/guides/nextjs) for Tailwind CSS.
+Follow the next steps to set up Tailwind CSS inside your Next.js project.
 
-1. Install Tailwind CSS, PostCSS and Autoprefixer using NPM:
+1. Run the following command to install Tailwind CSS, Post CSS and Autoprefixer:
 
 ```bash
 npm install -D tailwindcss postcss autoprefixer
 ```
 
-2. Create a new `tailwind.config.js` and `postcss.config.js` file by running the following command in your terminal:
+2. Create a new `tailwind.config.js` and `postcss.config.js` file by running the following command:
 
 ```bash
 npx tailwindcss init -p
@@ -95,7 +101,7 @@ module.exports = {
 };
 ```
 
-This is needed in order to look for all of the class names inside the project and only include the used ones in the final CSS file.
+This is needed for tagging all class names inside the project and including only the used ones in the CSS file.
 
 4. Replace the contents of the `styles/globals.css` file and import the following directives:
 
@@ -111,15 +117,15 @@ Follow the steps of the next section in this tutorial to start using a library o
 
 ## Install Flowbite React
 
-[Flowbite React](https://github.com/themesberg/flowbite-react) is an open-source set of interactive React components based on the Tailwind CSS utility-first framework featuring interactive elements such as modals, navbars, dropdowns, carousels, and more.
+Flowbite React is an open-source set of interactive React components based on the Tailwind CSS utility-first framework featuring interactive elements such as modals, navbars, dropdowns, carousels, and more.
 
-1. Install [Flowbite React](https://flowbite-react.com/) via NPM by running the following command:
+1. Install Flowbite React  via NPM by running the following command:
 
 ```bash
 npm install flowbite-react
 ```
 
-2. Import [Flowbite React](https://flowbite-react.com/) and add the `plugin` and the `content` path inside your `tailwind.config.js` file:
+2. Import Flowbite React  and add the `plugin` and the `content` path inside your `tailwind.config.js` file:
 
 ```javascript
 const flowbite = require("flowbite-react/tailwind");
@@ -137,13 +143,11 @@ module.exports = {
 };
 ```
 
-Now that you have successfully installed [Flowbite React](https://flowbite-react.com/) you can start using the components from the library.
+Now that you have successfully installed Flowbite React  you can start using the components from the library.
 
 ## Flowbite components
 
-To get you started you can check out the full collection of React components from the [Flowbite React repository](https://github.com/themesberg/flowbite-react) and browse the documentation for the source code of each component.
-
-Here's an example of how you can use the alert component by importing it from the `flowbite-react` package:
+Here's an example of how you can use the alert component by importing it from `flowbite-react`:
 
 ```javascript
 import { Alert } from "flowbite-react";
@@ -207,19 +211,11 @@ function Demo() {
 }
 ```
 
-To learn more about [Flowbite React](https://flowbite-react.com/) make sure to check out to the [repository](https://github.com/themesberg/flowbite-react) and the [main website](https://flowbite-react.com/).
+To learn more about Flowbite React make sure to check out to the [repository](https://github.com/themesberg/flowbite-react) and the [documentation](https://flowbite-react.com/docs/getting-started/introduction).
 
 ## Next.js starter project
 
-The Flowbite community has created an open-source Next.js starter project that has Tailwind CSS and Flowbite React set up beforehand and you can go ahead and clone it by checking out the [repository on GitHub](https://github.com/tulupinc/flowbite-next-starter).
+The open-source community from Flowbite has created a few starter templates that you can find on GitHub or Stackblitz to get you started with the Tailwind CSS, React, Next.js and Flowbite stack:
 
-## Starter templates
-
-#### Official
-
-- [Github](https://github.com/themesberg/flowbite-react-template-nextjs)
-- [StackBlitz](https://stackblitz.com/edit/flowbite-react-template-nextjs)
-
-#### Community
-
-- [Kitchen Sink](https://github.com/tulupinc/flowbite-next-starter) - [Demo](https://flowbite-next-starter.vercel.app/)
+- [Starter template on GitHub](https://github.com/themesberg/flowbite-react-template-nextjs)
+- [Starter template on StackBlitz](https://stackblitz.com/edit/flowbite-react-template-nextjs)

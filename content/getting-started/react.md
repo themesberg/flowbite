@@ -70,6 +70,8 @@ module.exports = {
 @tailwind utilities;
 ```
 
+Now that you have installed Tailwind CSS you can proceed by setting up Flowbite React.
+
 ## Install Flowbite React
 
 Flowbite React is an open-source set of interactive React components based on the Tailwind CSS utility-first framework featuring interactive elements such as modals, navbars, dropdowns, carousels, and more.
@@ -97,6 +99,8 @@ module.exports = {
   ],
 };
 ```
+
+Congratulations! You have successfully now installed all of the required dependencies so you are now ready to start building websites using Tailwind CSS, React and Flowbite.
 
 ## React components
 

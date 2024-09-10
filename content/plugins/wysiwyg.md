@@ -18,8 +18,11 @@ import StarterKit from 'https://esm.sh/@tiptap/starter-kit';
 import Highlight from 'https://esm.sh/@tiptap/extension-highlight';
 import Underline from 'https://esm.sh/@tiptap/extension-underline';
 import Link from 'https://esm.sh/@tiptap/extension-link';
+import Code from 'https://esm.sh/@tiptap/extension-code';
 
 if (document.getElementById("wysiwyg-example")) {
+
+    // tip tap editor setup
     const editor = new Editor({
         element: document.querySelector('#wysiwyg-example'),
         extensions: [
@@ -27,19 +30,21 @@ if (document.getElementById("wysiwyg-example")) {
             Highlight,
             Underline,
             Link.configure({
-                openOnClick: false,
+                openOnClick: true,
                 autolink: true,
                 defaultProtocol: 'https',
-            })
+            }),
+            Code
         ],
-        content: '<p>Flowbite is an open-source library of UI components based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, templates, and more. It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, but also some more advanced interactive elements such as datepickers.</p>',
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
         editorProps: {
             attributes: {
-                class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue',
+                class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
             },
         }
     });
 
+    // set up custom event listeners for the buttons
     document.getElementById('toggleBoldButton').addEventListener('click', () => editor.chain().focus().toggleBold().run());
     document.getElementById('toggleItalicButton').addEventListener('click', () => editor.chain().focus().toggleItalic().run());
     document.getElementById('toggleUnderlineButton').addEventListener('click', () => editor.chain().focus().toggleUnderline().run());
@@ -49,6 +54,9 @@ if (document.getElementById("wysiwyg-example")) {
         const url = window.prompt('Enter the URL');
         editor.chain().focus().toggleLink({ href: url }).run();
     });
+    document.getElementById('toggleCodeButton').addEventListener('click', () => {
+        editor.chain().focus().toggleCode().run();
+    })
 }
 ` >}}
 <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
@@ -115,14 +123,14 @@ if (document.getElementById("wysiwyg-example")) {
                     Add link
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <button type="button" data-tooltip-target="tooltip-code" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <button id="toggleCodeButton" type="button" data-tooltip-target="tooltip-code" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"/>
                     </svg>
                     <span class="sr-only">Code</span>
                 </button>
                 <div id="tooltip-code" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                    Add code
+                    Format code
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
             </div>

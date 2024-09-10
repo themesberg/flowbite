@@ -19,6 +19,7 @@ import Highlight from 'https://esm.sh/@tiptap/extension-highlight';
 import Underline from 'https://esm.sh/@tiptap/extension-underline';
 import Link from 'https://esm.sh/@tiptap/extension-link';
 import Code from 'https://esm.sh/@tiptap/extension-code';
+import TextAlign from 'https://esm.sh/@tiptap/extension-text-align';
 
 if (document.getElementById("wysiwyg-example")) {
 
@@ -34,7 +35,10 @@ if (document.getElementById("wysiwyg-example")) {
                 autolink: true,
                 defaultProtocol: 'https',
             }),
-            Code
+            Code,
+            TextAlign.configure({
+                types: ['heading', 'paragraph'],
+            })
         ],
         content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
         editorProps: {
@@ -57,6 +61,16 @@ if (document.getElementById("wysiwyg-example")) {
     document.getElementById('toggleCodeButton').addEventListener('click', () => {
         editor.chain().focus().toggleCode().run();
     })
+
+    document.getElementById('toggleLeftAlignButton').addEventListener('click', () => {
+        editor.chain().focus().setTextAlign('left').run();
+    });
+    document.getElementById('toggleCenterAlignButton').addEventListener('click', () => {
+        editor.chain().focus().setTextAlign('center').run();
+    });
+    document.getElementById('toggleRightAlignButton').addEventListener('click', () => {
+        editor.chain().focus().setTextAlign('right').run();
+    });
 }
 ` >}}
 <div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
@@ -131,6 +145,36 @@ if (document.getElementById("wysiwyg-example")) {
                 </button>
                 <div id="tooltip-code" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                     Format code
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <button id="toggleLeftAlignButton" type="button" data-tooltip-target="tooltip-left-align" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+                    </svg>
+                    <span class="sr-only">Align left</span>
+                </button>
+                <div id="tooltip-left-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Left align
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <button id="toggleCenterAlignButton" type="button" data-tooltip-target="tooltip-center-align" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 6h8M6 10h12M8 14h8M6 18h12"/>
+                    </svg>
+                    <span class="sr-only">Align center</span>
+                </button>
+                <div id="tooltip-center-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Center align
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <button id="toggleRightAlignButton" type="button" data-tooltip-target="tooltip-right-align" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+                    </svg>
+                    <span class="sr-only">Right center</span>
+                </button>
+                <div id="tooltip-right-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Right align
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
             </div>

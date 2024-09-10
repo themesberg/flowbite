@@ -78,5 +78,6 @@ module.exports = {
             tooltips: true,
             datatables: true,
         }),
+        require('flowbite-typography'),
     ],
 };

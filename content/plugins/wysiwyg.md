@@ -10,7 +10,7 @@ previous: Datatables
 previousLink: plugins/datatables/
 ---
 
-## Default WYSIWYG
+## Default text editor
 
 {{< example id="default-wysiwyg-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core';

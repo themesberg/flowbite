@@ -59,7 +59,7 @@ if (document.getElementById("wysiwyg-example")) {
     })
 }
 ` >}}
-<div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+<div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
     <div class="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600">
         <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x sm:rtl:divide-x-reverse dark:divide-gray-600">
             <div class="flex items-center space-x-1 rtl:space-x-reverse sm:pe-4">

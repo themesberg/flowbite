@@ -75,7 +75,7 @@ if (document.getElementById("wysiwyg-example")) {
 ` >}}
 <div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
     <div class="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600">
-        <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x sm:rtl:divide-x-reverse dark:divide-gray-600">
+        <div class="flex flex-wrap items-center">
             <div class="flex items-center space-x-1 rtl:space-x-reverse sm:pe-4">
                 <button id="toggleBoldButton" data-tooltip-target="tooltip-bold" type="button" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -118,7 +118,7 @@ if (document.getElementById("wysiwyg-example")) {
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
                 <button id="toggleHighlightButton" data-tooltip-target="tooltip-highlight" type="button" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
-                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M9 20H5.5a.5.5 0 0 1-.5-.5v-3c0-.3.2-.5.5-.5h13c.3 0 .5.2.5.5v3c0 .3-.2.5-.5.5H18m-6-1 1.4 1.9h.2L15 19m-7-6 4-9.8s0 0 0 0l4 9.8m-6-3h4"/>
                     </svg>
                     <span class="sr-only">Highlight</span>
@@ -147,6 +147,9 @@ if (document.getElementById("wysiwyg-example")) {
                     Format code
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
+                <div class="px-1">
+                    <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
+                </div>
                 <button id="toggleLeftAlignButton" type="button" data-tooltip-target="tooltip-left-align" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
@@ -154,7 +157,7 @@ if (document.getElementById("wysiwyg-example")) {
                     <span class="sr-only">Align left</span>
                 </button>
                 <div id="tooltip-left-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                    Left align
+                    Align left
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
                 <button id="toggleCenterAlignButton" type="button" data-tooltip-target="tooltip-center-align" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
@@ -164,17 +167,17 @@ if (document.getElementById("wysiwyg-example")) {
                     <span class="sr-only">Align center</span>
                 </button>
                 <div id="tooltip-center-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                    Center align
+                    Align center
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
                 <button id="toggleRightAlignButton" type="button" data-tooltip-target="tooltip-right-align" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M9 17h10"/>
                     </svg>
-                    <span class="sr-only">Right center</span>
+                    <span class="sr-only">Align right</span>
                 </button>
                 <div id="tooltip-right-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                    Right align
+                    Align right
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
             </div>

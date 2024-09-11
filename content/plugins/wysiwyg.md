@@ -12,15 +12,15 @@ previousLink: plugins/datatables/
 
 ## Default text editor
 
-{{< example id="default-wysiwyg-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true script_module=true  disable_init_js=true javascript=`
-import { Editor } from 'https://esm.sh/@tiptap/core';
-import StarterKit from 'https://esm.sh/@tiptap/starter-kit';
-import Highlight from 'https://esm.sh/@tiptap/extension-highlight';
-import Underline from 'https://esm.sh/@tiptap/extension-underline';
-import Link from 'https://esm.sh/@tiptap/extension-link';
-import TextAlign from 'https://esm.sh/@tiptap/extension-text-align';
+{{< example id="default-wysiwyg-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
+import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
+import Highlight from 'https://esm.sh/@tiptap/extension-highlight@2.6.6';
+import Underline from 'https://esm.sh/@tiptap/extension-underline@2.6.6';
+import Link from 'https://esm.sh/@tiptap/extension-link@2.6.6';
+import TextAlign from 'https://esm.sh/@tiptap/extension-text-align@2.6.6';
 
-import Image from 'https://esm.sh/@tiptap/extension-image';
+import Image from 'https://esm.sh/@tiptap/extension-image@2.6.6';
 
 if (document.getElementById("wysiwyg-example")) {
 
@@ -236,3 +236,30 @@ if (document.getElementById("wysiwyg-example")) {
     </div>
 </div>
 {{< /example >}}
+
+Notice: there is a <a href="https://github.com/ueberdosis/tiptap/issues/577" target="_blank" rel="nofollow noreferrer">known issue from TipTap</a> when splitting blocks (ie. using enter to create break lines) and using the bullet list item. A quickfix for `v2.6.6` when using CDN is to match the import statements:
+
+```html
+<script type="importmap">
+    {
+        "imports": {
+            "https://esm.sh/v135/prosemirror-model@1.22.3/es2022/prosemirror-model.mjs": "https://esm.sh/v135/prosemirror-model@1.19.3/es2022/prosemirror-model.mjs", 
+            "https://esm.sh/v135/prosemirror-model@1.22.1/es2022/prosemirror-model.mjs": "https://esm.sh/v135/prosemirror-model@1.19.3/es2022/prosemirror-model.mjs"
+        }
+    }
+</script>
+```
+
+If you're importing the package with Yarn or NPM then you need to add this in your `package.json` file:
+
+```javascript
+// when using Yarn
+"resolutions": {
+    "prosemirror-model": "1.19.3"
+}
+
+// when using NPM
+"overrides": {
+    "prosemirror-model": "1.19.3"
+}
+```

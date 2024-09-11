@@ -26,7 +26,7 @@
 {{ $javascript := .Get "javascript" | default "" | safeJS }}
 {{- $script_module := .Get "script_module" | default false -}}
 {{- $wysiwyg := .Get "wysiwyg" | default false -}}
-{{ $wysiwyg_json_fix := `{"imports": {"prosemirror-model": "https://esm.sh/v135/prosemirror-model@1.22.3/es2022/prosemirror-model.mjs"}}` }}
+{{ $wysiwyg_json_fix := `{"imports": {"https://esm.sh/v135/prosemirror-model@1.22.3/es2022/prosemirror-model.mjs": "https://esm.sh/v135/prosemirror-model@1.19.3/es2022/prosemirror-model.mjs", "https://esm.sh/v135/prosemirror-model@1.22.1/es2022/prosemirror-model.mjs": "https://esm.sh/v135/prosemirror-model@1.19.3/es2022/prosemirror-model.mjs"}}` }}
 
 {{- $initDatepicker := .Get "initDatepicker" | default false -}}
 {{- $charts := .Get "charts" | default false -}}

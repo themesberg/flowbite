@@ -13,13 +13,15 @@ previousLink: plugins/datatables/
 ## Default text editor
 
 {{< example id="default-wysiwyg-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true disable_init_js=true javascript=`
-import { Editor } from 'https://esm.sh/@tiptap/core';
-import StarterKit from 'https://esm.sh/@tiptap/starter-kit';
-import Highlight from 'https://esm.sh/@tiptap/extension-highlight';
-import Underline from 'https://esm.sh/@tiptap/extension-underline';
-import Link from 'https://esm.sh/@tiptap/extension-link';
-import Code from 'https://esm.sh/@tiptap/extension-code';
-import TextAlign from 'https://esm.sh/@tiptap/extension-text-align';
+import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
+import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
+import Highlight from 'https://esm.sh/@tiptap/extension-highlight@2.6.6';
+import Underline from 'https://esm.sh/@tiptap/extension-underline@2.6.6';
+import Link from 'https://esm.sh/@tiptap/extension-link@2.6.6';
+import Code from 'https://esm.sh/@tiptap/extension-code@2.6.6';
+import TextAlign from 'https://esm.sh/@tiptap/extension-text-align@2.6.6';
+// import ListItem from 'https://esm.sh/@tiptap/extension-list-item@2.6.6';
+// import BulletList from 'https://esm.sh/@tiptap/extension-bullet-list@2.6.6';
 
 if (document.getElementById("wysiwyg-example")) {
 
@@ -31,14 +33,16 @@ if (document.getElementById("wysiwyg-example")) {
             Highlight,
             Underline,
             Link.configure({
-                openOnClick: true,
+                openOnClick: false,
                 autolink: true,
                 defaultProtocol: 'https',
             }),
             Code,
             TextAlign.configure({
                 types: ['heading', 'paragraph'],
-            })
+            }),
+            // BulletList,
+            // ListItem
         ],
         content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
         editorProps: {
@@ -58,6 +62,9 @@ if (document.getElementById("wysiwyg-example")) {
         const url = window.prompt('Enter the URL');
         editor.chain().focus().toggleLink({ href: url }).run();
     });
+    document.getElementById('removeLinkButton').addEventListener('click', () => {
+        editor.chain().focus().unsetLink().run()
+    });
     document.getElementById('toggleCodeButton').addEventListener('click', () => {
         editor.chain().focus().toggleCode().run();
     })
@@ -71,6 +78,9 @@ if (document.getElementById("wysiwyg-example")) {
     document.getElementById('toggleRightAlignButton').addEventListener('click', () => {
         editor.chain().focus().setTextAlign('right').run();
     });
+    // document.getElementById('toggleListButton').addEventListener('click', () => {
+    //    editor.chain().focus().toggleBulletList().run();
+    // });
 }
 ` >}}
 <div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
@@ -137,6 +147,16 @@ if (document.getElementById("wysiwyg-example")) {
                     Add link
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
+                <button id="removeLinkButton" data-tooltip-target="tooltip-remove-link" type="button" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M13.2 9.8a3.4 3.4 0 0 0-4.8 0L5 13.2A3.4 3.4 0 0 0 9.8 18l.3-.3m-.3-4.5a3.4 3.4 0 0 0 4.8 0L18 9.8A3.4 3.4 0 0 0 13.2 5l-1 1m7.4 14-1.8-1.8m0 0L16 16.4m1.8 1.8 1.8-1.8m-1.8 1.8L16 20"/>
+                    </svg>
+                    <span class="sr-only">Remove link</span>
+                </button>
+                <div id="tooltip-remove-link" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Remove link
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
                 <button id="toggleCodeButton" type="button" data-tooltip-target="tooltip-code" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"/>
@@ -178,6 +198,19 @@ if (document.getElementById("wysiwyg-example")) {
                 </button>
                 <div id="tooltip-right-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                     Align right
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <div class="px-1">
+                    <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
+                </div>
+                <button id="toggleListButton" type="button" data-tooltip-target="tooltip-right-align" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M9 8h10M9 12h10M9 16h10M4.99 8H5m-.02 4h.01m0 4H5"/>
+                    </svg>
+                    <span class="sr-only">Create list</span>
+                </button>
+                <div id="tooltip-right-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Create list
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
             </div>

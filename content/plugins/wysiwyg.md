@@ -20,8 +20,11 @@ import Underline from 'https://esm.sh/@tiptap/extension-underline@2.6.6';
 import Link from 'https://esm.sh/@tiptap/extension-link@2.6.6';
 import Code from 'https://esm.sh/@tiptap/extension-code@2.6.6';
 import TextAlign from 'https://esm.sh/@tiptap/extension-text-align@2.6.6';
-// import ListItem from 'https://esm.sh/@tiptap/extension-list-item@2.6.6';
-// import BulletList from 'https://esm.sh/@tiptap/extension-bullet-list@2.6.6';
+
+import Image from 'https://esm.sh/@tiptap/extension-image@2.6.6';
+
+import ListItem from 'https://esm.sh/@tiptap/extension-list-item@2.6.6';
+import BulletList from 'https://esm.sh/@tiptap/extension-bullet-list@2.6.6';
 
 if (document.getElementById("wysiwyg-example")) {
 
@@ -41,8 +44,9 @@ if (document.getElementById("wysiwyg-example")) {
             TextAlign.configure({
                 types: ['heading', 'paragraph'],
             }),
-            // BulletList,
-            // ListItem
+            BulletList,
+            ListItem,
+            Image
         ],
         content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
         editorProps: {
@@ -81,6 +85,12 @@ if (document.getElementById("wysiwyg-example")) {
     // document.getElementById('toggleListButton').addEventListener('click', () => {
     //    editor.chain().focus().toggleBulletList().run();
     // });
+    document.getElementById('addImageButton').addEventListener('click', () => {
+        const url = window.prompt('Enter image URL:', 'https://placehold.co/600x400');
+        if (url) {
+            editor.chain().focus().setImage({ src: url }).run();
+        }
+    });
 }
 ` >}}
 <div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
@@ -203,14 +213,25 @@ if (document.getElementById("wysiwyg-example")) {
                 <div class="px-1">
                     <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
                 </div>
-                <button id="toggleListButton" type="button" data-tooltip-target="tooltip-right-align" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <button id="toggleListButton" type="button" data-tooltip-target="tooltip-list" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M9 8h10M9 12h10M9 16h10M4.99 8H5m-.02 4h.01m0 4H5"/>
                     </svg>
                     <span class="sr-only">Create list</span>
                 </button>
-                <div id="tooltip-right-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                     Create list
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <button id="addImageButton" type="button" data-tooltip-target="tooltip-image" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M13 10a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2H14a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+                    <path fill-rule="evenodd" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12c0 .556-.227 1.06-.593 1.422A.999.999 0 0 1 20.5 20H4a2.002 2.002 0 0 1-2-2V6Zm6.892 12 3.833-5.356-3.99-4.322a1 1 0 0 0-1.549.097L4 12.879V6h16v9.95l-3.257-3.619a1 1 0 0 0-1.557.088L11.2 18H8.892Z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="sr-only">Add image</span>
+                </button>
+                <div id="tooltip-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Add image
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
             </div>

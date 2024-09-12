@@ -87,7 +87,7 @@ if (document.getElementById("wysiwyg-example")) {
 }
 ` >}}
 <div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-    <div class="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600">
+    <div class="px-3 py-2 border-b dark:border-gray-600">
         <div class="flex flex-wrap items-center">
             <div class="flex items-center space-x-1 rtl:space-x-reverse sm:pe-4">
                 <button id="toggleBoldButton" data-tooltip-target="tooltip-bold" type="button" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
@@ -173,6 +173,8 @@ if (document.getElementById("wysiwyg-example")) {
                 <div class="px-1">
                     <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
                 </div>
+            </div>
+            <div class="flex items-center space-x-1 rtl:space-x-reverse sm:pe-4">
                 <button id="toggleLeftAlignButton" type="button" data-tooltip-target="tooltip-left-align" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
@@ -206,6 +208,8 @@ if (document.getElementById("wysiwyg-example")) {
                 <div class="px-1">
                     <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
                 </div>
+            </div>
+            <div class="flex items-center space-x-1 rtl:space-x-reverse sm:pe-4">
                 <button id="toggleListButton" type="button" data-tooltip-target="tooltip-list" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M9 8h10M9 12h10M9 16h10M4.99 8H5m-.02 4h.01m0 4H5"/>
@@ -227,13 +231,16 @@ if (document.getElementById("wysiwyg-example")) {
                     Add image
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-            </div>
         </div>
     </div>
-    <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
-        <label for="wysiwyg-example" class="sr-only">Publish post</label>
-        <div id="wysiwyg-example" rows="8" class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write an article..." required ></div>
+    <div class="flex flex-wrap items-center pt-2">
+        baga aici dropdown cu headings si normal
     </div>
+</div>
+<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+    <label for="wysiwyg-example" class="sr-only">Publish post</label>
+    <div id="wysiwyg-example" rows="8" class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write an article..." required ></div>
+</div>
 </div>
 {{< /example >}}
 

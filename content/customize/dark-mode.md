@@ -69,7 +69,7 @@ This will first check if you've previously set the theme color preference manual
 </button>
 ```
 
-In this example we used a `<button>` component where we change the icon inside based on the current color scheme. You can also use other elements, such as the [toggle component]({{< ref "components/forms" >}}).
+In this example we used a `<button>` component where we change the icon inside based on the current color scheme. You can also use other elements, such as the [toggle component](https://flowbite.com/docs/components/forms/#toggle-switch).
 
 3. Add the following JavaScript inside your main file to handle the click events on the `<button>` element:
 

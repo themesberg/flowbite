@@ -18,7 +18,40 @@ All examples provided on this page have support for dark mode, RTL (right-to-lef
 
 ## Getting started
 
+Before continuing make sure that you have Tailwind CSS, Flowbite, and Tip Tap installed in your project.
+
+1. Follow the [quickstart guide](https://flowbite.com/docs/getting-started/quickstart/) from Flowbite to install the plugin and the JavaScript
+
+2. Install the [Flowbite Typography](https://flowbite.com/docs/components/typography/) plugin to format the content of text inside the WYSYIWYG editor preview:
+
+```bash
+npm i flowbite-typography
+```
+
+Require the plugin inside the `tailwind.config.js` file:
+
+```javascript
+  theme: {
+    // ...
+  },
+  plugins: [
+    require('flowbite-typography'),
+    // ...
+  ],
+}
+```
+
+3. Finally, install [Tip Tap](https://tiptap.dev/docs/editor/getting-started/install/vanilla-javascript) either via NPM or skip this step if you're using CDN:
+
+```bash
+npm install @tiptap/core @tiptap/pm @tiptap/starter-kit
+```
+
+Now you're ready to use the examples below by copying the HTML markup and the JavaScript code.
+
 ## Default text editor
+
+Use this example of a WYSIWYG editor to enable basic text and typography styling and formatting, adding lists, links, images, videos, code blocks, aligning text, blockquotes, setting headers and paragraphs and more.
 
 {{< example id="default-wysiwyg-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';

@@ -794,7 +794,7 @@ Check out Flowbite Blocks to get access to over 400+ website sections coded in T
 
 ## Flowbite Icons
 
-Start using over 430+ free and open-source collection of solid and outline SVG icons built for Tailwind CSS and with support for Figma and JSX (React):
+Start using over 450+ free and open-source collection of solid and outline SVG icons built for Tailwind CSS and with support for Figma and JSX (React):
 
 🔍 [Check out the icons](https://flowbite.com/icons/)
 

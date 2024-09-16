@@ -10,6 +10,14 @@ previous: Datatables
 previousLink: plugins/datatables/
 ---
 
+The WYSIWYG text editor from Flowbite is open-source under the MIT license based on the [Tip Tap library](https://github.com/ueberdosis/tiptap) and allows you to easily edit complex text data with typography styles, links, images, videos, and more.
+
+The markup and styles provided by Flowbite are all built with the utility classes from Tailwind CSS and the styles for the content inside the WYSIWYG text editor are based on the [Flowbite Typography](https://flowbite.com/docs/components/typography/) plugin.
+
+All examples provided on this page have support for dark mode, RTL (right-to-left) styles, responsive on mobile devices and you can easily add your own functionality using JavaScript and the Flowbite API.
+
+## Getting started
+
 ## Default text editor
 
 {{< example id="default-wysiwyg-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`

@@ -449,3 +449,25 @@ If you're importing the package with Yarn or NPM then you need to add this in yo
     "prosemirror-model": "1.19.3"
 }
 ```
+
+## Text styling
+
+underline, strike etc
+
+## Text alignment
+
+## Typography elements
+
+lists, blockquote etc
+
+## Configuring links
+
+## Editing images
+
+## Adding videos
+
+## Editing tables
+
+## Exporting data
+
+## Javascript behaviour

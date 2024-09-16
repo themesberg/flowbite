@@ -51,7 +51,7 @@ Now you're ready to use the examples below by copying the HTML markup and the Ja
 
 ## Default text editor
 
-Use this example of a WYSIWYG editor to enable basic text and typography styling and formatting, adding lists, links, images, videos, code blocks, aligning text, blockquotes, setting headers and paragraphs and more.
+Use this example of a WYSIWYG text editor to enable basic typography styling and formatting, adding lists, links, images, videos, code blocks, aligning text, blockquotes, setting headers and paragraphs and more.
 
 {{< example id="default-wysiwyg-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';

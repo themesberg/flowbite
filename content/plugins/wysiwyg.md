@@ -14,13 +14,13 @@ The WYSIWYG text editor from Flowbite is open-source under the MIT license based
 
 The markup and styles provided by Flowbite are all built with the utility classes from Tailwind CSS and the styles for the content inside the WYSIWYG text editor are based on the [Flowbite Typography](https://flowbite.com/docs/components/typography/) plugin.
 
-All examples provided on this page have support for dark mode, RTL (right-to-left) styles, responsive on mobile devices and you can easily add your own functionality using JavaScript and the Flowbite API.
+All examples provided on this page have support for dark mode, RTL (right-to-left) styles, responsiveness on mobile devices and you can easily add your own functionality using JavaScript and the Flowbite API.
 
 ## Getting started
 
 Before continuing make sure that you have Tailwind CSS, Flowbite, and Tip Tap installed in your project.
 
-1. Follow the [quickstart guide](https://flowbite.com/docs/getting-started/quickstart/) from Flowbite to install the plugin and the JavaScript
+1. Follow the [quickstart guide](https://flowbite.com/docs/getting-started/quickstart/) from Flowbite to enable the interactive elements
 
 2. Install the [Flowbite Typography](https://flowbite.com/docs/components/typography/) plugin to format the content of text inside the WYSYIWYG editor preview:
 

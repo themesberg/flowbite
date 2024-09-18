@@ -466,6 +466,8 @@ If you're importing the package with Yarn or NPM then you need to add this in yo
 }
 ```
 
+We recommend later checking the Tip Tap library for a proper update to prevent this quickfix in the future.
+
 ## Text formatting
 
 Use this example of a WYSIWYG text editor to enable typography styling, formatting and marking such as underline, bold, italic, strikethrough, code, higlight, size and more using the utility classes from Tailwind CSS.
@@ -995,6 +997,82 @@ window.addEventListener('load', function() {
 {{< /example >}}
 
 ## Configuring links
+
+Use this example to add and remove anchor links for the content inside of the WYSIWYG text editor.
+
+Add extra docs for the link options
+
+{{< example id="default-wysiwyg-links-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
+import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
+import Link from 'https://esm.sh/@tiptap/extension-link@2.6.6';
+
+window.addEventListener('load', function() {
+    if (document.getElementById("wysiwyg-links-example")) {
+
+    // tip tap editor setup
+    const editor = new Editor({
+        element: document.querySelector('#wysiwyg-links-example'),
+        extensions: [
+            StarterKit,
+            Link.configure({
+                openOnClick: false,
+                autolink: true,
+                defaultProtocol: 'https',
+            })
+        ],
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+        editorProps: {
+            attributes: {
+                class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
+            },
+        }
+    });
+
+    // set up custom event listeners for the buttons
+    document.getElementById('toggleLinkButton').addEventListener('click', () => {
+        const url = window.prompt('Enter image URL:', 'https://flowbite.com');
+        editor.chain().focus().toggleLink({ href: url }).run();
+    });
+    document.getElementById('removeLinkButton').addEventListener('click', () => {
+        editor.chain().focus().unsetLink().run()
+    });
+}
+})
+` >}}
+<div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+    <div class="px-3 py-2 border-b dark:border-gray-600">
+        <div class="flex flex-wrap items-center">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <button id="toggleLinkButton" data-tooltip-target="tooltip-link" type="button" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"/>
+                    </svg>
+                    <span class="sr-only">Link</span>
+                </button>
+                <div id="tooltip-link" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Add link
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <button id="removeLinkButton" data-tooltip-target="tooltip-remove-link" type="button" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M13.2 9.8a3.4 3.4 0 0 0-4.8 0L5 13.2A3.4 3.4 0 0 0 9.8 18l.3-.3m-.3-4.5a3.4 3.4 0 0 0 4.8 0L18 9.8A3.4 3.4 0 0 0 13.2 5l-1 1m7.4 14-1.8-1.8m0 0L16 16.4m1.8 1.8 1.8-1.8m-1.8 1.8L16 20"/>
+                    </svg>
+                    <span class="sr-only">Remove link</span>
+                </button>
+                <div id="tooltip-remove-link" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Remove link
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+            </div>
+    </div>
+</div>
+<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+    <label for="wysiwyg-links-example" class="sr-only">Publish post</label>
+    <div id="wysiwyg-links-example"class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"></div>
+</div>
+</div>
+{{< /example >}}
 
 ## Editing images
 

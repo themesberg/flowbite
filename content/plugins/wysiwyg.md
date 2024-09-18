@@ -60,8 +60,9 @@ import Highlight from 'https://esm.sh/@tiptap/extension-highlight@2.6.6';
 import Underline from 'https://esm.sh/@tiptap/extension-underline@2.6.6';
 import Link from 'https://esm.sh/@tiptap/extension-link@2.6.6';
 import TextAlign from 'https://esm.sh/@tiptap/extension-text-align@2.6.6';
+import HorizontalRule from 'https://esm.sh/@tiptap/extension-horizontal-rule@2.6.6';
 import Image from 'https://esm.sh/@tiptap/extension-image@2.6.6';
-import YouTube from 'https://esm.sh/@tiptap/extension-youtube@2.6.6'
+import YouTube from 'https://esm.sh/@tiptap/extension-youtube@2.6.6';
 
 window.addEventListener('load', function() {
     if (document.getElementById("wysiwyg-example")) {
@@ -81,6 +82,7 @@ window.addEventListener('load', function() {
             TextAlign.configure({
                 types: ['heading', 'paragraph'],
             }),
+            HorizontalRule,
             Image,
             YouTube
         ],
@@ -126,6 +128,9 @@ window.addEventListener('load', function() {
     });
     document.getElementById('toggleBlockquoteButton').addEventListener('click', () => {
         editor.chain().focus().toggleBlockquote().run();
+    });
+    document.getElementById('toggleHRButton').addEventListener('click', () => {
+        editor.chain().focus().setHorizontalRule().run();
     });
     document.getElementById('addImageButton').addEventListener('click', () => {
         const url = window.prompt('Enter image URL:', 'https://placehold.co/600x400');
@@ -413,6 +418,17 @@ window.addEventListener('load', function() {
                 Toggle blockquote
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
+            <button id="toggleHRButton" type="button" data-tooltip-target="tooltip-hr-list" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 12h14"/>
+                    <path stroke="currentColor" stroke-linecap="round" d="M6 9.5h12m-12 9h12M6 7.5h12m-12 9h12M6 5.5h12m-12 9h12"/>
+                </svg>
+                <span class="sr-only">Toggle Horizontal Rule</span>
+            </button>
+            <div id="tooltip-hr-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Toggle Horizontal Rule
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
         </div>
     </div>
 </div>
@@ -452,7 +468,7 @@ If you're importing the package with Yarn or NPM then you need to add this in yo
 
 ## Text formatting
 
-Use this example of a WYSIWYG text editor to enable typography styling, formatting and marking such as underline, bold, italic, strikethrough, code, highlighting, and more using the utility classes from Tailwind CSS.
+Use this example of a WYSIWYG text editor to enable typography styling, formatting and marking such as underline, bold, italic, strikethrough, code, higlight, size and more using the utility classes from Tailwind CSS.
 
 {{< example id="default-wysiwyg-text-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';

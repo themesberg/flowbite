@@ -476,6 +476,8 @@ import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
 import Highlight from 'https://esm.sh/@tiptap/extension-highlight@2.6.6';
 import Underline from 'https://esm.sh/@tiptap/extension-underline@2.6.6';
 import TextStyle from 'https://esm.sh/@tiptap/extension-text-style@2.6.6';
+import Subscript from 'https://esm.sh/@tiptap/extension-subscript@2.6.6';
+import Superscript from 'https://esm.sh/@tiptap/extension-superscript@2.6.6';
 
 window.addEventListener('load', function() {
     if (document.getElementById("wysiwyg-text-example")) {
@@ -504,6 +506,8 @@ window.addEventListener('load', function() {
             StarterKit,
             Highlight,
             Underline,
+            Subscript,
+            Superscript,
             TextStyle,
             FontSizeTextStyle
         ],
@@ -520,6 +524,8 @@ window.addEventListener('load', function() {
     document.getElementById('toggleItalicButton').addEventListener('click', () => editor.chain().focus().toggleItalic().run());
     document.getElementById('toggleUnderlineButton').addEventListener('click', () => editor.chain().focus().toggleUnderline().run());
     document.getElementById('toggleStrikeButton').addEventListener('click', () => editor.chain().focus().toggleStrike().run());
+    document.getElementById('toggleSubscriptButton').addEventListener('click', () => editor.chain().focus().toggleSubscript().run());
+    document.getElementById('toggleSuperscriptButton').addEventListener('click', () => editor.chain().focus().toggleSuperscript().run());
     document.getElementById('toggleHighlightButton').addEventListener('click', () => editor.chain().focus().toggleHighlight({ color: '#ffc078' }).run());
     document.getElementById('toggleCodeButton').addEventListener('click', () => {
         editor.chain().focus().toggleCode().run();
@@ -586,6 +592,26 @@ window.addEventListener('load', function() {
                 </button>
                 <div id="tooltip-strike" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                     Toggle strike
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <button id="toggleSubscriptButton" data-tooltip-target="tooltip-subscript" type="button" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 19h-4v-.5c1.099-1.033 3.75-2.5 3.75-3.5v-1a1 1 0 0 0-1-1H17a1 1 0 0 0-1 1M4 4l9.269 11.576M13.122 4 3.853 15.576"/>
+                    </svg>
+                    <span class="sr-only">Subscript</span>
+                </button>
+                <div id="tooltip-subscript" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Toggle subscript
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <button id="toggleSuperscriptButton" data-tooltip-target="tooltip-superscript" type="button" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 10h-4v-.5C17.1 8.467 19.75 7 19.75 6V5a1 1 0 0 0-1-1H17a1 1 0 0 0-1 1M4.378 6.983l9.27 11.576m-.526-11.256L3.855 18.877"/>
+                    </svg>
+                    <span class="sr-only">Superscript</span>
+                </button>
+                <div id="tooltip-superscript" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Toggle superscript
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
                 <button id="toggleHighlightButton" data-tooltip-target="tooltip-highlight" type="button" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">

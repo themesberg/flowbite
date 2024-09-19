@@ -1321,13 +1321,15 @@ window.addEventListener('load', function() {
                         <label for="URL" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">YouTube URL</label>
                         <input type="url" name="url" id="URL" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="https://www.youtube.com/watch?v=KaLxCiilHns" required />
                     </div>
-                    <div>
-                        <label for="width" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Video width</label>
-                        <input type="number" name="width" id="width" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
-                    </div>
-                    <div>
-                        <label for="height" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Video height</label>
-                        <input type="number" name="height" id="height" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="width" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Video width</label>
+                            <input type="number" name="width" id="width" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
+                        </div>
+                        <div>
+                            <label for="height" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Video height</label>
+                            <input type="number" name="height" id="height" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
+                        </div>
                     </div>
                     <button type="submit" id="addAdvancedVideoButton" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add video</button>
                 </form>

@@ -1078,7 +1078,7 @@ window.addEventListener('load', function() {
 
 Use this example to learn how to add images inside of the WYSIWYG text editor and configure settings such as the image URL, image alt attribute which is important for SEO and accessibility and the image title.
 
-{{< example id="default-wysiwyg-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+{{< example id="default-wysiwyg-image-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
 import Image from 'https://esm.sh/@tiptap/extension-image@2.6.6';
@@ -1205,6 +1205,137 @@ window.addEventListener('load', function() {
 {{< /example >}}
 
 ## Adding videos
+
+Use this example to embed videos inside the WYSIWYG text editor based on a YouTube URL source and set the width and height of the video by using the Flowbite modal component API.
+
+{{< example id="default-wysiwyg-video-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
+import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
+import YouTube from 'https://esm.sh/@tiptap/extension-youtube@2.6.6';
+
+window.addEventListener('load', function() {
+    if (document.getElementById("wysiwyg-video-example")) {
+
+    // tip tap editor setup
+    const editor = new Editor({
+        element: document.querySelector('#wysiwyg-video-example'),
+        extensions: [
+            StarterKit,
+            YouTube
+        ],
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><img src="https://placehold.co/600x400" contenteditable="false" draggable="true"><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+        editorProps: {
+            attributes: {
+                class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
+            },
+        }
+    });
+
+    // set up custom event listeners for the buttons
+    document.getElementById('addVideoButton').addEventListener('click', () => {
+        const url = window.prompt('Enter YouTube URL:', 'https://www.youtube.com/watch?v=KaLxCiilHns');
+        if (url) {
+            editor.commands.setYoutubeVideo({
+                src: url,
+                width: 640,
+                height: 480,
+            })
+        }
+    });
+
+    const advancedVideoModal = FlowbiteInstances.getInstance('Modal', 'advanced-video-modal');
+    
+    document.getElementById('advancedVideoForm').addEventListener('submit', (e) => {
+
+        e.preventDefault();
+        
+        const videoUrl = document.getElementById('URL').value;
+        const videoWidth = document.getElementById('width').value;
+        const videoHeight = document.getElementById('height').value;
+
+        if (videoUrl) {
+            editor.commands.setYoutubeVideo({ src: videoUrl, width: videoWidth ? videoWidth : 640, height: videoHeight ? videoHeight: 480 });
+            document.getElementById('advancedVideoForm').reset();
+            advancedVideoModal.hide();
+        }
+    });
+    
+}
+})
+` >}}
+<div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+    <div class="px-3 py-2 border-b dark:border-gray-600">
+    <div class="flex items-center gap-2">
+        <div class="flex items-center space-x-1 rtl:space-x-reverse">
+            <button id="addVideoButton" type="button" data-tooltip-target="tooltip-video" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M14 7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7Zm2 9.387 4.684 1.562A1 1 0 0 0 22 17V7a1 1 0 0 0-1.316-.949L16 7.613v8.774Z" clip-rule="evenodd"/>
+                </svg>
+                <span class="sr-only">Add video</span>
+            </button>
+            <div id="tooltip-video" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Add video
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+            <button type="button" data-tooltip-target="tooltip-advanced-video" data-modal-target="advanced-video-modal" data-modal-toggle="advanced-video-modal" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M9 7V2.221a2 2 0 0 0-.5.365L4.586 6.5a2 2 0 0 0-.365.5H9Zm2 0V2h7a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9h5a2 2 0 0 0 2-2Zm-2 4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H9Zm0 2h2v2H9v-2Zm7.965-.557a1 1 0 0 0-1.692-.72l-1.268 1.218a1 1 0 0 0-.308.721v.733a1 1 0 0 0 .37.776l1.267 1.032a1 1 0 0 0 1.631-.776v-2.984Z" clip-rule="evenodd"/>
+                </svg>
+                <span class="sr-only">Insert advanced video</span>
+            </button>
+            <div id="tooltip-advanced-video" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Video with settings
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+    <label for="wysiwyg-video-example" class="sr-only">Publish post</label>
+    <div id="wysiwyg-video-example"class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"></div>
+</div>
+</div>
+
+
+<!-- Main modal -->
+<div id="advanced-video-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Insert advanced video
+                </h3>
+                <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="advanced-video-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5">
+                <form id="advancedVideoForm" class="space-y-4" action="#">
+                    <div>
+                        <label for="URL" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">YouTube URL</label>
+                        <input type="url" name="url" id="URL" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="https://www.youtube.com/watch?v=KaLxCiilHns" required />
+                    </div>
+                    <div>
+                        <label for="width" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Video width</label>
+                        <input type="number" name="width" id="width" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
+                    </div>
+                    <div>
+                        <label for="height" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Video height</label>
+                        <input type="number" name="height" id="height" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
+                    </div>
+                    <button type="submit" id="addAdvancedVideoButton" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add video</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 
+{{< /example >}}
 
 ## Editing tables
 

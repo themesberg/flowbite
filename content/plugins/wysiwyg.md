@@ -811,7 +811,7 @@ window.addEventListener('load', function() {
             HorizontalRule,
             CodeBlock
         ],
-        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><pre><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code></pre><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><ul><li>Over 600+ open-source UI components</li><li>Supports dark mode and RTL</li><li>Available in React, Vue, Svelte frameworks</li></ul><p>Here is an example of a button component:</p><pre><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code></pre><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
         editorProps: {
             attributes: {
                 class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
@@ -1074,7 +1074,135 @@ window.addEventListener('load', function() {
 </div>
 {{< /example >}}
 
-## Editing images
+## Using images
+
+Use this example to learn how to add images inside of the WYSIWYG text editor and configure settings such as the image URL, image alt attribute which is important for SEO and accessibility and the image title.
+
+{{< example id="default-wysiwyg-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
+import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
+import Image from 'https://esm.sh/@tiptap/extension-image@2.6.6';
+
+window.addEventListener('load', function() {
+    if (document.getElementById("wysiwyg-images-example")) {
+
+    // tip tap editor setup
+    const editor = new Editor({
+        element: document.querySelector('#wysiwyg-images-example'),
+        extensions: [
+            StarterKit,
+            Image
+        ],
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><img src="https://placehold.co/600x400" contenteditable="false" draggable="true"><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+        editorProps: {
+            attributes: {
+                class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
+            },
+        }
+    });
+
+    // set up custom event listeners for the buttons
+    document.getElementById('addImageButton').addEventListener('click', () => {
+        const url = window.prompt('Enter image URL:', 'https://placehold.co/600x400');
+        if (url) {
+            editor.chain().focus().setImage({ src: url }).run();
+        }
+    });
+
+    const advancedImageModal = FlowbiteInstances.getInstance('Modal', 'advanced-image-modal');
+    
+    document.getElementById('advancedImageForm').addEventListener('submit', (e) => {
+
+        e.preventDefault();
+        
+        const imageUrl = document.getElementById('URL').value;
+        const imageAlt = document.getElementById('alt').value;
+        const imageTitle = document.getElementById('title').value;
+
+        if (imageUrl) {
+            editor.chain().focus().setImage({ src: imageUrl, alt: imageAlt ? imageAlt : '', title: imageTitle ? imageTitle: '' }).run();
+            document.getElementById('advancedImageForm').reset();
+            advancedImageModal.hide();
+        }
+    });
+    
+}
+})
+` >}}
+<div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+    <div class="px-3 py-2 border-b dark:border-gray-600">
+    <div class="flex items-center gap-2">
+        <div class="flex items-center space-x-1 rtl:space-x-reverse">
+            <button id="addImageButton" type="button" data-tooltip-target="tooltip-image" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M13 10a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2H14a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12c0 .556-.227 1.06-.593 1.422A.999.999 0 0 1 20.5 20H4a2.002 2.002 0 0 1-2-2V6Zm6.892 12 3.833-5.356-3.99-4.322a1 1 0 0 0-1.549.097L4 12.879V6h16v9.95l-3.257-3.619a1 1 0 0 0-1.557.088L11.2 18H8.892Z" clip-rule="evenodd"/>
+                </svg>
+                <span class="sr-only">Add image</span>
+            </button>
+            <div id="tooltip-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Add image
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+            <button type="button" data-tooltip-target="tooltip-advanced-image" data-modal-target="advanced-image-modal" data-modal-toggle="advanced-image-modal" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M9 2.221V7H4.221a2 2 0 0 1 .365-.5L8.5 2.586A2 2 0 0 1 9 2.22ZM11 2v5a2 2 0 0 1-2 2H4v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-7Zm.394 9.553a1 1 0 0 0-1.817.062l-2.5 6A1 1 0 0 0 8 19h8a1 1 0 0 0 .894-1.447l-2-4A1 1 0 0 0 13.2 13.4l-.53.706-1.276-2.553ZM13 9.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd"/>
+                </svg>
+                <span class="sr-only">Insert advanced image</span>
+            </button>
+            <div id="tooltip-advanced-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Image with settings
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+    <label for="wysiwyg-images-example" class="sr-only">Publish post</label>
+    <div id="wysiwyg-images-example"class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"></div>
+</div>
+</div>
+
+
+<!-- Main modal -->
+<div id="advanced-image-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Insert advanced image
+                </h3>
+                <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="advanced-image-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5">
+                <form id="advancedImageForm" class="space-y-4" action="#">
+                    <div>
+                        <label for="URL" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Image URL</label>
+                        <input type="url" name="url" id="URL" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="https://placehold.co/600x400" required />
+                    </div>
+                    <div>
+                        <label for="alt" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Image alt</label>
+                        <input type="text" name="alt" id="alt" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
+                    </div>
+                    <div>
+                        <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Image title</label>
+                        <input type="text" name="title" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
+                    </div>
+                    <button type="submit" id="addAdvancedImageButton" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add image</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 
+{{< /example >}}
 
 ## Adding videos
 

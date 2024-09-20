@@ -470,9 +470,7 @@ We recommend later checking the Tip Tap library for a proper update to prevent t
 
 ## Text formatting
 
-Use this example of a WYSIWYG text editor to enable typography styling, formatting and marking such as underline, bold, italic, strikethrough, code, higlight, size and more using the utility classes from Tailwind CSS.
-
-To do: font family, text color
+Use this example of a WYSIWYG text editor to enable typography styling, formatting and marking such as underline, bold, italic, strikethrough, code, highlight and also selecting text size, color, font family and more using the utility classes from Tailwind CSS.
 
 {{< example id="default-wysiwyg-text-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
@@ -483,6 +481,7 @@ import TextStyle from 'https://esm.sh/@tiptap/extension-text-style@2.6.6';
 import Subscript from 'https://esm.sh/@tiptap/extension-subscript@2.6.6';
 import Superscript from 'https://esm.sh/@tiptap/extension-superscript@2.6.6';
 import FontFamily from 'https://esm.sh/@tiptap/extension-font-family@2.6.6';
+import { Color } from 'https://esm.sh/@tiptap/extension-color@2.6.6';
 
 window.addEventListener('load', function() {
     if (document.getElementById("wysiwyg-text-example")) {
@@ -515,6 +514,7 @@ window.addEventListener('load', function() {
             Superscript,
             TextStyle,
             FontSizeTextStyle,
+            Color,
             FontFamily
         ],
         content: '<p>Flowbite React is an <strong>open-source library of UI components</strong> built using React and Tailwind CSS. It supports dark mode, a Figma design system, and more.</p><p>It includes essential components for web apps like buttons, dropdowns, navigation bars, modals, datepickers, and charts, all optimized for React.</p><p>Example button component in Flowbite React:</p><code>import &#123; Button &#125; from &#39;flowbite-react&#39;; &lt;Button color&#x3D;&quot;blue&quot;&gt;Default&lt;/Button&gt;</code><p>These components can also be easily customized using the theme props from the Flowbite Docs and allows you to add your own Tailwind CSS utility classes to override the default styles.</p><p>Explore more components and props values in the Flowbite Docs.</p>',
@@ -551,6 +551,15 @@ window.addEventListener('load', function() {
             textSizeDropdown.hide();
         });
     });
+
+    // Listen for color picker changes
+    const colorPicker = document.getElementById('color');
+    colorPicker.addEventListener('input', (event) => {
+        const selectedColor = event.target.value;
+
+        // Apply the selected color to the selected text
+        editor.chain().focus().setColor(selectedColor).run();
+    })
 
     const fontFamilyDropdown = FlowbiteInstances.getInstance('Dropdown', 'fontFamilyDropdown');
 

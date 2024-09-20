@@ -482,6 +482,7 @@ import Underline from 'https://esm.sh/@tiptap/extension-underline@2.6.6';
 import TextStyle from 'https://esm.sh/@tiptap/extension-text-style@2.6.6';
 import Subscript from 'https://esm.sh/@tiptap/extension-subscript@2.6.6';
 import Superscript from 'https://esm.sh/@tiptap/extension-superscript@2.6.6';
+import FontFamily from 'https://esm.sh/@tiptap/extension-font-family@2.6.6';
 
 window.addEventListener('load', function() {
     if (document.getElementById("wysiwyg-text-example")) {
@@ -513,9 +514,10 @@ window.addEventListener('load', function() {
             Subscript,
             Superscript,
             TextStyle,
-            FontSizeTextStyle
+            FontSizeTextStyle,
+            FontFamily
         ],
-        content: '<p>Flowbite React is an <strong>open-source library of UI components</strong> built using React and Tailwind CSS. It supports dark mode, a Figma design system, and more.</p><p>It includes essential components for web apps like buttons, dropdowns, navigation bars, modals, datepickers, and charts, all optimized for React.</p><p>Example button component in Flowbite React:</p><code>import &#123; Button &#125; from &#39;flowbite-react&#39;; &lt;Button color&#x3D;&quot;blue&quot;&gt;Default&lt;/Button&gt;</code><p>Explore more components and props values in the Flowbite Docs.</p>',
+        content: '<p>Flowbite React is an <strong>open-source library of UI components</strong> built using React and Tailwind CSS. It supports dark mode, a Figma design system, and more.</p><p>It includes essential components for web apps like buttons, dropdowns, navigation bars, modals, datepickers, and charts, all optimized for React.</p><p>Example button component in Flowbite React:</p><code>import &#123; Button &#125; from &#39;flowbite-react&#39;; &lt;Button color&#x3D;&quot;blue&quot;&gt;Default&lt;/Button&gt;</code><p>These components can also be easily customized using the theme props from the Flowbite Docs and allows you to add your own Tailwind CSS utility classes to override the default styles.</p><p>Explore more components and props values in the Flowbite Docs.</p>',
         editorProps: {
             attributes: {
                 class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
@@ -539,18 +541,32 @@ window.addEventListener('load', function() {
 
     // Loop through all elements with the data-text-size attribute
     document.querySelectorAll('[data-text-size]').forEach((button) => {
-            button.addEventListener('click', () => {
-                const fontSize = button.getAttribute('data-text-size');
+        button.addEventListener('click', () => {
+            const fontSize = button.getAttribute('data-text-size');
 
-                console.log({ fontSize: fontSize })
+            // Apply the selected font size via pixels using the TipTap editor chain
+            editor.chain().focus().setMark('textStyle', { fontSize }).run();
 
-                // Apply the selected font size via pixels using the TipTap editor chain
-                editor.chain().focus().setMark('textStyle', { fontSize }).run();
-
-                // Hide the dropdown after selection
-                textSizeDropdown.hide();
-            });
+            // Hide the dropdown after selection
+            textSizeDropdown.hide();
         });
+    });
+
+    const fontFamilyDropdown = FlowbiteInstances.getInstance('Dropdown', 'fontFamilyDropdown');
+
+    // Loop through all elements with the data-font-family attribute
+    document.querySelectorAll('[data-font-family]').forEach((button) => {
+        button.addEventListener('click', () => {
+            const fontFamily = button.getAttribute('data-font-family');
+
+            // Apply the selected font size via pixels using the TipTap editor chain
+            editor.chain().focus().setFontFamily(fontFamily).run();
+
+            // Hide the dropdown after selection
+            fontFamilyDropdown.hide();
+        });
+    });
+
     }
 })
 ` >}}
@@ -672,6 +688,69 @@ window.addEventListener('load', function() {
                         </li>
                         <li>
                             <button data-text-size="36px" type="button" class="flex justify-between items-center w-full text-4xl rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white">36px (Huge)
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <button id="toggleTextColorButton" data-dropdown-toggle="textColorDropdown" type="button" data-tooltip-target="tooltip-text-color" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none" viewBox="0 0 25 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m6.532 15.982 1.573-4m-1.573 4h-1.1m1.1 0h1.65m-.077-4 2.725-6.93a.11.11 0 0 1 .204 0l2.725 6.93m-5.654 0H8.1m.006 0h5.654m0 0 .617 1.569m5.11 4.453c0 1.102-.854 1.996-1.908 1.996-1.053 0-1.907-.894-1.907-1.996 0-1.103 1.907-4.128 1.907-4.128s1.909 3.025 1.909 4.128Z"/>
+                    </svg>
+                    <span class="sr-only">Text color</span>
+                </button>
+                <div id="tooltip-text-color" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Text color
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <div id="textColorDropdown" class="z-10 hidden w-72 rounded bg-white p-2 shadow dark:bg-gray-700">
+                    <input type="color" id="color">
+                </div>
+                <button id="toggleFontFamilyButton" data-dropdown-toggle="fontFamilyDropdown" type="button" data-tooltip-target="tooltip-font-family" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10.6 19 4.298-10.93a.11.11 0 0 1 .204 0L19.4 19m-8.8 0H9.5m1.1 0h1.65m7.15 0h-1.65m1.65 0h1.1m-7.7-3.985h4.4M3.021 16l1.567-3.985m0 0L7.32 5.07a.11.11 0 0 1 .205 0l2.503 6.945h-5.44Z"/>
+                    </svg>
+                    <span class="sr-only">Font family</span>
+                </button>
+                <div id="tooltip-font-family" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Font Family
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <div id="fontFamilyDropdown" class="z-10 hidden w-48 rounded bg-white p-2 shadow dark:bg-gray-700">
+                    <ul class="space-y-1 text-sm font-medium" aria-labelledby="toggleFontFamilyButton">
+                        <li>
+                            <button data-font-family="Inter, ui-sans-serif" type="button" class="flex justify-between items-center w-full text-sm font-sans rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white">Default
+                            </button>
+                        </li>
+                        <li>
+                            <button data-font-family="Arial, sans-serif" type="button" class="flex justify-between items-center w-full text-sm rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white" style="font-family: Arial, sans-serif;">Arial
+                            </button>
+                        </li>
+                        <li>
+                            <button data-font-family="'Courier New', monospace" type="button" class="flex justify-between items-center w-full text-sm rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white" style="font-family: 'Courier New', monospace;">Courier New
+                            </button>
+                        </li>
+                        <li>
+                            <button data-font-family="Georgia, serif" type="button" class="flex justify-between items-center w-full text-sm rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white" style="font-family: Georgia, serif;">Georgia
+                            </button>
+                        </li>
+                        <li>
+                            <button data-font-family="'Lucida Sans Unicode', sans-serif" type="button" class="flex justify-between items-center w-full text-sm rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white" style="font-family: 'Lucida Sans Unicode', sans-serif;">Lucida Sans Unicode
+                            </button>
+                        </li>
+                        <li>
+                            <button data-font-family="Tahoma, sans-serif" type="button" class="flex justify-between items-center w-full text-sm rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white" style="font-family: Tahoma, sans-serif;">Tahoma
+                            </button>
+                        </li>
+                        <li>
+                            <button data-font-family="'Times New Roman', serif;" type="button" class="flex justify-between items-center w-full text-sm rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white" style="font-family: 'Times New Roman', serif;">Times New Roman
+                            </button>
+                        </li>
+                        <li>
+                            <button data-font-family="'Trebuchet MS', sans-serif" type="button" class="flex justify-between items-center w-full text-sm rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white" style="font-family: 'Trebuchet MS', sans-serif;">Trebuchet MS
+                            </button>
+                        </li>
+                        <li>
+                            <button data-font-family="Verdana, sans-serif" type="button" class="flex justify-between items-center w-full text-sm rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white" style="font-family: Verdana, sans-serif;">Verdana
                             </button>
                         </li>
                     </ul>

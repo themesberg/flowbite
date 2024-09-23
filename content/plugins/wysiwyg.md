@@ -1666,6 +1666,8 @@ window.addEventListener('load', function() {
 
 ## Undo and redo
 
+Use the history functionality from the WYSIWYG text editor component to integrate undo and redo actions.
+
 {{< example id="default-wysiwyg-history-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';

@@ -329,6 +329,7 @@ export function initDrawers() {
             const edgeOffset = $triggerEl.getAttribute(
                 'data-drawer-edge-offset'
             );
+	    const backdropClasses = $triggerEl.getAttribute('data-drawer-backdropClasses');
 
             new Drawer($drawerEl, {
                 placement: placement ? placement : Default.placement,
@@ -344,6 +345,7 @@ export function initDrawers() {
                     : Default.backdrop,
                 edge: edge ? (edge === 'true' ? true : false) : Default.edge,
                 edgeOffset: edgeOffset ? edgeOffset : Default.edgeOffset,
+		backdropClasses: backdropClasses ? backdropClasses : Default.backdropClasses,
             } as DrawerOptions);
         } else {
             console.error(

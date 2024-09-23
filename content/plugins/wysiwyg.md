@@ -1600,7 +1600,136 @@ window.addEventListener('load', function() {
 
 ## Editing tables
 
+{{< example id="default-wysiwyg-video-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
+import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
+import Table from 'https://esm.sh/@tiptap/extension-table@2.6.6';
+import TableCell from 'https://esm.sh/@tiptap/extension-table-cell@2.6.6';
+import TableHeader from 'https://esm.sh/@tiptap/extension-table-header@2.6.6';
+import TableRow from 'https://esm.sh/@tiptap/extension-table-row@2.6.6';
+import Gapcursor from 'https://esm.sh/@tiptap/extension-gapcursor@2.6.6'
+
+window.addEventListener('load', function() {
+    if (document.getElementById("wysiwyg-tables-example")) {
+
+    // tip tap editor setup
+    const editor = new Editor({
+        element: document.querySelector('#wysiwyg-tables-example'),
+        extensions: [
+            StarterKit,
+            Gapcursor,
+            Table.configure({
+                resizable: true,
+            }),
+            TableRow,
+            TableHeader,
+            TableCell
+        ],
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+        editorProps: {
+            attributes: {
+                class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
+            },
+        }
+    });
+
+    // set up custom event listeners for the buttons
+    document.getElementById('addTableButton').addEventListener('click', () => {
+        editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run();
+    });
+}
+})
+` >}}
+<div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+    <div class="px-3 py-2 border-b dark:border-gray-600">
+    <div class="flex items-center gap-2">
+        <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
+            <button id="addTableButton" type="button" data-tooltip-target="tooltip-table" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6Zm2 8v-2h7v2H4Zm0 2v2h7v-2H4Zm9 2h7v-2h-7v2Zm7-4v-2h-7v2h7Z" clip-rule="evenodd"/>
+                </svg>
+                <span class="sr-only">Add table</span>
+            </button>
+            <div id="tooltip-table" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Add table
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+    <label for="wysiwyg-tables-example" class="sr-only">Publish post</label>
+    <div id="wysiwyg-tables-example"class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"></div>
+</div>
+</div>
+{{< /example >}}
+
 ## Undo and redo
+
+{{< example id="default-wysiwyg-history-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
+import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
+
+window.addEventListener('load', function() {
+    if (document.getElementById("wysiwyg-history-example")) {
+
+    // tip tap editor setup
+    const editor = new Editor({
+        element: document.querySelector('#wysiwyg-history-example'),
+        extensions: [
+            StarterKit
+        ],
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+        editorProps: {
+            attributes: {
+                class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
+            },
+        }
+    });
+
+    // set up custom event listeners for the buttons
+    document.getElementById('toggleUndoButton').addEventListener('click', () => {
+        editor.chain().focus().undo().run();
+    });
+    document.getElementById('toggleRedoButton').addEventListener('click', () => {
+        editor.chain().focus().redo().run()
+    });
+}
+})
+` >}}
+<div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+    <div class="px-3 py-2 border-b dark:border-gray-600">
+        <div class="flex flex-wrap items-center">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
+                <button id="toggleUndoButton" data-tooltip-target="tooltip-undo" type="button" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9h13a5 5 0 0 1 0 10H7M3 9l4-4M3 9l4 4"/>
+                    </svg>
+                    <span class="sr-only">Undo</span>
+                </button>
+                <div id="tooltip-undo" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Undo
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <button id="toggleRedoButton" data-tooltip-target="tooltip-redo" type="button" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 9H8a5 5 0 0 0 0 10h9m4-10-4-4m4 4-4 4"/>
+                    </svg>
+                    <span class="sr-only">Redo</span>
+                </button>
+                <div id="tooltip-redo" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Redo
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+            </div>
+    </div>
+</div>
+<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+    <label for="wysiwyg-history-example" class="sr-only">Publish post</label>
+    <div id="wysiwyg-history-example"class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"></div>
+</div>
+</div>
+{{< /example >}}
 
 ## Exporting data
 

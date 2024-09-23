@@ -1422,7 +1422,6 @@ window.addEventListener('load', function() {
 </div>
 </div>
 
-
 <!-- Main modal -->
 <div id="advanced-image-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
@@ -1696,6 +1695,7 @@ window.addEventListener('load', function() {
     document.getElementById('toggleRedoButton').addEventListener('click', () => {
         editor.chain().focus().redo().run()
     });
+
 }
 })
 ` >}}
@@ -1734,5 +1734,114 @@ window.addEventListener('load', function() {
 {{< /example >}}
 
 ## Exporting data
+
+Use the `editor.getJSON()` and the `editor.getHTML()` functions to export the text content inside of the WYSIWYG text editor in JSON or raw HTML format to persist into your database or API structure.
+
+{{< example id="default-wysiwyg-export-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
+import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
+
+window.addEventListener('load', function() {
+    if (document.getElementById("wysiwyg-export-example")) {
+
+    // tip tap editor setup
+    const editor = new Editor({
+        element: document.querySelector('#wysiwyg-export-example'),
+        extensions: [
+            StarterKit
+        ],
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+        editorProps: {
+            attributes: {
+                class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
+            },
+        }
+    });
+
+    const sourceCodeModal = FlowbiteInstances.getInstance('Modal', 'source-code-modal');
+    const sourceCodeWrapper = document.getElementById('sourceCode');
+
+    // set up custom event listeners for the buttons
+    document.getElementById('toggleHTMLButton').addEventListener('click', () => {
+
+        // basically just use editor.getHTML(); to get the raw html
+
+        sourceCodeWrapper.innerHTML = editor.getHTML()
+            .replace(/&/g, "&amp;") // Escape & character
+            .replace(/</g, "&lt;")  // Escape < character
+            .replace(/>/g, "&gt;")  // Escape > character
+            .replace(/"/g, "&quot;") // Escape " character
+            .replace(/'/g, "&#039;"); // Escape ' character
+    });
+
+    document.getElementById('toggleJSONButton').addEventListener('click', () => {
+
+        // basically just use editor.getJSON(); to get the raw json
+
+        sourceCode.innerHTML = JSON.stringify(editor.getJSON(), null, 2)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
+    });
+}
+})
+` >}}
+<div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+    <div class="px-3 py-2 border-b dark:border-gray-600">
+        <div class="flex flex-wrap items-center">
+            <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
+                <button id="toggleJSONButton" data-tooltip-target="tooltip-json" data-modal-target="source-code-modal" data-modal-toggle="source-code-modal" type="button" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 8v8m0-8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 8a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm6-2a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm0 0h-1a5 5 0 0 1-5-5v-.5"/>
+                    </svg>
+                    <span class="sr-only">JSON</span>
+                </button>
+                <div id="tooltip-json" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Get JSON
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <button id="toggleHTMLButton" data-tooltip-target="tooltip-html" data-modal-target="source-code-modal" data-modal-toggle="source-code-modal" type="button" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z"/>
+                    </svg>
+                    <span class="sr-only">HTML</span>
+                </button>
+                <div id="tooltip-html" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Get HTML
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+            </div>
+    </div>
+</div>
+<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+    <label for="wysiwyg-export-example" class="sr-only">Publish post</label>
+    <div id="wysiwyg-export-example"class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"></div>
+</div>
+</div>
+
+<div id="source-code-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    JSON/HTML data export result
+                </h3>
+                <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="source-code-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5 format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none">
+                <pre><code id="sourceCode"></code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+{{< /example >}}
 
 ## Javascript behaviour

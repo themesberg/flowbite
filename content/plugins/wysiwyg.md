@@ -721,6 +721,15 @@ window.addEventListener('load', function() {
         editor.chain().focus().setColor(selectedColor).run();
     })
 
+    document.querySelectorAll('[data-hex-color]').forEach((button) => {
+        button.addEventListener('click', () => {
+            const selectedColor = button.getAttribute('data-hex-color');
+
+            // Apply the selected color to the selected text
+            editor.chain().focus().setColor(selectedColor).run();
+        });
+    });
+
     const fontFamilyDropdown = FlowbiteInstances.getInstance('Dropdown', 'fontFamilyDropdown');
 
     // Loop through all elements with the data-font-family attribute
@@ -871,10 +880,18 @@ window.addEventListener('load', function() {
                     Text color
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="textColorDropdown" class="z-10 hidden w-40 rounded bg-white p-2 shadow dark:bg-gray-700">
-                    <div class="flex items-center justify-between cursor-pointer group">
-                        <input type="color" id="color" value="#e66465" class="border-gray-200 border bg-gray-50 dark:bg-gray-700 dark:border-gray-600 rounded-md p-px px-1 hover:bg-gray-100 group-hover:bg-gray-100 dark:group-hover:bg-gray-600" />
-                        <label for="color" class="text-gray-500 dark:text-gray-400 text-sm font-medium">Pick a color</label>
+                <div id="textColorDropdown" class="z-10 hidden w-48 rounded bg-white p-2 shadow dark:bg-gray-700">
+                    <div class="grid grid-cols-6 gap-2 cursor-pointer group mb-3 items-center">
+                        <input type="color" id="color" value="#e66465" class="border-gray-200 border bg-gray-50 dark:bg-gray-700 dark:border-gray-600 rounded-md p-px px-1 hover:bg-gray-100 group-hover:bg-gray-200 dark:group-hover:bg-gray-600 w-full h-8 col-span-3" />
+                        <label for="color" class="text-gray-500 dark:text-gray-400 text-sm font-medium col-span-3 group-hover:text-gray-900 dark:group-hover:text-white">Pick a color</label>
+                    </div>
+                    <div class="grid grid-cols-6 gap-1">
+                        <button type="button" data-hex-color="#1A56DB" style="background-color: #1A56DB" class="w-6 h-6 rounded-md"><span class="sr-only">Blue</span></button>
+                        <button type="button" data-hex-color="#0E9F6E" style="background-color: #0E9F6E" class="w-6 h-6 rounded-md"><span class="sr-only">Green</span></button>
+                        <button type="button" data-hex-color="#FACA15" style="background-color: #FACA15" class="w-6 h-6 rounded-md"><span class="sr-only">Yellow</span></button>
+                        <button type="button" data-hex-color="#F05252" style="background-color: #F05252" class="w-6 h-6 rounded-md"><span class="sr-only">Red</span></button>
+                        <button type="button" data-hex-color="#FF8A4C" style="background-color: #FF8A4C" class="w-6 h-6 rounded-md"><span class="sr-only">Orange</span></button>
+                        <button type="button" data-hex-color="#0694A2" style="background-color: #0694A2" class="w-6 h-6 rounded-md"><span class="sr-only">Teal</span></button>
                     </div>
                 </div>
                 <button id="toggleFontFamilyButton" data-dropdown-toggle="fontFamilyDropdown" type="button" data-tooltip-target="tooltip-font-family" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">

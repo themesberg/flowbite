@@ -871,8 +871,11 @@ window.addEventListener('load', function() {
                     Text color
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="textColorDropdown" class="z-10 hidden w-72 rounded bg-white p-2 shadow dark:bg-gray-700">
-                    <input type="color" id="color">
+                <div id="textColorDropdown" class="z-10 hidden w-40 rounded bg-white p-2 shadow dark:bg-gray-700">
+                    <div class="flex items-center justify-between cursor-pointer group">
+                        <input type="color" id="color" value="#e66465" class="border-gray-200 border bg-gray-50 dark:bg-gray-700 dark:border-gray-600 rounded-md p-px px-1 hover:bg-gray-100 group-hover:bg-gray-100 dark:group-hover:bg-gray-600" />
+                        <label for="color" class="text-gray-500 dark:text-gray-400 text-sm font-medium">Pick a color</label>
+                    </div>
                 </div>
                 <button id="toggleFontFamilyButton" data-dropdown-toggle="fontFamilyDropdown" type="button" data-tooltip-target="tooltip-font-family" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">

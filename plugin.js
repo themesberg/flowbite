@@ -17,7 +17,15 @@ module.exports = plugin.withOptions(
             tooltips = true,
         } = options;
 
-        return function ({ addBase, addComponents, theme }) {
+        return function ({ addBase, addComponents, theme, config }) {
+            const cfg = config();
+            const darkSelector =
+                cfg.darkMode === 'class'
+                    ? '.dark'
+                    : cfg.darkMode === 'media'
+                    ? '@media (prefers-color-scheme: dark)'
+                    : '';
+
             // tooltip and popover styles
             if (tooltips) {
                 addBase({
@@ -107,17 +115,21 @@ module.exports = plugin.withOptions(
                         'border-style': 'solid',
                         'border-color': colors.gray[200],
                     },
-                    [`.dark [role="tooltip"] > [data-popper-arrow]:before`]: {
-                        'border-style': 'solid',
-                        'border-color': colors.gray[600],
+                    [darkSelector]: {
+                        [`[role="tooltip"] > [data-popper-arrow]:before`]: {
+                            'border-style': 'solid',
+                            'border-color': colors.gray[600],
+                        },
                     },
                     [`[role="tooltip"] > [data-popper-arrow]:after`]: {
                         'border-style': 'solid',
                         'border-color': colors.gray[200],
                     },
-                    [`.dark [role="tooltip"] > [data-popper-arrow]:after`]: {
-                        'border-style': 'solid',
-                        'border-color': colors.gray[600],
+                    [darkSelector]: {
+                        [`[role="tooltip"] > [data-popper-arrow]:after`]: {
+                            'border-style': 'solid',
+                            'border-color': colors.gray[600],
+                        },
                     },
                     [`[data-popover][role="tooltip"][data-popper-placement^='top'] > [data-popper-arrow]:before`]:
                         {
@@ -318,17 +330,24 @@ module.exports = plugin.withOptions(
                         '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
                         'box-shadow': `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)`,
                     },
-                    [[
-                        `[type='checkbox']:checked`,
-                        `[type='radio']:checked`,
-                        `.dark [type='checkbox']:checked`,
-                        `.dark [type='radio']:checked`,
-                    ]]: {
+                    [[`[type='checkbox']:checked`, `[type='radio']:checked`]]: {
                         'border-color': `transparent`,
                         'background-color': `currentColor`,
                         'background-size': `0.55em 0.55em`,
                         'background-position': `center`,
                         'background-repeat': `no-repeat`,
+                    },
+                    [darkSelector]: {
+                        [[
+                            `[type='checkbox']:checked`,
+                            `[type='radio']:checked`,
+                        ]]: {
+                            'border-color': `transparent`,
+                            'background-color': `currentColor`,
+                            'background-size': `0.55em 0.55em`,
+                            'background-position': `center`,
+                            'background-repeat': `no-repeat`,
+                        },
                     },
                     [`[type='checkbox']:checked`]: {
                         'background-image': `url("${svgToDataUri(
@@ -346,11 +365,13 @@ module.exports = plugin.withOptions(
                         )}")`,
                         'background-size': `1em 1em`,
                     },
-                    [`.dark [type='radio']:checked`]: {
-                        'background-image': `url("${svgToDataUri(
-                            `<svg viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`
-                        )}")`,
-                        'background-size': `1em 1em`,
+                    [darkSelector]: {
+                        [`[type='radio']:checked`]: {
+                            'background-image': `url("${svgToDataUri(
+                                `<svg viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`
+                            )}")`,
+                            'background-size': `1em 1em`,
+                        },
                     },
                     [`[type='checkbox']:indeterminate`]: {
                         'background-image': `url("${svgToDataUri(
@@ -409,14 +430,19 @@ module.exports = plugin.withOptions(
                             paddingRight: spacing[8],
                             paddingLeft: spacing[4],
                         },
-                    [[`.dark input[type=file]::file-selector-button`]]: {
-                        color: 'white',
-                        background: theme('colors.gray.600', colors.gray[600]),
-                        '&:hover': {
+                    [darkSelector]: {
+                        [[`input[type=file]::file-selector-button`]]: {
+                            color: 'white',
                             background: theme(
-                                'colors.gray.500',
-                                colors.gray[500]
+                                'colors.gray.600',
+                                colors.gray[600]
                             ),
+                            '&:hover': {
+                                background: theme(
+                                    'colors.gray.500',
+                                    colors.gray[500]
+                                ),
+                            },
                         },
                     },
                     [[`input[type="range"]::-webkit-slider-thumb`]]: {
@@ -433,10 +459,15 @@ module.exports = plugin.withOptions(
                     [[`input[type="range"]:disabled::-webkit-slider-thumb`]]: {
                         background: theme('colors.gray.400', colors.gray[400]),
                     },
-                    [[
-                        `.dark input[type="range"]:disabled::-webkit-slider-thumb`,
-                    ]]: {
-                        background: theme('colors.gray.500', colors.gray[500]),
+                    [darkSelector]: {
+                        [[
+                            `input[type="range"]:disabled::-webkit-slider-thumb`,
+                        ]]: {
+                            background: theme(
+                                'colors.gray.500',
+                                colors.gray[500]
+                            ),
+                        },
                     },
                     [[`input[type="range"]:focus::-webkit-slider-thumb`]]: {
                         outline: '2px solid transparent',
@@ -465,13 +496,14 @@ module.exports = plugin.withOptions(
                     [[`input[type="range"]:disabled::-moz-range-thumb`]]: {
                         background: theme('colors.gray.400', colors.gray[400]),
                     },
-                    [[`.dark input[type="range"]:disabled::-moz-range-thumb`]]:
-                        {
+                    [darkSelector]: {
+                        [[`input[type="range"]:disabled::-moz-range-thumb`]]: {
                             background: theme(
                                 'colors.gray.500',
                                 colors.gray[500]
                             ),
                         },
+                    },
                     [[`input[type="range"]::-moz-range-progress`]]: {
                         background: theme('colors.blue.500', colors.blue[500]),
                     },
@@ -564,18 +596,20 @@ module.exports = plugin.withOptions(
                             )}`,
                             minWidth: '16rem',
                         },
-                    '.dark .datatable-wrapper .datatable-search .datatable-input, .dark .datatable-wrapper .datatable-input':
-                        {
-                            color: 'white',
-                            backgroundColor: `${theme(
-                                'colors.gray.800',
-                                colors.gray[800]
-                            )}`,
-                            border: `1px solid ${theme(
-                                'colors.gray.700',
-                                colors.gray[700]
-                            )}`,
-                        },
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-search .datatable-input, .datatable-wrapper .datatable-input':
+                            {
+                                color: 'white',
+                                backgroundColor: `${theme(
+                                    'colors.gray.800',
+                                    colors.gray[800]
+                                )}`,
+                                border: `1px solid ${theme(
+                                    'colors.gray.700',
+                                    colors.gray[700]
+                                )}`,
+                            },
+                    },
                     '.datatable-wrapper thead th .datatable-input': {
                         backgroundColor: 'white',
                         fontWeight: `${theme('fontWeight.normal')}`,
@@ -584,16 +618,18 @@ module.exports = plugin.withOptions(
                         paddingBottom: `.35rem`,
                         minWidth: '0',
                     },
-                    '.dark .datatable-wrapper thead th .datatable-input': {
-                        backgroundColor: `${theme(
-                            'colors.gray.700',
-                            colors.gray[700]
-                        )}`,
-                        borderColor: `${theme(
-                            'colors.gray.600',
-                            colors.gray[600]
-                        )}`,
-                        color: 'white',
+                    [darkSelector]: {
+                        '.datatable-wrapper thead th .datatable-input': {
+                            backgroundColor: `${theme(
+                                'colors.gray.700',
+                                colors.gray[700]
+                            )}`,
+                            borderColor: `${theme(
+                                'colors.gray.600',
+                                colors.gray[600]
+                            )}`,
+                            color: 'white',
+                        },
                     },
                     '.datatable-wrapper .datatable-top .datatable-dropdown': {
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
@@ -602,13 +638,15 @@ module.exports = plugin.withOptions(
                             defaultTheme.fontSize.sm
                         )}`,
                     },
-                    '.dark .datatable-wrapper .datatable-top .datatable-dropdown':
-                        {
-                            color: `${theme(
-                                'colors.gray.400',
-                                colors.gray[400]
-                            )}`,
-                        },
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-top .datatable-dropdown':
+                            {
+                                color: `${theme(
+                                    'colors.gray.400',
+                                    colors.gray[400]
+                                )}`,
+                            },
+                    },
                     '.datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
                         {
                             backgroundColor: `${theme('colors.gray.50')}`,
@@ -628,18 +666,20 @@ module.exports = plugin.withOptions(
                             marginRight: `${theme('spacing.1', spacing[1])}`,
                             minWidth: '4rem',
                         },
-                    '.dark .datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
-                        {
-                            backgroundColor: `${theme(
-                                'colors.gray.800',
-                                colors.gray[800]
-                            )}`,
-                            border: `1px solid ${theme(
-                                'colors.gray.700',
-                                colors.gray[700]
-                            )}`,
-                            color: 'white',
-                        },
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
+                            {
+                                backgroundColor: `${theme(
+                                    'colors.gray.800',
+                                    colors.gray[800]
+                                )}`,
+                                border: `1px solid ${theme(
+                                    'colors.gray.700',
+                                    colors.gray[700]
+                                )}`,
+                                color: 'white',
+                            },
+                    },
                     '.datatable-wrapper .datatable-container thead tr.search-filtering-row th':
                         {
                             paddingTop: '0',
@@ -663,8 +703,13 @@ module.exports = plugin.withOptions(
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
                         textAlign: 'left',
                     },
-                    '.dark .datatable-wrapper .datatable-table': {
-                        color: `${theme('colors.gray.400', colors.gray[400])}`,
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-table': {
+                            color: `${theme(
+                                'colors.gray.400',
+                                colors.gray[400]
+                            )}`,
+                        },
                     },
                     '.datatable-wrapper .datatable-table thead': {
                         fontSize: `${theme(
@@ -677,12 +722,17 @@ module.exports = plugin.withOptions(
                             colors.gray[50]
                         )}`,
                     },
-                    '.dark .datatable-wrapper .datatable-table thead': {
-                        color: `${theme('colors.gray.400', colors.gray[400])}`,
-                        backgroundColor: `${theme(
-                            'colors.gray.800',
-                            colors.gray[800]
-                        )}`,
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-table thead': {
+                            color: `${theme(
+                                'colors.gray.400',
+                                colors.gray[400]
+                            )}`,
+                            backgroundColor: `${theme(
+                                'colors.gray.800',
+                                colors.gray[800]
+                            )}`,
+                        },
                     },
                     '.datatable-wrapper .datatable-table thead th': {
                         whiteSpace: 'nowrap',
@@ -706,28 +756,36 @@ module.exports = plugin.withOptions(
                                 colors.blue[900]
                             )}`,
                         },
-                    '.dark .datatable-wrapper .datatable-table thead th .datatable-sorter:hover, .dark .datatable-wrapper .datatable-table thead th.datatable-ascending .datatable-sorter, .dark .datatable-wrapper .datatable-table thead th.datatable-descending .datatable-sorter':
-                        {
-                            color: 'white',
-                        },
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-table thead th .datatable-sorter:hover, .datatable-wrapper .datatable-table thead th.datatable-ascending .datatable-sorter, .datatable-wrapper .datatable-table thead th.datatable-descending .datatable-sorter':
+                            {
+                                color: 'white',
+                            },
+                    },
                     '.datatable-wrapper .datatable-table tbody tr.selected': {
                         backgroundColor: `${theme(
                             'colors.gray.100',
                             colors.gray[100]
                         )}`,
                     },
-                    '.dark .datatable-wrapper .datatable-table tbody tr.selected':
-                        {
-                            backgroundColor: `${theme(
-                                'colors.gray.700',
-                                colors.gray[700]
-                            )}`,
-                        },
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-table tbody tr.selected':
+                            {
+                                backgroundColor: `${theme(
+                                    'colors.gray.700',
+                                    colors.gray[700]
+                                )}`,
+                            },
+                    },
                     '.datatable-wrapper .datatable-table tbody tr': {
                         borderBottom: `1px solid ${theme('colors.gray.200')}`,
                     },
-                    '.dark .datatable-wrapper .datatable-table tbody tr': {
-                        borderBottom: `1px solid ${theme('colors.gray.700')}`,
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-table tbody tr': {
+                            borderBottom: `1px solid ${theme(
+                                'colors.gray.700'
+                            )}`,
+                        },
                     },
                     '.datatable-wrapper .datatable-table .datatable-empty': {
                         textAlign: 'center',
@@ -747,13 +805,15 @@ module.exports = plugin.withOptions(
                             defaultTheme.fontSize.sm
                         )}`,
                     },
-                    '.dark .datatable-wrapper .datatable-bottom .datatable-info':
-                        {
-                            color: `${theme(
-                                'colors.gray.400',
-                                colors.gray[400]
-                            )}`,
-                        },
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-bottom .datatable-info':
+                            {
+                                color: `${theme(
+                                    'colors.gray.400',
+                                    colors.gray[400]
+                                )}`,
+                            },
+                    },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list':
                         {
                             display: 'flex',
@@ -788,17 +848,19 @@ module.exports = plugin.withOptions(
                                 'colors.gray.300'
                             )}`,
                         },
-                    '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link':
-                        {
-                            color: `${theme(
-                                'colors.gray.400',
-                                colors.gray[400]
-                            )}`,
-                            borderColor: `${theme(
-                                'colors.gray.700',
-                                colors.gray[700]
-                            )}`,
-                        },
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link':
+                            {
+                                color: `${theme(
+                                    'colors.gray.400',
+                                    colors.gray[400]
+                                )}`,
+                                borderColor: `${theme(
+                                    'colors.gray.700',
+                                    colors.gray[700]
+                                )}`,
+                            },
+                    },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type, .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type':
                         {
                             position: 'relative',
@@ -807,10 +869,12 @@ module.exports = plugin.withOptions(
                         {
                             color: 'transparent',
                         },
-                    '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link, .dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link':
-                        {
-                            color: 'transparent',
-                        },
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link, .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link':
+                            {
+                                color: 'transparent',
+                            },
+                    },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link::after':
                         {
                             content: `url("${svgToDataUri(
@@ -839,25 +903,29 @@ module.exports = plugin.withOptions(
                                 </svg>`
                             )}")`,
                         },
-                    '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link::after':
-                        {
-                            content: `url("${svgToDataUri(
-                                `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link::after':
+                            {
+                                content: `url("${svgToDataUri(
+                                    `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
                                     <path stroke="${theme(
                                         'colors.gray.400',
                                         colors.gray[400]
                                     )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 8-4 4 4 4"/>
                                 </svg>`
-                            )}")`,
-                        },
-                    '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link:hover::after':
-                        {
-                            content: `url("${svgToDataUri(
-                                `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                                )}")`,
+                            },
+                    },
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link:hover::after':
+                            {
+                                content: `url("${svgToDataUri(
+                                    `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
                                     <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 8-4 4 4 4"/>
                                 </svg>`
-                            )}")`,
-                        },
+                                )}")`,
+                            },
+                    },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link::after':
                         {
                             content: `url("${svgToDataUri(
@@ -888,27 +956,31 @@ module.exports = plugin.withOptions(
                                 `
                             )}")`,
                         },
-                    '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link::after':
-                        {
-                            content: `url("${svgToDataUri(
-                                `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link::after':
+                            {
+                                content: `url("${svgToDataUri(
+                                    `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
                                 <path stroke="${theme(
                                     'colors.gray.400',
                                     colors.gray[400]
                                 )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
                                 </svg>
                                 `
-                            )}")`,
-                        },
-                    '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link:hover::after':
-                        {
-                            content: `url("${svgToDataUri(
-                                `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                                )}")`,
+                            },
+                    },
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link:hover::after':
+                            {
+                                content: `url("${svgToDataUri(
+                                    `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
                                 <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
                                 </svg>
                                 `
-                            )}")`,
-                        },
+                                )}")`,
+                            },
+                    },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link':
                         {
                             borderTopLeftRadius: `${theme(
@@ -921,10 +993,14 @@ module.exports = plugin.withOptions(
                             )}`,
                             borderLeft: `1px solid ${theme('colors.gray.300')}`,
                         },
-                    '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link':
-                        {
-                            borderLeft: `1px solid ${theme('colors.gray.700')}`,
-                        },
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link':
+                            {
+                                borderLeft: `1px solid ${theme(
+                                    'colors.gray.700'
+                                )}`,
+                            },
+                    },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link':
                         {
                             borderTopRightRadius: `${theme(
@@ -945,11 +1021,13 @@ module.exports = plugin.withOptions(
                                 colors.gray[700]
                             )}`,
                         },
-                    '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link:hover':
-                        {
-                            backgroundColor: `${theme('colors.gray.700')}`,
-                            color: 'white',
-                        },
+                    [darkSelector]: {
+                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link:hover':
+                            {
+                                backgroundColor: `${theme('colors.gray.700')}`,
+                                color: 'white',
+                            },
+                    },
                     '@screen sm': {
                         '.datatable-wrapper .datatable-top': {
                             flexDirection: 'row-reverse',
@@ -977,14 +1055,19 @@ module.exports = plugin.withOptions(
                         // padding: `${theme('spacing.3', spacing[3])}`,
                         boxShadow: `${theme('boxShadow.md', boxShadow.md)}`,
                     },
-                    '.dark .apexcharts-canvas .apexcharts-tooltip': {
-                        backgroundColor: `${theme(
-                            'colors.gray.700',
-                            colors.gray[700]
-                        )}`,
-                        color: `${theme('colors.gray.400', colors.gray[400])}`,
-                        borderColor: 'transparent',
-                        boxShadow: `${theme('boxShadow.md', boxShadow.md)}`,
+                    [darkSelector]: {
+                        '.apexcharts-canvas .apexcharts-tooltip': {
+                            backgroundColor: `${theme(
+                                'colors.gray.700',
+                                colors.gray[700]
+                            )}`,
+                            color: `${theme(
+                                'colors.gray.400',
+                                colors.gray[400]
+                            )}`,
+                            borderColor: 'transparent',
+                            boxShadow: `${theme('boxShadow.md', boxShadow.md)}`,
+                        },
                     },
                     '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title':
                         {
@@ -1014,21 +1097,23 @@ module.exports = plugin.withOptions(
                                 colors.gray[500]
                             )}`,
                         },
-                    '.dark .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title':
-                        {
-                            backgroundColor: `${theme(
-                                'colors.gray.600',
-                                colors.gray[600]
-                            )}`,
-                            borderColor: `${theme(
-                                'colors.gray.500',
-                                colors.gray[500]
-                            )}`,
-                            color: `${theme(
-                                'colors.gray.400',
-                                colors.gray[400]
-                            )}`,
-                        },
+                    [darkSelector]: {
+                        '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title':
+                            {
+                                backgroundColor: `${theme(
+                                    'colors.gray.600',
+                                    colors.gray[600]
+                                )}`,
+                                borderColor: `${theme(
+                                    'colors.gray.500',
+                                    colors.gray[500]
+                                )}`,
+                                color: `${theme(
+                                    'colors.gray.400',
+                                    colors.gray[400]
+                                )}`,
+                            },
+                    },
                     '.apexcharts-canvas .apexcharts-xaxistooltip': {
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
                         paddingTop: `${theme('spacing.2', spacing[2])}`,
@@ -1043,12 +1128,17 @@ module.exports = plugin.withOptions(
                         )}`,
                         boxShadow: `${theme('boxShadow.md', boxShadow.md)}`,
                     },
-                    '.dark .apexcharts-canvas .apexcharts-xaxistooltip': {
-                        color: `${theme('colors.gray.400', colors.gray[400])}`,
-                        backgroundColor: `${theme(
-                            'colors.gray.700',
-                            colors.gray[700]
-                        )}`,
+                    [darkSelector]: {
+                        '.apexcharts-canvas .apexcharts-xaxistooltip': {
+                            color: `${theme(
+                                'colors.gray.400',
+                                colors.gray[400]
+                            )}`,
+                            backgroundColor: `${theme(
+                                'colors.gray.700',
+                                colors.gray[700]
+                            )}`,
+                        },
                     },
                     '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-label':
                         {
@@ -1061,13 +1151,15 @@ module.exports = plugin.withOptions(
                                 defaultTheme.fontSize.sm
                             )}`,
                         },
-                    '.dark .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-label':
-                        {
-                            color: `${theme(
-                                'colors.gray.400',
-                                colors.gray[400]
-                            )}`,
-                        },
+                    [darkSelector]: {
+                        '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-label':
+                            {
+                                color: `${theme(
+                                    'colors.gray.400',
+                                    colors.gray[400]
+                                )}`,
+                            },
+                    },
                     '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-value':
                         {
                             color: `${theme(
@@ -1084,10 +1176,12 @@ module.exports = plugin.withOptions(
                             marginRight: `${theme('spacing.0', spacing[0])}`,
                             marginLeft: `${theme('spacing.1.5', spacing[1.5])}`,
                         },
-                    '.dark .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-value':
-                        {
-                            color: 'white',
-                        },
+                    [darkSelector]: {
+                        '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-value':
+                            {
+                                color: 'white',
+                            },
+                    },
                     '.apexcharts-canvas .apexcharts-xaxistooltip-text': {
                         fontWeight: `${theme(
                             'fontWeight.normal',
@@ -1110,13 +1204,15 @@ module.exports = plugin.withOptions(
                         borderWidth: '10px',
                         marginLeft: '-10px',
                     },
-                    '.dark .apexcharts-canvas .apexcharts-xaxistooltip:after, .dark .apexcharts-canvas .apexcharts-xaxistooltip:before':
-                        {
-                            borderBottomColor: `${theme(
-                                'colors.gray.700',
-                                colors.gray[700]
-                            )}`,
-                        },
+                    [darkSelector]: {
+                        '.apexcharts-canvas .apexcharts-xaxistooltip:after, .apexcharts-canvas .apexcharts-xaxistooltip:before':
+                            {
+                                borderBottomColor: `${theme(
+                                    'colors.gray.700',
+                                    colors.gray[700]
+                                )}`,
+                            },
+                    },
                     '.apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-y-group':
                         {
                             padding: '0',
@@ -1132,17 +1228,19 @@ module.exports = plugin.withOptions(
                                 colors.gray[500]
                             )} !important`,
                         },
-                    '.dark .apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active':
-                        {
-                            backgroundColor: `${theme(
-                                'colors.gray.700',
-                                colors.gray[700]
-                            )} !important`,
-                            color: `${theme(
-                                'colors.gray.400',
-                                colors.gray[400]
-                            )} !important`,
-                        },
+                    [darkSelector]: {
+                        '.apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active':
+                            {
+                                backgroundColor: `${theme(
+                                    'colors.gray.700',
+                                    colors.gray[700]
+                                )} !important`,
+                                color: `${theme(
+                                    'colors.gray.400',
+                                    colors.gray[400]
+                                )} !important`,
+                            },
+                    },
                     '.apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active:first-of-type':
                         {
                             paddingTop: `${theme('spacing.3', spacing[3])}`,
@@ -1176,16 +1274,20 @@ module.exports = plugin.withOptions(
                                 colors.gray[900]
                             )} !important`,
                         },
-                    '.dark .apexcharts-canvas .apexcharts-legend-text': {
-                        color: `${theme(
-                            'colors.gray.400',
-                            colors.gray[400]
-                        )} !important`,
-                    },
-                    '.dark .apexcharts-canvas .apexcharts-legend-text:not(.apexcharts-inactive-legend):hover':
-                        {
-                            color: `white !important`,
+                    [darkSelector]: {
+                        '.apexcharts-canvas .apexcharts-legend-text': {
+                            color: `${theme(
+                                'colors.gray.400',
+                                colors.gray[400]
+                            )} !important`,
                         },
+                    },
+                    [darkSelector]: {
+                        '.apexcharts-canvas .apexcharts-legend-text:not(.apexcharts-inactive-legend):hover':
+                            {
+                                color: `white !important`,
+                            },
+                    },
                     '.apexcharts-canvas .apexcharts-legend-series': {
                         marginLeft: `${theme('spacing.2', spacing[2])}`,
                         marginRight: `${theme('spacing.2', spacing[2])}`,
@@ -1208,10 +1310,12 @@ module.exports = plugin.withOptions(
                                 defaultTheme.fontWeight.bold
                             )}`,
                         },
-                    '.dark .apexcharts-canvas .apexcharts-datalabels-group .apexcharts-text.apexcharts-datalabel-value':
-                        {
-                            fill: `white !important`,
-                        },
+                    [darkSelector]: {
+                        '.apexcharts-canvas .apexcharts-datalabels-group .apexcharts-text.apexcharts-datalabel-value':
+                            {
+                                fill: `white !important`,
+                            },
+                    },
                     '.apexcharts-canvas .apexcharts-datalabels-group .apexcharts-text.apexcharts-datalabel-label':
                         {
                             fill: `${theme(
@@ -1224,13 +1328,15 @@ module.exports = plugin.withOptions(
                                 defaultTheme.fontWeight.normal
                             )}`,
                         },
-                    '.dark .apexcharts-canvas .apexcharts-datalabels-group .apexcharts-text.apexcharts-datalabel-label':
-                        {
-                            fill: `${theme(
-                                'colors.gray.400',
-                                colors.gray[400]
-                            )} !important`,
-                        },
+                    [darkSelector]: {
+                        '.apexcharts-canvas .apexcharts-datalabels-group .apexcharts-text.apexcharts-datalabel-label':
+                            {
+                                fill: `${theme(
+                                    'colors.gray.400',
+                                    colors.gray[400]
+                                )} !important`,
+                            },
+                    },
                     '.apexcharts-canvas .apexcharts-datalabels .apexcharts-text.apexcharts-pie-label':
                         {
                             fontSize: `${theme('fontSize.xs')} !important`,
@@ -1251,13 +1357,15 @@ module.exports = plugin.withOptions(
                                 colors.gray[200]
                             )} !important`,
                         },
-                    '.dark .apexcharts-gridline, .dark .apexcharts-xcrosshairs, .dark .apexcharts-ycrosshairs':
-                        {
-                            stroke: `${theme(
-                                'colors.gray.700',
-                                colors.gray[700]
-                            )} !important`,
-                        },
+                    [darkSelector]: {
+                        '.apexcharts-gridline, .apexcharts-xcrosshairs, .apexcharts-ycrosshairs':
+                            {
+                                stroke: `${theme(
+                                    'colors.gray.700',
+                                    colors.gray[700]
+                                )} !important`,
+                            },
+                    },
                 });
             }
         };

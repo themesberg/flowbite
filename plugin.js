@@ -21,7 +21,7 @@ module.exports = plugin.withOptions(
             const cfg = config();
             const darkSelector =
                 cfg.darkMode === 'class'
-                    ? '.dark'
+                    ? '.dark &'
                     : cfg.darkMode === 'media'
                     ? '@media (prefers-color-scheme: dark)'
                     : '';
@@ -114,9 +114,7 @@ module.exports = plugin.withOptions(
                     [`[role="tooltip"] > [data-popper-arrow]:before`]: {
                         'border-style': 'solid',
                         'border-color': colors.gray[200],
-                    },
-                    [darkSelector]: {
-                        [`[role="tooltip"] > [data-popper-arrow]:before`]: {
+                        [darkSelector]: {
                             'border-style': 'solid',
                             'border-color': colors.gray[600],
                         },
@@ -124,9 +122,7 @@ module.exports = plugin.withOptions(
                     [`[role="tooltip"] > [data-popper-arrow]:after`]: {
                         'border-style': 'solid',
                         'border-color': colors.gray[200],
-                    },
-                    [darkSelector]: {
-                        [`[role="tooltip"] > [data-popper-arrow]:after`]: {
+                        [darkSelector]: {
                             'border-style': 'solid',
                             'border-color': colors.gray[600],
                         },
@@ -336,12 +332,7 @@ module.exports = plugin.withOptions(
                         'background-size': `0.55em 0.55em`,
                         'background-position': `center`,
                         'background-repeat': `no-repeat`,
-                    },
-                    [darkSelector]: {
-                        [[
-                            `[type='checkbox']:checked`,
-                            `[type='radio']:checked`,
-                        ]]: {
+                        [darkSelector]: {
                             'border-color': `transparent`,
                             'background-color': `currentColor`,
                             'background-size': `0.55em 0.55em`,
@@ -364,9 +355,7 @@ module.exports = plugin.withOptions(
                             `<svg viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`
                         )}")`,
                         'background-size': `1em 1em`,
-                    },
-                    [darkSelector]: {
-                        [`[type='radio']:checked`]: {
+                        [darkSelector]: {
                             'background-image': `url("${svgToDataUri(
                                 `<svg viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`
                             )}")`,
@@ -424,14 +413,7 @@ module.exports = plugin.withOptions(
                                 colors.gray[700]
                             ),
                         },
-                    },
-                    [[`:is([dir=rtl]) input[type=file]::file-selector-button`]]:
-                        {
-                            paddingRight: spacing[8],
-                            paddingLeft: spacing[4],
-                        },
-                    [darkSelector]: {
-                        [[`input[type=file]::file-selector-button`]]: {
+                        [darkSelector]: {
                             color: 'white',
                             background: theme(
                                 'colors.gray.600',
@@ -445,6 +427,11 @@ module.exports = plugin.withOptions(
                             },
                         },
                     },
+                    [[`:is([dir=rtl]) input[type=file]::file-selector-button`]]:
+                        {
+                            paddingRight: spacing[8],
+                            paddingLeft: spacing[4],
+                        },
                     [[`input[type="range"]::-webkit-slider-thumb`]]: {
                         height: spacing[5],
                         width: spacing[5],
@@ -458,11 +445,7 @@ module.exports = plugin.withOptions(
                     },
                     [[`input[type="range"]:disabled::-webkit-slider-thumb`]]: {
                         background: theme('colors.gray.400', colors.gray[400]),
-                    },
-                    [darkSelector]: {
-                        [[
-                            `input[type="range"]:disabled::-webkit-slider-thumb`,
-                        ]]: {
+                        [darkSelector]: {
                             background: theme(
                                 'colors.gray.500',
                                 colors.gray[500]
@@ -495,9 +478,7 @@ module.exports = plugin.withOptions(
                     },
                     [[`input[type="range"]:disabled::-moz-range-thumb`]]: {
                         background: theme('colors.gray.400', colors.gray[400]),
-                    },
-                    [darkSelector]: {
-                        [[`input[type="range"]:disabled::-moz-range-thumb`]]: {
+                        [darkSelector]: {
                             background: theme(
                                 'colors.gray.500',
                                 colors.gray[500]
@@ -595,10 +576,7 @@ module.exports = plugin.withOptions(
                                 colors.gray[50]
                             )}`,
                             minWidth: '16rem',
-                        },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-search .datatable-input, .datatable-wrapper .datatable-input':
-                            {
+                            [darkSelector]: {
                                 color: 'white',
                                 backgroundColor: `${theme(
                                     'colors.gray.800',
@@ -609,7 +587,7 @@ module.exports = plugin.withOptions(
                                     colors.gray[700]
                                 )}`,
                             },
-                    },
+                        },
                     '.datatable-wrapper thead th .datatable-input': {
                         backgroundColor: 'white',
                         fontWeight: `${theme('fontWeight.normal')}`,
@@ -617,9 +595,7 @@ module.exports = plugin.withOptions(
                         paddingTop: `.35rem`,
                         paddingBottom: `.35rem`,
                         minWidth: '0',
-                    },
-                    [darkSelector]: {
-                        '.datatable-wrapper thead th .datatable-input': {
+                        [darkSelector]: {
                             backgroundColor: `${theme(
                                 'colors.gray.700',
                                 colors.gray[700]
@@ -637,15 +613,12 @@ module.exports = plugin.withOptions(
                             'fontSize.sm',
                             defaultTheme.fontSize.sm
                         )}`,
-                    },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-top .datatable-dropdown':
-                            {
-                                color: `${theme(
-                                    'colors.gray.400',
-                                    colors.gray[400]
-                                )}`,
-                            },
+                        [darkSelector]: {
+                            color: `${theme(
+                                'colors.gray.400',
+                                colors.gray[400]
+                            )}`,
+                        },
                     },
                     '.datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
                         {
@@ -665,10 +638,7 @@ module.exports = plugin.withOptions(
                             )}`,
                             marginRight: `${theme('spacing.1', spacing[1])}`,
                             minWidth: '4rem',
-                        },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
-                            {
+                            [darkSelector]: {
                                 backgroundColor: `${theme(
                                     'colors.gray.800',
                                     colors.gray[800]
@@ -679,7 +649,7 @@ module.exports = plugin.withOptions(
                                 )}`,
                                 color: 'white',
                             },
-                    },
+                        },
                     '.datatable-wrapper .datatable-container thead tr.search-filtering-row th':
                         {
                             paddingTop: '0',
@@ -702,9 +672,7 @@ module.exports = plugin.withOptions(
                         )}`,
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
                         textAlign: 'left',
-                    },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-table': {
+                        [darkSelector]: {
                             color: `${theme(
                                 'colors.gray.400',
                                 colors.gray[400]
@@ -721,9 +689,7 @@ module.exports = plugin.withOptions(
                             'colors.gray.50',
                             colors.gray[50]
                         )}`,
-                    },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-table thead': {
+                        [darkSelector]: {
                             color: `${theme(
                                 'colors.gray.400',
                                 colors.gray[400]
@@ -755,33 +721,25 @@ module.exports = plugin.withOptions(
                                 'colors.gray.900',
                                 colors.blue[900]
                             )}`,
-                        },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-table thead th .datatable-sorter:hover, .datatable-wrapper .datatable-table thead th.datatable-ascending .datatable-sorter, .datatable-wrapper .datatable-table thead th.datatable-descending .datatable-sorter':
-                            {
+                            [darkSelector]: {
                                 color: 'white',
                             },
-                    },
+                        },
                     '.datatable-wrapper .datatable-table tbody tr.selected': {
                         backgroundColor: `${theme(
                             'colors.gray.100',
                             colors.gray[100]
                         )}`,
-                    },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-table tbody tr.selected':
-                            {
-                                backgroundColor: `${theme(
-                                    'colors.gray.700',
-                                    colors.gray[700]
-                                )}`,
-                            },
+                        [darkSelector]: {
+                            backgroundColor: `${theme(
+                                'colors.gray.700',
+                                colors.gray[700]
+                            )}`,
+                        },
                     },
                     '.datatable-wrapper .datatable-table tbody tr': {
                         borderBottom: `1px solid ${theme('colors.gray.200')}`,
-                    },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-table tbody tr': {
+                        [darkSelector]: {
                             borderBottom: `1px solid ${theme(
                                 'colors.gray.700'
                             )}`,
@@ -804,15 +762,12 @@ module.exports = plugin.withOptions(
                             'fontSize.sm',
                             defaultTheme.fontSize.sm
                         )}`,
-                    },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-bottom .datatable-info':
-                            {
-                                color: `${theme(
-                                    'colors.gray.400',
-                                    colors.gray[400]
-                                )}`,
-                            },
+                        [darkSelector]: {
+                            color: `${theme(
+                                'colors.gray.400',
+                                colors.gray[400]
+                            )}`,
+                        },
                     },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list':
                         {
@@ -847,10 +802,7 @@ module.exports = plugin.withOptions(
                             borderRight: `1px solid ${theme(
                                 'colors.gray.300'
                             )}`,
-                        },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link':
-                            {
+                            [darkSelector]: {
                                 color: `${theme(
                                     'colors.gray.400',
                                     colors.gray[400]
@@ -860,7 +812,7 @@ module.exports = plugin.withOptions(
                                     colors.gray[700]
                                 )}`,
                             },
-                    },
+                        },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type, .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type':
                         {
                             position: 'relative',
@@ -868,13 +820,10 @@ module.exports = plugin.withOptions(
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link, .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link':
                         {
                             color: 'transparent',
-                        },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link, .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link':
-                            {
+                            [darkSelector]: {
                                 color: 'transparent',
                             },
-                    },
+                        },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link::after':
                         {
                             content: `url("${svgToDataUri(
@@ -891,6 +840,16 @@ module.exports = plugin.withOptions(
                             width: '1.3rem',
                             height: '1.3rem',
                             transform: 'translate(-50%, -50%)',
+                            [darkSelector]: {
+                                content: `url("${svgToDataUri(
+                                    `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="${theme(
+                                            'colors.gray.400',
+                                            colors.gray[400]
+                                        )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 8-4 4 4 4"/>
+                                    </svg>`
+                                )}")`,
+                            },
                         },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link:hover::after':
                         {
@@ -902,30 +861,14 @@ module.exports = plugin.withOptions(
                                     )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 8-4 4 4 4"/>
                                 </svg>`
                             )}")`,
-                        },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link::after':
-                            {
-                                content: `url("${svgToDataUri(
-                                    `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="${theme(
-                                        'colors.gray.400',
-                                        colors.gray[400]
-                                    )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 8-4 4 4 4"/>
-                                </svg>`
-                                )}")`,
-                            },
-                    },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link:hover::after':
-                            {
+                            [darkSelector]: {
                                 content: `url("${svgToDataUri(
                                     `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
                                     <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 8-4 4 4 4"/>
                                 </svg>`
                                 )}")`,
                             },
-                    },
+                        },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link::after':
                         {
                             content: `url("${svgToDataUri(
@@ -943,6 +886,17 @@ module.exports = plugin.withOptions(
                             width: '1.3rem',
                             height: '1.3rem',
                             transform: 'translate(50%, -50%)',
+                            [darkSelector]: {
+                                content: `url("${svgToDataUri(
+                                    `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="${theme(
+                                            'colors.gray.400',
+                                            colors.gray[400]
+                                        )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
+                                        </svg>
+                                        `
+                                )}")`,
+                            },
                         },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link:hover::after':
                         {
@@ -955,24 +909,7 @@ module.exports = plugin.withOptions(
                                 </svg>
                                 `
                             )}")`,
-                        },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link::after':
-                            {
-                                content: `url("${svgToDataUri(
-                                    `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
-                                <path stroke="${theme(
-                                    'colors.gray.400',
-                                    colors.gray[400]
-                                )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
-                                </svg>
-                                `
-                                )}")`,
-                            },
-                    },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link:hover::after':
-                            {
+                            [darkSelector]: {
                                 content: `url("${svgToDataUri(
                                     `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
                                 <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
@@ -980,7 +917,7 @@ module.exports = plugin.withOptions(
                                 `
                                 )}")`,
                             },
-                    },
+                        },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link':
                         {
                             borderTopLeftRadius: `${theme(
@@ -992,15 +929,12 @@ module.exports = plugin.withOptions(
                                 borderRadius.lg
                             )}`,
                             borderLeft: `1px solid ${theme('colors.gray.300')}`,
-                        },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link':
-                            {
+                            [darkSelector]: {
                                 borderLeft: `1px solid ${theme(
                                     'colors.gray.700'
                                 )}`,
                             },
-                    },
+                        },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link':
                         {
                             borderTopRightRadius: `${theme(
@@ -1020,14 +954,11 @@ module.exports = plugin.withOptions(
                                 'colors.gray.700',
                                 colors.gray[700]
                             )}`,
-                        },
-                    [darkSelector]: {
-                        '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link:hover':
-                            {
+                            [darkSelector]: {
                                 backgroundColor: `${theme('colors.gray.700')}`,
                                 color: 'white',
                             },
-                    },
+                        },
                     '@screen sm': {
                         '.datatable-wrapper .datatable-top': {
                             flexDirection: 'row-reverse',
@@ -1054,9 +985,7 @@ module.exports = plugin.withOptions(
                         )}`,
                         // padding: `${theme('spacing.3', spacing[3])}`,
                         boxShadow: `${theme('boxShadow.md', boxShadow.md)}`,
-                    },
-                    [darkSelector]: {
-                        '.apexcharts-canvas .apexcharts-tooltip': {
+                        [darkSelector]: {
                             backgroundColor: `${theme(
                                 'colors.gray.700',
                                 colors.gray[700]
@@ -1096,10 +1025,7 @@ module.exports = plugin.withOptions(
                                 'colors.gray.500',
                                 colors.gray[500]
                             )}`,
-                        },
-                    [darkSelector]: {
-                        '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title':
-                            {
+                            [darkSelector]: {
                                 backgroundColor: `${theme(
                                     'colors.gray.600',
                                     colors.gray[600]
@@ -1113,7 +1039,7 @@ module.exports = plugin.withOptions(
                                     colors.gray[400]
                                 )}`,
                             },
-                    },
+                        },
                     '.apexcharts-canvas .apexcharts-xaxistooltip': {
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
                         paddingTop: `${theme('spacing.2', spacing[2])}`,
@@ -1127,9 +1053,7 @@ module.exports = plugin.withOptions(
                             borderRadius.DEFAULT
                         )}`,
                         boxShadow: `${theme('boxShadow.md', boxShadow.md)}`,
-                    },
-                    [darkSelector]: {
-                        '.apexcharts-canvas .apexcharts-xaxistooltip': {
+                        [darkSelector]: {
                             color: `${theme(
                                 'colors.gray.400',
                                 colors.gray[400]
@@ -1150,16 +1074,13 @@ module.exports = plugin.withOptions(
                                 'fontSize.sm',
                                 defaultTheme.fontSize.sm
                             )}`,
-                        },
-                    [darkSelector]: {
-                        '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-label':
-                            {
+                            [darkSelector]: {
                                 color: `${theme(
                                     'colors.gray.400',
                                     colors.gray[400]
                                 )}`,
                             },
-                    },
+                        },
                     '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-value':
                         {
                             color: `${theme(
@@ -1170,18 +1091,15 @@ module.exports = plugin.withOptions(
                                 'fontSize.sm',
                                 defaultTheme.fontSize.sm
                             )}`,
+                            [darkSelector]: {
+                                color: 'white',
+                            },
                         },
                     ':is([dir=rtl]) .apexcharts-tooltip .apexcharts-tooltip-marker':
                         {
                             marginRight: `${theme('spacing.0', spacing[0])}`,
                             marginLeft: `${theme('spacing.1.5', spacing[1.5])}`,
                         },
-                    [darkSelector]: {
-                        '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-value':
-                            {
-                                color: 'white',
-                            },
-                    },
                     '.apexcharts-canvas .apexcharts-xaxistooltip-text': {
                         fontWeight: `${theme(
                             'fontWeight.normal',
@@ -1195,6 +1113,12 @@ module.exports = plugin.withOptions(
                     '.apexcharts-canvas .apexcharts-xaxistooltip:after, .apexcharts-canvas .apexcharts-xaxistooltip:before':
                         {
                             borderBottomColor: 'white',
+                            [darkSelector]: {
+                                borderBottomColor: `${theme(
+                                    'colors.gray.700',
+                                    colors.gray[700]
+                                )}`,
+                            },
                         },
                     '.apexcharts-canvas .apexcharts-xaxistooltip:after': {
                         borderWidth: '8px',
@@ -1203,15 +1127,6 @@ module.exports = plugin.withOptions(
                     '.apexcharts-canvas .apexcharts-xaxistooltip:before': {
                         borderWidth: '10px',
                         marginLeft: '-10px',
-                    },
-                    [darkSelector]: {
-                        '.apexcharts-canvas .apexcharts-xaxistooltip:after, .apexcharts-canvas .apexcharts-xaxistooltip:before':
-                            {
-                                borderBottomColor: `${theme(
-                                    'colors.gray.700',
-                                    colors.gray[700]
-                                )}`,
-                            },
                     },
                     '.apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-y-group':
                         {
@@ -1227,10 +1142,7 @@ module.exports = plugin.withOptions(
                                 'colors.gray.500',
                                 colors.gray[500]
                             )} !important`,
-                        },
-                    [darkSelector]: {
-                        '.apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active':
-                            {
+                            [darkSelector]: {
                                 backgroundColor: `${theme(
                                     'colors.gray.700',
                                     colors.gray[700]
@@ -1240,7 +1152,7 @@ module.exports = plugin.withOptions(
                                     colors.gray[400]
                                 )} !important`,
                             },
-                    },
+                        },
                     '.apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active:first-of-type':
                         {
                             paddingTop: `${theme('spacing.3', spacing[3])}`,
@@ -1262,6 +1174,12 @@ module.exports = plugin.withOptions(
                             'colors.gray.500',
                             colors.gray[500]
                         )} !important`,
+                        [darkSelector]: {
+                            color: `${theme(
+                                'colors.gray.400',
+                                colors.gray[400]
+                            )} !important`,
+                        },
                     },
                     ':is([dir=rtl]) .apexcharts-canvas .apexcharts-legend-text':
                         {
@@ -1273,21 +1191,10 @@ module.exports = plugin.withOptions(
                                 'colors.gray.900',
                                 colors.gray[900]
                             )} !important`,
-                        },
-                    [darkSelector]: {
-                        '.apexcharts-canvas .apexcharts-legend-text': {
-                            color: `${theme(
-                                'colors.gray.400',
-                                colors.gray[400]
-                            )} !important`,
-                        },
-                    },
-                    [darkSelector]: {
-                        '.apexcharts-canvas .apexcharts-legend-text:not(.apexcharts-inactive-legend):hover':
-                            {
+                            [darkSelector]: {
                                 color: `white !important`,
                             },
-                    },
+                        },
                     '.apexcharts-canvas .apexcharts-legend-series': {
                         marginLeft: `${theme('spacing.2', spacing[2])}`,
                         marginRight: `${theme('spacing.2', spacing[2])}`,
@@ -1298,7 +1205,7 @@ module.exports = plugin.withOptions(
                         display: 'flex',
                         alignItems: 'center',
                     },
-                    '.apexcharts-datalabels-group .apexcharts-text.apexcharts-datalabel-value':
+                    '.apexcharts-canvas .apexcharts-datalabels-group .apexcharts-text.apexcharts-datalabel-value':
                         {
                             fill: `${theme(
                                 'colors.gray.900',
@@ -1309,13 +1216,10 @@ module.exports = plugin.withOptions(
                                 'fontWeight.bold',
                                 defaultTheme.fontWeight.bold
                             )}`,
-                        },
-                    [darkSelector]: {
-                        '.apexcharts-canvas .apexcharts-datalabels-group .apexcharts-text.apexcharts-datalabel-value':
-                            {
+                            [darkSelector]: {
                                 fill: `white !important`,
                             },
-                    },
+                        },
                     '.apexcharts-canvas .apexcharts-datalabels-group .apexcharts-text.apexcharts-datalabel-label':
                         {
                             fill: `${theme(
@@ -1327,16 +1231,13 @@ module.exports = plugin.withOptions(
                                 'fontWeight.normal',
                                 defaultTheme.fontWeight.normal
                             )}`,
-                        },
-                    [darkSelector]: {
-                        '.apexcharts-canvas .apexcharts-datalabels-group .apexcharts-text.apexcharts-datalabel-label':
-                            {
+                            [darkSelector]: {
                                 fill: `${theme(
                                     'colors.gray.400',
                                     colors.gray[400]
                                 )} !important`,
                             },
-                    },
+                        },
                     '.apexcharts-canvas .apexcharts-datalabels .apexcharts-text.apexcharts-pie-label':
                         {
                             fontSize: `${theme('fontSize.xs')} !important`,
@@ -1356,16 +1257,13 @@ module.exports = plugin.withOptions(
                                 'colors.gray.200',
                                 colors.gray[200]
                             )} !important`,
-                        },
-                    [darkSelector]: {
-                        '.apexcharts-gridline, .apexcharts-xcrosshairs, .apexcharts-ycrosshairs':
-                            {
+                            [darkSelector]: {
                                 stroke: `${theme(
                                     'colors.gray.700',
                                     colors.gray[700]
                                 )} !important`,
                             },
-                    },
+                        },
                 });
             }
         };

@@ -1955,3 +1955,102 @@ window.addEventListener('load', function() {
 {{< /example >}}
 
 ## Javascript behaviour
+
+Learn more about how you can programmatically use the WYSIWYG editor using Javascript by creating a new instance of the object, setting options, method, event listeners, and more to integrate with your code base.
+
+After you have installed Tip Tap via NPM or CDN you can create a new `Editor` object:
+
+```javascript
+import { Editor } from '@tiptap/core';
+import StarterKit from '@tiptap/starter-kit';
+
+new Editor({
+  element: document.getElementById('wysiwyg'),
+  extensions: [StarterKit],
+  content: '<p>Welcome to Flowbite!</p>',
+})
+```
+
+Make sure that you also have an empty `div` element with the appropiate ID:
+
+```html
+<div id="wysiwyg"></div>
+```
+
+This code will automatically set up the markup needed inside of the WYSIWYG component. Please note the fact that the Tip Tap library is headless so you need to style the elements yourself, but you can copy-paste the examples from Flowbite on this page.
+
+### Content styling
+
+We also recommend adding custom typography classes from the [Flowbite Typography](https://flowbite.com/docs/components/typography/) package so that the content inside of the text editor will be correctly styled:
+
+```javascript
+new Editor({
+  element: document.getElementById('wysiwyg'),
+  extensions: [StarterKit],
+  content: '<p>Welcome to Flowbite!</p>',
+  editorProps: {
+        attributes: {
+            class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
+        },
+    }
+})
+```
+
+### Extensions
+
+Tip Tap is a modular library meaning that if you want to introduce images, videos, links and other elements inside the WYSIWYG component you need to specifically import that resources from the library and set it as an extension when initialising the `Editor` object.
+
+Here is one example where we add the link extension:
+
+```javascript
+import { Editor } from '@tiptap/core';
+import StarterKit from '@tiptap/starter-kit';
+import Link from '@tiptap/extension-link';
+
+const editor = new Editor({
+    element: document.querySelector('#wysiwyg-links-example'),
+    extensions: [
+        StarterKit,
+        Link.configure({
+            openOnClick: false,
+            autolink: true,
+            defaultProtocol: 'https',
+        })
+    ],
+    content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+    editorProps: {
+        attributes: {
+            class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
+        },
+    }
+});
+```
+
+Links will now be available inside the WYSIWYG component. Learn more about all of the <a href="https://tiptap.dev/docs/editor/extensions/overview" target="_blank" rel="nofollow">extensions API</a>.
+
+### Methods
+
+You can easily call the methods from the `Editor` object to set text styles, links, images, and more. Here is one example where based upon a click event on a button you will be prompted with the URL of the link and it will add it to the currently selected text:
+
+```javascript
+// set up custom event listeners for the buttons
+document.getElementById('toggleLinkButton').addEventListener('click', () => {
+    const url = window.prompt('Enter image URL:', 'https://flowbite.com');
+    editor.chain().focus().toggleLink({ href: url }).run();
+});
+```
+
+And here's another example where you can unset a link:
+
+```javascript
+// unset the links based on a button click
+document.getElementById('removeLinkButton').addEventListener('click', () => {
+    editor.chain().focus().unsetLink().run()
+});
+```
+
+Examples from this page have functional elements so you can check the JavaScript tab for the source code.
+
+## License
+
+Resources from this page are licensed under the MIT License, including the Flowbite examples and Tip Tap.

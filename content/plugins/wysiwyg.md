@@ -1774,6 +1774,11 @@ window.addEventListener('load', function() {
     document.getElementById('removeRowButton').addEventListener('click', () => {
         editor.chain().focus().deleteRow().run();
     });
+
+    // delete table
+    document.getElementById('deleteTableButton').addEventListener('click', () => {
+        editor.chain().focus().deleteTable().run();
+    });
 }
 })
 ` >}}
@@ -1790,6 +1795,19 @@ window.addEventListener('load', function() {
             <div id="tooltip-table" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                 Add table
                 <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+            <button id="deleteTableButton" type="button" data-tooltip-target="tooltip-delete-table" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15.5v3c0 .5523.44772 1 1 1h10.5M3 15.5v-4m0 4h11m-11-4v-5c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v5m-18 0h18m0 0v1m-13-1v8m4-8v8m4-8v2m1.8956 5.9528 1.5047-1.5047m0 0 1.5048-1.5048m-1.5048 1.5048 1.4605 1.4604m-1.4605-1.4604-1.4604-1.4605"/>
+                </svg>
+                <span class="sr-only">Delete table</span>
+            </button>
+            <div id="tooltip-delete-table" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Delete table
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+            <div class="px-1">
+                <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
             </div>
             <button id="addColumnBeforeButton" type="button" data-tooltip-target="tooltip-add-column-before" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -1820,6 +1838,9 @@ window.addEventListener('load', function() {
             <div id="tooltip-remove-column" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                 Remove column
                 <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+            <div class="px-1">
+                <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
             </div>
             <button id="addRowBeforeButton" type="button" data-tooltip-target="tooltip-add-row-before" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">

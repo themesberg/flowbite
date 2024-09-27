@@ -1796,6 +1796,21 @@ window.addEventListener('load', function() {
     document.getElementById('mergeCellsButton').addEventListener('click', () => {
         editor.chain().focus().mergeCells().run();
     });
+
+    // split cells
+    document.getElementById('splitCellsButton').addEventListener('click', () => {
+        editor.chain().focus().splitCell().run();
+    });
+
+    // go to previous cell
+    document.getElementById('previousCellButton').addEventListener('click', () => {
+        editor.chain().focus().goToPreviousCell().run();
+    });
+
+    // go to the next cell
+    document.getElementById('nextCellButton').addEventListener('click', () => {
+        editor.chain().focus().goToNextCell().run();
+    });
 }
 })
 ` >}}
@@ -1891,18 +1906,51 @@ window.addEventListener('load', function() {
             </div>
         </div>
     </div>
-        <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
-            <button id="mergeCellsButton" type="button" data-tooltip-target="tooltip-merge-cells" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
-                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 18.5v2H4v-16h6v2m4 12v2h6v-16h-6v2m-6.49543 8.4954L10 12.5m0 0-2.49543-2.4954M10 12.5H4.05191m12.50199 2.5539L14 12.5m0 0 2.5539-2.55392M14 12.5h5.8319"/>
-                </svg>
-                <span class="sr-only">Merge cells</span>
-            </button>
-            <div id="tooltip-merge-cells" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                Mergre cells
-                <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
+    <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
+        <button id="mergeCellsButton" type="button" data-tooltip-target="tooltip-merge-cells" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 18.5v2H4v-16h6v2m4 12v2h6v-16h-6v2m-6.49543 8.4954L10 12.5m0 0-2.49543-2.4954M10 12.5H4.05191m12.50199 2.5539L14 12.5m0 0 2.5539-2.55392M14 12.5h5.8319"/>
+            </svg>
+            <span class="sr-only">Merge cells</span>
+        </button>
+        <div id="tooltip-merge-cells" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            Merge cells
+            <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
+        <button id="splitCellsButton" type="button" data-tooltip-target="tooltip-split-cells" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18.5v2h6v-16H4v2m16 12v2h-6v-16h6v2M6.49545 14.9954 4.00003 12.5m0 0 2.49542-2.4954M4.00003 12.5h5.94809m7.49798 2.5539L20 12.5m0 0-2.5539-2.55392M20 12.5h-5.8319"/>
+            </svg>
+            <span class="sr-only">Split cells</span>
+        </button>
+        <div id="tooltip-split-cells" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            Split cells
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+        <div class="px-1">
+            <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
+        </div>
+        <button id="previousCellButton" type="button" data-tooltip-target="tooltip-previous-cell" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15.5v3c0 .5523.44772 1 1 1h9.5M3 15.5v-4m0 4h9m-9-4v-5c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v5H3Zm5 0v8m4-8v8m5.9001-1.0999L16 16.5m0 0 1.9001-1.9001M16 16.5h5"/>
+            </svg>
+            <span class="sr-only">Previous cell</span>
+        </button>
+        <div id="tooltip-previous-cell" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            Previous cell
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+        <button id="nextCellButton" type="button" data-tooltip-target="tooltip-next-cell" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15.5v3c0 .5523.44772 1 1 1h9.5M3 15.5v-4m0 4h9m-9-4v-5c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v5H3Zm5 0v8m4-8v8m7.0999-1.0999L21 16.5m0 0-1.9001-1.9001M21 16.5h-5"/>
+            </svg>
+            <span class="sr-only">Next cell</span>
+        </button>
+        <div id="tooltip-next-cell" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            Next cell
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+    </div>
 </div>
 <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
     <label for="wysiwyg-tables-example" class="sr-only">Publish post</label>

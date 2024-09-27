@@ -1579,7 +1579,7 @@ window.addEventListener('load', function() {
             </div>
         </div>
     </div>
-</div> 
+</div>
 {{< /example >}}
 
 ## Adding videos
@@ -1719,6 +1719,8 @@ window.addEventListener('load', function() {
 
 ## Editing tables
 
+Use this example to edit table data inside the WYSIWYG text editor by adding and removing table column, rows, and cells and use other features to navigate through the table data for a convenient editing process.
+
 {{< example id="default-wysiwyg-video-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
@@ -1726,7 +1728,30 @@ import Table from 'https://esm.sh/@tiptap/extension-table@2.6.6';
 import TableCell from 'https://esm.sh/@tiptap/extension-table-cell@2.6.6';
 import TableHeader from 'https://esm.sh/@tiptap/extension-table-header@2.6.6';
 import TableRow from 'https://esm.sh/@tiptap/extension-table-row@2.6.6';
-import Gapcursor from 'https://esm.sh/@tiptap/extension-gapcursor@2.6.6'
+import Gapcursor from 'https://esm.sh/@tiptap/extension-gapcursor@2.6.6';
+
+const TipTapExtensionTableCell = TableCell.extend({
+	addAttributes() {
+		return {
+			...this.parent?.(),
+			backgroundColor: {
+				default: null,
+				renderHTML: (attributes) => {
+					if (!attributes.backgroundColor) {
+						return {}
+					}
+
+					return {
+						style: 'background-color: ' + attributes.backgroundColor,
+					}
+				},
+				parseHTML: (element) => {
+					return element.style.backgroundColor.replace(/['"]+/g, '')
+				},
+			},
+		}
+	},
+});
 
 window.addEventListener('load', function() {
     if (document.getElementById("wysiwyg-tables-example")) {
@@ -1742,7 +1767,8 @@ window.addEventListener('load', function() {
             }),
             TableRow,
             TableHeader,
-            TableCell
+            TableCell,
+            TipTapExtensionTableCell
         ],
         content: '<p>Understanding global <strong>population growth trends</strong> is essential for analyzing the development and future of nations. Population growth rates provide insights into economic prospects, resource allocation, and potential challenges for countries worldwide.</p><p>Here is an example of population data:</p><div class=tableWrapper><table style=min-width:75px><col><col><col><tr><th colspan=1 rowspan=1><p>Country<th colspan=1 rowspan=1><p>Population<th colspan=1 rowspan=1><p>Growth rate<tr><td colspan=1 rowspan=1><p>United States<td colspan=1 rowspan=1><p>333 million<td colspan=1 rowspan=1><p>0.4%<tr><td colspan=1 rowspan=1><p>China<td colspan=1 rowspan=1><p>1.41 billion<td colspan=1 rowspan=1><p>0%<tr><td colspan=1 rowspan=1><p>Germany<td colspan=1 rowspan=1><p>83.8 million<td colspan=1 rowspan=1><p>0.7%<tr><td colspan=1 rowspan=1><p>India<td colspan=1 rowspan=1><p>1.42 billion<td colspan=1 rowspan=1><p>1.0%<tr><td colspan=1 rowspan=1><p>Brazil<td colspan=1 rowspan=1><p>214 million<td colspan=1 rowspan=1><p>0.6%<tr><td colspan=1 rowspan=1><p>Indonesia<td colspan=1 rowspan=1><p>273 million<td colspan=1 rowspan=1><p>1.1%<tr><td colspan=1 rowspan=1><p>Pakistan<td colspan=1 rowspan=1><p>231 million<td colspan=1 rowspan=1><p>2.0%<tr><td colspan=1 rowspan=1><p>Nigeria<td colspan=1 rowspan=1><p>223 million<td colspan=1 rowspan=1><p>2.5%</table></div><p>Learn more about global population trends from reliable sources like the <a href=https://www.worldpopulationreview.com>World Population Review</a>.</p>',
         editorProps: {
@@ -1820,6 +1846,27 @@ window.addEventListener('load', function() {
     // toggle header cell
     document.getElementById('toggleHeaderCellButton').addEventListener('click', () => {
         editor.chain().focus().toggleHeaderCell().run();
+    });
+
+    const cellAttributeModal = FlowbiteInstances.getInstance('Modal', 'cell-attribute-modal');
+    
+    document.getElementById('addCellAttributeForm').addEventListener('submit', (e) => {
+
+        e.preventDefault();
+        
+        const attributeName = document.getElementById('attribute-name').value;
+        const attributeValue = document.getElementById('attribute-value').value;
+
+        if (attributeName && attributeValue) {
+            const result = editor.commands.setCellAttribute(attributeName ? attributeName : '', attributeValue ? attributeValue : '');
+            document.getElementById('addCellAttributeForm').reset();
+            cellAttributeModal.hide();
+        }
+    });
+
+    // fix tables
+    document.getElementById('fixTablesButton').addEventListener('click', () => {
+       editor.commands.fixTables();
     });
 
     // go to previous cell
@@ -1990,8 +2037,28 @@ window.addEventListener('load', function() {
             Toggle header cell
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
+        <button data-modal-toggle="cell-attribute-modal" data-modal-target="cell-attribute-modal" type="button" data-tooltip-target="tooltip-add-cell-attribute" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15.5v3c0 .5523.44772 1 1 1h8v-8m-9 4v-4m0 4h9m-9-4v-5c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v4m-18 1h11m6.25 5c0 1.2426-1.0073 2.25-2.25 2.25m2.25-2.25c0-1.2426-1.0073-2.25-2.25-2.25m2.25 2.25H21m-3 2.25c-1.2426 0-2.25-1.0074-2.25-2.25M18 18.75v.75m-2.25-3c0-1.2426 1.0074-2.25 2.25-2.25m-2.25 2.25H15m3-2.25v-.75m-1.591 1.409-.5303-.5303m4.2426 4.2426-.5303-.5303m-3.182 0-.5303.5303m4.2426-4.2426-.5303.5303"/>
+            </svg>
+            <span class="sr-only">Add cell attribute</span>
+        </button>
+        <div id="tooltip-add-cell-attribute" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            Add cell attribute
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
         <div class="px-1">
             <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
+        </div>
+        <button id="fixTablesButton" type="button" data-tooltip-target="tooltip-fix-tables" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15.5v3c0 .5523.44772 1 1 1h4v-4m-5 0v-4m0 4h5m-5-4v-5c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v1.98935M3 11.5h5v4m9.4708 4.1718-.8696-1.4388-2.8164-.235-2.573-4.2573 1.4873-2.8362 1.4441 2.3893c.3865.6396 1.2183.8447 1.8579.4582.6396-.3866.8447-1.2184.4582-1.858l-1.444-2.38925h3.1353l2.6101 4.27715-1.0713 2.5847.8695 1.4388"/>
+            </svg>
+            <span class="sr-only">Fix tables</span>
+        </button>
+        <div id="tooltip-fix-tables" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            Fix tables
+            <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
         <button id="previousCellButton" type="button" data-tooltip-target="tooltip-previous-cell" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -2019,6 +2086,40 @@ window.addEventListener('load', function() {
     <label for="wysiwyg-tables-example" class="sr-only">Publish post</label>
     <div id="wysiwyg-tables-example"class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"></div>
 </div>
+</div>
+
+<div id="cell-attribute-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Add cell attribute
+                </h3>
+                <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="cell-attribute-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5">
+                <form id="addCellAttributeForm" class="space-y-4" action="#">
+                    <div>
+                        <label for="attribute-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Attribute name</label>
+                        <input type="text" name="attribute-name" id="attribute-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="backgroundColor" placeholder="eg. backgroundColor" />
+                    </div>
+                    <div>
+                        <label for="attribute-value" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Attribute value</label>
+                        <input type="text" name="attribute-value" id="attribute-value" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="#E1EFFE;" placeholder="#E1EFFE;" />
+                    </div>
+                    <button type="submit" id="addCellAttributeButton" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Set attribute</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 {{< /example >}}
 

@@ -20,25 +20,21 @@
         slug: nuxt-js
       - title: Svelte
       - title: Angular
-        new: true
       - title: Astro
       - title: Remix
       - title: Meteor.js
         slug: meteor-js
-        new: true
       - title: Gatsby
       - title: SolidJS
         slug: solid-js
       - title: Qwik
       - title: Laravel
-        new: true
       - title: Symfony
       - title: Rails
       - title: Phoenix
       - title: Django
       - title: Flask
       - title: Blazor
-        new: true
 
 - title: Customize
   slug: customize
@@ -67,9 +63,7 @@
       - title: Card
       - title: Carousel
       - title: Chat Bubble
-        new: true
       - title: Clipboard
-        new: true
       - title: Datepicker
       - title: Device Mockups
       - title: Drawer
@@ -108,13 +102,10 @@
       - title: File Input
       - title: Search Input
       - title: Number Input
-        new: true
       - title: Phone Input
-        new: true
       - title: Select
       - title: Textarea
       - title: Timepicker
-        new: true
       - title: Checkbox
       - title: Radio
       - title: Toggle
@@ -138,4 +129,6 @@
   pages:
       - title: Charts
       - title: Datatables
+        new: true
+      - title: WYSIWYG
         new: true

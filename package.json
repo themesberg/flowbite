@@ -1,6 +1,6 @@
 {
   "name": "flowbite",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "description": "The most popular library of interactive components built with Tailwind CSS",
   "keywords": [
     "flowbite",
@@ -85,6 +85,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-tailwindcss": "^3.7.1",
     "file-loader": "^6.2.0",
+    "flowbite-typography": "^1.0.4",
     "mini-css-extract-plugin": "^1.3.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.6",
@@ -108,8 +109,8 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.9.3",
-    "mini-svg-data-uri": "^1.4.3",
-    "flowbite-datepicker": "^1.3.0"
+    "flowbite-datepicker": "^1.3.0",
+    "mini-svg-data-uri": "^1.4.3"
   },
   "files": [
     "lib",

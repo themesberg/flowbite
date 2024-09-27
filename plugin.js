@@ -15,6 +15,7 @@ module.exports = plugin.withOptions(
             datatables = false,
             forms = true,
             tooltips = true,
+            wysiwyg = false,
         } = options;
 
         return function ({ addBase, addComponents, theme }) {
@@ -525,6 +526,23 @@ module.exports = plugin.withOptions(
                             'colors.blue.600',
                             colors.gray[600]
                         ),
+                    },
+                });
+            }
+
+            if (wysiwyg) {
+                addComponents({
+                    '.selectedCell': {
+                        backgroundColor: `${theme(
+                            'colors.gray.50',
+                            colors.gray[50]
+                        )}`,
+                    },
+                    '.dark .selectedCell': {
+                        backgroundColor: `${theme(
+                            'colors.gray.700',
+                            colors.gray[700]
+                        )}`,
                     },
                 });
             }
@@ -1269,6 +1287,7 @@ module.exports = plugin.withOptions(
             datatables = false,
             forms = true,
             tooltips = true,
+            wysiwyg = false,
         } = options;
 
         const safelist = [
@@ -1289,6 +1308,7 @@ module.exports = plugin.withOptions(
             'shadow-lg',
             '!bg-gray-50',
             'dark:!bg-gray-700',
+            'selectedCell',
         ];
 
         if (charts) {

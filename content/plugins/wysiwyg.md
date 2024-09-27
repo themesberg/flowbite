@@ -41,7 +41,19 @@ Require the plugin inside the `tailwind.config.js` file:
 }
 ```
 
-3. Finally, install Tip Tap either via NPM or skip this step if you're using CDN:
+3. Set the `wysiwyg` field from the Flowbite plugin to `true` to enable pseudo styles:
+
+```javascript
+```javascript
+plugins: [
+  require('flowbite/plugin')({
+      wysiwyg: true,
+  }),
+  // ... other plugins
+]
+```
+
+4. Finally, install Tip Tap either via NPM or skip this step if you're using CDN:
 
 ```bash
 npm install @tiptap/core @tiptap/pm @tiptap/starter-kit
@@ -1779,6 +1791,11 @@ window.addEventListener('load', function() {
     document.getElementById('deleteTableButton').addEventListener('click', () => {
         editor.chain().focus().deleteTable().run();
     });
+
+    // merge cells
+    document.getElementById('mergeCellsButton').addEventListener('click', () => {
+        editor.chain().focus().mergeCells().run();
+    });
 }
 })
 ` >}}
@@ -1874,6 +1891,18 @@ window.addEventListener('load', function() {
             </div>
         </div>
     </div>
+        <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
+            <button id="mergeCellsButton" type="button" data-tooltip-target="tooltip-merge-cells" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 18.5v2H4v-16h6v2m4 12v2h6v-16h-6v2m-6.49543 8.4954L10 12.5m0 0-2.49543-2.4954M10 12.5H4.05191m12.50199 2.5539L14 12.5m0 0 2.5539-2.55392M14 12.5h5.8319"/>
+                </svg>
+                <span class="sr-only">Merge cells</span>
+            </button>
+            <div id="tooltip-merge-cells" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Mergre cells
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+        </div>
 </div>
 <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
     <label for="wysiwyg-tables-example" class="sr-only">Publish post</label>

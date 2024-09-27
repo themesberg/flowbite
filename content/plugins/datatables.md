@@ -24,6 +24,7 @@ All examples are responsive, dark mode and RTL support included and by installin
 Before continuing make sure that you have Tailwind CSS, Flowbite, and Simple Datables in your project.
 
 1. Install Tailwind CSS and follow our <a href="{{< ref "getting-started/quickstart" >}}">quickstart guide</a> to install Flowbite and the official plugin
+
 2. Set the field `datatables` to the value `true` inside the `tailwind.config.js` file:
 
 ```javascript

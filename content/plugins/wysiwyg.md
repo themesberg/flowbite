@@ -41,7 +41,7 @@ Require the plugin inside the `tailwind.config.js` file:
 }
 ```
 
-3. Finally, install [Tip Tap](https://tiptap.dev/docs/editor/getting-started/install/vanilla-javascript) either via NPM or skip this step if you're using CDN:
+3. Finally, install Tip Tap either via NPM or skip this step if you're using CDN:
 
 ```bash
 npm install @tiptap/core @tiptap/pm @tiptap/starter-kit
@@ -1369,8 +1369,6 @@ window.addEventListener('load', function() {
 
 Use this example to add and remove anchor links for the content inside of the WYSIWYG text editor.
 
-Add extra docs for the link options
-
 {{< example id="default-wysiwyg-links-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
@@ -1746,6 +1744,36 @@ window.addEventListener('load', function() {
     document.getElementById('addTableButton').addEventListener('click', () => {
         editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run();
     });
+
+    // add column before
+    document.getElementById('addColumnBeforeButton').addEventListener('click', () => {
+        editor.chain().focus().addColumnBefore().run();
+    });
+
+    // add column after
+    document.getElementById('addColumnAfterButton').addEventListener('click', () => {
+        editor.chain().focus().addColumnAfter().run();
+    });
+
+    // remove column
+    document.getElementById('removeColumnButton').addEventListener('click', () => {
+        editor.chain().focus().deleteColumn().run();
+    });
+
+    // add row before
+    document.getElementById('addRowBeforeButton').addEventListener('click', () => {
+        editor.chain().focus().addRowBefore().run();
+    });
+
+    // add row after
+    document.getElementById('addRowAfterButton').addEventListener('click', () => {
+        editor.chain().focus().addRowAfter().run();
+    });
+
+    // remove row
+    document.getElementById('removeRowButton').addEventListener('click', () => {
+        editor.chain().focus().deleteRow().run();
+    });
 }
 })
 ` >}}
@@ -1754,13 +1782,73 @@ window.addEventListener('load', function() {
     <div class="flex items-center gap-2">
         <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
             <button id="addTableButton" type="button" data-tooltip-target="tooltip-table" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6Zm2 8v-2h7v2H4Zm0 2v2h7v-2H4Zm9 2h7v-2h-7v2Zm7-4v-2h-7v2h7Z" clip-rule="evenodd"/>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15v3c0 .5523.44772 1 1 1h10.5M3 15v-4m0 4h11M3 11V6c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v5M3 11h18m0 0v1M8 11v8m4-8v8m4-8v2m1 4h2m0 0h2m-2 0v2m0-2v-2"/>
                 </svg>
                 <span class="sr-only">Add table</span>
             </button>
             <div id="tooltip-table" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                 Add table
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+            <button id="addColumnBeforeButton" type="button" data-tooltip-target="tooltip-add-column-before" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5.5v14m-8-7h2m0 0h2m-2 0v2m0-2v-2m12 1h-6m6 4h-6m-11 4h16c.5523 0 1-.4477 1-1v-12c0-.55228-.4477-1-1-1H4c-.55228 0-1 .44772-1 1v12c0 .5523.44772 1 1 1Z"/>
+                </svg>
+                <span class="sr-only">Add column before</span>
+            </button>
+            <div id="tooltip-add-column-before" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Add column before
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+            <button id="addColumnAfterButton" type="button" data-tooltip-target="tooltip-add-column-after" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5.5v14m8-7h-2m0 0h-2m2 0v2m0-2v-2m-12 1h6m-6 4h6m11 4H4c-.55228 0-1-.4477-1-1v-12c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v12c0 .5523-.4477 1-1 1Z"/>
+                </svg>
+                <span class="sr-only">Add column after</span>
+            </button>
+            <div id="tooltip-add-column-after" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Add column after
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+            <button id="removeColumnButton" type="button" data-tooltip-target="tooltip-remove-column" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5.5v14m-6-8h6m-6 4h6m4.5061-1.4939L15.0123 12.5m0 0 1.5061-1.5061M15.0123 12.5l1.5061 1.5061M15.0123 12.5l-1.5062-1.5061M20 19.5H4c-.55228 0-1-.4477-1-1v-12c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v12c0 .5523-.4477 1-1 1Z"/>
+                </svg>
+                <span class="sr-only">Remove column</span>
+            </button>
+            <div id="tooltip-remove-column" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Remove column
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+            <button id="addRowBeforeButton" type="button" data-tooltip-target="tooltip-add-row-before" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15.5v3c0 .5523.44772 1 1 1h16c.5523 0 1-.4477 1-1v-3m-18 0v-9c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v9m-18 0h18m-13 0v4m4-4v4m4-4v4m-6-9h2m0 0h2m-2 0v2m0-2v-2"/>
+                </svg>
+                <span class="sr-only">Add row before</span>
+            </button>
+            <div id="tooltip-add-row-before" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Add row before
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+            <button id="addRowAfterButton" type="button" data-tooltip-target="tooltip-add-row-after" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9.5v-3c0-.55228.44772-1 1-1h16c.5523 0 1 .44771 1 1v3m-18 0v9c0 .5523.44772 1 1 1h16c.5523 0 1-.4477 1-1v-9m-18 0h18m-13 0v-4m4 4v-4m4 4v-4m-6 9h2m0 0h2m-2 0v-2m0 2v2"/>
+                </svg>
+                <span class="sr-only">Add row after</span>
+            </button>
+            <div id="tooltip-add-row-after" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Add row after
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+            <button id="removeRowButton" type="button" data-tooltip-target="tooltip-remove-row" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15.5v3c0 .5523.44772 1 1 1h16c.5523 0 1-.4477 1-1v-3m-18 0v-9c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v9m-18 0h18m-13 0v4m4-4v4m4-4v4m-5.5061-7.4939L12 10.5m0 0 1.5061-1.50614M12 10.5l1.5061 1.5061M12 10.5l-1.5061-1.50614"/>
+                </svg>
+                <span class="sr-only">Remove row</span>
+            </button>
+            <div id="tooltip-remove-row" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Remove row
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
         </div>

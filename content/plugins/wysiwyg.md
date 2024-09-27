@@ -1802,6 +1802,26 @@ window.addEventListener('load', function() {
         editor.chain().focus().splitCell().run();
     });
 
+    // merge or split
+    document.getElementById('mergeOrSplitButton').addEventListener('click', () => {
+        editor.chain().focus().mergeOrSplit().run();
+    });
+
+    // toggle header column
+    document.getElementById('toggleHeaderColumnButton').addEventListener('click', () => {
+        editor.chain().focus().toggleHeaderColumn().run();
+    });
+
+    // toggle header row
+    document.getElementById('toggleHeaderRowButton').addEventListener('click', () => {
+        editor.chain().focus().toggleHeaderRow().run();
+    });
+
+    // toggle header cell
+    document.getElementById('toggleHeaderCellButton').addEventListener('click', () => {
+        editor.chain().focus().toggleHeaderCell().run();
+    });
+
     // go to previous cell
     document.getElementById('previousCellButton').addEventListener('click', () => {
         editor.chain().focus().goToPreviousCell().run();
@@ -1925,6 +1945,49 @@ window.addEventListener('load', function() {
         </button>
         <div id="tooltip-split-cells" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
             Split cells
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+        <button id="mergeOrSplitButton" type="button" data-tooltip-target="tooltip-merge-or-split" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.5045 14.9954 21 12.5m0 0-2.4955-2.4954M21 12.5h-5.9481m-9.49798 2.5539L3 12.5m0 0 2.55392-2.55392M3 12.5h5.83192m.16807 7v-14H15v14H8.99999Z"/>
+            </svg>
+            <span class="sr-only">Merge or split</span>
+        </button>
+        <div id="tooltip-merge-or-split" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            Merge or split
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+        <div class="px-1">
+            <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
+        </div>
+        <button id="toggleHeaderColumnButton" type="button" data-tooltip-target="tooltip-toggle-header-column" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5.5v14m6-8h-6m6 4h-6m-9-3h1.99093M4 19.5h16c.5523 0 1-.4477 1-1v-12c0-.55228-.4477-1-1-1H4c-.55228 0-1 .44772-1 1v12c0 .5523.44772 1 1 1Zm8-7c0 1.1046-.8954 2-2 2-1.10457 0-2-.8954-2-2s.89543-2 2-2c1.1046 0 2 .8954 2 2Z"/>
+            </svg>
+            <span class="sr-only">Toggle header column</span>
+        </button>
+        <div id="tooltip-toggle-header-column" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            Toggle header column
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+        <button id="toggleHeaderRowButton" type="button" data-tooltip-target="tooltip-toggle-header-row" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15.5v3c0 .5523.44772 1 1 1h16c.5523 0 1-.4477 1-1v-3m-18 0v-9c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v9m-18 0h18m-13 0v4m4-4v4m4-4v4m-7-9h1.9909M15 10.5c0 1.1046-.8954 2-2 2s-2-.8954-2-2c0-1.10457.8954-2 2-2s2 .89543 2 2Z"/>
+            </svg>
+            <span class="sr-only">Toggle header row</span>
+        </button>
+        <div id="tooltip-toggle-header-row" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            Toggle header row
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+        <button id="toggleHeaderCellButton" type="button" data-tooltip-target="tooltip-toggle-header-cell" class="p-1.5 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15.5v3c0 .5523.44772 1 1 1h16c.5523 0 1-.4477 1-1v-3m-18 0v-9c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v9m-18 0h18m-13 0v4m4-4v4m4-4v4m-7-9h1.9909M15 10.5c0 1.1046-.8954 2-2 2s-2-.8954-2-2c0-1.10457.8954-2 2-2s2 .89543 2 2Z"/>
+            </svg>
+            <span class="sr-only">Toggle header cell</span>
+        </button>
+        <div id="tooltip-toggle-header-cell" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            Toggle header cell
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
         <div class="px-1">

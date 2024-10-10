@@ -628,7 +628,7 @@ datepicker.getDatepickerInstance();
 
 ### Parent library
 
-If you want to directly use the main Datepicker component instance you can either install it via NPM and import it or use the `getDatepickertInstance()` method using our Instance Manager to call all of the extra options and methods from the [parent plugin library](https://github.com/themesberg/flowbite-datepicker):
+If you want to directly use the main Datepicker component instance you can either install it via NPM and import it or use the `getDatepickerInstance()` method using our Instance Manager to call all of the extra options and methods from the [parent plugin library](https://github.com/themesberg/flowbite-datepicker):
 
 ```bash
 npm install flowbite-datepicker --save

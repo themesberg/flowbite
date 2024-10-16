@@ -135,7 +135,14 @@ window.addEventListener('load', function() {
     document.getElementById('toggleItalicButton').addEventListener('click', () => editor.chain().focus().toggleItalic().run());
     document.getElementById('toggleUnderlineButton').addEventListener('click', () => editor.chain().focus().toggleUnderline().run());
     document.getElementById('toggleStrikeButton').addEventListener('click', () => editor.chain().focus().toggleStrike().run());
-    document.getElementById('toggleHighlightButton').addEventListener('click', () => editor.chain().focus().toggleHighlight({ color: '#ffc078' }).run());
+    document.getElementById('toggleHighlightButton').addEventListener('click', () => {
+    const isHighlighted = editor.isActive('highlight');
+    // when using toggleHighlight(), judge if is is already highlighted.
+    editor.chain().focus().toggleHighlight({
+        color: isHighlighted ? undefined : '#ffc078' // if is already highlighted，unset the highlight color
+    }).run();
+    });
+
     document.getElementById('toggleLinkButton').addEventListener('click', () => {
         const url = window.prompt('Enter image URL:', 'https://flowbite.com');
         editor.chain().focus().toggleLink({ href: url }).run();
@@ -759,7 +766,14 @@ window.addEventListener('load', function() {
     document.getElementById('toggleStrikeButton').addEventListener('click', () => editor.chain().focus().toggleStrike().run());
     document.getElementById('toggleSubscriptButton').addEventListener('click', () => editor.chain().focus().toggleSubscript().run());
     document.getElementById('toggleSuperscriptButton').addEventListener('click', () => editor.chain().focus().toggleSuperscript().run());
-    document.getElementById('toggleHighlightButton').addEventListener('click', () => editor.chain().focus().toggleHighlight({ color: '#ffc078' }).run());
+    document.getElementById('toggleHighlightButton').addEventListener('click', () => {
+    const isHighlighted = editor.isActive('highlight');
+    // when using toggleHighlight(), judge if is is already highlighted.
+    editor.chain().focus().toggleHighlight({
+        color: isHighlighted ? undefined : '#ffc078' // if is already highlighted，unset the highlight color
+    }).run();
+    });
+
     document.getElementById('toggleCodeButton').addEventListener('click', () => {
         editor.chain().focus().toggleCode().run();
     });

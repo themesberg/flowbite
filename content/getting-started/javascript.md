@@ -231,7 +231,7 @@ modal.show();
 modal.hide();
 ```
 
-You can even remove the instance form the instance manager:
+You can even remove the instance from the instance manager:
 
 ```javascript
 // remove the instance object from the global FlowbiteInstances manager

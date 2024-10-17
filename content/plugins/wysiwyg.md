@@ -44,7 +44,6 @@ Require the plugin inside the `tailwind.config.js` file:
 3. Set the `wysiwyg` field from the Flowbite plugin to `true` to enable pseudo styles:
 
 ```javascript
-```javascript
 plugins: [
   require('flowbite/plugin')({
       wysiwyg: true,

@@ -317,3 +317,7 @@ Here's a full list of UI components, sections, and templates resources you can l
 ## Qwik starter project
 
 The open-source community from Flowbite has created a [Qwik starter project](https://github.com/themesberg/tailwind-qwik-starter) that has Tailwind CSS and Flowbite already installed and includes a showcase of some of the UI components already configured.
+
+## Qwik components
+
+You can check out the whole collection of Flowbite components built with Qwik and Tailwind CSS by checking out the [GitHub repository](https://github.com/qwikerx/flowbite-qwik) and the [Flowbite Qwik](https://flowbite-qwik.com) official documentation.

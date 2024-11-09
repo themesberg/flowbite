@@ -44,7 +44,6 @@ Require the plugin inside the `tailwind.config.js` file:
 3. Set the `wysiwyg` field from the Flowbite plugin to `true` to enable pseudo styles:
 
 ```javascript
-```javascript
 plugins: [
   require('flowbite/plugin')({
       wysiwyg: true,
@@ -78,6 +77,8 @@ import YouTube from 'https://esm.sh/@tiptap/extension-youtube@2.6.6';
 import TextStyle from 'https://esm.sh/@tiptap/extension-text-style@2.6.6';
 import FontFamily from 'https://esm.sh/@tiptap/extension-font-family@2.6.6';
 import { Color } from 'https://esm.sh/@tiptap/extension-color@2.6.6';
+import Bold from 'https://esm.sh/@tiptap/extension-bold@2.6.6'; // Import the Bold extension
+
 
 window.addEventListener('load', function() {
     if (document.getElementById("wysiwyg-example")) {
@@ -98,12 +99,40 @@ window.addEventListener('load', function() {
             };
         },
     });
+    const CustomBold = Bold.extend({
+        // Override the renderHTML method
+        renderHTML({ mark, HTMLAttributes }) {
+            const { style, ...rest } = HTMLAttributes;
 
+            // Merge existing styles with font-weight
+            const newStyle = 'font-weight: bold;' + (style ? ' ' + style : '');
+
+            return ['span', { ...rest, style: newStyle.trim() }, 0];
+        },
+        // Ensure it doesn't exclude other marks
+        addOptions() {
+            return {
+                ...this.parent?.(),
+                HTMLAttributes: {},
+            };
+        },
+    });
     // tip tap editor setup
     const editor = new Editor({
         element: document.querySelector('#wysiwyg-example'),
         extensions: [
-            StarterKit,
+            // Exclude the default Bold mark
+            StarterKit.configure({
+                marks: {
+                    bold: false,
+                },
+            }),
+            // Include the custom Bold extension
+            CustomBold,
+            TextStyle,
+            Color,
+            FontSizeTextStyle,
+            FontFamily,
             Highlight,
             Underline,
             Link.configure({
@@ -117,10 +146,6 @@ window.addEventListener('load', function() {
             HorizontalRule,
             Image,
             YouTube,
-            TextStyle,
-            FontSizeTextStyle,
-            Color,
-            FontFamily
         ],
         content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
         editorProps: {
@@ -716,6 +741,7 @@ import Superscript from 'https://esm.sh/@tiptap/extension-superscript@2.6.6';
 import TextStyle from 'https://esm.sh/@tiptap/extension-text-style@2.6.6';
 import FontFamily from 'https://esm.sh/@tiptap/extension-font-family@2.6.6';
 import { Color } from 'https://esm.sh/@tiptap/extension-color@2.6.6';
+import Bold from 'https://esm.sh/@tiptap/extension-bold@2.6.6';
 
 window.addEventListener('load', function() {
     if (document.getElementById("wysiwyg-text-example")) {
@@ -736,12 +762,27 @@ window.addEventListener('load', function() {
             };
         },
     });
+    const CustomBold = Bold.extend({
+    // Override the renderHTML method
+    renderHTML({ HTMLAttributes }) {
+    return ['span', { ...HTMLAttributes, style: 'font-weight: bold;' }, 0];
+    },
+    // Ensure it doesn't exclude other marks
+    excludes: '',
+    });
 
     // tip tap editor setup
     const editor = new Editor({
         element: document.querySelector('#wysiwyg-text-example'),
-        extensions: [
-            StarterKit,
+          extensions: [
+            // Exclude the default Bold mark
+            StarterKit.configure({
+                marks: {
+                    bold: false,
+                },
+            }),
+            // Include the custom Bold extension
+            CustomBold,
             Highlight,
             Underline,
             Subscript,

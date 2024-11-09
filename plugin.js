@@ -1315,7 +1315,7 @@ module.exports = plugin.withOptions(
             safelist.push({ pattern: /^apexcharts-.*$/ });
         }
 
-        if (charts) {
+        if (datatables) {
             safelist.push({ pattern: /^datatable-.*$/ });
         }
 

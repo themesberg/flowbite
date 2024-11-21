@@ -31,7 +31,7 @@ Use this free example to show a text message for announcement with a CTA link, a
                 </svg>
                 <span class="sr-only">Light bulb</span>
             </span>
-            <span>New brand identity has been launched for the <a href="https://flowbite.com" class="inline font-medium text-blue-600 underline dark:text-blue-500 underline-offset-2 decoration-600 dark:decoration-500 decoration-solid hover:no-underline">Flowbite Library</a></span>
+            <span>New brand identity has been launched for the <a href="https://flowbite.com" class="inline font-medium text-blue-600 underline dark:text-blue-500 underline-offset-2 decoration-1 dark:decoration-500 decoration-solid hover:no-underline">Flowbite Library</a></span>
         </p>
     </div>
     <div class="flex items-center">

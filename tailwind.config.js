@@ -72,13 +72,13 @@ module.exports = {
         },
     },
     plugins: [
-        require('./plugin')({
-            charts: true,
-            forms: true,
-            tooltips: true,
-            datatables: true,
-            wysiwyg: true,
-        }),
+        // require('./plugin')({
+        //     charts: true,
+        //     forms: true,
+        //     tooltips: true,
+        //     datatables: true,
+        //     wysiwyg: true,
+        // }),
         require('flowbite-typography'),
     ],
 };

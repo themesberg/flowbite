@@ -408,7 +408,7 @@ code.language-html .token.comment{
 }
 
 .DocSearch-Search-Icon {
-	@apply w-4 h-4 md:w-3 md:h-3 md:mr-1 text-transparent !important;
+	@apply !w-4 !h-4 md:!w-3 md:!h-3 md:!mr-1 !text-transparent;
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><path stroke="%236A7280" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/></svg>');
 }
 

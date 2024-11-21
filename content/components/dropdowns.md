@@ -1284,7 +1284,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">targetElement</code>
               </td>
@@ -1298,7 +1298,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
                   Apply the main dropdown menu element as the first parameter of the Dropdown object.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">triggerElement</code>
               </td>
@@ -1312,7 +1312,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
                   Apply the trigger element, such as a button, which is required to position the dropdown menu and set a click event.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">options</code>
               </td>
@@ -1326,7 +1326,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
                   Use the options parameter to set the positioning of the dropdown menu.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
                 </td>
@@ -1364,7 +1364,7 @@ Use the following options as the third parameter for the Dropdown class to set t
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">placement</code>
               </td>
@@ -1375,7 +1375,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set the position of the dropdown menu relative to the trigger element choosing from <code class="text-purple-600 dark:text-purple-400">top|right|bottom|left</code>.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">triggerType</code>
               </td>
@@ -1386,7 +1386,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set the event type that will trigger the dropdown menu choosing between <code class="text-purple-600 dark:text-purple-400">hover|click|none</code>.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">offsetDistance</code>
               </td>
@@ -1397,7 +1397,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set the amount of pixels the dropdown menu should be offset relative to the trigger element on the X horizontal axis.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">offsetSkidding</code>
               </td>
@@ -1408,7 +1408,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set the number of pixels the dropdown menu should be offset relative to the trigger element on the Y horizontal axis.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">delay</code>
               </td>
@@ -1419,7 +1419,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set the milliseconds for which the showing or hiding of the dropdown will be delayed for when using the hover trigger type.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">ignoreClickOutsideClass</code>
               </td>
@@ -1430,7 +1430,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set a class for one or more elements that when they are clicked should ignore closing the dropdown (ie. offcanvas datepicker).
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">onHide</code>
               </td>
@@ -1441,7 +1441,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set a callback function when the dropdown has been hidden.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">onShow</code>
               </td>
@@ -1452,7 +1452,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set a callback function when the dropdown has been shown.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">onToggle</code>
               </td>
@@ -1484,7 +1484,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">show()</code>
               </td>
@@ -1492,7 +1492,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method on the Dropdown object to show the dropdown menu.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">hide()</code>
               </td>
@@ -1500,7 +1500,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method on the Dropdown object to hide the dropdown menu.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">toggle()</code>
               </td>
@@ -1508,7 +1508,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method on the Dropdown object to toggle the visibility of the dropdown menu.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">isVisible()</code>
               </td>
@@ -1516,7 +1516,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Returns true or false based on the visibility of the dropdown.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">updateOnShow(callback)</code>
               </td>
@@ -1524,7 +1524,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method to set a callback function when the dropdown has been shown.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
               </td>
@@ -1532,7 +1532,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method to set a callback function when the dropdown has been hidden.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
               </td>

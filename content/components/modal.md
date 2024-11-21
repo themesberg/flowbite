@@ -913,7 +913,7 @@ Initialize a Modal object with parameters such as the modal element and the opti
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">targetEl</code>
                 </td>
@@ -927,7 +927,7 @@ Initialize a Modal object with parameters such as the modal element and the opti
                     Set the main modal element as a JavaScript object.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">options</code>
                 </td>
@@ -941,7 +941,7 @@ Initialize a Modal object with parameters such as the modal element and the opti
                     Use the options parameter to set the default state of the modal, placement, and animations.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
                 </td>
@@ -979,7 +979,7 @@ Use the following options as the second parameter for the Modal object to set th
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">placement</code>
                 </td>
@@ -990,7 +990,7 @@ Use the following options as the second parameter for the Modal object to set th
                     Set the position of the modal element relative to the document body by choosing one of the values from <code class="text-purple-600 dark:text-purple-400">{top|center|right}-{left|center|right}</code>. (eg. top-left or bottom-right)
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">backdrop</code>
                 </td>
@@ -1001,7 +1001,7 @@ Use the following options as the second parameter for the Modal object to set th
                     Choose between <code class="text-purple-600 dark:text-purple-400">static</code> or <code class="text-purple-600 dark:text-purple-400">dynamic</code> to prevent closing the modal when clicking outside.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">backdropClasses</code>
                 </td>
@@ -1012,7 +1012,7 @@ Use the following options as the second parameter for the Modal object to set th
                     Set a string of Tailwind CSS classes for the backdrop element (eg. <code class="text-purple-600 dark:text-purple-400">'bg-blue-500 dark:bg-blue-400'</code>.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">closable</code>
                 </td>
@@ -1023,7 +1023,7 @@ Use the following options as the second parameter for the Modal object to set th
                     Set to <code class="text-purple-600 dark:text-purple-400">false</code> to disable closing the modal on hitting ESC or clicking on the backdrop.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onHide</code>
                 </td>
@@ -1034,7 +1034,7 @@ Use the following options as the second parameter for the Modal object to set th
                     Set a callback function when the modal has been hidden.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onShow</code>
                 </td>
@@ -1045,7 +1045,7 @@ Use the following options as the second parameter for the Modal object to set th
                     Set a callback function when the modal has been shown.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onToggle</code>
                 </td>
@@ -1077,7 +1077,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">toggle()</code>
                 </td>
@@ -1085,7 +1085,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use the toggle function on the Modal object to toggle the modal element's visibility.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">show()</code>
                 </td>
@@ -1093,7 +1093,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use the show function on the Modal object to show the modal element.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">hide()</code>
                 </td>
@@ -1101,7 +1101,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use the hide function on the Modal object to hide the modal element.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">isHidden()</code>
                 </td>
@@ -1109,7 +1109,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use this function to check if the modal is hidden.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">isVisible()</code>
                 </td>
@@ -1117,7 +1117,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use this function to check if the modal is visible.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">updateOnShow(callback)</code>
                 </td>
@@ -1125,7 +1125,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use this method to set a custom callback function when the modal has been shown.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
                 </td>
@@ -1133,7 +1133,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use this method to set a custom callback function when the modal has been closed.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
                 </td>

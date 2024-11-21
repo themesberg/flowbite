@@ -488,7 +488,7 @@ The parameters for the Dismiss object can be used to programmatically initialize
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">targetEl</code>
               </td>
@@ -502,7 +502,7 @@ The parameters for the Dismiss object can be used to programmatically initialize
                   Pass the element object that will be dismissed.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
               </td>
@@ -516,7 +516,7 @@ The parameters for the Dismiss object can be used to programmatically initialize
                   Pass the element object that will trigger the targetEl dismission on click.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">options</code>
               </td>
@@ -530,7 +530,7 @@ The parameters for the Dismiss object can be used to programmatically initialize
                   Pass the options object to set the trigger element, transition, duration, timing classes of the dismiss animation and callback functions.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
                 </td>
@@ -568,7 +568,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">transition</code>
               </td>
@@ -579,7 +579,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   Use one of the Transition Property utility classes from Tailwind CSS to set transition type for the main element. The default value is <code class="text-purple-600 dark:text-purple-400">transition-opacity</code>.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">duration</code>
               </td>
@@ -590,7 +590,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   Set the duration of the dismissing animation. The default value is <code class="text-purple-600 dark:text-purple-400">300</code> (300 milliseconds).
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">timing</code>
               </td>
@@ -601,7 +601,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   Set the transition timing function utility class from Tailwind CSS. The default value is <code class="text-purple-600 dark:text-purple-400">ease-out</code>.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">onHide</code>
               </td>
@@ -633,7 +633,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">hide()</code>
               </td>
@@ -641,7 +641,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
                   Use this method on the Dismiss object to hide the target element.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               <td class="px-6 py-4 font-medium">
                   <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
               </td>

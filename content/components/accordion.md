@@ -417,7 +417,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">accordionEl</code>
                 </td>
@@ -431,7 +431,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
                     The parent HTML element of the accordion component.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">items</code>
                 </td>
@@ -445,7 +445,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
                     Array of accordion items objects including the unique identifier, heading element, content element, and the active state.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">options</code>
                 </td>
@@ -459,7 +459,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
                     Object of options that you can set to customize the style of the accordion items and set callback functions.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
                 </td>
@@ -497,7 +497,7 @@ Use the following options as the second parameter for the Accordion object to cu
             </tr>
         </thead>
         <tbody>
-              <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+              <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                   <td class="px-6 py-4 font-medium">
                       <code class="text-blue-600 dark:text-blue-400">alwaysOpen</code>
                   </td>
@@ -508,7 +508,7 @@ Use the following options as the second parameter for the Accordion object to cu
                       If set to true then multiple accordion elements can be open at the same time. By default it's false.
                   </td>
               </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">activeClasses</code>
                 </td>
@@ -519,7 +519,7 @@ Use the following options as the second parameter for the Accordion object to cu
                     Set an array of Tailwind CSS class names to apply for the active accordion heading element.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">inactiveClasses</code>
                 </td>
@@ -530,7 +530,7 @@ Use the following options as the second parameter for the Accordion object to cu
                     Apply an array of Tailwind CSS class names to apply for the inactive accordion heading elements.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onOpen</code>
                 </td>
@@ -541,7 +541,7 @@ Use the following options as the second parameter for the Accordion object to cu
                     Set a callback function when a new accordion item has been opened.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onClose</code>
                 </td>
@@ -573,7 +573,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">toggle(id)</code>
                 </td>
@@ -581,7 +581,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this function to toggle an accordion item based on its current state.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">open(id)</code>
                 </td>
@@ -589,7 +589,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this function to open an accordion item based on the id.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">close(id)</code>
                 </td>
@@ -597,7 +597,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this function to close an accordion item based on the id.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">updateOnOpen(callback)</code>
                 </td>
@@ -605,7 +605,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this method to set a callback function when an accordion item has been opened.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">updateOnClose(callback)</code>
                 </td>
@@ -613,7 +613,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this method to set a callback function when an accordion item has been closed.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
                 </td>

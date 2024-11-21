@@ -52,7 +52,7 @@
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14v4m-4 1h8M1 10h18M2 1h16a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
         </svg></button>
         {{ if $id }}
-          <div id="{{ $id }}-full-screen-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+          <div id="{{ $id }}-full-screen-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
               Toggle full screen
               <div class="tooltip-arrow" data-popper-arrow></div>
           </div>
@@ -61,7 +61,7 @@
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.5 16.5h3M2 1h14a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
         </svg></button>
         {{ if $id }}
-          <div id="{{ $id }}-tablet-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+          <div id="{{ $id }}-tablet-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
               Toggle tablet view
               <div class="tooltip-arrow" data-popper-arrow></div>
           </div>
@@ -70,7 +70,7 @@
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 14h12M1 4h12M6.5 16.5h1M2 1h10a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
         </svg></button>
         {{ if $id }}
-        <div id="{{ $id }}-mobile-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="{{ $id }}-mobile-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             Toggle mobile view
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -80,7 +80,7 @@
         <button {{ if $id }} data-tooltip-target="{{ $id }}-toggle-rtl"{{ end }} data-toggle-direction="ltr" type="button" class="toggle-rtl flex items-center w-9 h-9 mr-3 justify-center text-xs font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
           RTL
         </button> 
-        <div id="{{ $id }}-toggle-rtl" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="{{ $id }}-toggle-rtl" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             <span class="tooltip-text">Toggle RTL mode</span>
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -95,7 +95,7 @@
             <span class="sr-only">Toggle dark/light mode</span>
           </button>
           {{ if $id }}
-          <div id="{{ $id }}-toggle-dark-mode-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+          <div id="{{ $id }}-toggle-dark-mode-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
               <span class="tooltip-text">Toggle dark mode</span>
               <div class="tooltip-arrow" data-popper-arrow></div>
           </div>
@@ -147,7 +147,7 @@
                   </svg> <span class="copy-text">Copy</span>
                 </button>
                 {{ if $id }}
-                  <div id="{{ $id }}-copy-clipboard-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  <div id="{{ $id }}-copy-clipboard-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                       Copy to clipboard
                       <div class="tooltip-arrow" data-popper-arrow></div>
                   </div>

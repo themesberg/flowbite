@@ -66,7 +66,7 @@ Use this example to show a timepicker together with a dropdown menu where you ca
         <button id="dropdown-duration-button" data-dropdown-toggle="dropdown-duration" class="border-s-0 flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-e-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
         Duration <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>
         </button>
-        <div id="dropdown-duration" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-36 dark:bg-gray-700">
+        <div id="dropdown-duration" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-36 dark:bg-gray-700">
             <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-duration-button">
                 <li>
                     <button type="button" class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
@@ -166,7 +166,7 @@ $saveTimeButton.addEventListener('click', function() {
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownTimepicker" class="z-10 hidden bg-white rounded-lg shadow w-auto dark:bg-gray-700 p-3">
+<div id="dropdownTimepicker" class="z-10 hidden bg-white rounded-lg shadow-sm w-auto dark:bg-gray-700 p-3">
     <div class="max-w-[16rem] mx-auto grid grid-cols-2 gap-4 mb-2">
         <div>
             <label for="start-time" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Start time:</label>
@@ -390,7 +390,7 @@ Schedule appointment
 <div id="timepicker-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-[23rem] max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-800">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-800">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
@@ -546,7 +546,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                </svg>
                <span class="sr-only">Details</span>
             </button>
-            <div id="tooltip-timezone" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 max-w-sm text-xs font-normal text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-timezone" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 max-w-sm text-xs font-normal text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                Select a timezone that fits your location to accurately display time-related information.
                <div class="tooltip-arrow" data-popper-arrow></div>
             </div>

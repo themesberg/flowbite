@@ -232,7 +232,7 @@ Toggle modal
 <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-2xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
@@ -277,7 +277,7 @@ Let's add a [dropdown component](https://flowbite.com/docs/components/dropdowns/
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
   </svg></button>
 
-<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>

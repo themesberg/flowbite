@@ -332,7 +332,7 @@ Use this example to show a mega menu dropdown that spans the entire width of the
             </ul>
         </div>
     </div>
-    <div id="mega-menu-full-dropdown" class="mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600">
+    <div id="mega-menu-full-dropdown" class="mt-1 bg-white border-gray-200 shadow-xs border-y dark:bg-gray-800 dark:border-gray-600">
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button">
                 <li>
@@ -439,7 +439,7 @@ This example can be used to also show a CTA button or link next to the menu item
             </ul>
         </div>
     </div>
-    <div id="mega-menu-full-cta-dropdown" class="mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600">
+    <div id="mega-menu-full-cta-dropdown" class="mt-1 bg-white border-gray-200 shadow-xs border-y dark:bg-gray-800 dark:border-gray-600">
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500 dark:text-gray-400 md:grid-cols-3 md:px-6">
             <ul class="space-y-4 sm:mb-4 md:mb-0" aria-labelledby="mega-menu-full-cta-button">
                 <li>
@@ -541,7 +541,7 @@ This example can be used to also show a CTA with a backdround image inside the d
             </ul>
         </div>
     </div>
-    <div id="mega-menu-full-image-dropdown" class="mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600">
+    <div id="mega-menu-full-image-dropdown" class="mt-1 bg-white border-gray-200 shadow-xs border-y dark:bg-gray-800 dark:border-gray-600">
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500 dark:text-gray-400 md:grid-cols-3 md:px-6">
             <ul class="hidden mb-4 space-y-4 md:mb-0 md:block" aria-labelledby="mega-menu-full-image-button">
                 <li>

@@ -56,21 +56,21 @@ Use this example to show a tooltip when hovering over the avatar.
 
 {{< example id="avatar-tooltip-example" class="flex items-center justify-center pt-8 gap-4" github="components/avatar.md" show_dark=true >}}
 <div>
-  <div id="tooltip-jese" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+  <div id="tooltip-jese" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
       Jese Leos
       <div class="tooltip-arrow" data-popper-arrow></div>
   </div>
   <img data-tooltip-target="tooltip-jese" class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Medium avatar">
 </div>
 <div>
-  <div id="tooltip-roberta" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+  <div id="tooltip-roberta" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
       Roberta Casas
       <div class="tooltip-arrow" data-popper-arrow></div>
   </div>
   <img data-tooltip-target="tooltip-roberta" class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-4.jpg" alt="Medium avatar">
 </div>
 <div>
-  <div id="tooltip-bonnie" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+  <div id="tooltip-bonnie" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
       Bonnie Green
       <div class="tooltip-arrow" data-popper-arrow></div>
   </div>
@@ -142,7 +142,7 @@ Use this example if you want to show a dropdown menu when clicking on the avatar
 <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" src="/docs/images/people/profile-picture-5.jpg" alt="User dropdown">
 
 <!-- Dropdown menu -->
-<div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+<div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
     <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
       <div>Bonnie Green</div>
       <div class="font-medium truncate">name@flowbite.com</div>

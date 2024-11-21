@@ -18,7 +18,7 @@ Use these responsive card components to show data entries and information to you
 Use the following simple card component with a title and description.
 
 {{< example id="default-card-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
-<a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+<a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 
 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
 <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
@@ -31,7 +31,7 @@ Use the following example of a card element if you also want to have an action b
 
 {{< example id="card-cta-button-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
     </a>
@@ -51,7 +51,7 @@ This example can be used to show a CTA as a link instead of a button inside the 
 
 {{< example id="card-cta-link-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
     <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
         <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
     </svg>
@@ -74,7 +74,7 @@ You can use the following example of a card element with an image for blog posts
 
 {{< example id="card-image-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
         <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
     </a>
@@ -98,7 +98,7 @@ You can use the following example of a card element with an image for blog posts
 If you want to spice up your cards you can use the following card which has its child elements aligned horizontally.
 
 {{< example id="card-horizontal-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
-<a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+<a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
     <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="/docs/images/blog/image-4.jpg" alt="">
     <div class="flex flex-col justify-between p-4 leading-normal">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
@@ -113,7 +113,7 @@ Use this user profile card example if you want to show a dropdown menu and butto
 
 {{< example id="card-user-profile-example" class="flex flex-wrap justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
     <div class="flex justify-end px-4 pt-4">
         <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
             <span class="sr-only">Open dropdown</span>
@@ -122,7 +122,7 @@ Use this user profile card example if you want to show a dropdown menu and butto
             </svg>
         </button>
         <!-- Dropdown menu -->
-        <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+        <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
             <ul class="py-2" aria-labelledby="dropdownButton">
             <li>
                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
@@ -154,7 +154,7 @@ Use this card example where you can add form input elements that can be used for
 
 {{< example id="card-form-inputs-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+<div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
     <form class="space-y-6" action="#">
         <h5 class="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h5>
         <div>
@@ -188,7 +188,7 @@ Use this card for your e-commerce websites and show information about the produc
 
 {{< example id="card-ecommerce-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
         <img class="p-8 rounded-t-lg" src="/docs/images/products/apple-watch.png" alt="product image" />
     </a>
@@ -230,7 +230,7 @@ Use this CTA card example to encourage your users to visit a certain page such a
 
 {{< example id="card-cta-example" github="components/card.md" show_dark=true >}}
 
-<div class="w-full p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+<div class="w-full p-4 text-center bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 dark:bg-gray-800 dark:border-gray-700">
     <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Work fast from anywhere</h5>
     <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">Stay up to date and move work forward with Flowbite on iOS & Android. Download the app today.</p>
     <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
@@ -258,7 +258,7 @@ Use this example of a card component with navigation tabs that can change the co
 
 {{< example id="card-nav-tabs-example" github="components/card.md" show_dark=true >}}
 
-<div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
     <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800" id="defaultTab" data-tabs-toggle="#defaultTabContent" role="tablist">
         <li class="me-2">
             <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true" class="inline-block p-4 text-blue-600 rounded-ss-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-blue-500">About</button>
@@ -337,7 +337,7 @@ Use this example of a card component to show tabs that span the full width of th
 
 {{< example id="card-full-width-tabs-example" github="components/card.md" show_dark=true >}}
 
-<div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
     <div class="sm:hidden">
         <label for="tabs" class="sr-only">Select tab</label>
         <select id="tabs" class="bg-gray-50 border-0 border-b border-gray-200 text-gray-900 text-sm rounded-t-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -477,7 +477,7 @@ Use this card example if you want to show a list of data:
 
 {{< example id="card-list-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+<div class="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 dark:bg-gray-800 dark:border-gray-700">
     <div class="flex items-center justify-between mb-4">
         <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest Customers</h5>
         <a href="#" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
@@ -587,7 +587,7 @@ Show detailed information to potential customers about your product's pricing pl
 
 {{< example id="card-pricing-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+<div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 dark:bg-gray-800 dark:border-gray-700">
 <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard plan</h5>
 <div class="flex items-baseline text-gray-900 dark:text-white">
 <span class="text-3xl font-semibold">$</span>
@@ -648,7 +648,7 @@ Use this example to split cards into multiple sections such as for testimonials 
 
 {{< example id="card-testimonial-example" github="components/card.md" show_dark=true >}}
 
-<div class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
+<div class="grid mb-8 border border-gray-200 rounded-lg shadow-xs dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
     <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
         <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Very easy this was to integrate</h3>
@@ -710,7 +710,7 @@ Use this web3 card component to show a list of applications that you can use to 
 
 {{< example id="card-crypto-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700">
+<div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 dark:bg-gray-800 dark:border-gray-700">
 <h5 class="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
 Connect wallet
 </h5>

@@ -29,7 +29,7 @@ The `dropdownId` is the id of the dropdown menu element.
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -60,7 +60,7 @@ There's a 300ms default delay when showing or hiding the dropdown due to UI/UX r
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="dropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -89,7 +89,7 @@ You can use the `data-dropdown-delay={milliseconds}` data attribute to set they 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDelay" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="dropdownDelay" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDelayButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -118,7 +118,7 @@ You can use the `divide-y divide-gray-100` classes to add separate elements insi
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDivider" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownDivider" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -147,7 +147,7 @@ Use this example to show extra information outside of the list of menu items ins
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownInformation" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownInformation" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
     <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
       <div>Bonnie Green</div>
       <div class="font-medium truncate">name@flowbite.com</div>
@@ -180,7 +180,7 @@ Use this example to enable multi-level dropdown menus by adding stacked elements
 </button>
 
 <!-- Dropdown menu -->
-<div id="multi-dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="multi-dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="multiLevelDropdownButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -189,7 +189,7 @@ Use this example to enable multi-level dropdown menus by adding stacked elements
         <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" data-dropdown-placement="right-start" type="button" class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dropdown<svg class="w-2.5 h-2.5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
   </svg></button>
-          <div id="doubleDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+          <div id="doubleDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
             <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
               <li>
                 <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Overview</a>
@@ -227,7 +227,7 @@ Add multiple checkbox elements inside your dropdown menu to enable more advanced
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDefaultCheckbox" class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownDefaultCheckbox" class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600">
     <ul class="p-3 space-y-3 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownCheckboxButton">
       <li>
         <div class="flex items-center">
@@ -262,7 +262,7 @@ Use this example to update the background color of a menu item when using a list
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownBgHover" class="z-10 hidden w-48 bg-white rounded-lg shadow dark:bg-gray-700">
+<div id="dropdownBgHover" class="z-10 hidden w-48 bg-white rounded-lg shadow-sm dark:bg-gray-700">
     <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownBgHoverButton">
       <li>
         <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
@@ -297,7 +297,7 @@ Add an extra helper text to each checkbox element inside the dropdown menu list 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownHelper" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-60 dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownHelper" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-60 dark:bg-gray-700 dark:divide-gray-600">
     <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHelperButton">
       <li>
         <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
@@ -353,7 +353,7 @@ Enable more advanced interaction with your users by adding radio input elements 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDefaultRadio" class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownDefaultRadio" class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600">
     <ul class="p-3 space-y-3 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownRadioButton">
       <li>
         <div class="flex items-center">
@@ -388,7 +388,7 @@ Use this example to update the background color when hovering over a menu item w
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownRadioBgHover" class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownRadioBgHover" class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600">
     <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownRadioBgHoverButton">
       <li>
         <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
@@ -423,7 +423,7 @@ This example can be used to add an extra helper text inside of each radio elemen
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownRadioHelper" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-60 dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownRadioHelper" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-60 dark:bg-gray-700 dark:divide-gray-600">
     <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownRadioHelperButton">
       <li>
         <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
@@ -479,7 +479,7 @@ Show a list of toggle switch elements inside the dropdown menu to enable a yes o
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownToggle" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-72 dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownToggle" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-72 dark:bg-gray-700 dark:divide-gray-600">
     <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownToggleButton">
       <li>
         <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
@@ -524,7 +524,7 @@ This example can be used when you want to show a long list of items that won't a
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownUsers" class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700">
+<div id="dropdownUsers" class="z-10 hidden bg-white rounded-lg shadow-sm w-60 dark:bg-gray-700">
   <ul class="h-48 py-2 overflow-y-auto text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUsersButton">
     <li>
       <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
@@ -595,7 +595,7 @@ Use this example if you want to add a search bar inside the dropdown menu to be 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownSearch" class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700">
+<div id="dropdownSearch" class="z-10 hidden bg-white rounded-lg shadow-sm w-60 dark:bg-gray-700">
     <div class="p-3">
       <label for="input-group-search" class="sr-only">Search</label>
       <div class="relative">
@@ -672,7 +672,7 @@ Use the menu icon trigger element on components such as cards as an alternative 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -696,7 +696,7 @@ Use the menu icon trigger element on components such as cards as an alternative 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDotsHorizontal" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownDotsHorizontal" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -729,7 +729,7 @@ Use this example to show a list of notifications inside your application by prov
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownNotification" class="z-20 hidden w-full max-w-sm bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-800 dark:divide-gray-700" aria-labelledby="dropdownNotificationButton">
+<div id="dropdownNotification" class="z-20 hidden w-full max-w-sm bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-800 dark:divide-gray-700" aria-labelledby="dropdownNotificationButton">
   <div class="block px-4 py-2 font-medium text-center text-gray-700 rounded-t-lg bg-gray-50 dark:bg-gray-800 dark:text-white">
       Notifications
   </div>
@@ -828,7 +828,7 @@ This example can be used to show a list of menu items and options when a user is
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownAvatar" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownAvatar" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
     <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
       <div>Bonnie Green</div>
       <div class="font-medium truncate">name@flowbite.com</div>
@@ -865,7 +865,7 @@ Bonnie Green
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownAvatarName" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownAvatarName" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
     <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
       <div class="font-medium ">Pro User</div>
       <div class="truncate">name@flowbite.com</div>
@@ -915,7 +915,7 @@ You can also use the dropdown element inside a navigation bar and add a second l
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
   </svg></button>
             <!-- Dropdown menu -->
-            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLargeButton">
                   <li>
                     <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -957,7 +957,7 @@ Use this example to show a date range picker inside a dropdown menu. Use the `da
 </svg>
 </button>
 
-<div id="dateRangeDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-80 lg:w-96 dark:bg-gray-700 dark:divide-gray-600">
+<div id="dateRangeDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-80 lg:w-96 dark:bg-gray-700 dark:divide-gray-600">
     <div class="p-3" aria-labelledby="dateRangeButton">
       <div date-rangepicker datepicker-autohide class="flex items-center">
           <div class="relative">
@@ -993,7 +993,7 @@ The dropdown menus work with buttons of all sizes including smaller or larger on
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownSmall" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownSmall" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
     <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
       <div>Bonnie Green</div>
       <div class="font-medium truncate">name@flowbite.com</div>
@@ -1020,7 +1020,7 @@ The dropdown menus work with buttons of all sizes including smaller or larger on
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownLarge" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownLarge" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
     <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
       <div>Bonnie Green</div>
       <div class="font-medium truncate">name@flowbite.com</div>
@@ -1053,7 +1053,7 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownTop" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="dropdownTop" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownTopButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -1076,7 +1076,7 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownRight" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="dropdownRight" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownRightButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -1099,7 +1099,7 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownBottom" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="dropdownBottom" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownBottomButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -1121,7 +1121,7 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 </svg>Dropdown left</button>
 
 <!-- Dropdown menu -->
-<div id="dropdownLeft" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="dropdownLeft" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLeftButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -1150,7 +1150,7 @@ You can combine the placement options by using the `top|right|bottom|left-{start
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownLeftEnd" class="z-20 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="dropdownLeftEnd" class="z-20 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLeftEndButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -1173,7 +1173,7 @@ You can combine the placement options by using the `top|right|bottom|left-{start
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownRightEnd" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="dropdownRightEnd" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownRightEndButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -1206,7 +1206,7 @@ Use the `data-dropdown-offset-distance={pixels}` data attribute to set the numbe
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDistance" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="dropdownDistance" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -1235,7 +1235,7 @@ The `data-dropdown-offset-skidding={pixels}` data attribute can be used to move 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownSkidding" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="dropdownSkidding" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -1626,7 +1626,7 @@ Use the following HTML code for the JavaScript example above.
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownMenu" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+<div id="dropdownMenu" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>

@@ -297,7 +297,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Bold</span>
                 </button>
-                <div id="tooltip-bold" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-bold" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Toggle bold
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -307,7 +307,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Italic</span>
                 </button>
-                <div id="tooltip-italic" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-italic" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Toggle italic
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -317,7 +317,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Underline</span>
                 </button>
-                <div id="tooltip-underline" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-underline" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Toggle underline
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -327,7 +327,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Strike</span>
                 </button>
-                <div id="tooltip-strike" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-strike" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Toggle strike
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -337,7 +337,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Highlight</span>
                 </button>
-                <div id="tooltip-highlight" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-highlight" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Toggle highlight
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -347,7 +347,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Code</span>
                 </button>
-                <div id="tooltip-code" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-code" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Format code
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -357,7 +357,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Link</span>
                 </button>
-                <div id="tooltip-link" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-link" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Add link
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -367,7 +367,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Remove link</span>
                 </button>
-                <div id="tooltip-remove-link" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-remove-link" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Remove link
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -377,11 +377,11 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Text size</span>
                 </button>
-                <div id="tooltip-text-size" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-text-size" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Text size
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="textSizeDropdown" class="z-10 hidden w-72 rounded bg-white p-2 shadow dark:bg-gray-700">
+                <div id="textSizeDropdown" class="z-10 hidden w-72 rounded bg-white p-2 shadow-sm dark:bg-gray-700">
                     <ul class="space-y-1 text-sm font-medium" aria-labelledby="toggleTextSizeButton">
                         <li>
                             <button data-text-size="16px" type="button" class="flex justify-between items-center w-full text-base rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white">16px (Default) 
@@ -415,11 +415,11 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Text color</span>
                 </button>
-                <div id="tooltip-text-color" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-text-color" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Text color
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="textColorDropdown" class="z-10 hidden w-48 rounded bg-white p-2 shadow dark:bg-gray-700">
+                <div id="textColorDropdown" class="z-10 hidden w-48 rounded bg-white p-2 shadow-sm dark:bg-gray-700">
                     <div class="grid grid-cols-6 gap-2 group mb-3 items-center p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600">
                         <input type="color" id="color" value="#e66465" class="border-gray-200 border bg-gray-50 dark:bg-gray-700 dark:border-gray-600 rounded-md p-px px-1 hover:bg-gray-50 group-hover:bg-gray-50 dark:group-hover:bg-gray-700 w-full h-8 col-span-3" />
                         <label for="color" class="text-gray-500 dark:text-gray-400 text-sm font-medium col-span-3 group-hover:text-gray-900 dark:group-hover:text-white">Pick a color</label>
@@ -470,11 +470,11 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Font family</span>
                 </button>
-                <div id="tooltip-font-family" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-font-family" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Font Family
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="fontFamilyDropdown" class="z-10 hidden w-48 rounded bg-white p-2 shadow dark:bg-gray-700">
+                <div id="fontFamilyDropdown" class="z-10 hidden w-48 rounded bg-white p-2 shadow-sm dark:bg-gray-700">
                     <ul class="space-y-1 text-sm font-medium" aria-labelledby="toggleFontFamilyButton">
                         <li>
                             <button data-font-family="Inter, ui-sans-serif" type="button" class="flex justify-between items-center w-full text-sm font-sans rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white">Default
@@ -523,7 +523,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Align left</span>
                 </button>
-                <div id="tooltip-left-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-left-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Align left
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -533,7 +533,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Align center</span>
                 </button>
-                <div id="tooltip-center-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-center-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Align center
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -543,7 +543,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Align right</span>
                 </button>
-                <div id="tooltip-right-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-right-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Align right
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -560,7 +560,7 @@ window.addEventListener('load', function() {
             <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
         </div>
         <!-- Heading Dropdown -->
-        <div id="typographyDropdown" class="z-10 hidden w-72 rounded bg-white p-2 shadow dark:bg-gray-700">
+        <div id="typographyDropdown" class="z-10 hidden w-72 rounded bg-white p-2 shadow-sm dark:bg-gray-700">
             <ul class="space-y-1 text-sm font-medium" aria-labelledby="typographyDropdownButton">
                 <li>
                     <button id="toggleParagraphButton" type="button" class="flex justify-between items-center w-full text-base rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white">Paragraph 
@@ -634,7 +634,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Add image</span>
             </button>
-            <div id="tooltip-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Add image
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -644,7 +644,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Add video</span>
             </button>
-            <div id="tooltip-video" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-video" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Add video
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -654,7 +654,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Toggle list</span>
             </button>
-            <div id="tooltip-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Toggle list
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -664,7 +664,7 @@ window.addEventListener('load', function() {
             </svg>
             <span class="sr-only">Toggle ordered list</span>
         </button>
-        <div id="tooltip-ordered-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-ordered-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             Toggle ordered list
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -674,7 +674,7 @@ window.addEventListener('load', function() {
             </svg>
             <span class="sr-only">Toggle blockquote</span>
         </button>
-        <div id="tooltip-blockquote-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-blockquote-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             Toggle blockquote
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -685,7 +685,7 @@ window.addEventListener('load', function() {
             </svg>
             <span class="sr-only">Toggle Horizontal Rule</span>
         </button>
-        <div id="tooltip-hr-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-hr-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             Toggle Horizontal Rule
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -884,7 +884,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Bold</span>
                 </button>
-                <div id="tooltip-bold" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-bold" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Toggle bold
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -894,7 +894,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Italic</span>
                 </button>
-                <div id="tooltip-italic" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-italic" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Toggle italic
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -904,7 +904,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Underline</span>
                 </button>
-                <div id="tooltip-underline" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-underline" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Toggle underline
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -914,7 +914,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Strike</span>
                 </button>
-                <div id="tooltip-strike" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-strike" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Toggle strike
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -924,7 +924,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Subscript</span>
                 </button>
-                <div id="tooltip-subscript" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-subscript" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Toggle subscript
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -934,7 +934,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Superscript</span>
                 </button>
-                <div id="tooltip-superscript" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-superscript" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Toggle superscript
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -944,7 +944,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Highlight</span>
                 </button>
-                <div id="tooltip-highlight" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-highlight" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Toggle highlight
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -954,7 +954,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Code</span>
                 </button>
-                <div id="tooltip-code" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-code" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Format code
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -964,11 +964,11 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Text size</span>
                 </button>
-                <div id="tooltip-text-size" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-text-size" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Text size
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="textSizeDropdown" class="z-10 hidden w-72 rounded bg-white p-2 shadow dark:bg-gray-700">
+                <div id="textSizeDropdown" class="z-10 hidden w-72 rounded bg-white p-2 shadow-sm dark:bg-gray-700">
                     <ul class="space-y-1 text-sm font-medium" aria-labelledby="toggleTextSizeButton">
                         <li>
                             <button data-text-size="16px" type="button" class="flex justify-between items-center w-full text-base rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white">16px (Default) 
@@ -1002,11 +1002,11 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Text color</span>
                 </button>
-                <div id="tooltip-text-color" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-text-color" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Text color
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="textColorDropdown" class="z-10 hidden w-48 rounded bg-white p-2 shadow dark:bg-gray-700">
+                <div id="textColorDropdown" class="z-10 hidden w-48 rounded bg-white p-2 shadow-sm dark:bg-gray-700">
                     <div class="grid grid-cols-6 gap-2 group mb-3 items-center p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600">
                         <input type="color" id="color" value="#e66465" class="border-gray-200 border bg-gray-50 dark:bg-gray-700 dark:border-gray-600 rounded-md p-px px-1 hover:bg-gray-50 group-hover:bg-gray-50 dark:group-hover:bg-gray-700 w-full h-8 col-span-3" />
                         <label for="color" class="text-gray-500 dark:text-gray-400 text-sm font-medium col-span-3 group-hover:text-gray-900 dark:group-hover:text-white">Pick a color</label>
@@ -1057,11 +1057,11 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Font family</span>
                 </button>
-                <div id="tooltip-font-family" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-font-family" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Font Family
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="fontFamilyDropdown" class="z-10 hidden w-48 rounded bg-white p-2 shadow dark:bg-gray-700">
+                <div id="fontFamilyDropdown" class="z-10 hidden w-48 rounded bg-white p-2 shadow-sm dark:bg-gray-700">
                     <ul class="space-y-1 text-sm font-medium" aria-labelledby="toggleFontFamilyButton">
                         <li>
                             <button data-font-family="Inter, ui-sans-serif" type="button" class="flex justify-between items-center w-full text-sm font-sans rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white">Default
@@ -1182,7 +1182,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Align left</span>
                 </button>
-                <div id="tooltip-left-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-left-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Align left
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -1192,7 +1192,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Align center</span>
                 </button>
-                <div id="tooltip-center-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-center-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Align center
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -1202,7 +1202,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Align right</span>
                 </button>
-                <div id="tooltip-right-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-right-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Align right
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -1212,7 +1212,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Justify</span>
                 </button>
-                <div id="tooltip-justify" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-justify" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Justify text
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -1303,7 +1303,7 @@ window.addEventListener('load', function() {
             <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
         </div>
         <!-- Heading Dropdown -->
-        <div id="typographyDropdown" class="z-10 hidden w-72 rounded bg-white p-2 shadow dark:bg-gray-700">
+        <div id="typographyDropdown" class="z-10 hidden w-72 rounded bg-white p-2 shadow-sm dark:bg-gray-700">
             <ul class="space-y-1 text-sm font-medium" aria-labelledby="typographyDropdownButton">
                 <li>
                     <button id="toggleParagraphButton" type="button" class="flex justify-between items-center w-full text-base rounded px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white">Paragraph 
@@ -1377,7 +1377,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Toggle code block</span>
             </button>
-            <div id="tooltip-code-block" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-code-block" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Toggle code block
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -1387,7 +1387,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Toggle list</span>
             </button>
-            <div id="tooltip-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Toggle list
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -1397,7 +1397,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Create ordered list</span>
             </button>
-            <div id="tooltip-ordered-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-ordered-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Toggle ordered list
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -1407,7 +1407,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Toggle blockquote</span>
             </button>
-            <div id="tooltip-blockquote-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-blockquote-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Toggle blockquote
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -1418,7 +1418,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Toggle Horizontal Rule</span>
             </button>
-            <div id="tooltip-hr-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-hr-list" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Toggle Horizontal Rule
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -1484,7 +1484,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Link</span>
                 </button>
-                <div id="tooltip-link" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-link" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Add link
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -1494,7 +1494,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Remove link</span>
                 </button>
-                <div id="tooltip-remove-link" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-remove-link" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Remove link
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -1574,7 +1574,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Add image</span>
             </button>
-            <div id="tooltip-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Add image
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -1584,7 +1584,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Insert advanced image</span>
             </button>
-            <div id="tooltip-advanced-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-advanced-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Image with settings
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -1601,7 +1601,7 @@ window.addEventListener('load', function() {
 <div id="advanced-image-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
@@ -1706,7 +1706,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Add video</span>
             </button>
-            <div id="tooltip-video" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-video" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Add video
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -1716,7 +1716,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Insert advanced video</span>
             </button>
-            <div id="tooltip-advanced-video" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-advanced-video" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Video with settings
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -1734,7 +1734,7 @@ window.addEventListener('load', function() {
 <div id="advanced-video-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
@@ -1946,7 +1946,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Add table</span>
             </button>
-            <div id="tooltip-table" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-table" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Add table
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -1956,7 +1956,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Delete table</span>
             </button>
-            <div id="tooltip-delete-table" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-delete-table" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Delete table
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -1969,7 +1969,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Add column before</span>
             </button>
-            <div id="tooltip-add-column-before" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-add-column-before" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Add column before
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -1979,7 +1979,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Add column after</span>
             </button>
-            <div id="tooltip-add-column-after" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-add-column-after" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Add column after
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -1989,7 +1989,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Remove column</span>
             </button>
-            <div id="tooltip-remove-column" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-remove-column" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Remove column
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -2002,7 +2002,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Add row before</span>
             </button>
-            <div id="tooltip-add-row-before" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-add-row-before" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Add row before
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -2012,7 +2012,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Add row after</span>
             </button>
-            <div id="tooltip-add-row-after" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-add-row-after" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Add row after
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -2022,7 +2022,7 @@ window.addEventListener('load', function() {
                 </svg>
                 <span class="sr-only">Remove row</span>
             </button>
-            <div id="tooltip-remove-row" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            <div id="tooltip-remove-row" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                 Remove row
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
@@ -2035,7 +2035,7 @@ window.addEventListener('load', function() {
             </svg>
             <span class="sr-only">Merge cells</span>
         </button>
-        <div id="tooltip-merge-cells" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-merge-cells" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             Merge cells
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -2045,7 +2045,7 @@ window.addEventListener('load', function() {
             </svg>
             <span class="sr-only">Split cells</span>
         </button>
-        <div id="tooltip-split-cells" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-split-cells" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             Split cells
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -2055,7 +2055,7 @@ window.addEventListener('load', function() {
             </svg>
             <span class="sr-only">Merge or split</span>
         </button>
-        <div id="tooltip-merge-or-split" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-merge-or-split" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             Merge or split
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -2068,7 +2068,7 @@ window.addEventListener('load', function() {
             </svg>
             <span class="sr-only">Toggle header column</span>
         </button>
-        <div id="tooltip-toggle-header-column" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-toggle-header-column" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             Toggle header column
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -2078,7 +2078,7 @@ window.addEventListener('load', function() {
             </svg>
             <span class="sr-only">Toggle header row</span>
         </button>
-        <div id="tooltip-toggle-header-row" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-toggle-header-row" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             Toggle header row
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -2088,7 +2088,7 @@ window.addEventListener('load', function() {
             </svg>
             <span class="sr-only">Toggle header cell</span>
         </button>
-        <div id="tooltip-toggle-header-cell" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-toggle-header-cell" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             Toggle header cell
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -2098,7 +2098,7 @@ window.addEventListener('load', function() {
             </svg>
             <span class="sr-only">Add cell attribute</span>
         </button>
-        <div id="tooltip-add-cell-attribute" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-add-cell-attribute" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             Add cell attribute
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -2111,7 +2111,7 @@ window.addEventListener('load', function() {
             </svg>
             <span class="sr-only">Fix tables</span>
         </button>
-        <div id="tooltip-fix-tables" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-fix-tables" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             Fix tables
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -2121,7 +2121,7 @@ window.addEventListener('load', function() {
             </svg>
             <span class="sr-only">Previous cell</span>
         </button>
-        <div id="tooltip-previous-cell" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-previous-cell" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             Previous cell
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -2131,7 +2131,7 @@ window.addEventListener('load', function() {
             </svg>
             <span class="sr-only">Next cell</span>
         </button>
-        <div id="tooltip-next-cell" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-next-cell" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             Next cell
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -2146,7 +2146,7 @@ window.addEventListener('load', function() {
 <div id="cell-attribute-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
@@ -2224,7 +2224,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Undo</span>
                 </button>
-                <div id="tooltip-undo" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-undo" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Undo
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -2234,7 +2234,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">Redo</span>
                 </button>
-                <div id="tooltip-redo" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-redo" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Redo
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -2311,7 +2311,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">JSON</span>
                 </button>
-                <div id="tooltip-json" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-json" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Get JSON
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -2321,7 +2321,7 @@ window.addEventListener('load', function() {
                     </svg>
                     <span class="sr-only">HTML</span>
                 </button>
-                <div id="tooltip-html" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                <div id="tooltip-html" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                     Get HTML
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
@@ -2337,7 +2337,7 @@ window.addEventListener('load', function() {
 <div id="source-code-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">

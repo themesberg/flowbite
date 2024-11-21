@@ -174,7 +174,7 @@ This example can be used to show a list of steps aligned vertically where you ca
 This example can be used to show the number of steps similar to how a breadcrumb component looks like by using double chevron icons between the items.
 
 {{< example id="breadcrumb-stepper-example" github="components/stepper.md" show_dark=true >}}
-<ol class="flex items-center w-full p-3 space-x-2 text-sm font-medium text-center text-gray-500 bg-white border border-gray-200 rounded-lg shadow-sm dark:text-gray-400 sm:text-base dark:bg-gray-800 dark:border-gray-700 sm:p-4 sm:space-x-4 rtl:space-x-reverse">
+<ol class="flex items-center w-full p-3 space-x-2 text-sm font-medium text-center text-gray-500 bg-white border border-gray-200 rounded-lg shadow-xs dark:text-gray-400 sm:text-base dark:bg-gray-800 dark:border-gray-700 sm:p-4 sm:space-x-4 rtl:space-x-reverse">
     <li class="flex items-center text-blue-600 dark:text-blue-500">
         <span class="flex items-center justify-center w-5 h-5 me-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
             1

@@ -37,7 +37,7 @@ If you want to toggle the visibility, show, or hide the modal you can use the fo
 <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-2xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
@@ -84,7 +84,7 @@ Use the `data-modal-backdrop="static"` data attribute to prevent the modal from 
 <div id="static-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-2xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
@@ -127,7 +127,7 @@ Toggle modal
 
 <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
@@ -164,7 +164,7 @@ Use this modal example with form input element to receive information from your 
 <div id="authentication-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
@@ -223,7 +223,7 @@ Use this example of a modal to use within CRUD (Create, Read, Update, Delete) op
 <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
@@ -287,7 +287,7 @@ This example can be used to show a list of options to your users by using advanc
 <div id="select-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
@@ -359,7 +359,7 @@ Use this example to show a timeline of events to your users with a modal. This c
 <div id="timeline-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
                 <!-- Modal header -->
                 <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
@@ -429,7 +429,7 @@ This modal can be used to show the progress of a task to your users. It can be u
 <div id="progress-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="progress-modal">
                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
@@ -475,7 +475,7 @@ Connect wallet
 <div id="crypto-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
@@ -563,7 +563,7 @@ You can use four different modal sizing options starting from small to extra lar
 <div id="small-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-medium text-gray-900 dark:text-white">
@@ -598,7 +598,7 @@ You can use four different modal sizing options starting from small to extra lar
 <div id="medium-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-lg max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-medium text-gray-900 dark:text-white">
@@ -633,7 +633,7 @@ You can use four different modal sizing options starting from small to extra lar
 <div id="large-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-4xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-medium text-gray-900 dark:text-white">
@@ -668,7 +668,7 @@ You can use four different modal sizing options starting from small to extra lar
 <div id="extralarge-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-7xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-medium text-gray-900 dark:text-white">
@@ -740,7 +740,7 @@ The default position is the center of the page.
 <div id="top-left-modal" data-modal-placement="top-left" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-2xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-medium text-gray-900 dark:text-white">
@@ -775,7 +775,7 @@ The default position is the center of the page.
 <div id="top-right-modal" data-modal-placement="top-right" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-2xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-medium text-gray-900 dark:text-white">
@@ -810,7 +810,7 @@ The default position is the center of the page.
 <div id="bottom-left-modal" data-modal-placement="bottom-left" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-2xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-medium text-gray-900 dark:text-white">
@@ -845,7 +845,7 @@ The default position is the center of the page.
 <div id="bottom-right-modal" data-modal-placement="bottom-right" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-2xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-medium text-gray-900 dark:text-white">
@@ -1232,7 +1232,7 @@ Use the following HTML code for the JavaScript example above.
 >
     <div class="relative max-h-full w-full max-w-2xl">
         <!-- Modal content -->
-        <div class="relative rounded-lg bg-white shadow dark:bg-gray-700">
+        <div class="relative rounded-lg bg-white shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div
                 class="flex items-start justify-between rounded-t border-b p-5 dark:border-gray-600"

@@ -170,7 +170,7 @@ Use this example to show a list of checkbox items inside a dropdown menu.
   </svg></button>
 
 <!-- Dropdown menu -->
-<div id="dropdownSearch" class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700">
+<div id="dropdownSearch" class="z-10 hidden bg-white rounded-lg shadow-sm w-60 dark:bg-gray-700">
     <div class="p-3">
       <label for="input-group-search" class="sr-only">Search</label>
       <div class="relative">

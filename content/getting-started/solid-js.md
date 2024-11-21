@@ -190,7 +190,7 @@ function App() {
 
         <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto text-base text-left md:inset-0 h-[calc(100%-1rem)] max-h-full">
             <div class="relative w-full max-w-2xl max-h-full">
-                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
                     <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600 border-gray-200">
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
                             Terms of Service
@@ -233,7 +233,7 @@ Let's now show a [tooltip indicator](https://flowbite.com/docs/components/toolti
 <button data-tooltip-target="tooltip-default" data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="block mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
     Toggle Flowbite modal
 </button>
-<div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+<div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
     Toggle modal component
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>

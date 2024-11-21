@@ -116,7 +116,7 @@ window.addEventListener('load', function () {
                 </svg>
             </span>
         </button>
-        <div id="tooltip-copy-npm-install-copy-button" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-copy-npm-install-copy-button" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             <span id="default-tooltip-message">Copy to clipboard</span>
             <span id="success-tooltip-message" class="hidden">Copied!</span>
             <div class="tooltip-arrow" data-popper-arrow></div>
@@ -240,7 +240,7 @@ window.addEventListener('load', function () {
                 </svg>
             </span>
         </button>
-        <div id="tooltip-website-url" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-website-url" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             <span id="default-tooltip-message">Copy link</span>
             <span id="success-tooltip-message" class="hidden">Copied!</span>
             <div class="tooltip-arrow" data-popper-arrow></div>
@@ -312,7 +312,7 @@ window.addEventListener('load', function() {
                 </svg>
             </span>
         </button>
-        <div id="tooltip-url-shortener" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-url-shortener" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             <span id="default-tooltip-message">Copy link</span>
             <span id="success-tooltip-message" class="hidden">Copied!</span>
             <div class="tooltip-arrow" data-popper-arrow></div>
@@ -482,7 +482,7 @@ window.addEventListener('load', function() {
     }
 })
 ` >}}
-<div class="w-full max-w-lg bg-white dark:bg-gray-800 border-gray-200 border dark:border-gray-700 shadow rounded-lg p-5">
+<div class="w-full max-w-lg bg-white dark:bg-gray-800 border-gray-200 border dark:border-gray-700 shadow-sm rounded-lg p-5">
     <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Create a role with read only in-line policies</h2>
     <p class="text-gray-500 dark:text-gray-400 mb-6">To give Flowbite read access, please create an IAM Role following <a href="#" class="text-blue-700 dark:text-blue-500 underline hover:no-underline font-medium">trust relationship</a> and <a href="#" class="text-blue-700 dark:text-blue-500 underline hover:no-underline font-medium">inline policy</a>.</p>
     <label for="account-id" class="text-sm font-medium text-gray-900 dark:text-white mb-2 block">Flowbite account ID:</label>
@@ -500,7 +500,7 @@ window.addEventListener('load', function() {
                 </svg>
             </span>
         </button>
-        <div id="tooltip-account-id" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-account-id" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             <span id="default-tooltip-message-account-id">Copy to clipboard</span>
             <span id="success-tooltip-message-account-id" class="hidden">Copied!</span>
             <div class="tooltip-arrow" data-popper-arrow></div>
@@ -521,7 +521,7 @@ window.addEventListener('load', function() {
                 </svg>
             </span>
         </button>
-        <div id="tooltip-api-key" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-api-key" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             <span id="default-tooltip-message-api-key">Copy to clipboard</span>
             <span id="success-tooltip-message-api-key" class="hidden">Copied!</span>
             <div class="tooltip-arrow" data-popper-arrow></div>
@@ -542,7 +542,7 @@ window.addEventListener('load', function() {
                 </svg>
             </span>
         </button>
-        <div id="tooltip-role-arn" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-role-arn" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             <span id="default-tooltip-message-role-arn">Copy to clipboard</span>
             <span id="success-tooltip-message-role-arn" class="hidden">Copied!</span>
             <div class="tooltip-arrow" data-popper-arrow></div>
@@ -598,7 +598,7 @@ window.addEventListener('load', function() {
     }
 })
 ` >}}
-<div class="w-full max-w-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow rounded-lg p-5">
+<div class="w-full max-w-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm rounded-lg p-5">
     <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Contact details</h2>
     <address class="relative bg-gray-50 dark:bg-gray-700 dark:border-gray-600 p-4 rounded-lg border border-gray-200 not-italic grid grid-cols-2">
         <div class="space-y-2 text-gray-500 dark:text-gray-400 leading-loose hidden sm:block">
@@ -623,7 +623,7 @@ window.addEventListener('load', function() {
                 </svg>
             </span>
         </button>
-        <div id="tooltip-contact-details" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        <div id="tooltip-contact-details" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             <span id="default-tooltip-message-contact-details">Copy to clipboard</span>
             <span id="success-tooltip-message-contact-details" class="hidden">Copied!</span>
             <div class="tooltip-arrow" data-popper-arrow></div>
@@ -684,7 +684,7 @@ Share course
 <div id="course-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-lg max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-800">
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-800">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5">
                 <h3 class="text-lg text-gray-500 dark:text-gray-400">
@@ -714,7 +714,7 @@ Share course
                             </svg>
                         </span>
                     </button>
-                    <div id="tooltip-course-url" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    <div id="tooltip-course-url" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                         <span id="default-tooltip-message-course-url">Copy to clipboard</span>
                         <span id="success-tooltip-message-course-url" class="hidden">Copied!</span>
                         <div class="tooltip-arrow" data-popper-arrow></div>

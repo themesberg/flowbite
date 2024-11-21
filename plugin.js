@@ -968,16 +968,16 @@ module.exports = plugin.withOptions(
                             backgroundColor: `${theme('colors.gray.700')}`,
                             color: 'white',
                         },
-                    '@screen sm': {
-                        '.datatable-wrapper .datatable-top': {
-                            flexDirection: 'row-reverse',
-                            alignItems: 'center',
-                        },
-                        '.datatable-wrapper .datatable-bottom': {
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                        },
-                    },
+                    // '@screen sm': {
+                    //     '.datatable-wrapper .datatable-top': {
+                    //         flexDirection: 'row-reverse',
+                    //         alignItems: 'center',
+                    //     },
+                    //     '.datatable-wrapper .datatable-bottom': {
+                    //         flexDirection: 'row',
+                    //         alignItems: 'center',
+                    //     },
+                    // },
                 });
             }
 

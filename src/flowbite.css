@@ -2,6 +2,20 @@
 @import "./docs.css";
 @config "./../tailwind.config.js";
 
+@layer utilities {
+    input,
+    textarea,
+    select,
+    button {
+      border: 0px solid;
+      border-radius: 0;
+      padding: 0;
+      color: inherit;
+      background-color: transparent;
+      color: inherit;
+    }
+  }
+
 /*
 “Have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.”
 ― Steve Jobs

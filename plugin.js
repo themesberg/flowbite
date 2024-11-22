@@ -560,6 +560,10 @@ module.exports = plugin.withOptions(
                         alignItems: 'start',
                         gap: `${theme('spacing.4', spacing[4])}`,
                         marginBottom: `${theme('spacing.4', spacing[4])}`,
+                        '@media (min-width: 640px)': {
+                            flexDirection: 'row-reverse',
+                            alignItems: 'center',
+                        },
                     },
                     '.datatable-wrapper .datatable-search .datatable-input, .datatable-wrapper .datatable-input':
                         {
@@ -757,6 +761,10 @@ module.exports = plugin.withOptions(
                         alignItems: 'start',
                         marginTop: `${theme('spacing.4', spacing[4])}`,
                         gap: `${theme('spacing.4', spacing[4])}`,
+                        '@media (min-width: 640px)': {
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                        },
                     },
                     '.datatable-wrapper .datatable-bottom .datatable-info': {
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
@@ -968,16 +976,6 @@ module.exports = plugin.withOptions(
                             backgroundColor: `${theme('colors.gray.700')}`,
                             color: 'white',
                         },
-                    // '@screen sm': {
-                    //     '.datatable-wrapper .datatable-top': {
-                    //         flexDirection: 'row-reverse',
-                    //         alignItems: 'center',
-                    //     },
-                    //     '.datatable-wrapper .datatable-bottom': {
-                    //         flexDirection: 'row',
-                    //         alignItems: 'center',
-                    //     },
-                    // },
                 });
             }
 

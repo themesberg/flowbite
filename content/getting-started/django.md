@@ -293,7 +293,7 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
 <body class="bg-green-50">
 
     <!-- Add this -->
-    <nav class="bg-green-50 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+    <nav class="bg-green-50 border-gray-200 px-2 sm:px-4 py-2.5 rounded-sm dark:bg-gray-800">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
           <a href="{{ .Site.Params.homepage }}/" class="flex items-center">
               <img src="/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
@@ -307,7 +307,7 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
           <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
             <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-white bg-green-700 rounded md:bg-transparent md:text-green-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+                <a href="#" class="block py-2 pl-3 pr-4 text-white bg-green-700 rounded-sm md:bg-transparent md:text-green-700 md:p-0 dark:text-white" aria-current="page">Home</a>
               </li>
               <li>
                 <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>

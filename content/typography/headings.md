@@ -60,7 +60,7 @@ Use this example to highlight a certain portion of the heading text with a diffe
 This example can be used to mark one part of the heading text with a solid background for highlighting.
 
 {{< example id="heading-mark-example" github="typography/headings.md" show_dark=true >}}
-<h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Regain <mark class="px-2 text-white bg-blue-600 rounded dark:bg-blue-500">control</mark> over your days</h1>
+<h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Regain <mark class="px-2 text-white bg-blue-600 rounded-sm dark:bg-blue-500">control</mark> over your days</h1>
 <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
 {{< /example >}}
 
@@ -123,7 +123,7 @@ Get started with this example to position a breadcrumb component above the H1 he
 Use this example to show a badge component inside the heading text element as a secondary indicator.
 
 {{< example id="heading-badge-example" github="typography/headings.md" show_dark=true >}}
-<h1 class="flex items-center text-5xl font-extrabold dark:text-white">Flowbite<span class="bg-blue-100 text-blue-800 text-2xl font-semibold me-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2">PRO</span></h1>
+<h1 class="flex items-center text-5xl font-extrabold dark:text-white">Flowbite<span class="bg-blue-100 text-blue-800 text-2xl font-semibold me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-2">PRO</span></h1>
 {{< /example >}}
 
 ## Secondary text

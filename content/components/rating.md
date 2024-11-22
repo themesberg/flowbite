@@ -172,36 +172,36 @@ This advanced rating component can be used to also show how many reviews have be
 <p class="text-sm font-medium text-gray-500 dark:text-gray-400">1,745 global ratings</p>
 <div class="flex items-center mt-4">
     <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">5 star</a>
-    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
-        <div class="h-5 bg-yellow-300 rounded" style="width: 70%"></div>
+    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded-sm dark:bg-gray-700">
+        <div class="h-5 bg-yellow-300 rounded-sm" style="width: 70%"></div>
     </div>
     <span class="text-sm font-medium text-gray-500 dark:text-gray-400">70%</span>
 </div>
 <div class="flex items-center mt-4">
     <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">4 star</a>
-    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
-        <div class="h-5 bg-yellow-300 rounded" style="width: 17%"></div>
+    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded-sm dark:bg-gray-700">
+        <div class="h-5 bg-yellow-300 rounded-sm" style="width: 17%"></div>
     </div>
     <span class="text-sm font-medium text-gray-500 dark:text-gray-400">17%</span>
 </div>
 <div class="flex items-center mt-4">
     <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">3 star</a>
-    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
-        <div class="h-5 bg-yellow-300 rounded" style="width: 8%"></div>
+    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded-sm dark:bg-gray-700">
+        <div class="h-5 bg-yellow-300 rounded-sm" style="width: 8%"></div>
     </div>
     <span class="text-sm font-medium text-gray-500 dark:text-gray-400">8%</span>
 </div>
 <div class="flex items-center mt-4">
     <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">2 star</a>
-    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
-        <div class="h-5 bg-yellow-300 rounded" style="width: 4%"></div>
+    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded-sm dark:bg-gray-700">
+        <div class="h-5 bg-yellow-300 rounded-sm" style="width: 4%"></div>
     </div>
     <span class="text-sm font-medium text-gray-500 dark:text-gray-400">4%</span>
 </div>
 <div class="flex items-center mt-4">
     <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">1 star</a>
-    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
-        <div class="h-5 bg-yellow-300 rounded" style="width: 1%"></div>
+    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded-sm dark:bg-gray-700">
+        <div class="h-5 bg-yellow-300 rounded-sm" style="width: 1%"></div>
     </div>
     <span class="text-sm font-medium text-gray-500 dark:text-gray-400">1%</span>
 </div>   
@@ -214,7 +214,7 @@ This component can be used to break up a general rating score into multiple cate
 {{< example id="rating-score-example" github="components/rating.md" show_dark=true >}}
 
 <div class="flex items-center mb-5">
-    <p class="bg-blue-100 text-blue-800 text-sm font-semibold inline-flex items-center p-1.5 rounded dark:bg-blue-200 dark:text-blue-800">8.7</p>
+    <p class="bg-blue-100 text-blue-800 text-sm font-semibold inline-flex items-center p-1.5 rounded-sm dark:bg-blue-200 dark:text-blue-800">8.7</p>
     <p class="ms-2 font-medium text-gray-900 dark:text-white">Excellent</p>
     <span class="w-1 h-1 mx-2 bg-gray-900 rounded-full dark:bg-gray-500"></span>
     <p class="text-sm font-medium text-gray-500 dark:text-gray-400">376 reviews</p>
@@ -225,8 +225,8 @@ This component can be used to break up a general rating score into multiple cate
         <dl>
             <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Staff</dt>
             <dd class="flex items-center mb-3">
-                <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
-                    <div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style="width: 88%"></div>
+                <div class="w-full bg-gray-200 rounded-sm h-2.5 dark:bg-gray-700 me-2">
+                    <div class="bg-blue-600 h-2.5 rounded-sm dark:bg-blue-500" style="width: 88%"></div>
                 </div>
                 <span class="text-sm font-medium text-gray-500 dark:text-gray-400">8.8</span>
             </dd>
@@ -234,8 +234,8 @@ This component can be used to break up a general rating score into multiple cate
         <dl>
             <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Comfort</dt>
             <dd class="flex items-center mb-3">
-                <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
-                    <div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style="width: 89%"></div>
+                <div class="w-full bg-gray-200 rounded-sm h-2.5 dark:bg-gray-700 me-2">
+                    <div class="bg-blue-600 h-2.5 rounded-sm dark:bg-blue-500" style="width: 89%"></div>
                 </div>
                 <span class="text-sm font-medium text-gray-500 dark:text-gray-400">8.9</span>
             </dd>
@@ -243,8 +243,8 @@ This component can be used to break up a general rating score into multiple cate
         <dl>
             <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Free WiFi</dt>
             <dd class="flex items-center mb-3">
-                <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
-                    <div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style="width: 88%"></div>
+                <div class="w-full bg-gray-200 rounded-sm h-2.5 dark:bg-gray-700 me-2">
+                    <div class="bg-blue-600 h-2.5 rounded-sm dark:bg-blue-500" style="width: 88%"></div>
                 </div>
                 <span class="text-sm font-medium text-gray-500 dark:text-gray-400">8.8</span>
             </dd>
@@ -252,8 +252,8 @@ This component can be used to break up a general rating score into multiple cate
         <dl>
             <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Facilities</dt>
             <dd class="flex items-center">
-                <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
-                    <div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style="width: 54%"></div>
+                <div class="w-full bg-gray-200 rounded-sm h-2.5 dark:bg-gray-700 me-2">
+                    <div class="bg-blue-600 h-2.5 rounded-sm dark:bg-blue-500" style="width: 54%"></div>
                 </div>
                 <span class="text-sm font-medium text-gray-500 dark:text-gray-400">5.4</span>
             </dd>
@@ -263,8 +263,8 @@ This component can be used to break up a general rating score into multiple cate
         <dl>
             <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Value for money</dt>
             <dd class="flex items-center mb-3">
-                <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
-                    <div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style="width: 89%"></div>
+                <div class="w-full bg-gray-200 rounded-sm h-2.5 dark:bg-gray-700 me-2">
+                    <div class="bg-blue-600 h-2.5 rounded-sm dark:bg-blue-500" style="width: 89%"></div>
                 </div>
                 <span class="text-sm font-medium text-gray-500 dark:text-gray-400">8.9</span>
             </dd>
@@ -272,8 +272,8 @@ This component can be used to break up a general rating score into multiple cate
         <dl>
             <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Cleanliness</dt>
             <dd class="flex items-center mb-3">
-                <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
-                    <div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style="width: 70%"></div>
+                <div class="w-full bg-gray-200 rounded-sm h-2.5 dark:bg-gray-700 me-2">
+                    <div class="bg-blue-600 h-2.5 rounded-sm dark:bg-blue-500" style="width: 70%"></div>
                 </div>
                 <span class="text-sm font-medium text-gray-500 dark:text-gray-400">7.0</span>
             </dd>
@@ -281,8 +281,8 @@ This component can be used to break up a general rating score into multiple cate
         <dl>
             <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Location</dt>
             <dd class="flex items-center">
-                <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
-                    <div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style="width: 89%"></div>
+                <div class="w-full bg-gray-200 rounded-sm h-2.5 dark:bg-gray-700 me-2">
+                    <div class="bg-blue-600 h-2.5 rounded-sm dark:bg-blue-500" style="width: 89%"></div>
                 </div>
                 <span class="text-sm font-medium text-gray-500 dark:text-gray-400">8.9</span>
             </dd>
@@ -375,7 +375,7 @@ Use this component to show the review content from a user alongside the avatar, 
                 </footer>
                 <h4 class="text-xl font-bold text-gray-900 dark:text-white">Spotless, good appliances, excellent layout, host was genuinely nice and helpful.</h4>
             </div>
-            <p class="bg-blue-700 text-white text-sm font-semibold inline-flex items-center p-1.5 rounded">8.7</p>
+            <p class="bg-blue-700 text-white text-sm font-semibold inline-flex items-center p-1.5 rounded-sm">8.7</p>
         </div>
         <p class="mb-2 text-gray-500 dark:text-gray-400">The flat was spotless, very comfortable, and the host was amazing. I highly recommend this accommodation for anyone visiting New York city centre. It's quite a while since we are no longer using hotel facilities but self contained places. And the main reason is poor cleanliness and staff not being trained properly. This place exceeded our expectation and will return for sure.</p>
         <p class="mb-5 text-gray-500 dark:text-gray-400">It is obviously not the same build quality as those very expensive watches. But that is like comparing a Citroën to a Ferrari. This watch was well under £100! An absolute bargain.</p>

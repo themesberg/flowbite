@@ -30,7 +30,7 @@
               {{- $is_active := and $is_active_group (eq $page_slug $doc_slug) -}}
               {{- $href := printf "/docs/%s/%s/" $group_slug $doc_slug }}
               <li>
-                <a href="{{ $href }}" data-sidebar-item class="py-2 transition-colors duration-200 relative flex items-center flex-wrap font-medium hover:text-gray-900 text-gray-500 dark:text-gray-400 dark:hover:text-white {{ if $is_active }} !text-blue-700 hover:!text-blue-700 dark:!text-blue-500 dark:hover:!text-blue-500{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }} {{ if ( eq $doc.new true) }}<span><span class="bg-blue-100 text-blue-800 text-2xs font-semibold ml-2 px-1.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-100 dark:border-blue-400">NEW</span></span>{{ end }}</a>
+                <a href="{{ $href }}" data-sidebar-item class="py-2 transition-colors duration-200 relative flex items-center flex-wrap font-medium hover:text-gray-900 text-gray-500 dark:text-gray-400 dark:hover:text-white {{ if $is_active }} !text-blue-700 hover:!text-blue-700 dark:!text-blue-500 dark:hover:!text-blue-500{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }} {{ if ( eq $doc.new true) }}<span><span class="bg-blue-100 text-blue-800 text-2xs font-semibold ml-2 px-1.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-blue-400 border border-blue-100 dark:border-blue-400">NEW</span></span>{{ end }}</a>
               </li>
             {{- end }}
           </ul>

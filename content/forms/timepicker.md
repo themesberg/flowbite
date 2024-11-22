@@ -570,7 +570,7 @@ Use this example to show multiple time interval selections inside of a drawer co
       <div class="mb-6">
          <div class="flex items-center justify-between">
             <div class="flex items-center min-w-[4rem]">
-               <input checked id="monday" name="days" type="checkbox" value="monday" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+               <input checked id="monday" name="days" type="checkbox" value="monday" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                <label for="monday" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Mon</label>
             </div>
             <div class="w-full max-w-[7rem]">
@@ -608,7 +608,7 @@ Use this example to show multiple time interval selections inside of a drawer co
       <div class="mb-6">
          <div class="flex items-center justify-between">
             <div class="flex items-center min-w-[4rem]">
-               <input id="tuesday" name="days" type="checkbox" value="tuesday" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+               <input id="tuesday" name="days" type="checkbox" value="tuesday" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                <label for="tuesday" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tue</label>
             </div>
             <div class="w-full max-w-[7rem]">
@@ -646,7 +646,7 @@ Use this example to show multiple time interval selections inside of a drawer co
       <div class="mb-6">
          <div class="flex items-center justify-between">
             <div class="flex items-center min-w-[4rem]">
-               <input checked id="wednesday" name="days" type="checkbox" value="wednesday" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+               <input checked id="wednesday" name="days" type="checkbox" value="wednesday" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                <label for="wednesday" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Wed</label>
             </div>
             <div class="w-full max-w-[7rem]">
@@ -684,7 +684,7 @@ Use this example to show multiple time interval selections inside of a drawer co
       <div class="mb-6">
          <div class="flex items-center justify-between">
             <div class="flex items-center min-w-[4rem]">
-               <input id="thursday" name="days" type="checkbox" value="thursday" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+               <input id="thursday" name="days" type="checkbox" value="thursday" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                <label for="thursday" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Thu</label>
             </div>
             <div class="w-full max-w-[7rem]">
@@ -722,7 +722,7 @@ Use this example to show multiple time interval selections inside of a drawer co
       <div class="mb-6">
          <div class="flex items-center justify-between">
             <div class="flex items-center min-w-[4rem]">
-               <input id="friday" name="days" type="checkbox" value="friday" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+               <input id="friday" name="days" type="checkbox" value="friday" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                <label for="friday" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Fri</label>
             </div>
             <div class="w-full max-w-[7rem]">

@@ -19,7 +19,7 @@ Use this example to create a circle and rounded avatar on an image element.
 
 {{< example id="default-avatar-example" class="flex justify-center gap-4" github="components/avatar.md" show_dark=true >}}
 <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Rounded avatar">
-<img class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Default avatar">
+<img class="w-10 h-10 rounded-sm" src="/docs/images/people/profile-picture-5.jpg" alt="Default avatar">
 {{< /example >}}
 
 ## Bordered
@@ -60,21 +60,21 @@ Use this example to show a tooltip when hovering over the avatar.
       Jese Leos
       <div class="tooltip-arrow" data-popper-arrow></div>
   </div>
-  <img data-tooltip-target="tooltip-jese" class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Medium avatar">
+  <img data-tooltip-target="tooltip-jese" class="w-10 h-10 rounded-sm" src="/docs/images/people/profile-picture-5.jpg" alt="Medium avatar">
 </div>
 <div>
   <div id="tooltip-roberta" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
       Roberta Casas
       <div class="tooltip-arrow" data-popper-arrow></div>
   </div>
-  <img data-tooltip-target="tooltip-roberta" class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-4.jpg" alt="Medium avatar">
+  <img data-tooltip-target="tooltip-roberta" class="w-10 h-10 rounded-sm" src="/docs/images/people/profile-picture-4.jpg" alt="Medium avatar">
 </div>
 <div>
   <div id="tooltip-bonnie" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
       Bonnie Green
       <div class="tooltip-arrow" data-popper-arrow></div>
   </div>
-  <img data-tooltip-target="tooltip-bonnie" class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-3.jpg" alt="Medium avatar">
+  <img data-tooltip-target="tooltip-bonnie" class="w-10 h-10 rounded-sm" src="/docs/images/people/profile-picture-3.jpg" alt="Medium avatar">
 </div>
 {{< /example >}}
 
@@ -88,7 +88,7 @@ Use a dot element relative to the avatar component as an indicator for the user 
     <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
 </div>
 <div class="relative">
-    <img class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="">
+    <img class="w-10 h-10 rounded-sm" src="/docs/images/people/profile-picture-5.jpg" alt="">
     <span class="absolute top-0 left-8 transform -translate-y-1/2 w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
 </div>
 <div class="relative">
@@ -96,7 +96,7 @@ Use a dot element relative to the avatar component as an indicator for the user 
     <span class="bottom-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
 </div>
 <div class="relative">
-    <img class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="">
+    <img class="w-10 h-10 rounded-sm" src="/docs/images/people/profile-picture-5.jpg" alt="">
     <span class="absolute bottom-0 left-8 transform translate-y-1/4 w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
 </div>
 {{< /example >}}
@@ -169,9 +169,9 @@ Use this example if you want to show a dropdown menu when clicking on the avatar
 Choose from multiple sizing options for the avatar component from this example.
 
 {{< example id="avatar-sizes-example" class="flex flex-wrap items-center justify-center gap-6" github="components/avatar.md" show_dark=true >}}
-<img class="w-6 h-6 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Extra small avatar">
-<img class="w-8 h-8 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Small avatar">
-<img class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Medium avatar">
-<img class="w-20 h-20 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Large avatar">
-<img class="rounded w-36 h-36" src="/docs/images/people/profile-picture-5.jpg" alt="Extra large avatar">
+<img class="w-6 h-6 rounded-sm" src="/docs/images/people/profile-picture-5.jpg" alt="Extra small avatar">
+<img class="w-8 h-8 rounded-sm" src="/docs/images/people/profile-picture-5.jpg" alt="Small avatar">
+<img class="w-10 h-10 rounded-sm" src="/docs/images/people/profile-picture-5.jpg" alt="Medium avatar">
+<img class="w-20 h-20 rounded-sm" src="/docs/images/people/profile-picture-5.jpg" alt="Large avatar">
+<img class="rounded-sm w-36 h-36" src="/docs/images/people/profile-picture-5.jpg" alt="Extra large avatar">
 {{< /example >}}

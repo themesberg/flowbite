@@ -130,7 +130,7 @@ Use this component to show a sign in or register form as the first section of yo
                     </div>
                     <div class="flex items-start">
                         <div class="flex items-center h-5">
-                            <input id="remember" aria-describedby="remember" name="remember" type="checkbox" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600" required />
+                            <input id="remember" aria-describedby="remember" name="remember" type="checkbox" class="w-4 h-4 border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600" required />
                         </div>
                         <div class="ms-3 text-sm">
                         <label for="remember" class="font-medium text-gray-500 dark:text-gray-400">Remember this device</label>

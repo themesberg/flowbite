@@ -497,7 +497,7 @@ Use this component to show control buttons for a video or audio that is playing 
 
 <div class="fixed bottom-0 left-0 z-50 grid w-full h-24 grid-cols-1 px-8 bg-white border-t border-gray-200 md:grid-cols-3 dark:bg-gray-700 dark:border-gray-600">
     <div class="items-center justify-center hidden me-auto md:flex">
-        <img class="h-8 me-3 rounded" src="/docs/images/misc/flowbite-yt-screenshot.png" alt="Video preview">
+        <img class="h-8 me-3 rounded-sm" src="/docs/images/misc/flowbite-yt-screenshot.png" alt="Video preview">
         <span class="text-sm text-gray-500 dark:text-gray-400">Flowbite Crash Course</span>
     </div>
     <div class="flex items-center w-full">

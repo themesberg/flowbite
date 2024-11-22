@@ -85,7 +85,7 @@ Use the following example to make the video responsive across all devices and vi
 
 ## Custom styles
 
-Customize the video player appearance using the utility classes from Tailwind CSS such as `rounded-{size}` or `border` to set rounded corners and border.
+Customize the video player appearance using the utility classes from Tailwind CSS such as `rounded-{size}` or `border` to set rounded-sm corners and border.
 
 {{< example id="video-customize-example" github="typography/video.md" show_dark=true >}}
 <video class="w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700" controls>

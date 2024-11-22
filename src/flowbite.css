@@ -1,19 +1,4 @@
 @import "tailwindcss";
-
-/* reset preflight styles for better v3 backwards compatibility */
-@layer base {
-  input,
-  textarea,
-  select, 
-  button {
-    border: 0px solid;
-    border-radius: 0;
-    padding: 0;
-    color: inherit;
-    background-color: transparent;
-  }
-}
-
 @config "./../tailwind.config.js";
 
 /*

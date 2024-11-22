@@ -325,8 +325,8 @@ module.exports = plugin.withOptions(
                         `.dark [type='checkbox']:checked`,
                         `.dark [type='radio']:checked`,
                     ]]: {
-                        'border-color': `transparent`,
-                        'background-color': `currentColor`,
+                        'border-color': `transparent !important`,
+                        'background-color': `currentColor !important`,
                         'background-size': `0.55em 0.55em`,
                         'background-position': `center`,
                         'background-repeat': `no-repeat`,
@@ -359,8 +359,8 @@ module.exports = plugin.withOptions(
                             <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M0.5 6h14"/>
                             </svg>`
                         )}")`,
-                        'background-color': `currentColor`,
-                        'border-color': `transparent`,
+                        'background-color': `currentColor !important`,
+                        'border-color': `transparent !important`,
                         'background-position': `center`,
                         'background-repeat': `no-repeat`,
                         'background-size': `0.55em 0.55em`,
@@ -370,8 +370,8 @@ module.exports = plugin.withOptions(
                         `[type='checkbox']:indeterminate:hover`,
                         `[type='checkbox']:indeterminate:focus`,
                     ]]: {
-                        'border-color': 'transparent',
-                        'background-color': 'currentColor',
+                        'border-color': 'transparent !important',
+                        'background-color': 'currentColor !important',
                     },
                     [`[type='file']`]: {
                         background: 'unset',

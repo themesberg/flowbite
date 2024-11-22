@@ -167,9 +167,37 @@ import type { ModalOptions, ModalInterface } from 'flowbite'
 
 Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/).
 
-## Tailwind CSS 2.0
+## Tailwind CSS 4.0 beta
 
-Flowbite works with the 2.x version of Tailwind CSS.
+If you want to upgrade to v4 of Tailwind CSS you can do so with the current version of Flowbite by following the official [v4 upgrade guide](https://tailwindcss.com/docs/v4-beta) and by additionally doing the following things in your main CSS file:
+
+1. After you've upgraded to v4.0 of Tailwind CSS update your current CSS config file by using the `@config` directive and importing the configuration file:
+
+```css
+@import "tailwindcss";
+
+/* add this to copy the configuration settings from Flowbite */
+@config "./../tailwind.config.js";
+```
+
+2. Reset the form and button styles to match v3 backwards compatibility:
+
+```css
+@layer base {
+  input,
+  textarea,
+  select, 
+  button {
+    border: 0px solid;
+    border-radius: 0;
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+  }
+}
+```
+
+Now you should be good to go! Please check the [deprecated changes from v3](https://tailwindcss.com/docs/v4-beta#changes-from-v3) to learn more about the new features.
 
 ## Tailwind CSS 3.0
 
@@ -184,6 +212,10 @@ plugins: [
     require('flowbite/plugin-windicss')
 ],
 ```
+
+## Tailwind CSS 2.0
+
+Flowbite works with the 2.x version of Tailwind CSS.
 
 ## Figma design system
 

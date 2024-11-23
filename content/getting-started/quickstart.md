@@ -212,7 +212,7 @@ Now you should be good to go! Check the [deprecated changes from v3](https://tai
 
 ## Tailwind CSS 3.0
 
-Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking changes when using the components from Flowbite.
+We recommend using the current stable 3.x version of Tailwind CSS until v4.0 becomes the standard version.
 
 ## Tailwind CSS 2.0
 

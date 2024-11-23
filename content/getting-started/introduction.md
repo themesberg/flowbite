@@ -240,19 +240,60 @@ If you're ready to take your application to the next level you can [work with us
 
 If you want to create even better Flowbite pages, learn design fundamentals from [Teach Me Design - Enhance UI](https://www.enhanceui.com/?ref=flowbite-introduction), a book that covers color theory, typography, UI and UX so you can make the most to implement the Flowbite Ecosystem!
 
-## Tailwind CSS 2.0
+## Tailwind CSS 4.0
 
-Flowbite is fully compatible with the 2.x versions of Tailwind CSS.
+If you want to upgrade to v4.0.0-beta of Tailwind CSS with Flowbite you have to follow [v4 upgrade guide](https://tailwindcss.com/docs/v4-beta).
+
+1. Install the next version of Tailwind CSS using NPM:
+
+```bash
+npm install tailwindcss@next @tailwindcss/postcss@next
+```
+
+2. Add the PostCSS plugin inside the `postcss.config.js` file:
+
+```bash
+export default {
+  plugins: {
+    '@tailwindcss/postcss': {},
+  },
+};
+```
+
+3. Remove the old directives in your main CSS file and import Tailwind:
+
+```css
+@import "tailwindcss";
+```
+
+4. Use the `@config` directive to import the old configuration file from your project:
+
+```css
+@import "tailwindcss";
+
+/* add this to copy the configuration settings from Flowbite */
+@config "./../tailwind.config.js";
+```
+
+5. Compile the source CSS file using NPX:
+
+```bash
+npx @tailwindcss/cli -i main.css -o styles.css
+```
+
+Now you should be good to go! Check the [deprecated changes from v3](https://tailwindcss.com/docs/v4-beta#changes-from-v3) to learn more about the new features.
 
 ## Tailwind CSS 3.0
 
-Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking changes when using the components from Flowbite.
+We recommend using the current stable 3.x version of Tailwind CSS until v4.0 becomes the standard version.
+
+## Tailwind CSS 2.0
+
+Flowbite works with the 2.x version of Tailwind CSS.
 
 ## WindiCSS
 
-Flowbite also works with WindiCSS.
-
-Just include the WindiCSS version of the Flowbite plugin inside the `windi.config.js` file.
+Flowbite also works with WindiCSS by including the plugin inside the `windi.config.js` file:
 
 ```bash
 plugins: [

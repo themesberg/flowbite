@@ -400,8 +400,8 @@ code.language-html .token.comment{
 
 /* Search */
 
-.DocSearch-Button {
-	@apply p-2 m-0 md:w-52 items-center justify-center focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 md:justify-between h-[40px] w-[40px] md:bg-gray-50 rounded-lg border md:border-gray-300 md:border-solid shadow-none xl:pl-4 flex hover:bg-gray-100 dark:focus:bg-gray-600 xl:w-64 hover:shadow-none focus:shadow-none dark:md:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600;
+.DocSearch.DocSearch-Button {
+	@apply p-2 m-0 md:w-52 dark:bg-gray-800 items-center dark:border-gray-800 justify-center focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 md:justify-between h-[40px] w-[40px] md:bg-gray-50 rounded-lg border md:border-gray-300 md:border-solid shadow-none xl:pl-4 flex hover:bg-gray-100 dark:focus:bg-gray-600 xl:w-64 hover:shadow-none focus:shadow-none dark:md:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600;
 }
 
 .DocSearch-Button-Placeholder {

@@ -167,11 +167,33 @@ import type { ModalOptions, ModalInterface } from 'flowbite'
 
 Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/).
 
-## Tailwind CSS 4.0 beta
+## Tailwind CSS 4.0
 
-If you want to upgrade to v4 of Tailwind CSS you can do so with the current version of Flowbite by following the official [v4 upgrade guide](https://tailwindcss.com/docs/v4-beta) and by additionally doing the following things in your main CSS file:
+If you want to upgrade to v4.0.0-beta of Tailwind CSS with Flowbite you have to follow [v4 upgrade guide](https://tailwindcss.com/docs/v4-beta).
 
-1. After you've upgraded to v4.0 of Tailwind CSS update your current CSS config file by using the `@config` directive and importing the configuration file:
+1. Install the next version of Tailwind CSS using NPM:
+
+```bash
+npm install tailwindcss@next @tailwindcss/postcss@next
+```
+
+2. Add the PostCSS plugin inside the `postcss.config.js` file:
+
+```bash
+export default {
+  plugins: {
+    '@tailwindcss/postcss': {},
+  },
+};
+```
+
+3. Remove the old directives in your main CSS file and import Tailwind:
+
+```css
+@import "tailwindcss";
+```
+
+4. Use the `@config` directive to import the old configuration file from your project:
 
 ```css
 @import "tailwindcss";
@@ -180,42 +202,31 @@ If you want to upgrade to v4 of Tailwind CSS you can do so with the current vers
 @config "./../tailwind.config.js";
 ```
 
-2. Reset the form and button styles to match v3 backwards compatibility:
+5. Compile the source CSS file using NPX:
 
-```css
-@layer base {
-  input,
-  textarea,
-  select, 
-  button {
-    border: 0px solid;
-    border-radius: 0;
-    padding: 0;
-    color: inherit;
-    background-color: transparent;
-  }
-}
+```bash
+npx @tailwindcss/cli -i main.css -o styles.css
 ```
 
-Now you should be good to go! Please check the [deprecated changes from v3](https://tailwindcss.com/docs/v4-beta#changes-from-v3) to learn more about the new features.
+Now you should be good to go! Check the [deprecated changes from v3](https://tailwindcss.com/docs/v4-beta#changes-from-v3) to learn more about the new features.
 
 ## Tailwind CSS 3.0
 
 Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking changes when using the components from Flowbite.
 
+## Tailwind CSS 2.0
+
+Flowbite works with the 2.x version of Tailwind CSS.
+
 ## WindiCSS
 
-Flowbite also works with WindiCSS. Just include the WindiCSS version of the Flowbite plugin inside the `windi.config.js` file.
+Flowbite also works with WindiCSS by including the plugin inside the `windi.config.js` file:
 
 ```bash
 plugins: [
     require('flowbite/plugin-windicss')
 ],
 ```
-
-## Tailwind CSS 2.0
-
-Flowbite works with the 2.x version of Tailwind CSS.
 
 ## Figma design system
 

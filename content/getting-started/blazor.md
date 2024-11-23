@@ -219,7 +219,7 @@ module.exports = {
 
 ```bash
     <!-- ... -->
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.0.0-beta.1/dist/flowbite.min.js"></script>
   </body>
 </html>
 ```

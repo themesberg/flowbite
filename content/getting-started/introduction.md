@@ -250,10 +250,10 @@ If you want to create even better Flowbite pages, learn design fundamentals from
 
 If you want to upgrade to v4-beta of Tailwind CSS with Flowbite you have to follow the <a href="https://tailwindcss.com/docs/v4-beta" rel="nofollow" target="_blank">v4 upgrade guide</a>.
 
-1. Install the next version of Tailwind CSS using NPM:
+1. Install the next versions of Tailwind CSS and Flowbite using NPM:
 
 ```bash
-npm install tailwindcss@next @tailwindcss/postcss@next
+npm install tailwindcss@next @tailwindcss/postcss@next flowbite@next
 ```
 
 2. Add the PostCSS plugin inside the `postcss.config.js` file:
@@ -275,8 +275,6 @@ export default {
 4. Use the `@config` directive to import the old configuration file from your project:
 
 ```css
-@import "tailwindcss";
-
 /* add this to copy the configuration settings from your project */
 @config "./../tailwind.config.js";
 ```
@@ -285,12 +283,6 @@ export default {
 
 ```bash
 npx @tailwindcss/cli -i main.css -o styles.css
-```
-
-6. Finally, update to the experimental v3.0 of Flowbite via NPM:
-
-```bash
-npm install flowbite@next
 ```
 
 Now you should be good to go! Check the <a href="https://tailwindcss.com/docs/v4-beta#changes-from-v3" rel="nofollow" target="_blank">deprecated changes from v3</a> to learn more about the new features.

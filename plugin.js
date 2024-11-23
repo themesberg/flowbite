@@ -390,7 +390,7 @@ module.exports = plugin.withOptions(
                         background: theme('colors.gray.800', colors.gray[800]),
                         border: 0,
                         'font-weight': theme('fontWeight.medium'),
-                        'font-size': theme('fontSize.sm'),
+                        'font-size': theme('fontSize.sm')[0],
                         cursor: 'pointer',
                         'padding-top': spacing[2.5],
                         'padding-bottom': spacing[2.5],
@@ -571,10 +571,7 @@ module.exports = plugin.withOptions(
                                 'colors.gray.900',
                                 colors.gray[900]
                             )}`,
-                            fontSize: `${theme(
-                                'fontSize.sm',
-                                defaultTheme.fontSize.sm
-                            )}`,
+                            fontSize: `${theme('fontSize.sm')[0]}`,
                             border: `1px solid ${theme('colors.gray.300')}`,
                             borderRadius: `${theme(
                                 'borderRadius.lg',
@@ -619,10 +616,7 @@ module.exports = plugin.withOptions(
                     },
                     '.datatable-wrapper .datatable-top .datatable-dropdown': {
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
-                        fontSize: `${theme(
-                            'fontSize.sm',
-                            defaultTheme.fontSize.sm
-                        )}`,
+                        fontSize: `${theme('fontSize.sm')[0]}`,
                     },
                     '.dark .datatable-wrapper .datatable-top .datatable-dropdown':
                         {
@@ -638,10 +632,7 @@ module.exports = plugin.withOptions(
                                 'colors.gray.900',
                                 colors.gray[900]
                             )}`,
-                            fontSize: `${theme(
-                                'fontSize.sm',
-                                defaultTheme.fontSize.sm
-                            )}`,
+                            fontSize: `${theme('fontSize.sm')[0]}`,
                             border: `1px solid ${theme('colors.gray.300')}`,
                             borderRadius: `${theme(
                                 'borderRadius.lg',
@@ -678,10 +669,7 @@ module.exports = plugin.withOptions(
                     },
                     '.datatable-wrapper .datatable-table': {
                         width: '100%',
-                        fontSize: `${theme(
-                            'fontSize.sm',
-                            defaultTheme.fontSize.sm
-                        )}`,
+                        fontSize: `${theme('fontSize.sm')[0]}`,
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
                         textAlign: 'left',
                     },
@@ -689,10 +677,7 @@ module.exports = plugin.withOptions(
                         color: `${theme('colors.gray.400', colors.gray[400])}`,
                     },
                     '.datatable-wrapper .datatable-table thead': {
-                        fontSize: `${theme(
-                            'fontSize.xs',
-                            defaultTheme.fontSize.xs
-                        )}`,
+                        fontSize: `${theme('fontSize.xs')[0]}`,
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
                         backgroundColor: `${theme(
                             'colors.gray.50',
@@ -768,10 +753,7 @@ module.exports = plugin.withOptions(
                     },
                     '.datatable-wrapper .datatable-bottom .datatable-info': {
                         color: `${theme('colors.gray.500', colors.gray[500])}`,
-                        fontSize: `${theme(
-                            'fontSize.sm',
-                            defaultTheme.fontSize.sm
-                        )}`,
+                        fontSize: `${theme('fontSize.sm')[0]}`,
                     },
                     '.dark .datatable-wrapper .datatable-bottom .datatable-info':
                         {
@@ -785,10 +767,7 @@ module.exports = plugin.withOptions(
                             display: 'flex',
                             alignItems: 'center',
                             height: spacing[8],
-                            fontSize: `${theme(
-                                'fontSize.sm',
-                                defaultTheme.fontSize.sm
-                            )}`,
+                            fontSize: `${theme('fontSize.sm')[0]}`,
                         },
                     '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link':
                         {
@@ -802,10 +781,7 @@ module.exports = plugin.withOptions(
                             paddingLeft: `${theme('spacing.3', spacing[3])}`,
                             paddingRight: `${theme('spacing.3', spacing[3])}`,
                             height: spacing[8],
-                            fontSize: `${theme(
-                                'fontSize.sm',
-                                defaultTheme.fontSize.sm
-                            )}`,
+                            fontSize: `${theme('fontSize.sm')[0]}`,
                             borderTop: `1px solid ${theme('colors.gray.300')}`,
                             borderBottom: `1px solid ${theme(
                                 'colors.gray.300'
@@ -1017,10 +993,7 @@ module.exports = plugin.withOptions(
                                 'colors.gray.200',
                                 colors.gray[200]
                             )}`,
-                            fontSize: `${theme(
-                                'fontSize.sm',
-                                defaultTheme.fontSize.sm
-                            )} !important`,
+                            fontSize: `${theme('fontSize.sm')[0]} !important`,
                             fontWeight: `${theme(
                                 'fontWeight.normal',
                                 defaultTheme.fontWeight.normal
@@ -1072,10 +1045,7 @@ module.exports = plugin.withOptions(
                                 'colors.gray.500',
                                 colors.gray[500]
                             )}`,
-                            fontSize: `${theme(
-                                'fontSize.sm',
-                                defaultTheme.fontSize.sm
-                            )}`,
+                            fontSize: `${theme('fontSize.sm')[0]}`,
                         },
                     '.dark .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-label':
                         {
@@ -1090,10 +1060,7 @@ module.exports = plugin.withOptions(
                                 'colors.gray.900',
                                 colors.gray[900]
                             )}`,
-                            fontSize: `${theme(
-                                'fontSize.sm',
-                                defaultTheme.fontSize.sm
-                            )}`,
+                            fontSize: `${theme('fontSize.sm')[0]}`,
                         },
                     ':is([dir=rtl]) .apexcharts-tooltip .apexcharts-tooltip-marker':
                         {
@@ -1109,10 +1076,7 @@ module.exports = plugin.withOptions(
                             'fontWeight.normal',
                             defaultTheme.fontWeight.normal
                         )}`,
-                        fontSize: `${theme(
-                            'fontSize.sm',
-                            defaultTheme.fontSize.sm
-                        )} !important`,
+                        fontSize: `${theme('fontSize.sm')[0]} !important`,
                     },
                     '.apexcharts-canvas .apexcharts-xaxistooltip:after, .apexcharts-canvas .apexcharts-xaxistooltip:before':
                         {
@@ -1167,10 +1131,7 @@ module.exports = plugin.withOptions(
                         padding: '0 !important',
                     },
                     '.apexcharts-canvas .apexcharts-legend-text': {
-                        fontSize: `${theme(
-                            'fontSize.xs',
-                            defaultTheme.fontSize.xs
-                        )}`,
+                        fontSize: `${theme('fontSize.xs')[0]}`,
                         fontWeight: `${theme(
                             'fontWeight.medium',
                             defaultTheme.fontWeight.medium

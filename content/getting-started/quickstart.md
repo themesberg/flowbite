@@ -59,6 +59,12 @@ module.exports = {
 
 Learn more about the Flowbite JavaScript API and functionalities in the [JavaScript section](https://flowbite.com/docs/getting-started/javascript/).
 
+<div class="mt-6 mb-4">
+  {{< requires_tw4 >}}
+</div>
+
+Note: if you want to try out Flowbite with Tailwind v4-beta please [check out the guide below](#tailwind-css-40).
+
 ### Include via CDN
 
 The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.
@@ -167,17 +173,58 @@ import type { ModalOptions, ModalInterface } from 'flowbite'
 
 Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/).
 
+## Tailwind CSS 4.0
+
+If you want to upgrade to v4-beta of Tailwind CSS with Flowbite you have to follow the <a href="https://tailwindcss.com/docs/v4-beta" rel="nofollow" target="_blank">v4 upgrade guide</a>.
+
+1. Install the next versions of Tailwind CSS and Flowbite using NPM:
+
+```bash
+npm install tailwindcss@next @tailwindcss/postcss@next flowbite@next
+```
+
+2. Add the PostCSS plugin inside the `postcss.config.js` file:
+
+```bash
+export default {
+  plugins: {
+    '@tailwindcss/postcss': {},
+  },
+};
+```
+
+3. Remove the old directives in your main CSS file and import Tailwind:
+
+```css
+@import "tailwindcss";
+```
+
+4. Use the `@config` directive to import the old configuration file from your project:
+
+```css
+/* add this to copy the configuration settings from your project */
+@config "./../tailwind.config.js";
+```
+
+5. Compile the source CSS file using NPX:
+
+```bash
+npx @tailwindcss/cli -i main.css -o styles.css
+```
+
+Now you should be good to go! Check the <a href="https://tailwindcss.com/docs/v4-beta#changes-from-v3" rel="nofollow" target="_blank">deprecated changes from v3</a> to learn more about the new features.
+
+## Tailwind CSS 3.0
+
+We recommend using the current stable 3.x version of Tailwind CSS until v4.0 becomes the standard version.
+
 ## Tailwind CSS 2.0
 
 Flowbite works with the 2.x version of Tailwind CSS.
 
-## Tailwind CSS 3.0
-
-Feel free to upgrade to version 3 of Tailwind CSS as there are no breaking changes when using the components from Flowbite.
-
 ## WindiCSS
 
-Flowbite also works with WindiCSS. Just include the WindiCSS version of the Flowbite plugin inside the `windi.config.js` file.
+Flowbite also works with WindiCSS by including the plugin inside the `windi.config.js` file:
 
 ```bash
 plugins: [

@@ -101,6 +101,12 @@ module.exports = {
 
 Learn more about the Flowbite JavaScript API and functionalities in the [JavaScript section](https://flowbite.com/docs/getting-started/javascript/).
 
+<div class="mt-6 mb-4">
+  {{< requires_tw4 >}}
+</div>
+
+Note: if you want to try out Flowbite with Tailwind v4-beta please [check out the guide below](#tailwind-css-40).
+
 ### Include via CDN
 
 If you want to quickly test out Flowbite you can easily include the following CSS and JavaScript files.
@@ -242,7 +248,7 @@ If you want to create even better Flowbite pages, learn design fundamentals from
 
 ## Tailwind CSS 4.0
 
-If you want to upgrade to v4.0.0-beta of Tailwind CSS with Flowbite you have to follow [v4 upgrade guide](https://tailwindcss.com/docs/v4-beta).
+If you want to upgrade to v4-beta of Tailwind CSS with Flowbite you have to follow the <a href="https://tailwindcss.com/docs/v4-beta" rel="nofollow" target="_blank">v4 upgrade guide</a>.
 
 1. Install the next version of Tailwind CSS using NPM:
 
@@ -271,7 +277,7 @@ export default {
 ```css
 @import "tailwindcss";
 
-/* add this to copy the configuration settings from Flowbite */
+/* add this to copy the configuration settings from your project */
 @config "./../tailwind.config.js";
 ```
 
@@ -281,7 +287,13 @@ export default {
 npx @tailwindcss/cli -i main.css -o styles.css
 ```
 
-Now you should be good to go! Check the [deprecated changes from v3](https://tailwindcss.com/docs/v4-beta#changes-from-v3) to learn more about the new features.
+6. Finally, update to the experimental v3.0 of Flowbite via NPM:
+
+```bash
+npm install flowbite@next
+```
+
+Now you should be good to go! Check the <a href="https://tailwindcss.com/docs/v4-beta#changes-from-v3" rel="nofollow" target="_blank">deprecated changes from v3</a> to learn more about the new features.
 
 ## Tailwind CSS 3.0
 

@@ -9,7 +9,7 @@
     <a href="https://discord.com/invite/4eeurUVvTy"><img src="https://img.shields.io/discord/902911619032576090?color=%237289da&label=Discord" alt="Discord"></a>
     <a href="https://www.npmjs.com/package/flowbite"><img src="https://img.shields.io/npm/dt/flowbite.svg" alt="Total Downloads"></a>
     <a href="https://github.com/themesberg/flowbite/releases"><img src="https://img.shields.io/npm/v/flowbite.svg" alt="Latest Release"></a>
-    <a href="https://flowbite.com/docs/getting-started/license/"><img src="https://img.shields.io/badge/license-MIT-blue" alt="Licenese"></a>
+    <a href="https://flowbite.com/docs/getting-started/license/"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License"></a>
 </p>
 
 ------
@@ -94,13 +94,13 @@ The quickest way to get started working with Flowbite is to simply include the C
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 ```
 
 And include the following javascript file before the end of the `body` tag:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 ```
 
 ### Bundled JavaScript
@@ -256,12 +256,13 @@ All of the Flowbite UI components have native RTL support and you can easily set
 
 ### JavaScript Frameworks
 
-The awesome open-source community also built and currently maintains the following standalone libraries for React, Vue, Svelte, and Angular:
+The awesome open-source community also built and currently maintains the following standalone libraries for React, Vue, Svelte, Angular and Qwik:
 
 - [🌀 Flowbite React Library](https://github.com/themesberg/flowbite-react)
 - [🍀 Flowbite Vue Library](https://github.com/themesberg/flowbite-vue)
 - [🎸 Flowbite Svelte Library](https://github.com/themesberg/flowbite-svelte)
 - [📕 Flowbite Angular Library](https://github.com/themesberg/flowbite-angular)
+- [👿 Flowbite Qwik Library](https://github.com/qwikerx/flowbite-qwik)
 
 We also wrote integration guides for the following front-end frameworks and libraries:
 
@@ -437,7 +438,7 @@ Flowbite is an open source collection of UI components built with the utility cl
         </a>
     </td>
     <td width="33.3333%">
-        <a href="https://flowbite.com/docs/plugins/datepicker/">
+        <a href="https://flowbite.com/docs/components/datepicker/">
             <img alt="Tailwind CSS Datepicker" src="https://flowbite.s3.amazonaws.com/github/datepicker.jpg">
         </a>
     </td>
@@ -756,15 +757,37 @@ Flowbite is an open source collection of UI components built with the utility cl
     </td>
   </tr>
   </tr>
-    <tr>
+<tr>
     <td width="33.3333%">Copy to Clipboard</td>
-    <td width="33.3333%"></td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">Timepicker</td>
+    <td width="33.3333%">DataTables</td>
   </tr>
   <tr>
     <td width="33.3333%">
         <a href="https://flowbite.com/docs/components/clipboard/">
             <img alt="Tailwind CSS Clipboard" src="https://flowbite.s3.amazonaws.com/github/clipboard.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/forms/timepicker/">
+            <img alt="Tailwind CSS Timepicker" src="https://flowbite.s3.amazonaws.com/github/timepicker.jpg">
+        </a>
+    </td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/plugins/datatables/">
+            <img alt="Tailwind CSS DataTables" src="https://flowbite.s3.amazonaws.com/github/datatables.jpg">
+        </a>
+    </td>
+  </tr>
+<tr>
+    <td width="33.3333%">WYSIWYG Editor</td>
+    <td width="33.3333%"></td>
+    <td width="33.3333%"></td>
+  </tr>
+  <tr>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/plugins/wysiwyg/">
+            <img alt="Tailwind CSS WYSIWYG Text Editor" src="https://flowbite.s3.amazonaws.com/github/wysiwyg.jpg">
         </a>
     </td>
     <td width="33.3333%"></td>
@@ -780,13 +803,13 @@ If you need the Figma files for the components you can check out our website for
 
 ## Flowbite Blocks
 
-Check out Flowbite Blocks to get access to over 330+ website sections coded in Tailwind CSS and Flowbite:
+Check out Flowbite Blocks to get access to over 400+ website sections coded in Tailwind CSS and Flowbite:
 
 📦 [Check out Flowbite Blocks](https://flowbite.com/blocks/)
 
 ## Flowbite Icons
 
-Start using over 430+ free and open-source collection of solid and outline SVG icons built for Tailwind CSS and with support for Figma and JSX (React):
+Start using over 450+ free and open-source collection of solid and outline SVG icons built for Tailwind CSS and with support for Figma and JSX (React):
 
 🔍 [Check out the icons](https://flowbite.com/icons/)
 

@@ -53,7 +53,6 @@ module.exports = {
 Use the custom styles from Flowbite by including the plugin inside the `tailwind.config.js` file:
 
 ```javascript
-```javascript
 plugins: [
   require('flowbite/plugin')({
       charts: true,

@@ -1090,7 +1090,7 @@ Use the following options for the Drawer object to set the placement, enable or 
                     String
                 </td>
                 <td class="px-6 py-4">
-                    Set the position of the drawer component relative to the document body by choosing one of the values from <code class="text-purple-600 dark:text-purple-400">{top|right|bottom"left}</code>.
+                    Set the position of the drawer component relative to the document body by choosing one of the values from <code class="text-purple-600 dark:text-purple-400">{top|right|bottom|left}</code>.
                 </td>
             </tr>
             <tr class="border-b dark:bg-gray-800 dark:border-gray-700">

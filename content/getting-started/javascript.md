@@ -223,10 +223,12 @@ htmx.onLoad(function (content) {
 
 Since version `2.0.0`, the Flowbite JS API also provides a way to globally access all of the instances even if they were created via the data attributes interface. This allows you to programmatically handle the components while also giving you the possibility to use the recommended and quick way of accessing the data attributes interface and UI component examples.
 
-After the DOM has rendered and the UI components from Flowbite have been initialised (either via CDN or the `initFlowbite()` function) you can use the following global object and methods to get access to the object instances:
+After the window has loaded and the UI components from Flowbite have been initialised (either via CDN or the `initFlowbite()` function) you can use the following global object and methods to get access to the object instances:
 
 ```javascript
-const modal = FlowbiteInstances.getInstance('Modal', 'modal-id');
+window.addEventListener('load', function() {
+    const modal = FlowbiteInstances.getInstance('Modal', 'modal-id');
+})
 ```
 
 As you can see, the `FlowbiteInstances` global object has two main parameters:
@@ -246,7 +248,7 @@ modal.show();
 modal.hide();
 ```
 
-You can even remove the instance form the instance manager:
+You can even remove the instance from the instance manager:
 
 ```javascript
 // remove the instance object from the global FlowbiteInstances manager
@@ -301,7 +303,7 @@ FlowbiteInstances.getAllInstances();
 Alternatively, you can also get all of the instances from one component pool such as from the modals:
 
 ```javascript
-FlowbiteInstance.getInstances('Modal');
+FlowbiteInstances.getInstances('Modal');
 ```
 
 ## Instance options

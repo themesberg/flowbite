@@ -1,6 +1,6 @@
 {
   "name": "flowbite",
-  "version": "2.3.0",
+  "version": "2.5.2",
   "description": "The most popular library of interactive components built with Tailwind CSS",
   "keywords": [
     "flowbite",
@@ -59,7 +59,7 @@
     "build:css:min": "NPM_ENV=production npx postcss src/flowbite.css  > dist/flowbite.min.css",
     "build:css": "NPM_ENV=development npx postcss src/flowbite.css  > dist/flowbite.css",
     "build:js": "run-s build:webpack",
-    "copy:js:dist": "copyfiles --flat static/flowbite.js dist && copyfiles --flat static/flowbite.js.map dist && copyfiles --flat static/flowbite.min.js.map dist && copyfiles --flat static/flowbite.min.js dist && copyfiles --flat static/flowbite.turbo.js dist && copyfiles --flat static/flowbite.turbo.min.js dist && copyfiles --flat static/flowbite.turbo.js.map dist && copyfiles --flat static/flowbite.turbo.min.js.map dist && copyfiles --flat static/flowbite.phoenix.js dist && copyfiles --flat static/flowbite.phoenix.min.js dist && copyfiles --flat static/flowbite.phoenix.js.map dist && copyfiles --flat static/flowbite.phoenix.min.js.map dist && copyfiles --flat static/datepicker.js dist &&  copyfiles --flat static/datepicker.min.js dist && copyfiles --flat static/datepicker.js.map dist && copyfiles --flat static/datepicker.turbo.js dist &&  copyfiles --flat static/datepicker.turbo.min.js dist && copyfiles --flat static/datepicker.turbo.js.map dist",
+    "copy:js:dist": "copyfiles --flat static/flowbite.js dist && copyfiles --flat static/flowbite.js.map dist && copyfiles --flat static/flowbite.min.js.map dist && copyfiles --flat static/flowbite.min.js dist && copyfiles --flat static/flowbite.turbo.js dist && copyfiles --flat static/flowbite.turbo.min.js dist && copyfiles --flat static/flowbite.turbo.js.map dist && copyfiles --flat static/flowbite.turbo.min.js.map dist && copyfiles --flat static/flowbite.phoenix.js dist && copyfiles --flat static/flowbite.phoenix.min.js dist && copyfiles --flat static/flowbite.phoenix.js.map dist && copyfiles --flat static/flowbite.phoenix.min.js.map dist",
     "build:dist": "mkdir -p dist && run-s build:css:min build:css build:js copy:js:dist",
     "build:lib": "tsc --outDir lib/cjs && tsc -m es6 --outDir lib/esm",
     "clean:lib": "shx rm -rf lib",
@@ -85,7 +85,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-tailwindcss": "^3.7.1",
     "file-loader": "^6.2.0",
-    "flowbite-datepicker": "^1.2.6",
+    "flowbite-typography": "^1.0.4",
     "mini-css-extract-plugin": "^1.3.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.6",
@@ -109,11 +109,13 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.9.3",
+    "flowbite-datepicker": "^1.3.0",
     "mini-svg-data-uri": "^1.4.3"
   },
   "files": [
     "lib",
     "dist",
+    "types",
     "plugin.d.ts",
     "plugin.js",
     "plugin-windicss.js"

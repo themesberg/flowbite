@@ -11,6 +11,7 @@ import { TabsInterface } from '../components/tabs/interface';
 import { TooltipInterface } from '../components/tooltip/interface';
 import { InputCounterInterface } from '../components/input-counter/interface';
 import { CopyClipboardInterface } from '../components/clipboard/interface';
+import { DatepickerInterface } from '../components/datepicker/interface';
 
 class Instances {
     private _instances: {
@@ -27,6 +28,7 @@ class Instances {
         Tooltip: { [id: string]: TooltipInterface };
         InputCounter: { [id: string]: InputCounterInterface };
         CopyClipboard: { [id: string]: CopyClipboardInterface };
+        Datepicker: { [id: string]: DatepickerInterface };
     };
 
     constructor() {
@@ -44,6 +46,7 @@ class Instances {
             Tooltip: {},
             InputCounter: {},
             CopyClipboard: {},
+            Datepicker: {},
         };
     }
 

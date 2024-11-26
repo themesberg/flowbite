@@ -12,6 +12,7 @@ import { initPopovers } from './popover';
 import { initTabs } from './tabs';
 import { initTooltips } from './tooltip';
 import { RootElement } from '../dom/types';
+import { initDatepickers } from './datepicker';
 
 export function initFlowbite($rootElement: RootElement = document) {
     initAccordions($rootElement);
@@ -27,6 +28,7 @@ export function initFlowbite($rootElement: RootElement = document) {
     initDials($rootElement);
     initInputCounters($rootElement);
     initCopyClipboards($rootElement);
+    initDatepickers();
 }
 
 if (typeof window !== 'undefined') {

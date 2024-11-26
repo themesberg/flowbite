@@ -8,8 +8,8 @@ requires_js: true
 
 previous: Chat Bubble
 previousLink: components/chat-bubble/
-next: Device mockups
-nextLink: components/device-mockups/
+next: Datepicker
+nextLink: components/datepicker/
 ---
 
 The copy to clipboard component allows you to copy text, lines of code, contact details or any other data to the clipboard with a single click on a trigger element such as a button. This component can be used to copy text from an input field, textarea, code block or even address fields in a form element.
@@ -25,19 +25,21 @@ Make sure that you add the `data-copy-to-clipboard-target="elementID"` data attr
 Use this example to copy the content of an input text field by clicking on a button and update the button text by applying the JavaScript code from the tab below based on the `updateOnCopyCallback()` function callback from the Flowbite JS API.
 
 {{< example id="clipboard-example" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
-const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'npm-install');
-const $defaultMessage = document.getElementById('default-message');
-const $successMessage = document.getElementById('success-message');
+window.addEventListener('load', function() {
+    const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'npm-install');
+    const $defaultMessage = document.getElementById('default-message');
+    const $successMessage = document.getElementById('success-message');
 
-clipboard.updateOnCopyCallback((clipboard) => {
-    $defaultMessage.classList.add('hidden');
-    $successMessage.classList.remove('hidden');
+    clipboard.updateOnCopyCallback((clipboard) => {
+        $defaultMessage.classList.add('hidden');
+        $successMessage.classList.remove('hidden');
 
-    // reset to default state
-    setTimeout(() => {
-        $defaultMessage.classList.remove('hidden');
-        $successMessage.classList.add('hidden');
-    }, 2000);
+        // reset to default state
+        setTimeout(() => {
+            $defaultMessage.classList.remove('hidden');
+            $successMessage.classList.add('hidden');
+        }, 2000);
+    });
 })
 ` >}}
 <div class="grid grid-cols-8 gap-2 w-full max-w-[23rem]">
@@ -62,39 +64,41 @@ This example can be used to copy the content of an input field by clicking on a 
 If you also want to update the text inside the tooltip and the icon, then you need to apply the JavaScript code based on the `updateOnCopyCallback()` function callback from the Flowbite JS API.
 
 {{< example id="clipboard-button-input-example" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
-const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'npm-install-copy-button');
-const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-copy-npm-install-copy-button');
+window.addEventListener('load', function () {
+    const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'npm-install-copy-button');
+    const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-copy-npm-install-copy-button');
 
-const $defaultIcon = document.getElementById('default-icon');
-const $successIcon = document.getElementById('success-icon');
+    const $defaultIcon = document.getElementById('default-icon');
+    const $successIcon = document.getElementById('success-icon');
 
-const $defaultTooltipMessage = document.getElementById('default-tooltip-message');
-const $successTooltipMessage = document.getElementById('success-tooltip-message');
+    const $defaultTooltipMessage = document.getElementById('default-tooltip-message');
+    const $successTooltipMessage = document.getElementById('success-tooltip-message');
 
-clipboard.updateOnCopyCallback((clipboard) => {
-    showSuccess();
+    clipboard.updateOnCopyCallback((clipboard) => {
+        showSuccess();
 
-    // reset to default state
-    setTimeout(() => {
-        resetToDefault();
-    }, 2000);
+        // reset to default state
+        setTimeout(() => {
+            resetToDefault();
+        }, 2000);
+    })
+
+    const showSuccess = () => {
+        $defaultIcon.classList.add('hidden');
+        $successIcon.classList.remove('hidden');
+        $defaultTooltipMessage.classList.add('hidden');
+        $successTooltipMessage.classList.remove('hidden');    
+        tooltip.show();
+    }
+
+    const resetToDefault = () => {
+        $defaultIcon.classList.remove('hidden');
+        $successIcon.classList.add('hidden');
+        $defaultTooltipMessage.classList.remove('hidden');
+        $successTooltipMessage.classList.add('hidden');
+        tooltip.hide();
+    }
 })
-
-const showSuccess = () => {
-    $defaultIcon.classList.add('hidden');
-    $successIcon.classList.remove('hidden');
-    $defaultTooltipMessage.classList.add('hidden');
-    $successTooltipMessage.classList.remove('hidden');    
-    tooltip.show();
-}
-
-const resetToDefault = () => {
-    $defaultIcon.classList.remove('hidden');
-    $successIcon.classList.add('hidden');
-    $defaultTooltipMessage.classList.remove('hidden');
-    $successTooltipMessage.classList.add('hidden');
-    tooltip.hide();
-}
 ` >}}
 <div class="w-full max-w-[16rem]">
     <div class="relative">
@@ -126,29 +130,31 @@ const resetToDefault = () => {
 Use this example to show a copy button inside the input field with a text label and icon that updates to a success state when the text has been copied. Make sure that you also apply the custom JavaScript code below to enable the success and default message states.
 
 {{< example id="clipboard-button-text-input-example" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
-const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'npm-install-copy-text');
+window.addEventListener('load', function () {
+    const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'npm-install-copy-text');
 
-const $defaultMessage = document.getElementById('default-message');
-const $successMessage = document.getElementById('success-message');
+    const $defaultMessage = document.getElementById('default-message');
+    const $successMessage = document.getElementById('success-message');
 
-clipboard.updateOnCopyCallback((clipboard) => {
-    showSuccess();
+    clipboard.updateOnCopyCallback((clipboard) => {
+        showSuccess();
 
-    // reset to default state
-    setTimeout(() => {
-        resetToDefault();
-    }, 2000);
+        // reset to default state
+        setTimeout(() => {
+            resetToDefault();
+        }, 2000);
+    })
+
+    const showSuccess = () => {
+        $defaultMessage.classList.add('hidden');
+        $successMessage.classList.remove('hidden');
+    }
+
+    const resetToDefault = () => {
+        $defaultMessage.classList.remove('hidden');
+        $successMessage.classList.add('hidden');
+    }
 })
-
-const showSuccess = () => {
-    $defaultMessage.classList.add('hidden');
-    $successMessage.classList.remove('hidden');
-}
-
-const resetToDefault = () => {
-    $defaultMessage.classList.remove('hidden');
-    $successMessage.classList.add('hidden');
-}
 ` >}}
 <div class="w-full max-w-[16rem]">
     <div class="relative">
@@ -177,39 +183,41 @@ const resetToDefault = () => {
 This example can be used to show a copy to clipboard button inside an input group which has a label positioned inside the input field. The icon inside the button will switch to a success state if you also apply the custom JavaScript code below.
 
 {{< example id="clipboard-button-group-example" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
-const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'website-url');
-const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-website-url');
+window.addEventListener('load', function () {
+    const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'website-url');
+    const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-website-url');
 
-const $defaultIcon = document.getElementById('default-icon');
-const $successIcon = document.getElementById('success-icon');
+    const $defaultIcon = document.getElementById('default-icon');
+    const $successIcon = document.getElementById('success-icon');
 
-const $defaultTooltipMessage = document.getElementById('default-tooltip-message');
-const $successTooltipMessage = document.getElementById('success-tooltip-message');
+    const $defaultTooltipMessage = document.getElementById('default-tooltip-message');
+    const $successTooltipMessage = document.getElementById('success-tooltip-message');
 
-clipboard.updateOnCopyCallback((clipboard) => {
-    showSuccess();
+    clipboard.updateOnCopyCallback((clipboard) => {
+        showSuccess();
 
-    // reset to default state
-    setTimeout(() => {
-        resetToDefault();
-    }, 2000);
+        // reset to default state
+        setTimeout(() => {
+            resetToDefault();
+        }, 2000);
+    })
+
+    const showSuccess = () => {
+        $defaultIcon.classList.add('hidden');
+        $successIcon.classList.remove('hidden');
+        $defaultTooltipMessage.classList.add('hidden');
+        $successTooltipMessage.classList.remove('hidden');    
+        tooltip.show();
+    }
+
+    const resetToDefault = () => {
+        $defaultIcon.classList.remove('hidden');
+        $successIcon.classList.add('hidden');
+        $defaultTooltipMessage.classList.remove('hidden');
+        $successTooltipMessage.classList.add('hidden');
+        tooltip.hide();
+    }
 })
-
-const showSuccess = () => {
-    $defaultIcon.classList.add('hidden');
-    $successIcon.classList.remove('hidden');
-    $defaultTooltipMessage.classList.add('hidden');
-    $successTooltipMessage.classList.remove('hidden');    
-    tooltip.show();
-}
-
-const resetToDefault = () => {
-    $defaultIcon.classList.remove('hidden');
-    $successIcon.classList.add('hidden');
-    $defaultTooltipMessage.classList.remove('hidden');
-    $successTooltipMessage.classList.add('hidden');
-    tooltip.hide();
-}
 ` >}}
 <div class="w-full max-w-sm">
     <div class="mb-2 flex justify-between items-center">
@@ -247,39 +255,41 @@ const resetToDefault = () => {
 Use this example to copy a shortened URL to the clipboard by clicking on a button with an icon positioned inside the input field and also show a tooltip with a message when the text has been copied.
 
 {{< example id="clipboard-url-shortener-example" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
-const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'url-shortener');
-const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-url-shortener');
+window.addEventListener('load', function() {
+    const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'url-shortener');
+    const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-url-shortener');
 
-const $defaultIcon = document.getElementById('default-icon');
-const $successIcon = document.getElementById('success-icon');
+    const $defaultIcon = document.getElementById('default-icon');
+    const $successIcon = document.getElementById('success-icon');
 
-const $defaultTooltipMessage = document.getElementById('default-tooltip-message');
-const $successTooltipMessage = document.getElementById('success-tooltip-message');
+    const $defaultTooltipMessage = document.getElementById('default-tooltip-message');
+    const $successTooltipMessage = document.getElementById('success-tooltip-message');
 
-clipboard.updateOnCopyCallback((clipboard) => {
-    showSuccess();
+    clipboard.updateOnCopyCallback((clipboard) => {
+        showSuccess();
 
-    // reset to default state
-    setTimeout(() => {
-        resetToDefault();
-    }, 2000);
+        // reset to default state
+        setTimeout(() => {
+            resetToDefault();
+        }, 2000);
+    })
+
+    const showSuccess = () => {
+        $defaultIcon.classList.add('hidden');
+        $successIcon.classList.remove('hidden');
+        $defaultTooltipMessage.classList.add('hidden');
+        $successTooltipMessage.classList.remove('hidden');    
+        tooltip.show();
+    }
+
+    const resetToDefault = () => {
+        $defaultIcon.classList.remove('hidden');
+        $successIcon.classList.add('hidden');
+        $defaultTooltipMessage.classList.remove('hidden');
+        $successTooltipMessage.classList.add('hidden');
+        tooltip.hide();
+    }
 })
-
-const showSuccess = () => {
-    $defaultIcon.classList.add('hidden');
-    $successIcon.classList.remove('hidden');
-    $defaultTooltipMessage.classList.add('hidden');
-    $successTooltipMessage.classList.remove('hidden');    
-    tooltip.show();
-}
-
-const resetToDefault = () => {
-    $defaultIcon.classList.remove('hidden');
-    $successIcon.classList.add('hidden');
-    $defaultTooltipMessage.classList.remove('hidden');
-    $successTooltipMessage.classList.add('hidden');
-    tooltip.hide();
-}
 ` >}}
 <div class="w-full max-w-sm">
     <div class="mb-2 flex justify-between items-center">
@@ -321,29 +331,31 @@ You need to add an extra `data-copy-to-clipboard-content-type="innerHTML"` data 
 You also need to add the `data-copy-to-clipboard-html-entities="true"` option to the trigger element so that the copied text will be decoded from HTML entities to plain text that will work inside your code editor.
 
 {{< example id="clipboard-source-block" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="480" javascript=`
-const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'code-block');
+window.addEventListener('load', function () {
+    const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'code-block');
 
-const $defaultMessage = document.getElementById('default-message');
-const $successMessage = document.getElementById('success-message');
+    const $defaultMessage = document.getElementById('default-message');
+    const $successMessage = document.getElementById('success-message');
 
-clipboard.updateOnCopyCallback((clipboard) => {
-    showSuccess();
+    clipboard.updateOnCopyCallback((clipboard) => {
+        showSuccess();
 
-    // reset to default state
-    setTimeout(() => {
-        resetToDefault();
-    }, 2000);
+        // reset to default state
+        setTimeout(() => {
+            resetToDefault();
+        }, 2000);
+    })
+
+    const showSuccess = () => {
+        $defaultMessage.classList.add('hidden');
+        $successMessage.classList.remove('hidden');
+    }
+
+    const resetToDefault = () => {
+        $defaultMessage.classList.remove('hidden');
+        $successMessage.classList.add('hidden');
+    }
 })
-
-const showSuccess = () => {
-    $defaultMessage.classList.add('hidden');
-    $successMessage.classList.remove('hidden');
-}
-
-const resetToDefault = () => {
-    $defaultMessage.classList.remove('hidden');
-    $successMessage.classList.add('hidden');
-}
 ` >}}
 <div class="w-full max-w-lg">
     <div class="mb-2 flex justify-between items-center">
@@ -408,65 +420,67 @@ Use this example to show multiple input field elements that have the copy to cli
 Make sure that you also apply the custom JavaScript code with the function callback to enable the success and default message states for each input field and copy button.
 
 {{< example id="clipboard-api-keys" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="580" javascript=`
-const clipboardAccountID = FlowbiteInstances.getInstance('CopyClipboard', 'account-id');
-const clipboardExternalID = FlowbiteInstances.getInstance('CopyClipboard', 'api-key');
-const clipboardRoleARN = FlowbiteInstances.getInstance('CopyClipboard', 'role-arn');
+window.addEventListener('load', function() {
+    const clipboardAccountID = FlowbiteInstances.getInstance('CopyClipboard', 'account-id');
+    const clipboardExternalID = FlowbiteInstances.getInstance('CopyClipboard', 'api-key');
+    const clipboardRoleARN = FlowbiteInstances.getInstance('CopyClipboard', 'role-arn');
 
-const tooltipAccountID = FlowbiteInstances.getInstance('Tooltip', 'tooltip-account-id');
-const tooltipExternalID = FlowbiteInstances.getInstance('Tooltip', 'tooltip-api-key');
-const tooltipRoleARN = FlowbiteInstances.getInstance('Tooltip', 'tooltip-role-arn');
+    const tooltipAccountID = FlowbiteInstances.getInstance('Tooltip', 'tooltip-account-id');
+    const tooltipExternalID = FlowbiteInstances.getInstance('Tooltip', 'tooltip-api-key');
+    const tooltipRoleARN = FlowbiteInstances.getInstance('Tooltip', 'tooltip-role-arn');
 
-const clipboards = [
-    {
-        clipboard: clipboardAccountID,
-        tooltip: tooltipAccountID,
-        defaultMessage: document.getElementById('default-tooltip-message-account-id'),
-        successMessage: document.getElementById('success-tooltip-message-account-id'),
-        defaultIcon: document.getElementById('default-icon-account-id'),
-        successIcon: document.getElementById('success-icon-account-id')
-    },
-    {
-        clipboard: clipboardExternalID,
-        tooltip: tooltipExternalID,
-        defaultMessage: document.getElementById('default-tooltip-message-api-key'),
-        successMessage: document.getElementById('success-tooltip-message-api-key'),
-        defaultIcon: document.getElementById('default-icon-api-key'),
-        successIcon: document.getElementById('success-icon-api-key')
-    },
-    {
-        clipboard: clipboardRoleARN,
-        tooltip: tooltipRoleARN,
-        defaultMessage: document.getElementById('default-tooltip-message-role-arn'),
-        successMessage: document.getElementById('success-tooltip-message-role-arn'),
-        defaultIcon: document.getElementById('default-icon-role-arn'),
-        successIcon: document.getElementById('success-icon-role-arn')
-    }
-]
+    const clipboards = [
+        {
+            clipboard: clipboardAccountID,
+            tooltip: tooltipAccountID,
+            defaultMessage: document.getElementById('default-tooltip-message-account-id'),
+            successMessage: document.getElementById('success-tooltip-message-account-id'),
+            defaultIcon: document.getElementById('default-icon-account-id'),
+            successIcon: document.getElementById('success-icon-account-id')
+        },
+        {
+            clipboard: clipboardExternalID,
+            tooltip: tooltipExternalID,
+            defaultMessage: document.getElementById('default-tooltip-message-api-key'),
+            successMessage: document.getElementById('success-tooltip-message-api-key'),
+            defaultIcon: document.getElementById('default-icon-api-key'),
+            successIcon: document.getElementById('success-icon-api-key')
+        },
+        {
+            clipboard: clipboardRoleARN,
+            tooltip: tooltipRoleARN,
+            defaultMessage: document.getElementById('default-tooltip-message-role-arn'),
+            successMessage: document.getElementById('success-tooltip-message-role-arn'),
+            defaultIcon: document.getElementById('default-icon-role-arn'),
+            successIcon: document.getElementById('success-icon-role-arn')
+        }
+    ]
 
-clipboards.forEach((item) => {
-    item.clipboard.updateOnCopyCallback(() => {
-        showSuccess(item.defaultMessage, item.successMessage);
-        showSuccess(item.defaultIcon, item.successIcon);
-        item.tooltip.show();
+    clipboards.forEach((item) => {
+        item.clipboard.updateOnCopyCallback(() => {
+            showSuccess(item.defaultMessage, item.successMessage);
+            showSuccess(item.defaultIcon, item.successIcon);
+            item.tooltip.show();
 
-        // reset to default state
-        setTimeout(() => {
-            resetToDefault(item.defaultMessage, item.successMessage);
-            resetToDefault(item.defaultIcon, item.successIcon);
-            item.tooltip.hide();
-        }, 2000);
+            // reset to default state
+            setTimeout(() => {
+                resetToDefault(item.defaultMessage, item.successMessage);
+                resetToDefault(item.defaultIcon, item.successIcon);
+                item.tooltip.hide();
+            }, 2000);
+        })
     })
+
+    const showSuccess = ($defaultEl, $successEl) => {
+        $defaultEl.classList.add('hidden');
+        $successEl.classList.remove('hidden');
+    }
+
+    const resetToDefault = ($defaultEl, $successEl) => {
+        $defaultEl.classList.remove('hidden');
+        $successEl.classList.add('hidden');
+    }
 })
-
-const showSuccess = ($defaultEl, $successEl) => {
-    $defaultEl.classList.add('hidden');
-    $successEl.classList.remove('hidden');
-}
-
-const resetToDefault = ($defaultEl, $successEl) => {
-    $defaultEl.classList.remove('hidden');
-    $successEl.classList.add('hidden');
-}
 ` >}}
 <div class="w-full max-w-lg bg-white dark:bg-gray-800 border-gray-200 border dark:border-gray-700 shadow rounded-lg p-5">
     <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Create a role with read only in-line policies</h2>
@@ -548,39 +562,41 @@ This example can be used to copy the text content (ie. contact details) inside o
 Make sure that you set the `data-copy-to-clipboard-content-type="textContent"` data attribute to the trigger element (ie. the button) to specify the source of the content that is to be copied.
 
 {{< example id="contact-details-clipboard" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="380" javascript=`
-const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'contact-details');
-const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-contact-details');
+window.addEventListener('load', function() {
+    const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'contact-details');
+    const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-contact-details');
 
-const $defaultIcon = document.getElementById('default-icon-contact-details');
-const $successIcon = document.getElementById('success-icon-contact-details');
+    const $defaultIcon = document.getElementById('default-icon-contact-details');
+    const $successIcon = document.getElementById('success-icon-contact-details');
 
-const $defaultTooltipMessage = document.getElementById('default-tooltip-message-contact-details');
-const $successTooltipMessage = document.getElementById('success-tooltip-message-contact-details');
+    const $defaultTooltipMessage = document.getElementById('default-tooltip-message-contact-details');
+    const $successTooltipMessage = document.getElementById('success-tooltip-message-contact-details');
 
-clipboard.updateOnCopyCallback((clipboard) => {
-    showSuccess();
+    clipboard.updateOnCopyCallback((clipboard) => {
+        showSuccess();
 
-    // reset to default state
-    setTimeout(() => {
-        resetToDefault();
-    }, 2000);
+        // reset to default state
+        setTimeout(() => {
+            resetToDefault();
+        }, 2000);
+    })
+
+    const showSuccess = () => {
+        $defaultIcon.classList.add('hidden');
+        $successIcon.classList.remove('hidden');
+        $defaultTooltipMessage.classList.add('hidden');
+        $successTooltipMessage.classList.remove('hidden');    
+        tooltip.show();
+    }
+
+    const resetToDefault = () => {
+        $defaultIcon.classList.remove('hidden');
+        $successIcon.classList.add('hidden');
+        $defaultTooltipMessage.classList.remove('hidden');
+        $successTooltipMessage.classList.add('hidden');
+        tooltip.hide();
+    }
 })
-
-const showSuccess = () => {
-    $defaultIcon.classList.add('hidden');
-    $successIcon.classList.remove('hidden');
-    $defaultTooltipMessage.classList.add('hidden');
-    $successTooltipMessage.classList.remove('hidden');    
-    tooltip.show();
-}
-
-const resetToDefault = () => {
-    $defaultIcon.classList.remove('hidden');
-    $successIcon.classList.add('hidden');
-    $defaultTooltipMessage.classList.remove('hidden');
-    $successTooltipMessage.classList.add('hidden');
-    tooltip.hide();
-}
 ` >}}
 <div class="w-full max-w-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow rounded-lg p-5">
     <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Contact details</h2>
@@ -621,39 +637,41 @@ const resetToDefault = () => {
 Use this example to show an input field where you can copy the URL of the current page and also show a modal with the copied URL when the copy button is clicked.
 
 {{< example id="copy-to-clipboard-modal" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="580" javascript=`
-const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'course-url');
-const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-course-url');
+window.addEventListener('load', function() {
+    const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'course-url');
+    const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-course-url');
 
-const $defaultIcon = document.getElementById('default-icon-course-url');
-const $successIcon = document.getElementById('success-icon-course-url');
+    const $defaultIcon = document.getElementById('default-icon-course-url');
+    const $successIcon = document.getElementById('success-icon-course-url');
 
-const $defaultTooltipMessage = document.getElementById('default-tooltip-message-course-url');
-const $successTooltipMessage = document.getElementById('success-tooltip-message-course-url');
+    const $defaultTooltipMessage = document.getElementById('default-tooltip-message-course-url');
+    const $successTooltipMessage = document.getElementById('success-tooltip-message-course-url');
 
-clipboard.updateOnCopyCallback((clipboard) => {
-    showSuccess();
+    clipboard.updateOnCopyCallback((clipboard) => {
+        showSuccess();
 
-    // reset to default state
-    setTimeout(() => {
-        resetToDefault();
-    }, 2000);
+        // reset to default state
+        setTimeout(() => {
+            resetToDefault();
+        }, 2000);
+    })
+
+    const showSuccess = () => {
+        $defaultIcon.classList.add('hidden');
+        $successIcon.classList.remove('hidden');
+        $defaultTooltipMessage.classList.add('hidden');
+        $successTooltipMessage.classList.remove('hidden');    
+        tooltip.show();
+    }
+
+    const resetToDefault = () => {
+        $defaultIcon.classList.remove('hidden');
+        $successIcon.classList.add('hidden');
+        $defaultTooltipMessage.classList.remove('hidden');
+        $successTooltipMessage.classList.add('hidden');
+        tooltip.hide();
+    }
 })
-
-const showSuccess = () => {
-    $defaultIcon.classList.add('hidden');
-    $successIcon.classList.remove('hidden');
-    $defaultTooltipMessage.classList.add('hidden');
-    $successTooltipMessage.classList.remove('hidden');    
-    tooltip.show();
-}
-
-const resetToDefault = () => {
-    $defaultIcon.classList.remove('hidden');
-    $successIcon.classList.add('hidden');
-    $defaultTooltipMessage.classList.remove('hidden');
-    $successTooltipMessage.classList.add('hidden');
-    tooltip.hide();
-}
 ` >}}
 <button type="button" data-modal-target="course-modal" data-modal-toggle="course-modal" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700">
 <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">

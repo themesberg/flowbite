@@ -5,8 +5,8 @@ description: Use the toggle component to switch between a binary state of true o
 group: forms
 toc: true
 
-previous: Radio
-previousLink: forms/radio/
+previous: Timepicker
+previousLink: forms/timepicker/
 next: Range Slider
 nextLink: forms/range/
 ---

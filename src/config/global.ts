@@ -11,6 +11,7 @@ import Tabs, { initTabByElement } from "../components/tabs";
 import Tooltip, { initTooltipByElement } from "../components/tooltip";
 import InputCounter, { initInputCounterByElement } from "../components/input-counter";
 import Clipboard from '../components/clipboard';
+import Datepicker from '../components/datepicker';
 import { RootElement } from '../dom/types';
 
 declare global {
@@ -28,6 +29,8 @@ declare global {
         Tooltip: typeof Tooltip;
         InputCounter: typeof InputCounter;
         CopyClipboard: typeof Clipboard;
+        Datepicker: typeof Datepicker;
+        initDatepickers: () => void;
         initAccordions: ($rootElement?: RootElement) => void;
         initAccordionByElement: ($accordionEl: HTMLElement) => void;
         initCarousels: ($rootElement?: RootElement) => void;

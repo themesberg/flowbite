@@ -285,7 +285,7 @@ Dynamically show the password strength progress when creating a new password pos
 
 ## Placement
 
-Set the position of the popover component relative to the trigger element by using the `data-popover-placement="{top|right|bottom"left}"` data attribute and its values.
+Set the position of the popover component relative to the trigger element by using the `data-popover-placement="{top|right|bottom|left}"` data attribute and its values.
 
 {{< example id="popover-placement-example" class="flex flex-wrap justify-center py-24 space-x-4" github="components/popover.md" show_dark=true >}}
 <button data-popover-target="popover-top" data-popover-placement="top" type="button" class="text-white mb-3 me-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Top popover</button>

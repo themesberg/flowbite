@@ -284,7 +284,7 @@ Alternatively to all of the above you can also include the JavaScript via CDN:
 
 ```html
 // include via CDN
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/flowbite.phoenix.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.phoenix.min.js"></script>
 ```
 
 This will work for both LiveViews and regular Views.
@@ -579,7 +579,11 @@ You can check out the full collection of website sections by browsing the [Flowb
 
 ## Datepicker plugin
 
-If you want to use the <a href="{{< ref "plugins/datepicker" >}}">Flowbite Datepicker</a> plugin using JavaScript you will need to include it into your project via NPM:
+Since the release of version `2.4.0` of Flowbite the Datepicker component is part of the main package so it should work out of the box without any additional setup.
+
+### Versions prior to 2.4.0
+
+To use the <a href="{{< ref "plugins/datepicker" >}}">Flowbite Datepicker</a> plugin using JavaScript you will need to include it into your project via NPM:
 
 ```bash
 npm install flowbite-datepicker --save

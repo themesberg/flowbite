@@ -12,7 +12,9 @@ import { initPopovers } from './components/popover';
 import { initDials } from './components/dial';
 import { initInputCounters } from './components/input-counter';
 import { initCopyClipboards } from './components/clipboard';
+import { initDatepickers } from './components/datepicker';
 import './components/index';
+import './types/declarations';
 
 // setup events for data attributes
 const events = new Events('load', [
@@ -28,7 +30,8 @@ const events = new Events('load', [
     () => initPopovers(),
     () => initDials(),
     () => initInputCounters(),
-    () => initCopyClipboards,
+    () => initCopyClipboards(),
+    () => initDatepickers(),
 ]);
 events.init();
 
@@ -46,6 +49,7 @@ export { default as Tabs } from './components/tabs';
 export { default as Tooltip } from './components/tooltip';
 export { default as InputCounter } from './components/input-counter';
 export { default as CopyClipboard } from './components/clipboard';
+export { default as Datepicker } from './components/datepicker';
 
 // export all types
 export * from './components/accordion/types';
@@ -61,6 +65,7 @@ export * from './components/tabs/types';
 export * from './components/tooltip/types';
 export * from './components/input-counter/types';
 export * from './components/clipboard/types';
+export * from './components/datepicker/types';
 export * from './dom/types';
 
 // export all interfaces
@@ -77,6 +82,7 @@ export * from './components/tabs/interface';
 export * from './components/tooltip/interface';
 export * from './components/input-counter/interface';
 export * from './components/clipboard/interface';
+export * from './components/datepicker/interface';
 
 // export init functions
 export { initAccordions } from './components/accordion';
@@ -92,6 +98,7 @@ export { initTabs } from './components/tabs';
 export { initTooltips } from './components/tooltip';
 export { initInputCounters } from './components/input-counter';
 export { initCopyClipboards } from './components/clipboard';
+export { initDatepickers } from './components/datepicker';
 
 // export all init functions
 export { initFlowbite } from './components/index';

@@ -260,7 +260,7 @@ This component can be used to set a currency value inside a form field when you 
 
 ## Credit card input
 
-Use this component to set the information needed when making an online transaction with a credit card by adding the card number, expiration date, and security code. The component uses the [Flowbite Datepicker](https://flowbite.com/docs/plugins/datepicker/).
+Use this component to set the information needed when making an online transaction with a credit card by adding the card number, expiration date, and security code. The component uses the [Flowbite Datepicker](https://flowbite.com/docs/components/datepicker/).
 
 {{< example id="zip-code-number-input" github="components/number-input.md" show_dark=true iframeHeight="540" >}}
 <form class="max-w-sm mx-auto">
@@ -314,6 +314,28 @@ document.querySelectorAll('[data-focus-input-init]').forEach(function(element) {
         const nextId = this.getAttribute('data-focus-input-next');
         focusNextInput(this, prevId, nextId);
     });
+    
+// Handle paste event to split the pasted code into each input
+    element.addEventListener('paste', function(event) {
+        event.preventDefault();
+        const pasteData = (event.clipboardData || window.clipboardData).getData('text');
+        const digits = pasteData.replace(/\D/g, ''); // Only take numbers from the pasted data
+
+        // Get all input fields
+        const inputs = document.querySelectorAll('[data-focus-input-init]');
+        
+        // Iterate over the inputs and assign values from the pasted string
+        inputs.forEach((input, index) => {
+            if (digits[index]) {
+                input.value = digits[index];
+                // Focus the next input after filling the current one
+                const nextId = input.getAttribute('data-focus-input-next');
+                if (nextId) {
+                    document.getElementById(nextId).focus();
+                }
+            }
+        });
+    });
 });
 ` >}}
 <form class="max-w-sm mx-auto">
@@ -349,7 +371,7 @@ document.querySelectorAll('[data-focus-input-init]').forEach(function(element) {
 
 ## Number input with slider
 
-This example can be used to set the value of a number input field by sliding the range slider component or by typing the value in the input field. The component uses the [Flowbite Range Slider](https://flowbite.com/docs/plugins/range-slider/).
+This example can be used to set the value of a number input field by sliding the range slider component or by typing the value in the input field. The component uses the [Flowbite Range Slider](https://flowbite.com/docs/components/range-slider/).
 
 {{< example id="zip-code-number-input" github="components/number-input.md" show_dark=true iframeHeight="290" disable_init_js="true" javascript=`
 // Get the elements

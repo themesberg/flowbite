@@ -30,7 +30,8 @@ declare global {
         InputCounter: typeof InputCounter;
         CopyClipboard: typeof Clipboard;
         Datepicker: typeof Datepicker;
-        initDatepickers: () => void;
+        initDatepickers: ($rootElement?: RootElement) => void;
+        initDatepickerByElement: ($datepickerEl: HTMLElement) => void;
         initAccordions: ($rootElement?: RootElement) => void;
         initAccordionByElement: ($accordionEl: HTMLElement) => void;
         initCarousels: ($rootElement?: RootElement) => void;

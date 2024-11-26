@@ -185,7 +185,9 @@ class Dial implements DialInterface {
 }
 
 export function initDials($rootElement: RootElement = document) {
-    $rootElement.querySelectorAll('[data-dial-init]').forEach(initDialByElement);
+    $rootElement
+        .querySelectorAll('[data-dial-init]')
+        .forEach(initDialByElement);
 }
 
 export function initDialByElement($parentEl: Element) {

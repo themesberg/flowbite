@@ -28,7 +28,7 @@ export function initFlowbite($rootElement: RootElement = document) {
     initDials($rootElement);
     initInputCounters($rootElement);
     initCopyClipboards($rootElement);
-    initDatepickers();
+    initDatepickers($rootElement);
 }
 
 if (typeof window !== 'undefined') {

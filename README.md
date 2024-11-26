@@ -256,12 +256,13 @@ All of the Flowbite UI components have native RTL support and you can easily set
 
 ### JavaScript Frameworks
 
-The awesome open-source community also built and currently maintains the following standalone libraries for React, Vue, Svelte, and Angular:
+The awesome open-source community also built and currently maintains the following standalone libraries for React, Vue, Svelte, Angular and Qwik:
 
 - [🌀 Flowbite React Library](https://github.com/themesberg/flowbite-react)
 - [🍀 Flowbite Vue Library](https://github.com/themesberg/flowbite-vue)
 - [🎸 Flowbite Svelte Library](https://github.com/themesberg/flowbite-svelte)
 - [📕 Flowbite Angular Library](https://github.com/themesberg/flowbite-angular)
+- [👿 Flowbite Qwik Library](https://github.com/qwikerx/flowbite-qwik)
 
 We also wrote integration guides for the following front-end frameworks and libraries:
 

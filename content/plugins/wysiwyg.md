@@ -71,7 +71,6 @@ import Highlight from 'https://esm.sh/@tiptap/extension-highlight@2.6.6';
 import Underline from 'https://esm.sh/@tiptap/extension-underline@2.6.6';
 import Link from 'https://esm.sh/@tiptap/extension-link@2.6.6';
 import TextAlign from 'https://esm.sh/@tiptap/extension-text-align@2.6.6';
-import HorizontalRule from 'https://esm.sh/@tiptap/extension-horizontal-rule@2.6.6';
 import Image from 'https://esm.sh/@tiptap/extension-image@2.6.6';
 import YouTube from 'https://esm.sh/@tiptap/extension-youtube@2.6.6';
 import TextStyle from 'https://esm.sh/@tiptap/extension-text-style@2.6.6';
@@ -121,8 +120,9 @@ window.addEventListener('load', function() {
     const editor = new Editor({
         element: document.querySelector('#wysiwyg-example'),
         extensions: [
-            // Exclude the default Bold mark
             StarterKit.configure({
+                textStyle: false,
+                bold: false,
                 marks: {
                     bold: false,
                 },
@@ -143,7 +143,6 @@ window.addEventListener('load', function() {
             TextAlign.configure({
                 types: ['heading', 'paragraph'],
             }),
-            HorizontalRule,
             Image,
             YouTube,
         ],
@@ -775,8 +774,9 @@ window.addEventListener('load', function() {
     const editor = new Editor({
         element: document.querySelector('#wysiwyg-text-example'),
           extensions: [
-            // Exclude the default Bold mark
             StarterKit.configure({
+                textStyle: false,
+                bold: false,
                 marks: {
                     bold: false,
                 },
@@ -1122,7 +1122,6 @@ import Highlight from 'https://esm.sh/@tiptap/extension-highlight@2.6.6';
 import Underline from 'https://esm.sh/@tiptap/extension-underline@2.6.6';
 import Link from 'https://esm.sh/@tiptap/extension-link@2.6.6';
 import TextAlign from 'https://esm.sh/@tiptap/extension-text-align@2.6.6';
-import HorizontalRule from 'https://esm.sh/@tiptap/extension-horizontal-rule@2.6.6';
 import Image from 'https://esm.sh/@tiptap/extension-image@2.6.6';
 import YouTube from 'https://esm.sh/@tiptap/extension-youtube@2.6.6';
 
@@ -1144,7 +1143,6 @@ window.addEventListener('load', function() {
             TextAlign.configure({
                 types: ['heading', 'paragraph'],
             }),
-            HorizontalRule,
             Image,
             YouTube
         ],
@@ -1233,8 +1231,6 @@ Use this example to create typography elements like bullet lists, ordered lists,
 {{< example id="default-wysiwyg-typography-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
-import HorizontalRule from 'https://esm.sh/@tiptap/extension-horizontal-rule@2.6.6';
-import CodeBlock from 'https://esm.sh/@tiptap/extension-code-block@2.6.6';
 
 window.addEventListener('load', function() {
     if (document.getElementById("wysiwyg-typography-example")) {
@@ -1243,9 +1239,7 @@ window.addEventListener('load', function() {
     const editor = new Editor({
         element: document.querySelector('#wysiwyg-typography-example'),
         extensions: [
-            StarterKit,
-            HorizontalRule,
-            CodeBlock
+            StarterKit
         ],
         content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><ul><li>Over 600+ open-source UI components</li><li>Supports dark mode and RTL</li><li>Available in React, Vue, Svelte frameworks</li></ul><p>Here is an example of a button component:</p><pre><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code></pre><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
         editorProps: {
@@ -1783,7 +1777,6 @@ import Table from 'https://esm.sh/@tiptap/extension-table@2.6.6';
 import TableCell from 'https://esm.sh/@tiptap/extension-table-cell@2.6.6';
 import TableHeader from 'https://esm.sh/@tiptap/extension-table-header@2.6.6';
 import TableRow from 'https://esm.sh/@tiptap/extension-table-row@2.6.6';
-import Gapcursor from 'https://esm.sh/@tiptap/extension-gapcursor@2.6.6';
 
 const TipTapExtensionTableCell = TableCell.extend({
 	addAttributes() {
@@ -1816,7 +1809,6 @@ window.addEventListener('load', function() {
         element: document.querySelector('#wysiwyg-tables-example'),
         extensions: [
             StarterKit,
-            Gapcursor,
             Table.configure({
                 resizable: true,
             }),

@@ -1230,7 +1230,7 @@ window.addEventListener('load', function() {
 
 Use this example to create typography elements like bullet lists, ordered lists, blockquotes, horizontal rules, paragraphs, headings, code blocks based on Tailwind CSS utility classees and the Flowbite API.
 
-{{< example id="default-wysiwyg-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+{{< example id="default-wysiwyg-typography-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
 import HorizontalRule from 'https://esm.sh/@tiptap/extension-horizontal-rule@2.6.6';
@@ -1776,7 +1776,7 @@ window.addEventListener('load', function() {
 
 Use this example to edit table data inside the WYSIWYG text editor by adding and removing table column, rows, and cells and use other features to navigate through the table data for a convenient editing process.
 
-{{< example id="default-wysiwyg-video-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+{{< example id="default-wysiwyg-tables-example" class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
 import Table from 'https://esm.sh/@tiptap/extension-table@2.6.6';

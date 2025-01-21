@@ -202,39 +202,41 @@ Use this example to send a verification code to the user's phone number for auth
 Use this example to select one of your saved phone numbers from an application with a copy-paste feature.
 
 {{< example id="phone-select-number-input" github="components/phone-input.md" show_dark=true disable_init_js="true" javascript=`
-const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'phone-numbers');
-const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-phone');
+window.addEventListener('load', function() {
+    const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'phone-numbers');
+    const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-phone');
 
-const $defaultIcon = document.getElementById('copy-icon');
-const $successIcon = document.getElementById('copy-icon-success');
+    const $defaultIcon = document.getElementById('copy-icon');
+    const $successIcon = document.getElementById('copy-icon-success');
 
-const $defaultTooltipMessage = document.getElementById('tooltip-text');
-const $successTooltipMessage = document.getElementById('tooltip-text-success');
+    const $defaultTooltipMessage = document.getElementById('tooltip-text');
+    const $successTooltipMessage = document.getElementById('tooltip-text-success');
 
-clipboard.updateOnCopyCallback((clipboard) => {
-    showSuccess();
+    clipboard.updateOnCopyCallback((clipboard) => {
+        showSuccess();
 
-    // reset to default state
-    setTimeout(() => {
-        resetToDefault();
-    }, 2000);
-})
+        // reset to default state
+        setTimeout(() => {
+            resetToDefault();
+        }, 2000);
+    })
 
-const showSuccess = () => {
-    $defaultIcon.classList.add('hidden');
-    $successIcon.classList.remove('hidden');
-    $defaultTooltipMessage.classList.add('hidden');
-    $successTooltipMessage.classList.remove('hidden');    
-    tooltip.show();
-}
+    const showSuccess = () => {
+        $defaultIcon.classList.add('hidden');
+        $successIcon.classList.remove('hidden');
+        $defaultTooltipMessage.classList.add('hidden');
+        $successTooltipMessage.classList.remove('hidden');    
+        tooltip.show();
+    }
 
-const resetToDefault = () => {
-    $defaultIcon.classList.remove('hidden');
-    $successIcon.classList.add('hidden');
-    $defaultTooltipMessage.classList.remove('hidden');
-    $successTooltipMessage.classList.add('hidden');
-    tooltip.hide();
-}
+    const resetToDefault = () => {
+        $defaultIcon.classList.remove('hidden');
+        $successIcon.classList.add('hidden');
+        $defaultTooltipMessage.classList.remove('hidden');
+        $successTooltipMessage.classList.add('hidden');
+        tooltip.hide();
+    }
+});
 ` >}}
 <form class="max-w-sm mx-auto">
     <div class="mb-2 flex justify-between items-center">
@@ -259,7 +261,7 @@ const resetToDefault = () => {
         </button>
         <div id="tooltip-phone" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
             <span id="tooltip-text">Copy number</span>
-            <span id="tooltip-text-success">Copied!</span>
+            <span id="tooltip-text-success" class="hidden">Copied!</span>
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
     </div>

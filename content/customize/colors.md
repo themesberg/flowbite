@@ -18,7 +18,7 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
 <div class="grid grid-cols-1 gap-8 my-12">
    <div>
       <div class="flex flex-col space-y-3 text-xs sm:flex-row sm:space-y-0 sm:space-x-4">
-         <div class="flex-shrink-0 w-32">
+         <div class="shrink-0 w-32">
             <div class="flex flex-col justify-center h-10">
                <div class="text-sm font-semibold text-gray-900 dark:text-gray-400">Gray</div>
                <div><code class="text-xs text-gray-500">colors.coolGray</code></div>
@@ -100,7 +100,7 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
    </div>
    <div>
       <div class="flex flex-col space-y-3 text-xs sm:flex-row sm:space-y-0 sm:space-x-4">
-         <div class="flex-shrink-0 w-32">
+         <div class="shrink-0 w-32">
             <div class="flex flex-col justify-center h-10">
                <div class="text-sm font-semibold text-gray-900 dark:text-gray-400">Red</div>
                <div><code class="text-xs text-gray-500">colors.red</code></div>
@@ -182,7 +182,7 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
    </div>
    <div>
       <div class="flex flex-col space-y-3 text-xs sm:flex-row sm:space-y-0 sm:space-x-4">
-         <div class="flex-shrink-0 w-32">
+         <div class="shrink-0 w-32">
             <div class="flex flex-col justify-center h-10">
                <div class="text-sm font-semibold text-gray-900 dark:text-gray-400">Yellow</div>
                <div><code class="text-xs text-gray-500">colors.amber</code></div>
@@ -264,7 +264,7 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
    </div>
    <div>
       <div class="flex flex-col space-y-3 text-xs sm:flex-row sm:space-y-0 sm:space-x-4">
-         <div class="flex-shrink-0 w-32">
+         <div class="shrink-0 w-32">
             <div class="flex flex-col justify-center h-10">
                <div class="text-sm font-semibold text-gray-900 dark:text-gray-400">Green</div>
                <div><code class="text-xs text-gray-500">colors.emerald</code></div>
@@ -346,7 +346,7 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
    </div>
    <div>
       <div class="flex flex-col space-y-3 text-xs sm:flex-row sm:space-y-0 sm:space-x-4">
-         <div class="flex-shrink-0 w-32">
+         <div class="shrink-0 w-32">
             <div class="flex flex-col justify-center h-10">
                <div class="text-sm font-semibold text-gray-900 dark:text-gray-400">Blue</div>
                <div><code class="text-xs text-gray-500">colors.blue</code></div>
@@ -428,7 +428,7 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
    </div>
    <div>
       <div class="flex flex-col space-y-3 text-xs sm:flex-row sm:space-y-0 sm:space-x-4">
-         <div class="flex-shrink-0 w-32">
+         <div class="shrink-0 w-32">
             <div class="flex flex-col justify-center h-10">
                <div class="text-sm font-semibold text-gray-900 dark:text-gray-400">Indigo</div>
                <div><code class="text-xs text-gray-500">colors.indigo</code></div>
@@ -510,7 +510,7 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
    </div>
    <div>
       <div class="flex flex-col space-y-3 text-xs sm:flex-row sm:space-y-0 sm:space-x-4">
-         <div class="flex-shrink-0 w-32">
+         <div class="shrink-0 w-32">
             <div class="flex flex-col justify-center h-10">
                <div class="text-sm font-semibold text-gray-900 dark:text-gray-400">Purple</div>
                <div><code class="text-xs text-gray-500">colors.violet</code></div>
@@ -592,7 +592,7 @@ The team behind FlowBite carefully selected and extended the default Tailwind CS
    </div>
    <div>
       <div class="flex flex-col space-y-3 text-xs sm:flex-row sm:space-y-0 sm:space-x-4">
-         <div class="flex-shrink-0 w-32">
+         <div class="shrink-0 w-32">
             <div class="flex flex-col justify-center h-10">
                <div class="text-sm font-semibold text-gray-900 dark:text-gray-400">Pink</div>
                <div><code class="text-xs text-gray-500">colors.pink</code></div>

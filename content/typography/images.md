@@ -100,7 +100,7 @@ Use the filter option and apply a grayscale to the image element using the `gray
 Apply a blur by using the `blur-{size}` utility class from Tailwind CSS to an image component.
 
 {{< example id="image-blur-example" class="flex justify-center" github="typography/images.md" show_dark=true >}}
-<img class="h-auto max-w-lg transition-all duration-300 rounded-lg blur-sm hover:blur-none" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" alt="image description">
+<img class="h-auto max-w-lg transition-all duration-300 rounded-lg blur-xs hover:blur-none" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" alt="image description">
 {{< /example >}}
 
 ## Alignment

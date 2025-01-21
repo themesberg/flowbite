@@ -191,7 +191,7 @@ This example be used to paginate multiple pages on a single view alongside other
                     </svg>
                     <span class="sr-only">Previous page</span>
                 </button>
-                <span class="flex-shrink-0 mx-1 text-sm font-medium space-x-0.5 rtl:space-x-reverse">1 of 345</span>
+                <span class="shrink-0 mx-1 text-sm font-medium space-x-0.5 rtl:space-x-reverse">1 of 345</span>
                 <button type="button" class="inline-flex items-center justify-center h-8 px-1 w-6 bg-gray-100 rounded-e-lg dark:bg-gray-600 hover:bg-gray-200 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-800">
                     <svg class="w-2 h-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>

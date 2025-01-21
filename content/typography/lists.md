@@ -40,19 +40,19 @@ This example can be used to apply custom icons instead of the default bullets fo
 <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Password requirements:</h2>
 <ul class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
     <li class="flex items-center">
-        <svg class="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+        <svg class="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
          </svg>
         At least 10 characters
     </li>
     <li class="flex items-center">
-        <svg class="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+        <svg class="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
          </svg>
         At least one lowercase character
     </li>
     <li class="flex items-center">
-        <svg class="w-3.5 h-3.5 me-2 text-gray-500 dark:text-gray-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+        <svg class="w-3.5 h-3.5 me-2 text-gray-500 dark:text-gray-400 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
          </svg>
         At least one special character, e.g., ! @ # ?
@@ -192,31 +192,31 @@ Use this example to create a list of items with [custom SVG icons](https://flowb
 {{< example id="list-icons-example" github="typography/lists.md" show_dark=true >}}
 <ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
     <li class="flex items-center space-x-3 rtl:space-x-reverse">
-         <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+         <svg class="shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
          </svg>
         <span>Individual configuration</span>
     </li>
     <li class="flex items-center space-x-3 rtl:space-x-reverse">
-        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+        <svg class="shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
          </svg>
         <span>No setup, or hidden fees</span>
     </li>
     <li class="flex items-center space-x-3 rtl:space-x-reverse">
-        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+        <svg class="shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
          </svg>
         <span>Team size: <span class="font-semibold text-gray-900 dark:text-white">1 developer</span></span>
     </li>
     <li class="flex items-center space-x-3 rtl:space-x-reverse">
-        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+        <svg class="shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
          </svg>
         <span>Premium support: <span class="font-semibold text-gray-900 dark:text-white">6 months</span></span>
     </li>
     <li class="flex items-center space-x-3 rtl:space-x-reverse">
-        <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+        <svg class="shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
          </svg>
         <span>Free updates: <span class="font-semibold text-gray-900 dark:text-white">6 months</span></span>
@@ -232,7 +232,7 @@ This example can be used to show more details for each list item such as the use
 <ul class="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
    <li class="pb-3 sm:pb-4">
       <div class="flex items-center space-x-4 rtl:space-x-reverse">
-         <div class="flex-shrink-0">
+         <div class="shrink-0">
             <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Neil image">
          </div>
          <div class="flex-1 min-w-0">
@@ -250,7 +250,7 @@ This example can be used to show more details for each list item such as the use
    </li>
    <li class="py-3 sm:py-4">
       <div class="flex items-center space-x-4 rtl:space-x-reverse">
-         <div class="flex-shrink-0">
+         <div class="shrink-0">
             <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Neil image">
          </div>
          <div class="flex-1 min-w-0">
@@ -268,7 +268,7 @@ This example can be used to show more details for each list item such as the use
    </li>
    <li class="py-3 sm:py-4">
       <div class="flex items-center space-x-4 rtl:space-x-reverse">
-         <div class="flex-shrink-0">
+         <div class="shrink-0">
             <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-2.jpg" alt="Neil image">
          </div>
          <div class="flex-1 min-w-0">
@@ -286,7 +286,7 @@ This example can be used to show more details for each list item such as the use
    </li>
    <li class="py-3 sm:py-4">
       <div class="flex items-center space-x-4 rtl:space-x-reverse">
-         <div class="flex-shrink-0">
+         <div class="shrink-0">
             <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Neil image">
          </div>
          <div class="flex-1 min-w-0">
@@ -304,7 +304,7 @@ This example can be used to show more details for each list item such as the use
    </li>
    <li class="pt-3 pb-0 sm:pt-4">
       <div class="flex items-center space-x-4 rtl:space-x-reverse">
-         <div class="flex-shrink-0">
+         <div class="shrink-0">
             <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-4.jpg" alt="Neil image">
          </div>
          <div class="flex-1 min-w-0">

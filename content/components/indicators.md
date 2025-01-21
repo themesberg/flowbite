@@ -36,10 +36,10 @@ Use this example to create a simple indicator with multiple colors and position 
 This example can be used as a legend indicator for charts to also add a text next to the bullet point.
 
 {{< example id="legend-indicator-example" class="flex items-center justify-center" github="components/indicators.md" show_dark=true >}}
-<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white me-3"><span class="flex w-2.5 h-2.5 bg-blue-600 rounded-full me-1.5 flex-shrink-0"></span>Visitors</span>
-<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white me-3"><span class="flex w-2.5 h-2.5 bg-purple-500 rounded-full me-1.5 flex-shrink-0"></span>Sessions</span>
-<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white me-3"><span class="flex w-2.5 h-2.5 bg-indigo-500 rounded-full me-1.5 flex-shrink-0"></span>Customers</span>
-<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white me-3"><span class="flex w-2.5 h-2.5 bg-teal-500 rounded-full me-1.5 flex-shrink-0"></span>Revenue</span>
+<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white me-3"><span class="flex w-2.5 h-2.5 bg-blue-600 rounded-full me-1.5 shrink-0"></span>Visitors</span>
+<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white me-3"><span class="flex w-2.5 h-2.5 bg-purple-500 rounded-full me-1.5 shrink-0"></span>Sessions</span>
+<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white me-3"><span class="flex w-2.5 h-2.5 bg-indigo-500 rounded-full me-1.5 shrink-0"></span>Customers</span>
+<span class="flex items-center text-sm font-medium text-gray-900 dark:text-white me-3"><span class="flex w-2.5 h-2.5 bg-teal-500 rounded-full me-1.5 shrink-0"></span>Revenue</span>
 {{< /example >}}
 
 ## Indicator count
@@ -83,7 +83,7 @@ This example can be used to add an indicator inside of a badge component.
 <ul role="list" class="max-w-sm divide-y divide-gray-200 dark:divide-gray-700">
     <li class="py-3 sm:py-4">
         <div class="flex items-center space-x-3 rtl:space-x-reverse">
-            <div class="flex-shrink-0">
+            <div class="shrink-0">
                 <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Neil image">
             </div>
             <div class="flex-1 min-w-0">
@@ -102,7 +102,7 @@ This example can be used to add an indicator inside of a badge component.
     </li>
     <li class="py-3 sm:py-4">
         <div class="flex items-center space-x-3 rtl:space-x-reverse">
-            <div class="flex-shrink-0">
+            <div class="shrink-0">
                 <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-4.jpg" alt="Neil image">
             </div>
             <div class="flex-1 min-w-0">

@@ -195,13 +195,13 @@ export default {
 
 3. Remove the old directives in your main CSS file and import Tailwind:
 
-```css
+```bash
 @import "tailwindcss";
 ```
 
 4. Use the `@config` directive to import the old configuration file from your project:
 
-```css
+```bash
 /* add this to copy the configuration settings from your project */
 @config "./../tailwind.config.js";
 ```

@@ -31,7 +31,7 @@ If you want to add other actions as buttons alongside your textarea component, s
 {{< example id="textarea-wysiwyg-example" github="forms/textarea.md" show_dark=true >}}
 <form>
    <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-       <div class="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600 border-gray-200">
+       <div class="flex items-center justify-between px-3 py-2 border-b border-gray-200 dark:border-gray-600 border-gray-200">
            <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x sm:rtl:divide-x-reverse dark:divide-gray-600">
                <div class="flex items-center space-x-1 rtl:space-x-reverse sm:pe-4">
                    <button type="button" class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">

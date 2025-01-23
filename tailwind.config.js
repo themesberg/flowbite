@@ -80,5 +80,5 @@ module.exports = {
             wysiwyg: true,
         }),
         require('flowbite-typography'),
-    ]
+    ],
 };

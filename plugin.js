@@ -11,11 +11,11 @@ module.exports = plugin.withOptions(
     function (options = {}) {
         // Enable forms and tooltip by default if not specified in options
         const {
-            charts = false,
-            datatables = false,
+            charts = true,
+            datatables = true,
             forms = true,
             tooltips = true,
-            wysiwyg = false,
+            wysiwyg = true,
         } = options;
 
         return function ({ addBase, addComponents, theme }) {

@@ -47,7 +47,7 @@ npm install flowbite
 
 Learn more about the Flowbite JavaScript API and functionalities in the [JavaScript section](https://flowbite.com/docs/getting-started/javascript/).
 
-If you have and old project with Tailwind CSS v3 then [check out the guide](#tailwind-css-v3-to-v4) to learn how to upgrade to v4.
+If you have and old project with Tailwind CSS v3 then [check out this guide](#tailwind-css-v3-to-v4) to learn how to upgrade to v4.
 
 ### Include using CDN
 

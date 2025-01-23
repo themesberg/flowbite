@@ -105,7 +105,7 @@ Learn more about the Flowbite JavaScript API and functionalities in the [JavaScr
   {{< requires_tw4 >}}
 </div>
 
-Note: if you want to try out Flowbite with Tailwind v4-beta please [check out the guide below](#tailwind-css-40).
+Note: if you want to try out Flowbite with Tailwind v4 please [check out the guide below](#tailwind-css-40).
 
 ### Include via CDN
 
@@ -248,7 +248,7 @@ If you want to create even better Flowbite pages, learn design fundamentals from
 
 ## Tailwind CSS 4.0
 
-If you want to upgrade to v4-beta of Tailwind CSS with Flowbite you have to follow the <a href="https://tailwindcss.com/docs/v4-beta" rel="nofollow" target="_blank">v4 upgrade guide</a>.
+If you want to upgrade to v4 of Tailwind CSS with Flowbite you have to follow the <a href="https://tailwindcss.com/docs/v4-beta" rel="nofollow" target="_blank">v4 upgrade guide</a>.
 
 1. Install the next versions of Tailwind CSS and Flowbite using NPM:
 

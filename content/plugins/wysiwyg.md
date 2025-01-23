@@ -28,9 +28,17 @@ Before continuing make sure that you have Tailwind CSS, Flowbite, and Tip Tap in
 npm i flowbite-typography
 ```
 
-Require the plugin inside the `tailwind.config.js` file:
+3. Import the `flowbite-typography` plugin inside your main Tailwind CSS file:
 
 ```javascript
+@plugin "flowbite-typography";
+```
+
+Alternatively you can do the same but in your `tailwind.config.js` file:
+
+```javascript
+// import the tailwind.config.js file in your main CSS file if using Tailwind CSS v4
+module.exports = {
   theme: {
     // ...
   },
@@ -39,17 +47,6 @@ Require the plugin inside the `tailwind.config.js` file:
     // ...
   ],
 }
-```
-
-3. Set the `wysiwyg` field from the Flowbite plugin to `true` to enable pseudo styles:
-
-```javascript
-plugins: [
-  require('flowbite/plugin')({
-      wysiwyg: true,
-  }),
-  // ... other plugins
-]
 ```
 
 4. Finally, install Tip Tap either via NPM or skip this step if you're using CDN:

@@ -25,9 +25,16 @@ Make sure that you have both [Node.js](https://nodejs.org/) and [Tailwind CSS](h
 npm i -D flowbite-typography
 ```
 
-2. Require the plugin inside the `tailwind.config.js` file:
+2. Import the `flowbite-typography` plugin inside your main Tailwind CSS file:
 
 ```javascript
+@plugin "flowbite-typography";
+```
+
+Alternatively you can do the same but in your `tailwind.config.js` file:
+
+```javascript
+// import the tailwind.config.js file in your main CSS file if using Tailwind CSS v4
 module.exports = {
   theme: {
     // ...
@@ -38,6 +45,8 @@ module.exports = {
   ],
 }
 ```
+
+Now you can go ahead and use the new formatting classes from the Flowbite Typography plugin.
 
 ## Basic usage
 

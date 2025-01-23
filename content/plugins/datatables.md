@@ -25,18 +25,7 @@ Before continuing make sure that you have Tailwind CSS, Flowbite, and Simple Dat
 
 1. Install Tailwind CSS and follow our <a href="{{< ref "getting-started/quickstart" >}}">quickstart guide</a> to install Flowbite and the official plugin
 
-2. Set the field `datatables` to the value `true` inside the `tailwind.config.js` file:
-
-```javascript
-plugins: [
-  require('flowbite/plugin')({
-      datatables: true,
-  }),
-  // ... other plugins
-]
-```
-
-3. Install the `simple-datatables` library using NPM:
+2. Install the `simple-datatables` library using NPM:
 
 ```bash
 npm install simple-datatables --save

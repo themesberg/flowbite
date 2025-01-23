@@ -1318,46 +1318,7 @@ module.exports = plugin.withOptions(
         };
     },
     function (options = {}) {
-        // Enable forms and tooltip by default if not specified in options
-        const {
-            charts = false,
-            datatables = false,
-            forms = true,
-            tooltips = true,
-            wysiwyg = false,
-        } = options;
-
-        const safelist = [
-            'z-40',
-            'w-64',
-            'w-1/2',
-            'rounded-l-lg',
-            'rounded-r-lg',
-            'rounded-s-lg',
-            'rounded-e-lg',
-            'bg-gray-200',
-            'grid-cols-4',
-            'grid-cols-7',
-            'h-6',
-            'leading-6',
-            'h-9',
-            'leading-9',
-            'shadow-lg',
-            '!bg-gray-50',
-            'dark:!bg-gray-700',
-            'selectedCell',
-        ];
-
-        if (charts) {
-            safelist.push({ pattern: /^apexcharts-.*$/ });
-        }
-
-        if (datatables) {
-            safelist.push({ pattern: /^datatable-.*$/ });
-        }
-
         return {
-            safelist: safelist,
             darkMode: 'class', // or 'media' or 'class',
             theme: {
                 extend: {

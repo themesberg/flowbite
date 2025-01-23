@@ -61,39 +61,29 @@ There are over 56 types of UI components including buttons, alerts, breadcrumbs,
 
 Flowbite is technically a plugin that can be included into any existing Tailwind CSS project. To get started, you first need to make sure that you have a working Tailwind CSS project installed and that you also have Node and NPM installed on your machine.
 
-### Require via NPM
+### Install using NPM
 
-1. Install the latest version of Flowbite using NPM:
+Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="_blank">Node.js</a> and <a href="https://tailwindcss.com/docs/installation/using-postcss" rel="nofollow" target="_blank">Tailwind CSS</a> installed. This guide works with Tailwind v4.
+
+1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
 npm install flowbite
 ```
 
-2. Include Flowbite as a plugin inside the `tailwind.config.js` file:
+2. Import Flowbite as a plugin inside your main Tailwind CSS file:
 
 ```javascript
-module.exports = {
-
-    plugins: [
-        require('flowbite/plugin')
-    ]
-
-}
+@plugin "flowbite/plugin";
 ```
 
-3. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
+3. Make sure that you add the Flowbite JS source files to your CSS file:
 
-```javascript
-module.exports = {
-
-    content: [
-        "./node_modules/flowbite/**/*.js"
-    ]
-
-}
+```bash
+@source "../node_modules/flowbite";
 ```
 
-4. Require the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
+4. Include the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
 
 ```html
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
@@ -101,23 +91,19 @@ module.exports = {
 
 Learn more about the Flowbite JavaScript API and functionalities in the [JavaScript section](https://flowbite.com/docs/getting-started/javascript/).
 
-<div class="mt-6 mb-4">
-  {{< requires_tw4 >}}
-</div>
+If you have and old project with Tailwind CSS v3 then [check out the guide](#tailwind-css-v3-to-v4) to learn how to upgrade to v4.
 
-Note: if you want to try out Flowbite with Tailwind v4 please [check out the guide below](#tailwind-css-40).
+### Include using CDN
 
-### Include via CDN
-
-If you want to quickly test out Flowbite you can easily include the following CSS and JavaScript files.
+The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.
 
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.css"  rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.css" rel="stylesheet" />
 ```
 
-And include the following javascript file before the end of the `body` element:
+And include the following JavaScript file before the end of the `body` element:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
@@ -246,14 +232,14 @@ If you're ready to take your application to the next level you can [work with us
 
 If you want to create even better Flowbite pages, learn design fundamentals from [Teach Me Design - Enhance UI](https://www.enhanceui.com/?ref=flowbite-introduction), a book that covers color theory, typography, UI and UX so you can make the most to implement the Flowbite Ecosystem!
 
-## Tailwind CSS 4.0
+## Tailwind CSS v3 to v.4
 
-If you want to upgrade to v4 of Tailwind CSS with Flowbite you have to follow the <a href="https://tailwindcss.com/docs/v4-beta" rel="nofollow" target="_blank">v4 upgrade guide</a>.
+If you want to upgrade v3 from Tailwind CSS with Flowbite you have to follow the <a href="https://tailwindcss.com/docs/v4-beta" rel="nofollow" target="_blank">v4 upgrade guide</a>.
 
 1. Install the next versions of Tailwind CSS and Flowbite using NPM:
 
 ```bash
-npm install tailwindcss@next @tailwindcss/postcss@next flowbite@next
+npm install tailwindcss @tailwindcss/postcss postcss
 ```
 
 2. Add the PostCSS plugin inside the `postcss.config.js` file:
@@ -276,7 +262,7 @@ export default {
 
 ```bash
 /* add this to copy the configuration settings from your project */
-@config "./../tailwind.config.js";
+@config "../tailwind.config.js";
 ```
 
 5. Compile the source CSS file using NPX:
@@ -285,13 +271,13 @@ export default {
 npx @tailwindcss/cli -i main.css -o styles.css
 ```
 
-Now you should be good to go! Check the <a href="https://tailwindcss.com/docs/v4-beta#changes-from-v3" rel="nofollow" target="_blank">deprecated changes from v3</a> to learn more about the new features.
+Now you should be good to go! Check the <a href="https://tailwindcss.com/docs/upgrade-guide#changes-from-v3" rel="nofollow" target="_blank">deprecated changes from v3</a> to learn more about the new features.
 
-## Tailwind CSS 3.0
+## Tailwind CSS v3
 
-We recommend using the current stable 3.x version of Tailwind CSS until v4.0 becomes the standard version.
+We recommend you to follow the upgrade guide from v3 to v4 since Flowbite works with both.
 
-## Tailwind CSS 2.0
+## Tailwind CSS v2
 
 Flowbite works with the 2.x version of Tailwind CSS.
 

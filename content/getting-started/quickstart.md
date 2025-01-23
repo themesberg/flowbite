@@ -19,7 +19,7 @@ Flowbite can be easily integrated into your project through NPM. It functions as
 
 ### Install using NPM
 
-Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="_blank">Node.js</a> and <a href="https://tailwindcss.com/docs/installation/using-postcss" rel="nofollow" target="_blank">Tailwind CSS</a> installed. 
+Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="_blank">Node.js</a> and <a href="https://tailwindcss.com/docs/installation/using-postcss" rel="nofollow" target="_blank">Tailwind CSS</a> installed. This guide works with Tailwind v4.
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
@@ -36,7 +36,7 @@ npm install flowbite
 3. Make sure that you add the Flowbite JS source files to your CSS file:
 
 ```bash
-@source "./node_modules/flowbite/**/*.js";
+@source "../node_modules/flowbite";
 ```
 
 4. Include the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
@@ -187,7 +187,7 @@ export default {
 
 ```bash
 /* add this to copy the configuration settings from your project */
-@config "./../tailwind.config.js";
+@config "../tailwind.config.js";
 ```
 
 5. Compile the source CSS file using NPX:

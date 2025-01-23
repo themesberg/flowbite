@@ -29,13 +29,13 @@ Before continuing make sure that you have Tailwind CSS, Flowbite and ApexCharts 
 Install ApexChart via NPM and save it in your `package.json` file:
 
 ```bash
-npm install apexcharts --save
+npm install apexcharts@3.46.0 --save
 ``` 
 
 Alternatively, you can also just include the CDN link:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@3.46.0/dist/apexcharts.min.js"></script>
 ```
 
 Now that you have all the libraries installed you can copy-paste the chart examples below in your code.

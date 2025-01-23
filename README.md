@@ -49,7 +49,7 @@ Flowbite can be included as a plugin into an existing Tailwind CSS project and i
 
 ### Install using NPM
 
-Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" >Node.js</a> and <a href="https://tailwindcss.com/" rel="nofollow" >Tailwind CSS</a> installed. 
+Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="_blank">Node.js</a> and <a href="https://tailwindcss.com/docs/installation/using-postcss" rel="nofollow" target="_blank">Tailwind CSS</a> installed. This guide works with Tailwind v4.
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
@@ -57,51 +57,45 @@ Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" >Node.js
 npm install flowbite
 ```
 
-2. Require Flowbite as a plugin inside the `tailwind.config.js` file:
+2. Import Flowbite as a plugin inside your main Tailwind CSS file:
 
 ```javascript
-module.exports = {
-
-    plugins: [
-        require('flowbite/plugin')
-    ]
-
-}
+@plugin "flowbite/plugin";
 ```
 
-3. Make sure that you add the template path to the `tailwind.config.js` file:
+3. Make sure that you add the Flowbite JS source files to your CSS file:
 
-```javascript
-module.exports = {
-
-    content: [
-        "./node_modules/flowbite/**/*.js"
-    ]
-
-}
+```bash
+@source "../node_modules/flowbite";
 ```
 
-4. Include the main JavaScript file to make interactive elements work:
+4. Include the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
 
 ```html
-<script src="../path/to/flowbite/dist/flowbite.js"></script>
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 ```
 
-### Include via CDN
+Learn more about the Flowbite JavaScript API and functionalities in the [JavaScript section](https://flowbite.com/docs/getting-started/javascript/).
 
-The quickest way to get started working with Flowbite is to simply include the CSS and JavaScript into your project via a CDN service such as UNPKG or CDNJS (content delivery networks).
+If you have and old project with Tailwind CSS v3 then [check out the guide](#tailwind-css-v3-to-v4) to learn how to upgrade to v4.
+
+### Include using CDN
+
+The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.
 
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.css" rel="stylesheet" />
 ```
 
-And include the following javascript file before the end of the `body` tag:
+And include the following JavaScript file before the end of the `body` element:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
 ```
+
+Please remember that the best way to work with Tailwind CSS and Flowbite is by purging the CSS classes.
 
 ### Bundled JavaScript
 

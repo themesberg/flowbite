@@ -306,7 +306,7 @@ This example can be used to show a list of options to your users by using advanc
                 <ul class="space-y-4 mb-4">
                     <li>
                         <input type="radio" id="job-1" name="job" value="job-1" class="hidden peer" required />
-                        <label for="job-1" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">                           
+                        <label for="job-1" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 dark:peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">                           
                             <div class="block">
                                 <div class="w-full text-lg font-semibold">UI/UX Engineer</div>
                                 <div class="w-full text-gray-500 dark:text-gray-400">Flowbite</div>
@@ -316,7 +316,7 @@ This example can be used to show a list of options to your users by using advanc
                     </li>
                     <li>
                         <input type="radio" id="job-2" name="job" value="job-2" class="hidden peer">
-                        <label for="job-2" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
+                        <label for="job-2" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 dark:peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
                             <div class="block">
                                 <div class="w-full text-lg font-semibold">React Developer</div>
                                 <div class="w-full text-gray-500 dark:text-gray-400">Alphabet</div>
@@ -326,7 +326,7 @@ This example can be used to show a list of options to your users by using advanc
                     </li>
                     <li>
                         <input type="radio" id="job-3" name="job" value="job-3" class="hidden peer">
-                        <label for="job-3" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
+                        <label for="job-3" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 dark:peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
                             <div class="block">
                                 <div class="w-full text-lg font-semibold">Full Stack Engineer</div>
                                 <div class="w-full text-gray-500 dark:text-gray-400">Apple</div>

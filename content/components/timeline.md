@@ -192,7 +192,7 @@ Use this component to group multiple data entries inside a single date and show 
 {{< example id="timeline-grouped-example" github="components/timeline.md" show_dark=true >}}
 <div class="p-5 mb-4 border border-gray-100 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
     <time class="text-lg font-semibold text-gray-900 dark:text-white">January 13th, 2022</time>
-    <ol class="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
+    <ol class="mt-3 divide-y divide-gray-200 dark:divide-gray-700">
         <li>
             <a href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                 <img class="w-12 h-12 mb-3 me-3 rounded-full sm:mb-0" src="/docs/images/people/profile-picture-1.jpg" alt="Jese Leos image"/>
@@ -228,7 +228,7 @@ Use this component to group multiple data entries inside a single date and show 
 </div>
 <div class="p-5 border border-gray-100 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
     <time class="text-lg font-semibold text-gray-900 dark:text-white">January 12th, 2022</time>
-    <ol class="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
+    <ol class="mt-3 divide-y divide-gray-200 dark:divide-gray-700">
         <li>
             <a href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                 <img class="w-12 h-12 mb-3 me-3 rounded-full sm:mb-0" src="/docs/images/people/profile-picture-4.jpg" alt="Laura Romeros image"/>

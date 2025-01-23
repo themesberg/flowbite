@@ -1182,7 +1182,7 @@ const getChartOptions = () => {
     series: [90, 85, 70],
     colors: ["#1C64F2", "#16BDCA", "#FDBA8C"],
     chart: {
-      height: "380px",
+      height: "350px",
       width: "100%",
       type: "radialBar",
       sparkline: {

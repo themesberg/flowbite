@@ -19,6 +19,7 @@ module.exports = plugin.withOptions(
         } = options;
 
         return function ({ addBase, addComponents, theme }) {
+            // set color variables
             addBase({
                 ':root': {
                     'color-transparent': 'transparent',
@@ -1435,7 +1436,7 @@ module.exports = plugin.withOptions(
             }
         };
     },
-    function (options = {}) {
+    function () {
         return {
             darkMode: 'class', // or 'media' or 'class',
         };

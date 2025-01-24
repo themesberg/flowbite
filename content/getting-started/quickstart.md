@@ -27,15 +27,15 @@ Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="
 npm install flowbite
 ```
 
-2. Import Flowbite as a plugin inside your main Tailwind CSS file:
+2. Import Flowbite as a plugin inside your main `input.css` CSS file:
 
-```javascript
+```css
 @plugin "flowbite/plugin";
 ```
 
-3. Make sure that you add the Flowbite JS source files to your CSS file:
+3. Make sure that you add the Flowbite JS source files to your `input.css` CSS file:
 
-```bash
+```css
 @source "../node_modules/flowbite";
 ```
 
@@ -51,7 +51,7 @@ If you have and old project with Tailwind CSS v3 then [check out this guide](#ta
 
 ### Include using CDN
 
-The quickest way to get started working with FlowBite is to simply include the CSS and JavaScript into your project via CDN.
+The quickest way to get started working with Flowbite is to include the CSS and JS into your project via CDN.
 
 Require the following minified stylesheet inside the `head` tag:
 
@@ -200,7 +200,7 @@ Now you should be good to go! Check the <a href="https://tailwindcss.com/docs/up
 
 ## Tailwind CSS v3
 
-We recommend using the current stable 3.x version of Tailwind CSS until v4.0 becomes the standard version.
+We recommend you to follow the upgrade guide from v3 to v4 since Flowbite works with both.
 
 ## Tailwind CSS v2
 

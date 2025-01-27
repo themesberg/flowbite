@@ -13,33 +13,20 @@ nextLink: customize/theming/
 
 Offering a dark version for your website is more of an expected feature rather than a nice to have nowadays. Luckily, Tailwind CSS has a dark mode functionality enabled and the components from Flowbite also support it by using the "class" option.
 
-Learn how to enable and build a dark version switcher for Tailwind CSS and Flowbite by using JavaScript and the configuration file.
+Learn how to enable and build a dark version switcher for Tailwind CSS and Flowbite by using JavaScript and the main CSS file by following the steps described below.
 
 ## Enable dark mode
 
-All you need to do to enable dark mode for your Tailwind CSS project and Flowbite components is to add the following code inside your `tailwind.config.js` file and then add the `dark` class on your `html` element.
+All you need to do to enable dark mode for your Tailwind CSS project and Flowbite components is to add the following code inside your main `input.css` file and then add the `dark` class on your `html` element.
 
-```javascript
-// tailwind.config.js
-module.exports = {
-  darkMode: 'class',
-  // ...
-}
+```css
+/* input.css */
+@custom-variant dark (&:where(.dark, .dark *));
 ```
 
-Alternatively, you can also just use the "media" option to automatically set the dark or light theme based on the browser's color scheme preference.
+If you install the Flowbite Plugin inside your Tailwind project then dark mode via the class method will work automatically as we do this for you by default.
 
-```javascript
-// tailwind.config.js
-module.exports = {
-  darkMode: 'media',
-  // ...
-}
-```
-
-<div class="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800" role="alert">
-  <p>The "media" option is now set by default if you use version 3.x of Tailwind CSS.</p>
-</div>
+Alternatively, you can also just use the "media" option to automatically set the dark or light theme based on the browser's color scheme preference which is the default setting in Tailwind CSS.
 
 ## Dark mode switcher
 

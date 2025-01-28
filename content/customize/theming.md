@@ -61,9 +61,9 @@ This will ensure that the pseudo styles for forms, checkboxes, tooltips, charts,
 
 ## Theme options
 
-When you're adding a new color variable this will be available for all text, background, and border related colors. There are many more variable namespaces that you can use to customize the default utility classes from Tailwind CSS including for spacing, containers, fonts, sizing, and more.
+The best way to understand how theming works with Tailwind CSS is for example when you're adding a new color variable this will be available for all text, background, and border related colors. Basically the newly added color will propagate into all of the available utility classes.
 
-You can read all of the configurable variable namespaces on the <a href="https://tailwindcss.com/docs/theme#theme-variable-namespaces" target="_blank" rel="nofollow">Tailwind CSS docs</a>.
+There are many more variable namespaces that you can use to customize the default utility classes from Tailwind CSS including for spacing, containers, fonts, sizing, and more.
 
 ### Colors
 
@@ -146,3 +146,7 @@ You can customize the breakpoints at which the reponsive mobile-first utility cl
 ```
 
 This will make `p-custom` or `w-custom` have the value of `10px` as explained above.
+
+## Reference
+
+You can read all of the configurable variable namespaces on the <a href="https://tailwindcss.com/docs/theme#theme-variable-namespaces" target="_blank" rel="nofollow">Tailwind CSS docs</a>.

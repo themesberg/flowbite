@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Theming - Flowbite
-description: Use the theming options from the Tailwind CSS configuration file to override the default utility classes from Flowbite and change colors, fonts, and the default class values
+description: Use the theming options from Tailwind CSS to set native CSS theme variables to add new colors, fonts, spacings and create new utility classes to customize your project
 group: customize
 toc: true
 
@@ -11,108 +11,101 @@ next: Colors
 nextLink: customize/colors/
 ---
 
-You can use the `theme` object from the configuration file to define any style related classes, such as the color palette, fonts, breakpoints, and more.
+Since the release of Tailwind v4 the theming customization has been moved from the `tailwind.config.js` file to native CSS theme variables which brings allows your project to have a much more natural way of customizing colors, fonts, shadows, spacings, and more.
 
-```javascript
-// tailwind.config.js
-const colors = require('tailwindcss/colors')
+Here's an example of a modified CSS file that sets a custom set of colors and fonts:
 
-module.exports = {
-  theme: {
-    screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
-    },
-    colors: {
-      gray: colors.coolGray,
-      blue: colors.lightBlue,
-      red: colors.rose,
-      pink: colors.fuchsia,
-    },
-    fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-    },
-    extend: {
-      spacing: {
-        '128': '32rem',
-        '144': '36rem',
-      },
-      borderRadius: {
-        '4xl': '2rem',
-      }
-    }
-  }
+```css
+/* input.css file */
+
+@import "tailwindcss";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+@theme {
+    --color-primary-50: #eff6ff;
+    --color-primary-100: #dbeafe;
+    --color-primary-200: #bfdbfe;
+    --color-primary-300: #93c5fd;
+    --color-primary-400: #60a5fa;
+    --color-primary-500: #3b82f6;
+    --color-primary-600: #2563eb;
+    --color-primary-700: #1d4ed8;
+    --color-primary-800: #1e40af;
+    --color-primary-900: #1e3a8a;
+    
+    --font-sans: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-body: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-mono: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace';
 }
 ```
 
+These variables will now create a new color pallette called `primary` that can be used as your main brand color and the fonts that will now use `Inter` by default.
+
 ## Flowbite Plugin
 
-Use the custom styles from Flowbite by including the plugin inside the `tailwind.config.js` file:
+Make sure that you also import the Flowbite plugin in your main CSS file:
 
-```javascript
-plugins: [
-  require('flowbite/plugin')({
-      charts: true,
-      forms: true,
-      tooltips: true
-  }),
-  // ... other plugins
-]
+```css
+/* input.css file */
+
+@import "tailwindcss";
+
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
 ```
 
-You can enable or disable styles for the charts, forms or tooltips by setting a `true` or `false` value.
+This will ensure that the pseudo styles for forms, checkboxes, tooltips, charts, and datatables will be applied.
 
 ## Theme structure
 
-Some of the more widely used `theme` keys are `screens`, `colors`, and `spacing` as one of the core utility classes.
+When you're adding a new color variable this will be available for all text, background, and border related colors. There are many more variable namespaces that you can use to customize the default utility classes from Tailwind CSS including for spacing, containers, fonts, sizing, and more.
 
-You can read all of the [configurable keys on Tailwind CSS](https://tailwindcss.com/docs/theme#configuration-reference).
+You can read all of the configurable variable namespaces on the <a href="https://tailwindcss.com/docs/theme#theme-variable-namespaces" target="_blank" rel="nofollow">Tailwind CSS docs</a>.
 
 ### Breakpoints
 
-Use the `screens` key to update the responsive breakpoints.
+You can customize the breakpoints at which the reponsive mobile-first utility classes are being targeted using the `--breakpoint-{size}` variable namespaces in your main CSS file:
 
-```javascript
-// tailwind.config.js
-module.exports = {
-  theme: {
-    screens: {
-      'sm': '640px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '1536px',
-    }
-  }
+```css
+/* input.css */
+@import "tailwindcss";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+@theme {
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
 }
 ```
 
 ### Colors
 
-Use the `colors` key to set the colors of your site.
+Updating or adding new colors can be done by using the `--color-{name}` variable namespaces:
 
-```javascript
-// tailwind.config.js
-module.exports = {
-  theme: {
-    colors: {
-      transparent: 'transparent',
-      black: '#000',
-      white: '#fff',
-      gray: {
-        100: '#f7fafc',
-        // ...
-        900: '#1a202c',
-      },
+```css
+/* input.css file */
 
-      // ...
-    }
-  }
+@import "tailwindcss";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+@theme {
+    --color-primary-50: #eff6ff;
+    --color-primary-100: #dbeafe;
+    --color-primary-200: #bfdbfe;
+    --color-primary-300: #93c5fd;
+    --color-primary-400: #60a5fa;
+    --color-primary-500: #3b82f6;
+    --color-primary-600: #2563eb;
+    --color-primary-700: #1d4ed8;
+    --color-primary-800: #1e40af;
+    --color-primary-900: #1e3a8a;
 }
 ```
+
+This introduces a list of colors attributed to the `primary` variable name, meaning that utility class names such as `text-primary-600` or `bg-primary-600` will now show your custom branded color when using Tailwind.
 
 ### Fonts
 

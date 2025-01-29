@@ -11,131 +11,118 @@ next: Dark mode
 nextLink: customize/dark-mode/
 ---
 
-Before continuing, please make sure that you have installed Flowbite as a plugin inside your Tailwind CSS by following the [quickstart guide]({{< ref "getting-started/quickstart" >}}).
+Since the release of Tailwind v4, the configuration file that you've previously used to set options has now been moved to your main CSS file where you can import modules, plugins, set new variables like colors and fonts, set the custom source files, and more.
 
-## Configuration file
+Before continuing, please make sure that you have installed both Flowbite and the latest version of Tailwind.
 
-You will probably want to be able to add your own colors, fonts, sizings, shadows, and other styles to the default set of utility classes from FlowBite and Tailwind CSS.
+## Getting started
 
-You can easily do that by editing the `tailwind.config.js` file from the root folder of your project.
+You will probably want to be able to add your own colors, fonts, sizings, shadows, and other styles to the default set of utility classes from Flowbite and Tailwind CSS. In order to do that, you can set most of these options in your main CSS file that gets compiled by Tailwind.
 
-```javascript
-module.exports = {
+Here's an example of a simple configuration where we import plugins, set the source files, customize variables for colors and fonts, and set the dark mode strategy to use class name:
 
-  // add the folders and files from your templates
-  content: ["./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html", "./src/**/*.js"],
+```css
+@import "tailwindcss";
+@plugin "flowbite/plugin";
 
-  // make sure to safelist these classes when using purge
-  safelist: [
-    'w-64',
-    'w-1/2',
-    'rounded-l-lg',
-    'rounded-r-lg',
-    'bg-gray-200',
-    'grid-cols-4',
-    'grid-cols-7',
-    'h-6',
-    'leading-6',
-    'h-9',
-    'leading-9',
-    'shadow-lg'
-  ],
+@source "../node_modules/flowbite";
 
-  // enable dark mode via class strategy
-  darkMode: 'class',
+@custom-variant dark (&:where(.dark, .dark *));
 
-  theme: {
-    extend: {
-      // extend base Tailwind CSS utility classes
-    }
-  },
-  plugins: [
-    // include Flowbite as a plugin in your Tailwind CSS project
-    require('flowbite/plugin')
-  ]
+@theme {
+    --color-primary-50: #eff6ff;
+    --color-primary-100: #dbeafe;
+    --color-primary-200: #bfdbfe;
+    --color-primary-300: #93c5fd;
+    --color-primary-400: #60a5fa;
+    --color-primary-500: #3b82f6;
+    --color-primary-600: #2563eb;
+    --color-primary-700: #1d4ed8;
+    --color-primary-800: #1e40af;
+    --color-primary-900: #1e3a8a;
+    
+    --font-sans: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-body: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-mono: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace';
 }
 ```
 
-## Theme
+Using this example is a good starting point for any project created using Flowbite and Tailwind CSS.
 
-Use the `theme` object to define the color palette, fonts, border sizes, breakpoints. Basically, all of the visual design aspects of your website.
+## Theming variables
 
-```javascript
-// tailwind.config.js
-module.exports = {
-  theme: {
-    colors: {
-      gray: colors.coolGray,
-      blue: colors.lightBlue,
-      red: colors.rose,
-      pink: colors.fuchsia,
-    },
-    fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-    },
-    extend: {
-      spacing: {
-        '128': '32rem',
-        '144': '36rem',
-      },
-      borderRadius: {
-        '4xl': '2rem',
-      }
-    }
+You can customize colors, fonts, spacings, and other styles using native variables in your main CSS file.
+
+```css
+/* input.css file */
+
+@import "tailwindcss";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+@theme {
+    --color-primary-50: #eff6ff;
+    --color-primary-100: #dbeafe;
+    --color-primary-200: #bfdbfe;
+    --color-primary-300: #93c5fd;
+    --color-primary-400: #60a5fa;
+    --color-primary-500: #3b82f6;
+    --color-primary-600: #2563eb;
+    --color-primary-700: #1d4ed8;
+    --color-primary-800: #1e40af;
+    --color-primary-900: #1e3a8a;
+
+    --font-sans: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-body: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-mono: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace';
+
+    --spacing-custom: 10px;
+
+    --breakpoint-xs: 30rem;
+    --breakpoint-2xl: 100rem;
+    --breakpoint-3xl: 120rem;
+}
+```
+
+The example above adds a new color palette, fonts, a custom spacing variable and new media breakpoints.
+
+All of these styles will be propagated to the utility classes provided by Tailwind CSS.
+
+## Custom variants
+
+Use the `@variant` direct in native CSS to target states such as hover, focus, dark mode, and more.
+
+```css
+.element {
+  text-decoration: underline;
+
+  @variant hover {
+    text-decoration: no-underline;
   }
 }
 ```
 
-## Variants
+## Import plugins
 
-Use the `variants` object lets you define which variants (eg. hover, focus states) are used for each utility plugin.
-
-```javascript
-// tailwind.config.js
-module.exports = {
-  variants: {
-    fill: [],
-    extend: {
-      borderColor: ['focus-visible'],
-      opacity: ['disabled'],
-    }
-  },
-}
-```
-
-## Plugins
-
-The `plugins` object lets you define which external plugin you would like to include.
+You can import third party plugins using the `@plugin` directive in your CSS file.
 
 ```javascript
-// tailwind.config.js
-module.exports = {
-  plugins: [
-    require('flowbite/plugin'),
-    // ...
-  ],
-}
+@import "tailwindcss";
+@plugin "flowbite/plugin";
+@plugin "flowbite-typography";
 ```
 
-## Presets
+## Source
 
-Use the `presets` object to require another default set of configuration.
+Tailwind CSS automatically detects source files, but ignores a few folders such as your `node_modules`.
 
-```javascript
-// tailwind.config.js
-module.exports = {
-  presets: [
-    require('@acmecorp/base-tailwind-config')
-  ],
+Here's how you can explicictly set the source files in your main CSS file:
 
-  // Project-specific customizations
-  theme: {
-    //...
-  },
-  // ...
-}
+```css
+@source "../node_modules/flowbite";
 ```
+
+This will scan the Flowbite folder inside your installed packages for Tailwind classes.
 
 ## Prefix
 

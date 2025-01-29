@@ -19,8 +19,8 @@ Here's an example of a modified CSS file that sets a custom set of colors and fo
 
 ```css
 /* input.css file */
-
 @import "tailwindcss";
+
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
@@ -50,7 +50,6 @@ After installing Flowbite, make sure that you also import the Flowbite plugin in
 
 ```css
 /* input.css file */
-
 @import "tailwindcss";
 
 @plugin "flowbite/plugin";
@@ -71,8 +70,8 @@ Updating or adding new colors can be done by using the `--color-{name}` variable
 
 ```css
 /* input.css file */
-
 @import "tailwindcss";
+
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
@@ -98,8 +97,8 @@ You can add your own fonts by updating the `--font-body` variable in your CSS fi
 
 ```css
 /* input.css file */
-
 @import "tailwindcss";
+
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
@@ -118,8 +117,8 @@ Use the `spacing-{name}` variable namespace to set spacing values to utility cla
 
 ```css
 /* input.css file */
-
 @import "tailwindcss";
+
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
@@ -133,8 +132,9 @@ Use the `spacing-{name}` variable namespace to set spacing values to utility cla
 You can customize the breakpoints at which the reponsive mobile-first utility classes are being targeted using the `--breakpoint-{size}` variable namespaces in your main CSS file:
 
 ```css
-/* input.css */
+/* input.css file */
 @import "tailwindcss";
+
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 

@@ -23,8 +23,8 @@ Here's an example of a simple configuration where we import plugins, set the sou
 
 ```css
 @import "tailwindcss";
-@plugin "flowbite/plugin";
 
+@plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -55,8 +55,8 @@ You can customize colors, fonts, spacings, and other styles using native variabl
 
 ```css
 /* input.css file */
-
 @import "tailwindcss";
+
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
@@ -88,6 +88,19 @@ The example above adds a new color palette, fonts, a custom spacing variable and
 
 All of these styles will be propagated to the utility classes provided by Tailwind CSS.
 
+## Custom utilities
+
+You can add custom utilities by using the `@utility` directive in your CSS file.
+
+```css
+@utility custom-url {
+  color: --color-primary-600;
+  text-decoration: underline;
+}
+```
+
+Now you can use the `custom-url` class to add an underline and primary color to the target element.
+
 ## Custom variants
 
 Use the `@variant` direct in native CSS to target states such as hover, focus, dark mode, and more.
@@ -108,6 +121,7 @@ You can import third party plugins using the `@plugin` directive in your CSS fil
 
 ```javascript
 @import "tailwindcss";
+
 @plugin "flowbite/plugin";
 @plugin "flowbite-typography";
 ```
@@ -119,6 +133,8 @@ Tailwind CSS automatically detects source files, but ignores a few folders such 
 Here's how you can explicictly set the source files in your main CSS file:
 
 ```css
+@import "tailwindcss";
+
 @source "../node_modules/flowbite";
 ```
 

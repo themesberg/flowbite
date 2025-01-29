@@ -681,8 +681,10 @@ The Flowbite UI library has a carefully selected color pallette to meet aestheti
 If you'd like to customize the current colors or introduce new ones you can do so by creating new color variables `--color-{name}` and this color will be available for all text, background and border colors:
 
 ```css
-/* input.css file /*
+/* input.css file */
+
 @import "tailwindcss";
+
 @plugin "flowbite/plugin";
 
 @source "../node_modules/flowbite";

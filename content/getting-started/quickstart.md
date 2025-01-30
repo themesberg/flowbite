@@ -193,7 +193,7 @@ export default {
 5. Compile the source CSS file using NPX:
 
 ```bash
-npx @tailwindcss/cli -i main.css -o styles.css
+npx @tailwindcss/cli -i input.css -o output.css
 ```
 
 Now you should be good to go! Check the <a href="https://tailwindcss.com/docs/upgrade-guide#changes-from-v3" rel="nofollow" target="_blank">deprecated changes from v3</a> to learn more about the new features.

@@ -157,7 +157,7 @@ import type { ModalOptions, ModalInterface } from 'flowbite'
 
 Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/).
 
-## Tailwind CSS v3 to v.4
+## Tailwind CSS v3 to v4
 
 If you want to upgrade v3 from Tailwind CSS with Flowbite you have to follow the <a href="https://tailwindcss.com/docs/v4-beta" rel="nofollow" target="_blank">v4 upgrade guide</a>.
 

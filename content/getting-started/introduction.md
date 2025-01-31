@@ -232,7 +232,7 @@ If you're ready to take your application to the next level you can [work with us
 
 If you want to create even better Flowbite pages, learn design fundamentals from [Teach Me Design - Enhance UI](https://www.enhanceui.com/?ref=flowbite-introduction), a book that covers color theory, typography, UI and UX so you can make the most to implement the Flowbite Ecosystem!
 
-## Tailwind CSS v3 to v.4
+## Tailwind CSS v3 to v4
 
 If you want to upgrade v3 from Tailwind CSS with Flowbite you have to follow the <a href="https://tailwindcss.com/docs/v4-beta" rel="nofollow" target="_blank">v4 upgrade guide</a>.
 

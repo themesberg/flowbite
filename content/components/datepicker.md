@@ -30,6 +30,14 @@ Alternatively you can also use CDN to include the datepicker JavaScript.
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
 ```
 
+Also make sure that you add the source files for Tailwind in your main CSS file:
+
+```css
+@import "tailwindcss";
+
+@source "../node_modules/flowbite-datepicker";
+```
+
 If you'd like to manually be able to manipulate the datepicker component using JavaScript then you should <a href="#javascript">install the component using NPM</a> and include it into your JavaScript code.
 
 ## Datepicker example

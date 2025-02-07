@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { TabItem, TabsOptions } from './types';
-import type { InstanceOptions } from '../../dom/types';
+import type { InstanceOptions, RootElement } from '../../dom/types';
 import { TabsInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -136,50 +136,51 @@ class Tabs implements TabsInterface {
     }
 }
 
-export function initTabs() {
-    document.querySelectorAll('[data-tabs-toggle]').forEach(($parentEl) => {
-        const tabItems: TabItem[] = [];
-        const activeClasses = $parentEl.getAttribute(
-            'data-tabs-active-classes'
-        );
-        const inactiveClasses = $parentEl.getAttribute(
-            'data-tabs-inactive-classes'
-        );
-        let defaultTabId = null;
-        $parentEl
-            .querySelectorAll('[role="tab"]')
-            .forEach(($triggerEl: HTMLElement) => {
-                const isActive =
-                    $triggerEl.getAttribute('aria-selected') === 'true';
-                const tab: TabItem = {
-                    id: $triggerEl.getAttribute('data-tabs-target'),
-                    triggerEl: $triggerEl,
-                    targetEl: document.querySelector(
-                        $triggerEl.getAttribute('data-tabs-target')
-                    ),
-                };
-                tabItems.push(tab);
+export function initTabs($rootElement: RootElement = document) {
+    $rootElement
+        .querySelectorAll('[data-tabs-toggle]')
+        .forEach(initTabByElement);
+}
 
-                if (isActive) {
-                    defaultTabId = tab.id;
-                }
-            });
+export function initTabByElement($parentEl: Element) {
+    const tabItems: TabItem[] = [];
+    const activeClasses = $parentEl.getAttribute('data-tabs-active-classes');
+    const inactiveClasses = $parentEl.getAttribute(
+        'data-tabs-inactive-classes'
+    );
+    let defaultTabId = null;
+    $parentEl
+        .querySelectorAll('[role="tab"]')
+        .forEach(($triggerEl: HTMLElement) => {
+            const isActive =
+                $triggerEl.getAttribute('aria-selected') === 'true';
+            const tab: TabItem = {
+                id: $triggerEl.getAttribute('data-tabs-target'),
+                triggerEl: $triggerEl,
+                targetEl: document.querySelector(
+                    $triggerEl.getAttribute('data-tabs-target')
+                ),
+            };
+            tabItems.push(tab);
 
-        new Tabs($parentEl as HTMLElement, tabItems, {
-            defaultTabId: defaultTabId,
-            activeClasses: activeClasses
-                ? activeClasses
-                : Default.activeClasses,
-            inactiveClasses: inactiveClasses
-                ? inactiveClasses
-                : Default.inactiveClasses,
-        } as TabsOptions);
-    });
+            if (isActive) {
+                defaultTabId = tab.id;
+            }
+        });
+
+    new Tabs($parentEl as HTMLElement, tabItems, {
+        defaultTabId: defaultTabId,
+        activeClasses: activeClasses ? activeClasses : Default.activeClasses,
+        inactiveClasses: inactiveClasses
+            ? inactiveClasses
+            : Default.inactiveClasses,
+    } as TabsOptions);
 }
 
 if (typeof window !== 'undefined') {
     window.Tabs = Tabs;
     window.initTabs = initTabs;
+    window.initTabByElement = initTabByElement;
 }
 
 export default Tabs;

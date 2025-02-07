@@ -119,6 +119,7 @@
   "files": [
     "lib",
     "dist",
+    "src",
     "types",
     "plugin.d.ts",
     "plugin.js",

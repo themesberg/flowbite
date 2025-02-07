@@ -1,6 +1,6 @@
 {
   "name": "flowbite",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "The most popular library of interactive components built with Tailwind CSS",
   "keywords": [
     "flowbite",
@@ -119,7 +119,7 @@
   "files": [
     "lib",
     "dist",
-    "src",
+    "src/themes",
     "types",
     "plugin.d.ts",
     "plugin.js",

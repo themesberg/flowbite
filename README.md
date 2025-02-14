@@ -32,6 +32,7 @@
 - [Figma Design System](#figma-design-system)
 - [Flowbite Blocks](#flowbite-blocks)
 - [Flowbite Icons](#flowbite-icons)
+- [Flowbite Illustrations](#flowbite-illustrations)
 - [Flowbite GPT](#flowbite-gpt)
 - [Pro version](#pro-version)
 - [Hire us](#hire-us)
@@ -806,6 +807,12 @@ Check out Flowbite Blocks to get access to over 400+ website sections coded in T
 Start using over 450+ free and open-source collection of solid and outline SVG icons built for Tailwind CSS and with support for Figma and JSX (React):
 
 🔍 [Check out the icons](https://flowbite.com/icons/)
+
+## Flowbite Illustrations
+
+Get access to over 50 custom SVG illustrations designed for Flowbite and Tailwind CSS available as SVG code based on 3D styles:
+
+✍️ [Check out the illustrations](https://flowbite.com/illustrations/)
 
 ## Flowbite GPT
 

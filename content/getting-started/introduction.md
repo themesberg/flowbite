@@ -28,7 +28,7 @@ Here's a quick overview of the Flowbite ecosystem including the open source Tail
         <p class="font-normal text-gray-700 dark:text-gray-400">Learn how to get started by downloading and configuring Flowbite locally on your machine and start developing.</p>
     </a>
     <a href="{{< ref "components/alerts" >}}" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
-        <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Components</h3>
+        <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">UI Components</h3>
         <p class="font-normal text-gray-700 dark:text-gray-400">Explore the Tailwind CSS elements such as buttons, navbars, alerts, dropdowns and use them to build your website.</p>
     </a>
     <a href="{{< param homepage >}}/figma/" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
@@ -38,6 +38,10 @@ Here's a quick overview of the Flowbite ecosystem including the open source Tail
     <a href="{{< param homepage >}}/icons/" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Flowbite Icons</h3>
         <p class="font-normal text-gray-700 dark:text-gray-400">Free and open-source collection of over 430 solid and outline styled SVG icons to use with our UI component library and Figma.</p>
+    </a>
+    <a href="{{< param homepage >}}/illustrations/" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
+        <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Flowbite Illustrations</h3>
+        <p class="font-normal text-gray-700 dark:text-gray-400">Free and open-source collection of over 50 custom SVG illustrations in 3D style built for Flowbite and Tailwind CSS.</p>
     </a>
     <a href="{{< param homepage >}}/pro/" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Flowbite Blocks</h3>
@@ -214,11 +218,15 @@ The components from Flowbite are first conceptualized and designed in Figma usin
 
 Learn more by checking out <a href="{{< param homepage >}}/figma/">Flowbite's Figma design system</a> and start designing your Tailwind CSS projects before actually coding them.
 
-## Flowbite SVG Icons
+## Flowbite Icons
 
 Check out a free and open-source collection of over 430 SVG icons with solid and outline styles to integrate with the UI components from Flowbite.
 
 Learn more by browsing the <a href="{{< param homepage >}}/icons/">Flowbite Icons</a> page and interface to directly copy-paste the icons into your project as raw SVGs or React (JSX) code.
+
+## Flowbite Illustrations
+
+Get access to over [50 custom SVG illustrations](https://flowbite.com/illustrations/) designed for Flowbite and Tailwind CSS available as SVG code based on 3D styles that you can get in light or dark mode.
 
 ## Flowbite GPT
 

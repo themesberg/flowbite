@@ -175,13 +175,13 @@ Awesome! Now you have a working Django project locally. Let's continue by instal
 1. Run the following command the install Tailwind CSS as a dev dependency using NPM:
 
 ```bash
-npm install -D tailwindcss
+npm install -D tailwindcss @tailwindcss/cli
 ```
 
-2. Using the Tailwind CLI create a new `tailwind.config.js` file:
+2. Using the Tailwind CLI create a new `tailwind.config.js` and `postcss.config.js` files:
 
 ```bash
-npx tailwindcss init
+npx tailwindcss-cli@latest init -p
 ```
 
 Configure the template paths using the `content` value inside the Tailwind configuration file:
@@ -202,7 +202,7 @@ module.exports = {
 
 ```css
 /* static/src/input.css */
-
+@import "tailwindcss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -211,7 +211,7 @@ module.exports = {
 4. Run the following command to watch for changes and compile the Tailwind CSS code:
 
 ```bash
-npx tailwindcss -i ./static/src/input.css -o ./static/src/output.css --watch
+npx @tailwindcss/cli -i ./static/src/input.css -o ./static/src/output.css --watch
 ```
 
 Open `localhost:3000` in your browser and you'll see working HTML with Tailwind CSS code.

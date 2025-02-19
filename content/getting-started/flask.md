@@ -101,16 +101,16 @@ Now that you have a working Flask project we can proceed by installing Tailwind 
 
 You can either follow the official [installation guide](https://tailwindcss.com/docs/installation) or follow the next steps from this guide.
 
-1. Install the `tailwindcss` package via NPM:
+1. Install the `tailwindcss` and `@tailwindcss/cli` packages via NPM:
 
 ```bash
-npm install -D tailwindcss
+npm install -D tailwindcss @tailwindcss/cli
 ```
 
-2. Create a new `tailwind.config.js` file by running the following command in your terminal:
+2. Create a new `tailwind.config.js` and `postcss.config.js` file by running the following command in your terminal:
 
 ```bash
-npx tailwindcss init
+npx tailwindcss-cli@latest init -p
 ```
 
 3. Configure the template files inside the `tailwind.config.js` file:
@@ -132,6 +132,7 @@ module.exports = {
 4. Create a new `static/src/` folder and add a new `input.css` file with the following content:
 
 ```css
+@import "tailwindcss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -140,7 +141,7 @@ module.exports = {
 5. Run the following command to compile and watch for changes for the Tailwind CSS file:
 
 ```bash
-npx tailwindcss -i ./static/src/input.css -o ./static/dist/css/output.css --watch
+npx @tailwindcss/cli -i ./static/src/input.css -o ./static/src/dist/output.css --watch
 ```
 
 This will generate a new `output.css` file inside the `static/dist/css/` folder that we will now include in the newly created `index.html` template file.

@@ -12,75 +12,66 @@ next: Nuxt
 nextLink: getting-started/nuxt-js/
 ---
 
-Vue.js is a popular front-end library used by websites such as Behance, Nintendo, Gitlab, Font Awesome, and more that you can use to build modern web applications. 
+Vue.js is a popular front-end library based on reactivity and declarative rendering used by websites such as Behance, Nintendo, Gitlab, Font Awesome, and more that you can use to build modern web applications.
 
-By installing Tailwind CSS and Flowbite you can build your project even faster using the utility-first approach from Tailwind and the interactive components from Flowbite.
+By installing Tailwind CSS and Flowbite you can build your project even faster using the utility-first approach from Tailwind and the interactive UI components from Flowbite, such as modals, tables, dropdowns, datepickers, and more.
 
-## Install Tailwind CSS with Vue.js
+## Create a Vue project
 
-Follow the next steps to install Tailwind CSS and Flowbite with Vue 3 and Vite.
+Follow the next steps to install Tailwind CSS (with v4) and Flowbite with Vue 3 and Vite.
 
 1. Create a new Vite project running the following commands in your terminal:
 
 ```bash
-npm init vite my-project
-cd my-project
+npm create vite@latest flowbite-app -- --template vue
+cd flowbite-app
 ```
 
-2. Install Tailwind CSS:
+## Install Tailwind CSS
+
+This guide uses the newest version of Tailwind CSS v4 which brings many improvements.
+
+1. Install Tailwind CSS using Vite via the terminal:
 
 ```bash
-npm install -D tailwindcss postcss autoprefixer
+npm install tailwindcss @tailwindcss/vite --save
 ```
 
-3. Generate the `tailwind.config.js` file by running the following command:
-
-```bash
-npx tailwindcss init -p
-```
-
-4. Configure the template paths inside the `tailwind.config.js` file:
+2. Add the Tailwind plugin inside your `vite.config.js` file:
 
 ```javascript
-module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import tailwindcss from '@tailwindcss/vite'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [
+    vue(), 
+    tailwindcss()
   ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+})
 ```
 
-5. Create a new `./src/index.css` file and add the Tailwind directives:
+3. Import the `tailwind` module inside your `style.css` file:
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 ```
 
-6. Import the newly created CSS file inside your `./src/main.js` file:
+You have now installed both Tailwind CSS and Vue and can proceed with the next steps.
 
-```javascript
-import { createApp } from 'vue'
-import App from './App.vue'
+## Install Flowbite
 
-// add this
-import './index.css'
+The UI components from Flowbite can help you save time building websites with Vue and Tailwind. Make sure that you follow the next steps to ensure that you install both the CSS and JavaScript dependencies.
 
-createApp(App).mount('#app')
-```
-
-7. Install Flowbite by running the following command in your terminal:
+1. Install Flowbite by running the following command in your terminal:
 
 ```bash
 npm install flowbite
 ```
 
-8. Require Flowbite as a plugin inside your `tailwind.config.js` file:
+2. Require Flowbite as a plugin inside your `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
@@ -92,7 +83,7 @@ module.exports = {
 }
 ```
 
-9. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
+3. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
 
 ```javascript
 module.exports = {
@@ -104,7 +95,7 @@ module.exports = {
 }
 ```
 
-10. Start a local server on `localhost:3000/` by running the following command in your terminal:
+4. Start a local development server by running the following command in your terminal:
 
 ```bash
 npm run dev

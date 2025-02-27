@@ -65,34 +65,28 @@ You have now installed both Tailwind CSS and Vue and can proceed with the next s
 
 The UI components from Flowbite can help you save time building websites with Vue and Tailwind. Make sure that you follow the next steps to ensure that you install both the CSS and JavaScript dependencies.
 
-1. Install Flowbite by running the following command in your terminal:
+1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
-npm install flowbite
+npm install flowbite --save
 ```
 
-2. Require Flowbite as a plugin inside your `tailwind.config.js` file:
+2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-```javascript
-module.exports = {
-
-    plugins: [
-        require('flowbite/plugin')
-    ]
-
-}
+```css
+@import "flowbite/src/themes/default";
 ```
 
-3. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
+3. Import the Flowbite plugin file in your CSS:
 
-```javascript
-module.exports = {
+```css
+@plugin "flowbite/plugin";
+```
 
-    content: [
-        "./node_modules/flowbite/**/*.js"
-    ]
+4. Configure the source files of Flowbite in your CSS:
 
-}
+```css
+@source "../node_modules/flowbite";
 ```
 
 4. Start a local development server by running the following command in your terminal:
@@ -295,5 +289,3 @@ We have also created a [starter project on GitHub](https://github.com/themesberg
 ## Flowbite Vue Library
 
 We have started working on a dedicated [Flowbite Vue](https://github.com/themesberg/flowbite-vue) library which when it will be launched will be the recommended way of using our components with Vue 3 because they are built specifically for usage within a Vue 3 environment. 
-
-Even though progress has been great, we still expect a couple of months until we can make a stable release. Contributions are more than welcome!

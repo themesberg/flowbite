@@ -16,7 +16,7 @@ nextLink: getting-started/svelte/
 
 The framework was inspired by Vercel's Next.js framework built with React and it is being used by large companies such as Ecosia, Upwork, NASA, Appsumo, and CDN JS.
 
-If you follow this guide you will learn how to install the latest version 3 of Nuxt with Tailwind CSS and Flowbite and also show you how to use the TypeScript version.
+If you follow this guide you will learn how to install the latest version 3 of Nuxt with Tailwind CSS v4 and Flowbite and also show you how to use the TypeScript version.
 
 ## Create a Nuxt project
 
@@ -25,7 +25,8 @@ Before continuing make sure that you have Node.js and NPM installed on your loca
 1. Create a new Nuxt project by running the following command in your terminal:
 
 ```bash
-npx nuxi init project-name
+npx nuxi init flowbite-app
+cd flowbite-app
 ```
 
 2. Install the project dependencies by executing the following command:
@@ -49,50 +50,29 @@ Now that you have locally set up a Nuxt project we will proceed by installing Ta
 1. Require and install the NuxtTailwind module by installing it via NPM:
 
 ```bash
-npm install --save-dev @nuxtjs/tailwindcss
+npm install tailwindcss @tailwindcss/vite --save
 ```
 
 2. Configure the Nuxt configuration file to include the Tailwind module:
 
 ```javascript
-// nuxt.config.{js,ts}
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
-    modules: [
-        '@nuxtjs/tailwindcss'
-    ]
-})
+  devtools: { enabled: true },
+  css: ['~/assets/css/input.css'], // you'll have to create this file
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
+});
 ```
 
-3. Create a `tailwind.config.js` file by running the following command:
-
-```bash
-npx tailwindcss init
-```
-
-4. Create a new CSS file `./assets/css/input.css` and import the main Tailwind CSS directives:
+3. Create a new CSS file `./assets/css/input.css` and import Tailwind:
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-5. Set up the template paths for your Nuxt project inside the Tailwind CSS configuration file:
-
-```javascript
-module.exports = {
-  content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+@import "tailwindcss";
 ```
 
 Tailwind CSS is now configured in your project and if you add the utility classes anywhere in your Vue template files the CSS will be generated and included.
@@ -101,32 +81,28 @@ Tailwind CSS is now configured in your project and if you add the utility classe
 
 After installing both Nuxt and Tailwind CSS inside your project we can proceed by installing Flowbite.
 
-1. Install Flowbite via NPM and save it in your `package.json` file:
+1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
-npm install flowbite
+npm install flowbite --save
 ```
 
-2. Require Flowbite as a plugin inside your `tailwind.config.js` file:
+2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-```javascript
-module.exports = {
-  // other options ...
-  plugins: [
-    require('flowbite/plugin')
-  ],
-}
+```css
+@import "flowbite/src/themes/default";
 ```
 
-3. Add the source JavaScript files of Flowbite to the `tailwind.config.js` template path:
+3. Import the Flowbite plugin file in your CSS:
 
-```javascript
-module.exports = {
-  content: [
-    // other files...
-    "./node_modules/flowbite/**/*.{js,ts}"
-  ],
-}
+```css
+@plugin "flowbite/plugin";
+```
+
+4. Configure the source files of Flowbite in your CSS:
+
+```css
+@source "../../node_modules/flowbite";
 ```
 
 ## Flowbite Components

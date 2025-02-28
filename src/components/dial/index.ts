@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { DialOptions, DialTriggerType } from './types';
-import type { InstanceOptions } from '../../dom/types';
+import type { InstanceOptions, RootElement } from '../../dom/types';
 import { DialInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -184,43 +184,47 @@ class Dial implements DialInterface {
     }
 }
 
-export function initDials() {
-    document.querySelectorAll('[data-dial-init]').forEach(($parentEl) => {
-        const $triggerEl = $parentEl.querySelector('[data-dial-toggle]');
+export function initDials($rootElement: RootElement = document) {
+    $rootElement
+        .querySelectorAll('[data-dial-init]')
+        .forEach(initDialByElement);
+}
 
-        if ($triggerEl) {
-            const dialId = $triggerEl.getAttribute('data-dial-toggle');
-            const $dialEl = document.getElementById(dialId);
+export function initDialByElement($parentEl: Element) {
+    const $triggerEl = $parentEl.querySelector('[data-dial-toggle]');
 
-            if ($dialEl) {
-                const triggerType =
-                    $triggerEl.getAttribute('data-dial-trigger');
-                new Dial(
-                    $parentEl as HTMLElement,
-                    $triggerEl as HTMLElement,
-                    $dialEl as HTMLElement,
-                    {
-                        triggerType: triggerType
-                            ? triggerType
-                            : Default.triggerType,
-                    } as DialOptions
-                );
-            } else {
-                console.error(
-                    `Dial with id ${dialId} does not exist. Are you sure that the data-dial-toggle attribute points to the correct modal id?`
-                );
-            }
+    if ($triggerEl) {
+        const dialId = $triggerEl.getAttribute('data-dial-toggle');
+        const $dialEl = document.getElementById(dialId);
+
+        if ($dialEl) {
+            const triggerType = $triggerEl.getAttribute('data-dial-trigger');
+            new Dial(
+                $parentEl as HTMLElement,
+                $triggerEl as HTMLElement,
+                $dialEl as HTMLElement,
+                {
+                    triggerType: triggerType
+                        ? triggerType
+                        : Default.triggerType,
+                } as DialOptions
+            );
         } else {
             console.error(
-                `Dial with id ${$parentEl.id} does not have a trigger element. Are you sure that the data-dial-toggle attribute exists?`
+                `Dial with id ${dialId} does not exist. Are you sure that the data-dial-toggle attribute points to the correct modal id?`
             );
         }
-    });
+    } else {
+        console.error(
+            `Dial with id ${$parentEl.id} does not have a trigger element. Are you sure that the data-dial-toggle attribute exists?`
+        );
+    }
 }
 
 if (typeof window !== 'undefined') {
     window.Dial = Dial;
     window.initDials = initDials;
+    window.initDialByElement = initDialByElement;
 }
 
 export default Dial;

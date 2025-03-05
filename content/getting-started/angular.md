@@ -31,12 +31,12 @@ This command will make the Angular CLI available on your local computer.
 1. Run the following command to create a new Angular project:
 
 ```bash
-ng new my-app
+ng new flowbite-app
 ```
 
 You can follow the instructions from the CLI prompts to select the options that you want to choose when creating a new project - you should select "CSS" when asked.
 
-This command will create a new folder called `my-app` where you have all the necessary source files to start a new local and production-ready Angular project.
+This command will create a new folder called `flowbite-app` where you have all the necessary source files to start a new local and production-ready Angular project.
 
 2. Run the `ng serve --open` command in your terminal to start a local server:
 
@@ -52,46 +52,33 @@ Congratulations! Now you have a fully working Angular project installed and conf
 
 Now that you've successfully installed and configured an Angular project we can proceed with installing the most popular utility-first CSS framework called Tailwind.
 
-3. Install Tailwind CSS and Post CSS via NPM by running the following command:
+1. Install Tailwind CSS and Post CSS via NPM by running the following command:
 
 ```bash
-npm install tailwindcss --save-dev
+npm install tailwindcss @tailwindcss/postcss postcss --save
 ```
 
 This command will install all the dependencies of Tailwind CSS available in your `package.json` file.
 
-4. Run the init command from Tailwind CSS to create a new `tailwind.config.js` file:
-
-```bash
-npx tailwindcss init
-```
-
-5. Update the newly generated config file to set up the source template files from Angular:
+2. Create a `.postcssrc.json` file in the root folder of your project and include the Tailwind PostCSS plugin:
 
 ```javascript
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/**/*.{html,ts}", // add this line
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+{
+  "plugins": {
+    "@tailwindcss/postcss": {}
+  }
 }
 ```
 
-6. Import the core Tailwind directives inside the `styles.css` file:
+3. Import the core Tailwind directive inside the `styles.css` file:
 
 ```css
 /* You can add global styles to this file, and also import other style files */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 ```
 
-7. Start a local development server on Angular by running `ng serve --open`. If you already had one open then you need to restart it to allow Angular to internally set up the new configuration.
+5. Start a local development server on Angular by running `ng serve --open`. If you already had one open then you need to restart it to allow Angular to internally set up the new configuration.
 
 Congratulations! You can now start using the utility classes from Tailwind CSS inside your Angular project.
 
@@ -99,48 +86,31 @@ Congratulations! You can now start using the utility classes from Tailwind CSS i
 
 Now that you have both Angular and Tailwind CSS configured for your web application project you can proceed by installing the Flowbite Library to start leveraging the interactive UI components such as navbars, modals, cards, buttons, and more to build user interfaces faster with Tailwind CSS support.
 
-8. Install and require Flowbite as a dependency via NPM for your `package.json` file:
+1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
-npm install flowbite
+npm install flowbite --save
 ```
 
-9. Require the Flowbite plugin inside your `tailwind.config.js` file:
+2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-```javascript
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/**/*.{html,ts}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [
-    require('flowbite/plugin') // add this line
-  ],
-}
+```css
+@import "flowbite/src/themes/default";
 ```
 
-10. Configure the template paths to include the interactive Tailwind CSS classes from Flowbite:
+3. Import the Flowbite plugin file in your CSS:
 
-```javascript
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/**/*.{html,ts}",
-    "./node_modules/flowbite/**/*.js" // add this line
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [
-    require('flowbite/plugin')
-  ],
-}
+```css
+@plugin "flowbite/plugin";
 ```
 
-11. Update the `app.component.ts` file to use the `initFlowbite` function to enable the interactive components via data attributes:
+4. Configure the source files of Flowbite in your CSS:
+
+```css
+@source "../node_modules/flowbite";
+```
+
+5. Update the `app.component.ts` file to use the `initFlowbite` function to enable the interactive components via data attributes:
 
 ```javascript
 import { Component } from '@angular/core';
@@ -206,9 +176,8 @@ export class SomeComponent implements OnInit {
   constructor(private flowbiteService: FlowbiteService) {}
 
   ngOnInit(): void {
-    this.flowbiteService.loadFlowbite(flowbite => {
-      // Your custom code here
-      console.log('Flowbite loaded', flowbite);
+    this.flowbiteService.loadFlowbite((flowbite) => {
+      initFlowbite();
     });
   }
 }

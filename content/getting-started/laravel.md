@@ -16,7 +16,7 @@ Laravel is the most popular free and open-source PHP web framework that helps yo
 
 Check out this guide to learn how to set up a new Laravel project together with Tailwind CSS and the UI components from Flowbite to enhance your front-end development workflow.
 
-## Install Tailwind CSS with Laravel
+## Create a Laravel app
 
 Make sure that you have <a href="https://getcomposer.org/" rel="nofollow">Composer</a> and <a href="https://nodejs.org/en/" rel="nofollow">Node.js</a> installed locally on your computer.
 
@@ -37,94 +37,101 @@ Make sure to place the vendor bin directory in your PATH. Here's how you can do 
 2. Create a new project using Laravel's CLI:
 
 ```bash
-laravel new awesome-project
-
-cd awesome-project
+laravel new flowbite-app
+cd flowbite-app
 ```
 
 Start the development server using the following command:
 
 ```bash
-php artisan serve
+composer run dev
 ```
 
 You can now access the Laravel application on `http://localhost:8000`.
 
 This command will initialize a blank Laravel project that you can get started with.
 
-4. Install Tailwind CSS and Flowbite using NPM:
+## Install Tailwind CSS
+
+Since Laravel 12, the latest version of Tailwind v4 will be installed by default, so if you have that version or later then you can skip this step and proceed with installing Flowbite.
+
+1. Install Tailwind CSS using NPM:
 
 ```javascript
-npm install -D tailwindcss postcss autoprefixer flowbite
+npm install tailwindcss @tailwindcss/vite --save-dev
 ```
 
-5. Create a Tailwind CSS config file:
-
-```bash
-npx tailwindcss init -p
-```
-
-A new `tailwind.config.js` file will be created inside your root folder.
-
-6. Add the view paths and require Flowbite as a plugin inside `tailwind.config.js`:
+2. Configure the `vite.config.ts` file by importing the Tailwind plugin:
 
 ```javascript
-module.exports = {
-    content: [
-      "./resources/**/*.blade.php",
-      "./resources/**/*.js",
-      "./resources/**/*.vue",
-      "./node_modules/flowbite/**/*.js"
-    ],
-    theme: {
-      extend: {},
-    },
-    plugins: [
-        require('flowbite/plugin')
-    ],
-  }
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+    // …
+  ],
+})
 ```
 
-This will tell the compiler from Tailwind what files to look for to properly apply the classes inside the final CSS file and it will also install the extra plugin options from Flowbite.
-
-7. Add the directives inside the `./resources/css/app.css` file:
+3. Import the main Tailwind directive inside your `app.css` CSS file:
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 ```
 
-8. Make sure your compiled CSS and JS is included in the `<head>` then start using Tailwind’s utility classes to style your content.
+5. Run the build process for Vite using `npm run dev`. Use `npm run build` for production builds.
 
-```javascript
-@vite(['resources/css/app.css','resources/js/app.js'])
+## Install Flowbite
+
+[Flowbite](https://flowbite.com) is a popular and open-source UI component library built on top of the Tailwind CSS framework that allows you to choose from a wide range of UI components such as modals, drawers, buttons, dropdowns, datepickers, and more to make your development workflow faster and more efficient.
+
+Follow the next steps to install Flowbite using NPM.
+
+1. Install Flowbite as a dependency using NPM by running the following command:
+
+```bash
+npm install flowbite --save
 ```
 
-9. Import the Flowbite JavaScript package inside the `./resources/js/app.js` file to enable the interactive components such as modals, dropdowns, navbars, and more.
+2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-```javascript
-import 'flowbite';
+```css
+@import "flowbite/src/themes/default";
 ```
 
-Alternatively, you can also include the JavaScript file using CDN:
+3. Import the Flowbite plugin file in your CSS:
+
+```css
+@plugin "flowbite/plugin";
+```
+
+4. Configure the source files of Flowbite in your CSS:
+
+```css
+@source "../../node_modules/flowbite";
+```
+
+5. Add the Flowbite JS script inside your main `app.blade.php` layout file:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
+<body>
+    @yield('content')
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
 ```
 
-10. Run the build process for Vite using `npm run dev`. Use `npm run build` for production builds.
+This will have the JavaScript loaded in all the files that extend this main layout.
 
-## Flowbite components
+## UI components
 
 Now that you have successfully installed the project you can start using the UI components from Flowbite and Tailwind CSS to develop modern websites and web applications.
 
 We recommend exploring the components using the search bar navigation (`cmd` or `ctrl` + `k`) or by browsing the components section of the sidebar on the left side of this page.
 
-<!-- ## Boilerplate Github Repository
+## GitHub Starter kit
 
-Download or clone the Flowbite Laravel Github boilerplate repository to get access to a project that already has Laravel, Tailwind CSS, and Flowbite set up for development.
+Download or clone the [Flowbite Laravel](https://github.com/themesberg/tailwind-laravel-starter) Github boilerplate repository to get access to a project that already has Laravel, Tailwind CSS, and Flowbite set up for development.
 
-```bash
-git clone ...
-``` -->
+For even more resources and UI components you can check out [Flowbite Pro](https://flowbite.com/pro/).

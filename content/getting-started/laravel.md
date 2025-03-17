@@ -130,7 +130,7 @@ Now that you have successfully installed the project you can start using the UI 
 
 We recommend exploring the components using the search bar navigation (`cmd` or `ctrl` + `k`) or by browsing the components section of the sidebar on the left side of this page.
 
-## GitHub Starter kit
+## GitHub starter kit
 
 Download or clone the [Flowbite Laravel](https://github.com/themesberg/tailwind-laravel-starter) Github boilerplate repository to get access to a project that already has Laravel, Tailwind CSS, and Flowbite set up for development.
 

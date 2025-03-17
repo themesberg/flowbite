@@ -41,7 +41,7 @@ Now that you have the CLI available you can proceed by creating a new project.
 1. Create a new Symfony project by running the following command inside your terminal:
 
 ```bash
-symfony new --webapp my_application
+symfony new --webapp flowbite-app
 ```
 
 This command will create a new folder with a fresh Symfony project installation inside.
@@ -49,12 +49,13 @@ This command will create a new folder with a fresh Symfony project installation 
 2. Change the current working directory to the newly created project folder:
 
 ```bash
-cd my_application
+cd flowbite-app
 ```
 
-3. Install the recommended Symfony Webpack Encore bundle to enable front-end integration via Composer:
+3. Install the recommended Symfony Webpack Encore bundle to enable front-end integration via Composer and remove the default dependencies:
 
 ```bash
+composer remove symfony/ux-turbo symfony/asset-mapper symfony/stimulus-bundle
 composer require symfony/webpack-encore-bundle
 ```
 
@@ -77,42 +78,16 @@ Now that you have a working Symfony application on your local computer we can pr
 1. Run the following command to require and install Tailwind CSS and PostCSS via NPM:
 
 ```bash
-npm install --save-dev tailwindcss postcss autoprefixer postcss-loader
+npm install tailwindcss @tailwindcss/postcss postcss postcss-loader --save-dev
 ```
 
-2. Generate the Tailwind CSS configuration files by running the following command:
-
-```bash
-npx tailwindcss init -p
-```
-
-This will create two new `tailwind.config.js` and `postcss.config.js` configuration files.
-
-3. Update the template paths to indicate where Tailwind CSS utility classes will be used:
-
-```javascript
-// tailwind.config.js
-module.exports = {
-  content: [
-    "./assets/**/*.js",
-    "./templates/**/*.html.twig",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-```
-
-4. Import the base Tailwind directives inside the default `./assets/styles/app.css` file:
+2. Import the base Tailwind directive inside the default `./assets/styles/app.css` file:
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 ```
 
-5. Enable the PostCSS loader plugin by adding it to the Webpack config file:
+3. Enable the PostCSS loader plugin by adding it to the Webpack config file:
 
 ```javascript
 // webpack.config.js
@@ -124,13 +99,23 @@ Encore
     // ... more plugins
 ```
 
-6. Run the following command to compile the front-end assets via Webpack:
+4. Create a new `postcss.config.mjs` file in the root folder and add the following configuration:
+
+```javascript
+export default {
+  plugins: {
+    "@tailwindcss/postcss": {},
+  },
+};
+```
+
+5. Run the following command to compile the front-end assets via Webpack:
 
 ```bash
 npm run watch
 ```
 
-7. Let's create a new homepage entry file by configuring the Symfony routes file:
+6. Let's create a new homepage entry file by configuring the Symfony routes file:
 
 ```javascript
 // ./config/routes.yml
@@ -140,7 +125,7 @@ index:
     controller: App\Controller\DefaultController::index
 ```
 
-8. Create a new `DefaultController` and set up the path for a new Twig template file:
+7. Create a new `DefaultController` and set up the path for a new Twig template file:
 
 ```javascript
 <?php
@@ -162,7 +147,7 @@ class DefaultController extends AbstractController
 }
 ```
 
-9. Create a new `index.html.twig` inside the templates folder and add a couple of [header](https://flowbite.com/blocks/marketing/header/) and [hero](https://flowbite.com/blocks/marketing/hero/) sections from the Flowbite Blocks collection:
+8. Create a new `index.html.twig` inside the templates folder and add a couple of [header](https://flowbite.com/blocks/marketing/header/) and [hero](https://flowbite.com/blocks/marketing/hero/) sections from the Flowbite Blocks collection:
 
 ```html
 {% extends 'base.html.twig' %}
@@ -271,29 +256,28 @@ A brand new header and hero section should now be visible on the homepage of you
 
 [Flowbite](https://flowbite.com) is a free and popular open-source UI component library built on top of the utility-classes from Tailwind CSS featuring interactive UI elements such as dropdowns, navbars, modals and also an ecosystem of website sections, templates, plugins, tools, and more that you can leverage to build websites even faster.
 
-1. Install the Flowbite package via NPM in your terminal:
+1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
-npm install flowbite
+npm install flowbite --save
 ```
 
-2. Require the Flowbite plugin and set up the template paths inside the configuration file:
+2. Import the default theme variables from Flowbite inside your main `app.css` CSS file:
 
-```javascript
-// tailwind.config.js
-module.exports = {
-  content: [
-    "./assets/**/*.js",
-    "./templates/**/*.html.twig",
-    "./node_modules/flowbite/**/*.js" // set up the path to the flowbite package
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [
-    require('flowbite/plugin') // add the flowbite plugin
-  ],
-}
+```css
+@import "flowbite/src/themes/default";
+```
+
+3. Import the Flowbite plugin file in your CSS:
+
+```css
+@plugin "flowbite/plugin";
+```
+
+4. Configure the source files of Flowbite in your CSS:
+
+```css
+@source "../../node_modules/flowbite";
 ```
 
 Inside the `./assets/app.js` file you can import the Flowbite package to enable interactivity of the UI components:
@@ -351,19 +335,33 @@ Now that you have all of the technologies successfully set up in your Symfony pr
 Let's start by adding a simple [modal authentication component](https://flowbite.com/docs/components/modal/#form-element) from the Flowbite Library when clicking on the login button from the header:
 
 ```html
-<button type="button" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log in</button>
 
-<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <div class="relative w-full max-w-md max-h-full">
+
+<!-- Modal toggle -->
+<button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+  Toggle modal
+</button>
+
+<!-- Main modal -->
+<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
-            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="authentication-modal">
-                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                <span class="sr-only">Close modal</span>
-            </button>
-            <div class="px-6 py-6 lg:px-8">
-                <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
-                <form class="space-y-6" action="#">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Sign in to our platform
+                </h3>
+                <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5">
+                <form class="space-y-4" action="#">
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
                         <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
@@ -377,7 +375,7 @@ Let's start by adding a simple [modal authentication component](https://flowbite
                             <div class="flex items-center h-5">
                                 <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
                             </div>
-                            <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                            <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
                         </div>
                         <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
                     </div>
@@ -389,7 +387,7 @@ Let's start by adding a simple [modal authentication component](https://flowbite
             </div>
         </div>
     </div>
-</div>
+</div> 
 ```
 
 After setting up the `data-modal-target="{modalId}"` and `data-modal-toggle="{modalId}"` data attributes for the button component and copy-pasting the modal example, clicking on the login button will now show a modal element with a user sign-in form that you can use to authenticate users directly from your homepage.

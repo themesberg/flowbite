@@ -33,82 +33,55 @@ gem install rails
 2. Create a new Ruby on Rails application if you don't already have one:
 
 ```bash
-rails new app-name
-cd app-name
+rails new flowbite-app
+cd flowbite-app
 ```
 
 Now that you have created a new project you can proceed by setting up Tailwind CSS.
 
 ## Install Tailwind CSS
 
-3. Install the official `tailwindcss-rails` gem:
+Since Tailwind v4, it's really easy to install Tailwind CSS with Rails, because we no longer need to have a custom `tailwind.config.js` file. Instead, everything is configured in your main CSS file.
+
+1. Install the official `tailwindcss-rails` gems:
 
 ```bash
+./bin/bundle add tailwindcss-ruby
 ./bin/bundle add tailwindcss-rails
 ```
 
-4. Run the install command to generate a `tailwind.config.js` file inside the `./config` directory:
+2. Run the install command to set up the Tailwind configuration files:
 
 ```bash
 ./bin/rails tailwindcss:install
-```
-
-5. Configure the `tailwind.config.js` file by setting the appropriate `content` paths:
-
-```javascript
-module.exports = {
-  content: [
-    './app/helpers/**/*.rb',
-    './app/javascript/**/*.js',
-    './app/views/**/*',
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-```
-
-6. Set up the Tailwind directives inside the `./app/assets/stylesheets/application.tailwind.css` file:
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 ```
 
 Now that Tailwind CSS has been successfully installed you can proceed by installing Flowbite.
 
 ## Install Flowbite
 
-7. Install Flowbite by running the following command in your terminal:
+1. Install Flowbite by running the following command in your terminal:
 
 ```bash
-npm install flowbite
+npm install flowbite --save
 ```
 
-8. Require Flowbite as a plugin inside your `tailwind.config.js` file:
+2. Import the default theme variables from Flowbite inside your main `application.css` CSS file:
 
-```javascript
-module.exports = {
-
-    plugins: [
-        require('flowbite/plugin')
-    ]
-
-}
+```css
+@import "flowbite/src/themes/default";
 ```
 
-9. Additionally to your own `content` data you should add `flowbite` to apply the classes from the interactive elements in the `tailwind.config.js` file:
+3. Import the Flowbite plugin file in your CSS:
 
-```javascript
-module.exports = {
+```css
+@plugin "flowbite/plugin";
+```
 
-    content: [
-        './node_modules/flowbite/**/*.js'
-    ]
+4. Configure the source files of Flowbite in your CSS:
 
-}
+```css
+@source "../../../node_modules/flowbite";
 ```
 
 ### Turbo load support
@@ -134,6 +107,7 @@ import 'flowbite';
 This will enable the interactive elements like dropdowns, modals, and navbars work by hooking the event listeners and actions to the data attributes whenever a new page is loaded in your application.
 
 ### ESBuild
+
 If you use ESBuild to Bundle your JavaScript on Rails, you will need to import a version of Flowbite which supports the `turbo:load` event listeners instead of `load`. To do this **add the line below** to your `application.js` file:
 
 ```javascript
@@ -233,3 +207,7 @@ root to: 'pages#home'
 ```
 
 If you have run `./bin/dev` to start a local server you should see the changes on `localhost:3000/` and the utility classes from Tailwind CSS should work and the interactive components from Flowbite should also be functional.
+
+## Rails starter project
+
+We have released an open-source [Ruby on Rails project with Tailwind CSS and Flowbite](https://github.com/themesberg/tailwind-rails-starter) that you can use to get starter with a new project where we have showcased most of the components from Flowbite.

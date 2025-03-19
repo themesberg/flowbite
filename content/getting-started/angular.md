@@ -430,7 +430,7 @@ const carousel: CarouselInterface = new Carousel(items, options);
 
 You can read more about using [Flowbite and TypeScript](https://flowbite.com/docs/getting-started/typescript/) by following our documentation guide.
 
-## Angular Starter Project
+## Angular starter project
 
 We built a free and open-source [starter project](https://github.com/themesberg/tailwind-angular-starter) on GitHub that you can clone to use as a reference for this guide and for your own Angular web application configured with Flowbite and Tailwind CSS.
 

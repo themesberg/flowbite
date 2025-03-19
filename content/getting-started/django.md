@@ -34,14 +34,14 @@ Now that you have all the required technologies installed you can start by creat
 
 ## Create a Django project
 
-1. Run the following command in the terminal to create a new Django project with the name `myapp`:
+1. Run the following command in the terminal to create a new Django project with the name `flowbiteapp`:
 
 ```bash
-django-admin startproject myapp
-cd myapp/
+django-admin startproject flowbiteapp
+cd flowbiteapp/
 ```
 
-2. Create a new `templates/` directory inside the project folder and update `settings.py` folder:
+2. Create a new `templates/` directory inside the project folder and then update the existing `settings.py` file:
 
 ```bash
 TEMPLATES = [
@@ -59,7 +59,7 @@ TEMPLATES = [
 python -m pip install django-compressor
 ```
 
-4. Add `compressor` to the installed apps inside the `settings.py` file:
+4. Add `compressor` and `flowbiteapp` (or the name of your app) to the installed apps inside the `settings.py` file:
 
 ```bash
 # config/settings.py
@@ -72,6 +72,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'compressor',  # new
+    'flowbiteapp',  # new
 ]
 ```
 
@@ -95,7 +96,7 @@ static
 
 Later we will import the Tailwind CSS directives and use it as the source file for the final stylesheet.
 
-7. Create a new `views.py` file inside `myapp/` next to `urls.py` and add the following content:
+7. Create a new `views.py` file inside `flowbiteapp/` next to `urls.py` and add the following content:
 
 ```bash
 from django.shortcuts import render
@@ -166,52 +167,30 @@ urlpatterns = [
 python manage.py runserver
 ```
 
-You will now get an error that the `output.css` file does not exist, but that will be fixed once we install Tailwind CSS.
+You'll now get an error that the `output.css` file doesn't exist, but that'll be fixed once we install Tailwind CSS.
 
-Awesome! Now you have a working Django project locally. Let's continue by installing Tailwind CSS.
+Awesome! Now you have a working Django project locally. Let's continue by installing Tailwind.
 
 ## Install Tailwind CSS
 
 1. Run the following command the install Tailwind CSS as a dev dependency using NPM:
 
 ```bash
-npm install -D tailwindcss
+npm install tailwindcss @tailwindcss/cli --save-dev
 ```
 
-2. Using the Tailwind CLI create a new `tailwind.config.js` file:
-
-```bash
-npx tailwindcss init
-```
-
-Configure the template paths using the `content` value inside the Tailwind configuration file:
-
-```javascript
-module.exports = {
-  content: [
-      './templates/**/*.html'
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-```
-
-3. Import the Tailwind CSS directives inside the `input.css` file:
+2. Import the Tailwind CSS directive inside the `input.css` file:
 
 ```css
 /* static/src/input.css */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 ```
 
 4. Run the following command to watch for changes and compile the Tailwind CSS code:
 
 ```bash
-npx tailwindcss -i ./static/src/input.css -o ./static/src/output.css --watch
+npx @tailwindcss/cli -i ./static/src/input.css -o ./static/src/output.css --watch
 ```
 
 Open `localhost:3000` in your browser and you'll see working HTML with Tailwind CSS code.
@@ -222,40 +201,31 @@ Now that you have configured both Django and Tailwind CSS you can also set up Fl
 
 Flowbite is an open source library of interactive components built on top of Tailwind CSS and it can be installed using NPM and required as a plugin inside Tailwind CSS.
 
-1. Install Flowbite as a dependency using NPM:
+1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
-npm install flowbite
+npm install flowbite --save
 ```
 
-2. Require Flowbite as a plugin inside the `tailwind.config.js` file:
+2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-```javascript
-module.exports = {
-
-    plugins: [
-        require('flowbite/plugin')
-    ]
-
-}
+```css
+@import "flowbite/src/themes/default";
 ```
 
-3. Include Flowbite inside the content value of the `tailwind.config.js` file:
+3. Import the Flowbite plugin file in your CSS:
 
-```javascript
-module.exports = {
-  content: [
-      './templates/**/*.html',
-      './node_modules/flowbite/**/*.js'
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+```css
+@plugin "flowbite/plugin";
 ```
 
-4. Include Flowbite's JavaScript file inside the `_base.html` file just before the end of the `<body>` tag using CDN or by including it directly from the `node_modules/` folder:
+4. Configure the source files of Flowbite in your CSS:
+
+```css
+@source "../../node_modules/flowbite";
+```
+
+5. Include Flowbite's JavaScript file inside the `_base.html` file just before the end of the `<body>` tag using CDN or by including it directly from the `node_modules/` folder:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
@@ -342,7 +312,7 @@ This way you already have a functional and responsive navigation bar added to al
 
 Let's take a look how can added more content directly to the view templates, not just the base template.
 
-Check out one of the <a href="{{< ref "components/card" >}}">Card components</a> from Flowbite and add it to the `index.html` file:
+Check out one of the <a href="{{< ref "components/card" >}}">card components</a> from Flowbite and add it to the `index.html` file:
 
 ```html
 <!-- templates/index.html -->
@@ -382,3 +352,7 @@ Check out one of the <a href="{{< ref "components/card" >}}">Card components</a>
 At this point you can use any of the components to build user interfaces easier and faster together with Django, Tailwind CSS and Flowbite. 
 
 Check out all of the components by browsing the menu on the left sidebar under the "components" section.
+
+## Django starter project
+
+We have built a free and open-source [Django starter project with Tailwind CSS](https://github.com/themesberg/tailwind-django-starter) on GitHub that you can clone to use as a reference for this guide and for your own Django web application configured with Flowbite and Tailwind CSS.

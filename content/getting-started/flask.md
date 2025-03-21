@@ -99,53 +99,29 @@ This should make the project available via the browser by going to `http://local
 
 Now that you have a working Flask project we can proceed by installing Tailwind CSS. 
 
-You can either follow the official [installation guide](https://tailwindcss.com/docs/installation) or follow the next steps from this guide.
-
-1. Install the `tailwindcss` package via NPM:
+1. Run the following command the install Tailwind CSS as a dev dependency using NPM:
 
 ```bash
-npm install -D tailwindcss
+npm install tailwindcss @tailwindcss/cli --save-dev
 ```
 
-2. Create a new `tailwind.config.js` file by running the following command in your terminal:
-
-```bash
-npx tailwindcss init
-```
-
-3. Configure the template files inside the `tailwind.config.js` file:
-
-```javascript
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./templates/**/*.html",
-    "./static/src/**/*.js"
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-```
-
-4. Create a new `static/src/` folder and add a new `input.css` file with the following content:
+2. Create a new `static/src/` folder and add a new `input.css` file with the following content:
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* static/src/input.css */
+
+@import "tailwindcss";
 ```
 
-5. Run the following command to compile and watch for changes for the Tailwind CSS file:
+4. Run the following command to watch for changes and compile the Tailwind CSS code:
 
 ```bash
-npx tailwindcss -i ./static/src/input.css -o ./static/dist/css/output.css --watch
+npx @tailwindcss/cli -i ./static/src/input.css -o ./static/dist/output.css --watch
 ```
 
 This will generate a new `output.css` file inside the `static/dist/css/` folder that we will now include in the newly created `index.html` template file.
 
-6. Include `output.css` inside the main `index.html` template:
+5. Include `output.css` inside the main `index.html` template:
 
 ```html
 <!DOCTYPE html>
@@ -155,7 +131,7 @@ This will generate a new `output.css` file inside the `static/dist/css/` folder 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flowbite Flask</title>
-    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/output.css')}}">
 </head>
 <body>
     <h1 class="text-blue-600">Hello, Flask!</h1>
@@ -169,43 +145,31 @@ Notice how the `text-blue-600` class is now being applied using the configuratio
 
 Now that you have a working Flask and Tailwind CSS configuration you can also include Flowbite inside your project to get started with hundreds of UI components like navbars, dropdowns, tables, and more.
 
-1. Install Flowbite as a dependency using NPM:
+1. Install Flowbite as a dependency using NPM by running the following command:
 
 ```bash
-npm install flowbite
+npm install flowbite --save
 ```
 
-2. Require Flowbite as a plugin inside the `tailwind.config.js` file:
+2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-```javascript
-module.exports = {
-
-    plugins: [
-        require("flowbite/plugin")
-    ]
-
-}
+```css
+@import "flowbite/src/themes/default";
 ```
 
-3. Include Flowbite inside the content key value pair of the `tailwind.config.js` file:
+3. Import the Flowbite plugin file in your CSS:
 
-```javascript
-module.exports = {
-  content: [
-      "./templates/**/*.html",
-      "./static/src/**/*.js",
-      "./node_modules/flowbite/**/*.js"
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [
-    require("flowbite/plugin")
-  ],
-}
+```css
+@plugin "flowbite/plugin";
 ```
 
-4. Include Flowbite's JavaScript file inside the `index.html` file just before the end of the `<body>` tag using CDN or by including it directly from the `node_modules/` folder:
+4. Configure the source files of Flowbite in your CSS:
+
+```css
+@source "../../node_modules/flowbite";
+```
+
+5. Include Flowbite's JavaScript file inside the `index.html` file just before the end of the `<body>` tag using CDN or by including it directly from the `node_modules/` folder:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
@@ -228,7 +192,7 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flowbite Flask</title>
-    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/output.css')}}">
 </head>
 
 <body>

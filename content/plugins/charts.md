@@ -208,6 +208,7 @@ const options = {
   },
   stroke: {
     width: 6,
+    curve: 'smooth'
   },
   grid: {
     show: true,
@@ -232,9 +233,6 @@ const options = {
   ],
   legend: {
     show: false
-  },
-  stroke: {
-    curve: 'smooth'
   },
   xaxis: {
     categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],

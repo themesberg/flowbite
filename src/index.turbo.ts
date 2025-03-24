@@ -22,8 +22,8 @@ const afterRenderEvent = new Event('turbo:after-stream-render');
 addEventListener('turbo:before-stream-render', (event: CustomEvent) => {
     const originalRender = event.detail.render;
 
-    event.detail.render = function (streamElement: Element) {
-        originalRender(streamElement);
+    event.detail.render = async function (streamElement: Element) {
+        await originalRender(streamElement);
         window.dispatchEvent(afterRenderEvent);
     };
 });

@@ -94,7 +94,7 @@ Follow the next steps to install Flowbite using NPM.
 npm install flowbite --save
 ```
 
-2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
+2. Import the default theme variables from Flowbite inside your main `app.css` CSS file:
 
 ```css
 @import "flowbite/src/themes/default";

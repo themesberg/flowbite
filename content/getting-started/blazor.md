@@ -210,34 +210,112 @@ Now you have installed Flowbite and the styles associated with it. Please follow
 
 To use Flowbite with Blazor WebAssembly (WASM), you will need to setup the [Flowbite init functions](https://flowbite.com/docs/getting-started/quickstart/#init-functions) using an [interop layer](https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-7.0) that ensures the DOM rendering before applying the event listeners via the data attributes API.
 
-1. First, you need to define the JS function to initialize Flowbite inside the `index.html` file:
+1. First, you need to create a new `flowbite-interop.js` file inside `wwwroot/` and add the following code:
+
+```javascript
+window.flowbiteInterop = {
+    initializeFlowbite: function () {
+        return initFlowbite();
+    }
+};
+```
+
+2. After that, create a new `Services/FlowbiteService.cs` service inside your Blazor project:
+
+```javascript
+using Microsoft.JSInterop;
+
+namespace tailwind_4_blazor_starter.Services;
+
+public interface IFlowbiteService
+{
+    ValueTask InitializeFlowbiteAsync();
+}
+
+public class FlowbiteService : IFlowbiteService
+{
+    private readonly IJSRuntime _jsRuntime;
+
+    public FlowbiteService(IJSRuntime jsRuntime)
+    {
+        _jsRuntime = jsRuntime;
+    }
+
+    public async ValueTask InitializeFlowbiteAsync()
+    {
+        await _jsRuntime.InvokeVoidAsync("flowbiteInterop.initializeFlowbite");
+    }
+}
+```
+
+This creates a reusable service for all of your Blazor WASM pages.
+
+3. Register the newly created service in your `Program.cs` file:
+
+```javascript
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using tailwind_4_blazor_starter;
+
+// add this
+using tailwind_4_blazor_starter.Services;
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
+
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+// add this
+builder.Services.AddScoped<IFlowbiteService, FlowbiteService>();
+
+await builder.Build().RunAsync();
+```
+
+4. Import the Flowbite Javascript file and the `flowbite-interop.js` file in your `index.html` file:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-<script>
-    window.initializeFlowbite = () => {
-        initFlowbite();
-    }
-</script>
+  <!-- ... -->
+  <script src="_framework/blazor.webassembly.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script src="js/flowbite-interop.js"></script>
+</body>
 ```
 
-2. After that, in your `Mainlayout.razor` file, you need to implement the JS interop logic to invoke the JavaScript function `window.initializeFlowbite` by first injecting the `IJSRuntime` service into your component:
+5. Create a new `FlowbitePage.cs` file inside the `Pages` folder:
 
-```bash
-@inject IJSRuntime Js
-```
+```javascript
+using Microsoft.AspNetCore.Components;
+using tailwind_4_blazor_starter.Services;
 
-And then override the `OnAfterRenderAsync` method:
+namespace tailwind_4_blazor_starter.Pages;
 
-```bash
-@code {
-    protected override async Task OnAfterRenderAsync(bool isFirstRender) {
-        if (isFirstRender)
+public abstract class FlowbitePage : ComponentBase
+{
+    [Inject]
+    protected IFlowbiteService FlowbiteService { get; set; } = default!;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
         {
-           await Js.InvokeVoidAsync("window.initializeFlowbite");
+            await FlowbiteService.InitializeFlowbiteAsync();
         }
+        await base.OnAfterRenderAsync(firstRender);
     }
- }
+}
+```
+
+6. Use the inheritance directive in your pages to load the Flowbite JS components:
+
+```html
+@page "/"
+
+@inherits FlowbitePage
+
+<PageTitle>Home</PageTitle>
+
+<!-- your components -->
 ```
 
 Congratulations! You have now integrated the interactive JS components from Flowbite with a Blazor WASM.
@@ -248,7 +326,7 @@ Now that you have successfully installed Blazor.NET, Tailwind CSS and Flowbite, 
 
 Copy and paste this [dropdown component example](https://flowbite.com/docs/components/dropdowns/) into your `Pages/Home.razor` file:
 
-```bash
+```html
 @page "/"
 
 <PageTitle>Home</PageTitle>

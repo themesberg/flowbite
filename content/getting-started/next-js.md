@@ -16,210 +16,142 @@ nextLink: getting-started/vue/
 
 This technology is being used by hundreds of thousands of developers and companies such as Vercel, Netflix, TikTok, Twitch, Hulu, Nike and HBO Max since its original release in 2016.
 
-By following this guide you will learn how to properly set up Tailwind CSS with the [Flowbite React](https://flowbite-react.com/) components inside an existing or new Next.js project.
+## Quick Start
 
-## Requirements
-
-Make sure that you have [Node.js](https://nodejs.org/en/) installed on your computer to be able to install Next.js, Tailwind CSS and Flowbite React using `npx` and `npm` commands.
-
-## Create a Next.js project
-
-Follow the next steps to create a brand new Next.js project using the CLI or a manual installation.
-
-### Using the CLI
-
-Run the following command to scaffold a new Flowbite React project using Next.js:
+The fastest way to get started is using our project creation CLI, which sets up a new Next.js project with Flowbite React, Tailwind CSS, and all necessary configurations:
 
 ```bash
-npm create flowbite-react@latest -- --template nextjs
+npx create-flowbite-react@latest -t nextjs
 ```
 
-Running this will automatically set up Flowbite React in a Next.js project environment.
+This will:
 
-### Manual install
+-   Create a new Next.js project
+-   Install and configure Tailwind CSS
+-   Set up Flowbite React with all required dependencies
+-   Configure dark mode support
+-   Set up example components
 
-1. Run the following command to create a new starter Next.js project:
+## Add to Existing Project
+
+If you already have a Next.js project and want to add Flowbite React, you can use our initialization CLI:
+
+```bash
+npx flowbite-react@latest init
+```
+
+This will automatically:
+
+-   Install Flowbite React and its dependencies
+-   Configure Tailwind CSS to include Flowbite React plugin
+-   Set up necessary configurations
+
+## Manual Setup
+
+If you prefer to set everything up manually or need more control over the configuration, follow these steps:
+
+### 1. Create Project
+
+Create a new Next.js project:
+
+When prompted:
+
+-   Would you like to use Tailwind CSS? » Yes
 
 ```bash
 npx create-next-app@latest
-cd my-app
 ```
 
-This command will install all of the necessary dependencies and boilerplate files for a basic Next.js project.
+### 2. Install Flowbite React
 
-2. Run the following command in your terminal to start a local server:
+Install Flowbite React:
 
 ```bash
-npm run dev
+npx flowbite-react@latest init
 ```
 
-This will make local development accessible via the browser on `http://localhost:3000`.
+This will:
 
-3. Run the following command to build the project files:
+-   Install Flowbite React and its dependencies
+-   Configure Tailwind CSS to include Flowbite React plugin
+-   Configure Vite to include Flowbite React plugin
 
-```bash
-npm run build
-```
+### 3. Configure Dark Mode (Optional)
 
-Now that you have created a Next.js project you can proceed by setting up Tailwind CSS.
+To avoid page flicker in dark mode before hydration, add the `ThemeModeScript` to your root layout:
 
-## Install Tailwind CSS
-
-Follow the next steps to set up Tailwind CSS inside your Next.js project.
-
-1. Run the following command to install Tailwind CSS, Post CSS and Autoprefixer:
-
-```bash
-npm install -D tailwindcss postcss autoprefixer
-```
-
-2. Create a new `tailwind.config.js` and `postcss.config.js` file by running the following command:
-
-```bash
-npx tailwindcss init -p
-```
-
-The `-p` flag will also generate the PostCSS configuration file.
-
-3. Configure the template paths inside the Tailwind CSS configuration file:
+For App Router:
 
 ```javascript
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+// app/layout.tsx
+import { ThemeModeScript } from 'flowbite-react';
 
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
-```
-
-This is needed for tagging all class names inside the project and including only the used ones in the CSS file.
-
-4. Replace the contents of the `styles/globals.css` file and import the following directives:
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-With this last change you should now have a proper Next.js and Tailwind CSS configuration set up.
-
-Follow the steps of the next section in this tutorial to start using a library of open-source React components based on Tailwind CSS.
-
-## Install Flowbite React
-
-Flowbite React is an open-source set of interactive React components based on the Tailwind CSS utility-first framework featuring interactive elements such as modals, navbars, dropdowns, carousels, and more.
-
-1. Install Flowbite React  via NPM by running the following command:
-
-```bash
-npm install flowbite-react
-```
-
-2. Import Flowbite React  and add the `plugin` and the `content` path inside your `tailwind.config.js` file:
-
-```javascript
-const flowbite = require("flowbite-react/tailwind");
-
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    // ...
-    flowbite.content(),
-  ],
-  plugins: [
-    // ...
-    flowbite.plugin(),
-  ],
-};
-```
-
-Now that you have successfully installed Flowbite React  you can start using the components from the library.
-
-## Flowbite components
-
-Here's an example of how you can use the alert component by importing it from `flowbite-react`:
-
-```javascript
-import { Alert } from "flowbite-react";
-
-function Demo() {
-  return <Alert color="info">Alert!</Alert>;
+export default function RootLayout({ children }) {
+    return (
+        <html suppressHydrationWarning>
+            <head>
+                <ThemeModeScript />
+            </head>
+            <body>{children}</body>
+        </html>
+    );
 }
 ```
 
-Here's another example of how you can use the dropdown component:
+For Pages Router:
 
 ```javascript
-"use client";
+// pages/_document.tsx
+import { ThemeModeScript } from 'flowbite-react';
 
-import { Dropdown } from "flowbite-react";
-
-function Demo() {
-  return (
-    <Dropdown label="Dropdown button">
-      <Dropdown.Item>Dashboard</Dropdown.Item>
-      <Dropdown.Item>Settings</Dropdown.Item>
-      <Dropdown.Item>Earnings</Dropdown.Item>
-      <Dropdown.Item>Sign out</Dropdown.Item>
-    </Dropdown>
-  );
+export default function Document() {
+    return (
+        <Html suppressHydrationWarning>
+            <Head>
+                <ThemeModeScript />
+            </Head>
+            <body>
+                <Main />
+                <NextScript />
+            </body>
+        </Html>
+    );
 }
 ```
 
-Finally, another example on how you can use the navbar component:
+## Try it out
+
+Now that you have successfully installed Flowbite React you can start using the components from the library:
 
 ```javascript
-"use client";
+// app/page.tsx
+import { Button } from 'flowbite-react';
 
-import { Navbar } from "flowbite-react";
-
-function Demo() {
-  return (
-    <Navbar fluid rounded>
-      <Navbar.Brand href="https://flowbite.com/">
-        <img
-          src="https://flowbite.com/docs/images/logo.svg"
-          className="mr-3 h-6 sm:h-9"
-          alt="Flowbite Logo"
-        />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-          Flowbite
-        </span>
-      </Navbar.Brand>
-      <Navbar.Toggle />
-      <Navbar.Collapse>
-        <Navbar.Link href="/navbars" active>
-          Home
-        </Navbar.Link>
-        <Navbar.Link href="/navbars">About</Navbar.Link>
-        <Navbar.Link href="/navbars">Services</Navbar.Link>
-        <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-        <Navbar.Link href="/navbars">Contact</Navbar.Link>
-      </Navbar.Collapse>
-    </Navbar>
-  );
+export default function Page() {
+    return <Button>Click me</Button>;
 }
 ```
 
-To learn more about Flowbite React make sure to check out to the [repository](https://github.com/themesberg/flowbite-react) and the [documentation](https://flowbite-react.com/docs/getting-started/introduction).
+## Templates
 
-## Next.js starter project
+### Official
 
-The open-source community from Flowbite has created a few starter templates that you can find on GitHub or Stackblitz to get you started with the Tailwind CSS, React, Next.js and Flowbite stack:
+-   [GitHub](https://github.com/themesberg/flowbite-react-template-nextjs)
+-   [StackBlitz](https://stackblitz.com/edit/flowbite-react-template-nextjs)
 
-- [Starter template on GitHub](https://github.com/themesberg/flowbite-react-template-nextjs)
-- [Starter template on StackBlitz](https://stackblitz.com/edit/flowbite-react-template-nextjs)
+### Community
 
-## More examples
+-   [Kitchen Sink - Demo](https://flowbite-react.com/storybook)
 
-You can additionally check out the [pro version of Flowbite](https://flowbite.com/pro/) to get access to over 300+ blocks, templates and an admin dashboard coded with Flowbite React and Tailwind CSS.
+## Resources
+
+-   [GitHub Repository](https://github.com/themesberg/flowbite-react)
+-   [Documentation](https://flowbite-react.com/docs)
+-   [Storybook](https://flowbite-react.com/storybook)
+-   [Figma Design System](https://www.figma.com/community/file/1251695088645881)
+
+## Support
+
+-   [Discord Community](https://discord.gg/4eeurUVvTy)
+-   [GitHub Discussions](https://github.com/themesberg/flowbite-react/discussions)
+-   [GitHub Issues](https://github.com/themesberg/flowbite-react/issues)

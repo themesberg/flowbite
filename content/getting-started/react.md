@@ -16,103 +16,74 @@ nextLink: getting-started/next-js/
 
 Coupled with Tailwind CSS and the React components from Flowbite you will be able to develop applications faster than ever based on the [Flowbite React](https://flowbite-react.com) library using advanced theming functionalities and React specific components and methodologies.
 
-## Create a React project
+## Quickstart
 
-The latest recommended way of creating a new React application is to use a front-end tooling software such as Vite or Parcel since the React docs no longer recommends the `create-react-app` repository.
+Get started with Flowbite React by either creating a new project or adding it to an existing one using our CLI tools.
 
-### Using the CLI
+### Creating a new project
 
-Run the following command to scaffold a new Flowbite React project using [Vite](https://vitejs.dev/):
-
-```bash
-npm create flowbite-react@latest -- --template vite
-```
-
-Running this will create a new folder with all the necessary files for a React project with Flowbite.
-
-### Using Vite React
-
-Create a new React project using Vite by running the following two commands:
+Use our project creation CLI to scaffold a new application with Flowbite React pre-configured:
 
 ```bash
-npm create vite@latest my-project -- --template react-ts
-cd my-project
+npx create-flowbite-react@latest
 ```
 
-Now that the project has been created you can start a local development server by running `npm run dev` and use the `npm run build` command to create an optimized build for production use.
+### Adding to an existing project
 
-## Install Tailwind CSS
-
-1. Install Tailwind CSS by running the following two commands:
+For existing projects, use the Flowbite React CLI to set up and configure everything automatically:
 
 ```bash
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+npx flowbite-react@latest init
 ```
 
-2. Configure the template paths inside the `tailwind.config.js` file:
+## Integration Guides
 
-```javascript
-module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
-```
+Looking to integrate Flowbite React with your favorite framework or tool? Check out our detailed integration guides below for step-by-step instructions on setting up Flowbite React with various technologies:
 
-3. Set up the Tailwind directives inside the `./src/index.css` file:
+-   [AdonisJS](https://flowbite-react.com/docs/guides/adonisjs)
+-   [Astro](https://flowbite-react.com/docs/guides/astro)
+-   [Blitz.js](https://flowbite-react.com/docs/guides/blitzjs)
+-   [Bun](https://flowbite-react.com/docs/guides/bun)
+-   [ESBuild](https://flowbite-react.com/docs/guides/esbuild)
+-   [Farm](https://flowbite-react.com/docs/guides/farm)
+-   [Gatsby](https://flowbite-react.com/docs/guides/gatsby)
+-   [Laravel](https://flowbite-react.com/docs/guides/laravel)
+-   [Meteor.js](https://flowbite-react.com/docs/guides/meteorjs)
+-   [Modern.js](https://flowbite-react.com/docs/guides/modernjs)
+-   [Next.js](https://flowbite-react.com/docs/guides/nextjs)
+-   [Parcel](https://flowbite-react.com/docs/guides/parcel)
+-   [React Router](https://flowbite-react.com/docs/guides/react-router)
+-   [React Server](https://flowbite-react.com/docs/guides/react-server)
+-   [RedwoodJS](https://flowbite-react.com/docs/guides/redwoodjs)
+-   [Remix](https://flowbite-react.com/docs/guides/remix)
+-   [Rsbuild](https://flowbite-react.com/docs/guides/rsbuild)
+-   [Rspack](https://flowbite-react.com/docs/guides/rspack)
+-   [TanStack Router](https://flowbite-react.com/docs/guides/tanstack-router)
+-   [TanStack Start](https://flowbite-react.com/docs/guides/tanstack-start)
+-   [Vike](https://flowbite-react.com/docs/guides/vike)
+-   [Vite](https://flowbite-react.com/docs/guides/vite)
+-   [Waku](https://flowbite-react.com/docs/guides/waku)
+-   [Webpack](https://flowbite-react.com/docs/guides/webpack)
 
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
+## Next Steps
 
-Now that you have installed Tailwind CSS you can proceed by setting up Flowbite React.
+Ready to explore more? Check out:
 
-## Install Flowbite React
+-   [Theme customization](https://flowbite-react.com/docs/customize/theme) to learn about styling components
+-   [Dark mode implementation](https://flowbite-react.com/docs/customize/dark-mode) for adding dark theme support
+-   [Contributing guide](https://flowbite-react.com/docs/getting-started/contributing) to get involved with the project
 
-Flowbite React is an open-source set of interactive React components based on the Tailwind CSS utility-first framework featuring interactive elements such as modals, navbars, dropdowns, carousels, and more.
+For installation and setup instructions, visit our [quickstart guide](https://flowbite-react.com/docs/getting-started/quickstart).
 
-4. Install Flowbite react by running the following command in your terminal:
+## Resources
 
-```bash
-npm install flowbite-react
-```
+-   [GitHub Repository](https://github.com/themesberg/flowbite-react)
+-   [Documentation](https://flowbite-react.com/docs)
+-   [Storybook](https://flowbite-react.com/storybook)
+-   [Figma Design System](https://www.figma.com/community/file/1251695088645881)
 
-5. Import Flowbite React and add the `plugin` and the `content` path inside your `tailwind.config.js` file:
+## Support
 
-```javascript
-const flowbite = require("flowbite-react/tailwind");
-
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    // ...
-    flowbite.content(),
-  ],
-  plugins: [
-    // ...
-    flowbite.plugin(),
-  ],
-};
-```
-
-Congratulations! You have successfully now installed all of the required dependencies so you are now ready to start building websites using Tailwind CSS, React and Flowbite.
-
-## React components
-
-You can check out the whole collection of Flowbite components built with React and Tailwind CSS by checking out the [GitHub repository](https://github.com/themesberg/flowbite-react) and the [Flowbite React](https://flowbite-react.com) official documentation.
-
-## Starter templates
-
-Use the following open-source starter templates that already have Tailwind CSS, React and Flowbite configured so you can get started with your project right away:
-
-- [Flowbite React Template on GitHub](https://github.com/themesberg/flowbite-react-template-vite)
-- [Flowbite React Template on StackBlitz](https://stackblitz.com/edit/flowbite-react-template-vite)
-
-## More examples
-
-You can also check out the [pro version of Flowbite](https://flowbite.com/pro/) to get access to over 300+ blocks, templates and an admin dashboard coded with Flowbite React and Tailwind CSS.
+-   [Discord Community](https://discord.gg/4eeurUVvTy)
+-   [GitHub Discussions](https://github.com/themesberg/flowbite-react/discussions)
+-   [GitHub Issues](https://github.com/themesberg/flowbite-react/issues)

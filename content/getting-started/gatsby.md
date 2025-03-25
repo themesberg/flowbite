@@ -22,200 +22,110 @@ By following this guide you will learn how to create a new Gatsby project, insta
 
 Before creating a new project make sure that you have [Node.js](https://nodejs.org/en/) (v18 or higher) installed on your local machine and production server because it will be required to install all of the three technologies.
 
-## Create a Gatsby project
+## Quick Start (Recommended)
 
-1. The first step in this guide is to create a new Gatsby project using the CLI interface via NPM:
+The fastest way to get started is using our project creation CLI, which sets up a new Gatsby project with Flowbite React, Tailwind CSS, and all necessary configurations:
+
+```bash
+npx create-flowbite-react@latest -t gatsby
+```
+
+This will:
+
+-   Create a new Gatsby project
+-   Install and configure Tailwind CSS
+-   Set up Flowbite React with all required dependencies
+-   Configure dark mode support
+-   Set up example components
+
+## Add to Existing Project
+
+If you already have a Gatsby project and want to add Flowbite React, you can use our initialization CLI:
+
+```bash
+npx flowbite-react@latest init
+```
+
+This will automatically:
+
+-   Install Flowbite React and its dependencies
+-   Configure Tailwind CSS to include Flowbite React plugin
+-   Set up necessary configurations for dark mode
+
+## Manual Setup
+
+If you prefer to set everything up manually or need more control over the configuration, follow these steps:
+
+### 1. Create Project
+
+Create a new Gatsby project with Tailwind CSS:
 
 ```bash
 npm init gatsby
 ```
 
-This command will prompt you to select the options for creating a new Gatsby application such as choosing between JavaScript or TypeScript, selecting your preferred CMS (WordPress, Drupal), styling system (we'll use Tailwind CSS), additional configurations and the name of the project.
+When prompted:
 
-2. Create a local server by running the following command in your terminal:
+-   Select `"Tailwind CSS"` to `"Would you like to install a styling system?"` question.
 
-```bash
-npm run develop
-```
-
-This command will compile your source code and make the Gatsby starter project accessible via your browser on the default `http://localhost:8000` address.
-
-3. To create a production build you can run the following command, just make sure you have Gatsby globally installed for your terminal:
+> **Note:** Install the correct version of Tailwind CSS, Gatsby CLI installs Tailwind CSS v4 by default but their template is configured for v3:
 
 ```bash
-gatsby build
+npm install -D tailwindcss@^3
 ```
 
-You can also use [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/) as the recommended way to host your website.
+### 2. Install Flowbite React
 
-## Install Tailwind CSS
-
-[Tailwind CSS](https://tailwindcss.com) is a popular utility-first CSS framework that allows you to build user interfaces quickly directly inside your template files without having to touch your CSS.
-
-1. Install Tailwind CSS and the PostCSS plugin for Gatsby using NPM:
+Install Flowbite React:
 
 ```bash
-npm install -D tailwindcss gatsby-plugin-postcss postcss autoprefixer
+npx flowbite-react@latest init
 ```
 
-2. Use the following command to create a default `tailwind.config.js` configuration using PostCSS:
+This will:
 
-```bash
-tailwindcss init -p
-```
+-   Install Flowbite React and its dependencies
+-   Configure Tailwind CSS to include Flowbite React plugin
+-   Configure Vite to include Flowbite React plugin
 
-3. Require the `gatsby-plugin-postcss` plugin inside your `gatsby-config.js` file:
+### 3. Configure Dark Mode
 
-```javascript
-module.exports = {
-  plugins: [
-    // other plugins ...
-    'gatsby-plugin-postcss',
-  ],
-}
-```
+In server side rendered applications like Gatsby, to avoid page flicker when dark mode is set, you need to configure the `ThemeModeScript` component:
 
-4. Configure the template paths for your Gatsby project inside your `tailwind.config.js` file:
+1. Create `gatsby-ssr.js` file at the root folder of the project:
 
-```javascript
-module.exports = {
-  content: [
-    "./src/pages/**/*.{js,jsx,ts,tsx}",
-    "./src/components/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-```
-
-5. Create a new `./src/css/global.css` file and import the default Tailwind directives:
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* other styles ... */
-```
-
-6. Finally, import the created `global.css` CSS file inside a new `./gatsby-browser.js` file:
-
-```javascript
-import './src/css/global.css'
-```
-
-7. You can now start using Tailwind CSS utility classes inside your Gatsby templates. For example, you can add `text-blue-600` to one of the elements inside your `index.js` file.
-
-```javascript
-const IndexPage = () => {
-  return (
-    <main>
-      <h1 className="text-blue-600">
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      // other markup ...
-    </main>
-  )
-}
-
-export default IndexPage
-
-export const Head = () => <title>Home Page</title>
-```
-
-8. Restart your server and run `npm run develop` to apply the changes and now the title should have a blue color instead of the default black from the browser.
-
-## Install Flowbite
-
-[Flowbite](https://flowbite.com) is a popular and open-source UI component library built on top of the Tailwind CSS framework featuring interactive elements such as dropdowns, modals, navbars, carousels, and more that can help you build websites even faster. 
-
-Flowbite also supports technologies and frameworks such as React, Vue, Svelte, Angular, and more. In this guide, we will use the [Flowbite React](https://github.com/themesberg/flowbite-react) library because it matches the best with Gatsby.
-
-1. The first step is to install the Flowbite and Flowbite React package via NPM:
-
-```bash
-npm install flowbite flowbite-react
-```
-
-2. Make sure that you require the Flowbite plugin and configure the template paths inside your Tailwind CSS configuration file:
-
-```javascript
-module.exports = {
-  content: [
-    "./src/pages/**/*.{js,jsx,ts,tsx}",
-    "./src/components/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/flowbite-react/**/*.js", // add this
-  ],
-  plugins: [
-    require("flowbite/plugin") // add this
-  ],
-  theme: {},
+```js
+// gatsby-ssr.js
+export const onRenderBody = ({ setPreBodyComponents }) => {
+    setPreBodyComponents([]);
 };
 ```
 
-Having these configured you can now start using the UI components from Flowbite.
+2. Import `ThemeModeScript` and add it to `setPreBodyComponents` function:
 
-## Flowbite components
+```js
+// gatsby-ssr.js
+import { ThemeModeScript } from 'flowbite-react';
 
-You can either use the core vanilla JS and static HTML components from the [Flowbite Library](https://flowbite.com/docs/getting-started/introduction/) or you can import dedicated React components such as the Alert, Modal, or Navbar from the [Flowbite React](https://github.com/themesberg/flowbite-react) library.
-
-Here's an example of how you can import and use the Alert component:
-
-```javascript
-import { Alert } from "flowbite-react";
-
-const IndexPage = () => {
-  return (
-    <main>
-      <Alert color="info">This is a guide using Gatsby, Flowibte, and Tailwind CSS.</Alert>
-    </main>
-  )
-}
-
-export default IndexPage
-
-export const Head = () => <title>Home Page</title>
+export const onRenderBody = ({ setPreBodyComponents }) => {
+    setPreBodyComponents([ThemeModeScript]);
+};
 ```
 
-This example will show a default alert component. You can change the appearance by using `color="danger"` or `color="warning"` to update the colors.
+## Try it out
 
-Another example would be the commonly used Dropdown UI component:
+Now that you have successfully installed Flowbite React you can start using the components from the library:
 
 ```javascript
-import { Dropdown } from "flowbite-react";
+// src/pages/index.tsx (or .jsx)
+import { Button } from 'flowbite-react';
 
-const IndexPage = () => {
-  return (
-    <main>
-      <Dropdown
-        label="Dropdown button"
-        dismissOnClick={false}
-      >
-        <Dropdown.Item>
-          Gatsby JS
-        </Dropdown.Item>
-        <Dropdown.Item>
-          Tailwind CSS
-        </Dropdown.Item>
-        <Dropdown.Item>
-          Flowbite Components
-        </Dropdown.Item>
-      </Dropdown>
-    </main>
-  )
+export default function IndexPage() {
+    return <Button>Click me</Button>;
 }
-
-export default IndexPage
-
-export const Head = () => <title>Home Page</title>
 ```
 
-This example will show a button that on the click event will show a dropdown menu item. You can browse the full list of components and options by checking out the [Flowbite React](https://github.com/themesberg/flowbite-react) library.
+## Templates
 
-## Gatsby starter project
-
-The open-source community created a [free starter project](https://github.com/themesberg/tailwind-gatsby-starter) using Gatsby, Tailwind CSS, and Flowbite React that you can download to set up your tech stack faster.
+-   [GitHub](https://github.com/themesberg/flowbite-react-gatsby-starter)
+-   [StackBlitz](https://stackblitz.com/fork/flowbite-react-gatsby)

@@ -16,103 +16,91 @@ nextLink: getting-started/next-js/
 
 Coupled with Tailwind CSS and the React components from Flowbite you will be able to develop applications faster than ever based on the [Flowbite React](https://flowbite-react.com) library using advanced theming functionalities and React specific components and methodologies.
 
+## Getting started
+
+You can easily install or add Flowbite React to an existing project with our new CLI toolkit.
+
 ## Create a React project
 
-The latest recommended way of creating a new React application is to use a front-end tooling software such as Vite or Parcel since the React docs no longer recommends the `create-react-app` repository.
-
-### Using the CLI
-
-Run the following command to scaffold a new Flowbite React project using [Vite](https://vitejs.dev/):
+Use our project creation CLI to scaffold a new application with Flowbite React already configured:
 
 ```bash
-npm create flowbite-react@latest -- --template vite
+npx create-flowbite-react@latest
 ```
 
-Running this will create a new folder with all the necessary files for a React project with Flowbite.
+This will create a new project with React, Flowbite, and Tailwind CSS (v4) ready to use.
 
-### Using Vite React
+## Add to existing project
 
-Create a new React project using Vite by running the following two commands:
+For existing projects, use the Flowbite React CLI to set up and configure everything automatically:
 
 ```bash
-npm create vite@latest my-project -- --template react-ts
-cd my-project
+npx flowbite-react@latest init
 ```
 
-Now that the project has been created you can start a local development server by running `npm run dev` and use the `npm run build` command to create an optimized build for production use.
+This will add Flowbite React and configure Tailwind CSS to an existing React project.
 
-## Install Tailwind CSS
+## Integration Guides
 
-1. Install Tailwind CSS by running the following two commands:
+Flowbite React is a UI component library that can be integrated with many other technologies and libraries such as Next.js, Astro, Gatsby, Laravel, Remix and more.
 
-```bash
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
-2. Configure the template paths inside the `tailwind.config.js` file:
-
-```javascript
-module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
-```
-
-3. Set up the Tailwind directives inside the `./src/index.css` file:
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-Now that you have installed Tailwind CSS you can proceed by setting up Flowbite React.
-
-## Install Flowbite React
-
-Flowbite React is an open-source set of interactive React components based on the Tailwind CSS utility-first framework featuring interactive elements such as modals, navbars, dropdowns, carousels, and more.
-
-4. Install Flowbite react by running the following command in your terminal:
-
-```bash
-npm install flowbite-react
-```
-
-5. Import Flowbite React and add the `plugin` and the `content` path inside your `tailwind.config.js` file:
-
-```javascript
-const flowbite = require("flowbite-react/tailwind");
-
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    // ...
-    flowbite.content(),
-  ],
-  plugins: [
-    // ...
-    flowbite.plugin(),
-  ],
-};
-```
-
-Congratulations! You have successfully now installed all of the required dependencies so you are now ready to start building websites using Tailwind CSS, React and Flowbite.
+Check out [this page](https://flowbite-react.com/docs/getting-started/quickstart) to learn how to get started with each integration.
 
 ## React components
 
-You can check out the whole collection of Flowbite components built with React and Tailwind CSS by checking out the [GitHub repository](https://github.com/themesberg/flowbite-react) and the [Flowbite React](https://flowbite-react.com) official documentation.
+Flowbite React offers a wide variety of UI components such as buttons, dropdowns, modals, datepickers, and more that you can plug and play into your application. Check out the [Flowbite React docs](https://flowbite-react.com/docs/components/button) for more details.
 
-## Starter templates
+## Theme customization
 
-Use the following open-source starter templates that already have Tailwind CSS, React and Flowbite configured so you can get started with your project right away:
+Flowbite React offers an advanced system of customizing your components and templates using the new [theming engine](https://flowbite-react.com/docs/customize/theme). You can style components by directly using the `className` attribute of the component, but also by passing a theme object to the `<ThemeProvider>` component.
 
-- [Flowbite React Template on GitHub](https://github.com/themesberg/flowbite-react-template-vite)
-- [Flowbite React Template on StackBlitz](https://stackblitz.com/edit/flowbite-react-template-vite)
+For example, here is a simple way you can update a button component:
 
-## More examples
+```javascript
+import { Button } from "flowbite-react";
 
-You can also check out the [pro version of Flowbite](https://flowbite.com/pro/) to get access to over 300+ blocks, templates and an admin dashboard coded with Flowbite React and Tailwind CSS.
+function App() {
+  return <Button className="bg-red-500 hover:bg-red-600">Custom Button</Button>;
+}
+```
+
+Additionally, you can also use the `createTheme` helper to create a theme object that you can then pass on to the `<ThemeProvider>` component with which you can style subcomponents too:
+
+```javascript
+import { Button, createTheme, ThemeProvider } from "flowbite-react";
+
+const customTheme = createTheme({
+  button: {
+    color: {
+      primary: "bg-red-500 hover:bg-red-600",
+      secondary: "bg-blue-500 hover:bg-blue-600",
+    },
+    size: {
+      lg: "px-6 py-3 text-lg",
+    },
+  },
+});
+
+function App() {
+  return (
+    <ThemeProvider theme={customTheme}>
+      <Button color="primary">Red Button</Button>
+      <Button color="secondary" size="lg">
+        Large Blue Button
+      </Button>
+    </ThemeProvider>
+  );
+}
+```
+
+## Storybook
+
+Flowbite React also has a [Storybook](https://flowbite-react.com/storybook) version which you can use to preview and test components in isolation.
+
+## Open-source community
+
+The Flowbite React UI library is an open-source project under the MIT license. You can access the source code on [GitHub](https://github.com/themesberg/flowbite-react) and collaborate with our community of developers to contribute to its growth.
+
+## Support development
+
+If you’d like to support our open-source work, you can explore the [pro version](https://flowbite.com/pro/) of Flowbite, which offers 400+ components and templates, a Figma design system, an admin dashboard, and more.

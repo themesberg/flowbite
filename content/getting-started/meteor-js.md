@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Tailwind CSS Meteor.js - Flowbite
-description: Learn how to install Tailwind CSS with Flowbite for your Meteor.js project to build full-stack JavaScript or TypeScript web, mobile, and desktop applications 
+description: Learn how to install Tailwind CSS with Flowbite for your Meteor.js project to build full-stack JavaScript or TypeScript web, mobile, and desktop applications
 group: getting-started
 toc: true
 requires_meteorjs: true
@@ -24,179 +24,161 @@ nextLink: getting-started/gatsby/
 
 Using both Meteor.js, Tailwind CSS and Flowbite can help you get started building modern UI web applications by leveraging the extensive framework features of Meteor.js, the utility-first approach of the Tailwind CSS framework and the open-source UI components from the Flowbite Library.
 
-## Requirements
+## Getting started
 
-Make sure that you have [Node.js v14](https://nodejs.org/en/) installed on your computer to be able to install Meteor.js, Tailwind CSS and Flowbite using NPX and NPM.
-
-For more information on how to install Meteor.js, check out the [official installation guide](https://docs.meteor.com/install.html#prereqs).
+The fastest way to get started is using our project creation CLI, which sets up a new Meteor project with Flowbite React, Tailwind CSS, and all necessary configurations.
 
 ## Create a Meteor.js project
 
-The easiest way to create a new Meteor.js project is by first installing the CLI globally:
+Use the following command from the Flowbite React CLI toolkit:
 
 ```bash
-npm install -g meteor
+npx create-flowbite-react@latest -t meteorjs
 ```
 
-After you have `meteor` available in your terminal you can go ahead and create a new project:
+This will create a new Meteor project, install and configure Tailwind CSS, set up Flowbite React and its dependencies, configure dark mode and also add example components for you to get started.
+
+## Add to existing project
+
+If you already have a Meteor project and want to add Flowbite React, you can use our initialization CLI:
 
 ```bash
-meteor create flowbite-app --tailwind      
-cd flowbite-app
+npx flowbite-react@latest init
 ```
 
-This will create a new `meteor` project with `tailwindcss` support and no extra configuration is needed as we added the `--tailwind` flag when setting up the project.
+This command will install Flowbite React and configure Tailwind with the Flowbite plugin.
 
-Now that you have created a new Meteor.js project with Tailwind CSS configured automatically we can proceed with installing Flowbite and Flowbite React to start leveraging the open-source UI components.
+## Custom installation
 
-## Install Flowbite
+If you prefer to set everything up manually or need more control over the configuration, follow these steps.
 
-[Flowbite](https://flowbite.com/) is an open-source UI component library based on the Tailwind CSS utility-first framework featuring hundreds of components like dropdowns, modals, navbars, datepickers, and more that you can leverage to quickly build modern web applications.
+### Create a project
 
-1. The first step is to install Flowbite and Flowbite React via NPM:
+The first step is to create a new Meteor.js project using their CLI toolkit:
 
 ```bash
-npm install --save flowbite flowbite-react
+meteor create meteor-project
+cd meteor-project
 ```
 
-2. Make sure that you set up the Flowbite plugin and template paths in your `tailwind.config.js` file:
+If you prefer using TypeScript, then add the `--typescript` flag to the command:
 
-```javascript
-module.exports = {
-  content: [
-    "./imports/ui/**/*.{js,jsx,ts,tsx}",
-    "./client/*.html",
-    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [require("flowbite/plugin")],
+```bash
+meteor create meteor-project --typescript
+cd meteor-project
+```
+
+Now that you have a new Meteor.js project, you can proceed with installing Tailwind CSS.
+
+### Install Tailwind CSS
+
+The next step is to now install Tailwind CSS (v4) using NPM:
+
+```bash
+npm install -D tailwindcss @tailwindcss/postcss postcss postcss-load-config
+```
+
+Create a `postcss.config.mjs` file inside the root directory of your Meteor.js project:
+
+```bash
+touch postcss.config.mjs
+```
+
+Add `@tailwindcss/postcss` to your `postcss.config.mjs` file:
+
+```js
+/** @type {import('postcss-load-config').Config} */
+const config = {
+    plugins: {
+        '@tailwindcss/postcss': {},
+    },
 };
-
+export default config;
 ```
 
-3. Now that you have installed the Flowbite packages you can start importing the UI components:
+Update the css file `client/main.css` to include Tailwind CSS:
 
-```javascript
-import { Alert } from "flowbite-react";
-
-export default function MyPage() {
-  return <Alert color="info">Alert!</Alert>;
-}
+```css
+@import 'tailwindcss';
 ```
 
-The code above will import the `<Alert>` component that you can use to send feedback messages.
+Now that you have installed and configured Tailwind CSS, you can now proceed with installing Flowbite React.
 
-## Flowbite UI components
+### Install Flowbite React
 
-To get you started you can check out the full collection of React components from the [Flowbite React repository](https://github.com/themesberg/flowbite-react) and [browse the documentation](https://www.flowbite-react.com/docs/getting-started/introduction) for the source code of each component.
+To easily install Flowbite React you can use our official CLI toolkit:
 
-Here's an example of how you can use the modal and button components by importing them from the Flowbite React package inside your Meteor.js project:
+```bash
+npx flowbite-react@latest init
+```
+
+This command installs Flowbite React and configures it with Tailwind CSS.
+
+## React components
+
+Now that you have succesfully installed Flowbite React, Meteor.js and Tailwind CSS you can start using our components such as buttons, dropdowns, modal, navbars, and more:
 
 ```javascript
-import { Button, Modal } from 'flowbite-react';
+// imports/ui/App.tsx (or .jsx)
+import { Button } from 'flowbite-react';
+import React from 'react';
 
-export default function DefaultModal() {
-  const [openModal, setOpenModal] = useState<string | undefined>();
-  const props = { openModal, setOpenModal };
-
-  return (
+export const App = () => (
     <>
-      <Button onClick={() => props.setOpenModal('default')}>Toggle modal</Button>
-      <Modal show={props.openModal === 'default'} onClose={() => props.setOpenModal(undefined)}>
-        <Modal.Header>Terms of Service</Modal.Header>
-        <Modal.Body>
-          <div className="space-y-6">
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              With less than a month to go before the European Union enacts new consumer privacy laws for its citizens,
-              companies around the world are updating their terms of service agreements to comply.
-            </p>
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to
-              ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as
-              possible of high-risk data breaches that could personally affect them.
-            </p>
-          </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={() => props.setOpenModal(undefined)}>I accept</Button>
-          <Button color="gray" onClick={() => props.setOpenModal(undefined)}>
-            Decline
-          </Button>
-        </Modal.Footer>
-      </Modal>
+        <Button>Click me</Button>
     </>
-  )
+);
+```
+
+Check out the [official documentation](https://flowbite-react.com) to learn more about the components and how to use them.
+
+## Theme customization
+
+Flowbite React offers an advanced system of customizing your components and templates using the new [theming engine](https://flowbite-react.com/docs/customize/theme). You can style components by directly using the `className` attribute of the component, but also by passing a theme object to the `<ThemeProvider>` component.
+
+For example, here is a simple way you can update a button component:
+
+```javascript
+import { Button } from "flowbite-react";
+
+function App() {
+  return <Button className="bg-red-500 hover:bg-red-600">Custom Button</Button>;
 }
 ```
 
-Here's another example of how you can use the dropdown component:
+Additionally, you can also use the `createTheme` helper to create a theme object that you can then pass on to the `<ThemeProvider>` component with which you can style subcomponents too:
 
 ```javascript
-import { Dropdown } from "flowbite-react";
+import { Button, createTheme, ThemeProvider } from "flowbite-react";
 
-<Dropdown label="Dropdown button">
-  <Dropdown.Item>
-    Dashboard
-  </Dropdown.Item>
-  <Dropdown.Item>
-    Settings
-  </Dropdown.Item>
-  <Dropdown.Item>
-    Earnings
-  </Dropdown.Item>
-  <Dropdown.Item>
-    Sign out
-  </Dropdown.Item>
-</Dropdown>
+const customTheme = createTheme({
+  button: {
+    color: {
+      primary: "bg-red-500 hover:bg-red-600",
+      secondary: "bg-blue-500 hover:bg-blue-600",
+    },
+    size: {
+      lg: "px-6 py-3 text-lg",
+    },
+  },
+});
+
+function App() {
+  return (
+    <ThemeProvider theme={customTheme}>
+      <Button color="primary">Red Button</Button>
+      <Button color="secondary" size="lg">
+        Large Blue Button
+      </Button>
+    </ThemeProvider>
+  );
+}
 ```
 
-Finally, another example on how you can use the navbar component:
+## Open-source community
 
-```javascript
-import { Navbar } from "flowbite-react";
+The Flowbite React UI library is a free, open-source project licensed under MIT. You can access the source code on [GitHub](https://github.com/themesberg/flowbite-react) and collaborate with our developer community to contribute.
 
-<Navbar
-  fluid={true}
-  rounded={true}
->
-  <Navbar.Brand href="https://flowbite.com/">
-    <img
-      src="https://flowbite.com/docs/images/logo.svg"
-      className="mr-3 h-6 sm:h-9"
-      alt="Flowbite Logo"
-    />
-    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-      Flowbite
-    </span>
-  </Navbar.Brand>
-  <Navbar.Toggle />
-  <Navbar.Collapse>
-    <Navbar.Link
-      href="/navbars"
-      active={true}
-    >
-      Home
-    </Navbar.Link>
-    <Navbar.Link href="/navbars">
-      About
-    </Navbar.Link>
-    <Navbar.Link href="/navbars">
-      Services
-    </Navbar.Link>
-    <Navbar.Link href="/navbars">
-      Pricing
-    </Navbar.Link>
-    <Navbar.Link href="/navbars">
-      Contact
-    </Navbar.Link>
-  </Navbar.Collapse>
-</Navbar>
-```
+## Support development
 
-To learn more about Flowbite React make sure to check out to the [repository](https://github.com/themesberg/flowbite-react) and the [main website](https://flowbite-react.com/).
-
-## Meteor.js starter project
-
-The Flowbite and Meteor community has created an open-source Meteor.js starter project that has Tailwind CSS and Flowbite React set up beforehand and you can go ahead and clone it by checking out the official [repository on GitHub](https://github.com/meteor/flowbite-meteor-starter).
+If you’d like to support our open-source work, consider exploring the [pro version](https://flowbite.com/pro/) of Flowbite, which includes 400+ components and templates, a Figma design system, an admin dashboard, and more.

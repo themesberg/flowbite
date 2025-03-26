@@ -93,16 +93,14 @@ function App() {
 }
 ```
 
-This is just a basic explanation of the [theming system](https://flowbite-react.com/docs/customize/theme) from Flowbite React.
-
 ## Storybook
 
 Flowbite React also has a [Storybook](https://flowbite-react.com/storybook) version which you can use to preview and test components in isolation.
 
-## Resources
+## Open-source community
 
 The Flowbite React UI library is an open-source project licensed under the MIT license. You can find the source code on [GitHub](https://github.com/themesberg/flowbite-react) and contribute to the project together with our community of developers.
 
-## More examples
+## Support development
 
 If you want to support our open-source work, then you can also check out the [pro version](https://flowbite.com/pro/) version of Flowbite which brings you over 400+ components and templates, a Figma design system, admin dashboard, and more.

@@ -105,7 +105,7 @@ npm install flowbite --save
 @source "../../node_modules/flowbite";
 ```
 
-## Flowbite Components
+## Flowbite components
 
 Now that you have successfully installed Nuxt, Tailwind CSS and Flowbite you can start importing and using components from the open-source library of [Flowbite](https://flowbite.com) such as modals, navbars, tables, dropdowns, and more.
 

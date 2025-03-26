@@ -30,7 +30,7 @@ npx create-flowbite-react@latest -t nextjs
 
 This will create a new project configured with Next.js,Tailwind CSS (v4) and Flowbite React and it also sets up the dark mode configuration and a couple of example components.
 
-## Add to Existing Project
+## Add to existing project
 
 If you already have a Next.js project and want to add Flowbite React, you can use our initialization CLI:
 
@@ -56,7 +56,7 @@ Now you can proceed with installing the Flowbite React UI component library.
 
 ### Install Flowbite React
 
-You can easily install Flowbite React by using the official CLI toolkit from Flowbite:
+You can easily install Flowbite React by using the official CLI toolkit:
 
 ```bash
 npx flowbite-react@latest init

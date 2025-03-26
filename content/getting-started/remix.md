@@ -22,7 +22,7 @@ Follow the next steps in this guide to learn how to create a new Remix project a
 
 Before getting started make sure you that have [Node.js](https://nodejs.org/en/) and NPM installed on your local machine to be able to install the required packages including Remix, Tailwind CSS and Flowbite.
 
-## Quick Start (Recommended)
+## Getting started
 
 The fastest way to get started is using our project creation CLI, which sets up a new Remix project with Flowbite React, Tailwind CSS, and all necessary configurations:
 
@@ -30,15 +30,9 @@ The fastest way to get started is using our project creation CLI, which sets up 
 npx create-flowbite-react@latest -t remix
 ```
 
-This will:
+This command will create a new Remix project, install Tailwind CSS (v4), Flowbite React with all its dependencies, and set up dark mode support with a couple of example components to get you started.
 
--   Create a new Remix project
--   Install and configure Tailwind CSS
--   Set up Flowbite React with all required dependencies
--   Configure dark mode support
--   Set up example components
-
-## Add to Existing Project
+## Add to existing project
 
 If you already have a Remix project and want to add Flowbite React, you can use our initialization CLI:
 
@@ -46,42 +40,35 @@ If you already have a Remix project and want to add Flowbite React, you can use 
 npx flowbite-react@latest init
 ```
 
-This will automatically:
+This command will automatically install Flowbite React and its dependencies and configure the Flowbite plugin with Tailwind within an existing Remix project.
 
--   Install Flowbite React and its dependencies
--   Configure Tailwind CSS to include Flowbite React plugin
+## Custom installation
 
-## Manual Setup
+If you prefer to set everything up manually or need more control over the configuration, follow these steps.
 
-If you prefer to set everything up manually or need more control over the configuration, follow these steps:
+### Create new project
 
-### 1. Create Project
-
-Create a new Remix project:
+Create a new Remix project using the official CLI toolkit:
 
 ```bash
 npx create-remix@latest
 ```
 
-### 2. Install Flowbite React
+This command will create a fresh new Remix project.
 
-Install Flowbite React:
+### Install Flowbite React
+
+You can now proceed with installing Flowbite React:
 
 ```bash
 npx flowbite-react@latest init
 ```
 
-This will:
+This command will install Flowbite React and configure Tailwind and Vite with the Flowbite plugin.
 
--   Install Flowbite React and its dependencies
--   Configure Tailwind CSS to include Flowbite React plugin
--   Configure Vite to include Flowbite React plugin
+### Add dark mode
 
-### 3. Configure Dark Mode
-
-In server-side rendered applications like Remix, to avoid page flicker (if `dark` mode is set) before Remix hydrates the content, the `ThemeModeScript` component must be rendered in the `<head>` tag.
-
-`ThemeModeScript` renders a script tag that sets `dark` or removes `dark` from the `<html>` element before hydration occurs.
+In server-side rendered applications like Remix, to avoid page flicker (if `dark` mode is set) before Remix hydrates the content, the `ThemeModeScript` component must be rendered in the `<head>` tag. The component renders a script tag that sets `dark` or removes `dark` from the `<html>` element before hydration occurs.
 
 Import and render `ThemeModeScript` in `app/root.tsx` the `<head>` tag:
 
@@ -101,7 +88,9 @@ export default function Layout() {
 }
 ```
 
-## Try it out
+Congratulations! You have now installed and configured Flowbite React within a Remix project.
+
+## Remix components
 
 Now that you have successfully installed Flowbite React you can start using the components from the library:
 
@@ -115,9 +104,55 @@ export default function Index() {
 }
 ```
 
-## Templates
+Check out the [Flowbite React documentation](https://flowbite-react.com/) to learn more about the components and how to use them.
 
-Check out the following open-source starter templates built with Flowbite React, Tailwind CSS and Remix:
+## Theme customization
 
--   [Starter template on Github](https://github.com/themesberg/flowbite-react-template-remix)
--   [Starter template on StackBlitz](https://stackblitz.com/edit/flowbite-react-template-remix)
+Flowbite React offers an advanced system of customizing your components and templates using the new [theming engine](https://flowbite-react.com/docs/customize/theme). You can style components by directly using the `className` attribute of the component, but also by passing a theme object to the `<ThemeProvider>` component.
+
+For example, here is a simple way you can update a button component:
+
+```javascript
+import { Button } from "flowbite-react";
+
+function App() {
+  return <Button className="bg-red-500 hover:bg-red-600">Custom Button</Button>;
+}
+```
+
+Additionally, you can also use the `createTheme` helper to create a theme object that you can then pass on to the `<ThemeProvider>` component with which you can style subcomponents too:
+
+```javascript
+import { Button, createTheme, ThemeProvider } from "flowbite-react";
+
+const customTheme = createTheme({
+  button: {
+    color: {
+      primary: "bg-red-500 hover:bg-red-600",
+      secondary: "bg-blue-500 hover:bg-blue-600",
+    },
+    size: {
+      lg: "px-6 py-3 text-lg",
+    },
+  },
+});
+
+function App() {
+  return (
+    <ThemeProvider theme={customTheme}>
+      <Button color="primary">Red Button</Button>
+      <Button color="secondary" size="lg">
+        Large Blue Button
+      </Button>
+    </ThemeProvider>
+  );
+}
+```
+
+## Open-source community
+
+The Flowbite React UI library is an open-source project available for free under the MIT license. Its source code is hosted on [GitHub](https://github.com/themesberg/flowbite-react), where you can collaborate and contribute alongside our developer community.
+
+## Support development
+
+If you’d like to support our open-source efforts, consider exploring the [pro version](https://flowbite.com/pro/) of Flowbite, which includes 400+ components and templates, a Figma design system, an admin dashboard, and more.

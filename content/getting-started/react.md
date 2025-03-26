@@ -22,7 +22,7 @@ You can easily install or add Flowbite React to an existing project with our new
 
 ## Create a React project
 
-Use our project creation CLI to scaffold a new application with Flowbite React already pre-configured:
+Use our project creation CLI to scaffold a new application with Flowbite React already configured:
 
 ```bash
 npx create-flowbite-react@latest
@@ -38,7 +38,7 @@ For existing projects, use the Flowbite React CLI to set up and configure everyt
 npx flowbite-react@latest init
 ```
 
-This will add Flowbite React and Tailwind CSS to an existing React project.
+This will add Flowbite React and configure Tailwind CSS to an existing React project.
 
 ## Integration Guides
 
@@ -99,8 +99,8 @@ Flowbite React also has a [Storybook](https://flowbite-react.com/storybook) vers
 
 ## Open-source community
 
-The Flowbite React UI library is an open-source project licensed under the MIT license. You can find the source code on [GitHub](https://github.com/themesberg/flowbite-react) and contribute to the project together with our community of developers.
+The Flowbite React UI library is an open-source project under the MIT license. You can access the source code on [GitHub](https://github.com/themesberg/flowbite-react) and collaborate with our community of developers to contribute to its growth.
 
 ## Support development
 
-If you want to support our open-source work, then you can also check out the [pro version](https://flowbite.com/pro/) version of Flowbite which brings you over 400+ components and templates, a Figma design system, admin dashboard, and more.
+If you’d like to support our open-source work, you can explore the [pro version](https://flowbite.com/pro/) of Flowbite, which offers 400+ components and templates, a Figma design system, an admin dashboard, and more.

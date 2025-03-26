@@ -22,23 +22,21 @@ By following this guide you will learn how to create a new Gatsby project, insta
 
 Before creating a new project make sure that you have [Node.js](https://nodejs.org/en/) (v18 or higher) installed on your local machine and production server because it will be required to install all of the three technologies.
 
-## Quick Start (Recommended)
+## Getting started
 
-The fastest way to get started is using our project creation CLI, which sets up a new Gatsby project with Flowbite React, Tailwind CSS, and all necessary configurations:
+The fastest way to get started is using our project creation CLI, which sets up a new Gatsby project with Flowbite React, Tailwind CSS, and all necessary configurations.
+
+## Create a Gatsby project
+
+Run the following command in your terminal using our CLI toolkit:
 
 ```bash
 npx create-flowbite-react@latest -t gatsby
 ```
 
-This will:
+This will create a new Gatsby project, install and configure Tailwind CSS, install and configure Flowbite React, add dark mode support and also set up example components to get you started.
 
--   Create a new Gatsby project
--   Install and configure Tailwind CSS
--   Set up Flowbite React with all required dependencies
--   Configure dark mode support
--   Set up example components
-
-## Add to Existing Project
+## Add to existing project
 
 If you already have a Gatsby project and want to add Flowbite React, you can use our initialization CLI:
 
@@ -46,55 +44,39 @@ If you already have a Gatsby project and want to add Flowbite React, you can use
 npx flowbite-react@latest init
 ```
 
-This will automatically:
+This will automatically add Flowbite React to your project and will configure Tailwind CSS with the Flowbite plugin alongside dark mode support.
 
--   Install Flowbite React and its dependencies
--   Configure Tailwind CSS to include Flowbite React plugin
--   Set up necessary configurations for dark mode
+## Custom installation
 
-## Manual Setup
+If you prefer to set everything up manually or need more control over the configuration, follow these steps.
 
-If you prefer to set everything up manually or need more control over the configuration, follow these steps:
+### Create a new project
 
-### 1. Create Project
-
-Create a new Gatsby project with Tailwind CSS:
+Create a new Gatsby project using NPM and make sure to select `Tailwind CSS` when prompted:
 
 ```bash
 npm init gatsby
 ```
 
-When prompted:
+You can now proceed with the installation of Flowbite React.
 
--   Select `"Tailwind CSS"` to `"Would you like to install a styling system?"` question.
+### Install Flowbite React
 
-> **Note:** Install the correct version of Tailwind CSS, Gatsby CLI installs Tailwind CSS v4 by default but their template is configured for v3:
-
-```bash
-npm install -D tailwindcss@^3
-```
-
-### 2. Install Flowbite React
-
-Install Flowbite React:
+Run the following CLI command to add Flowbite React to your project:
 
 ```bash
 npx flowbite-react@latest init
 ```
 
-This will:
+This command will install Flowbite React and configure Tailwind with the Flowbite plugin.
 
--   Install Flowbite React and its dependencies
--   Configure Tailwind CSS to include Flowbite React plugin
--   Configure Vite to include Flowbite React plugin
+### Adding dark mode
 
-### 3. Configure Dark Mode
-
-In server side rendered applications like Gatsby, to avoid page flicker when dark mode is set, you need to configure the `ThemeModeScript` component:
+In server side rendered applications like Gatsby, if you want to avoid page flicker when dark mode is set, you need to configure the `ThemeModeScript` component.
 
 1. Create `gatsby-ssr.js` file at the root folder of the project:
 
-```js
+```javascript
 // gatsby-ssr.js
 export const onRenderBody = ({ setPreBodyComponents }) => {
     setPreBodyComponents([]);
@@ -103,7 +85,7 @@ export const onRenderBody = ({ setPreBodyComponents }) => {
 
 2. Import `ThemeModeScript` and add it to `setPreBodyComponents` function:
 
-```js
+```javascript
 // gatsby-ssr.js
 import { ThemeModeScript } from 'flowbite-react';
 
@@ -112,9 +94,11 @@ export const onRenderBody = ({ setPreBodyComponents }) => {
 };
 ```
 
-## Try it out
+Congratulations! You have successfully installed Flowbite React.
 
-Now that you have successfully installed Flowbite React you can start using the components from the library:
+## React components
+
+Now that you have Flowbite React installed you can start using the components from the library:
 
 ```javascript
 // src/pages/index.tsx (or .jsx)
@@ -125,7 +109,55 @@ export default function IndexPage() {
 }
 ```
 
-## Templates
+Check out all of the UI components from the [Flowbite React](https://flowbite-react.com) library.
 
--   [GitHub](https://github.com/themesberg/flowbite-react-gatsby-starter)
--   [StackBlitz](https://stackblitz.com/fork/flowbite-react-gatsby)
+## Theme customization
+
+Flowbite React offers an advanced system of customizing your components and templates using the new [theming engine](https://flowbite-react.com/docs/customize/theme). You can style components by directly using the `className` attribute of the component, but also by passing a theme object to the `<ThemeProvider>` component.
+
+For example, here is a simple way you can update a button component:
+
+```javascript
+import { Button } from "flowbite-react";
+
+function App() {
+  return <Button className="bg-red-500 hover:bg-red-600">Custom Button</Button>;
+}
+```
+
+Additionally, you can also use the `createTheme` helper to create a theme object that you can then pass on to the `<ThemeProvider>` component with which you can style subcomponents too:
+
+```javascript
+import { Button, createTheme, ThemeProvider } from "flowbite-react";
+
+const customTheme = createTheme({
+  button: {
+    color: {
+      primary: "bg-red-500 hover:bg-red-600",
+      secondary: "bg-blue-500 hover:bg-blue-600",
+    },
+    size: {
+      lg: "px-6 py-3 text-lg",
+    },
+  },
+});
+
+function App() {
+  return (
+    <ThemeProvider theme={customTheme}>
+      <Button color="primary">Red Button</Button>
+      <Button color="secondary" size="lg">
+        Large Blue Button
+      </Button>
+    </ThemeProvider>
+  );
+}
+```
+
+## Open-source community
+
+The Flowbite React UI library is a free, open-source project licensed under MIT. You can find the source code on [GitHub](https://github.com/themesberg/flowbite-react) and collaborate with our developer community to contribute.
+
+## Support development
+
+If you’d like to support our open-source work, check out the [pro version](https://flowbite.com/pro/) of Flowbite, which offers 400+ components and templates, a Figma design system, an admin dashboard, and more.

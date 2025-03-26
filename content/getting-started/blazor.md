@@ -105,7 +105,7 @@ PostCSS helps in transforming `tailwindcss` to styling that is relevant to your 
 npm install tailwindcss @tailwindcss/cli --save-dev
 ```
 
-2. Next, create an `input.css` file in the `wwwroot/` folder and import the following directive:
+2. Next, create an `input.css` file in the `wwwroot/css/` folder and import the following directive:
 
 ```css
 @import "tailwindcss";

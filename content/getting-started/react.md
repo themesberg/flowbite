@@ -16,19 +16,21 @@ nextLink: getting-started/next-js/
 
 Coupled with Tailwind CSS and the React components from Flowbite you will be able to develop applications faster than ever based on the [Flowbite React](https://flowbite-react.com) library using advanced theming functionalities and React specific components and methodologies.
 
-## Quickstart
+## Getting started
 
-Get started with Flowbite React by either creating a new project or adding it to an existing one using our CLI tools.
+You can easily install or add Flowbite React to an existing project with our new CLI toolkit.
 
-### Creating a new project
+## Create a React project
 
-Use our project creation CLI to scaffold a new application with Flowbite React pre-configured:
+Use our project creation CLI to scaffold a new application with Flowbite React already pre-configured:
 
 ```bash
 npx create-flowbite-react@latest
 ```
 
-### Adding to an existing project
+This will create a new project with React, Flowbite, and Tailwind CSS (v4) ready to use.
+
+## Add to existing project
 
 For existing projects, use the Flowbite React CLI to set up and configure everything automatically:
 
@@ -36,54 +38,71 @@ For existing projects, use the Flowbite React CLI to set up and configure everyt
 npx flowbite-react@latest init
 ```
 
+This will add Flowbite React and Tailwind CSS to an existing React project.
+
 ## Integration Guides
 
-Looking to integrate Flowbite React with your favorite framework or tool? Check out our detailed integration guides below for step-by-step instructions on setting up Flowbite React with various technologies:
+Flowbite React is a UI component library that can be integrated with many other technologies and libraries such as Next.js, Astro, Gatsby, Laravel, Remix and more.
 
--   [AdonisJS](https://flowbite-react.com/docs/guides/adonisjs)
--   [Astro](https://flowbite-react.com/docs/guides/astro)
--   [Blitz.js](https://flowbite-react.com/docs/guides/blitzjs)
--   [Bun](https://flowbite-react.com/docs/guides/bun)
--   [ESBuild](https://flowbite-react.com/docs/guides/esbuild)
--   [Farm](https://flowbite-react.com/docs/guides/farm)
--   [Gatsby](https://flowbite-react.com/docs/guides/gatsby)
--   [Laravel](https://flowbite-react.com/docs/guides/laravel)
--   [Meteor.js](https://flowbite-react.com/docs/guides/meteorjs)
--   [Modern.js](https://flowbite-react.com/docs/guides/modernjs)
--   [Next.js](https://flowbite-react.com/docs/guides/nextjs)
--   [Parcel](https://flowbite-react.com/docs/guides/parcel)
--   [React Router](https://flowbite-react.com/docs/guides/react-router)
--   [React Server](https://flowbite-react.com/docs/guides/react-server)
--   [RedwoodJS](https://flowbite-react.com/docs/guides/redwoodjs)
--   [Remix](https://flowbite-react.com/docs/guides/remix)
--   [Rsbuild](https://flowbite-react.com/docs/guides/rsbuild)
--   [Rspack](https://flowbite-react.com/docs/guides/rspack)
--   [TanStack Router](https://flowbite-react.com/docs/guides/tanstack-router)
--   [TanStack Start](https://flowbite-react.com/docs/guides/tanstack-start)
--   [Vike](https://flowbite-react.com/docs/guides/vike)
--   [Vite](https://flowbite-react.com/docs/guides/vite)
--   [Waku](https://flowbite-react.com/docs/guides/waku)
--   [Webpack](https://flowbite-react.com/docs/guides/webpack)
+Check out [this page](https://flowbite-react.com/docs/getting-started/quickstart) to learn how to get started with each integration.
 
-## Next Steps
+## React components
 
-Ready to explore more? Check out:
+Flowbite React offers a wide variety of UI components such as buttons, dropdowns, modals, datepickers, and more that you can plug and play into your application. Check out the [Flowbite React docs](https://flowbite-react.com/docs/components/button) for more details.
 
--   [Theme customization](https://flowbite-react.com/docs/customize/theme) to learn about styling components
--   [Dark mode implementation](https://flowbite-react.com/docs/customize/dark-mode) for adding dark theme support
--   [Contributing guide](https://flowbite-react.com/docs/getting-started/contributing) to get involved with the project
+## Theme customization
 
-For installation and setup instructions, visit our [quickstart guide](https://flowbite-react.com/docs/getting-started/quickstart).
+Flowbite React offers an advanced system of customizing your components and templates using the new [theming engine](https://flowbite-react.com/docs/customize/theme). You can style components by directly using the `className` attribute of the component, but also by passing a theme object to the `<ThemeProvider>` component.
+
+For example, here is a simple way you can update a button component:
+
+```javascript
+import { Button } from "flowbite-react";
+
+function App() {
+  return <Button className="bg-red-500 hover:bg-red-600">Custom Button</Button>;
+}
+```
+
+Additionally, you can also use the `createTheme` helper to create a theme object that you can then pass on to the `<ThemeProvider>` component with which you can style subcomponents too:
+
+```javascript
+import { Button, createTheme, ThemeProvider } from "flowbite-react";
+
+const customTheme = createTheme({
+  button: {
+    color: {
+      primary: "bg-red-500 hover:bg-red-600",
+      secondary: "bg-blue-500 hover:bg-blue-600",
+    },
+    size: {
+      lg: "px-6 py-3 text-lg",
+    },
+  },
+});
+
+function App() {
+  return (
+    <ThemeProvider theme={customTheme}>
+      <Button color="primary">Red Button</Button>
+      <Button color="secondary" size="lg">
+        Large Blue Button
+      </Button>
+    </ThemeProvider>
+  );
+}
+```
+
+This is just a basic explanation of the [theming system](https://flowbite-react.com/docs/customize/theme) from Flowbite React.
+
+## Storybook
+
+Flowbite React also has a [Storybook](https://flowbite-react.com/storybook) version which you can use to preview and test components in isolation.
 
 ## Resources
 
--   [GitHub Repository](https://github.com/themesberg/flowbite-react)
--   [Documentation](https://flowbite-react.com/docs)
--   [Storybook](https://flowbite-react.com/storybook)
--   [Figma Design System](https://www.figma.com/community/file/1251695088645881)
+The Flowbite React UI library is an open-source project licensed under the MIT license. You can find the source code on [GitHub](https://github.com/themesberg/flowbite-react) and contribute to the project together with our community of developers.
 
-## Support
+## More examples
 
--   [Discord Community](https://discord.gg/4eeurUVvTy)
--   [GitHub Discussions](https://github.com/themesberg/flowbite-react/discussions)
--   [GitHub Issues](https://github.com/themesberg/flowbite-react/issues)
+If you want to support our open-source work, then you can also check out the [pro version](https://flowbite.com/pro/) version of Flowbite which brings you over 400+ components and templates, a Figma design system, admin dashboard, and more.

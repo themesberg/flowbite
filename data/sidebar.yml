@@ -35,6 +35,9 @@
       - title: Django
       - title: Flask
       - title: Blazor
+      - title: Hugo
+        new: true
+      
 
 - title: Customize
   slug: customize

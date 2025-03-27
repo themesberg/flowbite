@@ -5,8 +5,8 @@ description: Learn how to customize the default Flowbite and Tailwind CSS option
 group: customize
 toc: true
 
-previous: Blazor (.NET)
-previousLink: getting-started/blazor/
+previous: HUGO
+previousLink: getting-started/hugo/
 next: Dark mode
 nextLink: customize/dark-mode/
 ---

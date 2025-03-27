@@ -8,8 +8,8 @@ requires_blazor: true
 
 previous: Flask
 previousLink: getting-started/flask/
-next: Configuration
-nextLink: customize/configuration/
+next: HUGO
+nextLink: getting-started/hugo/
 ---
 
 [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) is an open source .NET framework for building dynamic and interactive front-ends for your applications with HTML, C#, and Razor templates. Blazor allows you to compose components directly for your server or for the client side. This flexibility enables developers to create fullstack web and mobile applications with a single-page UI framework.

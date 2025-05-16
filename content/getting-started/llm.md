@@ -21,8 +21,8 @@ AI still has shortcomings and limitations and it is not a replacement for human 
 
 The LLMs files are hosted on the following routes on Flowbite:
 
-- `https://flowbite.com/llms.txt` - this is the main file that you can use to feed data to your AI tools
-- `https://flowbite.com/llms-full.txt` - this is the full file that is much larger and contains more data
+- `https://raw.githubusercontent.com/themesberg/flowbite/refs/heads/main/llms.txt` - this is the main file that you can use to feed data to your AI tools
+- `https://raw.githubusercontent.com/themesberg/flowbite/refs/heads/main/llms-full.txt` - this is the full file that is much larger and contains more data
 
 On a general level, the first file should be enough for LLMs that are able to parse the web.
 
@@ -41,7 +41,7 @@ You can use the following code examples to implement LLMs in your web applicatio
 
 ```javascript
 async function getLLMData() {
-    const response = await fetch('https://flowbite.com/llms.txt');
+    const response = await fetch('https://raw.githubusercontent.com/themesberg/flowbite/refs/heads/main/llms.txt');
     const data = await response.text();
     return data;
 }

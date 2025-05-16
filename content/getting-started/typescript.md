@@ -8,8 +8,8 @@ requires_typescript: true
 
 previous: JavaScript API
 previousLink: getting-started/javascript/
-next: License
-nextLink: getting-started/license/
+next: LLM
+nextLink: getting-started/llm/
 ---
 
 [TypeScript](https://www.typescriptlang.org/) is a free and open-source programming language that helps improve the scalability, maintainability, and readability of code. It does this by adding optional static typing to JavaScript. 

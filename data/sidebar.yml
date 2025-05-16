@@ -4,8 +4,9 @@
     - title: Introduction
     - title: Quickstart
     - title: JavaScript
-      new: true
     - title: TypeScript
+    - title: LLM
+      new: true
     - title: License
     - title: Changelog
 

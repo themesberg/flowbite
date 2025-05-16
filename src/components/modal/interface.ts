@@ -17,6 +17,10 @@ export declare interface ModalInterface {
 
     _keydownEventListener: EventListenerOrEventListenerObject;
 
+    // Focus trap related properties
+    _lastActiveElement: HTMLElement | null;
+    _focusTrapEventListener: EventListenerOrEventListenerObject;
+
     // Initializes the modal and sets up its event listeners
     init(): void;
 
@@ -28,6 +32,15 @@ export declare interface ModalInterface {
 
     // Sets up event listeners for the modal to allow it to be closed when clicked outside or the Escape key is pressed
     _setupModalCloseEventListeners(): void;
+
+    // Sets up focus trapping within the modal
+    _setupFocusTrap(): void;
+
+    // Removes focus trap event listeners
+    _removeFocusTrap(): void;
+
+    // Gets all focusable elements within the modal
+    _getFocusableElements(): HTMLElement[];
 
     // Handles clicks outside the modal and hides it if necessary
     _handleOutsideClick(target: EventTarget): void;

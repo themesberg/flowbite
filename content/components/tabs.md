@@ -202,7 +202,7 @@ If you want to show the tabs on the full width relative to the parent element yo
         <option>Profile</option>
         <option>Dashboard</option>
         <option>setting</option>
-        <option>Invoioce</option>
+        <option>Invoice</option>
     </select>
 </div>
 <ul class="hidden text-sm font-medium text-center text-gray-500 rounded-lg shadow-sm sm:flex dark:divide-gray-700 dark:text-gray-400">

@@ -1,5 +1,5 @@
 import { TooltipInterface } from './interface';
-import type { Placement } from '@popperjs/core';
+import type { Placement } from '@floating-ui/dom';
 
 export declare type TooltipTriggerType = 'click' | 'hover' | 'none';
 

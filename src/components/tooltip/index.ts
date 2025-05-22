@@ -1,9 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { createPopper } from '@popperjs/core';
-import type {
-    Options as PopperOptions,
-    Instance as PopperInstance,
-} from '@popperjs/core';
+import { computePosition, autoUpdate, offset } from '@floating-ui/dom';
 import type { TooltipOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
 import { TooltipInterface } from './interface';
@@ -27,7 +23,7 @@ class Tooltip implements TooltipInterface {
     _targetEl: HTMLElement | null;
     _triggerEl: HTMLElement | null;
     _options: TooltipOptions;
-    _popperInstance: PopperInstance;
+    _cleanupAutoUpdate: Function;
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
     _keydownEventListener: EventListenerOrEventListenerObject;
     _visible: boolean;
@@ -47,7 +43,7 @@ class Tooltip implements TooltipInterface {
         this._targetEl = targetEl;
         this._triggerEl = triggerEl;
         this._options = { ...Default, ...options };
-        this._popperInstance = null;
+        this._cleanupAutoUpdate = null;
         this._visible = false;
         this._initialized = false;
         this.init();
@@ -62,7 +58,6 @@ class Tooltip implements TooltipInterface {
     init() {
         if (this._triggerEl && this._targetEl && !this._initialized) {
             this._setupEventListeners();
-            this._popperInstance = this._createPopperInstance();
             this._initialized = true;
         }
     }
@@ -86,10 +81,9 @@ class Tooltip implements TooltipInterface {
             // remove event listeners for click outside
             this._removeClickOutsideListener();
 
-            // destroy the Popper instance if you have one (assuming this._popperInstance is the Popper instance)
-            if (this._popperInstance) {
-                this._popperInstance.destroy();
-            }
+            // stop FloatingUI auto updates
+            this?._cleanupAutoUpdate();
+
             this._initialized = false;
         }
     }
@@ -123,18 +117,13 @@ class Tooltip implements TooltipInterface {
         });
     }
 
-    _createPopperInstance() {
-        return createPopper(this._triggerEl, this._targetEl, {
-            placement: this._options.placement,
-            modifiers: [
-                {
-                    name: 'offset',
-                    options: {
-                        offset: [0, 8],
-                    },
-                },
-            ],
-        });
+    _initializeFloatingUI() {
+      computePosition(this._triggerEl, this._targetEl, {
+        placement: this._options.placement,
+        middleware: [offset(8)]
+      }).then(({ x, y }) => {
+        Object.assign(this._targetEl.style, { left: `${x}px`, top: `${y}px` });
+      });
     }
 
     _getTriggerEvents() {
@@ -230,23 +219,16 @@ class Tooltip implements TooltipInterface {
         this._targetEl.classList.remove('opacity-0', 'invisible');
         this._targetEl.classList.add('opacity-100', 'visible');
 
+        // Update its position
+        this._initializeFloatingUI();
         // Enable the event listeners
-        this._popperInstance.setOptions((options: PopperOptions) => ({
-            ...options,
-            modifiers: [
-                ...options.modifiers,
-                { name: 'eventListeners', enabled: true },
-            ],
-        }));
+        this._cleanupAutoUpdate = autoUpdate(this._triggerEl, this._targetEl, () => { this._initializeFloatingUI() });
 
         // handle click outside
         this._setupClickOutsideListener();
 
         // handle esc keydown
         this._setupKeydownListener();
-
-        // Update its position
-        this._popperInstance.update();
 
         // set visibility
         this._visible = true;
@@ -260,13 +242,8 @@ class Tooltip implements TooltipInterface {
         this._targetEl.classList.add('opacity-0', 'invisible');
 
         // Disable the event listeners
-        this._popperInstance.setOptions((options: PopperOptions) => ({
-            ...options,
-            modifiers: [
-                ...options.modifiers,
-                { name: 'eventListeners', enabled: false },
-            ],
-        }));
+        this._cleanupAutoUpdate();
+        this._cleanupAutoUpdate = null;
 
         // handle click outside
         this._removeClickOutsideListener();

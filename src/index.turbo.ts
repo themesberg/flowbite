@@ -24,18 +24,18 @@ addEventListener('turbo:before-stream-render', (event: CustomEvent) => {
 
     event.detail.render = function (streamElement: Element) {
         originalRender(streamElement);
-        window.dispatchEvent(afterRenderEvent);
+        document.dispatchEvent(afterRenderEvent);
     };
 });
 
-const turboLoadEvents = new Events('turbo:load', [initFlowbite]);
+const turboLoadEvents = new Events('turbo:load', [() => initFlowbite()]);
 turboLoadEvents.init();
 
-const turboFrameLoadEvents = new Events('turbo:frame-load', [initFlowbite]);
+const turboFrameLoadEvents = new Events('turbo:frame-load', [() => initFlowbite()]);
 turboFrameLoadEvents.init();
 
 const turboStreamLoadEvents = new Events('turbo:after-stream-render', [
-    initFlowbite,
+    () => initFlowbite(),
 ]);
 turboStreamLoadEvents.init();
 

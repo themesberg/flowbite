@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { CopyClipboardOptions } from './types';
-import type { InstanceOptions } from '../../dom/types';
+import type { InstanceOptions, RootElement } from '../../dom/types';
 import { CopyClipboardInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -140,54 +140,55 @@ class CopyClipboard implements CopyClipboardInterface {
     }
 }
 
-export function initCopyClipboards() {
-    document
+export function initCopyClipboards($rootElement: RootElement = document) {
+    $rootElement
         .querySelectorAll('[data-copy-to-clipboard-target]')
-        .forEach(($triggerEl) => {
-            const targetId = $triggerEl.getAttribute(
-                'data-copy-to-clipboard-target'
-            );
-            const $targetEl = document.getElementById(targetId);
-            const contentType = $triggerEl.getAttribute(
-                'data-copy-to-clipboard-content-type'
-            );
-            const htmlEntities = $triggerEl.getAttribute(
-                'data-copy-to-clipboard-html-entities'
-            );
+        .forEach(initCopyClipboardByElement);
+}
 
-            // check if the target element exists
-            if ($targetEl) {
-                if (
-                    !instances.instanceExists(
-                        'CopyClipboard',
-                        $targetEl.getAttribute('id')
-                    )
-                ) {
-                    new CopyClipboard(
-                        $triggerEl as HTMLElement,
-                        $targetEl as HTMLInputElement,
-                        {
-                            htmlEntities:
-                                htmlEntities && htmlEntities === 'true'
-                                    ? true
-                                    : Default.htmlEntities,
-                            contentType: contentType
-                                ? contentType
-                                : Default.contentType,
-                        } as CopyClipboardOptions
-                    );
-                }
-            } else {
-                console.error(
-                    `The target element with id "${targetId}" does not exist. Please check the data-copy-to-clipboard-target attribute.`
-                );
-            }
-        });
+export function initCopyClipboardByElement($triggerEl: Element) {
+    const targetId = $triggerEl.getAttribute('data-copy-to-clipboard-target');
+    const $targetEl = document.getElementById(targetId);
+    const contentType = $triggerEl.getAttribute(
+        'data-copy-to-clipboard-content-type'
+    );
+    const htmlEntities = $triggerEl.getAttribute(
+        'data-copy-to-clipboard-html-entities'
+    );
+
+    // check if the target element exists
+    if ($targetEl) {
+        if (
+            !instances.instanceExists(
+                'CopyClipboard',
+                $targetEl.getAttribute('id')
+            )
+        ) {
+            new CopyClipboard(
+                $triggerEl as HTMLElement,
+                $targetEl as HTMLInputElement,
+                {
+                    htmlEntities:
+                        htmlEntities && htmlEntities === 'true'
+                            ? true
+                            : Default.htmlEntities,
+                    contentType: contentType
+                        ? contentType
+                        : Default.contentType,
+                } as CopyClipboardOptions
+            );
+        }
+    } else {
+        console.error(
+            `The target element with id "${targetId}" does not exist. Please check the data-copy-to-clipboard-target attribute.`
+        );
+    }
 }
 
 if (typeof window !== 'undefined') {
-    window.CopyClipboard = CopyClipboard;
+    // window.CopyClipboard = CopyClipboard;
     window.initClipboards = initCopyClipboards;
+    window.initCopyClipboardByElement = initCopyClipboardByElement;
 }
 
 export default CopyClipboard;

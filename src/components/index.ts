@@ -12,22 +12,23 @@ import { initPopovers } from './popover';
 import { initTabs } from './tabs';
 import { initTooltips } from './tooltip';
 import { initDatepickers } from './datepicker';
+import { RootElement } from '../dom/types';
 
-export function initFlowbite() {
-    initAccordions();
-    initCollapses();
-    initCarousels();
-    initDismisses();
-    initDropdowns();
-    initModals();
-    initDrawers();
-    initTabs();
-    initTooltips();
-    initPopovers();
-    initDials();
-    initInputCounters();
-    initCopyClipboards();
-    initDatepickers();
+export function initFlowbite($rootElement: RootElement = document) {
+    initAccordions($rootElement);
+    initCollapses($rootElement);
+    initCarousels($rootElement);
+    initDismisses($rootElement);
+    initDropdowns($rootElement);
+    initModals($rootElement);
+    initDrawers($rootElement);
+    initTabs($rootElement);
+    initTooltips($rootElement);
+    initPopovers($rootElement);
+    initDials($rootElement);
+    initInputCounters($rootElement);
+    initCopyClipboards($rootElement);
+    initDatepickers($rootElement);
 }
 
 if (typeof window !== 'undefined') {

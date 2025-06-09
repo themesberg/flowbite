@@ -95,7 +95,7 @@ function App() {
 
 ## Storybook
 
-Flowbite React also has a [Storybook](https://flowbite-react.com/storybook) version which you can use to preview and test components in isolation.
+Flowbite React also has a [Storybook](https://storybook.flowbite-react.com/) version which you can use to preview and test components in isolation.
 
 ## Open-source community
 

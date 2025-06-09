@@ -5,7 +5,7 @@ import type {
     IndicatorItem,
     RotationItems,
 } from './types';
-import type { InstanceOptions } from '../../dom/types';
+import type { InstanceOptions, RootElement } from '../../dom/types';
 import { CarouselInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -308,20 +308,22 @@ class Carousel implements CarouselInterface {
     }
 }
 
-export function initCarousels() {
-    document.querySelectorAll('[data-carousel]').forEach(($carouselEl) => {
-        const interval = $carouselEl.getAttribute('data-carousel-interval');
-        const slide =
-            $carouselEl.getAttribute('data-carousel') === 'slide'
-                ? true
-                : false;
+export function initCarousels($rootElement: RootElement = document) {
+    $rootElement
+        .querySelectorAll('[data-carousel]')
+        .forEach(initCarouselByElement);
+}
 
-        const items: CarouselItem[] = [];
-        let defaultPosition = 0;
-        if ($carouselEl.querySelectorAll('[data-carousel-item]').length) {
-            Array.from(
-                $carouselEl.querySelectorAll('[data-carousel-item]')
-            ).map(($carouselItemEl: HTMLElement, position: number) => {
+export function initCarouselByElement($carouselEl: Element) {
+    const interval = $carouselEl.getAttribute('data-carousel-interval');
+    const slide =
+        $carouselEl.getAttribute('data-carousel') === 'slide' ? true : false;
+
+    const items: CarouselItem[] = [];
+    let defaultPosition = 0;
+    if ($carouselEl.querySelectorAll('[data-carousel-item]').length) {
+        Array.from($carouselEl.querySelectorAll('[data-carousel-item]')).map(
+            ($carouselItemEl: HTMLElement, position: number) => {
                 items.push({
                     position: position,
                     el: $carouselItemEl,
@@ -333,60 +335,57 @@ export function initCarousels() {
                 ) {
                     defaultPosition = position;
                 }
-            });
-        }
-
-        const indicators: IndicatorItem[] = [];
-        if ($carouselEl.querySelectorAll('[data-carousel-slide-to]').length) {
-            Array.from(
-                $carouselEl.querySelectorAll('[data-carousel-slide-to]')
-            ).map(($indicatorEl: HTMLElement) => {
-                indicators.push({
-                    position: parseInt(
-                        $indicatorEl.getAttribute('data-carousel-slide-to')
-                    ),
-                    el: $indicatorEl,
-                });
-            });
-        }
-
-        const carousel = new Carousel($carouselEl as HTMLElement, items, {
-            defaultPosition: defaultPosition,
-            indicators: {
-                items: indicators,
-            },
-            interval: interval ? interval : Default.interval,
-        } as CarouselOptions);
-
-        if (slide) {
-            carousel.cycle();
-        }
-
-        // check for controls
-        const carouselNextEl = $carouselEl.querySelector(
-            '[data-carousel-next]'
+            }
         );
-        const carouselPrevEl = $carouselEl.querySelector(
-            '[data-carousel-prev]'
-        );
+    }
 
-        if (carouselNextEl) {
-            carouselNextEl.addEventListener('click', () => {
-                carousel.next();
+    const indicators: IndicatorItem[] = [];
+    if ($carouselEl.querySelectorAll('[data-carousel-slide-to]').length) {
+        Array.from(
+            $carouselEl.querySelectorAll('[data-carousel-slide-to]')
+        ).map(($indicatorEl: HTMLElement) => {
+            indicators.push({
+                position: parseInt(
+                    $indicatorEl.getAttribute('data-carousel-slide-to')
+                ),
+                el: $indicatorEl,
             });
-        }
+        });
+    }
 
-        if (carouselPrevEl) {
-            carouselPrevEl.addEventListener('click', () => {
-                carousel.prev();
-            });
-        }
-    });
+    const carousel = new Carousel($carouselEl as HTMLElement, items, {
+        defaultPosition: defaultPosition,
+        indicators: {
+            items: indicators,
+        },
+        interval: interval ? interval : Default.interval,
+    } as CarouselOptions);
+
+    if (slide) {
+        carousel.cycle();
+    }
+
+    // check for controls
+    const carouselNextEl = $carouselEl.querySelector('[data-carousel-next]');
+    const carouselPrevEl = $carouselEl.querySelector('[data-carousel-prev]');
+
+    if (carouselNextEl) {
+        carouselNextEl.addEventListener('click', () => {
+            carousel.next();
+        });
+    }
+
+    if (carouselPrevEl) {
+        carouselPrevEl.addEventListener('click', () => {
+            carousel.prev();
+        });
+    }
 }
 
 if (typeof window !== 'undefined') {
     window.Carousel = Carousel;
     window.initCarousels = initCarousels;
+    window.initCarouselByElement = initCarouselByElement;
 }
 
 export default Carousel;

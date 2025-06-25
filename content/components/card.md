@@ -18,7 +18,7 @@ Use these responsive card components to show data entries and information to you
 Use the following simple card component with a title and description.
 
 {{< example id="default-card-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
-<a href="#" class="block max-w-sm p-6 bg-brand border border-base rounded-base shadow-xs hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+<a href="#" class="bg-brand block max-w-sm p-6 border border-base rounded-base shadow-xs hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 
 <h5 class="mb-2 text-2xl font-semibold tracking-tight text-heading dark:text-white">Noteworthy technology acquisitions 2021</h5>
 <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
@@ -31,7 +31,7 @@ Use the following example of a card element if you also want to have an action b
 
 {{< example id="card-cta-button-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="max-w-sm p-6 bg-bg-brand border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+<div class="max-w-sm p-6 bg-brand border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
     </a>

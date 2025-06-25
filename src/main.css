@@ -9,31 +9,8 @@
     --font-sans: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-body: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-mono: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace';
-    --spacing-8xl: 90rem; 
-    --color-2xs: 0.625rem;
-	--color-brand: #1447E6;
-	--color-brand-strong: #193CB8;
-	--color-brand-medium: #BEDBFF;
-	--color-primary: #ffffff;
-	--color-base: #E5E7EB;
-	--leading-9: 36px;
-	--leading-7: 28px;
-	--leading-8: 32px;
-	--leading-6: 24px;
-	--leading-4: 16px;
-	--leading-none: 1px;
-	--leading-5: 20px;
-	--tracking-tighter: -0.800000011920929px;
-	--leading-heading(none): 60px;
-	--tracking-tight: -0.4000000059604645px;
-  	--radius: 8px;
-  	--radius-xs: 4px;
-  	--radius-0: 0px;
-  	--radius-base: 12px; 
-  	--radius-lg: 16px;
-  	--radius-xxs: 2px;
- 	--radius-sm: 6px;
-
+	--text-2xs: 0.625rem;
+	--spacing-8xl: 90rem;
 }
 
 /*

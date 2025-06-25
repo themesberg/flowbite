@@ -20,9 +20,11 @@ Flowbite provides a large variety of styles and sizes for the button component i
 
 Use these default button styles with multiple colors to indicate an action or link within your website.
 
-{{< example id="default-button-example" class="flex flex-wrap" github="components/buttons.md" show_dark=true >}}
-<button type="button" class="text-white bg-brand hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 me-2 mb-2 focus:outline-none">Default</button>
-<button type="button" class="text-heading bg-primary border border-base hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 me-2 mb-2 focus:outline-none">Secondary</button>
+{{< example id="default-button-example" class="flex flex-wrap space-x-2" github="components/buttons.md" show_dark=true >}}
+<button type="button" class="text-white bg-brand hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Default</button>
+<button type="button" class="text-body bg-secondary-medium border border-base hover:bg-tertiary-medium hover:text-brand focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Secondary</button>
+<button type="button" class="text-body bg-primary border border-base hover:bg-secondary-strong hover:text-brand focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Tertiary</button>
+<button type="button" class="text-white bg-success hover:bg-success-strong focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Success</button>
 
 {{< /example >}}
 

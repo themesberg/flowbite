@@ -24,7 +24,11 @@ Use these default button styles with multiple colors to indicate an action or li
 <button type="button" class="text-white bg-brand hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Default</button>
 <button type="button" class="text-body bg-secondary-medium border border-base hover:bg-tertiary-medium hover:text-brand focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Secondary</button>
 <button type="button" class="text-body bg-primary border border-base hover:bg-secondary-strong hover:text-brand focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Tertiary</button>
-<button type="button" class="text-white bg-success hover:bg-success-strong focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Success</button>
+<button type="button" class="text-white bg-success hover:bg-success-strong focus:ring-4 focus:success-subtle shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Success</button>
+<button type="button" class="text-white bg-danger hover:bg-danger-strong focus:ring-4 focus:danger-subtle shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Danger</button>
+<button type="button" class="text-white bg-warning hover:bg-warning-strong focus:ring-4 focus:warning-subtle shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Warning</button>
+<button type="button" class="text-white bg-dark hover:bg-dark-strong focus:ring-4 focus:warning-subtle shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Dark</button>
+<button type="button" class="text-heading bg-primary hover:bg-secondary-strong hover:text-brand focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Ghost button</button>
 
 {{< /example >}}
 

@@ -3,13 +3,12 @@ import {
     PopoverTriggerType,
     PopoverTriggerEventTypes,
 } from './types';
-import type { Instance as PopperInstance } from '@popperjs/core';
 
 export declare interface PopoverInterface {
     _targetEl: HTMLElement | null;
     _triggerEl: HTMLElement | null;
     _options: PopoverOptions;
-    _popperInstance: PopperInstance;
+    _cleanupAutoUpdate: Function;
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
     _keydownEventListener: EventListenerOrEventListenerObject;
 

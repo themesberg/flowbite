@@ -1,9 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { createPopper } from '@popperjs/core';
-import type {
-    Options as PopperOptions,
-    Instance as PopperInstance,
-} from '@popperjs/core';
+import { computePosition, autoUpdate, offset } from '@floating-ui/dom';
 import type { DropdownOptions } from './types';
 import type { InstanceOptions } from '../../dom/types';
 import { DropdownInterface } from './interface';
@@ -32,7 +28,7 @@ class Dropdown implements DropdownInterface {
     _triggerEl: HTMLElement;
     _options: DropdownOptions;
     _visible: boolean;
-    _popperInstance: PopperInstance;
+    _cleanupAutoUpdate: Function;
     _initialized: boolean;
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
     _hoverShowTriggerElHandler: EventListenerOrEventListenerObject;
@@ -52,7 +48,7 @@ class Dropdown implements DropdownInterface {
         this._targetEl = targetElement;
         this._triggerEl = triggerElement;
         this._options = { ...Default, ...options };
-        this._popperInstance = null;
+        this._cleanupAutoUpdate = null;
         this._visible = false;
         this._initialized = false;
         this.init();
@@ -66,7 +62,6 @@ class Dropdown implements DropdownInterface {
 
     init() {
         if (this._triggerEl && this._targetEl && !this._initialized) {
-            this._popperInstance = this._createPopperInstance();
             this._setupEventListeners();
             this._initialized = true;
         }
@@ -101,7 +96,9 @@ class Dropdown implements DropdownInterface {
             });
         }
 
-        this._popperInstance.destroy();
+        // stop FloatingUI auto updates
+        this?._cleanupAutoUpdate();
+
         this._initialized = false;
     }
 
@@ -169,21 +166,13 @@ class Dropdown implements DropdownInterface {
         }
     }
 
-    _createPopperInstance() {
-        return createPopper(this._triggerEl, this._targetEl, {
-            placement: this._options.placement,
-            modifiers: [
-                {
-                    name: 'offset',
-                    options: {
-                        offset: [
-                            this._options.offsetSkidding,
-                            this._options.offsetDistance,
-                        ],
-                    },
-                },
-            ],
-        });
+    _initializeFloatingUI() {
+      computePosition(this._triggerEl, this._targetEl, {
+        placement: this._options.placement,
+        middleware: [offset({ mainAxis: this._options.offsetSkidding, crossAxis: this._options.offsetDistance})]
+      }).then(({ x, y }) => {
+        Object.assign(this._targetEl.style, { left: `${x}px`, top: `${y}px` });
+      });
     }
 
     _setupClickOutsideListener() {
@@ -279,19 +268,13 @@ class Dropdown implements DropdownInterface {
         this._targetEl.classList.add('block');
         this._targetEl.removeAttribute('aria-hidden');
 
+        // Update its position
+        this._initializeFloatingUI();
         // Enable the event listeners
-        this._popperInstance.setOptions((options: PopperOptions) => ({
-            ...options,
-            modifiers: [
-                ...options.modifiers,
-                { name: 'eventListeners', enabled: true },
-            ],
-        }));
+        this._cleanupAutoUpdate = autoUpdate(this._triggerEl, this._targetEl, () => { this._initializeFloatingUI() });
 
         this._setupClickOutsideListener();
 
-        // Update its position
-        this._popperInstance.update();
         this._visible = true;
 
         // callback function
@@ -304,13 +287,8 @@ class Dropdown implements DropdownInterface {
         this._targetEl.setAttribute('aria-hidden', 'true');
 
         // Disable the event listeners
-        this._popperInstance.setOptions((options: PopperOptions) => ({
-            ...options,
-            modifiers: [
-                ...options.modifiers,
-                { name: 'eventListeners', enabled: false },
-            ],
-        }));
+        this._cleanupAutoUpdate();
+        this._cleanupAutoUpdate = null;
 
         this._visible = false;
 

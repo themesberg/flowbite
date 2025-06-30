@@ -1,8 +1,9 @@
-:root {
+
+
+:root{
   --color-white: #ffffff;
 }
-
-@theme {
+  @theme {
   --color-transparent: transparent;
   --color-red-50: oklch(0.971 0.013 17.38);
   --color-red-100: oklch(0.936 0.032 17.717);
@@ -361,5 +362,93 @@
     --color-brand-subtle: var(--color-blue-200);
     --color-brand-light: var(--color-blue-600);
     --color-dark-subtle: var(--color-gray-800);
+    
+}
+
+.dark {
+   --color-white: #ffffff;
+  /* text color variables */
+    --color-body: var(--color-gray-400);
+    --color-body-soft: var(--color-gray-400);
+    --color-heading: var(--color-white);
+    --color-fg-brand-subtle: var(--color-blue-200);
+    --color-fg-brand: var(--color-blue-500);
+    --color-fg-brand-strong: var(--color-blue-400);
+    --color-fg-success: var(--color-emerald-600);
+    --color-fg-success-strong: var(--color-emerald-300);
+    --color-fg-danger: var(--color-rose-500);
+    --color-fg-danger-strong: var(--color-rose-300);
+    --color-fg-warning-subtle: var(--color-orange-500);
+    --color-fg-warning: var(--color-orange-300);
+    --color-fg-yellow: var(--color-yellow-400);
+    --color-fg-disabled: var(--color-gray-600);
+    --color-fg-purple: var(--color-purple-500);
+    --color-fg-cyan: var(--color-cyan-500);
+    --color-fg-indigo: var(--color-indigo-500);
+    --color-fg-pink: var(--color-pink-500);
+    --color-fg-lime: var(--color-lime-500);
+
+  /* background color variables */
+    --color-primary-soft: var(--color-gray-900);
+    --color-primary: var(--color-gray-950);
+    --color-primary-medium: var(--color-gray-800);
+    --color-primary-strong: var(--color-gray-700);
+    --color-secondary-soft: var(--color-gray-900);
+    --color-secondary: var(--color-gray-950);
+    --color-secondary-medium: var(--color-gray-800);
+    --color-secondary-strong: var(--color-gray-700);
+    --color-tertiary-soft: var(--color-gray-900);
+    --color-tertiary: var(--color-gray-800);
+    --color-tertiary-medium: var(--color-gray-700);
+    --color-quaternary: var(--color-gray-700);
+    --color-quaternary-medium: var(--color-gray-600);
+    --color-gray: var(--color-gray-600);
+    --color-brand-softer: var(--color-blue-950);
+    --color-brand-soft: var(--color-blue-900);
+    --color-brand: var(--color-blue-600);
+    --color-brand-medium: var(--color-blue-900);
+    --color-brand-strong: var(--color-blue-700);
+    --color-success-soft: var(--color-emerald-950);
+    --color-success: var(--color-emerald-600);
+    --color-success-medium: var(--color-emerald-900);
+    --color-success-strong: var(--color-emerald-700);
+    --color-danger-soft: var(--color-rose-950);
+    --color-danger: var(--color-rose-700);
+    --color-danger-medium: var(--color-rose-900);
+    --color-danger-strong: var(--color-rose-800);
+    --color-warning-soft: var(--color-orange-950);
+    --color-warning: var(--color-orange-600);
+    --color-warning-medium: var(--color-orange-900);
+    --color-warning-strong: var(--color-orange-700);
+    --color-dark: var(--color-gray-800);
+    --color-dark-strong: var(--color-gray-700);
+    --color-disabled: var(--color-gray-800);
+    --color-purple: var(--color-purple-500);
+    --color-sky: var(--color-sky-500);
+    --color-teal: var(--color-teal-500);
+    --color-pink: var(--color-pink-500);
+    --color-cyan: var(--color-cyan-500);
+    --color-fuchsia: var(--color-fuchsia-500);
+    --color-indigo: var(--color-indigo-500);
+    --color-orange: var(--color-orange-400);
+
+     /* border color variables */
+    --color-buffer: var(--color-gray-950);
+    --color-buffer-medium: var(--color-gray-900);
+    --color-buffer-strong: var(--color-gray-800);
+    --color-muted: var(--color-gray-900);
+    --color-light-subtle: var(--color-gray-900);
+    --color-light: var(--color-gray-800);
+    --color-light-medium: var(--color-gray-700);
+    --color-base-subtle: var(--color-gray-900);
+    --color-base: var(--color-gray-800);
+    --color-base-medium: var(--color-gray-700);
+    --color-base-strong: var(--color-gray-600);
+    --color-success-subtle: var(--color-emerald-900);
+    --color-danger-subtle: var(--color-rose-900);
+    --color-warning-subtle: var(--color-orange-900);
+    --color-brand-subtle: var(--color-blue-900);
+    --color-brand-light: var(--color-blue-600);
+    --color-dark-subtle: var(--color-gray-700);
     
 }

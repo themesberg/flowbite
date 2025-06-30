@@ -219,11 +219,11 @@ module.exports = plugin.withOptions(function (options = {}) {
                         '--tw-ring-inset': 'var(--tw-empty,/*!*/ /*!*/)',
                         '--tw-ring-offset-width': '0px',
                         '--tw-ring-offset-color': '#fff',
-                        '--tw-ring-color': 'var(--color-blue-600)',
+                        '--tw-ring-color': 'var(--color-blue-700)',
                         '--tw-ring-offset-shadow': `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
                         '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
                         'box-shadow': `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)`,
-                        'border-color': 'var(--color-blue-600)',
+                        'border-color': 'var(--color-blue-700)',
                     },
                 },
                 [['input::placeholder', 'textarea::placeholder']]: {
@@ -275,9 +275,9 @@ module.exports = plugin.withOptions(function (options = {}) {
                     'flex-shrink': '0',
                     height: spacing[4],
                     width: spacing[4],
-                    color: 'var(--color-blue-600)',
+                    color: 'var(--color-blue-700)',
                     'background-color': '#fff',
-                    'border-color': '--color-gray-500',
+                    'border-color': '--color-gray-400',
                     'border-width': borderWidth['DEFAULT'],
                     '--tw-shadow': '0 0 #0000',
                 },
@@ -293,7 +293,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     '--tw-ring-inset': 'var(--tw-empty,/*!*/ /*!*/)',
                     '--tw-ring-offset-width': '2px',
                     '--tw-ring-offset-color': '#fff',
-                    '--tw-ring-color': 'var(--color-blue-600)',
+                    '--tw-ring-color': 'var(--color-blue-700)',
                     '--tw-ring-offset-shadow': `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
                     '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
                     'box-shadow': `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)`,
@@ -306,15 +306,15 @@ module.exports = plugin.withOptions(function (options = {}) {
                 ]]: {
                     'border-color': `transparent !important`,
                     'background-color': `currentColor !important`,
-                    'background-size': `0.55em 0.55em`,
+                    'background-size': `0.85em 0.85em !important`,
                     'background-position': `center`,
                     'background-repeat': `no-repeat`,
                 },
                 [`[type='checkbox']:checked`]: {
                     'background-image': `url("${svgToDataUri(
-                        `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                                <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M1 5.917 5.724 10.5 15 1.5"/>
-                            </svg>`
+                        `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
+                        </svg>`
                     )}")`,
                     'background-repeat': `no-repeat`,
                     'background-size': `0.55em 0.55em`,

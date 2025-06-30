@@ -157,7 +157,7 @@ pre[class*="language-"] {
 /* without preview */
 .highlight pre[class*="language-"] {
 	overflow: auto;
-	@apply p-6 pt-6 m-0 mt-4 mb-8 text-sm bg-gray-50 dark:bg-gray-800;
+	@apply p-6 pt-6 m-0 mt-4 mb-8 text-sm bg-gray-50 dark:bg-gray-900;
 }
 
 [data-code-wrapper] .highlight pre[class*="language-"] {

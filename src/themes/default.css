@@ -281,7 +281,7 @@
     /* text color variables */
     --color-white: var(--color-white);
     --color-body: var(--color-gray-600);
-    --color-body-soft: var(--color-gray-500);
+    --color-body-subtle: var(--color-gray-500);
     --color-heading: var(--color-gray-900);
     --color-fg-brand-subtle: var(--color-blue-200);
     --color-fg-brand: var(--color-blue-700);
@@ -369,7 +369,7 @@
    --color-white: #ffffff;
   /* text color variables */
     --color-body: var(--color-gray-400);
-    --color-body-soft: var(--color-gray-400);
+    --color-body-subtle: var(--color-gray-400);
     --color-heading: var(--color-white);
     --color-fg-brand-subtle: var(--color-blue-200);
     --color-fg-brand: var(--color-blue-500);

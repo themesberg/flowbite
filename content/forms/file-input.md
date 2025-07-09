@@ -74,7 +74,7 @@ The dropzone file input component can be used to upload one or more files by cli
 </div> 
 {{< /example >}}
 
-## With button
+## With button (New)
 
 The dropzone file input component can be used to upload one or more files by clicking anywhere in the area.
 

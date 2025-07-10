@@ -306,14 +306,14 @@ module.exports = plugin.withOptions(function (options = {}) {
                 ]]: {
                     'border-color': `transparent !important`,
                     'background-color': `currentColor !important`,
-                    'background-size': `1.75em 1.75em !important`,
+                    'background-size': `0.85em 0.85em !important`,
                     'background-position': `center`,
                     'background-repeat': `no-repeat`,
                 },
                 [`[type='checkbox']:checked`]: {
                     'background-image': `url("${svgToDataUri(
                         `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="#1447E6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
+                            <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
                         </svg>`
                     )}")`,
                     'background-repeat': `no-repeat`,
@@ -324,13 +324,13 @@ module.exports = plugin.withOptions(function (options = {}) {
                     'background-image': `url("${svgToDataUri(
                         `<svg viewBox="0 0 16 16" fill="#1447E6" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`
                     )}")`,
-                    'background-size': `2em 2em`,
+                    'background-size': `1.75em 1.75em !important`,
                 },
                 [`.dark [type='radio']:checked`]: {
                     'background-image': `url("${svgToDataUri(
                         `<svg viewBox="0 0 16 16" fill="#1447E6" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`
                     )}")`,
-                    'background-size': `2em 2em`,
+                    'background-size': `1.75em 1.75em !important`,
                 },
                 [`[type='checkbox']:indeterminate`]: {
                     'background-image': `url("${svgToDataUri(
@@ -342,7 +342,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     'border-color': `transparent !important`,
                     'background-position': `center`,
                     'background-repeat': `no-repeat`,
-                    'background-size': `0.55em 0.55em`,
+                    'background-size': `1.55em 1.55em`,
                     'print-color-adjust': `exact`,
                 },
                 [[

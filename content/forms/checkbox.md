@@ -120,7 +120,7 @@ Use this example of a checkbox inside a card element to enable a larger area of 
         <p  class="w-full text-sm font-medium text-heading">16GB unified memory</p>
         <p id="helper-checkbox-bordered-3" class="text-sm text-body">Seamlessly handle multitasking, large apps.</p>
     </label>
-    <input id="bordered-checkbox-5" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft" checked>
+    <input id="bordered-checkbox-5" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 mt-4 me-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft" checked>
 </div>
 <div class="flex justify-between space-x-2.5 bg-primary-soft border border-base rounded-base shadow-xs">
     <label for="bordered-checkbox-6" class="p-4">
@@ -128,7 +128,7 @@ Use this example of a checkbox inside a card element to enable a larger area of 
         <p  class="w-full text-sm font-medium text-heading">1TB SSD storage</p>
         <p id="helper-checkbox-bordered-4" class="text-sm text-body">Get ultra-fast storage with 1TB of SSD space</p>
     </label>
-    <input id="bordered-checkbox-6" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+    <input id="bordered-checkbox-6" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 mt-4 me-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
 </div>
 {{< /example >}}
 

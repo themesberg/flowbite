@@ -288,14 +288,14 @@ module.exports = plugin.withOptions(function (options = {}) {
                     'border-radius': '100%',
                 },
                 [[`[type='checkbox']:focus`, `[type='radio']:focus`]]: {
-                    outline: '2px solid transparent',
-                    'outline-offset': '2px',
+                    outline: '1px solid transparent',
+                    'outline-offset': '1px',
                     '--tw-ring-inset': 'var(--tw-empty,/*!*/ /*!*/)',
-                    '--tw-ring-offset-width': '2px',
+                    '--tw-ring-offset-width': '1px',
                     '--tw-ring-offset-color': '#fff',
-                    '--tw-ring-color': 'var(--color-blue-700)',
+                    '--tw-ring-color': 'var(--color-brand)',
                     '--tw-ring-offset-shadow': `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
-                    '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
+                    '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
                     'box-shadow': `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)`,
                 },
                 [[
@@ -306,31 +306,31 @@ module.exports = plugin.withOptions(function (options = {}) {
                 ]]: {
                     'border-color': `transparent !important`,
                     'background-color': `currentColor !important`,
-                    'background-size': `0.85em 0.85em !important`,
+                    'background-size': `1.75em 1.75em !important`,
                     'background-position': `center`,
                     'background-repeat': `no-repeat`,
                 },
                 [`[type='checkbox']:checked`]: {
                     'background-image': `url("${svgToDataUri(
                         `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
+                            <path stroke="#1447E6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
                         </svg>`
                     )}")`,
                     'background-repeat': `no-repeat`,
-                    'background-size': `0.55em 0.55em`,
+                    'background-size': `0.75em 0.75em`,
                     'print-color-adjust': `exact`,
                 },
                 [`[type='radio']:checked`]: {
                     'background-image': `url("${svgToDataUri(
-                        `<svg viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`
+                        `<svg viewBox="0 0 16 16" fill="#1447E6" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`
                     )}")`,
-                    'background-size': `1em 1em`,
+                    'background-size': `2em 2em`,
                 },
                 [`.dark [type='radio']:checked`]: {
                     'background-image': `url("${svgToDataUri(
-                        `<svg viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`
+                        `<svg viewBox="0 0 16 16" fill="#1447E6" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`
                     )}")`,
-                    'background-size': `1em 1em`,
+                    'background-size': `2em 2em`,
                 },
                 [`[type='checkbox']:indeterminate`]: {
                     'background-image': `url("${svgToDataUri(

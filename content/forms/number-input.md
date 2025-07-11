@@ -183,7 +183,7 @@ Use this example to also add an icon inside the input field to improve the user 
 {{< example id="control-icon-number-input" github="components/number-input.md" show_dark=true >}}
 <form class="max-w-xs mx-auto">
     <label for="bedrooms-input" class="block mb-2.5 text-sm font-medium text-heading">Choose quantity:</label>
-    <div class="relative flex items-center max-w-[11rem] shadow-xs">
+    <div class="relative flex items-center max-w-[11rem] shadow-xs rounded-base">
         <button type="button" id="decrement-button" data-input-counter-decrement="bedrooms-input" class="text-body bg-secondary-medium box-border border border-base-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-s-base text-sm px-3 focus:outline-none h-10">
             <svg class="w-4 h-4 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
         </button>

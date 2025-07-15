@@ -277,7 +277,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     width: spacing[4],
                     color: 'var(--color-blue-600)',
                     'background-color': '#fff',
-                    'border-color': '--color-gray-500',
+                    'border-color': 'var(--color-gray-500)',
                     'border-width': borderWidth['DEFAULT'],
                     '--tw-shadow': '0 0 #0000',
                 },

@@ -384,7 +384,52 @@ The following alert components can be used if you wish to disclose more informat
   </button>
 </div>
 
+{{< /example >}}
 
+## Advanced small (New)
+
+Use the following alert elements that are also dismissible.
+
+{{< example id="alerts-dismissing-example" github="components/alerts.md" show_dark=true >}}
+<div id="alert-small-1" class="w-auto inline-flex items-center p-1 pe-2 mb-4 text-sm text-fg-brand-strong rounded-full bg-brand-softer border border-brand-subtle" role="alert">
+  <span class="bg-brand-soft text-fg-brand-strong py-0.5 px-2 rounded-full">New</span>
+  <div class="ms-2 text-sm">
+    Great job! You've acknowledged this <a href="#" class="font-medium underline hover:no-underline">significant</a> alert message.
+  </div>
+  <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
+</div>
+
+<div id="alert-small-2" class="w-auto inline-flex items-center p-1 pe-2 mb-4 text-sm text-fg-danger-strong rounded-full bg-danger-soft border border-danger-subtle" role="alert">
+  <span class="bg-danger-medium text-fg-danger-strong py-0.5 px-2 rounded-full">New</span>
+  <div class="ms-2 text-sm">
+    Great job! You've acknowledged this <a href="#" class="font-medium underline hover:no-underline">significant</a> alert message.
+  </div>
+  <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
+</div>
+
+<div id="alert-small-3" class="w-auto inline-flex items-center p-1 pe-2 mb-4 text-sm text-fg-success-strong rounded-full bg-success-soft border border-success-subtle" role="alert">
+  <span class="bg-success-medium text-fg-success-strong py-0.5 px-2 rounded-full">New</span>
+  <div class="ms-2 text-sm">
+    Great job! You've acknowledged this <a href="#" class="font-medium underline hover:no-underline">significant</a> alert message.
+  </div>
+  <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
+</div>
+
+<div id="alert-small-4" class="w-auto inline-flex items-center p-1 pe-2 mb-4 text-sm text-fg-warning rounded-full bg-warning-soft border border-warning-subtle" role="alert">
+  <span class="bg-warning-medium text-fg-warning py-0.5 px-2 rounded-full">New</span>
+  <div class="ms-2 text-sm">
+    Great job! You've acknowledged this <a href="#" class="font-medium underline hover:no-underline">significant</a> alert message.
+  </div>
+  <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
+</div>
+
+<div id="alert-small-5" class="w-auto inline-flex items-center p-1 pe-2 mb-4 text-sm text-heading rounded-full bg-secondary-medium border border-base-medium" role="alert">
+  <span class="bg-quaternary text-heading py-0.5 px-2 rounded-full">New</span>
+  <div class="ms-2 text-sm">
+    Great job! You've acknowledged this <a href="#" class="font-medium underline hover:no-underline">significant</a> alert message.
+  </div>
+  <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
+</div>
 {{< /example >}}
 
 ## JavaScript behaviour

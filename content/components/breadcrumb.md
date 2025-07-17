@@ -242,10 +242,10 @@ Use the following breadcrumb example to show the hierarchical structure of pages
 
 <nav class="flex" aria-label="Breadcrumb">
   <div class="inline-flex shadow-xs -space-x-px me-2.5" role="group">
-    <button type="button" class="inline-flex items-center justify-center text-body bg-secondary-medium rounded-s box-border border border-base-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 w-8 h-8 focus:outline-none">
+    <button type="button" class="inline-flex items-center justify-center text-body bg-secondary-medium rounded-s-base box-border border border-base-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 w-8 h-8 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
     </button>
-    <button type="button" class="inline-flex items-center justify-center text-body bg-secondary-medium rounded-e box-border border border-base-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 w-8 h-8 focus:outline-none">
+    <button type="button" class="inline-flex items-center justify-center text-body bg-secondary-medium rounded-e-base box-border border border-base-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 w-8 h-8 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
     </button>
   </div>

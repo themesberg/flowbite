@@ -70,20 +70,36 @@ Use the following code to stack together buttons into a single group.
 
 Use the following code to stack together buttons into a single group.
 
-{{< example id="default-button-group-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
+{{< example id="default-button-group-example" class="flex justify-center pt-24" iframeHeight="280" github="components/button-group.md" show_dark=true >}}
   <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
-    <button type="button" class="inline-flex items-center justify-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 rounded-s-base text-sm w-9 h-9 focus:outline-none">
+    <button data-tooltip-target="tooltip-option-1" type="button" class="inline-flex items-center justify-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 rounded-s-base text-sm w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6h8m-8 4h12M6 14h8m-8 4h12"/></svg>
     </button>
-    <button type="button" class="inline-flex items-center justify-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 text-sm w-9 h-9 focus:outline-none">
+    <div id="tooltip-option-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+      Align left
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+    <button data-tooltip-target="tooltip-option-2" type="button" class="inline-flex items-center justify-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 text-sm w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 6h8M6 10h12M8 14h8M6 18h12"/></svg>
     </button>
-    <button type="button" class="inline-flex items-center justify-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 text-sm w-9 h-9 focus:outline-none">
+    <div id="tooltip-option-2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+      Align center
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+    <button data-tooltip-target="tooltip-option-3" type="button" class="inline-flex items-center justify-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 text-sm w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6H6m12 4H6m12 4H6m12 4H6"/></svg>
     </button>
-    <button type="button" class="inline-flex items-center justify-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 rounded-e-base text-sm w-9 h-9 focus:outline-none">
+    <div id="tooltip-option-3" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+      Align justify
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+    <button data-tooltip-target="tooltip-option-4" type="button" class="inline-flex items-center justify-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 rounded-e-base text-sm w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6h-8m8 4H6m12 4h-8m8 4H6"/></svg>
     </button>
+    <div id="tooltip-option-4" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+      Align right
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
   </div>
 {{< /example >}}
 
@@ -223,18 +239,34 @@ Use the following code to stack together buttons into a single group.
 
 
 <div class="rounded-base shadow-xs -space-y-px" role="group">
-    <button type="button" class="grid place-items-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 rounded-t-base text-sm w-9 h-9 focus:outline-none">
+    <button data-tooltip-target="tooltip-option-5" type="button" class="grid place-items-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 rounded-t-base text-sm w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6h8m-8 4h12M6 14h8m-8 4h12"/></svg>
     </button>
-    <button type="button" class="grid place-items-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 text-sm w-9 h-9 focus:outline-none">
+    <div id="tooltip-option-5" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+      Align left
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+    <button data-tooltip-target="tooltip-option-6" type="button" class="grid place-items-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 text-sm w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 6h8M6 10h12M8 14h8M6 18h12"/></svg>
     </button>
-    <button type="button" class="grid place-items-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 text-sm w-9 h-9 focus:outline-none">
+    <div id="tooltip-option-6" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+      Align center
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+    <button data-tooltip-target="tooltip-option-7" type="button" class="grid place-items-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 text-sm w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6H6m12 4H6m12 4H6m12 4H6"/></svg>
     </button>
-    <button type="button" class="grid place-items-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 rounded-b-base text-sm w-9 h-9 focus:outline-none">
+    <div id="tooltip-option-7" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+      Align justify
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+    <button data-tooltip-target="tooltip-option-8" type="button" class="grid place-items-center text-body bg-primary-soft border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 rounded-b-base text-sm w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6h-8m8 4H6m12 4h-8m8 4H6"/></svg>
     </button>
+    <div id="tooltip-option-8" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+      Align right
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
   </div>
 {{< /example >}}
 
@@ -242,14 +274,22 @@ Use the following code to stack together buttons into a single group.
 
 Use the following code to stack together buttons into a single group.
 
-{{< example id="default-button-group-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
+{{< example id="default-button-group-example" class="flex justify-center py-8" github="components/button-group.md" show_dark=true >}}
   <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
-    <button type="button" class="inline-flex items-center justify-center text-body bg-primary-soft rounded-s-base box-border border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary leading-5 w-9 h-9 focus:outline-none">
+    <button data-tooltip-target="tooltip-previous" type="button" class="inline-flex items-center justify-center text-body bg-primary-soft rounded-s-base box-border border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary leading-5 w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
     </button>
-    <button type="button" class="inline-flex items-center justify-center text-body bg-primary-soft rounded-e-base box-border border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary leading-5 w-9 h-9 focus:outline-none">
+    <div id="tooltip-previous" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+      Previous
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+    <button data-tooltip-target="tooltip-next" type="button" class="inline-flex items-center justify-center text-body bg-primary-soft rounded-e-base box-border border border-base hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary leading-5 w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
     </button>
+    <div id="tooltip-next" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+      Next
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
   </div>
 {{< /example >}}
 

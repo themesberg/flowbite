@@ -23,35 +23,33 @@ Use this example to show a simple chat bubble with a text message, user profile 
 {{< example id="chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="380" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
-   <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
-      <div class="flex items-center space-x-2 rtl:space-x-reverse">
-         <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+   <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+         <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+         <span class="text-sm text-body">11:46</span>
       </div>
-      <p class="text-sm font-normal py-2.5 text-gray-900 dark:text-white">That's awesome. I think our users will really appreciate the improvements.</p>
-      <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+      <p class="text-sm py-2.5 text-body">That's awesome. I think our users will really appreciate the improvements.</p>
+      <span class="text-sm text-body">Delivered</span>
    </div>
-   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 dark:focus:ring-gray-600" type="button">
-      <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
-         <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
-      </svg>
+   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-40 dark:bg-gray-700 dark:divide-gray-600">
-      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+      <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -65,16 +63,14 @@ This example can be used to show a voice note message with control buttons and a
 {{< example id="voice-note-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="380" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
-   <div class="flex flex-col gap-2.5 w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
-      <div class="flex items-center space-x-2 rtl:space-x-reverse">
-         <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+   <div class="flex flex-col gap-2.5 w-full max-w-[320px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+         <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+         <span class="text-sm text-body">11:46</span>
       </div>
-      <div class="flex items-center space-x-2 rtl:space-x-reverse">
-         <button class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-gray-100 rounded-lg hover:bg-gray-200 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-600" type="button">
-            <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 12 16">
-               <path d="M3 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm7 0H9a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Z"/>
-            </svg>
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+         <button class="inline-flex self-center items-center text-body hover:text-heading" type="button">
+            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
          </button>
          <svg aria-hidden="true" class="w-[145px] md:w-[185px] md:h-[40px]" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="17" width="3" height="6" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
@@ -106,31 +102,29 @@ This example can be used to show a voice note message with control buttons and a
             <rect x="182" y="17.5" width="3" height="5" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
             <rect x="66" y="16" width="8" height="8" rx="4" fill="#1C64F2"/>
          </svg>
-         <span class="inline-flex self-center items-center p-2 text-sm font-medium text-gray-900 dark:text-white">3:42</span>
+         <span class="inline-flex self-center items-center text-sm font-medium text-heading">3:42</span>
       </div>
-      <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+      <span class="text-sm text-body">Delivered</span>
    </div>
-   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="shrink-0 inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 dark:focus:ring-gray-600" type="button">
-      <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
-         <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
-      </svg>
+   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="shrink-0 inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-40 dark:bg-gray-700 dark:divide-gray-600">
-      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+      <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -145,14 +139,14 @@ Use this example to send a file attachment inside a chat bubble with the ability
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie Green image">
    <div class="flex flex-col gap-1">
-      <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
-         <div class="flex items-center space-x-2 rtl:space-x-reverse">
-            <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-            <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+         <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+            <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+            <span class="text-sm text-body">11:46</span>
          </div>
-         <div class="flex items-start my-2.5 bg-gray-50 dark:bg-gray-600 rounded-xl p-2">
-            <div class="me-2">
-               <span class="flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-white pb-2">
+         <div class="flex items-start my-2.5 bg-tertiary rounded-base p-2">
+            <div class="me-1.5">
+               <span class="flex items-center gap-2 text-sm font-medium text-heading pb-2">
                   <svg fill="none" aria-hidden="true" class="w-5 h-5 shrink-0" viewBox="0 0 20 21">
                      <g clip-path="url(#clip0_3173_1381)">
                         <path fill="#E2E5E7" d="M5.024.5c-.688 0-1.25.563-1.25 1.25v17.5c0 .688.562 1.25 1.25 1.25h12.5c.687 0 1.25-.563 1.25-1.25V5.5l-5-5h-8.75z"/>
@@ -170,7 +164,7 @@ Use this example to send a file attachment inside a chat bubble with the ability
                   </svg>
                   Flowbite Terms & Conditions
                </span>
-               <span class="flex text-xs font-normal text-gray-500 dark:text-gray-400 gap-2">
+               <span class="flex text-xs font-normal text-heading gap-2">
                   12 Pages 
                   <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="self-center" width="3" height="4" viewBox="0 0 3 4" fill="none">
                      <circle cx="1.5" cy="2" r="1.5" fill="#6B7280"/>
@@ -183,38 +177,33 @@ Use this example to send a file attachment inside a chat bubble with the ability
                </span>
             </div>
             <div class="inline-flex self-center items-center">
-               <button class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-600 dark:hover:bg-gray-500 dark:focus:ring-gray-600" type="button">
-                  <svg class="w-4 h-4 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                     <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
-                     <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
-                  </svg>
+               <button class="text-heading bg-tertiary box-border border border-transparent hover:bg-quaternary focus:ring-4 focus:ring-quaternary font-medium leading-5 rounded-base p-2 focus:outline-none" type="button">
+                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"/></svg>
                </button>
             </div>
          </div>
-         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+         <span class="text-sm text-body">Delivered</span>
       </div>
    </div>
-   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 dark:focus:ring-gray-600" type="button">
-      <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
-         <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
-      </svg>
+   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-40 dark:bg-gray-700 dark:divide-gray-600">
-      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+      <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -229,50 +218,46 @@ This example can be used to show an image attachment with a download button when
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie Green image">
    <div class="flex flex-col gap-1">
-      <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
-         <div class="flex items-center space-x-2 rtl:space-x-reverse mb-2">
-            <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-            <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+         <div class="flex items-center space-x-1.5 rtl:space-x-reverse mb-2">
+            <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+            <span class="text-sm text-body">11:46</span>
          </div>
-         <p class="text-sm font-normal text-gray-900 dark:text-white">This is the new office <3</p>
+         <p class="text-sm text-body">This is the new office <3</p>
          <div class="group relative my-2.5">
-            <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                <button data-tooltip-target="download-image" class="inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
-                    <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-                    </svg>
+            <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-base flex items-center justify-center">
+                <button data-tooltip-target="download-image" class="inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none focus:ring-white">
+                  <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/></svg>
                 </button>
-                <div id="download-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                <div id="download-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                     Download image
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
             </div>
-            <img src="/docs/images/blog/image-2.jpg" class="rounded-lg" />
+            <img src="/docs/images/blog/image-2.jpg" class="rounded-base" />
          </div>
-         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+         <span class="text-sm text-body">Delivered</span>
       </div>
    </div>
-   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 dark:focus:ring-gray-600" type="button">
-      <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
-         <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
-      </svg>
+   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-40 dark:bg-gray-700 dark:divide-gray-600">
-      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+      <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -287,97 +272,88 @@ Use this example to show an image gallery based on a grid layout with the abilit
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie Green image">
    <div class="flex flex-col gap-1">
-      <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
-         <div class="flex items-center space-x-2 rtl:space-x-reverse mb-2">
-            <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-            <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+         <div class="flex items-center space-x-1.5 rtl:space-x-reverse mb-2">
+            <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+            <span class="text-sm text-body">11:46</span>
          </div>
-         <p class="text-sm font-normal text-gray-900 dark:text-white">This is the new office <3</p>
+         <p class="text-sm text-body">This is the new office <3</p>
          <div class="grid gap-4 grid-cols-2 my-2.5">
             <div class="group relative">
-                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-base flex items-center justify-center">
                     <button data-tooltip-target="download-image-1" class="inline-flex items-center justify-center rounded-full h-8 w-8 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
-                        <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-                        </svg>
+                  <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/></svg>
                     </button>
-                    <div id="download-image-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                    <div id="download-image-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                         Download image
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
                 </div>
-                <img src="/docs/images/blog/image-1.jpg" class="rounded-lg" />
+                <img src="/docs/images/blog/image-1.jpg" class="rounded-base" />
             </div>
             <div class="group relative">
-                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-base flex items-center justify-center">
                     <button data-tooltip-target="download-image-2" class="inline-flex items-center justify-center rounded-full h-8 w-8 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
-                        <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-                        </svg>
+                        <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/></svg>
                     </button>
-                    <div id="download-image-2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                    <div id="download-image-2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                         Download image
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
                 </div>
-                <img src="/docs/images/blog/image-2.jpg" class="rounded-lg" />
+                <img src="/docs/images/blog/image-2.jpg" class="rounded-base" />
             </div>
             <div class="group relative">
-                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-base flex items-center justify-center">
                     <button data-tooltip-target="download-image-3" class="inline-flex items-center justify-center rounded-full h-8 w-8 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
-                        <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-                        </svg>
+                        <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/></svg>
                     </button>
-                    <div id="download-image-3" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                    <div id="download-image-3" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                         Download image
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
                 </div>
-                <img src="/docs/images/blog/image-3.jpg" class="rounded-lg" />
+                <img src="/docs/images/blog/image-3.jpg" class="rounded-base" />
             </div>
             <div class="group relative">
-                <button class="absolute w-full h-full bg-gray-900/90 hover:bg-gray-900/50 transition-all duration-300 rounded-lg flex items-center justify-center">
+                <button class="absolute w-full h-full bg-gray-900/90 hover:bg-gray-900/50 transition-all duration-300 rounded-base flex items-center justify-center">
                     <span class="text-xl font-medium text-white">+7</span>
-                    <div id="download-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                    <div id="download-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                         Download image
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
                 </button>
-                <img src="/docs/images/blog/image-1.jpg" class="rounded-lg" />
+                <img src="/docs/images/blog/image-1.jpg" class="rounded-base" />
             </div>
          </div>
          <div class="flex justify-between items-center">
-            <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
-            <button class="text-sm text-blue-700 dark:text-blue-500 font-medium inline-flex items-center hover:underline">
-                <svg class="w-3 h-3 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-                </svg>
-            Save all</button>
+            <span class="text-sm text-body">Delivered</span>
+            <button class="text-sm text-fg-brand font-medium inline-flex items-center hover:underline">
+               <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/></svg>
+               Save all
+            </button>
          </div>
       </div>
    </div>
-   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 dark:focus:ring-gray-600" type="button">
-      <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
-         <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
-      </svg>
+   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-40 dark:bg-gray-700 dark:divide-gray-600">
-      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+      <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -391,41 +367,39 @@ Use this example to show a OG preview of the URL that is being shared inside the
 {{< example id="url-sharing-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="520" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
-   <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
-      <div class="flex items-center space-x-2 rtl:space-x-reverse">
-         <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+   <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+         <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+         <span class="text-sm text-body">11:46</span>
       </div>
-      <p class="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Check out this open-source UI component library based on Tailwind CSS:</p>
-      <p class="text-sm font-normal pb-2.5 text-gray-900 dark:text-white"><a href="https://github.com/themesberg/flowbite" class="text-blue-700 dark:text-blue-500 underline hover:no-underline font-medium break-all">https://github.com/themesberg/flowbite</a></p>
-      <a href="#" class="bg-gray-50 dark:bg-gray-600 rounded-xl p-4 mb-2 hover:bg-gray-200 dark:hover:bg-gray-500">
-        <img src="https://flowbite.com/docs/images/og-image.png" class="rounded-lg mb-2" />
-        <span class="text-sm font-medium text-gray-900 dark:text-white mb-2">GitHub - themesberg/flowbite: The most popular and open source libra ...</span>
-        <span class="text-xs text-gray-500 dark:text-gray-400 font-normal">github.com</span>
+      <p class="text-sm py-2.5 text-body">Check out this open-source UI component library based on Tailwind CSS:</p>
+      <p class="text-sm pb-2.5"><a href="https://github.com/themesberg/flowbite" class="text-fg-brand underline hover:no-underline font-medium break-all">https://github.com/themesberg/flowbite</a></p>
+      <a href="#" class="bg-tertiary rounded-base p-4 mb-2 hover:bg-quaternary">
+        <img src="https://flowbite.com/docs/images/og-image.png" class="rounded-base mb-2" />
+        <span class="text-sm font-medium text-heading">GitHub - themesberg/flowbite: The most popular and open source libra ...</span>
+        <p class="text-xs text-body font-normal mt-2">github.com</p>
       </a>
-      <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+      <span class="text-sm text-body">Delivered</span>
    </div>
-   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 dark:focus:ring-gray-600" type="button">
-      <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
-         <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
-      </svg>
+   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-40 dark:bg-gray-700 dark:divide-gray-600">
-      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+      <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -440,36 +414,34 @@ Use this example to show a text message with the user profile and timestamp outs
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
    <div class="flex flex-col gap-1 w-full max-w-[320px]">
-      <div class="flex items-center space-x-2 rtl:space-x-reverse">
-         <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+         <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+         <span class="text-sm text-body">11:46</span>
       </div>
-      <div class="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
-         <p class="text-sm font-normal text-gray-900 dark:text-white"> That's awesome. I think our users will really appreciate the improvements.</p>
+      <div class="flex flex-col leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-bas">
+         <p class="text-sm text-body"> That's awesome. I think our users will really appreciate the improvements.</p>
       </div>
-      <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+      <span class="text-sm text-body">Delivered</span>
    </div>
-   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 dark:focus:ring-gray-600" type="button">
-      <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
-         <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
-      </svg>
+   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-40 dark:bg-gray-700 dark:divide-gray-600">
-      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+      <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -484,73 +456,69 @@ This example can be used to show a voice note with the user profile and timestam
 <div class="flex items-start gap-2.5">
     <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
     <div class="flex flex-col gap-1">
-        <div class="flex items-center space-x-2 rtl:space-x-reverse">
-            <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-            <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+        <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+            <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+            <span class="text-sm text-body">11:46</span>
         </div>
-        <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
-            <div class="flex items-center space-x-2 rtl:space-x-reverse">
-                <button class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-gray-100 rounded-lg hover:bg-gray-200 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-600" type="button">
-                    <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 12 16">
-                        <path d="M3 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm7 0H9a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Z"/>
-                    </svg>
-                </button>
-                <svg class="w-[145px] md:w-[185px] md:h-[40px]" aria-hidden="true" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="17" width="3" height="6" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="7" y="15.5" width="3" height="9" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="21" y="6.5" width="3" height="27" rx="1.5" fill="#6B7280"class="dark:fill-white"/>
-                    <rect x="14" y="6.5" width="3" height="27" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="28" y="3" width="3" height="34" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="35" y="3" width="3" height="34" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="42" y="5.5" width="3" height="29" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="49" y="10" width="3" height="20" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="56" y="13.5" width="3" height="13" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="63" y="16" width="3" height="8" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="70" y="12.5" width="3" height="15" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="77" y="3" width="3" height="34" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="84" y="3" width="3" height="34" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="91" y="0.5" width="3" height="39" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="98" y="0.5" width="3" height="39" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="105" y="2" width="3" height="36" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="112" y="6.5" width="3" height="27" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="119" y="9" width="3" height="22" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="126" y="11.5" width="3" height="17" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="133" y="2" width="3" height="36" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="140" y="2" width="3" height="36" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="147" y="7" width="3" height="26" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="154" y="9" width="3" height="22" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="161" y="9" width="3" height="22" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="168" y="13.5" width="3" height="13" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="175" y="16" width="3" height="8" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="182" y="17.5" width="3" height="5" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="66" y="16" width="8" height="8" rx="4" fill="#1C64F2"/>
-                </svg>
-                <span class="inline-flex self-center items-center p-2 text-sm font-medium text-gray-900 dark:text-white">3:42</span>
+        <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+            <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+               <button class="inline-flex self-center items-center text-body hover:text-heading" type="button">
+                  <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+               </button>
+               <svg aria-hidden="true" class="w-[145px] md:w-[185px] md:h-[40px]" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="17" width="3" height="6" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="7" y="15.5" width="3" height="9" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="21" y="6.5" width="3" height="27" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="14" y="6.5" width="3" height="27" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="28" y="3" width="3" height="34" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="35" y="3" width="3" height="34" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="42" y="5.5" width="3" height="29" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="49" y="10" width="3" height="20" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="56" y="13.5" width="3" height="13" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="63" y="16" width="3" height="8" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="70" y="12.5" width="3" height="15" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="77" y="3" width="3" height="34" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="84" y="3" width="3" height="34" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="91" y="0.5" width="3" height="39" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="98" y="0.5" width="3" height="39" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="105" y="2" width="3" height="36" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="112" y="6.5" width="3" height="27" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="119" y="9" width="3" height="22" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="126" y="11.5" width="3" height="17" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="133" y="2" width="3" height="36" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="140" y="2" width="3" height="36" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="147" y="7" width="3" height="26" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="154" y="9" width="3" height="22" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="161" y="9" width="3" height="22" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="168" y="13.5" width="3" height="13" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="175" y="16" width="3" height="8" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="182" y="17.5" width="3" height="5" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="66" y="16" width="8" height="8" rx="4" fill="#1C64F2"/>
+               </svg>
+               <span class="inline-flex self-center items-center text-sm font-medium text-heading">3:42</span>
             </div>
         </div>
-        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+        <span class="text-sm text-body">Delivered</span>
     </div>
-    <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 dark:focus:ring-gray-600" type="button">
-        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
-            <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
-        </svg>
+    <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
     </button>
-    <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-40 dark:bg-gray-700 dark:divide-gray-600">
-        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+    <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+        <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
             <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reply</a>
+                <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
             </li>
             <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forward</a>
+                <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
             </li>
             <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Copy</a>
+                <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
             </li>
             <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
             </li>
             <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Delete</a>
+                <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
             </li>
         </ul>
     </div>
@@ -565,14 +533,14 @@ Use this example to show a file attachment with the user profile and timestamp o
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
    <div class="flex flex-col gap-1">
-      <div class="flex items-center space-x-2 rtl:space-x-reverse">
-         <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+         <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+         <span class="text-sm text-body">11:46</span>
       </div>
-      <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
-         <div class="flex items-start bg-gray-50 dark:bg-gray-600 rounded-xl p-2">
-            <div class="me-2">
-               <span class="flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-white pb-2">
+      <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+                 <div class="flex items-start my-2.5 bg-tertiary rounded-base p-2">
+            <div class="me-1.5">
+               <span class="flex items-center gap-2 text-sm font-medium text-heading pb-2">
                   <svg fill="none" aria-hidden="true" class="w-5 h-5 shrink-0" viewBox="0 0 20 21">
                      <g clip-path="url(#clip0_3173_1381)">
                         <path fill="#E2E5E7" d="M5.024.5c-.688 0-1.25.563-1.25 1.25v17.5c0 .688.562 1.25 1.25 1.25h12.5c.687 0 1.25-.563 1.25-1.25V5.5l-5-5h-8.75z"/>
@@ -590,7 +558,7 @@ Use this example to show a file attachment with the user profile and timestamp o
                   </svg>
                   Flowbite Terms & Conditions
                </span>
-               <span class="flex text-xs font-normal text-gray-500 dark:text-gray-400 gap-2">
+               <span class="flex text-xs font-normal text-heading gap-2">
                   12 Pages 
                   <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="self-center" width="3" height="4" viewBox="0 0 3 4" fill="none">
                      <circle cx="1.5" cy="2" r="1.5" fill="#6B7280"/>
@@ -603,38 +571,33 @@ Use this example to show a file attachment with the user profile and timestamp o
                </span>
             </div>
             <div class="inline-flex self-center items-center">
-               <button class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-600 dark:hover:bg-gray-500 dark:focus:ring-gray-600" type="button">
-                  <svg class="w-4 h-4 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                     <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
-                     <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
-                  </svg>
+               <button class="text-heading bg-tertiary box-border border border-transparent hover:bg-quaternary focus:ring-4 focus:ring-quaternary font-medium leading-5 rounded-base p-2 focus:outline-none" type="button">
+                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"/></svg>
                </button>
             </div>
          </div>
       </div>
-      <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+      <span class="text-sm text-body">Delivered</span>
    </div>
-   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 dark:focus:ring-gray-600" type="button">
-      <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
-         <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
-      </svg>
+   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-40 dark:bg-gray-700 dark:divide-gray-600">
-      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+      <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -649,50 +612,46 @@ This example can be used to send an image attachment with the user profile outsi
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
    <div class="flex flex-col gap-1">
-      <div class="flex items-center space-x-2 rtl:space-x-reverse">
-         <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+         <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+         <span class="text-sm text-body">11:46</span>
       </div>
-      <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
-        <p class="text-sm font-normal text-gray-900 dark:text-white">I'm working from home today! 😅</p>
+      <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+        <p class="text-sm text-body">I'm working from home today! 😅</p>
         <div class="group relative my-2.5">
-            <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+            <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-base flex items-center justify-center">
                 <button data-tooltip-target="download-image" class="inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
-                    <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-                    </svg>
+                  <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/></svg>
                 </button>
-                <div id="download-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                <div id="download-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                     Download image
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
             </div>
-            <img src="/docs/images/blog/image-1.jpg" class="rounded-lg" />
+            <img src="/docs/images/blog/image-1.jpg" class="rounded-base"/>
         </div>
       </div>
-      <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+      <span class="text-sm text-body">Delivered</span>
    </div>
-   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 dark:focus:ring-gray-600" type="button">
-      <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
-         <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
-      </svg>
+   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-40 dark:bg-gray-700 dark:divide-gray-600">
-      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+      <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -707,97 +666,88 @@ Use this example to show an image gallery with the user profile and timestamp ou
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
    <div class="flex flex-col gap-1">
-      <div class="flex items-center space-x-2 rtl:space-x-reverse">
-         <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+         <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+         <span class="text-sm text-body">11:46</span>
       </div>
-      <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
-        <p class="text-sm font-normal text-gray-900 dark:text-white">I'm working from home today! 😅</p>
+      <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+        <p class="text-sm text-body">I'm working from home today! 😅</p>
         <div class="grid gap-4 grid-cols-2 my-2.5">
             <div class="group relative">
-                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-base flex items-center justify-center">
                     <button data-tooltip-target="download-image-1" class="inline-flex items-center justify-center rounded-full h-8 w-8 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
-                        <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-                        </svg>
+                  <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/></svg>
                     </button>
-                    <div id="download-image-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                    <div id="download-image-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                         Download image
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
                 </div>
-                <img src="/docs/images/blog/image-1.jpg" class="rounded-lg" />
+                <img src="/docs/images/blog/image-1.jpg" class="rounded-base" />
             </div>
             <div class="group relative">
-                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-base flex items-center justify-center">
                     <button data-tooltip-target="download-image-2" class="inline-flex items-center justify-center rounded-full h-8 w-8 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
-                        <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-                        </svg>
+                        <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/></svg>
                     </button>
-                    <div id="download-image-2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                    <div id="download-image-2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                         Download image
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
                 </div>
-                <img src="/docs/images/blog/image-2.jpg" class="rounded-lg" />
+                <img src="/docs/images/blog/image-2.jpg" class="rounded-base" />
             </div>
             <div class="group relative">
-                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-base flex items-center justify-center">
                     <button data-tooltip-target="download-image-3" class="inline-flex items-center justify-center rounded-full h-8 w-8 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
-                        <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-                        </svg>
+                        <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/></svg>
                     </button>
-                    <div id="download-image-3" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                    <div id="download-image-3" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                         Download image
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
                 </div>
-                <img src="/docs/images/blog/image-3.jpg" class="rounded-lg" />
+                <img src="/docs/images/blog/image-3.jpg" class="rounded-base" />
             </div>
             <div class="group relative">
-                <button class="absolute w-full h-full bg-gray-900/90 hover:bg-gray-900/50 transition-all duration-300 rounded-lg flex items-center justify-center">
+                <button class="absolute w-full h-full bg-gray-900/90 hover:bg-gray-900/50 transition-all duration-300 rounded-base flex items-center justify-center">
                     <span class="text-xl font-medium text-white">+7</span>
-                    <div id="download-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                    <div id="download-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                         Download image
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
                 </button>
-                <img src="/docs/images/blog/image-1.jpg" class="rounded-lg" />
+                <img src="/docs/images/blog/image-1.jpg" class="rounded-base" />
             </div>
          </div>
          <div class="flex justify-end items-center">
-            <button class="text-sm text-blue-700 dark:text-blue-500 font-medium inline-flex items-center hover:underline">
-                <svg class="w-3 h-3 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-                </svg>
-            Save all</button>
+            <button class="text-sm text-fg-brand font-medium inline-flex items-center hover:underline">
+               <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/></svg>
+               Save all
+            </button>
          </div>
       </div>
-      <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+      <span class="text-sm text-body">Delivered</span>
    </div>
-   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 dark:focus:ring-gray-600" type="button">
-      <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
-         <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
-      </svg>
+   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-40 dark:bg-gray-700 dark:divide-gray-600">
-      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+      <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -812,42 +762,40 @@ Use this example to show a URL preview with the user profile and timestamp outsi
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
    <div class="flex flex-col gap-1 w-full max-w-[320px]">
-      <div class="flex items-center space-x-2 rtl:space-x-reverse">
-         <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+         <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+         <span class="text-sm text-body">11:46</span>
       </div>
-      <div class="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
-         <p class="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Check out this open-source UI component library based on Tailwind CSS:</p>
-        <p class="text-sm font-normal pb-2.5 text-gray-900 dark:text-white"><a href="https://github.com/themesberg/flowbite" class="text-blue-700 dark:text-blue-500 underline hover:no-underline font-medium break-all">https://github.com/themesberg/flowbite</a></p>
-        <a href="#" class="bg-gray-50 dark:bg-gray-600 rounded-xl p-4 mb-2 hover:bg-gray-200 dark:hover:bg-gray-500">
-            <img src="https://flowbite.com/docs/images/og-image.png" class="rounded-lg mb-2" />
-            <span class="text-sm font-medium text-gray-900 dark:text-white mb-2">GitHub - themesberg/flowbite: The most popular and open source libra ...</span>
-            <span class="text-xs text-gray-500 dark:text-gray-400 font-normal">github.com</span>
-        </a>
+      <div class="flex flex-col leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-bas">
+      <p class="text-sm py-2.5 text-body">Check out this open-source UI component library based on Tailwind CSS:</p>
+      <p class="text-sm pb-2.5"><a href="https://github.com/themesberg/flowbite" class="text-fg-brand underline hover:no-underline font-medium break-all">https://github.com/themesberg/flowbite</a></p>
+      <a href="#" class="bg-tertiary rounded-base p-4 mb-2 hover:bg-quaternary">
+        <img src="https://flowbite.com/docs/images/og-image.png" class="rounded-base mb-2" />
+        <span class="text-sm font-medium text-heading">GitHub - themesberg/flowbite: The most popular and open source libra ...</span>
+        <p class="text-xs text-body font-normal mt-2">github.com</p>
+      </a>
       </div>
-      <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+      <span class="text-sm text-body">Delivered</span>
    </div>
-   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 dark:focus:ring-gray-600" type="button">
-      <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
-         <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
-      </svg>
+   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-40 dark:bg-gray-700 dark:divide-gray-600">
-      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+      <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -862,12 +810,12 @@ Use this example to show a text message with the user profile and timestamp with
 <div class="flex items-start gap-2.5">
     <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
     <div class="flex flex-col w-full max-w-[320px] leading-1.5">
-        <div class="flex items-center space-x-2 rtl:space-x-reverse">
-            <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-            <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+        <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+            <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+            <span class="text-sm text-body">11:46</span>
         </div>
-        <p class="text-sm font-normal py-2 text-gray-900 dark:text-white"> That's awesome. I think our users will really appreciate the improvements.</p>
-        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+        <p class="text-sm py-2 text-heading"> That's awesome. I think our users will really appreciate the improvements.</p>
+        <span class="text-sm text-body">Delivered</span>
     </div>
 </div>
 {{< /example >}}
@@ -880,51 +828,49 @@ This example can be used to show a voice note with a transparent background.
 <div class="flex items-start gap-2.5">
     <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
     <div class="flex flex-col gap-1">
-        <div class="flex items-center space-x-2 rtl:space-x-reverse">
-            <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-            <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+        <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+            <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+            <span class="text-sm text-body">11:46</span>
         </div>
-        <div class="flex flex-col w-full max-w-[320px] leading-1.5 py-2 rounded-e-xl rounded-es-xl">
-            <div class="flex items-center space-x-2 rtl:space-x-reverse">
-                <button class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:hover:bg-gray-600 dark:focus:ring-gray-600" type="button">
-                    <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 12 16">
-                        <path d="M3 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm7 0H9a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Z"/>
-                    </svg>
-                </button>
-                <svg class="w-[145px] md:w-[185px] md:h-[40px]" aria-hidden="true" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="17" width="3" height="6" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="7" y="15.5" width="3" height="9" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="21" y="6.5" width="3" height="27" rx="1.5" fill="#6B7280"class="dark:fill-white"/>
-                    <rect x="14" y="6.5" width="3" height="27" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="28" y="3" width="3" height="34" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="35" y="3" width="3" height="34" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="42" y="5.5" width="3" height="29" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="49" y="10" width="3" height="20" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="56" y="13.5" width="3" height="13" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="63" y="16" width="3" height="8" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
-                    <rect x="70" y="12.5" width="3" height="15" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="77" y="3" width="3" height="34" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="84" y="3" width="3" height="34" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="91" y="0.5" width="3" height="39" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="98" y="0.5" width="3" height="39" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="105" y="2" width="3" height="36" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="112" y="6.5" width="3" height="27" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="119" y="9" width="3" height="22" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="126" y="11.5" width="3" height="17" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="133" y="2" width="3" height="36" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="140" y="2" width="3" height="36" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="147" y="7" width="3" height="26" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="154" y="9" width="3" height="22" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="161" y="9" width="3" height="22" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="168" y="13.5" width="3" height="13" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="175" y="16" width="3" height="8" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="182" y="17.5" width="3" height="5" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
-                    <rect x="66" y="16" width="8" height="8" rx="4" fill="#1C64F2"/>
-                </svg>
-                <span class="inline-flex self-center items-center p-2 text-sm font-medium text-gray-900 dark:text-white">3:42</span>
+        <div class="flex flex-col w-full max-w-[320px] leading-1.5 py-2 rounded-e-base rounded-es-base">
+            <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+               <button class="inline-flex self-center items-center text-body hover:text-heading" type="button">
+                  <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+               </button>
+               <svg aria-hidden="true" class="w-[145px] md:w-[185px] md:h-[40px]" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="17" width="3" height="6" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="7" y="15.5" width="3" height="9" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="21" y="6.5" width="3" height="27" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="14" y="6.5" width="3" height="27" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="28" y="3" width="3" height="34" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="35" y="3" width="3" height="34" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="42" y="5.5" width="3" height="29" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="49" y="10" width="3" height="20" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="56" y="13.5" width="3" height="13" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="63" y="16" width="3" height="8" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
+                  <rect x="70" y="12.5" width="3" height="15" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="77" y="3" width="3" height="34" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="84" y="3" width="3" height="34" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="91" y="0.5" width="3" height="39" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="98" y="0.5" width="3" height="39" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="105" y="2" width="3" height="36" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="112" y="6.5" width="3" height="27" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="119" y="9" width="3" height="22" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="126" y="11.5" width="3" height="17" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="133" y="2" width="3" height="36" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="140" y="2" width="3" height="36" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="147" y="7" width="3" height="26" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="154" y="9" width="3" height="22" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="161" y="9" width="3" height="22" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="168" y="13.5" width="3" height="13" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="175" y="16" width="3" height="8" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="182" y="17.5" width="3" height="5" rx="1.5" fill="#E5E7EB" class="dark:fill-gray-500"/>
+                  <rect x="66" y="16" width="8" height="8" rx="4" fill="#1C64F2"/>
+               </svg>
+               <span class="inline-flex self-center items-center text-sm font-medium text-heading">3:42</span>
             </div>
         </div>
-        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+        <span class="text-sm text-body">Delivered</span>
     </div>
 </div>
 {{< /example >}}
@@ -937,14 +883,14 @@ Use this example to show a file attachment and a download button with a transpar
 <div class="flex items-start gap-2.5">
    <img class="h-8 w-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image" />
    <div class="flex flex-col gap-2.5">
-      <div class="flex items-center space-x-2 rtl:space-x-reverse">
-         <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+         <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+         <span class="text-sm text-body">11:46</span>
       </div>
       <div class="leading-1.5 flex w-full max-w-[320px] flex-col">
-         <div class="flex items-start bg-gray-50 dark:bg-gray-700 rounded-xl p-2">
-            <div class="me-2">
-               <span class="flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-white pb-2">
+         <div class="flex items-start bg-secondary-soft rounded-xl p-2">
+            <div class="me-1.5">
+               <span class="flex items-center gap-2 text-sm font-medium text-heading pb-2">
                   <svg fill="none" aria-hidden="true" class="w-5 h-5 shrink-0" viewBox="0 0 20 21">
                      <g clip-path="url(#clip0_3173_1381)">
                         <path fill="#E2E5E7" d="M5.024.5c-.688 0-1.25.563-1.25 1.25v17.5c0 .688.562 1.25 1.25 1.25h12.5c.687 0 1.25-.563 1.25-1.25V5.5l-5-5h-8.75z"/>
@@ -962,7 +908,7 @@ Use this example to show a file attachment and a download button with a transpar
                   </svg>
                   Flowbite Terms & Conditions
                </span>
-               <span class="flex text-xs font-normal text-gray-500 dark:text-gray-400 gap-2">
+               <span class="flex text-xs font-normal text-heading gap-2">
                   12 Pages 
                   <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="self-center" width="3" height="4" viewBox="0 0 3 4" fill="none">
                      <circle cx="1.5" cy="2" r="1.5" fill="#6B7280"/>
@@ -975,16 +921,13 @@ Use this example to show a file attachment and a download button with a transpar
                </span>
             </div>
             <div class="inline-flex self-center items-center">
-               <button class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-600" type="button">
-                  <svg class="w-4 h-4 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                     <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
-                     <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
-                  </svg>
+               <button class="text-heading bg-secondary-soft box-border border border-transparent hover:bg-quaternary focus:ring-4 focus:ring-quaternary font-medium leading-5 rounded-base p-2 focus:outline-none" type="button">
+                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"/></svg>
                </button>
             </div>
          </div>
       </div>
-      <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+      <span class="text-sm text-body">Delivered</span>
    </div>
 </div>
 {{< /example >}}
@@ -997,28 +940,26 @@ This example can be used to show an image and a download button with a transpare
 <div class="flex items-start gap-2.5">
    <img class="h-8 w-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image" />
    <div class="flex flex-col gap-2.5">
-      <div class="flex items-center space-x-2 rtl:space-x-reverse">
-         <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+         <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+         <span class="text-sm text-body">11:46</span>
       </div>
       <div class="leading-1.5 flex w-full max-w-[320px] flex-col">
-         <p class="text-sm font-normal text-gray-900 dark:text-white">This is the new office <3</p>
+         <p class="text-sm text-body">This is the new office <3</p>
          <div class="group relative mt-2">
-            <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+            <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-base flex items-center justify-center">
                 <button data-tooltip-target="download-image" class="inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
-                    <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-                    </svg>
+                  <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/></svg>
                 </button>
-                <div id="download-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                <div id="download-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                     Download image
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
             </div>
-            <img src="/docs/images/blog/image-2.jpg" class="rounded-lg" />
+            <img src="/docs/images/blog/image-2.jpg" class="rounded-base" />
          </div>
       </div>
-      <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+      <span class="text-sm text-body">Delivered</span>
    </div>
 </div>
 {{< /example >}}
@@ -1031,74 +972,67 @@ Use this example to show an image gallery with a transparent background as a cha
 <div class="flex items-start gap-2.5">
    <img class="h-8 w-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image" />
    <div class="flex flex-col gap-2.5">
-      <div class="flex items-center space-x-2 rtl:space-x-reverse">
-         <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+         <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+         <span class="text-sm text-body">11:46</span>
       </div>
       <div class="leading-1.5 flex w-full max-w-[320px] flex-col">
-         <p class="text-sm font-normal text-gray-900 dark:text-white">This is the new office <3</p>
+         <p class="text-sm text-body">This is the new office <3</p>
          <div class="grid gap-4 grid-cols-2 mt-2">
             <div class="group relative">
-                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-base flex items-center justify-center">
                     <button data-tooltip-target="download-image-1" class="inline-flex items-center justify-center rounded-full h-8 w-8 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
-                        <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-                        </svg>
+                  <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/></svg>
                     </button>
-                    <div id="download-image-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                    <div id="download-image-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                         Download image
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
                 </div>
-                <img src="/docs/images/blog/image-1.jpg" class="rounded-lg" />
+                <img src="/docs/images/blog/image-1.jpg" class="rounded-base" />
             </div>
             <div class="group relative">
-                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-base flex items-center justify-center">
                     <button data-tooltip-target="download-image-2" class="inline-flex items-center justify-center rounded-full h-8 w-8 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
-                        <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-                        </svg>
+                  <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/></svg>
                     </button>
-                    <div id="download-image-2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                    <div id="download-image-2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                         Download image
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
                 </div>
-                <img src="/docs/images/blog/image-2.jpg" class="rounded-lg" />
+                <img src="/docs/images/blog/image-2.jpg" class="rounded-base" />
             </div>
             <div class="group relative">
-                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-base flex items-center justify-center">
                     <button data-tooltip-target="download-image-3" class="inline-flex items-center justify-center rounded-full h-8 w-8 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
-                        <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-                        </svg>
+                  <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/></svg>
                     </button>
-                    <div id="download-image-3" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                    <div id="download-image-3" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                         Download image
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
                 </div>
-                <img src="/docs/images/blog/image-3.jpg" class="rounded-lg" />
+                <img src="/docs/images/blog/image-3.jpg" class="rounded-base" />
             </div>
             <div class="group relative">
-                <button class="absolute w-full h-full bg-gray-900/90 hover:bg-gray-900/50 transition-all duration-300 rounded-lg flex items-center justify-center">
+                <button class="absolute w-full h-full bg-gray-900/90 hover:bg-gray-900/50 transition-all duration-300 rounded-base flex items-center justify-center">
                     <span class="text-xl font-medium text-white">+7</span>
-                    <div id="download-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                    <div id="download-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                         Download image
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
                 </button>
-                <img src="/docs/images/blog/image-1.jpg" class="rounded-lg" />
+                <img src="/docs/images/blog/image-1.jpg" class="rounded-base" />
             </div>
          </div>
       </div>
       <div class="flex justify-between items-center">
-        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
-        <button class="text-sm text-blue-700 dark:text-blue-500 font-medium inline-flex items-center hover:underline">
-            <svg class="w-3 h-3 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-            </svg>
-        Save all</button>
+        <span class="text-sm text-body">Delivered</span>
+        <button class="text-sm text-fg-brand font-medium inline-flex items-center hover:underline">
+            <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/></svg>
+            Save all
+        </button>
         </div>
    </div>
 </div>
@@ -1112,18 +1046,18 @@ This example can be used to show a URL preview with a transparent background.
 <div class="flex items-start gap-2.5">
     <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
     <div class="flex flex-col w-full max-w-[320px] leading-1.5">
-        <div class="flex items-center space-x-2 rtl:space-x-reverse">
-            <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-            <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+        <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+            <span class="text-sm font-semibold text-heading">Bonnie Green</span>
+            <span class="text-sm text-body">11:46</span>
         </div>
-        <p class="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Check out this open-source UI component library based on Tailwind CSS:</p>
-        <p class="text-sm font-normal pb-2.5 text-gray-900 dark:text-white"><a href="https://github.com/themesberg/flowbite" class="text-blue-700 dark:text-blue-500 underline hover:no-underline font-medium break-all">https://github.com/themesberg/flowbite</a></p>
-        <a href="#" class="bg-gray-50 dark:bg-gray-600 rounded-xl p-4 mb-2 hover:bg-gray-200 dark:hover:bg-gray-500">
-            <img src="https://flowbite.com/docs/images/og-image.png" class="rounded-lg mb-2" />
-            <span class="text-sm font-medium text-gray-900 dark:text-white mb-2">GitHub - themesberg/flowbite: The most popular and open source libra ...</span>
-            <span class="text-xs text-gray-500 dark:text-gray-400 font-normal">github.com</span>
-        </a>
-        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+      <p class="text-sm py-2.5 text-body">Check out this open-source UI component library based on Tailwind CSS:</p>
+      <p class="text-sm pb-2.5"><a href="https://github.com/themesberg/flowbite" class="text-fg-brand underline hover:no-underline font-medium break-all">https://github.com/themesberg/flowbite</a></p>
+      <a href="#" class="bg-tertiary rounded-base p-4 mb-2 hover:bg-quaternary">
+        <img src="https://flowbite.com/docs/images/og-image.png" class="rounded-base mb-2" />
+        <span class="text-sm font-medium text-heading">GitHub - themesberg/flowbite: The most popular and open source libra ...</span>
+        <p class="text-xs text-body font-normal mt-2">github.com</p>
+      </a>
+      <span class="text-sm text-body">Delivered</span>
     </div>
 </div>
 {{< /example >}}

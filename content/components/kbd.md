@@ -20,13 +20,13 @@ Use the semantic `<kbd>` keyboard input tag to use the default monospace font wh
 Here's a list of KBD components that you can use inside any other element.
 
 {{< example id="default-kbd-example" github="components/kbd.md" show_dark=true >}}
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Shift</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Ctrl</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Tab</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Caps Lock</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Esc</kbd>
-<kbd class="px-4 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Spacebar</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Enter</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Shift</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Ctrl</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Tab</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Caps Lock</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Esc</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Spacebar</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Enter</kbd>
 {{< /example >}}
 
 ## KBD inside text
@@ -35,8 +35,8 @@ Use this example by nesting an inline KBD component inside a paragraph.
 
 {{< example id="kbd-text-example" github="components/kbd.md" show_dark=true >}}
 
-<p class="text-gray-500 dark:text-gray-400">
-    Please press <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Ctrl</kbd> + <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Shift</kbd> + <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">R</kbd> to re-render an MDN page.
+<p class="text-body">
+    Please press <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Ctrl</kbd> + <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Shift</kbd> + <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">R</kbd> to re-render an MDN page.
 </p>
 {{< /example >}}
 
@@ -47,8 +47,8 @@ The KBD component can also be used inside table components to denote what type o
 {{< example id="kbd-table-example" github="components/kbd.md" show_dark=true >}}
 
 <div class="relative overflow-x-auto">
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-800 dark:text-gray-400">
+    <table class="w-full text-sm text-left rtl:text-right text-body">
+        <thead class="text-xs text-body uppercase bg-tertiary">
             <tr>
                 <th scope="col" class="px-6 py-3">
                     Key
@@ -59,48 +59,48 @@ The KBD component can also be used inside table components to denote what type o
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-500 whitespace-nowrap dark:text-gray-400">
-                    <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Shift</kbd>
+            <tr class="bg-primary border-b border-base">
+                <th scope="row" class="px-6 py-4 font-medium text-body whitespace-nowrap">
+                    <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Shift</kbd>
                         <span class="mx-2">or</span>
-                    <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Tab</kbd>
+                    <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Tab</kbd>
                 </th>
                 <td class="px-6 py-4">
                     Navigate to interactive elements
                 </td>
             </tr>
-            <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-500 whitespace-nowrap dark:text-gray-400">
-                    <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Enter</kbd>
+            <tr class="bg-primary border-b border-base">
+                <th scope="row" class="px-6 py-4 font-medium text-body whitespace-nowrap">
+                    <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Enter</kbd>
                     <span class="mx-2">or</span>
-                    <kbd class="px-4 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Spacebar</kbd>
+                    <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Spacebar</kbd>
                 </th>
                 <td class="px-6 py-4">
                     Ensure elements with ARIA role="button" can be activated with both key commands.
                 </td>
             </tr>
-            <tr class="bg-white dark:bg-gray-900">
-                <th scope="row" class="inline-flex items-center px-6 py-4 font-medium text-gray-500 dark:text-gray-400 whitespace-nowrap">
-                    <kbd class="inline-flex items-center me-1 px-2 py-1.5 text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+            <tr class="bg-primary">
+                <th scope="row" class="inline-flex items-center px-6 py-4 font-medium text-body whitespace-nowrap">
+                    <kbd class="inline-flex items-center me-1 px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">
                         <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 10">
                             <path d="M9.207 1A2 2 0 0 0 6.38 1L.793 6.586A2 2 0 0 0 2.207 10H13.38a2 2 0 0 0 1.414-3.414L9.207 1Z"/>
                         </svg>
                         <span class="sr-only">Arrow key up</span>
                     </kbd>
-                    <kbd class="inline-flex items-center px-2 py-1.5 text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+                    <kbd class="inline-flex items-center px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">
                         <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 10">
                             <path d="M15.434 1.235A2 2 0 0 0 13.586 0H2.414A2 2 0 0 0 1 3.414L6.586 9a2 2 0 0 0 2.828 0L15 3.414a2 2 0 0 0 .434-2.179Z"/>
                         </svg>
                         <span class="sr-only">Arrow key down</span>
                     </kbd>
                     <span class="mx-2">or</span>
-                    <kbd class="rtl:rotate-180 inline-flex items-center me-1  px-2 py-1.5 text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+                    <kbd class="rtl:rotate-180 inline-flex items-center me-1 px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">
                         <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 10 16">
                             <path d="M8.766.566A2 2 0 0 0 6.586 1L1 6.586a2 2 0 0 0 0 2.828L6.586 15A2 2 0 0 0 10 13.586V2.414A2 2 0 0 0 8.766.566Z"/>
                         </svg>
                         <span class="sr-only">Arrow key left</span>
                     </kbd>
-                    <kbd class="rtl:rotate-180 inline-flex items-center px-2 py-1.5 text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+                    <kbd class="rtl:rotate-180 inline-flex items-center px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">
                         <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 10 16">
                             <path d="M3.414 1A2 2 0 0 0 0 2.414v11.172A2 2 0 0 0 3.414 15L9 9.414a2 2 0 0 0 0-2.828L3.414 1Z"/>
                         </svg>
@@ -121,25 +121,25 @@ The KBD component can also be used inside table components to denote what type o
 Use this example to show arrow keys inside the KBD styled element.
 
 {{< example id="kbd-arrow-example" github="components/list-group.md" show_dark=true >}}
-<kbd class="inline-flex items-center px-2 py-1.5 text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+<kbd class="inline-flex items-center px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">
 <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 10">
 <path d="M9.207 1A2 2 0 0 0 6.38 1L.793 6.586A2 2 0 0 0 2.207 10H13.38a2 2 0 0 0 1.414-3.414L9.207 1Z"/>
 </svg>
 <span class="sr-only">Arrow key up</span>
 </kbd>
-<kbd class="inline-flex items-center px-2 py-1.5 text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+<kbd class="inline-flex items-center px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">
 <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 10">
 <path d="M15.434 1.235A2 2 0 0 0 13.586 0H2.414A2 2 0 0 0 1 3.414L6.586 9a2 2 0 0 0 2.828 0L15 3.414a2 2 0 0 0 .434-2.179Z"/>
 </svg>
 <span class="sr-only">Arrow key down</span>
 </kbd>
-<kbd class="rtl:rotate-180 inline-flex items-center px-2 py-1.5 text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+<kbd class="rtl:rotate-180 inline-flex items-center px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">
 <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 10 16">
 <path d="M8.766.566A2 2 0 0 0 6.586 1L1 6.586a2 2 0 0 0 0 2.828L6.586 15A2 2 0 0 0 10 13.586V2.414A2 2 0 0 0 8.766.566Z"/>
 </svg>
 <span class="sr-only">Arrow key left</span>
 </kbd>
-<kbd class="rtl:rotate-180 inline-flex items-center px-2 py-1.5 text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+<kbd class="rtl:rotate-180 inline-flex items-center px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">
 <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 10 16">
 <path d="M3.414 1A2 2 0 0 0 0 2.414v11.172A2 2 0 0 0 3.414 15L9 9.414a2 2 0 0 0 0-2.828L3.414 1Z"/>
 </svg>
@@ -152,32 +152,32 @@ Use this example to show arrow keys inside the KBD styled element.
 Use this example if you need to show a key from the latin alphabet
 
 {{< example id="kbd-letter-example" github="components/kbd.md" show_dark=true >}}
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Q</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">W</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">E</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">R</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">T</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Y</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">U</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">I</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">O</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">P</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">A</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">S</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">D</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">G</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">H</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">J</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">K</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">L</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Z</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">X</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">C</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">V</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">B</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">N</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">M</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Q</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">W</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">E</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">R</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">T</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Y</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">U</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">I</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">O</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">P</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">A</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">S</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">D</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">F</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">G</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">H</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">J</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">K</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">L</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">Z</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">X</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">C</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">V</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">B</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">N</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">M</kbd>
 {{< /example >}}
 
 ## Number keys
@@ -185,16 +185,16 @@ Use this example if you need to show a key from the latin alphabet
 Use this example to show a key inside a KBD component from the english numeral system.
 
 {{< example id="kbd-number-example" github="components/kbd.md" show_dark=true >}}
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">1</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">2</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">3</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">4</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">5</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">6</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">7</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">8</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">9</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">0</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">1</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">2</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">3</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">4</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">5</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">6</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">7</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">8</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">9</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">0</kbd>
 {{< /example >}}
 
 ## Function keys
@@ -202,16 +202,16 @@ Use this example to show a key inside a KBD component from the english numeral s
 This example can be used to denote function keys inside the KBD component.
 
 {{< example id="kbd-function-example" github="components/kbd.md" show_dark=true >}}
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F1</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F2</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F3</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F4</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F5</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F6</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F7</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F8</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F9</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F10</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F11</kbd>
-<kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">F12</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">F1</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">F2</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">F3</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">F4</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">F5</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">F6</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">F7</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">F8</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">F9</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">F10</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">F11</kbd>
+<kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-base-medium rounded-base">F12</kbd>
 {{< /example >}}

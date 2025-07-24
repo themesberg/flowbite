@@ -232,11 +232,11 @@ Pay with Ethereum
 Use the following button styles to show the colors only for the border of the element.
 
 {{< example id="button-outline-example" class="flex flex-wrap gap-2.5" github="components/buttons.md" show_dark=true >}}
-<button type="button" class="text-brand bg-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none">Brand</button>
-<button type="button" class="text-body bg-primary border border-base hover:bg-secondary-soft hover:text-white focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none">Gray</button>
-<button type="button" class="text-success bg-primary border border-success hover:bg-success hover:text-white focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none">Success</button>
-<button type="button" class="text-danger bg-primary border border-danger hover:bg-danger hover:text-white focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none">Danger</button>
-<button type="button" class="text-warning bg-primary border border-warning hover:bg-warning hover:text-white focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none">Warning</button>
+<button type="button" class="text-brand bg-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Brand</button>
+<button type="button" class="text-body bg-primary border border-base hover:bg-secondary-soft hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Gray</button>
+<button type="button" class="text-success bg-primary border border-success hover:bg-success hover:text-white focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Success</button>
+<button type="button" class="text-danger bg-primary border border-danger hover:bg-danger hover:text-white focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Danger</button>
+<button type="button" class="text-warning bg-primary border border-warning hover:bg-warning hover:text-white focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Warning</button>
 {{< /example >}}
 
 ## Button sizes

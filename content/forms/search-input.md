@@ -26,7 +26,7 @@ Get started with the default example of a search input component including and i
         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
         </div>
-        <input type="search" id="search" class="block w-full p-3 ps-9 bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" placeholder="Search" required />
+        <input type="search" id="search" class="block w-full p-3 ps-9 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" placeholder="Search" required />
         <button type="button" class="absolute end-1.5 bottom-1.5 text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none">Search</button>
     </div>
 </form>
@@ -44,12 +44,12 @@ Use this search component with a dropdown to let your users select a category in
 <form class="max-w-2xl mx-auto">
     <div class="flex shadow-xs rounded-base -space-x-0.5">
         <label for="search-dropdown" class="block mb-2.5 text-sm font-medium text-heading sr-only ">Your Email</label>
-        <button id="dropdown-button" data-dropdown-toggle="dropdown" type="button" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-base-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-s-base text-sm px-4 py-2.5 focus:outline-none">
+        <button id="dropdown-button" data-dropdown-toggle="dropdown" type="button" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-s-base text-sm px-4 py-2.5 focus:outline-none">
             <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.143 4H4.857A.857.857 0 0 0 4 4.857v4.286c0 .473.384.857.857.857h4.286A.857.857 0 0 0 10 9.143V4.857A.857.857 0 0 0 9.143 4Zm10 0h-4.286a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286A.857.857 0 0 0 20 9.143V4.857A.857.857 0 0 0 19.143 4Zm-10 10H4.857a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286a.857.857 0 0 0 .857-.857v-4.286A.857.857 0 0 0 9.143 14Zm10 0h-4.286a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286a.857.857 0 0 0 .857-.857v-4.286a.857.857 0 0 0-.857-.857Z"/></svg>
             All categories
             <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+        <div id="dropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-button">
                 <li>
                     <a href="#" class="block p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Shopping</a>
@@ -65,7 +65,7 @@ Use this search component with a dropdown to let your users select a category in
                 </li>
             </ul>
         </div>
-        <input type="search" id="search-dropdown" id="input-group-1" class="px-3 py-2.5 bg-secondary-medium border border-base-medium text-heading text-sm focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" placeholder="Search for products" required>
+        <input type="search" id="search-dropdown" id="input-group-1" class="px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" placeholder="Search for products" required>
         <button type="button" class="inline-flex items-center  text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-e-base text-sm px-4 py-2.5 focus:outline-none">
         <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
         Search
@@ -85,7 +85,7 @@ Use the simplest form of a search input component with an icon and a search butt
         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 8v8m0-8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 8a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8-8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 0a4 4 0 0 1-4 4h-1a3 3 0 0 0-3 3"/></svg>
         </div>
-        <input type="text" id="simple-search" class="px-3 py-2.5 bg-secondary-medium border border-base-medium rounded-base ps-9 text-heading text-sm focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" placeholder="Search branch name..." required />
+        <input type="text" id="simple-search" class="px-3 py-2.5 bg-secondary-medium border border-default-medium rounded-base ps-9 text-heading text-sm focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" placeholder="Search branch name..." required />
     </div>
     <button type="submit" class="inline-flex items-center justify-center shrink-0 text-white bg-brand hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs rounded-base w-10 h-10 focus:outline-none">
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
@@ -106,12 +106,12 @@ Use this example where you can select a country in which you want to search for 
 <form class="max-w-lg mx-auto">
     <div class="flex shadow-xs rounded-base -space-x-0.5">
         <label for="search-dropdown-location" class="block mb-2.5 text-sm font-medium text-heading sr-only ">Choose city</label>
-        <button id="dropdown-button-location" data-dropdown-toggle="dropdown-location" type="button" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-base-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-s-base text-sm px-4 py-2.5 focus:outline-none">
+        <button id="dropdown-button-location" data-dropdown-toggle="dropdown-location" type="button" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-s-base text-sm px-4 py-2.5 focus:outline-none">
             <svg class="w-4 h-4 me-1.5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.00013 14.6666C11.6821 14.6666 14.667 11.6818 14.667 7.99992C14.667 4.31802 11.6821 1.33325 8.00013 1.33325C4.31811 1.33325 1.33325 4.31802 1.33325 7.99992C1.33325 11.6818 4.31811 14.6666 8.00013 14.6666Z" fill="white"/><path d="M7.71167 7.99975H14.6678C14.6678 7.39807 14.5876 6.8152 14.4382 6.26074H7.71167V7.99975Z" fill="#D80027"/><path d="M7.71167 4.52172H13.6894C13.2813 3.85583 12.7596 3.26726 12.1512 2.78271H7.71167V4.52172Z" fill="#D80027"/><path d="M8.00053 14.6667C9.56944 14.6667 11.0115 14.1244 12.1502 13.2175H3.85083C4.98958 14.1244 6.43162 14.6667 8.00053 14.6667Z" fill="#D80027"/><path d="M2.31233 11.4784H13.689C14.0167 10.9438 14.2708 10.3594 14.4379 9.73926H1.56348C1.73059 10.3594 1.98469 10.9438 2.31233 11.4784V11.4784Z" fill="#D80027"/><path d="M4.42123 2.37426H5.02873L4.46365 2.78478L4.6795 3.44902L4.11445 3.03851L3.5494 3.44902L3.73584 2.87519C3.23832 3.28961 2.80224 3.77514 2.44289 4.31614H2.63754L2.27784 4.57745C2.2218 4.67093 2.16806 4.7659 2.11655 4.86227L2.28831 5.3909L1.96786 5.15808C1.8882 5.32684 1.81534 5.49941 1.74985 5.67557L1.93908 6.25802H2.63754L2.07246 6.66853L2.28831 7.33278L1.72326 6.92226L1.38479 7.16818C1.35091 7.4405 1.33325 7.71788 1.33325 7.99939H7.9996C7.9996 4.31781 7.9996 3.88378 7.9996 1.33325C6.68268 1.33325 5.45506 1.71525 4.42123 2.37426V2.37426ZM4.6795 7.33278L4.11445 6.92226L3.5494 7.33278L3.76524 6.66853L3.20017 6.25802H3.89862L4.11445 5.59377L4.33027 6.25802H5.02873L4.46365 6.66853L4.6795 7.33278ZM4.46365 4.72666L4.6795 5.3909L4.11445 4.98039L3.5494 5.3909L3.76524 4.72666L3.20017 4.31614H3.89862L4.11445 3.6519L4.33027 4.31614H5.02873L4.46365 4.72666ZM7.07068 7.33278L6.50563 6.92226L5.94058 7.33278L6.15643 6.66853L5.59135 6.25802H6.28981L6.50563 5.59377L6.72146 6.25802H7.41991L6.85484 6.66853L7.07068 7.33278ZM6.85484 4.72666L7.07068 5.3909L6.50563 4.98039L5.94058 5.3909L6.15643 4.72666L5.59135 4.31614H6.28981L6.50563 3.6519L6.72146 4.31614H7.41991L6.85484 4.72666ZM6.85484 2.78478L7.07068 3.44902L6.50563 3.03851L5.94058 3.44902L6.15643 2.78478L5.59135 2.37426H6.28981L6.50563 1.71002L6.72146 2.37426H7.41991L6.85484 2.78478Z" fill="#1A47B8"/></svg>
             USA
             <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown-location" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+        <div id="dropdown-location" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-button-location">
                 <li>
                     <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
@@ -191,7 +191,7 @@ Use this example where you can select a country in which you want to search for 
                 </li>
             </ul>
         </div>
-        <input type="search" id="search-dropdown-location" id="input-group-4" class="px-3 py-2.5 bg-secondary-medium border border-base-medium text-heading text-sm focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" placeholder="Search for city or address" required>
+        <input type="search" id="search-dropdown-location" id="input-group-4" class="px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" placeholder="Search for city or address" required>
         <button type="submit" class="inline-flex items-center  text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-e-base text-sm px-4 py-2.5 focus:outline-none">
         <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
         Search
@@ -211,7 +211,7 @@ Get started with this example if you would like to enable voice search for your 
         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7h.01m3.486 1.513h.01m-6.978 0h.01M6.99 12H7m9 4h2.706a1.957 1.957 0 0 0 1.883-1.325A9 9 0 1 0 3.043 12.89 9.1 9.1 0 0 0 8.2 20.1a8.62 8.62 0 0 0 3.769.9 2.013 2.013 0 0 0 2.03-2v-.857A2.036 2.036 0 0 1 16 16Z"/></svg>
         </div>
-        <input type="text" id="voice-search" class="block w-full ps-9 pe-3 py-2.5 bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Search Mockups, Logos, Design Templates..." required />
+        <input type="text" id="voice-search" class="block w-full ps-9 pe-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Search Mockups, Logos, Design Templates..." required />
         <button type="button" class="absolute inset-y-0 end-0 flex items-center pe-3">
             <svg class="w-4 h-4 text-body hover:text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9v3a5.006 5.006 0 0 1-5 5h-4a5.006 5.006 0 0 1-5-5V9m7 9v3m-3 0h6M11 3h2a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z"/></svg>
         </button>
@@ -232,11 +232,11 @@ Get started with this example if you would like to enable voice search for your 
 <form class="max-w-2xl mx-auto">
     <div class="flex shadow-xs rounded-base -space-x-0.5">
         <label for="search-dropdown-advanced" class="block mb-2.5 text-sm font-medium text-heading sr-only ">Your Email</label>
-        <button id="dropdown-button-links" data-dropdown-toggle="dropdown-links" type="button" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-base-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-s-base text-sm px-4 py-2.5 focus:outline-none">
+        <button id="dropdown-button-links" data-dropdown-toggle="dropdown-links" type="button" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-s-base text-sm px-4 py-2.5 focus:outline-none">
             http + https
             <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown-links" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-36">
+        <div id="dropdown-links" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-36">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-button-links">
                 <li>
                     <a href="#" class="block p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">http</a>
@@ -249,12 +249,12 @@ Get started with this example if you would like to enable voice search for your 
                 </li>
             </ul>
         </div>
-        <input type="search" id="search-dropdown-advanced" id="input-group-6" class="px-3 py-2.5 bg-secondary-medium border border-base-medium text-heading text-sm focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" placeholder="Search for domain or URL" required>
-        <button id="dropdown-button-links" data-dropdown-toggle="dropdown-domains" type="button" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-base-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none">
+        <input type="search" id="search-dropdown-advanced" id="input-group-6" class="px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" placeholder="Search for domain or URL" required>
+        <button id="dropdown-button-links" data-dropdown-toggle="dropdown-domains" type="button" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none">
             Subdomain
             <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown-domains" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+        <div id="dropdown-domains" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-button-links">
                 <li>
                     <a href="#" class="block p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Subdomain</a>

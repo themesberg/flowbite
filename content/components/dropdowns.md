@@ -29,7 +29,7 @@ The `dropdownId` is the id of the dropdown menu element.
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdown" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefaultButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -60,7 +60,7 @@ There's a 300ms default delay when showing or hiding the dropdown due to UI/UX r
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownHover" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownHover" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownHoverButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -89,7 +89,7 @@ You can use the `data-dropdown-delay={milliseconds}` data attribute to set they 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDelay" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownDelay" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDelayButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -118,7 +118,7 @@ You can use the `divide-y divide-gray-100` classes to add separate elements insi
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDivider" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base divide-y divide-base-medium shadow-lg w-44">
+<div id="dropdownDivider" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base divide-y divide-base-medium shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDividerButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -146,7 +146,7 @@ Use this example to show extra information outside of the list of menu items ins
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
 </button>
 <!-- Dropdown menu -->
-<div id="dropdownInformation" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-72">
+<div id="dropdownInformation" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-72">
     <div class="p-2">
       <div class="flex items-center px-2.5 p-2 space-x-1.5 text-sm bg-secondary-strong rounded">
         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Rounded avatar">
@@ -199,7 +199,7 @@ Use this example to show extra information outside of the list of menu items ins
           <span class="ms-3 text-sm font-medium text-heading sr-only">Toggle me</span>
         </label>
       </li>
-      <li class="border-t border-base-medium pt-1.5">
+      <li class="border-t border-default-medium pt-1.5">
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
           <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10.051 8.102-3.778.322-1.994 1.994a.94.94 0 0 0 .533 1.6l2.698.316m8.39 1.617-.322 3.78-1.994 1.994a.94.94 0 0 1-1.595-.533l-.4-2.652m8.166-11.174a1.366 1.366 0 0 0-1.12-1.12c-1.616-.279-4.906-.623-6.38.853-1.671 1.672-5.211 8.015-6.31 10.023a.932.932 0 0 0 .162 1.111l.828.835.833.832a.932.932 0 0 0 1.111.163c2.008-1.102 8.35-4.642 10.021-6.312 1.475-1.478 1.133-4.77.855-6.385Zm-2.961 3.722a1.88 1.88 0 1 1-3.76 0 1.88 1.88 0 0 1 3.76 0Z"/></svg>
           Upgrade to PRO
@@ -226,7 +226,7 @@ Use this example to enable multi-level dropdown menus by adding stacked elements
 </button>
 
 <!-- Dropdown menu -->
-<div id="multi-dropdown" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="multi-dropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="multiLevelDropdownButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -236,7 +236,7 @@ Use this example to enable multi-level dropdown menus by adding stacked elements
           Dropdown
           <svg class="h-4 w-4 ms-auto rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
         </button>
-          <div id="doubleDropdown" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+          <div id="doubleDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="doubleDropdownButton">
               <li>
                 <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Overview</a>
@@ -273,23 +273,23 @@ Add multiple checkbox elements inside your dropdown menu to enable more advanced
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
 </button>
 <!-- Dropdown menu -->
-<div id="dropdownDefaultCheckbox" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownDefaultCheckbox" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-4 text-sm text-body font-medium space-y-4" aria-labelledby="dropdownCheckboxButton">
       <li>
         <div class="flex items-center">
-          <input id="dropdown-checkbox" type="checkbox" value="" class="w-4 h-4 border border-base-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+          <input id="dropdown-checkbox" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
           <label for="dropdown-checkbox" class="ms-2 text-sm font-medium text-heading">Default checkbox</label>
         </div>
       </li>
       <li>
         <div class="flex items-center">
-          <input checked id="dropdown-checkbox-2" type="checkbox" value="" class="w-4 h-4 border border-base-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+          <input checked id="dropdown-checkbox-2" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
           <label for="dropdown-checkbox-2" class="ms-2 text-sm font-medium text-heading">Checked state</label>
         </div>
       </li>
       <li>
         <div class="flex items-center">
-          <input id="dropdown-checkbox-3" type="checkbox" value="" class="w-4 h-4 border border-base-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+          <input id="dropdown-checkbox-3" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
           <label for="dropdown-checkbox-3" class="ms-2 text-sm font-medium text-heading">Default checkbox</label>
         </div>
       </li>
@@ -308,23 +308,23 @@ Use this example to update the background color of a menu item when using a list
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownBgHover" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownBgHover" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownBgHoverButton">
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
-          <input id="dropdown-checkbox-4" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+          <input id="dropdown-checkbox-4" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           <label for="dropdown-checkbox-4" class="ms-2 text-sm font-medium text-heading">Default checkbox</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
-          <input checked id="dropdown-checkbox-5" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+          <input checked id="dropdown-checkbox-5" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           <label for="dropdown-checkbox-5" class="ms-2 text-sm font-medium text-heading">Checked state</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
-          <input id="dropdown-checkbox-6" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+          <input id="dropdown-checkbox-6" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           <label for="dropdown-checkbox-6" class="ms-2 text-sm font-medium text-heading">Default checkbox</label>
         </div>
       </li>
@@ -342,12 +342,12 @@ Add an extra helper text to each checkbox element inside the dropdown menu list 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
 </button>
 <!-- Dropdown menu -->
-<div id="dropdownHelper" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-54">
+<div id="dropdownHelper" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-54">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownHelperButton">
       <li>
         <div class="inline-flex items-start w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
           <div class="flex items-center h-5">
-            <input id="dropdown-checkbox-7" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+            <input id="dropdown-checkbox-7" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           </div>
           <div class="ms-2 text-sm">
               <label for="dropdown-checkbox-7" class="font-medium text-heading">
@@ -360,7 +360,7 @@ Add an extra helper text to each checkbox element inside the dropdown menu list 
       <li>
         <div class="inline-flex items-start w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
           <div class="flex items-center h-5">
-            <input id="dropdown-checkbox-8" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+            <input id="dropdown-checkbox-8" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           </div>
           <div class="ms-2 text-sm">
               <label for="helper-checkbox-2" class="font-medium text-heading">
@@ -373,7 +373,7 @@ Add an extra helper text to each checkbox element inside the dropdown menu list 
       <li>
         <div class="inline-flex items-start w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
           <div class="flex items-center h-5">
-            <input id="dropdown-checkbox-9" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+            <input id="dropdown-checkbox-9" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           </div>
           <div class="ms-2 text-sm">
               <label for="helper-checkbox-3" class="font-medium text-heading">
@@ -524,7 +524,7 @@ Show a list of toggle switch elements inside the dropdown menu to enable a yes o
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownToggle" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-72">
+<div id="dropdownToggle" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-72">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownToggleButton">
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -569,7 +569,7 @@ This example can be used when you want to show a long list of items that won't a
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownUsers" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-54">
+<div id="dropdownUsers" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-54">
   <ul class="h-48 p-2 text-sm text-body font-medium overflow-y-auto" aria-labelledby="dropdownUsersButton">
     <li>
       <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -620,7 +620,7 @@ This example can be used when you want to show a long list of items that won't a
       </a>
     </li>
   </ul>
-  <div class="bg-primary-medium border-t border-base-medium p-2 rounded-b-base">
+  <div class="bg-primary-medium border-t border-default-medium p-2 rounded-b-base">
       <button type="button" class="inline-flex items-center w-full justify-center text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none">
         <svg class="w-3.5 h-3.5 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12h4m-2 2v-4M4 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
         Add new user
@@ -640,7 +640,7 @@ This example can be used when you want to show a long list of items that won't a
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownAdvanced" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-54">
+<div id="dropdownAdvanced" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-54">
   <ul class="h-48 p-2 text-sm text-body font-medium overflow-y-auto" aria-labelledby="dropdownAdvancedButton">
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
       <label for="dropdown-user-1" class="w-full flex items-center justify-between">
@@ -648,7 +648,7 @@ This example can be used when you want to show a long list of items that won't a
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese image">
           Jese Leos
         </div>
-        <input id="dropdown-user-1" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-1" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>    
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -657,7 +657,7 @@ This example can be used when you want to show a long list of items that won't a
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-2.jpg" alt="Robert image">
           Robert Gough
         </div>
-        <input id="dropdown-user-2" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-2" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -666,7 +666,7 @@ This example can be used when you want to show a long list of items that won't a
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image">
           Bonnie Green
         </div>
-        <input id="dropdown-user-3" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-3" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -675,7 +675,7 @@ This example can be used when you want to show a long list of items that won't a
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-4.jpg" alt="Leslie image">
           Leslie Livingston
         </div>
-        <input id="dropdown-user-4" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-4" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -684,7 +684,7 @@ This example can be used when you want to show a long list of items that won't a
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Michael image">
           Michael Gough
         </div>
-        <input id="dropdown-user-5" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-5" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -693,7 +693,7 @@ This example can be used when you want to show a long list of items that won't a
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-2.jpg" alt="Joseph image">
           Joseph Mcfall
         </div>
-        <input id="dropdown-user-6" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-6" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -702,7 +702,7 @@ This example can be used when you want to show a long list of items that won't a
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-4.jpg" alt="Roberta image">
           Roberta Casas
         </div>
-        <input id="dropdown-user-7" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-7" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -711,11 +711,11 @@ This example can be used when you want to show a long list of items that won't a
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Neil image">
           Neil Sims
         </div>
-        <input id="dropdown-user-8" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-8" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>
   </ul>
-  <div class="bg-primary-medium border-t border-base-medium p-2 rounded-b-base">
+  <div class="bg-primary-medium border-t border-default-medium p-2 rounded-b-base">
       <button type="button" class="w-full inline-flex items-center justify-center text-white bg-danger box-border border border-transparent hover:bg-danger-strong focus:ring-4 focus:ring-danger-medium shadow-xs font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none">
         <svg class="w-3.5 h-3.5 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/></svg>
         Delete user
@@ -735,10 +735,10 @@ Use this example if you want to add a search bar inside the dropdown menu to be 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownSearch" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-54">
-  <div class="bg-primary-medium border-b border-base-medium p-2 rounded-t-base">
+<div id="dropdownSearch" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-54">
+  <div class="bg-primary-medium border-b border-default-medium p-2 rounded-t-base">
     <label for="search" class="sr-only">Search</label>
-    <input type="text" id="search" class="bg-secondary-strong border border-base-strong text-heading text-sm rounded focus:ring-brand focus:border-brand block w-full px-2.5 py-2 shadow-xs placeholder:text-body" placeholder="Search for users" required />
+    <input type="text" id="search" class="bg-secondary-strong border border-default-strong text-heading text-sm rounded focus:ring-brand focus:border-brand block w-full px-2.5 py-2 shadow-xs placeholder:text-body" placeholder="Search for users" required />
   </div>
   <ul class="h-48 p-2 text-sm text-body font-medium overflow-y-auto" aria-labelledby="dropdownSearchButton">
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -747,7 +747,7 @@ Use this example if you want to add a search bar inside the dropdown menu to be 
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese image">
           Jese Leos
         </div>
-        <input id="dropdown-user-9" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-9" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>    
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -756,7 +756,7 @@ Use this example if you want to add a search bar inside the dropdown menu to be 
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-2.jpg" alt="Robert image">
           Robert Gough
         </div>
-        <input id="dropdown-user-10" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-10" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -765,7 +765,7 @@ Use this example if you want to add a search bar inside the dropdown menu to be 
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image">
           Bonnie Green
         </div>
-        <input id="dropdown-user-11" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-11" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -774,7 +774,7 @@ Use this example if you want to add a search bar inside the dropdown menu to be 
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-4.jpg" alt="Leslie image">
           Leslie Livingston
         </div>
-        <input id="dropdown-user-12" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-12" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -783,7 +783,7 @@ Use this example if you want to add a search bar inside the dropdown menu to be 
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Michael image">
           Michael Gough
         </div>
-        <input id="dropdown-user-13" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-13" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -792,7 +792,7 @@ Use this example if you want to add a search bar inside the dropdown menu to be 
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-2.jpg" alt="Joseph image">
           Joseph Mcfall
         </div>
-        <input id="dropdown-user-14" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-14" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -801,7 +801,7 @@ Use this example if you want to add a search bar inside the dropdown menu to be 
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-4.jpg" alt="Roberta image">
           Roberta Casas
         </div>
-        <input id="dropdown-user-15" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-15" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -810,11 +810,11 @@ Use this example if you want to add a search bar inside the dropdown menu to be 
           <img class="w-5 h-5 me-2 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Neil image">
           Neil Sims
         </div>
-        <input id="dropdown-user-16" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
+        <input id="dropdown-user-16" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
       </label>
     </li>
   </ul>
-  <div class="bg-primary-medium border-t border-base-medium p-2 rounded-b-base">
+  <div class="bg-primary-medium border-t border-default-medium p-2 rounded-b-base">
       <button type="button" class="w-full inline-flex items-center justify-center text-white bg-danger box-border border border-transparent hover:bg-danger-strong focus:ring-4 focus:ring-danger-medium shadow-xs font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none">
         <svg class="w-3.5 h-3.5 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/></svg>
         Delete user
@@ -833,7 +833,7 @@ Use the menu icon trigger element on components such as cards as an alternative 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDots" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownDots" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -845,7 +845,7 @@ Use the menu icon trigger element on components such as cards as an alternative 
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Earnings</a>
       </li>
     </ul>
-    <div class="p-2 text-sm text-body font-medium border-t border-base">
+    <div class="p-2 text-sm text-body font-medium border-t border-default">
       <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Separated link</a>
     </div>
 </div>
@@ -855,7 +855,7 @@ Use the menu icon trigger element on components such as cards as an alternative 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDotsHorizontal" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44 dark:divide-gray-600">
+<div id="dropdownDotsHorizontal" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44 dark:divide-gray-600">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconHorizontalButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -867,7 +867,7 @@ Use the menu icon trigger element on components such as cards as an alternative 
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Earnings</a>
       </li>
     </ul>
-    <div class="p-2 text-sm text-body font-medium border-t border-base">
+    <div class="p-2 text-sm text-body font-medium border-t border-default">
       <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Separated link</a>
     </div>
 </div>
@@ -972,7 +972,7 @@ This example can be used to show a list of menu items and options when a user is
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownAvatar" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-72">
+<div id="dropdownAvatar" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-72">
     <div class="p-2">
       <div class="flex items-center px-2.5 p-2 space-x-1.5 text-sm bg-secondary-strong rounded">
         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Rounded avatar">
@@ -1025,7 +1025,7 @@ This example can be used to show a list of menu items and options when a user is
           <span class="ms-3 text-sm font-medium text-heading sr-only">Toggle me</span>
         </label>
       </li>
-      <li class="border-t border-base-medium pt-1.5">
+      <li class="border-t border-default-medium pt-1.5">
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
           <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10.051 8.102-3.778.322-1.994 1.994a.94.94 0 0 0 .533 1.6l2.698.316m8.39 1.617-.322 3.78-1.994 1.994a.94.94 0 0 1-1.595-.533l-.4-2.652m8.166-11.174a1.366 1.366 0 0 0-1.12-1.12c-1.616-.279-4.906-.623-6.38.853-1.671 1.672-5.211 8.015-6.31 10.023a.932.932 0 0 0 .162 1.111l.828.835.833.832a.932.932 0 0 0 1.111.163c2.008-1.102 8.35-4.642 10.021-6.312 1.475-1.478 1.133-4.77.855-6.385Zm-2.961 3.722a1.88 1.88 0 1 1-3.76 0 1.88 1.88 0 0 1 3.76 0Z"/></svg>
           Upgrade to PRO
@@ -1054,7 +1054,7 @@ Use this example to also show the name or email of the user next to the avatar f
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownAvatarName" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-72">
+<div id="dropdownAvatarName" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-72">
     <div class="p-2">
       <div class="flex items-center px-2.5 p-2 space-x-1.5 text-sm bg-secondary-strong rounded">
         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Rounded avatar">
@@ -1107,7 +1107,7 @@ Use this example to also show the name or email of the user next to the avatar f
           <span class="ms-3 text-sm font-medium text-heading sr-only">Toggle me</span>
         </label>
       </li>
-      <li class="border-t border-base-medium pt-1.5">
+      <li class="border-t border-default-medium pt-1.5">
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
           <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10.051 8.102-3.778.322-1.994 1.994a.94.94 0 0 0 .533 1.6l2.698.316m8.39 1.617-.322 3.78-1.994 1.994a.94.94 0 0 1-1.595-.533l-.4-2.652m8.166-11.174a1.366 1.366 0 0 0-1.12-1.12c-1.616-.279-4.906-.623-6.38.853-1.671 1.672-5.211 8.015-6.31 10.023a.932.932 0 0 0 .162 1.111l.828.835.833.832a.932.932 0 0 0 1.111.163c2.008-1.102 8.35-4.642 10.021-6.312 1.475-1.478 1.133-4.77.855-6.385Zm-2.961 3.722a1.88 1.88 0 1 1-3.76 0 1.88 1.88 0 0 1 3.76 0Z"/></svg>
           Upgrade to PRO
@@ -1129,7 +1129,7 @@ You can also use the dropdown element inside a navigation bar and add a second l
 
 {{< example id="dropdown-navbar-example" bodyClass="!p-0" github="components/dropdowns.md" show_dark=true iframeHeight="380" >}}
 
-<nav class="bg-primary border-base">
+<nav class="bg-primary border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2.5">
     <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
@@ -1140,7 +1140,7 @@ You can also use the dropdown element inside a navigation bar and add a second l
       <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-      <ul class="flex flex-col font-medium p-4 mt-4 border border-base rounded-base bg-secondary-soft md:flex-row md:mt-0 md:text-sm  md:border-0 md:bg-primary md:space-x-8 md:rtl:space-x-reverse space-y-1">
+      <ul class="flex flex-col font-medium p-4 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:mt-0 md:text-sm  md:border-0 md:bg-primary md:space-x-8 md:rtl:space-x-reverse space-y-1">
         <li>
           <a href="#" class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0 md:text-fg-brand md:dark:bg-transparent" aria-current="page">Home</a>
         </li>
@@ -1150,7 +1150,7 @@ You can also use the dropdown element inside a navigation bar and add a second l
               <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
             </button>
             <!-- Dropdown menu -->
-            <div id="dropdownNavbar" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+            <div id="dropdownNavbar" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
                 <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownLargeButton">
                   <li>
                     <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1189,21 +1189,21 @@ Use this example to show a date range picker inside a dropdown menu. Use the `da
   <svg class="w-5 h-5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
 </button>
 
-<div id="dateRangeDropdown" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-sm w-96">
+<div id="dateRangeDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-sm w-96">
   <div class="p-3" aria-labelledby="dateRangeButton">
     <div id="date-range-picker" date-rangepicker class="flex items-center">
       <div class="relative">
         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/></svg>
         </div>
-        <input id="datepicker-range-start" name="start" type="text" class="block w-full ps-9 pe-3 py-2.5 bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Date start">
+        <input id="datepicker-range-start" name="start" type="text" class="block w-full ps-9 pe-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Date start">
       </div>
       <span class="mx-4 text-body">to</span>
       <div class="relative">
         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/></svg>
         </div>
-        <input id="datepicker-range-end" name="end" type="text" class="block w-full ps-9 pe-3 py-2.5 bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Date end">
+        <input id="datepicker-range-end" name="end" type="text" class="block w-full ps-9 pe-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Date end">
       </div>
     </div>
   </div>
@@ -1221,7 +1221,7 @@ The dropdown menus work with buttons of all sizes including smaller or larger on
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownSmall" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownSmall" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownSmallButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1244,7 +1244,7 @@ The dropdown menus work with buttons of all sizes including smaller or larger on
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownLarge" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownLarge" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownLargeButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1273,7 +1273,7 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownTop" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownTop" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownTopButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1296,7 +1296,7 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownRight" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownRight" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownRightButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1319,7 +1319,7 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownBottom" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownBottom" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownBottomButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1342,7 +1342,7 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownLeft" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownLeft" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownLeftButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1371,7 +1371,7 @@ You can combine the placement options by using the `top|right|bottom|left-{start
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownLeftEnd" class="z-20 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownLeftEnd" class="z-20 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownLeftEndButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1394,7 +1394,7 @@ You can combine the placement options by using the `top|right|bottom|left-{start
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownRightEnd" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownRightEnd" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownRightEndButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1427,7 +1427,7 @@ Use the `data-dropdown-offset-distance={pixels}` data attribute to set the numbe
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDistance" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownDistance" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefault">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1456,7 +1456,7 @@ The `data-dropdown-offset-skidding={pixels}` data attribute can be used to move 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownSkidding" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownSkidding" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefault">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1847,7 +1847,7 @@ Use the following HTML code for the JavaScript example above.
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownMenu" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
+<div id="dropdownMenu" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>

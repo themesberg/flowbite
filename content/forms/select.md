@@ -20,7 +20,7 @@ Get started with the default example of a select input component to get a single
 {{< example id="default-select-example" github="forms/select.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
   <label for="countries" class="block mb-2.5 text-sm font-medium text-heading">Select an option</label>
-  <select id="countries" class="block w-full px-3 py-2.5 bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
+  <select id="countries" class="block w-full px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
     <option selected>Choose a country</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>
@@ -37,7 +37,7 @@ Apply the `multiple` attribute to the select component to allow users to select 
 {{< example id="select-multiple-example" github="forms/select.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
   <label for="countries_multiple" class="block mb-2.5 text-sm font-medium text-heading">Select an option</label>
-  <select multiple id="countries_multiple" class="block w-full p-2.5 bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
+  <select multiple id="countries_multiple" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
     <option selected>Choose countries</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>
@@ -54,7 +54,7 @@ Use the size attribute for the select component to specify the number of visible
 {{< example id="select-size-example" github="forms/select.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
   <label for="years" class="block mb-2.5 text-sm font-medium text-heading">Select an option</label>
-  <select id="years" size="5" class="block w-full p-2.5 bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
+  <select id="years" size="5" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
     <option>2016</option>
     <option>2017</option>
     <option>2018</option>
@@ -73,7 +73,7 @@ Apply the `disable` state to the select component to disallow the selection of n
 {{< example id="select-disabled-example" github="forms/select.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
   <label for="countries_disabled" class="block mb-2.5 text-sm font-medium text-heading">Select an option</label>
-  <select disabled id="countries_disabled" class="block w-full p-2.5 bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs text-fg-disabled">
+  <select disabled id="countries_disabled" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs text-fg-disabled">
     <option selected>Choose a country</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>
@@ -90,7 +90,7 @@ Use the underline style for the select component as an alternative appearance.
 {{< example id="select-underline-example" github="forms/select.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
   <label for="underline_select" class="sr-only">Underline select</label>
-  <select id="underline_select" class="block py-2.5 ps-0 w-full text-sm text-body bg-transparent border-0 border-b-2 border-base-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer">
+  <select id="underline_select" class="block py-2.5 ps-0 w-full text-sm text-body bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer">
       <option selected>Choose a country</option>
       <option value="US">United States</option>
       <option value="CA">Canada</option>
@@ -111,12 +111,12 @@ Use this example if you want to create a multi-level dropdown and select compone
 {{< example id="select-dropdown-example" github="forms/select.md" show_dark=true iframeHeight="340" >}}
 <form class="max-w-sm mx-auto">
   <div class="flex">
-      <button id="dropdown-states-button" data-dropdown-toggle="dropdown-states" type="button" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-base-medium hover:bg-tertiary-medium hover:text-brand focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-s-base text-sm px-4 py-2.5 focus:outline-none">
+      <button id="dropdown-states-button" data-dropdown-toggle="dropdown-states" type="button" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-brand focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-s-base text-sm px-4 py-2.5 focus:outline-none">
             <svg class="w-4 h-4 me-1.5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.00013 14.6666C11.6821 14.6666 14.667 11.6818 14.667 7.99992C14.667 4.31802 11.6821 1.33325 8.00013 1.33325C4.31811 1.33325 1.33325 4.31802 1.33325 7.99992C1.33325 11.6818 4.31811 14.6666 8.00013 14.6666Z" fill="white"/><path d="M7.71167 7.99975H14.6678C14.6678 7.39807 14.5876 6.8152 14.4382 6.26074H7.71167V7.99975Z" fill="#D80027"/><path d="M7.71167 4.52172H13.6894C13.2813 3.85583 12.7596 3.26726 12.1512 2.78271H7.71167V4.52172Z" fill="#D80027"/><path d="M8.00053 14.6667C9.56944 14.6667 11.0115 14.1244 12.1502 13.2175H3.85083C4.98958 14.1244 6.43162 14.6667 8.00053 14.6667Z" fill="#D80027"/><path d="M2.31233 11.4784H13.689C14.0167 10.9438 14.2708 10.3594 14.4379 9.73926H1.56348C1.73059 10.3594 1.98469 10.9438 2.31233 11.4784V11.4784Z" fill="#D80027"/><path d="M4.42123 2.37426H5.02873L4.46365 2.78478L4.6795 3.44902L4.11445 3.03851L3.5494 3.44902L3.73584 2.87519C3.23832 3.28961 2.80224 3.77514 2.44289 4.31614H2.63754L2.27784 4.57745C2.2218 4.67093 2.16806 4.7659 2.11655 4.86227L2.28831 5.3909L1.96786 5.15808C1.8882 5.32684 1.81534 5.49941 1.74985 5.67557L1.93908 6.25802H2.63754L2.07246 6.66853L2.28831 7.33278L1.72326 6.92226L1.38479 7.16818C1.35091 7.4405 1.33325 7.71788 1.33325 7.99939H7.9996C7.9996 4.31781 7.9996 3.88378 7.9996 1.33325C6.68268 1.33325 5.45506 1.71525 4.42123 2.37426V2.37426ZM4.6795 7.33278L4.11445 6.92226L3.5494 7.33278L3.76524 6.66853L3.20017 6.25802H3.89862L4.11445 5.59377L4.33027 6.25802H5.02873L4.46365 6.66853L4.6795 7.33278ZM4.46365 4.72666L4.6795 5.3909L4.11445 4.98039L3.5494 5.3909L3.76524 4.72666L3.20017 4.31614H3.89862L4.11445 3.6519L4.33027 4.31614H5.02873L4.46365 4.72666ZM7.07068 7.33278L6.50563 6.92226L5.94058 7.33278L6.15643 6.66853L5.59135 6.25802H6.28981L6.50563 5.59377L6.72146 6.25802H7.41991L6.85484 6.66853L7.07068 7.33278ZM6.85484 4.72666L7.07068 5.3909L6.50563 4.98039L5.94058 5.3909L6.15643 4.72666L5.59135 4.31614H6.28981L6.50563 3.6519L6.72146 4.31614H7.41991L6.85484 4.72666ZM6.85484 2.78478L7.07068 3.44902L6.50563 3.03851L5.94058 3.44902L6.15643 2.78478L5.59135 2.37426H6.28981L6.50563 1.71002L6.72146 2.37426H7.41991L6.85484 2.78478Z" fill="#1A47B8"/></svg>
             USA
             <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown-states" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-54">
+        <div id="dropdown-states" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-54">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-states-button">
                 <li>
                     <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
@@ -203,7 +203,7 @@ Use this example if you want to create a multi-level dropdown and select compone
             </ul>
         </div>
       <label for="states" class="sr-only">Choose a state</label>
-      <select id="states" class="block w-full px-3 py-2.5 bg-secondary-medium border border-s-0 border-base-medium text-heading text-sm rounded-e-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
+      <select id="states" class="block w-full px-3 py-2.5 bg-secondary-medium border border-s-0 border-default-medium text-heading text-sm rounded-e-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
           <option selected>Choose a state</option>
           <option value="CA">California</option>
           <option value="TX">Texas</option>
@@ -224,7 +224,7 @@ Get started with the small, default, and large sizes for the select component fr
 {{< example id="select-sizes-example" github="forms/select.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
   <label for="small" class="block mb-2.5 text-sm font-medium text-heading">Small select</label>
-  <select id="small" class="block w-full px-3 py-2.5 bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body mb-4">
+  <select id="small" class="block w-full px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body mb-4">
     <option selected>Choose a country</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>
@@ -232,7 +232,7 @@ Get started with the small, default, and large sizes for the select component fr
     <option value="DE">Germany</option>
   </select>
   <label for="default" class="block mb-2.5 text-sm font-medium text-heading">Default select</label>
-  <select id="default" class="block w-full px-3 py-2.5 bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body mb-4">
+  <select id="default" class="block w-full px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body mb-4">
     <option selected>Choose a country</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>
@@ -240,7 +240,7 @@ Get started with the small, default, and large sizes for the select component fr
     <option value="DE">Germany</option>
   </select>
   <label for="large" class="block mb-2.5 text-sm font-medium text-heading">Large select</label>
-  <select id="large" class="block w-full px-3 py-2.5 bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3.5 py-3 shadow-xs placeholder:text-body mb-4">
+  <select id="large" class="block w-full px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3.5 py-3 shadow-xs placeholder:text-body mb-4">
     <option selected>Choose a country</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>
@@ -248,7 +248,7 @@ Get started with the small, default, and large sizes for the select component fr
     <option value="DE">Germany</option>
   </select>
   <label for="extra-large" class="block mb-2.5 text-sm font-medium text-heading">Extra Large select</label>
-  <select id="extra-large" class="block w-full px-3 py-2.5 bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-4 py-3.5 shadow-xs placeholder:text-body mb-4">
+  <select id="extra-large" class="block w-full px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-4 py-3.5 shadow-xs placeholder:text-body mb-4">
     <option selected>Choose a country</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>

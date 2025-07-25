@@ -19,10 +19,10 @@ Here's an example of a list group that you can use right away.
 
 {{< example id="default-list-group-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
-<ul class="w-48 text-sm font-medium text-heading bg-primary-soft border border-base rounded-base">
-    <li class="w-full px-4 py-2 border-b border-base rounded-t-lg">Profile</li>
-    <li class="w-full px-4 py-2 border-b border-base">Settings</li>
-    <li class="w-full px-4 py-2 border-b border-base">Messages</li>
+<ul class="w-48 text-sm font-medium text-heading bg-primary-soft border border-default rounded-base">
+    <li class="w-full px-4 py-2 border-b border-default rounded-t-lg">Profile</li>
+    <li class="w-full px-4 py-2 border-b border-default">Settings</li>
+    <li class="w-full px-4 py-2 border-b border-default">Messages</li>
     <li class="w-full px-4 py-2 rounded-b-lg">Download</li>
 </ul>
 {{< /example >}}
@@ -33,14 +33,14 @@ You can also display a series of links inside the list group element.
 
 {{< example id="list-group-links-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
-<div class="w-48 text-sm font-medium text-heading bg-primary-soft border border-base rounded-base">
-    <a href="#" aria-current="true" class="block w-full px-4 py-2 text-fg-brand bg-brand-softer border-b border-base rounded-t-base cursor-pointer">
+<div class="w-48 text-sm font-medium text-heading bg-primary-soft border border-default rounded-base">
+    <a href="#" aria-current="true" class="block w-full px-4 py-2 text-fg-brand bg-brand-softer border-b border-default rounded-t-base cursor-pointer">
         Profile
     </a>
-    <a href="#" class="block w-full px-4 py-2 border-b border-base cursor-pointer hover:bg-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
+    <a href="#" class="block w-full px-4 py-2 border-b border-default cursor-pointer hover:bg-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
         Settings
     </a>
-    <a href="#" class="block w-full px-4 py-2 border-b border-base cursor-pointer hover:bg-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
+    <a href="#" class="block w-full px-4 py-2 border-b border-default cursor-pointer hover:bg-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
         Messages
     </a>
     <a href="#" class="block w-full px-4 py-2 rounded-b-base cursor-pointer hover:bg-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
@@ -55,14 +55,14 @@ It is also possible to display a list of button element inside the list group co
 
 {{< example id="list-group-buttons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
-<div class="w-48 text-sm font-medium text-heading bg-primary-soft border border-base rounded-base">
-    <button aria-current="true" type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right text-fg-brand bg-brand-softer border-b border-base rounded-t-base cursor-pointer focus:outline-none">
+<div class="w-48 text-sm font-medium text-heading bg-primary-soft border border-default rounded-base">
+    <button aria-current="true" type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right text-fg-brand bg-brand-softer border-b border-default rounded-t-base cursor-pointer focus:outline-none">
         Profile
     </button>
-    <button type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right border-b border-base cursor-pointer hover:bg-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
+    <button type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right border-b border-default cursor-pointer hover:bg-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
         Settings
     </button>
-    <button type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right border-b border-base cursor-pointer hover:bg-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
+    <button type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right border-b border-default cursor-pointer hover:bg-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
         Messages
     </button>
     <button disabled type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right bg-tertiary rounded-b-base cursor-not-allowed">
@@ -77,16 +77,16 @@ Use the following example to create a list of buttons as a menu together with [S
 
 {{< example id="list-group-icons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
-<div class="w-48 text-sm font-medium text-heading bg-primary-soft border border-base rounded-base">
-    <a href="#" aria-current="true" class="flex items-center w-full px-4 py-2 text-fg-brand bg-brand-softer border-b border-base rounded-t-base cursor-pointer">
+<div class="w-48 text-sm font-medium text-heading bg-primary-soft border border-default rounded-base">
+    <a href="#" aria-current="true" class="flex items-center w-full px-4 py-2 text-fg-brand bg-brand-softer border-b border-default rounded-t-base cursor-pointer">
         <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
         Profile
     </a>
-    <a href="#" class="flex items-center w-full px-4 py-2 border-b border-base cursor-pointer hover:bg-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
+    <a href="#" class="flex items-center w-full px-4 py-2 border-b border-default cursor-pointer hover:bg-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
         <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M20 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6h-2m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4"/></svg>
         Settings
     </a>
-    <a href="#" class="flex items-center w-full px-4 py-2 border-b border-base cursor-pointer hover:bg-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
+    <a href="#" class="flex items-center w-full px-4 py-2 border-b border-default cursor-pointer hover:bg-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
         <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 13h3.439a.991.991 0 0 1 .908.6 3.978 3.978 0 0 0 7.306 0 .99.99 0 0 1 .908-.6H20M4 13v6a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-6M4 13l2-9h12l2 9M9 7h6m-7 3h8"/></svg>
         Messages
     </a>
@@ -104,7 +104,7 @@ Use the following example to create a list of buttons as a menu together with [S
 
 {{< example id="list-group-icons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
-<div class="w-72 bg-primary-soft border border-base rounded-base shadow-xs">
+<div class="w-72 bg-primary-soft border border-default rounded-base shadow-xs">
     <ul role="list" class="space-y-4 p-6">
         <li class="flex items-center">
             <svg class="w-5 h-5 shrink-0 text-fg-brand me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
@@ -144,7 +144,7 @@ Use the following example to create a list of buttons as a menu together with [S
 
 {{< example id="list-group-icons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
-<div class="w-96 bg-primary-soft border border-base rounded-base shadow-xs">
+<div class="w-96 bg-primary-soft border border-default rounded-base shadow-xs">
     <ul role="list" class="space-y-3 p-6 divide-y divide-base">
         <li class="flex items-center justify-between pb-3">
             <div class="flex items-center text-body">
@@ -226,7 +226,7 @@ Use the following example to create a list of buttons as a menu together with [S
 
 {{< example id="list-group-icons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
-<div class="w-full max-w-sm p-6 bg-primary-soft border border-base rounded-base shadow-xs">
+<div class="w-full max-w-sm p-6 bg-primary-soft border border-default rounded-base shadow-xs">
     <h5 class="text-xl font-semibold text-heading mb-6">Latest users</h5>
     <div class="flow-root">
         <ul role="list" class="divide-y divide-base">
@@ -244,7 +244,7 @@ Use the following example to create a list of buttons as a menu together with [S
                         </p>
                     </div>
                     <div class="inline-flex items-center space-x-1.5">
-                        <button type="button" class="text-body bg-secondary-medium box-border border border-base-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none shrink-0">Follow</button>
+                        <button type="button" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none shrink-0">Follow</button>
                         <button data-tooltip-target="tooltip-remove-1" type="button" class="inline-flex items-center justify-center text-fg-danger bg-transparent box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base h-9 w-9 focus:outline-none">
                             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/></svg>
                         </button>
@@ -269,7 +269,7 @@ Use the following example to create a list of buttons as a menu together with [S
                         </p>
                     </div>
                     <div class="inline-flex items-center space-x-1.5">
-                        <button type="button" class="text-body bg-secondary-medium box-border border border-base-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none shrink-0">Follow</button>
+                        <button type="button" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none shrink-0">Follow</button>
                         <button data-tooltip-target="tooltip-remove-2" type="button" class="inline-flex items-center justify-center text-fg-danger bg-transparent box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base h-9 w-9 focus:outline-none">
                             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/></svg>
                         </button>
@@ -294,7 +294,7 @@ Use the following example to create a list of buttons as a menu together with [S
                         </p>
                     </div>
                     <div class="inline-flex items-center space-x-1.5">
-                        <button type="button" class="text-body bg-secondary-medium box-border border border-base-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none shrink-0">Follow</button>
+                        <button type="button" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none shrink-0">Follow</button>
                         <button data-tooltip-target="tooltip-remove-3" type="button" class="inline-flex items-center justify-center text-fg-danger bg-transparent box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base h-9 w-9 focus:outline-none">
                             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/></svg>
                         </button>
@@ -319,7 +319,7 @@ Use the following example to create a list of buttons as a menu together with [S
                         </p>
                     </div>
                     <div class="inline-flex items-center space-x-1.5">
-                        <button type="button" class="text-body bg-secondary-medium box-border border border-base-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none shrink-0">Follow</button>
+                        <button type="button" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none shrink-0">Follow</button>
                         <button data-tooltip-target="tooltip-remove-4" type="button" class="inline-flex items-center justify-center text-fg-danger bg-transparent box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base h-9 w-9 focus:outline-none">
                             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/></svg>
                         </button>
@@ -344,7 +344,7 @@ Use the following example to create a list of buttons as a menu together with [S
                         </p>
                     </div>
                     <div class="inline-flex items-center space-x-1.5">
-                        <button type="button" class="text-body bg-secondary-medium box-border border border-base-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none shrink-0">Follow</button>
+                        <button type="button" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none shrink-0">Follow</button>
                         <button data-tooltip-target="tooltip-remove-5" type="button" class="inline-flex items-center justify-center text-fg-danger bg-transparent box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base h-9 w-9 focus:outline-none">
                             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/></svg>
                         </button>

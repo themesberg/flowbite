@@ -147,7 +147,7 @@ Get started with the default toggle component example as a checkbox element to r
 Get started with small, default, or large sizes of the toggle component based on your needs.
 
 {{< example id="toggle-sizes-example" class="flex flex-col flex-wrap items-center" github="forms/toggle.md" show_dark=true >}}
-<label class="w-80 inline-flex cursor-pointer p-4 bg-primary-soft border border-base rounded-base shadow-xs">
+<label class="w-80 inline-flex cursor-pointer p-4 bg-primary-soft border border-default rounded-base shadow-xs">
   <input type="checkbox" value="" class="sr-only peer">
   <div class="shrink-0 relative w-9 h-5 bg-quaternary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
   <div class="ms-2.5">
@@ -162,7 +162,7 @@ Get started with small, default, or large sizes of the toggle component based on
 Get started with small, default, or large sizes of the toggle component based on your needs.
 
 {{< example id="toggle-sizes-example" class="flex flex-col flex-wrap items-center" github="forms/toggle.md" show_dark=true >}}
-<label class="w-112 inline-flex cursor-pointer p-4 bg-primary-soft border border-base rounded-base shadow-xs">
+<label class="w-112 inline-flex cursor-pointer p-4 bg-primary-soft border border-default rounded-base shadow-xs">
   <div class="me-2.5">
     <svg class="h-8 mb-2 text-heading" viewBox="0 0 90 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.62 3.33333C5.19995 3.33333 0 8.53328 0 14.9533C0 20.0952 3.32622 24.4382 7.94517 25.9778C8.52617 26.0795 8.74405 25.7309 8.74405 25.4259C8.74405 25.1499 8.72952 24.2348 8.72952 23.2616C5.81 23.7991 5.0547 22.5499 4.8223 21.8963C4.69157 21.5622 4.1251 20.5309 3.63125 20.255C3.22455 20.0371 2.64355 19.4997 3.61672 19.4851C4.5318 19.4706 5.18542 20.3276 5.4033 20.6762C6.4491 22.4337 8.11947 21.9399 8.78762 21.6348C8.8893 20.8795 9.19432 20.3712 9.5284 20.0807C6.94295 19.7902 4.2413 18.7879 4.2413 14.3433C4.2413 13.0796 4.69157 12.0338 5.43235 11.2204C5.31615 10.9299 4.90945 9.73886 5.54855 8.14111C5.54855 8.14111 6.52172 7.83608 8.74405 9.33216C9.67365 9.07071 10.6613 8.93998 11.649 8.93998C12.6367 8.93998 13.6244 9.07071 14.554 9.33216C16.7764 7.82156 17.7495 8.14111 17.7495 8.14111C18.3886 9.73886 17.9819 10.9299 17.8657 11.2204C18.6065 12.0338 19.0568 13.0651 19.0568 14.3433C19.0568 18.8025 16.3406 19.7902 13.7552 20.0807C14.1764 20.4438 14.5395 21.141 14.5395 22.2304C14.5395 23.7845 14.525 25.0337 14.525 25.4259C14.525 25.7309 14.7429 26.094 15.3239 25.9778C17.6307 25.1991 19.6351 23.7165 21.0552 21.7389C22.4753 19.7612 23.2394 17.388 23.24 14.9533C23.24 8.53328 18.04 3.33333 11.62 3.33333Z" fill="currentColor"/>

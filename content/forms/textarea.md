@@ -21,7 +21,7 @@ Get started with the default example of a textarea component below.
 
 {{< example id="default-textarea-example" github="forms/textarea.md" show_dark=true >}}
 <label for="message" class="block mb-2.5 text-sm font-medium text-heading">Your message</label>
-<textarea id="message" rows="4" class="bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body" placeholder="Write your thoughts here..."></textarea>
+<textarea id="message" rows="4" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body" placeholder="Write your thoughts here..."></textarea>
 {{< /example >}}
 
 ## WYSIWYG Editor
@@ -30,8 +30,8 @@ If you want to add other actions as buttons alongside your textarea component, s
 
 {{< example id="textarea-wysiwyg-example" github="forms/textarea.md" show_dark=true >}}
 <form>
-   <div class="w-full mb-4 border border-base-medium rounded-base bg-secondary-medium shadow-xs">
-       <div class="flex items-center justify-between px-3 py-2 border-b border-base-medium">
+   <div class="w-full mb-4 border border-default-medium rounded-base bg-secondary-medium shadow-xs">
+       <div class="flex items-center justify-between px-3 py-2 border-b border-default-medium">
            <div class="flex flex-wrap items-center divide-base-medium sm:divide-x sm:rtl:divide-x-reverse">
                <div class="flex items-center space-x-1 rtl:space-x-reverse sm:pe-4">
                    <button type="button" class="p-2 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-tertiary-medium">
@@ -98,12 +98,12 @@ Most often the textarea component is used as the main text field input element i
 
 {{< example id="textarea-comment-example" github="forms/textarea.md" show_dark=true >}}
 <form>
-   <div class="w-full mb-4 border border-base-medium rounded-base bg-secondary-medium shadow-xs">
+   <div class="w-full mb-4 border border-default-medium rounded-base bg-secondary-medium shadow-xs">
        <div class="px-4 py-2 bg-secondary-medium rounded-t-base">
            <label for="comment" class="sr-only">Your comment</label>
            <textarea id="comment" rows="4" class="block w-full px-0 text-sm text-heading bg-secondary-medium border-0 focus:ring-0 placeholder:text-body" placeholder="Write a comment..." required ></textarea>
        </div>
-       <div class="flex items-center px-3 py-2 border-t border-base-medium">
+       <div class="flex items-center px-3 py-2 border-t border-default-medium">
             <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Post comment</button>
            <div class="flex ps-0 space-x-1 rtl:space-x-reverse sm:ps-2">
                 <button type="button" class="p-2 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-tertiary-medium">
@@ -145,7 +145,7 @@ If you want to build a chatroom component you will usually want to use a textare
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M16 18H8l2.5-6 2 4 1.5-2 2 4Zm-1-8.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m14-4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1ZM8 18h8l-2-4-1.5 2-2-4L8 18Zm7-8.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z"/></svg>
             <span class="sr-only">Upload image</span>
         </button>
-        <textarea id="chat" rows="1" class="mx-4 bg-primary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" placeholder="Your message..."></textarea>
+        <textarea id="chat" rows="1" class="mx-4 bg-primary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" placeholder="Your message..."></textarea>
             <button type="submit" class="inline-flex justify-center p-2 text-fg-brand rounded-full cursor-pointer hover:bg-brand-softer">
             <svg class="w-6 h-6 rotate-90 rtl:-rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/></svg>
             <span class="sr-only">Send message</span>

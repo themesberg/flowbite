@@ -142,8 +142,8 @@ Use this example if you want to show a dropdown menu when clicking on the avatar
 <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" src="/docs/images/people/profile-picture-5.jpg" alt="User dropdown">
 
 <!-- Dropdown menu -->
-<div id="userDropdown" class="z-10 hidden bg-primary-medium border border-base-medium rounded-base shadow-lg w-44">
-    <div class="px-4 py-3 border-b border-base text-sm text-heading">
+<div id="userDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+    <div class="px-4 py-3 border-b border-default text-sm text-heading">
       <div class="font-medium">Bonnie Green</div>
       <div class="truncate">name@flowbite.com</div>
     </div>

@@ -22,15 +22,15 @@ This is an example of a form component including an email, password, checkbox, a
 <form class="max-w-sm mx-auto">
   <div class="mb-5">
     <label for="email" class="block mb-2.5 text-sm font-medium text-heading">Your email</label>
-    <input type="email" id="email" class="bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="name@flowbite.com" required />
+    <input type="email" id="email" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="name@flowbite.com" required />
   </div>
   <div class="mb-5">
     <label for="password" class="block mb-2.5 text-sm font-medium text-heading">Your password</label>
-    <input type="password" id="password" class="bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="••••••••" required />
+    <input type="password" id="password" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="••••••••" required />
   </div>
   <div class="flex items-start mb-5">
     <div class="flex items-center h-5">
-      <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft" required />
+      <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft" required />
     </div>
     <label for="remember" class="ms-2 text-sm font-medium text-heading">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
   </div>
@@ -50,34 +50,34 @@ Use these form elements inspired by material design from Google to adjust the `l
 
 <form class="max-w-md mx-auto">
   <div class="relative z-0 w-full mb-5 group">
-      <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-base-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
+      <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
       <label for="floating_email" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Email address</label>
   </div>
   <div class="relative z-0 w-full mb-5 group">
-      <input type="password" name="floating_password" id="floating_password" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-base-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
+      <input type="password" name="floating_password" id="floating_password" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
       <label for="floating_password" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Password</label>
   </div>
   <div class="relative z-0 w-full mb-5 group">
-      <input type="password" name="repeat_password" id="floating_repeat_password" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-base-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
+      <input type="password" name="repeat_password" id="floating_repeat_password" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
       <label for="floating_repeat_password" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Confirm password</label>
   </div>
   <div class="grid md:grid-cols-2 md:gap-6">
     <div class="relative z-0 w-full mb-5 group">
-        <input type="text" name="floating_first_name" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-base-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
+        <input type="text" name="floating_first_name" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
         <label for="floating_first_name" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">First name</label>
     </div>
     <div class="relative z-0 w-full mb-5 group">
-        <input type="text" name="floating_last_name" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-base-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
+        <input type="text" name="floating_last_name" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
         <label for="floating_last_name" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Last name</label>
     </div>
   </div>
   <div class="grid md:grid-cols-2 md:gap-6">
     <div class="relative z-0 w-full mb-5 group">
-        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-base-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
+        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
         <label for="floating_phone" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Phone number (123-456-7890)</label>
     </div>
     <div class="relative z-0 w-full mb-5 group">
-        <input type="text" name="floating_company" id="floating_company" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-base-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
+        <input type="text" name="floating_company" id="floating_company" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
         <label for="floating_company" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Company (Ex. Google)</label>
     </div>
   </div>
@@ -93,19 +93,19 @@ Use the following utility classes to create three different sizing options (larg
 <form class="max-w-sm mx-auto space-y-4">
     <div>
         <label for="visitors" class="block mb-2.5 text-sm font-medium text-heading">Small Input</label>
-        <input type="text" id="visitors" class="bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-2.5 py-2 shadow-xs placeholder:text-body" placeholder="" required />
+        <input type="text" id="visitors" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-2.5 py-2 shadow-xs placeholder:text-body" placeholder="" required />
     </div>
     <div>
         <label for="visitors" class="block mb-2.5 text-sm font-medium text-heading">Base Input</label>
-        <input type="text" id="visitors" class="bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="" required />
+        <input type="text" id="visitors" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="" required />
     </div>
     <div>
         <label for="visitors" class="block mb-2.5 text-sm font-medium text-heading">Large Input</label>
-        <input type="text" id="visitors" class="bg-secondary-medium border border-base-medium text-heading text-base rounded-base focus:ring-brand focus:border-brand block w-full px-3.5 py-3 shadow-xs placeholder:text-body" placeholder="" required />
+        <input type="text" id="visitors" class="bg-secondary-medium border border-default-medium text-heading text-base rounded-base focus:ring-brand focus:border-brand block w-full px-3.5 py-3 shadow-xs placeholder:text-body" placeholder="" required />
     </div>
     <div>
         <label for="visitors" class="block mb-2.5 text-sm font-medium text-heading">Extra Large Input</label>
-        <input type="text" id="visitors" class="bg-secondary-medium border border-base-medium text-heading text-base rounded-base focus:ring-brand focus:border-brand block w-full px-4 py-3.5 shadow-xs placeholder:text-body" placeholder="" required />
+        <input type="text" id="visitors" class="bg-secondary-medium border border-default-medium text-heading text-base rounded-base focus:ring-brand focus:border-brand block w-full px-4 py-3.5 shadow-xs placeholder:text-body" placeholder="" required />
     </div>
 </form>
 {{< /example >}}
@@ -116,8 +116,8 @@ Use the following utility classes to indicate a disabled form input item.
 
 {{< example id="form-disabled-example" github="components/forms.md" show_dark=true >}}
 <form class="max-w-sm mx-auto space-y-4">
-  <input type="text" id="disabled-input" aria-label="disabled input" class="bg-secondary-medium border border-base-medium text-fg-disabled text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" value="Disabled input" disabled>
-  <input type="text" id="disabled-input-2" aria-label="disabled input 2" class="bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" value="Disabled readonly input" disabled readonly>
+  <input type="text" id="disabled-input" aria-label="disabled input" class="bg-secondary-medium border border-default-medium text-fg-disabled text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" value="Disabled input" disabled>
+  <input type="text" id="disabled-input-2" aria-label="disabled input 2" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" value="Disabled readonly input" disabled readonly>
 </form>
 {{< /example >}}
 
@@ -129,15 +129,15 @@ Alternatively, you can decide to apply a shadow styling using the `shadow-xs` cl
 <form class="max-w-sm mx-auto">
   <div class="mb-5">
     <label for="email-2" class="block mb-2.5 text-sm font-medium text-heading">Your email</label>
-    <input type="email-2" id="email-2" class="bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body" placeholder="name@flowbite.com" required />
+    <input type="email-2" id="email-2" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body" placeholder="name@flowbite.com" required />
   </div>
   <div class="mb-5">
     <label for="password-2" class="block mb-2.5 text-sm font-medium text-heading">Your password</label>
-    <input type="password-2" id="password-2" class="bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body" placeholder="••••••••" required />
+    <input type="password-2" id="password-2" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body" placeholder="••••••••" required />
   </div>
   <div class="flex items-start mb-5">
     <div class="flex items-center h-5">
-      <input id="remember-2" type="checkbox" value="" class="w-4 h-4 border border-base-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft" required />
+      <input id="remember-2" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft" required />
     </div>
     <label for="remember-2" class="ms-2 text-sm font-medium text-heading">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
   </div>
@@ -152,7 +152,7 @@ Use the following markup to also add a helper text below your form input item. U
 {{< example id="form-helper-text-example" github="components/forms.md" show_dark=true >}}
 <form class="max-w-sm mx-auto"> 
   <label for="email" class="block mb-2.5 text-sm font-medium text-heading">Your email</label>
-  <input type="email" id="email" aria-describedby="helper-text-explanation" class="bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="name@flowbite.com">
+  <input type="email" id="email" aria-describedby="helper-text-explanation" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="name@flowbite.com">
 
   <p id="helper-text-explanation" class="mt-2.5 text-sm text-body">We’ll never share your details. Read our <a href="#" class="font-medium text-blue-600 hover:underline dark:text-blue-500">Privacy Policy</a>.</p>
 </form>
@@ -169,7 +169,7 @@ Use the following Tailwind utility classes and [SVG icon](https://flowbite.com/i
     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
       <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/></svg>
     </div>
-    <input type="text" id="input-group-1" class="block w-full ps-9 pe-3 py-2.5 bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="name@flowbite.com">
+    <input type="text" id="input-group-1" class="block w-full ps-9 pe-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="name@flowbite.com">
   </div>
 </form>
 {{< /example >}}
@@ -182,10 +182,10 @@ Use this example to add a SVG icon or special character with an addon style to t
 <form class="max-w-sm mx-auto">
   <label for="website-admin" class="block mb-2.5 text-sm font-medium text-heading">Username</label>
   <div class="flex shadow-xs rounded-base">
-    <span class="inline-flex items-center px-3 text-sm text-body bg-tertiary border rounded-e-0 border-base-medium border-e-0 rounded-s-base">
+    <span class="inline-flex items-center px-3 text-sm text-body bg-tertiary border rounded-e-0 border-default-medium border-e-0 rounded-s-base">
       <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
     </span>
-    <input type="text" id="website-admin" class="rounded-none rounded-e-base block w-full px-3 py-2.5 bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 placeholder:text-body" placeholder="elonmusk">
+    <input type="text" id="website-admin" class="rounded-none rounded-e-base block w-full px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 placeholder:text-body" placeholder="elonmusk">
   </div>
 </form>
 {{< /example >}}
@@ -216,7 +216,7 @@ Use the following code to create a textarea form element.
 {{< example id="form-textarea-example" github="components/forms.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
   <label for="message" class="block mb-2.5 text-sm font-medium text-heading">Your message</label>
-  <textarea id="message" rows="4" class="bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body" placeholder="Write your thoughts here..."></textarea>
+  <textarea id="message" rows="4" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body" placeholder="Write your thoughts here..."></textarea>
 </form>
 {{< /example >}}
 
@@ -227,7 +227,7 @@ Use the following select input element to show selectable list of items.
 {{< example id="form-select-input-example" github="components/forms.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
   <label for="countries" class="block mb-2.5 text-sm font-medium text-heading">Select an option</label>
-  <select id="countries" class="block w-full px-3 py-2.5 bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
+  <select id="countries" class="block w-full px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
     <option selected>Choose a country</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>
@@ -247,23 +247,23 @@ The code below can be used to create a fieldset of checkbox elements inside a fo
   <legend class="sr-only">Checkbox variants</legend>
 
   <div class="flex items-center mb-4">
-      <input checked id="checkbox-1" type="checkbox" value="" class="w-4 h-4 border border-base-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" >
+      <input checked id="checkbox-1" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" >
       <label for="checkbox-1" class="ms-2 text-sm font-medium text-heading">I agree to the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
   </div>
 
   <div class="flex items-center mb-4">
-      <input id="checkbox-2" type="checkbox" value="" class="w-4 h-4 border border-base-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+      <input id="checkbox-2" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
       <label for="checkbox-2" class="ms-2 text-sm font-medium text-heading">I want to get promotional offers</label>
   </div>
 
   <div class="flex items-center mb-4">
-      <input id="checkbox-3" type="checkbox" value="" class="w-4 h-4 border border-base-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+      <input id="checkbox-3" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
       <label for="checkbox-3" class="ms-2 text-sm font-medium text-heading">I am 18 years or older</label>
   </div>
   
   <div class="flex mb-4">
       <div class="flex items-center h-5">
-          <input id="helper-checkbox" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 border border-base-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+          <input id="helper-checkbox" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
       </div>
       <div class="ms-2 text-sm">
           <label for="helper-checkbox" class="text-sm font-medium text-heading">Free shipping via Flowbite</label>
@@ -272,7 +272,7 @@ The code below can be used to create a fieldset of checkbox elements inside a fo
   </div>
 
   <div class="flex items-center">
-      <input id="international-shipping-disabled" type="checkbox" value="" class="w-4 h-4 border border-base-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" disabled>
+      <input id="international-shipping-disabled" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" disabled>
       <label for="international-shipping-disabled" class="ms-2 text-sm font-medium text-fg-disabled">Eligible for international shipping (disabled)</label>
   </div>
 </fieldset>
@@ -335,7 +335,7 @@ Use the following Tailwind CSS file upload element to receive any type of file f
 {{< example id="form-file-input-example" github="components/forms.md" show_dark=true >}}
 <form class="max-w-lg mx-auto">
   <label class="block mb-2.5 text-sm font-medium text-heading" for="file_input">Upload file</label>
-  <input class="cursor-pointer bg-secondary-medium border border-base-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" id="file_input" type="file">
+  <input class="cursor-pointer bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" id="file_input" type="file">
 </form>
 {{< /example >}}
 

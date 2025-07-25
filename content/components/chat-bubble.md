@@ -34,7 +34,7 @@ Use this example to show a simple chat bubble with a text message, user profile 
    <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
       <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
             <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
@@ -109,7 +109,7 @@ This example can be used to show a voice note message with control buttons and a
    <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="shrink-0 inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
       <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
             <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
@@ -188,7 +188,7 @@ Use this example to send a file attachment inside a chat bubble with the ability
    <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
       <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
             <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
@@ -242,7 +242,7 @@ This example can be used to show an image attachment with a download button when
    <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
       <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
             <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
@@ -338,7 +338,7 @@ Use this example to show an image gallery based on a grid layout with the abilit
    <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
       <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
             <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
@@ -384,7 +384,7 @@ Use this example to show a OG preview of the URL that is being shared inside the
    <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
       <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
             <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
@@ -426,7 +426,7 @@ Use this example to show a text message with the user profile and timestamp outs
    <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
       <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
             <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
@@ -503,7 +503,7 @@ This example can be used to show a voice note with the user profile and timestam
     <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
       <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
     </button>
-    <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+    <div id="dropdownDots" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
         <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
             <li>
                 <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
@@ -582,7 +582,7 @@ Use this example to show a file attachment with the user profile and timestamp o
    <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
       <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
             <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
@@ -636,7 +636,7 @@ This example can be used to send an image attachment with the user profile outsi
    <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
       <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
             <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
@@ -732,7 +732,7 @@ Use this example to show an image gallery with the user profile and timestamp ou
    <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
       <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
             <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
@@ -780,7 +780,7 @@ Use this example to show a URL preview with the user profile and timestamp outsi
    <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" data-dropdown-placement="bottom-start" class="inline-flex self-center items-center text-body hover:text-heading bg-primary box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
       <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
    </button>
-   <div id="dropdownDots" class="z-10 bg-primary-medium border border-base-medium rounded-base shadow-lg w-40 block hidden">
+   <div id="dropdownDots" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
             <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>

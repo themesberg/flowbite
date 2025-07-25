@@ -276,10 +276,10 @@ Use this example to show a list of tags and filter the images below based on the
 
 <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
     <button type="button" class="text-fg-brand border border-brand bg-primary focus:ring-4 focus:outline-none focus:ring-tertiary rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3">All categories</button>
-    <button type="button" class="text-heading border border-buffer hover:border-base bg-primary focus:ring-4 focus:outline-none focus:ring-tertiary rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3">Shoes</button>
-    <button type="button" class="text-heading border border-buffer hover:border-base bg-primary focus:ring-4 focus:outline-none focus:ring-tertiary rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3">Bags</button>
-    <button type="button" class="text-heading border border-buffer hover:border-base bg-primary focus:ring-4 focus:outline-none focus:ring-tertiary rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3">Electronics</button>
-    <button type="button" class="text-heading border border-buffer hover:border-base bg-primary focus:ring-4 focus:outline-none focus:ring-tertiary rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3">Gaming</button>
+    <button type="button" class="text-heading border border-buffer hover:border-default bg-primary focus:ring-4 focus:outline-none focus:ring-tertiary rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3">Shoes</button>
+    <button type="button" class="text-heading border border-buffer hover:border-default bg-primary focus:ring-4 focus:outline-none focus:ring-tertiary rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3">Bags</button>
+    <button type="button" class="text-heading border border-buffer hover:border-default bg-primary focus:ring-4 focus:outline-none focus:ring-tertiary rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3">Electronics</button>
+    <button type="button" class="text-heading border border-buffer hover:border-default bg-primary focus:ring-4 focus:outline-none focus:ring-tertiary rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3">Gaming</button>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
     <div>

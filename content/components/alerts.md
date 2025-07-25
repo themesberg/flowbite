@@ -85,7 +85,7 @@ Use this example to add a border accent to the alert component instead of just a
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
   <span class="font-medium">Warning alert!</span> Change a few things up and try submitting again.
 </div>
-<div class="flex items-center p-4 text-sm text-heading rounded-base bg-secondary-medium border border-base-medium" role="alert">
+<div class="flex items-center p-4 text-sm text-heading rounded-base bg-secondary-medium border border-default-medium" role="alert">
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
   <span class="font-medium">Dark alert!</span> Change a few things up and try submitting again.
 </div>
@@ -261,7 +261,7 @@ Use this example to add a border accent on top of the alert component for furthe
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
   </button>
 </div>
-<div id="alert-border-5" class="flex items-center p-4 text-sm text-heading bg-secondary-medium border-t-4 border-base-medium" role="alert">
+<div id="alert-border-5" class="flex items-center p-4 text-sm text-heading bg-secondary-medium border-t-4 border-default-medium" role="alert">
   <svg class="w-4 h-4 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
   <span class="sr-only">Info</span>
   <div class="ms-2 text-sm ">
@@ -363,7 +363,7 @@ The following alert components can be used if you wish to disclose more informat
   </button>
 </div>
 
-<div id="alert-additional-content-5" class="p-4 text-sm text-heading rounded-base bg-secondary-medium border border-base-medium" role="alert">
+<div id="alert-additional-content-5" class="p-4 text-sm text-heading rounded-base bg-secondary-medium border border-default-medium" role="alert">
   <div class="flex items-center justify-between">
     <div class="flex items-center">
       <svg class="w-4 h-4 shrink-0 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
@@ -423,7 +423,7 @@ Use the following alert elements that are also dismissible.
   <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
 </div>
 
-<div id="alert-small-5" class="w-auto inline-flex items-center p-1 pe-2 mb-4 text-sm text-heading rounded-full bg-secondary-medium border border-base-medium" role="alert">
+<div id="alert-small-5" class="w-auto inline-flex items-center p-1 pe-2 mb-4 text-sm text-heading rounded-full bg-secondary-medium border border-default-medium" role="alert">
   <span class="bg-quaternary text-heading py-0.5 px-2 rounded-full">New</span>
   <div class="ms-2 text-sm">
     Great job! You've acknowledged this <a href="#" class="font-medium underline hover:no-underline">significant</a> alert message.

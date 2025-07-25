@@ -22,7 +22,7 @@ Use this example to show a list of links aligned on three columns inside the meg
 
 {{< example id="default-mega-menu-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="300" >}}
 
-<nav class="bg-primary border-base">
+<nav class="bg-primary border-default">
     <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
         <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
@@ -46,7 +46,7 @@ Use this example to show a list of links aligned on three columns inside the meg
                         Company 
                         <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
                     </button>
-                    <div id="mega-menu-dropdown" class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-primary-soft border border-base rounded-base shadow md:grid-cols-3">
+                    <div id="mega-menu-dropdown" class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-primary-soft border border-default rounded-base shadow md:grid-cols-3">
                         <div class="p-4 pb-0 text-heading md:pb-4">
                             <ul class="space-y-3" aria-labelledby="mega-menu-dropdown-button">
                                 <li>
@@ -134,7 +134,7 @@ This example of a mega menu dropdown can be used to also show an icon near the t
 
 {{< example id="mega-menu-icons-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="300" >}}
 
-<nav class="bg-primary border-base">
+<nav class="bg-primary border-default">
     <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
         <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
@@ -158,7 +158,7 @@ This example of a mega menu dropdown can be used to also show an icon near the t
                         Company 
                         <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
                     </button>
-                    <div id="mega-menu-icons-dropdown" class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-primary-soft border border-base rounded-base shadow md:grid-cols-3">
+                    <div id="mega-menu-icons-dropdown" class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-primary-soft border border-default rounded-base shadow md:grid-cols-3">
                         <div class="p-4 pb-0 text-heading md:pb-4">
                             <ul class="space-y-3 font-normal" aria-labelledby="mega-menu-icons-dropdown-button">
                                 <li>
@@ -257,7 +257,7 @@ Use this example to show a mega menu dropdown that spans the entire width of the
 
 {{< example id="mega-menu-full-width-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="440" >}}
 
-<nav class="bg-primary-soft border-base">
+<nav class="bg-primary-soft border-default">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
@@ -290,7 +290,7 @@ Use this example to show a mega menu dropdown that spans the entire width of the
             </ul>
         </div>
     </div>
-    <div id="mega-menu-full-dropdown" class="mt-1 bg-primary-soft border-base shadow-xs border-y">
+    <div id="mega-menu-full-dropdown" class="mt-1 bg-primary-soft border-default shadow-xs border-y">
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-heading sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button">
                 <li>
@@ -363,7 +363,7 @@ This example can be used to also show a CTA button or link next to the menu item
 
 {{< example id="mega-menu-full-width-cta-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="360" >}}
 
-<nav class="bg-primary-soft border-base">
+<nav class="bg-primary-soft border-default">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
@@ -396,7 +396,7 @@ This example can be used to also show a CTA button or link next to the menu item
             </ul>
         </div>
     </div>
-    <div id="mega-menu-full-cta-dropdown" class="mt-1 bg-primary-soft border-base shadow-xs border-y">
+    <div id="mega-menu-full-cta-dropdown" class="mt-1 bg-primary-soft border-default shadow-xs border-y">
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-body md:grid-cols-3 md:px-6">
             <ul class="space-y-3 sm:mb-4 md:mb-0" aria-labelledby="mega-menu-full-cta-button">
                 <li>
@@ -462,7 +462,7 @@ This example can be used to also show a CTA with a backdround image inside the d
 
 {{< example id="mega-menu-full-width-image-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="360" >}}
 
-<nav class="bg-primary-soft border-base">
+<nav class="bg-primary-soft border-default">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
@@ -495,7 +495,7 @@ This example can be used to also show a CTA with a backdround image inside the d
             </ul>
         </div>
     </div>
-    <div id="mega-menu-full-image-dropdown" class="mt-1 bg-primary-soft border-base shadow-xs border-y">
+    <div id="mega-menu-full-image-dropdown" class="mt-1 bg-primary-soft border-default shadow-xs border-y">
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-body md:grid-cols-3 md:px-6">
             <ul class="hidden mb-4 space-y-4 md:mb-0 md:block" aria-labelledby="mega-menu-full-image-button">
                 <li>
@@ -545,9 +545,7 @@ This example can be used to also show a CTA with a backdround image inside the d
                 <p class="max-w-xl mb-5 font-medium leading-tight tracking-tight text-white">Preview the new Flowbite dashboard navigation.</p>
                 <button type="button" class="inline-flex items-center px-3 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-dark focus:ring-4 focus:outline-none">
                     Get started
-                    <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                    </svg>
+                    <svg class="w-4 h-4 ms-1.5 -me-0.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
                 </button>
             </a>
         </div>

@@ -21,7 +21,7 @@ Use this footer component to show a copyright notice and some helpful website li
 
 {{< example id="default-footer-example" bodyClass="!p-0" github="components/footer.md" class="p-2" show_dark=true >}}
 
-<footer class="bg-primary-soft rounded-base shadow-xs border border-base m-4">
+<footer class="bg-primary-soft rounded-base shadow-xs border border-default m-4">
     <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
       <span class="text-sm text-body sm:text-center">© 2023 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
     </span>
@@ -49,7 +49,7 @@ Use this component to show your brand's logo, a few website links and the copyri
 
 {{< example id="footer-logo-example" bodyClass="!p-0" github="components/footer.md" class="p-2" show_dark=true >}}
 
-<footer class="bg-primary-soft rounded-base shadow-xs border border-base m-4">
+<footer class="bg-primary-soft rounded-base shadow-xs border border-default m-4">
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
             <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
@@ -71,7 +71,7 @@ Use this component to show your brand's logo, a few website links and the copyri
                 </li>
             </ul>
         </div>
-        <hr class="my-6 border-base sm:mx-auto lg:my-8" />
+        <hr class="my-6 border-default sm:mx-auto lg:my-8" />
         <span class="block text-sm text-body sm:text-center">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
     </div>
 </footer>
@@ -129,7 +129,7 @@ This footer component can be used to show your brand's logo, multiple rows of we
               </div>
           </div>
       </div>
-      <hr class="my-6 border-base sm:mx-auto lg:my-8" />
+      <hr class="my-6 border-default sm:mx-auto lg:my-8" />
       <div class="sm:flex sm:items-center sm:justify-between">
           <span class="text-sm text-body sm:text-center">© 2023 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
           </span>
@@ -271,7 +271,7 @@ Use this example to set create a sticky footer by using a fixed position to the 
 
 {{< example id="footer-sticky-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true >}}
 
-<footer class="fixed bottom-0 left-0 z-20 w-full p-4 bg-primary-soft border-t border-base shadow-sm md:flex md:items-center md:justify-between md:p-6">
+<footer class="fixed bottom-0 left-0 z-20 w-full p-4 bg-primary-soft border-t border-default shadow-sm md:flex md:items-center md:justify-between md:p-6">
     <span class="text-sm text-body sm:text-center">© 2023 <a href="{{< param homepage >}}/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
     </span>
     <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-body sm:mt-0">

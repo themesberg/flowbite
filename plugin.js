@@ -302,6 +302,12 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 [[
                     `[type='checkbox']:checked`,
+                    `.dark [type='checkbox']:checked`,
+                ]]: {
+                    'border-color': `currentColor !important`,
+                },
+                [[
+                    `[type='checkbox']:checked`,
                     `[type='radio']:checked`,
                     `.dark [type='checkbox']:checked`,
                     `.dark [type='radio']:checked`,
@@ -327,7 +333,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     'background-image': `url("${svgToDataUri(
                         `<svg viewBox="0 0 16 16" fill="#1447E6" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`
                     )}")`,
-                    'background-size': `1.75em 1.75em !important`,
+                    'background-size': `1.25em 1.25em !important`,
                 },
                 [`.dark [type='radio']:checked`]: {
                     'background-image': `url("${svgToDataUri(

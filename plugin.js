@@ -289,9 +289,11 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 [[`[type='checkbox']:focus`, `[type='radio']:focus`]]: {
                     outline: '1px solid transparent',
-                    'outline-offset': '1px',
+                    // TODO: conflict with radio
+                    // 'outline-offset': '1px',
                     '--tw-ring-inset': 'var(--tw-empty,/*!*/ /*!*/)',
-                    '--tw-ring-offset-width': '1px',
+                    // TODO: conflict with radio
+                    // '--tw-ring-offset-width': '1px',
                     '--tw-ring-offset-color': '#fff',
                     '--tw-ring-color': 'var(--color-brand)',
                     '--tw-ring-offset-shadow': `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
@@ -304,7 +306,8 @@ module.exports = plugin.withOptions(function (options = {}) {
                     `.dark [type='checkbox']:checked`,
                     `.dark [type='radio']:checked`,
                 ]]: {
-                    'border-color': `transparent !important`,
+                    // TODO: conflict with radio
+                    // 'border-color': `currentColor !important`,
                     'background-color': `currentColor !important`,
                     'background-size': `0.85em 0.85em !important`,
                     'background-position': `center`,

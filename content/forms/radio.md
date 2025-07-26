@@ -26,10 +26,12 @@ Use the default example of a radio component with the checked and unchecked stat
     <label for="default-radio-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default radio</label>
 </div>
 <div class="flex items-center">
-    <input checked id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary bg-gray-100 border-gray-300 focus:ring-brand dark:focus:ring-brand ring-offset-primary focus:ring-1 peer-checked:border-brand-subtle">
+    <input checked id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary bg-gray-100 border-gray-300 checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none rounded-full">
     <label for="default-radio-2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
 </div>
 {{< /example >}}
+
+h-4 w-4 appearance-none rounded-full border border-gray-300 bg-gray-100 bg-[length:1em_1em] bg-center bg-no-repeat checked:border-transparent checked:bg-current checked:bg-dot-icon focus:outline-none focus:ring-2 focus:ring-offset-2 dark:border-gray-600 dark:bg-gray-700 dark:checked:border-transparent dark:checked:bg-current text-primary-600 focus:ring-primary-600 dark:ring-offset-gray-800 dark:focus:ring-primary-600
 
 ## Disabled state
 

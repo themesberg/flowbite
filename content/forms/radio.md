@@ -23,11 +23,11 @@ Use the default example of a radio component with the checked and unchecked stat
 {{< example id="default-radio-example" github="forms/radio.md" show_dark=true >}}
 <div class="flex items-center mb-4">
     <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary bg-gray-100 border-gray-300 checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none rounded-full">
-    <label for="default-radio-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default radio</label>
+    <label for="default-radio-1" class="select-none ms-2 text-sm font-medium text-heading">Default radio</label>
 </div>
 <div class="flex items-center">
     <input checked id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary bg-gray-100 border-gray-300 checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none rounded-full">
-    <label for="default-radio-2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+    <label for="default-radio-2" class="select-none ms-2 text-sm font-medium text-heading">Checked state</label>
 </div>
 {{< /example >}}
 

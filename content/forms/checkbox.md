@@ -23,11 +23,11 @@ Use this default example of a checkbox element in a checked and unchecked state.
 {{< example id="default-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex items-center mb-4">
     <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
-    <label for="default-checkbox" class="ms-2 text-sm font-medium text-heading">Default checkbox</label>
+    <label for="default-checkbox" class="select-none ms-2 text-sm font-medium text-heading">Default checkbox</label>
 </div>
 <div class="flex items-center">
     <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
-    <label for="checked-checkbox" class="ms-2 text-sm font-medium text-heading">Checked state</label>
+    <label for="checked-checkbox" class="select-none ms-2 text-sm font-medium text-heading">Checked state</label>
 </div>
 {{< /example >}}
 
@@ -38,11 +38,11 @@ This example can be used for the disabled state of the checkbox component by app
 {{< example id="disabled-checkbox-example" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex items-center mb-4">
     <input disabled id="disabled-checkbox" type="checkbox" value="" class="w-4 h-4 border border-light rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
-    <label for="disabled-checkbox" class="ms-2 text-sm font-medium text-fg-disabled">Disabled checkbox</label>
+    <label for="disabled-checkbox" class="select-none ms-2 text-sm font-medium text-fg-disabled">Disabled checkbox</label>
 </div>
 <div class="flex items-center">
     <input disabled checked id="disabled-checked-checkbox" type="checkbox" value="" class="w-4 h-4 border border-light rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
-    <label for="disabled-checked-checkbox" class="ms-2 text-sm font-medium text-fg-disabled">Disabled checked</label>
+    <label for="disabled-checked-checkbox" class="select-none ms-2 text-sm font-medium text-fg-disabled">Disabled checked</label>
 </div>
 {{< /example >}}
 
@@ -53,7 +53,7 @@ Use this example if you want to add an anchor link inside the label of the check
 {{< example id="checkbox-link-example" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex items-center">
     <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
-    <label for="link-checkbox" class="ms-2 text-sm font-medium text-heading">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
+    <label for="link-checkbox" class="select-none ms-2 text-sm font-medium text-heading">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
 </div>
 {{< /example >}}
 
@@ -80,11 +80,11 @@ Use this example of a checkbox inside a card element to enable a larger area of 
 {{< example id="checkbox-bordered-example" class="grid gap-6 md:grid-cols-2" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex items-center ps-4 bg-primary-soft border border-default rounded-base shadow-xs">
     <input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
-    <label for="bordered-checkbox-1" class="w-full py-4 ms-2 text-sm font-medium text-heading">Default radio</label>
+    <label for="bordered-checkbox-1" class="select-none w-full py-4 ms-2 text-sm font-medium text-heading">Default checkbox</label>
 </div>
 <div class="flex items-center ps-4 bg-primary-soft border border-default rounded-base shadow-xs">
     <input checked id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
-    <label for="bordered-checkbox-2" class="w-full py-4 ms-2 text-sm font-medium text-heading">Checked state</label>
+    <label for="bordered-checkbox-2" class="select-none w-full py-4 ms-2 text-sm font-medium text-heading">Checked state</label>
 </div>
 {{< /example >}}
 
@@ -96,15 +96,15 @@ Use this example of a checkbox inside a card element to enable a larger area of 
 <div class="flex space-x-2.5 bg-primary-soft border border-default rounded-base shadow-xs">
     <input id="bordered-checkbox-3" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 mt-4 ms-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
     <label for="bordered-checkbox-3" class="py-4 pe-4">
-        <p class="w-full text-sm font-medium text-heading">16GB unified memory</p>
-        <p id="helper-checkbox-bordered-1" class="text-sm text-body">Seamlessly handle multitasking, large apps.</p>
+        <p class="select-none w-full text-sm font-medium text-heading">16GB unified memory</p>
+        <p id="helper-checkbox-bordered-1" class="select-none text-sm text-body">Seamlessly handle multitasking, large apps.</p>
     </label>
 </div>
 <div class="flex space-x-2.5 bg-primary-soft border border-default rounded-base shadow-xs">
     <input checked id="bordered-checkbox-4" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 mt-4 ms-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
     <label for="bordered-checkbox-4" class="py-4 pe-4">
-        <p class="w-full text-sm font-medium text-heading">1TB SSD storage</p>
-        <p id="helper-checkbox-bordered-2" class="text-sm text-body">Get ultra-fast storage with 1TB of SSD space</p>
+        <p class="select-none w-full text-sm font-medium text-heading">1TB SSD storage</p>
+        <p id="helper-checkbox-bordered-2" class="select-none text-sm text-body">Get ultra-fast storage with 1TB of SSD space</p>
     </label>
 </div>
 {{< /example >}}
@@ -117,16 +117,16 @@ Use this example of a checkbox inside a card element to enable a larger area of 
 <div class="flex justify-between space-x-2.5 bg-primary-soft border border-default rounded-base shadow-xs">
     <label for="bordered-checkbox-5" class="p-4">
         <svg class="w-7 h-7 text-body mb-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1M5 12h14M5 12a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1m-2 3h.01M14 15h.01M17 9h.01M14 9h.01"/></svg>
-        <p  class="w-full text-sm font-medium text-heading">16GB unified memory</p>
-        <p id="helper-checkbox-bordered-3" class="text-sm text-body">Seamlessly handle multitasking, large apps.</p>
+        <p  class="select-none w-full text-sm font-medium text-heading">16GB unified memory</p>
+        <p id="helper-checkbox-bordered-3" class="select-none text-sm text-body">Seamlessly handle multitasking, large apps.</p>
     </label>
     <input id="bordered-checkbox-5" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 mt-4 me-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" checked>
 </div>
 <div class="flex justify-between space-x-2.5 bg-primary-soft border border-default rounded-base shadow-xs">
     <label for="bordered-checkbox-6" class="p-4">
         <svg class="w-7 h-7 text-body mb-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 6c0 1.657-3.134 3-7 3S5 7.657 5 6m14 0c0-1.657-3.134-3-7-3S5 4.343 5 6m14 0v6M5 6v6m0 0c0 1.657 3.134 3 7 3s7-1.343 7-3M5 12v6c0 1.657 3.134 3 7 3s7-1.343 7-3v-6"/></svg>
-        <p  class="w-full text-sm font-medium text-heading">1TB SSD storage</p>
-        <p id="helper-checkbox-bordered-4" class="text-sm text-body">Get ultra-fast storage with 1TB of SSD space</p>
+        <p  class="select-none w-full text-sm font-medium text-heading">1TB SSD storage</p>
+        <p id="helper-checkbox-bordered-4" class="select-none text-sm text-body">Get ultra-fast storage with 1TB of SSD space</p>
     </label>
     <input id="bordered-checkbox-6" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 mt-4 me-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
 </div>
@@ -139,7 +139,7 @@ Use this example to show a list of checkbox items grouped inside a card.
 
 {{< example id="checkbox-list-example" github="components/radio.md" show_dark=true >}}
 <h3 class="mb-4 font-semibold text-heading">Technology</h3>
-<ul class="w-48 text-sm font-medium text-heading bg-primary-soft border border-default rounded-base">
+<ul class="w-48 select-none text-sm font-medium text-heading bg-primary-soft border border-default rounded-base">
     <li class="w-full border-b border-default rounded-t-lg">
         <div class="flex items-center ps-3">
             <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
@@ -173,7 +173,7 @@ Use this example to show a list of checkbox items inside a card horizontally.
 
 {{< example id="checkbox-horizontal-list-example" github="components/radio.md" show_dark=true >}}
 <h3 class="mb-4 font-semibold text-heading">Identification</h3>
-<ul class="items-center w-full text-sm font-medium text-heading bg-primary-soft border border-default rounded-base sm:flex">
+<ul class="items-center select-none w-full text-sm font-medium text-heading bg-primary-soft border border-default rounded-base sm:flex">
     <li class="w-full border-b border-default sm:border-b-0 sm:border-r">
         <div class="flex items-center ps-3">
             <input id="vue-checkbox-list" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
@@ -225,7 +225,7 @@ Use this example to show a list of checkbox items inside a dropdown menu.
         <input type="text" id="input-group-1" class="block w-full ps-9 pe-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded focus:ring-brand focus:border-brand px-2.5 py-2 placeholder:text-body" placeholder="Search user">
       </div>
     </div>
-    <ul class="h-48 overflow-y-auto p-2 text-sm text-body font-medium" aria-labelledby="dropdownSearchButton">
+    <ul class="h-48 select-none overflow-y-auto p-2 text-sm text-body font-medium" aria-labelledby="dropdownSearchButton">
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
           <input id="checkbox-item-11" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
@@ -286,19 +286,19 @@ You can align the checkbox elements horizontally by using a wrapper tag and appl
 <div class="flex">
     <div class="flex items-center me-4">
         <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
-        <label for="inline-checkbox" class="ms-2 text-sm font-medium text-heading">Inline 1</label>
+        <label for="inline-checkbox" class="select-none ms-2 text-sm font-medium text-heading">Inline 1</label>
     </div>
     <div class="flex items-center me-4">
         <input id="inline-2-checkbox" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
-        <label for="inline-2-checkbox" class="ms-2 text-sm font-medium text-heading">Inline 2</label>
+        <label for="inline-2-checkbox" class="select-none ms-2 text-sm font-medium text-heading">Inline 2</label>
     </div>
     <div class="flex items-center me-4">
         <input checked id="inline-checked-checkbox" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
-        <label for="inline-checked-checkbox" class="ms-2 text-sm font-medium text-heading">Inline checked</label>
+        <label for="inline-checked-checkbox" class="select-none ms-2 text-sm font-medium text-heading">Inline checked</label>
     </div>
     <div class="flex items-center">
         <input disabled id="inline-disabled-checkbox" type="checkbox" value="" class="w-4 h-4 border border-light rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
-        <label for="inline-disabled-checkbox" class="ms-2 text-sm font-medium text-fg-disabled">Inline disabled</label>
+        <label for="inline-disabled-checkbox" class="select-none ms-2 text-sm font-medium text-fg-disabled">Inline disabled</label>
     </div>
 </div>
 {{< /example >}}
@@ -310,27 +310,27 @@ Use the `text-{color}-{shade}` classes from Tailwind CSS to change the color of 
 {{< example id="checkbox-colors-example" class="flex flex-wrap" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex items-center me-4">
     <input checked id="red-checkbox" type="checkbox" value="" class="w-4 h-4 text-red-600 bg-secondary-medium border-default-medium rounded-xs focus:ring-red-500 dark:focus:ring-red-600 ring-offset-primary focus:ring-2">
-    <label for="red-checkbox" class="ms-2 text-sm font-medium text-heading">Red</label>
+    <label for="red-checkbox" class="select-none ms-2 text-sm font-medium text-heading">Red</label>
 </div>
 <div class="flex items-center me-4">
     <input checked id="green-checkbox" type="checkbox" value="" class="w-4 h-4 text-green-600 bg-secondary-medium border-default-medium rounded-xs focus:ring-green-500 dark:focus:ring-green-600 ring-offset-primary focus:ring-2">
-    <label for="green-checkbox" class="ms-2 text-sm font-medium text-heading">Green</label>
+    <label for="green-checkbox" class="select-none ms-2 text-sm font-medium text-heading">Green</label>
 </div>
 <div class="flex items-center me-4">
     <input checked id="purple-checkbox" type="checkbox" value="" class="w-4 h-4 text-purple-600 bg-secondary-medium border-default-medium rounded-xs focus:ring-purple-500 dark:focus:ring-purple-600 ring-offset-primary focus:ring-2">
-    <label for="purple-checkbox" class="ms-2 text-sm font-medium text-heading">Purple</label>
+    <label for="purple-checkbox" class="select-none ms-2 text-sm font-medium text-heading">Purple</label>
 </div>
 <div class="flex items-center me-4">
     <input checked id="teal-checkbox" type="checkbox" value="" class="w-4 h-4 text-teal-600 bg-secondary-medium border-default-medium rounded-xs focus:ring-teal-500 dark:focus:ring-teal-600 ring-offset-primary focus:ring-2">
-    <label for="teal-checkbox" class="ms-2 text-sm font-medium text-heading">Teal</label>
+    <label for="teal-checkbox" class="select-none ms-2 text-sm font-medium text-heading">Teal</label>
 </div>
 <div class="flex items-center me-4">
     <input checked id="yellow-checkbox" type="checkbox" value="" class="w-4 h-4 text-yellow-400 bg-secondary-medium border-default-medium rounded-xs focus:ring-yellow-500 dark:focus:ring-yellow-600 ring-offset-primary focus:ring-2">
-    <label for="yellow-checkbox" class="ms-2 text-sm font-medium text-heading">Yellow</label>
+    <label for="yellow-checkbox" class="select-none ms-2 text-sm font-medium text-heading">Yellow</label>
 </div>
 <div class="flex items-center me-4">
     <input checked id="orange-checkbox" type="checkbox" value="" class="w-4 h-4 text-orange-500 bg-secondary-medium border-default-medium rounded-xs focus:ring-orange-500 dark:focus:ring-orange-600 ring-offset-primary focus:ring-2">
-    <label for="orange-checkbox" class="ms-2 text-sm font-medium text-heading">Orange</label>
+    <label for="orange-checkbox" class="select-none ms-2 text-sm font-medium text-heading">Orange</label>
 </div>
 {{< /example >}}
 
@@ -340,7 +340,7 @@ Use this example of an advanced layout of checkbox elements where the label pare
 
 {{< example id="checkbox-advanced-example" class="flex flex-wrap" github="forms/checkbox.md" show_dark=true >}}
 <h3 class="mb-4 text-lg font-medium text-heading">Choose technology:</h3>
-<ul class="grid w-full gap-4 md:grid-cols-3">
+<ul class="select-none grid w-full gap-4 md:grid-cols-3">
     <li>
         <input type="checkbox" id="react-option" value="" class="hidden peer" required="">
         <label for="react-option" class="inline-flex items-center justify-between w-full p-5 text-body bg-primary-soft border-1 border-default rounded-base cursor-pointer peer-checked:hover:bg-brand-softer peer-checked:border-brand-subtle peer-checked:bg-brand-softer hover:bg-secondary-medium peer-checked:text-fg-brand-strong">                           

@@ -22,11 +22,11 @@ Make sure that you have the Flowbite JavaScript included in your project to enab
 Initialize a new popover by adding the `data-popover-target="{elementId}"` data attribute to the trigger element where `elementId` is the id of the popover component.
 
 {{< example id="default-popover-example" class="flex justify-center pt-24" github="components/popover.md" show_dark=true >}}
-<button data-popover-target="popover-default" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default popover</button>
+<button data-popover-target="popover-default" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Default popover</button>
 
-<div data-popover id="popover-default" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
-        <h3 class="font-semibold text-gray-900 dark:text-white">Popover title</h3>
+<div data-popover id="popover-default" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+    <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
+        <h3 class="font-medium text-heading">Popover title</h3>
     </div>
     <div class="px-3 py-2">
         <p>And here's some amazing content. It's very engaging. Right?</p>
@@ -40,35 +40,35 @@ Initialize a new popover by adding the `data-popover-target="{elementId}"` data 
 Use this example to show more information about a user profile when hovering over the trigger component.
 
 {{< example id="popover-user-profile-example" class="flex justify-center pt-52" github="components/popover.md" show_dark=true >}}
-<button data-popover-target="popover-user-profile" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">User profile</button>
+<button data-popover-target="popover-user-profile" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">User profile</button>
 
-<div data-popover id="popover-user-profile" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600">
+<div data-popover id="popover-user-profile" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
     <div class="p-3">
         <div class="flex items-center justify-between mb-2">
             <a href="#">
-                <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese Leos">
+                <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese Leos">
             </a>
             <div>
-                <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Follow</button>
+                <button type="button" class="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none">Follow</button>
             </div>
         </div>
-        <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
+        <p class="text-sm font-semibold text-heading">
             <a href="#">Jese Leos</a>
         </p>
-        <p class="mb-3 text-sm font-normal">
+        <p class="mb-3 text-sm font-normal text-body">
             <a href="#" class="hover:underline">@jeseleos</a>
         </p>
-        <p class="mb-4 text-sm">Open-source contributor. Building <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">flowbite.com</a>.</p>
+        <p class="mb-4 text-sm">Open-source contributor & CEO. Building <a href="#" class="text-fg-brand hover:underline">flowbite.com</a>.</p>
         <ul class="flex text-sm">
-            <li class="me-2">
+            <li class="me-2.5">
                 <a href="#" class="hover:underline">
-                    <span class="font-semibold text-gray-900 dark:text-white">799</span>
+                    <span class="font-medium text-heading">799</span>
                     <span>Following</span>
                 </a>
             </li>
             <li>
                 <a href="#" class="hover:underline">
-                    <span class="font-semibold text-gray-900 dark:text-white">3,758</span>
+                    <span class="font-medium text-heading">3,758</span>
                     <span>Followers</span>
                 </a>
             </li>
@@ -83,72 +83,67 @@ Use this example to show more information about a user profile when hovering ove
 This example can be used to show more information about a company profile.
 
 {{< example id="popover-company-profile-example" class="flex justify-center pt-80" github="components/popover.md" disable_init_js=true show_dark=true >}}
-<button data-popover-target="popover-company-profile" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Company profile</button>
+<button data-popover-target="popover-company-profile" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Company profile</button>
 
-<div data-popover id="popover-company-profile" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 w-80 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600">
+<div data-popover id="popover-company-profile" role="tooltip" class="absolute z-10 invisible inline-block w-80 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
     <div class="p-3">
         <div class="flex">
             <div class="me-3 shrink-0">
-                <a href="#" class="block p-2 bg-gray-100 rounded-lg dark:bg-gray-700">
+                <a href="#" class="block w-10 h-10 flex items-center justify-center p-2 bg-tertiary rounded">
                 <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/logo.svg" alt="Flowbite logo">
             </a>
             </div>
             <div>
-                <p class="mb-1 text-base font-semibold leading-none text-gray-900 dark:text-white">
+                <p class="text-base font-semibold text-heading">
                     <a href="#" class="hover:underline">Flowbite</a>
                 </p>
                 <p class="mb-3 text-sm font-normal">
                     Tech company
                 </p>
-                <p class="mb-4 text-sm">Open-source library of Tailwind CSS components and Figma design system.</p>
+                <p class="mb-3 text-sm">Instant breaking news alerts and the most talked about stories.</p>
                 <ul class="text-sm">
                     <li class="flex items-center mb-2">
-                        <span class="me-2 font-semibold text-gray-400">
-                            <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 20">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6.487 1.746c0 4.192 3.592 1.66 4.592 5.754 0 .828 1 1.5 2 1.5s2-.672 2-1.5a1.5 1.5 0 0 1 1.5-1.5h1.5m-16.02.471c4.02 2.248 1.776 4.216 4.878 5.645C10.18 13.61 9 19 9 19m9.366-6h-2.287a3 3 0 0 0-3 3v2m6-8a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
-                            </svg>
+                        <span class="me-2 font-semibold text-body">
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"/></svg>
                         </span>
-                        <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">https://flowbite.com/</a>
+                        <a href="#" class="font-medium text-fg-brand hover:underline">https://flowbite.com/</a>
                     </li>
                     <li class="flex items-start mb-2">
-                        <span class="me-2 font-semibold text-gray-400">
-                            <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                                <path d="M17.947 2.053a5.209 5.209 0 0 0-3.793-1.53A6.414 6.414 0 0 0 10 2.311 6.482 6.482 0 0 0 5.824.5a5.2 5.2 0 0 0-3.8 1.521c-1.915 1.916-2.315 5.392.625 8.333l7 7a.5.5 0 0 0 .708 0l7-7a6.6 6.6 0 0 0 2.123-4.508 5.179 5.179 0 0 0-1.533-3.793Z"/>
-                            </svg>
+                        <span class="me-2 text-body">
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/></svg>
                         </span>
                         <span class="-mt-1">4,567,346 people like this including 5 of your friends</span>
                     </li>
                 </ul>
-                <div class="flex mb-3 -space-x-3 rtl:space-x-reverse">
-                    <img class="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-5.jpg" alt="">
-                    <img class="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-2.jpg" alt="">
-                    <img class="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800" src="/docs/images/people/profile-picture-3.jpg" alt="">
-                    <a class="flex items-center justify-center w-8 h-8 text-xs font-medium text-white bg-gray-400 border-2 border-white rounded-full hover:bg-gray-500 dark:border-gray-800" href="#">+3</a>
+                <div class="flex mb-4 -space-x-3 rtl:space-x-reverse">
+                    <img class="w-8 h-8 border-2 border-buffer-medium rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="">
+                    <img class="w-8 h-8 border-2 border-buffer-medium rounded-full" src="/docs/images/people/profile-picture-2.jpg" alt="">
+                    <img class="w-8 h-8 border-2 border-buffer-medium rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="">
+                    <a class="flex items-center justify-center w-8 h-8 text-xs font-medium text-heading bg-tertiary border-2 border-buffer-medium rounded-full hover:bg-quaternary" href="#">+3</a>
                 </div>
-                <div class="flex">
-                    <button type="button" class="inline-flex items-center justify-center w-full px-5 py-2 me-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"><svg class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
-    <path d="M3 7H1a1 1 0 0 0-1 1v8a2 2 0 0 0 4 0V8a1 1 0 0 0-1-1Zm12.954 0H12l1.558-4.5a1.778 1.778 0 0 0-3.331-1.06A24.859 24.859 0 0 1 6 6.8v9.586h.114C8.223 16.969 11.015 18 13.6 18c1.4 0 1.592-.526 1.88-1.317l2.354-7A2 2 0 0 0 15.954 7Z"/>
-  </svg>Like page</button>
-                    <button id="dropdown-button" data-dropdown-toggle="dropdown-menu" data-dropdown-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg shrink-0 focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button"> 
-                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
-                            <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
-                        </svg>
+                <div class="flex space-x-2">
+                    <button type="button" class="flex items-center justify-center w-full text-body bg-primary-medium border border-default-medium hover:bg-secondary-strong hover:text-heading hover:border-default-strong focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
+                        <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11c.889-.086 1.416-.543 2.156-1.057a22.323 22.323 0 0 0 3.958-5.084 1.6 1.6 0 0 1 .582-.628 1.549 1.549 0 0 1 1.466-.087c.205.095.388.233.537.406a1.64 1.64 0 0 1 .384 1.279l-1.388 4.114M7 11H4v6.5A1.5 1.5 0 0 0 5.5 19v0A1.5 1.5 0 0 0 7 17.5V11Zm6.5-1h4.915c.286 0 .372.014.626.15.254.135.472.332.637.572a1.874 1.874 0 0 1 .215 1.673l-2.098 6.4C17.538 19.52 17.368 20 16.12 20c-2.303 0-4.79-.943-6.67-1.475"/></svg>
+                        Like page
+                    </button>
+                    <button id="dropdown-button" data-dropdown-toggle="dropdown-menu" data-dropdown-placement="right" type="button" class="flex items-center justify-center text-body bg-primary-medium border border-default-medium hover:bg-secondary-strong hover:text-heading hover:border-default-strong focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base w-9 h-9 shrink-0 focus:outline-none">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M6 12h.01m6 0h.01m5.99 0h.01"/></svg>
                     </button>
                 </div>
-                <div id="dropdown-menu" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
-                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report this page</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Add to favorites</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Block this page</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Invite users</a>
-                    </li>
+                <div id="dropdown-menu" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+                    <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-button">
+                        <li>
+                            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Report this page</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Add to favorites</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Block this page</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Invite users</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -162,21 +157,23 @@ This example can be used to show more information about a company profile.
 
 Use this example to trigger a popover component with detailed information and an image when hovering over a portion of highlighted text inspired by Wikipedia and other large news outlets.
 
-{{< example id="popover-image-example" class="flex justify-center pt-64" github="components/popover.md" show_dark=true >}}
+{{< example id="popover-image-example" class="flex justify-center pt-72" github="components/popover.md" show_dark=true >}}
 
-<p class="text-gray-500 dark:text-gray-400">Due to its central geographic location in Southern Europe, <a href="#" class="text-blue-600 underline dark:text-blue-500 hover:no-underline" data-popover-target="popover-image">Italy</a> has historically been home to myriad peoples and cultures. In addition to the various ancient peoples dispersed throughout what is now modern-day Italy, the most predominant being the Indo-European Italic peoples who gave the peninsula its name, beginning from the classical era, Phoenicians and Carthaginians founded colonies mostly in insular Italy</p>
-<div data-popover id="popover-image" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 w-96 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600">
+<p class="text-body">Due to its central geographic location in Southern Europe, <a href="#" class="text-fg-brand font-medium underline hover:no-underline" data-popover-target="popover-image">Italy</a> has historically been home to myriad peoples and cultures. In addition to the various ancient peoples dispersed throughout what is now modern-day Italy, the most predominant being the Indo-European Italic peoples who gave the peninsula its name, beginning from the classical era, Phoenicians and Carthaginians founded colonies mostly in insular Italy</p>
+<div data-popover id="popover-image" role="tooltip" class="absolute z-10 p-3 invisible inline-block text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-lg shadow-xs opacity-0 w-96">
     <div class="grid grid-cols-5">
-        <div class="col-span-3 p-3">
+        <div class="col-span-3 pe-3">
             <div class="space-y-2">
-                <h3 class="font-semibold text-gray-900 dark:text-white">About Italy</h3>
-                <p>Italy is located in the middle of the Mediterranean Sea, in Southern Europe it is also considered part of Western Europe. A unitary parliamentary republic with Rome as its capital and largest city.</p>
-                <a href="#" class="flex items-center font-medium text-blue-600 dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700 hover:underline">Read more <svg class="w-2 h-2 ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-  </svg></a>
+                <h3 class="font-semibold text-heading">About Italy</h3>
+                <p class="mb-2">Italy is located in the middle of the Mediterranean Sea, in Southern Europe it is also part of Western Europe.</p>
+                <p>A unitary parliamentary republic with Rome as its capital and largest city.</p>
+                <a href="#" class="flex items-center font-medium text-fg-brand hover:underline">
+                    Read more 
+                    <svg class="w-4 h-4 ms-1 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
+                </a>
             </div>
         </div>
-        <img src="/docs/images/popovers/italy.png" class="h-full col-span-2" alt="Italy map" />
+        <img src="/docs/images/popovers/italy.png" class="h-full col-span-2 rounded" alt="Italy map" />
     </div>
     <div data-popper-arrow></div>
 </div>
@@ -188,16 +185,17 @@ Show helpful information inside a popover when hovering over a question mark but
 
 {{< example id="popover-description-example" class="pb-96" github="components/popover.md" show_dark=true >}}
 
-<p class="flex items-center text-sm text-gray-500 dark:text-gray-400">This is just some informational text <button data-popover-target="popover-description" data-popover-placement="bottom-end" type="button"><svg class="w-4 h-4 ms-2 text-gray-400 hover:text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg><span class="sr-only">Show information</span></button></p>
-<div data-popover id="popover-description" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
-    <div class="p-3 space-y-2">
-        <h3 class="font-semibold text-gray-900 dark:text-white">Activity growth - Incremental</h3>
-        <p>Report helps navigate cumulative growth of community activities. Ideally, the chart should have a growing trend, as stagnating chart signifies a significant decrease of community activity.</p>
-        <h3 class="font-semibold text-gray-900 dark:text-white">Calculation</h3>
-        <p>For each date bucket, the all-time volume of activities is calculated. This means that activities in period n contain all activities up to period n, plus the activities generated by your community in period.</p>
-        <a href="#" class="flex items-center font-medium text-blue-600 dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700 hover:underline">Read more <svg class="w-2 h-2 ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-  </svg></a>
+<p class="flex items-center text-sm text-body">This is just some informational text <button data-popover-target="popover-description" data-popover-placement="bottom-end" type="button"><svg class="w-4 h-4 text-body hover:text-heading ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.529 9.988a2.502 2.502 0 1 1 5 .191A2.441 2.441 0 0 1 12 12.582V14m-.01 3.008H12M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg><span class="sr-only">Show information</span></button></p>
+<div data-popover id="popover-description" role="tooltip" class="absolute z-10 p-3 invisible inline-block text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0 w-72">
+    <div>
+        <h3 class="font-semibold text-heading mb-2">Activity growth - Incremental</h3>
+        <p class="mb-4">Report helps navigate cumulative growth of community activities. Ideally, the chart should have a growing trend, as stagnating chart signifies a significant decrease of community activity.</p>
+        <h3 class="font-semibold text-heading mb-2">Calculation</h3>
+        <p class="mb-4">For each date bucket, the all-time volume of activities is calculated. This means that activities in period n contain all activities up to period n, plus the activities generated by your community in period.</p>
+        <a href="#" class="flex items-center font-medium text-fg-brand hover:underline">
+            Read more 
+            <svg class="w-4 h-4 ms-1 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
+        </a>
     </div>
     <div data-popper-arrow></div>
 </div>
@@ -208,19 +206,23 @@ Show helpful information inside a popover when hovering over a question mark but
 Show a progress bar with details inside a popover when hovering over a settings button.
 
 {{< example id="popover-description-example" class="flex justify-center pt-36" github="components/popover.md" show_dark=true >}}
-<button data-popover-target="popover-description" type="button" class="text-white bg-blue-700 hover:bg-blue-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2.5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><svg class="w-4 h-4 me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z"></path><path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z"></path><path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"></path></svg> Storage status</button>
+<button data-popover-target="popover-description" type="button" class="inline-flex items-center  text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+    <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 6c0 1.657-3.134 3-7 3S5 7.657 5 6m14 0c0-1.657-3.134-3-7-3S5 4.343 5 6m14 0v6M5 6v6m0 0c0 1.657 3.134 3 7 3s7-1.343 7-3M5 12v6c0 1.657 3.134 3 7 3s7-1.343 7-3v-6"/></svg>
+    Storage status
+</button>
 
-<div data-popover id="popover-description" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
-    <div class="p-3 space-y-2">
-        <h3 class="font-semibold text-gray-900 dark:text-white">Available storage</h3>
-        <p>This server has <span class="font-semibold text-gray-900 dark:text-white">30</span> of <span class="font-semibold text-gray-900 dark:text-white">150 GB</span> of block storage remaining.</p>
-        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
-            <div class="bg-red-600 h-2.5 rounded-full" style="width: 85%"></div>
+<div data-popover id="popover-description" role="tooltip" class="absolute z-10 p-3 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+    <div class="space-y-2.5">
+        <h3 class="font-semibold text-heading">Available storage</h3>
+        <p>This server has <span class="font-semibold text-heading">30</span> of <span class="font-semibold text-heading">150 GB</span> of block storage remaining.</p>
+        <div class="w-full bg-quaternary rounded-full h-1.5 mb-4">
+            <div class="bg-danger h-1.5 rounded-full" style="width: 85%"></div>
         </div>
-        <a href="#" class="flex items-center font-medium text-blue-600 dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700">Upgrade now <svg class="w-2 h-2 ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-  </svg></a>
     </div>
+    <a href="#" class="flex items-center font-medium text-fg-brand hover:underline">
+        Upgrade now
+        <svg class="w-4 h-4 ms-1 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
+    </a>
     <div data-popper-arrow></div>
 </div>
 {{< /example >}}
@@ -229,57 +231,51 @@ Show a progress bar with details inside a popover when hovering over a settings 
 
 Dynamically show the password strength progress when creating a new password positioned relative to the input element.
 
-{{< example id="popover-password-example" class="pb-16" github="components/popover.md" show_dark=true >}}
+{{< example id="popover-password-example" github="components/popover.md" iframeHeight="480" show_dark=true >}}
 
 <form>
-  <div class="mb-6">
-    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required />
-  </div>
-  <div class="mb-6">
-    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-    <input data-popover-target="popover-password" data-popover-placement="bottom" type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-    <div data-popover id="popover-password" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
-        <div class="p-3 space-y-2">
-            <h3 class="font-semibold text-gray-900 dark:text-white">Must have at least 6 characters</h3>
-            <div class="grid grid-cols-4 gap-2">
-                <div class="h-1 bg-orange-300 dark:bg-orange-400"></div>
-                <div class="h-1 bg-orange-300 dark:bg-orange-400"></div>
-                <div class="h-1 bg-gray-200 dark:bg-gray-600"></div>
-                <div class="h-1 bg-gray-200 dark:bg-gray-600"></div>
+    <div class="mb-6">
+        <label for="email" class="block mb-2.5 text-sm font-medium text-heading">Your email</label>
+        <input type="email" id="email" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="name@flowbite.com" required />
+    </div>
+    <div class="mb-6">
+        <label for="password" class="block mb-2.5 text-sm font-medium text-heading">Your password</label>
+        <input data-popover-target="popover-password" data-popover-placement="bottom" type="password" id="password" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" required />
+        <div data-popover id="popover-password" role="tooltip" class="absolute z-10 p-3 invisible inline-block w-72 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+            <div>
+                <h3 class="font-semibold text-heading mb-3">Must have at least 6 characters</h3>
+                <div class="grid grid-cols-4 gap-2 mb-3">
+                    <div class="h-1 bg-warning rounded-full"></div>
+                    <div class="h-1 bg-warning rounded-full"></div>
+                    <div class="h-1 bg-quaternary rounded-full"></div>
+                    <div class="h-1 bg-quaternary rounded-full"></div>
+                </div>
+                <p class="mb-2">It’s better to have:</p>
+                <ul>
+                    <li class="flex items-center mb-1">
+                        <svg class="w-4 h-4 me-1.5 text-success" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/></svg>
+                        Upper & lower case letters
+                    </li>
+                    <li class="flex items-center mb-1">
+                        <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+                        A symbol (#$&)
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+                        A longer password (min. 12 chars.)
+                    </li>
+                </ul>
             </div>
-            <p>It’s better to have:</p>
-            <ul>
-                <li class="flex items-center mb-1">
-                    <svg class="w-3.5 h-3.5 me-2 text-green-400 dark:text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                    </svg>
-                    Upper & lower case letters
-                </li>
-                <li class="flex items-center mb-1">
-                    <svg class="w-3 h-3 me-2.5 text-gray-300 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                    </svg>
-                    A symbol (#$&)
-                </li>
-                <li class="flex items-center">
-                    <svg class="w-3 h-3 me-2.5 text-gray-300 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                    </svg>
-                    A longer password (min. 12 chars.)
-                </li>
-            </ul>
+            <div data-popper-arrow></div>
+        </div>
     </div>
-    <div data-popper-arrow></div>
-</div>
-  </div>
-  <div class="flex items-start mb-6">
-    <div class="flex items-center h-5">
-      <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
+    <div class="flex items-start mb-6">
+        <div class="flex items-center h-5">
+        <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft" required />
+        </div>
+        <label for="remember" class="ms-2 text-sm font-medium text-heading">I agree with the <a href="#" class="text-brand hover:underline">terms and conditions</a>.</label>
     </div>
-    <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-  </div>
-  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+    <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Submit</button>
 </form>
 {{< /example >}}
 
@@ -288,41 +284,41 @@ Dynamically show the password strength progress when creating a new password pos
 Set the position of the popover component relative to the trigger element by using the `data-popover-placement="{top|right|bottom|left}"` data attribute and its values.
 
 {{< example id="popover-placement-example" class="flex flex-wrap justify-center py-24 space-x-4" github="components/popover.md" show_dark=true >}}
-<button data-popover-target="popover-top" data-popover-placement="top" type="button" class="text-white mb-3 me-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Top popover</button>
+<button data-popover-target="popover-top" data-popover-placement="top" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Top popover</button>
 
-<div data-popover id="popover-top" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
-        <h3 class="font-semibold text-gray-900 dark:text-white">Popover top</h3>
+<div data-popover id="popover-top" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+    <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
+        <h3 class="font-medium text-heading">Popover top</h3>
     </div>
     <div class="px-3 py-2">
         <p>And here's some amazing content. It's very engaging. Right?</p>
     </div>
     <div data-popper-arrow></div>
 </div>
-<button data-popover-target="popover-right" data-popover-placement="right" type="button" class="text-white mb-3 me-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Right popover</button>
-<div data-popover id="popover-right" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
-        <h3 class="font-semibold text-gray-900 dark:text-white">Popover right</h3>
+<button data-popover-target="popover-right" data-popover-placement="right" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Right popover</button>
+<div data-popover id="popover-right" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+    <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
+        <h3 class="font-medium text-heading">Popover right</h3>
     </div>
     <div class="px-3 py-2">
         <p>And here's some amazing content. It's very engaging. Right?</p>
     </div>
     <div data-popper-arrow></div>
 </div>
-<button data-popover-target="popover-bottom" data-popover-placement="bottom" type="button" class="text-white mb-3 me-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Bottom popover</button>
-<div data-popover id="popover-bottom" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
-        <h3 class="font-semibold text-gray-900 dark:text-white">Popover bottom</h3>
+<button data-popover-target="popover-bottom" data-popover-placement="bottom" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Bottom popover</button>
+<div data-popover id="popover-bottom" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+    <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
+        <h3 class="font-medium text-heading">Popover bottom</h3>
     </div>
     <div class="px-3 py-2">
         <p>And here's some amazing content. It's very engaging. Right?</p>
     </div>
     <div data-popper-arrow></div>
 </div>
-<button data-popover-target="popover-left" data-popover-placement="left" type="button" class="text-white mb-3 me-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Left popover</button>
-<div data-popover id="popover-left" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
-        <h3 class="font-semibold text-gray-900 dark:text-white">Popover left</h3>
+<button data-popover-target="popover-left" data-popover-placement="left" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Left popover</button>
+<div data-popover id="popover-left" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+    <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
+        <h3 class="font-medium text-heading">Popover left</h3>
     </div>
     <div class="px-3 py-2">
         <p>And here's some amazing content. It's very engaging. Right?</p>
@@ -335,12 +331,12 @@ Set the position of the popover component relative to the trigger element by usi
 
 Manually set the trigger event by adding the `data-popover-trigger="{hover|click}"` data attribute to the trigger element choosing between a hover or click event. By default it is set to `hover`.
 
-{{< example id="popover-triggering-example" class="flex justify-center pt-24" github="components/popover.md" show_dark=true >}}
-<button data-popover-target="popover-hover" data-popover-trigger="hover" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Hover popover</button>
+{{< example id="popover-triggering-example" class="flex justify-center space-x-4 pt-24" github="components/popover.md" show_dark=true >}}
+<button data-popover-target="popover-hover" data-popover-trigger="hover" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Hover popover</button>
 
-<div data-popover id="popover-hover" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
-        <h3 class="font-semibold text-gray-900 dark:text-white">Popover hover</h3>
+<div data-popover id="popover-hover" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+    <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
+        <h3 class="font-medium text-heading">Popover left</h3>
     </div>
     <div class="px-3 py-2">
         <p>And here's some amazing content. It's very engaging. Right?</p>
@@ -348,11 +344,11 @@ Manually set the trigger event by adding the `data-popover-trigger="{hover|click
     <div data-popper-arrow></div>
 </div>
 
-<button data-popover-target="popover-click" data-popover-trigger="click" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Click popover</button>
+<button data-popover-target="popover-click" data-popover-trigger="click" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Click popover</button>
 
-<div data-popover id="popover-click" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
-        <h3 class="font-semibold text-gray-900 dark:text-white">Popover click</h3>
+<div data-popover id="popover-click" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+    <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
+        <h3 class="font-medium text-heading">Popover left</h3>
     </div>
     <div class="px-3 py-2">
         <p>And here's some amazing content. It's very engaging. Right?</p>
@@ -366,11 +362,11 @@ Manually set the trigger event by adding the `data-popover-trigger="{hover|click
 Increase or decrease the default offset by adding the `data-popover-offset="{offset}"` data attribute where the value is an integer.
 
 {{< example id="popover-offset-example" class="flex justify-center pt-32" github="components/popover.md" show_dark=true >}}
-<button data-popover-target="popover-offset" data-popover-offset="30" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Offset popover</button>
+<button data-popover-target="popover-offset" data-popover-offset="30" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Offset popover</button>
 
-<div data-popover id="popover-offset" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
-        <h3 class="font-semibold text-gray-900 dark:text-white">Popover offset</h3>
+<div data-popover id="popover-offset" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+    <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
+        <h3 class="font-medium text-heading">Popover left</h3>
     </div>
     <div class="px-3 py-2">
         <p>And here's some amazing content. It's very engaging. Right?</p>
@@ -384,11 +380,11 @@ Increase or decrease the default offset by adding the `data-popover-offset="{off
 Customize the animation of the popover component by using the utility classes from Tailwind CSS such as `transition-opacity` and `duration-{x}`.
 
 {{< example id="popover-animation-example" class="flex justify-center pt-32" github="components/popover.md" show_dark=true >}}
-<button data-popover-target="popover-animation" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Animated popover</button>
+<button data-popover-target="popover-animation" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Animated popover</button>
 
-<div data-popover id="popover-animation" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
-        <h3 class="font-semibold text-gray-900 dark:text-white">Popover animation</h3>
+<div data-popover id="popover-animation" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+    <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
+        <h3 class="font-medium text-heading">Popover left</h3>
     </div>
     <div class="px-3 py-2">
         <p>And here's some amazing content. It's very engaging. Right?</p>
@@ -402,11 +398,11 @@ Customize the animation of the popover component by using the utility classes fr
 You can also disable the popover arrow by not including the `data-popper-arrow` element.
 
 {{< example id="popover-disable-arrow-example" class="flex justify-center pt-32" github="components/popover.md" show_dark=true >}}
-<button data-popover-target="popover-no-arrow" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default popover</button>
+<button data-popover-target="popover-no-arrow" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Default popover</button>
 
-<div data-popover id="popover-no-arrow" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
-        <h3 class="font-semibold text-gray-900 dark:text-white">Popover no arrow</h3>
+<div data-popover id="popover-no-arrow" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+    <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
+        <h3 class="font-medium text-heading">Popover left</h3>
     </div>
     <div class="px-3 py-2">
         <p>And here's some amazing content. It's very engaging. Right?</p>

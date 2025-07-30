@@ -114,7 +114,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 [`.dark [role="tooltip"] > [data-popper-arrow]:after`]: {
                     'border-style': 'solid',
-                    'border-color': 'var(--color-gray-600)',
+                    'border-color': 'var(--color-gray-800)',
                 },
                 [`[data-popover][role="tooltip"][data-popper-placement^='top'] > [data-popper-arrow]:before`]:
                     {
@@ -158,19 +158,19 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 [`[data-popover][role="tooltip"][data-popper-placement^='top'] > [data-popper-arrow]`]:
                     {
-                        bottom: '-5px',
+                        bottom: '-4px',
                     },
                 [`[data-popover][role="tooltip"][data-popper-placement^='bottom'] > [data-popper-arrow]`]:
                     {
-                        top: '-5px',
+                        top: '-4px',
                     },
                 [`[data-popover][role="tooltip"][data-popper-placement^='left'] > [data-popper-arrow]`]:
                     {
-                        right: '-5px',
+                        right: '-4px',
                     },
                 [`[data-popover][role="tooltip"][data-popper-placement^='right'] > [data-popper-arrow]`]:
                     {
-                        left: '-5px',
+                        left: '-4px',
                     },
                 ['[role="tooltip"].invisible > [data-popper-arrow]:before']: {
                     visibility: 'hidden',

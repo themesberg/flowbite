@@ -150,26 +150,26 @@ Use the following markup to show simple previous and next elements.
 
 {{< example id="pagination-prev-next-example" class="flex flex-col space-y-4 items-center justify-center" github="components/pagination.md" show_dark=true >}}
 
-<div class="flex">
+<div class="flex space-x-2">
   <!-- Previous Button -->
-  <a href="#" class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+  <a href="#" class="text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
     Previous
   </a>
 
   <!-- Next Button -->
-  <a href="#" class="flex items-center justify-center px-3 h-8 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+  <a href="#" class="text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
     Next
   </a>
 </div>
 
-<div class="flex">
+<div class="flex space-x-2">
   <!-- Previous Button -->
-  <a href="#" class="flex items-center justify-center px-4 h-10 text-base font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+  <a href="#" class="text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
     Previous
   </a>
 
   <!-- Next Button -->
-  <a href="#" class="flex items-center justify-center px-4 h-10 ms-3 text-base font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+  <a href="#" class="text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
     Next
   </a>
 </div>
@@ -180,35 +180,31 @@ Use the following markup to show simple previous and next elements.
 Use the following code to show simple previous and next elements with icons.
 
 {{< example id="pagination-prev-next-icons-example" class="flex flex-col space-y-4 items-center justify-center" github="components/pagination.md" show_dark=true >}}
-
-<div class="flex">
+<div class="flex space-x-2">
   <!-- Previous Button -->
-  <a href="#" class="flex items-center justify-center px-3 h-8 me-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-    <svg class="w-3.5 h-3.5 me-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
-    </svg>
+  <a href="#" class="inline-flex items-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
+    <svg class="w-4 h-4 me-1.5 -ms-0.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/></svg>
     Previous
   </a>
-  <a href="#" class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+
+  <!-- Next Button -->
+  <a href="#" class="inline-flex items-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
     Next
-    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-    </svg>
+    <svg class="w-4 h-4 ms-1.5 -me-0.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
   </a>
 </div>
-<div class="flex">
+
+<div class="flex space-x-2">
   <!-- Previous Button -->
-  <a href="#" class="flex items-center justify-center px-4 h-10 me-3 text-base font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-    <svg class="w-3.5 h-3.5 me-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
-    </svg>
+  <a href="#" class="inline-flex items-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+    <svg class="w-4 h-4 me-1.5 -ms-0.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/></svg>
     Previous
   </a>
-  <a href="#" class="flex items-center justify-center px-4 h-10 text-base font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+
+  <!-- Next Button -->
+  <a href="#" class="inline-flex items-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
     Next
-    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-    </svg>
+    <svg class="w-4 h-4 ms-1.5 -me-0.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
   </a>
 </div>
 {{< /example >}}
@@ -221,32 +217,36 @@ You can use the following markup to show the number of data shown inside a table
 
 <div class="flex flex-col items-center">
   <!-- Help text -->
-  <span class="text-sm text-gray-700 dark:text-gray-400">
-      Showing <span class="font-semibold text-gray-900 dark:text-white">1</span> to <span class="font-semibold text-gray-900 dark:text-white">10</span> of <span class="font-semibold text-gray-900 dark:text-white">100</span> Entries
+  <span class="text-sm text-body">
+      Showing <span class="font-semibold text-heading">1</span> to <span class="font-semibold text-heading">10</span> of <span class="font-semibold text-heading">100</span> Entries
   </span>
   <!-- Buttons -->
-  <div class="inline-flex mt-2 xs:mt-0">
-      <button class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 rounded-s hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-          Prev
-      </button>
-      <button class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 border-0 border-s border-gray-700 rounded-e hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-          Next
-      </button>
+  <div class="inline-flex mt-4 -space-x-px">
+    <!-- Previous Button -->
+    <button type="button" class="inline-flex items-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-s-base text-sm px-3 py-2 focus:outline-none">
+      Previous
+    </button>
+    <!-- Next Button -->
+    <button type="button" class="inline-flex items-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-e-base text-sm px-3 py-2 focus:outline-none">
+      Next
+    </button>
   </div>
 </div>
 <div class="flex flex-col items-center">
   <!-- Help text -->
-  <span class="text-sm text-gray-700 dark:text-gray-400">
-      Showing <span class="font-semibold text-gray-900 dark:text-white">1</span> to <span class="font-semibold text-gray-900 dark:text-white">10</span> of <span class="font-semibold text-gray-900 dark:text-white">100</span> Entries
+  <span class="text-sm text-body">
+      Showing <span class="font-semibold text-heading">1</span> to <span class="font-semibold text-heading">10</span> of <span class="font-semibold text-heading">100</span> Entries
   </span>
   <!-- Buttons -->
-  <div class="inline-flex mt-2 xs:mt-0">
-      <button class="flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-gray-800 rounded-s hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-          Prev
-      </button>
-      <button class="flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-gray-800 border-0 border-s border-gray-700 rounded-e hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-          Next
-      </button>
+  <div class="inline-flex mt-4 -space-x-px">
+    <!-- Previous Button -->
+    <button type="button" class="inline-flex items-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-s-base text-sm px-4 py-2.5 focus:outline-none">
+      Previous
+    </button>
+    <!-- Next Button -->
+    <button type="button" class="inline-flex items-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-e-base text-sm px-4 py-2.5 focus:outline-none">
+      Next
+    </button>
   </div>
 </div>
 {{< /example >}}
@@ -259,44 +259,214 @@ You can use the following code to show the number of data shown inside a table e
 
 <div class="flex flex-col items-center">
   <!-- Help text -->
-  <span class="text-sm text-gray-700 dark:text-gray-400">
-      Showing <span class="font-semibold text-gray-900 dark:text-white">1</span> to <span class="font-semibold text-gray-900 dark:text-white">10</span> of <span class="font-semibold text-gray-900 dark:text-white">100</span> Entries
+  <span class="text-sm text-body">
+      Showing <span class="font-semibold text-heading">1</span> to <span class="font-semibold text-heading">10</span> of <span class="font-semibold text-heading">100</span> Entries
   </span>
-  <div class="inline-flex mt-2 xs:mt-0">
-    <!-- Buttons -->
-    <button class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 rounded-s hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-        <svg class="w-3.5 h-3.5 me-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
-        </svg>
-        Prev
+  <!-- Buttons -->
+  <div class="inline-flex mt-4 -space-x-px">
+    <!-- Previous Button -->
+    <button type="button" class="inline-flex items-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-s-base text-sm px-3 py-2 focus:outline-none">
+      <svg class="w-4 h-4 me-1.5 -ms-0.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/></svg>
+      Previous
     </button>
-    <button class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 border-0 border-s border-gray-700 rounded-e hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-        Next
-        <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-      </svg>
+    <!-- Next Button -->
+    <button type="button" class="inline-flex items-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-e-base text-sm px-3 py-2 focus:outline-none">
+      Next
+      <svg class="w-4 h-4 ms-1.5 -me-0.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
     </button>
   </div>
 </div>
 <div class="flex flex-col items-center">
   <!-- Help text -->
-  <span class="text-sm text-gray-700 dark:text-gray-400">
-      Showing <span class="font-semibold text-gray-900 dark:text-white">1</span> to <span class="font-semibold text-gray-900 dark:text-white">10</span> of <span class="font-semibold text-gray-900 dark:text-white">100</span> Entries
+  <span class="text-sm text-body">
+      Showing <span class="font-semibold text-heading">1</span> to <span class="font-semibold text-heading">10</span> of <span class="font-semibold text-heading">100</span> Entries
   </span>
-  <div class="inline-flex mt-2 xs:mt-0">
-    <!-- Buttons -->
-    <button class="flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-gray-800 rounded-s hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-        <svg class="w-3.5 h-3.5 me-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
-        </svg>
-        Prev
+  <!-- Buttons -->
+  <div class="inline-flex mt-4 -space-x-px">
+    <!-- Previous Button -->
+    <button type="button" class="inline-flex items-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-s-base text-sm px-4 py-2.5 focus:outline-none">
+      <svg class="w-4 h-4 me-1.5 -ms-0.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/></svg>
+      Previous
     </button>
-    <button class="flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-gray-800 border-0 border-s border-gray-700 rounded-e hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-        Next
-        <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-      </svg>
+    <!-- Next Button -->
+    <button type="button" class="inline-flex items-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-e-base text-sm px-4 py-2.5 focus:outline-none">
+      Next
+      <svg class="w-4 h-4 ms-1.5 -me-0.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
     </button>
   </div>
 </div>
+{{< /example >}}
+
+## Pagination with dropdown (New)
+
+Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
+
+{{< example id="default-pagination-example" class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
+
+<nav aria-label="Page navigation example" class="flex items-center space-x-4">
+  <ul class="flex -space-x-px text-sm">
+    <li>
+      <a href="#" class="flex items-center justify-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-s-base text-sm px-3 h-9 focus:outline-none">Previous</a>
+    </li>
+    <li>
+      <a href="#" class="flex items-center justify-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 text-sm w-9 h-9 focus:outline-none">1</a>
+    </li>
+    <li>
+      <a href="#" class="flex items-center justify-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 text-sm w-9 h-9 focus:outline-none">2</a>
+    </li>
+    <li>
+      <a href="#" aria-current="page" class="flex items-center justify-center text-fg-brand bg-brand-softer box-border border border-default-medium hover:bg-brand-soft hover:text-fg-brand font-medium text-sm w-9 h-9 focus:outline-none">3</a>
+    </li>
+    <li>
+      <a href="#" class="flex items-center justify-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 text-sm w-9 h-9 focus:outline-none">4</a>
+    </li>
+    <li>
+      <a href="#" class="flex items-center justify-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 text-sm w-9 h-9 focus:outline-none">5</a>
+    </li>
+    <li>
+      <a href="#" class="flex items-center justify-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-e-base text-sm px-3 h-9 focus:outline-none">Next</a>
+    </li>
+  </ul>
+  <form class="w-32 mx-auto">
+    <label for="countries" class="sr-only">Select an option</label>
+    <select id="countries" class="block w-full px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm leading-4 rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body">
+      <option selected>10 per page</option>
+      <option value="25">25 per page</option>
+      <option value="50">50 per page</option>
+      <option value="100">100 per page</option>
+    </select>
+  </form>
+</nav>
+
+{{< /example >}}
+
+## Pagination with input (New)
+
+Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
+
+{{< example id="default-pagination-example" class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
+
+<nav aria-label="Page navigation example" class="flex items-center space-x-4">
+  <ul class="flex -space-x-px text-sm">
+    <li>
+      <a href="#" class="flex items-center justify-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-s-base text-sm px-3 h-9 focus:outline-none">Previous</a>
+    </li>
+    <li>
+      <a href="#" class="flex items-center justify-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 text-sm w-9 h-9 focus:outline-none">1</a>
+    </li>
+    <li>
+      <a href="#" class="flex items-center justify-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 text-sm w-9 h-9 focus:outline-none">2</a>
+    </li>
+    <li>
+      <a href="#" aria-current="page" class="flex items-center justify-center text-fg-brand bg-brand-softer box-border border border-default-medium hover:bg-brand-soft hover:text-fg-brand font-medium text-sm w-9 h-9 focus:outline-none">3</a>
+    </li>
+    <li>
+      <a href="#" class="flex items-center justify-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 text-sm w-9 h-9 focus:outline-none">4</a>
+    </li>
+    <li>
+      <a href="#" class="flex items-center justify-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 text-sm w-9 h-9 focus:outline-none">5</a>
+    </li>
+    <li>
+      <a href="#" class="flex items-center justify-center text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-e-base text-sm px-3 h-9 focus:outline-none">Next</a>
+    </li>
+  </ul>
+  <form class="mx-auto">
+    <div class="flex items-center space-x-2">
+        <label for="visitors" class="text-sm font-medium text-heading shrink-0">Go to</label>
+        <input type="text" id="visitors" class="bg-secondary-medium w-10 border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block px-2.5 py-2 shadow-xs placeholder:text-body" placeholder="99" required />
+        <span class="text-sm font-medium text-heading">page</span>
+    </div>
+  </form>
+</nav>
+
+{{< /example >}}
+
+## Button & input (New)
+
+Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
+
+{{< example id="default-pagination-example" class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
+
+<nav aria-label="Page navigation example">
+  <form class="mx-auto flex items-center space-x-3">
+    <div class="flex items-center space-x-2">
+        <label for="visitors" class="text-sm font-medium text-heading shrink-0">Go to</label>
+        <input type="text" id="visitors" class="bg-secondary-medium w-10 border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block px-2.5 py-2 shadow-xs placeholder:text-body" placeholder="99" />
+        <span class="text-sm font-medium text-heading">page</span>
+    </div>
+    <button type="submit" class="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Go</button>
+  </form>
+</nav>
+
+{{< /example >}}
+
+## Select input & buttons (New)
+
+Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
+
+{{< example id="default-pagination-example" class="flex flex-col space-y-6 py-8 items-center" github="components/pagination.md" show_dark=true >}}
+
+<nav aria-label="Page navigation example">
+  <form class="mx-auto flex items-center space-x-3">
+    <label for="countries" class="sr-only">Select an option</label>
+    <select id="countries" class="block w-16 px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm leading-4 rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body">
+      <option selected>03</option>
+      <option value="4">04</option>
+      <option value="5">05</option>
+      <option value="6">06</option>
+      <option value="7">07</option>
+      <option value="8">08</option>
+      <option value="9">09</option>
+      <option value="10">10</option>
+    </select>
+    <input type="text" id="visitors" class="bg-disabled w-28 border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block px-2.5 py-2 shadow-xs placeholder:text-fg-disabled" placeholder="of 99 pages" disabled/>
+    <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
+      <button data-tooltip-target="tooltip-previous" type="button" class="inline-flex items-center justify-center text-body bg-primary-soft rounded-s-base box-border border border-default hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary leading-5 w-9 h-9 focus:outline-none">
+        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
+      </button>
+      <div id="tooltip-previous" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+        Previous
+        <div class="tooltip-arrow" data-popper-arrow></div>
+      </div>
+      <button data-tooltip-target="tooltip-next" type="button" class="inline-flex items-center justify-center text-body bg-primary-soft rounded-e-base box-border border border-default hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary leading-5 w-9 h-9 focus:outline-none">
+        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
+      </button>
+      <div id="tooltip-next" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+        Next
+        <div class="tooltip-arrow" data-popper-arrow></div>
+      </div>
+    </div>
+  </form>
+</nav>
+
+{{< /example >}}
+
+## Button group (New)
+
+Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
+
+{{< example id="default-pagination-example" class="flex flex-col space-y-6 py-8 items-center" github="components/pagination.md" show_dark=true >}}
+
+<nav aria-label="Page navigation example">
+  <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
+    <button data-tooltip-target="tooltip-previous" type="button" class="inline-flex items-center justify-center text-body bg-primary-soft rounded-s-base box-border border border-default hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary leading-5 w-9 h-9 focus:outline-none">
+      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
+    </button>
+    <div id="tooltip-previous" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+      Previous
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+    <button type="button" class="inline-flex shrink-0 items-center justify-center text-body bg-primary-soft box-border border border-default hover:bg-secondary-medium hover:text-heading leading-5 px-3 h-9 focus:outline-none">
+      1 of 99
+    </button>
+    <button data-tooltip-target="tooltip-next" type="button" class="inline-flex items-center justify-center text-body bg-primary-soft rounded-e-base box-border border border-default hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary leading-5 w-9 h-9 focus:outline-none">
+      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
+    </button>
+    <div id="tooltip-next" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+      Next
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+  </div>
+</nav>
+
 {{< /example >}}

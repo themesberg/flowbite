@@ -62,17 +62,17 @@ module.exports = plugin.withOptions(function (options = {}) {
                         'border-right-width': '1px',
                     },
                 [`.tooltip[data-popper-placement^='top'] > .tooltip-arrow`]: {
-                    bottom: '-4px',
+                    bottom: '-3px',
                 },
                 [`.tooltip[data-popper-placement^='bottom'] > .tooltip-arrow`]:
                     {
-                        top: '-4px',
+                        top: '-3px',
                     },
                 [`.tooltip[data-popper-placement^='left'] > .tooltip-arrow`]: {
-                    right: '-4px',
+                    right: '-3px',
                 },
                 [`.tooltip[data-popper-placement^='right'] > .tooltip-arrow`]: {
-                    left: '-4px',
+                    left: '-3px',
                 },
                 ['.tooltip.invisible > .tooltip-arrow:before']: {
                     visibility: 'hidden',

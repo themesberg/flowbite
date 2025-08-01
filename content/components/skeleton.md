@@ -23,12 +23,12 @@ Use this example to show a placeholder when loading text content.
 
 {{< example id="default-skeleton-example" github="components/skeleton.md" show_dark=true >}}
 <div role="status" class="max-w-sm animate-pulse">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <div class="h-2.5 bg-quaternary rounded-full w-48 mb-4"></div>
+    <div class="h-2 bg-quaternary rounded-full max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-quaternary rounded-full mb-2.5"></div>
+    <div class="h-2 bg-quaternary rounded-full max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-quaternary rounded-full max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-quaternary rounded-full max-w-[360px]"></div>
     <span class="sr-only">Loading...</span>
 </div>
 
@@ -40,18 +40,16 @@ This example can be used to show a placeholder when loading an image and text co
 
 {{< example id="skeleton-image-example" github="components/skeleton.md" show_dark=true >}}
 <div role="status" class="space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center">
-    <div class="flex items-center justify-center w-full h-48 bg-gray-300 rounded-sm sm:w-96 dark:bg-gray-700">
-        <svg class="w-10 h-10 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-            <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z"/>
-        </svg>
+    <div class="flex items-center justify-center w-full h-48 bg-quaternary rounded-base sm:w-96">
+        <svg class="w-11 h-11 text-fg-disabled" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 16 5-7 6 6.5m6.5 2.5L16 13l-4.286 6M14 10h.01M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/></svg>
     </div>
     <div class="w-full">
-        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[480px] mb-2.5"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[440px] mb-2.5"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[460px] mb-2.5"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+        <div class="h-2.5 bg-quaternary rounded-full w-48 mb-4"></div>
+        <div class="h-2 bg-quaternary rounded-full max-w-[480px] mb-2.5"></div>
+        <div class="h-2 bg-quaternary rounded-full mb-2.5"></div>
+        <div class="h-2 bg-quaternary rounded-full max-w-[440px] mb-2.5"></div>
+        <div class="h-2 bg-quaternary rounded-full max-w-[460px] mb-2.5"></div>
+        <div class="h-2 bg-quaternary rounded-full max-w-[360px]"></div>
     </div>
     <span class="sr-only">Loading...</span>
 </div>
@@ -64,11 +62,8 @@ Use this example to show a skeleton placeholder when loading video content.
 
 {{< example id="skeleton-video-example" github="components/skeleton.md" show_dark=true >}}
 
-<div role="status" class="flex items-center justify-center h-56 max-w-sm bg-gray-300 rounded-lg animate-pulse dark:bg-gray-700">
-    <svg class="w-10 h-10 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-    <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"/>
-    <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2ZM9 13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2Zm4 .382a1 1 0 0 1-1.447.894L10 13v-2l1.553-1.276a1 1 0 0 1 1.447.894v2.764Z"/>
-  </svg>
+<div role="status" class="flex items-center justify-center h-56 max-w-sm bg-quaternary rounded-base animate-pulse">
+    <svg class="w-11 h-11 text-fg-disabled" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m14-4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1ZM9 12h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Zm5.697 2.395v-.733l1.269-1.219v2.984l-1.268-1.032Z"/></svg>
     <span class="sr-only">Loading...</span>
 </div>
 {{< /example >}}
@@ -80,34 +75,34 @@ Use this example to show a placeholder when loading longer pagraphs and headings
 {{< example id="skeleton-text-example" github="components/skeleton.md" show_dark=true >}}
 <div role="status" class="space-y-2.5 animate-pulse max-w-lg">
     <div class="flex items-center w-full">
-        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32"></div>
-        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
-        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+        <div class="h-2.5 bg-quaternary rounded-full w-32"></div>
+        <div class="h-2.5 ms-2 bg-quaternary rounded-full w-24"></div>
+        <div class="h-2.5 ms-2 bg-quaternary rounded-full w-full"></div>
     </div>
     <div class="flex items-center w-full max-w-[480px]">
-        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
-                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
-        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
+        <div class="h-2.5 bg-quaternary rounded-full w-full"></div>
+                <div class="h-2.5 ms-2 bg-quaternary rounded-full w-full"></div>
+        <div class="h-2.5 ms-2 bg-quaternary rounded-full w-24"></div>
     </div>
     <div class="flex items-center w-full max-w-[400px]">
-        <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
-        <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-80"></div>
-        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+        <div class="h-2.5 bg-quaternary rounded-full w-full"></div>
+        <div class="h-2.5 ms-2 bg-quaternary rounded-full w-80"></div>
+        <div class="h-2.5 ms-2 bg-quaternary rounded-full w-full"></div>
     </div>
     <div class="flex items-center w-full max-w-[480px]">
-        <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
-                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
-        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
+        <div class="h-2.5 ms-2 bg-quaternary rounded-full w-full"></div>
+                <div class="h-2.5 ms-2 bg-quaternary rounded-full w-full"></div>
+        <div class="h-2.5 ms-2 bg-quaternary rounded-full w-24"></div>
     </div>
     <div class="flex items-center w-full max-w-[440px]">
-        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-32"></div>
-        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
-        <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
+        <div class="h-2.5 ms-2 bg-quaternary rounded-full w-32"></div>
+        <div class="h-2.5 ms-2 bg-quaternary rounded-full w-24"></div>
+        <div class="h-2.5 ms-2 bg-quaternary rounded-full w-full"></div>
     </div>
     <div class="flex items-center w-full max-w-[360px]">
-        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
-        <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-80"></div>
-        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+        <div class="h-2.5 ms-2 bg-quaternary rounded-full w-full"></div>
+        <div class="h-2.5 ms-2 bg-quaternary rounded-full w-80"></div>
+        <div class="h-2.5 ms-2 bg-quaternary rounded-full w-full"></div>
     </div>
     <span class="sr-only">Loading...</span>
 </div>
@@ -118,24 +113,20 @@ Use this example to show a placeholder when loading longer pagraphs and headings
 Use this example to show a placeholder when loading content inside a card.
 
 {{< example id="skeleton-card-example" github="components/skeleton.md" show_dark=true >}}
-<div role="status" class="max-w-sm p-4 border border-gray-200 rounded-sm shadow-sm animate-pulse md:p-6 dark:border-gray-700">
-    <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded-sm dark:bg-gray-700">
-        <svg class="w-10 h-10 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-            <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2ZM10.5 6a1.5 1.5 0 1 1 0 2.999A1.5 1.5 0 0 1 10.5 6Zm2.221 10.515a1 1 0 0 1-.858.485h-8a1 1 0 0 1-.9-1.43L5.6 10.039a.978.978 0 0 1 .936-.57 1 1 0 0 1 .9.632l1.181 2.981.541-1a.945.945 0 0 1 .883-.522 1 1 0 0 1 .879.529l1.832 3.438a1 1 0 0 1-.031.988Z"/>
-            <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"/>
-        </svg>
+<div role="status" class="max-w-sm p-4 border border-default rounded-base shadow-xs animate-pulse md:p-6">
+    <div role="status" class="flex items-center justify-center h-48 max-w-sm bg-quaternary rounded-base animate-pulse mb-4 sm:mb-6">
+        <svg class="w-11 h-11 text-fg-disabled" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m14-4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1ZM9 12h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Zm5.697 2.395v-.733l1.269-1.219v2.984l-1.268-1.032Z"/></svg>
+        <span class="sr-only">Loading...</span>
     </div>
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+    <div class="h-2.5 bg-quaternary rounded-full w-48 mb-4"></div>
+    <div class="h-2 bg-quaternary rounded-full mb-2.5"></div>
+    <div class="h-2 bg-quaternary rounded-full mb-2.5"></div>
+    <div class="h-2 bg-quaternary rounded-full"></div>
     <div class="flex items-center mt-4">
-       <svg class="w-10 h-10 me-3 text-gray-200 dark:text-gray-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"/>
-        </svg>
+        <svg class="w-8 h-8 text-fg-disabled me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
         <div>
-            <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32 mb-2"></div>
-            <div class="w-48 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+            <div class="h-2.5 bg-quaternary rounded-full w-32 mb-2"></div>
+            <div class="w-48 h-2 bg-quaternary rounded-full"></div>
         </div>
     </div>
     <span class="sr-only">Loading...</span>
@@ -147,17 +138,17 @@ Use this example to show a placeholder when loading content inside a card.
 This example can be used to show a placeholder of skeleton when fetching data for widgets and cards inside an application.
 
 {{< example id="skeleton-chart-example" github="components/skeleton.md" show_dark=true >}}
-<div role="status" class="max-w-sm p-4 border border-gray-200 rounded-sm shadow-sm animate-pulse md:p-6 dark:border-gray-700">
-    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32 mb-2.5"></div>
-    <div class="w-48 h-2 mb-10 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+<div role="status" class="max-w-sm p-4 border border-default rounded-base shadow-xs animate-pulse md:p-6">
+    <div class="h-2.5 bg-quaternary rounded-full w-32 mb-2.5"></div>
+    <div class="w-48 h-2 mb-10 bg-quaternary rounded-full"></div>
     <div class="flex items-baseline mt-4">
-        <div class="w-full bg-gray-200 rounded-t-lg h-72 dark:bg-gray-700"></div>
-        <div class="w-full h-56 ms-6 bg-gray-200 rounded-t-lg dark:bg-gray-700"></div>
-        <div class="w-full bg-gray-200 rounded-t-lg h-72 ms-6 dark:bg-gray-700"></div>
-        <div class="w-full h-64 ms-6 bg-gray-200 rounded-t-lg dark:bg-gray-700"></div>
-        <div class="w-full bg-gray-200 rounded-t-lg h-80 ms-6 dark:bg-gray-700"></div>
-        <div class="w-full bg-gray-200 rounded-t-lg h-72 ms-6 dark:bg-gray-700"></div>
-        <div class="w-full bg-gray-200 rounded-t-lg h-80 ms-6 dark:bg-gray-700"></div>
+        <div class="w-full bg-quaternary rounded-t-full h-72"></div>
+        <div class="w-full h-56 ms-6 bg-quaternary rounded-t-full"></div>
+        <div class="w-full bg-quaternary rounded-t-full h-72 ms-6"></div>
+        <div class="w-full h-64 ms-6 bg-quaternary rounded-t-full"></div>
+        <div class="w-full bg-quaternary rounded-t-full h-80 ms-6"></div>
+        <div class="w-full bg-quaternary rounded-t-full h-72 ms-6"></div>
+        <div class="w-full bg-quaternary rounded-t-full h-80 ms-6"></div>
     </div>
     <span class="sr-only">Loading...</span>
 </div>
@@ -168,41 +159,41 @@ This example can be used to show a placeholder of skeleton when fetching data fo
 Use this example to show a placeholder when loading a list of items.
 
 {{< example id="skeleton-list-example" github="components/skeleton.md" show_dark=true >}}
-<div role="status" class="max-w-md p-4 space-y-4 border border-gray-200 divide-y divide-gray-200 rounded-sm shadow-sm animate-pulse dark:divide-gray-700 md:p-6 dark:border-gray-700">
-    <div class="flex items-center justify-between">
+<div role="status" class="max-w-md p-4 border border-default divide-y divide-default rounded-base shadow-xs animate-pulse md:p-6">
+    <div class="flex items-center justify-between pb-4">
         <div>
-            <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-            <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+            <div class="h-2.5 bg-quaternary rounded-full w-24 mb-2.5"></div>
+            <div class="w-32 h-2 bg-quaternary rounded-full"></div>
         </div>
-        <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+        <div class="h-2.5 bg-default rounded-full w-12"></div>
     </div>
-    <div class="flex items-center justify-between pt-4">
+    <div class="flex items-center justify-between py-4">
         <div>
-            <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-            <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+            <div class="h-2.5 bg-quaternary rounded-full w-24 mb-2.5"></div>
+            <div class="w-32 h-2 bg-quaternary rounded-full"></div>
         </div>
-        <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+        <div class="h-2.5 bg-default rounded-full w-12"></div>
     </div>
-    <div class="flex items-center justify-between pt-4">
+    <div class="flex items-center justify-between py-4">
         <div>
-            <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-            <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+            <div class="h-2.5 bg-quaternary rounded-full w-24 mb-2.5"></div>
+            <div class="w-32 h-2 bg-quaternary rounded-full"></div>
         </div>
-        <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+        <div class="h-2.5 bg-default rounded-full w-12"></div>
     </div>
-    <div class="flex items-center justify-between pt-4">
+    <div class="flex items-center justify-between py-4">
         <div>
-            <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-            <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+            <div class="h-2.5 bg-quaternary rounded-full w-24 mb-2.5"></div>
+            <div class="w-32 h-2 bg-quaternary rounded-full"></div>
         </div>
-        <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+        <div class="h-2.5 bg-default rounded-full w-12"></div>
     </div>
-    <div class="flex items-center justify-between pt-4">
+    <div class="flex items-center justify-between py-4">
         <div>
-            <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-            <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+            <div class="h-2.5 bg-quaternary rounded-full w-24 mb-2.5"></div>
+            <div class="w-32 h-2 bg-quaternary rounded-full"></div>
         </div>
-        <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+        <div class="h-2.5 bg-default rounded-full w-12"></div>
     </div>
     <span class="sr-only">Loading...</span>
 </div>
@@ -214,14 +205,12 @@ This example can be used to show a skeleton placeholder when loading data for a 
 
 {{< example id="skeleton-testimonial-example" github="components/skeleton.md" show_dark=true >}}
 <div role="status" class="animate-pulse">
-    <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 max-w-[640px] mb-2.5 mx-auto"></div>
-    <div class="h-2.5 mx-auto bg-gray-300 rounded-full dark:bg-gray-700 max-w-[540px]"></div>
+    <div class="h-2.5 bg-default rounded-full max-w-[640px] mb-2.5 mx-auto"></div>
+    <div class="h-2.5 mx-auto bg-default rounded-full max-w-[540px]"></div>
     <div class="flex items-center justify-center mt-4">
-        <svg class="w-8 h-8 text-gray-200 dark:text-gray-700 me-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"/>
-        </svg>
-        <div class="w-20 h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 me-3"></div>
-        <div class="w-24 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+        <svg class="w-7 h-7 text-fg-disabled me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+        <div class="w-20 h-2.5 bg-quaternary rounded-full me-3"></div>
+        <div class="w-24 h-2 bg-quaternary rounded-full"></div>
     </div>
     <span class="sr-only">Loading...</span>
 </div>

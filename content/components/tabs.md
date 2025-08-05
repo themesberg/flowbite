@@ -308,8 +308,8 @@ Use the `data-tabs-active-classes` and the `data-tabs-inactive-classes` to set t
 
 {{< example id="tabs-interactive-active-example" github="components/tabs.md" show_dark=true >}}
 
-<div class="mb-4 border-b border-default dark:border-gray-700">
-    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-body hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-brand dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
+<div class="mb-4 border-b border-default">
+    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-purple hover:text-purple border-purple" data-tabs-inactive-classes="dark:border-transparent text-body hover:text-fg-brand border-default hover:border-brand" role="tablist">
         <li class="me-2" role="presentation">
             <button class="inline-block p-4 border-b rounded-t-base" id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
         </li>

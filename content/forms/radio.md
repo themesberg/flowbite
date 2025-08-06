@@ -236,7 +236,7 @@ Use the `flex` class for a wrapper element to horizontally align the radio eleme
     </div>
     <div class="flex items-center">
         <input disabled id="inline-disabled-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
-        <label for="inline-disabled-radio" class="ms-2 text-sm font-medium text-gray-400 dark:text-gray-500">Inline disabled</label>
+        <label for="inline-disabled-radio" class="ms-2 text-sm font-medium text-fg-disabled">Inline disabled</label>
     </div>
 </div>
 {{< /example >}}
@@ -293,7 +293,7 @@ Use this example of a more advanced radio component to add more information and 
         <input type="radio" id="vue-option" value="vue-option" name="technologies" class="hidden peer">
         <label for="vue-option" class="inline-flex items-center justify-between w-full p-5 text-body bg-primary-soft border-1 border-default rounded-base cursor-pointer peer-checked:hover:bg-brand-softer peer-checked:border-brand-subtle peer-checked:bg-brand-softer hover:bg-secondary-medium peer-checked:text-fg-brand-strong">
             <div class="block">
-                <svg class="mb-2 text-green-600 w-7 h-7" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M356.9 64.3H280l-56 88.6-48-88.6H0L224 448 448 64.3h-91.1zm-301.2 32h53.8L224 294.5 338.4 96.3h53.8L224 384.5 55.7 96.3z"/></svg>
+                <svg class="mb-2 text-success w-7 h-7" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M356.9 64.3H280l-56 88.6-48-88.6H0L224 448 448 64.3h-91.1zm-301.2 32h53.8L224 294.5 338.4 96.3h53.8L224 384.5 55.7 96.3z"/></svg>
                 <div class="w-full font-medium mb-1">Vue Js</div>
                 <div class="w-full text-sm">Vue.js is an model–view front end JavaScript framework.</div>
             </div>
@@ -303,7 +303,7 @@ Use this example of a more advanced radio component to add more information and 
         <input type="radio" id="angular-option" value="angular-option" name="technologies" class="hidden peer">
         <label for="angular-option" class="inline-flex items-center justify-between w-full p-5 text-body bg-primary-soft border-1 border-default rounded-base cursor-pointer peer-checked:hover:bg-brand-softer peer-checked:border-brand-subtle peer-checked:bg-brand-softer hover:bg-secondary-medium peer-checked:text-fg-brand-strong">
             <div class="block">
-                <svg class="mb-2 text-red-600 w-7 h-7" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M185.7 268.1h76.2l-38.1-91.6-38.1 91.6zM223.8 32L16 106.4l31.8 275.7 176 97.9 176-97.9 31.8-275.7zM354 373.8h-48.6l-26.2-65.4H168.6l-26.2 65.4H93.7L223.8 81.5z"/></svg>
+                <svg class="mb-2 text-danger w-7 h-7" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M185.7 268.1h76.2l-38.1-91.6-38.1 91.6zM223.8 32L16 106.4l31.8 275.7 176 97.9 176-97.9 31.8-275.7zM354 373.8h-48.6l-26.2-65.4H168.6l-26.2 65.4H93.7L223.8 81.5z"/></svg>
                 <div class="w-full font-medium mb-1">Angular</div>
                 <div class="w-full text-sm">A TypeScript-based web application framework.</div>
             </div>

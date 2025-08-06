@@ -118,7 +118,7 @@ You can use the `divide-y divide-gray-100` classes to add separate elements insi
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDivider" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base divide-y divide-base-medium shadow-lg w-44">
+<div id="dropdownDivider" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base divide-y divide-default-medium shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDividerButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -392,30 +392,30 @@ Add an extra helper text to each checkbox element inside the dropdown menu list 
 Enable more advanced interaction with your users by adding radio input elements inside the dropdown menu.
 
 {{< example id="dropdown-radio-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="250" >}}
-<button id="dropdownRadioButton" data-dropdown-toggle="dropdownDefaultRadio" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-base text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown radio <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-</svg>
+<button id="dropdownRadioButton" data-dropdown-toggle="dropdownDefaultRadio" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
+  Dropdown radio 
+  <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDefaultRadio" class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-base shadow-sm dark:bg-gray-700 dark:divide-gray-600">
-    <ul class="p-3 space-y-3 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownRadioButton">
+<div id="dropdownDefaultRadio" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+    <ul class="p-3 text-sm text-body font-medium space-y-3" aria-labelledby="dropdownRadioButton">
       <li>
-        <div class="flex items-center">
-            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-            <label for="default-radio-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default radio</label>
+        <div class="inline-flex items-center">
+          <input id="dropdown-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+          <label for="dropdown-radio-1" class="select-none ms-2 text-sm font-medium text-heading">Default radio</label>
         </div>
       </li>
       <li>
-        <div class="flex items-center">
-            <input checked id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-            <label for="default-radio-2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+        <div class="inline-flex items-center">
+          <input id="dropdown-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+          <label for="dropdown-radio-2" class="select-none ms-2 text-sm font-medium text-heading">Checked radio</label>
         </div>
       </li>
       <li>
-        <div class="flex items-center">
-            <input id="default-radio-3" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-            <label for="default-radio-3" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default radio</label>
+        <div class="inline-flex items-center">
+          <input id="dropdown-radio-3" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+          <label for="dropdown-radio-3" class="select-none ms-2 text-sm font-medium text-heading">Default radio</label>
         </div>
       </li>
     </ul>
@@ -427,30 +427,30 @@ Enable more advanced interaction with your users by adding radio input elements 
 Use this example to update the background color when hovering over a menu item when using radio elements.
 
 {{< example id="dropdown-radio-bg-hover-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="280" >}}
-<button id="dropdownRadioBgHoverButton" data-dropdown-toggle="dropdownRadioBgHover" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-base text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown radio <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-</svg>
+<button id="dropdownRadioBgHoverButton" data-dropdown-toggle="dropdownRadioBgHover" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
+  Dropdown button 
+  <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownRadioBgHover" class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-base shadow-sm dark:bg-gray-700 dark:divide-gray-600">
-    <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownRadioBgHoverButton">
+<div id="dropdownRadioBgHover" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+    <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownRadioBgHoverButton">
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
-            <input id="default-radio-4" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-            <label for="default-radio-4" class="w-full ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Default radio</label>
+          <input id="dropdown-radio-4" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+          <label for="dropdown-radio-4" class="select-none ms-2 text-sm font-medium text-heading">Default radio</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
-            <input checked id="default-radio-5" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-            <label for="default-radio-5" class="w-full ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Checked state</label>
+          <input id="dropdown-radio-5" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none" checked>
+          <label for="dropdown-radio-5" class="select-none ms-2 text-sm font-medium text-heading">Checked radio</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
-            <input id="default-radio-6" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-            <label for="default-radio-6" class="w-full ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Default radio</label>
+          <input id="dropdown-radio-6" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+          <label for="dropdown-radio-6" class="select-none ms-2 text-sm font-medium text-heading">Default radio</label>
         </div>
       </li>
     </ul>
@@ -462,49 +462,50 @@ Use this example to update the background color when hovering over a menu item w
 This example can be used to add an extra helper text inside of each radio element from the dropdown menu.
 
 {{< example id="dropdown-radio-helper-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="380" >}}
-<button id="dropdownRadioHelperButton" data-dropdown-toggle="dropdownRadioHelper" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-base text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown radio <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-</svg>
+
+<button id="dropdownHelperRadioButton" data-dropdown-toggle="dropdownHelperRadio" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
+  Dropdown button 
+  <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownRadioHelper" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-base shadow-sm w-60 dark:bg-gray-700 dark:divide-gray-600">
-    <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownRadioHelperButton">
+<div id="dropdownHelperRadio" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-56" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
+    <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownHelperRadioButton">
       <li>
-        <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+        <div class="flex p-2 w-full hover:bg-tertiary-medium hover:text-heading rounded">
           <div class="flex items-center h-5">
-              <input id="helper-radio-4" name="helper-radio" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+              <input id="helper-radio-4" name="helper-radio" type="radio" value="" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           </div>
           <div class="ms-2 text-sm">
-              <label for="helper-radio-4" class="font-medium text-gray-900 dark:text-gray-300">
-                <div>Individual</div>
-                <p id="helper-radio-text-4" class="text-xs font-normal text-gray-500 dark:text-gray-300">Some helpful instruction goes over here.</p>
+              <label for="helper-radio-4" class="font-medium text-heading">
+                <div class="mb-1">Individual</div>
+                <p id="helper-radio-text-4" class="text-xs font-normal text-body">Some helpful instruction goes over here.</p>
               </label>
           </div>
         </div>
       </li>
       <li>
-        <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+        <div class="flex p-2 w-full hover:bg-tertiary-medium hover:text-heading rounded">
           <div class="flex items-center h-5">
-              <input id="helper-radio-5" name="helper-radio" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+              <input id="helper-radio-5" name="helper-radio" type="radio" value="" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           </div>
           <div class="ms-2 text-sm">
-              <label for="helper-radio-5" class="font-medium text-gray-900 dark:text-gray-300">
-                <div>Company</div>
-                <p id="helper-radio-text-5" class="text-xs font-normal text-gray-500 dark:text-gray-300">Some helpful instruction goes over here.</p>
+              <label for="helper-radio-5" class="font-medium text-heading">
+                <div class="mb-1">Company</div>
+                <p id="helper-radio-text-5" class="text-xs font-normal text-body">Some helpful instruction goes over here.</p>
               </label>
           </div>
         </div>
       </li>
       <li>
-        <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+        <div class="flex p-2 w-full hover:bg-tertiary-medium hover:text-heading rounded">
           <div class="flex items-center h-5">
-              <input id="helper-radio-6" name="helper-radio" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+              <input id="helper-radio-6" name="helper-radio" type="radio" value="" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           </div>
           <div class="ms-2 text-sm">
-              <label for="helper-radio-6" class="font-medium text-gray-900 dark:text-gray-300">
-                <div>Non profit</div>
-                <p id="helper-radio-text-6" class="text-xs font-normal text-gray-500 dark:text-gray-300">Some helpful instruction goes over here.</p>
+              <label for="helper-radio-6" class="font-medium text-heading">
+                <div class="mb-1">Non profit</div>
+                <p id="helper-radio-text-6" class="text-xs font-normal text-body">Some helpful instruction goes over here.</p>
               </label>
           </div>
         </div>
@@ -525,7 +526,7 @@ Show a list of toggle switch elements inside the dropdown menu to enable a yes o
 
 <!-- Dropdown menu -->
 <div id="dropdownToggle" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-72">
-    <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownToggleButton">
+    <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="dropdownToggleButton">
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
         <label class="inline-flex items-center cursor-pointer">
@@ -886,11 +887,11 @@ Use this example to show a list of notifications inside your application by prov
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownNotification" class="z-20 hidden w-full max-w-sm bg-primary-soft divide-y divide-base-medium rounded-base shadow" aria-labelledby="dropdownNotificationButton">
+<div id="dropdownNotification" class="z-20 hidden w-full max-w-sm bg-primary-soft divide-y divide-default-medium rounded-base shadow" aria-labelledby="dropdownNotificationButton">
   <div class="block px-4 py-2 font-medium text-center text-body rounded-t-base bg-secondary-medium">
       Notifications
   </div>
-  <div class="divide-y divide-base">
+  <div class="divide-y divide-default">
     <a href="#" class="flex px-4 py-3 hover:bg-secondary-medium">
       <div class="shrink-0">
         <img class="rounded-full w-11 h-11" src="/docs/images/people/profile-picture-1.jpg" alt="Jese image">

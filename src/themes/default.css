@@ -309,6 +309,7 @@
     --color-secondary: var(--color-gray-50);
     --color-secondary-medium: var(--color-gray-50);
     --color-secondary-strong: var(--color-gray-50);
+    --color-secondary-strongest: var(--color-gray-50);
     --color-tertiary-soft: var(--color-gray-100);
     --color-tertiary: var(--color-gray-100);
     --color-tertiary-medium: var(--color-gray-100);
@@ -398,6 +399,7 @@
     --color-secondary: var(--color-gray-950);
     --color-secondary-medium: var(--color-gray-800);
     --color-secondary-strong: var(--color-gray-700);
+    --color-secondary-strongest: var(--color-gray-600);
     --color-tertiary-soft: var(--color-gray-900);
     --color-tertiary: var(--color-gray-800);
     --color-tertiary-medium: var(--color-gray-700);

@@ -45,7 +45,7 @@ Make sure that in addition to the HTML markup you also copy the JavaScript code 
 
 Use this example to show table data with default sorting and pagination functionalities.
 
-{{< example id="default-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
+{{< example id="default-datatable-example" class="flex justify-center dark:bg-gray-950" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("default-table") && typeof simpleDatatables.DataTable !== 'undefined') {
     const dataTable = new simpleDatatables.DataTable("#default-table", {
         searchable: false,
@@ -92,127 +92,127 @@ if (document.getElementById("default-table") && typeof simpleDatatables.DataTabl
     </thead>
     <tbody>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Flowbite</td>
+            <td class="font-medium text-heading whitespace-nowrap">Flowbite</td>
             <td>2021/25/09</td>
             <td>269000</td>
             <td>49%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">React</td>
+            <td class="font-medium text-heading whitespace-nowrap">React</td>
             <td>2013/24/05</td>
             <td>4500000</td>
             <td>24%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Angular</td>
+            <td class="font-medium text-heading whitespace-nowrap">Angular</td>
             <td>2010/20/09</td>
             <td>2800000</td>
             <td>17%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Vue</td>
+            <td class="font-medium text-heading whitespace-nowrap">Vue</td>
             <td>2014/12/02</td>
             <td>3600000</td>
             <td>30%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Svelte</td>
+            <td class="font-medium text-heading whitespace-nowrap">Svelte</td>
             <td>2016/26/11</td>
             <td>1200000</td>
             <td>57%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Ember</td>
+            <td class="font-medium text-heading whitespace-nowrap">Ember</td>
             <td>2011/08/12</td>
             <td>500000</td>
             <td>44%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Backbone</td>
+            <td class="font-medium text-heading whitespace-nowrap">Backbone</td>
             <td>2010/13/10</td>
             <td>300000</td>
             <td>9%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">jQuery</td>
+            <td class="font-medium text-heading whitespace-nowrap">jQuery</td>
             <td>2006/28/01</td>
             <td>6000000</td>
             <td>5%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Bootstrap</td>
+            <td class="font-medium text-heading whitespace-nowrap">Bootstrap</td>
             <td>2011/19/08</td>
             <td>1800000</td>
             <td>12%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Foundation</td>
+            <td class="font-medium text-heading whitespace-nowrap">Foundation</td>
             <td>2011/23/09</td>
             <td>700000</td>
             <td>8%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Bulma</td>
+            <td class="font-medium text-heading whitespace-nowrap">Bulma</td>
             <td>2016/24/10</td>
             <td>500000</td>
             <td>7%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Next.js</td>
+            <td class="font-medium text-heading whitespace-nowrap">Next.js</td>
             <td>2016/25/10</td>
             <td>2300000</td>
             <td>45%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Nuxt.js</td>
+            <td class="font-medium text-heading whitespace-nowrap">Nuxt.js</td>
             <td>2016/16/10</td>
             <td>900000</td>
             <td>50%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Meteor</td>
+            <td class="font-medium text-heading whitespace-nowrap">Meteor</td>
             <td>2012/17/01</td>
             <td>1000000</td>
             <td>10%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Aurelia</td>
+            <td class="font-medium text-heading whitespace-nowrap">Aurelia</td>
             <td>2015/08/07</td>
             <td>200000</td>
             <td>20%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Inferno</td>
+            <td class="font-medium text-heading whitespace-nowrap">Inferno</td>
             <td>2016/27/09</td>
             <td>100000</td>
             <td>35%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Preact</td>
+            <td class="font-medium text-heading whitespace-nowrap">Preact</td>
             <td>2015/16/08</td>
             <td>600000</td>
             <td>28%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Lit</td>
+            <td class="font-medium text-heading whitespace-nowrap">Lit</td>
             <td>2018/28/05</td>
             <td>400000</td>
             <td>60%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Alpine.js</td>
+            <td class="font-medium text-heading whitespace-nowrap">Alpine.js</td>
             <td>2019/02/11</td>
             <td>300000</td>
             <td>70%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Stimulus</td>
+            <td class="font-medium text-heading whitespace-nowrap">Stimulus</td>
             <td>2018/06/03</td>
             <td>150000</td>
             <td>25%</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Solid</td>
+            <td class="font-medium text-heading whitespace-nowrap">Solid</td>
             <td>2021/05/07</td>
             <td>250000</td>
             <td>80%</td>
@@ -225,7 +225,7 @@ if (document.getElementById("default-table") && typeof simpleDatatables.DataTabl
 
 Set the `searchable` option to `true` to enable the search functionality for all table data.
 
-{{< example id="search-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
+{{< example id="search-datatable-example" class="flex justify-center dark:bg-gray-950" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("search-table") && typeof simpleDatatables.DataTable !== 'undefined') {
     const dataTable = new simpleDatatables.DataTable("#search-table", {
         searchable: true,
@@ -260,181 +260,181 @@ if (document.getElementById("search-table") && typeof simpleDatatables.DataTable
     </thead>
     <tbody>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple Inc.</td>
+            <td class="font-medium text-heading whitespace-nowrap">Apple Inc.</td>
             <td>AAPL</td>
             <td>$192.58</td>
             <td>$3.04T</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Microsoft Corporation</td>
+            <td class="font-medium text-heading whitespace-nowrap">Microsoft Corporation</td>
             <td>MSFT</td>
             <td>$340.54</td>
             <td>$2.56T</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Alphabet Inc.</td>
+            <td class="font-medium text-heading whitespace-nowrap">Alphabet Inc.</td>
             <td>GOOGL</td>
             <td>$134.12</td>
             <td>$1.72T</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Amazon.com Inc.</td>
+            <td class="font-medium text-heading whitespace-nowrap">Amazon.com Inc.</td>
             <td>AMZN</td>
             <td>$138.01</td>
             <td>$1.42T</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">NVIDIA Corporation</td>
+            <td class="font-medium text-heading whitespace-nowrap">NVIDIA Corporation</td>
             <td>NVDA</td>
             <td>$466.19</td>
             <td>$1.16T</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Tesla Inc.</td>
+            <td class="font-medium text-heading whitespace-nowrap">Tesla Inc.</td>
             <td>TSLA</td>
             <td>$255.98</td>
             <td>$811.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Meta Platforms Inc.</td>
+            <td class="font-medium text-heading whitespace-nowrap">Meta Platforms Inc.</td>
             <td>META</td>
             <td>$311.71</td>
             <td>$816.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Berkshire Hathaway Inc.</td>
+            <td class="font-medium text-heading whitespace-nowrap">Berkshire Hathaway Inc.</td>
             <td>BRK.B</td>
             <td>$354.08</td>
             <td>$783.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">TSMC</td>
+            <td class="font-medium text-heading whitespace-nowrap">TSMC</td>
             <td>TSM</td>
             <td>$103.51</td>
             <td>$538.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">UnitedHealth Group Incorporated</td>
+            <td class="font-medium text-heading whitespace-nowrap">UnitedHealth Group Incorporated</td>
             <td>UNH</td>
             <td>$501.96</td>
             <td>$466.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Johnson & Johnson</td>
+            <td class="font-medium text-heading whitespace-nowrap">Johnson & Johnson</td>
             <td>JNJ</td>
             <td>$172.85</td>
             <td>$452.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">JPMorgan Chase & Co.</td>
+            <td class="font-medium text-heading whitespace-nowrap">JPMorgan Chase & Co.</td>
             <td>JPM</td>
             <td>$150.23</td>
             <td>$431.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Visa Inc.</td>
+            <td class="font-medium text-heading whitespace-nowrap">Visa Inc.</td>
             <td>V</td>
             <td>$246.39</td>
             <td>$519.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Eli Lilly and Company</td>
+            <td class="font-medium text-heading whitespace-nowrap">Eli Lilly and Company</td>
             <td>LLY</td>
             <td>$582.97</td>
             <td>$552.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Walmart Inc.</td>
+            <td class="font-medium text-heading whitespace-nowrap">Walmart Inc.</td>
             <td>WMT</td>
             <td>$159.67</td>
             <td>$429.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Samsung Electronics Co., Ltd.</td>
+            <td class="font-medium text-heading whitespace-nowrap">Samsung Electronics Co., Ltd.</td>
             <td>005930.KS</td>
             <td>$70.22</td>
             <td>$429.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Procter & Gamble Co.</td>
+            <td class="font-medium text-heading whitespace-nowrap">Procter & Gamble Co.</td>
             <td>PG</td>
             <td>$156.47</td>
             <td>$366.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Nestlé S.A.</td>
+            <td class="font-medium text-heading whitespace-nowrap">Nestlé S.A.</td>
             <td>NESN.SW</td>
             <td>$120.51</td>
             <td>$338.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Roche Holding AG</td>
+            <td class="font-medium text-heading whitespace-nowrap">Roche Holding AG</td>
             <td>ROG.SW</td>
             <td>$296.00</td>
             <td>$317.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Chevron Corporation</td>
+            <td class="font-medium text-heading whitespace-nowrap">Chevron Corporation</td>
             <td>CVX</td>
             <td>$160.92</td>
             <td>$310.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">LVMH Moët Hennessy Louis Vuitton</td>
+            <td class="font-medium text-heading whitespace-nowrap">LVMH Moët Hennessy Louis Vuitton</td>
             <td>MC.PA</td>
             <td>$956.60</td>
             <td>$478.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Pfizer Inc.</td>
+            <td class="font-medium text-heading whitespace-nowrap">Pfizer Inc.</td>
             <td>PFE</td>
             <td>$35.95</td>
             <td>$200.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Novo Nordisk A/S</td>
+            <td class="font-medium text-heading whitespace-nowrap">Novo Nordisk A/S</td>
             <td>NVO</td>
             <td>$189.15</td>
             <td>$443.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">PepsiCo, Inc.</td>
+            <td class="font-medium text-heading whitespace-nowrap">PepsiCo, Inc.</td>
             <td>PEP</td>
             <td>$182.56</td>
             <td>$311.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">ASML Holding N.V.</td>
+            <td class="font-medium text-heading whitespace-nowrap">ASML Holding N.V.</td>
             <td>ASML</td>
             <td>$665.72</td>
             <td>$273.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">The Coca-Cola Company</td>
+            <td class="font-medium text-heading whitespace-nowrap">The Coca-Cola Company</td>
             <td>KO</td>
             <td>$61.37</td>
             <td>$265.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Oracle Corporation</td>
+            <td class="font-medium text-heading whitespace-nowrap">Oracle Corporation</td>
             <td>ORCL</td>
             <td>$118.36</td>
             <td>$319.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Merck & Co., Inc.</td>
+            <td class="font-medium text-heading whitespace-nowrap">Merck & Co., Inc.</td>
             <td>MRK</td>
             <td>$109.12</td>
             <td>$276.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Broadcom Inc.</td>
+            <td class="font-medium text-heading whitespace-nowrap">Broadcom Inc.</td>
             <td>AVGO</td>
             <td>$861.80</td>
             <td>$356.00B</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Mastercard Incorporated</td>
+            <td class="font-medium text-heading whitespace-nowrap">Mastercard Incorporated</td>
             <td>MA</td>
             <td>$421.44</td>
             <td>$396.00B</td>
@@ -448,7 +448,7 @@ if (document.getElementById("search-table") && typeof simpleDatatables.DataTable
 
 To enable filtering data based on a search query for each column you need to copy the custom code from the JavaScript tab and the HTML structure of the table. Enabling search for each individual data column is an advanced way of letting users browse complex data.
 
-{{< example id="filter-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
+{{< example id="filter-datatable-example" class="flex justify-center dark:bg-gray-950" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable !== 'undefined') {
     const dataTable = new simpleDatatables.DataTable("#filter-table", {
         tableRender: (_data, table, type) => {
@@ -544,7 +544,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
     </thead>
     <tbody>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple iMac</td>
+            <td class="font-medium text-heading whitespace-nowrap">Apple iMac</td>
             <td>Computers</td>
             <td>Apple</td>
             <td>$1,299</td>
@@ -553,7 +553,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple iPhone</td>
+            <td class="font-medium text-heading whitespace-nowrap">Apple iPhone</td>
             <td>Mobile Phones</td>
             <td>Apple</td>
             <td>$999</td>
@@ -562,7 +562,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Samsung Galaxy</td>
+            <td class="font-medium text-heading whitespace-nowrap">Samsung Galaxy</td>
             <td>Mobile Phones</td>
             <td>Samsung</td>
             <td>$899</td>
@@ -571,7 +571,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Dell XPS 13</td>
+            <td class="font-medium text-heading whitespace-nowrap">Dell XPS 13</td>
             <td>Computers</td>
             <td>Dell</td>
             <td>$1,099</td>
@@ -580,7 +580,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">HP Spectre x360</td>
+            <td class="font-medium text-heading whitespace-nowrap">HP Spectre x360</td>
             <td>Computers</td>
             <td>HP</td>
             <td>$1,299</td>
@@ -589,7 +589,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Google Pixel 6</td>
+            <td class="font-medium text-heading whitespace-nowrap">Google Pixel 6</td>
             <td>Mobile Phones</td>
             <td>Google</td>
             <td>$799</td>
@@ -598,7 +598,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Sony WH-1000XM4</td>
+            <td class="font-medium text-heading whitespace-nowrap">Sony WH-1000XM4</td>
             <td>Headphones</td>
             <td>Sony</td>
             <td>$349</td>
@@ -607,7 +607,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple AirPods Pro</td>
+            <td class="font-medium text-heading whitespace-nowrap">Apple AirPods Pro</td>
             <td>Headphones</td>
             <td>Apple</td>
             <td>$249</td>
@@ -616,7 +616,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Asus ROG Zephyrus</td>
+            <td class="font-medium text-heading whitespace-nowrap">Asus ROG Zephyrus</td>
             <td>Computers</td>
             <td>Asus</td>
             <td>$1,899</td>
@@ -625,7 +625,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Microsoft Surface Pro 7</td>
+            <td class="font-medium text-heading whitespace-nowrap">Microsoft Surface Pro 7</td>
             <td>Computers</td>
             <td>Microsoft</td>
             <td>$899</td>
@@ -634,7 +634,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Samsung QLED TV</td>
+            <td class="font-medium text-heading whitespace-nowrap">Samsung QLED TV</td>
             <td>Televisions</td>
             <td>Samsung</td>
             <td>$1,299</td>
@@ -643,7 +643,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">LG OLED TV</td>
+            <td class="font-medium text-heading whitespace-nowrap">LG OLED TV</td>
             <td>Televisions</td>
             <td>LG</td>
             <td>$1,499</td>
@@ -652,7 +652,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Canon EOS R5</td>
+            <td class="font-medium text-heading whitespace-nowrap">Canon EOS R5</td>
             <td>Cameras</td>
             <td>Canon</td>
             <td>$3,899</td>
@@ -661,7 +661,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Nikon Z7 II</td>
+            <td class="font-medium text-heading whitespace-nowrap">Nikon Z7 II</td>
             <td>Cameras</td>
             <td>Nikon</td>
             <td>$3,299</td>
@@ -670,7 +670,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple Watch Series 7</td>
+            <td class="font-medium text-heading whitespace-nowrap">Apple Watch Series 7</td>
             <td>Wearables</td>
             <td>Apple</td>
             <td>$399</td>
@@ -679,7 +679,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Fitbit Charge 5</td>
+            <td class="font-medium text-heading whitespace-nowrap">Fitbit Charge 5</td>
             <td>Wearables</td>
             <td>Fitbit</td>
             <td>$179</td>
@@ -688,7 +688,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Dyson V11 Vacuum</td>
+            <td class="font-medium text-heading whitespace-nowrap">Dyson V11 Vacuum</td>
             <td>Home Appliances</td>
             <td>Dyson</td>
             <td>$599</td>
@@ -697,7 +697,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">iRobot Roomba i7+</td>
+            <td class="font-medium text-heading whitespace-nowrap">iRobot Roomba i7+</td>
             <td>Home Appliances</td>
             <td>iRobot</td>
             <td>$799</td>
@@ -706,7 +706,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Bose SoundLink Revolve</td>
+            <td class="font-medium text-heading whitespace-nowrap">Bose SoundLink Revolve</td>
             <td>Speakers</td>
             <td>Bose</td>
             <td>$199</td>
@@ -715,7 +715,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Sonos One</td>
+            <td class="font-medium text-heading whitespace-nowrap">Sonos One</td>
             <td>Speakers</td>
             <td>Sonos</td>
             <td>$219</td>
@@ -724,7 +724,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple iPad Pro</td>
+            <td class="font-medium text-heading whitespace-nowrap">Apple iPad Pro</td>
             <td>Tablets</td>
             <td>Apple</td>
             <td>$1,099</td>
@@ -733,7 +733,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Samsung Galaxy Tab S7</td>
+            <td class="font-medium text-heading whitespace-nowrap">Samsung Galaxy Tab S7</td>
             <td>Tablets</td>
             <td>Samsung</td>
             <td>$649</td>
@@ -742,7 +742,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Amazon Echo Dot</td>
+            <td class="font-medium text-heading whitespace-nowrap">Amazon Echo Dot</td>
             <td>Smart Home</td>
             <td>Amazon</td>
             <td>$49</td>
@@ -751,7 +751,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Google Nest Hub</td>
+            <td class="font-medium text-heading whitespace-nowrap">Google Nest Hub</td>
             <td>Smart Home</td>
             <td>Google</td>
             <td>$89</td>
@@ -760,7 +760,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">PlayStation 5</td>
+            <td class="font-medium text-heading whitespace-nowrap">PlayStation 5</td>
             <td>Gaming Consoles</td>
             <td>Sony</td>
             <td>$499</td>
@@ -769,7 +769,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>Out of Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Xbox Series X</td>
+            <td class="font-medium text-heading whitespace-nowrap">Xbox Series X</td>
             <td>Gaming Consoles</td>
             <td>Microsoft</td>
             <td>$499</td>
@@ -778,7 +778,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>Out of Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Nintendo Switch</td>
+            <td class="font-medium text-heading whitespace-nowrap">Nintendo Switch</td>
             <td>Gaming Consoles</td>
             <td>Nintendo</td>
             <td>$299</td>
@@ -787,7 +787,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
             <td>In Stock</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple MacBook Pro</td>
+            <td class="font-medium text-heading whitespace-nowrap">Apple MacBook Pro</td>
             <td>Computers</td>
             <td>Apple</td>
             <td>$1,299</td>
@@ -803,7 +803,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
 
 By setting the value `sortable` to `true` you'll enable all data rows from the datatable to be sortable by clicking on the table column heading. You can also disable it by setting the same option to `false`.
 
-{{< example id="sorting-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
+{{< example id="sorting-datatable-example" class="flex justify-center dark:bg-gray-950" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("sorting-table") && typeof simpleDatatables.DataTable !== 'undefined') {
     const dataTable = new simpleDatatables.DataTable("#sorting-table", {
         searchable: false,
@@ -851,121 +851,121 @@ if (document.getElementById("sorting-table") && typeof simpleDatatables.DataTabl
     </thead>
     <tbody>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">United States</td>
+            <td class="font-medium text-heading whitespace-nowrap">United States</td>
             <td>$21433 billion</td>
             <td>331 million</td>
             <td>$64763</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">China</td>
+            <td class="font-medium text-heading whitespace-nowrap">China</td>
             <td>$14342 billion</td>
             <td>1441 million</td>
             <td>$9957</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Japan</td>
+            <td class="font-medium text-heading whitespace-nowrap">Japan</td>
             <td>$5082 billion</td>
             <td>126 million</td>
             <td>$40335</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Germany</td>
+            <td class="font-medium text-heading whitespace-nowrap">Germany</td>
             <td>$3846 billion</td>
             <td>83 million</td>
             <td>$46386</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">India</td>
+            <td class="font-medium text-heading whitespace-nowrap">India</td>
             <td>$2875 billion</td>
             <td>1380 million</td>
             <td>$2083</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">United Kingdom</td>
+            <td class="font-medium text-heading whitespace-nowrap">United Kingdom</td>
             <td>$2829 billion</td>
             <td>67 million</td>
             <td>$42224</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">France</td>
+            <td class="font-medium text-heading whitespace-nowrap">France</td>
             <td>$2716 billion</td>
             <td>65 million</td>
             <td>$41723</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Italy</td>
+            <td class="font-medium text-heading whitespace-nowrap">Italy</td>
             <td>$2001 billion</td>
             <td>60 million</td>
             <td>$33350</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Canada</td>
+            <td class="font-medium text-heading whitespace-nowrap">Canada</td>
             <td>$1643 billion</td>
             <td>38 million</td>
             <td>$43237</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">South Korea</td>
+            <td class="font-medium text-heading whitespace-nowrap">South Korea</td>
             <td>$1631 billion</td>
             <td>52 million</td>
             <td>$31365</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Russia</td>
+            <td class="font-medium text-heading whitespace-nowrap">Russia</td>
             <td>$1460 billion</td>
             <td>144 million</td>
             <td>$10139</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Brazil</td>
+            <td class="font-medium text-heading whitespace-nowrap">Brazil</td>
             <td>$1430 billion</td>
             <td>213 million</td>
             <td>$6718</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Australia</td>
+            <td class="font-medium text-heading whitespace-nowrap">Australia</td>
             <td>$1393 billion</td>
             <td>25 million</td>
             <td>$55720</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Spain</td>
+            <td class="font-medium text-heading whitespace-nowrap">Spain</td>
             <td>$1326 billion</td>
             <td>47 million</td>
             <td>$28255</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Mexico</td>
+            <td class="font-medium text-heading whitespace-nowrap">Mexico</td>
             <td>$1194 billion</td>
             <td>129 million</td>
             <td>$9255</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Indonesia</td>
+            <td class="font-medium text-heading whitespace-nowrap">Indonesia</td>
             <td>$1158 billion</td>
             <td>273 million</td>
             <td>$4241</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Netherlands</td>
+            <td class="font-medium text-heading whitespace-nowrap">Netherlands</td>
             <td>$1010 billion</td>
             <td>17 million</td>
             <td>$59412</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Saudi Arabia</td>
+            <td class="font-medium text-heading whitespace-nowrap">Saudi Arabia</td>
             <td>$804 billion</td>
             <td>35 million</td>
             <td>$22914</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Turkey</td>
+            <td class="font-medium text-heading whitespace-nowrap">Turkey</td>
             <td>$761 billion</td>
             <td>84 million</td>
             <td>$9060</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Switzerland</td>
+            <td class="font-medium text-heading whitespace-nowrap">Switzerland</td>
             <td>$741 billion</td>
             <td>9 million</td>
             <td>$82333</td>
@@ -980,7 +980,7 @@ Pagination is enabled by default for all datatables from Flowbite, however, you 
 
 You can also set the `perPageSelect` option to set the selection options of the table.
 
-{{< example id="pagination-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
+{{< example id="pagination-datatable-example" class="flex justify-center dark:bg-gray-950" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("pagination-table") && typeof simpleDatatables.DataTable !== 'undefined') {
     const dataTable = new simpleDatatables.DataTable("#pagination-table", {
         paging: true,
@@ -1022,189 +1022,189 @@ if (document.getElementById("pagination-table") && typeof simpleDatatables.DataT
     </thead>
     <tbody>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">GPT-4</td>
+            <td class="font-medium text-heading whitespace-nowrap">GPT-4</td>
             <td>OpenAI</td>
             <td>March 2023</td>
             <td>1 trillion</td>
             <td>Natural Language Processing</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">BERT</td>
+            <td class="font-medium text-heading whitespace-nowrap">BERT</td>
             <td>Google</td>
             <td>October 2018</td>
             <td>340 million</td>
             <td>Natural Language Understanding</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">DALL-E 2</td>
+            <td class="font-medium text-heading whitespace-nowrap">DALL-E 2</td>
             <td>OpenAI</td>
             <td>April 2022</td>
             <td>3.5 billion</td>
             <td>Image Generation</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">T5</td>
+            <td class="font-medium text-heading whitespace-nowrap">T5</td>
             <td>Google</td>
             <td>October 2019</td>
             <td>11 billion</td>
             <td>Text-to-Text Transfer</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">GPT-3.5</td>
+            <td class="font-medium text-heading whitespace-nowrap">GPT-3.5</td>
             <td>OpenAI</td>
             <td>November 2022</td>
             <td>175 billion</td>
             <td>Natural Language Processing</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Codex</td>
+            <td class="font-medium text-heading whitespace-nowrap">Codex</td>
             <td>OpenAI</td>
             <td>August 2021</td>
             <td>12 billion</td>
             <td>Code Generation</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">PaLM 2</td>
+            <td class="font-medium text-heading whitespace-nowrap">PaLM 2</td>
             <td>Google</td>
             <td>May 2023</td>
             <td>540 billion</td>
             <td>Multilingual Understanding</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">LaMDA</td>
+            <td class="font-medium text-heading whitespace-nowrap">LaMDA</td>
             <td>Google</td>
             <td>May 2021</td>
             <td>137 billion</td>
             <td>Conversational AI</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">CLIP</td>
+            <td class="font-medium text-heading whitespace-nowrap">CLIP</td>
             <td>OpenAI</td>
             <td>January 2021</td>
             <td>400 million</td>
             <td>Image and Text Understanding</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">XLNet</td>
+            <td class="font-medium text-heading whitespace-nowrap">XLNet</td>
             <td>Google</td>
             <td>June 2019</td>
             <td>340 million</td>
             <td>Natural Language Processing</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Meena</td>
+            <td class="font-medium text-heading whitespace-nowrap">Meena</td>
             <td>Google</td>
             <td>January 2020</td>
             <td>2.6 billion</td>
             <td>Conversational AI</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">BigGAN</td>
+            <td class="font-medium text-heading whitespace-nowrap">BigGAN</td>
             <td>Google</td>
             <td>September 2018</td>
             <td>Unlimited</td>
             <td>Image Generation</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Electra</td>
+            <td class="font-medium text-heading whitespace-nowrap">Electra</td>
             <td>Google</td>
             <td>March 2020</td>
             <td>14 million</td>
             <td>Natural Language Understanding</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Swin Transformer</td>
+            <td class="font-medium text-heading whitespace-nowrap">Swin Transformer</td>
             <td>Microsoft</td>
             <td>April 2021</td>
             <td>88 million</td>
             <td>Vision Processing</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">GPT-NeoX-20B</td>
+            <td class="font-medium text-heading whitespace-nowrap">GPT-NeoX-20B</td>
             <td>EleutherAI</td>
             <td>April 2022</td>
             <td>20 billion</td>
             <td>Natural Language Processing</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Ernie 3.0</td>
+            <td class="font-medium text-heading whitespace-nowrap">Ernie 3.0</td>
             <td>Baidu</td>
             <td>July 2021</td>
             <td>10 billion</td>
             <td>Natural Language Processing</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Turing-NLG</td>
+            <td class="font-medium text-heading whitespace-nowrap">Turing-NLG</td>
             <td>Microsoft</td>
             <td>February 2020</td>
             <td>17 billion</td>
             <td>Natural Language Processing</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Wu Dao 2.0</td>
+            <td class="font-medium text-heading whitespace-nowrap">Wu Dao 2.0</td>
             <td>Beijing Academy of AI</td>
             <td>June 2021</td>
             <td>1.75 trillion</td>
             <td>Multimodal Processing</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Jukebox</td>
+            <td class="font-medium text-heading whitespace-nowrap">Jukebox</td>
             <td>OpenAI</td>
             <td>April 2020</td>
             <td>1.2 billion</td>
             <td>Music Generation</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">StyleGAN2</td>
+            <td class="font-medium text-heading whitespace-nowrap">StyleGAN2</td>
             <td>NVIDIA</td>
             <td>February 2020</td>
             <td>Unlimited</td>
             <td>Image Generation</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">FLAN</td>
+            <td class="font-medium text-heading whitespace-nowrap">FLAN</td>
             <td>Google</td>
             <td>December 2021</td>
             <td>137 billion</td>
             <td>Few-shot Learning</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">GShard</td>
+            <td class="font-medium text-heading whitespace-nowrap">GShard</td>
             <td>Google</td>
             <td>June 2020</td>
             <td>600 billion</td>
             <td>Multilingual Understanding</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">AlphaFold</td>
+            <td class="font-medium text-heading whitespace-nowrap">AlphaFold</td>
             <td>DeepMind</td>
             <td>December 2020</td>
             <td>Unknown</td>
             <td>Protein Folding</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">GPT-J</td>
+            <td class="font-medium text-heading whitespace-nowrap">GPT-J</td>
             <td>EleutherAI</td>
             <td>June 2021</td>
             <td>6 billion</td>
             <td>Natural Language Processing</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">M6</td>
+            <td class="font-medium text-heading whitespace-nowrap">M6</td>
             <td>Alibaba</td>
             <td>December 2020</td>
             <td>10 billion</td>
             <td>Multimodal Processing</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Megatron-Turing NLG</td>
+            <td class="font-medium text-heading whitespace-nowrap">Megatron-Turing NLG</td>
             <td>NVIDIA & Microsoft</td>
             <td>October 2021</td>
             <td>530 billion</td>
             <td>Natural Language Processing</td>
         </tr>
         <tr>
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">DeepSpeed</td>
+            <td class="font-medium text-heading whitespace-nowrap">DeepSpeed</td>
             <td>Microsoft</td>
             <td>February 2020</td>
             <td>Not disclosed</td>
@@ -1220,7 +1220,7 @@ Use this example to enable the selection of rows by clicking anywhere one of the
 
 Use the `datatable.selectrow` event to write your own code and get the data from the selected table row.
 
-{{< example id="selection-datatable-example" class="flex justify-center dark:bg-gray-900" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
+{{< example id="selection-datatable-example" class="flex justify-center dark:bg-gray-950" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("selection-table") && typeof simpleDatatables.DataTable !== 'undefined') {
 
     let multiSelect = true;
@@ -1324,128 +1324,128 @@ if (document.getElementById("selection-table") && typeof simpleDatatables.DataTa
         </tr>
     </thead>
     <tbody>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Flowbite</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Flowbite</td>
             <td>2021/25/09</td>
             <td>269000</td>
             <td>49%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">React</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">React</td>
             <td>2013/24/05</td>
             <td>4500000</td>
             <td>24%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Angular</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Angular</td>
             <td>2010/20/09</td>
             <td>2800000</td>
             <td>17%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Vue</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Vue</td>
             <td>2014/12/02</td>
             <td>3600000</td>
             <td>30%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Svelte</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Svelte</td>
             <td>2016/26/11</td>
             <td>1200000</td>
             <td>57%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Ember</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Ember</td>
             <td>2011/08/12</td>
             <td>500000</td>
             <td>44%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Backbone</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Backbone</td>
             <td>2010/13/10</td>
             <td>300000</td>
             <td>9%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">jQuery</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">jQuery</td>
             <td>2006/28/01</td>
             <td>6000000</td>
             <td>5%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Bootstrap</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Bootstrap</td>
             <td>2011/19/08</td>
             <td>1800000</td>
             <td>12%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Foundation</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Foundation</td>
             <td>2011/23/09</td>
             <td>700000</td>
             <td>8%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Bulma</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Bulma</td>
             <td>2016/24/10</td>
             <td>500000</td>
             <td>7%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Next.js</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Next.js</td>
             <td>2016/25/10</td>
             <td>2300000</td>
             <td>45%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Nuxt.js</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Nuxt.js</td>
             <td>2016/16/10</td>
             <td>900000</td>
             <td>50%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Meteor</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Meteor</td>
             <td>2012/17/01</td>
             <td>1000000</td>
             <td>10%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Aurelia</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Aurelia</td>
             <td>2015/08/07</td>
             <td>200000</td>
             <td>20%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Inferno</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Inferno</td>
             <td>2016/27/09</td>
             <td>100000</td>
             <td>35%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Preact</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Preact</td>
             <td>2015/16/08</td>
             <td>600000</td>
             <td>28%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Lit</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Lit</td>
             <td>2018/28/05</td>
             <td>400000</td>
             <td>60%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Alpine.js</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Alpine.js</td>
             <td>2019/02/11</td>
             <td>300000</td>
             <td>70%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Stimulus</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Stimulus</td>
             <td>2018/06/03</td>
             <td>150000</td>
             <td>25%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Solid</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Solid</td>
             <td>2021/05/07</td>
             <td>250000</td>
             <td>80%</td>
@@ -1636,128 +1636,128 @@ if (document.getElementById("export-table") && typeof simpleDatatables.DataTable
         </tr>
     </thead>
     <tbody>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Flowbite</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Flowbite</td>
             <td>2021/25/09</td>
             <td>269000</td>
             <td>49%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">React</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">React</td>
             <td>2013/24/05</td>
             <td>4500000</td>
             <td>24%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Angular</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Angular</td>
             <td>2010/20/09</td>
             <td>2800000</td>
             <td>17%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Vue</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Vue</td>
             <td>2014/12/02</td>
             <td>3600000</td>
             <td>30%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Svelte</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Svelte</td>
             <td>2016/26/11</td>
             <td>1200000</td>
             <td>57%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Ember</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Ember</td>
             <td>2011/08/12</td>
             <td>500000</td>
             <td>44%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Backbone</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Backbone</td>
             <td>2010/13/10</td>
             <td>300000</td>
             <td>9%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">jQuery</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">jQuery</td>
             <td>2006/28/01</td>
             <td>6000000</td>
             <td>5%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Bootstrap</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Bootstrap</td>
             <td>2011/19/08</td>
             <td>1800000</td>
             <td>12%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Foundation</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Foundation</td>
             <td>2011/23/09</td>
             <td>700000</td>
             <td>8%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Bulma</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Bulma</td>
             <td>2016/24/10</td>
             <td>500000</td>
             <td>7%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Next.js</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Next.js</td>
             <td>2016/25/10</td>
             <td>2300000</td>
             <td>45%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Nuxt.js</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Nuxt.js</td>
             <td>2016/16/10</td>
             <td>900000</td>
             <td>50%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Meteor</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Meteor</td>
             <td>2012/17/01</td>
             <td>1000000</td>
             <td>10%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Aurelia</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Aurelia</td>
             <td>2015/08/07</td>
             <td>200000</td>
             <td>20%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Inferno</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Inferno</td>
             <td>2016/27/09</td>
             <td>100000</td>
             <td>35%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Preact</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Preact</td>
             <td>2015/16/08</td>
             <td>600000</td>
             <td>28%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Lit</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Lit</td>
             <td>2018/28/05</td>
             <td>400000</td>
             <td>60%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Alpine.js</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Alpine.js</td>
             <td>2019/02/11</td>
             <td>300000</td>
             <td>70%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Stimulus</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Stimulus</td>
             <td>2018/06/03</td>
             <td>150000</td>
             <td>25%</td>
         </tr>
-        <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Solid</td>
+        <tr class="hover:bg-secondary-soft cursor-pointer">
+            <td class="font-medium text-heading whitespace-nowrap">Solid</td>
             <td>2021/05/07</td>
             <td>250000</td>
             <td>80%</td>

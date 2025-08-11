@@ -143,7 +143,7 @@ window.addEventListener('load', function() {
             Image,
             YouTube,
         ],
-        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-base text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
         editorProps: {
             attributes: {
                 class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
@@ -284,7 +284,7 @@ window.addEventListener('load', function() {
 })
 ` >}}
 <div class="w-full bg-secondary-medium border border-default-medium rounded-base">
-    <div class="px-2 py-2 border-b border-default-medium">
+    <div class="p-2 border-b border-default-medium">
         <div class="flex flex-wrap items-center">
             <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
                 <button id="toggleBoldButton" data-tooltip-target="tooltip-bold" type="button" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
@@ -397,7 +397,8 @@ window.addEventListener('load', function() {
                 </div>
                 <div id="textColorDropdown" class="z-10 hidden w-48 rounded-sm bg-primary-soft p-2 shadow-sm">
                     <div class="grid grid-cols-6 gap-2 group mb-3 items-center p-1.5 rounded hover:bg-tertiary">
-                        <input type="color" id="color" value="#e66465" class="border-default-medium border bg-tertiary rounded p-px px-1 w-full h-8 col-span-3" />
+                        <input type="color" id="color" value="#e66465" class="border-default-medium
+                         border bg-tertiary rounded p-px px-1 w-full h-8 col-span-3" />
                         <label for="color" class="text-body text-xs font-medium col-span-3 group-hover:text-heading">Pick a color</label>
                     </div>
                     <div class="grid grid-cols-6 gap-1 mb-3">
@@ -828,7 +829,7 @@ window.addEventListener('load', function() {
 })
 ` >}}
 <div class="w-full bg-secondary-medium border border-default-medium rounded-base">
-    <div class="px-3 py-2 border-b border-default-medium">
+    <div class="p-2 border-b border-default-medium">
         <div class="flex flex-wrap items-center">
             <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
                 <button id="toggleBoldButton" data-tooltip-target="tooltip-bold" type="button" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
@@ -856,7 +857,7 @@ window.addEventListener('load', function() {
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
                 <button id="toggleStrikeButton" data-tooltip-target="tooltip-strike" type="button" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 6.2V5h12v1.2M7 19h6m.2-14-1.677 6.523M9.6 19l1.029-4M5 5l6.523 6.523M19 19l-7.477-7.477"/></svg>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 6.2V5h12v1.2M7 19h6m.2-14-1.677 6.523M9.6 19l1.029-4M5 5l6.523 6.523M19 19l-7.477-7.477"/></svg>
                     <span class="sr-only">Strike</span>
                 </button>
                 <div id="tooltip-strike" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark-strong rounded-base shadow-xs opacity-0 tooltip">
@@ -864,9 +865,7 @@ window.addEventListener('load', function() {
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
                 <button id="toggleSubscriptButton" data-tooltip-target="tooltip-subscript" type="button" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.9999 21h-4v-.5c1.0989-1.0329 3.75-2.5 3.75-3.5v-1.0001c0-.5523-.4477-.9999-1-.9999h-1.75c-.5523 0-1 .4477-1 1M3.99986 6l9.26894 11.5765M13.1219 6 3.85303 17.5765"/>
-                    </svg>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 20h-4v-.5c1.0989-1.0329 3.75-2.5 3.75-3.5v-1.0001c0-.5523-.4477-.9999-1-.9999H17c-.5522 0-1 .4477-1 1M4.00004 4l9.12206 11.3932m0-11.3932L4 15.3932"/></svg>
                     <span class="sr-only">Subscript</span>
                 </button>
                 <div id="tooltip-subscript" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark-strong rounded-base shadow-xs opacity-0 tooltip">
@@ -874,9 +873,7 @@ window.addEventListener('load', function() {
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
                 <button id="toggleSuperscriptButton" data-tooltip-target="tooltip-superscript" type="button" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
-                    <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.0002 11h-4l-.0001-.5C18.099 9.46711 20.7502 8 20.7502 7V5.99989c0-.55228-.4478-.99989-1-.99989h-1.75c-.5523 0-1 .44772-1 1M5.37837 7.98274 14.6473 19.5593m-.5251-11.25583L4.85547 19.8773"/>
-                    </svg>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 10h-4v-.5C17.0989 8.46711 19.75 7 19.75 6V4.99989c0-.55228-.4477-.99989-1-.99989H17c-.5523 0-1 .44772-1 1M4 7.30341l9.1221 11.39319m0-11.39319L4 18.6966"/></svg>
                     <span class="sr-only">Superscript</span>
                 </button>
                 <div id="tooltip-superscript" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark-strong rounded-base shadow-xs opacity-0 tooltip">
@@ -900,9 +897,7 @@ window.addEventListener('load', function() {
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
                 <button id="toggleTextSizeButton" data-dropdown-toggle="textSizeDropdown" type="button" data-tooltip-target="tooltip-text-size" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6.2V5h11v1.2M8 5v14m-3 0h6m2-6.8V11h8v1.2M17 11v8m-1.5 0h3"/>
-                    </svg>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6.2V5h11v1.2M8 5v14m-3 0h6m2-6.8V11h8v1.2M17 11v8m-1.5 0h3"/></svg>
                     <span class="sr-only">Text size</span>
                 </button>
                 <div id="tooltip-text-size" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark-strong rounded-base shadow-xs opacity-0 tooltip">
@@ -912,7 +907,7 @@ window.addEventListener('load', function() {
                 <div id="textSizeDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-72">
                     <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="toggleTextSizeButton">
                         <li>
-                            <button data-text-size="16px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">16px (Default) 
+                            <button data-text-size="16px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm">16px (Default) 
                             </button>
                         </li>
                         <li>
@@ -938,19 +933,18 @@ window.addEventListener('load', function() {
                     </ul>
                 </div>
                 <button id="toggleTextColorButton" data-dropdown-toggle="textColorDropdown" type="button" data-tooltip-target="tooltip-text-color" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none" viewBox="0 0 25 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m6.532 15.982 1.573-4m-1.573 4h-1.1m1.1 0h1.65m-.077-4 2.725-6.93a.11.11 0 0 1 .204 0l2.725 6.93m-5.654 0H8.1m.006 0h5.654m0 0 .617 1.569m5.11 4.453c0 1.102-.854 1.996-1.908 1.996-1.053 0-1.907-.894-1.907-1.996 0-1.103 1.907-4.128 1.907-4.128s1.909 3.025 1.909 4.128Z"/>
-                    </svg>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m6.08169 15.9817 1.57292-4m-1.57292 4h-1.1m1.1 0h1.65m-.07708-4 2.72499-6.92967c.0368-.09379.1673-.09379.2042 0l2.725 6.92967m-5.65419 0h-.00607m.00607 0h5.65419m0 0 .6169 1.569m5.1104 4.453c0 1.1025-.8543 1.9963-1.908 1.9963s-1.908-.8938-1.908-1.9963c0-1.1026 1.908-4.1275 1.908-4.1275s1.908 3.0249 1.908 4.1275Z"/></svg>
                     <span class="sr-only">Text color</span>
                 </button>
                 <div id="tooltip-text-color" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark-strong rounded-base shadow-xs opacity-0 tooltip">
                     Text color
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="textColorDropdown" class="z-10 hidden w-48 rounded-sm bg-white p-2 shadow-sm dark:bg-gray-700">
-                    <div class="grid grid-cols-6 gap-2 group mb-3 items-center p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600">
-                        <input type="color" id="color" value="#e66465" class="border-gray-200 border bg-gray-50 dark:bg-gray-700 dark:border-gray-600 rounded-md p-px px-1 hover:bg-gray-50 group-hover:bg-gray-50 dark:group-hover:bg-gray-700 w-full h-8 col-span-3" />
-                        <label for="color" class="text-gray-500 dark:text-gray-400 text-sm font-medium col-span-3 group-hover:text-gray-900 dark:group-hover:text-white">Pick a color</label>
+                <div id="textColorDropdown" class="z-10 hidden w-48 rounded-sm bg-primary-soft p-2 shadow-sm">
+                    <div class="grid grid-cols-6 gap-2 group mb-3 items-center p-1.5 rounded hover:bg-tertiary">
+                        <input type="color" id="color" value="#e66465" class="border-default-medium
+                         border bg-tertiary rounded p-px px-1 w-full h-8 col-span-3" />
+                        <label for="color" class="text-body text-xs font-medium col-span-3 group-hover:text-heading">Pick a color</label>
                     </div>
                     <div class="grid grid-cols-6 gap-1 mb-3">
                         <button type="button" data-hex-color="#1A56DB" style="background-color: #1A56DB" class="w-6 h-6 rounded-md"><span class="sr-only">Blue</span></button>
@@ -990,22 +984,20 @@ window.addEventListener('load', function() {
                         <button type="button" data-hex-color="#F3F4F6" style="background-color: #F3F4F6" class="w-6 h-6 rounded-md"><span class="sr-only">Cloud Gray</span></button>
                         <button type="button" data-hex-color="#F9FAFB" style="background-color: #F9FAFB" class="w-6 h-6 rounded-md"><span class="sr-only">Heaven Gray</span></button>
                     </div>
-                    <button type="button" id="reset-color" class="py-1.5 text-sm font-medium text-gray-500 focus:outline-none bg-white rounded-lg hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-700 dark:text-gray-400 dark:hover:text-white w-full dark:hover:bg-gray-600">Reset color</button>
+                    <button type="button" id="reset-color" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none w-full">Reset color</button>
                 </div>
                 <button id="toggleFontFamilyButton" data-dropdown-toggle="fontFamilyDropdown" type="button" data-tooltip-target="tooltip-font-family" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10.6 19 4.298-10.93a.11.11 0 0 1 .204 0L19.4 19m-8.8 0H9.5m1.1 0h1.65m7.15 0h-1.65m1.65 0h1.1m-7.7-3.985h4.4M3.021 16l1.567-3.985m0 0L7.32 5.07a.11.11 0 0 1 .205 0l2.503 6.945h-5.44Z"/>
-                    </svg>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10.6 19 4.298-10.93a.11.11 0 0 1 .204 0L19.4 19m-8.8 0H9.5m1.1 0h1.65m7.15 0h-1.65m1.65 0h1.1m-7.7-3.985h4.4M3.021 16l1.567-3.985m0 0L7.32 5.07a.11.11 0 0 1 .205 0l2.503 6.945h-5.44Z"/></svg>
                     <span class="sr-only">Font family</span>
                 </button>
                 <div id="tooltip-font-family" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark-strong rounded-base shadow-xs opacity-0 tooltip">
                     Font Family
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="fontFamilyDropdown" class="z-10 hidden w-48 rounded-sm bg-white p-2 shadow-sm dark:bg-gray-700">
+                <div id="fontFamilyDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-48">
                     <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="toggleFontFamilyButton">
                         <li>
-                            <button data-font-family="Inter, ui-sans-serif" type="button" class="flex justify-between items-center w-full text-sm font-sans rounded-sm px-3 py-2 hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-600 dark:text-white">Default
+                            <button data-font-family="Inter, ui-sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm">Default
                             </button>
                         </li>
                         <li>
@@ -1045,7 +1037,7 @@ window.addEventListener('load', function() {
             </div>
     </div>
 </div>
-<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+<div class="p-3 rounded-b-base">
     <label for="wysiwyg-text-example" class="sr-only">Write comment</label>
     <div id="wysiwyg-text-example" class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
 </div>
@@ -1087,7 +1079,7 @@ window.addEventListener('load', function() {
             Image,
             YouTube
         ],
-        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-base text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
         editorProps: {
             attributes: {
                 class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
@@ -1112,13 +1104,11 @@ window.addEventListener('load', function() {
 })
 ` >}}
 <div class="w-full bg-secondary-medium border border-default-medium rounded-base">
-    <div class="px-3 py-2 border-b border-gray-200 dark:border-gray-600">
+    <div class="p-2 border-b border-default-medium">
         <div class="flex flex-wrap items-center">
             <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
                 <button id="toggleLeftAlignButton" type="button" data-tooltip-target="tooltip-left-align" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6h8m-8 4h12M6 14h8m-8 4h12"/>
-                    </svg>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6h8m-8 4h12M6 14h8m-8 4h12"/></svg>
                     <span class="sr-only">Align left</span>
                 </button>
                 <div id="tooltip-left-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark-strong rounded-base shadow-xs opacity-0 tooltip">
@@ -1126,9 +1116,7 @@ window.addEventListener('load', function() {
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
                 <button id="toggleCenterAlignButton" type="button" data-tooltip-target="tooltip-center-align" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 6h8M6 10h12M8 14h8M6 18h12"/>
-                    </svg>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 6h8M6 10h12M8 14h8M6 18h12"/></svg>
                     <span class="sr-only">Align center</span>
                 </button>
                 <div id="tooltip-center-align" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark-strong rounded-base shadow-xs opacity-0 tooltip">
@@ -1158,7 +1146,7 @@ window.addEventListener('load', function() {
             </div>
     </div>
 </div>
-<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+<div class="p-3 rounded-b-base">
     <label for="wysiwyg-alignment-example" class="sr-only">Publish post</label>
     <div id="wysiwyg-alignment-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
 </div>
@@ -1182,7 +1170,7 @@ window.addEventListener('load', function() {
         extensions: [
             StarterKit
         ],
-        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><ul><li>Over 600+ open-source UI components</li><li>Supports dark mode and RTL</li><li>Available in React, Vue, Svelte frameworks</li></ul><p>Here is an example of a button component:</p><pre><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code></pre><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><ul><li>Over 600+ open-source UI components</li><li>Supports dark mode and RTL</li><li>Available in React, Vue, Svelte frameworks</li></ul><p>Here is an example of a button component:</p><pre><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-base text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code></pre><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
         editorProps: {
             attributes: {
                 class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
@@ -1226,23 +1214,21 @@ window.addEventListener('load', function() {
 })
 ` >}}
 <div class="w-full bg-secondary-medium border border-default-medium rounded-base">
-    <div class="px-3 py-2 border-b border-gray-200 dark:border-gray-600">
+    <div class="p-2 border-b border-default-medium">
     <div class="flex items-center gap-2">
-        <button id="typographyDropdownButton" data-dropdown-toggle="typographyDropdown" class="flex items-center justify-center rounded-lg bg-gray-100 px-3 py-1.5 text-sm font-medium text-gray-500 hover:bg-gray-200 hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-50 dark:bg-gray-600 dark:text-gray-400 dark:hover:bg-gray-500 dark:hover:text-white dark:focus:ring-gray-600" type="button">
+        <button id="typographyDropdownButton" data-dropdown-toggle="typographyDropdown" class="flex items-center justify-center text-body bg-primary-strong border border-default-strong hover:bg-secondary-strongest hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none" type="button">
             Format
-            <svg class="-me-0.5 ms-1.5 h-3.5 w-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
-            </svg>
+            <svg class="w-3.5 h-3.5 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
         <div class="ps-1.5">
-            <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
+            <span class="block w-px h-4 bg-tertiary"></span>
         </div>
         <!-- Heading Dropdown -->
         <div id="typographyDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-72">
             <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="typographyDropdownButton">
                 <li>
                     <button id="toggleParagraphButton" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Paragraph 
-                        <div class="space-x-1.5">
+                        <div class="space-x-1.5 ms-4">
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">0</kbd>
@@ -1251,7 +1237,7 @@ window.addEventListener('load', function() {
                 </li>
                 <li>
                     <button data-heading-level="1" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 1 
-                        <div class="space-x-1.5">
+                        <div class="space-x-1.5 ms-4">
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">1</kbd>
@@ -1260,7 +1246,7 @@ window.addEventListener('load', function() {
                 </li>
                 <li>
                     <button  data-heading-level="2" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 2 
-                        <div class="space-x-1.5">
+                        <div class="space-x-1.5 ms-4">
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">2</kbd>
@@ -1269,7 +1255,7 @@ window.addEventListener('load', function() {
                 </li>
                 <li>
                     <button  data-heading-level="3" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 3
-                        <div class="space-x-1.5">
+                        <div class="space-x-1.5 ms-4">
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">3</kbd>
@@ -1278,7 +1264,7 @@ window.addEventListener('load', function() {
                 </li>
                 <li>
                     <button  data-heading-level="4" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 4
-                        <div class="space-x-1.5">
+                        <div class="space-x-1.5 ms-4">
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">4</kbd>
@@ -1287,7 +1273,7 @@ window.addEventListener('load', function() {
                 </li>
                 <li>
                     <button data-heading-level="5" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 5
-                        <div class="space-x-1.5">
+                        <div class="space-x-1.5 ms-4">
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">5</kbd>
@@ -1296,7 +1282,7 @@ window.addEventListener('load', function() {
                 </li>
                 <li>
                     <button  data-heading-level="6" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 6
-                        <div class="space-x-1.5">
+                        <div class="space-x-1.5 ms-4">
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
                             <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">6</kbd>
@@ -1360,7 +1346,7 @@ window.addEventListener('load', function() {
         </div>
     </div>
 </div>
-<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+<div class="p-3 rounded-b-base">
     <label for="wysiwyg-typography-example" class="sr-only">Publish post</label>
     <div id="wysiwyg-typography-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
 </div>
@@ -1390,7 +1376,7 @@ window.addEventListener('load', function() {
                 defaultProtocol: 'https',
             })
         ],
-        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-base text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
         editorProps: {
             attributes: {
                 class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
@@ -1410,7 +1396,7 @@ window.addEventListener('load', function() {
 })
 ` >}}
 <div class="w-full bg-secondary-medium border border-default-medium rounded-base">
-    <div class="px-3 py-2 border-b border-gray-200 dark:border-gray-600">
+    <div class="p-2 border-b border-default-medium">
         <div class="flex flex-wrap items-center">
             <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
                 <button id="toggleLinkButton" data-tooltip-target="tooltip-link" type="button" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
@@ -1436,7 +1422,7 @@ window.addEventListener('load', function() {
             </div>
     </div>
 </div>
-<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+<div class="p-3 rounded-b-base">
     <label for="wysiwyg-links-example" class="sr-only">Publish post</label>
     <div id="wysiwyg-links-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
 </div>
@@ -1462,7 +1448,7 @@ window.addEventListener('load', function() {
             StarterKit,
             Image
         ],
-        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><img src="https://placehold.co/600x400" contenteditable="false" draggable="true"><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><img src="https://placehold.co/600x400" contenteditable="false" draggable="true"><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-base text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
         editorProps: {
             attributes: {
                 class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
@@ -1499,7 +1485,7 @@ window.addEventListener('load', function() {
 })
 ` >}}
 <div class="w-full bg-secondary-medium border border-default-medium rounded-base">
-    <div class="px-3 py-2 border-b border-gray-200 dark:border-gray-600">
+    <div class="p-2 border-b border-default-medium">
     <div class="flex items-center gap-2">
         <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
             <button id="addImageButton" type="button" data-tooltip-target="tooltip-image" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
@@ -1526,7 +1512,7 @@ window.addEventListener('load', function() {
         </div>
     </div>
 </div>
-<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+<div class="p-3 rounded-b-base">
     <label for="wysiwyg-images-example" class="sr-only">Publish post</label>
     <div id="wysiwyg-images-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
 </div>
@@ -1534,42 +1520,43 @@ window.addEventListener('load', function() {
 
 <!-- Main modal -->
 <div id="advanced-image-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <div class="relative p-4 w-full max-w-md max-h-full">
+    <div class="relative p-4 w-full max-w-sm max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
+        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
-            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
+                <h3 class="text-lg font-medium text-heading">
                     Insert advanced image
                 </h3>
-                <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="advanced-image-modal">
-                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                    </svg>
+                <button type="button" class="text-body bg-transparent hover:bg-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center" data-modal-hide="advanced-image-modal">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
                     <span class="sr-only">Close modal</span>
                 </button>
             </div>
             <!-- Modal body -->
-            <div class="p-4 md:p-5">
-                <form id="advancedImageForm" class="space-y-4" action="#">
-                    <div>
-                        <label for="URL" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Image URL</label>
-                        <input type="url" name="url" id="URL" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="https://placehold.co/600x400" required />
+            <form action="#">
+                <div class="grid gap-4 grid-cols-2 py-4 md:py-6">
+                    <div class="col-span-2">
+                        <label for="image-url" class="block mb-2.5 text-sm font-medium text-heading">Image URL</label>
+                        <input type="text" name="image-url" id="image-url" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="https://placehold.co/600x400" required="">
                     </div>
-                    <div>
-                        <label for="alt" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Image alt</label>
-                        <input type="text" name="alt" id="alt" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
+                    <div class="col-span-2">
+                        <label for="image-alt" class="block mb-2.5 text-sm font-medium text-heading">Image alt</label>
+                        <input type="text" name="image-alt" id="image-alt" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="" required="">
                     </div>
-                    <div>
-                        <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Image title</label>
-                        <input type="text" name="title" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
+                   <div class="col-span-2">
+                        <label for="image-title" class="block mb-2.5 text-sm font-medium text-heading">Image title</label>
+                        <input type="text" name="image-title" id="image-title" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="" required="">
                     </div>
-                    <button type="submit" id="addAdvancedImageButton" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add image</button>
-                </form>
-            </div>
+                </div>
+                <button type="submit" class="w-full inline-flex items-center justify-center text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+                    <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
+                    Add image
+                </button>
+            </form>
         </div>
     </div>
-</div>
+</div> 
 {{< /example >}}
 
 ## Adding videos
@@ -1591,7 +1578,7 @@ window.addEventListener('load', function() {
             StarterKit,
             YouTube
         ],
-        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><img src="https://placehold.co/600x400" contenteditable="false" draggable="true"><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><img src="https://placehold.co/600x400" contenteditable="false" draggable="true"><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-base text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
         editorProps: {
             attributes: {
                 class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
@@ -1632,13 +1619,11 @@ window.addEventListener('load', function() {
 })
 ` >}}
 <div class="w-full bg-secondary-medium border border-default-medium rounded-base">
-    <div class="px-3 py-2 border-b border-gray-200 dark:border-gray-600">
+    <div class="p-2 border-b border-default-medium">
     <div class="flex items-center gap-2">
         <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
             <button id="addVideoButton" type="button" data-tooltip-target="tooltip-video" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M14 7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7Zm2 9.387 4.684 1.562A1 1 0 0 0 22 17V7a1 1 0 0 0-1.316-.949L16 7.613v8.774Z" clip-rule="evenodd"/>
-                </svg>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 6H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1Zm7 11-6-2V9l6-2v10Z"/></svg>
                 <span class="sr-only">Add video</span>
             </button>
             <div id="tooltip-video" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark-strong rounded-base shadow-xs opacity-0 tooltip">
@@ -1646,9 +1631,7 @@ window.addEventListener('load', function() {
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
             <button type="button" data-tooltip-target="tooltip-advanced-video" data-modal-target="advanced-video-modal" data-modal-toggle="advanced-video-modal" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M9 7V2.221a2 2 0 0 0-.5.365L4.586 6.5a2 2 0 0 0-.365.5H9Zm2 0V2h7a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9h5a2 2 0 0 0 2-2Zm-2 4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H9Zm0 2h2v2H9v-2Zm7.965-.557a1 1 0 0 0-1.692-.72l-1.268 1.218a1 1 0 0 0-.308.721v.733a1 1 0 0 0 .37.776l1.267 1.032a1 1 0 0 0 1.631-.776v-2.984Z" clip-rule="evenodd"/>
-                </svg>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m14-4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1ZM9 12h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Zm5.697 2.395v-.733l1.269-1.219v2.984l-1.268-1.032Z"/></svg>
                 <span class="sr-only">Insert advanced video</span>
             </button>
             <div id="tooltip-advanced-video" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark-strong rounded-base shadow-xs opacity-0 tooltip">
@@ -1658,53 +1641,51 @@ window.addEventListener('load', function() {
         </div>
     </div>
 </div>
-<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+<div class="p-3 rounded-b-base">
     <label for="wysiwyg-video-example" class="sr-only">Publish post</label>
     <div id="wysiwyg-video-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
 </div>
 </div>
 
-
 <!-- Main modal -->
 <div id="advanced-video-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <div class="relative p-4 w-full max-w-md max-h-full">
+    <div class="relative p-4 w-full max-w-sm max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
+        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
-            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
+                <h3 class="text-lg font-medium text-heading">
                     Insert advanced video
                 </h3>
-                <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="advanced-video-modal">
-                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                    </svg>
+                <button type="button" class="text-body bg-transparent hover:bg-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center" data-modal-hide="advanced-video-modal">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
                     <span class="sr-only">Close modal</span>
                 </button>
             </div>
             <!-- Modal body -->
-            <div class="p-4 md:p-5">
-                <form id="advancedVideoForm" class="space-y-4" action="#">
-                    <div>
-                        <label for="URL" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">YouTube URL</label>
-                        <input type="url" name="url" id="URL" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="https://www.youtube.com/watch?v=KaLxCiilHns" required />
+            <form action="#">
+                <div class="grid gap-4 grid-cols-2 py-4 md:py-6">
+                    <div class="col-span-2">
+                        <label for="video-url" class="block mb-2.5 text-sm font-medium text-heading">Youtube URL</label>
+                        <input type="text" name="video-url" id="video-url" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="https://www.youtube.com/watch?v=KaLxCiilHns" required="">
                     </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label for="width" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Video width</label>
-                            <input type="number" name="width" id="width" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
-                        </div>
-                        <div>
-                            <label for="height" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Video height</label>
-                            <input type="number" name="height" id="height" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
-                        </div>
+                    <div class="col-span-2 md:col-span-1">
+                        <label for="video-width" class="block mb-2.5 text-sm font-medium text-heading">Video width</label>
+                        <input type="text" name="video-width" id="video-width" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="" required="">
                     </div>
-                    <button type="submit" id="addAdvancedVideoButton" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add video</button>
-                </form>
-            </div>
+                   <div class="col-span-2 md:col-span-1">
+                        <label for="video-height" class="block mb-2.5 text-sm font-medium text-heading">Video height</label>
+                        <input type="text" name="video-height" id="video-height" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="" required="">
+                    </div>
+                </div>
+                <button type="submit" class="w-full inline-flex items-center justify-center text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+                    <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
+                    Add video
+                </button>
+            </form>
         </div>
     </div>
-</div> 
+</div>
 {{< /example >}}
 
 ## Editing tables
@@ -1870,7 +1851,7 @@ window.addEventListener('load', function() {
 })
 ` >}}
 <div class="w-full bg-secondary-medium border border-default-medium rounded-base">
-    <div class="px-3 py-2 border-b border-gray-200 dark:border-gray-600">
+    <div class="p-2 border-b border-default-medium">
     <div class="flex items-center gap-2">
         <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
             <button id="addTableButton" type="button" data-tooltip-target="tooltip-table" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
@@ -1894,7 +1875,7 @@ window.addEventListener('load', function() {
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
             <div class="px-1">
-                <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
+                <span class="block w-px h-4 bg-quaternary"></span>
             </div>
             <button id="addColumnBeforeButton" type="button" data-tooltip-target="tooltip-add-column-before" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -1927,7 +1908,7 @@ window.addEventListener('load', function() {
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
             <div class="px-1">
-                <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
+                <span class="block w-px h-4 bg-quaternary"></span>
             </div>
             <button id="addRowBeforeButton" type="button" data-tooltip-target="tooltip-add-row-before" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -1993,7 +1974,7 @@ window.addEventListener('load', function() {
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
         <div class="px-1">
-            <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
+            <span class="block w-px h-4 bg-quaternary"></span>
         </div>
         <button id="toggleHeaderColumnButton" type="button" data-tooltip-target="tooltip-toggle-header-column" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -2036,7 +2017,7 @@ window.addEventListener('load', function() {
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
         <div class="px-1">
-            <span class="block w-px h-4 bg-gray-300 dark:bg-gray-600"></span>
+            <span class="block w-px h-4 bg-tertiary"></span>
         </div>
         <button id="fixTablesButton" type="button" data-tooltip-target="tooltip-fix-tables" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -2070,42 +2051,44 @@ window.addEventListener('load', function() {
         </div>
     </div>
 </div>
-<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+<div class="p-3 rounded-b-base">
     <label for="wysiwyg-tables-example" class="sr-only">Publish post</label>
     <div id="wysiwyg-tables-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
 </div>
 </div>
 
+<!-- Main modal -->
 <div id="cell-attribute-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <div class="relative p-4 w-full max-w-md max-h-full">
+    <div class="relative p-4 w-full max-w-sm max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
+        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
-            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            <div class="flex items-center justify-between border-b border-default pb-4">
+                <h3 class="text-lg font-medium text-heading">
                     Add cell attribute
                 </h3>
-                <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="cell-attribute-modal">
-                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                    </svg>
+                <button type="button" class="text-body bg-transparent hover:bg-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center" data-modal-hide="cell-attribute-modal">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
                     <span class="sr-only">Close modal</span>
                 </button>
             </div>
             <!-- Modal body -->
-            <div class="p-4 md:p-5">
-                <form id="addCellAttributeForm" class="space-y-4" action="#">
-                    <div>
-                        <label for="attribute-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Attribute name</label>
-                        <input type="text" name="attribute-name" id="attribute-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="backgroundColor" placeholder="eg. backgroundColor" />
+            <form action="#">
+                <div class="grid gap-4 grid-cols-2 py-4 md:py-6">
+                    <div class="col-span-2">
+                        <label for="attribute-name" class="block mb-2.5 text-sm font-medium text-heading">Attribute name</label>
+                        <input type="text" name="attribute-name" id="attribute-name" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="backgroundColor" required="">
                     </div>
-                    <div>
-                        <label for="attribute-value" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Attribute value</label>
-                        <input type="text" name="attribute-value" id="attribute-value" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="#E1EFFE;" placeholder="#E1EFFE;" />
+                    <div class="col-span-2">
+                        <label for="attribute-value" class="block mb-2.5 text-sm font-medium text-heading">Attribute value</label>
+                        <input type="text" name="attribute-value" id="attribute-value" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="#F1FF3F" required="">
                     </div>
-                    <button type="submit" id="addCellAttributeButton" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Set attribute</button>
-                </form>
-            </div>
+                </div>
+                <button type="submit" class="w-full inline-flex items-center justify-center text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+                    <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
+                    Set attribute
+                </button>
+            </form>
         </div>
     </div>
 </div>
@@ -2128,7 +2111,7 @@ window.addEventListener('load', function() {
         extensions: [
             StarterKit
         ],
-        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-base text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
         editorProps: {
             attributes: {
                 class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
@@ -2148,7 +2131,7 @@ window.addEventListener('load', function() {
 })
 ` >}}
 <div class="w-full bg-secondary-medium border border-default-medium rounded-base">
-    <div class="px-3 py-2 border-b border-gray-200 dark:border-gray-600">
+    <div class="p-2 border-b border-default-medium">
         <div class="flex flex-wrap items-center">
             <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
                 <button id="toggleUndoButton" data-tooltip-target="tooltip-undo" type="button" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
@@ -2174,7 +2157,7 @@ window.addEventListener('load', function() {
             </div>
     </div>
 </div>
-<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+<div class="p-3 rounded-b-base">
     <label for="wysiwyg-history-example" class="sr-only">Publish post</label>
     <div id="wysiwyg-history-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
 </div>
@@ -2198,7 +2181,7 @@ window.addEventListener('load', function() {
         extensions: [
             StarterKit
         ],
-        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
+        content: '<p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><code>&#x3C;button type=&#x22;button&#x22; class=&#x22;text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-base text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800&#x22;&#x3E;Default&#x3C;/button&#x3E;</code><p>Learn more about all components from the <a href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p>',
         editorProps: {
             attributes: {
                 class: 'format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none',
@@ -2235,7 +2218,7 @@ window.addEventListener('load', function() {
 })
 ` >}}
 <div class="w-full bg-secondary-medium border border-default-medium rounded-base">
-    <div class="px-3 py-2 border-b border-gray-200 dark:border-gray-600">
+    <div class="p-2 border-b border-default-medium">
         <div class="flex flex-wrap items-center">
             <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
                 <button id="toggleJSONButton" data-tooltip-target="tooltip-json" data-modal-target="source-code-modal" data-modal-toggle="source-code-modal" type="button" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
@@ -2261,7 +2244,7 @@ window.addEventListener('load', function() {
             </div>
     </div>
 </div>
-<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+<div class="p-3 rounded-b-base">
     <label for="wysiwyg-export-example" class="sr-only">Publish post</label>
     <div id="wysiwyg-export-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
 </div>
@@ -2270,13 +2253,13 @@ window.addEventListener('load', function() {
 <div id="source-code-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
+        <div class="relative bg-white rounded-base shadow-sm dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
                     JSON/HTML data export result
                 </h3>
-                <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="source-code-modal">
+                <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-base text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="source-code-modal">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                     </svg>

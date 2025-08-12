@@ -20,8 +20,8 @@ The main `<blockquote>` HTML tag can be used together with the `<cite>` tag or a
 Use this example to quote an external source inside a blockquote element.
 
 {{< example id="default-blockquote-example" github="typography/blockquote.md" show_dark=true >}}
-<blockquote class="text-xl italic font-semibold text-gray-900 dark:text-white">
-    <p>"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
+<blockquote class="text-xl italic font-semibold tracking-tight text-heading">
+    <p>"Flowbite is just awesome. It contains tons of predesigned pages starting from login screen to complex dashboard. Best choice for your SaaS application."</p>
 </blockquote>
 {{< /example >}}
 
@@ -30,13 +30,13 @@ Use this example to quote an external source inside a blockquote element.
 This example can be used as an alternative style to the default one by applying a solid background color.
 
 {{< example id="blockquote-background-example" github="typography/blockquote.md" show_dark=true >}}
-<p class="text-gray-500 dark:text-gray-400">
+<p class="text-body">
 Does your user know how to exit out of screens? Can they follow your intended user journey and buy something from the site you’ve designed? By running a usability test, you’ll be able to see how users will interact with your design once it’s live.
 </p>
-<blockquote class="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
-    <p class="text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
+<blockquote class="p-4 my-4 border-s-4 border-default bg-secondary-soft">
+    <p class="text-xl italic font-medium leading-relaxed text-heading">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
 </blockquote>
-<p class="text-gray-500 dark:text-gray-400">
+<p class="text-body">
 First of all you need to understand how Flowbite works. This library is not another framework. Rather, it is a set of components based on Tailwind CSS that you can just copy-paste from the documentation.
 </p>
 {{< /example >}}
@@ -46,10 +46,8 @@ First of all you need to understand how Flowbite works. This library is not anot
 Use this example to show an icon above the blockquote text content.
 
 {{< example id="blockquote-icon-example" github="typography/blockquote.md" show_dark=true >}}
-<blockquote class="text-xl italic font-semibold text-gray-900 dark:text-white">
-    <svg class="w-8 h-8 text-gray-400 dark:text-gray-600 mb-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
-        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
-    </svg>
+<blockquote class="text-xl italic font-semibold text-heading tracking-tight">
+    <svg class="w-9 h-9 text-heading mb-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V8a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1Zm0 0v2a4 4 0 0 1-4 4H5m14-6V8a1 1 0 0 0-1-1h-3a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1Zm0 0v2a4 4 0 0 1-4 4h-1"/></svg>
     <p>"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
 </blockquote>
 {{< /example >}}
@@ -59,14 +57,14 @@ Use this example to show an icon above the blockquote text content.
 Use this example to show a blockquote component between multiple paragraph elements.
 
 {{< example id="blockquote-paragraph-example" github="typography/blockquote.md" show_dark=true >}}
-<p class="mb-3 text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
+<p class="mb-3 text-body">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
 <div class="grid grid-cols-1 md:gap-6 md:grid-cols-2">
-    <p class="mb-3 text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
+    <p class="mb-3 text-body">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
     <blockquote class="mb-3">
-        <p class="text-xl italic font-semibold text-gray-900 dark:text-white">" Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application. "</p>
+        <p class="text-xl italic font-semibold text-heading">" Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application. "</p>
     </blockquote>
 </div>
-<p class="mb-3 text-gray-500 dark:text-gray-400">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease, with a complete audit trail for every change.</p>
+<p class="mb-3 text-body">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease, with a complete audit trail for every change.</p>
 {{< /example >}}
 
 ## User testimonial
@@ -75,17 +73,15 @@ This example can be used for user testimonials by mentioning the author and occu
 
 {{< example id="blockquote-testimonial-example" github="typography/blockquote.md" show_dark=true >}}
 <figure class="max-w-screen-md mx-auto text-center">
-    <svg class="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
-        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
-    </svg>
+    <svg class="w-11 h-11 text-heading mb-4 mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V8a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1Zm0 0v2a4 4 0 0 1-4 4H5m14-6V8a1 1 0 0 0-1-1h-3a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1Zm0 0v2a4 4 0 0 1-4 4h-1"/></svg>
     <blockquote>
-        <p class="text-2xl italic font-medium text-gray-900 dark:text-white">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
+        <p class="text-2xl italic font-semibold tracking-tight text-heading">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
     </blockquote>
     <figcaption class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
         <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture">
-        <div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
-            <cite class="pe-3 font-medium text-gray-900 dark:text-white">Michael Gough</cite>
-            <cite class="ps-3 text-sm text-gray-500 dark:text-gray-400">CEO at Google</cite>
+        <div class="flex items-center divide-x rtl:divide-x-reverse divide-default">
+            <cite class="pe-3 font-medium text-heading">Michael Gough</cite>
+            <cite class="ps-3 text-sm text-body">CEO at Google</cite>
         </div>
     </figcaption>
 </figure>
@@ -97,31 +93,21 @@ Use this example to show a user review with rating stars and the name and occupa
 
 {{< example id="blockquote-review-example" github="typography/blockquote.md" show_dark=true >}}
 <figure class="max-w-screen-md">
-    <div class="flex items-center mb-4 text-yellow-300">
-        <svg class="w-5 h-5 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-        </svg>
-        <svg class="w-5 h-5 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-        </svg>
-        <svg class="w-5 h-5 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-        </svg>
-        <svg class="w-5 h-5 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-        </svg>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-        </svg>
+    <div class="flex items-center space-x-1 mb-4">
+        <svg class="w-5 h-5 text-fg-yellow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/></svg>
+        <svg class="w-5 h-5 text-fg-yellow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/></svg>
+        <svg class="w-5 h-5 text-fg-yellow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/></svg>
+        <svg class="w-5 h-5 text-fg-yellow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/></svg>
+        <svg class="w-5 h-5 text-fg-disabled" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/></svg>
     </div>
     <blockquote>
-        <p class="text-2xl font-semibold text-gray-900 dark:text-white">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
+        <p class="text-2xl font-semibold text-heading tracking-tight">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
     </blockquote>
     <figcaption class="flex items-center mt-6 space-x-3 rtl:space-x-reverse">
         <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="profile picture">
-        <div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-300 dark:divide-gray-700">
-            <cite class="pe-3 font-medium text-gray-900 dark:text-white">Bonnie Green</cite>
-            <cite class="ps-3 text-sm text-gray-500 dark:text-gray-400">CTO at Flowbite</cite>
+        <div class="flex items-center divide-x rtl:divide-x-reverse divide-default">
+            <cite class="pe-3 font-medium text-heading">Bonnie Green</cite>
+            <cite class="ps-3 text-sm text-body">CTO at Flowbite</cite>
         </div>
     </figcaption>
 </figure>
@@ -136,7 +122,7 @@ Choose from the following examples the blockquote text alignment from starting f
 The default alignment of the blockquote text content is the left side of the document.
 
 {{< example id="default-blockquote-left-example" github="typography/blockquote.md" show_dark=true >}}
-<blockquote class="text-xl italic font-semibold text-left text-gray-900 dark:text-white">
+<blockquote class="text-xl italic font-semibold text-left text-heading">
     <p>"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
 </blockquote>
 {{< /example >}}
@@ -146,7 +132,7 @@ The default alignment of the blockquote text content is the left side of the doc
 Use the `text-center` class from Tailwind CSS to align the text content inside the blockquote to the center.
 
 {{< example id="default-blockquote-center-example" github="typography/blockquote.md" show_dark=true >}}
-<blockquote class="text-xl italic font-semibold text-center text-gray-900 dark:text-white">
+<blockquote class="text-xl italic font-semibold text-center text-heading">
     <p>"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
 </blockquote>
 {{< /example >}}
@@ -156,7 +142,7 @@ Use the `text-center` class from Tailwind CSS to align the text content inside t
 Use the `text-right` utility class from Tailwind CSS to align the blockquote text content to the right side of the page.
 
 {{< example id="default-blockquote-right-example" github="typography/blockquote.md" show_dark=true >}}
-<blockquote class="text-xl italic font-semibold text-right text-gray-900 dark:text-white">
+<blockquote class="text-xl italic font-semibold text-right text-heading">
     <p>"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
 </blockquote>
 {{< /example >}}
@@ -170,7 +156,7 @@ Choose from one of the multiple sizes for the default blockquote component based
 Use the `text-lg` font size class from Tailwind CSS to apply the small size for the blockquote component.
 
 {{< example id="default-blockquote-small-example" github="typography/blockquote.md" show_dark=true >}}
-<blockquote class="text-lg italic font-semibold text-gray-900 dark:text-white">
+<blockquote class="text-lg italic font-semibold text-heading">
     <p>"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
 </blockquote>
 {{< /example >}}
@@ -180,7 +166,7 @@ Use the `text-lg` font size class from Tailwind CSS to apply the small size for 
 Use the `text-xl` utility class to set the default size for the blockquote element.
 
 {{< example id="default-blockquote-medium-example" github="typography/blockquote.md" show_dark=true >}}
-<blockquote class="text-xl italic font-semibold text-gray-900 dark:text-white">
+<blockquote class="text-xl italic font-semibold text-heading">
     <p>"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
 </blockquote>
 {{< /example >}}
@@ -190,7 +176,7 @@ Use the `text-xl` utility class to set the default size for the blockquote eleme
 The `text-2xl` class can be used to set a large size for the blockquote component.
 
 {{< example id="default-blockquote-large-example" github="typography/blockquote.md" show_dark=true >}}
-<blockquote class="text-2xl italic font-semibold text-gray-900 dark:text-white">
+<blockquote class="text-2xl italic font-semibold text-heading">
     <p>"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
 </blockquote>
 {{< /example >}}

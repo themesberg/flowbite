@@ -27,8 +27,8 @@ This example can be used to add a caption for the image often used inside articl
 
 {{< example id="image-caption-example" class="flex justify-center" github="typography/images.md" show_dark=true >}}
 <figure class="max-w-lg">
-  <img class="h-auto max-w-full rounded-lg" src="/docs/images/examples/image-3@2x.jpg" alt="image description">
-  <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Image caption</figcaption>
+  <img class="h-auto max-w-full rounded-base" src="/docs/images/examples/image-3@2x.jpg" alt="image description">
+  <figcaption class="mt-2 text-sm text-center text-body">Image caption</figcaption>
 </figure>
 {{< /example >}}
 
@@ -41,7 +41,7 @@ Apply rounded corners to the image by using the specific utility classes from Ta
 Use this example to apply rounded corners to the image by using the `rounded-{size}` class where the size can be anything from small to extra large.
 
 {{< example id="image-rounded-example" class="flex justify-center" github="typography/images.md" show_dark=true >}}
-<img class="h-auto max-w-lg rounded-lg" src="/docs/images/examples/image-1@2x.jpg" alt="image description">
+<img class="h-auto max-w-lg rounded-base" src="/docs/images/examples/image-1@2x.jpg" alt="image description">
 {{< /example >}}
 
 ### Full circle
@@ -57,7 +57,7 @@ Use this example to mask the image inside a circle using the `rounded-full` util
 This example can be used to show a shadow effect for the image using the `shadow-{size}` utility class.
 
 {{< example id="image-shadow-example" class="flex justify-center pb-8" github="typography/images.md" show_dark=true >}}
-<img class="h-auto max-w-xl rounded-lg shadow-xl dark:shadow-gray-800" src="/docs/images/examples/image-2@2x.jpg" alt="image description">
+<img class="h-auto max-w-xl rounded-base shadow-xl dark:shadow-gray-800" src="/docs/images/examples/image-2@2x.jpg" alt="image description">
 {{< /example >}}
 
 ## Retina-ready
@@ -65,7 +65,7 @@ This example can be used to show a shadow effect for the image using the `shadow
 Use the `srcset` attribute to set Retina-ready images with double resolution.
 
 {{< example id="image-retina-example" class="flex justify-center" github="typography/images.md" show_dark=true >}}
-<img srcset="/docs/images/examples/image-1.jpg 1x, /docs/images/examples/image-1@2x.jpg 2x" class="w-full h-auto max-w-xl rounded-lg" alt="image description">
+<img srcset="/docs/images/examples/image-1.jpg 1x, /docs/images/examples/image-1@2x.jpg 2x" class="w-full h-auto max-w-xl rounded-base" alt="image description">
 {{< /example >}}
 
 ## Image card
@@ -75,7 +75,7 @@ Use this example to make the image a card item with a link and a short text desc
 {{< example id="image-card-example" class="flex justify-center" github="typography/images.md" show_dark=true >}}
 <figure class="relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
   <a href="#">
-    <img class="rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" alt="image description">
+    <img class="rounded-base" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" alt="image description">
   </a>
   <figcaption class="absolute px-4 text-lg text-white bottom-6">
       <p>Do you want to get notified when a new component is added to Flowbite?</p>
@@ -92,7 +92,7 @@ Use image effects such as grayscale or blur to change the appearances of the ima
 Use the filter option and apply a grayscale to the image element using the `grayscale` class.
 
 {{< example id="image-grayscale-example" class="flex justify-center" github="typography/images.md" show_dark=true >}}
-<img class="h-auto max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" alt="image description">
+<img class="h-auto max-w-lg transition-all duration-300 rounded-base cursor-pointer filter grayscale hover:grayscale-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" alt="image description">
 {{< /example >}}
 
 ### Blur
@@ -100,7 +100,7 @@ Use the filter option and apply a grayscale to the image element using the `gray
 Apply a blur by using the `blur-{size}` utility class from Tailwind CSS to an image component.
 
 {{< example id="image-blur-example" class="flex justify-center" github="typography/images.md" show_dark=true >}}
-<img class="h-auto max-w-lg transition-all duration-300 rounded-lg blur-xs hover:blur-none" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" alt="image description">
+<img class="h-auto max-w-lg transition-all duration-300 rounded-base blur-xs hover:blur-none" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" alt="image description">
 {{< /example >}}
 
 ## Alignment

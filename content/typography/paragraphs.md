@@ -48,7 +48,7 @@ Use this example to highlight the first letter of the paragraph, often used in e
 This example can be used to add a custom styled link element inside the paragraph.
 
 {{< example id="paragraph-link-example" github="typography/paragraphs.md" show_dark=true >}}
-<p class="mb-3 text-body">Track work across the enterprise through an open, collaborative platform. <a href="#" class="font-medium text-brand underline hover:no-underline">Link issues across Jira</a> and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
+<p class="mb-3 text-body">Track work across the enterprise through an open, collaborative platform. <a href="#" class="font-medium text-fg-brand underline hover:no-underline">Link issues across Jira</a> and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
 {{< /example >}}
 
 ## Paragraph bold

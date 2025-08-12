@@ -31,7 +31,7 @@ Use this example to show a list of links aligned on three columns inside the meg
         <div class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
             <a href="#" class="text-heading bg-primary box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary-soft font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Login</a>
             <a href="#" class="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Sign Up</a>
-            <button data-collapse-toggle="mega-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-base" aria-controls="mega-menu" aria-expanded="false">
+            <button data-collapse-toggle="mega-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
             </button>
@@ -143,7 +143,7 @@ This example of a mega menu dropdown can be used to also show an icon near the t
         <div class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
             <a href="#" class="text-heading bg-primary box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary-soft font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Login</a>
             <a href="#" class="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Sign Up</a>
-            <button data-collapse-toggle="mega-menu-icons" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-base" aria-controls="mega-menu-icons" aria-expanded="false">
+            <button data-collapse-toggle="mega-menu-icons" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-icons" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
             </button>
@@ -263,7 +263,7 @@ Use this example to show a mega menu dropdown that spans the entire width of the
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap text-heading">Flowbite</span>
         </a>
-        <button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-base" aria-controls="mega-menu-full" aria-expanded="false">
+        <button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-full" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
         </button>
@@ -369,7 +369,7 @@ This example can be used to also show a CTA button or link next to the menu item
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap text-heading">Flowbite</span>
         </a>
-        <button data-collapse-toggle="mega-menu-full-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-base" aria-controls="mega-menu-full-cta" aria-expanded="false">
+        <button data-collapse-toggle="mega-menu-full-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-full-cta" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
         </button>
@@ -468,7 +468,7 @@ This example can be used to also show a CTA with a backdround image inside the d
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap text-heading">Flowbite</span>
         </a>
-        <button data-collapse-toggle="mega-menu-full-image" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-base" aria-controls="mega-menu-full-image" aria-expanded="false">
+        <button data-collapse-toggle="mega-menu-full-image" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-full-image" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
         </button>

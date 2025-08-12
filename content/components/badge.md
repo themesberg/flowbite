@@ -60,8 +60,8 @@ Use the `text-sm` utility class and increase the paddings to create a larger var
 
 {{< example id="badge-sizes-example" class="gap-4" github="components/badge.md" show_dark=true >}}
 <span class="px-2 py-1 ring-1 ring-inset ring-brand-subtle text-fg-brand-strong text-sm leading-none font-medium rounded bg-brand-softer">Brand</span>
-<span class="px-2 py-1 ring-1 ring-inset ring-base text-heading text-sm leading-none font-medium rounded bg-primary-soft">Alternative</span>
-<span class="px-2 py-1 ring-1 ring-inset ring-base-medium text-heading text-sm leading-none font-medium rounded bg-secondary-medium">Gray</span>
+<span class="px-2 py-1 ring-1 ring-inset ring-default text-heading text-sm leading-none font-medium rounded bg-primary-soft">Alternative</span>
+<span class="px-2 py-1 ring-1 ring-inset ring-default-medium text-heading text-sm leading-none font-medium rounded bg-secondary-medium">Gray</span>
 <span class="px-2 py-1 ring-1 ring-inset ring-danger-subtle text-fg-danger-strong text-sm leading-none font-medium rounded bg-danger-soft">Danger</span>
 <span class="px-2 py-1 ring-1 ring-inset ring-success-subtle text-fg-success-strong text-sm leading-none font-medium rounded bg-success-soft">Success</span>
 <span class="px-2 py-1 ring-1 ring-inset ring-warning-subtle text-fg-warning text-sm leading-none font-medium rounded bg-warning-soft">Warning</span>

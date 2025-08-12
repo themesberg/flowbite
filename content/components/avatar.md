@@ -27,7 +27,7 @@ Use this example to create a circle and rounded avatar on an image element.
 Apply a border around the avatar component you can use the `ring-{color}` class from Tailwind CSS.
 
 {{< example id="avatar-bordered-example" class="flex justify-center" github="components/avatar.md" show_dark=true >}}
-<img class="w-10 h-10 p-1 rounded-full ring-2 ring-base" src="/docs/images/people/profile-picture-5.jpg" alt="Bordered avatar">
+<img class="w-10 h-10 p-1 rounded-full ring-2 ring-default" src="/docs/images/people/profile-picture-5.jpg" alt="Bordered avatar">
 {{< /example >}}
 
 ## Placeholder icon

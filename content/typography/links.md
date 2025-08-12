@@ -20,7 +20,7 @@ Hyperlinks are a great way to reduce bounce rate of the current page and encoura
 Use this example to set default styles to an inline link element.
 
 {{< example id="default-link-example" class="flex justify-center" github="typography/links.md" show_dark=true >}}
-<a href="#" class="font-medium text-brand hover:underline">Read more</a>
+<a href="#" class="font-medium text-fg-brand hover:underline">Read more</a>
 {{< /example >}}
 
 ## Button
@@ -36,7 +36,7 @@ This example can be used to set a hyperlink on a button component.
 Use this example to set a link inside a paragraph with an underline style.
 
 {{< example id="paragraph-link-example" github="typography/links.md" show_dark=true >}}
-<p class="text-body">The free updates that will be provided is based on the <a href="#" class="font-medium text-brand underline hover:no-underline">roadmap</a> that we have laid out for this project. It is also possible that we will provide extra updates outside of the roadmap as well.</p>
+<p class="text-body">The free updates that will be provided is based on the <a href="#" class="font-medium text-fg-brand underline hover:no-underline">roadmap</a> that we have laid out for this project. It is also possible that we will provide extra updates outside of the roadmap as well.</p>
 {{< /example >}}
 
 ## Icon link
@@ -44,7 +44,7 @@ Use this example to set a link inside a paragraph with an underline style.
 This example can be used to set a custom [SVG icon](https://flowbite.com/icons/) inside the hyperlink element.
 
 {{< example id="link-icon-example" class="flex justify-center" github="typography/links.md" show_dark=true >}}
-<p class="text-body">500,000 people & companies have made over a million apps with Glide. <a href="#" class="inline-flex items-center font-medium text-brand hover:underline">
+<p class="text-body">500,000 people & companies have made over a million apps with Glide. <a href="#" class="inline-flex items-center font-medium text-fg-brand hover:underline">
 Read their stories
 <svg class="w-5 h-5 ms-1 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
 </a></p>

@@ -54,7 +54,7 @@ This example can be used to the font weight of an inline text element using the 
 Use the `text-{color}` classes from Tailwind CSS to set the color of the inline text.
 
 {{< example id="text-color-example" class="space-y-2" github="typography/text.md" show_dark=true >}}
-<p class="text-brand">This text is in the brand color.</p>
+<p class="text-fg-brand">This text is in the brand color.</p>
 <p class="text-success">This text is in the green color.</p>
 <p class="text-danger">This text is in the red color.</p>
 <p class="text-purple">This text is in the purple color.</p>
@@ -242,8 +242,8 @@ Update the text decoration style using the `decoration-{*}` classes from Tailwin
 Use the `text-{color}-{opacity}` class from Tailwind CSS to set the opacity of inline text elements.
 
 {{< example id="text-opacity-example" class="space-y-3" github="typography/text.md" show_dark=true >}}
-<p class="text-xl font-semibold text-brand/100">Flowbite app will help you improve yourself by analysing your everyday life.</p>
-<p class="text-xl font-semibold text-brand/75">Flowbite app will help you improve yourself by analysing your everyday life.</p>
-<p class="text-xl font-semibold text-brand/50">Flowbite app will help you improve yourself by analysing your everyday life.</p>
-<p class="text-xl font-semibold text-brand/25">Flowbite app will help you improve yourself by analysing your everyday life.</p>
+<p class="text-xl font-semibold text-fg-brand/100">Flowbite app will help you improve yourself by analysing your everyday life.</p>
+<p class="text-xl font-semibold text-fg-brand/75">Flowbite app will help you improve yourself by analysing your everyday life.</p>
+<p class="text-xl font-semibold text-fg-brand/50">Flowbite app will help you improve yourself by analysing your everyday life.</p>
+<p class="text-xl font-semibold text-fg-brand/25">Flowbite app will help you improve yourself by analysing your everyday life.</p>
 {{< /example >}}

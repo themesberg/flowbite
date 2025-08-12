@@ -2,10 +2,10 @@
 
 {{ partial "navbar" }}
 
-<div class="w-full px-4 mx-auto max-w-8xl">
+<div class="w-full px-4 lg:px-0 mx-auto max-w-8xl border-s border-e border-gray-100 dark:border-gray-900">
   <div class="lg:flex">
     <!-- Sidebar -->
-    <aside id="sidebar" class="fixed inset-0 z-20 flex-none hidden h-full w-72 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-56 lg:block px-6 border-e border-s border-gray-100 dark:border-gray-900" aria-labelledby="sidebar-label">
+    <aside id="sidebar" class="fixed inset-0 z-20 flex-none hidden h-full w-72 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-56 lg:block px-6 border-e border-gray-100 dark:border-gray-900" aria-labelledby="sidebar-label">
       <h4 id="sidebar-label" class="sr-only">Browse docs</h4>
       {{ partial "sidebar" . }}
     </aside>
@@ -16,7 +16,7 @@
       <div class="flex w-full">
 
         <!-- Main content -->
-        <div class="flex-auto max-w-4xl min-w-0 pt-6 lg:px-8 lg:pt-8 pb:12 xl:pb-24 lg:pb-16">
+        <div class="flex-auto max-w-full min-w-0 pt-6 lg:px-8 lg:pt-8 pb:12 xl:pb-24 lg:pb-16">
 
           <!-- Intro -->
           <div class="pb-4 mb-8 border-b border-gray-100 dark:border-gray-900">
@@ -406,7 +406,7 @@
               {{ end }}
             </aside>
 
-            <aside class="p-4 my-8 bg-gray-50 border border-gray-200 rounded-xl shadow-xs sm:p-6 lg:p-8 dark:bg-gray-900 dark:border-gray-800" aria-label="Subscribe to the Flowbite newsletter">
+            <aside class="p-4 my-8 bg-white border border-gray-100 rounded-xl shadow-xs sm:p-6 lg:p-8 dark:bg-gray-900 dark:border-gray-800" aria-label="Subscribe to the Flowbite newsletter">
               <h3 class="mb-3 text-xl font-semibold text-gray-950 dark:text-white">Get more updates...</h3>
               <p class="mb-5 text-sm font-normal text-gray-600 dark:text-gray-300">Do you want to get notified when a new component is added to Flowbite? Sign up for our newsletter and you'll be among the first to find out about new features, components, versions, and tools.</p>
               <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
@@ -434,7 +434,7 @@
                               </div>
                               <input
                                   id="member_email"
-                                  class="formkit-input bg-white border border-gray-200 text-gray-950 text-sm rounded-xl focus:ring-blue-700 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                  class="formkit-input bg-gray-50 border border-gray-200 text-gray-950 text-sm rounded-xl focus:ring-blue-700 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                   name="email_address"
                                   aria-label="Email Address"
                                   placeholder="Your email address..."
@@ -460,7 +460,7 @@
         </div>
 
         <!-- Table of content -->
-        <div class="flex-none hidden w-64 px-4 mr-6 xl:text-sm xl:block border-s border-e border-gray-100 dark:border-gray-900">
+        <div class="flex-none hidden w-64 px-4 xl:text-sm xl:block border-s border-gray-100 dark:border-gray-900">
           {{ if (eq .Page.Params.toc true) }}
           <div class="flex overflow-y-auto sticky top-28 flex-col justify-between pt-10 pb-6 h-[calc(100vh-5rem)]">
             <div class="mb-8">

@@ -41,7 +41,7 @@
 }
 
 #TableOfContents > ul {
-	@apply overflow-x-hidden font-medium text-gray-700 dark:text-gray-300;
+	@apply overflow-x-hidden font-medium text-gray-600 dark:text-gray-300;
 }
 
 #TableOfContents > ul > li {
@@ -82,7 +82,7 @@
 }
 
 #mainContent > p {
-	@apply mb-4 text-base font-normal text-gray-700 dark:text-gray-300;
+	@apply mb-4 text-base font-normal text-gray-600 dark:text-gray-300;
 }
 
 #mainContent > p > a,
@@ -90,7 +90,7 @@
 #mainContent > ol > li > a,
 #mainContent > ul > li > p > a,
 #mainContent > ol > li > p > a {
-	@apply font-medium text-gray-700 underline dark:text-gray-300 decoration-1 underline-offset-2 decoration-blue-700 dark:decoration-blue-400;
+	@apply font-medium text-gray-600 underline dark:text-gray-300 decoration-1 underline-offset-2 decoration-blue-700 dark:decoration-blue-400;
 }
 
 #mainContent > p > a:hover,
@@ -126,7 +126,7 @@
 
 #mainContent > ul > li,
 #mainContent > ol > li {
-	@apply mb-4 text-base font-normal text-gray-700 dark:text-gray-300;
+	@apply mb-4 text-base font-normal text-gray-600 dark:text-gray-300;
 }
 
 /* prism styles */
@@ -463,7 +463,7 @@ code.language-html .token.comment{
 }
 
 .DocSearch-Hit-source {
-	@apply pb-1 text-gray-700 bg-white dark:bg-gray-700 dark:text-gray-400;
+	@apply pb-1 text-gray-600 bg-white dark:bg-gray-700 dark:text-gray-400;
 }
 
 .DocSearch-Container {
@@ -531,7 +531,7 @@ code.language-html .token.comment{
 }
 
 .DocSearch-Title {
-	@apply mb-1 text-lg font-normal text-gray-700 dark:text-gray-200;
+	@apply mb-1 text-lg font-normal text-gray-600 dark:text-gray-200;
 }
 
 .DocSearch-Hit-Container {

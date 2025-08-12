@@ -25,27 +25,27 @@ Here's a quick overview of the Flowbite ecosystem including the open source Tail
 <div class="mt-10 lg:grid lg:grid-cols-2 lg:gap-8">
     <a href="{{< ref "getting-started/quickstart" >}}" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Quickstart</h3>
-        <p class="font-normal text-gray-700 dark:text-gray-400">Learn how to get started by downloading and configuring Flowbite locally on your machine and start developing.</p>
+        <p class="font-normal text-gray-600 dark:text-gray-400">Learn how to get started by downloading and configuring Flowbite locally on your machine and start developing.</p>
     </a>
     <a href="{{< ref "components/alerts" >}}" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Components</h3>
-        <p class="font-normal text-gray-700 dark:text-gray-400">Explore the Tailwind CSS elements such as buttons, navbars, alerts, dropdowns and use them to build your website.</p>
+        <p class="font-normal text-gray-600 dark:text-gray-400">Explore the Tailwind CSS elements such as buttons, navbars, alerts, dropdowns and use them to build your website.</p>
     </a>
     <a href="{{< param homepage >}}/figma/" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Figma design files</h3>
-        <p class="font-normal text-gray-700 dark:text-gray-400">Prototype and design your website before coding with the Flowbite Figma file which is based on the Tailwind CSS classes.</p>
+        <p class="font-normal text-gray-600 dark:text-gray-400">Prototype and design your website before coding with the Flowbite Figma file which is based on the Tailwind CSS classes.</p>
     </a>
     <a href="{{< param homepage >}}/icons/" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Flowbite Icons</h3>
-        <p class="font-normal text-gray-700 dark:text-gray-400">Free and open-source collection of over 430 solid and outline styled SVG icons to use with our UI component library and Figma.</p>
+        <p class="font-normal text-gray-600 dark:text-gray-400">Free and open-source collection of over 430 solid and outline styled SVG icons to use with our UI component library and Figma.</p>
     </a>
     <a href="{{< param homepage >}}/pro/" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Flowbite Blocks</h3>
-        <p class="font-normal text-gray-700 dark:text-gray-400">Take your Figma and Tailwind CSS development to the next level with thousands more elements and pages with Flowbite Pro.</p>
+        <p class="font-normal text-gray-600 dark:text-gray-400">Take your Figma and Tailwind CSS development to the next level with thousands more elements and pages with Flowbite Pro.</p>
     </a>
     <a href="{{< param homepage >}}/pro/" class="block p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 dark:border-gray-700 lg:mb-0">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Upgrade to Pro</h3>
-        <p class="font-normal text-gray-700 dark:text-gray-400">Check out over 450+ website sections and advanced UI components built with Tailwind CSS and the Flowbite Library.</p>
+        <p class="font-normal text-gray-600 dark:text-gray-400">Check out over 450+ website sections and advanced UI components built with Tailwind CSS and the Flowbite Library.</p>
     </a>
 </div>
 

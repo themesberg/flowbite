@@ -706,9 +706,9 @@ Use the **CopyClipboard** object from the Flowbite JS API to create a component 
 
 Use the object parameters from the CopyClipboard object to set options such as the content type of the text that is to be copied (ie. value of an input field, text content or inner HTML) and other options.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-base">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
                   Parameter
@@ -789,9 +789,9 @@ Use the object parameters from the CopyClipboard object to set options such as t
 
 Use these optional options for the CopyClipboard object to set the content type from where the text will be copied from, an optional HTML decoder for code blocks and function callbacks to set success and default messages.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-base">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
                   Option
@@ -846,9 +846,9 @@ Use these optional options for the CopyClipboard object to set the content type 
 
 Use the following methods from the CopyClipboard component to programmatically work with the component such as copying the text on demand or updating the callback function.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-base">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
                   Method

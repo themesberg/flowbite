@@ -231,9 +231,9 @@ Use the **Carousel** class from Flowbite to create an object that you can use to
 
 Pass the object parameters for the Carousel object to set the carousel items and options.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-base">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Parameter
@@ -314,9 +314,9 @@ Pass the object parameters for the Carousel object to set the carousel items and
 
 Use these options for the Carousel object to set the default position, interval, indicators, custom styles, and callback functions.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-base">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Option
@@ -404,9 +404,9 @@ Use these options for the Carousel object to set the default position, interval,
 
 Use the following methods on the Carousel object to programmatically manipulate the behaviour.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-base">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Method

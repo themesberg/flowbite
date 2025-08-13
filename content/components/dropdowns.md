@@ -1487,9 +1487,9 @@ The **Dropdown** class from Flowbite can be used to create an object that will s
 
 Initialize a Dropdown object with the object parameters such as the main target dropdown menu, a trigger element (eg. a button) and options to set the placement relative to the trigger element.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-base">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Parameter
@@ -1570,9 +1570,9 @@ Initialize a Dropdown object with the object parameters such as the main target 
 
 Use the following options as the third parameter for the Dropdown class to set the placement of the dropdown menu.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-base">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Option
@@ -1693,9 +1693,9 @@ Use the following options as the third parameter for the Dropdown class to set t
 
 Use the methods from the Dropdown object to programmatically show or hide the dropdown menu directly from JavaScript.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-base">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Method

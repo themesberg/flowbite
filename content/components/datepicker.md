@@ -208,9 +208,9 @@ Use the **Tailwind CSS Datepicker** component from Flowbite to select a date or 
 
 Use the object parameters from the Datepicker component to set the datepicker parent input element and the options associated with it when creating a new instance.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
                   Parameter
@@ -277,9 +277,9 @@ Use the object parameters from the Datepicker component to set the datepicker pa
 
 Use these optional options for the Datepicker object to set options such as the date format, orientation, max and min dates, custom buttons, callback functions and more.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
                   Option
@@ -400,9 +400,9 @@ Use these optional options for the Datepicker object to set options such as the 
 
 Use the following methods of the Datepicker object to programmatically manipulate the behaviour.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
                   Method

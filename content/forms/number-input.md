@@ -734,9 +734,9 @@ Use the **InputCounter** object from the Flowbite JS API to create a number inpu
 
 Use the object parameters from the InputCounter object to set the target, increment, and decrement elements as well as the options object.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
                   Parameter
@@ -831,9 +831,9 @@ Use the object parameters from the InputCounter object to set the target, increm
 
 Use these optional options for the InputCounter object to set the minimum and maximum values of the input field and also to set callback functions for the increment and decrement events.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
                   Option
@@ -899,9 +899,9 @@ Use these optional options for the InputCounter object to set the minimum and ma
 
 Use the following methods of the InputCounter object to programmatically manipulate the behaviour of the input field.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
                   Method

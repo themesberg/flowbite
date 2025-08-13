@@ -348,9 +348,9 @@ The **Tabs** class from Flowbite can be used to create an object that will enabl
 
 Create a new Tabs object with parameters such as an array of the tab and content elements.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-base">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
     <table class="w-full text-sm text-left text-body dark:text-gray-400">
-        <thead class="bg-gray-50 dark:bg-gray-700">
+        <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Parameter
@@ -367,7 +367,7 @@ Create a new Tabs object with parameters such as an array of the tab and content
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand dark:text-blue-400">tabsElement</code>
                 </td>
@@ -381,7 +381,7 @@ Create a new Tabs object with parameters such as an array of the tab and content
                     Parent HTML element of the tabs component.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand dark:text-blue-400">items</code>
                 </td>
@@ -395,7 +395,7 @@ Create a new Tabs object with parameters such as an array of the tab and content
                     Array of the tab objects including the id, trigger element, and the content element.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand dark:text-blue-400">options</code>
                 </td>
@@ -409,7 +409,7 @@ Create a new Tabs object with parameters such as an array of the tab and content
                     An object of options for the appearances of the tabs and to use callback functions.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand dark:text-blue-400">instanceOptions</code>
                 </td>
@@ -431,9 +431,9 @@ Create a new Tabs object with parameters such as an array of the tab and content
 
 Use the following options as the second parameter for the Tabs object to set the appearance of the active tab elements and use callback functions.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-base">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
     <table class="w-full text-sm text-left text-body dark:text-gray-400">
-        <thead class="bg-gray-50 dark:bg-gray-700">
+        <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Option
@@ -447,7 +447,7 @@ Use the following options as the second parameter for the Tabs object to set the
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand dark:text-blue-400">defaultTabId</code>
                 </td>
@@ -458,7 +458,7 @@ Use the following options as the second parameter for the Tabs object to set the
                     Set the currently active tab element based on the ID.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand dark:text-blue-400">activeClasses</code>
                 </td>
@@ -469,7 +469,7 @@ Use the following options as the second parameter for the Tabs object to set the
                     Set a string of Tailwind CSS class names to apply to the active tab element.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand dark:text-blue-400">inactiveClasses</code>
                 </td>
@@ -480,7 +480,7 @@ Use the following options as the second parameter for the Tabs object to set the
                     Set a string of Tailwind CSS class names to apply to the inactive tab elements.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand dark:text-blue-400">onShow</code>
                 </td>
@@ -499,9 +499,9 @@ Use the following options as the second parameter for the Tabs object to set the
 
 Use the methods from the Tabs object to programmatically change the current active tab using JavaScript.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-base">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
     <table class="w-full text-sm text-left text-body dark:text-gray-400">
-        <thead class="bg-gray-50 dark:bg-gray-700">
+        <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Method
@@ -512,7 +512,7 @@ Use the methods from the Tabs object to programmatically change the current acti
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand dark:text-blue-400">show(id)</code>
                 </td>
@@ -520,7 +520,7 @@ Use the methods from the Tabs object to programmatically change the current acti
                     Use the show function on the Tab object to change the current active tab element.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand dark:text-blue-400">getTab(id)</code>
                 </td>
@@ -528,7 +528,7 @@ Use the methods from the Tabs object to programmatically change the current acti
                     Return the tab element based on the ID.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand dark:text-blue-400">updateOnShow(callback)</code>
                 </td>

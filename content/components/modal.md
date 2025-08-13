@@ -854,9 +854,9 @@ The **Modal** class from Flowbite can be used to create an object that will laun
 
 Initialize a Modal object with parameters such as the modal element and the optional options object.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="bg-gray-50 dark:bg-gray-700">
+        <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Parameter
@@ -923,9 +923,9 @@ Initialize a Modal object with parameters such as the modal element and the opti
 
 Use the following options as the second parameter for the Modal object to set the position of the modal, custom classes for the backdrop element and the callback functions.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="bg-gray-50 dark:bg-gray-700">
+        <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Option
@@ -1024,9 +1024,9 @@ Use the following options as the second parameter for the Modal object to set th
 
 Use the methods from the Modal object to show, hide, and toggle the visibility directly from JavaScript.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="bg-gray-50 dark:bg-gray-700">
+        <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Method

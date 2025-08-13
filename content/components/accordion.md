@@ -30,24 +30,24 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
 {{< example id="default-accordion-example" github="components/accordion.md" show_dark=true >}}
 <div id="accordion-collapse" data-accordion="collapse" class="rounded-base border border-default overflow-hidden shadow-xs">
   <h2 id="accordion-collapse-heading-1">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-base hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-default hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
       <span>What is Flowbite?</span>
       <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
     </button>
   </h2>
-  <div id="accordion-collapse-body-1" class="hidden border border-s-0 border-e-0 border-t-0 border-b-base" aria-labelledby="accordion-collapse-heading-1">
+  <div id="accordion-collapse-body-1" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-collapse-heading-1">
     <div class="p-4 md:p-5">
       <p class="mb-2 text-body">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
       <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-collapse-heading-2">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body border border-x-0 border-b-base border-t-0 hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body border border-x-0 border-b-default border-t-0 hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
       <span>Is there a Figma file available?</span>
       <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
     </button>
   </h2>
-  <div id="accordion-collapse-body-2" class="hidden border border-s-0 border-e-0 border-t-0 border-b-base" aria-labelledby="accordion-collapse-heading-2">
+  <div id="accordion-collapse-body-2" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-collapse-heading-2">
     <div class="p-4 md:p-5">
       <p class="mb-2 text-body">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
       <p class="text-body">Check out the <a href="{{< param homepage >}}/figma/" class="text-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
@@ -130,24 +130,24 @@ Use the `data-accordion="open"` option to keep previously opened accordion eleme
 {{< example id="accordion-always-open-example" github="components/accordion.md" show_dark=true >}}
 <div id="accordion-open" data-accordion="open" class="rounded-base border border-default overflow-hidden shadow-xs">
   <h2 id="accordion-open-heading-1">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-base hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-open-body-1" aria-expanded="true" aria-controls="accordion-open-body-1">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-default hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-open-body-1" aria-expanded="true" aria-controls="accordion-open-body-1">
       <span class="flex items-center"><svg class="w-5 h-5 me-2 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.529 9.988a2.502 2.502 0 1 1 5 .191A2.441 2.441 0 0 1 12 12.582V14m-.01 3.008H12M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>What is Flowbite?</span>
       <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
     </button>
   </h2>
-  <div id="accordion-open-body-1" class="hidden border border-s-0 border-e-0 border-t-0 border-b-base" aria-labelledby="accordion-open-heading-1">
+  <div id="accordion-open-body-1" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-open-heading-1">
     <div class="p-4 md:p-5">
       <p class="mb-2 text-body">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
       <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-open-heading-2">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body border border-x-0 border-b-base border-t-0 hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-open-body-2" aria-expanded="false" aria-controls="accordion-open-body-2">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body border border-x-0 border-b-default border-t-0 hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-open-body-2" aria-expanded="false" aria-controls="accordion-open-body-2">
       <span class="flex items-center"><svg class="w-5 h-5 me-2 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.529 9.988a2.502 2.502 0 1 1 5 .191A2.441 2.441 0 0 1 12 12.582V14m-.01 3.008H12M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>Is there a Figma file available?</span>
       <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
     </button>
   </h2>
-  <div id="accordion-open-body-2" class="hidden border border-s-0 border-e-0 border-t-0 border-b-base" aria-labelledby="accordion-open-heading-2">
+  <div id="accordion-open-body-2" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-open-heading-2">
     <div class="p-4 md:p-5">
       <p class="mb-2 text-body">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
       <p class="text-body">Check out the <a href="{{< param homepage >}}/figma/" class="text-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
@@ -182,24 +182,24 @@ Here's an example where we apply the blue colors instead of gray:
 {{< example id="accordion-color-options-example" github="components/accordion.md" show_dark=true >}}
 <div id="accordion-color" data-accordion="collapse" class="rounded-base border border-default overflow-hidden shadow-xs">
   <h2 id="accordion-color-heading-1">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-base hover:text-brand hover:bg-brand-softer gap-3" data-accordion-target="#accordion-color-body-1" aria-expanded="true" aria-controls="accordion-color-body-1">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-default hover:text-brand hover:bg-brand-softer gap-3" data-accordion-target="#accordion-color-body-1" aria-expanded="true" aria-controls="accordion-color-body-1">
       <span>What is Flowbite?</span>
       <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
     </button>
   </h2>
-  <div id="accordion-color-body-1" class="hidden border border-s-0 border-e-0 border-t-0 border-b-base" aria-labelledby="accordion-color-heading-1">
+  <div id="accordion-color-body-1" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-color-heading-1">
     <div class="p-4 md:p-5">
       <p class="mb-2 text-body">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
       <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-color-heading-2">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body border border-x-0 border-b-base border-t-0 hover:text-brand hover:bg-brand-softer gap-3" data-accordion-target="#accordion-color-body-2" aria-expanded="false" aria-controls="accordion-color-body-2">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body border border-x-0 border-b-default border-t-0 hover:text-brand hover:bg-brand-softer gap-3" data-accordion-target="#accordion-color-body-2" aria-expanded="false" aria-controls="accordion-color-body-2">
       <span>Is there a Figma file available?</span>
       <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
     </button>
   </h2>
-  <div id="accordion-color-body-2" class="hidden border border-s-0 border-e-0 border-t-0 border-b-base" aria-labelledby="accordion-color-heading-2">
+  <div id="accordion-color-body-2" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-color-heading-2">
     <div class="p-4 md:p-5">
       <p class="mb-2 text-body">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
       <p class="text-body">Check out the <a href="{{< param homepage >}}/figma/" class="text-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
@@ -336,35 +336,35 @@ To enable nested accordions you need to wrap the nested accordion in an element 
 
 <div id="accordion-collapse-2" data-accordion="collapse" class="rounded-base border border-default overflow-hidden shadow-xs">
   <h2 id="accordion-collapse-heading-6">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-base hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-collapse-body-6" aria-expanded="true" aria-controls="accordion-collapse-body-6">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-default hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-collapse-body-6" aria-expanded="true" aria-controls="accordion-collapse-body-6">
       <span>What is Flowbite?</span>
       <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
     </button>
   </h2>
-  <div id="accordion-collapse-body-6" class="hidden border border-s-0 border-e-0 border-t-0 border-b-base p-4 md:p-5" aria-labelledby="accordion-collapse-heading-6">
+  <div id="accordion-collapse-body-6" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default p-4 md:p-5" aria-labelledby="accordion-collapse-heading-6">
       <p class="mb-2 text-body">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
       <p class="text-body mb-4">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     <!-- Nested accordion -->
     <div id="accordion-nested" data-accordion="collapse" class="rounded-base border border-default overflow-hidden shadow-xs">
       <h2 id="accordion-nested-heading-1">
-        <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-base hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-nested-body-1" aria-expanded="true" aria-controls="accordion-nested-body-1">
+        <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-default hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-nested-body-1" aria-expanded="true" aria-controls="accordion-nested-body-1">
           <span>What is Flowbite?</span>
           <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
         </button>
       </h2>
-      <div id="accordion-nested-body-1" class="hidden border border-s-0 border-e-0 border-t-0 border-b-base" aria-labelledby="accordion-nested-heading-1">
+      <div id="accordion-nested-body-1" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-nested-heading-1">
         <div class="p-4 md:p-5">
           <p class="mb-2 text-body">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
           <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
         </div>
       </div>
       <h2 id="accordion-nested-heading-2">
-        <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body border border-x-0 border-b-base border-t-0 bg-primary-soft hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-nested-body-2" aria-expanded="false" aria-controls="accordion-nested-body-2">
+        <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body border border-x-0 border-b-default border-t-0 bg-primary-soft hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-nested-body-2" aria-expanded="false" aria-controls="accordion-nested-body-2">
           <span>Is there a Figma file available?</span>
           <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
         </button>
       </h2>
-      <div id="accordion-nested-body-2" class="hidden border border-s-0 border-e-0 border-t-0 border-b-base" aria-labelledby="accordion-nested-heading-2">
+      <div id="accordion-nested-body-2" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-nested-heading-2">
         <div class="p-4 md:p-5">
           <p class="mb-2 text-body">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
           <p class="text-body">Check out the <a href="https://flowbite.com/figma/" class="text-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
@@ -418,9 +418,9 @@ Use the **Accordion** object from Flowbite to create a collection of vertically 
 
 Create a new Accordion object by passing an array of accordion items and an optional options object to customize the styles and add callback functions.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
     <table class="w-full text-sm rtl:text-right text-body">
-        <thead class="bg-gray-50 dark:bg-gray-700">
+        <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Parameter
@@ -437,7 +437,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-brand dark:text-blue-400">accordionEl</code>
                 </td>
@@ -451,7 +451,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
                     The parent HTML element of the accordion component.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-brand dark:text-blue-400">items</code>
                 </td>
@@ -465,7 +465,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
                     Array of accordion items objects including the unique identifier, heading element, content element, and the active state.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-brand dark:text-blue-400">options</code>
                 </td>
@@ -479,7 +479,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
                     Object of options that you can set to customize the style of the accordion items and set callback functions.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-brand dark:text-blue-400">instanceOptions</code>
                 </td>
@@ -501,9 +501,9 @@ Create a new Accordion object by passing an array of accordion items and an opti
 
 Use the following options as the second parameter for the Accordion object to customize the behaviour, styles, and to set callback functions.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
     <table class="w-full text-sm rtl:text-right text-body">
-        <thead class="bg-gray-50 dark:bg-gray-700">
+        <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Option
@@ -517,7 +517,7 @@ Use the following options as the second parameter for the Accordion object to cu
             </tr>
         </thead>
         <tbody>
-              <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+              <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                   <td class="px-6 py-4 font-medium">
                       <code class="text-brand dark:text-blue-400">alwaysOpen</code>
                   </td>
@@ -528,7 +528,7 @@ Use the following options as the second parameter for the Accordion object to cu
                       If set to true then multiple accordion elements can be open at the same time. By default it's false.
                   </td>
               </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-brand dark:text-blue-400">activeClasses</code>
                 </td>
@@ -539,7 +539,7 @@ Use the following options as the second parameter for the Accordion object to cu
                     Set an array of Tailwind CSS class names to apply for the active accordion heading element.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-brand dark:text-blue-400">inactiveClasses</code>
                 </td>
@@ -550,7 +550,7 @@ Use the following options as the second parameter for the Accordion object to cu
                     Apply an array of Tailwind CSS class names to apply for the inactive accordion heading elements.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-brand dark:text-blue-400">onOpen</code>
                 </td>
@@ -561,7 +561,7 @@ Use the following options as the second parameter for the Accordion object to cu
                     Set a callback function when a new accordion item has been opened.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-brand dark:text-blue-400">onClose</code>
                 </td>
@@ -580,9 +580,9 @@ Use the following options as the second parameter for the Accordion object to cu
 
 Use the object methods on the Accordion object to programmatically open, close, or toggle the visibility of a given accordion item.
 
-<div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
     <table class="w-full text-sm rtl:text-right text-body">
-        <thead class="bg-gray-50 dark:bg-gray-700">
+        <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Method
@@ -593,7 +593,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-brand dark:text-blue-400">toggle(id)</code>
                 </td>
@@ -601,7 +601,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this function to toggle an accordion item based on its current state.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-brand dark:text-blue-400">open(id)</code>
                 </td>
@@ -609,7 +609,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this function to open an accordion item based on the id.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-brand dark:text-blue-400">close(id)</code>
                 </td>
@@ -617,7 +617,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this function to close an accordion item based on the id.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-brand dark:text-blue-400">updateOnOpen(callback)</code>
                 </td>
@@ -625,7 +625,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this method to set a callback function when an accordion item has been opened.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-brand dark:text-blue-400">updateOnClose(callback)</code>
                 </td>
@@ -633,7 +633,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this method to set a callback function when an accordion item has been closed.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-default">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-brand dark:text-blue-400">updateOnToggle(callback)</code>
                 </td>

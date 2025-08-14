@@ -365,7 +365,7 @@ Use this component to show a list of options for online video meetings by showin
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
         <button id="moreOptionsDropdownButton" data-dropdown-toggle="moreOptionsDropdown" type="button" class="text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-full text-sm p-2.5 focus:outline-none">
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
             <span class="sr-only">Show options</span>
         </button>
         <div id="moreOptionsDropdown" class="hidden z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-44 block">

@@ -725,7 +725,7 @@ Use the object parameters from the CopyClipboard object to set options such as t
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
               </td>
@@ -739,7 +739,7 @@ Use the object parameters from the CopyClipboard object to set options such as t
                   Pass the trigger element (ie. a button or text) that will trigger the copy to clipboard event when being clicked.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">targetEl</code>
               </td>
@@ -753,7 +753,7 @@ Use the object parameters from the CopyClipboard object to set options such as t
                   Set the target element where the text that will be copied to the clipboard is located (ie. an input field, code block, address tag).
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">options</code>
               </td>
@@ -767,7 +767,7 @@ Use the object parameters from the CopyClipboard object to set options such as t
                   Set these options to set the the content type, HTML decoder and callback function for the copy to clipboard event.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
                 </td>
@@ -805,7 +805,7 @@ Use these optional options for the CopyClipboard object to set the content type 
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">contentType</code>
               </td>
@@ -816,7 +816,7 @@ Use these optional options for the CopyClipboard object to set the content type 
                   Set the source of the text that will be copied: input (default), innerHTML or textContent.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">htmlEntities</code>
               </td>
@@ -827,7 +827,7 @@ Use these optional options for the CopyClipboard object to set the content type 
                   Set this option to true if you want to decode the HTML entities for code blocks. Default is false.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">onCopy</code>
               </td>
@@ -859,7 +859,7 @@ Use the following methods from the CopyClipboard component to programmatically w
           </tr>
       </thead>
       <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">getTargetValue()</code>
               </td>
@@ -867,7 +867,7 @@ Use the following methods from the CopyClipboard component to programmatically w
                  Get the value of the target element (ie. input field, code block, address tag).
               </td>
           </tr>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+        <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">copy()</code>
               </td>
@@ -875,7 +875,7 @@ Use the following methods from the CopyClipboard component to programmatically w
                  Use this method to copy the text from the target element to the clipboard.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">decodeHTML()</code>
               </td>
@@ -883,7 +883,7 @@ Use the following methods from the CopyClipboard component to programmatically w
                   Use this method to decode the HTML entities from the target element.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">updateOnCopyCallback(callback)</code>
               </td>

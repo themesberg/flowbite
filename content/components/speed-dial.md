@@ -791,7 +791,7 @@ Create a new Speed Diual object with the object parameters like the trigger elem
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">parentEl</code>
                 </td>
@@ -805,7 +805,7 @@ Create a new Speed Diual object with the object parameters like the trigger elem
                     This is the parent and main wrapping element of the speed dial component.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
                 </td>
@@ -819,7 +819,7 @@ Create a new Speed Diual object with the object parameters like the trigger elem
                     Set a button as the trigger element for the speed dial.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">targetEl</code>
                 </td>
@@ -833,7 +833,7 @@ Create a new Speed Diual object with the object parameters like the trigger elem
                     This is the element that is the list of menu items or buttons that will be toggled.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">options</code>
                 </td>
@@ -847,7 +847,7 @@ Create a new Speed Diual object with the object parameters like the trigger elem
                     Use the options parameter to set the trigger type and other options of the speed dial.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
                 </td>
@@ -885,7 +885,7 @@ Use the following options as the third parameter for the Speed Dial object to se
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">triggerType</code>
                 </td>
@@ -896,7 +896,7 @@ Use the following options as the third parameter for the Speed Dial object to se
                     Set the event type that will trigger the speed dial choosing between <code class="text-purple-600 dark:text-purple-400">hover|click|none</code>.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onHide</code>
                 </td>
@@ -907,7 +907,7 @@ Use the following options as the third parameter for the Speed Dial object to se
                     Set a callback function when the speed dial is hidden.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onShow</code>
                 </td>
@@ -918,7 +918,7 @@ Use the following options as the third parameter for the Speed Dial object to se
                     Set a callback function when the speed dial is shown.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onToggle</code>
                 </td>
@@ -950,7 +950,7 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">show()</code>
                 </td>
@@ -958,7 +958,7 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
                     Use this method on the Speed Dial object to show the list of menu items or buttons.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">hide()</code>
                 </td>
@@ -966,7 +966,7 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
                     Use this method on the Speed Dial object to hide the list of menu items or buttons.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">toggle()</code>
                 </td>
@@ -974,7 +974,7 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
                     Use this method on the Speed Dial object to toggle the visibility of the list of menu items or buttons.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">updateOnShow(callback)</code>
                 </td>
@@ -982,7 +982,7 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
                     Use this method to set a callback function when the dial has been shown.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
                 </td>
@@ -990,7 +990,7 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
                     Use this method to set a callback function when the dial has been hidden.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
                 </td>

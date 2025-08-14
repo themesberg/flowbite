@@ -901,7 +901,7 @@ Initialize a Drawer object with parameters such as the target element and the op
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">targetEl</code>
                 </td>
@@ -915,7 +915,7 @@ Initialize a Drawer object with parameters such as the target element and the op
                     Set the main drawer element as a JavaScript object.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">options</code>
                 </td>
@@ -929,7 +929,7 @@ Initialize a Drawer object with parameters such as the target element and the op
                     Use the options parameter to set the default state of the drawer, placement, and other options.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
                 </td>
@@ -967,7 +967,7 @@ Use the following options for the Drawer object to set the placement, enable or 
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">placement</code>
                 </td>
@@ -978,7 +978,7 @@ Use the following options for the Drawer object to set the placement, enable or 
                     Set the position of the drawer component relative to the document body by choosing one of the values from <code class="text-purple-600 dark:text-purple-400">{top|right|bottom|left}</code>.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">backdrop</code>
                 </td>
@@ -989,7 +989,7 @@ Use the following options for the Drawer object to set the placement, enable or 
                   Enable or disable the backdrop element. Values can be <code class="text-purple-600 dark:text-purple-400">true</code> or <code class="text-purple-600 dark:text-purple-400">false</code>.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">bodyScrolling</code>
                 </td>
@@ -1000,7 +1000,7 @@ Use the following options for the Drawer object to set the placement, enable or 
                     Enable or disable body scrolling behaviour when the drawer is active. Values can be <code class="text-purple-600 dark:text-purple-400">true</code> or <code class="text-purple-600 dark:text-purple-400">false</code>.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">edge</code>
                 </td>
@@ -1011,7 +1011,7 @@ Use the following options for the Drawer object to set the placement, enable or 
                     Enable or disable the edge functionality by showing a small part of the drawer component even when inactive. Values can be <code class="text-purple-600 dark:text-purple-400">true</code> or <code class="text-purple-600 dark:text-purple-400">false</code>.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">edgeOffset</code>
                 </td>
@@ -1022,7 +1022,7 @@ Use the following options for the Drawer object to set the placement, enable or 
                     Set the offset height that should be shown when the drawer is inactive. Default value is <code class="text-purple-600 dark:text-purple-400">bottom-[60px]</code>
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">backdropClasses</code>
                 </td>
@@ -1033,7 +1033,7 @@ Use the following options for the Drawer object to set the placement, enable or 
                     Set a string of Tailwind CSS utility classes to override the custom backdrop classes.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onShow()</code>
                 </td>
@@ -1044,7 +1044,7 @@ Use the following options for the Drawer object to set the placement, enable or 
                     Set a callback function when the drawer has been shown.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onHide()</code>
                 </td>
@@ -1055,7 +1055,7 @@ Use the following options for the Drawer object to set the placement, enable or 
                     Set a callback function when the drawer has been hidden.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onToggle()</code>
                 </td>
@@ -1087,7 +1087,7 @@ Use the following methods on the Drawer object to show, hide or check the visibi
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">show()</code>
                 </td>
@@ -1095,7 +1095,7 @@ Use the following methods on the Drawer object to show, hide or check the visibi
                     Use the show function to show the drawer element.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">hide()</code>
                 </td>
@@ -1103,7 +1103,7 @@ Use the following methods on the Drawer object to show, hide or check the visibi
                     Use the hide function to hide the drawer element.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">toggle()</code>
                 </td>
@@ -1111,7 +1111,7 @@ Use the following methods on the Drawer object to show, hide or check the visibi
                     Use the toggle function to toggle the drawer element's visibility.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">isVisible()</code>
                 </td>
@@ -1119,7 +1119,7 @@ Use the following methods on the Drawer object to show, hide or check the visibi
                     Use the isVisible function to check whether the element is visible or not.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">updateOnShow(callback)</code>
                 </td>
@@ -1127,7 +1127,7 @@ Use the following methods on the Drawer object to show, hide or check the visibi
                     Set a callback function when the drawer has been shown.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
                 </td>
@@ -1135,7 +1135,7 @@ Use the following methods on the Drawer object to show, hide or check the visibi
                     Set a callback function when the drawer has been hidden.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
                 </td>
@@ -1165,7 +1165,7 @@ const options = {
     edge: false,
     edgeOffset: '',
     backdropClasses:
-        'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-30',
+        'bg-gray-950/50 dark:bg-gray-950/80 fixed inset-0 z-30',
     onHide: () => {
         console.log('drawer is hidden');
     },

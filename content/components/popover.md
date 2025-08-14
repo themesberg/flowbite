@@ -437,7 +437,7 @@ Create a new Popover object with the object parameters like the trigger element,
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">targetEl</code>
                 </td>
@@ -451,7 +451,7 @@ Create a new Popover object with the object parameters like the trigger element,
                     Set the popover component as the target element.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
                 </td>
@@ -465,7 +465,7 @@ Create a new Popover object with the object parameters like the trigger element,
                     Set an element to trigger the popover when clicking or hovering (ie. a button, text).
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">options</code>
                 </td>
@@ -479,7 +479,7 @@ Create a new Popover object with the object parameters like the trigger element,
                     Use the options parameter to set the positioning of the popover element, trigger type, offset, and more.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
                 </td>
@@ -517,7 +517,7 @@ Use the following options as the third parameter for the Popover object to set t
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">placement</code>
                 </td>
@@ -528,7 +528,7 @@ Use the following options as the third parameter for the Popover object to set t
                     Set the position of the popover element relative to the trigger element choosing from <code class="text-purple-600 dark:text-purple-400">top|right|bottom|left</code>.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">triggerType</code>
                 </td>
@@ -539,7 +539,7 @@ Use the following options as the third parameter for the Popover object to set t
                     Set the event type that will trigger the popover content choosing between <code class="text-purple-600 dark:text-purple-400">hover|click|none</code>.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">offset</code>
                 </td>
@@ -550,7 +550,7 @@ Use the following options as the third parameter for the Popover object to set t
                     Set the offset distance between the popover and the trigger element.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onHide</code>
                 </td>
@@ -561,7 +561,7 @@ Use the following options as the third parameter for the Popover object to set t
                     Set a callback function when the popover is hidden.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onShow</code>
                 </td>
@@ -572,7 +572,7 @@ Use the following options as the third parameter for the Popover object to set t
                     Set a callback function when the popover is shown.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">onToggle</code>
                 </td>
@@ -604,7 +604,7 @@ Use the methods from the Popover object to programmatically show or hide the pop
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">show()</code>
                 </td>
@@ -612,7 +612,7 @@ Use the methods from the Popover object to programmatically show or hide the pop
                     Use this method on the Popover object to show the popover content.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">hide()</code>
                 </td>
@@ -620,7 +620,7 @@ Use the methods from the Popover object to programmatically show or hide the pop
                     Use this method on the Popover object to hide the popover content.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">toggle()</code>
                 </td>
@@ -628,7 +628,7 @@ Use the methods from the Popover object to programmatically show or hide the pop
                     Use this method on the Popover object to toggle the visibility of the popover content.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">isVisible()</code>
                 </td>
@@ -636,7 +636,7 @@ Use the methods from the Popover object to programmatically show or hide the pop
                     Use this function to check if the popover is visible or not.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">updateOnShow(callback)</code>
                 </td>
@@ -644,7 +644,7 @@ Use the methods from the Popover object to programmatically show or hide the pop
                     Use this method to set a custom callback function when the popover has been shown.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
                 </td>
@@ -652,7 +652,7 @@ Use the methods from the Popover object to programmatically show or hide the pop
                     Use this method to set a custom callback function when the popover has been hidden.
                 </td>
             </tr>
-            <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
                 </td>

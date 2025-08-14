@@ -227,7 +227,7 @@ Use the object parameters from the Datepicker component to set the datepicker pa
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">datepickerEl</code>
               </td>
@@ -241,7 +241,7 @@ Use the object parameters from the Datepicker component to set the datepicker pa
                   Pass the main HTML element that will be rendered for the datepicker. It can be an input element or a `div` for inline rendering.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">options</code>
               </td>
@@ -255,7 +255,7 @@ Use the object parameters from the Datepicker component to set the datepicker pa
                   Use the options parameter to set custom datepicker options such as the default date, minimum and maximum values, action buttons and callback functions.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
                 </td>
@@ -293,7 +293,7 @@ Use these optional options for the Datepicker object to set options such as the 
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">rangePicker</code>
               </td>
@@ -304,7 +304,7 @@ Use these optional options for the Datepicker object to set options such as the 
                   If set to true then the datepicker will be converted to a date range picker. By default it's false.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">format</code>
               </td>
@@ -315,7 +315,7 @@ Use these optional options for the Datepicker object to set options such as the 
                   Use this option to set a custom format for the datepicker. By default it's `mm/dd/yyyy`.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">maxDate</code>
               </td>
@@ -326,7 +326,7 @@ Use these optional options for the Datepicker object to set options such as the 
                  Use this option to set the maximum selectable date of the datepicker component.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">minDate</code>
               </td>
@@ -337,7 +337,7 @@ Use these optional options for the Datepicker object to set options such as the 
                  Use this option to set the minimum selectable date of the datepicker component.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">orientation</code>
               </td>
@@ -348,7 +348,7 @@ Use these optional options for the Datepicker object to set options such as the 
                  Set the orientation of the datepicker component when it's not inline. It can be top, bottom, left, or right.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">buttons</code>
               </td>
@@ -359,7 +359,7 @@ Use these optional options for the Datepicker object to set options such as the 
                  If set to true then the "today" and "clear" action buttons will be shown that lets you select today's date or clear selections.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">autoSelectToday</code>
               </td>
@@ -370,7 +370,7 @@ Use these optional options for the Datepicker object to set options such as the 
                  If set to 1 then it will automatically have today's date preselected.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">title</code>
               </td>
@@ -381,7 +381,7 @@ Use these optional options for the Datepicker object to set options such as the 
                  Set a custom title for the datepicker component. By default it's null.
               </td>
           </tr>
-          <!-- <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <!-- <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">language</code>
               </td>
@@ -413,7 +413,7 @@ Use the following methods of the Datepicker object to programmatically manipulat
           </tr>
       </thead>
       <tbody>
-        <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+        <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">getDate()</code>
               </td>
@@ -421,7 +421,7 @@ Use the following methods of the Datepicker object to programmatically manipulat
                   Use this method to get the currenctly select date from the datepicker.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">setDate()</code>
               </td>
@@ -429,7 +429,7 @@ Use the following methods of the Datepicker object to programmatically manipulat
                   Use this method to set the date value of the datepicker component.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">show()</code>
               </td>
@@ -437,7 +437,7 @@ Use the following methods of the Datepicker object to programmatically manipulat
                   Use this function to programatically show the datepicker component.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">hide()</code>
               </td>
@@ -445,7 +445,7 @@ Use the following methods of the Datepicker object to programmatically manipulat
                   Use this function to programatically hide the datepicker component.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">getDatepickerInstance()</code>
               </td>
@@ -453,7 +453,7 @@ Use the following methods of the Datepicker object to programmatically manipulat
                   Use this method to get the parent datepicker instance with the extended collection of methods and options.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">updateOnShow(callback)</code>
               </td>
@@ -461,7 +461,7 @@ Use the following methods of the Datepicker object to programmatically manipulat
                   Use this method to set a callback function whenever the datepicker component has been shown.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
                   <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
               </td>

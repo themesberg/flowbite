@@ -30,9 +30,9 @@ This is an example of a form component including an email, password, checkbox, a
   </div>
   <div class="flex items-start mb-5">
     <div class="flex items-center h-5">
-      <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft" required />
+      <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" required />
     </div>
-    <label for="remember" class="ms-2 text-sm font-medium text-heading">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
+    <label for="remember" class="ms-2 text-sm font-medium text-heading select-none">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
   </div>
   <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Submit</button>
 </form>
@@ -137,9 +137,9 @@ Alternatively, you can decide to apply a shadow styling using the `shadow-xs` cl
   </div>
   <div class="flex items-start mb-5">
     <div class="flex items-center h-5">
-      <input id="remember-2" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft" required />
+      <input id="remember-2" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" required />
     </div>
-    <label for="remember-2" class="ms-2 text-sm font-medium text-heading">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
+    <label for="remember-2" class="ms-2 text-sm font-medium text-heading select-none">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
   </div>
   <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Submit</button>
 </form>
@@ -248,24 +248,24 @@ The code below can be used to create a fieldset of checkbox elements inside a fo
 
   <div class="flex items-center mb-4">
       <input checked id="checkbox-1" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" >
-      <label for="checkbox-1" class="ms-2 text-sm font-medium text-heading">I agree to the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
+      <label for="checkbox-1" class="ms-2 text-sm font-medium text-heading select-none">I agree to the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
   </div>
 
   <div class="flex items-center mb-4">
       <input id="checkbox-2" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
-      <label for="checkbox-2" class="ms-2 text-sm font-medium text-heading">I want to get promotional offers</label>
+      <label for="checkbox-2" class="ms-2 text-sm font-medium text-heading select-none">I want to get promotional offers</label>
   </div>
 
   <div class="flex items-center mb-4">
       <input id="checkbox-3" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
-      <label for="checkbox-3" class="ms-2 text-sm font-medium text-heading">I am 18 years or older</label>
+      <label for="checkbox-3" class="ms-2 text-sm font-medium text-heading select-none">I am 18 years or older</label>
   </div>
   
   <div class="flex mb-4">
       <div class="flex items-center h-5">
           <input id="helper-checkbox" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
       </div>
-      <div class="ms-2 text-sm">
+      <div class="ms-2 text-sm select-none">
           <label for="helper-checkbox" class="text-sm font-medium text-heading">Free shipping via Flowbite</label>
           <p id="helper-checkbox-text" class="text-xs text-body">For orders shipped from $25 in books or $29 in other categories</p>
       </div>
@@ -273,7 +273,7 @@ The code below can be used to create a fieldset of checkbox elements inside a fo
 
   <div class="flex items-center">
       <input id="international-shipping-disabled" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" disabled>
-      <label for="international-shipping-disabled" class="ms-2 text-sm font-medium text-fg-disabled">Eligible for international shipping (disabled)</label>
+      <label for="international-shipping-disabled" class="ms-2 text-sm font-medium text-fg-disabled select-none">Eligible for international shipping (disabled)</label>
   </div>
 </fieldset>
 {{< /example >}}
@@ -317,7 +317,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
   <div class="flex items-center">
     <input id="option-disabled" type="radio" name="countries" value="China" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none" disabled>
-    <label for="option-disabled" class="block ms-2 text-sm font-medium text-fg-disabled">
+    <label for="option-disabled" class="block ms-2 text-sm font-medium text-fg-disabled select-none">
       China (disabled)
     </label>
   </div>
@@ -347,13 +347,13 @@ Use the following toggle switch component to ask for a yes or no type of input f
 <label class="inline-flex items-center cursor-pointer">
   <input type="checkbox" value="" class="sr-only peer">
   <div class="relative w-9 h-5 bg-quaternary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
-  <span class="ms-3 text-sm font-medium text-heading">Toggle me</span>
+  <span class="ms-3 text-sm font-medium text-heading select-none">Toggle me</span>
 </label>
 
 <label class="inline-flex items-center cursor-pointer">
   <input type="checkbox" value="" class="sr-only peer" checked>
   <div class="relative w-9 h-5 bg-quaternary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
-  <span class="ms-3 text-sm font-medium text-heading">Checked toggle</span>
+  <span class="ms-3 text-sm font-medium text-heading select-none">Checked toggle</span>
 </label>
 {{< /example >}}
 

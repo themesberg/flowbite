@@ -179,7 +179,7 @@ Here's an example of a list group that you can use right away.
               <input id="helper-radio-4" name="helper-radio" type="radio" value="" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           </div>
           <div class="ms-2 text-sm">
-              <label for="helper-radio-4" class="font-medium text-heading">
+              <label for="helper-radio-4" class="select-none font-medium text-heading">
                 <div class="mb-1">Individual</div>
                 <p id="helper-radio-text-4" class="text-xs font-normal text-body">Some helpful instruction goes over here.</p>
               </label>
@@ -192,7 +192,7 @@ Here's an example of a list group that you can use right away.
               <input id="helper-radio-5" name="helper-radio" type="radio" value="" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           </div>
           <div class="ms-2 text-sm">
-              <label for="helper-radio-5" class="font-medium text-heading">
+              <label for="helper-radio-5" class="select-none font-medium text-heading">
                 <div class="mb-1">Company</div>
                 <p id="helper-radio-text-5" class="text-xs font-normal text-body">Some helpful instruction goes over here.</p>
               </label>
@@ -205,7 +205,7 @@ Here's an example of a list group that you can use right away.
               <input id="helper-radio-6" name="helper-radio" type="radio" value="" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           </div>
           <div class="ms-2 text-sm">
-              <label for="helper-radio-6" class="font-medium text-heading">
+              <label for="helper-radio-6" class="select-none font-medium text-heading">
                 <div class="mb-1">Non profit</div>
                 <p id="helper-radio-text-6" class="text-xs font-normal text-body">Some helpful instruction goes over here.</p>
               </label>
@@ -236,7 +236,7 @@ Use the `flex` class for a wrapper element to horizontally align the radio eleme
     </div>
     <div class="flex items-center">
         <input disabled id="inline-disabled-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
-        <label for="inline-disabled-radio" class="ms-2 text-sm font-medium text-fg-disabled">Inline disabled</label>
+        <label for="inline-disabled-radio" class="select-none ms-2 text-sm font-medium text-fg-disabled">Inline disabled</label>
     </div>
 </div>
 {{< /example >}}

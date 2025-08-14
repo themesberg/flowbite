@@ -66,7 +66,7 @@ Get started with this example if you want to add a secondary helper text for the
     <div class="flex items-center h-5">
         <input id="helper-checkbox" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
     </div>
-    <div class="ms-2 text-sm">
+    <div class="ms-2 text-sm select-none">
         <label for="helper-checkbox" class="font-medium text-heading">Free shipping via Flowbite</label>
         <p id="helper-checkbox-text" class="text-xs font-normal text-body">For orders shipped from $25 in books or $29 in other categories</p>
     </div>
@@ -222,49 +222,49 @@ Use this example to show a list of checkbox items inside a dropdown menu.
         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
         </div>
-        <input type="text" id="input-group-1" class="block w-full ps-9 pe-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded focus:ring-brand focus:border-brand px-2.5 py-2 placeholder:text-body" placeholder="Search user">
+        <input type="text" id="input-group-1" class="block w-full ps-9 pe-3 py-2.5 bg-secondary-strong border border-default-strong text-heading text-sm rounded focus:ring-brand focus:border-brand px-2.5 py-2 placeholder:text-body" placeholder="Search user">
       </div>
     </div>
     <ul class="h-48 select-none overflow-y-auto p-2 text-sm text-body font-medium" aria-labelledby="dropdownSearchButton">
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
-          <input id="checkbox-item-11" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+          <input id="checkbox-item-11" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           <label for="checkbox-item-11" class="w-full ms-2 text-sm font-medium text-heading">Bonnie Green</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
-            <input checked id="checkbox-item-12" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+            <input checked id="checkbox-item-12" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
             <label for="checkbox-item-12" class="w-full ms-2 text-sm font-medium text-heading">Jese Leos</label>
           </div>
       </li>
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
-          <input id="checkbox-item-13" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+          <input id="checkbox-item-13" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           <label for="checkbox-item-13" class="w-full ms-2 text-sm font-medium text-heading">Michael Gough</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
-          <input id="checkbox-item-14" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+          <input id="checkbox-item-14" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           <label for="checkbox-item-14" class="w-full ms-2 text-sm font-medium text-heading">Robert Wall</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
-          <input id="checkbox-item-15" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+          <input id="checkbox-item-15" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           <label for="checkbox-item-15" class="w-full ms-2 text-sm font-medium text-heading">Joseph Mcfall</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
-          <input id="checkbox-item-16" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+          <input id="checkbox-item-16" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           <label for="checkbox-item-16" class="w-full ms-2 text-sm font-medium text-heading">Leslie Livingston</label>
         </div>
       </li>
             <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
-          <input id="checkbox-item-17" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+          <input id="checkbox-item-17" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           <label for="checkbox-item-17" class="w-full ms-2 text-sm font-medium text-heading">Roberta Casas</label>
         </div>
       </li>

@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS KBD (Keyboard) - Flowbite
 description: Use the KBD component as an inline element to denote textual user input from the keyboard inside paragraphs, tables, and other components
 group: components

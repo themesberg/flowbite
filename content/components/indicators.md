@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Indicators - Flowbite
 description: Use the indicator component to show a number count, account status, or as a loading label positioned relative to the parent component coded with Tailwind CSS
 group: components

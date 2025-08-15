@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Stepper - Flowbite
 description: Use the stepper component to show the number of steps required to complete a form inside your application based on Tailwind CSS
 group: components

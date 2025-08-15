@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Flowbite - Changelog
 description: Read more about the releases made for Flowbite from the official changelog
 group: getting-started

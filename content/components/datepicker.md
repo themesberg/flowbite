@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Datepicker - Flowbite
 description: Start receiving date and time data from your users using this free datepicker element based on Tailwind utility-classes and vanilla JavaScript
 group: components

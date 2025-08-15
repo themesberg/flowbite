@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Tooltip - Flowbite
 description: Use the following Tailwind CSS powered tooltips to show extra content when hovering or focusing on an element
 group: components

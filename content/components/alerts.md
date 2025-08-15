@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Alerts - Flowbite
 description: Show contextual information to your users using alert elements based on Tailwind CSS
 group: components

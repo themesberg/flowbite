@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Nuxt - Flowbite
 description: Learn how to install Tailwind CSS with Flowbite for your Nuxt 3 project and start developing with the most popular Vue-based framework inspired by Next.js
 group: getting-started

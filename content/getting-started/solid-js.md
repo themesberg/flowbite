@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS SolidJS - Flowbite
 description: Learn how to install SolidJS with Tailwind CSS and Flowbite and get started with building web applications with a simple and performant reactive JavaScript library
 group: getting-started

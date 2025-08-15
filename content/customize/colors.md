@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Colors - Flowbite
 description: Customize the default colors of Flowbite using the default color variables from the Tailwind CSS framework
 group: customize

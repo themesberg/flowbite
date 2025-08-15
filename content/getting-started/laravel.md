@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Laravel - Flowbite
 description: Learn how to install Tailwind CSS with Flowbite in a Laravel PHP project and start building modern websites with the most popular PHP framework in the world
 group: getting-started

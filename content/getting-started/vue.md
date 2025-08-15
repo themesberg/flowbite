@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Vue - Flowbite
 description: Learn how to install and set up Tailwind CSS with Flowbite for your Vue 3 project and start developing modern web applications with interactive components
 group: getting-started

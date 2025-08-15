@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Chat Bubble - Flowbite
 description: Use the chat bubble component to show chat messages in your web application including voice notes, images, galleries and other attachments based on multiple styles and variations
 group: components

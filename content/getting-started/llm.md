@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS AI and LLM - Flowbite
 description: Learn how to integrate Flowbite and Tailwind CSS with any LLM interface such as OpenAI, Anthropic, or Gemini to leverage the power of AI and LLMs in your web applications
 group: getting-started

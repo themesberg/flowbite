@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Blockquote - Flowbite
 description: The blockquote component can be used to quote text content from an external source that can be used for testimonials, reviews, and quotes inside an article
 group: typography

@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Django - Flowbite
 description: Learn how to install Tailwind CSS and Flowbite inside a Django project and start developing modern web applications with a high-level Python framework
 group: getting-started

@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Images - Flowbite
 description: The image component can be used to embed images inside the web page in articles and sections based on multiple styles, sizes, layouts and hover animations
 group: typography

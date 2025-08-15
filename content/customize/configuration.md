@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Configuration - Flowbite
 description: Learn how to customize the default Flowbite and Tailwind CSS options and styles
 group: customize

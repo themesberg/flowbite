@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS File Input - Flowbite
 description: Get started with the file input component to let the user to upload one or more files from their device storage based on multiple styles and sizes
 group: forms

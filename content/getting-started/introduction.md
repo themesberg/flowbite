@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Flowbite - Tailwind CSS component library
 description: Get started with the most popular open-source library of interactive UI components built with the utility classes from Tailwind CSS
 group: getting-started

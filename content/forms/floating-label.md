@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Floating Label - Flowbite
 description: Use the floating label style for the input field elements to replicate the Material UI design system from Google and choose from multiple styles and sizes
 group: forms

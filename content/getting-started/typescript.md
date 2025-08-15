@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS TypeScript - Flowbite
 description: Learn how to install Tailwind CSS and Flowbite with TypeScript to use optional static typing for JavaScript to make your code more scalable and maintainable
 group: getting-started

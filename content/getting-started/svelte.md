@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Svelte - Flowbite
 description: Learn how to install Tailwind CSS with Flowbite for your Svelte project and start developing modern web applications using interactive elements based on utility classes
 group: getting-started

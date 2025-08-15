@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Buttons - Flowbite
 # description: Use the Tailwind CSS button component inside forms, as links, and more with support for multiple colors, sizes, and variations
 description: Use the button component inside forms, as links, social login, payment options with support for multiple styles, colors, sizes, gradients, and shadows

@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Flask - Flowbite
 description: Learn how to install Tailwind CSS and Flowbite inside a Flask project and start building modern web applications with a micro Python web framework
 group: getting-started

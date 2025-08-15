@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Icons - Flowbite
 description: Use a free and open-source set of SVG icons built for Tailwind CSS and the Flowbite UI component library featuring hundreds of solid and outline styles
 group: customize

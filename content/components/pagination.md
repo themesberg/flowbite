@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Pagination - Flowbite
 description: Use the Tailwind CSS pagination element to indicate a series of content across various pages based on multiple styles and sizes
 group: components

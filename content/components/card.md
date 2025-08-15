@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Cards - Flowbite
 description: Get started with a large variety of Tailwind CSS card examples for your web project
 group: components

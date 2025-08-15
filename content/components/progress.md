@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Progress Bar - Flowbite
 description: Use the progress bar component to show the completion rate of a data indicator or use it as a loader element
 group: components

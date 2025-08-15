@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Blazor (.NET) - Flowbite
 description: Learn how to install Tailwind CSS with Flowbite for your Blazor (.NET) project and start developing modern web applications based on the full-stack framework
 group: getting-started

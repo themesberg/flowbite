@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Gatsby - Flowbite
 description: Learn how to install Gatsby with Tailwind CSS and Flowbite and start building websites with an open-source static site generator built on top of React and GraphQL
 group: getting-started

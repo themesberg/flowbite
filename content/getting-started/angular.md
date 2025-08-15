@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Angular - Flowbite
 description: Read this guide to learn how to install Tailwind CSS with Angular and set up the UI components from Flowbite to build enterprise-level web applications
 group: getting-started

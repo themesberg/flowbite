@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Checkbox - Flowbite
 description: Get started with the checkbox component to allow the user to select one or more options in the form of a square box available in multiple sizes and colors
 group: forms

@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Jumbotron - Flowbite
 description: Use the jumbotron component to show a marketing message to your users based on a headline and image inside of a card box based on Tailwind CSS
 group: components

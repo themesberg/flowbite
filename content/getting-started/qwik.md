@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Qwik - Flowbite
 description: Learn how to create a Qwik project and install Tailwind CSS to instantly build scalable and interactive web apps using the UI components from Flowbite
 group: getting-started

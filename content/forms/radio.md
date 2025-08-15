@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Radio - Flowbite
 description: Get started with the radio component to let the user choose a single option from multiple options in the form of a circle based on multiple styles and colors
 group: forms

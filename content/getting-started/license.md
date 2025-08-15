@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Flowbite - License
 description: Learn more about the licensing terms for Flowbite and Tailwind CSS
 group: getting-started

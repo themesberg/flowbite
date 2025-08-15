@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Remix - Flowbite
 description: Learn how to install Remix with Tailwind CSS and the UI components from Flowbite to leverage quicker page loads with a full-stack web framework built by Shopify
 group: getting-started

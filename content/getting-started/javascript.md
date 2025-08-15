@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS JavaScript - Flowbite
 description: Learn how to set up a Tailwind CSS project with the JavaScript from Flowbite and start working with the interactive UI components based on the Flowbite API and data attributes interface
 group: getting-started

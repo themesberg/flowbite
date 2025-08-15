@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Video - Flowbite
 description: Use the video component to configure an embedded video player using native HTML 5 functionality based on the utility classes from Tailwind CSS
 group: components

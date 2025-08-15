@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Sidebar - Flowbite
 description: Use the sidebar component to show a list of menu items and multi-level menu items on either side of the page to navigate on your website
 group: components

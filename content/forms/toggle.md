@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Toggle - Flowbite
 description: Use the toggle component to switch between a binary state of true or false using a single click available in multiple sizes, variants, and colors
 group: forms

@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Phoenix (Elixir) - Flowbite
 description: Learn how to install Flowbite with Phoenix and Tailwind CSS to start building rich and interactive web applications based on the Elixir programming language
 group: getting-started

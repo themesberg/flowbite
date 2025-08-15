@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Links - Flowbite
 description: The link component can be used to set hyperlinks from one page to another or to an external website when clicking on an inline text item, button, or card
 group: typography

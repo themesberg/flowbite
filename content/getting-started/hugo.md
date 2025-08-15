@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS HUGO - Flowbite
 description: Learn how to install HUGO together with Tailwind CSS and Flowbite to start building websites with one of the most popular static site generators in the world
 group: getting-started

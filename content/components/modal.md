@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Modal - Flowbite
 description: Use the modal component to show interactive dialogs and notifications to your website users available in multiple sizes, colors, and styles
 group: components

@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Optimization - Flowbite
 description: Optimize your project for production use by setting up Flowbite and Tailwind CSS using our guide
 group: customize

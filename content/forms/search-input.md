@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 title: Tailwind CSS Search Input - Flowbite
 description: Use the search input component as a text field to allow users to enter search queries and receive relevant page results available in multiple styles and sizes
 group: forms

@@ -6,7 +6,7 @@ enableInlineShortcodes: true
 params:
   homepage: "https://flowbite.com"
   current_version: 3.1.2
-  authors: Themesberg
+  authors: Flowbite
   social_image_path: /docs/images/og-image.png
 
 markup:
@@ -25,6 +25,6 @@ buildFuture:            true
 
 enableRobotsTXT:        true
 metaDataFormat:         "yaml"
-disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
+disableKinds:           ["404", "taxonomy", "RSS"]
 
 publishDir:             "_gh_pages"

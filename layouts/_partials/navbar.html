@@ -102,6 +102,35 @@
           Toggle dark mode
           <div class="tooltip-arrow" data-popper-arrow></div>
       </div>
+      <button id="new-theme-toggle" data-tooltip-target="tooltip-toggle-new-theme" data-dropdown-toggle="select-theme" type="button" class="inline-flex items-center justify-center text-gray-600 w-10 h-10 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-xl text-sm p-2.5 mr-0.5">
+        <svg class="w-4.5 h-4.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7h.01m3.486 1.513h.01m-6.978 0h.01M6.99 12H7m9 4h2.706a1.957 1.957 0 0 0 1.883-1.325A9 9 0 1 0 3.043 12.89 9.1 9.1 0 0 0 8.2 20.1a8.62 8.62 0 0 0 3.769.9 2.013 2.013 0 0 0 2.03-2v-.857A2.036 2.036 0 0 1 16 16Z"/>
+        </svg>
+        <span class="sr-only">Select theme</span>
+      </button>
+      <div id="tooltip-toggle-new-theme" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
+          Select theme
+          <div class="tooltip-arrow" data-popper-arrow></div>
+      </div>
+      <div id="select-theme" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+        <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefaultButton">
+          <li>
+            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Modern</a>
+          </li>
+          <li>
+            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Minimal</a>
+          </li>
+          <li>
+            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Enterprise</a>
+          </li>
+          <li>
+            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Playful</a>
+          </li>
+          <li>
+            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Mono</a>
+          </li>
+        </ul>
+    </div>
       <a href="{{ .Site.Params.homepage }}/pro/#pricing"  class="xl:hidden inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3.5 py-2 focus:outline-none ml-1 sm:ml-3">Pricing</a>
       <a href="{{ .Site.Params.homepage }}/pro/#pricing"  class="hidden xl:inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3.5 py-2 focus:outline-none ml-1 sm:ml-3">Pricing & FAQ</a>
     </div>

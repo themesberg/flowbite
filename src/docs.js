@@ -557,3 +557,45 @@ window.addEventListener('load', () => {
         });
     });
 });
+
+const themes = [
+    {
+        name: 'modern',
+        css: 'main.css',
+    },
+    {
+        name: 'minimal',
+        css: 'minimal.css',
+    },
+];
+const themeSelectorButtons = document.querySelectorAll('.theme-select-button');
+themeSelectorButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        console.log('theme click');
+        const theme = button.getAttribute('data-css-theme');
+        console.log(theme);
+        themes.forEach((t) => {
+            if (t.name === theme) {
+                const themeLink = document.getElementById('theme');
+                const currentHref = themeLink.href;
+
+                // Extract the base URL by removing the filename part
+                const baseURL = currentHref.substring(
+                    0,
+                    currentHref.lastIndexOf('/') + 1
+                );
+
+                // Extract the version parameter if it exists
+                const versionMatch = currentHref.match(/\?v=([\d\w]+)/);
+                const versionParam = versionMatch
+                    ? `?v=${versionMatch[1]}`
+                    : '';
+
+                // Set the new href with the base URL + new CSS filename + version parameter
+                themeLink.href = baseURL + t.css + versionParam;
+
+                console.log('New theme URL:', themeLink.href);
+            }
+        });
+    });
+});

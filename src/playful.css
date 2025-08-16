@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "./themes/default.css";
+@import "./themes/playful.css";
 @plugin "./../plugin.js";
 @plugin "flowbite-typography";
 

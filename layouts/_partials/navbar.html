@@ -7,9 +7,9 @@
         <p class='text-sm font-medium text-gray-950 md:my-0 dark:text-white'>
           <span class='bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded me-2 hidden md:inline'>New</span>
               We have launched the new Flowbite Dashboard featuring over 60+ pages!
-            <a href="https://flowbite.com/application-ui/preview/" class='inline-flex items-center ml-2 text-sm font-medium text-blue-700 md:ml-2 dark:text-blue-400 hover:underline'>
+            <a href="https://flowbite.com/application-ui/preview/" class='inline-flex items-center ml-2 text-sm font-medium text-brand-700 md:ml-2 dark:text-brand-400 hover:underline'>
               Check it out
-              <svg class="w-3 h-3 ml-1.5 text-blue-600 dark:text-blue-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <svg class="w-3 h-3 ml-1.5 text-brand-600 dark:text-brand-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
               </svg>
             </a>
@@ -34,22 +34,22 @@
     <div class="flex items-center">
       <ul id="flowbiteMenu" class="flex-col hidden pt-6 lg:flex-row lg:self-center lg:py-0 lg:flex">
         <li class="mb-3 lg:px-2 xl:px-2 lg:mb-0">
-          <a href="{{ "getting-started/quickstart/" | relURL }}" class="text-sm font-medium text-gray-950 hover:text-blue-700 dark:text-gray-300 dark:hover:text-blue-400">Quickstart</a>
+          <a href="{{ "getting-started/quickstart/" | relURL }}" class="text-sm font-medium text-gray-950 hover:text-brand-700 dark:text-gray-300 dark:hover:text-brand-400">Quickstart</a>
         </li>
         <li class="mb-3 lg:px-2 xl:px-2 lg:mb-0">
-          <a href="{{ .Site.Params.homepage }}/blocks/" class="text-sm font-medium text-gray-950 hover:text-blue-700 dark:text-gray-300 dark:hover:text-blue-400">Blocks</a>
+          <a href="{{ .Site.Params.homepage }}/blocks/" class="text-sm font-medium text-gray-950 hover:text-brand-700 dark:text-gray-300 dark:hover:text-brand-400">Blocks</a>
         </li>
         <li class="mb-3 lg:px-2 xl:px-2 lg:mb-0">
-          <a href="{{ .Site.Params.homepage }}/figma/" class="text-sm font-medium text-gray-950 hover:text-blue-700 dark:text-gray-300 dark:hover:text-blue-400">Figma</a>
+          <a href="{{ .Site.Params.homepage }}/figma/" class="text-sm font-medium text-gray-950 hover:text-brand-700 dark:text-gray-300 dark:hover:text-brand-400">Figma</a>
         </li>
         <li class="mb-3 lg:px-2 xl:px-2 lg:mb-0">
-          <a href="{{ .Site.Params.homepage }}/icons/" class="text-sm font-medium text-gray-950 hover:text-blue-700 dark:text-gray-300 dark:hover:text-blue-400">Icons</a>
+          <a href="{{ .Site.Params.homepage }}/icons/" class="text-sm font-medium text-gray-950 hover:text-brand-700 dark:text-gray-300 dark:hover:text-brand-400">Icons</a>
         </li>
         <li class="mb-3 lg:px-2 xl:px-2 lg:mb-0">
-          <a href="{{ .Site.Params.homepage }}/blog/" class="text-sm font-medium text-gray-950 hover:text-blue-700 dark:text-gray-300 dark:hover:text-blue-400">Blog</a>
+          <a href="{{ .Site.Params.homepage }}/blog/" class="text-sm font-medium text-gray-950 hover:text-brand-700 dark:text-gray-300 dark:hover:text-brand-400">Blog</a>
         </li>
         <li class="hidden mb-3 lg:px-2 xl:px-2 lg:mb-0 xl:block">
-          <a href="{{ .Site.Params.homepage }}/pro/" class="text-sm font-medium text-gray-950 hover:text-blue-700 dark:text-gray-300 dark:hover:text-blue-400">Pro version</a>
+          <a href="{{ .Site.Params.homepage }}/pro/" class="text-sm font-medium text-gray-950 hover:text-brand-700 dark:text-gray-300 dark:hover:text-brand-400">Pro version</a>
         </li>
       </ul>
       <div id="docsearch-mobile" class="sm:hidden"></div>
@@ -115,19 +115,19 @@
       <div id="select-theme" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
         <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefaultButton">
           <li>
-            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Modern</a>
+            <button data-css-theme="modern" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded theme-select-button">Modern</button>
           </li>
           <li>
-            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Minimal</a>
+            <button data-css-theme="minimal" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded theme-select-button">Minimal</button>
           </li>
           <li>
-            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Enterprise</a>
+            <button data-css-theme="enterprise" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded theme-select-button">Enterprise</button>
           </li>
           <li>
-            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Playful</a>
+            <button data-css-theme="playful" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded theme-select-button">Playful</button>
           </li>
           <li>
-            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Mono</a>
+            <button data-css-theme="mono" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded theme-select-button">Mono</button>
           </li>
         </ul>
     </div>

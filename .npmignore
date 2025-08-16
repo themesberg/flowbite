@@ -8,7 +8,6 @@ node_modules/
 resources/
 static/
 src/docs.js
-src/main.css
 config.yml
 yarn-error.log
 syntax.css

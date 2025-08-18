@@ -341,9 +341,35 @@ const updateiFrameHeight = (iFrame) => {
 };
 
 const updateiFrameCodeElsDarkMode = (theme) => {
-    const iframeCodeEls = document.querySelectorAll('.iframe-code');
-    iframeCodeEls.forEach((i) => {
-        updateiFrameDarkMode(i, theme);
+    var iframeCodeEls = document.querySelectorAll('.iframe-code');
+    iframeCodeEls.forEach((el) => {
+        updateiFrameDarkMode(el, theme);
+    });
+};
+
+const updateiFrameStylesheets = (cssFile, versionParam) => {
+    var iframeCodeEls = document.querySelectorAll('.iframe-code');
+    iframeCodeEls.forEach((el) => {
+        try {
+            // Make sure the iframe has loaded
+            if (el.contentDocument) {
+                const themeLink = el.contentDocument.getElementById('theme');
+                if (themeLink) {
+                    // Extract the base URL by removing the filename part
+                    const currentHref = themeLink.href;
+                    const baseURL = currentHref.substring(
+                        0,
+                        currentHref.lastIndexOf('/') + 1
+                    );
+
+                    // Set the new href with the base URL + new CSS filename + version parameter
+                    themeLink.href = baseURL + cssFile + versionParam;
+                    console.log('Updated iframe theme URL:', themeLink.href);
+                }
+            }
+        } catch (e) {
+            console.error('Error updating iframe stylesheet:', e);
+        }
     });
 };
 
@@ -593,6 +619,9 @@ themeSelectorButtons.forEach((button) => {
 
                 // Set the new href with the base URL + new CSS filename + version parameter
                 themeLink.href = baseURL + t.css + versionParam;
+
+                // Update stylesheets in all iframes
+                updateiFrameStylesheets(t.css, versionParam);
 
                 console.log('New theme URL:', themeLink.href);
             }

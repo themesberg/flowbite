@@ -55,7 +55,7 @@ You can also include a descriptive icon to complement the message inside the ale
   <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
   </svg>
-  <span class="sr-only">Info</span>
+  <span class="sr-only">Danger</span>
   <div>
     <span class="font-medium">Danger alert!</span> Change a few things up and try submitting again.
   </div>
@@ -64,7 +64,7 @@ You can also include a descriptive icon to complement the message inside the ale
   <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
   </svg>
-  <span class="sr-only">Info</span>
+  <span class="sr-only">Success</span>
   <div>
     <span class="font-medium">Success alert!</span> Change a few things up and try submitting again.
   </div>
@@ -73,7 +73,7 @@ You can also include a descriptive icon to complement the message inside the ale
   <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
   </svg>
-  <span class="sr-only">Info</span>
+  <span class="sr-only">Warning</span>
   <div>
     <span class="font-medium">Warning alert!</span> Change a few things up and try submitting again.
   </div>
@@ -107,7 +107,7 @@ Use this example to add a border accent to the alert component instead of just a
   <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
   </svg>
-  <span class="sr-only">Info</span>
+  <span class="sr-only">Danger</span>
   <div>
     <span class="font-medium">Danger alert!</span> Change a few things up and try submitting again.
   </div>
@@ -116,7 +116,7 @@ Use this example to add a border accent to the alert component instead of just a
   <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
   </svg>
-  <span class="sr-only">Info</span>
+  <span class="sr-only">Success</span>
   <div>
     <span class="font-medium">Success alert!</span> Change a few things up and try submitting again.
   </div>
@@ -125,7 +125,7 @@ Use this example to add a border accent to the alert component instead of just a
   <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
   </svg>
-  <span class="sr-only">Info</span>
+  <span class="sr-only">Warning</span>
   <div>
     <span class="font-medium">Warning alert!</span> Change a few things up and try submitting again.
   </div>
@@ -372,7 +372,7 @@ The following alert components can be used if you wish to disclose more informat
     <svg class="shrink-0 w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
       <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
     </svg>
-    <span class="sr-only">Info</span>
+    <span class="sr-only">Danger</span>
     <h3 class="text-lg font-medium">This is a danger alert</h3>
   </div>
   <div class="mt-2 mb-4 text-sm">
@@ -395,7 +395,7 @@ The following alert components can be used if you wish to disclose more informat
     <svg class="shrink-0 w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
       <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
     </svg>
-    <span class="sr-only">Info</span>
+    <span class="sr-only">Success</span>
     <h3 class="text-lg font-medium">This is a success alert</h3>
   </div>
   <div class="mt-2 mb-4 text-sm">
@@ -418,7 +418,7 @@ The following alert components can be used if you wish to disclose more informat
     <svg class="shrink-0 w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
       <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
     </svg>
-    <span class="sr-only">Info</span>
+    <span class="sr-only">Warning</span>
     <h3 class="text-lg font-medium">This is a warning alert</h3>
   </div>
   <div class="mt-2 mb-4 text-sm">

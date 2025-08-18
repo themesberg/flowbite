@@ -145,7 +145,7 @@ Use the following example to create a list of buttons as a menu together with [S
 {{< example id="list-group-icons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
 <div class="w-96 bg-primary-soft border border-default rounded-base shadow-xs">
-    <ul role="list" class="space-y-3 p-6 divide-y divide-base">
+    <ul role="list" class="space-y-3 p-6 divide-y divide-default">
         <li class="flex items-center justify-between pb-3">
             <div class="flex items-center text-body">
                 <svg class="w-5 h-5 me-1.5 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v5m-3 0h6M4 11h16M5 15h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1Z"/></svg>
@@ -229,7 +229,7 @@ Use the following example to create a list of buttons as a menu together with [S
 <div class="w-full max-w-sm p-6 bg-primary-soft border border-default rounded-base shadow-xs">
     <h5 class="text-xl font-semibold text-heading mb-6">Latest users</h5>
     <div class="flow-root">
-        <ul role="list" class="divide-y divide-base">
+        <ul role="list" class="divide-y divide-default">
             <li class="pb-4 sm:pb-4">
                 <div class="flex items-center">
                     <div class="shrink-0">

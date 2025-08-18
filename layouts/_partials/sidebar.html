@@ -1,4 +1,4 @@
-<div id="navWrapper" class="overflow-y-auto z-20 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-3rem)] lg:block lg:sticky top:24 lg:top-28 dark:bg-gray-950 lg:mr-0">
+<div id="navWrapper" class="overflow-y-auto z-20 h-full bg-primary scrolling-touch max-w-2xs lg:h-[calc(100vh-3rem)] lg:block lg:sticky top:24 lg:top-28 lg:mr-0">
   <nav id="nav" class="pt-16 px-1 pl-3 lg:pl-0 lg:pt-2 font-normal text-base lg:text-sm pb-10 lg:pb-20 sticky?lg:h-(screen-18)" aria-label="Docs navigation">
     {{- $url := split .Permalink "/" -}}
     {{- $page_slug := index $url (sub (len $url) 2) -}}
@@ -18,7 +18,7 @@
   
       {{- if $group.pages }}
         <li class="mt-8">
-          <h5 class="mb-2 font-medium tracking-widest uppercase text-xs text-gray-600 dark:text-white">{{ $group.title }}</h5>
+          <h5 class="mb-2 font-medium tracking-widest uppercase text-xs text-body">{{ $group.title }}</h5>
           <ul class="py-1 list-unstyled fw-normal small">
             {{- range $doc := $group.pages -}}
               {{- $doc_slug := "" -}}
@@ -30,7 +30,7 @@
               {{- $is_active := and $is_active_group (eq $page_slug $doc_slug) -}}
               {{- $href := printf "/docs/%s/%s/" $group_slug $doc_slug }}
               <li>
-                <a href="{{ $href }}" data-sidebar-item class="py-2 transition-colors duration-200 relative flex items-center flex-wrap font-medium hover:text-gray-950 text-gray-600 dark:text-gray-300 dark:hover:text-white {{ if $is_active }} !text-brand-700 hover:!text-brand-700 dark:!text-brand-400 dark:hover:!text-brand-400{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }} {{ if ( eq $doc.new true) }}<span><span class="ml-2 bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1 py-0.5 rounded">New</span></span>{{ end }}</a>
+                <a href="{{ $href }}" data-sidebar-item class="py-2 transition-colors duration-200 relative flex items-center flex-wrap font-medium hover:text-heading text-body {{ if $is_active }} !text-fg-brand-brand hover:!text-fg-brand-brand-strong{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }} {{ if ( eq $doc.new true) }}<span><span class="ml-2 bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1 py-0.5 rounded">New</span></span>{{ end }}</a>
               </li>
             {{- end }}
           </ul>

@@ -36,11 +36,11 @@
   
   {{- if eq $show_preview true -}}
   
-  <div class="w-full p-4 border border-gray-200 bg-gray-50 rounded-t-xl dark:border-gray-800 dark:bg-gray-900">
+  <div class="w-full p-4 border border-default bg-secondary-soft rounded-t-xl">
     <div class="grid grid-cols-3">
       {{ with .Get "github" }}
       <div class="col-span-2 sm:col-span-1">
-        <a href="https://github.com/themesberg/flowbite/blob/main/content/{{ . }}" rel="noopener nofollow noreferrer" class="inline-flex items-center justify-center h-9 mr-3 px-3 text-xs font-medium text-gray-900 bg-white border border-gray-200 rounded-full focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+        <a href="https://github.com/themesberg/flowbite/blob/main/content/{{ . }}" rel="noopener nofollow noreferrer" class="inline-flex items-center justify-center h-9 mr-3 px-3 text-xs font-medium text-heading bg-primary-medium border border-default-medium rounded-full focus:outline-none hover:bg-secondary-strong hover:border-default-strong hover:text-heading focus:z-10 focus:ring-2 focus:ring-tertiary">
           <svg class="w-3.5 h-3.5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
           </svg> Edit on GitHub
@@ -48,50 +48,50 @@
       </div>
       {{ end }}
       <div class="items-center justify-center hidden col-span-1 space-x-2 sm:flex">
-        <button {{ if $id }} data-tooltip-target="{{ $id }}-full-screen-tooltip"{{ end }} class="flex items-center justify-center w-9 h-9 text-xs font-medium text-gray-600 bg-white border border-gray-200 rounded-full toggle-full-view hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"><span class="sr-only">Toggle full view</span>
+        <button {{ if $id }} data-tooltip-target="{{ $id }}-full-screen-tooltip"{{ end }} class="toggle-full-view flex items-center justify-center w-9 h-9 text-xs font-medium text-body bg-primary-medium border border-default-medium rounded-full focus:outline-none hover:bg-secondary-strong hover:border-default-strong hover:text-heading focus:z-10 focus:ring-2 focus:ring-tertiary"><span class="sr-only">Toggle full view</span>
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v5m-3 0h6M4 11h16M5 15h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1Z"/>
           </svg>
         </button>
         {{ if $id }}
-          <div id="{{ $id }}-full-screen-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+          <div id="{{ $id }}-full-screen-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-lg shadow-xs opacity-0 tooltip">
               Toggle full screen
               <div class="tooltip-arrow" data-popper-arrow></div>
           </div>
         {{ end }}
-        <button {{ if $id }} data-tooltip-target="{{ $id }}-tablet-tooltip"{{ end }} class="flex items-center justify-center w-9 h-9 text-xs font-medium text-gray-600 bg-white border border-gray-200 rounded-full toggle-tablet-view hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"><span class="sr-only">Toggle tablet view</span>
+        <button {{ if $id }} data-tooltip-target="{{ $id }}-tablet-tooltip"{{ end }} class="toggle-tablet-view flex items-center justify-center w-9 h-9 text-xs font-medium text-body bg-primary-medium border border-default-medium rounded-full focus:outline-none hover:bg-secondary-strong hover:border-default-strong hover:text-heading focus:z-10 focus:ring-2 focus:ring-tertiary"><span class="sr-only">Toggle tablet view</span>
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 18h2M5.875 3h12.25c.483 0 .875.448.875 1v16c0 .552-.392 1-.875 1H5.875C5.392 21 5 20.552 5 20V4c0-.552.392-1 .875-1Z"/>
           </svg>
         </button>
         {{ if $id }}
-          <div id="{{ $id }}-tablet-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+          <div id="{{ $id }}-tablet-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-lg shadow-xs opacity-0 tooltip">
               Toggle tablet view
               <div class="tooltip-arrow" data-popper-arrow></div>
           </div>
         {{ end }}
-        <button {{ if $id }} data-tooltip-target="{{ $id }}-mobile-tooltip"{{ end }} class="flex items-center justify-center w-9 h-9 text-xs font-medium text-gray-600 bg-white border border-gray-200 rounded-full toggle-mobile-view hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"><span class="sr-only">Toggle mobile view</span>
+        <button {{ if $id }} data-tooltip-target="{{ $id }}-mobile-tooltip"{{ end }} class="toggle-mobile-view flex items-center justify-center w-9 h-9 text-xs font-medium text-body bg-primary-medium border border-default-medium rounded-full focus:outline-none hover:bg-secondary-strong hover:border-default-strong hover:text-heading focus:z-10 focus:ring-2 focus:ring-tertiary"><span class="sr-only">Toggle mobile view</span>
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15h12M6 6h12m-6 12h.01M7 21h10a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1Z"/>
           </svg>
         </button>
         {{ if $id }}
-        <div id="{{ $id }}-mobile-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+        <div id="{{ $id }}-mobile-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-lg shadow-xs opacity-0 tooltip">
             Toggle mobile view
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
       {{ end }}
       </div>
       <div class="flex justify-end col-span-1">  
-        <button {{ if $id }} data-tooltip-target="{{ $id }}-toggle-rtl"{{ end }} data-toggle-direction="ltr" type="button" class="toggle-rtl flex items-center w-9 h-9 mr-3 justify-center text-xs font-medium text-gray-600 bg-white border border-gray-200 rounded-full hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+        <button {{ if $id }} data-tooltip-target="{{ $id }}-toggle-rtl"{{ end }} data-toggle-direction="ltr" type="button" class="toggle-rtl mr-2 flex items-center justify-center w-9 h-9 text-xs font-medium text-body bg-primary-medium border border-default-medium rounded-full focus:outline-none hover:bg-secondary-strong hover:border-default-strong hover:text-heading focus:z-10 focus:ring-2 focus:ring-tertiary">
           RTL
         </button> 
-        <div id="{{ $id }}-toggle-rtl" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+        <div id="{{ $id }}-toggle-rtl" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-lg shadow-xs opacity-0 tooltip">
             <span class="tooltip-text">Toggle RTL mode</span>
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
         {{- if eq $show_dark true -}}
-          <button {{ if $id }} data-tooltip-target="{{ $id }}-toggle-dark-mode-tooltip"{{ end }} type="button" data-toggle-dark="light" class="flex items-center w-9 h-9 justify-center text-xs font-medium text-gray-600 bg-white border border-gray-200 rounded-full toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+          <button {{ if $id }} data-tooltip-target="{{ $id }}-toggle-dark-mode-tooltip"{{ end }} type="button" data-toggle-dark="light" class="toggle-dark-state-example flex items-center justify-center w-9 h-9 text-xs font-medium text-body bg-primary-medium border border-default-medium rounded-full focus:outline-none hover:bg-secondary-strong hover:border-default-strong hover:text-heading focus:z-10 focus:ring-2 focus:ring-tertiary">
             <svg data-toggle-icon="moon" class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z"/>
             </svg>
@@ -101,7 +101,7 @@
             <span class="sr-only">Toggle dark/light mode</span>
           </button>
           {{ if $id }}
-          <div id="{{ $id }}-toggle-dark-mode-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+          <div id="{{ $id }}-toggle-dark-mode-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-lg shadow-xs opacity-0 tooltip">
               <span class="tooltip-text">Toggle dark mode</span>
               <div class="tooltip-arrow" data-popper-arrow></div>
           </div>
@@ -112,10 +112,10 @@
   </div>
 
   <div class="code-preview-wrapper">
-    <div{{ with .Get "id" }} id="{{ . }}"{{ end }} class="flex p-0 bg-white border-gray-200 bg-gradient-to-r code-preview dark:bg-gray-900 border-x dark:border-gray-800">
+    <div{{ with .Get "id" }} id="{{ . }}"{{ end }} class="flex p-0 bg-primary dark:bg-primary border-default bg-gradient-to-r code-preview border-x">
       <div class="w-full code-responsive-wrapper">
-        <iframe {{ if $id }}title="{{ replace $id "-" " "}}"{{ end }} class="w-full h-0 mx-auto bg-white dark:bg-gray-900 iframe-code" {{ if $iframeMaxHeight }}style='max-height: {{  sub (int $iframeMaxHeight) 40 }}px'{{ end }} srcdoc="<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap' rel='stylesheet'><link rel='stylesheet' href='{{ .Site.BaseURL }}main.css?v=3.1.2a'></head><body {{ if $iframeHeight }}style='height: {{  sub (int $iframeHeight) 40 }}px'{{ end }} class='p-5 bg-white dark:bg-gray-950 antialiased {{ if $bodyClass }}{{ $bodyClass }}{{ end }}'><div id='exampleWrapper' class='{{ if $class }}{{ $class }}{{ end }}'>{{- $input | safeHTMLAttr -}}{{ if $skeletonPlaceholders }}{{ $skeletonPlaceholdersMarkup }}{{ end }}</div><script src='{{ .Site.BaseURL }}flowbite.min.js'></script>{{ if $charts }}<script src='https://cdn.jsdelivr.net/npm/apexcharts@3.46.0/dist/apexcharts.min.js'></script>{{ end }}{{ if $datatables }}<script src='https://cdn.jsdelivr.net/npm/simple-datatables@9.0.4'></script>{{ end }}<script>window.onload = function () { const anchorTags = document.querySelectorAll('a'); anchorTags.forEach(function(a){a.addEventListener('click', function(ev){ev.preventDefault();})}); {{ if not $disable_init_js }} const dropdownEl = document.querySelector('[data-dropdown-toggle]'); if (dropdownEl) {dropdownEl.click();} const modalEl = document.querySelector('[data-modal-toggle]'); if(modalEl) {modalEl.click(); } {{ if $initDatepicker }} const datepickerEl = document.querySelector('[datepicker]'); if (datepickerEl) { datepickerEl.focus({preventScroll: true}); } {{ end }} const dateRangePickerEl = document.querySelector('[data-rangepicker] input'); if (dateRangePickerEl) { dateRangePickerEl.focus(); } const drawerEl = document.querySelector('[data-drawer-show]'); if (drawerEl) { drawerEl.click(); } {{ end }} }</script>{{ if $wysiwyg }}<script type='importmap'>{{ $wysiwyg_json_fix | safeHTML }}</script>{{ end }}{{ if $javascript }} <script {{ if $script_module }}type='module'{{ end }}>{{ $javascript }}</script>{{ end }}</body></html>" frameborder="0"></iframe>
-        <div class="flex items-center justify-center w-full p-5 bg-white dark:bg-gray-900" data-component-loader>
+        <iframe {{ if $id }}title="{{ replace $id "-" " "}}"{{ end }} class="w-full h-0 mx-auto bg-primary dark:bg-primary iframe-code" {{ if $iframeMaxHeight }}style='max-height: {{  sub (int $iframeMaxHeight) 40 }}px'{{ end }} srcdoc="<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap' rel='stylesheet'><link rel='stylesheet' href='{{ .Site.BaseURL }}main.css?v=3.1.2a'></head><body {{ if $iframeHeight }}style='height: {{  sub (int $iframeHeight) 40 }}px'{{ end }} class='p-5 bg-transparent antialiased {{ if $bodyClass }}{{ $bodyClass }}{{ end }}'><div id='exampleWrapper' class='{{ if $class }}{{ $class }}{{ end }}'>{{- $input | safeHTMLAttr -}}{{ if $skeletonPlaceholders }}{{ $skeletonPlaceholdersMarkup }}{{ end }}</div><script src='{{ .Site.BaseURL }}flowbite.min.js'></script>{{ if $charts }}<script src='https://cdn.jsdelivr.net/npm/apexcharts@3.46.0/dist/apexcharts.min.js'></script>{{ end }}{{ if $datatables }}<script src='https://cdn.jsdelivr.net/npm/simple-datatables@9.0.4'></script>{{ end }}<script>window.onload = function () { const anchorTags = document.querySelectorAll('a'); anchorTags.forEach(function(a){a.addEventListener('click', function(ev){ev.preventDefault();})}); {{ if not $disable_init_js }} const dropdownEl = document.querySelector('[data-dropdown-toggle]'); if (dropdownEl) {dropdownEl.click();} const modalEl = document.querySelector('[data-modal-toggle]'); if(modalEl) {modalEl.click(); } {{ if $initDatepicker }} const datepickerEl = document.querySelector('[datepicker]'); if (datepickerEl) { datepickerEl.focus({preventScroll: true}); } {{ end }} const dateRangePickerEl = document.querySelector('[data-rangepicker] input'); if (dateRangePickerEl) { dateRangePickerEl.focus(); } const drawerEl = document.querySelector('[data-drawer-show]'); if (drawerEl) { drawerEl.click(); } {{ end }} }</script>{{ if $wysiwyg }}<script type='importmap'>{{ $wysiwyg_json_fix | safeHTML }}</script>{{ end }}{{ if $javascript }} <script {{ if $script_module }}type='module'{{ end }}>{{ $javascript }}</script>{{ end }}</body></html>" frameborder="0"></iframe>
+        <div class="flex items-center justify-center w-full p-5 bg-primary" data-component-loader>
           <div role="status">
             <svg aria-hidden="true" class="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
@@ -133,25 +133,25 @@
     {{- $content := replaceRE `<svg class="bd\-placeholder\-img(?:\-lg)?(?: *?bd\-placeholder\-img\-lg)? ?(.*?)".*?<\/svg>\n` `<img src="..." class="$1" alt="...">` $input -}}
     {{- $content = replaceRE ` (class=" *?")` "" $content -}}
       <div class="code-syntax-wrapper">
-        <div class="relative border-gray-200 border-y border-x code-syntax dark:border-gray-800">
-            <div class="grid w-full grid-cols-2 border-b border-gray-200 bg-gray-50 rounded-t-md dark:bg-gray-900 dark:border-gray-800">
-              <ul class="flex text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+        <div class="relative border-default border-y border-x code-syntax">
+            <div class="grid w-full grid-cols-2 border-b border-default bg-secondary-soft rounded-t-md">
+              <ul class="flex text-sm font-medium text-center text-body">
                 <li>
-                  <button type="button" data-toggle-html-code class="inline-block w-full p-2 px-3 text-gray-800 bg-gray-100 border-r border-gray-200 dark:text-white dark:bg-gray-900 dark:border-gray-800">HTML</button>
+                  <button type="button" data-toggle-html-code class="inline-block w-full p-2 px-3 text-heading bg-secondary-soft border-r border-default">HTML</button>
                 </li>
                 {{ if $javascript }}
                   <li>
-                    <button type="button" data-toggle-javascript-code class="inline-block w-full p-2 px-3 text-gray-800 bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 border-r border-gray-200 dark:text-white dark:bg-gray-800 dark:border-gray-800">JavaScript</button>
+                    <button type="button" data-toggle-javascript-code class="inline-block w-full p-2 px-3 text-heading bg-secondary-soft hover:bg-tertiary-medium border-r border-default">JavaScript</button>
                   </li>
                 {{ end }}
               </ul>
               <div class="flex justify-end">
-                <button {{ if $id }} data-tooltip-target="{{ $id }}-copy-clipboard-tooltip" data-clipboard-content-type="html" data-tooltip-placement="bottom"{{ end }} type="button" data-copy-state="copy" class="flex items-center px-3 py-2 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 border-l border-gray-200 dark:border-gray-800 dark:text-gray-400 dark:bg-gray-900 dark:hover:bg-gray-800 hover:text-blue-700 dark:hover:text-white copy-to-clipboard-button">
+                <button {{ if $id }} data-tooltip-target="{{ $id }}-copy-clipboard-tooltip" data-clipboard-content-type="html" data-tooltip-placement="bottom"{{ end }} type="button" data-copy-state="copy" class="flex items-center px-3 py-2 text-xs font-medium text-body bg-secondary-soft hover:bg-tertiary hover:text-heading border-l border-default copy-to-clipboard-button">
                   <svg class="w-5 h-5 mr-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"/></svg>
                   <span class="copy-text">Copy</span>
                 </button>
                 {{ if $id }}
-                  <div id="{{ $id }}-copy-clipboard-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                  <div id="{{ $id }}-copy-clipboard-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-lg shadow-xs opacity-0 tooltip">
                       Copy to clipboard
                       <div class="tooltip-arrow" data-popper-arrow></div>
                   </div>
@@ -172,7 +172,7 @@
                 </div>
               {{ end }}
             </div>
-            <button data-expand-code type="button" class="hidden absolute bottom-0 left-0 py-2.5 px-5 w-full text-sm font-medium text-gray-900 bg-gray-100 border-t border-gray-200 hover:bg-[#EEEEEF] hover:text-blue-700 dark:bg-gray-900 dark:text-gray-400 dark:border-gray-800 dark:hover:text-white dark:hover:bg-[#141D30]">Expand code</button>
+            <button data-expand-code type="button" class="hidden absolute bottom-0 left-0 py-2.5 px-5 w-full text-sm font-medium text-body bg-secondary-soft border-t border-default hover:bg-tertiary hover:text-heading">Expand code</button>
           </div>
         </div>
       </div>

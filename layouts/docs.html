@@ -2,10 +2,10 @@
 
 {{ partial "navbar" }}
 
-<div class="w-full px-4 lg:px-0 mx-auto max-w-8xl border-s border-e border-gray-100 dark:border-gray-900">
+<div class="w-full px-4 lg:px-0 mx-auto max-w-8xl border-s border-e border-light-subtle">
   <div class="lg:flex">
     <!-- Sidebar -->
-    <aside id="sidebar" class="fixed inset-0 z-20 flex-none hidden h-full w-72 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-56 lg:block px-6 border-e border-gray-100 dark:border-gray-900" aria-labelledby="sidebar-label">
+    <aside id="sidebar" class="fixed inset-0 z-20 flex-none hidden h-full w-72 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-56 lg:block px-6 border-e border-light-subtle" aria-labelledby="sidebar-label">
       <h4 id="sidebar-label" class="sr-only">Browse docs</h4>
       {{ partial "sidebar" . }}
     </aside>
@@ -19,7 +19,7 @@
         <div class="flex-auto max-w-full min-w-0 pt-6 lg:px-8 lg:pt-8 pb:12 xl:pb-24 lg:pb-16">
 
           <!-- Intro -->
-          <div class="pb-4 mb-8 border-b border-gray-100 dark:border-gray-900">
+          <div class="pb-4 mb-8 border-b border-light-subtle">
             {{ if ( eq .Page.Params.requires_js true) }}
               <aside class="mb-5" aria-label="Component requires Flowbite JavaScript">
                 <a href="{{ "getting-started/quickstart/" | relURL }}" class="inline-flex items-center justify-between px-1 py-1 pr-4 text-sm text-gray-600 bg-gray-50 border border-gray-200 dark:border-gray-800 rounded-full dark:bg-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:border-gray-700">
@@ -381,15 +381,15 @@
               </aside>
             {{ end }}
             
-            <h1 class="inline-block mb-3 text-3xl font-semibold tracking-tight text-gray-950 dark:text-white" id="content">{{ .Title | markdownify }}</h1>
-            <p class="mb-4 text-lg text-gray-600 dark:text-gray-300">{{ .Page.Params.Description | markdownify }}</p>
+            <h1 class="inline-block mb-3 text-3xl font-semibold tracking-tight text-heading" id="content">{{ .Title | markdownify }}</h1>
+            <p class="mb-4 text-lg text-body">{{ .Page.Params.Description | markdownify }}</p>
           </div>
 
           <div id="mainContent">
 
             {{ .Content }}
 
-            <aside class="flex mt-8 mb-8 font-medium leading-6 border-t border-b border-gray-100 dark:border-gray-900 py-4" aria-label="Previous and next page navigation">
+            <aside class="flex mt-8 mb-8 font-medium leading-6 border-t border-b border-light-subtle py-4" aria-label="Previous and next page navigation">
               {{ if isset .Page.Params "previous" }}
                 <a class="flex items-center justify-center mr-8 text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none" href="{{ .Page.Params.PreviousLink | relURL }}">
                   <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/></svg>
@@ -406,9 +406,9 @@
               {{ end }}
             </aside>
 
-            <aside class="p-4 my-8 bg-white border border-gray-100 rounded-xl shadow-xs sm:p-6 lg:p-8 dark:bg-gray-900 dark:border-gray-800" aria-label="Subscribe to the Flowbite newsletter">
-              <h3 class="mb-3 text-xl font-semibold text-gray-950 dark:text-white">Get more updates...</h3>
-              <p class="mb-5 text-sm font-normal text-gray-600 dark:text-gray-300">Do you want to get notified when a new component is added to Flowbite? Sign up for our newsletter and you'll be among the first to find out about new features, components, versions, and tools.</p>
+            <aside class="p-4 my-8 bg-primary-soft border border-default rounded-xl shadow-xs sm:p-6 lg:p-8" aria-label="Subscribe to the Flowbite newsletter">
+              <h3 class="mb-3 text-xl font-semibold text-heading">Get more updates...</h3>
+              <p class="mb-5 text-sm font-normal text-body">Do you want to get notified when a new component is added to Flowbite? Sign up for our newsletter and you'll be among the first to find out about new features, components, versions, and tools.</p>
               <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
               <form
                   action="https://app.convertkit.com/forms/4692392/subscriptions"
@@ -425,16 +425,16 @@
                       <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
                       <div data-element="fields" data-stacked="false" class="flex items-center w-full max-w-md mb-3 seva-fields formkit-fields">
                           <div class="relative w-full mr-3 formkit-field">
-                              <label for="member_email" class="hidden block mb-2 text-sm font-medium text-gray-950 dark:text-gray-300">Email address</label>
+                              <label for="member_email" class="hidden block mb-2 text-sm font-medium text-heading">Email address</label>
                               <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
-                                <svg class="w-4 h-4 text-gray-600 dark:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                   <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
                                 </svg>
 
                               </div>
                               <input
                                   id="member_email"
-                                  class="formkit-input bg-gray-50 border border-gray-200 text-gray-950 text-sm rounded-xl focus:ring-brand-700 focus:border-brand-500 block w-full pl-10 p-2.5 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500"
+                                  class="formkit-input bg-secondary-medium border ps-9 border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
                                   name="email_address"
                                   aria-label="Email Address"
                                   placeholder="Your email address..."
@@ -448,34 +448,34 @@
                                   <div></div>
                                   <div></div>
                               </div>
-                              <span class="px-4 py-3 text-sm font-medium text-center text-white bg-brand-700 rounded-xl cursor-pointer hover:bg-brand-800 focus:ring-4 focus:ring-brand-300 dark:bg-brand-700 dark:hover:bg-brand-700 dark:focus:ring-brand-800">Subscribe</span>
+                              <span class="px-4 py-3 text-sm text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base focus:outline-none">Subscribe</span>
                           </button>
                       </div>
                   </div>
               </form>
-              <div class="text-sm font-normal text-gray-600 dark:text-gray-300">By subscribing, you agree with ConvertKit's <a rel="nofollow" href="https://convertkit.com/terms" class="text-brand-700 hover:underline font-medium dark:text-brand-400">Terms of Service</a> and <a rel="nofollow" class="text-brand-700 font-medium hover:underline dark:text-brand-400" href="https://convertkit.com/privacy">Privacy Policy</a>.</div>
+              <div class="text-sm font-normal text-body">By subscribing, you agree with ConvertKit's <a rel="nofollow" href="https://convertkit.com/terms" class="text-brand-700 hover:underline font-medium dark:text-brand-400">Terms of Service</a> and <a rel="nofollow" class="text-brand-700 font-medium hover:underline dark:text-brand-400" href="https://convertkit.com/privacy">Privacy Policy</a>.</div>
             </aside>
 
           </div>
         </div>
 
         <!-- Table of content -->
-        <div class="flex-none hidden w-64 px-4 xl:text-sm xl:block border-s border-gray-100 dark:border-gray-900">
+        <div class="flex-none hidden w-64 px-4 xl:text-sm xl:block border-s border-light-subtle">
           {{ if (eq .Page.Params.toc true) }}
           <div class="flex overflow-y-auto sticky top-28 flex-col justify-between pt-10 pb-6 h-[calc(100vh-5rem)]">
             <div class="mb-8">
-              <h4 class="pl-2.5 mb-2 text-sm font-semibold tracking-wide text-gray-950 uppercase dark:text-white lg:text-xs">On this page</h4>
+              <h4 class="pl-2.5 mb-2 text-sm font-semibold tracking-wide text-heading uppercase lg:text-xs">On this page</h4>
               {{ .TableOfContents }}
               <!-- Enhance UI book -->
-              <aside class="w-52 mt-6 mx-auto border-t border-gray-100 dark:border-gray-900 pt-8">
+              <aside class="w-52 mt-6 mx-auto border-t border-light-subtle pt-8">
                 <a href="https://www.enhanceui.com/?ref=flowbite-sidebar" class="block rounded-lg" rel="nofollow noopener noreferrer" target="_blank"> 
                   <img src="/docs/images/book-light.svg" class="shadow-sm mb-3 w-36 dark:hidden" alt="Enhance UI book cover light mode">
                   <img src="/docs/images/book-dark.svg" class="shadow-sm mb-3 w-36 hidden dark:block" alt="Enhance UI book cover dark mode">
-                  <h4 class="text-base font-semibold text-gray-950 mb-1.5 dark:text-white">Learn Design Concepts</h4>
-                  <p class="text-gray-600 dark:text-gray-300">Make better Flowbite pages by learning the fundamentals of design</p>
-                  <div class="border-t border-gray-100 dark:border-gray-900 pt-2 mt-2">
-                    <h5 class="font-medium text-gray-950 dark:text-white">Teach Me Design</h5>
-                    <p class="text-gray-600 dark:text-gray-300">by Adrian Twarog</p>
+                  <h4 class="text-base font-semibold text-heading mb-1.5">Learn Design Concepts</h4>
+                  <p class="text-body">Make better Flowbite pages by learning the fundamentals of design</p>
+                  <div class="border-t border-light-subtle pt-2 mt-2">
+                    <h5 class="font-medium text-heading">Teach Me Design</h5>
+                    <p class="text-body">by Adrian Twarog</p>
                   </div>
                 </a>
               </aside>

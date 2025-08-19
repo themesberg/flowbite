@@ -44,7 +44,7 @@ Now that you have all the libraries installed you can copy-paste the chart examp
 
 Use this example to show a basic area chart by setting the `type: "area"` option in JavaScript:
 
-{{< example id="default-area-chart-example" class="flex justify-center dark:bg-gray-950" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="default-area-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const options = {
   chart: {
     height: "100%",
@@ -169,7 +169,7 @@ if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') 
 
 To create a double line chart check the example below by setting the chart type to `type: "line"` and copy the HTML markup and JS options to automatically style and populate the chart with data:
 
-{{< example id="line-chart-example" class="flex justify-center dark:bg-gray-950" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="line-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const options = {
   chart: {
     height: "100%",
@@ -330,7 +330,7 @@ if (document.getElementById("line-chart") && typeof ApexCharts !== 'undefined') 
 
 You can represent multiple data entries using columns by setting the `type: "bar"` option and also by updating the `horizontal` key value to `false` in JavaScript to adjust them vertically as columns:
 
-{{< example id="column-chart-example" class="flex justify-center dark:bg-gray-950" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="column-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const options = {
   colors: ["#1447E6", "#FF8A4C"],
   series: [
@@ -511,7 +511,7 @@ if(document.getElementById("column-chart") && typeof ApexCharts !== 'undefined')
 
 Create a horizontal bar chart with as many data series as you like by setting the `type: "bar"` chart type via JavaScript and copy the example below into your project. You can enable or disable the labels on the X or Y axis by setting `show` to `false` for the `xaxis` and `yaxis` objects of the chart options.
 
-{{< example id="bar-chart-example" class="flex justify-center dark:bg-gray-950" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="bar-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const options = {
   series: [
     {
@@ -678,7 +678,7 @@ if(document.getElementById("bar-chart") && typeof ApexCharts !== 'undefined') {
 
 Create a pie chart with multiple data series by setting the `type: "pie"` chart type option via JavaScript and copy the following HTML markup code and options from below:
 
-{{< example id="pie-chart-example" class="flex justify-center dark:bg-gray-950" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="pie-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const getChartOptions = () => {
   return {
     series: [52.8, 26.8, 20.4],
@@ -867,7 +867,7 @@ Set the JavaScript API option to `type: "donut"` to create a donut chart and cop
 
 In this example we also show how you can set event listeners on the UI components from Flowbite to update the data series from the chart by clicking the device checkboxes.
 
-{{< example id="donut-chart-example" class="flex justify-center dark:bg-gray-950" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="donut-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const getChartOptions = () => {
   return {
     series: [35.1, 23.5, 2.4, 5.4],
@@ -1080,7 +1080,7 @@ if (document.getElementById("donut-chart") && typeof ApexCharts !== 'undefined')
 
 To create a radial chart with multiple data entries you need to set the `type: "radialBar"` when initialising a new chart and introduce multiple series and labels to the options and copy the following code:
 
-{{< example id="radial-chart-example" class="flex justify-center dark:bg-gray-950" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="radial-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const getChartOptions = () => {
   return {
     series: [90, 85, 70],
@@ -1256,7 +1256,7 @@ Learn more about how you can customize the charts including the data, labels, le
 
 You can add multiple data sets by using the `series` object and setting a name, array of data and custom color of choice. In this example we added two data series based on a blue and purple color.
 
-{{< example id="data-series-chart" class="flex justify-center dark:bg-gray-950" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="data-series-chart" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const options = {
 // add data series via arrays, learn more here: https://apexcharts.com/docs/series/
 series: [
@@ -1395,7 +1395,7 @@ chart.render();
 
 Show labels for the X and Y axis by enabling the `xaxis: {show: true}` and `yaxis: {show: true}` and customize the appearance of the labels by adding Tailwind CSS utility classes to the `cssClass` object based on the following example:
 
-{{< example id="labels-example-chart" class="flex justify-center dark:bg-gray-950" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="labels-example-chart" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const options = {
 // set the labels option to true to show the labels on the X and Y axis
 xaxis: {
@@ -1541,7 +1541,7 @@ chart.render();
 
 Automatically show the legend indicators of the chart by setting the `legend: { show: true }` value when configuring the options via JavaScript. You can also set position of the legend by using the `position: {x}` option inside the legend object to place it to the top or bottom side of the chart.  
 
-{{< example id="legend-chart-example" class="flex justify-center dark:bg-gray-950" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="legend-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const options = {
 // add data series via arrays, learn more here: https://apexcharts.com/docs/series/
 series: [
@@ -1683,7 +1683,7 @@ Enable the tooltip that is shown when hovering over a data set by setting `{tool
 - `x: {show: false}` will show or hide the X axis data
 - `y: {show: true}` will show or hide the Y axis data
 
-{{< example id="tooltip-chart-example" class="flex justify-center dark:bg-gray-950" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="tooltip-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const options = {
 // set this option to enable the tooltip for the chart, learn more here: https://apexcharts.com/docs/tooltip/
 tooltip: {
@@ -1825,7 +1825,7 @@ chart.render();
 
 Add a grid layout of dashed lines to improve the readability of the data entries for the charts by configuring the `{grid: { show: true }}` object and customize the appearance via the `strokeDashArray` object.
 
-{{< example id="grid-chart-example" class="flex justify-center dark:bg-gray-950" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="grid-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const options = {
 // set grid lines to improve the readability of the chart, learn more here: https://apexcharts.com/docs/grid/
 grid: {
@@ -1964,7 +1964,7 @@ chart.render();
 
 Show data points on the chart by enable the `dataLabels: {enabled: true}` object when configuring the options via JavaScript and customize the appearance based on the following example:
 
-{{< example id="data-labels-chart-example" class="flex justify-center dark:bg-gray-950" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="data-labels-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const options = {
 // enable and customize data labels using the following example, learn more from here: https://apexcharts.com/docs/datalabels/
 dataLabels: {
@@ -2107,7 +2107,7 @@ chart.render();
 
 If you want to format and prefix your data with something such as a currency sign you can do that by using the `formatter` function. For example, here we use the euro ("€") sign instead of the dollar ("$").
 
-{{< example id="default-area-chart" class="flex justify-center dark:bg-gray-950" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="default-area-chart" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const options = {
 // set the formatter callback function to format data
 yaxis: {
@@ -2243,7 +2243,7 @@ chart.render();
 
 You can set the size (width and height) of the chart by passing the `width: {size}` and `height: {size}` options via JavaScript to the chart object using pixels or percentages:
 
-{{< example id="size-example-chart" class="flex justify-center dark:bg-gray-950" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="size-example-chart" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const options = {
   chart: {
     // add these lines to update the size of the chart

@@ -632,6 +632,18 @@ const themes = [
         name: 'minimal',
         css: 'minimal.css',
     },
+    {
+        name: 'enterprise',
+        css: 'enterprise.css',
+    },
+    {
+        name: 'playful',
+        css: 'playful.css',
+    },
+    {
+        name: 'mono',
+        css: 'mono.css',
+    },
 ];
 
 // Function to apply a specific CSS theme

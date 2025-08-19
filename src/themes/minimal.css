@@ -256,8 +256,6 @@
  
 /* Flowbite variables */
 
---font-base: 'Inter';
-
 --leading-9: 36px; /* rem pls */
 --leading-7: 28px;
 --leading-8: 32px;
@@ -289,10 +287,10 @@
 --color-fg-brand-subtle: var(--color-stone-200);
 --color-fg-brand: var(--color-stone-700);
 --color-fg-brand-strong: var(--color-stone-900);
---color-fg-success: var(--color-emerald-700);
---color-fg-success-strong: var(--color-emerald-900);
---color-fg-danger: var(--color-rose-700);
---color-fg-danger-strong: var(--color-rose-900);
+--color-fg-success: var(--color-green-700);
+--color-fg-success-strong: var(--color-green-900);
+--color-fg-danger: var(--color-red-700);
+--color-fg-danger-strong: var(--color-red-900);
 --color-fg-warning-subtle: var(--color-orange-600);
 --color-fg-warning: var(--color-orange-900);
 --color-fg-yellow: var(--color-yellow-400);
@@ -324,14 +322,14 @@
 --color-brand: var(--color-stone-900);
 --color-brand-medium: var(--color-stone-200);
 --color-brand-strong: var(--color-stone-800);
---color-success-soft: var(--color-emerald-50);
---color-success: var(--color-emerald-700);
---color-success-medium: var(--color-emerald-100);
---color-success-strong: var(--color-emerald-800);
---color-danger-soft: var(--color-rose-50);
---color-danger: var(--color-rose-700);
---color-danger-medium: var(--color-rose-100);
---color-danger-strong: var(--color-rose-800);
+--color-success-soft: var(--color-green-50);
+--color-success: var(--color-green-700);
+--color-success-medium: var(--color-green-100);
+--color-success-strong: var(--color-green-800);
+--color-danger-soft: var(--color-red-50);
+--color-danger: var(--color-red-700);
+--color-danger-medium: var(--color-red-100);
+--color-danger-strong: var(--color-red-800);
 --color-warning-soft: var(--color-orange-50);
 --color-warning: var(--color-orange-500);
 --color-warning-medium: var(--color-orange-100);
@@ -361,8 +359,8 @@
 --color-default: var(--color-stone-200);
 --color-default-medium: var(--color-stone-200);
 --color-default-strong: var(--color-stone-200);
---color-success-subtle: var(--color-emerald-200);
---color-danger-subtle: var(--color-rose-200);
+--color-success-subtle: var(--color-green-200);
+--color-danger-subtle: var(--color-red-200);
 --color-warning-subtle: var(--color-orange-200);
 --color-brand-subtle: var(--color-stone-200);
 --color-brand-light: var(--color-stone-600);
@@ -379,10 +377,10 @@
 --color-fg-brand-subtle: var(--color-stone-200);
 --color-fg-brand: var(--color-stone-500);
 --color-fg-brand-strong: var(--color-stone-400);
---color-fg-success: var(--color-emerald-600);
---color-fg-success-strong: var(--color-emerald-300);
---color-fg-danger: var(--color-rose-500);
---color-fg-danger-strong: var(--color-rose-300);
+--color-fg-success: var(--color-green-600);
+--color-fg-success-strong: var(--color-green-300);
+--color-fg-danger: var(--color-red-500);
+--color-fg-danger-strong: var(--color-red-300);
 --color-fg-warning-subtle: var(--color-orange-500);
 --color-fg-warning: var(--color-orange-300);
 --color-fg-yellow: var(--color-yellow-400);
@@ -414,14 +412,14 @@
 --color-brand: var(--color-stone-600);
 --color-brand-medium: var(--color-stone-900);
 --color-brand-strong: var(--color-stone-700);
---color-success-soft: var(--color-emerald-950);
---color-success: var(--color-emerald-600);
---color-success-medium: var(--color-emerald-900);
---color-success-strong: var(--color-emerald-700);
---color-danger-soft: var(--color-rose-950);
---color-danger: var(--color-rose-700);
---color-danger-medium: var(--color-rose-900);
---color-danger-strong: var(--color-rose-800);
+--color-success-soft: var(--color-green-950);
+--color-success: var(--color-green-600);
+--color-success-medium: var(--color-green-900);
+--color-success-strong: var(--color-green-700);
+--color-danger-soft: var(--color-red-950);
+--color-danger: var(--color-red-700);
+--color-danger-medium: var(--color-red-900);
+--color-danger-strong: var(--color-red-800);
 --color-warning-soft: var(--color-orange-950);
 --color-warning: var(--color-orange-600);
 --color-warning-medium: var(--color-orange-900);
@@ -451,8 +449,8 @@
 --color-default: var(--color-stone-800);
 --color-default-medium: var(--color-stone-700);
 --color-default-strong: var(--color-stone-600);
---color-success-subtle: var(--color-emerald-900);
---color-danger-subtle: var(--color-rose-900);
+--color-success-subtle: var(--color-green-900);
+--color-danger-subtle: var(--color-red-900);
 --color-warning-subtle: var(--color-orange-900);
 --color-brand-subtle: var(--color-stone-900);
 --color-brand-light: var(--color-stone-600);

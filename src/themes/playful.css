@@ -1,13 +1,10 @@
 :root{
     --color-white: #ffffff;
 }
- 
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @theme {
---font-sans: 'Shantell Sans', ui-sans-serif, system-ui, sans-serif;
---font-base: 'Shantell Sans', ui-sans-serif, system-ui, sans-serif;
+--font-sans: 'Shantell Sans', cursive;
+--font-base: 'Shantell Sans', cursive;
 
 --text-2xs: 0.625rem;
 --spacing-8xl: 90rem;

@@ -3,8 +3,8 @@
 }
 
 @theme {
---font-sans: 'IBM Plex Mono', monospace;
---font-base: 'IBM Plex Mono', monospace;
+--font-sans: 'Roboto Mono', monospace;
+--font-base: 'Roboto Mono', monospace;
 
 --text-2xs: 0.625rem;
 --spacing-8xl: 90rem;
@@ -268,6 +268,7 @@
 --tracking-tighter: -0.8px;
 --leading-heading(none): 60px;
 --tracking-tight: -0.4px;
+--tracking-normal: -0.4px;
 
 /* radius variables */
 --radius-xxs: 1px;

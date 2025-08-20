@@ -701,9 +701,9 @@ Use this web3 card component to show a list of applications that you can use to 
         </li>
     </ul>
     <div>
-    <a href="#" class="inline-flex items-center text-sm text-body hover:underline">
+    <a href="#" class="inline-flex items-center text-sm text-body hover:underline tracking-normal">
         <svg class="w-3.5 h-3.5 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.529 9.988a2.502 2.502 0 1 1 5 .191A2.441 2.441 0 0 1 12 12.582V14m-.01 3.008H12M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
-        Why do I need to connect with my wallet?
+        Why do I need to connect my wallet?
     </a>
     </div>
 </div>

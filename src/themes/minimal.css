@@ -258,6 +258,14 @@
  
 /* Flowbite variables */
 
+/* shadow variables */
+--shadow-xs: 0;
+--shadow-sm: 0;
+--shadow-md: 0;
+--shadow-lg: 0;
+--shadow-xl: 0;
+--shadow: 0;
+/* text variables */
 --leading-9: 36px; /* rem pls */
 --leading-7: 28px;
 --leading-8: 32px;
@@ -367,6 +375,7 @@
 --color-brand-subtle: var(--color-stone-200);
 --color-brand-light: var(--color-stone-600);
 --color-dark-subtle: var(--color-stone-800);
+--color-dark-backdrop: var(--color-stone-950);
 
 }
 
@@ -457,5 +466,6 @@
 --color-brand-subtle: var(--color-stone-900);
 --color-brand-light: var(--color-stone-600);
 --color-dark-subtle: var(--color-stone-700);
+--color-dark-backdrop: var(--color-stone-950);
 
 }

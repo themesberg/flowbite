@@ -371,6 +371,7 @@
     --color-brand-subtle: var(--color-blue-200);
     --color-brand-light: var(--color-blue-600);
     --color-dark-subtle: var(--color-gray-800);
+    --color-dark-backdrop: var(--color-gray-950);
     
 }
 
@@ -461,5 +462,6 @@
     --color-brand-subtle: var(--color-blue-900);
     --color-brand-light: var(--color-blue-600);
     --color-dark-subtle: var(--color-gray-700);
+    --color-dark-backdrop: var(--color-gray-950);
     
 }

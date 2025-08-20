@@ -6,7 +6,7 @@ import instances from '../../dom/instances';
 
 const Default: ModalOptions = {
     placement: 'center',
-    backdropClasses: 'bg-primary/80 fixed inset-0 z-40',
+    backdropClasses: 'bg-dark-backdrop/70 fixed inset-0 z-40',
     backdrop: 'dynamic',
     closable: true,
     onHide: () => {},

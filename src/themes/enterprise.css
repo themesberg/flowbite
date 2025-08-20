@@ -368,6 +368,7 @@
 --color-brand-subtle: var(--color-cyan-200);
 --color-brand-light: var(--color-cyan-600);
 --color-dark-subtle: var(--color-zinc-800);
+--color-dark-backdrop: var(--color-zinc-950);
 
 }
 
@@ -458,5 +459,6 @@
 --color-brand-subtle: var(--color-cyan-900);
 --color-brand-light: var(--color-cyan-600);
 --color-dark-subtle: var(--color-zinc-700);
+--color-dark-backdrop: var(--color-zinc-950);
 
 }

@@ -3,7 +3,9 @@
 }
  
 @theme {
---font-sans: 'Funnel Display', 'monospace', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+--font-sans: 'Open Sans', sans-serif;
+--font-base: 'Open Sans', sans-serif;
+
 --text-2xs: 0.625rem;
 --spacing-8xl: 90rem;
  

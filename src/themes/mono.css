@@ -3,8 +3,8 @@
 }
 
 @theme {
---font-sans: 'Roboto Mono', monospace;
---font-base: 'Roboto Mono', monospace;
+--font-sans: 'Google Sans Code', monospace;
+--font-base: 'Google Sans Code', monospace;
 
 --text-2xs: 0.625rem;
 --spacing-8xl: 90rem;

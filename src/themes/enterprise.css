@@ -3,8 +3,8 @@
 }
 
 @theme {
---font-sans: 'Noto Sans', sans-serif;
---font-base: 'Noto Sans', sans-serif;
+--font-sans: 'IBM Plex Serif', serif;
+--font-base: 'IBM Plex Serif', serif;
 
 --text-2xs: 0.625rem;
 --spacing-8xl: 90rem;

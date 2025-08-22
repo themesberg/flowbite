@@ -734,8 +734,8 @@ Use the **InputCounter** object from the Flowbite JS API to create a number inpu
 
 Use the object parameters from the InputCounter object to set the target, increment, and decrement elements as well as the options object.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -755,7 +755,7 @@ Use the object parameters from the InputCounter object to set the target, increm
       <tbody>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">targetEl</code>
+                  <code class="text-fg-brand">targetEl</code>
               </td>
               <td class="px-6 py-4">
                   Element
@@ -769,7 +769,7 @@ Use the object parameters from the InputCounter object to set the target, increm
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">incrementEl</code>
+                  <code class="text-fg-brand">incrementEl</code>
               </td>
               <td class="px-6 py-4">
                   Element
@@ -783,7 +783,7 @@ Use the object parameters from the InputCounter object to set the target, increm
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">decrementEl</code>
+                  <code class="text-fg-brand">decrementEl</code>
               </td>
               <td class="px-6 py-4">
                   Element
@@ -797,7 +797,7 @@ Use the object parameters from the InputCounter object to set the target, increm
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">options</code>
+                  <code class="text-fg-brand">options</code>
               </td>
               <td class="px-6 py-4">
                 Object
@@ -811,7 +811,7 @@ Use the object parameters from the InputCounter object to set the target, increm
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
+                    <code class="text-fg-brand">instanceOptions</code>
                 </td>
                 <td class="px-6 py-4">
                     Object
@@ -831,8 +831,8 @@ Use the object parameters from the InputCounter object to set the target, increm
 
 Use these optional options for the InputCounter object to set the minimum and maximum values of the input field and also to set callback functions for the increment and decrement events.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -849,7 +849,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
       <tbody>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">minValue</code>
+                  <code class="text-fg-brand">minValue</code>
               </td>
               <td class="px-6 py-4 ">
                   Integer
@@ -860,7 +860,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">maxValue</code>
+                  <code class="text-fg-brand">maxValue</code>
               </td>
               <td class="px-6 py-4 ">
                   Integer
@@ -871,7 +871,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">onIncrement</code>
+                  <code class="text-fg-brand">onIncrement</code>
               </td>
               <td class="px-6 py-4 ">
                   Function
@@ -882,7 +882,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">onDecrement</code>
+                  <code class="text-fg-brand">onDecrement</code>
               </td>
               <td class="px-6 py-4 ">
                   Function
@@ -899,8 +899,8 @@ Use these optional options for the InputCounter object to set the minimum and ma
 
 Use the following methods of the InputCounter object to programmatically manipulate the behaviour of the input field.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -914,7 +914,7 @@ Use the following methods of the InputCounter object to programmatically manipul
       <tbody>
         <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">getCurrentValue()</code>
+                  <code class="text-fg-brand">getCurrentValue()</code>
               </td>
               <td class="px-6 py-4">
                   Use this method to get the current value of the input field.
@@ -922,7 +922,7 @@ Use the following methods of the InputCounter object to programmatically manipul
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">increment()</code>
+                  <code class="text-fg-brand">increment()</code>
               </td>
               <td class="px-6 py-4">
                   Use this method on the InputCounter object to increment the value of the input field.
@@ -930,7 +930,7 @@ Use the following methods of the InputCounter object to programmatically manipul
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">decrement()</code>
+                  <code class="text-fg-brand">decrement()</code>
               </td>
               <td class="px-6 py-4">
                   Use this method on the InputCounter object to decrement the value of the input field.
@@ -938,7 +938,7 @@ Use the following methods of the InputCounter object to programmatically manipul
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">updateOnIncrement(callback)</code>
+                  <code class="text-fg-brand">updateOnIncrement(callback)</code>
               </td>
               <td class="px-6 py-4">
                   Use this method to set a callback function whenever the input field has been incremented.
@@ -946,7 +946,7 @@ Use the following methods of the InputCounter object to programmatically manipul
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">updateOnDecrement(callback)</code>
+                  <code class="text-fg-brand">updateOnDecrement(callback)</code>
               </td>
               <td class="px-6 py-4">
                   Use this method to set a callback function whenever the input field has been decremented.

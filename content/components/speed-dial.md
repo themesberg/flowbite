@@ -772,8 +772,8 @@ The Speed Dial API from Flowbite can be used to create an object in JavaScript t
 
 Create a new Speed Diual object with the object parameters like the trigger element, the target element, and the other options such as the trigger type.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -793,7 +793,7 @@ Create a new Speed Diual object with the object parameters like the trigger elem
         <tbody>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">parentEl</code>
+                    <code class="text-fg-brand">parentEl</code>
                 </td>
                 <td class="px-6 py-4">
                     Element
@@ -807,7 +807,7 @@ Create a new Speed Diual object with the object parameters like the trigger elem
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
+                    <code class="text-fg-brand">triggerEl</code>
                 </td>
                 <td class="px-6 py-4">
                     Element
@@ -821,7 +821,7 @@ Create a new Speed Diual object with the object parameters like the trigger elem
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">targetEl</code>
+                    <code class="text-fg-brand">targetEl</code>
                 </td>
                 <td class="px-6 py-4">
                     Element
@@ -835,7 +835,7 @@ Create a new Speed Diual object with the object parameters like the trigger elem
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">options</code>
+                    <code class="text-fg-brand">options</code>
                 </td>
                 <td class="px-6 py-4">
                     Object
@@ -849,7 +849,7 @@ Create a new Speed Diual object with the object parameters like the trigger elem
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
+                    <code class="text-fg-brand">instanceOptions</code>
                 </td>
                 <td class="px-6 py-4">
                     Object
@@ -869,8 +869,8 @@ Create a new Speed Diual object with the object parameters like the trigger elem
 
 Use the following options as the third parameter for the Speed Dial object to set the trigger type (hover or click).
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -887,7 +887,7 @@ Use the following options as the third parameter for the Speed Dial object to se
         <tbody>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">triggerType</code>
+                    <code class="text-fg-brand">triggerType</code>
                 </td>
                 <td class="px-6 py-4 font-medium">
                     String
@@ -898,7 +898,7 @@ Use the following options as the third parameter for the Speed Dial object to se
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">onHide</code>
+                    <code class="text-fg-brand">onHide</code>
                 </td>
                 <td class="px-6 py-4 font-medium">
                     Function
@@ -909,7 +909,7 @@ Use the following options as the third parameter for the Speed Dial object to se
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">onShow</code>
+                    <code class="text-fg-brand">onShow</code>
                 </td>
                 <td class="px-6 py-4 font-medium">
                     Function
@@ -920,7 +920,7 @@ Use the following options as the third parameter for the Speed Dial object to se
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">onToggle</code>
+                    <code class="text-fg-brand">onToggle</code>
                 </td>
                 <td class="px-6 py-4 font-medium">
                     Function
@@ -937,8 +937,8 @@ Use the following options as the third parameter for the Speed Dial object to se
 
 Use the methods from the Speed Dial object to programmatically show or hide the component from directly JavaScript.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -952,7 +952,7 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
         <tbody>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">show()</code>
+                    <code class="text-fg-brand">show()</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method on the Speed Dial object to show the list of menu items or buttons.
@@ -960,7 +960,7 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">hide()</code>
+                    <code class="text-fg-brand">hide()</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method on the Speed Dial object to hide the list of menu items or buttons.
@@ -968,7 +968,7 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">toggle()</code>
+                    <code class="text-fg-brand">toggle()</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method on the Speed Dial object to toggle the visibility of the list of menu items or buttons.
@@ -976,7 +976,7 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">updateOnShow(callback)</code>
+                    <code class="text-fg-brand">updateOnShow(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a callback function when the dial has been shown.
@@ -984,7 +984,7 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
+                    <code class="text-fg-brand">updateOnHide(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a callback function when the dial has been hidden.
@@ -992,7 +992,7 @@ Use the methods from the Speed Dial object to programmatically show or hide the 
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
+                    <code class="text-fg-brand">updateOnToggle(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a callback function when the dial visibility has been changed.

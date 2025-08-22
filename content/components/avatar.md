@@ -143,7 +143,7 @@ Use this example if you want to show a dropdown menu when clicking on the avatar
 
 <!-- Dropdown menu -->
 <div id="userDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
-    <div class="px-4 py-3 border-b border-default text-sm text-heading">
+    <div class="px-4 py-3 border-b border-default-medium text-sm text-heading">
       <div class="font-medium">Bonnie Green</div>
       <div class="truncate">name@flowbite.com</div>
     </div>
@@ -158,7 +158,7 @@ Use this example if you want to show a dropdown menu when clicking on the avatar
         <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Earnings</a>
       </li>
       <li>
-        <a href="#" class="block w-full p-2 hover:bg-tertiary-medium text-danger rounded-md">Sign out</a>
+        <a href="#" class="block w-full p-2 hover:bg-tertiary-medium text-fg-danger rounded-md">Sign out</a>
       </li>
     </ul>
 </div>

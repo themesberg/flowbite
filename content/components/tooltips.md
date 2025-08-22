@@ -156,8 +156,8 @@ The **Tooltip** class from Flowbite can be used to create an object that will sh
 
 Initialize a Tooltip object with the object parameters including the trigger element, the tooltip content element, and extra options to set the positioning and offsets of the tooltip.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -177,7 +177,7 @@ Initialize a Tooltip object with the object parameters including the trigger ele
         <tbody>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">targetEl</code>
+                    <code class="text-fg-brand">targetEl</code>
                 </td>
                 <td class="px-6 py-4">
                     Element
@@ -191,7 +191,7 @@ Initialize a Tooltip object with the object parameters including the trigger ele
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
+                    <code class="text-fg-brand">triggerEl</code>
                 </td>
                 <td class="px-6 py-4">
                     Element
@@ -205,7 +205,7 @@ Initialize a Tooltip object with the object parameters including the trigger ele
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">options</code>
+                    <code class="text-fg-brand">options</code>
                 </td>
                 <td class="px-6 py-4">
                     Object
@@ -219,7 +219,7 @@ Initialize a Tooltip object with the object parameters including the trigger ele
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
+                    <code class="text-fg-brand">instanceOptions</code>
                 </td>
                 <td class="px-6 py-4">
                     Object
@@ -239,8 +239,8 @@ Initialize a Tooltip object with the object parameters including the trigger ele
 
 Use the following options as the third parameter for the Tooltip class to set the positioning, offset, and the trigger type (hover or click) for the tooltip element.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -257,7 +257,7 @@ Use the following options as the third parameter for the Tooltip class to set th
         <tbody>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">placement</code>
+                    <code class="text-fg-brand">placement</code>
                 </td>
                 <td class="px-6 py-4 font-medium">
                     String
@@ -268,7 +268,7 @@ Use the following options as the third parameter for the Tooltip class to set th
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">triggerType</code>
+                    <code class="text-fg-brand">triggerType</code>
                 </td>
                 <td class="px-6 py-4 font-medium">
                     String
@@ -279,7 +279,7 @@ Use the following options as the third parameter for the Tooltip class to set th
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">onHide</code>
+                    <code class="text-fg-brand">onHide</code>
                 </td>
                 <td class="px-6 py-4 font-medium">
                     Function
@@ -290,7 +290,7 @@ Use the following options as the third parameter for the Tooltip class to set th
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">onShow</code>
+                    <code class="text-fg-brand">onShow</code>
                 </td>
                 <td class="px-6 py-4 font-medium">
                     Function
@@ -301,7 +301,7 @@ Use the following options as the third parameter for the Tooltip class to set th
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">onToggle</code>
+                    <code class="text-fg-brand">onToggle</code>
                 </td>
                 <td class="px-6 py-4 font-medium">
                     Function
@@ -318,8 +318,8 @@ Use the following options as the third parameter for the Tooltip class to set th
 
 Use the methods from the Tooltip object to programmatically show or hide the tooltip from JavaScript.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -333,7 +333,7 @@ Use the methods from the Tooltip object to programmatically show or hide the too
         <tbody>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">show()</code>
+                    <code class="text-fg-brand">show()</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method on the Tooltip object to show the tooltip content.
@@ -341,7 +341,7 @@ Use the methods from the Tooltip object to programmatically show or hide the too
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">hide()</code>
+                    <code class="text-fg-brand">hide()</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method on the Tooltip object to hide the tooltip content.
@@ -349,7 +349,7 @@ Use the methods from the Tooltip object to programmatically show or hide the too
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">toggle()</code>
+                    <code class="text-fg-brand">toggle()</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method on the Tooltip object to toggle the visibility of the tooltip content.
@@ -357,7 +357,7 @@ Use the methods from the Tooltip object to programmatically show or hide the too
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">updateOnShow(callback)</code>
+                    <code class="text-fg-brand">updateOnShow(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a custom callback function when the tooltip has been shown.
@@ -365,7 +365,7 @@ Use the methods from the Tooltip object to programmatically show or hide the too
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
+                    <code class="text-fg-brand">updateOnHide(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a custom callback function when the tooltip has been hidden.
@@ -373,7 +373,7 @@ Use the methods from the Tooltip object to programmatically show or hide the too
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
+                    <code class="text-fg-brand">updateOnToggle(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a custom callback function when the tooltip visibility has been toggled.

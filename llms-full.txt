@@ -3002,7 +3002,7 @@ The **Dismiss** class from Flowbite can be used to create an object that will hi
 The parameters for the Dismiss object can be used to programmatically initialize and manipulate the behaviour of the dismissal of the target element.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-800">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
@@ -3085,7 +3085,7 @@ The parameters for the Dismiss object can be used to programmatically initialize
 Use these optional options for the Dismiss object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-4000">
+  <table class="w-full text-sm text-left text-body0">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
@@ -3153,7 +3153,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
 Use the following methods on the Dismiss object to programmatically manipulate the behaviour.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
@@ -6130,7 +6130,7 @@ Use the **Carousel** class from Flowbite to create an object that you can use to
 Pass the object parameters for the Carousel object to set the carousel items and options.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
@@ -6213,7 +6213,7 @@ Pass the object parameters for the Carousel object to set the carousel items and
 Use these options for the Carousel object to set the default position, interval, indicators, custom styles, and callback functions.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
@@ -6303,7 +6303,7 @@ Use these options for the Carousel object to set the default position, interval,
 Use the following methods on the Carousel object to programmatically manipulate the behaviour.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
@@ -8609,7 +8609,7 @@ Use the **CopyClipboard** object from the Flowbite JS API to create a component 
 Use the object parameters from the CopyClipboard object to set options such as the content type of the text that is to be copied (ie. value of an input field, text content or inner HTML) and other options.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -8692,7 +8692,7 @@ Use the object parameters from the CopyClipboard object to set options such as t
 Use these optional options for the CopyClipboard object to set the content type from where the text will be copied from, an optional HTML decoder for code blocks and function callbacks to set success and default messages.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -8749,7 +8749,7 @@ Use these optional options for the CopyClipboard object to set the content type 
 Use the following methods from the CopyClipboard component to programmatically work with the component such as copying the text on demand or updating the callback function.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -9149,7 +9149,7 @@ Use the **Tailwind CSS Datepicker** component from Flowbite to select a date or 
 Use the object parameters from the Datepicker component to set the datepicker parent input element and the options associated with it when creating a new instance.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -9218,7 +9218,7 @@ Use the object parameters from the Datepicker component to set the datepicker pa
 Use these optional options for the Datepicker object to set options such as the date format, orientation, max and min dates, custom buttons, callback functions and more.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -9341,7 +9341,7 @@ Use these optional options for the Datepicker object to set options such as the 
 Use the following methods of the Datepicker object to programmatically manipulate the behaviour.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -10742,7 +10742,7 @@ The Drawer API can be used to create an instance of the class, use methods to ma
 Initialize a Drawer object with parameters such as the target element and the options object.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -10811,7 +10811,7 @@ Initialize a Drawer object with parameters such as the target element and the op
 Use the following options for the Drawer object to set the placement, enable or disable the backdrop, enable or disable body scrolling, and more.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -10934,7 +10934,7 @@ Use the following options for the Drawer object to set the placement, enable or 
 Use the following methods on the Drawer object to show, hide or check the visibility.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -12478,7 +12478,7 @@ The **Dropdown** class from Flowbite can be used to create an object that will s
 Initialize a Dropdown object with the object parameters such as the main target dropdown menu, a trigger element (eg. a button) and options to set the placement relative to the trigger element.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
@@ -12561,7 +12561,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
 Use the following options as the third parameter for the Dropdown class to set the placement of the dropdown menu.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
@@ -12684,7 +12684,7 @@ Use the following options as the third parameter for the Dropdown class to set t
 Use the methods from the Dropdown object to programmatically show or hide the dropdown menu directly from JavaScript.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
@@ -16202,7 +16202,7 @@ The **Modal** class from Flowbite can be used to create an object that will laun
 Initialize a Modal object with parameters such as the modal element and the optional options object.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -16271,7 +16271,7 @@ Initialize a Modal object with parameters such as the modal element and the opti
 Use the following options as the second parameter for the Modal object to set the position of the modal, custom classes for the backdrop element and the callback functions.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -16372,7 +16372,7 @@ Use the following options as the second parameter for the Modal object to set th
 Use the methods from the Modal object to show, hide, and toggle the visibility directly from JavaScript.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -17354,7 +17354,7 @@ Use the **Collapse** class to create an object with a trigger and target element
 Use the object parameters from the Collapse object to set the trigger element, target element, and the options including callback functions.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -17437,7 +17437,7 @@ Use the object parameters from the Collapse object to set the trigger element, t
 Use these optional options for the Collapse object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -17494,7 +17494,7 @@ Use these optional options for the Collapse object to set the transition, durati
 Use the following methods on the Dismiss object to programmatically manipulate the behaviour.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -18411,7 +18411,7 @@ The Popover API from Flowbite can be used to create an object that will show a p
 Create a new Popover object with the object parameters like the trigger element, the popover content element, and extra options to set the placement and offset.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -18494,7 +18494,7 @@ Create a new Popover object with the object parameters like the trigger element,
 Use the following options as the third parameter for the Popover object to set the positioning, offset, and the trigger type (hover or click).
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -18584,7 +18584,7 @@ Use the following options as the third parameter for the Popover object to set t
 Use the methods from the Popover object to programmatically show or hide the popover from directly JavaScript.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -21842,7 +21842,7 @@ The Speed Dial API from Flowbite can be used to create an object in JavaScript t
 Create a new Speed Diual object with the object parameters like the trigger element, the target element, and the other options such as the trigger type.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -21939,7 +21939,7 @@ Create a new Speed Diual object with the object parameters like the trigger elem
 Use the following options as the third parameter for the Speed Dial object to set the trigger type (hover or click).
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -22007,7 +22007,7 @@ Use the following options as the third parameter for the Speed Dial object to se
 Use the methods from the Speed Dial object to programmatically show or hide the component from directly JavaScript.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -26433,7 +26433,7 @@ The **Tabs** class from Flowbite can be used to create an object that will enabl
 Create a new Tabs object with parameters such as an array of the tab and content elements.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -26516,7 +26516,7 @@ Create a new Tabs object with parameters such as an array of the tab and content
 Use the following options as the second parameter for the Tabs object to set the appearance of the active tab elements and use callback functions.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -26584,7 +26584,7 @@ Use the following options as the second parameter for the Tabs object to set the
 Use the methods from the Tabs object to programmatically change the current active tab using JavaScript.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -27573,7 +27573,7 @@ The **Tooltip** class from Flowbite can be used to create an object that will sh
 Initialize a Tooltip object with the object parameters including the trigger element, the tooltip content element, and extra options to set the positioning and offsets of the tooltip.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -27656,7 +27656,7 @@ Initialize a Tooltip object with the object parameters including the trigger ele
 Use the following options as the third parameter for the Tooltip class to set the positioning, offset, and the trigger type (hover or click) for the tooltip element.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -27735,7 +27735,7 @@ Use the following options as the third parameter for the Tooltip class to set th
 Use the methods from the Tooltip object to programmatically show or hide the tooltip from JavaScript.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-700">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -29399,7 +29399,7 @@ Use the **InputCounter** object from the Flowbite JS API to create a number inpu
 Use the object parameters from the InputCounter object to set the target, increment, and decrement elements as well as the options object.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -29496,7 +29496,7 @@ Use the object parameters from the InputCounter object to set the target, increm
 Use these optional options for the InputCounter object to set the minimum and maximum values of the input field and also to set callback functions for the increment and decrement events.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -29564,7 +29564,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
 Use the following methods of the InputCounter object to programmatically manipulate the behaviour of the input field.
 
 <div class="relative my-10 overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-700">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">

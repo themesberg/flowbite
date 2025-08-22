@@ -309,11 +309,11 @@
 --color-primary: var(--color-white);
 --color-primary-medium: var(--color-white);
 --color-primary-strong: var(--color-white);
---color-secondary-soft: var(--color-zinc-50);
---color-secondary: var(--color-zinc-50);
---color-secondary-medium: var(--color-zinc-50);
---color-secondary-strong: var(--color-zinc-50);
---color-secondary-strongest: var(--color-zinc-50);
+--color-secondary-soft: var(--color-white);
+--color-secondary: var(--color-white);
+--color-secondary-medium: var(--color-white);
+--color-secondary-strong: var(--color-white);
+--color-secondary-strongest: var(--color-white);
 --color-tertiary-soft: var(--color-zinc-100);
 --color-tertiary: var(--color-zinc-100);
 --color-tertiary-medium: var(--color-zinc-100);

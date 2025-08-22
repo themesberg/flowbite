@@ -704,8 +704,8 @@ Use the **Collapse** class to create an object with a trigger and target element
 
 Use the object parameters from the Collapse object to set the trigger element, target element, and the options including callback functions.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -725,7 +725,7 @@ Use the object parameters from the Collapse object to set the trigger element, t
       <tbody>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">targetEl</code>
+                  <code class="text-fg-brand">targetEl</code>
               </td>
               <td class="px-6 py-4">
                   Element
@@ -739,7 +739,7 @@ Use the object parameters from the Collapse object to set the trigger element, t
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
+                  <code class="text-fg-brand">triggerEl</code>
               </td>
               <td class="px-6 py-4">
                   Element
@@ -753,7 +753,7 @@ Use the object parameters from the Collapse object to set the trigger element, t
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">options</code>
+                  <code class="text-fg-brand">options</code>
               </td>
               <td class="px-6 py-4">
                 Object
@@ -767,7 +767,7 @@ Use the object parameters from the Collapse object to set the trigger element, t
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
+                    <code class="text-fg-brand">instanceOptions</code>
                 </td>
                 <td class="px-6 py-4">
                     Object
@@ -787,8 +787,8 @@ Use the object parameters from the Collapse object to set the trigger element, t
 
 Use these optional options for the Collapse object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -805,7 +805,7 @@ Use these optional options for the Collapse object to set the transition, durati
       <tbody>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">onCollapse</code>
+                  <code class="text-fg-brand">onCollapse</code>
               </td>
               <td class="px-6 py-4 ">
                   Function
@@ -816,7 +816,7 @@ Use these optional options for the Collapse object to set the transition, durati
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">onExpand</code>
+                  <code class="text-fg-brand">onExpand</code>
               </td>
               <td class="px-6 py-4 ">
                   Function
@@ -827,7 +827,7 @@ Use these optional options for the Collapse object to set the transition, durati
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">onToggle</code>
+                  <code class="text-fg-brand">onToggle</code>
               </td>
               <td class="px-6 py-4 ">
                   Function
@@ -844,8 +844,8 @@ Use these optional options for the Collapse object to set the transition, durati
 
 Use the following methods on the Dismiss object to programmatically manipulate the behaviour.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
@@ -859,7 +859,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
       <tbody>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">collapse()</code>
+                  <code class="text-fg-brand">collapse()</code>
               </td>
               <td class="px-6 py-4">
                   Use this method on the Collapse object to hide the target element.
@@ -867,7 +867,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">expand()</code>
+                  <code class="text-fg-brand">expand()</code>
               </td>
               <td class="px-6 py-4">
                   Use this method on the Collapse object to show the target element.
@@ -875,7 +875,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">toggle()</code>
+                  <code class="text-fg-brand">toggle()</code>
               </td>
               <td class="px-6 py-4">
                   Use this method on the Collapse object toggle the current visibility of the target element.
@@ -883,7 +883,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">updateOnCollapse(callback)</code>
+                  <code class="text-fg-brand">updateOnCollapse(callback)</code>
               </td>
               <td class="px-6 py-4">
                   Use this method to set a callback function when the item has been collapsed.
@@ -891,7 +891,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">updateOnExpand(callback)</code>
+                  <code class="text-fg-brand">updateOnExpand(callback)</code>
               </td>
               <td class="px-6 py-4">
                   Use this method to set a callback function when the item has been expanded.
@@ -899,7 +899,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 ">
-                  <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
+                  <code class="text-fg-brand">updateOnToggle(callback)</code>
               </td>
               <td class="px-6 py-4">
                   Use this method to set a callback function when the item has been toggled.

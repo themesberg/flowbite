@@ -854,8 +854,8 @@ The **Modal** class from Flowbite can be used to create an object that will laun
 
 Initialize a Modal object with parameters such as the modal element and the optional options object.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -875,7 +875,7 @@ Initialize a Modal object with parameters such as the modal element and the opti
         <tbody>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">targetEl</code>
+                    <code class="text-fg-brand">targetEl</code>
                 </td>
                 <td class="px-6 py-4">
                     Element
@@ -889,7 +889,7 @@ Initialize a Modal object with parameters such as the modal element and the opti
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">options</code>
+                    <code class="text-fg-brand">options</code>
                 </td>
                 <td class="px-6 py-4">
                     Object
@@ -903,7 +903,7 @@ Initialize a Modal object with parameters such as the modal element and the opti
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
+                    <code class="text-fg-brand">instanceOptions</code>
                 </td>
                 <td class="px-6 py-4">
                     Object
@@ -923,8 +923,8 @@ Initialize a Modal object with parameters such as the modal element and the opti
 
 Use the following options as the second parameter for the Modal object to set the position of the modal, custom classes for the backdrop element and the callback functions.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -941,7 +941,7 @@ Use the following options as the second parameter for the Modal object to set th
         <tbody>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">placement</code>
+                    <code class="text-fg-brand">placement</code>
                 </td>
                 <td class="px-6 py-4">
                     String
@@ -952,7 +952,7 @@ Use the following options as the second parameter for the Modal object to set th
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">backdrop</code>
+                    <code class="text-fg-brand">backdrop</code>
                 </td>
                 <td class="px-6 py-4">
                     String
@@ -963,7 +963,7 @@ Use the following options as the second parameter for the Modal object to set th
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">backdropClasses</code>
+                    <code class="text-fg-brand">backdropClasses</code>
                 </td>
                 <td class="px-6 py-4">
                     String
@@ -974,7 +974,7 @@ Use the following options as the second parameter for the Modal object to set th
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">closable</code>
+                    <code class="text-fg-brand">closable</code>
                 </td>
                 <td class="px-6 py-4">
                     Boolean
@@ -985,7 +985,7 @@ Use the following options as the second parameter for the Modal object to set th
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">onHide</code>
+                    <code class="text-fg-brand">onHide</code>
                 </td>
                 <td class="px-6 py-4">
                     Function
@@ -996,7 +996,7 @@ Use the following options as the second parameter for the Modal object to set th
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">onShow</code>
+                    <code class="text-fg-brand">onShow</code>
                 </td>
                 <td class="px-6 py-4">
                     Function
@@ -1007,7 +1007,7 @@ Use the following options as the second parameter for the Modal object to set th
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">onToggle</code>
+                    <code class="text-fg-brand">onToggle</code>
                 </td>
                 <td class="px-6 py-4">
                     Function
@@ -1024,8 +1024,8 @@ Use the following options as the second parameter for the Modal object to set th
 
 Use the methods from the Modal object to show, hide, and toggle the visibility directly from JavaScript.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+    <table class="w-full text-sm text-left text-body">
         <thead class="bg-gray-50 dark:bg-gray-900">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
@@ -1039,7 +1039,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
         <tbody>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">toggle()</code>
+                    <code class="text-fg-brand">toggle()</code>
                 </td>
                 <td class="px-6 py-4">
                     Use the toggle function on the Modal object to toggle the modal element's visibility.
@@ -1047,7 +1047,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">show()</code>
+                    <code class="text-fg-brand">show()</code>
                 </td>
                 <td class="px-6 py-4">
                     Use the show function on the Modal object to show the modal element.
@@ -1055,7 +1055,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">hide()</code>
+                    <code class="text-fg-brand">hide()</code>
                 </td>
                 <td class="px-6 py-4">
                     Use the hide function on the Modal object to hide the modal element.
@@ -1063,7 +1063,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">isHidden()</code>
+                    <code class="text-fg-brand">isHidden()</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this function to check if the modal is hidden.
@@ -1071,7 +1071,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">isVisible()</code>
+                    <code class="text-fg-brand">isVisible()</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this function to check if the modal is visible.
@@ -1079,7 +1079,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">updateOnShow(callback)</code>
+                    <code class="text-fg-brand">updateOnShow(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a custom callback function when the modal has been shown.
@@ -1087,7 +1087,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
+                    <code class="text-fg-brand">updateOnHide(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a custom callback function when the modal has been closed.
@@ -1095,7 +1095,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
             </tr>
             <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">updateOnToggle(callback)</code>
+                    <code class="text-fg-brand">updateOnToggle(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a custom callback function when the modal visibility has been toggled.

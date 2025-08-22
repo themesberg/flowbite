@@ -231,8 +231,8 @@ Use the **Carousel** class from Flowbite to create an object that you can use to
 
 Pass the object parameters for the Carousel object to set the carousel items and options.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
@@ -252,7 +252,7 @@ Pass the object parameters for the Carousel object to set the carousel items and
       <tbody>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">carouselElement</code>
+                  <code class="text-fg-brand">carouselElement</code>
               </td>
               <td class="px-6 py-4">
                   Element
@@ -266,7 +266,7 @@ Pass the object parameters for the Carousel object to set the carousel items and
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">items</code>
+                  <code class="text-fg-brand">items</code>
               </td>
               <td class="px-6 py-4">
                   Array
@@ -280,7 +280,7 @@ Pass the object parameters for the Carousel object to set the carousel items and
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">options</code>
+                  <code class="text-fg-brand">options</code>
               </td>
               <td class="px-6 py-4">
                 Object
@@ -294,7 +294,7 @@ Pass the object parameters for the Carousel object to set the carousel items and
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
+                    <code class="text-fg-brand">instanceOptions</code>
                 </td>
                 <td class="px-6 py-4">
                     Object
@@ -314,8 +314,8 @@ Pass the object parameters for the Carousel object to set the carousel items and
 
 Use these options for the Carousel object to set the default position, interval, indicators, custom styles, and callback functions.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
@@ -332,7 +332,7 @@ Use these options for the Carousel object to set the default position, interval,
       <tbody>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">defaultPosition</code>
+                  <code class="text-fg-brand">defaultPosition</code>
               </td>
               <td class="px-6 py-4 font-medium">
                   Integer
@@ -343,7 +343,7 @@ Use these options for the Carousel object to set the default position, interval,
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">interval</code>
+                  <code class="text-fg-brand">interval</code>
               </td>
               <td class="px-6 py-4 font-medium">
                   Integer
@@ -354,7 +354,7 @@ Use these options for the Carousel object to set the default position, interval,
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">indicators</code>
+                  <code class="text-fg-brand">indicators</code>
               </td>
               <td class="px-6 py-4 font-medium">
                   Array
@@ -365,7 +365,7 @@ Use these options for the Carousel object to set the default position, interval,
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">onNext</code>
+                  <code class="text-fg-brand">onNext</code>
               </td>
               <td class="px-6 py-4 font-medium">
                   Function
@@ -376,7 +376,7 @@ Use these options for the Carousel object to set the default position, interval,
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">onPrev</code>
+                  <code class="text-fg-brand">onPrev</code>
               </td>
               <td class="px-6 py-4 font-medium">
                   Function
@@ -387,7 +387,7 @@ Use these options for the Carousel object to set the default position, interval,
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">onChange</code>
+                  <code class="text-fg-brand">onChange</code>
               </td>
               <td class="px-6 py-4 font-medium">
                   Function
@@ -404,8 +404,8 @@ Use these options for the Carousel object to set the default position, interval,
 
 Use the following methods on the Carousel object to programmatically manipulate the behaviour.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+  <table class="w-full text-sm text-left text-body">
       <thead class="bg-gray-50 dark:bg-gray-900">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
@@ -419,7 +419,7 @@ Use the following methods on the Carousel object to programmatically manipulate 
       <tbody>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">next()</code>
+                  <code class="text-fg-brand">next()</code>
               </td>
               <td class="px-6 py-4">
                   Use this method to go to the next slide of the carousel component.
@@ -427,7 +427,7 @@ Use the following methods on the Carousel object to programmatically manipulate 
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">prev()</code>
+                  <code class="text-fg-brand">prev()</code>
               </td>
               <td class="px-6 py-4">
                   Use this method to go to the previous slide of the carousel component.
@@ -435,7 +435,7 @@ Use the following methods on the Carousel object to programmatically manipulate 
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">slideTo(position)</code>
+                  <code class="text-fg-brand">slideTo(position)</code>
               </td>
               <td class="px-6 py-4">
                   Use this method to go the carousel with the position that you set as a parameter.
@@ -443,7 +443,7 @@ Use the following methods on the Carousel object to programmatically manipulate 
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">cycle()</code>
+                  <code class="text-fg-brand">cycle()</code>
               </td>
               <td class="px-6 py-4">
                   Use this method to start cycling the carousel component based on the default interval duration.
@@ -451,7 +451,7 @@ Use the following methods on the Carousel object to programmatically manipulate 
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">pause()</code>
+                  <code class="text-fg-brand">pause()</code>
               </td>
               <td class="px-6 py-4">
                   Use this method to stop the automatic cycling of the carousel component.
@@ -459,7 +459,7 @@ Use the following methods on the Carousel object to programmatically manipulate 
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">getItem(position)</code>
+                  <code class="text-fg-brand">getItem(position)</code>
               </td>
               <td class="px-6 py-4">
                   Get the carousel item based on the position number that you set as a parameter.
@@ -467,7 +467,7 @@ Use the following methods on the Carousel object to programmatically manipulate 
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">getActiveItem()</code>
+                  <code class="text-fg-brand">getActiveItem()</code>
               </td>
               <td class="px-6 py-4">
                   Get the current active carousel item.
@@ -475,7 +475,7 @@ Use the following methods on the Carousel object to programmatically manipulate 
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">updateOnNext(callback)</code>
+                  <code class="text-fg-brand">updateOnNext(callback)</code>
               </td>
               <td class="px-6 py-4">
                   Set a callback function when the next carousel item has been shown.
@@ -483,7 +483,7 @@ Use the following methods on the Carousel object to programmatically manipulate 
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">updateOnPrev(callback)</code>
+                  <code class="text-fg-brand">updateOnPrev(callback)</code>
               </td>
               <td class="px-6 py-4">
                   Set a callback function when the previous carousel item has been shown.
@@ -491,7 +491,7 @@ Use the following methods on the Carousel object to programmatically manipulate 
           </tr>
           <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">updateOnChange(callback)</code>
+                  <code class="text-fg-brand">updateOnChange(callback)</code>
               </td>
               <td class="px-6 py-4">
                   Set a callback function when the the slide item inside the carousel has been changed.

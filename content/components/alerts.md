@@ -440,10 +440,10 @@ The **Dismiss** class from Flowbite can be used to create an object that will hi
 
 The parameters for the Dismiss object can be used to programmatically initialize and manipulate the behaviour of the dismissal of the target element.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-800">
-          <tr class="text-xs font-medium uppercase">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+  <table class="w-full text-sm text-left text-body">
+      <thead class="bg-secondary-soft">
+          <tr class="text-heading text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Parameter
               </th>
@@ -459,9 +459,9 @@ The parameters for the Dismiss object can be used to programmatically initialize
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">targetEl</code>
+                  <code class="text-fg-brand">targetEl</code>
               </td>
               <td class="px-6 py-4">
                   Element
@@ -473,9 +473,9 @@ The parameters for the Dismiss object can be used to programmatically initialize
                   Pass the element object that will be dismissed.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">triggerEl</code>
+                  <code class="text-fg-brand">triggerEl</code>
               </td>
               <td class="px-6 py-4">
                   Element
@@ -487,9 +487,9 @@ The parameters for the Dismiss object can be used to programmatically initialize
                   Pass the element object that will trigger the targetEl dismission on click.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">options</code>
+                  <code class="text-fg-brand">options</code>
               </td>
               <td class="px-6 py-4">
                 Object
@@ -501,9 +501,9 @@ The parameters for the Dismiss object can be used to programmatically initialize
                   Pass the options object to set the trigger element, transition, duration, timing classes of the dismiss animation and callback functions.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
+          <tr class="bg-primary">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-blue-600 dark:text-blue-400">instanceOptions</code>
+                    <code class="text-fg-brand">instanceOptions</code>
                 </td>
                 <td class="px-6 py-4">
                     Object
@@ -523,10 +523,10 @@ The parameters for the Dismiss object can be used to programmatically initialize
 
 Use these optional options for the Dismiss object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-4000">
-      <thead class="bg-gray-50 dark:bg-gray-900">
-          <tr class="text-xs font-medium uppercase">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+  <table class="w-full text-sm text-left text-body0">
+      <thead class="bg-secondary-soft">
+          <tr class="text-heading text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Option
               </th>
@@ -538,43 +538,43 @@ Use these optional options for the Dismiss object to set the transition, duratio
               </th>
           </tr>
       </thead>
-      <tbody>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
+      <tbody class="text-body">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">transition</code>
+                  <code class="text-fg-brand">transition</code>
               </td>
               <td class="px-6 py-4 font-medium">
                   String
               </td>
               <td class="px-6 py-4">
-                  Use one of the Transition Property utility classes from Tailwind CSS to set transition type for the main element. The default value is <code class="text-purple-600 dark:text-purple-400">transition-opacity</code>.
+                  Use one of the Transition Property utility classes from Tailwind CSS to set transition type for the main element. The default value is <code class="text-fg-brand">transition-opacity</code>.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">duration</code>
+                  <code class="text-fg-brand">duration</code>
               </td>
               <td class="px-6 py-4 font-medium">
                   Integer
               </td>
               <td class="px-6 py-4">
-                  Set the duration of the dismissing animation. The default value is <code class="text-purple-600 dark:text-purple-400">300</code> (300 milliseconds).
+                  Set the duration of the dismissing animation. The default value is <code class="text-fg-brand">300</code> (300 milliseconds).
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">timing</code>
+                  <code class="text-fg-brand">timing</code>
               </td>
               <td class="px-6 py-4 font-medium">
                   String
               </td>
               <td class="px-6 py-4">
-                  Set the transition timing function utility class from Tailwind CSS. The default value is <code class="text-purple-600 dark:text-purple-400">ease-out</code>.
+                  Set the transition timing function utility class from Tailwind CSS. The default value is <code class="text-fg-brand">ease-out</code>.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
+          <tr class="bg-primary">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">onHide</code>
+                  <code class="text-fg-brand">onHide</code>
               </td>
               <td class="px-6 py-4 font-medium">
                   Function
@@ -591,9 +591,9 @@ Use these optional options for the Dismiss object to set the transition, duratio
 
 Use the following methods on the Dismiss object to programmatically manipulate the behaviour.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-gray-200 dark:border-gray-800">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead class="bg-gray-50 dark:bg-gray-900">
+<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+  <table class="w-full text-sm text-left text-body">
+      <thead class="text-heading bg-secondary-soft">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Method
@@ -604,17 +604,17 @@ Use the following methods on the Dismiss object to programmatically manipulate t
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">hide()</code>
+                  <code class="text-fg-brand">hide()</code>
               </td>
               <td class="px-6 py-4">
                   Use this method on the Dismiss object to hide the target element.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-900 border-gray-200">
+          <tr class="bg-primary">
               <td class="px-6 py-4 font-medium">
-                  <code class="text-blue-600 dark:text-blue-400">updateOnHide(callback)</code>
+                  <code class="text-fg-brand">updateOnHide(callback)</code>
               </td>
               <td class="px-6 py-4">
                   Use this method to set the callback function when the item has been dismissed.

@@ -121,13 +121,13 @@ Use the following code to stack together buttons into a single group.
   <button id="dropdownOptions" data-dropdown-toggle="dropdown-options" type="button" class="text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-3 focus:ring-tertiary-soft font-medium leading-5 rounded-e-base text-sm px-3 py-2 focus:outline-none">
     <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M6 12h.01m6 0h.01m5.99 0h.01"/></svg>
   </button>
-  <div id="dropdown-options" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-44 block hidden">
+  <div id="dropdown-options" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownOptions">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Save as PDF</a>
       </li>
       <li>
-        <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Save as doccument</a>
+        <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Save as doc</a>
       </li>
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Save as image</a>

@@ -53,16 +53,16 @@
 }
 
 #mainContent > h2 {
-	@apply mt-8 mb-4 text-2xl font-medium text-gray-950 dark:text-white;
+	@apply mt-8 mb-4 text-2xl font-medium text-heading dark:text-white;
 }
 
 #mainContent > h3,
 #mainContent > h4 {
-	@apply mt-8 mb-4 text-xl font-medium text-gray-950 dark:text-white;
+	@apply mt-8 mb-4 text-xl font-medium text-heading dark:text-white;
 }
 
 #mainContent > p {
-	@apply mb-4 text-base font-normal text-gray-600 dark:text-gray-300;
+	@apply mb-4 text-base font-normal text-body;
 }
 
 #mainContent > p > a,
@@ -70,7 +70,7 @@
 #mainContent > ol > li > a,
 #mainContent > ul > li > p > a,
 #mainContent > ol > li > p > a {
-	@apply font-medium text-gray-600 underline dark:text-gray-300 decoration-1 underline-offset-2 decoration-blue-700 dark:decoration-blue-400;
+	@apply font-medium text-body underline decoration-1 underline-offset-2 decoration-fg-brand;
 }
 
 #mainContent > p > a:hover,
@@ -78,13 +78,13 @@
 #mainContent > ol > li > a:hover,
 #mainContent > ul > li > p > a:hover,
 #mainContent > ol > li > p > a:hover {
-	@apply text-gray-950 decoration-2 dark:text-white;
+	@apply text-heading decoration-2 dark:text-white;
 }
 
 #mainContent > p > code,
 #mainContent > ul > li > code,
 #mainContent > ol > li > code {
-	@apply px-1 font-mono text-sm text-blue-700 break-all dark:text-blue-400;
+	@apply px-1 font-mono text-sm text-fg-brand break-all;
 }
 
 #mainContent > ul {
@@ -96,7 +96,7 @@
 }
 
 #mainContent p > strong {
-	@apply text-gray-950 dark:text-white;
+	@apply text-heading dark:text-white;
 }
 
 #mainContent > ul,
@@ -106,7 +106,7 @@
 
 #mainContent > ul > li,
 #mainContent > ol > li {
-	@apply mb-4 text-base font-normal text-gray-600 dark:text-gray-300;
+	@apply mb-4 text-base font-normal text-body;
 }
 
 /* prism styles */

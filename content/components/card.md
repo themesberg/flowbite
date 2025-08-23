@@ -20,7 +20,7 @@ Use the following simple card component with a title and description.
 {{< example id="default-card-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 <a href="#" class="bg-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs hover:bg-secondary-medium">
     <h5 class="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">Noteworthy technology acquisitions 2021</h5>
-    <p class="text-body">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+    <p class="text-body">Here are the biggest technology acquisitions of 2025 so far, in reverse chronological order.</p>
 </a>
 {{< /example >}}
 
@@ -32,7 +32,7 @@ Use the following example of a card element if you also want to have an action b
 
 <div class="bg-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
     <h5 class="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">Noteworthy technology acquisitions 2021</h5>
-    <p class="text-body mb-6">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+    <p class="text-body mb-6">Here are the biggest technology acquisitions of 2025 so far, in reverse chronological order.</p>
     <a href="#" class="inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
         Read more
         <svg class="w-4 h-4 ms-1.5 rtl:rotate-180 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
@@ -75,7 +75,7 @@ You can use the following example of a card element with an image for blog posts
             Trending
         </span>
         <a href="#">
-            <h5 class="mt-3 mb-6 text-2xl font-semibold tracking-tight text-heading">Streamlining your design process with Flowbite.</h5>
+            <h5 class="mt-3 mb-6 text-2xl font-semibold tracking-tight text-heading">Streamlining your design process today.</h5>
         </a>
         <a href="#" class="inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
             Read more
@@ -96,7 +96,7 @@ You can use the following example of a card element with an image for blog posts
         <img class="rounded-base" src="/docs/images/blog/image-1.jpg" alt="" />
     </a>
     <a href="#">
-        <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading">Streamlining your design process with Flowbite.</h5>
+        <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading">Streamlining your design process today.</h5>
     </a>
     <p class="mb-6 text-body">In today’s fast-paced digital landscape, fostering seamless collaboration among Developers and IT Operations.</p>
     <a href="#" class="inline-flex items-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
@@ -114,7 +114,7 @@ If you want to spice up your cards you can use the following card which has its 
 <a href="#" class="flex flex-col items-center bg-primary-soft p-6 border border-default rounded-base shadow-xs md:flex-row md:max-w-xl md:flex-row md:max-w-xl">
     <img class="object-cover w-full rounded-base h-64 md:h-auto md:w-48 mb-4 md:mb-0" src="/docs/images/blog/image-4.jpg" alt="">
     <div class="flex flex-col justify-between md:p-4 leading-normal">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-heading">Streamlining your design process with Flowbite.</h5>
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-heading">Streamlining your design process today.</h5>
         <p class="mb-6 text-body">In today’s fast-paced digital landscape, fostering seamless collaboration among Developers and IT Operations.</p>
         <button type="button" class="inline-flex self-start w-auto text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
             Read more
@@ -218,7 +218,7 @@ Use this card for your e-commerce websites and show information about the produc
             <span class="bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-sm">4.8 out of 5</span>
         </div>
         <a href="#">
-            <h5 class="text-xl text-heading font-semibold tracking-tight">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+            <h5 class="text-xl text-heading font-semibold tracking-tight">Apple Watch Series 7 GPS, Aluminium Case, Starlight</h5>
         </a>
         <div class="flex items-center justify-between mt-6">
             <span class="text-3xl font-extrabold text-heading">$599</span>

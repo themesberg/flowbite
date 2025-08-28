@@ -10,7 +10,7 @@ const Default: DrawerOptions = {
     backdrop: true,
     edge: false,
     edgeOffset: 'bottom-[60px]',
-    backdropClasses: 'bg-gray-950/50 dark:bg-gray-950/80 fixed inset-0 z-30',
+    backdropClasses: 'bg-dark-backdrop/70 fixed inset-0 z-30',
     onShow: () => {},
     onHide: () => {},
     onToggle: () => {},

@@ -273,23 +273,23 @@ Add multiple checkbox elements inside your dropdown menu to enable more advanced
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
 </button>
 <!-- Dropdown menu -->
-<div id="dropdownDefaultCheckbox" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownDefaultCheckbox" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-52">
     <ul class="p-4 text-sm text-body font-medium space-y-4" aria-labelledby="dropdownCheckboxButton">
       <li>
         <div class="flex items-center">
-          <input id="dropdown-checkbox" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+          <input id="dropdown-checkbox" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           <label for="dropdown-checkbox" class="ms-2 text-sm font-medium text-heading">Default checkbox</label>
         </div>
       </li>
       <li>
         <div class="flex items-center">
-          <input checked id="dropdown-checkbox-2" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+          <input checked id="dropdown-checkbox-2" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           <label for="dropdown-checkbox-2" class="ms-2 text-sm font-medium text-heading">Checked state</label>
         </div>
       </li>
       <li>
         <div class="flex items-center">
-          <input id="dropdown-checkbox-3" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+          <input id="dropdown-checkbox-3" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           <label for="dropdown-checkbox-3" class="ms-2 text-sm font-medium text-heading">Default checkbox</label>
         </div>
       </li>
@@ -308,7 +308,7 @@ Use this example to update the background color of a menu item when using a list
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownBgHover" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownBgHover" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-52">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownBgHoverButton">
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -342,7 +342,7 @@ Add an extra helper text to each checkbox element inside the dropdown menu list 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
 </button>
 <!-- Dropdown menu -->
-<div id="dropdownHelper" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-54">
+<div id="dropdownHelper" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-60">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownHelperButton">
       <li>
         <div class="inline-flex items-start w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -402,19 +402,19 @@ Enable more advanced interaction with your users by adding radio input elements 
     <ul class="p-3 text-sm text-body font-medium space-y-3" aria-labelledby="dropdownRadioButton">
       <li>
         <div class="inline-flex items-center">
-          <input id="dropdown-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+          <input id="dropdown-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           <label for="dropdown-radio-1" class="select-none ms-2 text-sm font-medium text-heading">Default radio</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center">
-          <input id="dropdown-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+          <input id="dropdown-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           <label for="dropdown-radio-2" class="select-none ms-2 text-sm font-medium text-heading">Checked radio</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center">
-          <input id="dropdown-radio-3" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+          <input id="dropdown-radio-3" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           <label for="dropdown-radio-3" class="select-none ms-2 text-sm font-medium text-heading">Default radio</label>
         </div>
       </li>
@@ -437,19 +437,19 @@ Use this example to update the background color when hovering over a menu item w
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownRadioBgHoverButton">
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
-          <input id="dropdown-radio-4" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+          <input id="dropdown-radio-4" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           <label for="dropdown-radio-4" class="select-none ms-2 text-sm font-medium text-heading">Default radio</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
-          <input id="dropdown-radio-5" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none" checked>
+          <input id="dropdown-radio-5" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none" checked>
           <label for="dropdown-radio-5" class="select-none ms-2 text-sm font-medium text-heading">Checked radio</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
-          <input id="dropdown-radio-6" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+          <input id="dropdown-radio-6" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           <label for="dropdown-radio-6" class="select-none ms-2 text-sm font-medium text-heading">Default radio</label>
         </div>
       </li>
@@ -1489,7 +1489,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
-      <thead class="bg-gray-50 dark:bg-gray-900">
+      <thead class="bg-secondary-soft text-heading">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Parameter
@@ -1506,7 +1506,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">targetElement</code>
               </td>
@@ -1520,7 +1520,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
                   Apply the main dropdown menu element as the first parameter of the Dropdown object.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">triggerElement</code>
               </td>
@@ -1534,7 +1534,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
                   Apply the trigger element, such as a button, which is required to position the dropdown menu and set a click event.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">options</code>
               </td>
@@ -1548,7 +1548,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
                   Use the options parameter to set the positioning of the dropdown menu.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="bg-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">instanceOptions</code>
                 </td>
@@ -1572,7 +1572,7 @@ Use the following options as the third parameter for the Dropdown class to set t
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
-      <thead class="bg-gray-50 dark:bg-gray-900">
+      <thead class="bg-secondary-soft text-heading">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Option
@@ -1586,7 +1586,7 @@ Use the following options as the third parameter for the Dropdown class to set t
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">placement</code>
               </td>
@@ -1594,10 +1594,10 @@ Use the following options as the third parameter for the Dropdown class to set t
                   String
               </td>
               <td class="px-6 py-4">
-                  Set the position of the dropdown menu relative to the trigger element choosing from <code class="text-purple-600 dark:text-purple-400">top|right|bottom|left</code>.
+                  Set the position of the dropdown menu relative to the trigger element choosing from <code class="text-fg-brand">top|right|bottom|left</code>.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">triggerType</code>
               </td>
@@ -1605,10 +1605,10 @@ Use the following options as the third parameter for the Dropdown class to set t
                   String
               </td>
               <td class="px-6 py-4">
-                  Set the event type that will trigger the dropdown menu choosing between <code class="text-purple-600 dark:text-purple-400">hover|click|none</code>.
+                  Set the event type that will trigger the dropdown menu choosing between <code class="text-fg-brand">hover|click|none</code>.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">offsetDistance</code>
               </td>
@@ -1619,7 +1619,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set the amount of pixels the dropdown menu should be offset relative to the trigger element on the X horizontal axis.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">offsetSkidding</code>
               </td>
@@ -1630,7 +1630,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set the number of pixels the dropdown menu should be offset relative to the trigger element on the Y horizontal axis.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">delay</code>
               </td>
@@ -1641,7 +1641,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set the milliseconds for which the showing or hiding of the dropdown will be delayed for when using the hover trigger type.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">ignoreClickOutsideClass</code>
               </td>
@@ -1652,7 +1652,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set a class for one or more elements that when they are clicked should ignore closing the dropdown (ie. offcanvas datepicker).
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">onHide</code>
               </td>
@@ -1663,7 +1663,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set a callback function when the dropdown has been hidden.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">onShow</code>
               </td>
@@ -1674,7 +1674,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set a callback function when the dropdown has been shown.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="bg-primary">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">onToggle</code>
               </td>
@@ -1695,7 +1695,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
-      <thead class="bg-gray-50 dark:bg-gray-900">
+      <thead class="bg-secondary-soft text-heading">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Method
@@ -1706,7 +1706,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">show()</code>
               </td>
@@ -1714,7 +1714,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method on the Dropdown object to show the dropdown menu.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">hide()</code>
               </td>
@@ -1722,7 +1722,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method on the Dropdown object to hide the dropdown menu.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">toggle()</code>
               </td>
@@ -1730,7 +1730,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method on the Dropdown object to toggle the visibility of the dropdown menu.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">isVisible()</code>
               </td>
@@ -1738,7 +1738,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Returns true or false based on the visibility of the dropdown.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">updateOnShow(callback)</code>
               </td>
@@ -1746,7 +1746,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method to set a callback function when the dropdown has been shown.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">updateOnHide(callback)</code>
               </td>
@@ -1754,7 +1754,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method to set a callback function when the dropdown has been hidden.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="bg-primary">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">updateOnToggle(callback)</code>
               </td>

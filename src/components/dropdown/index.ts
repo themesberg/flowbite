@@ -182,6 +182,10 @@ class Dropdown implements DropdownInterface {
                         ],
                     },
                 },
+                {
+                    name: 'eventListeners',
+                    enabled: false
+                },
             ],
         });
     }

@@ -444,7 +444,7 @@ Use this example to authenticate users with a login form using a phone number in
         <input type="password" name="password" id="password" placeholder="••••••••" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" required />
     </div>
     <div class="flex items-center mt-4 mb-4">
-        <input id="terms" aria-describedby="terms" type="checkbox" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft" required="">
+        <input id="terms" aria-describedby="terms" type="checkbox" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" required="">
         <label for="terms" class="text-body ms-2 text-sm">I accept the <a class="font-medium text-fg-brand hover:underline" href="#">Terms and Conditions</a></label>
     </div>
     <button type="submit" class="w-full text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Sign Up</button>

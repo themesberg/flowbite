@@ -61,9 +61,9 @@ Use this example as a generic form element which includes multiple input fields 
     </div> 
     <div class="flex items-start mb-6">
         <div class="flex items-center h-5">
-        <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft" required />
+        <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" required />
         </div>
-        <label for="remember" class="ms-2 text-sm font-medium text-heading">I agree with the <a href="#" class="text-brand hover:underline">terms and conditions</a>.</label>
+        <label for="remember" class="ms-2 text-sm font-medium text-heading">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
     </div>
     <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Submit</button>
 </form>
@@ -159,7 +159,7 @@ Use this example to show a helper text below the input field for additional expl
   </div>
   <input type="text" id="input-group-1" class="block w-full ps-9 pe-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="name@flowbite.com">
 </div>
-<p id="helper-text-explanation" class="mt-2.5 text-sm text-body">We’ll never share your details. Read our <a href="#" class="font-medium text-brand hover:underline">Privacy Policy</a>.</p>
+<p id="helper-text-explanation" class="mt-2.5 text-sm text-body">We’ll never share your details. Read our <a href="#" class="font-medium text-fg-brand hover:underline">Privacy Policy</a>.</p>
 {{< /example >}}
 
 ## Search input

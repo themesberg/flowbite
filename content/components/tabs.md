@@ -350,7 +350,7 @@ Create a new Tabs object with parameters such as an array of the tab and content
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left text-body dark:text-gray-400">
-        <thead class="bg-gray-50 dark:bg-gray-900">
+        <thead class="bg-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Parameter
@@ -369,7 +369,7 @@ Create a new Tabs object with parameters such as an array of the tab and content
         <tbody>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-fg-brand dark:text-blue-400">tabsElement</code>
+                    <code class="text-fg-brand">tabsElement</code>
                 </td>
                 <td class="px-6 py-4">
                     Element
@@ -383,7 +383,7 @@ Create a new Tabs object with parameters such as an array of the tab and content
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-fg-brand dark:text-blue-400">items</code>
+                    <code class="text-fg-brand">items</code>
                 </td>
                 <td class="px-6 py-4">
                     Array
@@ -397,7 +397,7 @@ Create a new Tabs object with parameters such as an array of the tab and content
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-fg-brand dark:text-blue-400">options</code>
+                    <code class="text-fg-brand">options</code>
                 </td>
                 <td class="px-6 py-4">
                     Object
@@ -411,7 +411,7 @@ Create a new Tabs object with parameters such as an array of the tab and content
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-fg-brand dark:text-blue-400">instanceOptions</code>
+                    <code class="text-fg-brand">instanceOptions</code>
                 </td>
                 <td class="px-6 py-4">
                     Object
@@ -433,7 +433,7 @@ Use the following options as the second parameter for the Tabs object to set the
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left text-body dark:text-gray-400">
-        <thead class="bg-gray-50 dark:bg-gray-900">
+        <thead class="bg-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Option
@@ -449,7 +449,7 @@ Use the following options as the second parameter for the Tabs object to set the
         <tbody>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-fg-brand dark:text-blue-400">defaultTabId</code>
+                    <code class="text-fg-brand">defaultTabId</code>
                 </td>
                 <td class="px-6 py-4">
                     String
@@ -460,7 +460,7 @@ Use the following options as the second parameter for the Tabs object to set the
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-fg-brand dark:text-blue-400">activeClasses</code>
+                    <code class="text-fg-brand">activeClasses</code>
                 </td>
                 <td class="px-6 py-4">
                     String
@@ -471,7 +471,7 @@ Use the following options as the second parameter for the Tabs object to set the
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-fg-brand dark:text-blue-400">inactiveClasses</code>
+                    <code class="text-fg-brand">inactiveClasses</code>
                 </td>
                 <td class="px-6 py-4">
                     String
@@ -482,7 +482,7 @@ Use the following options as the second parameter for the Tabs object to set the
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-fg-brand dark:text-blue-400">onShow</code>
+                    <code class="text-fg-brand">onShow</code>
                 </td>
                 <td class="px-6 py-4">
                     Function
@@ -501,7 +501,7 @@ Use the methods from the Tabs object to programmatically change the current acti
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left text-body dark:text-gray-400">
-        <thead class="bg-gray-50 dark:bg-gray-900">
+        <thead class="bg-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Method
@@ -514,7 +514,7 @@ Use the methods from the Tabs object to programmatically change the current acti
         <tbody>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-fg-brand dark:text-blue-400">show(id)</code>
+                    <code class="text-fg-brand">show(id)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use the show function on the Tab object to change the current active tab element.
@@ -522,7 +522,7 @@ Use the methods from the Tabs object to programmatically change the current acti
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-fg-brand dark:text-blue-400">getTab(id)</code>
+                    <code class="text-fg-brand">getTab(id)</code>
                 </td>
                 <td class="px-6 py-4">
                     Return the tab element based on the ID.
@@ -530,7 +530,7 @@ Use the methods from the Tabs object to programmatically change the current acti
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-fg-brand dark:text-blue-400">updateOnShow(callback)</code>
+                    <code class="text-fg-brand">updateOnShow(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a custom callback function whenever a tab has been shown.

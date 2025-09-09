@@ -116,7 +116,7 @@ Use this example to set a phone number inside a form field based on the `type="p
                         <path d="M7.04299 7.0435V7.04344L3.69623 3.69666C3.5423 3.85052 3.39547 4.01139 3.25537 4.17815L6.12069 7.04347H7.04299V7.0435Z" fill="#D80027"/>
                         <path d="M10.9556 7.04363L14.3024 3.69681C14.1485 3.54289 13.9876 3.39605 13.8209 3.25598L10.9556 6.1213V7.04363Z" fill="#D80027"/>
                     </svg>
-                    United Kingdom (+44)
+                    United Kingdom (+4)
                     </a>
                 </li>
                 <li>
@@ -172,7 +172,7 @@ If you have the [Flowbite JS](https://flowbite.com/docs/getting-started/quicksta
             <svg class="w-4 h-4 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
         </button>
     </div>
-    <p id="helper-text-explanation" class="mt-2.5 text-sm text-body">Please select a 5 digit number from 0 to 9.</p>
+    <p id="helper-text-explanation" class="mt-2.5 text-sm text-body shrink-0">Please select a 5 digit number from 0 to 9.</p>
 </form>
 {{< /example >}}
 
@@ -187,7 +187,7 @@ Use this example to also add an icon inside the input field to improve the user 
         <button type="button" id="decrement-button" data-input-counter-decrement="bedrooms-input" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-s-base text-sm px-3 focus:outline-none h-10">
             <svg class="w-4 h-4 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
         </button>
-        <input type="text" id="bedrooms-input" data-input-counter data-input-counter-min="1" data-input-counter-max="5" aria-describedby="helper-text-explanation" class="border-x-0 h-10 placeholder:text-heading text-center w-full bg-secondary-medium border-default-medium py-2.5 placeholder:text-body block pb-6 text-xs" placeholder="" value="3" required />
+        <input type="text" id="bedrooms-input" data-input-counter data-input-counter-min="1" data-input-counter-max="5" aria-describedby="helper-text-explanation" class="border-x-0 h-10 placeholder:text-heading text-heading text-center w-full bg-secondary-medium border-default-medium py-2.5 placeholder:text-body block pb-6 text-xs" placeholder="" value="3" required />
         <div class="absolute bottom-1 start-1/2 -translate-x-1/2 rtl:translate-x-1/2 flex items-center text-xs text-body-subtle space-x-1 rtl:space-x-reverse">
             <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 17v2M12 5.5V10m-6 7v2m15-2v-4c0-1.6569-1.3431-3-3-3H6c-1.65685 0-3 1.3431-3 3v4h18Zm-2-7V8c0-1.65685-1.3431-3-3-3H8C6.34315 5 5 6.34315 5 8v2h14Z"/></svg>
             <span>Bedrooms</span>
@@ -232,7 +232,7 @@ This component can be used to set a currency value inside a form field when you 
         </div>
         <input type="number" id="currency-input" class="block w-full ps-9 pe-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-s-base focus:ring-brand focus:border-brand placeholder:text-body" placeholder="Enter amount" required />
     </div>
-    <button id="dropdown-currency-button" data-dropdown-toggle="dropdown-currency" type="button" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-brand focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-e-base text-sm px-4 py-2.5 focus:outline-none">
+    <button id="dropdown-currency-button" data-dropdown-toggle="dropdown-currency" type="button" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-fg-brand focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-e-base text-sm px-4 py-2.5 focus:outline-none">
         <svg class="w-4 h-4 me-1.5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.00013 14.6666C11.6821 14.6666 14.667 11.6818 14.667 7.99992C14.667 4.31802 11.6821 1.33325 8.00013 1.33325C4.31811 1.33325 1.33325 4.31802 1.33325 7.99992C1.33325 11.6818 4.31811 14.6666 8.00013 14.6666Z" fill="white"/><path d="M7.71167 7.99975H14.6678C14.6678 7.39807 14.5876 6.8152 14.4382 6.26074H7.71167V7.99975Z" fill="#D80027"/><path d="M7.71167 4.52172H13.6894C13.2813 3.85583 12.7596 3.26726 12.1512 2.78271H7.71167V4.52172Z" fill="#D80027"/><path d="M8.00053 14.6667C9.56944 14.6667 11.0115 14.1244 12.1502 13.2175H3.85083C4.98958 14.1244 6.43162 14.6667 8.00053 14.6667Z" fill="#D80027"/><path d="M2.31233 11.4784H13.689C14.0167 10.9438 14.2708 10.3594 14.4379 9.73926H1.56348C1.73059 10.3594 1.98469 10.9438 2.31233 11.4784V11.4784Z" fill="#D80027"/><path d="M4.42123 2.37426H5.02873L4.46365 2.78478L4.6795 3.44902L4.11445 3.03851L3.5494 3.44902L3.73584 2.87519C3.23832 3.28961 2.80224 3.77514 2.44289 4.31614H2.63754L2.27784 4.57745C2.2218 4.67093 2.16806 4.7659 2.11655 4.86227L2.28831 5.3909L1.96786 5.15808C1.8882 5.32684 1.81534 5.49941 1.74985 5.67557L1.93908 6.25802H2.63754L2.07246 6.66853L2.28831 7.33278L1.72326 6.92226L1.38479 7.16818C1.35091 7.4405 1.33325 7.71788 1.33325 7.99939H7.9996C7.9996 4.31781 7.9996 3.88378 7.9996 1.33325C6.68268 1.33325 5.45506 1.71525 4.42123 2.37426V2.37426ZM4.6795 7.33278L4.11445 6.92226L3.5494 7.33278L3.76524 6.66853L3.20017 6.25802H3.89862L4.11445 5.59377L4.33027 6.25802H5.02873L4.46365 6.66853L4.6795 7.33278ZM4.46365 4.72666L4.6795 5.3909L4.11445 4.98039L3.5494 5.3909L3.76524 4.72666L3.20017 4.31614H3.89862L4.11445 3.6519L4.33027 4.31614H5.02873L4.46365 4.72666ZM7.07068 7.33278L6.50563 6.92226L5.94058 7.33278L6.15643 6.66853L5.59135 6.25802H6.28981L6.50563 5.59377L6.72146 6.25802H7.41991L6.85484 6.66853L7.07068 7.33278ZM6.85484 4.72666L7.07068 5.3909L6.50563 4.98039L5.94058 5.3909L6.15643 4.72666L5.59135 4.31614H6.28981L6.50563 3.6519L6.72146 4.31614H7.41991L6.85484 4.72666ZM6.85484 2.78478L7.07068 3.44902L6.50563 3.03851L5.94058 3.44902L6.15643 2.78478L5.59135 2.37426H6.28981L6.50563 1.71002L6.72146 2.37426H7.41991L6.85484 2.78478Z" fill="#1A47B8"/></svg>
         USD
         <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -520,7 +520,7 @@ Use this example of two number input fields and dropdowns to convert currency an
             <div class="relative w-full">
                 <input type="number" id="fiat-currency-input" class="block w-full bg-secondary-medium border border-default-medium text-heading text-sm rounded-s-base focus:ring-brand focus:border-brand px-3 py-2.5 placeholder:text-body" placeholder="421 USD" required />
             </div>
-            <button id="dropdown-fiat-currency-button" data-dropdown-toggle="dropdown-fiat-currency" type="button" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-brand focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-e-base text-sm px-4 py-2.5 focus:outline-none">
+            <button id="dropdown-fiat-currency-button" data-dropdown-toggle="dropdown-fiat-currency" type="button" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-fg-brand focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-e-base text-sm px-4 py-2.5 focus:outline-none">
                 <svg class="w-4 h-4 me-1.5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.00013 14.6666C11.6821 14.6666 14.667 11.6818 14.667 7.99992C14.667 4.31802 11.6821 1.33325 8.00013 1.33325C4.31811 1.33325 1.33325 4.31802 1.33325 7.99992C1.33325 11.6818 4.31811 14.6666 8.00013 14.6666Z" fill="white"/><path d="M7.71167 7.99975H14.6678C14.6678 7.39807 14.5876 6.8152 14.4382 6.26074H7.71167V7.99975Z" fill="#D80027"/><path d="M7.71167 4.52172H13.6894C13.2813 3.85583 12.7596 3.26726 12.1512 2.78271H7.71167V4.52172Z" fill="#D80027"/><path d="M8.00053 14.6667C9.56944 14.6667 11.0115 14.1244 12.1502 13.2175H3.85083C4.98958 14.1244 6.43162 14.6667 8.00053 14.6667Z" fill="#D80027"/><path d="M2.31233 11.4784H13.689C14.0167 10.9438 14.2708 10.3594 14.4379 9.73926H1.56348C1.73059 10.3594 1.98469 10.9438 2.31233 11.4784V11.4784Z" fill="#D80027"/><path d="M4.42123 2.37426H5.02873L4.46365 2.78478L4.6795 3.44902L4.11445 3.03851L3.5494 3.44902L3.73584 2.87519C3.23832 3.28961 2.80224 3.77514 2.44289 4.31614H2.63754L2.27784 4.57745C2.2218 4.67093 2.16806 4.7659 2.11655 4.86227L2.28831 5.3909L1.96786 5.15808C1.8882 5.32684 1.81534 5.49941 1.74985 5.67557L1.93908 6.25802H2.63754L2.07246 6.66853L2.28831 7.33278L1.72326 6.92226L1.38479 7.16818C1.35091 7.4405 1.33325 7.71788 1.33325 7.99939H7.9996C7.9996 4.31781 7.9996 3.88378 7.9996 1.33325C6.68268 1.33325 5.45506 1.71525 4.42123 2.37426V2.37426ZM4.6795 7.33278L4.11445 6.92226L3.5494 7.33278L3.76524 6.66853L3.20017 6.25802H3.89862L4.11445 5.59377L4.33027 6.25802H5.02873L4.46365 6.66853L4.6795 7.33278ZM4.46365 4.72666L4.6795 5.3909L4.11445 4.98039L3.5494 5.3909L3.76524 4.72666L3.20017 4.31614H3.89862L4.11445 3.6519L4.33027 4.31614H5.02873L4.46365 4.72666ZM7.07068 7.33278L6.50563 6.92226L5.94058 7.33278L6.15643 6.66853L5.59135 6.25802H6.28981L6.50563 5.59377L6.72146 6.25802H7.41991L6.85484 6.66853L7.07068 7.33278ZM6.85484 4.72666L7.07068 5.3909L6.50563 4.98039L5.94058 5.3909L6.15643 4.72666L5.59135 4.31614H6.28981L6.50563 3.6519L6.72146 4.31614H7.41991L6.85484 4.72666ZM6.85484 2.78478L7.07068 3.44902L6.50563 3.03851L5.94058 3.44902L6.15643 2.78478L5.59135 2.37426H6.28981L6.50563 1.71002L6.72146 2.37426H7.41991L6.85484 2.78478Z" fill="#1A47B8"/></svg>
                 USD
                 <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -590,7 +590,7 @@ Use this example of two number input fields and dropdowns to convert currency an
             <div class="relative w-full">
                 <input type="number" id="crypto-input" class="block w-full bg-secondary-medium border border-default-medium text-heading text-sm rounded-s-base focus:ring-brand focus:border-brand px-3 py-2.5 placeholder:text-body" placeholder="0.323 BTC" required />
             </div>
-            <button id="dropdown-crypto-button" data-dropdown-toggle="dropdown-crypto" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-brand focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-e-base text-sm px-4 py-2.5 focus:outline-none" type="button">
+            <button id="dropdown-crypto-button" data-dropdown-toggle="dropdown-crypto" class="inline-flex items-center shrink-0 z-10 text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-fg-brand focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-e-base text-sm px-4 py-2.5 focus:outline-none" type="button">
                 <svg class="h-4 w-4 me-2" fill="none" viewBox="0 0 16 15"><path fill="#F7931A" d="M14.83 9.204A7.04 7.04 0 111.17 5.797a7.04 7.04 0 0113.66 3.407z"/><path fill="#fff" d="M11.104 6.498c.14-.937-.573-1.44-1.548-1.777l.316-1.269-.773-.192-.308 1.235c-.203-.05-.411-.098-.619-.145l.31-1.244-.771-.193-.317 1.269a25.752 25.752 0 01-.493-.116v-.004l-1.065-.266-.205.825s.573.132.56.14c.314.078.37.285.36.449l-.36 1.446c.022.005.05.013.08.025l-.08-.02-.506 2.026c-.038.095-.135.237-.354.183.008.011-.562-.14-.562-.14l-.383.884 1.005.251c.187.047.37.096.55.142l-.319 1.284.772.192.317-1.27c.21.058.415.11.615.16l-.315 1.264.772.193.32-1.281c1.317.249 2.308.148 2.724-1.043.336-.96-.016-1.513-.71-1.874.505-.116.886-.448.987-1.134zM9.34 8.973c-.239.96-1.854.44-2.378.31l.424-1.7c.524.13 2.203.39 1.954 1.39zm.239-2.49c-.218.874-1.562.43-1.999.321l.385-1.542c.436.109 1.84.312 1.614 1.222z"/></svg>
                 BTC 
                 <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -655,7 +655,7 @@ This example can be used to add multiple number input fields with quantity selec
         <button type="button" id="decrement-button" data-input-counter-decrement="bedrooms-input" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-s-base text-sm px-3 focus:outline-none h-10">
             <svg class="w-4 h-4 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
         </button>
-        <input type="text" id="bedrooms-input" data-input-counter data-input-counter-min="1" data-input-counter-max="5" class="border-x-0 h-10 placeholder:text-heading text-center w-full bg-secondary-medium border-default-medium py-2.5 placeholder:text-body block pb-6 text-xs" placeholder="" value="2" required />
+        <input type="text" id="bedrooms-input" data-input-counter data-input-counter-min="1" data-input-counter-max="5" class="border-x-0 h-10 placeholder:text-heading text-heading text-center w-full bg-secondary-medium border-default-medium py-2.5 placeholder:text-body block pb-6 text-xs" placeholder="" value="2" required />
         <div class="absolute bottom-1 start-1/2 -translate-x-1/2 rtl:translate-x-1/2 flex items-center text-xs text-body space-x-1 rtl:space-x-reverse">
             <svg class="w-3 h-3 text-body-subtle" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 17v2M12 5.5V10m-6 7v2m15-2v-4c0-1.6569-1.3431-3-3-3H6c-1.65685 0-3 1.3431-3 3v4h18Zm-2-7V8c0-1.65685-1.3431-3-3-3H8C6.34315 5 5 6.34315 5 8v2h14Z"/>
@@ -671,7 +671,7 @@ This example can be used to add multiple number input fields with quantity selec
         <button type="button" id="decrement-button" data-input-counter-decrement="nights-input" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-s-base text-sm px-3 focus:outline-none h-10">
             <svg class="w-4 h-4 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
         </button>
-        <input type="text" id="nights-input" data-input-counter data-input-counter-min="1" data-input-counter-max="30" class="border-x-0 h-10 placeholder:text-heading text-center w-full bg-secondary-medium border-default-medium py-2.5 placeholder:text-body block pb-6 text-xs" placeholder="" value="7" required />
+        <input type="text" id="nights-input" data-input-counter data-input-counter-min="1" data-input-counter-max="30" class="border-x-0 h-10 placeholder:text-heading text-heading text-center w-full bg-secondary-medium border-default-medium py-2.5 placeholder:text-body block pb-6 text-xs" placeholder="" value="7" required />
         <div class="absolute bottom-1 start-1/2 -translate-x-1/2 rtl:translate-x-1/2 flex items-center text-xs text-body space-x-1 rtl:space-x-reverse">
             <svg class="w-3 h-3 text-body-subtle" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/>
@@ -687,7 +687,7 @@ This example can be used to add multiple number input fields with quantity selec
         <button type="button" id="decrement-button" data-input-counter-decrement="guests-input" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-s-base text-sm px-3 focus:outline-none h-10">
             <svg class="w-4 h-4 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
         </button>
-        <input type="text" id="guests-input" data-input-counter data-input-counter-min="1" data-input-counter-max="5" class="border-x-0 h-10 placeholder:text-heading text-center w-full bg-secondary-medium border-default-medium py-2.5 placeholder:text-body block pb-6 text-xs" placeholder="" value="3" required />
+        <input type="text" id="guests-input" data-input-counter data-input-counter-min="1" data-input-counter-max="5" class="border-x-0 h-10 placeholder:text-heading text-heading text-center w-full bg-secondary-medium border-default-medium py-2.5 placeholder:text-body block pb-6 text-xs" placeholder="" value="3" required />
         <div class="absolute bottom-1 start-1/2 -translate-x-1/2 rtl:translate-x-1/2 flex items-center text-xs text-body space-x-1 rtl:space-x-reverse">
             <svg class="w-3 h-3 text-body-subtle" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4.5 17H4a1 1 0 0 1-1-1 3 3 0 0 1 3-3h1m0-3.05A2.5 2.5 0 1 1 9 5.5M19.5 17h.5a1 1 0 0 0 1-1 3 3 0 0 0-3-3h-1m0-3.05a2.5 2.5 0 1 0-2-4.45m.5 13.5h-7a1 1 0 0 1-1-1 3 3 0 0 1 3-3h3a3 3 0 0 1 3 3 1 1 0 0 1-1 1Zm-1-9.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"/>
@@ -717,7 +717,7 @@ These values will be enforced and validated whenever the user clicks on one of t
         <button type="button" id="decrement-button" data-input-counter-decrement="quantity-input" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-s-base text-sm px-3 focus:outline-none h-10">
             <svg class="w-4 h-4 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
         </button>
-        <input type="text" id="quantity-input" data-input-counter data-input-counter-min="1" data-input-counter-max="50" aria-describedby="helper-text-explanation" class="border-x-0 h-10 placeholder:text-heading text-center w-full bg-secondary-medium border-default-medium py-2.5 placeholder:text-body" placeholder="999" value="5" required />
+        <input type="text" id="quantity-input" data-input-counter data-input-counter-min="1" data-input-counter-max="50" aria-describedby="helper-text-explanation" class="border-x-0 h-10 placeholder:text-heading text-heading text-center w-full bg-secondary-medium border-default-medium py-2.5 placeholder:text-body" placeholder="999" value="5" required />
         <button type="button" id="increment-button" data-input-counter-increment="quantity-input" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-e-base text-sm px-3 focus:outline-none h-10">
             <svg class="w-4 h-4 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
         </button>
@@ -736,7 +736,7 @@ Use the object parameters from the InputCounter object to set the target, increm
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
-      <thead class="bg-gray-50 dark:bg-gray-900">
+      <thead class="bg-secondary-soft text-heading">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
                   Parameter
@@ -753,7 +753,7 @@ Use the object parameters from the InputCounter object to set the target, increm
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary  border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">targetEl</code>
               </td>
@@ -767,7 +767,7 @@ Use the object parameters from the InputCounter object to set the target, increm
                   Pass the target input field element that will be incremented or decremented based on click event.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary  border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">incrementEl</code>
               </td>
@@ -781,7 +781,7 @@ Use the object parameters from the InputCounter object to set the target, increm
                   Pass the increment button element that will increase the value of the target element based on click event.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary  border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">decrementEl</code>
               </td>
@@ -795,7 +795,7 @@ Use the object parameters from the InputCounter object to set the target, increm
                   Pass the decrement button element that will decrease the value of the target element based on click event.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary  border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">options</code>
               </td>
@@ -809,7 +809,7 @@ Use the object parameters from the InputCounter object to set the target, increm
                   Set these options to set the minimum and maximum value of the input field and the callback functions.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="bg-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">instanceOptions</code>
                 </td>
@@ -833,7 +833,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
-      <thead class="bg-gray-50 dark:bg-gray-900">
+      <thead class="bg-secondary-soft text-heading">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
                   Option
@@ -847,7 +847,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">minValue</code>
               </td>
@@ -858,7 +858,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
                   Set the minimum value of the input field.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">maxValue</code>
               </td>
@@ -869,7 +869,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
                   Set the maximum value of the input field.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">onIncrement</code>
               </td>
@@ -880,7 +880,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
                   Set a callback function when the item has been incremented.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="bg-primary">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">onDecrement</code>
               </td>
@@ -901,7 +901,7 @@ Use the following methods of the InputCounter object to programmatically manipul
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
-      <thead class="bg-gray-50 dark:bg-gray-900">
+      <thead class="bg-secondary-soft text-heading">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
                   Method
@@ -912,7 +912,7 @@ Use the following methods of the InputCounter object to programmatically manipul
           </tr>
       </thead>
       <tbody>
-        <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+        <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">getCurrentValue()</code>
               </td>
@@ -920,7 +920,7 @@ Use the following methods of the InputCounter object to programmatically manipul
                   Use this method to get the current value of the input field.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">increment()</code>
               </td>
@@ -928,7 +928,7 @@ Use the following methods of the InputCounter object to programmatically manipul
                   Use this method on the InputCounter object to increment the value of the input field.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">decrement()</code>
               </td>
@@ -936,7 +936,7 @@ Use the following methods of the InputCounter object to programmatically manipul
                   Use this method on the InputCounter object to decrement the value of the input field.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b bg-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">updateOnIncrement(callback)</code>
               </td>
@@ -944,7 +944,7 @@ Use the following methods of the InputCounter object to programmatically manipul
                   Use this method to set a callback function whenever the input field has been incremented.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="bg-primary">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">updateOnDecrement(callback)</code>
               </td>

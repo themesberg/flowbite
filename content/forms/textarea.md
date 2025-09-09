@@ -32,7 +32,7 @@ If you want to add other actions as buttons alongside your textarea component, s
 <form>
    <div class="w-full mb-4 border border-default-medium rounded-base bg-secondary-medium shadow-xs">
        <div class="flex items-center justify-between px-3 py-2 border-b border-default-medium">
-           <div class="flex flex-wrap items-center divide-base-medium sm:divide-x sm:rtl:divide-x-reverse">
+           <div class="flex flex-wrap items-center divide-default-medium sm:divide-x sm:rtl:divide-x-reverse">
                <div class="flex items-center space-x-1 rtl:space-x-reverse sm:pe-4">
                    <button type="button" class="p-2 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-tertiary-medium">
                         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8v8a5 5 0 1 0 10 0V6.5a3.5 3.5 0 1 0-7 0V15a2 2 0 0 0 4 0V8"/></svg>

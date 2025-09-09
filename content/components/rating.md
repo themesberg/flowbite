@@ -108,35 +108,35 @@ This advanced rating component can be used to also show how many reviews have be
 </div>
 <p class="text-sm font-medium text-body">1,745 global ratings</p>
 <div class="flex items-center mt-4">
-    <a href="#" class="text-sm font-medium text-fg-brand hover:underline w-11">5 star</a>
+    <a href="#" class="text-sm font-medium text-fg-brand hover:underline w-14">5 star</a>
     <div class="w-2/4 h-4 mx-4 bg-quaternary rounded-base">
         <div class="h-4 bg-warning rounded-base" style="width: 70%"></div>
     </div>
     <span class="text-sm font-medium text-body">70%</span>
 </div>
 <div class="flex items-center mt-4">
-    <a href="#" class="text-sm font-medium text-fg-brand hover:underline w-11">4 star</a>
+    <a href="#" class="text-sm font-medium text-fg-brand hover:underline w-14">4 star</a>
     <div class="w-2/4 h-4 mx-4 bg-quaternary rounded-base">
         <div class="h-4 bg-warning rounded-base" style="width: 17%"></div>
     </div>
     <span class="text-sm font-medium text-body">17%</span>
 </div>
 <div class="flex items-center mt-4">
-    <a href="#" class="text-sm font-medium text-fg-brand hover:underline w-11">3 star</a>
+    <a href="#" class="text-sm font-medium text-fg-brand hover:underline w-14">3 star</a>
     <div class="w-2/4 h-4 mx-4 bg-quaternary rounded-base">
         <div class="h-4 bg-warning rounded-base" style="width: 8%"></div>
     </div>
     <span class="text-sm font-medium text-body">8%</span>
 </div>
 <div class="flex items-center mt-4">
-    <a href="#" class="text-sm font-medium text-fg-brand hover:underline w-11">2 star</a>
+    <a href="#" class="text-sm font-medium text-fg-brand hover:underline w-14">2 star</a>
     <div class="w-2/4 h-4 mx-4 bg-quaternary rounded-base">
         <div class="h-4 bg-warning rounded-base" style="width:4%"></div>
     </div>
     <span class="text-sm font-medium text-body">4%</span>
 </div>
 <div class="flex items-center mt-4">
-    <a href="#" class="text-sm font-medium text-fg-brand hover:underline w-11">1 star</a>
+    <a href="#" class="text-sm font-medium text-fg-brand hover:underline w-14">1 star</a>
     <div class="w-2/4 h-4 mx-4 bg-quaternary rounded-base">
         <div class="h-4 bg-warning rounded-base" style="width:1%"></div>
     </div>

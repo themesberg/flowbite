@@ -803,7 +803,7 @@ Use this example to show a navbar together with a sidebar layout for your web ap
               </button>
             </div>
             <div class="z-50 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44" id="dropdown-user">
-              <div class="px-4 py-3 border-b border-default" role="none">
+              <div class="px-4 py-3 border-b border-default-medium" role="none">
                 <p class="text-sm font-medium text-heading" role="none">
                   Neil Sims
                 </p>

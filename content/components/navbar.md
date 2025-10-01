@@ -617,7 +617,7 @@ You can also use the dropdown element inside a navigation bar and add a second l
 Use this example to show a solid background for the navbar component instead of being transparent.
 
 {{< example id="navbar-solid-bg-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="320" >}}
-<nav class="bg-secondary-soft border border-default">
+<nav class="bg-secondary-soft border-b border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="{{< param homepage >}}/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
@@ -706,7 +706,7 @@ Use the object parameters from the Collapse object to set the trigger element, t
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
-      <thead class="bg-gray-50 dark:bg-gray-900">
+      <thead class="bg-secondary-soft text-heading">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
                   Parameter
@@ -723,7 +723,7 @@ Use the object parameters from the Collapse object to set the trigger element, t
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">targetEl</code>
               </td>
@@ -737,7 +737,7 @@ Use the object parameters from the Collapse object to set the trigger element, t
                   Pass the target element object that will be expanded or collapsed.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">triggerEl</code>
               </td>
@@ -751,7 +751,7 @@ Use the object parameters from the Collapse object to set the trigger element, t
                   Pass the trigger element that will expand or collapse the target element based on click event. 
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">options</code>
               </td>
@@ -765,7 +765,7 @@ Use the object parameters from the Collapse object to set the trigger element, t
                   Set these options to override the default transition, duration, and timing function of the collapse animation.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr>
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">instanceOptions</code>
                 </td>
@@ -789,7 +789,7 @@ Use these optional options for the Collapse object to set the transition, durati
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
-      <thead class="bg-gray-50 dark:bg-gray-900">
+      <thead class="bg-secondary-soft text-heading">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
                   Option
@@ -803,7 +803,7 @@ Use these optional options for the Collapse object to set the transition, durati
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">onCollapse</code>
               </td>
@@ -814,7 +814,7 @@ Use these optional options for the Collapse object to set the transition, durati
                   Set a callback function when the item has been collapsed.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">onExpand</code>
               </td>
@@ -825,7 +825,7 @@ Use these optional options for the Collapse object to set the transition, durati
                   Set a callback function when the item has been expanded.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr>
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">onToggle</code>
               </td>
@@ -846,7 +846,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
-      <thead class="bg-gray-50 dark:bg-gray-900">
+      <thead class="bg-secondary-soft text-heading">
           <tr class="text-xs  uppercase">
               <th scope="col" class="px-6 py-3">
                   Method
@@ -857,7 +857,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">collapse()</code>
               </td>
@@ -865,7 +865,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
                   Use this method on the Collapse object to hide the target element.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">expand()</code>
               </td>
@@ -873,7 +873,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
                   Use this method on the Collapse object to show the target element.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">toggle()</code>
               </td>
@@ -881,7 +881,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
                   Use this method on the Collapse object toggle the current visibility of the target element.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">updateOnCollapse(callback)</code>
               </td>
@@ -889,7 +889,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
                   Use this method to set a callback function when the item has been collapsed.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr class="border-b border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">updateOnExpand(callback)</code>
               </td>
@@ -897,7 +897,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
                   Use this method to set a callback function when the item has been expanded.
               </td>
           </tr>
-          <tr class="border-b dark:bg-gray-950 dark:border-gray-800 border-gray-200">
+          <tr>
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">updateOnToggle(callback)</code>
               </td>

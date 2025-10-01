@@ -168,7 +168,7 @@ Use this example to show a vertically aligned set of tabs on the left side of th
             </a>
         </li>
     </ul>
-    <div class="p-6 bg-secondary-soft text-medium text-body rounded-base w-full">
+    <div class="p-6 bg-secondary text-medium text-body rounded-base w-full">
         <h3 class="text-lg font-semibold text-heading mb-4">Profile Tab</h3>
         <p class="mb-2">This is some placeholder content the Profile tab's associated content, clicking another tab will toggle the visibility of this one for the next.</p>
         <p>The tab JavaScript swaps classes to control the content visibility and styling.</p> 
@@ -409,7 +409,7 @@ Create a new Tabs object with parameters such as an array of the tab and content
                     An object of options for the appearances of the tabs and to use callback functions.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr>
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">instanceOptions</code>
                 </td>
@@ -480,7 +480,7 @@ Use the following options as the second parameter for the Tabs object to set the
                     Set a string of Tailwind CSS class names to apply to the inactive tab elements.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr>
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">onShow</code>
                 </td>
@@ -528,7 +528,7 @@ Use the methods from the Tabs object to programmatically change the current acti
                     Return the tab element based on the ID.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr>
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">updateOnShow(callback)</code>
                 </td>

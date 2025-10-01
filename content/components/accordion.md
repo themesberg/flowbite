@@ -420,7 +420,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm rtl:text-right text-body">
-        <thead class="bg-gray-50 dark:bg-gray-900">
+        <thead class="bg-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Parameter
@@ -439,7 +439,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
         <tbody>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-brand dark:text-blue-400">accordionEl</code>
+                    <code class="text-fg-brand">accordionEl</code>
                 </td>
                 <td class="px-6 py-4">
                     Element
@@ -453,7 +453,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-brand dark:text-blue-400">items</code>
+                    <code class="text-fg-brand">items</code>
                 </td>
                 <td class="px-6 py-4">
                     Array
@@ -467,7 +467,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-brand dark:text-blue-400">options</code>
+                    <code class="text-fg-brand">options</code>
                 </td>
                 <td class="px-6 py-4">
                     Object
@@ -479,9 +479,9 @@ Create a new Accordion object by passing an array of accordion items and an opti
                     Object of options that you can set to customize the style of the accordion items and set callback functions.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="bg-primary">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-brand dark:text-blue-400">instanceOptions</code>
+                    <code class="text-fg-brand">instanceOptions</code>
                 </td>
                 <td class="px-6 py-4">
                     Object
@@ -503,7 +503,7 @@ Use the following options as the second parameter for the Accordion object to cu
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm rtl:text-right text-body">
-        <thead class="bg-gray-50 dark:bg-gray-900">
+        <thead class="bg-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Option
@@ -519,7 +519,7 @@ Use the following options as the second parameter for the Accordion object to cu
         <tbody>
               <tr class="border-b bg-primary border-default">
                   <td class="px-6 py-4 font-medium">
-                      <code class="text-brand dark:text-blue-400">alwaysOpen</code>
+                      <code class="text-fg-brand">alwaysOpen</code>
                   </td>
                   <td class="px-6 py-4">
                       Boolean
@@ -530,7 +530,7 @@ Use the following options as the second parameter for the Accordion object to cu
               </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-brand dark:text-blue-400">activeClasses</code>
+                    <code class="text-fg-brand">activeClasses</code>
                 </td>
                 <td class="px-6 py-4">
                     Array
@@ -541,7 +541,7 @@ Use the following options as the second parameter for the Accordion object to cu
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-brand dark:text-blue-400">inactiveClasses</code>
+                    <code class="text-fg-brand">inactiveClasses</code>
                 </td>
                 <td class="px-6 py-4">
                     Array
@@ -552,7 +552,7 @@ Use the following options as the second parameter for the Accordion object to cu
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-brand dark:text-blue-400">onOpen</code>
+                    <code class="text-fg-brand">onOpen</code>
                 </td>
                 <td class="px-6 py-4">
                     Function
@@ -561,9 +561,9 @@ Use the following options as the second parameter for the Accordion object to cu
                     Set a callback function when a new accordion item has been opened.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="bg-primary">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-brand dark:text-blue-400">onClose</code>
+                    <code class="text-fg-brand">onClose</code>
                 </td>
                 <td class="px-6 py-4">
                     Function
@@ -582,7 +582,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm rtl:text-right text-body">
-        <thead class="bg-gray-50 dark:bg-gray-900">
+        <thead class="bg-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Method
@@ -595,7 +595,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
         <tbody>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-brand dark:text-blue-400">toggle(id)</code>
+                    <code class="text-fg-brand">toggle(id)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this function to toggle an accordion item based on its current state.
@@ -603,7 +603,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-brand dark:text-blue-400">open(id)</code>
+                    <code class="text-fg-brand">open(id)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this function to open an accordion item based on the id.
@@ -611,7 +611,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-brand dark:text-blue-400">close(id)</code>
+                    <code class="text-fg-brand">close(id)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this function to close an accordion item based on the id.
@@ -619,7 +619,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-brand dark:text-blue-400">updateOnOpen(callback)</code>
+                    <code class="text-fg-brand">updateOnOpen(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a callback function when an accordion item has been opened.
@@ -627,15 +627,15 @@ Use the object methods on the Accordion object to programmatically open, close, 
             </tr>
             <tr class="border-b bg-primary border-default">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-brand dark:text-blue-400">updateOnClose(callback)</code>
+                    <code class="text-fg-brand">updateOnClose(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a callback function when an accordion item has been closed.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="bg-primary">
                 <td class="px-6 py-4 font-medium">
-                    <code class="text-brand dark:text-blue-400">updateOnToggle(callback)</code>
+                    <code class="text-fg-brand">updateOnToggle(callback)</code>
                 </td>
                 <td class="px-6 py-4">
                     Use this method to set a callback function when an accordion item has been toggled.

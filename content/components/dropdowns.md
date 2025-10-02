@@ -350,7 +350,7 @@ Add an extra helper text to each checkbox element inside the dropdown menu list 
             <input id="dropdown-checkbox-7" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           </div>
           <div class="ms-2 text-sm">
-              <label for="dropdown-checkbox-7" class="font-medium text-heading">
+              <label for="dropdown-checkbox-7" class="font-medium text-heading select-none">
                 <div class="mb-0.5">Enable notifications</div>
                 <p id="helper-checkbox-text-1" class="text-xs font-normal text-body">Some helpful instruction goes over here.</p>
               </label>
@@ -363,7 +363,7 @@ Add an extra helper text to each checkbox element inside the dropdown menu list 
             <input id="dropdown-checkbox-8" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           </div>
           <div class="ms-2 text-sm">
-              <label for="helper-checkbox-2" class="font-medium text-heading">
+              <label for="helper-checkbox-2" class="font-medium text-heading select-none">
                 <div class="mb-0.5">Enable 2FA auth</div>
                 <p id="helper-checkbox-text-2" class="text-xs font-normal text-body">Some helpful instruction goes over here.</p>
               </label>
@@ -376,7 +376,7 @@ Add an extra helper text to each checkbox element inside the dropdown menu list 
             <input id="dropdown-checkbox-9" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft">
           </div>
           <div class="ms-2 text-sm">
-              <label for="helper-checkbox-3" class="font-medium text-heading">
+              <label for="helper-checkbox-3" class="font-medium text-heading select-none">
                 <div class="mb-0.5">Subscribe newsletter</div>
                 <p id="helper-checkbox-text-3" class="text-xs font-normal text-body">Some helpful instruction goes over here.</p>
               </label>
@@ -846,7 +846,7 @@ Use the menu icon trigger element on components such as cards as an alternative 
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Earnings</a>
       </li>
     </ul>
-    <div class="p-2 text-sm text-body font-medium border-t border-default">
+    <div class="p-2 text-sm text-body font-medium border-t border-default-medium">
       <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Separated link</a>
     </div>
 </div>
@@ -1190,7 +1190,7 @@ Use this example to show a date range picker inside a dropdown menu. Use the `da
   <svg class="w-5 h-5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
 </button>
 
-<div id="dateRangeDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-sm w-96">
+<div id="dateRangeDropdown" class="z-10 hidden bg-primary-soft border border-default rounded-base shadow-sm w-96">
   <div class="p-3" aria-labelledby="dateRangeButton">
     <div id="date-range-picker" date-rangepicker class="flex items-center">
       <div class="relative">

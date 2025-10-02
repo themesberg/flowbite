@@ -38,7 +38,7 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
   <div id="accordion-collapse-body-1" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-collapse-heading-1">
     <div class="p-4 md:p-5">
       <p class="mb-2 text-body">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+      <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-fg-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-collapse-heading-2">
@@ -50,7 +50,7 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
   <div id="accordion-collapse-body-2" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-collapse-heading-2">
     <div class="p-4 md:p-5">
       <p class="mb-2 text-body">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-body">Check out the <a href="{{< param homepage >}}/figma/" class="text-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+      <p class="text-body">Check out the <a href="{{< param homepage >}}/figma/" class="text-fg-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
   </div>
   <h2 id="accordion-collapse-heading-3">
@@ -65,8 +65,8 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
       <p class="mb-2 text-body">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-body">Learn more about these technologies:</p>
       <ul class="ps-5 text-body">
-        <li><a href="{{< param homepage >}}/pro/" class="text-brand hover:underline">Flowbite Pro</a></li>
-        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-brand hover:underline">Tailwind UI</a></li>
+        <li><a href="{{< param homepage >}}/pro/" class="text-fg-brand hover:underline">Flowbite Pro</a></li>
+        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-fg-brand hover:underline">Tailwind UI</a></li>
       </ul>
     </div>
   </div>
@@ -88,7 +88,7 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
   <div id="accordion-card-body-1" class="hidden border border-t-0 border-default rounded-b-base shadow-xs" aria-labelledby="accordion-card-heading-1">
     <div class="p-4 md:p-5">
       <p class="mb-2 text-body">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+      <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-fg-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-card-heading-2" class="mt-4">
@@ -100,7 +100,7 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
   <div id="accordion-card-body-2" class="hidden border border-t-0 border-default rounded-b-base shadow-xs" aria-labelledby="accordion-card-heading-2">
     <div class="p-4 md:p-5">
       <p class="mb-2 text-body">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-body">Check out the <a href="{{< param homepage >}}/figma/" class="text-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+      <p class="text-body">Check out the <a href="{{< param homepage >}}/figma/" class="text-fg-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
   </div>
   <h2 id="accordion-card-heading-3" class="mt-4">
@@ -115,8 +115,8 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
       <p class="mb-2 text-body">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-body">Learn more about these technologies:</p>
       <ul class="ps-5 text-body">
-        <li><a href="{{< param homepage >}}/pro/" class="text-brand hover:underline">Flowbite Pro</a></li>
-        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-brand hover:underline">Tailwind UI</a></li>
+        <li><a href="{{< param homepage >}}/pro/" class="text-fg-brand hover:underline">Flowbite Pro</a></li>
+        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-fg-brand hover:underline">Tailwind UI</a></li>
       </ul>
     </div>
   </div>
@@ -138,7 +138,7 @@ Use the `data-accordion="open"` option to keep previously opened accordion eleme
   <div id="accordion-open-body-1" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-open-heading-1">
     <div class="p-4 md:p-5">
       <p class="mb-2 text-body">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+      <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-fg-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-open-heading-2">
@@ -150,7 +150,7 @@ Use the `data-accordion="open"` option to keep previously opened accordion eleme
   <div id="accordion-open-body-2" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-open-heading-2">
     <div class="p-4 md:p-5">
       <p class="mb-2 text-body">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-body">Check out the <a href="{{< param homepage >}}/figma/" class="text-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+      <p class="text-body">Check out the <a href="{{< param homepage >}}/figma/" class="text-fg-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
   </div>
   <h2 id="accordion-open-heading-3">
@@ -165,8 +165,8 @@ Use the `data-accordion="open"` option to keep previously opened accordion eleme
       <p class="mb-2 text-body">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-body">Learn more about these technologies:</p>
       <ul class="ps-5 text-body list-disc">
-        <li><a href="{{< param homepage >}}/pro/" class="text-brand hover:underline">Flowbite Pro</a></li>
-        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-brand hover:underline">Tailwind UI</a></li>
+        <li><a href="{{< param homepage >}}/pro/" class="text-fg-brand hover:underline">Flowbite Pro</a></li>
+        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-fg-brand hover:underline">Tailwind UI</a></li>
       </ul>
     </div>
   </div>
@@ -182,7 +182,7 @@ Here's an example where we apply the blue colors instead of gray:
 {{< example id="accordion-color-options-example" github="components/accordion.md" show_dark=true >}}
 <div id="accordion-color" data-accordion="collapse" class="rounded-base border border-default overflow-hidden shadow-xs">
   <h2 id="accordion-color-heading-1">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-default hover:text-brand hover:bg-brand-softer gap-3" data-accordion-target="#accordion-color-body-1" aria-expanded="true" aria-controls="accordion-color-body-1">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-default hover:text-fg-brand hover:bg-brand-softer gap-3" data-accordion-target="#accordion-color-body-1" aria-expanded="true" aria-controls="accordion-color-body-1">
       <span>What is Flowbite?</span>
       <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
     </button>
@@ -190,11 +190,11 @@ Here's an example where we apply the blue colors instead of gray:
   <div id="accordion-color-body-1" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-color-heading-1">
     <div class="p-4 md:p-5">
       <p class="mb-2 text-body">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+      <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-fg-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-color-heading-2">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body border border-x-0 border-b-default border-t-0 hover:text-brand hover:bg-brand-softer gap-3" data-accordion-target="#accordion-color-body-2" aria-expanded="false" aria-controls="accordion-color-body-2">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body border border-x-0 border-b-default border-t-0 hover:text-fg-brand hover:bg-brand-softer gap-3" data-accordion-target="#accordion-color-body-2" aria-expanded="false" aria-controls="accordion-color-body-2">
       <span>Is there a Figma file available?</span>
       <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
     </button>
@@ -202,11 +202,11 @@ Here's an example where we apply the blue colors instead of gray:
   <div id="accordion-color-body-2" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-color-heading-2">
     <div class="p-4 md:p-5">
       <p class="mb-2 text-body">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-body">Check out the <a href="{{< param homepage >}}/figma/" class="text-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+      <p class="text-body">Check out the <a href="{{< param homepage >}}/figma/" class="text-fg-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
   </div>
   <h2 id="accordion-color-heading-3">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body hover:text-brand hover:bg-brand-softer gap-3" data-accordion-target="#accordion-color-body-3" aria-expanded="false" aria-controls="accordion-color-body-3">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body hover:text-fg-brand hover:bg-brand-softer gap-3" data-accordion-target="#accordion-color-body-3" aria-expanded="false" aria-controls="accordion-color-body-3">
       <span>What are the differences between Flowbite and Tailwind UI?</span>
       <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
     </button>
@@ -217,8 +217,8 @@ Here's an example where we apply the blue colors instead of gray:
       <p class="mb-2 text-body">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-body">Learn more about these technologies:</p>
       <ul class="ps-5 text-body">
-        <li><a href="{{< param homepage >}}/pro/" class="text-brand hover:underline">Flowbite Pro</a></li>
-        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-brand hover:underline">Tailwind UI</a></li>
+        <li><a href="{{< param homepage >}}/pro/" class="text-fg-brand hover:underline">Flowbite Pro</a></li>
+        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-fg-brand hover:underline">Tailwind UI</a></li>
       </ul>
     </div>
   </div>
@@ -240,7 +240,7 @@ Use this example to remove the background color and rounded borders from the acc
   <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
     <div class="py-5 border-b border-default text-body">
       <p class="mb-2">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p>Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+      <p>Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-fg-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-flush-heading-2">
@@ -252,7 +252,7 @@ Use this example to remove the background color and rounded borders from the acc
   <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
     <div class="py-5 border-b border-default text-body">
       <p class="mb-2">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p>Check out the <a href="{{< param homepage >}}/figma/" class="text-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+      <p>Check out the <a href="{{< param homepage >}}/figma/" class="text-fg-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
   </div>
   <h2 id="accordion-flush-heading-3">
@@ -267,8 +267,8 @@ Use this example to remove the background color and rounded borders from the acc
       <p class="mb-2">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2">Learn more about these technologies:</p>
       <ul class="ps-5 list-disc">
-        <li><a href="{{< param homepage >}}/pro/" class="text-brand hover:underline">Flowbite Pro</a></li>
-        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-brand hover:underline">Tailwind UI</a></li>
+        <li><a href="{{< param homepage >}}/pro/" class="text-fg-brand hover:underline">Flowbite Pro</a></li>
+        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-fg-brand hover:underline">Tailwind UI</a></li>
       </ul>
     </div>
   </div>
@@ -289,7 +289,7 @@ Use the `data-accordion-icon` data attribute to optionally set an element to rot
   <div id="accordion-arrow-body-1" class="hidden" aria-labelledby="accordion-arrow-heading-1">
     <div class="py-5 border-b border-default text-body">
       <p class="mb-2">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p>Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+      <p>Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-fg-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-arrow-heading-2">
@@ -303,7 +303,7 @@ Use the `data-accordion-icon` data attribute to optionally set an element to rot
   <div id="accordion-arrow-body-2" class="hidden" aria-labelledby="accordion-arrow-heading-2">
     <div class="py-5 border-b border-default text-body">
       <p class="mb-2">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p>Check out the <a href="{{< param homepage >}}/figma/" class="text-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+      <p>Check out the <a href="{{< param homepage >}}/figma/" class="text-fg-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
   </div>
   <h2 id="accordion-arrow-heading-3">
@@ -318,8 +318,8 @@ Use the `data-accordion-icon` data attribute to optionally set an element to rot
       <p class="mb-2">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2">Learn more about these technologies:</p>
       <ul class="ps-5 list-disc">
-        <li><a href="{{< param homepage >}}/pro/" class="text-brand hover:underline">Flowbite Pro</a></li>
-        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-brand hover:underline">Tailwind UI</a></li>
+        <li><a href="{{< param homepage >}}/pro/" class="text-fg-brand hover:underline">Flowbite Pro</a></li>
+        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-fg-brand hover:underline">Tailwind UI</a></li>
       </ul>
     </div>
   </div>
@@ -343,7 +343,7 @@ To enable nested accordions you need to wrap the nested accordion in an element 
   </h2>
   <div id="accordion-collapse-body-6" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default p-4 md:p-5" aria-labelledby="accordion-collapse-heading-6">
       <p class="mb-2 text-body">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p class="text-body mb-4">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+      <p class="text-body mb-4">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-fg-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     <!-- Nested accordion -->
     <div id="accordion-nested" data-accordion="collapse" class="rounded-base border border-default overflow-hidden shadow-xs">
       <h2 id="accordion-nested-heading-1">
@@ -355,7 +355,7 @@ To enable nested accordions you need to wrap the nested accordion in an element 
       <div id="accordion-nested-body-1" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-nested-heading-1">
         <div class="p-4 md:p-5">
           <p class="mb-2 text-body">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-          <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+          <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-fg-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
         </div>
       </div>
       <h2 id="accordion-nested-heading-2">
@@ -367,7 +367,7 @@ To enable nested accordions you need to wrap the nested accordion in an element 
       <div id="accordion-nested-body-2" class="hidden border border-s-0 border-e-0 border-t-0 border-b-default" aria-labelledby="accordion-nested-heading-2">
         <div class="p-4 md:p-5">
           <p class="mb-2 text-body">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-          <p class="text-body">Check out the <a href="https://flowbite.com/figma/" class="text-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+          <p class="text-body">Check out the <a href="https://flowbite.com/figma/" class="text-fg-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
         </div>
       </div>
       <h2 id="accordion-nested-heading-3">
@@ -382,8 +382,8 @@ To enable nested accordions you need to wrap the nested accordion in an element 
           <p class="mb-2 text-body">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
           <p class="mb-2 text-body">Learn more about these technologies:</p>
           <ul class="text-body">
-            <li><a href="https://flowbite.com/pro/" class="text-brand hover:underline">Flowbite Pro</a></li>
-            <li><a href="https://tailwindui.com/" rel="nofollow" class="text-brand hover:underline">Tailwind UI</a></li>
+            <li><a href="https://flowbite.com/pro/" class="text-fg-brand hover:underline">Flowbite Pro</a></li>
+            <li><a href="https://tailwindui.com/" rel="nofollow" class="text-fg-brand hover:underline">Tailwind UI</a></li>
           </ul>
         </div>
       </div>
@@ -402,8 +402,8 @@ To enable nested accordions you need to wrap the nested accordion in an element 
       <p class="mb-2 text-body">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-body">Learn more about these technologies:</p>
       <ul class="text-body">
-        <li><a href="https://flowbite.com/pro/" class="text-brand hover:underline">Flowbite Pro</a></li>
-        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-brand hover:underline">Tailwind UI</a></li>
+        <li><a href="https://flowbite.com/pro/" class="text-fg-brand hover:underline">Flowbite Pro</a></li>
+        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-fg-brand hover:underline">Tailwind UI</a></li>
       </ul>
     </div>
   </div>
@@ -746,7 +746,7 @@ Use the following HTML markup example for the JavaScript script above.
   <div id="accordion-example-body-1" class="hidden" aria-labelledby="accordion-example-heading-1">
     <div class="p-5 border border-b-0 border-default dark:border-gray-700 dark:bg-gray-900">
       <p class="mb-2 text-body">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-brand dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+      <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-fg-brand dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
     </div>
   </div>
   <h2 id="accordion-example-heading-2">
@@ -758,7 +758,7 @@ Use the following HTML markup example for the JavaScript script above.
   <div id="accordion-example-body-2" class="hidden" aria-labelledby="accordion-example-heading-2">
     <div class="p-5 border border-b-0 border-default dark:border-gray-700">
       <p class="mb-2 text-body">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-body">Check out the <a href="{{< param homepage >}}/figma/" class="text-brand dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+      <p class="text-body">Check out the <a href="{{< param homepage >}}/figma/" class="text-fg-brand dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
     </div>
   </div>
   <h2 id="accordion-example-heading-3">
@@ -773,8 +773,8 @@ Use the following HTML markup example for the JavaScript script above.
       <p class="mb-2 text-body">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-body">Learn more about these technologies:</p>
       <ul class="ps-5 text-body list-disc dark:text-gray-400">
-        <li><a href="{{< param homepage >}}/pro/" class="text-brand dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
-        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-brand dark:text-blue-500 hover:underline">Tailwind UI</a></li>
+        <li><a href="{{< param homepage >}}/pro/" class="text-fg-brand dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-fg-brand dark:text-blue-500 hover:underline">Tailwind UI</a></li>
       </ul>
     </div>
   </div>

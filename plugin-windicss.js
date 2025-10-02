@@ -127,7 +127,7 @@ module.exports = plugin(
                 `.dark [type='radio']:checked`,
             ]]: {
                 'border-color': `transparent`,
-                'background-color': `currentColor`,
+                'background-color': `var(--color-brand)`,
                 'background-size': `100% 100%`,
                 'background-position': `center`,
                 'background-repeat': `no-repeat`,
@@ -147,7 +147,7 @@ module.exports = plugin(
                     `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h8"/></svg>`
                 )}")`,
                 'border-color': `transparent`,
-                'background-color': `currentColor`,
+                'background-color': `var(--color-brand)`,
                 'background-size': `100% 100%`,
                 'background-position': `center`,
                 'background-repeat': `no-repeat`,
@@ -157,7 +157,7 @@ module.exports = plugin(
                 `[type='checkbox']:indeterminate:focus`,
             ]]: {
                 'border-color': 'transparent',
-                'background-color': 'currentColor',
+                'background-color': 'var(--color-brand)',
             },
             [`[type='file']`]: {
                 background: 'unset',

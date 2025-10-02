@@ -219,11 +219,11 @@ module.exports = plugin.withOptions(function (options = {}) {
                         '--tw-ring-inset': 'var(--tw-empty,/*!*/ /*!*/)',
                         '--tw-ring-offset-width': '0px',
                         '--tw-ring-offset-color': '#fff',
-                        '--tw-ring-color': 'var(--color-blue-700)',
+                        '--tw-ring-color': 'var(--color-brand)',
                         '--tw-ring-offset-shadow': `var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)`,
                         '--tw-ring-shadow': `var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)`,
                         'box-shadow': `var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)`,
-                        'border-color': 'var(--color-blue-700)',
+                        'border-color': 'var(--color-brand)',
                     },
                 },
                 [['input::placeholder', 'textarea::placeholder']]: {
@@ -275,7 +275,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     'flex-shrink': '0',
                     height: spacing[4],
                     width: spacing[4],
-                    color: 'var(--color-blue-700)',
+                    color: 'var(--color-brand)',
                     'background-color': '#fff',
                     'border-color': '--color-gray-400',
                     'border-width': borderWidth['DEFAULT'],
@@ -416,7 +416,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 [[`input[type="range"]::-webkit-slider-thumb`]]: {
                     height: spacing[5],
                     width: spacing[5],
-                    background: 'var(--color-blue-600)',
+                    background: 'var(--color-brand)',
                     'border-radius': borderRadius.full,
                     border: 0,
                     appearance: 'none',
@@ -447,7 +447,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 [[`input[type="range"]::-moz-range-thumb`]]: {
                     height: spacing[5],
                     width: spacing[5],
-                    background: 'var(--color-blue-600)',
+                    background: 'var(--color-brand)',
                     'border-radius': borderRadius.full,
                     border: 0,
                     appearance: 'none',
@@ -462,10 +462,10 @@ module.exports = plugin.withOptions(function (options = {}) {
                     background: 'var(--color-gray-500)',
                 },
                 [[`input[type="range"]::-moz-range-progress`]]: {
-                    background: 'var(--color-blue-500)',
+                    background: 'var(--color-brand)',
                 },
                 [[`input[type="range"]::-ms-fill-lower`]]: {
-                    background: 'var(--color-blue-500)',
+                    background: 'var(--color-brand)',
                 },
                 [[`input[type="range"].range-sm::-webkit-slider-thumb`]]: {
                     height: spacing[4],
@@ -506,8 +506,8 @@ module.exports = plugin.withOptions(function (options = {}) {
                     'border-color': 'white',
                 },
                 [['input:checked + .toggle-bg']]: {
-                    background: 'var(--color-blue-600)',
-                    'border-color': 'var(--color-blue-600)',
+                    background: 'var(--color-brand)',
+                    'border-color': 'var(--color-brand)',
                 },
             });
         }
@@ -603,7 +603,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                         paddingTop: '0',
                     },
                 '.datatable-wrapper .datatable-search .datatable-input:focus': {
-                    borderColor: 'var(--color-blue-600)',
+                    borderColor: 'var(--color-brand)',
                 },
                 '.datatable-wrapper .datatable-container': {
                     overflowX: 'auto',

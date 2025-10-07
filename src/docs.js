@@ -168,22 +168,26 @@ const initiateExpandCode = (element) => {
 };
 
 const updateiFrameDarkMode = (iFrame, theme) => {
-    let html = iFrame.contentDocument.querySelector('html');
+    if (iFrame.contentDocument && iFrame.contentDocument.documentElement) {
+        let html = iFrame.contentDocument.documentElement;
 
-    if (theme === 'dark') {
-        html.classList.add('dark');
-    } else {
-        html.classList.remove('dark');
+        if (theme === 'dark') {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
     }
 };
 
 const updateiFrameRTL = (iFrame, direction) => {
-    let html = iFrame.contentDocument.querySelector('html');
+    if (iFrame.contentDocument && iFrame.contentDocument.documentElement) {
+        let html = iFrame.contentDocument.documentElement;
 
-    if (direction === 'rtl') {
-        html.setAttribute('dir', 'rtl');
-    } else {
-        html.removeAttribute('dir');
+        if (direction === 'rtl') {
+            html.setAttribute('dir', 'rtl');
+        } else {
+            html.removeAttribute('dir');
+        }
     }
 };
 
@@ -339,7 +343,7 @@ const initiatePreviewState = (element) => {
             // Use the specific iframe function instead of updating all iframes
             const themeObj = themes.find((t) => t.name === savedCssTheme);
             if (themeObj) {
-                updateiFrameStylesheet(iframeCodeEl, themeObj.css);
+                updateiFrameTheme(iframeCodeEl, themeObj.attribute);
             }
         }
     });
@@ -361,47 +365,41 @@ const updateiFrameCodeElsDarkMode = (theme) => {
 };
 
 /**
- * Updates the stylesheet for a specific iframe element
+ * Updates the theme for a specific iframe element
  * @param {HTMLIFrameElement} iframeEl - The iframe element to update
- * @param {string} cssFile - The CSS file name to apply
- * @param {string} versionParam - Optional version parameter to append to the URL
+ * @param {string} themeAttribute - The theme attribute value to apply
  * @returns {boolean} - Whether the update was successful
  */
-const updateiFrameStylesheet = (iframeEl, cssFile, versionParam = '') => {
+const updateiFrameTheme = (iframeEl, themeAttribute) => {
     try {
         // Make sure the iframe has loaded
-        if (iframeEl.contentDocument) {
-            const themeLink = iframeEl.contentDocument.getElementById('theme');
-            if (themeLink) {
-                // Extract the base URL by removing the filename part
-                const currentHref = themeLink.href;
-                const baseURL = currentHref.substring(
-                    0,
-                    currentHref.lastIndexOf('/') + 1
-                );
-
-                // Set the new href with the base URL + new CSS filename + version parameter
-                themeLink.href = baseURL + cssFile + versionParam;
-                console.log('Updated iframe theme URL:', themeLink.href);
-                return true;
-            }
+        if (
+            iframeEl.contentDocument &&
+            iframeEl.contentDocument.documentElement
+        ) {
+            // Set the data-theme attribute on the iframe's html element
+            iframeEl.contentDocument.documentElement.setAttribute(
+                'data-theme',
+                themeAttribute
+            );
+            console.log('Updated iframe theme attribute:', themeAttribute);
+            return true;
         }
         return false;
     } catch (e) {
-        console.error('Error updating iframe stylesheet:', e);
+        console.error('Error updating iframe theme:', e);
         return false;
     }
 };
 
 /**
- * Updates the stylesheets for all iframe elements
- * @param {string} cssFile - The CSS file name to apply
- * @param {string} versionParam - Optional version parameter to append to the URL
+ * Updates the theme for all iframe elements
+ * @param {string} themeAttribute - The theme attribute value to apply
  */
-const updateiFrameStylesheets = (cssFile, versionParam = '') => {
+const updateiFrameThemes = (themeAttribute) => {
     const iframeCodeEls = document.querySelectorAll('.iframe-code');
     iframeCodeEls.forEach((el) => {
-        updateiFrameStylesheet(el, cssFile, versionParam);
+        updateiFrameTheme(el, themeAttribute);
     });
 };
 
@@ -420,7 +418,9 @@ const initializeCodeExamples = (theme) => {
             const themeObj = themes.find(
                 (t) => t.name === localStorage.getItem('css-theme')
             );
-            updateiFrameStylesheet(iframe, themeObj.css);
+            if (themeObj) {
+                updateiFrameTheme(iframe, themeObj.attribute);
+            }
         }
     });
 };
@@ -626,50 +626,47 @@ window.addEventListener('load', () => {
 const themes = [
     {
         name: 'modern',
-        css: 'main.css',
+        attribute: 'modern',
     },
     {
         name: 'minimal',
-        css: 'minimal.css',
+        attribute: 'minimal',
     },
     {
         name: 'enterprise',
-        css: 'enterprise.css',
+        attribute: 'enterprise',
     },
     {
         name: 'playful',
-        css: 'playful.css',
+        attribute: 'playful',
     },
     {
         name: 'mono',
-        css: 'mono.css',
+        attribute: 'mono',
     },
 ];
 
-// Function to apply a specific CSS theme
+// Function to apply a specific CSS theme by changing the data-theme attribute
 const applyCssTheme = (themeName) => {
     const themeObj = themes.find((t) => t.name === themeName);
     if (!themeObj) return;
 
-    // Update main document theme
-    const themeLink = document.getElementById('theme');
-    const currentHref = themeLink.href;
+    // Add transition class to prevent flash during theme change
+    document.documentElement.classList.add('theme-transition');
 
-    // Extract the base URL by removing the filename part
-    const baseURL = currentHref.substring(0, currentHref.lastIndexOf('/') + 1);
+    // Update main document theme attribute
+    document.documentElement.setAttribute('data-theme', themeObj.attribute);
 
-    // Extract the version parameter if it exists
-    const versionMatch = currentHref.match(/\?v=([\d\w]+)/);
-    const versionParam = versionMatch ? `?v=${versionMatch[1]}` : '';
-
-    // Set the new href with the base URL + new CSS filename + version parameter
-    themeLink.href = baseURL + themeObj.css + versionParam;
-
-    // Update stylesheets in all iframes
-    updateiFrameStylesheets(themeObj.css, versionParam);
+    // Update iframes
+    updateiFrameThemes(themeObj.attribute);
 
     // Save the selected theme to localStorage
     localStorage.setItem('css-theme', themeName);
+
+    // Remove transition class after a short delay
+    setTimeout(() => {
+        document.documentElement.classList.remove('theme-transition');
+    }, 100);
 
     console.log('Applied theme:', themeName);
 };

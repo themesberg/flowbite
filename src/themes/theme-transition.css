@@ -1,0 +1,19 @@
+/* Theme transition styles */
+.theme-transition,
+.theme-transition * {
+  transition: none !important;
+}
+
+/* Add a small animation when theme is loaded */
+@keyframes theme-fade-in {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html:not(.theme-transition) {
+  animation: theme-fade-in 0.3s ease-out;
+}

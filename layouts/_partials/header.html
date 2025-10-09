@@ -25,4 +25,8 @@
         document.documentElement.classList.remove('dark')
     }
 
+    if (localStorage.getItem('css-theme') &&  ('css-theme' in localStorage)) {
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('css-theme'));
+    }
+
 </script>

@@ -389,7 +389,7 @@
 
             {{ .Content }}
 
-            <aside class="flex mt-8 mb-8 font-medium leading-6 border-t border-b border-light-subtle py-4" aria-label="Previous and next page navigation">
+            <aside class="flex mt-8 mb-8 font-medium leading-6" aria-label="Previous and next page navigation">
               {{ if isset .Page.Params "previous" }}
                 <a class="flex items-center justify-center mr-8 text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none" href="{{ .Page.Params.PreviousLink | relURL }}">
                   <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/></svg>

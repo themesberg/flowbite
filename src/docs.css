@@ -234,7 +234,7 @@ pre[class*="language-"] {
 }
 
 .token.url {
-	@apply text-blue-700 dark:text-blue-500;
+	@apply text-brand dark:text-fg-brand;
 }
 
 .language-css .token.string,
@@ -244,7 +244,7 @@ pre[class*="language-"] {
 
 .token.atrule,
 .token.attr-value {
-	@apply text-blue-700 dark:text-blue-500;
+	@apply text-brand dark:text-fg-brand;
 }
 
 .token.function {
@@ -270,11 +270,11 @@ pre[class*="language-"] {
 
 code.language-bash,
 pre.language-bash {
-	@apply text-blue-700 dark:text-blue-400;
+	@apply text-brand dark:text-fg-brand;
 }
 
 code.language-javascript {
-	@apply text-blue-700 dark:text-blue-400;
+	@apply text-brand dark:text-fg-brand;
 }
 
 code.language-javascript .token.function{
@@ -302,7 +302,6 @@ code.language-javascript .token.class-name{
 }
 
 code.language-javascript .token {
-	/* @apply text-blue-900 dark:text-blue-500; */
 	background: transparent;
 }
 
@@ -311,7 +310,7 @@ code.language-html .token.tag{
 	@apply text-fuchsia-700 dark:text-fuchsia-400;
 }
 code.language-html .token.attr-value{
-	@apply text-blue-700 dark:text-blue-400;
+	@apply text-brand dark:text-fg-brand;
 }
 code.language-html .token.punctuation{
 	@apply text-gray-400 dark:text-gray-500;
@@ -434,11 +433,11 @@ code.language-html .token.comment{
 }
 
 .DocSearch-Hits mark {
-	@apply text-blue-700 dark:text-white decoration-2 underline-offset-2 decoration-blue-700 dark:decoration-white;
+	@apply text-brand dark:text-white decoration-2 underline-offset-2 decoration-brand dark:decoration-white;
 }
 
 .DocSearch-Hit[aria-selected=true] a {
-	@apply bg-blue-700 dark:bg-blue-700;
+	@apply bg-brand dark:bg-brand;
 }
 
 .DocSearch-Hit-source {
@@ -486,7 +485,7 @@ code.language-html .token.comment{
 }
 
 .DocSearch-Hit a {
-	@apply rounded-lg shadow-none bg-gray-50 dark:bg-gray-600 dark:hover:bg-blue-700;
+	@apply rounded-lg shadow-none bg-gray-50 dark:bg-gray-600 dark:hover:bg-brand;
 }
 
 .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-Select-Icon,

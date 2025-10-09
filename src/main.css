@@ -13,9 +13,9 @@
 
 @import "./docs.css";
 
-/* html, :host {
+html, :host {
 font-family: var(--font-sans);
-} */
+}
 
 /*
 “Have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.”

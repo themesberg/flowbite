@@ -563,11 +563,11 @@ window.addEventListener('load', () => {
     // toc menu item activation
     const deactivateMenuEl = (el) => {
         el.classList.remove(
-            '!border-blue-700',
+            '!border-brand',
             '!after:opacity-100',
-            '!text-blue-700',
-            'dark:!border-blue-500',
-            'dark:!text-blue-500'
+            '!text-brand',
+            'dark:!border-fg-brand',
+            'dark:!text-fg-brand'
         );
     };
 
@@ -577,11 +577,11 @@ window.addEventListener('load', () => {
             deactivateMenuEl(el);
         });
         el.classList.add(
-            '!border-blue-700',
+            '!border-brand',
             '!after:opacity-100',
-            '!text-blue-700',
-            'dark:!border-blue-500',
-            'dark:!text-blue-500'
+            '!text-brand',
+            'dark:!border-fg-brand',
+            'dark:!text-fg-brand'
         );
     };
 

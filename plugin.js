@@ -265,6 +265,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     'print-color-adjust': 'unset',
                 },
                 [[`[type='checkbox']`, `[type='radio']`]]: {
+                    position: 'relative',
                     appearance: 'none',
                     padding: '0',
                     'print-color-adjust': 'exact',
@@ -329,11 +330,27 @@ module.exports = plugin.withOptions(function (options = {}) {
                     'background-size': `0.75em 0.75em`,
                     'print-color-adjust': `exact`,
                 },
-                [`[type='radio']:checked`]: {
-                    'background-image': `url("${svgToDataUri(
-                        `<svg viewBox="0 0 16 16" fill="#1447E6" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`
-                    )}")`,
-                    'background-size': `1.25em 1.25em !important`,
+                [`[type='radio']:checked:before`]: {
+                    content: `''`,
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    'border-radius': '100%',
+                    'background-color': 'var(--color-brand)',
+                    width: `.9em !important`,
+                    height: `.9em !important`,
+                },
+                [`[type='radio']:checked:after`]: {
+                    content: `''`,
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    'border-radius': '100%',
+                    'background-color': 'var(--color-white)',
+                    width: `.35em !important`,
+                    height: `.35em !important`,
                 },
                 [`[type='radio']:disabled:checked`]: {
                     'background-image': `url("${svgToDataUri(

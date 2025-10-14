@@ -286,7 +286,7 @@ You can even use the other bottom navbar examples to exchange the default one pr
             <a href="#" class="flex items-center justify-center w-full px-4 py-3 hover:bg-secondary-medium">
                 <img class="me-3 rounded-full w-11 h-11" src="/docs/images/people/profile-picture-4.jpg" alt="Leslie Livingston Avatar">
                 <div>
-                    <p class="text-sm text-body"><span class="font-medium text-heading">Leslie Livingston</span> mentioned you in a comment: <span class="font-medium text-blue-600 dark:text-blue-500 hover:underline">@bonnie.green</span> what do you say?</p>
+                    <p class="text-sm text-body"><span class="font-medium text-heading">Leslie Livingston</span> mentioned you in a comment: <span class="font-medium text-fg-brand hover:underline">@bonnie.green</span> what do you say?</p>
                     <span class="text-xs text-fg-brand">23 minutes ago</span>
                 </div>
             </a>

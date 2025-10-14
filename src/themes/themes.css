@@ -245,8 +245,8 @@
     }
 
     [data-theme="enterprise"] {
-    --font-sans: 'IBM Plex Serif', serif;
-    --font-body: 'IBM Plex Serif', serif;
+    --font-sans: 'Yrsa', serif;
+    --font-body: 'Yrsa', serif;
         
     /* Flowbite variables */
     
@@ -261,6 +261,11 @@
     --leading-heading-none: 60px;
     --tracking-tight: -0.4px;
     
+    /* text size */
+    --text-xs: 0.875rem;
+    --text-sm: 1rem;
+    --text-base: 1.125rem;
+
     /* radius variables */
     --radius-xxs: 1px;
     --radius-xs: 1px;
@@ -727,7 +732,7 @@
     --color-quaternary: var(--color-stone-700);
     --color-quaternary-medium: var(--color-stone-600);
     --color-gray: var(--color-stone-600);
-    --color-brand-softer: var(--color-stone-950);
+    --color-brand-softer: var(--color-stone-900);
     --color-brand-soft: var(--color-stone-900);
     --color-brand: var(--color-stone-600);
     --color-brand-medium: var(--color-stone-900);

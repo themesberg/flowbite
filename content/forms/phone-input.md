@@ -134,7 +134,7 @@ This example can be used to select the country code from a dropdown menu and set
         </div>
         <label for="phone-input" class="mb-2.5 text-sm font-medium text-heading sr-only">Phone number:</label>
         <div class="relative w-full">
-            <input type="phone" id="phone-input" class="w-full z-20 bg-secondary-medium border border-default-medium text-heading text-sm rounded-e-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
+            <input type="phone" id="phone-input" class="w-full z-20 bg-secondary-medium border border-default-medium text-heading text-sm rounded-e-base focus:outline-none focus:ring-1 focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
         </div>
     </div>
 </form>
@@ -257,7 +257,7 @@ Use this example to send a verification code to the user's phone number for auth
         </div>
         <label for="phone-input" class="mb-2.5 text-sm font-medium text-heading sr-only">Phone number:</label>
         <div class="relative w-full">
-            <input type="phone" id="phone-input" class="w-full z-20 bg-secondary-medium border border-default-medium text-heading text-sm rounded-e-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
+            <input type="phone" id="phone-input" class="w-full z-20 bg-secondary-medium border border-default-medium text-heading text-sm rounded-e-base focus:outline-none focus:ring-1 focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
         </div>
     </div>
     <p id="helper-text-explanation-2" class="mt-2.5 mb-4 text-sm text-body">We will send you an SMS with a verification code.</p>
@@ -436,7 +436,7 @@ Use this example to authenticate users with a login form using a phone number in
         </div>
         <label for="phone-input" class="mb-2.5 text-sm font-medium text-heading sr-only">Phone number:</label>
         <div class="relative w-full">
-            <input type="phone" id="phone-input" class="w-full z-20 bg-secondary-medium border border-default-medium text-heading text-sm rounded-e-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
+            <input type="phone" id="phone-input" class="w-full z-20 bg-secondary-medium border border-default-medium text-heading text-sm rounded-e-base focus:outline-none focus:ring-1 focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
         </div>
     </div>
     <div class="mt-4">

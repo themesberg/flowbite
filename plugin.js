@@ -39,7 +39,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 [`[data-tooltip-style^='light'] + .tooltip > .tooltip-arrow:before`]:
                     {
                         'border-style': 'solid',
-                        'border-color': 'var(--color-gray-200)',
+                        'border-color': 'var(--color-tertiary)',
                     },
                 [`[data-tooltip-style^='light'] + .tooltip[data-popper-placement^='top'] > .tooltip-arrow:before`]:
                     {
@@ -102,19 +102,19 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 [`[role="tooltip"] > [data-popper-arrow]:before`]: {
                     'border-style': 'solid',
-                    'border-color': 'var(--color-gray-200)',
+                    'border-color': 'var(--color-tertiary)',
                 },
                 [`.dark [role="tooltip"] > [data-popper-arrow]:before`]: {
                     'border-style': 'solid',
-                    'border-color': 'var(--color-gray-600)',
+                    'border-color': 'var(--color-dark)',
                 },
                 [`[role="tooltip"] > [data-popper-arrow]:after`]: {
                     'border-style': 'solid',
-                    'border-color': 'var(--color-gray-200)',
+                    'border-color': 'var(--color-tertiary)',
                 },
                 [`.dark [role="tooltip"] > [data-popper-arrow]:after`]: {
                     'border-style': 'solid',
-                    'border-color': 'var(--color-gray-800)',
+                    'border-color': 'var(--color-dark)',
                 },
                 [`[data-popover][role="tooltip"][data-popper-placement^='top'] > [data-popper-arrow]:before`]:
                     {
@@ -543,48 +543,34 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 '.datatable-wrapper .datatable-search .datatable-input, .datatable-wrapper .datatable-input':
                     {
-                        color: 'var(--color-gray-900)',
+                        color: 'var(--color-heading)',
                         fontSize: `${theme('fontSize.sm')[0]}`,
-                        border: `1px solid var(--color-gray-300)`,
+                        border: `1px solid var(--color-base)`,
                         borderRadius: `${theme(
                             'borderRadius.lg',
                             borderRadius.lg
                         )}`,
-                        backgroundColor: 'var(--color-gray-50)',
+                        backgroundColor: 'var(--color-secondary-soft)',
                         minWidth: '16rem',
-                    },
-                '.dark .datatable-wrapper .datatable-search .datatable-input, .dark .datatable-wrapper .datatable-input':
-                    {
-                        color: 'white',
-                        backgroundColor: 'var(--color-gray-800)',
-                        border: `1px solid var(--color-gray-700)`,
                     },
                 '.datatable-wrapper thead th .datatable-input': {
                     backgroundColor: 'white',
                     fontWeight: `${theme('fontWeight.normal')}`,
-                    color: 'var(--color-gray-900)',
+                    color: 'var(--color-heading)',
                     paddingTop: `.35rem`,
                     paddingBottom: `.35rem`,
                     minWidth: '0',
                 },
-                '.dark .datatable-wrapper thead th .datatable-input': {
-                    backgroundColor: 'var(--color-gray-700)',
-                    borderColor: 'var(--color-gray-600)',
-                    color: 'white',
-                },
                 '.datatable-wrapper .datatable-top .datatable-dropdown': {
-                    color: 'var(--color-gray-500)',
+                    color: 'var(--color-body)',
                     fontSize: `${theme('fontSize.sm')[0]}`,
-                },
-                '.dark .datatable-wrapper .datatable-top .datatable-dropdown': {
-                    color: 'var(--color-gray-400)',
                 },
                 '.datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
                     {
-                        backgroundColor: 'var(--color-gray-50)',
+                        backgroundColor: 'var(--color-secondary-soft)',
                         color: 'var(--color-gray-900)',
                         fontSize: `${theme('fontSize.sm')[0]}`,
-                        border: `1px solid var(--color-gray-300)`,
+                        border: `1px solid var(--color-base)`,
                         borderRadius: `${theme(
                             'borderRadius.lg',
                             borderRadius.lg
@@ -594,8 +580,8 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 '.dark .datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
                     {
-                        backgroundColor: 'var(--color-gray-800)',
-                        border: `1px solid var(--color-gray-700)`,
+                        backgroundColor: 'var(--color-primary)',
+                        border: `1px solid var(--color-base)`,
                         color: 'white',
                     },
                 '.datatable-wrapper .datatable-container thead tr.search-filtering-row th':

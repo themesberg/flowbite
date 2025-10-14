@@ -126,23 +126,25 @@ Use the following utility classes to indicate a disabled form input item.
 Alternatively, you can decide to apply a shadow styling using the `shadow-xs` class to any of your form input elements.
 
 {{< example id="form-shadow-example" github="components/forms.md" show_dark=true >}}
+
 <form class="max-w-sm mx-auto">
   <div class="mb-5">
-    <label for="email-2" class="block mb-2.5 text-sm font-medium text-heading">Your email</label>
-    <input type="email-2" id="email-2" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body" placeholder="name@flowbite.com" required />
+    <label for="email-alternative" class="block mb-2.5 text-sm font-medium text-heading">Your email</label>
+    <input type="email" id="email-alternative" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body" placeholder="name@flowbite.com" required />
   </div>
   <div class="mb-5">
-    <label for="password-2" class="block mb-2.5 text-sm font-medium text-heading">Your password</label>
-    <input type="password-2" id="password-2" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body" placeholder="••••••••" required />
+    <label for="password-alternative" class="block mb-2.5 text-sm font-medium text-heading">Your password</label>
+    <input type="password" id="password-alternative" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body" placeholder="••••••••" required />
   </div>
   <div class="flex items-start mb-5">
     <div class="flex items-center h-5">
-      <input id="remember-2" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" required />
+      <input id="remember-alternative" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" required />
     </div>
-    <label for="remember-2" class="ms-2 text-sm font-medium text-heading select-none">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
+    <label for="remember" class="ms-2 text-sm font-medium text-heading select-none">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
   </div>
-  <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Submit</button>
+  <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Submit</button>
 </form>
+
 {{< /example >}}
 
 ## Helper text
@@ -154,7 +156,7 @@ Use the following markup to also add a helper text below your form input item. U
   <label for="email" class="block mb-2.5 text-sm font-medium text-heading">Your email</label>
   <input type="email" id="email" aria-describedby="helper-text-explanation" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="name@flowbite.com">
 
-  <p id="helper-text-explanation" class="mt-2.5 text-sm text-body">Read our <a href="#" class="font-medium text-blue-600 hover:underline dark:text-blue-500">Privacy Policy</a>.</p>
+  <p id="helper-text-explanation" class="mt-2.5 text-sm text-body">Read our <a href="#" class="font-medium text-fg-brand hover:underline ">Privacy Policy</a>.</p>
 </form>
 {{< /example >}}
 

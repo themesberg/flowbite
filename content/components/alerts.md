@@ -683,9 +683,9 @@ dismiss.hide();
 Use this HTML code for the JavaScript code example above.
 
 ```html
-<button id="triggerElement" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-base text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Hide alert</button>
+<button id="triggerElement" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Hide alert</button>
 
-<div id="targetElement" class="p-4 mb-4 text-sm text-blue-800 rounded-base bg-blue-50 dark:bg-blue-200 dark:text-blue-800" role="alert">
+<div id="targetElement" class="p-4 mb-4 text-sm text-fg-brand-strong rounded-base bg-brand-softer" role="alert">
   <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
 </div>
 ```

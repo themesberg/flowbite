@@ -577,9 +577,9 @@ const tabElements = [
 const options = {
     defaultTabId: 'settings',
     activeClasses:
-        'text-fg-brand hover:text-fg-brand dark:text-blue-500 dark:hover:text-blue-400 border-blue-600 dark:border-blue-500',
+        'text-fg-brand hover:text-fg-brand border-brand',
     inactiveClasses:
-        'text-body hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-brand dark:border-gray-700 dark:hover:text-gray-300',
+        'text-body hover:text-fg-brand border-base hover:border-brand',
     onShow: () => {
         console.log('tab is shown');
     },
@@ -781,9 +781,9 @@ const tabElements: TabItem[] = [
 const options: TabsOptions = {
     defaultTabId: 'settings',
     activeClasses:
-        'text-fg-brand hover:text-fg-brand dark:text-blue-500 dark:hover:text-blue-400 border-blue-600 dark:border-blue-500',
+        'text-fg-brand hover:text-fg-brand border-brand',
     inactiveClasses:
-        'text-body hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-brand dark:border-gray-700 dark:hover:text-gray-300',
+        'text-body hover:text-fg-brand border-base hover:border-brand',
     onShow: () => {
         console.log('tab is shown');
     },

@@ -144,7 +144,7 @@ Use this example to set a phone number inside a form field based on the `type="p
         </div>
         <label for="phone-input" class="mb-2.5 text-sm font-medium text-heading sr-only">Phone number:</label>
         <div class="relative w-full">
-            <input type="phone" id="phone-input" class="w-full z-20 bg-secondary-medium border border-default-medium text-heading text-sm rounded-e-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
+            <input type="phone" id="phone-input" class="w-full z-20 bg-secondary-medium border border-default-medium text-heading text-sm rounded-e-base focus:outline-none focus:ring-1 focus:ring-brand focus:border-brand block w-full px-3 py-2.5 placeholder:text-body" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
         </div>
     </div>
 </form>

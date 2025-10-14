@@ -44,23 +44,23 @@ You can also include a descriptive icon to complement the message inside the ale
 {{< example id="alerts-with-icon-example" github="components/alerts.md" show_dark=true >}}
 <div class="flex items-center p-4 mb-4 text-sm text-fg-brand-strong rounded-base bg-brand-softer" role="alert">
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
-  <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
+  <span class="font-medium me-1">Info alert!</span> Change a few things up and try submitting again.
 </div>
 <div class="flex items-center p-4 mb-4 text-sm text-fg-danger-strong rounded-base bg-danger-soft" role="alert">
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
-  <span class="font-medium">Danger alert!</span> Change a few things up and try submitting again.
+  <span class="font-medium me-1">Danger alert!</span> Change a few things up and try submitting again.
 </div>
 <div class="flex items-center p-4 mb-4 text-sm text-fg-success-strong rounded-base bg-success-soft" role="alert">
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
-  <span class="font-medium">Success alert!</span> Change a few things up and try submitting again.
+  <span class="font-medium me-1">Success alert!</span> Change a few things up and try submitting again.
 </div>
 <div class="flex items-center p-4 mb-4 text-sm text-fg-warning rounded-base bg-warning-soft" role="alert">
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
-  <span class="font-medium">Warning alert!</span> Change a few things up and try submitting again.
+  <span class="font-medium me-1">Warning alert!</span> Change a few things up and try submitting again.
 </div>
 <div class="flex items-center p-4 text-sm text-heading rounded-base bg-secondary-medium" role="alert">
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
-  <span class="font-medium">Dark alert!</span> Change a few things up and try submitting again.
+  <span class="font-medium me-1">Dark alert!</span> Change a few things up and try submitting again.
 </div>
 {{< /example >}}
 
@@ -71,23 +71,23 @@ Use this example to add a border accent to the alert component instead of just a
 {{< example id="alerts-with-border-example" github="components/alerts.md" show_dark=true >}}
 <div class="flex items-center p-4 mb-4 text-sm text-fg-brand-strong rounded-base bg-brand-softer border border-brand-subtle" role="alert">
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
-  <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
+  <span class="font-medium me-1">Info alert!</span> Change a few things up and try submitting again.
 </div>
 <div class="flex items-center p-4 mb-4 text-sm text-fg-danger-strong rounded-base bg-danger-soft border border-danger-subtle" role="alert">
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
-  <span class="font-medium">Danger alert!</span> Change a few things up and try submitting again.
+  <span class="font-medium me-1">Danger alert!</span> Change a few things up and try submitting again.
 </div>
 <div class="flex items-center p-4 mb-4 text-sm text-fg-success-strong rounded-base bg-success-soft border border-success-subtle" role="alert">
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
-  <span class="font-medium">Success alert!</span> Change a few things up and try submitting again.
+  <span class="font-medium me-1">Success alert!</span> Change a few things up and try submitting again.
 </div>
 <div class="flex items-center p-4 mb-4 text-sm text-fg-warning rounded-base bg-warning-soft border border-warning-subtle" role="alert">
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
-  <span class="font-medium">Warning alert!</span> Change a few things up and try submitting again.
+  <span class="font-medium me-1">Warning alert!</span> Change a few things up and try submitting again.
 </div>
 <div class="flex items-center p-4 text-sm text-heading rounded-base bg-secondary-medium border border-default-medium" role="alert">
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
-  <span class="font-medium">Dark alert!</span> Change a few things up and try submitting again.
+  <span class="font-medium me-1">Dark alert!</span> Change a few things up and try submitting again.
 </div>
 {{< /example >}}
 

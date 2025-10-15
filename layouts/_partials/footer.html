@@ -13,9 +13,13 @@
             <div class="grid gap-12 xl:grid-cols-6 xl:gap-24">
                 <div class="col-span-2">
                     <a href="{{ .Site.Params.homepage }}/" class="flex mb-5">
-                        <img src="/docs/images/logo.svg" class="h-7 mr-3" alt="Flowbite Logo" />
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap text-heading">Flowbite</span>
-                    </a>
+                        <img src="/docs/images/logo.svg" class="h-7 mr-3 group-data-[theme=modern]/root:block hidden" alt="FlowBite Logo" />
+                        <img src="/docs/images/logo-minimal.svg" class="h-7 mr-3 group-data-[theme=minimal]/root:block hidden" alt="FlowBite Logo" />
+                        <img src="/docs/images/logo-enterprise.svg" class="h-7 mr-3 group-data-[theme=enterprise]/root:block hidden" alt="FlowBite Logo" />
+                        <img src="/docs/images/logo-playful.svg" class="h-7 mr-3 group-data-[theme=playful]/root:block hidden" alt="FlowBite Logo" />
+                        <img src="/docs/images/logo-mono.svg" class="h-7 mr-3 group-data-[theme=mono]/root:block hidden" alt="FlowBite Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white leading-none">Flowbite</span>
+                      </a>
                     <p class="max-w-lg mb-3 text-body leading-relaxed">Flowbite is a library of interactive UI components built with Tailwind CSS that can get you started building websites faster and more efficiently.</p>
                     <p class="max-w-lg text-body">Code licensed <a href="https://github.com/themesberg/flowbite/blob/main/LICENSE.md" class="text-fg-brand hover:underline" rel="nofollow">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" class="text-fg-brand hover:underline" rel="nofollow">CC BY 3.0</a>.</p>
                 </div>

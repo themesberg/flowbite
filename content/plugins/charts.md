@@ -466,7 +466,7 @@ if(document.getElementById("column-chart") && typeof ApexCharts !== 'undefined')
         <dd class="text-heading text-sm font-semibold">$3,232</dd>
     </dl>
     <dl class="flex items-center justify-end">
-        <dt class="text-body text-sm font-normal me-1">Conversion rate:</dt>
+        <dt class="text-body text-sm font-normal me-1">Conversion:</dt>
         <dd class="text-heading text-sm font-semibold">1.2%</dd>
     </dl>
   </div>

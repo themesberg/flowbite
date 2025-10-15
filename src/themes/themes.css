@@ -161,7 +161,7 @@
         --color-body-subtle: var(--color-stone-500);
         --color-heading: var(--color-stone-900);
         --color-fg-brand-subtle: var(--color-stone-200);
-        --color-fg-brand: var(--color-stone-700);
+        --color-fg-brand: var(--color-stone-950);
         --color-fg-brand-strong: var(--color-stone-900);
         --color-fg-success: var(--color-green-700);
         --color-fg-success-strong: var(--color-green-900);
@@ -245,8 +245,8 @@
     }
 
     [data-theme="enterprise"] {
-    --font-sans: 'Yrsa', serif;
-    --font-body: 'Yrsa', serif;
+    --font-sans: 'STIX Two Text', serif;
+    --font-body: 'STIX Two Text', serif;
         
     /* Flowbite variables */
     
@@ -261,9 +261,8 @@
     --leading-heading-none: 60px;
     --tracking-tight: -0.4px;
     
-    /* text size */
-    --text-xs: 0.875rem;
-    --text-sm: 1rem;
+    --text-xs: 0.825rem;
+    --text-sm:  0.925rem;
     --text-base: 1.125rem;
 
     /* radius variables */
@@ -487,7 +486,7 @@
 
     [data-theme="mono"] {
         --font-sans: 'Google Sans Code', monospace;
-    --font-body: 'Google Sans Code', monospace;
+        --font-body: 'Google Sans Code', monospace;
         
     /* Flowbite variables */
     
@@ -700,8 +699,8 @@
     --color-body-subtle: var(--color-stone-400);
     --color-heading: var(--color-white);
     --color-fg-brand-subtle: var(--color-stone-200);
-    --color-fg-brand: var(--color-stone-500);
-    --color-fg-brand-strong: var(--color-stone-400);
+    --color-fg-brand: var(--color-white);
+    --color-fg-brand-strong: var(--color-stone-200);
     --color-fg-success: var(--color-green-600);
     --color-fg-success-strong: var(--color-green-300);
     --color-fg-danger: var(--color-red-500);

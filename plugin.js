@@ -203,7 +203,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 ]]: {
                     appearance: 'none',
                     'background-color': '#fff',
-                    'border-color': 'var(--color-gray-500)',
+                    'border-color': 'var(--color-body)',
                     'border-width': borderWidth['DEFAULT'],
                     'border-radius': borderRadius.none,
                     'padding-top': spacing[2],
@@ -227,7 +227,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 },
                 [['input::placeholder', 'textarea::placeholder']]: {
-                    color: 'var(--color-gray-500)',
+                    color: 'var(--color-body)',
                     opacity: '1',
                 },
                 ['::-webkit-datetime-edit-fields-wrapper']: {
@@ -410,7 +410,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     color: 'white',
                     background: 'var(--color-gray-600)',
                     '&:hover': {
-                        background: 'var(--color-gray-500)',
+                        background: 'var(--color-body)',
                     },
                 },
                 [[`input[type="range"]::-webkit-slider-thumb`]]: {
@@ -425,11 +425,11 @@ module.exports = plugin.withOptions(function (options = {}) {
                     cursor: 'pointer',
                 },
                 [[`input[type="range"]:disabled::-webkit-slider-thumb`]]: {
-                    background: 'var(--color-gray-400)',
+                    background: 'var(--color-body)',
                 },
                 [[`.dark input[type="range"]:disabled::-webkit-slider-thumb`]]:
                     {
-                        background: 'var(--color-gray-500)',
+                        background: 'var(--color-body)',
                     },
                 [[`input[type="range"]:focus::-webkit-slider-thumb`]]: {
                     outline: '2px solid transparent',
@@ -456,10 +456,10 @@ module.exports = plugin.withOptions(function (options = {}) {
                     cursor: 'pointer',
                 },
                 [[`input[type="range"]:disabled::-moz-range-thumb`]]: {
-                    background: 'var(--color-gray-400)',
+                    background: 'var(--color-body)',
                 },
                 [[`.dark input[type="range"]:disabled::-moz-range-thumb`]]: {
-                    background: 'var(--color-gray-500)',
+                    background: 'var(--color-body)',
                 },
                 [[`input[type="range"]::-moz-range-progress`]]: {
                     background: 'var(--color-brand)',
@@ -490,7 +490,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     top: spacing[0.5],
                     left: spacing[0.5],
                     background: 'white',
-                    'border-color': 'var(--color-gray-300)',
+                    'border-color': 'var(--color-base)',
                     'border-width': borderWidth['DEFAULT'],
                     'border-radius': borderRadius.full,
                     height: theme('height.5'),
@@ -515,10 +515,10 @@ module.exports = plugin.withOptions(function (options = {}) {
         if (wysiwyg) {
             addComponents({
                 '.selectedCell': {
-                    backgroundColor: 'var(--color-gray-50)',
+                    backgroundColor: 'var(--color-secondary-medium)',
                 },
                 '.dark .selectedCell': {
-                    backgroundColor: 'var(--color-gray-700)',
+                    backgroundColor: 'var(--color-secondary-medium)',
                 },
             });
         }
@@ -554,7 +554,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                         minWidth: '16rem',
                     },
                 '.datatable-wrapper thead th .datatable-input': {
-                    backgroundColor: 'white',
+                    backgroundColor: 'var(--color-primary)',
                     fontWeight: `${theme('fontWeight.normal')}`,
                     color: 'var(--color-heading)',
                     paddingTop: `.35rem`,
@@ -568,7 +568,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 '.datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
                     {
                         backgroundColor: 'var(--color-secondary-soft)',
-                        color: 'var(--color-gray-900)',
+                        color: 'var(--color-heading)',
                         fontSize: `${theme('fontSize.sm')[0]}`,
                         border: `1px solid var(--color-base)`,
                         borderRadius: `${theme(
@@ -597,20 +597,20 @@ module.exports = plugin.withOptions(function (options = {}) {
                 '.datatable-wrapper .datatable-table': {
                     width: '100%',
                     fontSize: `${theme('fontSize.sm')[0]}`,
-                    color: 'var(--color-gray-500)',
+                    color: 'var(--color-body)',
                     textAlign: 'left',
                 },
                 '.dark .datatable-wrapper .datatable-table': {
-                    color: 'var(--color-gray-400)',
+                    color: 'var(--color-body)',
                 },
                 '.datatable-wrapper .datatable-table thead': {
                     fontSize: `${theme('fontSize.xs')[0]}`,
-                    color: 'var(--color-gray-500)',
-                    backgroundColor: 'var(--color-gray-50)',
+                    color: 'var(--color-body)',
+                    backgroundColor: 'var(--color-secondary-medium)',
                 },
                 '.dark .datatable-wrapper .datatable-table thead': {
-                    color: 'var(--color-gray-400)',
-                    backgroundColor: 'var(--color-gray-800)',
+                    color: 'var(--color-body)',
+                    backgroundColor: 'var(--color-secondary-medium)',
                 },
                 '.datatable-wrapper .datatable-table thead th': {
                     whiteSpace: 'nowrap',
@@ -636,16 +636,16 @@ module.exports = plugin.withOptions(function (options = {}) {
                         color: 'white',
                     },
                 '.datatable-wrapper .datatable-table tbody tr.selected': {
-                    backgroundColor: 'var(--color-gray-100)',
+                    backgroundColor: 'var(--color-secondary)',
                 },
                 '.dark .datatable-wrapper .datatable-table tbody tr.selected': {
-                    backgroundColor: 'var(--color-gray-700)',
+                    backgroundColor: 'var(--color-secondary-medium)',
                 },
                 '.datatable-wrapper .datatable-table tbody tr': {
-                    borderBottom: `1px solid var(--color-gray-200)`,
+                    borderBottom: `1px solid var(--color-base)`,
                 },
                 '.dark .datatable-wrapper .datatable-table tbody tr': {
-                    borderBottom: `1px solid var(--color-gray-700)`,
+                    borderBottom: `1px solid var(--color-base)`,
                 },
                 '.datatable-wrapper .datatable-table .datatable-empty': {
                     textAlign: 'center',
@@ -663,11 +663,11 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 },
                 '.datatable-wrapper .datatable-bottom .datatable-info': {
-                    color: 'var(--color-gray-500)',
+                    color: 'var(--color-body)',
                     fontSize: `${theme('fontSize.sm')[0]}`,
                 },
                 '.dark .datatable-wrapper .datatable-bottom .datatable-info': {
-                    color: 'var(--color-gray-400)',
+                    color: 'var(--color-body)',
                 },
                 '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list':
                     {
@@ -680,20 +680,20 @@ module.exports = plugin.withOptions(function (options = {}) {
                     {
                         display: 'flex',
                         alignItems: 'center',
-                        color: 'var(--color-gray-500)',
+                        color: 'var(--color-body)',
                         fontWeight: `${theme('fontWeight.medium')}`,
                         paddingLeft: `${theme('spacing.3', spacing[3])}`,
                         paddingRight: `${theme('spacing.3', spacing[3])}`,
                         height: spacing[8],
                         fontSize: `${theme('fontSize.sm')[0]}`,
-                        borderTop: `1px solid var(--color-gray-300)`,
-                        borderBottom: `1px solid var(--color-gray-300)`,
-                        borderRight: `1px solid var(--color-gray-300)`,
+                        borderTop: `1px solid var(--color-base)`,
+                        borderBottom: `1px solid var(--color-base)`,
+                        borderRight: `1px solid var(--color-base)`,
                     },
                 '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link':
                     {
-                        color: 'var(--color-gray-400)',
-                        borderColor: 'var(--color-gray-700)',
+                        color: 'var(--color-body)',
+                        borderColor: 'var(--color-secondary-medium)',
                     },
                 '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type, .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type':
                     {
@@ -712,8 +712,8 @@ module.exports = plugin.withOptions(function (options = {}) {
                         content: `url("${svgToDataUri(
                             `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
                                     <path stroke="${theme(
-                                        'colors.gray.500',
-                                        colors.gray[500]
+                                        'colors.body',
+                                        colors.body
                                     )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 8-4 4 4 4"/>
                                 </svg>`
                         )}")`,
@@ -815,7 +815,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                             'borderRadius.lg',
                             borderRadius.lg
                         )}`,
-                        borderLeft: `1px solid var(--color-gray-300)`,
+                        borderLeft: `1px solid var(--color-base)`,
                     },
                 '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link':
                     {
@@ -835,7 +835,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link:hover':
                     {
-                        backgroundColor: 'var(--color-gray-50)',
+                        backgroundColor: 'var(--color-secondary-medium)',
                         color: 'var(--color-gray-700)',
                     },
                 '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link:hover':
@@ -850,8 +850,8 @@ module.exports = plugin.withOptions(function (options = {}) {
         if (charts) {
             addComponents({
                 '.apexcharts-canvas .apexcharts-tooltip': {
-                    backgroundColor: 'white !important',
-                    color: `var(--color-gray-700) !important`,
+                    backgroundColor: 'primary !important',
+                    color: `var(--color-body) !important`,
                     border: '0 !important',
                     borderRadius: `${theme(
                         'borderRadius.DEFAULT',
@@ -864,9 +864,9 @@ module.exports = plugin.withOptions(function (options = {}) {
                     )} !important`,
                 },
                 '.dark .apexcharts-canvas .apexcharts-tooltip': {
-                    backgroundColor: `var(--color-gray-700) !important`,
-                    color: `var(--color-gray-400) !important`,
-                    borderColor: 'transparent !important',
+                    backgroundColor: `var(--color-secondary-medium) !important`,
+                    color: `var(--color-body) !important`,
+                    borderColor: `var(--color-base) !important`,
                     boxShadow: `${theme(
                         'boxShadow.md',
                         boxShadow.md
@@ -894,23 +894,23 @@ module.exports = plugin.withOptions(function (options = {}) {
                             'spacing.3',
                             spacing[3]
                         )} !important`,
-                        backgroundColor: `var(--color-gray-100) !important`,
-                        borderBottomColor: `var(--color-gray-200) !important`,
+                        backgroundColor: `var(--color-secondary-medium) !important`,
+                        borderBottomColor: `var(--color-base) !important`,
                         fontSize: `${theme('fontSize.sm')[0]} !important`,
                         fontWeight: `${theme(
                             'fontWeight.normal',
                             defaultTheme.fontWeight.normal
                         )} !important`,
-                        color: `var(--color-gray-500) !important`,
+                        color: `var(--color-body) !important`,
                     },
                 '.dark .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title':
                     {
-                        backgroundColor: `var(--color-gray-600) !important`,
-                        borderColor: `var(--color-gray-500) !important`,
-                        color: `var(--color-gray-500) !important`,
+                        backgroundColor: `var(--color-secondary-medium) !important`,
+                        borderColor: `var(--color-body) !important`,
+                        color: `var(--color-body) !important`,
                     },
                 '.apexcharts-canvas .apexcharts-xaxistooltip': {
-                    color: `var(--color-gray-500) !important`,
+                    color: `var(--color-body) !important`,
                     paddingTop: `${theme('spacing.2', spacing[2])} !important`,
                     paddingBottom: `${theme(
                         'spacing.2',
@@ -933,21 +933,21 @@ module.exports = plugin.withOptions(function (options = {}) {
                     )} !important`,
                 },
                 '.dark .apexcharts-canvas .apexcharts-xaxistooltip': {
-                    color: `var(--color-gray-400) !important`,
-                    backgroundColor: `var(--color-gray-700) !important`,
+                    color: `var(--color-body) !important`,
+                    backgroundColor: `var(--color-secondary-medium) !important`,
                 },
                 '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-label':
                     {
-                        color: `var(--color-gray-500) !important`,
+                        color: `var(--color-body) !important`,
                         fontSize: `${theme('fontSize.sm')[0]} !important`,
                     },
                 '.dark .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-label':
                     {
-                        color: `var(--color-gray-400) !important`,
+                        color: `var(--color-body) !important`,
                     },
                 '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-value':
                     {
-                        color: 'var(--color-gray-900)',
+                        color: 'var(--color-heading)',
                         fontSize: `${theme('fontSize.sm')[0]} !important`,
                     },
                 ':is([dir=rtl]) .apexcharts-tooltip .apexcharts-tooltip-marker':
@@ -986,7 +986,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 '.dark .apexcharts-canvas .apexcharts-xaxistooltip:after, .dark .apexcharts-canvas .apexcharts-xaxistooltip:before':
                     {
-                        borderBottomColor: `var(--color-gray-700) !important`,
+                        borderBottomColor: `var(--color-base) !important`,
                     },
                 '.apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-y-group':
                     {
@@ -1006,13 +1006,13 @@ module.exports = plugin.withOptions(function (options = {}) {
                             'spacing.3',
                             spacing[3]
                         )} !important`,
-                        backgroundColor: 'white !important',
-                        color: `var(--color-gray-500) !important`,
+                        backgroundColor: 'primary !important',
+                        color: `var(--color-body) !important`,
                     },
                 '.dark .apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active':
                     {
-                        backgroundColor: `var(--color-gray-700) !important`,
-                        color: `var(--color-gray-400) !important`,
+                        backgroundColor: `var(--color-secondary-medium) !important`,
+                        color: `var(--color-body) !important`,
                     },
                 '.apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active:first-of-type':
                     {
@@ -1031,7 +1031,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                         defaultTheme.fontWeight.medium
                     )} !important`,
                     paddingLeft: `${theme('spacing.5', spacing[5])} !important`,
-                    color: `var(--color-gray-500) !important`,
+                    color: `var(--color-body) !important`,
                 },
                 ':is([dir=rtl]) .apexcharts-canvas .apexcharts-legend-text': {
                     paddingRight: `${theme(
@@ -1041,14 +1041,14 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 '.apexcharts-canvas .apexcharts-legend-text:not(.apexcharts-inactive-legend):hover':
                     {
-                        color: `var(--color-gray-900) !important`,
+                        color: `var(--color-heading) !important`,
                     },
                 '.dark .apexcharts-canvas .apexcharts-legend-text': {
-                    color: `var(--color-gray-400) !important`,
+                    color: `var(--color-body) !important`,
                 },
                 '.dark .apexcharts-canvas .apexcharts-legend-text:not(.apexcharts-inactive-legend):hover':
                     {
-                        color: `white !important`,
+                        color: `heading !important`,
                     },
                 '.apexcharts-canvas .apexcharts-legend-series': {
                     marginLeft: `${theme('spacing.2', spacing[2])} !important`,
@@ -1062,7 +1062,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 '.apexcharts-datalabels-group .apexcharts-text.apexcharts-datalabel-value':
                     {
-                        fill: `var(--color-gray-900) !important`,
+                        fill: `var(--color-heading) !important`,
                         fontSize: `${theme('fontSize.3xl')} !important`,
                         fontWeight: `${theme(
                             'fontWeight.bold',
@@ -1075,7 +1075,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 '.apexcharts-canvas .apexcharts-datalabels-group .apexcharts-text.apexcharts-datalabel-label':
                     {
-                        fill: `var(--color-gray-500) !important`,
+                        fill: `var(--color-body) !important`,
                         fontSize: `${theme('fontSize.base')} !important`,
                         fontWeight: `${theme(
                             'fontWeight.normal',
@@ -1084,7 +1084,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 '.dark .apexcharts-canvas .apexcharts-datalabels-group .apexcharts-text.apexcharts-datalabel-label':
                     {
-                        fill: `var(--color-gray-400) !important`,
+                        fill: `var(--color-body) !important`,
                     },
                 '.apexcharts-canvas .apexcharts-datalabels .apexcharts-text.apexcharts-pie-label':
                     {
@@ -1101,11 +1101,11 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 '.apexcharts-gridline, .apexcharts-xcrosshairs, .apexcharts-ycrosshairs':
                     {
-                        stroke: `var(--color-gray-200) !important`,
+                        stroke: `var(--color-base) !important`,
                     },
                 '.dark .apexcharts-gridline, .dark .apexcharts-xcrosshairs, .dark .apexcharts-ycrosshairs':
                     {
-                        stroke: `var(--color-gray-700) !important`,
+                        stroke: `var(--color-base) !important`,
                     },
             });
         }

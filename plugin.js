@@ -411,8 +411,8 @@ module.exports = plugin.withOptions(function (options = {}) {
                     outline: `1px auto inherit`,
                 },
                 [[`input[type=file]::file-selector-button`]]: {
-                    color: 'white',
-                    background: 'var(--color-gray-800)',
+                    color: 'var(--color-body)',
+                    background: 'var(--color-quaternary)',
                     border: 0,
                     'font-weight': theme('fontWeight.medium'),
                     'font-size': theme('fontSize.sm')[0],
@@ -424,7 +424,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     'margin-inline-start': '-1rem',
                     'margin-inline-end': '1rem',
                     '&:hover': {
-                        background: 'var(--color-gray-700)',
+                        background: 'var(--color-quaternary)',
                     },
                 },
                 [[`:is([dir=rtl]) input[type=file]::file-selector-button`]]: {
@@ -432,10 +432,10 @@ module.exports = plugin.withOptions(function (options = {}) {
                     paddingLeft: spacing[4],
                 },
                 [[`.dark input[type=file]::file-selector-button`]]: {
-                    color: 'white',
-                    background: 'var(--color-gray-600)',
+                    color: 'var(--color-body)',
+                    background: 'var(--color-quaternary)',
                     '&:hover': {
-                        background: 'var(--color-body)',
+                        background: 'var(--color-quaternary)',
                     },
                 },
                 [[`input[type="range"]::-webkit-slider-thumb`]]: {

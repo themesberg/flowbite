@@ -28,12 +28,10 @@ This is an example of a form component including an email, password, checkbox, a
     <label for="password" class="block mb-2.5 text-sm font-medium text-heading">Your password</label>
     <input type="password" id="password" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="••••••••" required />
   </div>
-  <div class="flex items-start mb-5">
-    <div class="flex items-center h-5">
-      <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" required />
-    </div>
-    <label for="remember" class="ms-2 text-sm font-medium text-heading select-none">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
-  </div>
+  <label for="remember" class="flex items-start mb-5">
+    <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" required />
+    <p class="ms-2 text-sm font-medium text-heading select-none">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</p>
+  </label>
   <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Submit</button>
 </form>
 {{< /example >}}
@@ -137,10 +135,10 @@ Alternatively, you can decide to apply a shadow styling using the `shadow-xs` cl
     <input type="password" id="password-alternative" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body" placeholder="••••••••" required />
   </div>
   <div class="flex items-start mb-5">
-    <div class="flex items-center h-5">
+    <label for="remember-alternative" class="flex items-center h-5">
       <input id="remember-alternative" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" required />
-    </div>
-    <label for="remember" class="ms-2 text-sm font-medium text-heading select-none">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
+      <p class="ms-2 text-sm font-medium text-heading select-none">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</p>
+    </label>
   </div>
   <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Submit</button>
 </form>

@@ -72,7 +72,7 @@ This example can be used to show a voice note message with control buttons and a
          <button class="inline-flex self-center items-center text-body hover:text-heading" type="button">
             <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
          </button>
-         <svg aria-hidden="true" class="w-[145px] md:w-[185px] md:h-[40px]" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <svg aria-hidden="true" class="w-[145px] md:w-[185px] md:h-[40px] text-brand" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="17" width="3" height="6" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
             <rect x="7" y="15.5" width="3" height="9" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
             <rect x="21" y="6.5" width="3" height="27" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
@@ -100,7 +100,7 @@ This example can be used to show a voice note message with control buttons and a
             <rect x="168" y="13.5" width="3" height="13" rx="1.5" fill="#E5E7EB" class="dark:fill-quaternary"/>
             <rect x="175" y="16" width="3" height="8" rx="1.5" fill="#E5E7EB" class="dark:fill-quaternary"/>
             <rect x="182" y="17.5" width="3" height="5" rx="1.5" fill="#E5E7EB" class="dark:fill-quaternary"/>
-            <rect x="66" y="16" width="8" height="8" rx="4" fill="#1C64F2"/>
+            <rect x="66" y="16" width="8" height="8" rx="4" fill="currentColor"/>
          </svg>
          <span class="inline-flex self-center items-center text-sm font-medium text-heading">3:42</span>
       </div>
@@ -316,7 +316,7 @@ Use this example to show an image gallery based on a grid layout with the abilit
                 <img src="/docs/images/blog/image-3.jpg" class="rounded-base" />
             </div>
             <div class="group relative">
-                <button class="absolute w-full h-full bg-gray-900/90 hover:bg-gray-900/50 transition-all duration-300 rounded-base flex items-center justify-center">
+                <button class="absolute w-full h-full bg-brand/90 hover:bg-brand/30 transition-all duration-300 rounded-base flex items-center justify-center">
                     <span class="text-xl font-medium text-white">+7</span>
                     <div id="download-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                         Download image
@@ -465,7 +465,7 @@ This example can be used to show a voice note with the user profile and timestam
                <button class="inline-flex self-center items-center text-body hover:text-heading" type="button">
                   <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
                </button>
-               <svg aria-hidden="true" class="w-[145px] md:w-[185px] md:h-[40px]" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <svg aria-hidden="true" class="w-[145px] md:w-[185px] md:h-[40px] text-brand" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect y="17" width="3" height="6" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
                   <rect x="7" y="15.5" width="3" height="9" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
                   <rect x="21" y="6.5" width="3" height="27" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
@@ -493,7 +493,7 @@ This example can be used to show a voice note with the user profile and timestam
                   <rect x="168" y="13.5" width="3" height="13" rx="1.5" fill="#E5E7EB" class="dark:fill-quaternary"/>
                   <rect x="175" y="16" width="3" height="8" rx="1.5" fill="#E5E7EB" class="dark:fill-quaternary"/>
                   <rect x="182" y="17.5" width="3" height="5" rx="1.5" fill="#E5E7EB" class="dark:fill-quaternary"/>
-                  <rect x="66" y="16" width="8" height="8" rx="4" fill="#1C64F2"/>
+                  <rect x="66" y="16" width="8" height="8" rx="4" fill="currentColor"/>
                </svg>
                <span class="inline-flex self-center items-center text-sm font-medium text-heading">3:42</span>
             </div>
@@ -710,7 +710,7 @@ Use this example to show an image gallery with the user profile and timestamp ou
                 <img src="/docs/images/blog/image-3.jpg" class="rounded-base" />
             </div>
             <div class="group relative">
-                <button class="absolute w-full h-full bg-gray-900/90 hover:bg-gray-900/50 transition-all duration-300 rounded-base flex items-center justify-center">
+                <button class="absolute w-full h-full bg-brand/90 hover:bg-brand/30 transition-all duration-300 rounded-base flex items-center justify-center">
                     <span class="text-xl font-medium text-white">+7</span>
                     <div id="download-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                         Download image
@@ -837,7 +837,7 @@ This example can be used to show a voice note with a transparent background.
                <button class="inline-flex self-center items-center text-body hover:text-heading" type="button">
                   <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
                </button>
-               <svg aria-hidden="true" class="w-[145px] md:w-[185px] md:h-[40px]" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <svg aria-hidden="true" class="w-[145px] md:w-[185px] md:h-[40px] text-brand" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect y="17" width="3" height="6" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
                   <rect x="7" y="15.5" width="3" height="9" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
                   <rect x="21" y="6.5" width="3" height="27" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
@@ -865,7 +865,7 @@ This example can be used to show a voice note with a transparent background.
                   <rect x="168" y="13.5" width="3" height="13" rx="1.5" fill="#E5E7EB" class="dark:fill-quaternary"/>
                   <rect x="175" y="16" width="3" height="8" rx="1.5" fill="#E5E7EB" class="dark:fill-quaternary"/>
                   <rect x="182" y="17.5" width="3" height="5" rx="1.5" fill="#E5E7EB" class="dark:fill-quaternary"/>
-                  <rect x="66" y="16" width="8" height="8" rx="4" fill="#1C64F2"/>
+                  <rect x="66" y="16" width="8" height="8" rx="4" fill="currentColor"/>
                </svg>
                <span class="inline-flex self-center items-center text-sm font-medium text-heading">3:42</span>
             </div>
@@ -1016,7 +1016,7 @@ Use this example to show an image gallery with a transparent background as a cha
                 <img src="/docs/images/blog/image-3.jpg" class="rounded-base" />
             </div>
             <div class="group relative">
-                <button class="absolute w-full h-full bg-gray-900/90 hover:bg-gray-900/50 transition-all duration-300 rounded-base flex items-center justify-center">
+                <button class="absolute w-full h-full bg-brand/90 hover:bg-brand/30 transition-all duration-300 rounded-base flex items-center justify-center">
                     <span class="text-xl font-medium text-white">+7</span>
                     <div id="download-image" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
                         Download image

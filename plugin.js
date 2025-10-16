@@ -878,10 +878,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     backgroundColor: 'primary !important',
                     color: `var(--color-body) !important`,
                     border: '0 !important',
-                    borderRadius: `${theme(
-                        'borderRadius.DEFAULT',
-                        borderRadius.DEFAULT
-                    )} !important`,
+                    borderRadius: `var(--radius-base) !important`,
                     // padding: `${theme('spacing.3', spacing[3])}`,
                     boxShadow: `${theme(
                         'boxShadow.md',
@@ -919,20 +916,20 @@ module.exports = plugin.withOptions(function (options = {}) {
                             'spacing.3',
                             spacing[3]
                         )} !important`,
-                        backgroundColor: `var(--color-secondary-medium) !important`,
-                        borderBottomColor: `var(--color-base) !important`,
+                        backgroundColor: `var(--color-tertiary-medium) !important`,
+                        borderColor: `var(--color-light) !important`,
                         fontSize: `${theme('fontSize.sm')[0]} !important`,
                         fontWeight: `${theme(
-                            'fontWeight.normal',
-                            defaultTheme.fontWeight.normal
+                            'fontWeight.semibold',
+                            defaultTheme.fontWeight.semibold
                         )} !important`,
-                        color: `var(--color-body) !important`,
+                        color: `var(--color-heading) !important`,
                     },
                 '.dark .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title':
                     {
-                        backgroundColor: `var(--color-secondary-medium) !important`,
-                        borderColor: `var(--color-body) !important`,
-                        color: `var(--color-body) !important`,
+                        backgroundColor: `var(--color-tertiary-medium) !important`,
+                        borderColor: `var(--color-light) !important`,
+                        color: `var(--color-heading) !important`,
                     },
                 '.apexcharts-canvas .apexcharts-xaxistooltip': {
                     color: `var(--color-body) !important`,
@@ -1031,7 +1028,8 @@ module.exports = plugin.withOptions(function (options = {}) {
                             'spacing.3',
                             spacing[3]
                         )} !important`,
-                        backgroundColor: 'primary !important',
+                        backgroundColor:
+                            'var(--color-primary-medium) !important',
                         color: `var(--color-body) !important`,
                     },
                 '.dark .apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active':

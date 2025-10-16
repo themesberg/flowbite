@@ -996,7 +996,8 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 '.apexcharts-canvas .apexcharts-xaxistooltip:after, .apexcharts-canvas .apexcharts-xaxistooltip:before':
                     {
-                        borderBottomColor: 'white !important',
+                        borderBottomColor:
+                            'var(--color-primary-medium) !important',
                     },
                 '.apexcharts-canvas .apexcharts-xaxistooltip:after': {
                     borderWidth: '8px !important',
@@ -1006,10 +1007,6 @@ module.exports = plugin.withOptions(function (options = {}) {
                     borderWidth: '10px !important',
                     marginLeft: '-10px !important',
                 },
-                '.dark .apexcharts-canvas .apexcharts-xaxistooltip:after, .dark .apexcharts-canvas .apexcharts-xaxistooltip:before':
-                    {
-                        borderBottomColor: `var(--color-base) !important`,
-                    },
                 '.apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-y-group':
                     {
                         padding: '0 !important',

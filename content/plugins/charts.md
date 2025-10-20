@@ -182,7 +182,7 @@ if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') 
 
 To create a double line chart check the example below by setting the chart type to `type: "line"` and copy the HTML markup and JS options to automatically style and populate the chart with data:
 
-{{< example id="line-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="line-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
 const options = {
   chart: {
     height: "100%",
@@ -343,7 +343,7 @@ if (document.getElementById("line-chart") && typeof ApexCharts !== 'undefined') 
 
 You can represent multiple data entries using columns by setting the `type: "bar"` option and also by updating the `horizontal` key value to `false` in JavaScript to adjust them vertically as columns:
 
-{{< example id="column-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="column-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
 const options = {
   colors: ["#1447E6", "#FF8A4C"],
   series: [
@@ -524,7 +524,7 @@ if(document.getElementById("column-chart") && typeof ApexCharts !== 'undefined')
 
 Create a horizontal bar chart with as many data series as you like by setting the `type: "bar"` chart type via JavaScript and copy the example below into your project. You can enable or disable the labels on the X or Y axis by setting `show` to `false` for the `xaxis` and `yaxis` objects of the chart options.
 
-{{< example id="bar-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="bar-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
 const options = {
   series: [
     {
@@ -691,7 +691,7 @@ if(document.getElementById("bar-chart") && typeof ApexCharts !== 'undefined') {
 
 Create a pie chart with multiple data series by setting the `type: "pie"` chart type option via JavaScript and copy the following HTML markup code and options from below:
 
-{{< example id="pie-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="pie-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
 const getChartOptions = () => {
   return {
     series: [52.8, 26.8, 20.4],
@@ -880,7 +880,7 @@ Set the JavaScript API option to `type: "donut"` to create a donut chart and cop
 
 In this example we also show how you can set event listeners on the UI components from Flowbite to update the data series from the chart by clicking the device checkboxes.
 
-{{< example id="donut-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="donut-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
 const getChartOptions = () => {
   return {
     series: [35.1, 23.5, 2.4, 5.4],

@@ -400,6 +400,12 @@ const updateiFrameThemes = (themeAttribute) => {
     const iframeCodeEls = document.querySelectorAll('.iframe-code');
     iframeCodeEls.forEach((el) => {
         updateiFrameTheme(el, themeAttribute);
+        const reloadOnThemeChange = el.hasAttribute(
+            'data-reload-on-theme-change'
+        );
+        if (reloadOnThemeChange) {
+            el.contentDocument.location.reload();
+        }
     });
 };
 

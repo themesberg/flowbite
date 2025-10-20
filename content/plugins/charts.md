@@ -44,7 +44,19 @@ Now that you have all the libraries installed you can copy-paste the chart examp
 
 Use this example to show a basic area chart by setting the `type: "area"` option in JavaScript:
 
-{{< example id="default-area-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example id="default-area-chart-example" class="flex justify-center bg-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
+window.addEventListener("load", function () {
+// Get the CSS variable --color-brand and convert it to hex for ApexCharts
+const getBrandColor = () => {
+  // Get the computed style of the document's root element
+  const computedStyle = getComputedStyle(document.documentElement);
+  console.log(computedStyle)
+  // Get the value of the --color-brand CSS variable
+  return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+};
+
+const brandColor = getBrandColor();
+
 const options = {
   chart: {
     height: "100%",
@@ -69,8 +81,8 @@ const options = {
     gradient: {
       opacityFrom: 0.55,
       opacityTo: 0,
-      shade: "#1447E6",
-      gradientToColors: ["#1447E6"],
+      shade: brandColor,
+      gradientToColors: [brandColor],
     },
   },
   dataLabels: {
@@ -92,7 +104,7 @@ const options = {
     {
       name: "New users",
       data: [6500, 6418, 6456, 6526, 6356, 6456],
-      color: "#1447E6",
+      color: brandColor,
     },
   ],
   xaxis: {
@@ -116,6 +128,7 @@ if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') 
   const chart = new ApexCharts(document.getElementById("area-chart"), options);
   chart.render();
 }
+});
 ` >}}
 <div class="max-w-sm w-full bg-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between items-start">

@@ -284,6 +284,7 @@ const initiatePreviewState = (element) => {
     if (mobileViewButton) {
         mobileViewButton.addEventListener('click', () => {
             const theme = darkModeButton.getAttribute('data-toggle-dark');
+            const cssTheme = localStorage.getItem('css-theme');
             const direction = RTLButton.getAttribute('data-toggle-direction');
             iframeCodeEl.classList.add('max-w-sm');
             iframeCodeEl.classList.add('max-w-lg');
@@ -293,6 +294,7 @@ const initiatePreviewState = (element) => {
                 updateiFrameHeight(iframeCodeEl);
                 updateiFrameDarkMode(iframeCodeEl, theme);
                 updateiFrameRTL(iframeCodeEl, direction);
+                updateiFrameTheme(iframeCodeEl, cssTheme);
             };
             setTimeout(() => {
                 iframeCodeEl.classList.remove('opacity-0');
@@ -303,6 +305,7 @@ const initiatePreviewState = (element) => {
     if (tabletViewButton) {
         tabletViewButton.addEventListener('click', () => {
             const theme = darkModeButton.getAttribute('data-toggle-dark');
+            const cssTheme = localStorage.getItem('css-theme');
             const direction = RTLButton.getAttribute('data-toggle-direction');
             iframeCodeEl.classList.add('max-w-lg');
             iframeCodeEl.classList.remove('max-w-sm');
@@ -312,6 +315,7 @@ const initiatePreviewState = (element) => {
                 updateiFrameHeight(iframeCodeEl);
                 updateiFrameDarkMode(iframeCodeEl, theme);
                 updateiFrameRTL(iframeCodeEl, direction);
+                updateiFrameTheme(iframeCodeEl, cssTheme);
             };
             setTimeout(() => {
                 iframeCodeEl.classList.remove('opacity-0');
@@ -322,6 +326,7 @@ const initiatePreviewState = (element) => {
     if (fullViewButton) {
         fullViewButton.addEventListener('click', () => {
             const theme = darkModeButton.getAttribute('data-toggle-dark');
+            const cssTheme = localStorage.getItem('css-theme');
             const direction = RTLButton.getAttribute('data-toggle-direction');
             iframeCodeEl.classList.remove('max-w-sm', 'max-w-lg');
             iframeCodeEl.contentWindow.location.reload();
@@ -330,23 +335,13 @@ const initiatePreviewState = (element) => {
                 updateiFrameHeight(iframeCodeEl);
                 updateiFrameDarkMode(iframeCodeEl, theme);
                 updateiFrameRTL(iframeCodeEl, direction);
+                updateiFrameTheme(iframeCodeEl, cssTheme);
             };
             setTimeout(() => {
                 iframeCodeEl.classList.remove('opacity-0');
             }, 500);
         });
     }
-
-    iframeCodeEl.addEventListener('load', () => {
-        const savedCssTheme = localStorage.getItem('css-theme');
-        if (savedCssTheme) {
-            // Use the specific iframe function instead of updating all iframes
-            const themeObj = themes.find((t) => t.name === savedCssTheme);
-            if (themeObj) {
-                updateiFrameTheme(iframeCodeEl, themeObj.attribute);
-            }
-        }
-    });
 };
 
 const updateiFrameHeight = (iFrame) => {
@@ -400,12 +395,6 @@ const updateiFrameThemes = (themeAttribute) => {
     const iframeCodeEls = document.querySelectorAll('.iframe-code');
     iframeCodeEls.forEach((el) => {
         updateiFrameTheme(el, themeAttribute);
-        const reloadOnThemeChange = el.hasAttribute(
-            'data-reload-on-theme-change'
-        );
-        if (reloadOnThemeChange) {
-            el.contentDocument.location.reload();
-        }
     });
 };
 

@@ -60,11 +60,11 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
     </button>
   </h2>
   <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
-    <div class="p-4 md:p-5 border border-t-base border-b-0 border-x-0">
+    <div class="p-4 md:p-5 border border-t-default border-b-0 border-x-0">
       <p class="mb-2 text-body">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-body">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-body">Learn more about these technologies:</p>
-      <ul class="ps-5 text-body">
+      <ul class="ps-5 text-body list-disc">
         <li><a href="{{< param homepage >}}/pro/" class="text-fg-brand hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-fg-brand hover:underline">Tailwind UI</a></li>
       </ul>
@@ -114,7 +114,7 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
       <p class="mb-2 text-body">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-body">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-body">Learn more about these technologies:</p>
-      <ul class="ps-5 text-body">
+      <ul class="ps-5 text-body list-disc">
         <li><a href="{{< param homepage >}}/pro/" class="text-fg-brand hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-fg-brand hover:underline">Tailwind UI</a></li>
       </ul>
@@ -160,7 +160,7 @@ Use the `data-accordion="open"` option to keep previously opened accordion eleme
     </button>
   </h2>
   <div id="accordion-open-body-3" class="hidden" aria-labelledby="accordion-open-heading-3">
-    <div class="p-4 md:p-5 border border-t-base border-b-0 border-x-0">
+    <div class="p-4 md:p-5 border border-t-default border-b-0 border-x-0">
       <p class="mb-2 text-body">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-body">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-body">Learn more about these technologies:</p>
@@ -212,11 +212,11 @@ Here's an example where we apply the blue colors instead of gray:
     </button>
   </h2>
   <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
-    <div class="p-4 md:p-5 border border-t-base border-b-0 border-x-0">
+    <div class="p-4 md:p-5 border border-t-default border-b-0 border-x-0">
       <p class="mb-2 text-body">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-body">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-body">Learn more about these technologies:</p>
-      <ul class="ps-5 text-body">
+      <ul class="ps-5 text-body list-disc">
         <li><a href="{{< param homepage >}}/pro/" class="text-fg-brand hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-fg-brand hover:underline">Tailwind UI</a></li>
       </ul>
@@ -377,11 +377,11 @@ To enable nested accordions you need to wrap the nested accordion in an element 
         </button>
       </h2>
       <div id="accordion-nested-body-3" class="hidden" aria-labelledby="accordion-nested-heading-3">
-        <div class="p-4 md:p-5 border border-t-base border-b-0 border-x-0">
+        <div class="p-4 md:p-5 border border-t-default border-b-0 border-x-0">
           <p class="mb-2 text-body">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
           <p class="mb-2 text-body">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
           <p class="mb-2 text-body">Learn more about these technologies:</p>
-          <ul class="text-body">
+          <ul class="text-body ps-5 list-disc">
             <li><a href="https://flowbite.com/pro/" class="text-fg-brand hover:underline">Flowbite Pro</a></li>
             <li><a href="https://tailwindui.com/" rel="nofollow" class="text-fg-brand hover:underline">Tailwind UI</a></li>
           </ul>
@@ -397,11 +397,11 @@ To enable nested accordions you need to wrap the nested accordion in an element 
     </button>
   </h2>
   <div id="accordion-collapse-body-7" class="hidden" aria-labelledby="accordion-collapse-heading-7">
-    <div class="p-4 md:p-5 border border-t-base border-b-0 border-x-0">
+    <div class="p-4 md:p-5 border border-t-default border-b-0 border-x-0">
       <p class="mb-2 text-body">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
       <p class="mb-2 text-body">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
       <p class="mb-2 text-body">Learn more about these technologies:</p>
-      <ul class="text-body">
+      <ul class="text-body list-disc ps-5">
         <li><a href="https://flowbite.com/pro/" class="text-fg-brand hover:underline">Flowbite Pro</a></li>
         <li><a href="https://tailwindui.com/" rel="nofollow" class="text-fg-brand hover:underline">Tailwind UI</a></li>
       </ul>

@@ -377,6 +377,7 @@ const updateiFrameTheme = (iframeEl, themeAttribute) => {
                 'data-theme',
                 themeAttribute
             );
+            // iframeEl.contentWindow.location.reload();
             console.log('Updated iframe theme attribute:', themeAttribute);
             return true;
         }

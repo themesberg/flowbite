@@ -12,14 +12,14 @@
 
     <div class="fixed inset-0 z-10 hidden bg-gray-900/50 dark:bg-gray-900/60" id="sidebarBackdrop"></div>
 
-    <main id="content-wrapper" class="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible mt-32 xl:mt-28">
+    <main id="content-wrapper" class="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible mt-32 xl:mt-30">
       <div class="flex w-full">
 
         <!-- Main content -->
-        <div class="flex-auto max-w-full min-w-0 pt-6 lg:px-8 lg:pt-8 pb:12 xl:pb-24 lg:pb-16">
+        <div class="flex-auto max-w-full min-w-0">
 
           <!-- Intro -->
-          <div class="pb-4 mb-8 border-b border-light-subtle">
+          <div class="border-b border-light-subtle py-8 lg:px-8 bg-no-repeat bg-right dark:bg-[url('{{ .Site.BaseURL }}/images/patterns/diamond-dark.svg')] bg-[url('{{ .Site.BaseURL }}/images/patterns/diamond.svg')]">
             {{ if ( eq .Page.Params.requires_js true) }}
               <aside class="mb-5" aria-label="Component requires Flowbite JavaScript">
                 <a href="{{ "getting-started/quickstart/" | relURL }}" class="inline-flex items-center justify-between px-1 py-1 pr-4 text-sm text-body bg-secondary-soft border border-default rounded-full hover:bg-tertiary">
@@ -382,10 +382,10 @@
             {{ end }}
             
             <h1 class="inline-block mb-3 text-3xl font-semibold tracking-tight text-heading" id="content">{{ .Title | markdownify }}</h1>
-            <p class="mb-4 text-lg text-body">{{ .Page.Params.Description | markdownify }}</p>
+            <p class="text-lg text-body">{{ .Page.Params.Description | markdownify }}</p>
           </div>
 
-          <div id="mainContent">
+          <div id="mainContent" class="lg:px-8 xl:pb-24 py-8 lg:pb-16">
 
             {{ .Content }}
 

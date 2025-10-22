@@ -522,3 +522,16 @@ code.language-html .token.comment{
 .formkit-alert.formkit-alert-error:not(:empty) {
 	@apply p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-gray-800 dark:text-red-400;
 }
+
+html {
+  @apply scroll-smooth;
+}
+
+#navWrapper::-webkit-scrollbar {
+	display: none; /* Chrome, Safari and Opera */
+}
+
+#navWrapper {
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+  	scrollbar-width: none; /* Firefox */
+}

@@ -854,7 +854,7 @@ The **Modal** class from Flowbite can be used to create an object that will laun
 
 Initialize a Modal object with parameters such as the modal element and the optional options object.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
@@ -923,7 +923,7 @@ Initialize a Modal object with parameters such as the modal element and the opti
 
 Use the following options as the second parameter for the Modal object to set the position of the modal, custom classes for the backdrop element and the callback functions.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
@@ -1024,7 +1024,7 @@ Use the following options as the second parameter for the Modal object to set th
 
 Use the methods from the Modal object to show, hide, and toggle the visibility directly from JavaScript.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">

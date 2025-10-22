@@ -706,7 +706,7 @@ Use the **CopyClipboard** object from the Flowbite JS API to create a component 
 
 Use the object parameters from the CopyClipboard object to set options such as the content type of the text that is to be copied (ie. value of an input field, text content or inner HTML) and other options.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
       <thead class="bg-neutral-secondary-soft text-heading">
           <tr class="text-xs  uppercase">
@@ -789,7 +789,7 @@ Use the object parameters from the CopyClipboard object to set options such as t
 
 Use these optional options for the CopyClipboard object to set the content type from where the text will be copied from, an optional HTML decoder for code blocks and function callbacks to set success and default messages.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
       <thead class="bg-neutral-secondary-soft text-heading">
           <tr class="text-xs  uppercase">
@@ -846,7 +846,7 @@ Use these optional options for the CopyClipboard object to set the content type 
 
 Use the following methods from the CopyClipboard component to programmatically work with the component such as copying the text on demand or updating the callback function.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
       <thead class="bg-neutral-secondary-soft text-heading">
           <tr class="text-xs  uppercase">

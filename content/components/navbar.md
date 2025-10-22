@@ -704,7 +704,7 @@ Use the **Collapse** class to create an object with a trigger and target element
 
 Use the object parameters from the Collapse object to set the trigger element, target element, and the options including callback functions.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
       <thead class="bg-neutral-secondary-soft text-heading">
           <tr class="text-xs  uppercase">
@@ -787,7 +787,7 @@ Use the object parameters from the Collapse object to set the trigger element, t
 
 Use these optional options for the Collapse object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
       <thead class="bg-neutral-secondary-soft text-heading">
           <tr class="text-xs  uppercase">
@@ -844,7 +844,7 @@ Use these optional options for the Collapse object to set the transition, durati
 
 Use the following methods on the Dismiss object to programmatically manipulate the behaviour.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
       <thead class="bg-neutral-secondary-soft text-heading">
           <tr class="text-xs  uppercase">

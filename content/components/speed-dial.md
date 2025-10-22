@@ -772,7 +772,7 @@ The Speed Dial API from Flowbite can be used to create an object in JavaScript t
 
 Create a new Speed Diual object with the object parameters like the trigger element, the target element, and the other options such as the trigger type.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
@@ -869,7 +869,7 @@ Create a new Speed Diual object with the object parameters like the trigger elem
 
 Use the following options as the third parameter for the Speed Dial object to set the trigger type (hover or click).
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
@@ -937,7 +937,7 @@ Use the following options as the third parameter for the Speed Dial object to se
 
 Use the methods from the Speed Dial object to programmatically show or hide the component from directly JavaScript.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">

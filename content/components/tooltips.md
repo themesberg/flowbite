@@ -156,7 +156,7 @@ The **Tooltip** class from Flowbite can be used to create an object that will sh
 
 Initialize a Tooltip object with the object parameters including the trigger element, the tooltip content element, and extra options to set the positioning and offsets of the tooltip.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
@@ -239,7 +239,7 @@ Initialize a Tooltip object with the object parameters including the trigger ele
 
 Use the following options as the third parameter for the Tooltip class to set the positioning, offset, and the trigger type (hover or click) for the tooltip element.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
@@ -318,7 +318,7 @@ Use the following options as the third parameter for the Tooltip class to set th
 
 Use the methods from the Tooltip object to programmatically show or hide the tooltip from JavaScript.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">

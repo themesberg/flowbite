@@ -21,9 +21,9 @@ Use the following example of a responsive table component to show multiple rows 
 
 {{< example id="default-table-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
-        <thead class="text-sm text-body bg-neutral-secondary-soft border-b border-default">
+        <thead class="text-sm text-body bg-neutral-secondary-soft border-b rounded-base border-default">
             <tr>
                 <th scope="col" class="px-6 py-3 font-medium">
                     Product name
@@ -97,7 +97,7 @@ Use this example to increase the readability of the data sets by alternating the
 
 {{< example id="table-striped-rows-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
         <thead class="bg-neutral-secondary-soft border-b border-default">
             <tr>
@@ -215,7 +215,7 @@ Use this example to increase the readability of the table cells by alternating t
 
 {{< example id="table-striped-columns-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
         <thead class="text-sm text-body border-b border-default">
             <tr>
@@ -315,7 +315,7 @@ Use the `hover:{bg-*}` utility class from Tailwind CSS to change the background 
 
 {{< example id="table-hover-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
         <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
             <tr>
@@ -403,7 +403,7 @@ This example can be used to show the head of the table component with sortable i
 
 {{< example id="table-head-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
         <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
             <tr>
@@ -569,7 +569,7 @@ Improve accessibility by using a caption inside the table as a heading to better
 
 {{< example id="table-caption-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
         <caption class="p-5 text-lg font-medium text-left rtl:text-right text-heading">
             Our products
@@ -733,7 +733,7 @@ Use this example to apply a shadow-sm border to the table component.
 
 {{< example id="table-shadow-example" github="components/tables.md" class="pb-4 overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
         <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
             <tr>
@@ -817,7 +817,7 @@ Use this example where we apply `overflow-x-auto` to enable horizontal scrolling
 
 {{< example id="table-scroll-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
         <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
             <tr>
@@ -1195,7 +1195,7 @@ Use this example to show a search bar that can be used to query through data ins
 
 {{< example id="table-search-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <div class="p-4">
         <label for="input-group-1" class="sr-only">Search</label>
         <div class="relative">
@@ -1385,7 +1385,7 @@ Use this example with a filter bar to select certain data sets inside the table 
 
 {{< example id="table-filter-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <div class="p-4 flex items-center justify-between">
         <label for="input-group-1" class="sr-only">Search</label>
         <div class="relative">
@@ -1593,7 +1593,7 @@ Paginate the table data when using larger data sets based on any given amount of
 
 {{< example id="table-pagination-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
         <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
             <tr>
@@ -1888,7 +1888,7 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
 
 {{< example id="table-checkbox-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
         <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
             <tr>
@@ -2069,7 +2069,7 @@ Use this example of a table where we show a data set of users and showing a prof
 
 {{< example id="table-users-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 p-4">
         <div>
         <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="inline-flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none" type="button">
@@ -2267,7 +2267,7 @@ Get started with this example to show a list of products inside the table and sh
 
 {{< example id="table-products-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
         <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
             <tr>
@@ -2387,7 +2387,7 @@ Get started with this example to show a list of products inside the table and sh
 Use this example to show a modal with a form where you can edit table data by clicking on one of the rows.
 
 {{< example id="table-modal-example" github="components/tables.md" class="overflow-hidden" show_dark=true iframeHeight="640" >}}
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <div class="flex items-center justify-between flex-column md:flex-row flex-wrap space-y-4 md:space-y-0 p-4">
         <div>
             <button id="dropdownDefaultButton2" data-dropdown-toggle="dropdown-2" class="inline-flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none" type="button">
@@ -2639,7 +2639,7 @@ Apply any color to the table element by using the `bg-{color}` and `text-{color}
 
 {{< example id="table-colors-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-fg-brand-subtle">
         <thead class="text-sm text-white bg-brand-strong">
             <tr>
@@ -2757,7 +2757,7 @@ Use this example to apply a different color to every second row inside the table
 
 {{< example id="table-striped-rows-colors-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-fg-brand-subtle">
         <thead class="text-sm text-white bg-brand-strong">
             <tr>
@@ -2875,7 +2875,7 @@ Use this example to apply a different color to every second column inside a colo
 
 {{< example id="table-striped-columns-colors-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-fg-brand-subtle">
         <thead class="text-sm text-white bg-brand">
             <tr>
@@ -2993,7 +2993,7 @@ Use this example to apply a different color to every second row inside the table
 
 {{< example id="table-striped-colors-hover-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
-<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
+<div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-fg-brand-subtle">
         <thead class="text-sm text-white bg-brand border-b border-brand-light">
             <tr>

@@ -418,7 +418,7 @@ The Popover API from Flowbite can be used to create an object that will show a p
 
 Create a new Popover object with the object parameters like the trigger element, the popover content element, and extra options to set the placement and offset.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
@@ -501,7 +501,7 @@ Create a new Popover object with the object parameters like the trigger element,
 
 Use the following options as the third parameter for the Popover object to set the positioning, offset, and the trigger type (hover or click).
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
@@ -591,7 +591,7 @@ Use the following options as the third parameter for the Popover object to set t
 
 Use the methods from the Popover object to programmatically show or hide the popover from directly JavaScript.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">

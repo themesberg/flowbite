@@ -348,7 +348,7 @@ The **Tabs** class from Flowbite can be used to create an object that will enabl
 
 Create a new Tabs object with parameters such as an array of the tab and content elements.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body dark:text-gray-400">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
@@ -431,7 +431,7 @@ Create a new Tabs object with parameters such as an array of the tab and content
 
 Use the following options as the second parameter for the Tabs object to set the appearance of the active tab elements and use callback functions.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body dark:text-gray-400">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
@@ -499,7 +499,7 @@ Use the following options as the second parameter for the Tabs object to set the
 
 Use the methods from the Tabs object to programmatically change the current active tab using JavaScript.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body dark:text-gray-400">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">

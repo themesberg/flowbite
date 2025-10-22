@@ -440,7 +440,7 @@ The **Dismiss** class from Flowbite can be used to create an object that will hi
 
 The parameters for the Dismiss object can be used to programmatically initialize and manipulate the behaviour of the dismissal of the target element.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
       <thead class="bg-neutral-secondary-soft">
           <tr class="text-heading text-xs font-medium uppercase">
@@ -523,7 +523,7 @@ The parameters for the Dismiss object can be used to programmatically initialize
 
 Use these optional options for the Dismiss object to set the transition, duration, and timing function types based on the utility classes from Tailwind CSS.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
   <table class="w-full text-sm text-left text-body0">
       <thead class="bg-neutral-secondary-soft">
           <tr class="text-heading text-xs font-medium uppercase">
@@ -591,7 +591,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
 
 Use the following methods on the Dismiss object to programmatically manipulate the behaviour.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
       <thead class="text-heading bg-neutral-secondary-soft">
           <tr class="text-xs font-medium uppercase">

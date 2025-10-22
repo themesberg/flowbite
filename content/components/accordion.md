@@ -418,7 +418,7 @@ Use the **Accordion** object from Flowbite to create a collection of vertically 
 
 Create a new Accordion object by passing an array of accordion items and an optional options object to customize the styles and add callback functions.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm rtl:text-right text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
@@ -501,7 +501,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
 
 Use the following options as the second parameter for the Accordion object to customize the behaviour, styles, and to set callback functions.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm rtl:text-right text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
@@ -580,7 +580,7 @@ Use the following options as the second parameter for the Accordion object to cu
 
 Use the object methods on the Accordion object to programmatically open, close, or toggle the visibility of a given accordion item.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm rtl:text-right text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">

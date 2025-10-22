@@ -734,7 +734,7 @@ Use the **InputCounter** object from the Flowbite JS API to create a number inpu
 
 Use the object parameters from the InputCounter object to set the target, increment, and decrement elements as well as the options object.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
       <thead class="bg-neutral-secondary-soft text-heading">
           <tr class="text-xs  uppercase">
@@ -831,7 +831,7 @@ Use the object parameters from the InputCounter object to set the target, increm
 
 Use these optional options for the InputCounter object to set the minimum and maximum values of the input field and also to set callback functions for the increment and decrement events.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
       <thead class="bg-neutral-secondary-soft text-heading">
           <tr class="text-xs  uppercase">
@@ -899,7 +899,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
 
 Use the following methods of the InputCounter object to programmatically manipulate the behaviour of the input field.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
       <thead class="bg-neutral-secondary-soft text-heading">
           <tr class="text-xs  uppercase">

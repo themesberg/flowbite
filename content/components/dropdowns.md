@@ -1487,7 +1487,7 @@ The **Dropdown** class from Flowbite can be used to create an object that will s
 
 Initialize a Dropdown object with the object parameters such as the main target dropdown menu, a trigger element (eg. a button) and options to set the placement relative to the trigger element.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
       <thead class="bg-neutral-secondary-soft text-heading">
           <tr class="text-xs font-medium uppercase">
@@ -1570,7 +1570,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
 
 Use the following options as the third parameter for the Dropdown class to set the placement of the dropdown menu.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
       <thead class="bg-neutral-secondary-soft text-heading">
           <tr class="text-xs font-medium uppercase">
@@ -1693,7 +1693,7 @@ Use the following options as the third parameter for the Dropdown class to set t
 
 Use the methods from the Dropdown object to programmatically show or hide the dropdown menu directly from JavaScript.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
       <thead class="bg-neutral-secondary-soft text-heading">
           <tr class="text-xs font-medium uppercase">

@@ -882,7 +882,7 @@ The Drawer API can be used to create an instance of the class, use methods to ma
 
 Initialize a Drawer object with parameters such as the target element and the options object.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
@@ -951,7 +951,7 @@ Initialize a Drawer object with parameters such as the target element and the op
 
 Use the following options for the Drawer object to set the placement, enable or disable the backdrop, enable or disable body scrolling, and more.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
@@ -1074,7 +1074,7 @@ Use the following options for the Drawer object to set the placement, enable or 
 
 Use the following methods on the Drawer object to show, hide or check the visibility.
 
-<div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
+<div class="relative my-10 overflow-x-auto shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
         <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">

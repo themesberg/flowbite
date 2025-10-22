@@ -37,7 +37,7 @@ You can also use our RTL button to switch between LTR and RTL when previewing ou
 
 {{< example id="default-navbar-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="300" >}}
 
-<nav class="bg-primary border-default">
+<nav class="bg-neutral-primary border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="https://flowbite.com/" class="flex items-center">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-7 me-3" alt="Flowbite Logo" />
@@ -48,7 +48,7 @@ You can also use our RTL button to switch between LTR and RTL when previewing ou
         <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-primary">
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
         <li>
           <a href="#" class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
         </li>

@@ -359,7 +359,7 @@ window.addEventListener('load', function() {
                     Text size
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="textSizeDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-72">
+                <div id="textSizeDropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-72">
                     <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="toggleTextSizeButton">
                         <li>
                             <button data-text-size="16px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">16px (Default) 
@@ -395,7 +395,7 @@ window.addEventListener('load', function() {
                     Text color
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="textColorDropdown" class="z-10 hidden w-48 rounded-sm bg-primary-soft p-2 shadow-sm">
+                <div id="textColorDropdown" class="z-10 hidden w-48 rounded-sm bg-neutral-primary-soft p-2 shadow-sm">
                     <div class="grid grid-cols-6 gap-2 group mb-3 items-center p-1.5 rounded hover:bg-tertiary">
                         <input type="color" id="color" value="#e66465" class="border-default-medium
                          border bg-tertiary rounded p-px px-1 w-full h-8 col-span-3" />
@@ -449,7 +449,7 @@ window.addEventListener('load', function() {
                     Font Family
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="fontFamilyDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-48">
+                <div id="fontFamilyDropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-48">
                     <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="toggleFontFamilyButton">
                         <li>
                             <button data-font-family="Inter, ui-sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm">Default
@@ -519,7 +519,7 @@ window.addEventListener('load', function() {
             </div>
     </div>
     <div class="flex items-center gap-2 pt-2 flex-wrap">
-        <button id="typographyDropdownButton" data-dropdown-toggle="typographyDropdown" class="flex items-center justify-center text-body bg-primary-strong border border-default-strong hover:bg-secondary-strongest hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none" type="button">
+        <button id="typographyDropdownButton" data-dropdown-toggle="typographyDropdown" class="flex items-center justify-center text-body bg-neutral-primary-strong border border-default-strong hover:bg-secondary-strongest hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none" type="button">
             Format
             <svg class="w-3.5 h-3.5 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
@@ -527,7 +527,7 @@ window.addEventListener('load', function() {
             <span class="block w-px h-4 bg-quaternary"></span>
         </div>
         <!-- Heading Dropdown -->
-        <div id="typographyDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-72">
+        <div id="typographyDropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-72">
             <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="typographyDropdownButton">
                 <li>
                     <button id="toggleParagraphButton" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Paragraph 
@@ -904,7 +904,7 @@ window.addEventListener('load', function() {
                     Text size
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="textSizeDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-72">
+                <div id="textSizeDropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-72">
                     <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="toggleTextSizeButton">
                         <li>
                             <button data-text-size="16px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm">16px (Default) 
@@ -940,7 +940,7 @@ window.addEventListener('load', function() {
                     Text color
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="textColorDropdown" class="z-10 hidden w-48 rounded-sm bg-primary-soft p-2 shadow-sm">
+                <div id="textColorDropdown" class="z-10 hidden w-48 rounded-sm bg-neutral-primary-soft p-2 shadow-sm">
                     <div class="grid grid-cols-6 gap-2 group mb-3 items-center p-1.5 rounded hover:bg-tertiary">
                         <input type="color" id="color" value="#e66465" class="border-default-medium
                          border bg-tertiary rounded p-px px-1 w-full h-8 col-span-3" />
@@ -994,7 +994,7 @@ window.addEventListener('load', function() {
                     Font Family
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <div id="fontFamilyDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-48">
+                <div id="fontFamilyDropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-48">
                     <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="toggleFontFamilyButton">
                         <li>
                             <button data-font-family="Inter, ui-sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm">Default
@@ -1216,7 +1216,7 @@ window.addEventListener('load', function() {
 <div class="w-full bg-secondary-medium border border-default-medium rounded-base">
     <div class="p-2 border-b border-default-medium">
     <div class="flex items-center gap-2">
-        <button id="typographyDropdownButton" data-dropdown-toggle="typographyDropdown" class="flex items-center justify-center text-body bg-primary-strong border border-default-strong hover:bg-secondary-strongest hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none" type="button">
+        <button id="typographyDropdownButton" data-dropdown-toggle="typographyDropdown" class="flex items-center justify-center text-body bg-neutral-primary-strong border border-default-strong hover:bg-secondary-strongest hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none" type="button">
             Format
             <svg class="w-3.5 h-3.5 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
@@ -1224,7 +1224,7 @@ window.addEventListener('load', function() {
             <span class="block w-px h-4 bg-tertiary"></span>
         </div>
         <!-- Heading Dropdown -->
-        <div id="typographyDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-72">
+        <div id="typographyDropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-72">
             <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="typographyDropdownButton">
                 <li>
                     <button id="toggleParagraphButton" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Paragraph 
@@ -1522,7 +1522,7 @@ window.addEventListener('load', function() {
 <div id="advanced-image-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-sm max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -1651,7 +1651,7 @@ window.addEventListener('load', function() {
 <div id="advanced-video-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-sm max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -2061,7 +2061,7 @@ window.addEventListener('load', function() {
 <div id="cell-attribute-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-sm max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4">
                 <h3 class="text-lg font-medium text-heading">

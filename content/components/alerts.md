@@ -459,7 +459,7 @@ The parameters for the Dismiss object can be used to programmatically initialize
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">targetEl</code>
               </td>
@@ -473,7 +473,7 @@ The parameters for the Dismiss object can be used to programmatically initialize
                   Pass the element object that will be dismissed.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">triggerEl</code>
               </td>
@@ -487,7 +487,7 @@ The parameters for the Dismiss object can be used to programmatically initialize
                   Pass the element object that will trigger the targetEl dismission on click.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">options</code>
               </td>
@@ -501,7 +501,7 @@ The parameters for the Dismiss object can be used to programmatically initialize
                   Pass the options object to set the trigger element, transition, duration, timing classes of the dismiss animation and callback functions.
               </td>
           </tr>
-          <tr class="bg-primary">
+          <tr class="bg-neutral-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">instanceOptions</code>
                 </td>
@@ -539,7 +539,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
           </tr>
       </thead>
       <tbody class="text-body">
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">transition</code>
               </td>
@@ -550,7 +550,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   Use one of the Transition Property utility classes from Tailwind CSS to set transition type for the main element. The default value is <code class="text-fg-brand">transition-opacity</code>.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">duration</code>
               </td>
@@ -561,7 +561,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   Set the duration of the dismissing animation. The default value is <code class="text-fg-brand">300</code> (300 milliseconds).
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">timing</code>
               </td>
@@ -572,7 +572,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
                   Set the transition timing function utility class from Tailwind CSS. The default value is <code class="text-fg-brand">ease-out</code>.
               </td>
           </tr>
-          <tr class="bg-primary">
+          <tr class="bg-neutral-primary">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">onHide</code>
               </td>
@@ -604,7 +604,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">hide()</code>
               </td>
@@ -612,7 +612,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
                   Use this method on the Dismiss object to hide the target element.
               </td>
           </tr>
-          <tr class="bg-primary">
+          <tr class="bg-neutral-primary">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">updateOnHide(callback)</code>
               </td>

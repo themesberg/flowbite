@@ -81,7 +81,7 @@ Get started with this example to show a popover with extra information inside pa
 
 {{< example id="paragraph-popover-example" class="pt-60" github="typography/paragraphs.md" show_dark=true >}}
 <p class="text-body">Due to its central geographic location in Southern Europe, <a href="#" class="text-fg-brand font-medium underline hover:no-underline" data-popover-target="popover-image">Italy</a> has historically been home to myriad peoples and cultures. In addition to the various ancient peoples dispersed throughout what is now modern-day Italy, the most predominant being the Indo-European Italic peoples who gave the peninsula its name, beginning from the classical era, Phoenicians and Carthaginians founded colonies mostly in insular Italy</p>
-<div data-popover id="popover-image" role="tooltip" class="absolute z-10 p-3 invisible inline-block text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-lg shadow-xs opacity-0 w-96">
+<div data-popover id="popover-image" role="tooltip" class="absolute z-10 p-3 invisible inline-block text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-lg shadow-xs opacity-0 w-96">
     <div class="grid grid-cols-5">
         <div class="col-span-3 pe-3">
             <div class="space-y-2">

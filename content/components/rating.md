@@ -256,7 +256,7 @@ Use this component to show a single rating comment and its score alongside other
     <aside>
         <p class="mt-1 text-xs text-body">19 people found this helpful</p>
         <div class="flex items-center mt-3">
-            <button type="button" class="text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none">Helpful</button>
+            <button type="button" class="text-body bg-neutral-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none">Helpful</button>
             <a href="#" class="ps-4 text-sm font-medium text-fg-brand hover:underline border-default ms-4 border-s md:mb-0">Report abuse</a>
         </div>
     </aside>

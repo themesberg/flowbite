@@ -24,7 +24,7 @@ Initialize a new popover by adding the `data-popover-target="{elementId}"` data 
 {{< example id="default-popover-example" class="flex justify-center pt-32" github="components/popover.md" show_dark=true >}}
 <button data-popover-target="popover-default" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Default popover</button>
 
-<div data-popover id="popover-default" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+<div data-popover id="popover-default" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
     <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
         <h3 class="font-medium text-heading">Popover title</h3>
     </div>
@@ -42,7 +42,7 @@ Use this example to show more information about a user profile when hovering ove
 {{< example id="popover-user-profile-example" class="flex justify-center pt-60" github="components/popover.md" show_dark=true >}}
 <button data-popover-target="popover-user-profile" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">User profile</button>
 
-<div data-popover id="popover-user-profile" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+<div data-popover id="popover-user-profile" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
     <div class="p-3">
         <div class="flex items-center justify-between mb-2">
             <a href="#">
@@ -85,7 +85,7 @@ This example can be used to show more information about a company profile.
 {{< example id="popover-company-profile-example" class="flex justify-center pt-80" github="components/popover.md" disable_init_js=true show_dark=true >}}
 <button data-popover-target="popover-company-profile" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Company profile</button>
 
-<div data-popover id="popover-company-profile" role="tooltip" class="absolute z-10 invisible inline-block w-80 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+<div data-popover id="popover-company-profile" role="tooltip" class="absolute z-10 invisible inline-block w-80 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
     <div class="p-3">
         <div class="flex">
             <div class="me-3 shrink-0">
@@ -122,15 +122,15 @@ This example can be used to show more information about a company profile.
                     <a class="flex items-center justify-center w-8 h-8 text-xs font-medium text-heading bg-tertiary border-2 border-buffer-medium rounded-full hover:bg-quaternary" href="#">+3</a>
                 </div>
                 <div class="flex space-x-2">
-                    <button type="button" class="flex items-center justify-center w-full text-body bg-primary-medium border border-default-medium hover:bg-secondary-strong hover:text-heading hover:border-default-strong focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
+                    <button type="button" class="flex items-center justify-center w-full text-body bg-neutral-primary-medium border border-default-medium hover:bg-secondary-strong hover:text-heading hover:border-default-strong focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
                         <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11c.889-.086 1.416-.543 2.156-1.057a22.323 22.323 0 0 0 3.958-5.084 1.6 1.6 0 0 1 .582-.628 1.549 1.549 0 0 1 1.466-.087c.205.095.388.233.537.406a1.64 1.64 0 0 1 .384 1.279l-1.388 4.114M7 11H4v6.5A1.5 1.5 0 0 0 5.5 19v0A1.5 1.5 0 0 0 7 17.5V11Zm6.5-1h4.915c.286 0 .372.014.626.15.254.135.472.332.637.572a1.874 1.874 0 0 1 .215 1.673l-2.098 6.4C17.538 19.52 17.368 20 16.12 20c-2.303 0-4.79-.943-6.67-1.475"/></svg>
                         Like page
                     </button>
-                    <button id="dropdown-button" data-dropdown-toggle="dropdown-menu" data-dropdown-placement="right" type="button" class="flex items-center justify-center text-body bg-primary-medium border border-default-medium hover:bg-secondary-strong hover:text-heading hover:border-default-strong focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base w-9 h-9 shrink-0 focus:outline-none">
+                    <button id="dropdown-button" data-dropdown-toggle="dropdown-menu" data-dropdown-placement="right" type="button" class="flex items-center justify-center text-body bg-neutral-primary-medium border border-default-medium hover:bg-secondary-strong hover:text-heading hover:border-default-strong focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base w-9 h-9 shrink-0 focus:outline-none">
                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M6 12h.01m6 0h.01m5.99 0h.01"/></svg>
                     </button>
                 </div>
-                <div id="dropdown-menu" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+                <div id="dropdown-menu" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
                     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-button">
                         <li>
                             <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Report this page</a>
@@ -160,7 +160,7 @@ Use this example to trigger a popover component with detailed information and an
 {{< example id="popover-image-example" class="flex justify-center pt-72" github="components/popover.md" show_dark=true >}}
 
 <p class="text-body">Due to its central geographic location in Southern Europe, <a href="#" class="text-fg-brand font-medium underline hover:no-underline" data-popover-target="popover-image">Italy</a> has historically been home to myriad peoples and cultures. In addition to the various ancient peoples dispersed throughout what is now modern-day Italy, the most predominant being the Indo-European Italic peoples who gave the peninsula its name, beginning from the classical era, Phoenicians and Carthaginians founded colonies mostly in insular Italy</p>
-<div data-popover id="popover-image" role="tooltip" class="absolute z-10 p-3 invisible inline-block text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-lg shadow-xs opacity-0 w-96">
+<div data-popover id="popover-image" role="tooltip" class="absolute z-10 p-3 invisible inline-block text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-lg shadow-xs opacity-0 w-96">
     <div class="grid grid-cols-5">
         <div class="col-span-3 pe-3">
             <div class="space-y-2">
@@ -186,7 +186,7 @@ Show helpful information inside a popover when hovering over a question mark but
 {{< example id="popover-description-example" class="pb-96" github="components/popover.md" show_dark=true >}}
 
 <p class="flex items-center text-sm text-body">This is just some informational text <button data-popover-target="popover-description" data-popover-placement="bottom-end" type="button"><svg class="w-4 h-4 text-body hover:text-heading ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.529 9.988a2.502 2.502 0 1 1 5 .191A2.441 2.441 0 0 1 12 12.582V14m-.01 3.008H12M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg><span class="sr-only">Show information</span></button></p>
-<div data-popover id="popover-description" role="tooltip" class="absolute z-10 p-3 invisible inline-block text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0 w-72">
+<div data-popover id="popover-description" role="tooltip" class="absolute z-10 p-3 invisible inline-block text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0 w-72">
     <div>
         <h3 class="font-semibold text-heading mb-2">Activity growth - Incremental</h3>
         <p class="mb-4">Report helps navigate cumulative growth of community activities. Ideally, the chart should have a growing trend, as stagnating chart signifies a significant decrease of community activity.</p>
@@ -211,7 +211,7 @@ Show a progress bar with details inside a popover when hovering over a settings 
     Storage status
 </button>
 
-<div data-popover id="popover-description" role="tooltip" class="absolute z-10 p-3 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+<div data-popover id="popover-description" role="tooltip" class="absolute z-10 p-3 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
     <div class="space-y-2.5">
         <h3 class="font-semibold text-heading">Available storage</h3>
         <p>This server has <span class="font-semibold text-heading">30</span> of <span class="font-semibold text-heading">150 GB</span> of block storage remaining.</p>
@@ -241,7 +241,7 @@ Dynamically show the password strength progress when creating a new password pos
     <div class="mb-6">
         <label for="password" class="block mb-2.5 text-sm font-medium text-heading">Your password</label>
         <input data-popover-target="popover-password" data-popover-placement="bottom" type="password" id="password" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" required />
-        <div data-popover id="popover-password" role="tooltip" class="absolute z-10 p-3 invisible inline-block w-72 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+        <div data-popover id="popover-password" role="tooltip" class="absolute z-10 p-3 invisible inline-block w-72 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
             <div>
                 <h3 class="font-semibold text-heading mb-3">Must have at least 6 characters</h3>
                 <div class="grid grid-cols-4 gap-2 mb-3">
@@ -286,7 +286,7 @@ Set the position of the popover component relative to the trigger element by usi
 {{< example id="popover-placement-example" class="flex flex-wrap justify-center py-24 space-x-4" github="components/popover.md" show_dark=true >}}
 <button data-popover-target="popover-top" data-popover-placement="top" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Top popover</button>
 
-<div data-popover id="popover-top" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+<div data-popover id="popover-top" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
     <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
         <h3 class="font-medium text-heading">Popover top</h3>
     </div>
@@ -296,7 +296,7 @@ Set the position of the popover component relative to the trigger element by usi
     <div data-popper-arrow></div>
 </div>
 <button data-popover-target="popover-right" data-popover-placement="right" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Right popover</button>
-<div data-popover id="popover-right" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+<div data-popover id="popover-right" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
     <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
         <h3 class="font-medium text-heading">Popover right</h3>
     </div>
@@ -306,7 +306,7 @@ Set the position of the popover component relative to the trigger element by usi
     <div data-popper-arrow></div>
 </div>
 <button data-popover-target="popover-bottom" data-popover-placement="bottom" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Bottom popover</button>
-<div data-popover id="popover-bottom" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+<div data-popover id="popover-bottom" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
     <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
         <h3 class="font-medium text-heading">Popover bottom</h3>
     </div>
@@ -316,7 +316,7 @@ Set the position of the popover component relative to the trigger element by usi
     <div data-popper-arrow></div>
 </div>
 <button data-popover-target="popover-left" data-popover-placement="left" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Left popover</button>
-<div data-popover id="popover-left" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+<div data-popover id="popover-left" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
     <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
         <h3 class="font-medium text-heading">Popover left</h3>
     </div>
@@ -334,7 +334,7 @@ Manually set the trigger event by adding the `data-popover-trigger="{hover|click
 {{< example id="popover-triggering-example" class="flex justify-center space-x-4 pt-32" github="components/popover.md" show_dark=true >}}
 <button data-popover-target="popover-hover" data-popover-trigger="hover" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Hover popover</button>
 
-<div data-popover id="popover-hover" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+<div data-popover id="popover-hover" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
     <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
         <h3 class="font-medium text-heading">Popover left</h3>
     </div>
@@ -346,7 +346,7 @@ Manually set the trigger event by adding the `data-popover-trigger="{hover|click
 
 <button data-popover-target="popover-click" data-popover-trigger="click" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Click popover</button>
 
-<div data-popover id="popover-click" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+<div data-popover id="popover-click" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
     <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
         <h3 class="font-medium text-heading">Popover left</h3>
     </div>
@@ -364,7 +364,7 @@ Increase or decrease the default offset by adding the `data-popover-offset="{off
 {{< example id="popover-offset-example" class="flex justify-center pt-32" github="components/popover.md" show_dark=true >}}
 <button data-popover-target="popover-offset" data-popover-offset="30" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Offset popover</button>
 
-<div data-popover id="popover-offset" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+<div data-popover id="popover-offset" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
     <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
         <h3 class="font-medium text-heading">Popover left</h3>
     </div>
@@ -382,7 +382,7 @@ Customize the animation of the popover component by using the utility classes fr
 {{< example id="popover-animation-example" class="flex justify-center pt-32" github="components/popover.md" show_dark=true >}}
 <button data-popover-target="popover-animation" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Animated popover</button>
 
-<div data-popover id="popover-animation" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+<div data-popover id="popover-animation" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
     <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
         <h3 class="font-medium text-heading">Popover left</h3>
     </div>
@@ -400,7 +400,7 @@ You can also disable the popover arrow by not including the `data-popper-arrow` 
 {{< example id="popover-disable-arrow-example" class="flex justify-center pt-32" github="components/popover.md" show_dark=true >}}
 <button data-popover-target="popover-no-arrow" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Default popover</button>
 
-<div data-popover id="popover-no-arrow" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-primary-soft border border-default rounded-base shadow-xs opacity-0">
+<div data-popover id="popover-no-arrow" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
     <div class="px-3 py-2 bg-tertiary border-b border-default rounded-t-base">
         <h3 class="font-medium text-heading">Popover left</h3>
     </div>
@@ -437,7 +437,7 @@ Create a new Popover object with the object parameters like the trigger element,
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">targetEl</code>
                 </td>
@@ -451,7 +451,7 @@ Create a new Popover object with the object parameters like the trigger element,
                     Set the popover component as the target element.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">triggerEl</code>
                 </td>
@@ -465,7 +465,7 @@ Create a new Popover object with the object parameters like the trigger element,
                     Set an element to trigger the popover when clicking or hovering (ie. a button, text).
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">options</code>
                 </td>
@@ -479,7 +479,7 @@ Create a new Popover object with the object parameters like the trigger element,
                     Use the options parameter to set the positioning of the popover element, trigger type, offset, and more.
                 </td>
             </tr>
-            <tr class="bg-primary">
+            <tr class="bg-neutral-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">instanceOptions</code>
                 </td>
@@ -517,7 +517,7 @@ Use the following options as the third parameter for the Popover object to set t
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">placement</code>
                 </td>
@@ -528,7 +528,7 @@ Use the following options as the third parameter for the Popover object to set t
                     Set the position of the popover element relative to the trigger element choosing from <code class="text-purple-600 dark:text-purple-400">top|right|bottom|left</code>.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">triggerType</code>
                 </td>
@@ -539,7 +539,7 @@ Use the following options as the third parameter for the Popover object to set t
                     Set the event type that will trigger the popover content choosing between <code class="text-purple-600 dark:text-purple-400">hover|click|none</code>.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">offset</code>
                 </td>
@@ -550,7 +550,7 @@ Use the following options as the third parameter for the Popover object to set t
                     Set the offset distance between the popover and the trigger element.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">onHide</code>
                 </td>
@@ -561,7 +561,7 @@ Use the following options as the third parameter for the Popover object to set t
                     Set a callback function when the popover is hidden.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">onShow</code>
                 </td>
@@ -572,7 +572,7 @@ Use the following options as the third parameter for the Popover object to set t
                     Set a callback function when the popover is shown.
                 </td>
             </tr>
-            <tr class="bg-primary">
+            <tr class="bg-neutral-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">onToggle</code>
                 </td>
@@ -604,7 +604,7 @@ Use the methods from the Popover object to programmatically show or hide the pop
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">show()</code>
                 </td>
@@ -612,7 +612,7 @@ Use the methods from the Popover object to programmatically show or hide the pop
                     Use this method on the Popover object to show the popover content.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">hide()</code>
                 </td>
@@ -620,7 +620,7 @@ Use the methods from the Popover object to programmatically show or hide the pop
                     Use this method on the Popover object to hide the popover content.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">toggle()</code>
                 </td>
@@ -628,7 +628,7 @@ Use the methods from the Popover object to programmatically show or hide the pop
                     Use this method on the Popover object to toggle the visibility of the popover content.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">isVisible()</code>
                 </td>
@@ -636,7 +636,7 @@ Use the methods from the Popover object to programmatically show or hide the pop
                     Use this function to check if the popover is visible or not.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">updateOnShow(callback)</code>
                 </td>
@@ -644,7 +644,7 @@ Use the methods from the Popover object to programmatically show or hide the pop
                     Use this method to set a custom callback function when the popover has been shown.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">updateOnHide(callback)</code>
                 </td>
@@ -652,7 +652,7 @@ Use the methods from the Popover object to programmatically show or hide the pop
                     Use this method to set a custom callback function when the popover has been hidden.
                 </td>
             </tr>
-            <tr class="bg-primary">
+            <tr class="bg-neutral-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">updateOnToggle(callback)</code>
                 </td>

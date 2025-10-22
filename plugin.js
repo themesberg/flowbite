@@ -579,7 +579,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                         minWidth: '16rem',
                     },
                 '.datatable-wrapper thead th .datatable-input': {
-                    backgroundColor: 'var(--color-primary)',
+                    backgroundColor: 'var(--color-neutral-primary)',
                     fontWeight: `${theme('fontWeight.normal')}`,
                     color: 'var(--color-heading)',
                     paddingTop: `.35rem`,
@@ -605,7 +605,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 '.dark .datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
                     {
-                        backgroundColor: 'var(--color-primary)',
+                        backgroundColor: 'var(--color-neutral-primary)',
                         border: `1px solid var(--color-base)`,
                         color: 'white',
                     },
@@ -997,7 +997,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 '.apexcharts-canvas .apexcharts-xaxistooltip:after, .apexcharts-canvas .apexcharts-xaxistooltip:before':
                     {
                         borderBottomColor:
-                            'var(--color-primary-medium) !important',
+                            'var(--color-neutral-primary-medium) !important',
                     },
                 '.apexcharts-canvas .apexcharts-xaxistooltip:after': {
                     borderWidth: '8px !important',
@@ -1026,7 +1026,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                             spacing[3]
                         )} !important`,
                         backgroundColor:
-                            'var(--color-primary-medium) !important',
+                            'var(--color-neutral-primary-medium) !important',
                         color: `var(--color-body) !important`,
                     },
                 '.dark .apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active':

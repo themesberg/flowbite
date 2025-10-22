@@ -313,7 +313,7 @@ Use this example to create a horizontally aligned list of items.
 
 {{< example id="horizontal-list-example" github="typography/lists.md" show_dark=true >}}
 
-<div class="w-full max-w-sm p-6 bg-primary-soft border border-default rounded-base shadow-xs">
+<div class="w-full max-w-sm p-6 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
     <h5 class="mb-4 text-xl font-medium text-body">Standard plan</h5>
     <div class="flex items-baseline text-heading">
         <span class="text-5xl font-extrabold tracking-tight">$49</span>

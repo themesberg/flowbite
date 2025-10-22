@@ -18,7 +18,7 @@ Use these responsive card components to show data entries and information to you
 Use the following simple card component with a title and description.
 
 {{< example id="default-card-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
-<a href="#" class="bg-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs hover:bg-secondary-medium">
+<a href="#" class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs hover:bg-secondary-medium">
     <h5 class="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">Noteworthy technology acquisitions 2021</h5>
     <p class="text-body">Here are the biggest technology acquisitions of 2025 so far, in reverse chronological order.</p>
 </a>
@@ -30,7 +30,7 @@ Use the following example of a card element if you also want to have an action b
 
 {{< example id="card-cta-button-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="bg-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
+<div class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
     <h5 class="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">Noteworthy technology acquisitions 2021</h5>
     <p class="text-body mb-6">Here are the biggest technology acquisitions of 2025 so far, in reverse chronological order.</p>
     <a href="#" class="inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
@@ -46,7 +46,7 @@ This example can be used to show a CTA as a link instead of a button inside the 
 
 {{< example id="card-cta-link-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="bg-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
+<div class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
     <svg class="w-7 h-7 mb-3 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21v-9m3-4H7.5a2.5 2.5 0 1 1 0-5c1.5 0 2.875 1.25 3.875 2.5M14 21v-9m-9 0h14v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-8ZM4 8h16a1 1 0 0 1 1 1v3H3V9a1 1 0 0 1 1-1Zm12.155-5c-3 0-5.5 5-5.5 5h5.5a2.5 2.5 0 0 0 0-5Z"/></svg>
     <a href="#">
         <h5 class="mb-2 text-2xl font-semibold tracking-tight text-heading">Need a help in Claim?</h5>
@@ -65,7 +65,7 @@ You can use the following example of a card element with an image for blog posts
 
 {{< example id="card-image-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="bg-primary-soft block max-w-sm border border-default rounded-base shadow-xs">
+<div class="bg-neutral-primary-soft block max-w-sm border border-default rounded-base shadow-xs">
     <a href="#">
         <img class="rounded-t-base" src="/docs/images/blog/image-1.jpg" alt="" />
     </a>
@@ -91,7 +91,7 @@ You can use the following example of a card element with an image for blog posts
 
 {{< example id="card-image-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="bg-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
+<div class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
     <a href="#">
         <img class="rounded-base" src="/docs/images/blog/image-1.jpg" alt="" />
     </a>
@@ -111,7 +111,7 @@ You can use the following example of a card element with an image for blog posts
 If you want to spice up your cards you can use the following card which has its child elements aligned horizontally.
 
 {{< example id="card-horizontal-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
-<a href="#" class="flex flex-col items-center bg-primary-soft p-6 border border-default rounded-base shadow-xs md:flex-row md:max-w-xl md:flex-row md:max-w-xl">
+<a href="#" class="flex flex-col items-center bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs md:flex-row md:max-w-xl md:flex-row md:max-w-xl">
     <img class="object-cover w-full rounded-base h-64 md:h-auto md:w-48 mb-4 md:mb-0" src="/docs/images/blog/image-4.jpg" alt="">
     <div class="flex flex-col justify-between md:p-4 leading-normal">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-heading">Streamlining your design process today.</h5>
@@ -132,13 +132,13 @@ Use this user profile card example if you want to show a dropdown menu and butto
 
 {{< example id="card-user-profile-example" class="flex flex-wrap justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="relative bg-primary-soft max-w-xs w-full p-6 border border-default rounded-base shadow-xs">
-        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="absolute top-2 end-2 text-body hover:text-heading bg-primary-soft box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
+<div class="relative bg-neutral-primary-soft max-w-xs w-full p-6 border border-default rounded-base shadow-xs">
+        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="absolute top-2 end-2 text-body hover:text-heading bg-neutral-primary-soft box-border border border-transparent hover:bg-tertiary focus:ring-4 focus:ring-tertiary rounded-base p-1.5 focus:outline-none" type="button">
             <span class="sr-only">Open dropdown</span>
             <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M6 12h.01m6 0h.01m5.99 0h.01"/></svg>
         </button>
         <!-- Dropdown menu -->
-        <div id="dropdown" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-36 block hidden">
+        <div id="dropdown" class="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-36 block hidden">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownButton">
                 <li>
                     <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Edit</a>
@@ -174,7 +174,7 @@ Use this card example where you can add form input elements that can be used for
 
 {{< example id="card-form-inputs-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="w-full max-w-sm bg-primary-soft p-6 border border-default rounded-base shadow-xs">
+<div class="w-full max-w-sm bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs">
     <form action="#">
         <h5 class="text-xl font-semibold text-heading mb-6">Sign in to our platform</h5>
         <div class="mb-4">
@@ -204,7 +204,7 @@ Use this card for your e-commerce websites and show information about the produc
 
 {{< example id="card-ecommerce-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="w-full max-w-sm bg-primary-soft p-6 border border-default rounded-base shadow-xs">
+<div class="w-full max-w-sm bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs">
     <a href="#">
         <img class="rounded-base mb-6" src="/docs/images/products/apple-watch.png" alt="product image" />
     </a>
@@ -239,7 +239,7 @@ Use this CTA card example to encourage your users to visit a certain page such a
 
 {{< example id="card-cta-example" github="components/card.md" show_dark=true >}}
 
-<div class="w-full text-center bg-primary-soft p-6 border border-default rounded-base shadow-xs">
+<div class="w-full text-center bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs">
     <h5 class="mb-3 text-2xl tracking-tight font-semibold text-heading">Work fast from anywhere</h5>
     <p class="mb-6 text-base text-body sm:text-lg">Stay up to date and move work forward with Flowbite on iOS & Android. <br>Download the app today.</p>
     <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
@@ -267,7 +267,7 @@ Use this example of a card component with navigation tabs that can change the co
 
 {{< example id="card-nav-tabs-example" github="components/card.md" show_dark=true >}}
 
-<div class="w-full bg-primary border border-default rounded-base shadow-xs">
+<div class="w-full bg-neutral-primary border border-default rounded-base shadow-xs">
     <ul class="flex flex-wrap text-sm font-medium text-center text-body bg-secondary-soft border-b border-default rounded-t-base" id="defaultTab" data-tabs-toggle="#defaultTabContent" role="tablist">
         <li class="me-2">
             <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true" class="inline-block p-4 text-fg-brand rounded-ss-base hover:bg-tertiary">About</button>
@@ -336,7 +336,7 @@ Use this example of a card component to show tabs that span the full width of th
 
 {{< example id="card-full-width-tabs-example" github="components/card.md" show_dark=true >}}
 
-<div class="w-full bg-primary border border-default rounded-base shadow-xs">
+<div class="w-full bg-neutral-primary border border-default rounded-base shadow-xs">
     <div class="sm:hidden">
         <label for="tabs" class="sr-only">Select tab</label>
         <select id="tabs" class="bg-secondary-soft border-0 border-b border-default text-heading text-sm rounded-t-base focus:ring-brand block w-full p-2.5">
@@ -396,7 +396,7 @@ Use this example of a card component to show tabs that span the full width of th
             </ul>
         </div>
         <div class="hidden p-4 rounded-base" id="faq" role="tabpanel" aria-labelledby="faq-tab">
-            <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-primary text-heading" data-inactive-classes="text-body">
+            <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-neutral-primary text-heading" data-inactive-classes="text-body">
               <h2 id="accordion-flush-heading-1">
                 <button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-body border-b border-default gap-3" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
                   <span>What is Flowbite?</span>
@@ -450,7 +450,7 @@ Use this card example if you want to show a list of data:
 
 {{< example id="card-list-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="w-full max-w-sm p-6 bg-primary-soft border border-default rounded-base shadow-xs">
+<div class="w-full max-w-sm p-6 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
     <div class="flex items-center justify-between mb-4">
         <h5 class="text-xl font-semibold leading-none text-heading">Latest Customers</h5>
         <a href="#" class="font-medium text-fg-brand hover:underline">View all</a>
@@ -558,7 +558,7 @@ Show detailed information to potential customers about your product's pricing pl
 
 {{< example id="card-pricing-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="w-full max-w-sm p-6 bg-primary-soft border border-default rounded-base shadow-xs">
+<div class="w-full max-w-sm p-6 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
     <h5 class="mb-4 text-xl font-medium text-body">Standard plan</h5>
     <div class="flex items-baseline text-heading">
         <span class="text-5xl font-extrabold tracking-tight">$49</span>
@@ -604,7 +604,7 @@ Use this example to split cards into multiple sections such as for testimonials 
 
 {{< example id="card-testimonial-example" github="components/card.md" show_dark=true >}}
 
-<div class="grid mb-8 bg-primary-soft border border-default rounded-base shadow-xs md:mb-12 md:grid-cols-2">
+<div class="grid mb-8 bg-neutral-primary-soft border border-default rounded-base shadow-xs md:mb-12 md:grid-cols-2">
     <figure class="flex flex-col items-center justify-center p-8 text-center border-b border-default rounded-t-base md:rounded-t-none md:rounded-ss-base md:border-e">
         <blockquote class="max-w-2xl mx-auto mb-4 text-body lg:mb-8">
             <h3 class="text-lg font-semibold text-heading">Very easy this was to integrate</h3>
@@ -666,7 +666,7 @@ Use this web3 card component to show a list of applications that you can use to 
 
 {{< example id="card-crypto-example" class="flex justify-center" github="components/card.md" show_dark=true >}}
 
-<div class="w-full max-w-sm p-4 sm:p-6 bg-primary-soft border border-default rounded-base shadow-xs">
+<div class="w-full max-w-sm p-4 sm:p-6 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
     <h5 class="mb-2 text-base md:text-xl font-semibold text-heading">Connect wallet</h5>
     <p class="text-body">Connect with one of our available wallet providers or create a new one.</p>
     <ul class="my-6 space-y-3">
@@ -674,7 +674,7 @@ Use this web3 card component to show a list of applications that you can use to 
             <a href="#" class="flex items-center p-3 text-lg font-semibold text-heading rounded-base bg-secondary-medium hover:bg-tertiary group">
                 <svg aria-hidden="true" class="h-4" viewBox="0 0 40 38" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M39.0728 0L21.9092 12.6999L25.1009 5.21543L39.0728 0Z" fill="#E17726"/><path d="M0.966797 0.0151367L14.9013 5.21656L17.932 12.7992L0.966797 0.0151367Z" fill="#E27625"/><path d="M32.1656 27.0093L39.7516 27.1537L37.1004 36.1603L27.8438 33.6116L32.1656 27.0093Z" fill="#E27625"/><path d="M7.83409 27.0093L12.1399 33.6116L2.89876 36.1604L0.263672 27.1537L7.83409 27.0093Z" fill="#E27625"/><path d="M17.5203 10.8677L17.8304 20.8807L8.55371 20.4587L11.1924 16.4778L11.2258 16.4394L17.5203 10.8677Z" fill="#E27625"/><path d="M22.3831 10.7559L28.7737 16.4397L28.8067 16.4778L31.4455 20.4586L22.1709 20.8806L22.3831 10.7559Z" fill="#E27625"/><path d="M12.4115 27.0381L17.4768 30.9848L11.5928 33.8257L12.4115 27.0381Z" fill="#E27625"/><path d="M27.5893 27.0376L28.391 33.8258L22.5234 30.9847L27.5893 27.0376Z" fill="#E27625"/><path d="M22.6523 30.6128L28.6066 33.4959L23.0679 36.1282L23.1255 34.3884L22.6523 30.6128Z" fill="#D5BFB2"/><path d="M17.3458 30.6143L16.8913 34.3601L16.9286 36.1263L11.377 33.4961L17.3458 30.6143Z" fill="#D5BFB2"/><path d="M15.6263 22.1875L17.1822 25.4575L11.8848 23.9057L15.6263 22.1875Z" fill="#233447"/><path d="M24.3739 22.1875L28.133 23.9053L22.8184 25.4567L24.3739 22.1875Z" fill="#233447"/><path d="M12.8169 27.0049L11.9606 34.0423L7.37109 27.1587L12.8169 27.0049Z" fill="#CC6228"/><path d="M27.1836 27.0049L32.6296 27.1587L28.0228 34.0425L27.1836 27.0049Z" fill="#CC6228"/><path d="M31.5799 20.0605L27.6165 24.0998L24.5608 22.7034L23.0978 25.779L22.1387 20.4901L31.5799 20.0605Z" fill="#CC6228"/><path d="M8.41797 20.0605L17.8608 20.4902L16.9017 25.779L15.4384 22.7038L12.3988 24.0999L8.41797 20.0605Z" fill="#CC6228"/><path d="M8.15039 19.2314L12.6345 23.7816L12.7899 28.2736L8.15039 19.2314Z" fill="#E27525"/><path d="M31.8538 19.2236L27.2061 28.2819L27.381 23.7819L31.8538 19.2236Z" fill="#E27525"/><path d="M17.6412 19.5088L17.8217 20.6447L18.2676 23.4745L17.9809 32.166L16.6254 25.1841L16.625 25.1119L17.6412 19.5088Z" fill="#E27525"/><path d="M22.3562 19.4932L23.3751 25.1119L23.3747 25.1841L22.0158 32.1835L21.962 30.4328L21.75 23.4231L22.3562 19.4932Z" fill="#E27525"/><path d="M27.7797 23.6011L27.628 27.5039L22.8977 31.1894L21.9414 30.5138L23.0133 24.9926L27.7797 23.6011Z" fill="#F5841F"/><path d="M12.2373 23.6011L16.9873 24.9926L18.0591 30.5137L17.1029 31.1893L12.3723 27.5035L12.2373 23.6011Z" fill="#F5841F"/><path d="M10.4717 32.6338L16.5236 35.5013L16.4979 34.2768L17.0043 33.8323H22.994L23.5187 34.2753L23.48 35.4989L29.4935 32.641L26.5673 35.0591L23.0289 37.4894H16.9558L13.4197 35.0492L10.4717 32.6338Z" fill="#C0AC9D"/><path d="M22.2191 30.231L23.0748 30.8354L23.5763 34.8361L22.8506 34.2234H17.1513L16.4395 34.8485L16.9244 30.8357L17.7804 30.231H22.2191Z" fill="#161616"/><path d="M37.9395 0.351562L39.9998 6.53242L38.7131 12.7819L39.6293 13.4887L38.3895 14.4346L39.3213 15.1542L38.0875 16.2779L38.8449 16.8264L36.8347 19.1742L28.5894 16.7735L28.5179 16.7352L22.5762 11.723L37.9395 0.351562Z" fill="#763E1A"/><path d="M2.06031 0.351562L17.4237 11.723L11.4819 16.7352L11.4105 16.7735L3.16512 19.1742L1.15488 16.8264L1.91176 16.2783L0.678517 15.1542L1.60852 14.4354L0.350209 13.4868L1.30098 12.7795L0 6.53265L2.06031 0.351562Z" fill="#763E1A"/><path d="M28.1861 16.2485L36.9226 18.7921L39.7609 27.5398L32.2728 27.5398L27.1133 27.6049L30.8655 20.2912L28.1861 16.2485Z" fill="#F5841F"/><path d="M11.8139 16.2485L9.13399 20.2912L12.8867 27.6049L7.72971 27.5398H0.254883L3.07728 18.7922L11.8139 16.2485Z" fill="#F5841F"/><path d="M25.5283 5.17383L23.0847 11.7736L22.5661 20.6894L22.3677 23.4839L22.352 30.6225H17.6471L17.6318 23.4973L17.4327 20.6869L16.9139 11.7736L14.4707 5.17383H25.5283Z" fill="#F5841F"/></svg>
                 <span class="flex-1 ms-3 whitespace-nowrap">MetaMask</span>
-                <span class="bg-primary-soft border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Popular</span>
+                <span class="bg-neutral-primary-soft border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Popular</span>
             </a>
         </li>
         <li>

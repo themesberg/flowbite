@@ -19,7 +19,7 @@ Here's an example of a list group that you can use right away.
 
 {{< example id="default-list-group-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
-<ul class="w-48 text-sm font-medium text-heading bg-primary-soft border border-default rounded-base">
+<ul class="w-48 text-sm font-medium text-heading bg-neutral-primary-soft border border-default rounded-base">
     <li class="w-full px-4 py-2 border-b border-default rounded-t-lg">Profile</li>
     <li class="w-full px-4 py-2 border-b border-default">Settings</li>
     <li class="w-full px-4 py-2 border-b border-default">Messages</li>
@@ -33,7 +33,7 @@ You can also display a series of links inside the list group element.
 
 {{< example id="list-group-links-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
-<div class="w-48 text-sm font-medium text-heading bg-primary-soft border border-default rounded-base">
+<div class="w-48 text-sm font-medium text-heading bg-neutral-primary-soft border border-default rounded-base">
     <a href="#" aria-current="true" class="block w-full px-4 py-2 text-fg-brand bg-brand-softer border-b border-default rounded-t-base cursor-pointer">
         Profile
     </a>
@@ -55,7 +55,7 @@ It is also possible to display a list of button element inside the list group co
 
 {{< example id="list-group-buttons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
-<div class="w-48 text-sm font-medium text-heading bg-primary-soft border border-default rounded-base">
+<div class="w-48 text-sm font-medium text-heading bg-neutral-primary-soft border border-default rounded-base">
     <button aria-current="true" type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right text-fg-brand bg-brand-softer border-b border-default rounded-t-base cursor-pointer focus:outline-none">
         Profile
     </button>
@@ -77,7 +77,7 @@ Use the following example to create a list of buttons as a menu together with [S
 
 {{< example id="list-group-icons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
-<div class="w-48 text-sm font-medium text-heading bg-primary-soft border border-default rounded-base">
+<div class="w-48 text-sm font-medium text-heading bg-neutral-primary-soft border border-default rounded-base">
     <a href="#" aria-current="true" class="flex items-center w-full px-4 py-2 text-fg-brand bg-brand-softer border-b border-default rounded-t-base cursor-pointer">
         <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
         Profile
@@ -104,7 +104,7 @@ Use the following example to create a list of buttons as a menu together with [S
 
 {{< example id="list-group-icons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
-<div class="w-72 bg-primary-soft border border-default rounded-base shadow-xs">
+<div class="w-72 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
     <ul role="list" class="space-y-4 p-6">
         <li class="flex items-center">
             <svg class="w-5 h-5 shrink-0 text-fg-brand me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
@@ -144,7 +144,7 @@ Use the following example to create a list of buttons as a menu together with [S
 
 {{< example id="list-group-icons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
-<div class="w-96 bg-primary-soft border border-default rounded-base shadow-xs">
+<div class="w-96 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
     <ul role="list" class="space-y-3 p-6 divide-y divide-default">
         <li class="flex items-center justify-between pb-3">
             <div class="flex items-center text-body">
@@ -226,7 +226,7 @@ Use the following example to create a list of buttons as a menu together with [S
 
 {{< example id="list-group-icons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
-<div class="w-full max-w-sm p-6 bg-primary-soft border border-default rounded-base shadow-xs">
+<div class="w-full max-w-sm p-6 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
     <h5 class="text-xl font-semibold text-heading mb-6">Latest users</h5>
     <div class="flow-root">
         <ul role="list" class="divide-y divide-default">

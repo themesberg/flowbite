@@ -45,7 +45,7 @@ Make sure that in addition to the HTML markup you also copy the JavaScript code 
 
 Use this example to show table data with default sorting and pagination functionalities.
 
-{{< example id="default-datatable-example" class="flex justify-center bg-primary" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
+{{< example id="default-datatable-example" class="flex justify-center bg-neutral-primary" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("default-table") && typeof simpleDatatables.DataTable !== 'undefined') {
     const dataTable = new simpleDatatables.DataTable("#default-table", {
         searchable: false,
@@ -225,7 +225,7 @@ if (document.getElementById("default-table") && typeof simpleDatatables.DataTabl
 
 Set the `searchable` option to `true` to enable the search functionality for all table data.
 
-{{< example id="search-datatable-example" class="flex justify-center bg-primary" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
+{{< example id="search-datatable-example" class="flex justify-center bg-neutral-primary" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("search-table") && typeof simpleDatatables.DataTable !== 'undefined') {
     const dataTable = new simpleDatatables.DataTable("#search-table", {
         searchable: true,
@@ -448,7 +448,7 @@ if (document.getElementById("search-table") && typeof simpleDatatables.DataTable
 
 To enable filtering data based on a search query for each column you need to copy the custom code from the JavaScript tab and the HTML structure of the table. Enabling search for each individual data column is an advanced way of letting users browse complex data.
 
-{{< example id="filter-datatable-example" class="flex justify-center bg-primary" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
+{{< example id="filter-datatable-example" class="flex justify-center bg-neutral-primary" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable !== 'undefined') {
     const dataTable = new simpleDatatables.DataTable("#filter-table", {
         tableRender: (_data, table, type) => {
@@ -803,7 +803,7 @@ if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable
 
 By setting the value `sortable` to `true` you'll enable all data rows from the datatable to be sortable by clicking on the table column heading. You can also disable it by setting the same option to `false`.
 
-{{< example id="sorting-datatable-example" class="flex justify-center bg-primary" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
+{{< example id="sorting-datatable-example" class="flex justify-center bg-neutral-primary" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("sorting-table") && typeof simpleDatatables.DataTable !== 'undefined') {
     const dataTable = new simpleDatatables.DataTable("#sorting-table", {
         searchable: false,
@@ -980,7 +980,7 @@ Pagination is enabled by default for all datatables from Flowbite, however, you 
 
 You can also set the `perPageSelect` option to set the selection options of the table.
 
-{{< example id="pagination-datatable-example" class="flex justify-center bg-primary" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
+{{< example id="pagination-datatable-example" class="flex justify-center bg-neutral-primary" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("pagination-table") && typeof simpleDatatables.DataTable !== 'undefined') {
     const dataTable = new simpleDatatables.DataTable("#pagination-table", {
         paging: true,
@@ -1220,7 +1220,7 @@ Use this example to enable the selection of rows by clicking anywhere one of the
 
 Use the `datatable.selectrow` event to write your own code and get the data from the selected table row.
 
-{{< example id="selection-datatable-example" class="flex justify-center bg-primary" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
+{{< example id="selection-datatable-example" class="flex justify-center bg-neutral-primary" github="plugins/datatables.md" show_dark=true datatables=true disable_init_js=true javascript=`
 if (document.getElementById("selection-table") && typeof simpleDatatables.DataTable !== 'undefined') {
 
     let multiSelect = true;
@@ -1511,7 +1511,7 @@ if (document.getElementById("export-table") && typeof simpleDatatables.DataTable
                         "<select class='" + options.classes.selector + "'></select> " + options.labels.perPage +
                     "</label>" +
                 "</div>" : ""
-            ) + "<button id='exportDropdownButton' type='button' class='flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 sm:w-auto'>" +
+            ) + "<button id='exportDropdownButton' type='button' class='flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-neutral-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 sm:w-auto'>" +
             "Export as" +
             "<svg class='-me-0.5 ms-1.5 h-4 w-4' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'>" +
                 "<path stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m19 9-7 7-7-7' />" +

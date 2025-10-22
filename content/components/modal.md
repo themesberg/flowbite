@@ -37,7 +37,7 @@ If you want to toggle the visibility, show, or hide the modal you can use the fo
 <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-2xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -82,7 +82,7 @@ Use the `data-modal-backdrop="static"` data attribute to prevent the modal from 
 <div id="static-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-2xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -123,7 +123,7 @@ Toggle modal
 
 <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
                 <button type="button" class="absolute top-3 end-2.5 text-body bg-transparent hover:bg-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center" data-modal-hide="popup-modal">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
                     <span class="sr-only">Close modal</span>
@@ -158,7 +158,7 @@ Use this modal example with form input element to receive information from your 
 <div id="authentication-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -209,7 +209,7 @@ Use this example of a modal to use within CRUD (Create, Read, Update, Delete) op
 <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -274,7 +274,7 @@ This example can be used to show a list of options to your users by using advanc
 <div id="select-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -291,7 +291,7 @@ This example can be used to show a list of options to your users by using advanc
                 <ul class="space-y-4 mb-4">
                     <li>
                         <input type="radio" id="job-1" name="job" value="job-1" class="hidden peer" required />
-                        <label for="job-1" class="inline-flex items-center w-full p-5 text-body bg-primary-soft border-1 border-default rounded-base cursor-pointer peer-checked:hover:bg-brand-softer peer-checked:border-brand-subtle peer-checked:bg-brand-softer hover:bg-secondary-medium peer-checked:text-fg-brand-strong">
+                        <label for="job-1" class="inline-flex items-center w-full p-5 text-body bg-neutral-primary-soft border-1 border-default rounded-base cursor-pointer peer-checked:hover:bg-brand-softer peer-checked:border-brand-subtle peer-checked:bg-brand-softer hover:bg-secondary-medium peer-checked:text-fg-brand-strong">
                             <div class="flex items-center justify-center w-9 h-9 rounded bg-brand-soft text-fg-brand-strong">
                                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M7.111 20A3.111 3.111 0 0 1 4 16.889v-12C4 4.398 4.398 4 4.889 4h4.444a.89.89 0 0 1 .89.889v12A3.111 3.111 0 0 1 7.11 20Zm0 0h12a.889.889 0 0 0 .889-.889v-4.444a.889.889 0 0 0-.889-.89h-4.389a.889.889 0 0 0-.62.253l-3.767 3.665a.933.933 0 0 0-.146.185c-.868 1.433-1.581 1.858-3.078 2.12Zm0-3.556h.009m7.933-10.927 3.143 3.143a.889.889 0 0 1 0 1.257l-7.974 7.974v-8.8l3.574-3.574a.889.889 0 0 1 1.257 0Z"/></svg>
                             </div>                           
@@ -304,7 +304,7 @@ This example can be used to show a list of options to your users by using advanc
                     </li>
                     <li>
                         <input type="radio" id="job-2" name="job" value="job-2" class="hidden peer">
-                        <label for="job-2" class="inline-flex items-center justify-between w-full p-5 text-body bg-primary-soft border-1 border-default rounded-base cursor-pointer peer-checked:hover:bg-brand-softer peer-checked:border-brand-subtle peer-checked:bg-brand-softer hover:bg-secondary-medium peer-checked:text-fg-brand-strong">
+                        <label for="job-2" class="inline-flex items-center justify-between w-full p-5 text-body bg-neutral-primary-soft border-1 border-default rounded-base cursor-pointer peer-checked:hover:bg-brand-softer peer-checked:border-brand-subtle peer-checked:bg-brand-softer hover:bg-secondary-medium peer-checked:text-fg-brand-strong">
                             <div class="flex items-center justify-center w-9 h-9 rounded bg-brand-soft text-fg-brand-strong">
                                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"/></svg>
                             </div> 
@@ -317,7 +317,7 @@ This example can be used to show a list of options to your users by using advanc
                     </li>
                     <li>
                         <input type="radio" id="job-3" name="job" value="job-3" class="hidden peer">
-                        <label for="job-3" class="inline-flex items-center justify-between w-full p-5 text-body bg-primary-soft border-1 border-default rounded-base cursor-pointer peer-checked:hover:bg-brand-softer peer-checked:border-brand-subtle peer-checked:bg-brand-softer hover:bg-secondary-medium peer-checked:text-fg-brand-strong">
+                        <label for="job-3" class="inline-flex items-center justify-between w-full p-5 text-body bg-neutral-primary-soft border-1 border-default rounded-base cursor-pointer peer-checked:hover:bg-brand-softer peer-checked:border-brand-subtle peer-checked:bg-brand-softer hover:bg-secondary-medium peer-checked:text-fg-brand-strong">
                             <div class="flex items-center justify-center w-9 h-9 rounded bg-brand-soft text-fg-brand-strong">
                                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 6c0 1.657-3.134 3-7 3S5 7.657 5 6m14 0c0-1.657-3.134-3-7-3S5 4.343 5 6m14 0v6M5 6v6m0 0c0 1.657 3.134 3 7 3s7-1.343 7-3M5 12v6c0 1.657 3.134 3 7 3s7-1.343 7-3v-6"/></svg>
                             </div> 
@@ -354,7 +354,7 @@ Use this example to show a timeline of events to your users with a modal. This c
 <div id="timeline-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-lg max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -424,7 +424,7 @@ This modal can be used to show the progress of a task to your users. It can be u
 <div id="progress-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
                 <button type="button" class="absolute top-3 end-2.5 text-body bg-transparent hover:bg-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center" data-modal-hide="timeline-modal">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
                     <span class="sr-only">Close modal</span>
@@ -466,7 +466,7 @@ Use this web3 modal component to show crypto wallet connection options like Meta
 <div id="crypto-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -551,7 +551,7 @@ You can use four different modal sizing options starting from small to extra lar
 <div id="small-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-md max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -584,7 +584,7 @@ You can use four different modal sizing options starting from small to extra lar
 <div id="medium-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-lg max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -617,7 +617,7 @@ You can use four different modal sizing options starting from small to extra lar
 <div id="large-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-4xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -650,7 +650,7 @@ You can use four different modal sizing options starting from small to extra lar
 <div id="extralarge-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-7xl max-h-full">
          <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -708,7 +708,7 @@ The default position is the center of the page.
 <div id="top-left-modal" data-modal-placement="top-left" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-2xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -741,7 +741,7 @@ The default position is the center of the page.
 <div id="top-right-modal" data-modal-placement="top-right" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-2xl max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -774,7 +774,7 @@ The default position is the center of the page.
 <div id="bottom-left-modal" data-modal-placement="bottom-left" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-2xl max-h-full">
          <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -807,7 +807,7 @@ The default position is the center of the page.
 <div id="bottom-right-modal" data-modal-placement="bottom-right" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-2xl max-h-full">
          <!-- Modal content -->
-        <div class="relative bg-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
             <!-- Modal header -->
             <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                 <h3 class="text-lg font-medium text-heading">
@@ -873,7 +873,7 @@ Initialize a Modal object with parameters such as the modal element and the opti
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">targetEl</code>
                 </td>
@@ -887,7 +887,7 @@ Initialize a Modal object with parameters such as the modal element and the opti
                     Set the main modal element as a JavaScript object.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">options</code>
                 </td>
@@ -901,7 +901,7 @@ Initialize a Modal object with parameters such as the modal element and the opti
                     Use the options parameter to set the default state of the modal, placement, and animations.
                 </td>
             </tr>
-            <tr class="bg-primary">
+            <tr class="bg-neutral-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">instanceOptions</code>
                 </td>
@@ -939,7 +939,7 @@ Use the following options as the second parameter for the Modal object to set th
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">placement</code>
                 </td>
@@ -950,7 +950,7 @@ Use the following options as the second parameter for the Modal object to set th
                     Set the position of the modal element relative to the document body by choosing one of the values from <code class="text-fg-brand">{top|center|right}-{left|center|right}</code>. (eg. top-left or bottom-right)
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">backdrop</code>
                 </td>
@@ -961,7 +961,7 @@ Use the following options as the second parameter for the Modal object to set th
                     Choose between <code class="text-fg-brand">static</code> or <code class="text-fg-brand">dynamic</code> to prevent closing the modal when clicking outside.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">backdropClasses</code>
                 </td>
@@ -972,7 +972,7 @@ Use the following options as the second parameter for the Modal object to set th
                     Set a string of Tailwind CSS classes for the backdrop element (eg. <code class="text-fg-brand">'bg-blue-500 dark:bg-blue-400'</code>.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">closable</code>
                 </td>
@@ -983,7 +983,7 @@ Use the following options as the second parameter for the Modal object to set th
                     Set to <code class="text-fg-brand">false</code> to disable closing the modal on hitting ESC or clicking on the backdrop.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">onHide</code>
                 </td>
@@ -994,7 +994,7 @@ Use the following options as the second parameter for the Modal object to set th
                     Set a callback function when the modal has been hidden.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">onShow</code>
                 </td>
@@ -1005,7 +1005,7 @@ Use the following options as the second parameter for the Modal object to set th
                     Set a callback function when the modal has been shown.
                 </td>
             </tr>
-            <tr class="bg-primary">
+            <tr class="bg-neutral-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">onToggle</code>
                 </td>
@@ -1037,7 +1037,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">toggle()</code>
                 </td>
@@ -1045,7 +1045,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use the toggle function on the Modal object to toggle the modal element's visibility.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">show()</code>
                 </td>
@@ -1053,7 +1053,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use the show function on the Modal object to show the modal element.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">hide()</code>
                 </td>
@@ -1061,7 +1061,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use the hide function on the Modal object to hide the modal element.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">isHidden()</code>
                 </td>
@@ -1069,7 +1069,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use this function to check if the modal is hidden.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">isVisible()</code>
                 </td>
@@ -1077,7 +1077,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use this function to check if the modal is visible.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">updateOnShow(callback)</code>
                 </td>
@@ -1085,7 +1085,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use this method to set a custom callback function when the modal has been shown.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">updateOnHide(callback)</code>
                 </td>
@@ -1093,7 +1093,7 @@ Use the methods from the Modal object to show, hide, and toggle the visibility d
                     Use this method to set a custom callback function when the modal has been closed.
                 </td>
             </tr>
-            <tr class="bg-primary">
+            <tr class="bg-neutral-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">updateOnToggle(callback)</code>
                 </td>

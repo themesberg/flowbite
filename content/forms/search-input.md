@@ -49,7 +49,7 @@ Use this search component with a dropdown to let your users select a category in
             All categories
             <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+        <div id="dropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-button">
                 <li>
                     <a href="#" class="block p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Shopping</a>
@@ -111,7 +111,7 @@ Use this example where you can select a country in which you want to search for 
             USA
             <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown-location" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+        <div id="dropdown-location" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-button-location">
                 <li>
                     <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
@@ -236,7 +236,7 @@ Get started with this example if you would like to enable voice search for your 
             http + https
             <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown-links" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-36">
+        <div id="dropdown-links" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-36">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-button-links">
                 <li>
                     <a href="#" class="block p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">http</a>
@@ -254,7 +254,7 @@ Get started with this example if you would like to enable voice search for your 
             Subdomain
             <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown-domains" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+        <div id="dropdown-domains" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-button-links">
                 <li>
                     <a href="#" class="block p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Subdomain</a>

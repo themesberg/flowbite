@@ -156,7 +156,7 @@ window.addEventListener('load', function () {
     <div class="relative">
         <label for="npm-install-copy-text" class="sr-only">Label</label>
         <input id="npm-install-copy-text" type="text" class="col-span-6 bg-secondary-medium border border-default-medium text-body text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" value="npm install flowbite" disabled readonly>
-        <button data-copy-to-clipboard-target="npm-install-copy-text" class="absolute flex items-center end-1.5 top-1/2 -translate-y-1/2 text-body bg-primary-strong border border-default-strong hover:bg-secondary-strong/70 hover:text-heading focus:ring-4 focus:ring-tertiary-soft font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none">
+        <button data-copy-to-clipboard-target="npm-install-copy-text" class="absolute flex items-center end-1.5 top-1/2 -translate-y-1/2 text-body bg-neutral-primary-strong border border-default-strong hover:bg-secondary-strong/70 hover:text-heading focus:ring-4 focus:ring-tertiary-soft font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none">
             <span id="default-message">
                 <span class="flex items-center">
                     <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-6 5h6m-6 4h6M10 3v4h4V3h-4Z"/></svg>
@@ -388,7 +388,7 @@ function Component() {
 </code></pre>
         </div>
     <div class="absolute top-2 end-2">
-        <button data-copy-to-clipboard-target="code-block" data-copy-to-clipboard-content-type="innerHTML" data-copy-to-clipboard-html-entities="true" class="flex items-center text-body bg-primary-strong border border-default-strong hover:bg-secondary-strong/70 hover:text-heading focus:ring-4 focus:ring-tertiary-soft font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none">
+        <button data-copy-to-clipboard-target="code-block" data-copy-to-clipboard-content-type="innerHTML" data-copy-to-clipboard-html-entities="true" class="flex items-center text-body bg-neutral-primary-strong border border-default-strong hover:bg-secondary-strong/70 hover:text-heading focus:ring-4 focus:ring-tertiary-soft font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none">
             <span id="default-message">
                 <span class="flex items-center">
                     <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-6 5h6m-6 4h6M10 3v4h4V3h-4Z"/></svg>
@@ -477,7 +477,7 @@ window.addEventListener('load', function() {
     }
 })
 ` >}}
-<div class="w-full max-w-lg bg-primary-soft border border-default shadow-xs rounded-base p-4 sm:p-6">
+<div class="w-full max-w-lg bg-neutral-primary-soft border border-default shadow-xs rounded-base p-4 sm:p-6">
     <h2 class="text-lg font-semibold text-heading mb-2">Create a role with read only in-line policies</h2>
     <p class="text-body mb-6">To give Flowbite read access, please create an IAM Role following <a href="#" class="text-fg-brand underline hover:no-underline font-medium">trust relationship</a> and <a href="#" class="text-fg-brand underline hover:no-underline font-medium">inline policy</a>.</p>
     <label for="account-id" class="block mb-2.5 text-sm font-medium text-heading mb-2 block">Flowbite account ID:</label>
@@ -581,7 +581,7 @@ window.addEventListener('load', function() {
     }
 })
 ` >}}
-<div class="w-full max-w-md bg-primary-soft border border-default shadow-xs rounded-base p-4 sm:p-6">
+<div class="w-full max-w-md bg-neutral-primary-soft border border-default shadow-xs rounded-base p-4 sm:p-6">
     <h2 class="text-lg font-semibold text-heading mb-4">Contact details</h2>
     <address class="relative bg-secondary-medium p-4 rounded-base border border-default-medium font-italic grid grid-cols-2">
         <div class="space-y-2 text-body leading-loose hidden sm:block">
@@ -615,7 +615,7 @@ window.addEventListener('load', function() {
 
 Use this example to show an input field where you can copy the URL of the current page and also show a modal with the copied URL when the copy button is clicked.
 
-{{< example id="copy-to-clipboard-modal" class="bg-primary flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="580" javascript=`
+{{< example id="copy-to-clipboard-modal" class="bg-neutral-primary flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="580" javascript=`
 window.addEventListener('load', function() {
     const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'course-url');
     const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-course-url');
@@ -661,7 +661,7 @@ window.addEventListener('load', function() {
 <div id="course-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-lg max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft rounded-base shadow-xs border border-default">
+        <div class="relative bg-neutral-primary-soft rounded-base shadow-xs border border-default">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5">
                 <h3 class="text-lg text-heading font-medium">
@@ -725,7 +725,7 @@ Use the object parameters from the CopyClipboard object to set options such as t
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">triggerEl</code>
               </td>
@@ -739,7 +739,7 @@ Use the object parameters from the CopyClipboard object to set options such as t
                   Pass the trigger element (ie. a button or text) that will trigger the copy to clipboard event when being clicked.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">targetEl</code>
               </td>
@@ -753,7 +753,7 @@ Use the object parameters from the CopyClipboard object to set options such as t
                   Set the target element where the text that will be copied to the clipboard is located (ie. an input field, code block, address tag).
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">options</code>
               </td>
@@ -767,7 +767,7 @@ Use the object parameters from the CopyClipboard object to set options such as t
                   Set these options to set the the content type, HTML decoder and callback function for the copy to clipboard event.
               </td>
           </tr>
-          <tr class="bg-primary">
+          <tr class="bg-neutral-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">instanceOptions</code>
                 </td>
@@ -805,7 +805,7 @@ Use these optional options for the CopyClipboard object to set the content type 
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">contentType</code>
               </td>
@@ -816,7 +816,7 @@ Use these optional options for the CopyClipboard object to set the content type 
                   Set the source of the text that will be copied: input (default), innerHTML or textContent.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">htmlEntities</code>
               </td>
@@ -827,7 +827,7 @@ Use these optional options for the CopyClipboard object to set the content type 
                   Set this option to true if you want to decode the HTML entities for code blocks. Default is false.
               </td>
           </tr>
-          <tr class="bg-primary">
+          <tr class="bg-neutral-primary">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">onCopy</code>
               </td>
@@ -859,7 +859,7 @@ Use the following methods from the CopyClipboard component to programmatically w
           </tr>
       </thead>
       <tbody>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">getTargetValue()</code>
               </td>
@@ -867,7 +867,7 @@ Use the following methods from the CopyClipboard component to programmatically w
                  Get the value of the target element (ie. input field, code block, address tag).
               </td>
           </tr>
-        <tr class="border-b bg-primary border-default">
+        <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">copy()</code>
               </td>
@@ -875,7 +875,7 @@ Use the following methods from the CopyClipboard component to programmatically w
                  Use this method to copy the text from the target element to the clipboard.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">decodeHTML()</code>
               </td>
@@ -883,7 +883,7 @@ Use the following methods from the CopyClipboard component to programmatically w
                   Use this method to decode the HTML entities from the target element.
               </td>
           </tr>
-          <tr class="bg-primary">
+          <tr class="bg-neutral-primary">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">updateOnCopyCallback(callback)</code>
               </td>

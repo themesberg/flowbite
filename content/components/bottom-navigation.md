@@ -21,7 +21,7 @@ Use the default bottom navigation bar example to show a list of menu items as bu
 
 {{< example id="default-bottom-nav-example" class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true show_dark=true >}}
 
-<div class="fixed bottom-0 left-0 z-50 w-full h-16 bg-primary-soft border-t border-default">
+<div class="fixed bottom-0 left-0 z-50 w-full h-16 bg-neutral-primary-soft border-t border-default">
     <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
         <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-secondary-medium group">
             <svg class="w-6 h-6 mb-1 text-body group-hover:text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/></svg>
@@ -49,7 +49,7 @@ This example can be used to show a border between the menu items inside the bott
 
 {{< example id="border-bottom-nav-example" class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true show_dark=true >}}
 
-<div class="fixed bottom-0 left-0 z-50 w-full h-16 bg-primary-soft border-t border-default">
+<div class="fixed bottom-0 left-0 z-50 w-full h-16 bg-neutral-primary-soft border-t border-default">
     <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
         <button type="button" class="inline-flex flex-col items-center justify-center px-5 border-default border-x hover:bg-secondary-medium group">
             <svg class="w-6 h-6 mb-1 text-body group-hover:text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/></svg>
@@ -77,7 +77,7 @@ Use this example to show a CTA button in the center of the navigation component 
 
 {{< example id="cta-button-bottom-nav-example" class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true show_dark=true >}}
 
-<div class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-primary-soft border border-default rounded-full bottom-4 left-1/2">
+<div class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-neutral-primary-soft border border-default rounded-full bottom-4 left-1/2">
     <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
         <button data-tooltip-target="tooltip-home" type="button" class="inline-flex flex-col items-center justify-center px-5 rounded-s-full hover:bg-secondary-medium group">
             <svg class="w-6 h-6 mb-1 text-body group-hover:text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/></svg>
@@ -131,7 +131,7 @@ This example be used to paginate multiple pages on a single view alongside other
 
 {{< example id="pagination-bottom-nav-example" class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true show_dark=true >}}
 
-<div class="fixed bottom-0 z-50 w-full h-16 -translate-x-1/2 bg-primary-soft border-t border-default left-1/2">
+<div class="fixed bottom-0 z-50 w-full h-16 -translate-x-1/2 bg-neutral-primary-soft border-t border-default left-1/2">
     <div class="grid h-full max-w-lg grid-cols-6 mx-auto">
         <button data-tooltip-target="tooltip-document" type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-secondary-medium group">
             <svg class="w-6 h-6 mb-1 text-body group-hover:text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9V4a1 1 0 0 0-1-1H8.914a1 1 0 0 0-.707.293L4.293 7.207A1 1 0 0 0 4 7.914V20a1 1 0 0 0 1 1h4M9 3v4a1 1 0 0 1-1 1H4m11 6v4m-2-2h4m3 0a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z"/></svg>
@@ -186,7 +186,7 @@ This example be used to paginate multiple pages on a single view alongside other
 
 {{< example id="button-group-bottom-nav-example" class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true show_dark=true >}}
 
-<div class="fixed bottom-0 z-50 w-full -translate-x-1/2 bg-primary-soft border-t border-default left-1/2">
+<div class="fixed bottom-0 z-50 w-full -translate-x-1/2 bg-neutral-primary-soft border-t border-default left-1/2">
     <div class="w-full">
         <div class="grid max-w-xs grid-cols-3 gap-1 p-1 mx-auto my-2 bg-tertiary rounded-base" role="group">
             <button type="button" class="px-5 py-1.5 text-xs font-medium text-body hover:bg-dark-strong hover:text-white rounded">
@@ -253,7 +253,7 @@ You can even use the other bottom navbar examples to exchange the default one pr
 
 {{< example id="card-bottom-nav-example" class="flex items-center justify-center p-4" github="components/bottom-navigation.md" show_dark=true >}}
  
-<div class="relative w-full max-w-sm overflow-y-scroll bg-primary-soft border border-default shadow-xs rounded-base h-96">
+<div class="relative w-full max-w-sm overflow-y-scroll bg-neutral-primary-soft border border-default shadow-xs rounded-base h-96">
     <ul>
         <li class="border-b border-default">
             <a href="#" class="flex items-center justify-center w-full px-4 py-3 hover:bg-secondary-medium dark:hover:bg-gray-800">
@@ -301,7 +301,7 @@ You can even use the other bottom navbar examples to exchange the default one pr
             </a>
         </li>
     </ul>
-    <div class="sticky bottom-0 left-0 z-50 w-full h-16 bg-primary-soft border-t border-default">
+    <div class="sticky bottom-0 left-0 z-50 w-full h-16 bg-neutral-primary-soft border-t border-default">
         <div class="grid h-full max-w-lg grid-cols-3 mx-auto">
             <button type="button" class="inline-flex flex-col items-center justify-center font-medium px-5 hover:bg-secondary-medium group">
                 <svg class="w-6 h-6 mb-1 text-body group-hover:text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
@@ -326,13 +326,13 @@ Use this component to show a list of options for online video meetings by showin
 
 {{< example id="video-bottom-nav-example" class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true disable_init_js=true show_dark=true >}}
 
-<div class="fixed bottom-0 left-0 z-50 grid w-full h-16 grid-cols-1 px-8 bg-primary-soft border-t border-default md:grid-cols-3">
+<div class="fixed bottom-0 left-0 z-50 grid w-full h-16 grid-cols-1 px-8 bg-neutral-primary-soft border-t border-default md:grid-cols-3">
     <div class="items-center justify-center hidden text-body me-auto md:flex">
         <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
         <span class="text-sm">12:43 PM</span>
     </div>
     <div class="flex items-center justify-center mx-auto space-x-3">
-        <button data-tooltip-target="tooltip-microphone" type="button" class="text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-full text-sm p-2.5 focus:outline-none">
+        <button data-tooltip-target="tooltip-microphone" type="button" class="text-body bg-neutral-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-full text-sm p-2.5 focus:outline-none">
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9v3a5.006 5.006 0 0 1-5 5h-4a5.006 5.006 0 0 1-5-5V9m7 9v3m-3 0h6M11 3h2a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z"/></svg>
             <span class="sr-only">Mute microphone</span>
         </button>
@@ -340,7 +340,7 @@ Use this component to show a list of options for online video meetings by showin
             Mute microphone
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
-        <button data-tooltip-target="tooltip-camera" type="button" class="text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-full text-sm p-2.5 focus:outline-none">
+        <button data-tooltip-target="tooltip-camera" type="button" class="text-body bg-neutral-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-full text-sm p-2.5 focus:outline-none">
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 6H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1Zm7 11-6-2V9l6-2v10Z"/></svg>
             <span class="sr-only">Hide camera</span>
         </button>
@@ -348,7 +348,7 @@ Use this component to show a list of options for online video meetings by showin
             Hide camera
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
-        <button data-tooltip-target="tooltip-feedback" type="button" class="text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-full text-sm p-2.5 focus:outline-none">
+        <button data-tooltip-target="tooltip-feedback" type="button" class="text-body bg-neutral-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-full text-sm p-2.5 focus:outline-none">
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.99 9H15M8.99 9H9m12 3a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM7 13c0 1 .507 2.397 1.494 3.216a5.5 5.5 0 0 0 7.022 0C16.503 15.397 17 14 17 13c0 0-1.99 1-4.995 1S7 13 7 13Z"/></svg>
             <span class="sr-only">Share feedback</span>
         </button>
@@ -356,7 +356,7 @@ Use this component to show a list of options for online video meetings by showin
             Share feedback
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
-        <button data-tooltip-target="tooltip-settings" type="button" class="text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-full text-sm p-2.5 focus:outline-none">
+        <button data-tooltip-target="tooltip-settings" type="button" class="text-body bg-neutral-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-full text-sm p-2.5 focus:outline-none">
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M6 4v10m0 0a2 2 0 1 0 0 4m0-4a2 2 0 1 1 0 4m0 0v2m6-16v2m0 0a2 2 0 1 0 0 4m0-4a2 2 0 1 1 0 4m0 0v10m6-16v10m0 0a2 2 0 1 0 0 4m0-4a2 2 0 1 1 0 4m0 0v2"/></svg>
             <span class="sr-only">Video settings</span>
         </button>
@@ -364,11 +364,11 @@ Use this component to show a list of options for online video meetings by showin
             Video settings
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
-        <button id="moreOptionsDropdownButton" data-dropdown-toggle="moreOptionsDropdown" type="button" class="text-body bg-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-full text-sm p-2.5 focus:outline-none">
+        <button id="moreOptionsDropdownButton" data-dropdown-toggle="moreOptionsDropdown" type="button" class="text-body bg-neutral-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-full text-sm p-2.5 focus:outline-none">
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
             <span class="sr-only">Show options</span>
         </button>
-        <div id="moreOptionsDropdown" class="hidden z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-44 block">
+        <div id="moreOptionsDropdown" class="hidden z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44 block">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="moreOptionsDropdownButton">
                 <li>
                     <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Show participants</a>
@@ -417,7 +417,7 @@ Use this component to show control buttons for a video or audio that is playing 
 
 {{< example id="audio-bottom-nav-example" class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" disable_init_js=true skeletonPlaceholders=true show_dark=true >}}
 
-<div class="fixed bottom-0 left-0 z-50 grid w-full h-24 grid-cols-1 px-8 bg-primary-soft border-t border-default md:grid-cols-3">
+<div class="fixed bottom-0 left-0 z-50 grid w-full h-24 grid-cols-1 px-8 bg-neutral-primary-soft border-t border-default md:grid-cols-3">
     <div class="items-center justify-center hidden me-auto md:flex">
         <img class="h-8 me-3 rounded-sm" src="/docs/images/misc/flowbite-yt-screenshot.png" alt="Video preview">
         <span class="text-sm text-body">Flowbite Crash Course</span>

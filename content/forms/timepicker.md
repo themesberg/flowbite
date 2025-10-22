@@ -63,7 +63,7 @@ Use this example to show a timepicker together with a dropdown menu where you ca
          Duration 
          <svg class="w-4 h-4 -me-0.5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown-duration" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-40">
+        <div id="dropdown-duration" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-40">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-duration-button">
                 <li>
                     <button type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded" role="menuitem">
@@ -162,7 +162,7 @@ Choose time
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownTimepicker" class="z-10 hidden bg-primary-soft rounded-base shadow-sm w-auto p-3">
+<div id="dropdownTimepicker" class="z-10 hidden bg-neutral-primary-soft rounded-base shadow-sm w-auto p-3">
     <div class="max-w-[16rem] mx-auto grid grid-cols-2 gap-4 mb-2">
          <div>
         <label for="start-time-2" class="block mb-2 text-sm font-medium text-heading">Start time:</label>
@@ -273,84 +273,84 @@ This is an advanced example that you can use to show the details of an event and
       <ul id="timetable" class="grid w-full grid-cols-2 gap-2 mt-5">
          <li>
             <input type="radio" id="10-am" value="" class="hidden peer" name="timetable">
-            <label for="10-am" class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+            <label for="10-am" class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
                10:00 AM
             </label>
          </li>
          <li>
             <input type="radio" id="10-30-am" value="" class="hidden peer" name="timetable">
             <label for="10-30-am"
-               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
             10:30 AM
             </label>
          </li>
          <li>
             <input type="radio" id="11-am" value="" class="hidden peer" name="timetable">
             <label for="11-am"
-               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
             11:00 AM
             </label>
          </li>
          <li>
             <input type="radio" id="11-30-am" value="" class="hidden peer" name="timetable">
             <label for="11-30-am"
-               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
             11:30 AM
             </label>
          </li>
          <li>
             <input type="radio" id="12-am" value="" class="hidden peer" name="timetable" checked>
             <label for="12-am"
-               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
             12:00 AM
             </label>
          </li>
          <li>
             <input type="radio" id="12-30-pm" value="" class="hidden peer" name="timetable">
             <label for="12-30-pm"
-               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
             12:30 PM
             </label>
          </li>
          <li>
             <input type="radio" id="1-pm" value="" class="hidden peer" name="timetable">
             <label for="1-pm"
-               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
             01:00 PM
             </label>
          </li>
          <li>
             <input type="radio" id="1-30-pm" value="" class="hidden peer" name="timetable">
             <label for="1-30-pm"
-               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
             01:30 PM
             </label>
          </li>
          <li>
             <input type="radio" id="2-pm" value="" class="hidden peer" name="timetable">
             <label for="2-pm"
-               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
             02:00 PM
             </label>
          </li>
          <li>
             <input type="radio" id="2-30-pm" value="" class="hidden peer" name="timetable">
             <label for="2-30-pm"
-               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
             02:30 PM
             </label>
          </li>
          <li>
             <input type="radio" id="3-pm" value="" class="hidden peer" name="timetable">
             <label for="3-pm"
-               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
             03:00 PM
             </label>
          </li>
          <li>
             <input type="radio" id="3-30-pm" value="" class="hidden peer" name="timetable">
             <label for="3-30-pm"
-               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+               class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
             03:30 PM
             </label>
          </li>
@@ -373,7 +373,7 @@ Use this example to select a date and time inside of a modal component based on 
 <div id="timepicker-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-[23rem] max-h-full">
         <!-- Modal content -->
-        <div class="relative bg-primary-soft rounded-base">
+        <div class="relative bg-neutral-primary-soft rounded-base">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 border-b rounded-t border-default">
                 <h3 class="font-medium text-heading">
@@ -394,84 +394,84 @@ Use this example to select a date and time inside of a modal component based on 
                     <li>
                         <input type="radio" id="10-am" value="" class="hidden peer" name="timetable">
                         <label for="10-am"
-                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
                         10:00 AM
                         </label>
                     </li>
                     <li>
                         <input type="radio" id="10-30-am" value="" class="hidden peer" name="timetable">
                         <label for="10-30-am"
-                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
                         10:30 AM
                         </label>
                     </li>
                     <li>
                         <input type="radio" id="11-am" value="" class="hidden peer" name="timetable">
                         <label for="11-am"
-                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
                         11:00 AM
                         </label>
                     </li>
                     <li>
                         <input type="radio" id="11-30-am" value="" class="hidden peer" name="timetable">
                         <label for="11-30-am"
-                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
                         11:30 AM
                         </label>
                     </li>
                     <li>
                         <input type="radio" id="12-am" value="" class="hidden peer" name="timetable" checked>
                         <label for="12-am"
-                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
                         12:00 AM
                         </label>
                     </li>
                     <li>
                         <input type="radio" id="12-30-pm" value="" class="hidden peer" name="timetable">
                         <label for="12-30-pm"
-                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
                         12:30 PM
                         </label>
                     </li>
                     <li>
                         <input type="radio" id="1-pm" value="" class="hidden peer" name="timetable">
                         <label for="1-pm"
-                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
                         01:00 PM
                         </label>
                     </li>
                     <li>
                         <input type="radio" id="1-30-pm" value="" class="hidden peer" name="timetable">
                         <label for="1-30-pm"
-                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
                         01:30 PM
                         </label>
                     </li>
                     <li>
                         <input type="radio" id="2-pm" value="" class="hidden peer" name="timetable">
                         <label for="2-pm"
-                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
                         02:00 PM
                         </label>
                     </li>
                     <li>
                         <input type="radio" id="2-30-pm" value="" class="hidden peer" name="timetable">
                         <label for="2-30-pm"
-                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
                         02:30 PM
                         </label>
                     </li>
                     <li>
                         <input type="radio" id="3-pm" value="" class="hidden peer" name="timetable">
                         <label for="3-pm"
-                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
                         03:00 PM
                         </label>
                     </li>
                     <li>
                         <input type="radio" id="3-30-pm" value="" class="hidden peer" name="timetable">
                         <label for="3-30-pm"
-                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
+                        class="inline-flex items-center justify-center w-full p-2 text-sm font-medium text-center bg-neutral-primary-soft border rounded-base cursor-pointer text-fg-brand border-brand peer-checked:border-brand peer-checked:bg-brand hover:text-white peer-checked:text-white hover:bg-brand-strong">
                         03:30 PM
                         </label>
                     </li>
@@ -498,7 +498,7 @@ Use this example to show multiple time interval selections inside of a drawer co
    </button>
 </div>
 <!-- drawer component -->
-<div id="drawer-timepicker" class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-primary-soft w-96" tabindex="-1" aria-labelledby="drawer-timepicker-label">
+<div id="drawer-timepicker" class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-neutral-primary-soft w-96" tabindex="-1" aria-labelledby="drawer-timepicker-label">
    <div class="border-b border-default pb-4 mb-5 flex items-center">
       <h5 id="drawer-label" class="inline-flex items-center text-lg font-medium text-body">
          <svg class="w-5 h-5 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">

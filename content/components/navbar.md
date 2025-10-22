@@ -19,7 +19,7 @@ Get started with the responsive navbar component from Flowbite to quickly set up
 Use this example of a navigation bar built with the utility classes from Tailwind CSS to enable users to navigate across the pages of your website.
 
 {{< example id="default-navbar-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="300" >}}
-<nav class="bg-primary border-default">
+<nav class="bg-neutral-primary border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="{{< param homepage >}}/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
@@ -30,7 +30,7 @@ Use this example of a navigation bar built with the utility classes from Tailwin
         <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-primary">
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
         <li>
           <a href="#" class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
         </li>
@@ -57,7 +57,7 @@ Use this example of a navigation bar built with the utility classes from Tailwin
 This example can be used to show a secondary dropdown menu when clicking on one of the navigation links.
 
 {{< example id="navbar-dropdown-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="320" >}}
-<nav class="bg-primary border-default">
+<nav class="bg-neutral-primary border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
@@ -68,7 +68,7 @@ This example can be used to show a secondary dropdown menu when clicking on one 
         <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-primary">
+      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
         <li>
           <a href="#" class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
         </li>
@@ -78,7 +78,7 @@ This example can be used to show a secondary dropdown menu when clicking on one 
               <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
           </button>
           <!-- Dropdown menu -->
-          <div id="dropdownNavbar" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+          <div id="dropdownNavbar" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
               <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownNvbarButton">
                 <li>
                   <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -115,7 +115,7 @@ This example can be used to show a secondary dropdown menu when clicking on one 
 Use this example to show multiple layers of dropdown menu by stacking them inside of each other.
 
 {{< example id="navbar-multi-dropdown-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="320" >}}
-<nav class="bg-primary border-default">
+<nav class="bg-neutral-primary border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
@@ -126,7 +126,7 @@ Use this example to show multiple layers of dropdown menu by stacking them insid
         <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level-dropdown">
-      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-primary">
+      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
         <li>
           <a href="#" class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
         </li>
@@ -136,7 +136,7 @@ Use this example to show multiple layers of dropdown menu by stacking them insid
               <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
           </button>
             <!-- Dropdown menu -->
-            <div id="multi-dropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+            <div id="multi-dropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
                 <ul class="p-2 text-sm text-body font-medium" aria-labelledby="multiLevelDropdownButton">
                   <li>
                     <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -146,7 +146,7 @@ Use this example to show multiple layers of dropdown menu by stacking them insid
                       Dropdown
                       <svg class="h-4 w-4 ms-auto rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
                     </button>
-                      <div id="doubleDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+                      <div id="doubleDropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
                         <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMultiLevelButton">
                           <li>
                             <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Overview</a>
@@ -193,7 +193,7 @@ Use this example to keep the navbar positioned fixed to the top side as you scro
 
 {{< example id="navbar-sticky-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true >}}
 
-<nav class="bg-primary fixed w-full z-20 top-0 start-0 border-b border-default">
+<nav class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo">
@@ -207,7 +207,7 @@ Use this example to keep the navbar positioned fixed to the top side as you scro
         </button>
     </div>
     <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-default rounded-base bg-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-primary">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-default rounded-base bg-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
         <li>
           <a href="#" class="block py-2 px-3 text-white bg-brand rounded-sm md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
         </li>
@@ -232,7 +232,7 @@ Use this example to show another subnav below the main navbar element.
 
 {{< example id="navbar-submenu-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true >}}
 
-<nav class="bg-primary border-default">
+<nav class="bg-neutral-primary border-default">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
@@ -272,7 +272,7 @@ Use this example of a navbar element to also show a search input element that yo
 
 {{< example id="navbar-search-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="300" >}}
 
-<nav class="bg-primary border-default">
+<nav class="bg-neutral-primary border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="{{< param homepage >}}/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
@@ -302,7 +302,7 @@ Use this example of a navbar element to also show a search input element that yo
         </div>
         <input type="text" id="input-group-1" class="block w-full ps-9 pe-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body" placeholder="Search">
       </div>
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-primary">
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
         <li>
           <a href="#" class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
         </li>
@@ -324,7 +324,7 @@ Use the following navbar element to show a call to action button alongside the l
 
 {{< example id="navbar-cta-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="300" >}}
 
-<nav class="bg-primary border-default">
+<nav class="bg-neutral-primary border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="{{< param homepage >}}/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
@@ -338,7 +338,7 @@ Use the following navbar element to show a call to action button alongside the l
     </button>
   </div>
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
-    <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-primary">
+    <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
       <li>
         <a href="#" class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
       </li>
@@ -363,7 +363,7 @@ Get started with this example to show a language dropdown selector in the navbar
 
 {{< example id="navbar-language-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="320" >}}
 
-<nav class="bg-primary border-default">
+<nav class="bg-neutral-primary border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="{{< param homepage >}}/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
@@ -375,7 +375,7 @@ Get started with this example to show a language dropdown selector in the navbar
         English (US)
       </button>
       <!-- Dropdown -->
-      <div class="z-50 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44" id="language-dropdown-menu">
+      <div class="z-50 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44" id="language-dropdown-menu">
         <ul class="p-2 text-sm text-body font-medium" role="none">
           <li>
             <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded" role="menuitem">
@@ -417,7 +417,7 @@ Get started with this example to show a language dropdown selector in the navbar
     </button>
   </div>
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-language">
-    <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-primary">
+    <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
       <li>
         <a href="#" class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
       </li>
@@ -445,19 +445,19 @@ Use this example to create a navigation bar with a user profile or button to tog
 
 {{< example id="navbar-user-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="380" >}}
 
-<nav class="bg-primary border-default">
+<nav class="bg-neutral-primary border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="{{< param homepage >}}/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
       <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">Flowbite</span>
   </a>
   <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-      <button type="button" class="flex text-sm bg-primary rounded-full md:me-0 focus:ring-4 focus:ring-tertiary" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+      <button type="button" class="flex text-sm bg-neutral-primary rounded-full md:me-0 focus:ring-4 focus:ring-tertiary" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
         <span class="sr-only">Open user menu</span>
         <img class="w-7 h-7 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="user photo">
       </button>
       <!-- Dropdown menu -->
-      <div class="z-50 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44" id="user-dropdown">
+      <div class="z-50 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44" id="user-dropdown">
         <div class="px-4 py-3 text-sm border-b border-default">
           <span class="block text-heading font-medium">Joseph McFall</span>
           <span class="block text-body truncate">name@flowbite.com</span>
@@ -483,7 +483,7 @@ Use this example to create a navigation bar with a user profile or button to tog
       </button>
   </div>
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
-    <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-primary">
+    <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
       <li>
         <a href="#" class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
       </li>
@@ -512,7 +512,7 @@ You can also use the dropdown element inside a navigation bar and add a second l
 {{< example id="navbar-mega-menu" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="340" >}}
 
 
-<nav class="bg-primary-soft border-default">
+<nav class="bg-neutral-primary-soft border-default">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
@@ -545,7 +545,7 @@ You can also use the dropdown element inside a navigation bar and add a second l
             </ul>
         </div>
     </div>
-    <div id="mega-menu-full-dropdown" class="mt-1 bg-primary-soft border-default shadow-xs border-y">
+    <div id="mega-menu-full-dropdown" class="mt-1 bg-neutral-primary-soft border-default shadow-xs border-y">
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-heading sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button">
                 <li>

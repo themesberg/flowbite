@@ -227,7 +227,7 @@ Use the object parameters from the Datepicker component to set the datepicker pa
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">datepickerEl</code>
               </td>
@@ -241,7 +241,7 @@ Use the object parameters from the Datepicker component to set the datepicker pa
                   Pass the main HTML element that will be rendered for the datepicker. It can be an input element or a `div` for inline rendering.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">options</code>
               </td>
@@ -255,7 +255,7 @@ Use the object parameters from the Datepicker component to set the datepicker pa
                   Use the options parameter to set custom datepicker options such as the default date, minimum and maximum values, action buttons and callback functions.
               </td>
           </tr>
-          <tr class="bg-primary">
+          <tr class="bg-neutral-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">instanceOptions</code>
                 </td>
@@ -293,7 +293,7 @@ Use these optional options for the Datepicker object to set options such as the 
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">rangePicker</code>
               </td>
@@ -304,7 +304,7 @@ Use these optional options for the Datepicker object to set options such as the 
                   If set to true then the datepicker will be converted to a date range picker. By default it's false.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">format</code>
               </td>
@@ -315,7 +315,7 @@ Use these optional options for the Datepicker object to set options such as the 
                   Use this option to set a custom format for the datepicker. By default it's `mm/dd/yyyy`.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">maxDate</code>
               </td>
@@ -326,7 +326,7 @@ Use these optional options for the Datepicker object to set options such as the 
                  Use this option to set the maximum selectable date of the datepicker component.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">minDate</code>
               </td>
@@ -337,7 +337,7 @@ Use these optional options for the Datepicker object to set options such as the 
                  Use this option to set the minimum selectable date of the datepicker component.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">orientation</code>
               </td>
@@ -348,7 +348,7 @@ Use these optional options for the Datepicker object to set options such as the 
                  Set the orientation of the datepicker component when it's not inline. It can be top, bottom, left, or right.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">buttons</code>
               </td>
@@ -359,7 +359,7 @@ Use these optional options for the Datepicker object to set options such as the 
                  If set to true then the "today" and "clear" action buttons will be shown that lets you select today's date or clear selections.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">autoSelectToday</code>
               </td>
@@ -370,7 +370,7 @@ Use these optional options for the Datepicker object to set options such as the 
                  If set to 1 then it will automatically have today's date preselected.
               </td>
           </tr>
-          <tr class="bg-primary">
+          <tr class="bg-neutral-primary">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">title</code>
               </td>
@@ -381,7 +381,7 @@ Use these optional options for the Datepicker object to set options such as the 
                  Set a custom title for the datepicker component. By default it's null.
               </td>
           </tr>
-          <!-- <tr class="border-b bg-primary border-default">
+          <!-- <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">language</code>
               </td>
@@ -413,7 +413,7 @@ Use the following methods of the Datepicker object to programmatically manipulat
           </tr>
       </thead>
       <tbody>
-        <tr class="border-b bg-primary border-default">
+        <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">getDate()</code>
               </td>
@@ -421,7 +421,7 @@ Use the following methods of the Datepicker object to programmatically manipulat
                   Use this method to get the currenctly select date from the datepicker.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">setDate()</code>
               </td>
@@ -429,7 +429,7 @@ Use the following methods of the Datepicker object to programmatically manipulat
                   Use this method to set the date value of the datepicker component.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">show()</code>
               </td>
@@ -437,7 +437,7 @@ Use the following methods of the Datepicker object to programmatically manipulat
                   Use this function to programatically show the datepicker component.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">hide()</code>
               </td>
@@ -445,7 +445,7 @@ Use the following methods of the Datepicker object to programmatically manipulat
                   Use this function to programatically hide the datepicker component.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">getDatepickerInstance()</code>
               </td>
@@ -453,7 +453,7 @@ Use the following methods of the Datepicker object to programmatically manipulat
                   Use this method to get the parent datepicker instance with the extended collection of methods and options.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">updateOnShow(callback)</code>
               </td>
@@ -461,7 +461,7 @@ Use the following methods of the Datepicker object to programmatically manipulat
                   Use this method to set a callback function whenever the datepicker component has been shown.
               </td>
           </tr>
-          <tr class="bg-primary">
+          <tr class="bg-neutral-primary">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">updateOnHide(callback)</code>
               </td>

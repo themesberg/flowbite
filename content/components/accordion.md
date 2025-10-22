@@ -230,7 +230,7 @@ Here's an example where we apply the blue colors instead of gray:
 Use this example to remove the background color and rounded borders from the accordion component.
 
 {{< example id="accordion-flush-example" github="components/accordion.md" show_dark=true >}}
-<div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-primary text-heading" data-inactive-classes="text-body">
+<div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-neutral-primary text-heading" data-inactive-classes="text-body">
   <h2 id="accordion-flush-heading-1">
     <button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-body border-b border-default gap-3" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
       <span>What is Flowbite?</span>
@@ -280,7 +280,7 @@ Use this example to remove the background color and rounded borders from the acc
 Use the `data-accordion-icon` data attribute to optionally set an element to rotate 180 degrees when the accordion element is expanded. If the data attribute is not set, then it will not rotate.
 
 {{< example id="accordion-arrow-style-example" github="components/accordion.md" show_dark=true >}}
-<div id="accordion-arrow" data-accordion="collapse" data-active-classes="bg-primary text-heading" data-inactive-classes="text-body">
+<div id="accordion-arrow" data-accordion="collapse" data-active-classes="bg-neutral-primary text-heading" data-inactive-classes="text-body">
   <h2 id="accordion-arrow-heading-1">
     <button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-body border-b border-default gap-3" data-accordion-target="#accordion-arrow-body-1" aria-expanded="true" aria-controls="accordion-arrow-body-1">
       <span>Accordion without an arrow</span>
@@ -359,7 +359,7 @@ To enable nested accordions you need to wrap the nested accordion in an element 
         </div>
       </div>
       <h2 id="accordion-nested-heading-2">
-        <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body border border-x-0 border-b-default border-t-0 bg-primary-soft hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-nested-body-2" aria-expanded="false" aria-controls="accordion-nested-body-2">
+        <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body border border-x-0 border-b-default border-t-0 bg-neutral-primary-soft hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-nested-body-2" aria-expanded="false" aria-controls="accordion-nested-body-2">
           <span>Is there a Figma file available?</span>
           <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
         </button>
@@ -371,7 +371,7 @@ To enable nested accordions you need to wrap the nested accordion in an element 
         </div>
       </div>
       <h2 id="accordion-nested-heading-3">
-        <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body bg-primary-soft hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-nested-body-3" aria-expanded="false" aria-controls="accordion-nested-body-3">
+        <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body bg-neutral-primary-soft hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-nested-body-3" aria-expanded="false" aria-controls="accordion-nested-body-3">
           <span>What are the differences between Flowbite and Tailwind UI?</span>
           <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
         </button>
@@ -391,7 +391,7 @@ To enable nested accordions you need to wrap the nested accordion in an element 
     <!-- End of  Nested accordion -->
   </div>
   <h2 id="accordion-collapse-heading-7">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body bg-primary-soft hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-collapse-body-7" aria-expanded="false" aria-controls="accordion-collapse-body-7">
+    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body bg-neutral-primary-soft hover:text-heading hover:bg-secondary-medium gap-3" data-accordion-target="#accordion-collapse-body-7" aria-expanded="false" aria-controls="accordion-collapse-body-7">
       <span>What are the differences between Flowbite and Tailwind UI?</span>
       <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
     </button>
@@ -437,7 +437,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">accordionEl</code>
                 </td>
@@ -451,7 +451,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
                     The parent HTML element of the accordion component.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">items</code>
                 </td>
@@ -465,7 +465,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
                     Array of accordion items objects including the unique identifier, heading element, content element, and the active state.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">options</code>
                 </td>
@@ -479,7 +479,7 @@ Create a new Accordion object by passing an array of accordion items and an opti
                     Object of options that you can set to customize the style of the accordion items and set callback functions.
                 </td>
             </tr>
-            <tr class="bg-primary">
+            <tr class="bg-neutral-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">instanceOptions</code>
                 </td>
@@ -517,7 +517,7 @@ Use the following options as the second parameter for the Accordion object to cu
             </tr>
         </thead>
         <tbody>
-              <tr class="border-b bg-primary border-default">
+              <tr class="border-b bg-neutral-primary border-default">
                   <td class="px-6 py-4 font-medium">
                       <code class="text-fg-brand">alwaysOpen</code>
                   </td>
@@ -528,7 +528,7 @@ Use the following options as the second parameter for the Accordion object to cu
                       If set to true then multiple accordion elements can be open at the same time. By default it's false.
                   </td>
               </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">activeClasses</code>
                 </td>
@@ -539,7 +539,7 @@ Use the following options as the second parameter for the Accordion object to cu
                     Set an array of Tailwind CSS class names to apply for the active accordion heading element.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">inactiveClasses</code>
                 </td>
@@ -550,7 +550,7 @@ Use the following options as the second parameter for the Accordion object to cu
                     Apply an array of Tailwind CSS class names to apply for the inactive accordion heading elements.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">onOpen</code>
                 </td>
@@ -561,7 +561,7 @@ Use the following options as the second parameter for the Accordion object to cu
                     Set a callback function when a new accordion item has been opened.
                 </td>
             </tr>
-            <tr class="bg-primary">
+            <tr class="bg-neutral-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">onClose</code>
                 </td>
@@ -593,7 +593,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">toggle(id)</code>
                 </td>
@@ -601,7 +601,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this function to toggle an accordion item based on its current state.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">open(id)</code>
                 </td>
@@ -609,7 +609,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this function to open an accordion item based on the id.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">close(id)</code>
                 </td>
@@ -617,7 +617,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this function to close an accordion item based on the id.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">updateOnOpen(callback)</code>
                 </td>
@@ -625,7 +625,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this method to set a callback function when an accordion item has been opened.
                 </td>
             </tr>
-            <tr class="border-b bg-primary border-default">
+            <tr class="border-b bg-neutral-primary border-default">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">updateOnClose(callback)</code>
                 </td>
@@ -633,7 +633,7 @@ Use the object methods on the Accordion object to programmatically open, close, 
                     Use this method to set a callback function when an accordion item has been closed.
                 </td>
             </tr>
-            <tr class="bg-primary">
+            <tr class="bg-neutral-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">updateOnToggle(callback)</code>
                 </td>

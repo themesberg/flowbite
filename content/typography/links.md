@@ -68,7 +68,7 @@ Use this example to set a hyperlink on a CTA element with text and a custom icon
 Use this example to set a hyperlink on a card component.
 
 {{< example id="link-card-example" class="flex justify-center" github="typography/links.md" show_dark=true >}}
-<a href="#" class="bg-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs hover:bg-secondary-medium">
+<a href="#" class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs hover:bg-secondary-medium">
     <h5 class="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">Noteworthy technology acquisitions 2021</h5>
     <p class="text-body">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
 </a>
@@ -79,7 +79,7 @@ Use this example to set a hyperlink on a card component.
 This example can be used to set a hyperlink on an image inside a card component.
 
 {{< example id="link-image-example" class="flex justify-center" github="typography/links.md" show_dark=true >}}
-<div class="bg-primary-soft block max-w-sm border border-default rounded-base shadow-xs">
+<div class="bg-neutral-primary-soft block max-w-sm border border-default rounded-base shadow-xs">
     <a href="#">
         <img class="rounded-t-base" src="/docs/images/blog/image-1.jpg" alt="" />
     </a>
@@ -105,7 +105,7 @@ This example can be used to set a hyperlink on an image inside a card component.
 This example can be used to set a hyperlink on an image inside a card component.
 
 {{< example id="link-image-example" class="flex justify-center" github="typography/links.md" show_dark=true >}}
-<div class="bg-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
+<div class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
     <svg class="w-7 h-7 mb-3 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21v-9m3-4H7.5a2.5 2.5 0 1 1 0-5c1.5 0 2.875 1.25 3.875 2.5M14 21v-9m-9 0h14v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-8ZM4 8h16a1 1 0 0 1 1 1v3H3V9a1 1 0 0 1 1-1Zm12.155-5c-3 0-5.5 5-5.5 5h5.5a2.5 2.5 0 0 0 0-5Z"/></svg>
     <a href="#">
         <h5 class="mb-2 text-2xl font-semibold tracking-tight text-heading">Need a help in Claim?</h5>

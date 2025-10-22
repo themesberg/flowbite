@@ -29,7 +29,7 @@ The `dropdownId` is the id of the dropdown menu element.
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefaultButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -60,7 +60,7 @@ There's a 300ms default delay when showing or hiding the dropdown due to UI/UX r
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownHover" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownHover" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownHoverButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -89,7 +89,7 @@ You can use the `data-dropdown-delay={milliseconds}` data attribute to set they 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDelay" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownDelay" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDelayButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -118,7 +118,7 @@ You can use the `divide-y divide-gray-100` classes to add separate elements insi
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDivider" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base divide-y divide-default-medium shadow-lg w-44">
+<div id="dropdownDivider" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base divide-y divide-default-medium shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDividerButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -146,7 +146,7 @@ Use this example to show extra information outside of the list of menu items ins
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
 </button>
 <!-- Dropdown menu -->
-<div id="dropdownInformation" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-72">
+<div id="dropdownInformation" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-72">
     <div class="p-2">
       <div class="flex items-center px-2.5 p-2 space-x-1.5 text-sm bg-secondary-strong rounded">
         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Rounded avatar">
@@ -226,7 +226,7 @@ Use this example to enable multi-level dropdown menus by adding stacked elements
 </button>
 
 <!-- Dropdown menu -->
-<div id="multi-dropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="multi-dropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="multiLevelDropdownButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -236,7 +236,7 @@ Use this example to enable multi-level dropdown menus by adding stacked elements
           Dropdown
           <svg class="h-4 w-4 ms-auto rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
         </button>
-          <div id="doubleDropdown" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+          <div id="doubleDropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="doubleDropdownButton">
               <li>
                 <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Overview</a>
@@ -273,7 +273,7 @@ Add multiple checkbox elements inside your dropdown menu to enable more advanced
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
 </button>
 <!-- Dropdown menu -->
-<div id="dropdownDefaultCheckbox" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-52">
+<div id="dropdownDefaultCheckbox" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-52">
     <ul class="p-4 text-sm text-body font-medium space-y-4" aria-labelledby="dropdownCheckboxButton">
       <li>
         <div class="flex items-center">
@@ -308,7 +308,7 @@ Use this example to update the background color of a menu item when using a list
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownBgHover" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-52">
+<div id="dropdownBgHover" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-52">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownBgHoverButton">
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -342,7 +342,7 @@ Add an extra helper text to each checkbox element inside the dropdown menu list 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
 </button>
 <!-- Dropdown menu -->
-<div id="dropdownHelper" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-60">
+<div id="dropdownHelper" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-60">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownHelperButton">
       <li>
         <div class="inline-flex items-start w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -398,23 +398,23 @@ Enable more advanced interaction with your users by adding radio input elements 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDefaultRadio" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownDefaultRadio" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-3 text-sm text-body font-medium space-y-3" aria-labelledby="dropdownRadioButton">
       <li>
         <div class="inline-flex items-center">
-          <input id="dropdown-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+          <input id="dropdown-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-neutral-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           <label for="dropdown-radio-1" class="select-none ms-2 text-sm font-medium text-heading">Default radio</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center">
-          <input id="dropdown-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+          <input id="dropdown-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-neutral-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           <label for="dropdown-radio-2" class="select-none ms-2 text-sm font-medium text-heading">Checked radio</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center">
-          <input id="dropdown-radio-3" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+          <input id="dropdown-radio-3" type="radio" value="" name="default-radio" class="w-4 h-4 text-neutral-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           <label for="dropdown-radio-3" class="select-none ms-2 text-sm font-medium text-heading">Default radio</label>
         </div>
       </li>
@@ -433,23 +433,23 @@ Use this example to update the background color when hovering over a menu item w
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownRadioBgHover" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownRadioBgHover" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownRadioBgHoverButton">
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
-          <input id="dropdown-radio-4" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+          <input id="dropdown-radio-4" type="radio" value="" name="default-radio" class="w-4 h-4 text-neutral-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           <label for="dropdown-radio-4" class="select-none ms-2 text-sm font-medium text-heading">Default radio</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
-          <input id="dropdown-radio-5" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none" checked>
+          <input id="dropdown-radio-5" type="radio" value="" name="default-radio" class="w-4 h-4 text-neutral-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none" checked>
           <label for="dropdown-radio-5" class="select-none ms-2 text-sm font-medium text-heading">Checked radio</label>
         </div>
       </li>
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
-          <input id="dropdown-radio-6" type="radio" value="" name="default-radio" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+          <input id="dropdown-radio-6" type="radio" value="" name="default-radio" class="w-4 h-4 text-neutral-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           <label for="dropdown-radio-6" class="select-none ms-2 text-sm font-medium text-heading">Default radio</label>
         </div>
       </li>
@@ -469,12 +469,12 @@ This example can be used to add an extra helper text inside of each radio elemen
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownHelperRadio" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-56" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
+<div id="dropdownHelperRadio" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-56" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownHelperRadioButton">
       <li>
         <div class="flex p-2 w-full hover:bg-tertiary-medium hover:text-heading rounded">
           <div class="flex items-center h-5">
-              <input id="helper-radio-4" name="helper-radio" type="radio" value="" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+              <input id="helper-radio-4" name="helper-radio" type="radio" value="" class="w-4 h-4 text-neutral-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           </div>
           <div class="ms-2 text-sm">
               <label for="helper-radio-4" class="font-medium text-heading">
@@ -487,7 +487,7 @@ This example can be used to add an extra helper text inside of each radio elemen
       <li>
         <div class="flex p-2 w-full hover:bg-tertiary-medium hover:text-heading rounded">
           <div class="flex items-center h-5">
-              <input id="helper-radio-5" name="helper-radio" type="radio" value="" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+              <input id="helper-radio-5" name="helper-radio" type="radio" value="" class="w-4 h-4 text-neutral-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           </div>
           <div class="ms-2 text-sm">
               <label for="helper-radio-5" class="font-medium text-heading">
@@ -500,7 +500,7 @@ This example can be used to add an extra helper text inside of each radio elemen
       <li>
         <div class="flex p-2 w-full hover:bg-tertiary-medium hover:text-heading rounded">
           <div class="flex items-center h-5">
-              <input id="helper-radio-6" name="helper-radio" type="radio" value="" class="w-4 h-4 text-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+              <input id="helper-radio-6" name="helper-radio" type="radio" value="" class="w-4 h-4 text-neutral-primary border-default-strong bg-secondary-strong rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
           </div>
           <div class="ms-2 text-sm">
               <label for="helper-radio-6" class="font-medium text-heading">
@@ -525,7 +525,7 @@ Show a list of toggle switch elements inside the dropdown menu to enable a yes o
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownToggle" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-72">
+<div id="dropdownToggle" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-72">
     <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="dropdownToggleButton">
       <li>
         <div class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -570,7 +570,7 @@ This example can be used when you want to show a long list of items that won't a
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownUsers" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-54">
+<div id="dropdownUsers" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-54">
   <ul class="h-48 p-2 text-sm text-body font-medium overflow-y-auto" aria-labelledby="dropdownUsersButton">
     <li>
       <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">
@@ -621,7 +621,7 @@ This example can be used when you want to show a long list of items that won't a
       </a>
     </li>
   </ul>
-  <div class="bg-primary-medium border-t border-default-medium p-2 rounded-b-base">
+  <div class="bg-neutral-primary-medium border-t border-default-medium p-2 rounded-b-base">
       <button type="button" class="inline-flex items-center w-full justify-center text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none">
         <svg class="w-3.5 h-3.5 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12h4m-2 2v-4M4 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
         Add new user
@@ -641,7 +641,7 @@ This example can be used when you want to show a long list of items that won't a
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownAdvanced" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-54">
+<div id="dropdownAdvanced" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-54">
   <ul class="h-48 p-2 text-sm text-body font-medium overflow-y-auto" aria-labelledby="dropdownAdvancedButton">
     <li class="w-full flex items-center p-2 hover:bg-tertiary-medium hover:text-heading rounded">
       <label for="dropdown-user-1" class="w-full flex items-center justify-between">
@@ -716,7 +716,7 @@ This example can be used when you want to show a long list of items that won't a
       </label>
     </li>
   </ul>
-  <div class="bg-primary-medium border-t border-default-medium p-2 rounded-b-base">
+  <div class="bg-neutral-primary-medium border-t border-default-medium p-2 rounded-b-base">
       <button type="button" class="w-full inline-flex items-center justify-center text-white bg-danger box-border border border-transparent hover:bg-danger-strong focus:ring-4 focus:ring-danger-medium shadow-xs font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none">
         <svg class="w-3.5 h-3.5 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/></svg>
         Delete user
@@ -736,8 +736,8 @@ Use this example if you want to add a search bar inside the dropdown menu to be 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownSearch" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-54">
-  <div class="bg-primary-medium border-b border-default-medium p-2 rounded-t-base">
+<div id="dropdownSearch" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-54">
+  <div class="bg-neutral-primary-medium border-b border-default-medium p-2 rounded-t-base">
     <label for="search" class="sr-only">Search</label>
     <input type="text" id="search" class="bg-secondary-strong border border-default-strong text-heading text-sm rounded focus:ring-brand focus:border-brand block w-full px-2.5 py-2 shadow-xs placeholder:text-body" placeholder="Search for users" required />
   </div>
@@ -815,7 +815,7 @@ Use this example if you want to add a search bar inside the dropdown menu to be 
       </label>
     </li>
   </ul>
-  <div class="bg-primary-medium border-t border-default-medium p-2 rounded-b-base">
+  <div class="bg-neutral-primary-medium border-t border-default-medium p-2 rounded-b-base">
       <button type="button" class="w-full inline-flex items-center justify-center text-white bg-danger box-border border border-transparent hover:bg-danger-strong focus:ring-4 focus:ring-danger-medium shadow-xs font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none">
         <svg class="w-3.5 h-3.5 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/></svg>
         Delete user
@@ -829,12 +829,12 @@ Use this example if you want to add a search bar inside the dropdown menu to be 
 Use the menu icon trigger element on components such as cards as an alternative element to the button.
 
 {{< example id="dropdown-menu-icon-example" class="flex justify-center space-x-4 rtl:space-x-reverse" github="components/dropdowns.md" show_dark=true iframeHeight="320" >}}
-<button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" class="text-heading bg-primary box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base text-sm p-2 focus:outline-none" type="button">
+<button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" class="text-heading bg-neutral-primary box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base text-sm p-2 focus:outline-none" type="button">
   <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDots" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownDots" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -851,12 +851,12 @@ Use the menu icon trigger element on components such as cards as an alternative 
     </div>
 </div>
 
-<button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="text-heading bg-primary box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base text-sm p-2 focus:outline-none" type="button"> 
+<button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="text-heading bg-neutral-primary box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base text-sm p-2 focus:outline-none" type="button"> 
   <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M6 12h.01m6 0h.01m5.99 0h.01"/></svg>
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDotsHorizontal" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44 dark:divide-gray-600">
+<div id="dropdownDotsHorizontal" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44 dark:divide-gray-600">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconHorizontalButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -887,7 +887,7 @@ Use this example to show a list of notifications inside your application by prov
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownNotification" class="z-20 hidden w-full max-w-sm bg-primary-soft divide-y divide-default-medium rounded-base shadow" aria-labelledby="dropdownNotificationButton">
+<div id="dropdownNotification" class="z-20 hidden w-full max-w-sm bg-neutral-primary-soft divide-y divide-default-medium rounded-base shadow" aria-labelledby="dropdownNotificationButton">
   <div class="block px-4 py-2 font-medium text-center text-body rounded-t-base bg-secondary-medium">
       Notifications
   </div>
@@ -973,7 +973,7 @@ This example can be used to show a list of menu items and options when a user is
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownAvatar" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-72">
+<div id="dropdownAvatar" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-72">
     <div class="p-2">
       <div class="flex items-center px-2.5 p-2 space-x-1.5 text-sm bg-secondary-strong rounded">
         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Rounded avatar">
@@ -1055,7 +1055,7 @@ Use this example to also show the name or email of the user next to the avatar f
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownAvatarName" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-72">
+<div id="dropdownAvatarName" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-72">
     <div class="p-2">
       <div class="flex items-center px-2.5 p-2 space-x-1.5 text-sm bg-secondary-strong rounded">
         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Rounded avatar">
@@ -1130,18 +1130,18 @@ You can also use the dropdown element inside a navigation bar and add a second l
 
 {{< example id="dropdown-navbar-example" bodyClass="!p-0" github="components/dropdowns.md" show_dark=true iframeHeight="380" >}}
 
-<nav class="bg-primary border-default">
+<nav class="bg-neutral-primary border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2.5">
     <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
         <span class="self-center text-xl text-headings font-semibold whitespace-nowrap">Flowbite</span>
     </a>
-    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ms-3 w-10 h-10 justify-center inline-flex items-center p-2 ms-3 w-10 h-10 justify-center text-heading bg-primary box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base focus:outline-none md:hidden" aria-controls="navbar-dropdown" aria-expanded="false">
+    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ms-3 w-10 h-10 justify-center inline-flex items-center p-2 ms-3 w-10 h-10 justify-center text-heading bg-neutral-primary box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base focus:outline-none md:hidden" aria-controls="navbar-dropdown" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
       <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-      <ul class="flex flex-col font-medium p-4 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:mt-0 md:text-sm  md:border-0 md:bg-primary md:space-x-8 md:rtl:space-x-reverse space-y-1">
+      <ul class="flex flex-col font-medium p-4 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:mt-0 md:text-sm  md:border-0 md:bg-neutral-primary md:space-x-8 md:rtl:space-x-reverse space-y-1">
         <li>
           <a href="#" class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0 md:text-fg-brand md:dark:bg-transparent" aria-current="page">Home</a>
         </li>
@@ -1151,7 +1151,7 @@ You can also use the dropdown element inside a navigation bar and add a second l
               <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
             </button>
             <!-- Dropdown menu -->
-            <div id="dropdownNavbar" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+            <div id="dropdownNavbar" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
                 <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownLargeButton">
                   <li>
                     <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1190,7 +1190,7 @@ Use this example to show a date range picker inside a dropdown menu. Use the `da
   <svg class="w-5 h-5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
 </button>
 
-<div id="dateRangeDropdown" class="z-10 hidden bg-primary-soft border border-default rounded-base shadow-sm w-96">
+<div id="dateRangeDropdown" class="z-10 hidden bg-neutral-primary-soft border border-default rounded-base shadow-sm w-96">
   <div class="p-3" aria-labelledby="dateRangeButton">
     <div id="date-range-picker" date-rangepicker class="flex items-center">
       <div class="relative">
@@ -1222,7 +1222,7 @@ The dropdown menus work with buttons of all sizes including smaller or larger on
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownSmall" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownSmall" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownSmallButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1245,7 +1245,7 @@ The dropdown menus work with buttons of all sizes including smaller or larger on
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownLarge" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownLarge" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownLargeButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1274,7 +1274,7 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownTop" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownTop" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownTopButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1297,7 +1297,7 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownRight" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownRight" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownRightButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1320,7 +1320,7 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownBottom" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownBottom" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownBottomButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1343,7 +1343,7 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownLeft" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownLeft" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownLeftButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1372,7 +1372,7 @@ You can combine the placement options by using the `top|right|bottom|left-{start
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownLeftEnd" class="z-20 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownLeftEnd" class="z-20 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownLeftEndButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1395,7 +1395,7 @@ You can combine the placement options by using the `top|right|bottom|left-{start
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownRightEnd" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownRightEnd" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownRightEndButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1428,7 +1428,7 @@ Use the `data-dropdown-offset-distance={pixels}` data attribute to set the numbe
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownDistance" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownDistance" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefault">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1457,7 +1457,7 @@ The `data-dropdown-offset-skidding={pixels}` data attribute can be used to move 
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownSkidding" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownSkidding" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefault">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>
@@ -1506,7 +1506,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">targetElement</code>
               </td>
@@ -1520,7 +1520,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
                   Apply the main dropdown menu element as the first parameter of the Dropdown object.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">triggerElement</code>
               </td>
@@ -1534,7 +1534,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
                   Apply the trigger element, such as a button, which is required to position the dropdown menu and set a click event.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">options</code>
               </td>
@@ -1548,7 +1548,7 @@ Initialize a Dropdown object with the object parameters such as the main target 
                   Use the options parameter to set the positioning of the dropdown menu.
               </td>
           </tr>
-          <tr class="bg-primary">
+          <tr class="bg-neutral-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">instanceOptions</code>
                 </td>
@@ -1586,7 +1586,7 @@ Use the following options as the third parameter for the Dropdown class to set t
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">placement</code>
               </td>
@@ -1597,7 +1597,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set the position of the dropdown menu relative to the trigger element choosing from <code class="text-fg-brand">top|right|bottom|left</code>.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">triggerType</code>
               </td>
@@ -1608,7 +1608,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set the event type that will trigger the dropdown menu choosing between <code class="text-fg-brand">hover|click|none</code>.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">offsetDistance</code>
               </td>
@@ -1619,7 +1619,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set the amount of pixels the dropdown menu should be offset relative to the trigger element on the X horizontal axis.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">offsetSkidding</code>
               </td>
@@ -1630,7 +1630,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set the number of pixels the dropdown menu should be offset relative to the trigger element on the Y horizontal axis.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">delay</code>
               </td>
@@ -1641,7 +1641,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set the milliseconds for which the showing or hiding of the dropdown will be delayed for when using the hover trigger type.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">ignoreClickOutsideClass</code>
               </td>
@@ -1652,7 +1652,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set a class for one or more elements that when they are clicked should ignore closing the dropdown (ie. offcanvas datepicker).
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">onHide</code>
               </td>
@@ -1663,7 +1663,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set a callback function when the dropdown has been hidden.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">onShow</code>
               </td>
@@ -1674,7 +1674,7 @@ Use the following options as the third parameter for the Dropdown class to set t
                   Set a callback function when the dropdown has been shown.
               </td>
           </tr>
-          <tr class="bg-primary">
+          <tr class="bg-neutral-primary">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">onToggle</code>
               </td>
@@ -1706,7 +1706,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">show()</code>
               </td>
@@ -1714,7 +1714,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method on the Dropdown object to show the dropdown menu.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">hide()</code>
               </td>
@@ -1722,7 +1722,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method on the Dropdown object to hide the dropdown menu.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">toggle()</code>
               </td>
@@ -1730,7 +1730,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method on the Dropdown object to toggle the visibility of the dropdown menu.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">isVisible()</code>
               </td>
@@ -1738,7 +1738,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Returns true or false based on the visibility of the dropdown.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">updateOnShow(callback)</code>
               </td>
@@ -1746,7 +1746,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method to set a callback function when the dropdown has been shown.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">updateOnHide(callback)</code>
               </td>
@@ -1754,7 +1754,7 @@ Use the methods from the Dropdown object to programmatically show or hide the dr
                   Use this method to set a callback function when the dropdown has been hidden.
               </td>
           </tr>
-          <tr class="bg-primary">
+          <tr class="bg-neutral-primary">
               <td class="px-6 py-4 font-medium">
                   <code class="text-fg-brand">updateOnToggle(callback)</code>
               </td>
@@ -1848,7 +1848,7 @@ Use the following HTML code for the JavaScript example above.
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownMenu" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+<div id="dropdownMenu" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownButton">
       <li>
         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Dashboard</a>

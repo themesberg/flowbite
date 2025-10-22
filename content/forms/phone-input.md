@@ -46,7 +46,7 @@ This example can be used to select the country code from a dropdown menu and set
             +1
             <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown-phone" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-54">
+        <div id="dropdown-phone" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-54">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-phone-button">
                 <li>
                     <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
@@ -169,7 +169,7 @@ Use this example to send a verification code to the user's phone number for auth
             +1
             <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown-phone-2" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-54">
+        <div id="dropdown-phone-2" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-54">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-phone-button-2">
                 <li>
                     <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
@@ -348,7 +348,7 @@ Use this example to authenticate users with a login form using a phone number in
             +1
             <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown-phone-3" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-54">
+        <div id="dropdown-phone-3" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-54">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-phone-button-3">
                 <li>
                     <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
@@ -463,7 +463,7 @@ Use this example to verify a phone number via SMS or phone call using a dropdown
             +1
             <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown-phone-4" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-54">
+        <div id="dropdown-phone-4" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-54">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-phone-button-4">
                 <li>
                     <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
@@ -557,7 +557,7 @@ Use this example to verify a phone number via SMS or phone call using a dropdown
             Send SMS 
             <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown-verification-option" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-36">
+        <div id="dropdown-verification-option" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-36">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-verification-option-button">
                 <li>
                     <button type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md" role="menuitem">

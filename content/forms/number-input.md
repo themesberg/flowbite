@@ -56,7 +56,7 @@ Use this example to set a phone number inside a form field based on the `type="p
             +1
             <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
-        <div id="dropdown-phone" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-54">
+        <div id="dropdown-phone" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-54">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-phone-button">
                 <li>
                     <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
@@ -237,7 +237,7 @@ This component can be used to set a currency value inside a form field when you 
         USD
         <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
     </button>
-    <div id="dropdown-currency" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-32">
+    <div id="dropdown-currency" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-32">
         <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-currency-button">
             <li>
                 <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
@@ -439,7 +439,7 @@ rangeInput.addEventListener('input', updateCurrencyInput);
             <input type="number" id="currency-input-2" class="block w-full ps-9 pe-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-e-base focus:ring-brand focus:border-brand px-3 py-2.5 placeholder:text-body" placeholder="Enter amount" value="1000" required />
         </div>
     </div>
-    <div id="dropdown-currency-2" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-32">
+    <div id="dropdown-currency-2" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-32">
         <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-currency-button-2">
             <li>
                 <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
@@ -525,7 +525,7 @@ Use this example of two number input fields and dropdowns to convert currency an
                 USD
                 <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
             </button>
-            <div id="dropdown-fiat-currency" class="z-10 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-32">
+            <div id="dropdown-fiat-currency" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-32">
                 <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-fiat-currency-button">
                     <li>
                         <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">
@@ -595,7 +595,7 @@ Use this example of two number input fields and dropdowns to convert currency an
                 BTC 
                 <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
             </button>
-            <div id="dropdown-crypto" class="z-10 bg-primary-medium border border-default-medium rounded-base shadow-lg w-32 block">
+            <div id="dropdown-crypto" class="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-32 block">
                 <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-crypto-button">
                     <li>
                         <button type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md" role="menuitem">
@@ -753,7 +753,7 @@ Use the object parameters from the InputCounter object to set the target, increm
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b bg-primary  border-default">
+          <tr class="border-b bg-neutral-primary  border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">targetEl</code>
               </td>
@@ -767,7 +767,7 @@ Use the object parameters from the InputCounter object to set the target, increm
                   Pass the target input field element that will be incremented or decremented based on click event.
               </td>
           </tr>
-          <tr class="border-b bg-primary  border-default">
+          <tr class="border-b bg-neutral-primary  border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">incrementEl</code>
               </td>
@@ -781,7 +781,7 @@ Use the object parameters from the InputCounter object to set the target, increm
                   Pass the increment button element that will increase the value of the target element based on click event.
               </td>
           </tr>
-          <tr class="border-b bg-primary  border-default">
+          <tr class="border-b bg-neutral-primary  border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">decrementEl</code>
               </td>
@@ -795,7 +795,7 @@ Use the object parameters from the InputCounter object to set the target, increm
                   Pass the decrement button element that will decrease the value of the target element based on click event.
               </td>
           </tr>
-          <tr class="border-b bg-primary  border-default">
+          <tr class="border-b bg-neutral-primary  border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">options</code>
               </td>
@@ -809,7 +809,7 @@ Use the object parameters from the InputCounter object to set the target, increm
                   Set these options to set the minimum and maximum value of the input field and the callback functions.
               </td>
           </tr>
-          <tr class="bg-primary">
+          <tr class="bg-neutral-primary">
                 <td class="px-6 py-4 font-medium">
                     <code class="text-fg-brand">instanceOptions</code>
                 </td>
@@ -847,7 +847,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
           </tr>
       </thead>
       <tbody>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">minValue</code>
               </td>
@@ -858,7 +858,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
                   Set the minimum value of the input field.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">maxValue</code>
               </td>
@@ -869,7 +869,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
                   Set the maximum value of the input field.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">onIncrement</code>
               </td>
@@ -880,7 +880,7 @@ Use these optional options for the InputCounter object to set the minimum and ma
                   Set a callback function when the item has been incremented.
               </td>
           </tr>
-          <tr class="bg-primary">
+          <tr class="bg-neutral-primary">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">onDecrement</code>
               </td>
@@ -912,7 +912,7 @@ Use the following methods of the InputCounter object to programmatically manipul
           </tr>
       </thead>
       <tbody>
-        <tr class="border-b bg-primary border-default">
+        <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">getCurrentValue()</code>
               </td>
@@ -920,7 +920,7 @@ Use the following methods of the InputCounter object to programmatically manipul
                   Use this method to get the current value of the input field.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">increment()</code>
               </td>
@@ -928,7 +928,7 @@ Use the following methods of the InputCounter object to programmatically manipul
                   Use this method on the InputCounter object to increment the value of the input field.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">decrement()</code>
               </td>
@@ -936,7 +936,7 @@ Use the following methods of the InputCounter object to programmatically manipul
                   Use this method on the InputCounter object to decrement the value of the input field.
               </td>
           </tr>
-          <tr class="border-b bg-primary border-default">
+          <tr class="border-b bg-neutral-primary border-default">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">updateOnIncrement(callback)</code>
               </td>
@@ -944,7 +944,7 @@ Use the following methods of the InputCounter object to programmatically manipul
                   Use this method to set a callback function whenever the input field has been incremented.
               </td>
           </tr>
-          <tr class="bg-primary">
+          <tr class="bg-neutral-primary">
               <td class="px-6 py-4 ">
                   <code class="text-fg-brand">updateOnDecrement(callback)</code>
               </td>

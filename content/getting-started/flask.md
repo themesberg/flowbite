@@ -197,7 +197,7 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
 
 <body>
     
-<nav class="bg-primary border-default">
+<nav class="bg-neutral-primary border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
@@ -208,7 +208,7 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
         <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-primary">
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
         <li>
           <a href="#" class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
         </li>
@@ -243,7 +243,7 @@ Other than the base components from the library you can also check out some of t
 Let's add a free [Tailwind CSS hero section](https://flowbite.com/blocks/marketing/hero/) just after the navigation bar:
 
 ```html
-<section class="bg-primary">
+<section class="bg-neutral-primary">
   <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
         <h1 class="mb-4 mt-8 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl">We invest in the world’s potential</h1>
         <p class="mb-8 text-lg font-normal text-body lg:text-xl sm:px-16 xl:px-48">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>

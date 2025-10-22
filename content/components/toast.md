@@ -20,7 +20,7 @@ Use this simple toast component with an icon, message, and dismissible close but
 
 {{< example id="default-toast-example" class="flex justify-center" github="components/toast.md" show_dark=true >}}
 
-<div id="toast-default" class="flex items-center w-full max-w-xs p-4 text-body bg-primary-soft rounded-base shadow-xs border border-default" role="alert">
+<div id="toast-default" class="flex items-center w-full max-w-xs p-4 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default" role="alert">
     <svg class="w-6 h-6 text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.122 17.645a7.185 7.185 0 0 1-2.656 2.495 7.06 7.06 0 0 1-3.52.853 6.617 6.617 0 0 1-3.306-.718 6.73 6.73 0 0 1-2.54-2.266c-2.672-4.57.287-8.846.887-9.668A4.448 4.448 0 0 0 8.07 6.31 4.49 4.49 0 0 0 7.997 4c1.284.965 6.43 3.258 5.525 10.631 1.496-1.136 2.7-3.046 2.846-6.216 1.43 1.061 3.985 5.462 1.754 9.23Z"/></svg>
     <div class="ms-2.5 text-sm border-s border-default ps-3.5">Set yourself free.</div>
     <button type="button" class="ms-auto flex items-center justify-center text-body hover:text-heading bg-transparent box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded text-sm h-8 w-8 focus:outline-none" data-dismiss-target="#toast-default" aria-label="Close">
@@ -37,7 +37,7 @@ Use these contextual toast components to show success, danger, or warning alert 
 
 {{< example id="toast-colors-example" class="flex flex-col items-center space-y-4" github="components/toast.md" show_dark=true >}}
 
-<div id="toast-success" class="flex items-center w-full max-w-sm p-4 text-body bg-primary-soft rounded-base shadow-xs border border-default" role="alert">
+<div id="toast-success" class="flex items-center w-full max-w-sm p-4 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default" role="alert">
     <div class="inline-flex items-center justify-center shrink-0 w-7 h-7 text-fg-success bg-success-soft rounded">
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/></svg>
         <span class="sr-only">Check icon</span>
@@ -48,7 +48,7 @@ Use these contextual toast components to show success, danger, or warning alert 
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
     </button>
 </div>
-<div id="toast-danger" class="flex items-center w-full max-w-sm p-4 text-body bg-primary-soft rounded-base shadow-xs border border-default" role="alert">
+<div id="toast-danger" class="flex items-center w-full max-w-sm p-4 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default" role="alert">
     <div class="inline-flex items-center justify-center shrink-0 w-7 h-7 text-fg-danger bg-danger-soft rounded">
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
         <span class="sr-only">Error icon</span>
@@ -59,7 +59,7 @@ Use these contextual toast components to show success, danger, or warning alert 
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
     </button>
 </div>
-<div id="toast-warning" class="flex items-center w-full max-w-sm p-4 text-body bg-primary-soft rounded-base shadow-xs border border-default" role="alert">
+<div id="toast-warning" class="flex items-center w-full max-w-sm p-4 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default" role="alert">
     <div class="inline-flex items-center justify-center shrink-0 w-7 h-7 text-fg-warning bg-warning-soft rounded">
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V8m0 8h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
         <span class="sr-only">Warning icon</span>
@@ -79,7 +79,7 @@ This component can be used to show simple messages and notifications without the
 
 {{< example id="toast-simple-example" class="flex justify-center" github="components/toast.md" show_dark=true >}}
 
-<div id="toast-simple" class="flex items-center w-full max-w-sm p-4 text-body bg-primary-soft rounded-base shadow-xs border border-default" role="alert">
+<div id="toast-simple" class="flex items-center w-full max-w-sm p-4 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default" role="alert">
     <svg class="w-5 h-5 text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/></svg>
     <div class="ms-2.5 text-sm border-s border-default ps-3.5">Message sent successfully.</div>
     <button type="button" class="ms-auto flex items-center justify-center text-body hover:text-heading bg-transparent box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded text-sm h-8 w-8 focus:outline-none" data-dismiss-target="#toast-simple" aria-label="Close">
@@ -95,7 +95,7 @@ Use this toast component to also show an "undo" button to reverse the action of 
 
 {{< example id="toast-undo-example" class="flex justify-center" github="components/toast.md" show_dark=true >}}
 
-<div id="toast-undo" class="flex items-center w-full max-w-xs p-4 text-body bg-primary-soft rounded-base shadow-xs border border-default" role="alert">
+<div id="toast-undo" class="flex items-center w-full max-w-xs p-4 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default" role="alert">
     <div class="text-sm font-normal">
        Conversation archived.
     </div>
@@ -116,7 +116,7 @@ This component can be used to show messages and a CTA button when receiving chat
 
 {{< example id="toast-message-example" class="flex justify-center" github="components/toast.md" show_dark=true >}}
 
-<div id="toast-message-cta" class="relative flex items-center w-full max-w-xs p-4 text-body bg-primary-soft rounded-base shadow-xs border border-default" role="alert">
+<div id="toast-message-cta" class="relative flex items-center w-full max-w-xs p-4 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default" role="alert">
     <div class="flex">
         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese Leos image"/>
         <div class="ms-3 text-sm font-normal">
@@ -141,7 +141,7 @@ This component can be used to show notifications for an action from another user
 
 {{< example id="toast-push-example" class="flex justify-center" github="components/toast.md" show_dark=true >}}
 
-<div id="toast-notification" class="w-full space-y-4 max-w-xs p-3 text-body bg-primary-soft rounded-base shadow-xs border border-default" role="alert">
+<div id="toast-notification" class="w-full space-y-4 max-w-xs p-3 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default" role="alert">
     <div class="flex items-center bg-tertiary py-2 px-2.5 rounded">
         <span class="text-sm font-medium text-heading">New notification</span>
     </div>
@@ -172,7 +172,7 @@ Use this interactive toast component to encourage users to make a certain action
 
 {{< example id="toast-interactive-example" class="flex justify-center" github="components/toast.md" show_dark=true >}}
 
-<div id="toast-interactive" class="w-full space-y-4 max-w-xs p-3 text-body bg-primary-soft rounded-base shadow-xs border border-default" role="alert">
+<div id="toast-interactive" class="w-full space-y-4 max-w-xs p-3 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default" role="alert">
     <div class="flex">
         <div class="inline-flex items-center justify-center shrink-0 w-9 h-9 text-fg-brand bg-brand-softer rounded">
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h3a3 3 0 0 0 0-6h-.025a5.56 5.56 0 0 0 .025-.5A5.5 5.5 0 0 0 7.207 9.021C7.137 9.017 7.071 9 7 9a4 4 0 1 0 0 8h2.167M12 19v-9m0 0-2 2m2-2 2 2"/></svg>
@@ -200,7 +200,7 @@ Use this interactive toast component to encourage users to make a certain action
 
 {{< example id="toast-interactive-example" class="flex justify-center" github="components/toast.md" show_dark=true >}}
 
-<div id="toast-illustration" class="w-full space-y-4 max-w-xs p-3 text-body bg-primary-soft rounded-base shadow-xs border border-default" role="alert">
+<div id="toast-illustration" class="w-full space-y-4 max-w-xs p-3 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default" role="alert">
     <div class="flex items-start">
         <svg class="w-32 h-auto" aria-hidden="true" width="533" height="651" viewBox="0 0 533 651" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M533 266.5C533 413.684 413.684 533 266.5 533C119.316 533 0 413.684 0 266.5C0 119.316 119.316 0 266.5 0C413.684 0 533 119.316 533 266.5Z" fill="url(#paint0_linear_344_2435)"/>
@@ -290,7 +290,7 @@ Use this interactive toast component to encourage users to make a certain action
 
 {{< example id="toast-interactive-example" class="flex justify-center" github="components/toast.md" show_dark=true >}}
 
-<div id="toast-interactive" class="w-full space-y-4 max-w-xs p-4 text-body bg-primary-soft rounded-base shadow-xs border border-default" role="alert">
+<div id="toast-interactive" class="w-full space-y-4 max-w-xs p-4 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default" role="alert">
     <div class="inline-flex items-center justify-center shrink-0 w-9 h-9 text-fg-brand bg-brand-softer rounded">
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h3a3 3 0 0 0 0-6h-.025a5.56 5.56 0 0 0 .025-.5A5.5 5.5 0 0 0 7.207 9.021C7.137 9.017 7.071 9 7 9a4 4 0 1 0 0 8h2.167M12 19v-9m0 0-2 2m2-2 2 2"/></svg>
         <span class="sr-only">Refresh icon</span>
@@ -384,16 +384,16 @@ Use the `fixed` class from Tailwind CSS to position these toast components relat
 
 {{< example id="toast-positioning-example" github="components/toast.md" class="relative h-56" show_dark=true >}}
 
-<div id="toast-top-left" class="fixed flex items-center w-full max-w-xs p-4 text-body bg-primary-soft rounded-base shadow-xs border border-default top-5 start-5" role="alert">
+<div id="toast-top-left" class="fixed flex items-center w-full max-w-xs p-4 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default top-5 start-5" role="alert">
     <div class="text-sm font-normal">Top left positioning.</div>
 </div>
-<div id="toast-top-right" class="fixed flex items-center w-full max-w-xs p-4 text-body bg-primary-soft rounded-base shadow-xs border border-default top-5 end-5" role="alert">
+<div id="toast-top-right" class="fixed flex items-center w-full max-w-xs p-4 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default top-5 end-5" role="alert">
     <div class="text-sm font-normal">Top right positioning.</div>
 </div>
-<div id="toast-bottom-right" class="fixed flex items-center w-full max-w-xs p-4 text-body bg-primary-soft rounded-base shadow-xs border border-default end-5 bottom-5" role="alert">
+<div id="toast-bottom-right" class="fixed flex items-center w-full max-w-xs p-4 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default end-5 bottom-5" role="alert">
     <div class="text-sm font-normal">Bottom right positioning.</div>
 </div>
-<div id="toast-bottom-left" class="fixed flex items-center w-full max-w-xs p-4 text-body bg-primary-soft rounded-base shadow-xs border border-default bottom-5 start-5" role="alert">
+<div id="toast-bottom-left" class="fixed flex items-center w-full max-w-xs p-4 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default bottom-5 start-5" role="alert">
     <div class="text-sm font-normal">Bottom left positioning.</div>
 </div>
 {{< /example >}}

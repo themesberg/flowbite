@@ -312,10 +312,10 @@
 --color-fg-lime: var(--color-lime-600);
 
 /* background color variables */
---color-primary-soft: var(--color-white);
---color-primary: var(--color-white);
---color-primary-medium: var(--color-white);
---color-primary-strong: var(--color-white);
+--color-neutral-primary-soft: var(--color-white);
+--color-neutral-primary: var(--color-white);
+--color-neutral-primary-medium: var(--color-white);
+--color-neutral-primary-strong: var(--color-white);
 --color-secondary-soft: var(--color-stone-100);
 --color-secondary: var(--color-stone-100);
 --color-secondary-medium: var(--color-stone-100);
@@ -403,10 +403,10 @@
 --color-fg-lime: var(--color-lime-500);
 
 /* background color variables */
---color-primary-soft: var(--color-stone-900);
---color-primary: var(--color-stone-950);
---color-primary-medium: var(--color-stone-800);
---color-primary-strong: var(--color-stone-700);
+--color-neutral-primary-soft: var(--color-stone-900);
+--color-neutral-primary: var(--color-stone-950);
+--color-neutral-primary-medium: var(--color-stone-800);
+--color-neutral-primary-strong: var(--color-stone-700);
 --color-secondary-soft: var(--color-stone-900);
 --color-secondary: var(--color-stone-950);
 --color-secondary-medium: var(--color-stone-800);

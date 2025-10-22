@@ -24,7 +24,7 @@ Use this example to show a responsive list of menu items inside the sidebar with
 </button>
 
 <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-   <div class="h-full px-3 py-4 overflow-y-auto bg-primary-soft border-e border-default">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-neutral-primary-soft border-e border-default">
       <ul class="space-y-2 font-medium">
          <li>
             <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-tertiary hover:text-fg-brand group">
@@ -160,7 +160,7 @@ Use this sidebar example to create multi-level menu items by applying the `data-
 </button>
 
 <aside id="sidebar-multi-level-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-   <div class="h-full px-3 py-4 overflow-y-auto bg-primary-soft border-e border-default">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-neutral-primary-soft border-e border-default">
       <ul class="space-y-2 font-medium">
          <li>
             <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-tertiary hover:text-fg-brand group">
@@ -310,7 +310,7 @@ Separate the content inside the sidebar component by applying a border separator
 </button>
 
 <aside id="separator-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-   <div class="h-full px-3 py-4 overflow-y-auto bg-primary-soft border-e border-default">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-neutral-primary-soft border-e border-default">
       <ul class="space-y-2 font-medium">
          <li>
             <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-tertiary hover:text-fg-brand group">
@@ -481,7 +481,7 @@ Use this example to add a CTA button inside the sidebar component and encourage 
 </button>
 
 <aside id="cta-button-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-   <div class="h-full px-3 py-4 overflow-y-auto bg-primary-soft border-e border-default">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-neutral-primary-soft border-e border-default">
       <ul class="space-y-2 font-medium">
          <li>
             <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-tertiary hover:text-fg-brand group">
@@ -650,7 +650,7 @@ Show the logo of your brand and link back to the homepage from the top part of t
 </button>
 
 <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-   <div class="h-full px-3 py-4 overflow-y-auto bg-primary-soft border-e border-default">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-neutral-primary-soft border-e border-default">
       <a href="https://flowbite.com/" class="flex items-center ps-2.5 mb-5">
          <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 me-3" alt="Flowbite Logo" />
          <span class="self-center text-lg text-heading font-semibold whitespace-nowrap">Flowbite</span>
@@ -781,7 +781,7 @@ Use this example to show a navbar together with a sidebar layout for your web ap
 
 {{< example id="sidebar-logo-example" github="components/sidebar.md" bodyClass="!p-0" iframeHeight="640" iframeMaxHeight="640" show_dark=true >}}
 
-<nav class="fixed top-0 z-50 w-full bg-primary-soft border-b border-default">
+<nav class="fixed top-0 z-50 w-full bg-neutral-primary-soft border-b border-default">
   <div class="px-3 py-3 lg:px-5 lg:pl-3">
     <div class="flex items-center justify-between">
       <div class="flex items-center justify-start rtl:justify-end">
@@ -802,7 +802,7 @@ Use this example to show a navbar together with a sidebar layout for your web ap
                 <img class="w-7 h-7 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo">
               </button>
             </div>
-            <div class="z-50 hidden bg-primary-medium border border-default-medium rounded-base shadow-lg w-44" id="dropdown-user">
+            <div class="z-50 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44" id="dropdown-user">
               <div class="px-4 py-3 border-b border-default-medium" role="none">
                 <p class="text-sm font-medium text-heading" role="none">
                   Neil Sims
@@ -833,7 +833,7 @@ Use this example to show a navbar together with a sidebar layout for your web ap
 </nav>
 
 <aside id="top-bar-sidebar" class="fixed top-0 left-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-   <div class="h-full px-3 py-4 overflow-y-auto bg-primary-soft border-e border-default">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-neutral-primary-soft border-e border-default">
       <a href="https://flowbite.com/" class="flex items-center ps-2.5 mb-5">
          <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 me-3" alt="Flowbite Logo" />
          <span class="self-center text-lg text-heading font-semibold whitespace-nowrap">Flowbite</span>
@@ -972,7 +972,7 @@ Use this example to show the navigation as an off-canvas drawer component when c
 </div>
 
 <!-- drawer component -->
-<div id="drawer-navigation" class="fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-primary-soft border-e border-default" tabindex="-1" aria-labelledby="drawer-navigation-label">
+<div id="drawer-navigation" class="fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-neutral-primary-soft border-e border-default" tabindex="-1" aria-labelledby="drawer-navigation-label">
   <div class="border-b border-default pb-4 flex items-center">
       <a href="https://flowbite.com/" class="flex items-center space-x-2 rtl:space-x-reverse">
          <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 w-6" alt="Flowbite Logo" />

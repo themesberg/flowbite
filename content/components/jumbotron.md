@@ -23,7 +23,7 @@ Use this default example to show a title, description, and two CTA buttons for t
 
 {{< example id="default-jumbotron-example" bodyClass="p-0" github="components/jumbotron.md" show_dark=true >}}
 
-<section class="bg-primary">
+<section class="bg-neutral-primary">
     <div class="py-8 px-4 mx-auto max-w-screen-2xl text-center lg:py-16">
         <h1 class="mb-6 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl">We invest in the world’s potential</h1>
         <p class="mb-8 text-base font-normal text-body md:text-xl">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
@@ -65,7 +65,7 @@ This component can be used to feature a video together with a heading title, des
 
 {{< example id="video-jumbotron-example" bodyClass="!p-0" github="components/jumbotron.md" show_dark=true >}}
 
-<section class="bg-primary">
+<section class="bg-neutral-primary">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
         <div class="flex flex-col justify-center">
             <h1 class="mb-6 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl">We invest in the world’s potential</h1>
@@ -91,7 +91,7 @@ Use this component to show a sign in or register form as the first section of yo
 
 {{< example id="form-jumbotron-example" bodyClass="!p-0 bg-gray-50 dark:bg-gray-900" github="components/jumbotron.md" show_dark=true >}}
 
-<section class="bg-primary">
+<section class="bg-neutral-primary">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
         <div class="flex flex-col justify-center">
             <h1 class="mb-6 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl">We invest in the world’s potential</h1>
@@ -101,7 +101,7 @@ Use this component to show a sign in or register form as the first section of yo
             </a>
         </div>
         <div>
-            <div class="w-full bg-primary-soft p-6 border border-default rounded-base shadow-xs">
+            <div class="w-full bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs">
                 <form action="#">
                     <h5 class="text-xl font-semibold text-heading mb-6">Sign in to our platform</h5>
                     <div class="mb-4">
@@ -134,7 +134,7 @@ Use this component to show a hero pattern with a linear gradient layout as an ov
 
 {{< example id="gradient-jumbotron-example" bodyClass="!p-0" github="components/jumbotron.md" show_dark=true >}}
 
-<section class="bg-primary bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')] dark:bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')]">
+<section class="bg-neutral-primary bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')] dark:bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')]">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative">
         <div class="w-auto inline-flex items-center p-1 pe-2 mb-4 text-sm text-fg-brand-strong rounded-full bg-brand-softer border border-brand-subtle" role="alert">
             <span class="bg-brand-soft text-fg-brand-strong py-0.5 px-2 rounded-full">New</span>
@@ -166,7 +166,7 @@ This example can be used to show cards with headings, descriptions, and CTA butt
 
 {{< example id="cards-jumbotron-example" bodyClass="!p-0" github="components/jumbotron.md" show_dark=true >}}
 
-<section class="bg-primary">
+<section class="bg-neutral-primary">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
         <div class="bg-secondary-soft border border-default rounded-base p-8 md:p-12 mb-8">
             <span class="inline-flex items-center bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-sm">

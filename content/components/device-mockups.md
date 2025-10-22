@@ -27,7 +27,7 @@ Use this example to show a standard phone mockup based on Tailwind CSS and add y
     <div class="h-[46px] w-[3px] bg-base absolute -start-[17px] top-[124px] rounded-s-lg"></div>
     <div class="h-[46px] w-[3px] bg-base absolute -start-[17px] top-[178px] rounded-s-lg"></div>
     <div class="h-[64px] w-[3px] bg-base absolute -end-[17px] top-[142px] rounded-e-lg"></div>
-    <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-primary ">
+    <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-neutral-primary ">
         <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-1-light.png" class="dark:hidden w-[272px] h-[572px]" alt="">
         <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-1-dark.png" class="hidden dark:block w-[272px] h-[572px]" alt="">
     </div>
@@ -44,7 +44,7 @@ Use this example to clearly show that the preview of your application is being u
     <div class="h-[46px] w-[3px] bg-base absolute -start-[17px] top-[124px] rounded-s-lg"></div>
     <div class="h-[46px] w-[3px] bg-base absolute -start-[17px] top-[178px] rounded-s-lg"></div>
     <div class="h-[64px] w-[3px] bg-base absolute -end-[17px] top-[142px] rounded-e-lg"></div>
-    <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-primary ">
+    <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-neutral-primary ">
         <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-2-light.png" class="dark:hidden w-[272px] h-[572px]" alt="">
         <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-2-dark.png" class="hidden dark:block w-[272px] h-[572px]" alt="">
     </div>
@@ -62,7 +62,7 @@ Use this alternative phone mockup example if you want to feature previews for an
     <div class="h-[46px] w-[3px] bg-base absolute -start-[17px] top-[124px] rounded-s-lg"></div>
     <div class="h-[46px] w-[3px] bg-base absolute -start-[17px] top-[178px] rounded-s-lg"></div>
     <div class="h-[64px] w-[3px] bg-base absolute -end-[17px] top-[142px] rounded-e-lg"></div>
-    <div class="rounded-xl overflow-hidden w-[272px] h-[572px] bg-primary ">
+    <div class="rounded-xl overflow-hidden w-[272px] h-[572px] bg-neutral-primary ">
         <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-1-light.png" class="dark:hidden w-[272px] h-[572px]" alt="">
         <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-1-dark.png" class="hidden dark:block w-[272px] h-[572px]" alt="">
     </div>
@@ -79,7 +79,7 @@ This component can be used to show an application preview inside of a responsive
     <div class="h-[46px] w-[3px] bg-base absolute -start-[17px] top-[124px] rounded-s-lg"></div>
     <div class="h-[46px] w-[3px] bg-base absolute -start-[17px] top-[178px] rounded-s-lg"></div>
     <div class="h-[64px] w-[3px] bg-base absolute -end-[17px] top-[142px] rounded-e-lg"></div>
-    <div class="rounded-[2rem] overflow-hidden h-[426px] md:h-[654px] bg-primary ">
+    <div class="rounded-[2rem] overflow-hidden h-[426px] md:h-[654px] bg-neutral-primary ">
         <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/tablet-mockup-image.png" class="dark:hidden h-[426px] md:h-[654px]" alt="">
         <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/tablet-mockup-image-dark.png" class="hidden dark:block h-[426px] md:h-[654px]" alt="">
     </div>
@@ -92,7 +92,7 @@ This example can be used to show a screenshot of your application inside a lapto
 
 {{< example id="laptop-mockup" github="components/device-mockups.md" show_dark=true >}}
 <div class="relative mx-auto border-default bg-base border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
-    <div class="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-primary ">
+    <div class="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-neutral-primary ">
         <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen.png" class="dark:hidden h-[156px] md:h-[278px] w-full rounded-lg" alt="">
         <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen-dark.png" class="hidden dark:block h-[156px] md:h-[278px] w-full rounded-lg" alt="">
     </div>
@@ -144,7 +144,7 @@ You can easily update the color of the mockup by changing the background color w
     <div class="h-[46px] w-[3px] bg-base absolute -start-[17px] top-[124px] rounded-s-lg"></div>
     <div class="h-[46px] w-[3px] bg-base absolute -start-[17px] top-[178px] rounded-s-lg"></div>
     <div class="h-[64px] w-[3px] bg-base absolute -end-[17px] top-[142px] rounded-e-lg"></div>
-    <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-primary ">
+    <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-neutral-primary ">
         <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-1-light.png" class="dark:hidden w-[272px] h-[572px]" alt="">
         <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-1-dark.png" class="hidden dark:block w-[272px] h-[572px]" alt="">
     </div>

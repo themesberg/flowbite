@@ -59,7 +59,7 @@ The KBD component can also be used inside table components to denote what type o
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-primary border-b border-default">
+            <tr class="bg-neutral-primary border-b border-default">
                 <th scope="row" class="px-6 py-4 font-medium text-body whitespace-nowrap">
                     <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-default-medium rounded-base">Shift</kbd>
                         <span class="mx-2">or</span>
@@ -69,7 +69,7 @@ The KBD component can also be used inside table components to denote what type o
                     Navigate to interactive elements
                 </td>
             </tr>
-            <tr class="bg-primary border-b border-default">
+            <tr class="bg-neutral-primary border-b border-default">
                 <th scope="row" class="px-6 py-4 font-medium text-body whitespace-nowrap">
                     <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-default-medium rounded-base">Enter</kbd>
                     <span class="mx-2">or</span>
@@ -79,7 +79,7 @@ The KBD component can also be used inside table components to denote what type o
                     Ensure elements with ARIA role="button" can be activated with both key commands.
                 </td>
             </tr>
-            <tr class="bg-primary">
+            <tr class="bg-neutral-primary">
                 <th scope="row" class="inline-flex items-center px-6 py-4 font-medium text-body whitespace-nowrap">
                     <kbd class="inline-flex items-center me-1 px-2 py-1.5 text-xs font-semibold text-heading bg-tertiary border border-default-medium rounded-base">
                         <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 10">

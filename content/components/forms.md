@@ -288,35 +288,35 @@ Group a series of buttons together on a single line or stack them in a vertical 
   <legend class="sr-only">Countries</legend>
 
   <div class="flex items-center mb-4">
-    <input id="country-option-1" type="radio" name="countries" value="USA" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none" checked>
+    <input id="country-option-1" type="radio" name="countries" value="USA" class="w-4 h-4 text-neutral-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none" checked>
     <label for="country-option-1" class="select-none ms-2 text-sm font-medium text-heading">
       United States
     </label>
   </div>
 
   <div class="flex items-center mb-4">
-    <input id="country-option-2" type="radio" name="countries" value="Germany" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+    <input id="country-option-2" type="radio" name="countries" value="Germany" class="w-4 h-4 text-neutral-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
     <label for="country-option-2" class="select-none ms-2 text-sm font-medium text-heading">
       Germany
     </label>
   </div>
 
   <div class="flex items-center mb-4">
-    <input id="country-option-3" type="radio" name="countries" value="Spain" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+    <input id="country-option-3" type="radio" name="countries" value="Spain" class="w-4 h-4 text-neutral-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
     <label for="country-option-3" class="select-none ms-2 text-sm font-medium text-heading">
       Spain
     </label>
   </div>
 
   <div class="flex items-center mb-4">
-    <input id="country-option-4" type="radio" name="countries" value="United Kingdom" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+    <input id="country-option-4" type="radio" name="countries" value="United Kingdom" class="w-4 h-4 text-neutral-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
     <label for="country-option-4" class="select-none ms-2 text-sm font-medium text-heading">
       United Kingdom
     </label>
   </div>
 
   <div class="flex items-center">
-    <input id="option-disabled" type="radio" name="countries" value="China" class="w-4 h-4 text-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none" disabled>
+    <input id="option-disabled" type="radio" name="countries" value="China" class="w-4 h-4 text-neutral-primary border-default-medium bg-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none" disabled>
     <label for="option-disabled" class="block ms-2 text-sm font-medium text-fg-disabled select-none">
       China (disabled)
     </label>

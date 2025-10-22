@@ -147,7 +147,7 @@ This component can be used to show the timline of a user's activity history insi
         <span class="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 ring-buffer">
             <img class="rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
         </span>
-        <div class="items-center justify-between p-4 bg-primary-soft border border-default rounded-base shadow-xs sm:flex">
+        <div class="items-center justify-between p-4 bg-neutral-primary-soft border border-default rounded-base shadow-xs sm:flex">
             <time class="bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded sm:order-last mb-1 sm:mb-0">just now</time>
             <div class="text-body"><a href="#" class="font-medium text-heading hover:underline">Bonnie Green</a> moved <a href="#" class="font-medium text-heading hover:underline">Jese Leos</a> to <span class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">Funny Group</span></div>
         </div>
@@ -156,7 +156,7 @@ This component can be used to show the timline of a user's activity history insi
         <span class="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 ring-buffer">
             <img class="rounded-full shadow-lg" src="/docs/images/people/profile-picture-5.jpg" alt="Thomas Lean image"/>
         </span>
-        <div class="p-4 bg-primary-soft border border-default rounded-base shadow-xs">
+        <div class="p-4 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
             <div class="items-center justify-between mb-3 sm:flex">
                 <time class="bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded sm:order-last mb-1 sm:mb-0">2 hours ago</time>
                 <div class="text-body">Thomas Lean commented on <a href="#" class="font-medium text-heading hover:underline">Flowbite Pro</a></div>
@@ -175,7 +175,7 @@ This component can be used to show the timline of a user's activity history insi
         <span class="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 ring-buffer">
             <img class="rounded-full shadow-lg" src="/docs/images/people/profile-picture-1.jpg" alt="Jese Leos image"/>
         </span>
-        <div class="items-center justify-between p-4 bg-primary-soft border border-default rounded-base shadow-xs sm:flex">
+        <div class="items-center justify-between p-4 bg-neutral-primary-soft border border-default rounded-base shadow-xs sm:flex">
             <time class="bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded sm:order-last mb-1 sm:mb-0">3 hours ago</time>
             <div class="text-body"><a href="#" class="font-medium text-heading hover:underline">Bonnie Green</a> moved <a href="#" class="font-medium text-heading hover:underline">Jese Leos</a> to <span class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">Funny Group</span></div>
         </div>
@@ -198,7 +198,7 @@ Use this component to group multiple data entries inside a single date and show 
                 <div class="text-body">
                     <div class="text-base font-normal mb-1"><span class="font-medium text-heading">Laura Romeros</span> likes <span class="font-medium text-heading">Bonnie Green's</span> post in <span class="font-medium text-heading"> How to start with Flowbite library</span></div>
                     <div class="text-sm font-normal mb-2">"I wanted to share a webinar zeroheight."</div>
-                    <span class="inline-flex items-center bg-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
+                    <span class="inline-flex items-center bg-neutral-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
                         <svg class="w-3 h-3 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.933 13.909A4.357 4.357 0 0 1 3 12c0-1 4-6 9-6m7.6 3.8A5.068 5.068 0 0 1 21 12c0 1-3 6-9 6-.314 0-.62-.014-.918-.04M5 19 19 5m-4 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
                         Private
                     </span>
@@ -210,7 +210,7 @@ Use this component to group multiple data entries inside a single date and show 
                 <img class="w-12 h-12 mb-3 me-3 rounded-full sm:mb-0" src="/docs/images/people/profile-picture-2.jpg" alt="Mike Willi image"/>
                 <div>
                     <div class="text-base font-normal text-body mb-2"><span class="font-medium text-heading">Mike Willi</span> react to <span class="font-medium text-heading">Thomas Lean's</span> comment</div>
-                    <span class="inline-flex items-center bg-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
+                    <span class="inline-flex items-center bg-neutral-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
                         <svg class="w-3 h-3 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"/><path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
                         Public
                     </span>
@@ -223,7 +223,7 @@ Use this component to group multiple data entries inside a single date and show 
                 <div class="text-body">
                     <div class="text-base font-normal mb-1"><span class="font-medium text-heading">Jese Leos</span> likes <span class="font-medium text-heading">Bonnie Green's</span> post in <span class="font-medium text-heading"> How to start with Flowbite library</span></div>
                     <div class="text-sm font-normal mb-2">"I wanted to share a webinar zeroheight."</div>
-                    <span class="inline-flex items-center bg-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
+                    <span class="inline-flex items-center bg-neutral-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
                         <svg class="w-3 h-3 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"/><path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
                         Public
                     </span>
@@ -236,7 +236,7 @@ Use this component to group multiple data entries inside a single date and show 
                 <div class="text-body">
                     <div class="text-base font-normal mb-1"><span class="font-medium text-heading">Bonnie Green</span> likes <span class="font-medium text-heading">Bonnie Green's</span> post in <span class="font-medium text-heading"> Top figma designs</span></div>
                     <div class="text-sm font-normal mb-2">"I wanted to share a webinar zeroheight."</div>
-                    <span class="inline-flex items-center bg-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
+                    <span class="inline-flex items-center bg-neutral-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
                         <svg class="w-3 h-3 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"/><path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
                         Public
                     </span> 
@@ -254,7 +254,7 @@ Use this component to group multiple data entries inside a single date and show 
                 <div class="text-body">
                     <div class="text-base font-normal mb-1"><span class="font-medium text-heading">Laura Romeros</span> likes <span class="font-medium text-heading">Bonnie Green's</span> post in <span class="font-medium text-heading"> How to start with Flowbite library</span></div>
                     <div class="text-sm font-normal mb-2">"I wanted to share a webinar zeroheight."</div>
-                    <span class="inline-flex items-center bg-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
+                    <span class="inline-flex items-center bg-neutral-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
                         <svg class="w-3 h-3 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.933 13.909A4.357 4.357 0 0 1 3 12c0-1 4-6 9-6m7.6 3.8A5.068 5.068 0 0 1 21 12c0 1-3 6-9 6-.314 0-.62-.014-.918-.04M5 19 19 5m-4 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
                         Private
                     </span>
@@ -266,7 +266,7 @@ Use this component to group multiple data entries inside a single date and show 
                 <img class="w-12 h-12 mb-3 me-3 rounded-full sm:mb-0" src="/docs/images/people/profile-picture-2.jpg" alt="Mike Willi image"/>
                 <div>
                     <div class="text-base font-normal text-body mb-2"><span class="font-medium text-heading">Mike Willi</span> react to <span class="font-medium text-heading">Thomas Lean's</span> comment</div>
-                    <span class="inline-flex items-center bg-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
+                    <span class="inline-flex items-center bg-neutral-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
                         <svg class="w-3 h-3 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"/><path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
                         Public
                     </span>
@@ -279,7 +279,7 @@ Use this component to group multiple data entries inside a single date and show 
                 <div class="text-body">
                     <div class="text-base font-normal mb-1"><span class="font-medium text-heading">Jese Leos</span> likes <span class="font-medium text-heading">Bonnie Green's</span> post in <span class="font-medium text-heading"> How to start with Flowbite library</span></div>
                     <div class="text-sm font-normal mb-2">"I wanted to share a webinar zeroheight."</div>
-                    <span class="inline-flex items-center bg-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
+                    <span class="inline-flex items-center bg-neutral-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
                         <svg class="w-3 h-3 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"/><path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
                         Public
                     </span>
@@ -292,7 +292,7 @@ Use this component to group multiple data entries inside a single date and show 
                 <div class="text-body">
                     <div class="text-base font-normal mb-1"><span class="font-medium text-heading">Bonnie Green</span> likes <span class="font-medium text-heading">Bonnie Green's</span> post in <span class="font-medium text-heading"> Top figma designs</span></div>
                     <div class="text-sm font-normal mb-2">"I wanted to share a webinar zeroheight."</div>
-                    <span class="inline-flex items-center bg-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
+                    <span class="inline-flex items-center bg-neutral-primary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">
                         <svg class="w-3 h-3 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"/><path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
                         Public
                     </span> 

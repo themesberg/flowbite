@@ -387,7 +387,7 @@ code.language-html .token.comment{
 /* Search */
 
 .DocSearch.DocSearch-Button {
-	@apply p-3 m-0 md:w-52 border-buffer items-center justify-center focus:outline-none focus:ring-4 focus:ring-tertiary md:justify-between h-[36px] w-[36px] md:bg-secondary-soft bg-primary rounded-base border md:border-default md:border-solid shadow-none xl:pl-3 flex hover:bg-tertiary xl:w-64 hover:shadow-none focus:shadow-none;
+	@apply p-3 m-0 md:w-52 border-buffer items-center justify-center focus:outline-none focus:ring-4 focus:ring-tertiary md:justify-between h-[36px] w-[36px] md:bg-secondary-soft bg-neutral-primary rounded-base border md:border-default md:border-solid shadow-none xl:pl-3 flex hover:bg-tertiary xl:w-64 hover:shadow-none focus:shadow-none;
 }
 
 .DocSearch-Button-Placeholder {

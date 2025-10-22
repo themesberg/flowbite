@@ -18,7 +18,7 @@ The sidebar component can be used as a complementary element relative to the nav
 Use this example to show a responsive list of menu items inside the sidebar with icons and labels.
 
 {{< example id="default-sidebar-example" github="components/sidebar.md" bodyClass="!p-0" iframeHeight="600" iframeMaxHeight="640" show_dark=true >}}
-<button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="text-heading bg-transparent box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base ms-3 mt-3 text-sm p-2 focus:outline-none">
+<button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base ms-3 mt-3 text-sm p-2 focus:outline-none">
    <span class="sr-only">Open sidebar</span>
    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
 </button>
@@ -36,7 +36,7 @@ Use this example to show a responsive list of menu items inside the sidebar with
             <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-tertiary hover:text-fg-brand group">
                <svg class="shrink-0 w-5 h-5 transition duration-75 group-hover:text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v14M9 5v14M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>
                <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
-               <span class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Pro</span>
+               <span class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Pro</span>
             </a>
          </li>
          <li>
@@ -71,71 +71,71 @@ Use this example to show a responsive list of menu items inside the sidebar with
 <div class="p-4 sm:ml-64 -mt-12">
    <div class="p-4 border-1 border-default border-dashed rounded-base">
       <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
       </div>
-      <div class="flex items-center justify-center h-48 rounded-base bg-secondary-soft mb-4">
+      <div class="flex items-center justify-center h-48 rounded-base bg-neutral-secondary-soft mb-4">
          <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
          </p>
       </div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
       </div>
-      <div class="flex items-center justify-center h-48 rounded-base bg-secondary-soft mb-4">
+      <div class="flex items-center justify-center h-48 rounded-base bg-neutral-secondary-soft mb-4">
          <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
          </p>
       </div>
       <div class="grid grid-cols-2 gap-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
@@ -154,7 +154,7 @@ Use this example to show a responsive list of menu items inside the sidebar with
 Use this sidebar example to create multi-level menu items by applying the `data-collapse-toggle="id"` data attribute from Flowbite and toggle the second-level menu item.
 
 {{< example id="sidebar-multi-level-example" github="components/sidebar.md" bodyClass="!p-0" iframeHeight="640" iframeMaxHeight="640" show_dark=true >}}
-<button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar" aria-controls="sidebar-multi-level-sidebar" type="button" class="text-heading bg-transparent box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base ms-3 mt-3 text-sm p-2 focus:outline-none">
+<button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar" aria-controls="sidebar-multi-level-sidebar" type="button" class="text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base ms-3 mt-3 text-sm p-2 focus:outline-none">
    <span class="sr-only">Open sidebar</span>
    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/></svg>
 </button>
@@ -190,7 +190,7 @@ Use this sidebar example to create multi-level menu items by applying the `data-
             <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-tertiary hover:text-fg-brand group">
                <svg class="shrink-0 w-5 h-5 transition duration-75 group-hover:text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v14M9 5v14M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>
                <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
-               <span class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Pro</span>
+               <span class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Pro</span>
             </a>
          </li>
          <li>
@@ -225,71 +225,71 @@ Use this sidebar example to create multi-level menu items by applying the `data-
 <div class="p-4 sm:ml-64 -mt-12">
    <div class="p-4 border-1 border-default border-dashed rounded-base">
       <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
       </div>
-      <div class="flex items-center justify-center h-48 rounded-base bg-secondary-soft mb-4">
+      <div class="flex items-center justify-center h-48 rounded-base bg-neutral-secondary-soft mb-4">
          <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
          </p>
       </div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
       </div>
-      <div class="flex items-center justify-center h-48 rounded-base bg-secondary-soft mb-4">
+      <div class="flex items-center justify-center h-48 rounded-base bg-neutral-secondary-soft mb-4">
          <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
          </p>
       </div>
       <div class="grid grid-cols-2 gap-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
@@ -304,7 +304,7 @@ Use this sidebar example to create multi-level menu items by applying the `data-
 Separate the content inside the sidebar component by applying a border separator between the two menus.
 
 {{< example id="sidebar-separator-example" github="components/sidebar.md" bodyClass="!p-0" iframeHeight="640" iframeMaxHeight="640" show_dark=true >}}
-<button  data-drawer-target="separator-sidebar" data-drawer-toggle="separator-sidebar" aria-controls="separator-sidebar" type="button" class="text-heading bg-transparent box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base ms-3 mt-3 text-sm p-2 focus:outline-none">
+<button  data-drawer-target="separator-sidebar" data-drawer-toggle="separator-sidebar" aria-controls="separator-sidebar" type="button" class="text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base ms-3 mt-3 text-sm p-2 focus:outline-none">
    <span class="sr-only">Open sidebar</span>
    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/></svg>
 </button>
@@ -340,7 +340,7 @@ Separate the content inside the sidebar component by applying a border separator
             <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-tertiary hover:text-fg-brand group">
                <svg class="shrink-0 w-5 h-5 transition duration-75 group-hover:text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v14M9 5v14M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>
                <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
-               <span class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Pro</span>
+               <span class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Pro</span>
             </a>
          </li>
          <li>
@@ -395,71 +395,71 @@ Separate the content inside the sidebar component by applying a border separator
 <div class="p-4 sm:ml-64 -mt-12">
    <div class="p-4 border-1 border-default border-dashed rounded-base">
       <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
       </div>
-      <div class="flex items-center justify-center h-48 rounded-base bg-secondary-soft mb-4">
+      <div class="flex items-center justify-center h-48 rounded-base bg-neutral-secondary-soft mb-4">
          <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
          </p>
       </div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
       </div>
-      <div class="flex items-center justify-center h-48 rounded-base bg-secondary-soft mb-4">
+      <div class="flex items-center justify-center h-48 rounded-base bg-neutral-secondary-soft mb-4">
          <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
          </p>
       </div>
       <div class="grid grid-cols-2 gap-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
@@ -475,7 +475,7 @@ Use this example to add a CTA button inside the sidebar component and encourage 
 
 {{< example id="sidebar-cta-button-example" github="components/sidebar.md" bodyClass="!p-0" iframeHeight="640" iframeMaxHeight="640" show_dark=true >}}
 
-<button data-drawer-target="cta-button-sidebar" data-drawer-toggle="cta-button-sidebar" aria-controls="cta-button-sidebar" type="button" class="text-heading bg-transparent box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base ms-3 mt-3 text-sm p-2 focus:outline-none">
+<button data-drawer-target="cta-button-sidebar" data-drawer-toggle="cta-button-sidebar" aria-controls="cta-button-sidebar" type="button" class="text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base ms-3 mt-3 text-sm p-2 focus:outline-none">
    <span class="sr-only">Open sidebar</span>
    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/></svg>
 </button>
@@ -511,7 +511,7 @@ Use this example to add a CTA button inside the sidebar component and encourage 
             <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-tertiary hover:text-fg-brand group">
                <svg class="shrink-0 w-5 h-5 transition duration-75 group-hover:text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v14M9 5v14M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>
                <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
-               <span class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Pro</span>
+               <span class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Pro</span>
             </a>
          </li>
          <li>
@@ -565,71 +565,71 @@ Use this example to add a CTA button inside the sidebar component and encourage 
 <div class="p-4 sm:ml-64 -mt-12">
    <div class="p-4 border-1 border-default border-dashed rounded-base">
       <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
       </div>
-      <div class="flex items-center justify-center h-48 rounded-base bg-secondary-soft mb-4">
+      <div class="flex items-center justify-center h-48 rounded-base bg-neutral-secondary-soft mb-4">
          <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
          </p>
       </div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
       </div>
-      <div class="flex items-center justify-center h-48 rounded-base bg-secondary-soft mb-4">
+      <div class="flex items-center justify-center h-48 rounded-base bg-neutral-secondary-soft mb-4">
          <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
          </p>
       </div>
       <div class="grid grid-cols-2 gap-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
@@ -644,7 +644,7 @@ Use this example to add a CTA button inside the sidebar component and encourage 
 Show the logo of your brand and link back to the homepage from the top part of the sidebar.
 
 {{< example id="sidebar-logo-example" github="components/sidebar.md" bodyClass="!p-0" iframeHeight="640" iframeMaxHeight="640" show_dark=true >}}
-<button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="text-heading bg-transparent box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base ms-3 mt-3 text-sm p-2 focus:outline-none">
+<button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base ms-3 mt-3 text-sm p-2 focus:outline-none">
    <span class="sr-only">Open sidebar</span>
    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
 </button>
@@ -666,7 +666,7 @@ Show the logo of your brand and link back to the homepage from the top part of t
             <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-tertiary hover:text-fg-brand group">
                <svg class="shrink-0 w-5 h-5 transition duration-75 group-hover:text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v14M9 5v14M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>
                <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
-               <span class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Pro</span>
+               <span class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Pro</span>
             </a>
          </li>
          <li>
@@ -701,71 +701,71 @@ Show the logo of your brand and link back to the homepage from the top part of t
 <div class="p-4 sm:ml-64 -mt-12">
    <div class="p-4 border-1 border-default border-dashed rounded-base">
       <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
       </div>
-      <div class="flex items-center justify-center h-48 rounded-base bg-secondary-soft mb-4">
+      <div class="flex items-center justify-center h-48 rounded-base bg-neutral-secondary-soft mb-4">
          <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
          </p>
       </div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
       </div>
-      <div class="flex items-center justify-center h-48 rounded-base bg-secondary-soft mb-4">
+      <div class="flex items-center justify-center h-48 rounded-base bg-neutral-secondary-soft mb-4">
          <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
          </p>
       </div>
       <div class="grid grid-cols-2 gap-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
@@ -785,7 +785,7 @@ Use this example to show a navbar together with a sidebar layout for your web ap
   <div class="px-3 py-3 lg:px-5 lg:pl-3">
     <div class="flex items-center justify-between">
       <div class="flex items-center justify-start rtl:justify-end">
-        <button data-drawer-target="top-bar-sidebar" data-drawer-toggle="top-bar-sidebar" aria-controls="top-bar-sidebar" type="button" class="sm:hidden text-heading bg-transparent box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base text-sm p-2 focus:outline-none">
+        <button data-drawer-target="top-bar-sidebar" data-drawer-toggle="top-bar-sidebar" aria-controls="top-bar-sidebar" type="button" class="sm:hidden text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-tertiary font-medium leading-5 rounded-base text-sm p-2 focus:outline-none">
             <span class="sr-only">Open sidebar</span>
             <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
          </button>
@@ -813,16 +813,16 @@ Use this example to show a navbar together with a sidebar layout for your web ap
               </div>
               <ul class="p-2 text-sm text-body font-medium" role="none">
                 <li>
-                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded" role="menuitem">Dashboard</a>
+                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">Dashboard</a>
                 </li>
                 <li>
-                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded" role="menuitem">Settings</a>
+                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">Settings</a>
                 </li>
                 <li>
-                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded" role="menuitem">Earnings</a>
+                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">Earnings</a>
                 </li>
                 <li>
-                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded" role="menuitem">Sign out</a>
+                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">Sign out</a>
                 </li>
               </ul>
             </div>
@@ -849,7 +849,7 @@ Use this example to show a navbar together with a sidebar layout for your web ap
             <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-tertiary hover:text-fg-brand group">
                <svg class="shrink-0 w-5 h-5 transition duration-75 group-hover:text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v14M9 5v14M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>
                <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
-               <span class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Pro</span>
+               <span class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Pro</span>
             </a>
          </li>
          <li>
@@ -884,71 +884,71 @@ Use this example to show a navbar together with a sidebar layout for your web ap
 <div class="p-4 sm:ml-64 mt-14">
    <div class="p-4 border-1 border-default border-dashed rounded-base">
       <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
       </div>
-      <div class="flex items-center justify-center h-48 rounded-base bg-secondary-soft mb-4">
+      <div class="flex items-center justify-center h-48 rounded-base bg-neutral-secondary-soft mb-4">
          <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
          </p>
       </div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
       </div>
-      <div class="flex items-center justify-center h-48 rounded-base bg-secondary-soft mb-4">
+      <div class="flex items-center justify-center h-48 rounded-base bg-neutral-secondary-soft mb-4">
          <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
          </p>
       </div>
       <div class="grid grid-cols-2 gap-4">
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
          </div>
-         <div class="flex items-center justify-center h-24 rounded-base bg-secondary-soft">
+         <div class="flex items-center justify-center h-24 rounded-base bg-neutral-secondary-soft">
             <p class="text-fg-disabled">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
             </p>
@@ -1013,7 +1013,7 @@ Use this example to show the navigation as an off-canvas drawer component when c
             <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-tertiary hover:text-fg-brand group">
                <svg class="shrink-0 w-5 h-5 transition duration-75 group-hover:text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v14M9 5v14M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>
                <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
-               <span class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Pro</span>
+               <span class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded-sm">Pro</span>
             </a>
          </li>
          <li>

@@ -29,7 +29,7 @@ Use this example to show a simple input field with the native browser timepicker
         <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
             <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
         </div>
-        <input type="time" id="time" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+        <input type="time" id="time" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
     </div>
 </form>
 {{< /example >}}
@@ -42,8 +42,8 @@ This example can be used to select a time via an input field where you can add a
 <form class="max-w-[8.5rem] mx-auto">
     <label for="time" class="block mb-2 text-sm font-medium text-heading">Select time:</label>
     <div class="flex">
-        <input type="time" id="time" class="rounded-none rounded-s-lg flex-1 block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required>
-        <span class="inline-flex items-center px-3 text-sm text-heading bg-secondary-medium border rounded-s-0 border-s-0 border-default-medium rounded-e-md">
+        <input type="time" id="time" class="rounded-none rounded-s-lg flex-1 block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required>
+        <span class="inline-flex items-center px-3 text-sm text-heading bg-neutral-secondary-medium border rounded-s-0 border-s-0 border-default-medium rounded-e-md">
             <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
         </span>
     </div>
@@ -58,25 +58,25 @@ Use this example to show a timepicker together with a dropdown menu where you ca
 <form class="max-w-[13rem] mx-auto">
     <label for="time" class="block mb-2 text-sm font-medium text-heading">Select time:</label>
     <div class="flex">
-        <input type="time" id="time" class="rounded-none rounded-s-lg flex-1 block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required>
-        <button id="dropdown-duration-button" data-dropdown-toggle="dropdown-duration" class="border-s-0 shrink-0 z-10 inline-flex items-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
+        <input type="time" id="time" class="rounded-none rounded-s-lg flex-1 block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required>
+        <button id="dropdown-duration-button" data-dropdown-toggle="dropdown-duration" class="border-s-0 shrink-0 z-10 inline-flex items-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
          Duration 
          <svg class="w-4 h-4 -me-0.5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
         <div id="dropdown-duration" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-40">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-duration-button">
                 <li>
-                    <button type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded" role="menuitem">
+                    <button type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">
                         30 minutes
                     </button>
                 </li>
                 <li>
-                    <button type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded" role="menuitem">
+                    <button type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">
                         1 hour
                     </button>
                 </li>
                 <li>
-                    <button type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded" role="menuitem">
+                    <button type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded" role="menuitem">
                         2 hours
                     </button>
                 </li>
@@ -94,8 +94,8 @@ Use this example to show a select input next to the timepicker to select an opti
 <form>
     <label for="time" class="block mb-2 text-sm font-medium text-heading">Select time:</label>
     <div class="flex">
-        <input type="time" id="time" class="rounded-none rounded-s-lg flex-1 block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required>
-        <select id="timezones" name="timezone" class="rounded-none border border-s-0 rounded-e-lg p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" required>
+        <input type="time" id="time" class="rounded-none rounded-s-lg flex-1 block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required>
+        <select id="timezones" name="timezone" class="rounded-none border border-s-0 rounded-e-lg p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" required>
             <option value="America/New_York" selected>EST - GMT-5 (New York)</option>
             <option value="America/Los_Angeles">PST - GMT-8 (Los Angeles)</option>
             <option value="Europe/London">GMT - GMT+0 (London)</option>
@@ -125,7 +125,7 @@ Use this example to select a time interval using two input field often used for 
             <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
                <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
             </div>
-            <input type="time" id="start-time" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+            <input type="time" id="start-time" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
         </div>
     </div>
     <div>
@@ -134,7 +134,7 @@ Use this example to select a time interval using two input field often used for 
             <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
                <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
             </div>
-            <input type="time" id="end-time" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+            <input type="time" id="end-time" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
         </div>
     </div>
 </form>
@@ -170,7 +170,7 @@ Choose time
             <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
                <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
             </div>
-            <input type="time" id="start-time-2" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+            <input type="time" id="start-time-2" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
         </div>
     </div>
     <div>
@@ -179,7 +179,7 @@ Choose time
             <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
                <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
             </div>
-            <input type="time" id="end-time-2" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+            <input type="time" id="end-time-2" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
         </div>
     </div>
     </div>
@@ -205,7 +205,7 @@ Use this example to show or hide the timepicker when clicking on an trigger elem
             <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
                <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
             </div>
-            <input type="time" id="start-time-3" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+            <input type="time" id="start-time-3" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
         </div>
     </div>
     <div>
@@ -214,7 +214,7 @@ Use this example to show or hide the timepicker when clicking on an trigger elem
             <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
                <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
             </div>
-            <input type="time" id="end-time-3" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+            <input type="time" id="end-time-3" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
         </div>
     </div>
     </div>
@@ -263,7 +263,7 @@ This is an advanced example that you can use to show the details of an event and
    <div inline-datepicker datepicker-buttons datepicker-autoselect-today class="mx-auto sm:mx-0"></div>
    <div class="sm:ms-7 sm:ps-5 sm:border-s border-default w-full sm:max-w-[15rem] mt-5 sm:mt-0">
       <h3 class="text-heading text-base font-medium mb-3 text-center">Wednesday 30 June 2024</h3>
-      <button type="button" data-collapse-toggle="timetable" class="inline-flex items-center justify-center w-full text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+      <button type="button" data-collapse-toggle="timetable" class="inline-flex items-center justify-center w-full text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
          <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
          Pick a time
       </button>
@@ -364,7 +364,7 @@ This is an advanced example that you can use to show the details of an event and
 Use this example to select a date and time inside of a modal component based on the [Flowbite Datepicker](https://flowbite.com/docs/components/datepicker/) and select a time interval using checkbox elements with predefined time values for event time scheduling.
 
 {{< example id="timepicker-modal-example" github="components/timepicker.md" class="flex justify-center" show_dark=true iframeHeight="880" >}}
-<button type="button" data-modal-target="timepicker-modal" data-modal-toggle="timepicker-modal" class="inline-flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+<button type="button" data-modal-target="timepicker-modal" data-modal-toggle="timepicker-modal" class="inline-flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
    <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
    Schedule appointment
 </button>
@@ -386,7 +386,7 @@ Use this example to select a date and time inside of a modal component based on 
             </div>
             <!-- Modal body -->
             <div class="p-4 pt-0">
-                <div inline-datepicker datepicker-autoselect-today class="mx-auto sm:mx-0 flex justify-center my-5 [&>div>div]:shadow-none [&>div>div]:bg-secondary-soft [&_div>button]:bg-secondary-soft"></div>
+                <div inline-datepicker datepicker-autoselect-today class="mx-auto sm:mx-0 flex justify-center my-5 [&>div>div]:shadow-none [&>div>div]:bg-neutral-secondary-soft [&_div>button]:bg-neutral-secondary-soft"></div>
                 <label class="text-sm font-medium text-heading mb-2 block">
                 Pick your time
                 </label>
@@ -478,7 +478,7 @@ Use this example to select a date and time inside of a modal component based on 
                 </ul>
                 <div class="grid grid-cols-2 gap-2">
                     <button type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Save</button>
-                    <button type="button" data-modal-hide="timepicker-modal" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Discard</button>
+                    <button type="button" data-modal-hide="timepicker-modal" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Discard</button>
                 </div>
             </div>
         </div>
@@ -511,7 +511,7 @@ Use this example to show multiple time interval selections inside of a drawer co
       </button>
    </div>
    <form>
-      <div class="rounded-lg border border-default-medium bg-secondary-medium p-4 mb-6">
+      <div class="rounded-lg border border-default-medium bg-neutral-secondary-medium p-4 mb-6">
          <div class="flex justify-between items-center mb-3">
             <span class="text-heading text-base font-medium">Business hours</span>
             <label class="inline-flex items-center cursor-pointer">
@@ -524,7 +524,7 @@ Use this example to show multiple time interval selections inside of a drawer co
       </div>
       <div class="pb-6 mb-6 border-b border-default">
            <label for="timezone" class="block mb-2.5 text-sm font-medium text-heading">Select a timezone</label>
-            <select id="timezone" class="block w-full px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
+            <select id="timezone" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
             <option selected value>Choose a timezone</option>
             <option value="America/New_York">EST (Eastern Standard Time) - GMT-5 (New York)</option>
             <option value="America/Los_Angeles">PST (Pacific Standard Time) - GMT-8 (Los Angeles)</option>
@@ -543,7 +543,7 @@ Use this example to show multiple time interval selections inside of a drawer co
       <div class="mb-6">
          <div class="flex items-center justify-between">
             <div class="flex items-center min-w-[4rem]">
-               <input checked id="monday" name="days" type="checkbox" value="monday" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+               <input checked id="monday" name="days" type="checkbox" value="monday" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                <label for="monday" class="ms-2 text-sm font-medium text-heading">Mon</label>
             </div>
             <div class="w-full max-w-[7rem]">
@@ -552,7 +552,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                   <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
                         <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
                   </div>
-                  <input type="time" id="start-time-monday" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+                  <input type="time" id="start-time-monday" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
                </div>
             </div>
             <div class="w-full max-w-[7rem]">
@@ -561,7 +561,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                   <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
                         <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
                   </div>
-                  <input type="time" id="end-time-monday" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+                  <input type="time" id="end-time-monday" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
                </div>
             </div>
             <div>
@@ -578,7 +578,7 @@ Use this example to show multiple time interval selections inside of a drawer co
       <div class="mb-6">
          <div class="flex items-center justify-between">
             <div class="flex items-center min-w-[4rem]">
-               <input id="tuesday" name="days" type="checkbox" value="tuesday" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+               <input id="tuesday" name="days" type="checkbox" value="tuesday" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                <label for="tuesday" class="ms-2 text-sm font-medium text-heading">Tue</label>
             </div>
             <div class="w-full max-w-[7rem]">
@@ -587,7 +587,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                   <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
 <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
                   </div>
-                  <input type="time" id="start-time-tuesday" name="start-time-tuesday" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+                  <input type="time" id="start-time-tuesday" name="start-time-tuesday" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
                </div>
             </div>
             <div class="w-full max-w-[7rem]">
@@ -596,7 +596,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                   <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
 <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
                   </div>
-                  <input type="time" id="end-time-tuesday" name="end-time-tuesday" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+                  <input type="time" id="end-time-tuesday" name="end-time-tuesday" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
                </div>
             </div>
             <div>
@@ -613,7 +613,7 @@ Use this example to show multiple time interval selections inside of a drawer co
       <div class="mb-6">
          <div class="flex items-center justify-between">
             <div class="flex items-center min-w-[4rem]">
-               <input checked id="wednesday" name="days" type="checkbox" value="wednesday" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+               <input checked id="wednesday" name="days" type="checkbox" value="wednesday" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                <label for="wednesday" class="ms-2 text-sm font-medium text-heading">Wed</label>
             </div>
             <div class="w-full max-w-[7rem]">
@@ -622,7 +622,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                   <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
 <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
                   </div>
-                  <input type="time" id="start-time-wednesday" name="start-time-wednesday" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+                  <input type="time" id="start-time-wednesday" name="start-time-wednesday" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
                </div>
             </div>
             <div class="w-full max-w-[7rem]">
@@ -631,7 +631,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                   <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
 <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
                   </div>
-                  <input type="time" id="end-time-wednesday" name="end-time-wednesday" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+                  <input type="time" id="end-time-wednesday" name="end-time-wednesday" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
                </div>
             </div>
             <div>
@@ -648,7 +648,7 @@ Use this example to show multiple time interval selections inside of a drawer co
       <div class="mb-6">
          <div class="flex items-center justify-between">
             <div class="flex items-center min-w-[4rem]">
-               <input id="thursday" name="days" type="checkbox" value="thursday" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+               <input id="thursday" name="days" type="checkbox" value="thursday" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                <label for="thursday" class="ms-2 text-sm font-medium text-heading">Thu</label>
             </div>
             <div class="w-full max-w-[7rem]">
@@ -657,7 +657,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                   <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
 <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
                   </div>
-                  <input type="time" id="start-time-thursday" name="start-time-thursday" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+                  <input type="time" id="start-time-thursday" name="start-time-thursday" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
                </div>
             </div>
             <div class="w-full max-w-[7rem]">
@@ -666,7 +666,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                   <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
 <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
                   </div>
-                  <input type="time" id="end-time-thursday" name="end-time-thursday" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+                  <input type="time" id="end-time-thursday" name="end-time-thursday" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
                </div>
             </div>
             <div>
@@ -683,7 +683,7 @@ Use this example to show multiple time interval selections inside of a drawer co
       <div class="mb-6">
          <div class="flex items-center justify-between">
             <div class="flex items-center min-w-[4rem]">
-               <input id="friday" name="days" type="checkbox" value="friday" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+               <input id="friday" name="days" type="checkbox" value="friday" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                <label for="friday" class="ms-2 text-sm font-medium text-heading">Fri</label>
             </div>
             <div class="w-full max-w-[7rem]">
@@ -692,7 +692,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                   <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
 <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
                   </div>
-                  <input type="time" id="start-time-friday" name="start-time-friday" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+                  <input type="time" id="start-time-friday" name="start-time-friday" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
                </div>
             </div>
             <div class="w-full max-w-[7rem]">
@@ -701,7 +701,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                   <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
 <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
                   </div>
-                  <input type="time" id="end-time-friday" name="end-time-friday" class="block w-full p-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
+                  <input type="time" id="end-time-friday" name="end-time-friday" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required />
                </div>
             </div>
             <div>
@@ -715,14 +715,14 @@ Use this example to show multiple time interval selections inside of a drawer co
             </div>
          </div>
       </div>
-      <button type="button" class="inline-flex items-center justify-center w-full text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+      <button type="button" class="inline-flex items-center justify-center w-full text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
          <svg class="w-4 h-4 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/>
          </svg>
          Add interval
       </button>
       <div class="grid grid-cols-2 gap-4 bottom-4 left-0 w-full md:px-4 md:absolute">
-         <button type="button" data-drawer-hide="drawer-timepicker" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Close</button>
+         <button type="button" data-drawer-hide="drawer-timepicker" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Close</button>
          <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
          Save all
          </button>

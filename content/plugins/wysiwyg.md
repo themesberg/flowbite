@@ -283,7 +283,7 @@ window.addEventListener('load', function() {
 }
 })
 ` >}}
-<div class="w-full bg-secondary-medium border border-default-medium rounded-base">
+<div class="w-full bg-neutral-secondary-medium border border-default-medium rounded-base">
     <div class="p-2 border-b border-default-medium">
         <div class="flex flex-wrap items-center">
             <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
@@ -362,27 +362,27 @@ window.addEventListener('load', function() {
                 <div id="textSizeDropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-72">
                     <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="toggleTextSizeButton">
                         <li>
-                            <button data-text-size="16px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">16px (Default) 
+                            <button data-text-size="16px" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">16px (Default) 
                             </button>
                         </li>
                         <li>
-                            <button data-text-size="12px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-xs">12px (Tiny)
+                            <button data-text-size="12px" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-xs">12px (Tiny)
                             </button>
                         </li>
                         <li>
-                            <button data-text-size="14px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm">14px (Small)
+                            <button data-text-size="14px" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm">14px (Small)
                             </button>
                         </li>
                         <li>
-                            <button data-text-size="18px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-lg">18px (Lead)
+                            <button data-text-size="18px" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-lg">18px (Lead)
                             </button>
                         </li>
                         <li>
-                            <button data-text-size="24px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-2xl">24px (Large)
+                            <button data-text-size="24px" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-2xl">24px (Large)
                             </button>
                         </li>
                         <li>
-                            <button data-text-size="36px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-4xl">36px (Huge)
+                            <button data-text-size="36px" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-4xl">36px (Huge)
                             </button>
                         </li>
                     </ul>
@@ -439,7 +439,7 @@ window.addEventListener('load', function() {
                         <button type="button" data-hex-color="#F3F4F6" style="background-color: #F3F4F6" class="w-6 h-6 rounded-md"><span class="sr-only">Cloud Gray</span></button>
                         <button type="button" data-hex-color="#F9FAFB" style="background-color: #F9FAFB" class="w-6 h-6 rounded-md"><span class="sr-only">Heaven Gray</span></button>
                     </div>
-                    <button type="button" id="reset-color" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none w-full">Reset color</button>
+                    <button type="button" id="reset-color" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none w-full">Reset color</button>
                 </div>
                 <button id="toggleFontFamilyButton" data-dropdown-toggle="fontFamilyDropdown" type="button" data-tooltip-target="tooltip-font-family" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10.5785 19 4.2979-10.92966c.0369-.09379.1674-.09379.2042 0L19.3785 19m-8.8 0H9.47851m1.09999 0h1.65m7.15 0h-1.65m1.65 0h1.1m-7.7-3.9846h4.4M3 16l1.56685-3.9846m0 0 2.73102-6.94506c.03688-.09379.16738-.09379.20426 0l2.50367 6.94506H4.56685Z"/></svg>
@@ -452,39 +452,39 @@ window.addEventListener('load', function() {
                 <div id="fontFamilyDropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-48">
                     <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="toggleFontFamilyButton">
                         <li>
-                            <button data-font-family="Inter, ui-sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm">Default
+                            <button data-font-family="Inter, ui-sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm">Default
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="Arial, sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Arial, sans-serif;">Arial
+                            <button data-font-family="Arial, sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Arial, sans-serif;">Arial
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="'Courier New', monospace" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Courier New', monospace;">Courier New
+                            <button data-font-family="'Courier New', monospace" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Courier New', monospace;">Courier New
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="Georgia, serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Georgia, serif;">Georgia
+                            <button data-font-family="Georgia, serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Georgia, serif;">Georgia
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="'Lucida Sans Unicode', sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Lucida Sans Unicode', sans-serif;">Lucida Sans Unicode
+                            <button data-font-family="'Lucida Sans Unicode', sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Lucida Sans Unicode', sans-serif;">Lucida Sans Unicode
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="Tahoma, sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Tahoma, sans-serif;">Tahoma
+                            <button data-font-family="Tahoma, sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Tahoma, sans-serif;">Tahoma
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="'Times New Roman', serif;" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Times New Roman', serif;">Times New Roman
+                            <button data-font-family="'Times New Roman', serif;" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Times New Roman', serif;">Times New Roman
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="'Trebuchet MS', sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Trebuchet MS', sans-serif;">Trebuchet MS
+                            <button data-font-family="'Trebuchet MS', sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Trebuchet MS', sans-serif;">Trebuchet MS
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="Verdana, sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Verdana, sans-serif;">Verdana
+                            <button data-font-family="Verdana, sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Verdana, sans-serif;">Verdana
                             </button>
                         </li>
                     </ul>
@@ -519,7 +519,7 @@ window.addEventListener('load', function() {
             </div>
     </div>
     <div class="flex items-center gap-2 pt-2 flex-wrap">
-        <button id="typographyDropdownButton" data-dropdown-toggle="typographyDropdown" class="flex items-center justify-center text-body bg-neutral-primary-strong border border-default-strong hover:bg-secondary-strongest hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none" type="button">
+        <button id="typographyDropdownButton" data-dropdown-toggle="typographyDropdown" class="flex items-center justify-center text-body bg-neutral-primary-strong border border-default-strong hover:bg-neutral-secondary-strongest hover:text-heading focus:ring-4 focus:ring-neutral-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none" type="button">
             Format
             <svg class="w-3.5 h-3.5 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
@@ -530,65 +530,65 @@ window.addEventListener('load', function() {
         <div id="typographyDropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-72">
             <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="typographyDropdownButton">
                 <li>
-                    <button id="toggleParagraphButton" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Paragraph 
+                    <button id="toggleParagraphButton" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Paragraph 
                         <div class="space-x-1.5 ms-4">
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">0</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Cmd</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Alt</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">0</kbd>
                         </div>
                     </button>
                 </li>
                 <li>
-                    <button data-heading-level="1" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 1 
+                    <button data-heading-level="1" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Heading 1 
                         <div class="space-x-1.5 ms-4">
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">1</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Cmd</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Alt</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">1</kbd>
                         </div>
                     </button>
                 </li>
                 <li>
-                    <button  data-heading-level="2" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 2 
+                    <button  data-heading-level="2" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Heading 2 
                         <div class="space-x-1.5 ms-4">
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">2</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Cmd</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Alt</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">2</kbd>
                         </div>
                     </button>
                 </li>
                 <li>
-                    <button  data-heading-level="3" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 3
+                    <button  data-heading-level="3" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Heading 3
                         <div class="space-x-1.5 ms-4">
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">3</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Cmd</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Alt</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">3</kbd>
                         </div>
                     </button>
                 </li>
                 <li>
-                    <button  data-heading-level="4" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 4
+                    <button  data-heading-level="4" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Heading 4
                         <div class="space-x-1.5 ms-4">
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">4</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Cmd</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Alt</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">4</kbd>
                         </div>
                     </button>
                 </li>
                 <li>
-                    <button data-heading-level="5" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 5
+                    <button data-heading-level="5" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Heading 5
                         <div class="space-x-1.5 ms-4">
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">5</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Cmd</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Alt</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">5</kbd>
                         </div>
                     </button>
                 </li>
                 <li>
-                    <button  data-heading-level="6" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 6
+                    <button  data-heading-level="6" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Heading 6
                         <div class="space-x-1.5 ms-4">
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">6</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Cmd</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Alt</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">6</kbd>
                         </div>
                     </button>
                 </li>
@@ -644,9 +644,9 @@ window.addEventListener('load', function() {
         </div>
     </div>
 </div>
-<div class="px-4 py-2 bg-secondary-medium rounded-b-lg">
+<div class="px-4 py-2 bg-neutral-secondary-medium rounded-b-lg">
     <label for="wysiwyg-example" class="sr-only">Publish post</label>
-    <div id="wysiwyg-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
+    <div id="wysiwyg-example"class="block w-full px-0 text-sm text-body bg-neutral-secondary-medium border-0 focus:ring-0"></div>
 </div>
 </div>
 {{< /example >}}
@@ -828,7 +828,7 @@ window.addEventListener('load', function() {
     }
 })
 ` >}}
-<div class="w-full bg-secondary-medium border border-default-medium rounded-base">
+<div class="w-full bg-neutral-secondary-medium border border-default-medium rounded-base">
     <div class="p-2 border-b border-default-medium">
         <div class="flex flex-wrap items-center">
             <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
@@ -907,27 +907,27 @@ window.addEventListener('load', function() {
                 <div id="textSizeDropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-72">
                     <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="toggleTextSizeButton">
                         <li>
-                            <button data-text-size="16px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm">16px (Default) 
+                            <button data-text-size="16px" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm">16px (Default) 
                             </button>
                         </li>
                         <li>
-                            <button data-text-size="12px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-xs">12px (Tiny)
+                            <button data-text-size="12px" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-xs">12px (Tiny)
                             </button>
                         </li>
                         <li>
-                            <button data-text-size="14px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm">14px (Small)
+                            <button data-text-size="14px" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm">14px (Small)
                             </button>
                         </li>
                         <li>
-                            <button data-text-size="18px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-lg">18px (Lead)
+                            <button data-text-size="18px" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-lg">18px (Lead)
                             </button>
                         </li>
                         <li>
-                            <button data-text-size="24px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-2xl">24px (Large)
+                            <button data-text-size="24px" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-2xl">24px (Large)
                             </button>
                         </li>
                         <li>
-                            <button data-text-size="36px" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-4xl">36px (Huge)
+                            <button data-text-size="36px" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-4xl">36px (Huge)
                             </button>
                         </li>
                     </ul>
@@ -984,7 +984,7 @@ window.addEventListener('load', function() {
                         <button type="button" data-hex-color="#F3F4F6" style="background-color: #F3F4F6" class="w-6 h-6 rounded-md"><span class="sr-only">Cloud Gray</span></button>
                         <button type="button" data-hex-color="#F9FAFB" style="background-color: #F9FAFB" class="w-6 h-6 rounded-md"><span class="sr-only">Heaven Gray</span></button>
                     </div>
-                    <button type="button" id="reset-color" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none w-full">Reset color</button>
+                    <button type="button" id="reset-color" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none w-full">Reset color</button>
                 </div>
                 <button id="toggleFontFamilyButton" data-dropdown-toggle="fontFamilyDropdown" type="button" data-tooltip-target="tooltip-font-family" class="p-1.5 text-body rounded-sm cursor-pointer hover:text-heading hover:bg-quaternary">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10.6 19 4.298-10.93a.11.11 0 0 1 .204 0L19.4 19m-8.8 0H9.5m1.1 0h1.65m7.15 0h-1.65m1.65 0h1.1m-7.7-3.985h4.4M3.021 16l1.567-3.985m0 0L7.32 5.07a.11.11 0 0 1 .205 0l2.503 6.945h-5.44Z"/></svg>
@@ -997,39 +997,39 @@ window.addEventListener('load', function() {
                 <div id="fontFamilyDropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-48">
                     <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="toggleFontFamilyButton">
                         <li>
-                            <button data-font-family="Inter, ui-sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm">Default
+                            <button data-font-family="Inter, ui-sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm">Default
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="Arial, sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Arial, sans-serif;">Arial
+                            <button data-font-family="Arial, sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Arial, sans-serif;">Arial
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="'Courier New', monospace" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Courier New', monospace;">Courier New
+                            <button data-font-family="'Courier New', monospace" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Courier New', monospace;">Courier New
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="Georgia, serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Georgia, serif;">Georgia
+                            <button data-font-family="Georgia, serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Georgia, serif;">Georgia
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="'Lucida Sans Unicode', sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Lucida Sans Unicode', sans-serif;">Lucida Sans Unicode
+                            <button data-font-family="'Lucida Sans Unicode', sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Lucida Sans Unicode', sans-serif;">Lucida Sans Unicode
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="Tahoma, sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Tahoma, sans-serif;">Tahoma
+                            <button data-font-family="Tahoma, sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Tahoma, sans-serif;">Tahoma
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="'Times New Roman', serif;" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Times New Roman', serif;">Times New Roman
+                            <button data-font-family="'Times New Roman', serif;" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Times New Roman', serif;">Times New Roman
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="'Trebuchet MS', sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Trebuchet MS', sans-serif;">Trebuchet MS
+                            <button data-font-family="'Trebuchet MS', sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: 'Trebuchet MS', sans-serif;">Trebuchet MS
                             </button>
                         </li>
                         <li>
-                            <button data-font-family="Verdana, sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Verdana, sans-serif;">Verdana
+                            <button data-font-family="Verdana, sans-serif" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded text-sm" style="font-family: Verdana, sans-serif;">Verdana
                             </button>
                         </li>
                     </ul>
@@ -1039,7 +1039,7 @@ window.addEventListener('load', function() {
 </div>
 <div class="p-3 rounded-b-base">
     <label for="wysiwyg-text-example" class="sr-only">Write comment</label>
-    <div id="wysiwyg-text-example" class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
+    <div id="wysiwyg-text-example" class="block w-full px-0 text-sm text-body bg-neutral-secondary-medium border-0 focus:ring-0"></div>
 </div>
 </div>
 {{< /example >}}
@@ -1103,7 +1103,7 @@ window.addEventListener('load', function() {
     }
 })
 ` >}}
-<div class="w-full bg-secondary-medium border border-default-medium rounded-base">
+<div class="w-full bg-neutral-secondary-medium border border-default-medium rounded-base">
     <div class="p-2 border-b border-default-medium">
         <div class="flex flex-wrap items-center">
             <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
@@ -1148,7 +1148,7 @@ window.addEventListener('load', function() {
 </div>
 <div class="p-3 rounded-b-base">
     <label for="wysiwyg-alignment-example" class="sr-only">Publish post</label>
-    <div id="wysiwyg-alignment-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
+    <div id="wysiwyg-alignment-example"class="block w-full px-0 text-sm text-body bg-neutral-secondary-medium border-0 focus:ring-0"></div>
 </div>
 </div>
 {{< /example >}}
@@ -1213,10 +1213,10 @@ window.addEventListener('load', function() {
 }
 })
 ` >}}
-<div class="w-full bg-secondary-medium border border-default-medium rounded-base">
+<div class="w-full bg-neutral-secondary-medium border border-default-medium rounded-base">
     <div class="p-2 border-b border-default-medium">
     <div class="flex items-center gap-2">
-        <button id="typographyDropdownButton" data-dropdown-toggle="typographyDropdown" class="flex items-center justify-center text-body bg-neutral-primary-strong border border-default-strong hover:bg-secondary-strongest hover:text-heading focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none" type="button">
+        <button id="typographyDropdownButton" data-dropdown-toggle="typographyDropdown" class="flex items-center justify-center text-body bg-neutral-primary-strong border border-default-strong hover:bg-neutral-secondary-strongest hover:text-heading focus:ring-4 focus:ring-neutral-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none" type="button">
             Format
             <svg class="w-3.5 h-3.5 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
@@ -1227,65 +1227,65 @@ window.addEventListener('load', function() {
         <div id="typographyDropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-72">
             <ul class="p-2 space-y-1 text-sm text-body font-medium" aria-labelledby="typographyDropdownButton">
                 <li>
-                    <button id="toggleParagraphButton" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Paragraph 
+                    <button id="toggleParagraphButton" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Paragraph 
                         <div class="space-x-1.5 ms-4">
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">0</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Cmd</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Alt</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">0</kbd>
                         </div>
                     </button>
                 </li>
                 <li>
-                    <button data-heading-level="1" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 1 
+                    <button data-heading-level="1" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Heading 1 
                         <div class="space-x-1.5 ms-4">
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">1</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Cmd</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Alt</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">1</kbd>
                         </div>
                     </button>
                 </li>
                 <li>
-                    <button  data-heading-level="2" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 2 
+                    <button  data-heading-level="2" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Heading 2 
                         <div class="space-x-1.5 ms-4">
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">2</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Cmd</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Alt</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">2</kbd>
                         </div>
                     </button>
                 </li>
                 <li>
-                    <button  data-heading-level="3" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 3
+                    <button  data-heading-level="3" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Heading 3
                         <div class="space-x-1.5 ms-4">
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">3</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Cmd</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Alt</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">3</kbd>
                         </div>
                     </button>
                 </li>
                 <li>
-                    <button  data-heading-level="4" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 4
+                    <button  data-heading-level="4" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Heading 4
                         <div class="space-x-1.5 ms-4">
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">4</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Cmd</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Alt</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">4</kbd>
                         </div>
                     </button>
                 </li>
                 <li>
-                    <button data-heading-level="5" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 5
+                    <button data-heading-level="5" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Heading 5
                         <div class="space-x-1.5 ms-4">
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">5</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Cmd</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Alt</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">5</kbd>
                         </div>
                     </button>
                 </li>
                 <li>
-                    <button  data-heading-level="6" type="button" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Heading 6
+                    <button  data-heading-level="6" type="button" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Heading 6
                         <div class="space-x-1.5 ms-4">
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Cmd</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">Alt</kbd>
-                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-tertiary-medium border border-default-strong rounded">6</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Cmd</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">Alt</kbd>
+                            <kbd class="px-2 py-1 text-xs font-semibold text-body bg-neutral-tertiary-medium border border-default-strong rounded">6</kbd>
                         </div>
                     </button>
                 </li>
@@ -1348,7 +1348,7 @@ window.addEventListener('load', function() {
 </div>
 <div class="p-3 rounded-b-base">
     <label for="wysiwyg-typography-example" class="sr-only">Publish post</label>
-    <div id="wysiwyg-typography-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
+    <div id="wysiwyg-typography-example"class="block w-full px-0 text-sm text-body bg-neutral-secondary-medium border-0 focus:ring-0"></div>
 </div>
 </div>
 {{< /example >}}
@@ -1395,7 +1395,7 @@ window.addEventListener('load', function() {
 }
 })
 ` >}}
-<div class="w-full bg-secondary-medium border border-default-medium rounded-base">
+<div class="w-full bg-neutral-secondary-medium border border-default-medium rounded-base">
     <div class="p-2 border-b border-default-medium">
         <div class="flex flex-wrap items-center">
             <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
@@ -1424,7 +1424,7 @@ window.addEventListener('load', function() {
 </div>
 <div class="p-3 rounded-b-base">
     <label for="wysiwyg-links-example" class="sr-only">Publish post</label>
-    <div id="wysiwyg-links-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
+    <div id="wysiwyg-links-example"class="block w-full px-0 text-sm text-body bg-neutral-secondary-medium border-0 focus:ring-0"></div>
 </div>
 </div>
 {{< /example >}}
@@ -1484,7 +1484,7 @@ window.addEventListener('load', function() {
 }
 })
 ` >}}
-<div class="w-full bg-secondary-medium border border-default-medium rounded-base">
+<div class="w-full bg-neutral-secondary-medium border border-default-medium rounded-base">
     <div class="p-2 border-b border-default-medium">
     <div class="flex items-center gap-2">
         <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
@@ -1514,7 +1514,7 @@ window.addEventListener('load', function() {
 </div>
 <div class="p-3 rounded-b-base">
     <label for="wysiwyg-images-example" class="sr-only">Publish post</label>
-    <div id="wysiwyg-images-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
+    <div id="wysiwyg-images-example"class="block w-full px-0 text-sm text-body bg-neutral-secondary-medium border-0 focus:ring-0"></div>
 </div>
 </div>
 
@@ -1538,15 +1538,15 @@ window.addEventListener('load', function() {
                 <div class="grid gap-4 grid-cols-2 py-4 md:py-6">
                     <div class="col-span-2">
                         <label for="image-url" class="block mb-2.5 text-sm font-medium text-heading">Image URL</label>
-                        <input type="text" name="image-url" id="image-url" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="https://placehold.co/600x400" required="">
+                        <input type="text" name="image-url" id="image-url" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="https://placehold.co/600x400" required="">
                     </div>
                     <div class="col-span-2">
                         <label for="image-alt" class="block mb-2.5 text-sm font-medium text-heading">Image alt</label>
-                        <input type="text" name="image-alt" id="image-alt" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="" required="">
+                        <input type="text" name="image-alt" id="image-alt" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="" required="">
                     </div>
                    <div class="col-span-2">
                         <label for="image-title" class="block mb-2.5 text-sm font-medium text-heading">Image title</label>
-                        <input type="text" name="image-title" id="image-title" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="" required="">
+                        <input type="text" name="image-title" id="image-title" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="" required="">
                     </div>
                 </div>
                 <button type="submit" class="w-full inline-flex items-center justify-center text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
@@ -1618,7 +1618,7 @@ window.addEventListener('load', function() {
 }
 })
 ` >}}
-<div class="w-full bg-secondary-medium border border-default-medium rounded-base">
+<div class="w-full bg-neutral-secondary-medium border border-default-medium rounded-base">
     <div class="p-2 border-b border-default-medium">
     <div class="flex items-center gap-2">
         <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
@@ -1643,7 +1643,7 @@ window.addEventListener('load', function() {
 </div>
 <div class="p-3 rounded-b-base">
     <label for="wysiwyg-video-example" class="sr-only">Publish post</label>
-    <div id="wysiwyg-video-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
+    <div id="wysiwyg-video-example"class="block w-full px-0 text-sm text-body bg-neutral-secondary-medium border-0 focus:ring-0"></div>
 </div>
 </div>
 
@@ -1667,15 +1667,15 @@ window.addEventListener('load', function() {
                 <div class="grid gap-4 grid-cols-2 py-4 md:py-6">
                     <div class="col-span-2">
                         <label for="video-url" class="block mb-2.5 text-sm font-medium text-heading">Youtube URL</label>
-                        <input type="text" name="video-url" id="video-url" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="https://www.youtube.com/watch?v=KaLxCiilHns" required="">
+                        <input type="text" name="video-url" id="video-url" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="https://www.youtube.com/watch?v=KaLxCiilHns" required="">
                     </div>
                     <div class="col-span-2 md:col-span-1">
                         <label for="video-width" class="block mb-2.5 text-sm font-medium text-heading">Video width</label>
-                        <input type="text" name="video-width" id="video-width" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="" required="">
+                        <input type="text" name="video-width" id="video-width" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="" required="">
                     </div>
                    <div class="col-span-2 md:col-span-1">
                         <label for="video-height" class="block mb-2.5 text-sm font-medium text-heading">Video height</label>
-                        <input type="text" name="video-height" id="video-height" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="" required="">
+                        <input type="text" name="video-height" id="video-height" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="" required="">
                     </div>
                 </div>
                 <button type="submit" class="w-full inline-flex items-center justify-center text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
@@ -1850,7 +1850,7 @@ window.addEventListener('load', function() {
 }
 })
 ` >}}
-<div class="w-full bg-secondary-medium border border-default-medium rounded-base">
+<div class="w-full bg-neutral-secondary-medium border border-default-medium rounded-base">
     <div class="p-2 border-b border-default-medium">
     <div class="flex items-center gap-2">
         <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
@@ -2053,7 +2053,7 @@ window.addEventListener('load', function() {
 </div>
 <div class="p-3 rounded-b-base">
     <label for="wysiwyg-tables-example" class="sr-only">Publish post</label>
-    <div id="wysiwyg-tables-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
+    <div id="wysiwyg-tables-example"class="block w-full px-0 text-sm text-body bg-neutral-secondary-medium border-0 focus:ring-0"></div>
 </div>
 </div>
 
@@ -2077,11 +2077,11 @@ window.addEventListener('load', function() {
                 <div class="grid gap-4 grid-cols-2 py-4 md:py-6">
                     <div class="col-span-2">
                         <label for="attribute-name" class="block mb-2.5 text-sm font-medium text-heading">Attribute name</label>
-                        <input type="text" name="attribute-name" id="attribute-name" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="backgroundColor" required="">
+                        <input type="text" name="attribute-name" id="attribute-name" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="backgroundColor" required="">
                     </div>
                     <div class="col-span-2">
                         <label for="attribute-value" class="block mb-2.5 text-sm font-medium text-heading">Attribute value</label>
-                        <input type="text" name="attribute-value" id="attribute-value" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="#F1FF3F" required="">
+                        <input type="text" name="attribute-value" id="attribute-value" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="#F1FF3F" required="">
                     </div>
                 </div>
                 <button type="submit" class="w-full inline-flex items-center justify-center text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
@@ -2130,7 +2130,7 @@ window.addEventListener('load', function() {
 }
 })
 ` >}}
-<div class="w-full bg-secondary-medium border border-default-medium rounded-base">
+<div class="w-full bg-neutral-secondary-medium border border-default-medium rounded-base">
     <div class="p-2 border-b border-default-medium">
         <div class="flex flex-wrap items-center">
             <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
@@ -2159,7 +2159,7 @@ window.addEventListener('load', function() {
 </div>
 <div class="p-3 rounded-b-base">
     <label for="wysiwyg-history-example" class="sr-only">Publish post</label>
-    <div id="wysiwyg-history-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
+    <div id="wysiwyg-history-example"class="block w-full px-0 text-sm text-body bg-neutral-secondary-medium border-0 focus:ring-0"></div>
 </div>
 </div>
 {{< /example >}}
@@ -2217,7 +2217,7 @@ window.addEventListener('load', function() {
 }
 })
 ` >}}
-<div class="w-full bg-secondary-medium border border-default-medium rounded-base">
+<div class="w-full bg-neutral-secondary-medium border border-default-medium rounded-base">
     <div class="p-2 border-b border-default-medium">
         <div class="flex flex-wrap items-center">
             <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
@@ -2246,7 +2246,7 @@ window.addEventListener('load', function() {
 </div>
 <div class="p-3 rounded-b-base">
     <label for="wysiwyg-export-example" class="sr-only">Publish post</label>
-    <div id="wysiwyg-export-example"class="block w-full px-0 text-sm text-body bg-secondary-medium border-0 focus:ring-0"></div>
+    <div id="wysiwyg-export-example"class="block w-full px-0 text-sm text-body bg-neutral-secondary-medium border-0 focus:ring-0"></div>
 </div>
 </div>
 

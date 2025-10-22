@@ -26,7 +26,7 @@ Optionally, you can also add a CTA button to any of the timeline elements.
         <time class="text-sm font-normal leading-none text-body">February 2022</time>
         <h3 class="text-lg font-semibold text-heading my-2">Application UI code in Tailwind CSS</h3>
         <p class="mb-4 text-base font-normal text-body">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
-        <a href="#" class="inline-flex items-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+        <a href="#" class="inline-flex items-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
             Learn more
             <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
         </a>
@@ -57,10 +57,10 @@ Use this vertical timeline component with icons and badges to show a more advanc
         <span class="absolute flex items-center justify-center w-6 h-6 bg-brand-softer rounded-full -start-3 ring-8 ring-buffer">
             <svg class="w-3 h-3 text-fg-brand-strong" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/></svg>
         </span>
-        <time class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">March 13th, 2025</time>
+        <time class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">March 13th, 2025</time>
         <h3 class="flex items-center mb-1 text-lg font-semibold text-heading my-2">Flowbite Application UI v2.0.0 <span class="ms-2 bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded">Latest</span></h3>
         <p class="mb-4 text-body">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
-        <a href="#" class="inline-flex items-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+        <a href="#" class="inline-flex items-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
             <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m14-4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Zm-4 1h.01v.01H15V5Zm-2 2h.01v.01H13V7Zm2 2h.01v.01H15V9Zm-2 2h.01v.01H13V11Zm2 2h.01v.01H15V13Zm-2 2h.01v.01H13V15Zm2 2h.01v.01H15V17Zm-2 2h.01v.01H13V19Z"/></svg>
             Download ZIP
         </a>
@@ -69,7 +69,7 @@ Use this vertical timeline component with icons and badges to show a more advanc
         <span class="absolute flex items-center justify-center w-6 h-6 bg-brand-softer rounded-full -start-3 ring-8 ring-buffer">
             <svg class="w-3 h-3 text-fg-brand-strong" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/></svg>
         </span>
-        <time class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">January 09th, 2025</time>
+        <time class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">January 09th, 2025</time>
         <h3 class="my-2 text-lg font-semibold text-heading">Flowbite Figma v1.3.0</h3>
         <p class="text-body">All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.</p>
     </li>
@@ -77,7 +77,7 @@ Use this vertical timeline component with icons and badges to show a more advanc
         <span class="absolute flex items-center justify-center w-6 h-6 bg-brand-softer rounded-full -start-3 ring-8 ring-buffer">
             <svg class="w-3 h-3 text-fg-brand-strong" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/></svg>
         </span>
-        <time class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">October 14th, 2024</time>
+        <time class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">October 14th, 2024</time>
         <h3 class="my-2 text-lg font-semibold text-heading">Flowbite Library v1.2.2</h3>
         <p class="text-body">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
     </li>
@@ -99,10 +99,10 @@ Use this horizontally aligned timeline component to show a series of data in a c
             <div class="hidden sm:flex w-full bg-quaternary h-px"></div>
         </div>
         <div class="mt-3 sm:pe-8">
-            <time class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">January 09th, 2025</time>
+            <time class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">January 09th, 2025</time>
             <h3 class="text-lg font-semibold text-heading my-2">Flowbite Library v1.0.0</h3>
             <p class="text-body mb-4">Get started with dozens of web components and interactive elements.</p>
-            <button type="button" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Read more</button>
+            <button type="button" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Read more</button>
         </div>
     </li>
     <li class="relative mb-6 sm:mb-0">
@@ -113,10 +113,10 @@ Use this horizontally aligned timeline component to show a series of data in a c
             <div class="hidden sm:flex w-full bg-quaternary h-px"></div>
         </div>
         <div class="mt-3 sm:pe-8">
-            <time class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">March 14th, 2025</time>
+            <time class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">March 14th, 2025</time>
             <h3 class="text-lg font-semibold text-heading my-2">Flowbite Library v1.2.0</h3>
             <p class="text-body mb-4">Get started with dozens of web components and interactive elements.</p>
-            <button type="button" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Read more</button>
+            <button type="button" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Read more</button>
         </div>
     </li>
     <li class="relative mb-6 sm:mb-0">
@@ -127,10 +127,10 @@ Use this horizontally aligned timeline component to show a series of data in a c
             <div class="hidden sm:flex w-full bg-quaternary h-px"></div>
         </div>
         <div class="mt-3 sm:pe-8">
-            <time class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">September 26th, 2025</time>
+            <time class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">September 26th, 2025</time>
             <h3 class="text-lg font-semibold text-heading my-2">Flowbite Library v1.3.0</h3>
             <p class="text-body mb-4">Get started with dozens of web components and interactive elements.</p>
-            <button type="button" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Read more</button>
+            <button type="button" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Read more</button>
         </div>
     </li>
 </ol>
@@ -149,7 +149,7 @@ This component can be used to show the timline of a user's activity history insi
         </span>
         <div class="items-center justify-between p-4 bg-neutral-primary-soft border border-default rounded-base shadow-xs sm:flex">
             <time class="bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded sm:order-last mb-1 sm:mb-0">just now</time>
-            <div class="text-body"><a href="#" class="font-medium text-heading hover:underline">Bonnie Green</a> moved <a href="#" class="font-medium text-heading hover:underline">Jese Leos</a> to <span class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">Funny Group</span></div>
+            <div class="text-body"><a href="#" class="font-medium text-heading hover:underline">Bonnie Green</a> moved <a href="#" class="font-medium text-heading hover:underline">Jese Leos</a> to <span class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">Funny Group</span></div>
         </div>
     </li>
     <li class="mb-10 ms-6">
@@ -161,9 +161,9 @@ This component can be used to show the timline of a user's activity history insi
                 <time class="bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded sm:order-last mb-1 sm:mb-0">2 hours ago</time>
                 <div class="text-body">Thomas Lean commented on <a href="#" class="font-medium text-heading hover:underline">Flowbite Pro</a></div>
             </div>
-            <div class="p-3 text-xs italic font-normal text-body border border-default-medium rounded-base bg-secondary-medium">Hi ya'll! I wanted to share a webinar zeroheight is having regarding how to best measure your design system! This is the second session of our new webinar series on #DesignSystems discussions where we'll be speaking about Measurement.</div>
+            <div class="p-3 text-xs italic font-normal text-body border border-default-medium rounded-base bg-neutral-secondary-medium">Hi ya'll! I wanted to share a webinar zeroheight is having regarding how to best measure your design system! This is the second session of our new webinar series on #DesignSystems discussions where we'll be speaking about Measurement.</div>
             <div class="flex items-center space-x-3 mt-4">
-                <button type="button" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">View comment</button> 
+                <button type="button" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">View comment</button> 
                 <button type="button" class="inline-flex items-center  text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
                     <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.5 8.046H11V6.119c0-.921-.9-1.446-1.524-.894l-5.108 4.49a1.2 1.2 0 0 0 0 1.739l5.108 4.49c.624.556 1.524.027 1.524-.893v-1.928h2a3.023 3.023 0 0 1 3 3.046V19a5.593 5.593 0 0 0-1.5-10.954Z"/></svg>
                     Reply
@@ -177,7 +177,7 @@ This component can be used to show the timline of a user's activity history insi
         </span>
         <div class="items-center justify-between p-4 bg-neutral-primary-soft border border-default rounded-base shadow-xs sm:flex">
             <time class="bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded sm:order-last mb-1 sm:mb-0">3 hours ago</time>
-            <div class="text-body"><a href="#" class="font-medium text-heading hover:underline">Bonnie Green</a> moved <a href="#" class="font-medium text-heading hover:underline">Jese Leos</a> to <span class="bg-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">Funny Group</span></div>
+            <div class="text-body"><a href="#" class="font-medium text-heading hover:underline">Bonnie Green</a> moved <a href="#" class="font-medium text-heading hover:underline">Jese Leos</a> to <span class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded">Funny Group</span></div>
         </div>
     </li>
 </ol>
@@ -189,7 +189,7 @@ This component can be used to show the timline of a user's activity history insi
 Use this component to group multiple data entries inside a single date and show elements like the avatar, title, description, tag and link to a relevant page.
 
 {{< example id="timeline-grouped-example" github="components/timeline.md" show_dark=true >}}
-<div class="p-5 bg-secondary-soft border border-default rounded-base mb-4">
+<div class="p-5 bg-neutral-secondary-soft border border-default rounded-base mb-4">
     <time class="text-lg font-semibold text-heading">January 15th, 2025</time>
     <ol class="mt-3 divide-y divide-default">
         <li>
@@ -245,7 +245,7 @@ Use this component to group multiple data entries inside a single date and show 
         </li>
     </ol>
 </div>
-<div class="p-5 bg-secondary-soft border border-default rounded-base mb-4">
+<div class="p-5 bg-neutral-secondary-soft border border-default rounded-base mb-4">
     <time class="text-lg font-semibold text-heading">January 13th, 2025</time>
     <ol class="mt-3 divide-y divide-default">
         <li>

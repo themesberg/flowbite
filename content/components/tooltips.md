@@ -158,7 +158,7 @@ Initialize a Tooltip object with the object parameters including the trigger ele
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
-        <thead class="bg-secondary-soft text-heading">
+        <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Parameter
@@ -241,7 +241,7 @@ Use the following options as the third parameter for the Tooltip class to set th
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
-        <thead class="bg-secondary-soft text-heading">
+        <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Option
@@ -320,7 +320,7 @@ Use the methods from the Tooltip object to programmatically show or hide the too
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
-        <thead class="bg-secondary-soft text-heading">
+        <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Method

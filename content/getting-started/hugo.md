@@ -211,7 +211,7 @@ Renders a menu for the given menu ID.
     {{- end }}
     <li>
       <a
-      class="block py-2 px-3 text-heading rounded-sm hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0"
+      class="block py-2 px-3 text-heading rounded-sm hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0"
         {{- range $k, $v := $attrs }}
           {{- with $v }}
             {{- printf " %s=%q" $k $v | safeHTMLAttr }}

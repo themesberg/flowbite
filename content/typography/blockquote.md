@@ -33,7 +33,7 @@ This example can be used as an alternative style to the default one by applying 
 <p class="text-body">
 Does your user know how to exit out of screens? Can they follow your intended user journey and buy something from the site you’ve designed? By running a usability test, you’ll be able to see how users will interact with your design once it’s live.
 </p>
-<blockquote class="p-4 my-4 border-s-4 border-default bg-secondary-soft">
+<blockquote class="p-4 my-4 border-s-4 border-default bg-neutral-secondary-soft">
     <p class="text-xl italic font-medium leading-relaxed text-heading">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
 </blockquote>
 <p class="text-body">

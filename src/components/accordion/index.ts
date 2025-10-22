@@ -6,7 +6,7 @@ import instances from '../../dom/instances';
 
 const Default: AccordionOptions = {
     alwaysOpen: false,
-    activeClasses: 'bg-secondary-medium text-heading',
+    activeClasses: 'bg-neutral-secondary-medium text-heading',
     inactiveClasses: 'bg-neutral-primary text-body',
     onOpen: () => {},
     onClose: () => {},

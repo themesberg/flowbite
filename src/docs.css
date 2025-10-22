@@ -137,7 +137,7 @@ pre[class*="language-"] {
 /* without preview */
 .highlight pre[class*="language-"] {
 	overflow: auto;
-	@apply p-6 pt-6 m-0 mt-4 mb-8 text-sm bg-secondary-soft dark:bg-secondary-soft;
+	@apply p-6 pt-6 m-0 mt-4 mb-8 text-sm bg-neutral-secondary-soft dark:bg-neutral-secondary-soft;
 }
 
 [data-code-wrapper] .highlight pre[class*="language-"] {
@@ -157,12 +157,12 @@ pre[class*="language-"] {
 }
 
 .code-preview-wrapper + .code-syntax-wrapper > .code-syntax > .relative > [data-code-wrapper] > .highlight > pre[class*="language-"] {
-	@apply p-4 m-0 bg-secondary-soft dark:bg-secondary-soft;
+	@apply p-4 m-0 bg-neutral-secondary-soft dark:bg-neutral-secondary-soft;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	@apply bg-secondary-soft dark:bg-secondary-soft;
+	@apply bg-neutral-secondary-soft dark:bg-neutral-secondary-soft;
 }
 
 /* Inline code */
@@ -387,7 +387,7 @@ code.language-html .token.comment{
 /* Search */
 
 .DocSearch.DocSearch-Button {
-	@apply p-3 m-0 md:w-52 border-buffer items-center justify-center focus:outline-none focus:ring-4 focus:ring-tertiary md:justify-between h-[36px] w-[36px] md:bg-secondary-soft bg-neutral-primary rounded-base border md:border-default md:border-solid shadow-none xl:pl-3 flex hover:bg-tertiary xl:w-64 hover:shadow-none focus:shadow-none;
+	@apply p-3 m-0 md:w-52 border-buffer items-center justify-center focus:outline-none focus:ring-4 focus:ring-tertiary md:justify-between h-[36px] w-[36px] md:bg-neutral-secondary-soft bg-neutral-primary rounded-base border md:border-default md:border-solid shadow-none xl:pl-3 flex hover:bg-tertiary xl:w-64 hover:shadow-none focus:shadow-none;
 }
 
 .DocSearch-Button-Placeholder {

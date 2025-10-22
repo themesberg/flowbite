@@ -233,7 +233,7 @@ Pass the object parameters for the Carousel object to set the carousel items and
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
-      <thead class="text-heading bg-secondary-soft">
+      <thead class="text-heading bg-neutral-secondary-soft">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Parameter
@@ -316,7 +316,7 @@ Use these options for the Carousel object to set the default position, interval,
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
-      <thead class="bg-secondary-soft">
+      <thead class="bg-neutral-secondary-soft">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Option
@@ -406,7 +406,7 @@ Use the following methods on the Carousel object to programmatically manipulate 
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
-      <thead class="bg-secondary-soft">
+      <thead class="bg-neutral-secondary-soft">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Method

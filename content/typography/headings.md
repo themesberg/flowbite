@@ -117,7 +117,7 @@ Use this example to show a badge component inside the heading text element as a 
 
 This example can be used to add a secondary text inside the main heading component.
 
-{{< example id="heading-secondary-example" github="typography/headings.md" show_dark=true >}}
+{{< example id="heading-neutral-secondary-example" github="typography/headings.md" show_dark=true >}}
 <h1 class="text-5xl font-bold text-heading">Flowbite<small class="ms-2 font-medium text-body">This is secondary text</small></h1>
 {{< /example >}}
 

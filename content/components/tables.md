@@ -23,7 +23,7 @@ Use the following example of a responsive table component to show multiple rows 
 
 <div class="relative overflow-x-auto">
     <table class="w-full text-sm text-left rtl:text-right text-body">
-        <thead class="text-sm text-body bg-secondary-soft border-b border-default">
+        <thead class="text-sm text-body bg-neutral-secondary-soft border-b border-default">
             <tr>
                 <th scope="col" class="px-6 py-3 font-medium">
                     Product name
@@ -99,7 +99,7 @@ Use this example to increase the readability of the data sets by alternating the
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
-        <thead class="bg-secondary-soft border-b border-default">
+        <thead class="bg-neutral-secondary-soft border-b border-default">
             <tr>
                 <th scope="col" class="px-6 py-3 font-medium">
                     Product name
@@ -119,7 +119,7 @@ Use this example to increase the readability of the data sets by alternating the
             </tr>
         </thead>
         <tbody>
-            <tr class="odd:bg-neutral-primary even:bg-secondary-soft border-b border-default">
+            <tr class="odd:bg-neutral-primary even:bg-neutral-secondary-soft border-b border-default">
                 <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
                     Apple MacBook Pro 17"
                 </th>
@@ -136,7 +136,7 @@ Use this example to increase the readability of the data sets by alternating the
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="odd:bg-neutral-primary even:bg-secondary-soft border-b border-default">
+            <tr class="odd:bg-neutral-primary even:bg-neutral-secondary-soft border-b border-default">
                 <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
                     Microsoft Surface Pro
                 </th>
@@ -153,7 +153,7 @@ Use this example to increase the readability of the data sets by alternating the
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="odd:bg-neutral-primary even:bg-secondary-soft border-b border-default">
+            <tr class="odd:bg-neutral-primary even:bg-neutral-secondary-soft border-b border-default">
                 <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
                     Magic Mouse 2
                 </th>
@@ -170,7 +170,7 @@ Use this example to increase the readability of the data sets by alternating the
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="odd:bg-neutral-primary even:bg-secondary-soft border-b border-default">
+            <tr class="odd:bg-neutral-primary even:bg-neutral-secondary-soft border-b border-default">
                 <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
                     Google Pixel Phone
                 </th>
@@ -187,7 +187,7 @@ Use this example to increase the readability of the data sets by alternating the
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="odd:bg-neutral-primary even:bg-secondary-soft">
+            <tr class="odd:bg-neutral-primary even:bg-neutral-secondary-soft">
                 <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
                     Apple Watch 5
                 </th>
@@ -219,13 +219,13 @@ Use this example to increase the readability of the table cells by alternating t
     <table class="w-full text-sm text-left rtl:text-right text-body">
         <thead class="text-sm text-body border-b border-default">
             <tr>
-                <th scope="col" class="px-6 py-3 bg-secondary-soft font-medium">
+                <th scope="col" class="px-6 py-3 bg-neutral-secondary-soft font-medium">
                     Product name
                 </th>
                 <th scope="col" class="px-6 py-3 font-medium">
                     Color
                 </th>
-                <th scope="col" class="px-6 py-3 bg-secondary-soft font-medium">
+                <th scope="col" class="px-6 py-3 bg-neutral-secondary-soft font-medium">
                     Category
                 </th>
                 <th scope="col" class="px-6 py-3 font-medium">
@@ -235,13 +235,13 @@ Use this example to increase the readability of the table cells by alternating t
         </thead>
         <tbody>
             <tr class="border-b border-default">
-                <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap bg-secondary-soft">
+                <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap bg-neutral-secondary-soft">
                     Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
                     Silver
                 </td>
-                <td class="px-6 py-4 bg-secondary-soft">
+                <td class="px-6 py-4 bg-neutral-secondary-soft">
                     Laptop
                 </td>
                 <td class="px-6 py-4">
@@ -249,13 +249,13 @@ Use this example to increase the readability of the table cells by alternating t
                 </td>
             </tr>
             <tr class="border-b border-default">
-                <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap bg-secondary-soft">
+                <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap bg-neutral-secondary-soft">
                     Microsoft Surface Pro
                 </th>
                 <td class="px-6 py-4">
                     White
                 </td>
-                <td class="px-6 py-4 bg-secondary-soft">
+                <td class="px-6 py-4 bg-neutral-secondary-soft">
                     Laptop PC
                 </td>
                 <td class="px-6 py-4">
@@ -263,13 +263,13 @@ Use this example to increase the readability of the table cells by alternating t
                 </td>
             </tr>
             <tr class="border-b border-default">
-                <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap bg-secondary-soft">
+                <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap bg-neutral-secondary-soft">
                     Magic Mouse 2
                 </th>
                 <td class="px-6 py-4">
                     Black
                 </td>
-                <td class="px-6 py-4 bg-secondary-soft">
+                <td class="px-6 py-4 bg-neutral-secondary-soft">
                     Accessories
                 </td>
                 <td class="px-6 py-4">
@@ -277,13 +277,13 @@ Use this example to increase the readability of the table cells by alternating t
                 </td>
             </tr>
             <tr class="border-b border-default">
-                <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap bg-secondary-soft">
+                <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap bg-neutral-secondary-soft">
                     Google Pixel Phone
                 </th>
                 <td class="px-6 py-4">
                     Gray
                 </td>
-                <td class="px-6 py-4 bg-secondary-soft">
+                <td class="px-6 py-4 bg-neutral-secondary-soft">
                     Phone
                 </td>
                 <td class="px-6 py-4">
@@ -291,13 +291,13 @@ Use this example to increase the readability of the table cells by alternating t
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap bg-secondary-soft">
+                <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap bg-neutral-secondary-soft">
                     Apple Watch 5
                 </th>
                 <td class="px-6 py-4">
                     Red
                 </td>
-                <td class="px-6 py-4 bg-secondary-soft">
+                <td class="px-6 py-4 bg-neutral-secondary-soft">
                     Wearables
                 </td>
                 <td class="px-6 py-4">
@@ -317,7 +317,7 @@ Use the `hover:{bg-*}` utility class from Tailwind CSS to change the background 
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
-        <thead class="text-sm text-body bg-secondary-medium border-b border-default-medium">
+        <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
             <tr>
                 <th scope="col" class="px-6 py-3 font-medium">
                     Product name
@@ -337,7 +337,7 @@ Use the `hover:{bg-*}` utility class from Tailwind CSS to change the background 
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
                     Apple MacBook Pro 17"
                 </th>
@@ -354,7 +354,7 @@ Use the `hover:{bg-*}` utility class from Tailwind CSS to change the background 
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
                     Microsoft Surface Pro
                 </th>
@@ -371,7 +371,7 @@ Use the `hover:{bg-*}` utility class from Tailwind CSS to change the background 
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft hover:bg-neutral-secondary-medium">
                 <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
                     Magic Mouse 2
                 </th>
@@ -405,7 +405,7 @@ This example can be used to show the head of the table component with sortable i
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
-        <thead class="text-sm text-body bg-secondary-medium border-b border-default-medium">
+        <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
             <tr>
                 <th scope="col" class="px-6 py-3 font-medium">
                     Product name
@@ -504,7 +504,7 @@ Use this example where the `<tfoot>` HTML element can be used in conjunction wit
 
 <div class="relative overflow-x-auto">
     <table class="w-full text-sm text-left rtl:text-right text-body">
-        <thead class="text-sm text-body bg-secondary-medium">
+        <thead class="text-sm text-body bg-neutral-secondary-medium">
             <tr>
                 <th scope="col" class="px-6 py-3 rounded-s-base font-medium">
                     Product name
@@ -575,7 +575,7 @@ Improve accessibility by using a caption inside the table as a heading to better
             Our products
             <p class="mt-1.5 text-sm font-normal text-body">Browse a list of Flowbite products designed to help you work and play, stay organized, get answers, keep in touch, grow your business, and more.</p>
         </caption>
-        <thead class="text-sm text-body bg-secondary-medium border-b border-t border-default-medium">
+        <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-t border-default-medium">
             <tr>
                 <th scope="col" class="px-6 py-3 font-medium">
                     Product name
@@ -735,7 +735,7 @@ Use this example to apply a shadow-sm border to the table component.
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
-        <thead class="text-sm text-body bg-secondary-medium border-b border-default-medium">
+        <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
             <tr>
                 <th scope="col" class="px-6 py-3 font-medium">
                     Product name
@@ -819,11 +819,11 @@ Use this example where we apply `overflow-x-auto` to enable horizontal scrolling
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
-        <thead class="text-sm text-body bg-secondary-medium border-b border-default-medium">
+        <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
             <tr>
                 <th scope="col" class="p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox" class="sr-only">Table checkbox</label>
                     </div>
                 </th>
@@ -854,10 +854,10 @@ Use this example where we apply `overflow-x-auto` to enable horizontal scrolling
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-2" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-2" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-2" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -887,10 +887,10 @@ Use this example where we apply `overflow-x-auto` to enable horizontal scrolling
                     <a href="#" class="font-medium text-danger hover:underline ms-3">Remove</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-3" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-3" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-3" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -920,10 +920,10 @@ Use this example where we apply `overflow-x-auto` to enable horizontal scrolling
                     <a href="#" class="font-medium text-danger hover:underline ms-3">Remove</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-4" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-4" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-4" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -953,10 +953,10 @@ Use this example where we apply `overflow-x-auto` to enable horizontal scrolling
                     <a href="#" class="font-medium text-danger hover:underline ms-3">Remove</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-5" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-5" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-5" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -986,10 +986,10 @@ Use this example where we apply `overflow-x-auto` to enable horizontal scrolling
                     <a href="#" class="font-medium text-danger hover:underline ms-3">Remove</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-6" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-6" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-6" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1019,10 +1019,10 @@ Use this example where we apply `overflow-x-auto` to enable horizontal scrolling
                     <a href="#" class="font-medium text-danger hover:underline ms-3">Remove</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-7" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-7" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-7" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1052,10 +1052,10 @@ Use this example where we apply `overflow-x-auto` to enable horizontal scrolling
                     <a href="#" class="font-medium text-danger hover:underline ms-3">Remove</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-8" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-8" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-8" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1085,10 +1085,10 @@ Use this example where we apply `overflow-x-auto` to enable horizontal scrolling
                     <a href="#" class="font-medium text-danger hover:underline ms-3">Remove</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-9" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-9" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-9" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1118,10 +1118,10 @@ Use this example where we apply `overflow-x-auto` to enable horizontal scrolling
                     <a href="#" class="font-medium text-danger hover:underline ms-3">Remove</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-10" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-10" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-10" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1151,10 +1151,10 @@ Use this example where we apply `overflow-x-auto` to enable horizontal scrolling
                     <a href="#" class="font-medium text-danger hover:underline ms-3">Remove</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-11" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-11" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-11" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1202,15 +1202,15 @@ Use this example to show a search bar that can be used to query through data ins
             <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
             </div>
-            <input type="text" id="input-group-1" class="block w-full max-w-96 ps-9 pe-3 py-2 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Search">
+            <input type="text" id="input-group-1" class="block w-full max-w-96 ps-9 pe-3 py-2 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Search">
         </div>
     </div>
     <table class="w-full text-sm text-left rtl:text-right text-body">
-        <thead class="text-sm text-body bg-secondary-medium border-b border-t border-default-medium">
+        <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-t border-default-medium">
             <tr>
                 <th scope="col" class="p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-12" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-12" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-12" class="sr-only">Table checkbox</label>
                     </div>
                 </th>
@@ -1232,10 +1232,10 @@ Use this example to show a search bar that can be used to query through data ins
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-13" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-13" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-13" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1255,10 +1255,10 @@ Use this example to show a search bar that can be used to query through data ins
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-14" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-14" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-14" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1278,10 +1278,10 @@ Use this example to show a search bar that can be used to query through data ins
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-15" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-15" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-15" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1301,10 +1301,10 @@ Use this example to show a search bar that can be used to query through data ins
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-16" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-16" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-16" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1324,10 +1324,10 @@ Use this example to show a search bar that can be used to query through data ins
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-17" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-17" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-17" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1347,10 +1347,10 @@ Use this example to show a search bar that can be used to query through data ins
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                      <div class="flex items-center">
-                        <input id="table-checkbox-18" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-18" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-18" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1392,9 +1392,9 @@ Use this example with a filter bar to select certain data sets inside the table 
             <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
             </div>
-            <input type="text" id="input-group-1" class="block w-full max-w-96 ps-9 pe-3 py-2 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Search">
+            <input type="text" id="input-group-1" class="block w-full max-w-96 ps-9 pe-3 py-2 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Search">
         </div>
-        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="inline-flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none" type="button">
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="inline-flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none" type="button">
             <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M18.796 4H5.204a1 1 0 0 0-.753 1.659l5.302 6.058a1 1 0 0 1 .247.659v4.874a.5.5 0 0 0 .2.4l3 2.25a.5.5 0 0 0 .8-.4v-7.124a1 1 0 0 1 .247-.659l5.302-6.059c.566-.646.106-1.658-.753-1.658Z"/></svg>
             Filter by
             <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -1403,26 +1403,26 @@ Use this example with a filter bar to select certain data sets inside the table 
         <div id="dropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-32">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefaultButton">
             <li>
-                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Color</a>
+                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Color</a>
             </li>
             <li>
-                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Category</a>
+                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Category</a>
             </li>
             <li>
-                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Price</a>
+                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Price</a>
             </li>
             <li>
-                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Sign out</a>
+                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Sign out</a>
             </li>
             </ul>
         </div>
     </div>
     <table class="w-full text-sm text-left rtl:text-right text-body">
-        <thead class="text-sm text-body bg-secondary-medium border-b border-t border-default-medium">
+        <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-t border-default-medium">
             <tr>
                 <th scope="col" class="p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-20" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-20" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-20" class="sr-only">Table checkbox</label>
                     </div>
                 </th>
@@ -1444,10 +1444,10 @@ Use this example with a filter bar to select certain data sets inside the table 
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-21" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-21" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-21" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1467,10 +1467,10 @@ Use this example with a filter bar to select certain data sets inside the table 
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-22" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-22" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-22" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1490,10 +1490,10 @@ Use this example with a filter bar to select certain data sets inside the table 
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-23" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-23" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-23" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1513,10 +1513,10 @@ Use this example with a filter bar to select certain data sets inside the table 
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-24" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-24" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-24" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1536,10 +1536,10 @@ Use this example with a filter bar to select certain data sets inside the table 
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-25" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-25" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-25" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1559,10 +1559,10 @@ Use this example with a filter bar to select certain data sets inside the table 
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-26" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-26" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-26" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1595,11 +1595,11 @@ Paginate the table data when using larger data sets based on any given amount of
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
-        <thead class="text-sm text-body bg-secondary-medium border-b border-default-medium">
+        <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
             <tr>
                 <th scope="col" class="p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-27" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-27" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-27" class="sr-only">Table checkbox</label>
                     </div>
                 </th>
@@ -1621,10 +1621,10 @@ Paginate the table data when using larger data sets based on any given amount of
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-28" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-28" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-28" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1644,10 +1644,10 @@ Paginate the table data when using larger data sets based on any given amount of
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-29" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-29" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-29" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1667,10 +1667,10 @@ Paginate the table data when using larger data sets based on any given amount of
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-30" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-30" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-30" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1690,10 +1690,10 @@ Paginate the table data when using larger data sets based on any given amount of
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-31" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-31" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-31" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1713,10 +1713,10 @@ Paginate the table data when using larger data sets based on any given amount of
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-32" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-32" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-32" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1736,10 +1736,10 @@ Paginate the table data when using larger data sets based on any given amount of
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-33" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-33" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-33" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1759,10 +1759,10 @@ Paginate the table data when using larger data sets based on any given amount of
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-34" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-34" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-34" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1782,10 +1782,10 @@ Paginate the table data when using larger data sets based on any given amount of
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-35" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-35" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-35" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1805,10 +1805,10 @@ Paginate the table data when using larger data sets based on any given amount of
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-36" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-36" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-36" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1828,10 +1828,10 @@ Paginate the table data when using larger data sets based on any given amount of
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-37" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-37" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-37" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1857,25 +1857,25 @@ Paginate the table data when using larger data sets based on any given amount of
         <span class="text-sm font-normal text-body mb-4 md:mb-0 block w-full md:inline md:w-auto">Showing <span class="font-semibold text-heading">1-10</span> of <span class="font-semibold text-heading">1000</span></span>
         <ul class="flex -space-x-px text-sm">
             <li>
-                <a href="#" class="flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading font-medium rounded-s-base text-sm px-3 h-9 focus:outline-none">Previous</a>
+                <a href="#" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading font-medium rounded-s-base text-sm px-3 h-9 focus:outline-none">Previous</a>
             </li>
             <li>
-                <a href="#" class="flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading font-medium text-sm w-9 h-9 focus:outline-none">1</a>
+                <a href="#" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading font-medium text-sm w-9 h-9 focus:outline-none">1</a>
             </li>
             <li>
-                <a href="#" class="flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading font-medium text-sm w-9 h-9 focus:outline-none">2</a>
+                <a href="#" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading font-medium text-sm w-9 h-9 focus:outline-none">2</a>
             </li>
             <li>
                 <a href="#" aria-current="page" class="flex items-center justify-center text-fg-brand bg-brand-softer box-border border border-default-medium hover:bg-brand-soft hover:text-fg-brand font-medium text-sm w-9 h-9 focus:outline-none">3</a>
             </li>
             <li>
-                <a href="#" class="flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading font-medium text-sm w-9 h-9 focus:outline-none">...</a>
+                <a href="#" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading font-medium text-sm w-9 h-9 focus:outline-none">...</a>
             </li>
             <li>
-                <a href="#" class="flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading font-medium text-sm w-9 h-9 focus:outline-none">5</a>
+                <a href="#" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading font-medium text-sm w-9 h-9 focus:outline-none">5</a>
             </li>
             <li>
-                <a href="#" class="flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading font-medium rounded-e-base text-sm px-3 h-9 focus:outline-none">Next</a>
+                <a href="#" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading font-medium rounded-e-base text-sm px-3 h-9 focus:outline-none">Next</a>
             </li>
         </ul>
     </nav>
@@ -1890,11 +1890,11 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
-        <thead class="text-sm text-body bg-secondary-medium border-b border-default-medium">
+        <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
             <tr>
                 <th scope="col" class="p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-38" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-38" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-38" class="sr-only">Table checkbox</label>
                     </div>
                 </th>
@@ -1916,10 +1916,10 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-39" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-39" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-39" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1939,10 +1939,10 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-40" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-40" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-40" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1962,10 +1962,10 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-41" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-41" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-41" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -1985,10 +1985,10 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-42" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-42" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-42" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -2008,10 +2008,10 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-43" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-43" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-43" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -2031,10 +2031,10 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-44" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-44" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-44" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -2072,7 +2072,7 @@ Use this example of a table where we show a data set of users and showing a prof
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
     <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 p-4">
         <div>
-        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="inline-flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none" type="button">
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="inline-flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none" type="button">
             Action
             <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
@@ -2080,16 +2080,16 @@ Use this example of a table where we show a data set of users and showing a prof
         <div id="dropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-32">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefaultButton">
             <li>
-                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Reward</a>
+                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Reward</a>
             </li>
             <li>
-                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Promote</a>
+                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Promote</a>
             </li>
             <li>
-                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Archive</a>
+                <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Archive</a>
             </li>
             <li>
-                <a href="#" class="inline-flex items-center w-full p-2 text-fg-danger hover:bg-tertiary-medium rounded">Delete</a>
+                <a href="#" class="inline-flex items-center w-full p-2 text-fg-danger hover:bg-neutral-tertiary-medium rounded">Delete</a>
             </li>
             </ul>
         </div>
@@ -2099,15 +2099,15 @@ Use this example of a table where we show a data set of users and showing a prof
             <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
             </div>
-            <input type="text" id="input-group-1" class="block w-full max-w-96 ps-9 pe-3 py-2 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Search">
+            <input type="text" id="input-group-1" class="block w-full max-w-96 ps-9 pe-3 py-2 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Search">
         </div>
     </div>
     <table class="w-full text-sm text-left rtl:text-right text-body">
-        <thead class="text-sm text-body bg-secondary-medium border-b border-t border-default-medium">
+        <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-t border-default-medium">
             <tr>
                 <th scope="col" class="p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-45" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-45" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-45" class="sr-only">Table checkbox</label>
                     </div>
                 </th>
@@ -2126,10 +2126,10 @@ Use this example of a table where we show a data set of users and showing a prof
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-46" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-46" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-46" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -2152,10 +2152,10 @@ Use this example of a table where we show a data set of users and showing a prof
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit user</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-47" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-47" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-47" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -2178,10 +2178,10 @@ Use this example of a table where we show a data set of users and showing a prof
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit user</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-48" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-48" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-48" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -2204,10 +2204,10 @@ Use this example of a table where we show a data set of users and showing a prof
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit user</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-49" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-49" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-49" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -2230,10 +2230,10 @@ Use this example of a table where we show a data set of users and showing a prof
                     <a href="#" class="font-medium text-fg-brand hover:underline">Edit user</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-50" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-50" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-50" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -2269,7 +2269,7 @@ Get started with this example to show a list of products inside the table and sh
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
-        <thead class="text-sm text-body bg-secondary-medium border-b border-default-medium">
+        <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
             <tr>
                 <th scope="col" class="px-16 py-3">
                     <span class="sr-only">Image</span>
@@ -2289,7 +2289,7 @@ Get started with this example to show a list of products inside the table and sh
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="p-4">
                     <img src="/docs/images/products/apple-watch.png" class="w-16 md:w-24 max-w-full max-h-full" alt="Apple Watch">
                 </td>
@@ -2300,11 +2300,11 @@ Get started with this example to show a list of products inside the table and sh
                     <form class="max-w-xs mx-auto">
                         <label for="counter-input-1" class="sr-only">Choose quantity:</label>
                         <div class="relative flex items-center">
-                            <button type="button" id="decrement-button-1" data-input-counter-decrement="counter-input-1" class="flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary rounded-full text-sm focus:outline-none h-6 w-6">
+                            <button type="button" id="decrement-button-1" data-input-counter-decrement="counter-input-1" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary rounded-full text-sm focus:outline-none h-6 w-6">
                                 <svg class="w-3 h-3 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
                             </button>
                             <input type="text" id="counter-input-1" data-input-counter class="shrink-0 text-heading border-0 bg-transparent text-sm font-normal focus:outline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="12" required />
-                            <button type="button" id="increment-button-1" data-input-counter-increment="counter-input-1" class="flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary rounded-full text-sm focus:outline-none h-6 w-6">
+                            <button type="button" id="increment-button-1" data-input-counter-increment="counter-input-1" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary rounded-full text-sm focus:outline-none h-6 w-6">
                                 <svg class="w-3 h-3 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
                             </button>
                         </div>
@@ -2317,7 +2317,7 @@ Get started with this example to show a list of products inside the table and sh
                     <a href="#" class="font-medium text-fg-danger hover:underline">Remove</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="p-4">
                     <img src="/docs/images/products/imac.png" class="w-16 md:w-24 max-w-full max-h-full" alt="Apple iMac">
                 </td>
@@ -2328,11 +2328,11 @@ Get started with this example to show a list of products inside the table and sh
                     <form class="max-w-xs mx-auto">
                         <label for="counter-input-2" class="sr-only">Choose quantity:</label>
                         <div class="relative flex items-center">
-                            <button type="button" id="decrement-button-2" data-input-counter-decrement="counter-input-2" class="flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary rounded-full text-sm focus:outline-none h-6 w-6">
+                            <button type="button" id="decrement-button-2" data-input-counter-decrement="counter-input-2" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary rounded-full text-sm focus:outline-none h-6 w-6">
                                 <svg class="w-3 h-3 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
                             </button>
                             <input type="text" id="counter-input-2" data-input-counter class="shrink-0 text-heading border-0 bg-transparent text-sm font-normal focus:outline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="12" required />
-                            <button type="button" id="increment-button-2" data-input-counter-increment="counter-input-2" class="flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary rounded-full text-sm focus:outline-none h-6 w-6">
+                            <button type="button" id="increment-button-2" data-input-counter-increment="counter-input-2" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary rounded-full text-sm focus:outline-none h-6 w-6">
                                 <svg class="w-3 h-3 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
                             </button>
                         </div>
@@ -2345,7 +2345,7 @@ Get started with this example to show a list of products inside the table and sh
                     <a href="#" class="font-medium text-fg-danger hover:underline">Remove</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="p-4">
                     <img src="/docs/images/products/iphone-12.png" class="w-16 md:w-24 max-w-full max-h-full" alt="iPhone 12">
                 </td>
@@ -2356,11 +2356,11 @@ Get started with this example to show a list of products inside the table and sh
                     <form class="max-w-xs mx-auto">
                         <label for="counter-input-3" class="sr-only">Choose quantity:</label>
                         <div class="relative flex items-center">
-                            <button type="button" id="decrement-button-3" data-input-counter-decrement="counter-input-3" class="flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary rounded-full text-sm focus:outline-none h-6 w-6">
+                            <button type="button" id="decrement-button-3" data-input-counter-decrement="counter-input-3" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary rounded-full text-sm focus:outline-none h-6 w-6">
                                 <svg class="w-3 h-3 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
                             </button>
                             <input type="text" id="counter-input-3" data-input-counter class="shrink-0 text-heading border-0 bg-transparent text-sm font-normal focus:outline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="12" required />
-                            <button type="button" id="increment-button-3" data-input-counter-increment="counter-input-3" class="flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary rounded-full text-sm focus:outline-none h-6 w-6">
+                            <button type="button" id="increment-button-3" data-input-counter-increment="counter-input-3" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary rounded-full text-sm focus:outline-none h-6 w-6">
                                 <svg class="w-3 h-3 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
                             </button>
                         </div>
@@ -2390,7 +2390,7 @@ Use this example to show a modal with a form where you can edit table data by cl
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs sm:rounded-base border border-default">
     <div class="flex items-center justify-between flex-column md:flex-row flex-wrap space-y-4 md:space-y-0 p-4">
         <div>
-            <button id="dropdownDefaultButton2" data-dropdown-toggle="dropdown-2" class="inline-flex items-center justify-center text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none" type="button">
+            <button id="dropdownDefaultButton2" data-dropdown-toggle="dropdown-2" class="inline-flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none" type="button">
                 Action
                 <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
             </button>
@@ -2398,16 +2398,16 @@ Use this example to show a modal with a form where you can edit table data by cl
             <div id="dropdown-2" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-32">
                 <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefaultButton2">
                 <li>
-                    <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Reward</a>
+                    <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Reward</a>
                 </li>
                 <li>
-                    <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Promote</a>
+                    <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Promote</a>
                 </li>
                 <li>
-                    <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Archive</a>
+                    <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Archive</a>
                 </li>
                 <li>
-                    <a href="#" class="inline-flex items-center w-full p-2 text-fg-danger hover:bg-tertiary-medium rounded">Delete</a>
+                    <a href="#" class="inline-flex items-center w-full p-2 text-fg-danger hover:bg-neutral-tertiary-medium rounded">Delete</a>
                 </li>
                 </ul>
             </div>
@@ -2417,15 +2417,15 @@ Use this example to show a modal with a form where you can edit table data by cl
             <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
             </div>
-            <input type="text" id="input-group-1" class="block w-full max-w-96 ps-9 pe-3 py-2 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Search">
+            <input type="text" id="input-group-1" class="block w-full max-w-96 ps-9 pe-3 py-2 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Search">
         </div>
     </div>
     <table class="w-full text-sm text-left rtl:text-right text-body">
-        <thead class="text-sm text-body bg-secondary-medium border-b border-t border-default-medium">
+        <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-t border-default-medium">
             <tr>
                 <th scope="col" class="p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-51" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-51" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-51" class="sr-only">Table checkbox</label>
                     </div>
                 </th>
@@ -2444,10 +2444,10 @@ Use this example to show a modal with a form where you can edit table data by cl
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-52" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-52" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-52" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -2471,10 +2471,10 @@ Use this example to show a modal with a form where you can edit table data by cl
                     <a href="#" type="button" data-modal-target="editUserModal" data-modal-show="editUserModal" class="font-medium text-fg-brand hover:underline">Edit user</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-53" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-53" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-53" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -2498,10 +2498,10 @@ Use this example to show a modal with a form where you can edit table data by cl
                     <a href="#" type="button" data-modal-show="editUserModal" class="font-medium text-fg-brand hover:underline">Edit user</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-54" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-54" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-54" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -2525,10 +2525,10 @@ Use this example to show a modal with a form where you can edit table data by cl
                     <a href="#" type="button" data-modal-show="editUserModal" class="font-medium text-fg-brand hover:underline">Edit user</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-55" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-55" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-55" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -2552,10 +2552,10 @@ Use this example to show a modal with a form where you can edit table data by cl
                     <a href="#" type="button" data-modal-show="editUserModal" class="font-medium text-fg-brand hover:underline">Edit user</a>
                 </td>
             </tr>
-            <tr class="bg-neutral-primary-soft hover:bg-secondary-medium">
+            <tr class="bg-neutral-primary-soft hover:bg-neutral-secondary-medium">
                 <td class="w-4 p-4">
                     <div class="flex items-center">
-                        <input id="table-checkbox-56" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                        <input id="table-checkbox-56" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
                         <label for="table-checkbox-56" class="sr-only">Table checkbox</label>
                     </div>
                 </td>
@@ -2601,15 +2601,15 @@ Use this example to show a modal with a form where you can edit table data by cl
                 <div class="grid gap-4 grid-cols-2 py-4 md:py-6">
                     <div class="col-span-2">
                         <label for="name" class="block mb-2.5 text-sm font-medium text-heading">Name</label>
-                        <input type="text" name="name" id="name" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Bonnie Green" required="">
+                        <input type="text" name="name" id="name" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="Bonnie Green" required="">
                     </div>
                     <div class="col-span-2 sm:col-span-1">
                         <label for="position" class="block mb-2.5 text-sm font-medium text-heading">Position</label>
-                        <input type="text" name="position" id="position" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="React Developer" required="">
+                        <input type="text" name="position" id="position" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="React Developer" required="">
                     </div>
                     <div class="col-span-2 sm:col-span-1">
                         <label for="category" class="block mb-2.5 text-sm font-medium text-heading">Status</label>
-                        <select id="category" class="block w-full px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
+                        <select id="category" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
                             <option selected="">Online</option>
                             <option value="offline">Offline</option>
                             <option value="archived">Archived</option>
@@ -2617,14 +2617,14 @@ Use this example to show a modal with a form where you can edit table data by cl
                     </div>
                     <div class="col-span-2">
                         <label for="biography" class="block mb-2.5 text-sm font-medium text-heading">Biography</label>
-                        <textarea id="biography" rows="4" class="block bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body" placeholder="Write a short biography here"></textarea>                    
+                        <textarea id="biography" rows="4" class="block bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body" placeholder="Write a short biography here"></textarea>                    
                     </div>
                 </div>
                 <div class="flex items-center space-x-4 border-t border-default pt-4 md:pt-6">
                     <button type="submit" class="inline-flex items-center  text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
                         Update user
                     </button>
-                    <button data-modal-hide="crud-modal" type="button" class="text-body bg-secondary-medium box-border border border-default-medium hover:bg-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Cancel</button>
+                    <button data-modal-hide="crud-modal" type="button" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Cancel</button>
                 </div>
             </form>
         </div>

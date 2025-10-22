@@ -540,10 +540,10 @@ module.exports = plugin.withOptions(function (options = {}) {
         if (wysiwyg) {
             addComponents({
                 '.selectedCell': {
-                    backgroundColor: 'var(--color-secondary-medium)',
+                    backgroundColor: 'var(--color-neutral-secondary-medium)',
                 },
                 '.dark .selectedCell': {
-                    backgroundColor: 'var(--color-secondary-medium)',
+                    backgroundColor: 'var(--color-neutral-secondary-medium)',
                 },
             });
         }
@@ -575,7 +575,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                             'borderRadius.lg',
                             borderRadius.lg
                         )}`,
-                        backgroundColor: 'var(--color-secondary-soft)',
+                        backgroundColor: 'var(--color-neutral-secondary-soft)',
                         minWidth: '16rem',
                     },
                 '.datatable-wrapper thead th .datatable-input': {
@@ -592,7 +592,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 '.datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
                     {
-                        backgroundColor: 'var(--color-secondary-soft)',
+                        backgroundColor: 'var(--color-neutral-secondary-soft)',
                         color: 'var(--color-heading)',
                         fontSize: `${theme('fontSize.sm')[0]}`,
                         border: `1px solid var(--color-base)`,
@@ -631,11 +631,11 @@ module.exports = plugin.withOptions(function (options = {}) {
                 '.datatable-wrapper .datatable-table thead': {
                     fontSize: `${theme('fontSize.xs')[0]}`,
                     color: 'var(--color-body)',
-                    backgroundColor: 'var(--color-secondary-medium)',
+                    backgroundColor: 'var(--color-neutral-secondary-medium)',
                 },
                 '.dark .datatable-wrapper .datatable-table thead': {
                     color: 'var(--color-body)',
-                    backgroundColor: 'var(--color-secondary-medium)',
+                    backgroundColor: 'var(--color-neutral-secondary-medium)',
                 },
                 '.datatable-wrapper .datatable-table thead th': {
                     whiteSpace: 'nowrap',
@@ -664,7 +664,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     backgroundColor: 'var(--color-secondary)',
                 },
                 '.dark .datatable-wrapper .datatable-table tbody tr.selected': {
-                    backgroundColor: 'var(--color-secondary-medium)',
+                    backgroundColor: 'var(--color-neutral-secondary-medium)',
                 },
                 '.datatable-wrapper .datatable-table tbody tr': {
                     borderBottom: `1px solid var(--color-base)`,
@@ -718,7 +718,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link':
                     {
                         color: 'var(--color-body)',
-                        borderColor: 'var(--color-secondary-medium)',
+                        borderColor: 'var(--color-neutral-secondary-medium)',
                     },
                 '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type, .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type':
                     {
@@ -860,7 +860,8 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link:hover':
                     {
-                        backgroundColor: 'var(--color-secondary-medium)',
+                        backgroundColor:
+                            'var(--color-neutral-secondary-medium)',
                         color: 'var(--color-gray-700)',
                     },
                 '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link:hover':
@@ -886,7 +887,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     )} !important`,
                 },
                 '.dark .apexcharts-canvas .apexcharts-tooltip': {
-                    backgroundColor: `var(--color-secondary-medium) !important`,
+                    backgroundColor: `var(--color-neutral-secondary-medium) !important`,
                     color: `var(--color-body) !important`,
                     borderColor: `var(--color-base) !important`,
                     boxShadow: `${theme(
@@ -916,7 +917,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                             'spacing.3',
                             spacing[3]
                         )} !important`,
-                        backgroundColor: `var(--color-tertiary-medium) !important`,
+                        backgroundColor: `var(--color-neutral-tertiary-medium) !important`,
                         borderColor: `var(--color-light) !important`,
                         fontSize: `${theme('fontSize.sm')[0]} !important`,
                         fontWeight: `${theme(
@@ -927,7 +928,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 '.dark .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title':
                     {
-                        backgroundColor: `var(--color-tertiary-medium) !important`,
+                        backgroundColor: `var(--color-neutral-tertiary-medium) !important`,
                         borderColor: `var(--color-light) !important`,
                         color: `var(--color-heading) !important`,
                     },
@@ -956,7 +957,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 '.dark .apexcharts-canvas .apexcharts-xaxistooltip': {
                     color: `var(--color-body) !important`,
-                    backgroundColor: `var(--color-secondary-medium) !important`,
+                    backgroundColor: `var(--color-neutral-secondary-medium) !important`,
                 },
                 '.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-y-label':
                     {
@@ -1031,7 +1032,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 '.dark .apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active':
                     {
-                        backgroundColor: `var(--color-secondary-medium) !important`,
+                        backgroundColor: `var(--color-neutral-secondary-medium) !important`,
                         color: `var(--color-body) !important`,
                     },
                 '.apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active:first-of-type':

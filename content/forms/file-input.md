@@ -22,7 +22,7 @@ Get started with a simple file input component to let users upload one single fi
 
 {{< example id="default-file-upload-example" github="forms/file-input.md" show_dark=true >}}
 <label class="block mb-2.5 text-sm font-medium text-heading" for="file_input">Upload file</label>
-<input class="cursor-pointer bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" id="file_input" type="file">
+<input class="cursor-pointer bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" id="file_input" type="file">
 {{< /example >}}
 
 ## Helper text
@@ -31,7 +31,7 @@ Add a descriptive helper text to inform users the allowed extensions and sizes o
 
 {{< example id="file-upload-helper-example" github="forms/file-input.md" show_dark=true >}}
 <label class="block mb-2.5 text-sm font-medium text-heading" for="file_input">Upload file</label>
-<input class="cursor-pointer bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" aria-describedby="file_input_help" id="file_input" type="file">
+<input class="cursor-pointer bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" aria-describedby="file_input_help" id="file_input" type="file">
 <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG, JPG or GIF (MAX. 800x400px).</p>
 {{< /example >}}
 
@@ -41,7 +41,7 @@ Apply the `multiple` attribute to the file input component to allow more files t
 
 {{< example id="file-upload-multiple-example" github="forms/file-input.md" show_dark=true >}}
 <label class="block mb-2.5 text-sm font-medium text-heading" for="multiple_files">Upload multiple files</label>
-<input class="cursor-pointer bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" id="multiple_files" type="file" multiple>
+<input class="cursor-pointer bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" id="multiple_files" type="file" multiple>
 {{< /example >}}
 
 ## Sizes
@@ -50,11 +50,11 @@ Choose from the small, default, and large file input sizing options.
 
 {{< example id="file-upload-sizes-example" class="space-y-6" github="forms/file-input.md" show_dark=true >}}
 <label class="block mb-2.5 text-sm font-medium text-heading" for="small_size">Base file input</label>
-<input class="cursor-pointer bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" id="small_size" type="file">
+<input class="cursor-pointer bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" id="small_size" type="file">
 
 
 <label class="block mb-2.5 text-sm font-medium text-heading" for="large_size">Large file input</label>
-<input class="cursor-pointer bg-secondary-medium border border-default-medium text-heading text-lg rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" id="large_size" type="file">
+<input class="cursor-pointer bg-neutral-secondary-medium border border-default-medium text-heading text-lg rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" id="large_size" type="file">
 {{< /example >}}
 
 ## Dropzone
@@ -63,7 +63,7 @@ The dropzone file input component can be used to upload one or more files by cli
 
 {{< example id="file-upload-dropzone-example" class="space-y-6" github="forms/file-input.md" show_dark=true >}}
 <div class="flex items-center justify-center w-full">
-    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 bg-secondary-medium border border-dashed border-default-strong rounded-base cursor-pointer hover:bg-tertiary-medium">
+    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 bg-neutral-secondary-medium border border-dashed border-default-strong rounded-base cursor-pointer hover:bg-neutral-tertiary-medium">
         <div class="flex flex-col items-center justify-center text-body pt-5 pb-6">
             <svg class="w-8 h-8 mb-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h3a3 3 0 0 0 0-6h-.025a5.56 5.56 0 0 0 .025-.5A5.5 5.5 0 0 0 7.207 9.021C7.137 9.017 7.071 9 7 9a4 4 0 1 0 0 8h2.167M12 19v-9m0 0-2 2m2-2 2 2"/></svg>
             <p class="mb-2 text-sm"><span class="font-semibold">Click to upload</span> or drag and drop</p>
@@ -80,7 +80,7 @@ The dropzone file input component can be used to upload one or more files by cli
 
 {{< example id="file-upload-dropzone-example" class="space-y-6" github="forms/file-input.md" show_dark=true >}}
 <div class="flex items-center justify-center w-full">
-  <div class="flex flex-col items-center justify-center w-full h-64 bg-secondary-medium border border-dashed border-default-strong rounded-base">
+  <div class="flex flex-col items-center justify-center w-full h-64 bg-neutral-secondary-medium border border-dashed border-default-strong rounded-base">
     <div class="flex flex-col items-center justify-center text-body pt-5 pb-6">
       <svg class="w-8 h-8 mb-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v9m-5 0H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2M8 9l4-5 4 5m1 8h.01"/></svg>
       <p class="mb-2 text-sm">Click the button below to upload</p>

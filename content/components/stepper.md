@@ -137,7 +137,7 @@ This example can be used to show a list of steps aligned vertically where you ca
         </div>
     </li>
     <li>
-        <div class="w-full p-4 bg-secondary-soft border border-default text-body rounded-base" role="alert">
+        <div class="w-full p-4 bg-neutral-secondary-soft border border-default text-body rounded-base" role="alert">
             <div class="flex items-center justify-between">
                 <span class="sr-only">Review</span>
                 <h3 class="font-medium">4. Review</h3>
@@ -146,7 +146,7 @@ This example can be used to show a list of steps aligned vertically where you ca
         </div>
     </li>
     <li>
-        <div class="w-full p-4 bg-secondary-soft border border-default text-body rounded-base" role="alert">
+        <div class="w-full p-4 bg-neutral-secondary-soft border border-default text-body rounded-base" role="alert">
             <div class="flex items-center justify-between">
                 <span class="sr-only">Confirmation</span>
                 <h3 class="font-medium">5. Confirmation</h3>
@@ -253,15 +253,15 @@ Use this example to show the stepper component next to a form layout and change 
     <h3 class="mb-6 text-lg font-medium leading-none text-heading">Sign In details</h3>
   <div class="mb-5">
     <label for="email" class="block mb-2.5 text-sm font-medium text-heading">Your email</label>
-    <input type="email" id="email" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="name@flowbite.com" required />
+    <input type="email" id="email" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="name@flowbite.com" required />
   </div>
   <div class="mb-5">
     <label for="password" class="block mb-2.5 text-sm font-medium text-heading">Your password</label>
-    <input type="password" id="password" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="••••••••" required />
+    <input type="password" id="password" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="••••••••" required />
   </div>
   <div class="flex items-start mb-5">
     <div class="flex items-center h-5">
-      <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-secondary-medium focus:ring-2 focus:ring-brand-soft" required />
+      <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft" required />
     </div>
     <label for="remember" class="ms-2 text-sm font-medium text-heading">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
   </div>

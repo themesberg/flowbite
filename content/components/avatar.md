@@ -35,7 +35,7 @@ Apply a border around the avatar component you can use the `ring-{color}` class 
 Use this example as a placeholder icon for the user profile when there is no custom image available.
 
 {{< example id="avatar-placeholder-example" class="flex justify-center" github="components/avatar.md" show_dark=true >}}
-<div class="relative w-10 h-10 overflow-hidden bg-secondary-medium rounded-full">
+<div class="relative w-10 h-10 overflow-hidden bg-neutral-secondary-medium rounded-full">
     <svg class="absolute w-12 h-12 text-body-subtle -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
 </div>
 {{< /example >}}
@@ -149,16 +149,16 @@ Use this example if you want to show a dropdown menu when clicking on the avatar
     </div>
     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="avatarButton">
       <li>
-        <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Dashboard</a>
+        <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Dashboard</a>
       </li>
       <li>
-        <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Settings</a>
+        <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Settings</a>
       </li>
       <li>
-        <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Earnings</a>
+        <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Earnings</a>
       </li>
       <li>
-        <a href="#" class="block w-full p-2 hover:bg-tertiary-medium text-fg-danger rounded-md">Sign out</a>
+        <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium text-fg-danger rounded-md">Sign out</a>
       </li>
     </ul>
 </div>

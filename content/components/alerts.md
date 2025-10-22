@@ -32,7 +32,7 @@ Use the following examples of alert components to show messages as feedback to y
 <div class="p-4 mb-4 text-sm text-fg-warning rounded-base bg-warning-soft" role="alert">
   <span class="font-medium">Warning alert!</span> Change a few things up and try submitting again.
 </div>
-<div class="p-4 text-sm text-heading rounded-base bg-secondary-medium" role="alert">
+<div class="p-4 text-sm text-heading rounded-base bg-neutral-secondary-medium" role="alert">
   <span class="font-medium">Dark alert!</span> Change a few things up and try submitting again.
 </div>
 {{< /example >}}
@@ -58,7 +58,7 @@ You can also include a descriptive icon to complement the message inside the ale
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
   <span class="font-medium me-1">Warning alert!</span> Change a few things up and try submitting again.
 </div>
-<div class="flex items-center p-4 text-sm text-heading rounded-base bg-secondary-medium" role="alert">
+<div class="flex items-center p-4 text-sm text-heading rounded-base bg-neutral-secondary-medium" role="alert">
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
   <span class="font-medium me-1">Dark alert!</span> Change a few things up and try submitting again.
 </div>
@@ -85,7 +85,7 @@ Use this example to add a border accent to the alert component instead of just a
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
   <span class="font-medium me-1">Warning alert!</span> Change a few things up and try submitting again.
 </div>
-<div class="flex items-center p-4 text-sm text-heading rounded-base bg-secondary-medium border border-default-medium" role="alert">
+<div class="flex items-center p-4 text-sm text-heading rounded-base bg-neutral-secondary-medium border border-default-medium" role="alert">
   <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
   <span class="font-medium me-1">Dark alert!</span> Change a few things up and try submitting again.
 </div>
@@ -199,13 +199,13 @@ Use the following alert elements that are also dismissible.
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
   </button>
 </div>
-<div id="alert-5" class="flex items-center p-4 text-sm text-heading rounded-base bg-secondary-medium" role="alert">
+<div id="alert-5" class="flex items-center p-4 text-sm text-heading rounded-base bg-neutral-secondary-medium" role="alert">
   <svg class="w-4 h-4 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
   <span class="sr-only">Info</span>
   <div class="ms-2 text-sm ">
     A simple dark alert with an <a href="#" class="font-medium underline hover:no-underline">example link</a>. Give it a click if you like.
   </div>
-  <button type="button" class="ms-auto -mx-1.5 -my-1.5 rounded focus:ring-2 focus:ring-tertiary p-1.5 hover:bg-tertiary-medium inline-flex items-center justify-center h-8 w-8" data-dismiss-target="#alert-5" aria-label="Close">
+  <button type="button" class="ms-auto -mx-1.5 -my-1.5 rounded focus:ring-2 focus:ring-tertiary p-1.5 hover:bg-neutral-tertiary-medium inline-flex items-center justify-center h-8 w-8" data-dismiss-target="#alert-5" aria-label="Close">
     <span class="sr-only">Dismiss</span>
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
   </button>
@@ -261,13 +261,13 @@ Use this example to add a border accent on top of the alert component for furthe
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
   </button>
 </div>
-<div id="alert-border-5" class="flex items-center p-4 text-sm text-heading bg-secondary-medium border-t-4 border-default-medium" role="alert">
+<div id="alert-border-5" class="flex items-center p-4 text-sm text-heading bg-neutral-secondary-medium border-t-4 border-default-medium" role="alert">
   <svg class="w-4 h-4 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
   <span class="sr-only">Info</span>
   <div class="ms-2 text-sm ">
     A simple dark alert with an <a href="#" class="font-medium underline hover:no-underline">example link</a>. Give it a click if you like.
   </div>
-  <button type="button" class="ms-auto -mx-1.5 -my-1.5 rounded focus:ring-2 focus:ring-tertiary p-1.5 hover:bg-tertiary-medium inline-flex items-center justify-center h-8 w-8" data-dismiss-target="#alert-border-5" aria-label="Close">
+  <button type="button" class="ms-auto -mx-1.5 -my-1.5 rounded focus:ring-2 focus:ring-tertiary p-1.5 hover:bg-neutral-tertiary-medium inline-flex items-center justify-center h-8 w-8" data-dismiss-target="#alert-border-5" aria-label="Close">
     <span class="sr-only">Dismiss</span>
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
   </button>
@@ -363,14 +363,14 @@ The following alert components can be used if you wish to disclose more informat
   </button>
 </div>
 
-<div id="alert-additional-content-5" class="p-4 text-sm text-heading rounded-base bg-secondary-medium border border-default-medium" role="alert">
+<div id="alert-additional-content-5" class="p-4 text-sm text-heading rounded-base bg-neutral-secondary-medium border border-default-medium" role="alert">
   <div class="flex items-center justify-between">
     <div class="flex items-center">
       <svg class="w-4 h-4 shrink-0 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
       <span class="sr-only">Info</span>
       <h3 class="font-medium">This is a default alert</h3>
     </div>
-    <button type="button" data-dismiss-target="#alert-additional-content-5" aria-label="Close" class="ms-auto -mx-1.5 -my-1.5 rounded focus:ring-2 focus:ring-tertiary p-1.5 hover:bg-tertiary-medium inline-flex items-center justify-center h-8 w-8">
+    <button type="button" data-dismiss-target="#alert-additional-content-5" aria-label="Close" class="ms-auto -mx-1.5 -my-1.5 rounded focus:ring-2 focus:ring-tertiary p-1.5 hover:bg-neutral-tertiary-medium inline-flex items-center justify-center h-8 w-8">
       <span class="sr-only">Close</span>
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
     </button>
@@ -423,7 +423,7 @@ Use the following alert elements that are also dismissible.
   <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
 </div>
 
-<div id="alert-small-5" class="w-auto inline-flex items-center p-1 pe-2 mb-4 text-sm text-heading rounded-full bg-secondary-medium border border-default-medium" role="alert">
+<div id="alert-small-5" class="w-auto inline-flex items-center p-1 pe-2 mb-4 text-sm text-heading rounded-full bg-neutral-secondary-medium border border-default-medium" role="alert">
   <span class="bg-quaternary text-heading py-0.5 px-2 rounded-full">New</span>
   <div class="ms-2 text-sm">
     Great job! You've acknowledged this <a href="#" class="font-medium underline hover:no-underline">significant</a> alert message.
@@ -442,7 +442,7 @@ The parameters for the Dismiss object can be used to programmatically initialize
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
-      <thead class="bg-secondary-soft">
+      <thead class="bg-neutral-secondary-soft">
           <tr class="text-heading text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Parameter
@@ -525,7 +525,7 @@ Use these optional options for the Dismiss object to set the transition, duratio
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
   <table class="w-full text-sm text-left text-body0">
-      <thead class="bg-secondary-soft">
+      <thead class="bg-neutral-secondary-soft">
           <tr class="text-heading text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Option
@@ -593,7 +593,7 @@ Use the following methods on the Dismiss object to programmatically manipulate t
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
   <table class="w-full text-sm text-left text-body">
-      <thead class="text-heading bg-secondary-soft">
+      <thead class="text-heading bg-neutral-secondary-soft">
           <tr class="text-xs font-medium uppercase">
               <th scope="col" class="px-6 py-3">
                   Method

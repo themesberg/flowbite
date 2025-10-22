@@ -21,16 +21,16 @@ Use the following default tabs component example to show a list of links that th
 
 <ul class="flex flex-wrap text-sm font-medium text-center text-body border-b border-default">
     <li class="me-2">
-        <a href="#" aria-current="page" class="inline-block p-4 text-fg-brand bg-secondary-soft rounded-t-base active">Profile</a>
+        <a href="#" aria-current="page" class="inline-block p-4 text-fg-brand bg-neutral-secondary-soft rounded-t-base active">Profile</a>
     </li>
     <li class="me-2">
-        <a href="#" class="inline-block p-4 rounded-t-base hover:text-heading hover:bg-secondary-soft">Dashboard</a>
+        <a href="#" class="inline-block p-4 rounded-t-base hover:text-heading hover:bg-neutral-secondary-soft">Dashboard</a>
     </li>
     <li class="me-2">
-        <a href="#" class="inline-block p-4 rounded-t-base hover:text-heading hover:bg-secondary-soft">Settings</a>
+        <a href="#" class="inline-block p-4 rounded-t-base hover:text-heading hover:bg-neutral-secondary-soft">Settings</a>
     </li>
     <li class="me-2">
-        <a href="#" class="inline-block p-4 rounded-t-base hover:text-heading hover:bg-secondary-soft">Contacts</a>
+        <a href="#" class="inline-block p-4 rounded-t-base hover:text-heading hover:bg-neutral-secondary-soft">Contacts</a>
     </li>
     <li>
         <a class="inline-block p-4 text-fg-disabled rounded-t-base cursor-not-allowed">Disabled</a>
@@ -115,13 +115,13 @@ If you want to use pills as a style for the tabs component you can do so by usin
         <a href="#" class="inline-block px-4 py-2.5 text-white bg-brand rounded-base active" aria-current="page">Tab 1</a>
     </li>
     <li class="me-2">
-        <a href="#"  class="inline-block px-4 py-3 rounded-base hover:text-heading hover:bg-secondary-soft">Tab 2</a>
+        <a href="#"  class="inline-block px-4 py-3 rounded-base hover:text-heading hover:bg-neutral-secondary-soft">Tab 2</a>
     </li>
     <li class="me-2">
-        <a href="#" class="inline-block px-4 py-3 rounded-base hover:text-heading hover:bg-secondary-soft">Tab 3</a>
+        <a href="#" class="inline-block px-4 py-3 rounded-base hover:text-heading hover:bg-neutral-secondary-soft">Tab 3</a>
     </li>
     <li class="me-2">
-        <a href="#" class="inline-block px-4 py-3 rounded-base hover:text-heading hover:bg-secondary-soft">Tab 4</a>
+        <a href="#" class="inline-block px-4 py-3 rounded-base hover:text-heading hover:bg-neutral-secondary-soft">Tab 4</a>
     </li>
     <li>
         <a class="inline-block px-4 py-3 text-fg-disabled cursor-not-allowed">Tab 5</a>
@@ -144,19 +144,19 @@ Use this example to show a vertically aligned set of tabs on the left side of th
             </a>
         </li>
         <li>
-            <a href="#" class="inline-flex items-center px-4 py-3 rounded-base hover:text-heading hover:bg-secondary-soft w-full">
+            <a href="#" class="inline-flex items-center px-4 py-3 rounded-base hover:text-heading hover:bg-neutral-secondary-soft w-full">
                 <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m4 10v-2m3 2v-6m3 6v-3m4-11v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/></svg>
                 Dashboard
             </a>
         </li>
         <li>
-            <a href="#" class="inline-flex items-center px-4 py-3 rounded-base hover:text-heading hover:bg-secondary-soft w-full">
+            <a href="#" class="inline-flex items-center px-4 py-3 rounded-base hover:text-heading hover:bg-neutral-secondary-soft w-full">
                 <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13v-2a1 1 0 0 0-1-1h-.757l-.707-1.707.535-.536a1 1 0 0 0 0-1.414l-1.414-1.414a1 1 0 0 0-1.414 0l-.536.535L14 4.757V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v.757l-1.707.707-.536-.535a1 1 0 0 0-1.414 0L4.929 6.343a1 1 0 0 0 0 1.414l.536.536L4.757 10H4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h.757l.707 1.707-.535.536a1 1 0 0 0 0 1.414l1.414 1.414a1 1 0 0 0 1.414 0l.536-.535 1.707.707V20a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-.757l1.707-.708.536.536a1 1 0 0 0 1.414 0l1.414-1.414a1 1 0 0 0 0-1.414l-.535-.536.707-1.707H20a1 1 0 0 0 1-1Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
                 Settings
             </a>
         </li>
         <li>
-            <a href="#" class="inline-flex items-center px-4 py-3 rounded-base hover:text-heading hover:bg-secondary-soft w-full">
+            <a href="#" class="inline-flex items-center px-4 py-3 rounded-base hover:text-heading hover:bg-neutral-secondary-soft w-full">
                 <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.079 6.839a3 3 0 0 0-4.255.1M13 20h1.083A3.916 3.916 0 0 0 18 16.083V9A6 6 0 1 0 6 9v7m7 4v-1a1 1 0 0 0-1-1h-1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1Zm-7-4v-6H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1Zm12-6h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1v-6Z"/></svg>
                 Contact
             </a>
@@ -186,7 +186,7 @@ If you want to show the tabs on the full width relative to the parent element yo
 
 <div class="sm:hidden">
     <label for="tabs" class="sr-only">Select your country</label>
-    <select id="tabs" class="block w-full px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
+    <select id="tabs" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
         <option>Profile</option>
         <option>Dashboard</option>
         <option>setting</option>
@@ -195,16 +195,16 @@ If you want to show the tabs on the full width relative to the parent element yo
 </div>
 <ul class="hidden text-sm font-medium text-center text-body sm:flex -space-x-px">
     <li class="w-full focus-within:z-10">
-        <a href="#" class="inline-block w-full text-body bg-neutral-primary-soft border border-default rounded-s-base hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none" aria-current="page">Profile</a>
+        <a href="#" class="inline-block w-full text-body bg-neutral-primary-soft border border-default rounded-s-base hover:bg-neutral-secondary-medium hover:text-heading focus:ring-4 focus:ring-neutral-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none" aria-current="page">Profile</a>
     </li>
     <li class="w-full focus-within:z-10">
-        <a href="#" class="inline-block w-full text-body bg-neutral-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none">Dashboard</a>
+        <a href="#" class="inline-block w-full text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-4 focus:ring-neutral-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none">Dashboard</a>
     </li>
     <li class="w-full focus-within:z-10">
-        <a href="#" class="inline-block w-full text-body bg-neutral-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none">Settings</a>
+        <a href="#" class="inline-block w-full text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-4 focus:ring-neutral-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none">Settings</a>
     </li>
     <li class="w-full focus-within:z-10">
-        <a href="#" class="inline-block w-full text-body bg-neutral-primary-soft border border-default rounded-e-base hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none">Invoice</a>
+        <a href="#" class="inline-block w-full text-body bg-neutral-primary-soft border border-default rounded-e-base hover:bg-neutral-secondary-medium hover:text-heading focus:ring-4 focus:ring-neutral-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none">Invoice</a>
     </li>
 </ul>
 {{< /example >}}
@@ -217,7 +217,7 @@ If you want to show the tabs on the full width relative to the parent element yo
 
 <div class="sm:hidden">
     <label for="tabs-icons" class="sr-only">Select your country</label>
-    <select id="tabs-icons" class="block w-full px-3 py-2.5 bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
+    <select id="tabs-icons" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
         <option>Profile</option>
         <option>Dashboard</option>
         <option>setting</option>
@@ -226,25 +226,25 @@ If you want to show the tabs on the full width relative to the parent element yo
 </div>
 <ul class="hidden text-sm font-medium text-center text-body sm:flex -space-x-px">
     <li class="w-full focus-within:z-10">
-        <a href="#" class="inline-flex items-center justify-center w-full text-body bg-neutral-primary-soft border border-default rounded-s-base hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none" aria-current="page">
+        <a href="#" class="inline-flex items-center justify-center w-full text-body bg-neutral-primary-soft border border-default rounded-s-base hover:bg-neutral-secondary-medium hover:text-heading focus:ring-4 focus:ring-neutral-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none" aria-current="page">
             <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
             Profile
         </a>
     </li>
     <li class="w-full focus-within:z-10">
-        <a href="#" class="inline-flex items-center justify-center  w-full text-body bg-neutral-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none">
+        <a href="#" class="inline-flex items-center justify-center  w-full text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-4 focus:ring-neutral-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none">
         <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.143 4H4.857A.857.857 0 0 0 4 4.857v4.286c0 .473.384.857.857.857h4.286A.857.857 0 0 0 10 9.143V4.857A.857.857 0 0 0 9.143 4Zm10 0h-4.286a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286A.857.857 0 0 0 20 9.143V4.857A.857.857 0 0 0 19.143 4Zm-10 10H4.857a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286a.857.857 0 0 0 .857-.857v-4.286A.857.857 0 0 0 9.143 14Zm10 0h-4.286a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286a.857.857 0 0 0 .857-.857v-4.286a.857.857 0 0 0-.857-.857Z"/></svg>
         Dashboard
         </a>
     </li>
     <li class="w-full focus-within:z-10">
-        <a href="#" class="inline-flex items-center justify-center  w-full text-body bg-neutral-primary-soft border border-default hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none">
+        <a href="#" class="inline-flex items-center justify-center  w-full text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-4 focus:ring-neutral-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none">
             <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M20 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6h-2m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4"/></svg>
             Settings
         </a>
     </li>
     <li class="w-full focus-within:z-10">
-        <a href="#" class="inline-flex items-center justify-center  w-full text-body bg-neutral-primary-soft border border-default rounded-e-base hover:bg-secondary-medium hover:text-heading focus:ring-4 focus:ring-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none">
+        <a href="#" class="inline-flex items-center justify-center  w-full text-body bg-neutral-primary-soft border border-default rounded-e-base hover:bg-neutral-secondary-medium hover:text-heading focus:ring-4 focus:ring-neutral-secondary-strong font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none">
             <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m8-2h3m-3 3h3m-4 3v6m4-3H8M19 4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1ZM8 12v6h8v-6H8Z"/></svg>
             Invoice
         </a>
@@ -287,16 +287,16 @@ You can use multiple tab components on a single page but make sure that the id's
     </ul>
 </div>
 <div id="default-tab-content">
-    <div class="hidden p-4 rounded-base bg-secondary-soft" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <div class="hidden p-4 rounded-base bg-neutral-secondary-soft" id="profile" role="tabpanel" aria-labelledby="profile-tab">
         <p class="text-sm text-body">This is some placeholder content the <strong class="font-medium text-heading">Profile tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
     </div>
-    <div class="hidden p-4 rounded-base bg-secondary-soft" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+    <div class="hidden p-4 rounded-base bg-neutral-secondary-soft" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
         <p class="text-sm text-body">This is some placeholder content the <strong class="font-medium text-heading">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
     </div>
-    <div class="hidden p-4 rounded-base bg-secondary-soft" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+    <div class="hidden p-4 rounded-base bg-neutral-secondary-soft" id="settings" role="tabpanel" aria-labelledby="settings-tab">
         <p class="text-sm text-body">This is some placeholder content the <strong class="font-medium text-heading">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
     </div>
-    <div class="hidden p-4 rounded-base bg-secondary-soft" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+    <div class="hidden p-4 rounded-base bg-neutral-secondary-soft" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
         <p class="text-sm text-body">This is some placeholder content the <strong class="font-medium text-heading">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
     </div>
 </div>
@@ -325,16 +325,16 @@ Use the `data-tabs-active-classes` and the `data-tabs-inactive-classes` to set t
     </ul>
 </div>
 <div id="default-styled-tab-content">
-    <div class="hidden p-4 rounded-base bg-secondary-soft" id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
+    <div class="hidden p-4 rounded-base bg-neutral-secondary-soft" id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
         <p class="text-sm text-body">This is some placeholder content the <strong class="font-medium text-heading">Profile tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
     </div>
-    <div class="hidden p-4 rounded-base bg-secondary-soft" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+    <div class="hidden p-4 rounded-base bg-neutral-secondary-soft" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
         <p class="text-sm text-body">This is some placeholder content the <strong class="font-medium text-heading">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
     </div>
-    <div class="hidden p-4 rounded-base bg-secondary-soft" id="styled-settings" role="tabpanel" aria-labelledby="settings-tab">
+    <div class="hidden p-4 rounded-base bg-neutral-secondary-soft" id="styled-settings" role="tabpanel" aria-labelledby="settings-tab">
         <p class="text-sm text-body">This is some placeholder content the <strong class="font-medium text-heading">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
     </div>
-    <div class="hidden p-4 rounded-base bg-secondary-soft" id="styled-contacts" role="tabpanel" aria-labelledby="contacts-tab">
+    <div class="hidden p-4 rounded-base bg-neutral-secondary-soft" id="styled-contacts" role="tabpanel" aria-labelledby="contacts-tab">
         <p class="text-sm text-body">This is some placeholder content the <strong class="font-medium text-heading">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
     </div>
 </div>
@@ -350,7 +350,7 @@ Create a new Tabs object with parameters such as an array of the tab and content
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left text-body dark:text-gray-400">
-        <thead class="bg-secondary-soft text-heading">
+        <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Parameter
@@ -433,7 +433,7 @@ Use the following options as the second parameter for the Tabs object to set the
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left text-body dark:text-gray-400">
-        <thead class="bg-secondary-soft text-heading">
+        <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Option
@@ -501,7 +501,7 @@ Use the methods from the Tabs object to programmatically change the current acti
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left text-body dark:text-gray-400">
-        <thead class="bg-secondary-soft text-heading">
+        <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Method

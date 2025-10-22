@@ -122,27 +122,27 @@ This example can be used to show more information about a company profile.
                     <a class="flex items-center justify-center w-8 h-8 text-xs font-medium text-heading bg-tertiary border-2 border-buffer-medium rounded-full hover:bg-quaternary" href="#">+3</a>
                 </div>
                 <div class="flex space-x-2">
-                    <button type="button" class="flex items-center justify-center w-full text-body bg-neutral-primary-medium border border-default-medium hover:bg-secondary-strong hover:text-heading hover:border-default-strong focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
+                    <button type="button" class="flex items-center justify-center w-full text-body bg-neutral-primary-medium border border-default-medium hover:bg-neutral-secondary-strong hover:text-heading hover:border-default-strong focus:ring-4 focus:ring-neutral-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
                         <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11c.889-.086 1.416-.543 2.156-1.057a22.323 22.323 0 0 0 3.958-5.084 1.6 1.6 0 0 1 .582-.628 1.549 1.549 0 0 1 1.466-.087c.205.095.388.233.537.406a1.64 1.64 0 0 1 .384 1.279l-1.388 4.114M7 11H4v6.5A1.5 1.5 0 0 0 5.5 19v0A1.5 1.5 0 0 0 7 17.5V11Zm6.5-1h4.915c.286 0 .372.014.626.15.254.135.472.332.637.572a1.874 1.874 0 0 1 .215 1.673l-2.098 6.4C17.538 19.52 17.368 20 16.12 20c-2.303 0-4.79-.943-6.67-1.475"/></svg>
                         Like page
                     </button>
-                    <button id="dropdown-button" data-dropdown-toggle="dropdown-menu" data-dropdown-placement="right" type="button" class="flex items-center justify-center text-body bg-neutral-primary-medium border border-default-medium hover:bg-secondary-strong hover:text-heading hover:border-default-strong focus:ring-4 focus:ring-tertiary-soft shadow-xs font-medium leading-5 rounded-base w-9 h-9 shrink-0 focus:outline-none">
+                    <button id="dropdown-button" data-dropdown-toggle="dropdown-menu" data-dropdown-placement="right" type="button" class="flex items-center justify-center text-body bg-neutral-primary-medium border border-default-medium hover:bg-neutral-secondary-strong hover:text-heading hover:border-default-strong focus:ring-4 focus:ring-neutral-tertiary-soft shadow-xs font-medium leading-5 rounded-base w-9 h-9 shrink-0 focus:outline-none">
                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M6 12h.01m6 0h.01m5.99 0h.01"/></svg>
                     </button>
                 </div>
                 <div id="dropdown-menu" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
                     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdown-button">
                         <li>
-                            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Report this page</a>
+                            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Report this page</a>
                         </li>
                         <li>
-                            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Add to favorites</a>
+                            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Add to favorites</a>
                         </li>
                         <li>
-                            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Block this page</a>
+                            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Block this page</a>
                         </li>
                         <li>
-                            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded">Invite users</a>
+                            <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Invite users</a>
                         </li>
                     </ul>
                 </div>
@@ -236,11 +236,11 @@ Dynamically show the password strength progress when creating a new password pos
 <form>
     <div class="mb-6">
         <label for="email" class="block mb-2.5 text-sm font-medium text-heading">Your email</label>
-        <input type="email" id="email" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="name@flowbite.com" required />
+        <input type="email" id="email" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="name@flowbite.com" required />
     </div>
     <div class="mb-6">
         <label for="password" class="block mb-2.5 text-sm font-medium text-heading">Your password</label>
-        <input data-popover-target="popover-password" data-popover-placement="bottom" type="password" id="password" class="bg-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" required />
+        <input data-popover-target="popover-password" data-popover-placement="bottom" type="password" id="password" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" required />
         <div data-popover id="popover-password" role="tooltip" class="absolute z-10 p-3 invisible inline-block w-72 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
             <div>
                 <h3 class="font-semibold text-heading mb-3">Must have at least 6 characters</h3>
@@ -271,7 +271,7 @@ Dynamically show the password strength progress when creating a new password pos
     </div>
     <div class="flex items-start mb-6">
         <div class="flex items-center h-5">
-        <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-secondary-strong focus:ring-2 focus:ring-brand-soft" required />
+        <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-neutral-secondary-strong focus:ring-2 focus:ring-brand-soft" required />
         </div>
         <label for="remember" class="ms-2 text-sm font-medium text-heading">I agree with the <a href="#" class="text-brand hover:underline">terms and conditions</a>.</label>
     </div>
@@ -420,7 +420,7 @@ Create a new Popover object with the object parameters like the trigger element,
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
-        <thead class="bg-secondary-soft text-heading">
+        <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Parameter
@@ -503,7 +503,7 @@ Use the following options as the third parameter for the Popover object to set t
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
-        <thead class="bg-secondary-soft text-heading">
+        <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Option
@@ -593,7 +593,7 @@ Use the methods from the Popover object to programmatically show or hide the pop
 
 <div class="relative my-10 overflow-x-auto shadow-xs sm:rounded-base border border-default">
     <table class="w-full text-sm text-left text-body">
-        <thead class="bg-secondary-soft text-heading">
+        <thead class="bg-neutral-secondary-soft text-heading">
             <tr class="text-xs font-medium uppercase">
                 <th scope="col" class="px-6 py-3">
                     Method

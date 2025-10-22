@@ -235,7 +235,7 @@ If you have a website with many pages you can use this footer component to show 
             </ul>
         </div>
     </div>
-    <div class="px-4 py-6 bg-secondary-soft md:flex md:items-center md:justify-between">
+    <div class="px-4 py-6 bg-neutral-secondary-soft md:flex md:items-center md:justify-between">
         <span class="text-sm text-body sm:text-center">© 2023 <a href="{{< param homepage >}}/">Flowbite™</a>. All Rights Reserved.
         </span>
         <div class="flex mt-4 sm:justify-center md:mt-0 space-x-2 rtl:space-x-reverse">

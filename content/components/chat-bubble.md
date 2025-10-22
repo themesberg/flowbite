@@ -23,7 +23,7 @@ Use this example to show a simple chat bubble with a text message, user profile 
 {{< example id="chat-bubble-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="380" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
-   <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+   <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-neutral-secondary-soft rounded-e-base rounded-es-base">
       <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
          <span class="text-sm font-semibold text-heading">Bonnie Green</span>
          <span class="text-sm text-body">11:46</span>
@@ -37,19 +37,19 @@ Use this example to show a simple chat bubble with a text message, user profile 
    <div id="dropdownDots" class="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -63,7 +63,7 @@ This example can be used to show a voice note message with control buttons and a
 {{< example id="voice-note-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="380" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
-   <div class="flex flex-col gap-2.5 w-full max-w-[320px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+   <div class="flex flex-col gap-2.5 w-full max-w-[320px] leading-1.5 p-4 bg-neutral-secondary-soft rounded-e-base rounded-es-base">
       <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
          <span class="text-sm font-semibold text-heading">Bonnie Green</span>
          <span class="text-sm text-body">11:46</span>
@@ -112,19 +112,19 @@ This example can be used to show a voice note message with control buttons and a
    <div id="dropdownDots" class="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -139,7 +139,7 @@ Use this example to send a file attachment inside a chat bubble with the ability
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie Green image">
    <div class="flex flex-col gap-1">
-      <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+      <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 bg-neutral-secondary-soft rounded-e-base rounded-es-base">
          <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
             <span class="text-sm font-semibold text-heading">Bonnie Green</span>
             <span class="text-sm text-body">11:46</span>
@@ -191,19 +191,19 @@ Use this example to send a file attachment inside a chat bubble with the ability
    <div id="dropdownDots" class="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -218,7 +218,7 @@ This example can be used to show an image attachment with a download button when
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie Green image">
    <div class="flex flex-col gap-1">
-      <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+      <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 bg-neutral-secondary-soft rounded-e-base rounded-es-base">
          <div class="flex items-center space-x-1.5 rtl:space-x-reverse mb-2">
             <span class="text-sm font-semibold text-heading">Bonnie Green</span>
             <span class="text-sm text-body">11:46</span>
@@ -245,19 +245,19 @@ This example can be used to show an image attachment with a download button when
    <div id="dropdownDots" class="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -272,7 +272,7 @@ Use this example to show an image gallery based on a grid layout with the abilit
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie Green image">
    <div class="flex flex-col gap-1">
-      <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+      <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 bg-neutral-secondary-soft rounded-e-base rounded-es-base">
          <div class="flex items-center space-x-1.5 rtl:space-x-reverse mb-2">
             <span class="text-sm font-semibold text-heading">Bonnie Green</span>
             <span class="text-sm text-body">11:46</span>
@@ -341,19 +341,19 @@ Use this example to show an image gallery based on a grid layout with the abilit
    <div id="dropdownDots" class="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -367,7 +367,7 @@ Use this example to show a OG preview of the URL that is being shared inside the
 {{< example id="url-sharing-example" class="flex justify-center" github="components/chat-bubble.md" show_dark=true iframeHeight="520" >}}
 <div class="flex items-start gap-2.5">
    <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
-   <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+   <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-neutral-secondary-soft rounded-e-base rounded-es-base">
       <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
          <span class="text-sm font-semibold text-heading">Bonnie Green</span>
          <span class="text-sm text-body">11:46</span>
@@ -387,19 +387,19 @@ Use this example to show a OG preview of the URL that is being shared inside the
    <div id="dropdownDots" class="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -418,7 +418,7 @@ Use this example to show a text message with the user profile and timestamp outs
          <span class="text-sm font-semibold text-heading">Bonnie Green</span>
          <span class="text-sm text-body">11:46</span>
       </div>
-      <div class="flex flex-col leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-bas">
+      <div class="flex flex-col leading-1.5 p-4 bg-neutral-secondary-soft rounded-e-base rounded-es-bas">
          <p class="text-sm text-body"> That's awesome. I think our users will really appreciate the improvements.</p>
       </div>
       <span class="text-sm text-body">Delivered</span>
@@ -429,19 +429,19 @@ Use this example to show a text message with the user profile and timestamp outs
    <div id="dropdownDots" class="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -460,7 +460,7 @@ This example can be used to show a voice note with the user profile and timestam
             <span class="text-sm font-semibold text-heading">Bonnie Green</span>
             <span class="text-sm text-body">11:46</span>
         </div>
-        <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+        <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-neutral-secondary-soft rounded-e-base rounded-es-base">
             <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
                <button class="inline-flex self-center items-center text-body hover:text-heading" type="button">
                   <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
@@ -506,19 +506,19 @@ This example can be used to show a voice note with the user profile and timestam
     <div id="dropdownDots" class="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
         <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
             <li>
-                <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
+                <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Reply</a>
             </li>
             <li>
-                <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
+                <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Forward</a>
             </li>
             <li>
-                <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
+                <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Copy</a>
             </li>
             <li>
-                <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
+                <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Report</a>
             </li>
             <li>
-                <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
+                <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Delete</a>
             </li>
         </ul>
     </div>
@@ -537,7 +537,7 @@ Use this example to show a file attachment with the user profile and timestamp o
          <span class="text-sm font-semibold text-heading">Bonnie Green</span>
          <span class="text-sm text-body">11:46</span>
       </div>
-      <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+      <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-neutral-secondary-soft rounded-e-base rounded-es-base">
                  <div class="flex items-start my-2.5 bg-tertiary rounded-base p-2">
             <div class="me-1.5">
                <span class="flex items-center gap-2 text-sm font-medium text-heading pb-2">
@@ -585,19 +585,19 @@ Use this example to show a file attachment with the user profile and timestamp o
    <div id="dropdownDots" class="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -616,7 +616,7 @@ This example can be used to send an image attachment with the user profile outsi
          <span class="text-sm font-semibold text-heading">Bonnie Green</span>
          <span class="text-sm text-body">11:46</span>
       </div>
-      <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+      <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-neutral-secondary-soft rounded-e-base rounded-es-base">
         <p class="text-sm text-body">I'm working from home today! 😅</p>
         <div class="group relative my-2.5">
             <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-base flex items-center justify-center">
@@ -639,19 +639,19 @@ This example can be used to send an image attachment with the user profile outsi
    <div id="dropdownDots" class="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -670,7 +670,7 @@ Use this example to show an image gallery with the user profile and timestamp ou
          <span class="text-sm font-semibold text-heading">Bonnie Green</span>
          <span class="text-sm text-body">11:46</span>
       </div>
-      <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-base">
+      <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-neutral-secondary-soft rounded-e-base rounded-es-base">
         <p class="text-sm text-body">I'm working from home today! 😅</p>
         <div class="grid gap-4 grid-cols-2 my-2.5">
             <div class="group relative">
@@ -735,19 +735,19 @@ Use this example to show an image gallery with the user profile and timestamp ou
    <div id="dropdownDots" class="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -766,7 +766,7 @@ Use this example to show a URL preview with the user profile and timestamp outsi
          <span class="text-sm font-semibold text-heading">Bonnie Green</span>
          <span class="text-sm text-body">11:46</span>
       </div>
-      <div class="flex flex-col leading-1.5 p-4 bg-secondary-soft rounded-e-base rounded-es-bas">
+      <div class="flex flex-col leading-1.5 p-4 bg-neutral-secondary-soft rounded-e-base rounded-es-bas">
       <p class="text-sm py-2.5 text-body">Check out this open-source UI component library based on Tailwind CSS:</p>
       <p class="text-sm pb-2.5"><a href="https://github.com/themesberg/flowbite" class="text-fg-brand underline hover:no-underline font-medium break-all">https://github.com/themesberg/flowbite</a></p>
       <a href="#" class="bg-tertiary rounded-base p-4 mb-2 hover:bg-quaternary">
@@ -783,19 +783,19 @@ Use this example to show a URL preview with the user profile and timestamp outsi
    <div id="dropdownDots" class="z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-40 block hidden">
       <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Reply</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Reply</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Forward</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Forward</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Copy</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Copy</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Report</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Report</a>
          </li>
          <li>
-            <a href="#" class="block w-full p-2 hover:bg-tertiary-medium hover:text-heading rounded-md">Delete</a>
+            <a href="#" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Delete</a>
          </li>
       </ul>
    </div>
@@ -888,7 +888,7 @@ Use this example to show a file attachment and a download button with a transpar
          <span class="text-sm text-body">11:46</span>
       </div>
       <div class="leading-1.5 flex w-full max-w-[320px] flex-col">
-         <div class="flex items-start bg-secondary-soft rounded-xl p-2">
+         <div class="flex items-start bg-neutral-secondary-soft rounded-xl p-2">
             <div class="me-1.5">
                <span class="flex items-center gap-2 text-sm font-medium text-heading pb-2">
                   <svg fill="none" aria-hidden="true" class="w-5 h-5 shrink-0" viewBox="0 0 20 21">
@@ -921,7 +921,7 @@ Use this example to show a file attachment and a download button with a transpar
                </span>
             </div>
             <div class="inline-flex self-center items-center">
-               <button class="text-heading bg-secondary-soft box-border border border-transparent hover:bg-quaternary focus:ring-4 focus:ring-quaternary font-medium leading-5 rounded-base p-2 focus:outline-none" type="button">
+               <button class="text-heading bg-neutral-secondary-soft box-border border border-transparent hover:bg-quaternary focus:ring-4 focus:ring-quaternary font-medium leading-5 rounded-base p-2 focus:outline-none" type="button">
                   <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"/></svg>
                </button>
             </div>

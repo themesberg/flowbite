@@ -29,9 +29,9 @@ Use this example to show a list of links aligned on three columns inside the meg
             <span class="self-center text-xl font-semibold whitespace-nowrap text-heading">Flowbite</span>
         </a>
         <div class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
-            <a href="#" class="text-heading bg-neutral-primary box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary-soft font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Login</a>
+            <a href="#" class="text-heading bg-neutral-primary box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Login</a>
             <a href="#" class="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Sign Up</a>
-            <button data-collapse-toggle="mega-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu" aria-expanded="false">
+            <button data-collapse-toggle="mega-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
             </button>
@@ -39,10 +39,10 @@ Use this example to show a list of links aligned on three columns inside the meg
         <div id="mega-menu" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
             <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
                 <li>
-                    <a href="#" class="block py-2 px-3 text-fg-brand border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0" aria-current="page">Home</a>
+                    <a href="#" class="block py-2 px-3 text-fg-brand border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0" aria-current="page">Home</a>
                 </li>
                 <li>
-                    <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-heading border-b border-light md:w-auto hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">
+                    <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-heading border-b border-light md:w-auto hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">
                         Company 
                         <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
                     </button>
@@ -117,10 +117,10 @@ Use this example to show a list of links aligned on three columns inside the meg
                     </div>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Team</a>
+                    <a href="#" class="block py-2 px-3 text-heading border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Team</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Contact</a>
+                    <a href="#" class="block py-2 px-3 text-heading border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Contact</a>
                 </li>
             </ul>
         </div>
@@ -141,9 +141,9 @@ This example of a mega menu dropdown can be used to also show an icon near the t
             <span class="self-center text-xl font-semibold whitespace-nowrap text-heading">Flowbite</span>
         </a>
         <div class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
-            <a href="#" class="text-heading bg-neutral-primary box-border border border-transparent hover:bg-secondary-medium focus:ring-4 focus:ring-tertiary-soft font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Login</a>
+            <a href="#" class="text-heading bg-neutral-primary box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Login</a>
             <a href="#" class="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Sign Up</a>
-            <button data-collapse-toggle="mega-menu-icons" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-icons" aria-expanded="false">
+            <button data-collapse-toggle="mega-menu-icons" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-icons" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
             </button>
@@ -151,10 +151,10 @@ This example of a mega menu dropdown can be used to also show an icon near the t
         <div id="mega-menu-icons" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
             <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
                 <li>
-                    <a href="#" class="block py-2 px-3 text-fg-brand border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0" aria-current="page">Home</a>
+                    <a href="#" class="block py-2 px-3 text-fg-brand border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0" aria-current="page">Home</a>
                 </li>
                 <li>
-                    <button id="mega-menu-icons-dropdown-button" data-dropdown-toggle="mega-menu-icons-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-heading border-b border-light md:w-auto hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">
+                    <button id="mega-menu-icons-dropdown-button" data-dropdown-toggle="mega-menu-icons-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-heading border-b border-light md:w-auto hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">
                         Company 
                         <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
                     </button>
@@ -240,10 +240,10 @@ This example of a mega menu dropdown can be used to also show an icon near the t
                     </div>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Team</a>
+                    <a href="#" class="block py-2 px-3 text-heading border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Team</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Contact</a>
+                    <a href="#" class="block py-2 px-3 text-heading border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Contact</a>
                 </li>
             </ul>
         </div>
@@ -263,29 +263,29 @@ Use this example to show a mega menu dropdown that spans the entire width of the
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap text-heading">Flowbite</span>
         </a>
-        <button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-full" aria-expanded="false">
+        <button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-full" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
         </button>
         <div id="mega-menu-full" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
             <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0" aria-current="page">Home</a>
+                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0" aria-current="page">Home</a>
                 </li>
                 <li>
-                    <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-heading border-b border-light md:w-auto hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">
+                    <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-heading border-b border-light md:w-auto hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">
                         Company 
                         <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
                     </button>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Marketplace</a>
+                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Marketplace</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Resources</a>
+                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Resources</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Contact</a>
+                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Contact</a>
                 </li>
             </ul>
         </div>
@@ -294,19 +294,19 @@ Use this example to show a mega menu dropdown that spans the entire width of the
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-heading sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button">
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-secondary-medium">
+                    <a href="#" class="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
                         <div class="font-semibold">Online Stores</div>
                         <span class="text-sm text-body">Connect with third-party tools that you're already using.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-secondary-medium">
+                    <a href="#" class="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
                         <div class="font-semibold">Segmentation</div>
                         <span class="text-sm text-body">Connect with third-party tools that you're already using.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-secondary-medium">
+                    <a href="#" class="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
                         <div class="font-semibold">Marketing CRM</div>
                         <span class="text-sm text-body">Connect with third-party tools that you're already using.</span>
                     </a>
@@ -314,19 +314,19 @@ Use this example to show a mega menu dropdown that spans the entire width of the
             </ul>
             <ul>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-secondary-medium">
+                    <a href="#" class="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
                         <div class="font-semibold">Online Stores</div>
                         <span class="text-sm text-body">Connect with third-party tools that you're already using.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-secondary-medium">
+                    <a href="#" class="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
                         <div class="font-semibold">Segmentation</div>
                         <span class="text-sm text-body">Connect with third-party tools that you're already using.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-secondary-medium">
+                    <a href="#" class="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
                         <div class="font-semibold">Marketing CRM</div>
                         <span class="text-sm text-body">Connect with third-party tools that you're already using.</span>
                     </a>
@@ -334,19 +334,19 @@ Use this example to show a mega menu dropdown that spans the entire width of the
             </ul>
             <ul class="hidden md:block">
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-secondary-medium">
+                    <a href="#" class="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
                         <div class="font-semibold">Audience Management</div>
                         <span class="text-sm text-body">Connect with third-party tools that you're already using.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-secondary-medium">
+                    <a href="#" class="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
                         <div class="font-semibold">Creative Tools</div>
                         <span class="text-sm text-body">Connect with third-party tools that you're already using.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-secondary-medium">
+                    <a href="#" class="block p-3 rounded-lg hover:bg-neutral-secondary-medium">
                         <div class="font-semibold">Marketing Automation</div>
                         <span class="text-sm text-body">Connect with third-party tools that you're already using.</span>
                     </a>
@@ -369,29 +369,29 @@ This example can be used to also show a CTA button or link next to the menu item
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap text-heading">Flowbite</span>
         </a>
-        <button data-collapse-toggle="mega-menu-full-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-full-cta" aria-expanded="false">
+        <button data-collapse-toggle="mega-menu-full-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-full-cta" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
         </button>
         <div id="mega-menu-full-cta" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
             <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0" aria-current="page">Home</a>
+                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0" aria-current="page">Home</a>
                 </li>
                 <li>
-                    <button id="mega-menu-full-cta-dropdown-button" data-collapse-toggle="mega-menu-full-cta-dropdown" data-dropdown-placement="bottom" class="flex items-center justify-between w-full py-2 px-3 font-medium text-heading border-b border-light md:w-auto hover:bg-secondary-soft hover:text-fg-brand md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">
+                    <button id="mega-menu-full-cta-dropdown-button" data-collapse-toggle="mega-menu-full-cta-dropdown" data-dropdown-placement="bottom" class="flex items-center justify-between w-full py-2 px-3 font-medium text-heading border-b border-light md:w-auto hover:bg-neutral-secondary-soft hover:text-fg-brand md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">
                         Company
                         <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
                     </button>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Marketplace</a>
+                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Marketplace</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Resources</a>
+                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Resources</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Contact</a>
+                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Contact</a>
                 </li>
             </ul>
         </div>
@@ -468,29 +468,29 @@ This example can be used to also show a CTA with a backdround image inside the d
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap text-heading">Flowbite</span>
         </a>
-        <button data-collapse-toggle="mega-menu-full-image" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-full-image" aria-expanded="false">
+        <button data-collapse-toggle="mega-menu-full-image" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-full-image" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
         </button>
         <div id="mega-menu-full-image" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
             <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0" aria-current="page">Home</a>
+                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0" aria-current="page">Home</a>
                 </li>
                 <li>
-                    <button id="mega-menu-full-cta-image-button" data-collapse-toggle="mega-menu-full-image-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-heading border-b border-light md:w-auto hover:bg-secondary-soft hover:text-fg-brand md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">
+                    <button id="mega-menu-full-cta-image-button" data-collapse-toggle="mega-menu-full-image-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-heading border-b border-light md:w-auto hover:bg-neutral-secondary-soft hover:text-fg-brand md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">
                         Company 
                         <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
                     </button>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Marketplace</a>
+                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Marketplace</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Resources</a>
+                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Resources</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Contact</a>
+                    <a href="#" class="block py-2 px-3 text-heading hover:text-fg-brand border-b border-light hover:bg-neutral-secondary-soft md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Contact</a>
                 </li>
             </ul>
         </div>

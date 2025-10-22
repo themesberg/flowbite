@@ -325,7 +325,7 @@
 --color-tertiary: var(--color-stone-100);
 --color-neutral-tertiary-medium: var(--color-stone-100);
 --color-quaternary: var(--color-stone-200);
---color-quaternary-medium: var(--color-stone-200);
+--color-neutral-quaternary-medium: var(--color-stone-200);
 --color-gray: var(--color-stone-300);
 --color-brand-softer: var(--color-stone-50);
 --color-brand-soft: var(--color-stone-100);
@@ -416,7 +416,7 @@
 --color-tertiary: var(--color-stone-800);
 --color-neutral-tertiary-medium: var(--color-stone-700);
 --color-quaternary: var(--color-stone-700);
---color-quaternary-medium: var(--color-stone-600);
+--color-neutral-quaternary-medium: var(--color-stone-600);
 --color-gray: var(--color-stone-600);
 --color-brand-softer: var(--color-stone-900);
 --color-brand-soft: var(--color-stone-900);

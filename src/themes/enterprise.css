@@ -318,7 +318,7 @@
 --color-tertiary: var(--color-zinc-100);
 --color-neutral-tertiary-medium: var(--color-zinc-100);
 --color-quaternary: var(--color-zinc-200);
---color-quaternary-medium: var(--color-zinc-200);
+--color-neutral-quaternary-medium: var(--color-zinc-200);
 --color-gray: var(--color-zinc-300);
 --color-brand-softer: var(--color-cyan-50);
 --color-brand-soft: var(--color-cyan-100);
@@ -409,7 +409,7 @@
 --color-tertiary: var(--color-zinc-800);
 --color-neutral-tertiary-medium: var(--color-zinc-700);
 --color-quaternary: var(--color-zinc-700);
---color-quaternary-medium: var(--color-zinc-600);
+--color-neutral-quaternary-medium: var(--color-zinc-600);
 --color-gray: var(--color-zinc-600);
 --color-brand-softer: var(--color-cyan-950);
 --color-brand-soft: var(--color-cyan-900);

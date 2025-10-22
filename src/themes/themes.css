@@ -65,7 +65,7 @@
     --color-tertiary: var(--color-gray-100);
     --color-neutral-tertiary-medium: var(--color-gray-100);
     --color-quaternary: var(--color-gray-200);
-    --color-quaternary-medium: var(--color-gray-200);
+    --color-neutral-quaternary-medium: var(--color-gray-200);
     --color-gray: var(--color-gray-300);
     --color-brand-softer: var(--color-blue-50);
     --color-brand-soft: var(--color-blue-100);
@@ -191,7 +191,7 @@
         --color-tertiary: var(--color-stone-100);
         --color-neutral-tertiary-medium: var(--color-stone-100);
         --color-quaternary: var(--color-stone-200);
-        --color-quaternary-medium: var(--color-stone-200);
+        --color-neutral-quaternary-medium: var(--color-stone-200);
         --color-gray: var(--color-stone-300);
         --color-brand-softer: var(--color-stone-50);
         --color-brand-soft: var(--color-stone-100);
@@ -313,7 +313,7 @@
     --color-tertiary: var(--color-zinc-100);
     --color-neutral-tertiary-medium: var(--color-zinc-100);
     --color-quaternary: var(--color-zinc-200);
-    --color-quaternary-medium: var(--color-zinc-200);
+    --color-neutral-quaternary-medium: var(--color-zinc-200);
     --color-gray: var(--color-zinc-300);
     --color-brand-softer: var(--color-cyan-50);
     --color-brand-soft: var(--color-cyan-100);
@@ -431,7 +431,7 @@
         --color-tertiary: var(--color-slate-100);
         --color-neutral-tertiary-medium: var(--color-slate-100);
         --color-quaternary: var(--color-slate-200);
-        --color-quaternary-medium: var(--color-slate-200);
+        --color-neutral-quaternary-medium: var(--color-slate-200);
         --color-gray: var(--color-slate-300);
         --color-brand-softer: var(--color-pink-50);
         --color-brand-soft: var(--color-pink-100);
@@ -549,7 +549,7 @@
     --color-tertiary: var(--color-neutral-100);
     --color-neutral-tertiary-medium: var(--color-neutral-100);
     --color-quaternary: var(--color-neutral-200);
-    --color-quaternary-medium: var(--color-neutral-200);
+    --color-neutral-quaternary-medium: var(--color-neutral-200);
     --color-gray: var(--color-neutral-300);
     --color-brand-softer: var(--color-indigo-50);
     --color-brand-soft: var(--color-indigo-100);
@@ -639,7 +639,7 @@
      --color-tertiary: var(--color-gray-800);
      --color-neutral-tertiary-medium: var(--color-gray-700);
      --color-quaternary: var(--color-gray-700);
-     --color-quaternary-medium: var(--color-gray-600);
+     --color-neutral-quaternary-medium: var(--color-gray-600);
      --color-gray: var(--color-gray-600);
      --color-brand-softer: var(--color-blue-950);
      --color-brand-soft: var(--color-blue-900);
@@ -729,7 +729,7 @@
     --color-tertiary: var(--color-stone-800);
     --color-neutral-tertiary-medium: var(--color-stone-700);
     --color-quaternary: var(--color-stone-700);
-    --color-quaternary-medium: var(--color-stone-600);
+    --color-neutral-quaternary-medium: var(--color-stone-600);
     --color-gray: var(--color-stone-600);
     --color-brand-softer: var(--color-stone-900);
     --color-brand-soft: var(--color-stone-900);
@@ -819,7 +819,7 @@
 --color-tertiary: var(--color-zinc-800);
 --color-neutral-tertiary-medium: var(--color-zinc-700);
 --color-quaternary: var(--color-zinc-700);
---color-quaternary-medium: var(--color-zinc-600);
+--color-neutral-quaternary-medium: var(--color-zinc-600);
 --color-gray: var(--color-zinc-600);
 --color-brand-softer: var(--color-cyan-950);
 --color-brand-soft: var(--color-cyan-900);
@@ -909,7 +909,7 @@
 --color-tertiary: var(--color-slate-800);
 --color-neutral-tertiary-medium: var(--color-slate-700);
 --color-quaternary: var(--color-slate-700);
---color-quaternary-medium: var(--color-slate-600);
+--color-neutral-quaternary-medium: var(--color-slate-600);
 --color-gray: var(--color-slate-600);
 --color-brand-softer: var(--color-pink-950);
 --color-brand-soft: var(--color-pink-900);
@@ -999,7 +999,7 @@
     --color-tertiary: var(--color-neutral-800);
     --color-neutral-tertiary-medium: var(--color-neutral-700);
     --color-quaternary: var(--color-neutral-700);
-    --color-quaternary-medium: var(--color-neutral-600);
+    --color-neutral-quaternary-medium: var(--color-neutral-600);
     --color-gray: var(--color-neutral-600);
     --color-brand-softer: var(--color-indigo-950);
     --color-brand-soft: var(--color-indigo-900);

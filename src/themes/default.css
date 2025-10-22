@@ -321,7 +321,7 @@
     --color-tertiary: var(--color-gray-100);
     --color-neutral-tertiary-medium: var(--color-gray-100);
     --color-quaternary: var(--color-gray-200);
-    --color-quaternary-medium: var(--color-gray-200);
+    --color-neutral-quaternary-medium: var(--color-gray-200);
     --color-gray: var(--color-gray-300);
     --color-brand-softer: var(--color-blue-50);
     --color-brand-soft: var(--color-blue-100);
@@ -412,7 +412,7 @@
     --color-tertiary: var(--color-gray-800);
     --color-neutral-tertiary-medium: var(--color-gray-700);
     --color-quaternary: var(--color-gray-700);
-    --color-quaternary-medium: var(--color-gray-600);
+    --color-neutral-quaternary-medium: var(--color-gray-600);
     --color-gray: var(--color-gray-600);
     --color-brand-softer: var(--color-blue-950);
     --color-brand-soft: var(--color-blue-900);

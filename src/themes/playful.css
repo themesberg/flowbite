@@ -318,7 +318,7 @@
 --color-tertiary: var(--color-slate-100);
 --color-neutral-tertiary-medium: var(--color-slate-100);
 --color-quaternary: var(--color-slate-200);
---color-quaternary-medium: var(--color-slate-200);
+--color-neutral-quaternary-medium: var(--color-slate-200);
 --color-gray: var(--color-slate-300);
 --color-brand-softer: var(--color-pink-50);
 --color-brand-soft: var(--color-pink-100);
@@ -409,7 +409,7 @@
 --color-tertiary: var(--color-slate-800);
 --color-neutral-tertiary-medium: var(--color-slate-700);
 --color-quaternary: var(--color-slate-700);
---color-quaternary-medium: var(--color-slate-600);
+--color-neutral-quaternary-medium: var(--color-slate-600);
 --color-gray: var(--color-slate-600);
 --color-brand-softer: var(--color-pink-950);
 --color-brand-soft: var(--color-pink-900);

@@ -515,7 +515,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     top: spacing[0.5],
                     left: spacing[0.5],
                     background: 'white',
-                    'border-color': 'var(--color-base)',
+                    'border-color': 'var(--color-default)',
                     'border-width': borderWidth['DEFAULT'],
                     'border-radius': borderRadius.full,
                     height: theme('height.5'),
@@ -570,7 +570,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     {
                         color: 'var(--color-heading)',
                         fontSize: `${theme('fontSize.sm')[0]}`,
-                        border: `1px solid var(--color-base)`,
+                        border: `1px solid var(--color-default)`,
                         borderRadius: `${theme(
                             'borderRadius.lg',
                             borderRadius.lg
@@ -595,7 +595,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                         backgroundColor: 'var(--color-neutral-secondary-soft)',
                         color: 'var(--color-heading)',
                         fontSize: `${theme('fontSize.sm')[0]}`,
-                        border: `1px solid var(--color-base)`,
+                        border: `1px solid var(--color-default)`,
                         borderRadius: `${theme(
                             'borderRadius.lg',
                             borderRadius.lg
@@ -606,7 +606,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 '.dark .datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
                     {
                         backgroundColor: 'var(--color-neutral-primary)',
-                        border: `1px solid var(--color-base)`,
+                        border: `1px solid var(--color-default)`,
                         color: 'white',
                     },
                 '.datatable-wrapper .datatable-container thead tr.search-filtering-row th':
@@ -618,6 +618,8 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 '.datatable-wrapper .datatable-container': {
                     overflowX: 'auto',
+                    border: '1px solid var(--color-default)',
+                    borderRadius: 'var(--radius-base)',
                 },
                 '.datatable-wrapper .datatable-table': {
                     width: '100%',
@@ -632,6 +634,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     fontSize: `${theme('fontSize.xs')[0]}`,
                     color: 'var(--color-body)',
                     backgroundColor: 'var(--color-neutral-secondary-medium)',
+                    borderBottom: '1px solid var(--color-default)',
                 },
                 '.dark .datatable-wrapper .datatable-table thead': {
                     color: 'var(--color-body)',
@@ -667,10 +670,10 @@ module.exports = plugin.withOptions(function (options = {}) {
                     backgroundColor: 'var(--color-neutral-secondary-medium)',
                 },
                 '.datatable-wrapper .datatable-table tbody tr': {
-                    borderBottom: `1px solid var(--color-base)`,
+                    borderBottom: `1px solid var(--color-default)`,
                 },
-                '.dark .datatable-wrapper .datatable-table tbody tr': {
-                    borderBottom: `1px solid var(--color-base)`,
+                '.datatable-wrapper .datatable-table tbody tr:last-child': {
+                    borderBottom: 0,
                 },
                 '.datatable-wrapper .datatable-table .datatable-empty': {
                     textAlign: 'center',
@@ -711,9 +714,9 @@ module.exports = plugin.withOptions(function (options = {}) {
                         paddingRight: `${theme('spacing.3', spacing[3])}`,
                         height: spacing[8],
                         fontSize: `${theme('fontSize.sm')[0]}`,
-                        borderTop: `1px solid var(--color-base)`,
-                        borderBottom: `1px solid var(--color-base)`,
-                        borderRight: `1px solid var(--color-base)`,
+                        borderTop: `1px solid var(--color-default)`,
+                        borderBottom: `1px solid var(--color-default)`,
+                        borderRight: `1px solid var(--color-default)`,
                     },
                 '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link':
                     {
@@ -840,7 +843,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                             'borderRadius.lg',
                             borderRadius.lg
                         )}`,
-                        borderLeft: `1px solid var(--color-base)`,
+                        borderLeft: `1px solid var(--color-default)`,
                     },
                 '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link':
                     {
@@ -889,7 +892,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 '.dark .apexcharts-canvas .apexcharts-tooltip': {
                     backgroundColor: `var(--color-neutral-secondary-medium) !important`,
                     color: `var(--color-body) !important`,
-                    borderColor: `var(--color-base) !important`,
+                    borderColor: `var(--color-default) !important`,
                     boxShadow: `${theme(
                         'boxShadow.md',
                         boxShadow.md
@@ -1122,11 +1125,11 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 '.apexcharts-gridline, .apexcharts-xcrosshairs, .apexcharts-ycrosshairs':
                     {
-                        stroke: `var(--color-base) !important`,
+                        stroke: `var(--color-default) !important`,
                     },
                 '.dark .apexcharts-gridline, .dark .apexcharts-xcrosshairs, .dark .apexcharts-ycrosshairs':
                     {
-                        stroke: `var(--color-base) !important`,
+                        stroke: `var(--color-default) !important`,
                     },
             });
         }

@@ -37,6 +37,9 @@ Use the following example of a responsive table component to show multiple rows 
                 <th scope="col" class="px-6 py-3 font-medium">
                     Price
                 </th>
+                <th scope="col" class="px-6 py-3 font-medium">
+                    Stock
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -53,6 +56,9 @@ Use the following example of a responsive table component to show multiple rows 
                 <td class="px-6 py-4">
                     $2999
                 </td>
+                <td class="px-6 py-4">
+                    231
+                </td>
             </tr>
             <tr class="bg-neutral-primary border-b border-default">
                 <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
@@ -67,6 +73,9 @@ Use the following example of a responsive table component to show multiple rows 
                 <td class="px-6 py-4">
                     $1999
                 </td>
+                <td class="px-6 py-4">
+                    423
+                </td>
             </tr>
             <tr class="bg-neutral-primary">
                 <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
@@ -80,6 +89,9 @@ Use the following example of a responsive table component to show multiple rows 
                 </td>
                 <td class="px-6 py-4">
                     $99
+                </td>
+                <td class="px-6 py-4">
+                    121
                 </td>
             </tr>
         </tbody>

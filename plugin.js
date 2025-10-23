@@ -709,6 +709,8 @@ module.exports = plugin.withOptions(function (options = {}) {
                         display: 'flex',
                         alignItems: 'center',
                         color: 'var(--color-body)',
+                        backgroundColor:
+                            'var(--color-neutral-secondary-medium)',
                         fontWeight: `${theme('fontWeight.medium')}`,
                         paddingLeft: `${theme('spacing.3', spacing[3])}`,
                         paddingRight: `${theme('spacing.3', spacing[3])}`,
@@ -718,120 +720,19 @@ module.exports = plugin.withOptions(function (options = {}) {
                         borderBottom: `1px solid var(--color-default)`,
                         borderRight: `1px solid var(--color-default)`,
                     },
-                '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link':
+                '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:hover .datatable-pagination-list-item-link':
                     {
-                        color: 'var(--color-body)',
-                        borderColor: 'var(--color-neutral-secondary-medium)',
+                        color: 'var(--color-heading)',
+                        backgroundColor: 'var(--color-neutral-tertiary-medium)',
                     },
                 '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type, .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type':
                     {
                         position: 'relative',
                     },
-                '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link, .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link':
+                '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item.datatable-active .datatable-pagination-list-item-link':
                     {
-                        color: 'transparent',
-                    },
-                '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link, .dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link':
-                    {
-                        color: 'transparent',
-                    },
-                '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link::after':
-                    {
-                        content: `url("${svgToDataUri(
-                            `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="${theme(
-                                        'colors.body',
-                                        colors.body
-                                    )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 8-4 4 4 4"/>
-                                </svg>`
-                        )}")`,
-                        position: 'absolute',
-                        top: '50%',
-                        left: '50%',
-                        width: '1.3rem',
-                        height: '1.3rem',
-                        transform: 'translate(-50%, -50%)',
-                    },
-                '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link:hover::after':
-                    {
-                        content: `url("${svgToDataUri(
-                            `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="${theme(
-                                        'colors.gray.900',
-                                        colors.gray[900]
-                                    )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 8-4 4 4 4"/>
-                                </svg>`
-                        )}")`,
-                    },
-                '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link::after':
-                    {
-                        content: `url("${svgToDataUri(
-                            `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="${theme(
-                                        'colors.gray.400',
-                                        colors.gray[400]
-                                    )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 8-4 4 4 4"/>
-                                </svg>`
-                        )}")`,
-                    },
-                '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link:hover::after':
-                    {
-                        content: `url("${svgToDataUri(
-                            `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 8-4 4 4 4"/>
-                                </svg>`
-                        )}")`,
-                    },
-                '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link::after':
-                    {
-                        content: `url("${svgToDataUri(
-                            `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
-                                <path stroke="${theme(
-                                    'colors.gray.500',
-                                    colors.gray[500]
-                                )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
-                                </svg>
-                                `
-                        )}")`,
-                        position: 'absolute',
-                        top: '50%',
-                        right: '50%',
-                        width: '1.3rem',
-                        height: '1.3rem',
-                        transform: 'translate(50%, -50%)',
-                    },
-                '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link:hover::after':
-                    {
-                        content: `url("${svgToDataUri(
-                            `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
-                                <path stroke="${theme(
-                                    'colors.gray.900',
-                                    colors.gray[900]
-                                )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
-                                </svg>
-                                `
-                        )}")`,
-                    },
-                '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link::after':
-                    {
-                        content: `url("${svgToDataUri(
-                            `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
-                                <path stroke="${theme(
-                                    'colors.gray.400',
-                                    colors.gray[400]
-                                )}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
-                                </svg>
-                                `
-                        )}")`,
-                    },
-                '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link:hover::after':
-                    {
-                        content: `url("${svgToDataUri(
-                            `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
-                                <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
-                                </svg>
-                                `
-                        )}")`,
+                        color: 'var(--color-brand)',
+                        backgroundColor: 'var(--color-neutral-tertiary-medium)',
                     },
                 '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link':
                     {

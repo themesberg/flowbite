@@ -571,10 +571,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                         color: 'var(--color-heading)',
                         fontSize: `${theme('fontSize.sm')[0]}`,
                         border: `1px solid var(--color-default)`,
-                        borderRadius: `${theme(
-                            'borderRadius.lg',
-                            borderRadius.lg
-                        )}`,
+                        borderRadius: `var(--radius-base)`,
                         backgroundColor: 'var(--color-neutral-secondary-soft)',
                         minWidth: '16rem',
                     },
@@ -736,30 +733,14 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link':
                     {
-                        borderTopLeftRadius: `${theme(
-                            'borderRadius.lg',
-                            borderRadius.lg
-                        )}`,
-                        borderBottomLeftRadius: `${theme(
-                            'borderRadius.lg',
-                            borderRadius.lg
-                        )}`,
+                        borderTopLeftRadius: `var(--radius-base)`,
+                        borderBottomLeftRadius: `var(--radius-base)`,
                         borderLeft: `1px solid var(--color-default)`,
-                    },
-                '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link':
-                    {
-                        borderLeft: `1px solid var(--color-gray-700)`,
                     },
                 '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:last-of-type .datatable-pagination-list-item-link':
                     {
-                        borderTopRightRadius: `${theme(
-                            'borderRadius.lg',
-                            borderRadius.lg
-                        )}`,
-                        borderBottomRightRadius: `${theme(
-                            'borderRadius.lg',
-                            borderRadius.lg
-                        )}`,
+                        borderTopRightRadius: `var(--radius-base)`,
+                        borderBottomRightRadius: `var(--radius-base)`,
                         borderLeft: 0,
                     },
                 '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link:hover':

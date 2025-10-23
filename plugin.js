@@ -600,12 +600,6 @@ module.exports = plugin.withOptions(function (options = {}) {
                         marginRight: `${theme('spacing.1', spacing[1])}`,
                         minWidth: '4rem',
                     },
-                '.dark .datatable-wrapper .datatable-top .datatable-dropdown .datatable-selector':
-                    {
-                        backgroundColor: 'var(--color-neutral-primary)',
-                        border: `1px solid var(--color-default)`,
-                        color: 'white',
-                    },
                 '.datatable-wrapper .datatable-container thead tr.search-filtering-row th':
                     {
                         paddingTop: '0',
@@ -624,18 +618,11 @@ module.exports = plugin.withOptions(function (options = {}) {
                     color: 'var(--color-body)',
                     textAlign: 'left',
                 },
-                '.dark .datatable-wrapper .datatable-table': {
-                    color: 'var(--color-body)',
-                },
                 '.datatable-wrapper .datatable-table thead': {
                     fontSize: `${theme('fontSize.xs')[0]}`,
                     color: 'var(--color-body)',
                     backgroundColor: 'var(--color-neutral-secondary-medium)',
                     borderBottom: '1px solid var(--color-default)',
-                },
-                '.dark .datatable-wrapper .datatable-table thead': {
-                    color: 'var(--color-body)',
-                    backgroundColor: 'var(--color-neutral-secondary-medium)',
                 },
                 '.datatable-wrapper .datatable-table thead th': {
                     whiteSpace: 'nowrap',
@@ -656,15 +643,8 @@ module.exports = plugin.withOptions(function (options = {}) {
                     {
                         color: 'var(--color-gray-900)',
                     },
-                '.dark .datatable-wrapper .datatable-table thead th .datatable-sorter:hover, .dark .datatable-wrapper .datatable-table thead th.datatable-ascending .datatable-sorter, .dark .datatable-wrapper .datatable-table thead th.datatable-descending .datatable-sorter':
-                    {
-                        color: 'white',
-                    },
                 '.datatable-wrapper .datatable-table tbody tr.selected': {
                     backgroundColor: 'var(--color-secondary)',
-                },
-                '.dark .datatable-wrapper .datatable-table tbody tr.selected': {
-                    backgroundColor: 'var(--color-neutral-secondary-medium)',
                 },
                 '.datatable-wrapper .datatable-table tbody tr': {
                     borderBottom: `1px solid var(--color-default)`,
@@ -690,9 +670,6 @@ module.exports = plugin.withOptions(function (options = {}) {
                 '.datatable-wrapper .datatable-bottom .datatable-info': {
                     color: 'var(--color-body)',
                     fontSize: `${theme('fontSize.sm')[0]}`,
-                },
-                '.dark .datatable-wrapper .datatable-bottom .datatable-info': {
-                    color: 'var(--color-body)',
                 },
                 '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list':
                     {
@@ -728,7 +705,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item.datatable-active .datatable-pagination-list-item-link':
                     {
-                        color: 'var(--color-brand)',
+                        color: 'var(--color-fg-brand)',
                         backgroundColor: 'var(--color-neutral-tertiary-medium)',
                     },
                 '.datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item:first-of-type .datatable-pagination-list-item-link':
@@ -748,11 +725,6 @@ module.exports = plugin.withOptions(function (options = {}) {
                         backgroundColor:
                             'var(--color-neutral-secondary-medium)',
                         color: 'var(--color-gray-700)',
-                    },
-                '.dark .datatable-wrapper .datatable-bottom .datatable-pagination .datatable-pagination-list-item-link:hover':
-                    {
-                        backgroundColor: 'var(--color-gray-700)',
-                        color: 'white',
                     },
             });
         }

@@ -372,9 +372,9 @@ Use the following list of pagination items based on two sizes powered by Tailwin
   </ul>
   <form class="mx-auto">
     <div class="flex items-center space-x-2">
-        <label for="visitors" class="text-sm font-medium text-heading shrink-0">Go to</label>
+        <label for="visitors" class="text-sm font-medium text-body shrink-0">Go to</label>
         <input type="text" id="visitors" class="bg-neutral-secondary-medium w-10 border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block px-2.5 py-2 shadow-xs placeholder:text-body" placeholder="99" required />
-        <span class="text-sm font-medium text-heading">page</span>
+        <span class="text-sm font-medium text-body">page</span>
     </div>
   </form>
 </nav>
@@ -456,7 +456,7 @@ Use the following list of pagination items based on two sizes powered by Tailwin
       Previous
       <div class="tooltip-arrow" data-popper-arrow></div>
     </div>
-    <button type="button" class="inline-flex shrink-0 items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading leading-5 px-3 h-9 focus:outline-none">
+    <button type="button" class="inline-flex shrink-0 text-sm items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading leading-5 px-3 h-9 focus:outline-none">
       1 of 99
     </button>
     <button data-tooltip-target="tooltip-next" type="button" class="inline-flex items-center justify-center text-body bg-neutral-secondary-medium rounded-e-base box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-3 focus:ring-tertiary leading-5 w-9 h-9 focus:outline-none">

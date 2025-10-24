@@ -59,7 +59,7 @@ Use this example to show a timepicker together with a dropdown menu where you ca
     <label for="time" class="block mb-2 text-sm font-medium text-heading">Select time:</label>
     <div class="flex">
         <input type="time" id="time" class="rounded-none rounded-s-lg flex-1 block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" min="09:00" max="18:00" value="00:00" required>
-        <button id="dropdown-duration-button" data-dropdown-toggle="dropdown-duration" class="border-s-0 shrink-0 z-10 inline-flex items-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
+        <button id="dropdown-duration-button" data-dropdown-toggle="dropdown-duration" class="border-s-0 shrink-0 z-10 inline-flex items-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
          Duration 
          <svg class="w-4 h-4 -me-0.5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
         </button>
@@ -263,7 +263,7 @@ This is an advanced example that you can use to show the details of an event and
    <div inline-datepicker datepicker-buttons datepicker-autoselect-today class="mx-auto sm:mx-0"></div>
    <div class="sm:ms-7 sm:ps-5 sm:border-s border-default w-full sm:max-w-[15rem] mt-5 sm:mt-0">
       <h3 class="text-heading text-base font-medium mb-3 text-center">Wednesday 30 June 2024</h3>
-      <button type="button" data-collapse-toggle="timetable" class="inline-flex items-center justify-center w-full text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+      <button type="button" data-collapse-toggle="timetable" class="inline-flex items-center justify-center w-full text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
          <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
          Pick a time
       </button>
@@ -364,7 +364,7 @@ This is an advanced example that you can use to show the details of an event and
 Use this example to select a date and time inside of a modal component based on the [Flowbite Datepicker](https://flowbite.com/docs/components/datepicker/) and select a time interval using checkbox elements with predefined time values for event time scheduling.
 
 {{< example id="timepicker-modal-example" github="components/timepicker.md" class="flex justify-center" show_dark=true iframeHeight="880" >}}
-<button type="button" data-modal-target="timepicker-modal" data-modal-toggle="timepicker-modal" class="inline-flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+<button type="button" data-modal-target="timepicker-modal" data-modal-toggle="timepicker-modal" class="inline-flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
    <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
    Schedule appointment
 </button>
@@ -379,7 +379,7 @@ Use this example to select a date and time inside of a modal component based on 
                 <h3 class="font-medium text-heading">
                     Schedule an appointment
                 </h3>
-               <button type="button" class="text-body bg-transparent hover:bg-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center" data-modal-toggle="timepicker-modal">
+               <button type="button" class="text-body bg-transparent hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center" data-modal-toggle="timepicker-modal">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
                     <span class="sr-only">Close modal</span>
                 </button>
@@ -478,7 +478,7 @@ Use this example to select a date and time inside of a modal component based on 
                 </ul>
                 <div class="grid grid-cols-2 gap-2">
                     <button type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Save</button>
-                    <button type="button" data-modal-hide="timepicker-modal" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Discard</button>
+                    <button type="button" data-modal-hide="timepicker-modal" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Discard</button>
                 </div>
             </div>
         </div>
@@ -505,7 +505,7 @@ Use this example to show multiple time interval selections inside of a drawer co
          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
          Time schedule
       </h5>
-      <button type="button" data-drawer-hide="drawer-timepicker" aria-controls="drawer-timepicker" class="text-body bg-transparent hover:text-heading hover:bg-tertiary rounded-base w-9 h-9 absolute top-2.5 end-2.5 flex items-center justify-center">
+      <button type="button" data-drawer-hide="drawer-timepicker" aria-controls="drawer-timepicker" class="text-body bg-transparent hover:text-heading hover:bg-neutral-tertiary rounded-base w-9 h-9 absolute top-2.5 end-2.5 flex items-center justify-center">
          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
          <span class="sr-only">Close menu</span>
       </button>
@@ -516,7 +516,7 @@ Use this example to show multiple time interval selections inside of a drawer co
             <span class="text-heading text-base font-medium">Business hours</span>
             <label class="inline-flex items-center cursor-pointer">
             <input type="checkbox" value="" class="sr-only peer">
-            <div class="relative w-9 h-5 bg-quaternary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
+            <div class="relative w-9 h-5 bg-neutral-quaternary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
             <span class="sr-only select-none">Business hours</span>
             </label>
          </div>
@@ -565,7 +565,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                </div>
             </div>
             <div>
-               <button type="button" class="inline-flex items-center p-1.5 text-sm font-medium text-center rounded-base focus:outline-none text-body hover:bg-tertiary hover:text-heading">
+               <button type="button" class="inline-flex items-center p-1.5 text-sm font-medium text-center rounded-base focus:outline-none text-body hover:bg-neutral-tertiary hover:text-heading">
 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
 </svg>
@@ -600,7 +600,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                </div>
             </div>
             <div>
-               <button type="button" class="inline-flex items-center p-1.5 text-sm font-medium text-center rounded-base focus:outline-none text-body hover:bg-tertiary hover:text-heading">
+               <button type="button" class="inline-flex items-center p-1.5 text-sm font-medium text-center rounded-base focus:outline-none text-body hover:bg-neutral-tertiary hover:text-heading">
 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
 </svg>
@@ -635,7 +635,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                </div>
             </div>
             <div>
-               <button type="button" class="inline-flex items-center p-1.5 text-sm font-medium text-center rounded-base focus:outline-none text-body hover:bg-tertiary hover:text-heading">
+               <button type="button" class="inline-flex items-center p-1.5 text-sm font-medium text-center rounded-base focus:outline-none text-body hover:bg-neutral-tertiary hover:text-heading">
 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
 </svg>
@@ -670,7 +670,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                </div>
             </div>
             <div>
-               <button type="button" class="inline-flex items-center p-1.5 text-sm font-medium text-center rounded-base focus:outline-none text-body hover:bg-tertiary hover:text-heading">
+               <button type="button" class="inline-flex items-center p-1.5 text-sm font-medium text-center rounded-base focus:outline-none text-body hover:bg-neutral-tertiary hover:text-heading">
 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
 </svg>
@@ -705,7 +705,7 @@ Use this example to show multiple time interval selections inside of a drawer co
                </div>
             </div>
             <div>
-               <button type="button" class="inline-flex items-center p-1.5 text-sm font-medium text-center rounded-base focus:outline-none text-body hover:bg-tertiary hover:text-heading">
+               <button type="button" class="inline-flex items-center p-1.5 text-sm font-medium text-center rounded-base focus:outline-none text-body hover:bg-neutral-tertiary hover:text-heading">
 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
 </svg>
@@ -715,14 +715,14 @@ Use this example to show multiple time interval selections inside of a drawer co
             </div>
          </div>
       </div>
-      <button type="button" class="inline-flex items-center justify-center w-full text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+      <button type="button" class="inline-flex items-center justify-center w-full text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
          <svg class="w-4 h-4 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/>
          </svg>
          Add interval
       </button>
       <div class="grid grid-cols-2 gap-4 bottom-4 left-0 w-full md:px-4 md:absolute">
-         <button type="button" data-drawer-hide="drawer-timepicker" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Close</button>
+         <button type="button" data-drawer-hide="drawer-timepicker" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Close</button>
          <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
          Save all
          </button>

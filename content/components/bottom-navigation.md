@@ -151,12 +151,12 @@ This example be used to paginate multiple pages on a single view alongside other
         </div>
         <div class="flex items-center justify-center col-span-2">
             <div class="flex items-center justify-between w-full text-body bg-neutral-secondary-medium rounded-base border border-default-medium max-w-[128px] mx-2">
-                <button type="button" class="inline-flex items-center justify-center h-8 px-1 w-6 rounded-s-base hover:bg-neutral-tertiary-medium focus:outline-none focus:ring-2 focus:ring-quaternary">
+                <button type="button" class="inline-flex items-center justify-center h-8 px-1 w-6 rounded-s-base hover:bg-neutral-tertiary-medium focus:outline-none focus:ring-2 focus:ring-neutral-quaternary">
                     <svg class="w-3.5 h-3.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
                     <span class="sr-only">Previous page</span>
                 </button>
                 <span class="shrink-0 mx-1 text-sm font-medium space-x-0.5 rtl:space-x-reverse">1 of 345</span>
-                <button type="button" class="inline-flex items-center justify-center h-8 px-1 w-6 rounded-e-base hover:bg-neutral-tertiary-medium focus:outline-none focus:ring-2 focus:ring-quaternary">
+                <button type="button" class="inline-flex items-center justify-center h-8 px-1 w-6 rounded-e-base hover:bg-neutral-tertiary-medium focus:outline-none focus:ring-2 focus:ring-neutral-quaternary">
                     <svg class="w-3.5 h-3.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
                     <span class="sr-only">Next page</span>
                 </button>
@@ -188,7 +188,7 @@ This example be used to paginate multiple pages on a single view alongside other
 
 <div class="fixed bottom-0 z-50 w-full -translate-x-1/2 bg-neutral-primary-soft border-t border-default left-1/2">
     <div class="w-full">
-        <div class="grid max-w-xs grid-cols-3 gap-1 p-1 mx-auto my-2 bg-tertiary rounded-base" role="group">
+        <div class="grid max-w-xs grid-cols-3 gap-1 p-1 mx-auto my-2 bg-neutral-tertiary rounded-base" role="group">
             <button type="button" class="px-5 py-1.5 text-xs font-medium text-body hover:bg-dark-strong hover:text-white rounded">
                 New
             </button>
@@ -383,7 +383,7 @@ Use this component to show a list of options for online video meetings by showin
         </div>
     </div>
     <div class="items-center justify-center hidden ms-auto md:flex">
-        <button data-tooltip-target="tooltip-participants" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-tertiary">
+        <button data-tooltip-target="tooltip-participants" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-neutral-tertiary">
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M16 19h4a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-2m-2.236-4a3 3 0 1 0 0-4M3 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
             <span class="sr-only">Show participants</span>
         </button>
@@ -391,7 +391,7 @@ Use this component to show a list of options for online video meetings by showin
             Show participants
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
-        <button data-tooltip-target="tooltip-volume" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-tertiary">
+        <button data-tooltip-target="tooltip-volume" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-neutral-tertiary">
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.5 8.43A4.985 4.985 0 0 1 17 12a4.984 4.984 0 0 1-1.43 3.5m2.794 2.864A8.972 8.972 0 0 0 21 12a8.972 8.972 0 0 0-2.636-6.364M12 6.135v11.73a1 1 0 0 1-1.64.768L6 15H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h2l4.36-3.633a1 1 0 0 1 1.64.768Z"/></svg>
             <span class="sr-only">Adjust volume</span>
         </button>
@@ -399,7 +399,7 @@ Use this component to show a list of options for online video meetings by showin
             Adjust volume
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
-        <button data-tooltip-target="tooltip-information" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-tertiary">
+        <button data-tooltip-target="tooltip-information" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-neutral-tertiary">
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
             <span class="sr-only">Show information</span>
         </button>
@@ -425,7 +425,7 @@ Use this component to show control buttons for a video or audio that is playing 
     <div class="flex items-center w-full">
         <div class="w-full">
             <div class="flex items-center justify-center mx-auto mb-1">
-                <button data-tooltip-target="tooltip-shuffle" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-tertiary">
+                <button data-tooltip-target="tooltip-shuffle" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-neutral-tertiary">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.484 9.166 15 7h5m0 0-3-3m3 3-3 3M4 17h4l1.577-2.253M4 7h4l7 10h5m0 0-3 3m3-3-3-3"/></svg>
                     <span class="sr-only">Shuffle video</span>
                 </button>
@@ -433,7 +433,7 @@ Use this component to show control buttons for a video or audio that is playing 
                     Shuffle video
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <button data-tooltip-target="tooltip-previous" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-tertiary">
+                <button data-tooltip-target="tooltip-previous" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-neutral-tertiary">
                     <svg class="w-5 h-5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 6v12m8-12v12l-8-6 8-6Z"/></svg>
                     <span class="sr-only">Previous video</span>
                 </button>
@@ -449,7 +449,7 @@ Use this component to show control buttons for a video or audio that is playing 
                     Pause video
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <button data-tooltip-target="tooltip-next" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-tertiary">
+                <button data-tooltip-target="tooltip-next" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-neutral-tertiary">
                     <svg class="w-5 h-5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 6v12M8 6v12l8-6-8-6Z"/></svg>
                     <span class="sr-only">Next video</span>
                 </button>
@@ -457,7 +457,7 @@ Use this component to show control buttons for a video or audio that is playing 
                     Next video
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-                <button data-tooltip-target="tooltip-restart" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-tertiary">
+                <button data-tooltip-target="tooltip-restart" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-neutral-tertiary">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.651 7.65a7.131 7.131 0 0 0-12.68 3.15M18.001 4v4h-4m-7.652 8.35a7.13 7.13 0 0 0 12.68-3.15M6 20v-4h4"/></svg>
                     <span class="sr-only">Restart video</span>
                 </button>
@@ -468,7 +468,7 @@ Use this component to show control buttons for a video or audio that is playing 
             </div>
             <div class="flex items-center justify-between space-x-2 rtl:space-x-reverse">
                 <span class="text-sm font-medium text-body">3:45</span>
-                <div class="w-full bg-quaternary rounded-full h-1.5">
+                <div class="w-full bg-neutral-quaternary rounded-full h-1.5">
                     <div class="bg-brand h-1.5 rounded-full" style="width: 65%"></div>
                 </div>
                 <span class="text-sm font-medium text-body">5:00</span>
@@ -476,7 +476,7 @@ Use this component to show control buttons for a video or audio that is playing 
         </div>
     </div>
     <div class="items-center justify-center hidden ms-auto md:flex">
-        <button data-tooltip-target="tooltip-playlist" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-tertiary">
+        <button data-tooltip-target="tooltip-playlist" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-neutral-tertiary">
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 15.5V5s3 1 3 4m-7-3H4m9 4H4m4 4H4m13 2.4c0 1.326-1.343 2.4-3 2.4s-3-1.075-3-2.4 1.343-2.4 3-2.4 3 1.075 3 2.4Z"/></svg>
             <span class="sr-only">View playlist</span>
         </button>
@@ -484,7 +484,7 @@ Use this component to show control buttons for a video or audio that is playing 
             View playlist
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
-        <button data-tooltip-target="tooltip-captions" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-tertiary">
+        <button data-tooltip-target="tooltip-captions" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-neutral-tertiary">
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.855 14.322a2.475 2.475 0 1 1 .133-4.241m6.053 4.241a2.475 2.475 0 1 1 .133-4.241M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>
             <span class="sr-only">Captions</span>
         </button>
@@ -492,7 +492,7 @@ Use this component to show control buttons for a video or audio that is playing 
             Toggle captions
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
-        <button data-tooltip-target="tooltip-expand" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-tertiary">
+        <button data-tooltip-target="tooltip-expand" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-neutral-tertiary">
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4H4m0 0v4m0-4 5 5m7-5h4m0 0v4m0-4-5 5M8 20H4m0 0v-4m0 4 5-5m7 5h4m0 0v-4m0 4-5-5"/></svg>
             <span class="sr-only">Expand</span>
         </button>
@@ -500,7 +500,7 @@ Use this component to show control buttons for a video or audio that is playing 
             Full screen
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
-        <button data-tooltip-target="tooltip-volume" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-tertiary">
+        <button data-tooltip-target="tooltip-volume" type="button" class="p-2 group rounded-full text-body hover:bg-neutral-tertiary-medium hover:text-heading me-1 focus:outline-none focus:ring-4 focus:ring-neutral-tertiary">
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.5 8.43A4.985 4.985 0 0 1 17 12a4.984 4.984 0 0 1-1.43 3.5m2.794 2.864A8.972 8.972 0 0 0 21 12a8.972 8.972 0 0 0-2.636-6.364M12 6.135v11.73a1 1 0 0 1-1.64.768L6 15H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h2l4.36-3.633a1 1 0 0 1 1.64.768Z"/></svg>
             <span class="sr-only">Adjust volume</span>
         </button>

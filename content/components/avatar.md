@@ -45,7 +45,7 @@ Use this example as a placeholder icon for the user profile when there is no cus
 This example can be used to show the initials of the user's first and last name as a placeholder when no profile picture is available.
 
 {{< example id="avatar-placeholder-initials-example" class="flex justify-center" github="components/avatar.md" show_dark=true >}}
-<div class="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-tertiary rounded-full">
+<div class="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-neutral-tertiary rounded-full">
     <span class="font-medium text-body">JL</span>
 </div>
 {{< /example >}}

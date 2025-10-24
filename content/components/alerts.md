@@ -205,7 +205,7 @@ Use the following alert elements that are also dismissible.
   <div class="ms-2 text-sm ">
     A simple dark alert with an <a href="#" class="font-medium underline hover:no-underline">example link</a>. Give it a click if you like.
   </div>
-  <button type="button" class="ms-auto -mx-1.5 -my-1.5 rounded focus:ring-2 focus:ring-tertiary p-1.5 hover:bg-neutral-tertiary-medium inline-flex items-center justify-center h-8 w-8" data-dismiss-target="#alert-5" aria-label="Close">
+  <button type="button" class="ms-auto -mx-1.5 -my-1.5 rounded focus:ring-2 focus:ring-neutral-tertiary p-1.5 hover:bg-neutral-tertiary-medium inline-flex items-center justify-center h-8 w-8" data-dismiss-target="#alert-5" aria-label="Close">
     <span class="sr-only">Dismiss</span>
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
   </button>
@@ -267,7 +267,7 @@ Use this example to add a border accent on top of the alert component for furthe
   <div class="ms-2 text-sm ">
     A simple dark alert with an <a href="#" class="font-medium underline hover:no-underline">example link</a>. Give it a click if you like.
   </div>
-  <button type="button" class="ms-auto -mx-1.5 -my-1.5 rounded focus:ring-2 focus:ring-tertiary p-1.5 hover:bg-neutral-tertiary-medium inline-flex items-center justify-center h-8 w-8" data-dismiss-target="#alert-border-5" aria-label="Close">
+  <button type="button" class="ms-auto -mx-1.5 -my-1.5 rounded focus:ring-2 focus:ring-neutral-tertiary p-1.5 hover:bg-neutral-tertiary-medium inline-flex items-center justify-center h-8 w-8" data-dismiss-target="#alert-border-5" aria-label="Close">
     <span class="sr-only">Dismiss</span>
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
   </button>
@@ -370,7 +370,7 @@ The following alert components can be used if you wish to disclose more informat
       <span class="sr-only">Info</span>
       <h3 class="font-medium">This is a default alert</h3>
     </div>
-    <button type="button" data-dismiss-target="#alert-additional-content-5" aria-label="Close" class="ms-auto -mx-1.5 -my-1.5 rounded focus:ring-2 focus:ring-tertiary p-1.5 hover:bg-neutral-tertiary-medium inline-flex items-center justify-center h-8 w-8">
+    <button type="button" data-dismiss-target="#alert-additional-content-5" aria-label="Close" class="ms-auto -mx-1.5 -my-1.5 rounded focus:ring-2 focus:ring-neutral-tertiary p-1.5 hover:bg-neutral-tertiary-medium inline-flex items-center justify-center h-8 w-8">
       <span class="sr-only">Close</span>
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
     </button>
@@ -378,7 +378,7 @@ The following alert components can be used if you wish to disclose more informat
   <div class="mt-2 mb-4">
     More info about this info alert goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
   </div>
-  <button type="button" class="inline-flex items-center text-white bg-dark-soft box-border border border-transparent hover:bg-dark-strong focus:ring-4 focus:ring-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none">
+  <button type="button" class="inline-flex items-center text-white bg-dark-soft box-border border border-transparent hover:bg-dark-strong focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none">
   <svg class="w-3.5 h-3.5 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"/><path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
   View more
   </button>
@@ -424,7 +424,7 @@ Use the following alert elements that are also dismissible.
 </div>
 
 <div id="alert-small-5" class="w-auto inline-flex items-center p-1 pe-2 mb-4 text-sm text-heading rounded-full bg-neutral-secondary-medium border border-default-medium" role="alert">
-  <span class="bg-quaternary text-heading py-0.5 px-2 rounded-full">New</span>
+  <span class="bg-neutral-quaternary text-heading py-0.5 px-2 rounded-full">New</span>
   <div class="ms-2 text-sm">
     Great job! You've acknowledged this <a href="#" class="font-medium underline hover:no-underline">significant</a> alert message.
   </div>

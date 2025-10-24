@@ -57,7 +57,7 @@ Aggregate more results by using this example to show the amount of reviews and t
 <div class="flex items-center">
     <svg class="w-5 h-5 text-fg-yellow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/></svg>
     <p class="ms-2 text-sm font-bold text-heading">4.95</p>
-    <span class="w-1 h-1 mx-1.5 bg-quaternary rounded-full"></span>
+    <span class="w-1 h-1 mx-1.5 bg-neutral-quaternary rounded-full"></span>
     <a href="#" class="text-sm font-medium text-heading underline hover:no-underline">73 reviews</a>
 </div>
 {{< /example >}}
@@ -109,35 +109,35 @@ This advanced rating component can be used to also show how many reviews have be
 <p class="text-sm font-medium text-body">1,745 global ratings</p>
 <div class="flex items-center mt-4">
     <a href="#" class="text-sm font-medium text-fg-brand hover:underline w-14">5 star</a>
-    <div class="w-2/4 h-4 mx-4 bg-quaternary rounded-base">
+    <div class="w-2/4 h-4 mx-4 bg-neutral-quaternary rounded-base">
         <div class="h-4 bg-warning rounded-base" style="width: 70%"></div>
     </div>
     <span class="text-sm font-medium text-body">70%</span>
 </div>
 <div class="flex items-center mt-4">
     <a href="#" class="text-sm font-medium text-fg-brand hover:underline w-14">4 star</a>
-    <div class="w-2/4 h-4 mx-4 bg-quaternary rounded-base">
+    <div class="w-2/4 h-4 mx-4 bg-neutral-quaternary rounded-base">
         <div class="h-4 bg-warning rounded-base" style="width: 17%"></div>
     </div>
     <span class="text-sm font-medium text-body">17%</span>
 </div>
 <div class="flex items-center mt-4">
     <a href="#" class="text-sm font-medium text-fg-brand hover:underline w-14">3 star</a>
-    <div class="w-2/4 h-4 mx-4 bg-quaternary rounded-base">
+    <div class="w-2/4 h-4 mx-4 bg-neutral-quaternary rounded-base">
         <div class="h-4 bg-warning rounded-base" style="width: 8%"></div>
     </div>
     <span class="text-sm font-medium text-body">8%</span>
 </div>
 <div class="flex items-center mt-4">
     <a href="#" class="text-sm font-medium text-fg-brand hover:underline w-14">2 star</a>
-    <div class="w-2/4 h-4 mx-4 bg-quaternary rounded-base">
+    <div class="w-2/4 h-4 mx-4 bg-neutral-quaternary rounded-base">
         <div class="h-4 bg-warning rounded-base" style="width:4%"></div>
     </div>
     <span class="text-sm font-medium text-body">4%</span>
 </div>
 <div class="flex items-center mt-4">
     <a href="#" class="text-sm font-medium text-fg-brand hover:underline w-14">1 star</a>
-    <div class="w-2/4 h-4 mx-4 bg-quaternary rounded-base">
+    <div class="w-2/4 h-4 mx-4 bg-neutral-quaternary rounded-base">
         <div class="h-4 bg-warning rounded-base" style="width:1%"></div>
     </div>
     <span class="text-sm font-medium text-body">1%</span>
@@ -153,7 +153,7 @@ This component can be used to break up a general rating score into multiple cate
 <div class="flex items-center mb-5">
     <p class="bg-brand-softer text-fg-brand-strong text-sm font-semibold inline-flex items-center p-1.5 rounded-base">8.7</p>
     <p class="ms-2 font-medium text-heading">Excellent</p>
-    <span class="w-1 h-1 mx-2 rounded-full bg-quaternary"></span>
+    <span class="w-1 h-1 mx-2 rounded-full bg-neutral-quaternary"></span>
     <p class="text-sm font-medium text-body">376 reviews</p>
     <a href="#" class="ms-auto text-sm font-medium text-fg-brand hover:underline">Read all reviews</a>
 </div>
@@ -162,7 +162,7 @@ This component can be used to break up a general rating score into multiple cate
         <dl>
             <dt class="text-sm font-medium text-body">Staff</dt>
             <dd class="flex items-center mb-3">
-                <div class="w-full bg-quaternary rounded-base h-2.5 me-2">
+                <div class="w-full bg-neutral-quaternary rounded-base h-2.5 me-2">
                     <div class="bg-brand h-2.5 rounded-base" style="width: 88%"></div>
                 </div>
                 <span class="text-sm font-medium text-body">8.8</span>
@@ -171,7 +171,7 @@ This component can be used to break up a general rating score into multiple cate
         <dl>
             <dt class="text-sm font-medium text-body">Comfort</dt>
             <dd class="flex items-center mb-3">
-                <div class="w-full bg-quaternary rounded-base h-2.5 me-2">
+                <div class="w-full bg-neutral-quaternary rounded-base h-2.5 me-2">
                     <div class="bg-brand h-2.5 rounded-base" style="width: 89%"></div>
                 </div>
                 <span class="text-sm font-medium text-body">8.9</span>
@@ -180,7 +180,7 @@ This component can be used to break up a general rating score into multiple cate
         <dl>
             <dt class="text-sm font-medium text-body">Free WiFi</dt>
             <dd class="flex items-center mb-3">
-                <div class="w-full bg-quaternary rounded-base h-2.5 me-2">
+                <div class="w-full bg-neutral-quaternary rounded-base h-2.5 me-2">
                     <div class="bg-brand h-2.5 rounded-base" style="width: 88%"></div>
                 </div>
                 <span class="text-sm font-medium text-body">8.8</span>
@@ -189,7 +189,7 @@ This component can be used to break up a general rating score into multiple cate
         <dl>
             <dt class="text-sm font-medium text-body">Facilities</dt>
             <dd class="flex items-center">
-                <div class="w-full bg-quaternary rounded-base h-2.5 me-2">
+                <div class="w-full bg-neutral-quaternary rounded-base h-2.5 me-2">
                     <div class="bg-brand h-2.5 rounded-base" style="width: 54%"></div>
                 </div>
                 <span class="text-sm font-medium text-body">5.4</span>
@@ -200,7 +200,7 @@ This component can be used to break up a general rating score into multiple cate
         <dl>
             <dt class="text-sm font-medium text-body">Value for money</dt>
             <dd class="flex items-center mb-3">
-                <div class="w-full bg-quaternary rounded-base h-2.5 me-2">
+                <div class="w-full bg-neutral-quaternary rounded-base h-2.5 me-2">
                     <div class="bg-brand h-2.5 rounded-base" style="width: 89%"></div>
                 </div>
                 <span class="text-sm font-medium text-body">8.9</span>
@@ -209,7 +209,7 @@ This component can be used to break up a general rating score into multiple cate
         <dl>
             <dt class="text-sm font-medium text-body">Cleanliness</dt>
             <dd class="flex items-center mb-3">
-                <div class="w-full bg-quaternary rounded-base h-2.5 me-2">
+                <div class="w-full bg-neutral-quaternary rounded-base h-2.5 me-2">
                     <div class="bg-brand h-2.5 rounded-base" style="width: 70%"></div>
                 </div>
                 <span class="text-sm font-medium text-body">7.0</span>
@@ -218,7 +218,7 @@ This component can be used to break up a general rating score into multiple cate
         <dl>
             <dt class="text-sm font-medium text-body">Location</dt>
             <dd class="flex items-center">
-                <div class="w-full bg-quaternary rounded-base h-2.5 me-2">
+                <div class="w-full bg-neutral-quaternary rounded-base h-2.5 me-2">
                     <div class="bg-brand h-2.5 rounded-base" style="width: 89%"></div>
                 </div>
                 <span class="text-sm font-medium text-body">8.9</span>

@@ -182,7 +182,7 @@ Use this example to add a SVG icon or special character with an addon style to t
 <form class="max-w-sm mx-auto">
   <label for="website-admin" class="block mb-2.5 text-sm font-medium text-heading">Username</label>
   <div class="flex shadow-xs rounded-base">
-    <span class="inline-flex items-center px-3 text-sm text-body bg-tertiary border rounded-e-0 border-default-medium border-e-0 rounded-s-base">
+    <span class="inline-flex items-center px-3 text-sm text-body bg-neutral-tertiary border rounded-e-0 border-default-medium border-e-0 rounded-s-base">
       <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
     </span>
     <input type="text" id="website-admin" class="rounded-none rounded-e-base block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 placeholder:text-body" placeholder="elonmusk">
@@ -346,13 +346,13 @@ Use the following toggle switch component to ask for a yes or no type of input f
 {{< example id="form-toggle-example" class="flex flex-col flex-wrap space-y-4" github="components/forms.md" show_dark=true >}}
 <label class="inline-flex items-center cursor-pointer">
   <input type="checkbox" value="" class="sr-only peer">
-  <div class="relative w-9 h-5 bg-quaternary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
+  <div class="relative w-9 h-5 bg-neutral-quaternary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
   <span class="ms-3 text-sm font-medium text-heading select-none">Toggle me</span>
 </label>
 
 <label class="inline-flex items-center cursor-pointer">
   <input type="checkbox" value="" class="sr-only peer" checked>
-  <div class="relative w-9 h-5 bg-quaternary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
+  <div class="relative w-9 h-5 bg-neutral-quaternary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
   <span class="ms-3 text-sm font-medium text-heading select-none">Checked toggle</span>
 </label>
 {{< /example >}}

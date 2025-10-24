@@ -23,27 +23,27 @@ All of the elements are built using the utility classes from Tailwind CSS and va
 Here's a quick overview of the Flowbite ecosystem including the open source Tailwind components library, the Figma design files, and the pro version.
 
 <div class="mt-10 lg:grid lg:grid-cols-2 lg:gap-8">
-    <a href="{{< ref "getting-started/quickstart" >}}" class="block p-6 mb-6 bg-neutral-primary border border-default rounded-base hover:bg-tertiary lg:mb-0">
+    <a href="{{< ref "getting-started/quickstart" >}}" class="block p-6 mb-6 bg-neutral-primary border border-default rounded-base hover:bg-neutral-tertiary lg:mb-0">
         <h3 class="mb-2 text-xl font-semibold tracking-tight text-heading">Quickstart</h3>
         <p class="font-normal text-body">Learn how to get started by downloading and configuring Flowbite locally on your machine and start developing.</p>
     </a>
-    <a href="{{< ref "components/alerts" >}}" class="block p-6 mb-6 bg-neutral-primary border border-default rounded-base hover:bg-tertiary lg:mb-0">
+    <a href="{{< ref "components/alerts" >}}" class="block p-6 mb-6 bg-neutral-primary border border-default rounded-base hover:bg-neutral-tertiary lg:mb-0">
         <h3 class="mb-2 text-xl font-semibold tracking-tight text-heading">Components</h3>
         <p class="font-normal text-body">Explore the Tailwind CSS elements such as buttons, navbars, alerts, dropdowns and use them to build your website.</p>
     </a>
-    <a href="{{< param homepage >}}/figma/" class="block p-6 mb-6 bg-neutral-primary border border-default rounded-base hover:bg-tertiary lg:mb-0">
+    <a href="{{< param homepage >}}/figma/" class="block p-6 mb-6 bg-neutral-primary border border-default rounded-base hover:bg-neutral-tertiary lg:mb-0">
         <h3 class="mb-2 text-xl font-semibold tracking-tight text-heading">Figma design files</h3>
         <p class="font-normal text-body">Prototype and design your website before coding with the Flowbite Figma file which is based on the Tailwind CSS classes.</p>
     </a>
-    <a href="{{< param homepage >}}/icons/" class="block p-6 mb-6 bg-neutral-primary border border-default rounded-base hover:bg-tertiary lg:mb-0">
+    <a href="{{< param homepage >}}/icons/" class="block p-6 mb-6 bg-neutral-primary border border-default rounded-base hover:bg-neutral-tertiary lg:mb-0">
         <h3 class="mb-2 text-xl font-semibold tracking-tight text-heading">Flowbite Icons</h3>
         <p class="font-normal text-body">Free and open-source collection of over 430 solid and outline styled SVG icons to use with our UI component library and Figma.</p>
     </a>
-    <a href="{{< param homepage >}}/pro/" class="block p-6 mb-6 bg-neutral-primary border border-default rounded-base hover:bg-tertiary lg:mb-0">
+    <a href="{{< param homepage >}}/pro/" class="block p-6 mb-6 bg-neutral-primary border border-default rounded-base hover:bg-neutral-tertiary lg:mb-0">
         <h3 class="mb-2 text-xl font-semibold tracking-tight text-heading">Flowbite Blocks</h3>
         <p class="font-normal text-body">Take your Figma and Tailwind CSS development to the next level with thousands more elements and pages with Flowbite Pro.</p>
     </a>
-    <a href="{{< param homepage >}}/pro/" class="block p-6 mb-6 bg-neutral-primary border border-default rounded-base hover:bg-tertiary lg:mb-0">
+    <a href="{{< param homepage >}}/pro/" class="block p-6 mb-6 bg-neutral-primary border border-default rounded-base hover:bg-neutral-tertiary lg:mb-0">
         <h3 class="mb-2 text-xl font-semibold tracking-tight text-heading">Upgrade to Pro</h3>
         <p class="font-normal text-body">Check out over 450+ website sections and advanced UI components built with Tailwind CSS and the Flowbite Library.</p>
     </a>

@@ -54,12 +54,12 @@ This example can be used to show the progress of the stepper component based onl
         </span>
     </li>
     <li class="flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-default after:border-4 after:inline-block  after:ms-4 after:rounded-full">
-        <span class="flex items-center justify-center w-10 h-10 bg-tertiary rounded-full lg:h-12 lg:w-12 shrink-0">
+        <span class="flex items-center justify-center w-10 h-10 bg-neutral-tertiary rounded-full lg:h-12 lg:w-12 shrink-0">
             <svg class="w-5 h-5 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 9h3m-3 3h3m-3 3h3m-6 1c-.306-.613-.933-1-1.618-1H7.618c-.685 0-1.312.387-1.618 1M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm7 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/></svg>
         </span>
     </li>
     <li class="flex items-center w-full">
-        <span class="flex items-center justify-center w-10 h-10 bg-tertiary rounded-full lg:h-12 lg:w-12 shrink-0">
+        <span class="flex items-center justify-center w-10 h-10 bg-neutral-tertiary rounded-full lg:h-12 lg:w-12 shrink-0">
             <svg class="w-5 h-5 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-6 7 2 2 4-4m-5-9v4h4V3h-4Z"/></svg>
         </span>
     </li>
@@ -82,7 +82,7 @@ Use this example to show an extra subtitle next to the number and the title of t
         </span>
     </li>
     <li class="flex items-center text-body space-x-3 rtl:space-x-reverse">
-        <span class="flex items-center justify-center w-10 h-10 bg-tertiary rounded-full lg:h-12 lg:w-12 shrink-0">
+        <span class="flex items-center justify-center w-10 h-10 bg-neutral-tertiary rounded-full lg:h-12 lg:w-12 shrink-0">
             <svg class="w-5 h-5 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 9h3m-3 3h3m-3 3h3m-6 1c-.306-.613-.933-1-1.618-1H7.618c-.685 0-1.312.387-1.618 1M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm7 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/></svg>
         </span>
         <span>
@@ -91,7 +91,7 @@ Use this example to show an extra subtitle next to the number and the title of t
         </span>
     </li>
     <li class="flex items-center text-body space-x-3 rtl:space-x-reverse">
-        <span class="flex items-center justify-center w-10 h-10 bg-tertiary rounded-full lg:h-12 lg:w-12 shrink-0">
+        <span class="flex items-center justify-center w-10 h-10 bg-neutral-tertiary rounded-full lg:h-12 lg:w-12 shrink-0">
             <svg class="w-5 h-5 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M6 14h2m3 0h5M3 7v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1Z"/></svg>
         </span>
         <span>
@@ -202,21 +202,21 @@ Use this example to show the number of steps inside a timeline component using i
         <p class="text-sm">Step details here</p>
     </li>
     <li class="mb-10 ms-7">
-        <span class="absolute flex items-center justify-center w-8 h-8 bg-tertiary text-body rounded-full -start-4 ring-4 ring-buffer">
+        <span class="absolute flex items-center justify-center w-8 h-8 bg-neutral-tertiary text-body rounded-full -start-4 ring-4 ring-buffer">
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 9h3m-3 3h3m-3 3h3m-6 1c-.306-.613-.933-1-1.618-1H7.618c-.685 0-1.312.387-1.618 1M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm7 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/></svg>
         </span>
         <h3 class="font-medium leading-tight">Account Info</h3>
         <p class="text-sm">Step details here</p>
     </li>
     <li class="mb-10 ms-7">
-        <span class="absolute flex items-center justify-center w-8 h-8 bg-tertiary text-body rounded-full -start-4 ring-4 ring-buffer">
+        <span class="absolute flex items-center justify-center w-8 h-8 bg-neutral-tertiary text-body rounded-full -start-4 ring-4 ring-buffer">
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-3 5h3m-6 0h.01M12 16h3m-6 0h.01M10 3v4h4V3h-4Z"/></svg>
         </span>
         <h3 class="font-medium leading-tight">Review</h3>
         <p class="text-sm">Step details here</p>
     </li>
     <li class="ms-7">
-        <span class="absolute flex items-center justify-center w-8 h-8 bg-tertiary text-body rounded-full -start-4 ring-4 ring-buffer">
+        <span class="absolute flex items-center justify-center w-8 h-8 bg-neutral-tertiary text-body rounded-full -start-4 ring-4 ring-buffer">
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-6 7 2 2 4-4m-5-9v4h4V3h-4Z"/></svg>
         </span>
         <h3 class="font-medium leading-tight">Confirmation</h3>
@@ -238,12 +238,12 @@ Use this example to show the stepper component next to a form layout and change 
         </span>
     </li>
     <li class="flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-default after:border-4 after:inline-block  after:ms-4 after:rounded-full">
-        <span class="flex items-center justify-center w-10 h-10 bg-tertiary rounded-full lg:h-12 lg:w-12 shrink-0">
+        <span class="flex items-center justify-center w-10 h-10 bg-neutral-tertiary rounded-full lg:h-12 lg:w-12 shrink-0">
             <svg class="w-5 h-5 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 9h3m-3 3h3m-3 3h3m-6 1c-.306-.613-.933-1-1.618-1H7.618c-.685 0-1.312.387-1.618 1M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm7 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/></svg>
         </span>
     </li>
     <li class="flex items-center w-full">
-        <span class="flex items-center justify-center w-10 h-10 bg-tertiary rounded-full lg:h-12 lg:w-12 shrink-0">
+        <span class="flex items-center justify-center w-10 h-10 bg-neutral-tertiary rounded-full lg:h-12 lg:w-12 shrink-0">
             <svg class="w-5 h-5 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-6 7 2 2 4-4m-5-9v4h4V3h-4Z"/></svg>
         </span>
     </li>

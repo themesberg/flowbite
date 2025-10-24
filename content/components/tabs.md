@@ -168,7 +168,7 @@ Use this example to show a vertically aligned set of tabs on the left side of th
             </a>
         </li>
     </ul>
-    <div class="p-6 bg-secondary text-medium text-body rounded-base w-full">
+    <div class="p-6 bg-neutral-secondary text-medium text-body rounded-base w-full">
         <h3 class="text-lg font-semibold text-heading mb-4">Profile Tab</h3>
         <p class="mb-2">This is some placeholder content the Profile tab's associated content, clicking another tab will toggle the visibility of this one for the next.</p>
         <p>The tab JavaScript swaps classes to control the content visibility and styling.</p> 

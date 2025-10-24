@@ -219,7 +219,7 @@ You may have to run `mix deps.get` if the command doesn't install Tailwind CSS r
 7. Restart the server using `mix phx.server` and add some Tailwind CSS classes inside the `index.html.heex` file:
 
 ```html
-<section class="bg-secondary">
+<section class="bg-neutral-secondary">
   <h1 class="text-4xl font-medium text-fg-brand"><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
   <p>Peace of mind from prototype to production</p>
 </section>

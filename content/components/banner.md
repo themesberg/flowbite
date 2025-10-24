@@ -25,7 +25,7 @@ Use this free example to show a text message for announcement with a CTA link, a
 <div id="sticky-banner" tabindex="-1" class="fixed top-0 start-0 z-50 flex justify-between w-full p-4 border-b border-default bg-neutral-primary-soft">
     <div class="flex items-center mx-auto">
         <p class="flex items-center text-sm font-normal text-body">
-            <span class="inline-flex items-center justify-center w-6 h-6 shrink-0 me-2.5 bg-tertiary rounded-full">
+            <span class="inline-flex items-center justify-center w-6 h-6 shrink-0 me-2.5 bg-neutral-tertiary rounded-full">
                 <svg class="w-3.5 h-3.5 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 9H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h6m0-6v6m0-6 5.419-3.87A1 1 0 0 1 18 5.942v12.114a1 1 0 0 1-1.581.814L11 15m7 0a3 3 0 0 0 0-6M6 15h3v5H6v-5Z"/></svg>
                 <span class="sr-only">Bullhorn</span>
             </span>
@@ -33,7 +33,7 @@ Use this free example to show a text message for announcement with a CTA link, a
         </p>
     </div>
     <div class="flex items-center">
-        <button data-dismiss-target="#sticky-banner" type="button" class="shrink-0 inline-flex justify-center text-sm w-7 h-7 items-center text-body hover:bg-tertiary hover:text-heading rounded-sm">
+        <button data-dismiss-target="#sticky-banner" type="button" class="shrink-0 inline-flex justify-center text-sm w-7 h-7 items-center text-body hover:bg-neutral-tertiary hover:text-heading rounded-sm">
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
             <span class="sr-only">Close banner</span>
         </button>
@@ -51,7 +51,7 @@ This example can be used to position the sticky banner to the bottom side of the
 <div id="bottom-banner" tabindex="-1" class="fixed bottom-0 start-0 z-50 flex justify-between w-full p-4 border-t border-default bg-neutral-primary-soft">
     <div class="flex items-center mx-auto">
         <p class="flex items-center text-sm font-normal text-body">
-            <span class="inline-flex items-center justify-center w-6 h-6 shrink-0 me-2.5 bg-tertiary rounded-full">
+            <span class="inline-flex items-center justify-center w-6 h-6 shrink-0 me-2.5 bg-neutral-tertiary rounded-full">
                 <svg class="w-3.5 h-3.5 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.891 15.107 15.11 8.89m-5.183-.52h.01m3.089 7.254h.01M14.08 3.902a2.849 2.849 0 0 0 2.176.902 2.845 2.845 0 0 1 2.94 2.94 2.849 2.849 0 0 0 .901 2.176 2.847 2.847 0 0 1 0 4.16 2.848 2.848 0 0 0-.901 2.175 2.843 2.843 0 0 1-2.94 2.94 2.848 2.848 0 0 0-2.176.902 2.847 2.847 0 0 1-4.16 0 2.85 2.85 0 0 0-2.176-.902 2.845 2.845 0 0 1-2.94-2.94 2.848 2.848 0 0 0-.901-2.176 2.848 2.848 0 0 1 0-4.16 2.849 2.849 0 0 0 .901-2.176 2.845 2.845 0 0 1 2.941-2.94 2.849 2.849 0 0 0 2.176-.901 2.847 2.847 0 0 1 4.159 0Z"/></svg>
                 <span class="sr-only">Discount</span>
             </span>
@@ -62,7 +62,7 @@ This example can be used to position the sticky banner to the bottom side of the
         </p>
     </div>
     <div class="flex items-center">
-        <button data-dismiss-target="#bottom-banner" type="button" class="shrink-0 inline-flex justify-center text-sm w-7 h-7 items-center text-body hover:bg-tertiary hover:text-heading rounded-sm">
+        <button data-dismiss-target="#bottom-banner" type="button" class="shrink-0 inline-flex justify-center text-sm w-7 h-7 items-center text-body hover:bg-neutral-tertiary hover:text-heading rounded-sm">
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
             <span class="sr-only">Close banner</span>
         </button>
@@ -86,7 +86,7 @@ Use this free example to show a text message for announcement with a CTA link, a
     </div>
     <div class="flex items-center shrink-0 space-x-2">
         <button type="button" class="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none">Sign Up</button>
-        <button data-dismiss-target="#marketing-banner" type="button" class="hidden shrink-0 md:inline-flex justify-center text-sm w-7 h-7 items-center text-body hover:bg-tertiary hover:text-heading rounded-sm">
+        <button data-dismiss-target="#marketing-banner" type="button" class="hidden shrink-0 md:inline-flex justify-center text-sm w-7 h-7 items-center text-body hover:bg-neutral-tertiary hover:text-heading rounded-sm">
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
             <span class="sr-only">Close banner</span>
         </button>
@@ -111,7 +111,7 @@ This example can be used to encourage your website visitors to sign up to your e
         </form>
     </div>
     <div class="flex items-center absolute top-2.5 end-2.5 md:relative md:top-auto md:end-auto">
-        <button data-dismiss-target="#newsletter-banner" type="button" class="shrink-0 inline-flex justify-center text-sm w-7 h-7 items-center text-body hover:bg-tertiary hover:text-heading rounded-sm">
+        <button data-dismiss-target="#newsletter-banner" type="button" class="shrink-0 inline-flex justify-center text-sm w-7 h-7 items-center text-body hover:bg-neutral-tertiary hover:text-heading rounded-sm">
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
             <span class="sr-only">Close banner</span>
         </button>
@@ -132,7 +132,7 @@ This example can be used to share important information with your website visito
     </div>
     <div class="flex items-center shrink-0 space-x-2">
         <button type="button" class="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none">Sign Up</button>
-        <button data-dismiss-target="#informational-banner" type="button" class="shrink-0 inline-flex justify-center text-sm w-7 h-7 items-center text-body hover:bg-tertiary hover:text-heading rounded-sm">
+        <button data-dismiss-target="#informational-banner" type="button" class="shrink-0 inline-flex justify-center text-sm w-7 h-7 items-center text-body hover:bg-neutral-tertiary hover:text-heading rounded-sm">
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
             <span class="sr-only">Close banner</span>
         </button>

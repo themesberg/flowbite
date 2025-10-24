@@ -39,7 +39,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 [`[data-tooltip-style^='light'] + .tooltip > .tooltip-arrow:before`]:
                     {
                         'border-style': 'solid',
-                        'border-color': 'var(--color-tertiary)',
+                        'border-color': 'var(--color-neutral-tertiary)',
                     },
                 [`[data-tooltip-style^='light'] + .tooltip[data-popper-placement^='top'] > .tooltip-arrow:before`]:
                     {
@@ -102,7 +102,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 [`[role="tooltip"] > [data-popper-arrow]:before`]: {
                     'border-style': 'solid',
-                    'border-color': 'var(--color-tertiary)',
+                    'border-color': 'var(--color-neutral-tertiary)',
                 },
                 [`.dark [role="tooltip"] > [data-popper-arrow]:before`]: {
                     'border-style': 'solid',
@@ -110,7 +110,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 [`[role="tooltip"] > [data-popper-arrow]:after`]: {
                     'border-style': 'solid',
-                    'border-color': 'var(--color-tertiary)',
+                    'border-color': 'var(--color-neutral-tertiary)',
                 },
                 [`.dark [role="tooltip"] > [data-popper-arrow]:after`]: {
                     'border-style': 'solid',
@@ -412,7 +412,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 [[`input[type=file]::file-selector-button`]]: {
                     color: 'var(--color-body)',
-                    background: 'var(--color-quaternary)',
+                    background: 'var(--color-neutral-quaternary)',
                     border: 0,
                     'font-weight': theme('fontWeight.medium'),
                     'font-size': theme('fontSize.sm')[0],
@@ -424,7 +424,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     'margin-inline-start': '-1rem',
                     'margin-inline-end': '1rem',
                     '&:hover': {
-                        background: 'var(--color-quaternary)',
+                        background: 'var(--color-neutral-quaternary)',
                     },
                 },
                 [[`:is([dir=rtl]) input[type=file]::file-selector-button`]]: {
@@ -433,9 +433,9 @@ module.exports = plugin.withOptions(function (options = {}) {
                 },
                 [[`.dark input[type=file]::file-selector-button`]]: {
                     color: 'var(--color-body)',
-                    background: 'var(--color-quaternary)',
+                    background: 'var(--color-neutral-quaternary)',
                     '&:hover': {
-                        background: 'var(--color-quaternary)',
+                        background: 'var(--color-neutral-quaternary)',
                     },
                 },
                 [[`input[type="range"]::-webkit-slider-thumb`]]: {
@@ -593,10 +593,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                         color: 'var(--color-heading)',
                         fontSize: `${theme('fontSize.sm')[0]}`,
                         border: `1px solid var(--color-default)`,
-                        borderRadius: `${theme(
-                            'borderRadius.lg',
-                            borderRadius.lg
-                        )}`,
+                        borderRadius: `var(--radius-base)`,
                         marginRight: `${theme('spacing.1', spacing[1])}`,
                         minWidth: '4rem',
                     },
@@ -644,7 +641,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                         color: 'var(--color-gray-900)',
                     },
                 '.datatable-wrapper .datatable-table tbody tr.selected': {
-                    backgroundColor: 'var(--color-secondary)',
+                    backgroundColor: 'var(--color-neutral-secondary)',
                 },
                 '.datatable-wrapper .datatable-table tbody tr': {
                     borderBottom: `1px solid var(--color-default)`,

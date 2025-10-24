@@ -33,13 +33,13 @@ This guide uses the newest version of Tailwind CSS v4 which brings many improvem
 
 1. Install Tailwind CSS using Vite via the terminal:
 
-```bash
+{{< code lang="bash" >}}
 npm install tailwindcss @tailwindcss/vite --save
-```
+{{< /code >}}
 
 2. Add the Tailwind plugin inside your `vite.config.js` file:
 
-```javascript
+{{< code lang="javascript" >}}
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import tailwindcss from '@tailwindcss/vite'
@@ -51,13 +51,13 @@ export default defineConfig({
     tailwindcss()
   ],
 })
-```
+{{< /code >}}
 
 3. Import the `tailwind` module inside your `style.css` file:
 
-```css
+{{< code lang="bash" >}}
 @import "tailwindcss";
-```
+{{< /code >}}
 
 You have now installed both Tailwind CSS and Vue and can proceed with the next steps.
 
@@ -67,33 +67,33 @@ The UI components from Flowbite can help you save time building websites with Vu
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite --save
-```
+{{< /code >}}
 
 2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "flowbite/src/themes/default";
-```
+{{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-```css
+{{< code lang="css" >}}
 @plugin "flowbite/plugin";
-```
+{{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-```css
+{{< code lang="css" >}}
 @source "../node_modules/flowbite";
-```
+{{< /code >}}
 
 4. Start a local development server by running the following command in your terminal:
 
-```bash
+{{< code lang="css" >}}
 npm run dev
-```
+{{< /code >}}
 
 If you want to build the project then you can run `npm run build`.
 
@@ -103,7 +103,8 @@ Now that you have successfully installed Vue 3, Tailwind CSS and Flowbite you ca
 
 We can use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Modal component</a> as an example and copy the HTML markup and add it inside our Vue 3 template file:
 
-```html
+
+{{< code lang="vue" >}}
 <template>
     <div>
         <div class="flex justify-center p-4">
@@ -142,7 +143,7 @@ We can use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Mod
         </div>
     </div>
 </template>
-```
+{{< /code >}}
 
 ### Data attributes
 
@@ -150,7 +151,7 @@ You can by default make the interactive components work by importing the "init" 
 
 Here's an example how you can initialise the components based on data attributes with Vue 3:
 
-```javascript
+{{< code lang="vue" >}}
 <script setup>
 import { onMounted } from 'vue'
 import { initFlowbite } from 'flowbite'
@@ -164,11 +165,11 @@ onMounted(() => {
 <template>
     // Modal HTML markup with data attributes from Flowbite
 </template>
-```
+{{< /code >}}
 
 Alternatively, here's the full list of available functions to use to initialise the components separately:
 
-```javascript
+{{< code lang="vue" >}}
 <script setup>
 import { onMounted } from 'vue'
 import { 
@@ -199,7 +200,7 @@ onMounted(() => {
     initTooltips();
 })
 </script>
-```
+{{< /code >}}
 
 Even though this will make sure all of the interactive components will work with data attributes from Flowbite, we actually recommend only initializing the ones that you use for every page to optimize load speed.
 
@@ -211,7 +212,25 @@ To start using the interactive components from Flowbite together with Vue 3 and 
 
 Here's an example showing how you can use the Modal component:
 
-```javascript
+{{< code lang="vue" >}}
+<script setup>
+import { onMounted } from 'vue'
+import { initFlowbite } from 'flowbite'
+
+// initialize components based on data attribute selectors
+onMounted(() => {
+    initFlowbite();
+})
+</script>
+
+<template>
+    // Modal HTML markup with data attributes from Flowbite
+</template>
+{{< /code >}}
+
+Alternatively, here's the full list of available functions to use to initialise the components separately:
+
+{{< code lang="vue" >}}
 <script setup>
 import { onMounted } from 'vue'
 import { Modal } from 'flowbite'
@@ -235,13 +254,13 @@ onMounted(() => {
     }
 })
 </script>
-```
+{{< /code >}}
 
 As you can see we have imported the Modal component from the Flowbite package and we used the onMounted method to set up the event listeners to make sure that the templates have loaded and will work even with tools such as the Vue Router as you switch between the views.
 
 Here's the HTML markup that you need to add inside the `<template>` tag:
 
-```html
+{{< code lang="vue" >}}
 <template>
   <div class="flex justify-center p-4">
         <button id="button" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Show modal</button>
@@ -278,7 +297,7 @@ Here's the HTML markup that you need to add inside the `<template>` tag:
         </div>
     </div>
 </template>
-```
+{{< /code >}}
 
 You can check out the available methods and options for the Flowbite API by scrolling down to the "JavaScript Behaviour" section on each page of this documentation where applicable.
 

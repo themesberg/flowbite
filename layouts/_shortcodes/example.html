@@ -33,7 +33,7 @@
 {{- $charts := .Get "charts" | default false -}}
 {{- $datatables := .Get "datatables" | default false -}}
 
-<div class="mt-8 code-example">
+<div class="mt-8 code-example rounded-b-base">
   
   {{- if eq $show_preview true -}}
   
@@ -133,8 +133,8 @@
   {{- if eq $show_markup true -}}
     {{- $content := replaceRE `<svg class="bd\-placeholder\-img(?:\-lg)?(?: *?bd\-placeholder\-img\-lg)? ?(.*?)".*?<\/svg>\n` `<img src="..." class="$1" alt="...">` $input -}}
     {{- $content = replaceRE ` (class=" *?")` "" $content -}}
-      <div class="code-syntax-wrapper">
-        <div class="relative border-default border-y border-x code-syntax">
+      <div class="code-syntax-wrapper rounded-b-base">
+        <div class="relative border-default border-y border-x code-syntax rounded-b-base">
             <div class="grid w-full grid-cols-2 border-b border-default bg-neutral-secondary-soft rounded-t-md">
               <ul class="flex text-sm font-medium text-center text-body">
                 <li>
@@ -163,17 +163,17 @@
               </div>
             </div>
           <div class="relative">
-            <div data-code-wrapper class="overflow-hidden max-h-72" tabindex="-1">
+            <div data-code-wrapper class="overflow-hidden max-h-72 rounded-b-base" tabindex="-1">
               <div data-code-wrapper-html>
-                {{- highlight (trim $content "\n") $lang "" -}}
+                <code class="shiki-code-block dark:[&>pre]:!bg-neutral-primary [&>pre]:p-4 [&>pre]:text-sm [&>pre]:overflow-x-scroll" data-language="{{$lang}}">{{- trim $content "\n" -}}</code>
               </div>
               {{ if $javascript }}
                 <div data-code-wrapper-javascript class="hidden">
-                  {{- highlight (trim $javascript "\n") "javascript" "" -}}
+                  <code class="shiki-code-block dark:[&>pre]:!bg-neutral-primary [&>pre]:p-4 [&>pre]:text-sm [&>pre]:overflow-x-scroll" data-language="javascript">{{- trim $javascript "\n" -}}</code>
                 </div>
               {{ end }}
             </div>
-            <button data-expand-code type="button" class="hidden absolute bottom-0 left-0 py-2.5 px-5 w-full text-sm font-medium text-body bg-neutral-secondary-soft border-t border-default hover:bg-neutral-tertiary hover:text-heading">Expand code</button>
+            <button data-expand-code type="button" class="hidden absolute bottom-0 left-0 py-2.5 px-5 w-full text-sm font-medium rounded-b-base text-body bg-neutral-secondary-soft border-t border-default hover:bg-neutral-tertiary hover:text-heading">Expand code</button>
           </div>
         </div>
       </div>

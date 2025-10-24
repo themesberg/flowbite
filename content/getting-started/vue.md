@@ -22,10 +22,10 @@ Follow the next steps to install Tailwind CSS (with v4) and Flowbite with Vue 3 
 
 1. Create a new Vite project running the following commands in your terminal:
 
-```bash
+{{< code lang="bash" >}}
 npm create vite@latest flowbite-app -- --template vue
 cd flowbite-app
-```
+{{< /code >}}
 
 ## Install Tailwind CSS
 

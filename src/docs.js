@@ -1,5 +1,23 @@
 // css for docs
 import docsearch from '@docsearch/js';
+import { codeToHtml } from 'shiki';
+
+const codeBlockElements = document.getElementsByClassName('shiki-code-block');
+
+console.log(codeBlockElements);
+
+// Convert HTMLCollection to Array before using forEach
+Array.from(codeBlockElements).forEach(async (e) => {
+    // Get the text content instead of innerHTML to preserve HTML entities
+    const code = e.textContent;
+    console.log(code);
+    const language = e.getAttribute('data-language');
+    const html = await codeToHtml(code, {
+        lang: language,
+        theme: 'github-dark',
+    });
+    e.innerHTML = html;
+});
 
 // Algolia docsearch
 docsearch({

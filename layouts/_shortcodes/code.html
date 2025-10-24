@@ -1,0 +1,3 @@
+{{- $lang := .Get "lang" | default "bash" -}}
+
+<code class="shiki-code-block dark:[&>pre]:!bg-neutral-primary [&>pre]:p-4 [&>pre]:text-sm [&>pre]:overflow-x-scroll" data-language="{{$lang}}">{{- trim $content "\n" -}}</code>

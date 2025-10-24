@@ -32,9 +32,9 @@ The fastest way to get started is using our project creation CLI, which sets up 
 
 Use the following command from the Flowbite React CLI toolkit:
 
-```bash
+{{< code lang="bash" >}}
 npx create-flowbite-react@latest -t meteorjs
-```
+{{< /code >}}
 
 This will create a new Meteor project, install and configure Tailwind CSS, set up Flowbite React and its dependencies, configure dark mode and also add example components for you to get started.
 
@@ -42,9 +42,9 @@ This will create a new Meteor project, install and configure Tailwind CSS, set u
 
 If you already have a Meteor project and want to add Flowbite React, you can use our initialization CLI:
 
-```bash
+{{< code lang="bash" >}}
 npx flowbite-react@latest init
-```
+{{< /code >}}
 
 This command will install Flowbite React and configure Tailwind with the Flowbite plugin.
 
@@ -56,17 +56,17 @@ If you prefer to set everything up manually or need more control over the config
 
 The first step is to create a new Meteor.js project using their CLI toolkit:
 
-```bash
+{{< code lang="bash" >}}
 meteor create meteor-project
 cd meteor-project
-```
+{{< /code >}}
 
 If you prefer using TypeScript, then add the `--typescript` flag to the command:
 
-```bash
+{{< code lang="bash" >}}
 meteor create meteor-project --typescript
 cd meteor-project
-```
+{{< /code >}}
 
 Now that you have a new Meteor.js project, you can proceed with installing Tailwind CSS.
 
@@ -74,19 +74,19 @@ Now that you have a new Meteor.js project, you can proceed with installing Tailw
 
 The next step is to now install Tailwind CSS (v4) using NPM:
 
-```bash
+{{< code lang="bash" >}}
 npm install -D tailwindcss @tailwindcss/postcss postcss postcss-load-config
-```
+{{< /code >}}
 
 Create a `postcss.config.mjs` file inside the root directory of your Meteor.js project:
 
-```bash
+{{< code lang="bash" >}}
 touch postcss.config.mjs
-```
+{{< /code >}}
 
 Add `@tailwindcss/postcss` to your `postcss.config.mjs` file:
 
-```js
+{{< code lang="javascript" >}}
 /** @type {import('postcss-load-config').Config} */
 const config = {
     plugins: {
@@ -94,13 +94,13 @@ const config = {
     },
 };
 export default config;
-```
+{{< /code >}}
 
 Update the css file `client/main.css` to include Tailwind CSS:
 
-```css
+{{< code lang="css" >}}
 @import 'tailwindcss';
-```
+{{< /code >}}
 
 Now that you have installed and configured Tailwind CSS, you can now proceed with installing Flowbite React.
 
@@ -108,9 +108,9 @@ Now that you have installed and configured Tailwind CSS, you can now proceed wit
 
 To easily install Flowbite React you can use our official CLI toolkit:
 
-```bash
+{{< code lang="bash" >}}
 npx flowbite-react@latest init
-```
+{{< /code >}}
 
 This command installs Flowbite React and configures it with Tailwind CSS.
 
@@ -118,7 +118,7 @@ This command installs Flowbite React and configures it with Tailwind CSS.
 
 Now that you have succesfully installed Flowbite React, Meteor.js and Tailwind CSS you can start using our components such as buttons, dropdowns, modal, navbars, and more:
 
-```javascript
+{{< code lang="javascript" >}}
 // imports/ui/App.tsx (or .jsx)
 import { Button } from 'flowbite-react';
 import React from 'react';
@@ -128,7 +128,7 @@ export const App = () => (
         <Button>Click me</Button>
     </>
 );
-```
+{{< /code >}}
 
 Check out the [official documentation](https://flowbite-react.com) to learn more about the components and how to use them.
 
@@ -138,17 +138,17 @@ Flowbite React offers an advanced system of customizing your components and temp
 
 For example, here is a simple way you can update a button component:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Button } from "flowbite-react";
 
 function App() {
   return <Button className="bg-red-500 hover:bg-red-600">Custom Button</Button>;
 }
-```
+{{< /code >}}
 
 Additionally, you can also use the `createTheme` helper to create a theme object that you can then pass on to the `<ThemeProvider>` component with which you can style subcomponents too:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Button, createTheme, ThemeProvider } from "flowbite-react";
 
 const customTheme = createTheme({
@@ -173,7 +173,7 @@ function App() {
     </ThemeProvider>
   );
 }
-```
+{{< /code >}}
 
 ## Open-source community
 

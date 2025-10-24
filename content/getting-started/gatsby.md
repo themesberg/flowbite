@@ -30,9 +30,9 @@ The fastest way to get started is using our project creation CLI, which sets up 
 
 Run the following command in your terminal using our CLI toolkit:
 
-```bash
+{{< code lang="bash" >}}
 npx create-flowbite-react@latest -t gatsby
-```
+{{< /code >}}
 
 This will create a new Gatsby project, install and configure Tailwind CSS, install and configure Flowbite React, add dark mode support and also set up example components to get you started.
 
@@ -40,9 +40,9 @@ This will create a new Gatsby project, install and configure Tailwind CSS, insta
 
 If you already have a Gatsby project and want to add Flowbite React, you can use our initialization CLI:
 
-```bash
+{{< code lang="bash" >}}
 npx flowbite-react@latest init
-```
+{{< /code >}}
 
 This will automatically add Flowbite React to your project and will configure Tailwind CSS with the Flowbite plugin alongside dark mode support.
 
@@ -54,9 +54,9 @@ If you prefer to set everything up manually or need more control over the config
 
 Create a new Gatsby project using NPM and make sure to select `Tailwind CSS` when prompted:
 
-```bash
+{{< code lang="bash" >}}
 npm init gatsby
-```
+{{< /code >}}
 
 You can now proceed with the installation of Flowbite React.
 
@@ -64,9 +64,9 @@ You can now proceed with the installation of Flowbite React.
 
 Run the following CLI command to add Flowbite React to your project:
 
-```bash
+{{< code lang="bash" >}}
 npx flowbite-react@latest init
-```
+{{< /code >}}
 
 This command will install Flowbite React and configure Tailwind with the Flowbite plugin.
 
@@ -76,23 +76,23 @@ In server side rendered applications like Gatsby, if you want to avoid page flic
 
 1. Create `gatsby-ssr.js` file at the root folder of the project:
 
-```javascript
+{{< code lang="javascript" >}}
 // gatsby-ssr.js
 export const onRenderBody = ({ setPreBodyComponents }) => {
     setPreBodyComponents([]);
 };
-```
+{{< /code >}}
 
 2. Import `ThemeModeScript` and add it to `setPreBodyComponents` function:
 
-```javascript
+{{< code lang="javascript" >}}
 // gatsby-ssr.js
 import { ThemeModeScript } from 'flowbite-react';
 
 export const onRenderBody = ({ setPreBodyComponents }) => {
     setPreBodyComponents([ThemeModeScript]);
 };
-```
+{{< /code >}}
 
 Congratulations! You have successfully installed Flowbite React.
 
@@ -100,14 +100,14 @@ Congratulations! You have successfully installed Flowbite React.
 
 Now that you have Flowbite React installed you can start using the components from the library:
 
-```javascript
+{{< code lang="javascript" >}}
 // src/pages/index.tsx (or .jsx)
 import { Button } from 'flowbite-react';
 
 export default function IndexPage() {
     return <Button>Click me</Button>;
 }
-```
+{{< /code >}}
 
 Check out all of the UI components from the [Flowbite React](https://flowbite-react.com) library.
 
@@ -117,17 +117,17 @@ Flowbite React offers an advanced system of customizing your components and temp
 
 For example, here is a simple way you can update a button component:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Button } from "flowbite-react";
 
 function App() {
   return <Button className="bg-red-500 hover:bg-red-600">Custom Button</Button>;
 }
-```
+{{< /code >}}
 
 Additionally, you can also use the `createTheme` helper to create a theme object that you can then pass on to the `<ThemeProvider>` component with which you can style subcomponents too:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Button, createTheme, ThemeProvider } from "flowbite-react";
 
 const customTheme = createTheme({
@@ -152,7 +152,7 @@ function App() {
     </ThemeProvider>
   );
 }
-```
+{{< /code >}}
 
 ## Open-source community
 

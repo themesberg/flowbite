@@ -28,26 +28,26 @@ We also highly recommend you to use VS Code as your standard editor and to insta
 
 1. Create a new Astro project running the following command using NPM:
 
-```bash
+{{< code lang="bash" >}}
 npm create astro@latest flowbite-project
 cd flowbite-project
-```
+{{< /code >}}
 
 This command will prompt you with some questions and will create a local project based on your answers.
 
 2. Run the following command to start a local development server:
 
-```bash
+{{< code lang="bash" >}}
 npm run dev
-```
+{{< /code >}}
 
 This will make the project accessible via the browser on `http://localhost:3000`.
 
 3. To create a production build of the project run the following command in your terminal:
 
-```bash
+{{< code lang="bash" >}}
 npm run build
-```
+{{< /code >}}
 
 One of the biggest advantages of Astro is the small build size that will be available once deployed to production via the build command - this way the website should load much quicker than using older technologies.
 
@@ -57,19 +57,19 @@ Now that you have installed and configured a working Astro project we can procee
 
 1. Run the following command to install Tailwind CSS and create a configuration file using the NPX command:
 
-```bash
+{{< code lang="bash" >}}
 npx astro add tailwind
-```
+{{< /code >}}
 
 This command will automatically install Tailwind CSS in the `package.json` file, it will also configure the compilation process and create a new `tailwind.config.cjs` file that configures the template paths.
 
 2. Import the `global.css` file in your `Layout.astro` file:
 
-```html
+{{< code lang="html" >}}
 ---
 import "../styles/global.css";
 ---
-```
+{{< /code >}}
 
 Now you can write Tailwind CSS classes inside any of the template files and the changes will be applied by generating a `global.css` file and including it on every page.
 
@@ -79,27 +79,27 @@ After you've installed both Astro and Tailwind CSS you can also choose to use th
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite --save
-```
+{{< /code >}}
 
 2. Import the default theme variables from Flowbite inside your main `global.css` CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "flowbite/src/themes/default";
-```
+{{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-```css
+{{< code lang="css" >}}
 @plugin "flowbite/plugin";
-```
+{{< /code >}}
 
 4. Configure the source files of Flowbite in your `global.css` file:
 
-```css
+{{< code lang="css" >}}
 @source "../../node_modules/flowbite";
-```
+{{< /code >}}
 
 Now that you've configured the styles for CSS from Flowbite you can now proceed by installing the JS.
 
@@ -111,9 +111,9 @@ To enable the interactive components you need to also include Flowbite's JavaScr
 
 In the `Layout.astro` file add the following script tag just before the end of the `<body>` tag:
 
-```html
+{{< code lang="html" >}}
 <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-```
+{{< /code >}}
 
 This allows you to use the data attributes from the Flowbite component examples and will make them interactive automatically without needing to write custom JavaScript and you can just copy-paste them from the Flowbite Docs.
 
@@ -125,7 +125,7 @@ Since version 1.6.0 Flowbite also supports type declarations and interfaces in T
 
 For example, here's how you can leverage the Flowbite JS API and Astro by adding the following code inside the script tag:
 
-```javascript
+{{< code lang="javascript" >}}
 <Layout>
   <!-- markup source content and elements -->
 </Layout>
@@ -145,11 +145,11 @@ For example, here's how you can leverage the Flowbite JS API and Astro by adding
     $buttonElement.addEventListener('click', () => modal.toggle());
   }
 </script>
-```
+{{< /code >}}
 
 Make sure that you have the necessary HTML markup for the event listeners and elements described in the example above inside the `<Layout>` tags from Astro:
 
-```html
+{{< code lang="html" >}}
 <Layout>
     <!-- Modal toggle -->
     <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
@@ -188,7 +188,7 @@ Make sure that you have the necessary HTML markup for the event listeners and el
         </div>
     </div>
 </Layout>
-```
+{{< /code >}}
 
 In this example, the modal will be shown when the button is clicked and the modal component will also be initialized based on the options that you've provided.
 

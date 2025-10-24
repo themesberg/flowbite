@@ -23,13 +23,13 @@ Before you start, make sure you have installed the latest version of [Tailwind C
 
 1. Add the `dir` attribute to the `<html>` element in your `index.html` file:
 
-```html
+{{< code lang="html" >}}
 <html dir="rtl">
 
 <!-- your HTML markup -->
 
 </html>
-```
+{{< /code >}}
 
 By default, when switching from LTR to RTL the direction, spacing, and positioning of all the UI components from Flowbite will be mirrored as we used logical properties and RTL variants from Tailwind CSS.
 
@@ -78,11 +78,11 @@ For example, if you want to add a margin to the left side of an element in LTR m
 
 In RTL mode, you would use `rtl:ml-2` instead.
 
-```html
+{{< code lang="html" >}}
 <div class="ml-2 rtl:ml-0">
   <!-- ... -->
 </div>
-```
+{{< /code >}}
 
 However, we do recommend that you use logical properties for margins, paddings, borders, and rounded-sm corners because the HTML markup will be cleaner and contain less utility-classes, which is always a good thing when it comes to Tailwind CSS.
 

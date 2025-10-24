@@ -26,30 +26,30 @@ Follow the next steps to learn how to create a new HUGO project after you've ins
 
 1. Run the following CLI command to create a new HUGO application:
 
-```bash
+{{< code lang="bash" >}}
 hugo new site flowbite-app
 cd flowbite-app
-```
+{{< /code >}}
 
 2. The next step is to create a local custom theme:
 
-```bash
+{{< code lang="bash" >}}
 hugo new theme flowbite-theme
-```
+{{< /code >}}
 
 This command will create a new scaffolded theme directory that we can extend with our HUGO app.
 
 3. Next, add the theme to the `config.toml` file:
 
-```bash
+{{< code lang="bash" >}}
 theme = ["flowbite-theme"]
-```
+{{< /code >}}
 
 4. Run a local server using the following command:
 
-```bash
+{{< code lang="bash" >}}
 hugo server -D
-```
+{{< /code >}}
 
 Now you should see a basic HUGO website running at a generated localhost server.
 
@@ -61,25 +61,25 @@ Tailwind CSS is a popular utility-first CSS framework that allows better control
 
 1. Go to the `flowbite-theme/` directory and run the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install tailwindcss @tailwindcss/cli --save-dev
-```
+{{< /code >}}
 
 2. Inside your `main.css` file from the `flowbite-theme/` directory add the following:
 
-```css
+{{< code lang="css" >}}
 @import "tailwindcss";
-```
+{{< /code >}}
 
 3. Compile the CSS code for Tailwind CSS by running this command inside of your theme directory:
 
-```bash
+{{< code lang="bash" >}}
 npx @tailwindcss/cli -i ./assets/css/main.css  -o ./assets/css/output.css --watch
-```
+{{< /code >}}
 
 4. Update the `css.html` file from the `flowbite-theme/` directory with the following:
 
-```html
+{{< code lang="html" >}}
 {{- with resources.Get "css/output.css" }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
@@ -89,11 +89,11 @@ npx @tailwindcss/cli -i ./assets/css/main.css  -o ./assets/css/output.css --watc
     {{- end }}
   {{- end }}
 {{- end }}
-```
+{{< /code >}}
 
 5. In order to test out Tailwind CSS, add a utility class inside the `single.html` file:
 
-```html
+{{< code lang="html" >}}
 {{ define "main" }}
   <h1 class="text-fg-brand">{{ .Title }}</h1>
 
@@ -104,7 +104,7 @@ npx @tailwindcss/cli -i ./assets/css/main.css  -o ./assets/css/output.css --watc
   {{ .Content }}
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}
-```
+{{< /code >}}
 
 By browsing to one of the post pages, you should now see the text updated in blue.
 
@@ -116,31 +116,31 @@ Please make sure that you install the dependency, just as with Tailwind CSS, ins
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite --save
-```
+{{< /code >}}
 
 2. Import the default theme variables from Flowbite inside your main `main.css` CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "flowbite/src/themes/default";
-```
+{{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-```css
+{{< code lang="css" >}}
 @plugin "flowbite/plugin";
-```
+{{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-```css
+{{< code lang="css" >}}
 @source "../../node_modules/flowbite";
-```
+{{< /code >}}
 
 5. Add the Flowbite JavaScript inside your `js.html` file:
 
-```html
+{{< code lang="html" >}}
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
 {{- with resources.Get "js/main.js" }}
@@ -155,11 +155,11 @@ npm install flowbite --save
     {{- end }}
   {{- end }}
 {{- end }}
-```
+{{< /code >}}
 
 6. Let's now test out Flowbite by updating our `menu.html` file from the theme directory:
 
-```html
+{{< code lang="html" >}}
 {{- /*
 Renders a menu for the given menu ID.
 
@@ -226,7 +226,7 @@ Renders a menu for the given menu ID.
     </li>
   {{- end }}
 {{- end }}
-```
+{{< /code >}}
 
 After you reload the server, the pages from the menu should now be rendered inside the navbar component.
 

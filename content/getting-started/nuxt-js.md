@@ -24,22 +24,22 @@ Before continuing make sure that you have Node.js and NPM installed on your loca
 
 1. Create a new Nuxt project by running the following command in your terminal:
 
-```bash
+{{< code lang="bash" >}}
 npx nuxi init flowbite-app
 cd flowbite-app
-```
+{{< /code >}}
 
 2. Install the project dependencies by executing the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install
-```
+{{< /code >}}
 
 3. Run the following command to start a local development server on `http://localhost:3000/`:
 
-```bash
+{{< code lang="bash" >}}
 npm run dev
-```
+{{< /code >}}
 
 This will make the Nuxt project accessible via the browser.
 
@@ -49,13 +49,13 @@ Now that you have locally set up a Nuxt project we will proceed by installing Ta
 
 1. Require and install the NuxtTailwind module by installing it via NPM:
 
-```bash
+{{< code lang="bash" >}}
 npm install tailwindcss @tailwindcss/vite --save
-```
+{{< /code >}}
 
 2. Configure the Nuxt configuration file to include the Tailwind module:
 
-```javascript
+{{< code lang="javascript" >}}
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
@@ -67,13 +67,13 @@ export default defineNuxtConfig({
     ],
   },
 });
-```
+{{< /code >}}
 
 3. Create a new CSS file `./assets/css/input.css` and import Tailwind:
 
-```css
+{{< code lang="css" >}}
 @import "tailwindcss";
-```
+{{< /code >}}
 
 Tailwind CSS is now configured in your project and if you add the utility classes anywhere in your Vue template files the CSS will be generated and included.
 
@@ -83,27 +83,27 @@ After installing both Nuxt and Tailwind CSS inside your project we can proceed b
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite --save
-```
+{{< /code >}}
 
 2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "flowbite/src/themes/default";
-```
+{{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-```css
+{{< code lang="css" >}}
 @plugin "flowbite/plugin";
-```
+{{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-```css
+{{< code lang="css" >}}
 @source "../../node_modules/flowbite";
-```
+{{< /code >}}
 
 ## Flowbite components
 
@@ -111,7 +111,7 @@ Now that you have successfully installed Nuxt, Tailwind CSS and Flowbite you can
 
 Let's use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Modal component</a> as an example and copy-paste the markup from the documentation inside your `app.vue` page:
 
-```html
+{{< code lang="html" >}}
 <template>
     <div>
         <div class="flex justify-center p-4">
@@ -150,7 +150,7 @@ Let's use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Moda
         </div>
     </div>
 </template>
-```
+{{< /code >}}
 
 ### Data attributes
 
@@ -158,7 +158,7 @@ You can automatically make the interactive components work by importing the init
 
 When using Flowbite you need to make sure that the client side JavaScript is executed only after the page is fully loaded. This is why we recommend you to create a `useFlowbite.js` file inside the `composables` folder:
 
-```javascript
+{{< code lang="javascript" >}}
 // composables/useFlowbite.js
 
 export function useFlowbite(callback) {
@@ -168,13 +168,13 @@ export function useFlowbite(callback) {
     });
   }
 }
-```
+{{< /code >}}
 
 **Important**: if you are using SSR make sure that this is the only way you're importing Flowbite in your Nuxt application to prevent the document object not being available on the server side.
 
 Then you can import the `useFlowbite` function inside your Nuxt page and use it to initialize the components:
 
-```javascript
+{{< code lang="javascript" >}}
 <script setup>
 import { onMounted } from 'vue'
 import { useFlowbite } from '~/composables/useFlowbite';
@@ -190,11 +190,11 @@ onMounted(() => {
 <template>
     // Modal HTML markup with data attributes from Flowbite
 </template>
-```
+{{< /code >}}
 
 Alternatively, here's a full list of available functions to use to initialise the components separately:
 
-```javascript
+{{< code lang="javascript" >}}
 <script setup>
 import { onMounted } from 'vue'
 import { useFlowbite } from '~/composables/useFlowbite';
@@ -228,7 +228,7 @@ onMounted(() => {
     })
 })
 </script>
-```
+{{< /code >}}
 
 Although this will make sure all of the interactive components will work with data attributes from Flowbite, we actually recommend only initializing the ones that you use for every page to optimize load speed.
 
@@ -238,7 +238,7 @@ Check out the [starter guide's](https://github.com/themesberg/tailwind-nuxt-star
 
 To make the component interactive we need to import the Modal object from Flowbite and set up the object parameters, options, and methods to show or hide the modal based on the button click.
 
-```javascript
+{{< code lang="javascript" >}}
 <script setup>
 import { onMounted } from 'vue'
 import { Modal } from 'flowbite'
@@ -268,17 +268,17 @@ onMounted(() => {
     })
 })
 </script>
-```
+{{< /code >}}
 
 As you can see we use the onMounted() lifecycle method from Vue 3 to query for the elements that we need to create a modal component and then programmatically use the methods such as showing or hiding the modal.
 
-```javascript
+{{< code lang="javascript" >}}
 // add your own logic and then show the modal
 modal.show();
 
 // or you can hide it
 modal.hide();
-```
+{{< /code >}}
 
 Every interactive component page that requires JavaScript has documentation on Flowbite showing you the available parameters, options, and methods that you can use.
 
@@ -288,36 +288,36 @@ Flowbite also supports TypeScript as of v1.6.0 and it allows us to use type decl
 
 You can import these types or interfaces like this:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Modal } from 'flowbite'
 import type { ModalOptions, ModalInterface } from 'flowbite'
 
 // other code
-```
+{{< /code >}}
 
 Generally speaking, all of the components have an interface definition that you can use whenever you create a new object to make sure that you’re using the correct types of parameters and methods.
 
 When creating a new modal you can set the ModalInterface as the main type:
 
-```javascript
+{{< code lang="javascript" >}}
 const modal: ModalInterface = new Modal($modalElement, modalOptions);
-```
+{{< /code >}}
 
 All of the Flowbite components also support type declaration for the options object. Here's an example:
 
-```javascript
+{{< code lang="javascript" >}}
 const modalOptions: ModalOptions = {
     placement: 'top-right'
 }
 
 const modal: ModalInterface = new Modal($modalElement, modalOptions);
-```
+{{< /code >}}
 
 Using types can be very beneficial because it makes sure that you only use the allowed types and values for the options that are available. For example, if you used a value such as `yellow` for the placement object, which is a color, TypeScript will throw an error because it does not meet the type requirements from Flowbite.
 
 Here's the full code using types with TypeScript:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Modal } from 'flowbite'
 import type { ModalOptions, ModalInterface } from 'flowbite'
 
@@ -332,7 +332,7 @@ const modal: ModalInterface = new Modal($modalElement, modalOptions);
 $buttonElement.addEventListener('click', () => modal.toggle());
 
 modal.show();
-```
+{{< /code >}}
 
 Learn more about using <a href="{{< ref "getting-started/typescript" >}}#javascript-behaviour">Flowbite with TypeScript</a> on the official docs page.
 

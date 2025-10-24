@@ -17,7 +17,7 @@ Since the release of Tailwind v4 the theming customization has been moved from t
 
 Here's an example of a modified CSS file that sets a custom set of colors and fonts:
 
-```css
+{{< code lang="css" >}}
 /* input.css file */
 @import "tailwindcss";
 
@@ -40,7 +40,7 @@ Here's an example of a modified CSS file that sets a custom set of colors and fo
     --font-body: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-mono: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace';
 }
-```
+{{< /code >}}
 
 These variables will now create a new color pallette called `primary` that can be used as your main brand color and the fonts that will now use `Inter` by default.
 
@@ -48,13 +48,13 @@ These variables will now create a new color pallette called `primary` that can b
 
 After installing Flowbite, make sure that you also import the Flowbite plugin in your main CSS file:
 
-```css
+{{< code lang="css" >}}
 /* input.css file */
 @import "tailwindcss";
 
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
-```
+{{< /code >}}
 
 This will ensure that the pseudo styles for forms, checkboxes, tooltips, charts, and datatables will be applied.
 
@@ -68,7 +68,7 @@ There are many more variable namespaces that you can use to customize the defaul
 
 Updating or adding new colors can be done by using the `--color-{name}` variable namespaces:
 
-```css
+{{< code lang="css" >}}
 /* input.css file */
 @import "tailwindcss";
 
@@ -87,7 +87,7 @@ Updating or adding new colors can be done by using the `--color-{name}` variable
     --color-primary-800: #1e40af;
     --color-primary-900: #1e3a8a;
 }
-```
+{{< /code >}}
 
 This introduces a list of colors attributed to the `primary` variable name, meaning that utility class names such as `text-primary-600` or `bg-primary-600` will now show your custom branded color when using Tailwind.
 
@@ -95,7 +95,7 @@ This introduces a list of colors attributed to the `primary` variable name, mean
 
 You can add your own fonts by updating the `--font-body` variable in your CSS file.
 
-```css
+{{< code lang="css" >}}
 /* input.css file */
 @import "tailwindcss";
 
@@ -107,7 +107,7 @@ You can add your own fonts by updating the `--font-body` variable in your CSS fi
     --font-body: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-mono: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace';
 }
-```
+{{< /code >}}
 
 Make sure that you apply `antialiased` to the `<body>` tag of your document to enable font smoothing.
 
@@ -115,7 +115,7 @@ Make sure that you apply `antialiased` to the `<body>` tag of your document to e
 
 Use the `spacing-{name}` variable namespace to set spacing values to utility class names used for setting widths, heights, paddings, margins, and more.
 
-```css
+{{< code lang="css" >}}
 /* input.css file */
 @import "tailwindcss";
 
@@ -125,13 +125,13 @@ Use the `spacing-{name}` variable namespace to set spacing values to utility cla
 @theme {
    --spacing-custom: 10px;
 }
-```
+{{< /code >}}
 
 ### Breakpoints
 
 You can customize the breakpoints at which the reponsive mobile-first utility classes are being targeted using the `--breakpoint-{size}` variable namespaces in your main CSS file:
 
-```css
+{{< code lang="css" >}}
 /* input.css file */
 @import "tailwindcss";
 
@@ -143,7 +143,7 @@ You can customize the breakpoints at which the reponsive mobile-first utility cl
   --breakpoint-2xl: 100rem;
   --breakpoint-3xl: 120rem;
 }
-```
+{{< /code >}}
 
 This will make `p-custom` or `w-custom` have the value of `10px` as explained above.
 

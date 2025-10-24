@@ -24,9 +24,9 @@ The fastest way you can get started with Flowbite React and Next.js is by using 
 
 Use the following command to create a new Next.js project:
 
-```bash
+{{< code lang="bash" >}}
 npx create-flowbite-react@latest -t nextjs
-```
+{{< /code >}}
 
 This will create a new project configured with Next.js,Tailwind CSS (v4) and Flowbite React and it also sets up the dark mode configuration and a couple of example components.
 
@@ -34,9 +34,9 @@ This will create a new project configured with Next.js,Tailwind CSS (v4) and Flo
 
 If you already have a Next.js project and want to add Flowbite React, you can use our initialization CLI:
 
-```bash
+{{< code lang="bash" >}}
 npx flowbite-react@latest init
-```
+{{< /code >}}
 
 This command will install Flowbite React and its dependencies, configure Tailwind CSS to include Flowbite React plugin, and set up necessary configurations.
 
@@ -48,9 +48,9 @@ If you prefer to set everything up manually or need more control over the config
 
 Use the CLI toolkit from Vercel to create a new Next.js project and include Tailwind CSS when prompted:
 
-```bash
+{{< code lang="bash" >}}
 npx create-next-app@latest
-```
+{{< /code >}}
 
 Now you can proceed with installing the Flowbite React UI component library.
 
@@ -58,9 +58,9 @@ Now you can proceed with installing the Flowbite React UI component library.
 
 You can easily install Flowbite React by using the official CLI toolkit:
 
-```bash
+{{< code lang="bash" >}}
 npx flowbite-react@latest init
-```
+{{< /code >}}
 
 This will install Flowbite React with all dependencies and configures Tailwind to include the Flowbite plugin.
 
@@ -70,7 +70,7 @@ If you want to properly configure dark mode and prevent page flickering before h
 
 Add the following code to the app router:
 
-```javascript
+{{< code lang="javascript" >}}
 // app/layout.tsx
 import { ThemeModeScript } from 'flowbite-react';
 
@@ -84,11 +84,11 @@ export default function RootLayout({ children }) {
         </html>
     );
 }
-```
+{{< /code >}}
 
 And the following code to the page router:
 
-```javascript
+{{< code lang="javascript" >}}
 // pages/_document.tsx
 import { ThemeModeScript } from 'flowbite-react';
 
@@ -105,7 +105,7 @@ export default function Document() {
         </Html>
     );
 }
-```
+{{< /code >}}
 
 Congratulations! You have now installed and configured Flowbite React in your Next.js application.
 
@@ -113,14 +113,14 @@ Congratulations! You have now installed and configured Flowbite React in your Ne
 
 Now that you have successfully installed Flowbite React you can start using the components from the library:
 
-```javascript
+{{< code lang="javascript" >}}
 // app/page.tsx
 import { Button } from 'flowbite-react';
 
 export default function Page() {
     return <Button>Click me</Button>;
 }
-```
+{{< /code >}}
 
 You can check out all of the UI components from the [Flowbite React](https://flowbite-react.com) library.
 
@@ -130,17 +130,17 @@ Flowbite React offers an advanced system of customizing your components and temp
 
 For example, here is a simple way you can update a button component:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Button } from "flowbite-react";
 
 function App() {
   return <Button className="bg-red-500 hover:bg-red-600">Custom Button</Button>;
 }
-```
+{{< /code >}}
 
 Additionally, you can also use the `createTheme` helper to create a theme object that you can then pass on to the `<ThemeProvider>` component with which you can style subcomponents too:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Button, createTheme, ThemeProvider } from "flowbite-react";
 
 const customTheme = createTheme({
@@ -165,7 +165,7 @@ function App() {
     </ThemeProvider>
   );
 }
-```
+{{< /code >}}
 
 ## Open-source community
 

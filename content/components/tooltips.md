@@ -391,7 +391,7 @@ First of all, set the target element as the tooltip itself and the trigger eleme
 
 After that you can also set the options object to change the placement and trigger type of the tooltip, alongside with the callback functions.
 
-```javascript
+{{< code lang="javascript" >}}
 // set the tooltip content element
 const $targetEl = document.getElementById('tooltipContent');
 
@@ -419,11 +419,11 @@ const instanceOptions = {
   id: 'tooltipContent',
   override: true
 };
-```
+{{< /code >}}
 
 Create a new Tooltip object based on the options above.
 
-```javascript
+{{< code lang="javascript" >}}
 import { Tooltip } from 'flowbite';
 
 /*
@@ -432,11 +432,11 @@ import { Tooltip } from 'flowbite';
  * options: optional
  */
 const tooltip = new Tooltip($targetEl, $triggerEl, options, instanceOptions);
-```
+{{< /code >}}
 
 Use the `show` and `hide` methods on the Tooltip object to programmatically show and hide the tooltip element using JavaScript.
 
-```javascript
+{{< code lang="javascript" >}}
 // show the tooltip
 tooltip.show();
 
@@ -451,13 +451,13 @@ tooltip.destroy();
 
 // re-initialize tooltip object
 tooltip.init();
-```
+{{< /code >}}
 
 ### HTML Markup
 
 Use the following HTML code for the JavaScript example above.
 
-```html
+{{< code lang="html" >}}
 <button
     id="tooltipButton"
     type="button"
@@ -472,7 +472,7 @@ Use the following HTML code for the JavaScript example above.
     Tooltip content
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
-```
+{{< /code >}}
 
 ### TypeScript
 
@@ -480,7 +480,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Tooltip } from 'flowbite';
 import type { TooltipOptions, TooltipInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';
@@ -521,4 +521,4 @@ const tooltip: TooltipInterface = new Tooltip($targetEl, $triggerEl, options, in
 
 // show the tooltip
 tooltip.show();
-```
+{{< /code >}}

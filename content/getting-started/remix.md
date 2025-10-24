@@ -26,9 +26,9 @@ Before getting started make sure you that have [Node.js](https://nodejs.org/en/)
 
 The fastest way to get started is using our project creation CLI, which sets up a new Remix project with Flowbite React, Tailwind CSS, and all necessary configurations:
 
-```bash
+{{< code lang="bash" >}}
 npx create-flowbite-react@latest -t remix
-```
+{{< /code >}}
 
 This command will create a new Remix project, install Tailwind CSS (v4), Flowbite React with all its dependencies, and set up dark mode support with a couple of example components to get you started.
 
@@ -36,9 +36,9 @@ This command will create a new Remix project, install Tailwind CSS (v4), Flowbit
 
 If you already have a Remix project and want to add Flowbite React, you can use our initialization CLI:
 
-```bash
+{{< code lang="bash" >}}
 npx flowbite-react@latest init
-```
+{{< /code >}}
 
 This command will automatically install Flowbite React and its dependencies and configure the Flowbite plugin with Tailwind within an existing Remix project.
 
@@ -50,9 +50,9 @@ If you prefer to set everything up manually or need more control over the config
 
 Create a new Remix project using the official CLI toolkit:
 
-```bash
+{{< code lang="bash" >}}
 npx create-remix@latest
-```
+{{< /code >}}
 
 This command will create a fresh new Remix project.
 
@@ -60,9 +60,9 @@ This command will create a fresh new Remix project.
 
 You can now proceed with installing Flowbite React:
 
-```bash
+{{< code lang="bash" >}}
 npx flowbite-react@latest init
-```
+{{< /code >}}
 
 This command will install Flowbite React and configure Tailwind and Vite with the Flowbite plugin.
 
@@ -72,7 +72,7 @@ In server-side rendered applications like Remix, to avoid page flicker (if `dark
 
 Import and render `ThemeModeScript` in `app/root.tsx` the `<head>` tag:
 
-```javascript
+{{< code lang="javascript" >}}
 import { ThemeModeScript } from 'flowbite-react';
 
 export default function Layout() {
@@ -86,7 +86,7 @@ export default function Layout() {
         </html>
     );
 }
-```
+{{< /code >}}
 
 Congratulations! You have now installed and configured Flowbite React within a Remix project.
 
@@ -94,7 +94,7 @@ Congratulations! You have now installed and configured Flowbite React within a R
 
 Now that you have successfully installed Flowbite React you can start using the components from the library:
 
-```javascript
+{{< code lang="javascript" >}}
 // app/routes/_index.tsx
 
 import { Button } from 'flowbite-react';
@@ -102,7 +102,7 @@ import { Button } from 'flowbite-react';
 export default function Index() {
     return <Button>Click me</Button>;
 }
-```
+{{< /code >}}
 
 Check out the [Flowbite React documentation](https://flowbite-react.com/) to learn more about the components and how to use them.
 
@@ -112,17 +112,17 @@ Flowbite React offers an advanced system of customizing your components and temp
 
 For example, here is a simple way you can update a button component:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Button } from "flowbite-react";
 
 function App() {
   return <Button className="bg-red-500 hover:bg-red-600">Custom Button</Button>;
 }
-```
+{{< /code >}}
 
 Additionally, you can also use the `createTheme` helper to create a theme object that you can then pass on to the `<ThemeProvider>` component with which you can style subcomponents too:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Button, createTheme, ThemeProvider } from "flowbite-react";
 
 const customTheme = createTheme({
@@ -147,7 +147,7 @@ function App() {
     </ThemeProvider>
   );
 }
-```
+{{< /code >}}
 
 ## Open-source community
 

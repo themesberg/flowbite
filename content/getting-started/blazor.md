@@ -32,36 +32,36 @@ Start by downloading and installing the .NET SDK. The SDK allows us to develop a
 
 1. Start by installing the Microsoft package repository that contains the package signing key:
 
-```bash
+{{< code lang="bash" >}}
 wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
-```
+{{< /code >}}
 
 If you're running on MacOS or another Linux distribution, visit the [Microsoft website](https://learn.microsoft.com/en-us/dotnet/core/install/macos) to learn how to install the SDK on your local environment. .NET can be installed on Windows, MacOS, and Linux.
 
 2. Install the .NET SDK (software development kit):
 
-```bash
+{{< code lang="bash" >}}
 sudo apt-get update && \
 sudo apt-get install -y dotnet-sdk-7.0
-```
+{{< /code >}}
 
 You can also install the .NET SDK via HomeBrew:
 
-```bash
+{{< code lang="bash" >}}
 brew install --cask dotnet
-```
+{{< /code >}}
 
 Open your terminal and run this command to confirm a successful installation:
 
-```bash
+{{< code lang="bash" >}}
 -$ dotnet
-```
+{{< /code >}}
 
 This is the output you should see to confirm that you installed the .NET SDK successfully:
 
-```bash
+{{< code lang="bash" >}}
 Usage: dotnet [options]
 Usage: dotnet [path-to-application]
 
@@ -73,19 +73,19 @@ Options:
 
 path-to-application:
   The path to an application .dll file to execute.
-```
+{{< /code >}}
 
 Run this command in your terminal to create a new Blazor WASM project.
 
-```bash
+{{< code lang="bash" >}}
 dotnet new blazorwasm
-```
+{{< /code >}}
 
 Run this command in your terminal to launch your application and watch for changes:
 
-```bash
+{{< code lang="bash" >}}
 dotnet watch
-```
+{{< /code >}}
 
 Your terminal will show that your app is listening on `http://localhost:<port number>` and should launch on your web browser. You can also click on the port to run your application. 
 
@@ -101,25 +101,25 @@ PostCSS helps in transforming `tailwindcss` to styling that is relevant to your 
 
 1. Start by installing the Tailwind CSS packages using NPM:
 
-```bash
+{{< code lang="bash" >}}
 npm install tailwindcss @tailwindcss/cli --save-dev
-```
+{{< /code >}}
 
 2. Next, create an `input.css` file in the `wwwroot/css/` folder and import the following directive:
 
-```css
+{{< code lang="css" >}}
 @import "tailwindcss";
-```
+{{< /code >}}
 
 3. Go to your terminal and run the Tailwind CLI to generate the output CSS watch for changes in your project:
 
-```bash
+{{< code lang="bash" >}}
 npx tailwindcss -i wwwroot/css/input.css -o wwwroot/css/output.css --watch
-```
+{{< /code >}}
 
 4. Add the new `output.css` CSS reference to the `index.html` file in the `wwwroot/` folder:
 
-```html
+{{< code lang="html" >}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -138,11 +138,11 @@ npx tailwindcss -i wwwroot/css/input.css -o wwwroot/css/output.css --watch
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="tailwind-4-blazor-starter.styles.css" rel="stylesheet" />
 </head>
-```
+{{< /code >}}
 
 5. Remove all of the other CSS file references from the `index.html` file:
 
-```html
+{{< code lang="html" >}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -165,7 +165,7 @@ npx tailwindcss -i wwwroot/css/input.css -o wwwroot/css/output.css --watch
     <link href="tailwind-4-blazor-starter.styles.css" rel="stylesheet" />
     <!-- end -->
 </head>
-```
+{{< /code >}}
 
 6. Finally, run `dotnet watch` to start adding Tailwind classes to your Blazor project. 
 
@@ -182,27 +182,27 @@ Flowbite is an open-source UI component library that is built with Tailwind CSS 
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite --save
-```
+{{< /code >}}
 
 2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "flowbite/src/themes/default";
-```
+{{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-```css
+{{< code lang="css" >}}
 @plugin "flowbite/plugin";
-```
+{{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-```css
+{{< code lang="css" >}}
 @source "../../node_modules/flowbite";
-```
+{{< /code >}}
 
 Now you have installed Flowbite and the styles associated with it. Please follow the next steps to make the interactive JS components work with your Blazor project.
 
@@ -212,17 +212,17 @@ To use Flowbite with Blazor WebAssembly (WASM), you will need to setup the [Flow
 
 1. First, you need to create a new `flowbite-interop.js` file inside `wwwroot/` and add the following code:
 
-```javascript
+{{< code lang="javascript" >}}
 window.flowbiteInterop = {
     initializeFlowbite: function () {
         return initFlowbite();
     }
 };
-```
+{{< /code >}}
 
 2. After that, create a new `Services/FlowbiteService.cs` service inside your Blazor project:
 
-```javascript
+{{< code lang="javascript" >}}
 using Microsoft.JSInterop;
 
 namespace tailwind_4_blazor_starter.Services;
@@ -246,13 +246,13 @@ public class FlowbiteService : IFlowbiteService
         await _jsRuntime.InvokeVoidAsync("flowbiteInterop.initializeFlowbite");
     }
 }
-```
+{{< /code >}}
 
 This creates a reusable service for all of your Blazor WASM pages.
 
 3. Register the newly created service in your `Program.cs` file:
 
-```javascript
+{{< code lang="javascript" >}}
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using tailwind_4_blazor_starter;
@@ -270,21 +270,21 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddScoped<IFlowbiteService, FlowbiteService>();
 
 await builder.Build().RunAsync();
-```
+{{< /code >}}
 
 4. Import the Flowbite Javascript file and the `flowbite-interop.js` file in your `index.html` file:
 
-```html
+{{< code lang="html" >}}
   <!-- ... -->
   <script src="_framework/blazor.webassembly.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   <script src="js/flowbite-interop.js"></script>
 </body>
-```
+{{< /code >}}
 
 5. Create a new `FlowbitePage.cs` file inside the `Pages` folder:
 
-```javascript
+{{< code lang="javascript" >}}
 using Microsoft.AspNetCore.Components;
 using tailwind_4_blazor_starter.Services;
 
@@ -304,11 +304,11 @@ public abstract class FlowbitePage : ComponentBase
         await base.OnAfterRenderAsync(firstRender);
     }
 }
-```
+{{< /code >}}
 
 6. Use the inheritance directive in your pages to load the Flowbite JS components:
 
-```html
+{{< code lang="html" >}}
 @page "/"
 
 @inherits FlowbitePage
@@ -316,7 +316,7 @@ public abstract class FlowbitePage : ComponentBase
 <PageTitle>Home</PageTitle>
 
 <!-- your components -->
-```
+{{< /code >}}
 
 Congratulations! You have now integrated the interactive JS components from Flowbite with a Blazor WASM.
 
@@ -326,7 +326,7 @@ Now that you have successfully installed Blazor.NET, Tailwind CSS and Flowbite, 
 
 Copy and paste this [dropdown component example](https://flowbite.com/docs/components/dropdowns/) into your `Pages/Home.razor` file:
 
-```html
+{{< code lang="html" >}}
 @page "/"
 
 <PageTitle>Home</PageTitle>
@@ -353,7 +353,7 @@ Copy and paste this [dropdown component example](https://flowbite.com/docs/compo
       </li>
     </ul>
 </div>
-```
+{{< /code >}}
 
 Now that you've set up Flowbite with Blazor you can explore the whole collection of UI components from the [Flowbite Library](https://flowbite.com/docs/getting-started/introduction/) or use the [Flowbite Blocks](https://flowbite.com/blocks/) collection to start building websites.
 

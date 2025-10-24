@@ -24,19 +24,19 @@ Before continuing make sure that you have Tailwind CSS, Flowbite, and Tip Tap in
 
 2. Install the [Flowbite Typography](https://flowbite.com/docs/components/typography/) plugin to format the content of text inside the WYSYIWYG editor preview:
 
-```bash
+{{< code lang="bash" >}}
 npm i flowbite-typography
-```
+{{< /code >}}
 
 3. Import the `flowbite-typography` plugin inside your main Tailwind CSS file:
 
-```javascript
+{{< code lang="javascript" >}}
 @plugin "flowbite-typography";
-```
+{{< /code >}}
 
 Alternatively you can do the same but in your `tailwind.config.js` file:
 
-```javascript
+{{< code lang="javascript" >}}
 // import the tailwind.config.js file in your main CSS file if using Tailwind CSS v4
 module.exports = {
   theme: {
@@ -47,13 +47,13 @@ module.exports = {
     // ...
   ],
 }
-```
+{{< /code >}}
 
 4. Finally, install Tip Tap either via NPM or skip this step if you're using CDN:
 
-```bash
+{{< code lang="bash" >}}
 npm install @tiptap/core @tiptap/pm @tiptap/starter-kit
-```
+{{< /code >}}
 
 Now you're ready to use the examples below by copying the HTML markup and the JavaScript code.
 
@@ -653,7 +653,7 @@ window.addEventListener('load', function() {
 
 Notice: there is a <a href="https://github.com/ueberdosis/tiptap/issues/577" target="_blank" rel="nofollow noreferrer">known issue from TipTap</a> when splitting blocks (ie. using enter to create break lines) and using the bullet list item. A quickfix for `v2.6.6` when using CDN is to match the import statements:
 
-```html
+{{< code lang="html" >}}
 <script type="importmap">
     {
         "imports": {
@@ -662,11 +662,11 @@ Notice: there is a <a href="https://github.com/ueberdosis/tiptap/issues/577" tar
         }
     }
 </script>
-```
+{{< /code >}}
 
 If you're importing the package with Yarn or NPM then you need to add this in your `package.json` file:
 
-```javascript
+{{< code lang="javascript" >}}
 // when using Yarn
 "resolutions": {
     "prosemirror-model": "1.19.3"
@@ -676,7 +676,7 @@ If you're importing the package with Yarn or NPM then you need to add this in yo
 "overrides": {
     "prosemirror-model": "1.19.3"
 }
-```
+{{< /code >}}
 
 We recommend later checking the Tip Tap library for a proper update to prevent this quickfix in the future.
 
@@ -2281,7 +2281,7 @@ Learn more about how you can programmatically use the WYSIWYG editor using Javas
 
 After you have installed Tip Tap via NPM or CDN you can create a new `Editor` object:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Editor } from '@tiptap/core';
 import StarterKit from '@tiptap/starter-kit';
 
@@ -2290,13 +2290,13 @@ new Editor({
   extensions: [StarterKit],
   content: '<p>Welcome to Flowbite!</p>',
 })
-```
+{{< /code >}}
 
 Make sure that you also have an empty `div` element with the appropiate ID:
 
-```html
+{{< code lang="html" >}}
 <div id="wysiwyg"></div>
-```
+{{< /code >}}
 
 This code will automatically set up the markup needed inside of the WYSIWYG component. Please note the fact that the Tip Tap library is headless so you need to style the elements yourself, but you can copy-paste the examples from Flowbite on this page.
 
@@ -2304,7 +2304,7 @@ This code will automatically set up the markup needed inside of the WYSIWYG comp
 
 We also recommend adding custom typography classes from the [Flowbite Typography](https://flowbite.com/docs/components/typography/) package so that the content inside of the text editor will be correctly styled:
 
-```javascript
+{{< code lang="javascript" >}}
 new Editor({
   element: document.getElementById('wysiwyg'),
   extensions: [StarterKit],
@@ -2315,7 +2315,7 @@ new Editor({
         },
     }
 })
-```
+{{< /code >}}
 
 ### Extensions
 
@@ -2323,7 +2323,7 @@ Tip Tap is a modular library meaning that if you want to introduce images, video
 
 Here is one example where we add the link extension:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Editor } from '@tiptap/core';
 import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
@@ -2345,7 +2345,7 @@ const editor = new Editor({
         },
     }
 });
-```
+{{< /code >}}
 
 Links will now be available inside the WYSIWYG component. Learn more about all of the <a href="https://tiptap.dev/docs/editor/extensions/overview" target="_blank" rel="nofollow">extensions API</a>.
 
@@ -2353,22 +2353,22 @@ Links will now be available inside the WYSIWYG component. Learn more about all o
 
 You can easily call the methods from the `Editor` object to set text styles, links, images, and more. Here is one example where based upon a click event on a button you will be prompted with the URL of the link and it will add it to the currently selected text:
 
-```javascript
+{{< code lang="javascript" >}}
 // set up custom event listeners for the buttons
 document.getElementById('toggleLinkButton').addEventListener('click', () => {
     const url = window.prompt('Enter image URL:', 'https://flowbite.com');
     editor.chain().focus().toggleLink({ href: url }).run();
 });
-```
+{{< /code >}}
 
 And here's another example where you can unset a link:
 
-```javascript
+{{< code lang="javascript" >}}
 // unset the links based on a button click
 document.getElementById('removeLinkButton').addEventListener('click', () => {
     editor.chain().focus().unsetLink().run()
 });
-```
+{{< /code >}}
 
 Examples from this page have functional elements so you can check the JavaScript tab for the source code.
 

@@ -26,16 +26,16 @@ Before getting started you need to have both [Elixir](https://elixir-lang.org/),
 
 If you're using macOS you can use Homebrew to install Elixir in your terminal:
 
-```bash
+{{< code lang="bash" >}}
 brew install elixir
-```
+{{< /code >}}
 
 Alternatively, if you're on a Windows device you can install Elixir using Scoop:
 
-```bash
+{{< code lang="bash" >}}
 scoop install erlang
 scoop install elixir
-```
+{{< /code >}}
 
 You can run `elixir -v` in your terminal to confirm that Elixir has been successfully installed.
 
@@ -45,9 +45,9 @@ Read more about the [Elixir installation guide](https://elixir-lang.org/install.
 
 Make sure that the Hex package manager is also available. Install it by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 mix local.hex
-```
+{{< /code >}}
 
 If you already had Hex locally installed this command will upgrade it to the latest version.
 
@@ -57,27 +57,27 @@ To install the open-source PostgreSQL (optional) relational database server we r
 
 If you have Homebrew available you can install PostgreSQL via the terminal:
 
-```bash
+{{< code lang="bash" >}}
 brew install postgresql
-```
+{{< /code >}}
 
 Alternatively, you can also use Scoop if you're running on a Windows device:
 
-```bash
+{{< code lang="bash" >}}
 scoop install postgresql
-```
+{{< /code >}}
 
 After you've installed PostgreSQL you need to start the server:
 
-```bash
+{{< code lang="bash" >}}
 brew services start postgresql
-```
+{{< /code >}}
 
 Additionally, you can connect via the terminal using:
 
-```bash
+{{< code lang="bash" >}}
 psql postgres
-```
+{{< /code >}}
 
 Now that you have PostgreSQL installed we can proceed with the other requirements.
 
@@ -85,9 +85,9 @@ Now that you have PostgreSQL installed we can proceed with the other requirement
 
 Now that you have both Elixir and Hex installed you need to set up the Phoenix application generator by running the following command in your terminal:
 
-```bash
+{{< code lang="bash" >}}
 mix archive.install hex phx_new
-```
+{{< /code >}}
 
 Make sure that you press "Yes" to all prompts.
 
@@ -100,51 +100,51 @@ Using the application generator, you can create a new Phoenix project and make s
 
 Use this command if you have Postgresql installed:
 
-```bash
+{{< code lang="bash" >}}
 # requires Postgres installed on your machine
 mix phx.new my_app
 cd my_app/
-```
+{{< /code >}}
 
 Alternatively, use the command below to create a Phoenix project without database configurations or generate a project configured with SQLite:
 
-```bash
+{{< code lang="bash" >}}
 # Create Phoenix project without database
 mix phx.new my_app --no-ecto
 cd my_app/
-```
+{{< /code >}}
 
 Or use this command to set up a database with SQLite preconfigured:
 
-```bash
+{{< code lang="bash" >}}
 # Create Phoenix project with SQLite
 mix phx.new my_app --database sqlite3
 cd my_app/
-```
+{{< /code >}}
 
 This command will create a fresh installation of a Phoenix application with a folder structure that already includes examples of the MVC pattern including controllers, view templates, and data models.
 
 2. Run the command below to setup your generated Phoenix project:
 
-```bash
+{{< code lang="bash" >}}
 mix setup
-```
+{{< /code >}}
 
 If you used a command that generates a Phoenix project with database configurations, make sure that you have a `postgres` SUPERUSER and a `postgres` database. You can create them first by running the following SQL command while logged into PostgreSQL via the terminal by running `psql postgres`:
 
-```bash
+{{< code lang="bash" >}}
 CREATE USER postgres SUPERUSER;
 CREATE DATABASE postgres WITH OWNER postgres;
 exit
-```
+{{< /code >}}
 
 The `mix ecto.setup` will create a new database for your Phoenix application.
 
 3. Create a local server by running the following command in your terminal:
 
-```bash
+{{< code lang="bash" >}}
 mix phx.server
-```
+{{< /code >}}
 
 This will make the Phoenix project available via the browser on `http://localhost:4000`.
 
@@ -156,18 +156,18 @@ If you are installing [Phoenix version 1.7](https://phoenixframework.org/blog/ph
 
 1. Install the Tailwind plugin inside the `mix.exs` file:
 
-```javascript
+{{< code lang="javascript" >}}
 defp deps do
 [
     # other dependencies
     {:tailwind, "~> 0.1", runtime: Mix.env() == :dev}
 ]
 end
-```
+{{< /code >}}
 
 2. Configure the input and output files inside the `config.exs` file:
 
-```javascript
+{{< code lang="javascript" >}}
 config :tailwind, version: "3.2.7", default: [
   args: ~w(
     --config=tailwind.config.js
@@ -176,54 +176,54 @@ config :tailwind, version: "3.2.7", default: [
   ),
   cd: Path.expand("../assets", __DIR__)
 ]
-```
+{{< /code >}}
 
 You can also set the version of Tailwind CSS that you want to download.
 
 3. Integrate the compilation of Tailwind CSS on deployment inside `mix.esx`:
 
-```javascript
+{{< code lang="javascript" >}}
 defp aliases do
     [
       # other scripts
       "assets.deploy": ["tailwind default --minify", "esbuild default --minify", "phx.digest"],
     ]
 end
-```
+{{< /code >}}
 
 4. Inside your `dev.exs` file set up a watcher to compile Tailwind CSS:
 
-```javascript
+{{< code lang="javascript" >}}
 watchers: [
     # other watchers
     tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
 ]
-```
+{{< /code >}}
 
 5. Install the official Tailwind CLI and generate a `tailwind.config.js` file:
 
-```bash
+{{< code lang="bash" >}}
 mix tailwind.install
-```
+{{< /code >}}
 
 You may have to run `mix deps.get` if the command doesn't install Tailwind CSS right away.
 
 6. Remove the default CSS styles and import the Tailwind directives inside the `./assets/css/app.css` file:
 
-```css
+{{< code lang="css" >}}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-```
+{{< /code >}}
 
 7. Restart the server using `mix phx.server` and add some Tailwind CSS classes inside the `index.html.heex` file:
 
-```html
+{{< code lang="html" >}}
 <section class="bg-neutral-secondary">
   <h1 class="text-4xl font-medium text-fg-brand"><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
   <p>Peace of mind from prototype to production</p>
 </section>
-```
+{{< /code >}}
 
 You can now use a collection of open-source UI components based on Tailwind CSS from the [Flowbite Library](https://flowbite.com/docs/getting-started/introduction/) and website sections from the [Flowbite Blocks](https://flowbite.com/blocks/) collection including CRUD layouts, marketing sections, blog layouts, and more.
 
@@ -236,13 +236,13 @@ Now that you have installed both Phoenix and Tailwind CSS we can proceed by inst
 
 1. Create a `package.json` file using `npm init` inside the `./assets/` folder and then install the Flowbite package using NPM:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite
-```
+{{< /code >}}
 
 2. Require the Flowbite plugin inside `tailwind.config.js`:
 
-```javascript
+{{< code lang="javascript" >}}
 module.exports = {
 
     plugins: [
@@ -250,11 +250,11 @@ module.exports = {
     ]
 
 }
-```
+{{< /code >}}
 
 3. Set up the template paths for the Flowbite JS file:
 
-```javascript
+{{< code lang="javascript" >}}
 module.exports = {
 
     content: [
@@ -262,7 +262,7 @@ module.exports = {
     ]
 
 }
-```
+{{< /code >}}
 
 4. Finally, import the Flowbite JS package inside the default `./assets/js/app.js` file.
    
@@ -271,21 +271,21 @@ Because of how Phoenix LiveView works, you will need to import a version of Flow
 This will enable the interactive elements like dropdowns, modals, and navbars to work by hooking the event listeners and actions to the data attributes whenever a new LiveView page is loaded, after a `navigate`, `patch` or `redirect`. To do this add the line below to your `app.js` file:
 
 
-```javascript
+{{< code lang="javascript" >}}
 // ...
 
 import "flowbite/dist/flowbite.phoenix.js";
 
 // other Phoenix packages
-```
+{{< /code >}}
 ### Include via CDN
 
 Alternatively to all of the above you can also include the JavaScript via CDN:
 
-```html
+{{< code lang="html" >}}
 // include via CDN
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.phoenix.min.js"></script>
-```
+{{< /code >}}
 
 This will work for both LiveViews and regular Views.
 
@@ -301,7 +301,7 @@ In this section, you will learn how to set up a landing page using the [Flowbite
 
 1. Go to the `root.html.heex` file and change the default `<header>` tag with a [Flowbite Header](https://flowbite.com/blocks/marketing/header/) component:
 
-```html
+{{< code lang="html" >}}
 <header>
     <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
@@ -343,13 +343,13 @@ In this section, you will learn how to set up a landing page using the [Flowbite
         </div>
     </nav>
 </header>
-```
+{{< /code >}}
 
 If you check out your browser you'll see the component at the top part of your page with an already responsive hamburger menu on mobile devices.
 
 2. Let's find a [hero section](https://flowbite.com/blocks/marketing/hero/) from the Flowbite Blocks collection and add it inside the `index.html.heex` file:
 
-```html
+{{< code lang="html" >}}
 <section class="bg-white dark:bg-gray-900">
     <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-12">
         <a href="#" class="inline-flex items-center justify-between px-1 py-1 pr-4 text-sm text-gray-600 bg-gray-100 rounded-full mb-7 dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
@@ -403,13 +403,13 @@ If you check out your browser you'll see the component at the top part of your p
         </div>
     </div>
 </section>
-```
+{{< /code >}}
 
 Remove the default `container` class from the `app.html.heex` file to enable the built-in containers.
 
 3. Let's add one of the [content sections](https://flowbite.com/blocks/marketing/content/) right after the hero section:
 
-```html
+{{< code lang="html" >}}
 <section class="bg-white dark:bg-gray-900">
     <div class="items-center max-w-screen-xl gap-16 px-4 py-8 mx-auto lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div class="text-gray-500 sm:text-lg dark:text-gray-400">
@@ -423,11 +423,11 @@ Remove the default `container` class from the `app.html.heex` file to enable the
         </div>
     </div>
 </section>
-```
+{{< /code >}}
 
 4. Furthermore, we can copy one of the [feature sections](https://flowbite.com/blocks/marketing/feature/) and add it next in the line:
 
-```html
+{{< code lang="html" >}}
 <section class="bg-white dark:bg-gray-900">
   <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-16 lg:px-6">
       <div class="max-w-screen-md mb-8 lg:mb-16">
@@ -480,11 +480,11 @@ Remove the default `container` class from the `app.html.heex` file to enable the
       </div>
   </div>
 </section>
-```
+{{< /code >}}
 
 5. Before the end of the page we probably want to add a [CTA section](https://flowbite.com/blocks/marketing/cta/):
 
-```html
+{{< code lang="html" >}}
 <section class="bg-white dark:bg-gray-900">
     <div class="items-center max-w-screen-xl gap-8 px-4 py-8 mx-auto xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
         <img class="w-full dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg" alt="dashboard image">
@@ -499,11 +499,11 @@ Remove the default `container` class from the `app.html.heex` file to enable the
         </div>
     </div>
 </section>
-```
+{{< /code >}}
 
 6. Finally, we can finish the landing page by adding one of the [footer components](https://flowbite.com/blocks/marketing/footer/) from Flowbite:
 
-```html
+{{< code lang="html" >}}
 <footer class="p-4 bg-white sm:p-6 dark:bg-gray-800">
     <div class="max-w-screen-xl mx-auto">
         <div class="md:flex md:justify-between">
@@ -573,7 +573,7 @@ Remove the default `container` class from the `app.html.heex` file to enable the
         </div>
     </div>
 </footer>
-```
+{{< /code >}}
 
 You can check out the full collection of website sections by browsing the [Flowbite Blocks](https://flowbite.com/blocks/) collection which includes not only marketing sections, but also application UI layouts, CRUD pages, blog templates, and more.
 
@@ -585,19 +585,19 @@ Since the release of version `2.4.0` of Flowbite the Datepicker component is par
 
 To use the <a href="{{< ref "plugins/datepicker" >}}">Flowbite Datepicker</a> plugin using JavaScript you will need to include it into your project via NPM:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite-datepicker --save
-```
+{{< /code >}}
 
 After you've installed the NPM library, you will need to import the `Datepicker` module in your `app.js` file:
 
-```javascript
+{{< code lang="javascript" >}}
 import Datepicker from 'flowbite-datepicker/Datepicker';
-```
+{{< /code >}}
 
 Initialize a new element using the `Datepicker` constructor in `app.js` file and optionally add custom options based on your needs:
 
-```javascript
+{{< code lang="javascript" >}}
 Hooks = {}
 
 Hooks.Datepicker = {
@@ -611,18 +611,18 @@ Hooks.Datepicker = {
         this.mounted();
     }
 }
-```
+{{< /code >}}
 
 Add hooks to your livesocket:
-```javascript
+{{< code lang="javascript" >}}
 let liveSocket = new LiveSocket("/live", Socket, { params: { _csrf_token: csrfToken }, hooks: Hooks })
-```
+{{< /code >}}
 
 Then to your input field add the `Datepicker` `phx-hook` to initialize the datepicker:
 
-```html
+{{< code lang="html" >}}
   <input phx-hook="Datepicker" id="myInput" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
-```
+{{< /code >}}
 
 ## Phoenix starter project
 

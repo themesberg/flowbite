@@ -31,7 +31,7 @@ Each component page on the documentation has a section called "JavaScript Behavi
 
 Here is an extensive example on how you can work with the Modal component:
 
-```javascript
+{{< code lang="javascript" >}}
 // set the modal menu element
 const $targetEl = document.getElementById('modalEl');
 
@@ -51,11 +51,11 @@ const options = {
       console.log('modal has been toggled');
   }
 };
-```
+{{< /code >}}
 
 Create a new Modal object based on the options above.
 
-```javascript
+{{< code lang="javascript" >}}
 import { Modal } from 'flowbite';
 
 /*
@@ -63,38 +63,38 @@ import { Modal } from 'flowbite';
 * options: optional
 */
 const modal = new Modal($targetEl, options);
-```
+{{< /code >}}
 
 Use the `show` and `hide` methods to show and hide the modal component directly from JavaScript.
 
-```javascript
+{{< code lang="javascript" >}}
 // show the modal
 modal.show();
 
 // hide the modal
 modal.hide();
-```
+{{< /code >}}
 
 Use the `toggle` method to toggle the visibility of the modal.
 
-```javascript
+{{< code lang="javascript" >}}
 // toggle the modal
 modal.toggle();
-```
+{{< /code >}}
 
 Use the `isHidden` or `isVisible` method to check if the modal is visible or not.
 
-```javascript
+{{< code lang="javascript" >}}
 // true if hidden
 modal.isHidden();
 
 // true if visible
 modal.isVisible();
-```
+{{< /code >}}
 
 Please take into consideration that for this example you also need to have the appropriate HTML markup available on the page where the JS is loaded:
 
-```html
+{{< code lang="html" >}}
 
 <!-- Main modal -->
 <div id="modalEl" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -128,7 +128,7 @@ Please take into consideration that for this example you also need to have the a
         </div>
     </div>
 </div>
-```
+{{< /code >}}
 
 Each component that requires JavaScript is well documented on their respective pages under the "JavaScript Behaviour" section as described above.
 
@@ -194,14 +194,14 @@ This is just one example that shows you how Flowbite leverages the data attribut
 
 If you want to programmatically call the initialisation functions when using data attributes (for example, you might want to call it after the DOM re-rendered) then you can use the `initFlowbite()` function or the separate component initialisation functions such as `initModals()` or `initDropdowns()` wherever you want in your JS code:
 
-```javascript
+{{< code lang="javascript" >}}
 <script type="application/javascript">
 import { initFlowbite } from 'flowbite'
 
 // initialize components based on data attribute selectors
 initFlowbite();
 </script>
-```
+{{< /code >}}
 
 Basically, the `initFlowbite()` function parses your DOM for all of the data attributes and creates new instances of the appropriate components like modals or dropdowns and sets up the behaviour of the examples from the Flowbite Docs - applying the functionality of showing and hiding the components such as hiding the modal when clicking on the "X" (close) button.
 
@@ -211,11 +211,11 @@ Since version `2.0.0`, the Flowbite JS API also provides a way to globally acces
 
 After the window has loaded and the UI components from Flowbite have been initialised (either via CDN or the `initFlowbite()` function) you can use the following global object and methods to get access to the object instances:
 
-```javascript
+{{< code lang="javascript" >}}
 window.addEventListener('load', function() {
     const modal = FlowbiteInstances.getInstance('Modal', 'modal-id');
 })
-```
+{{< /code >}}
 
 As you can see, the `FlowbiteInstances` global object has two main parameters:
 
@@ -226,48 +226,48 @@ If you provide the wrong category or ID then the console will give you a warning
 
 If you have provided the correct category and element ID then you can now access the object as if you've created it yourself and work with it programmatically via JavaScript:
 
-```javascript
+{{< code lang="javascript" >}}
 // show the modal
 modal.show();
 
 // hide the modal
 modal.hide();
-```
+{{< /code >}}
 
 You can even remove the instance from the instance manager:
 
-```javascript
+{{< code lang="javascript" >}}
 // remove the instance object from the global FlowbiteInstances manager
 modal.removeInstance();
-```
+{{< /code >}}
 
 You can also both destroy and remove the instance at the same time:
 
-```javascript
+{{< code lang="javascript" >}}
 modal.destroyAndRemoveInstance();
-```
+{{< /code >}}
 
 This in turn will basically remove the object instance from the global `flowbiteStorage` instance manager - you might want to do this if you want to reset certain elements from the DOM in single page applications.
 
 Another example if you want to show or hide a tooltip that was created via data attributes would be:
 
-```javascript
+{{< code lang="javascript" >}}
 const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-id');
-```
+{{< /code >}}
 
 And now you can show or hide the tooltip programmatically:
 
-```javascript
+{{< code lang="javascript" >}}
 // show the tooltip
 tooltip.show();
 
 // hide the tooltip
 tooltip.hide();
-```
+{{< /code >}}
 
 You can call the `destroy()` and `init()` methods to re-calculate the positioning of the tooltip:
 
-```javascript
+{{< code lang="javascript" >}}
 // destroy the tooltip event listeners
 tooltip.destroy();
 
@@ -276,27 +276,27 @@ tooltip.init();
 
 // show the tooltip
 tooltip.show();
-```
+{{< /code >}}
 
 A component is added to the `flowbiteStorage` global instance manager automatically when it's created via the `constructor` method of the object class, regardless of which component is being used from Flowbite.
 
 Finally, you can also access all of the instances by calling the following method:
 
-```javascript
+{{< code lang="javascript" >}}
 FlowbiteInstances.getAllInstances();
-```
+{{< /code >}}
 
 Alternatively, you can also get all of the instances from one component pool such as from the modals:
 
-```javascript
+{{< code lang="javascript" >}}
 FlowbiteInstances.getInstances('Modal');
-```
+{{< /code >}}
 
 ## Instance options
 
 When creating a new object you can also use the last parameter to set the `instanceOptions` object through which you can set custom options for the Instance manager:
 
-```javascript
+{{< code lang="javascript" >}}
 import type { InstanceOptions } from 'flowbite';
 
 const instanceOptions: InstanceOptions = {
@@ -305,7 +305,7 @@ const instanceOptions: InstanceOptions = {
 };
 
 const modal = new Modal($targetEl, options, instanceOptions);
-```
+{{< /code >}}
 
 In this example, the ID of the instance that you can get it from the `FlowbiteInstances` global instance manager object will be `my-unique-id` instead of the `$targetEl` unique ID.
 

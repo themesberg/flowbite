@@ -1111,7 +1111,7 @@ Check out the following JavaScript example to learn how to initialize, set the o
 
 First of all, create a new JavaScript element object for the first parameter of the Modal object and another options object to set the placement, backdrop styles, and callback functions.
 
-```javascript
+{{< code lang="javascript" >}}
 // set the modal menu element
 const $targetEl = document.getElementById('modalEl');
 
@@ -1138,11 +1138,11 @@ const instanceOptions = {
   id: 'modalEl',
   override: true
 };
-```
+{{< /code >}}
 
 Create a new Modal object based on the options above.
 
-```javascript
+{{< code lang="javascript" >}}
 import { Modal } from 'flowbite';
 
 /*
@@ -1150,40 +1150,40 @@ import { Modal } from 'flowbite';
  * options: optional
  */
 const modal = new Modal($targetEl, options, instanceOptions);
-```
+{{< /code >}}
 
 Use the `show` and `hide` methods to show and hide the modal component directly from JavaScript.
 
-```javascript
+{{< code lang="javascript" >}}
 // show the modal
 modal.show();
 
 // hide the modal
 modal.hide();
-```
+{{< /code >}}
 
 Use the `toggle` method to toggle the visibility of the modal.
 
-```javascript
+{{< code lang="javascript" >}}
 // toggle the modal
 modal.toggle();
-```
+{{< /code >}}
 
 Use the `isHidden` or `isVisible` method to check if the modal is visible or not.
 
-```javascript
+{{< code lang="javascript" >}}
 // true if hidden
 modal.isHidden();
 
 // true if visible
 modal.isVisible();
-```
+{{< /code >}}
 
 ### HTML Markup
 
 Use the following HTML code for the JavaScript example above.
 
-```html
+{{< code lang="html" >}}
 <div
     id="modalEl"
     tabindex="-1"
@@ -1265,7 +1265,7 @@ Use the following HTML code for the JavaScript example above.
         </div>
     </div>
 </div>
-```
+{{< /code >}}
 
 ### TypeScript
 
@@ -1273,7 +1273,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Modal } from 'flowbite';
 import type { ModalOptions, ModalInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';
@@ -1306,4 +1306,4 @@ const instanceOptions: InstanceOptions = {
 const modal: ModalInterface = new Modal($modalElement, modalOptions, instanceOptions);
 
 modal.show();
-```
+{{< /code >}}

@@ -67,33 +67,33 @@ Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite
-```
+{{< /code >}}
 
 2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "flowbite/src/themes/default";
-```
+{{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-```css
+{{< code lang="css" >}}
 @plugin "flowbite/plugin";
-```
+{{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-```css
+{{< code lang="css" >}}
 @source "../node_modules/flowbite";
-```
+{{< /code >}}
 
 5. Include the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
 
-```html
+{{< code lang="html" >}}
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-```
+{{< /code >}}
 
 Learn more about the Flowbite JavaScript API and functionalities in the [JavaScript section](https://flowbite.com/docs/getting-started/javascript/).
 
@@ -105,15 +105,15 @@ The quickest way to get started working with Flowbite is to include the CSS and 
 
 Require the following minified stylesheet inside the `head` tag:
 
-```html
+{{< code lang="html" >}}
 <link href="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.css" rel="stylesheet" />
-```
+{{< /code >}}
 
 And include the following JavaScript file before the end of the `body` element:
 
-```html
+{{< code lang="html" >}}
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
-```
+{{< /code >}}
 
 Please remember that the best way to work with Tailwind CSS and Flowbite is by purging the CSS classes.
 
@@ -123,9 +123,9 @@ One of the most popular way of using Flowbite is to include the bundled Javascri
 
 You can directly import the main JavaScript file inside your bundled `app-bundle.js` file like this:
 
-```javascript
+{{< code lang="javascript" >}}
 import 'flowbite';
-```
+{{< /code >}}
 
 This file has access to all of the components and it automatically applies event listeners to the data attributes.
 
@@ -139,7 +139,7 @@ For example, to set up a modal component all you need to do is use `data-modal-t
 
 You can also use the init functions to set up the event listeners yourself. Here's an example how you can do it with Vue or Nuxt:
 
-```javascript
+{{< code lang="javascript" >}}
 <script setup>
 import { onMounted } from 'vue'
 import { initFlowbite } from 'flowbite'
@@ -153,7 +153,7 @@ onMounted(() => {
 <template>
     // Modal HTML markup with data attributes from Flowbite
 </template>
-```
+{{< /code >}}
 
 The `initFlowbite` function sets up all of the init functions for dropdowns, modals, navbars, tooltips and so on to hook onto the data attributes. Alternatively, you can also initialise each component category class separately with `initDropdowns` or `initModals`.
 
@@ -165,7 +165,7 @@ Flowbite also offers an API for using the components programmatically and it sup
 
 Here's an example how you can import and create a new Modal component inside JavaScript:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Modal } from 'flowbite'
 
 const $modalElement = document.querySelector('#modalEl');
@@ -188,7 +188,7 @@ const modalOptions = {
 const modal = new Modal($modalElement, modalOptions);
 
 modal.show();
-```
+{{< /code >}}
 
 Check out the JavaScript behaviour section of each component's page to learn how you can use this.
 
@@ -198,13 +198,13 @@ Flowbite supports type declarations for the interactive UI components including 
 
 Additionally to our code above, we will now import some relevant types from the Flowbite package, namely the `ModalOptions` and `ModalInterface`:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Modal } from 'flowbite'
 import type { ModalOptions, ModalInterface } from 'flowbite'
 import type { InstanceOptions } from 'flowbite';
 
 // other code
-```
+{{< /code >}}
 
 Learn more about Flowbite and TypeScript in the [quickstart guide](https://flowbite.com/docs/getting-started/typescript/).
 
@@ -244,38 +244,38 @@ If you want to upgrade v3 from Tailwind CSS with Flowbite you have to follow the
 
 1. Install the next versions of Tailwind CSS and Flowbite using NPM:
 
-```bash
+{{< code lang="bash" >}}
 npm install tailwindcss @tailwindcss/postcss postcss
-```
+{{< /code >}}
 
 2. Add the PostCSS plugin inside the `postcss.config.js` file:
 
-```bash
+{{< code lang="bash" >}}
 export default {
   plugins: {
     '@tailwindcss/postcss': {},
   },
 };
-```
+{{< /code >}}
 
 3. Remove the old directives in your main CSS file and import Tailwind:
 
-```bash
+{{< code lang="bash" >}}
 @import "tailwindcss";
-```
+{{< /code >}}
 
 4. Use the `@config` directive to import the old configuration file from your project:
 
-```bash
+{{< code lang="bash" >}}
 /* add this to copy the configuration settings from your project */
 @config "../tailwind.config.js";
-```
+{{< /code >}}
 
 5. Compile the source CSS file using NPX:
 
-```bash
+{{< code lang="bash" >}}
 npx @tailwindcss/cli -i input.css -o output.css
-```
+{{< /code >}}
 
 Now you should be good to go! Check the <a href="https://tailwindcss.com/docs/upgrade-guide#changes-from-v3" rel="nofollow" target="_blank">deprecated changes from v3</a> to learn more about the new features.
 
@@ -291,11 +291,11 @@ Flowbite works with the 2.x version of Tailwind CSS.
 
 Flowbite also works with WindiCSS by including the plugin inside the `windi.config.js` file:
 
-```bash
+{{< code lang="bash" >}}
 plugins: [
     require('flowbite/plugin-windicss')
 ],
-```
+{{< /code >}}
 
 <div class="mt-8 -mb-5">
   {{< requires_react >}}

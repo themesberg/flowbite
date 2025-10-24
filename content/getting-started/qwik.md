@@ -26,17 +26,17 @@ Before getting started make sure that you have [Node.js v16.8](https://nodejs.or
 
 1. Create a new project by running the following command in your terminal:
 
-```bash
+{{< code lang="bash" >}}
 npm create qwik@latest
-```
+{{< /code >}}
 
 The custom CLI (command line interface) from Qwik will prompt you with some questions on how you want your project to be configured - follow the steps until you have a fully working directory.
 
 2. Start a local development server by running:
 
-```bash
+{{< code lang="bash" >}}
 npm run start
-```
+{{< /code >}}
 
 You should now be able to access a boilerplate Qwik project on `http://localhost:5173/` from your local browser and start developing with the framework.
 
@@ -46,9 +46,9 @@ Tailwind CSS is a popular utility-first CSS framework that allows you to quickly
 
 The easiest way to set up Tailwind CSS within your Qwik project is to run a starter script command:
 
-```bash
+{{< code lang="bash" >}}
 npm run qwik add tailwind
-```
+{{< /code >}}
 
 This command will automatically set up the following:
 
@@ -65,31 +65,31 @@ Follow the next steps to install and set up Flowbite in your Qwik project:
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite --save
-```
+{{< /code >}}
 
 2. Import the default theme variables from Flowbite inside your main `global.css` CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "flowbite/src/themes/default";
-```
+{{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-```css
+{{< code lang="css" >}}
 @plugin "flowbite/plugin";
-```
+{{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-```css
+{{< code lang="css" >}}
 @source "../node_modules/flowbite";
-```
+{{< /code >}}
 
 5. Finally, in the `src/root.tsx` file import the Flowbite JavaScript file inside your Qwik project to start using interactive components that require JavaScript such as the navbars, dropdowns, drawers, and more:
 
-```javascript
+{{< code lang="javascript" >}}
 import { component$, useVisibleTask$ } from "@builder.io/qwik";
 import {
   QwikCityProvider,
@@ -137,7 +137,7 @@ export default component$(() => {
   );
 });
 
-```
+{{< /code >}}
 
 Congratulations! Now you can start using all of the UI components from the Flowbite Library inside your Qwik project together with Tailwind CSS and build websites and user interfaces even faster.
 
@@ -147,7 +147,7 @@ By installing and configuring Flowbite in your Qwik project you can now directly
 
 Check out one of the [navbar components](https://flowbite.com/docs/components/navbar/) from Flowbite and add it inside your Qwik project for navigation:
 
-```javascript
+{{< code lang="javascript" >}}
 export default header$(() => {
   return (
   <nav class="bg-white border-gray-200 dark:bg-gray-900">
@@ -185,11 +185,11 @@ export default header$(() => {
   </nav>
   );
 });
-```
+{{< /code >}}
 
 Another example is the [modal component](https://flowbite.com/docs/components/modal/) which you could use for a seamless authentication experience:
 
-```javascript
+{{< code lang="javascript" >}}
 export default modal$(() => {
   return (
     <div>
@@ -229,11 +229,11 @@ export default modal$(() => {
     </div>
   );
 });
-```
+{{< /code >}}
 
 Lastly, you can also copy-paste whole [blocks of code](https://flowbite.com/blocks/marketing/hero/) such as hero, footer, header, and feature sections:
 
-```javascript
+{{< code lang="javascript" >}}
 export default hero$(() => {
   return (
     <section class="bg-white dark:bg-gray-900">
@@ -291,7 +291,7 @@ export default hero$(() => {
     </section>
   );
 });
-```
+{{< /code >}}
 
 Here's a full list of UI components, sections, and templates resources you can leverage from Flowbite:
 

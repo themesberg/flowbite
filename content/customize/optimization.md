@@ -21,11 +21,11 @@ Since Tailwind v4 you no longer need to set the content paths for your templatin
 
 However, you might want to set custom sources for where the engine should look for utility classes.
 
-```css
+{{< code lang="css" >}}
 @import "tailwindcss";
 
 @source "../node_modules/flowbite";
-```
+{{< /code >}}
 
 ## Build for production
 
@@ -33,8 +33,8 @@ When building your CSS, make sure that you set `NODE_ENV` to `production`.
 
 The command that you have to run in your terminal for production build would be:
 
-```javascript
+{{< code lang="javascript" >}}
 NODE_ENV=production npx @tailwindcss/cli -i input.css -o output.css
-```
+{{< /code >}}
 
 This command will create an `output.css` file that you will include in your templating files.

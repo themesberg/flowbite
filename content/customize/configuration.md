@@ -21,7 +21,7 @@ You will probably want to be able to add your own colors, fonts, sizings, shadow
 
 Here's an example of a simple configuration where we import plugins, set the source files, customize variables for colors and fonts, and set the dark mode strategy to use class name:
 
-```css
+{{< code lang="css" >}}
 @import "tailwindcss";
 
 @plugin "flowbite/plugin";
@@ -45,7 +45,7 @@ Here's an example of a simple configuration where we import plugins, set the sou
     --font-body: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-mono: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace';
 }
-```
+{{< /code >}}
 
 Using this example is a good starting point for any project created using Flowbite and Tailwind CSS.
 
@@ -53,7 +53,7 @@ Using this example is a good starting point for any project created using Flowbi
 
 You can customize colors, fonts, spacings, and other styles using native variables in your main CSS file.
 
-```css
+{{< code lang="css" >}}
 /* input.css file */
 @import "tailwindcss";
 
@@ -82,7 +82,7 @@ You can customize colors, fonts, spacings, and other styles using native variabl
     --breakpoint-2xl: 100rem;
     --breakpoint-3xl: 120rem;
 }
-```
+{{< /code >}}
 
 The example above adds a new color palette, fonts, a custom spacing variable and new media breakpoints.
 
@@ -92,12 +92,12 @@ All of these styles will be propagated to the utility classes provided by Tailwi
 
 You can add custom utilities by using the `@utility` directive in your CSS file.
 
-```css
+{{< code lang="css" >}}
 @utility custom-url {
   color: --color-primary-600;
   text-decoration: underline;
 }
-```
+{{< /code >}}
 
 Now you can use the `custom-url` class to add an underline and primary color to the target element.
 
@@ -105,7 +105,7 @@ Now you can use the `custom-url` class to add an underline and primary color to 
 
 Use the `@variant` direct in native CSS to target states such as hover, focus, dark mode, and more.
 
-```css
+{{< code lang="css" >}}
 .element {
   text-decoration: underline;
 
@@ -113,18 +113,18 @@ Use the `@variant` direct in native CSS to target states such as hover, focus, d
     text-decoration: no-underline;
   }
 }
-```
+{{< /code >}}
 
 ## Import plugins
 
 You can import third party plugins using the `@plugin` directive in your CSS file.
 
-```javascript
+{{< code lang="javascript" >}}
 @import "tailwindcss";
 
 @plugin "flowbite/plugin";
 @plugin "flowbite-typography";
-```
+{{< /code >}}
 
 ## Source
 
@@ -132,11 +132,11 @@ Tailwind CSS automatically detects source files, but ignores a few folders such 
 
 Here's how you can explicictly set the source files in your main CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "tailwindcss";
 
 @source "../node_modules/flowbite";
-```
+{{< /code >}}
 
 This will scan the Flowbite folder inside your installed packages for Tailwind classes.
 
@@ -144,11 +144,11 @@ This will scan the Flowbite folder inside your installed packages for Tailwind c
 
 Use the `@config` directive to import old `tailwind.config.js` files to copy your options.
 
-```css
+{{< code lang="css" >}}
 @import "tailwindcss";
 
 @config "../tailwind.config.js";
-```
+{{< /code >}}
 
 ## Prefixes
 
@@ -156,13 +156,13 @@ You can use the `prefix` object to set a prefix for all of the classes generated
 
 For example, you can add the `fb-` prefix like so:
 
-```css
+{{< code lang="css" >}}
 @import "tailwindcss" prefix(fb);
-```
+{{< /code >}}
 
 Doing so it will add the prefix to all of the classes.
 
-```css
+{{< code lang="css" >}}
 .fb-text-left {
   text-align: left;
 }
@@ -173,7 +173,7 @@ Doing so it will add the prefix to all of the classes.
   text-align: right;
 }
 /* etc. */
-```
+{{< /code >}}
 
 ## Reference
 

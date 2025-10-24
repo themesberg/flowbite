@@ -26,9 +26,9 @@ Make sure that you have both [Node.js](https://nodejs.org) and [Python](https://
 
 After that, you'll need to install Django on your local computer by following the official [installation guide](https://docs.djangoproject.com/en/4.0/intro/install/) or by running the following command in the terminal if you have pip available in your Python environment:
 
-```bash
+{{< code lang="bash" >}}
 python -m pip install Django
-```
+{{< /code >}}
 
 Now that you have all the required technologies installed you can start by creating a new Django project.
 
@@ -36,14 +36,14 @@ Now that you have all the required technologies installed you can start by creat
 
 1. Run the following command in the terminal to create a new Django project with the name `flowbiteapp`:
 
-```bash
+{{< code lang="bash" >}}
 django-admin startproject flowbiteapp
 cd flowbiteapp/
-```
+{{< /code >}}
 
 2. Create a new `templates/` directory inside the project folder and then update the existing `settings.py` file:
 
-```bash
+{{< code lang="bash" >}}
 TEMPLATES = [
     {
         ...
@@ -51,17 +51,17 @@ TEMPLATES = [
         ...
     },
 ]
-```
+{{< /code >}}
 
 3. Installed `django-compressor` by running the following command in your terminal:
 
-```bash
+{{< code lang="bash" >}}
 python -m pip install django-compressor
-```
+{{< /code >}}
 
 4. Add `compressor` and `flowbiteapp` (or the name of your app) to the installed apps inside the `settings.py` file:
 
-```bash
+{{< code lang="bash" >}}
 # config/settings.py
 
 INSTALLED_APPS = [
@@ -74,51 +74,51 @@ INSTALLED_APPS = [
     'compressor',  # new
     'flowbiteapp',  # new
 ]
-```
+{{< /code >}}
 
 5. Configure the `compressor` inside the `settings.py` file:
 
-```bash
+{{< code lang="bash" >}}
 COMPRESS_ROOT = BASE_DIR / 'static'
 
 COMPRESS_ENABLED = True
 
 STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
-```
+{{< /code >}}
 
 6. Create two new folders and an `input.css` file inside the `static/src/` folder:
 
-```bash
+{{< code lang="bash" >}}
 static
 └── src
     └── input.css
-```
+{{< /code >}}
 
 Later we will import the Tailwind CSS directives and use it as the source file for the final stylesheet.
 
 7. Create a new `views.py` file inside `flowbiteapp/` next to `urls.py` and add the following content:
 
-```bash
+{{< code lang="bash" >}}
 from django.shortcuts import render
 
 def index(request):
     return render(request, 'index.html')
-```
+{{< /code >}}
 
 8. Import the newly created view instance inside the `urls.py` file by adding the following code:
 
-```bash
+{{< code lang="bash" >}}
 from .views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index')
 ]
-```
+{{< /code >}}
 
 9. Create a new `_base.html` file inside the `templates/` directory:
 
-```html
+{{< code lang="html" >}}
 <!-- templates/_base.html -->
 
 {% load compress %}
@@ -147,11 +147,11 @@ urlpatterns = [
 </body>
 
 </html>
-```
+{{< /code >}}
 
 10. Create an `index.html` file that will be served as the homepage:
 
-```html
+{{< code lang="html" >}}
 <!-- templates/index.html -->
 
 {% extends "_base.html" %}
@@ -159,13 +159,13 @@ urlpatterns = [
 {% block content %}
   <h1 class="text-3xl text-green-800">Django + Tailwind CSS + Flowbite</h1>
 {% endblock content %}
-```
+{{< /code >}}
 
 11. Finally, create a local server instance by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 python manage.py runserver
-```
+{{< /code >}}
 
 You'll now get an error that the `output.css` file doesn't exist, but that'll be fixed once we install Tailwind CSS.
 
@@ -175,23 +175,23 @@ Awesome! Now you have a working Django project locally. Let's continue by instal
 
 1. Run the following command the install Tailwind CSS as a dev dependency using NPM:
 
-```bash
+{{< code lang="bash" >}}
 npm install tailwindcss @tailwindcss/cli --save-dev
-```
+{{< /code >}}
 
 2. Import the Tailwind CSS directive inside the `input.css` file:
 
-```css
+{{< code lang="css" >}}
 /* static/src/input.css */
 
 @import "tailwindcss";
-```
+{{< /code >}}
 
 4. Run the following command to watch for changes and compile the Tailwind CSS code:
 
-```bash
+{{< code lang="bash" >}}
 npx @tailwindcss/cli -i ./static/src/input.css -o ./static/src/output.css --watch
-```
+{{< /code >}}
 
 Open `localhost:3000` in your browser and you'll see working HTML with Tailwind CSS code.
 
@@ -203,33 +203,33 @@ Flowbite is an open source library of interactive components built on top of Tai
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite --save
-```
+{{< /code >}}
 
 2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "flowbite/src/themes/default";
-```
+{{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-```css
+{{< code lang="css" >}}
 @plugin "flowbite/plugin";
-```
+{{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-```css
+{{< code lang="css" >}}
 @source "../../node_modules/flowbite";
-```
+{{< /code >}}
 
 5. Include Flowbite's JavaScript file inside the `_base.html` file just before the end of the `<body>` tag using CDN or by including it directly from the `node_modules/` folder:
 
-```html
+{{< code lang="html" >}}
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
-```
+{{< /code >}}
 
 Now that you have everything configured you can check out the components from Flowbite such as navbars, modals, buttons, datepickers, and more.
 
@@ -239,7 +239,7 @@ In this section I'll show you how you can search for and use the interactive com
 
 Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar component</a> inside the `_base.html` file:
 
-```html
+{{< code lang="html" >}}
 <!-- templates/_base.html -->
 
 {% load compress %}
@@ -306,7 +306,7 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
 </body>
 
 </html>
-```
+{{< /code >}}
 
 This way you already have a functional and responsive navigation bar added to all pages.
 
@@ -314,7 +314,7 @@ Let's take a look how can added more content directly to the view templates, not
 
 Check out one of the <a href="{{< ref "components/card" >}}">card components</a> from Flowbite and add it to the `index.html` file:
 
-```html
+{{< code lang="html" >}}
 <!-- templates/index.html -->
 
 {% extends "_base.html" %}
@@ -347,7 +347,7 @@ Check out one of the <a href="{{< ref "components/card" >}}">card components</a>
 </div>
 
 {% endblock content %}
-```
+{{< /code >}}
 
 At this point you can use any of the components to build user interfaces easier and faster together with Django, Tailwind CSS and Flowbite. 
 

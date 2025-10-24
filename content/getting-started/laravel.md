@@ -24,9 +24,9 @@ Follow the next steps to install Tailwind CSS and Flowbite with Laravel Mix.
 
 1. Require the Laravel Installer globally using Composer:
 
-```bash
+{{< code lang="bash" >}}
 composer global require laravel/installer
-```
+{{< /code >}}
 
 Make sure to place the vendor bin directory in your PATH. Here's how you can do it based on each OS:
 
@@ -36,16 +36,16 @@ Make sure to place the vendor bin directory in your PATH. Here's how you can do 
 
 2. Create a new project using Laravel's CLI:
 
-```bash
+{{< code lang="bash" >}}
 laravel new flowbite-app
 cd flowbite-app
-```
+{{< /code >}}
 
 Start the development server using the following command:
 
-```bash
+{{< code lang="bash" >}}
 composer run dev
-```
+{{< /code >}}
 
 You can now access the Laravel application on `http://localhost:8000`.
 
@@ -57,13 +57,13 @@ Since Laravel 12, the latest version of Tailwind v4 will be installed by default
 
 1. Install Tailwind CSS using NPM:
 
-```javascript
+{{< code lang="javascript" >}}
 npm install tailwindcss @tailwindcss/vite --save-dev
-```
+{{< /code >}}
 
 2. Configure the `vite.config.ts` file by importing the Tailwind plugin:
 
-```javascript
+{{< code lang="javascript" >}}
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
@@ -72,13 +72,13 @@ export default defineConfig({
     // …
   ],
 })
-```
+{{< /code >}}
 
 3. Import the main Tailwind directive inside your `app.css` CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "tailwindcss";
-```
+{{< /code >}}
 
 5. Run the build process for Vite using `npm run dev`. Use `npm run build` for production builds.
 
@@ -90,37 +90,37 @@ Follow the next steps to install Flowbite using NPM.
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite --save
-```
+{{< /code >}}
 
 2. Import the default theme variables from Flowbite inside your main `app.css` CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "flowbite/src/themes/default";
-```
+{{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-```css
+{{< code lang="css" >}}
 @plugin "flowbite/plugin";
-```
+{{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-```css
+{{< code lang="css" >}}
 @source "../../node_modules/flowbite";
-```
+{{< /code >}}
 
 5. Add the Flowbite JS script inside your main `app.blade.php` layout file:
 
-```html
+{{< code lang="html" >}}
 <body>
     @yield('content')
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
-```
+{{< /code >}}
 
 This will have the JavaScript loaded in all the files that extend this main layout.
 

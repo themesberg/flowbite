@@ -672,7 +672,7 @@ First of all, set the target element as the popover itself and the trigger eleme
 
 After that you can also set the options object to change the placement and trigger type of the popover, alongside with the callback functions.
 
-```javascript
+{{< code lang="javascript" >}}
 // set the popover content element
 const $targetEl = document.getElementById('popoverContent');
 
@@ -700,11 +700,11 @@ const instanceOptions = {
   id: 'popoverContent',
   override: true
 };
-```
+{{< /code >}}
 
 Create a new Popover object based on the options above.
 
-```javascript
+{{< code lang="javascript" >}}
 import { Popover } from 'flowbite';
 
 /*
@@ -713,11 +713,11 @@ import { Popover } from 'flowbite';
  * options: optional
  */
 const popover = new Popover($targetEl, $triggerEl, options, instanceOptions);
-```
+{{< /code >}}
 
 Use the `show` and `hide` methods on the Popover object to programmatically show and hide the popover element using JavaScript.
 
-```javascript
+{{< code lang="javascript" >}}
 // show the popover
 popover.show();
 
@@ -735,13 +735,13 @@ tooltip.destroy();
 
 // re-initialize popover object
 tooltip.init();
-```
+{{< /code >}}
 
 ### HTML Markup
 
 Use the following HTML code for the JavaScript example above.
 
-```html
+{{< code lang="html" >}}
 <button
     id="popoverButton"
     type="button"
@@ -766,7 +766,7 @@ Use the following HTML code for the JavaScript example above.
     </div>
     <div data-popper-arrow></div>
 </div>
-```
+{{< /code >}}
 
 ### TypeScript
 
@@ -774,7 +774,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Popover } from 'flowbite';
 import type { PopoverOptions, PopoverInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';
@@ -823,4 +823,4 @@ if ($targetEl) {
 
     popover.show();
 }
-```
+{{< /code >}}

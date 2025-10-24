@@ -22,17 +22,17 @@ Follow this guide to learn how to set up a new Angular project with Tailwind CSS
 
 The recommended and quickest way to get started with creating a new Angular project is by installing the official CLI tool by running the following command in your terminal:
 
-```bash
+{{< code lang="bash" >}}
 npm install -g @angular/cli
-```
+{{< /code >}}
 
 This command will make the Angular CLI available on your local computer.
 
 1. Run the following command to create a new Angular project:
 
-```bash
+{{< code lang="bash" >}}
 ng new flowbite-app
-```
+{{< /code >}}
 
 You can follow the instructions from the CLI prompts to select the options that you want to choose when creating a new project - you should select "CSS" when asked.
 
@@ -40,9 +40,9 @@ This command will create a new folder called `flowbite-app` where you have all t
 
 2. Run the `ng serve --open` command in your terminal to start a local server:
 
-```bash
+{{< code lang="bash" >}}
 ng serve --open
-```
+{{< /code >}}
 
 This will create a local development server and automatically open a new tab on the `localhost:4200` port by adding the `--open` flag to the command.
 
@@ -54,29 +54,29 @@ Now that you've successfully installed and configured an Angular project we can 
 
 1. Install Tailwind CSS and Post CSS via NPM by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install tailwindcss @tailwindcss/postcss postcss --save
-```
+{{< /code >}}
 
 This command will install all the dependencies of Tailwind CSS available in your `package.json` file.
 
 2. Create a `.postcssrc.json` file in the root folder of your project and include the Tailwind PostCSS plugin:
 
-```javascript
+{{< code lang="javascript" >}}
 {
   "plugins": {
     "@tailwindcss/postcss": {}
   }
 }
-```
+{{< /code >}}
 
 3. Import the core Tailwind directive inside the `styles.css` file:
 
-```css
+{{< code lang="css" >}}
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
-```
+{{< /code >}}
 
 5. Start a local development server on Angular by running `ng serve --open`. If you already had one open then you need to restart it to allow Angular to internally set up the new configuration.
 
@@ -88,31 +88,31 @@ Now that you have both Angular and Tailwind CSS configured for your web applicat
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite --save
-```
+{{< /code >}}
 
 2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "flowbite/src/themes/default";
-```
+{{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-```css
+{{< code lang="css" >}}
 @plugin "flowbite/plugin";
-```
+{{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-```css
+{{< code lang="css" >}}
 @source "../node_modules/flowbite";
-```
+{{< /code >}}
 
 5. Update the `app.component.ts` file to use the `initFlowbite` function to enable the interactive components via data attributes:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
@@ -129,7 +129,7 @@ export class AppComponent implements OnInit {
     initFlowbite();
   }
 }
-```
+{{< /code >}}
 
 This will allow you to enable components such as the modals, navigation bars, dropdowns to dynamically set up the functionality via our data attributes interface.
 
@@ -137,7 +137,7 @@ This will allow you to enable components such as the modals, navigation bars, dr
 
 To enable using Flowbite with SSR (Server-Side Rendering) you need to create a custom service that will handle the dynamic import of Flowbite:
 
-```javascript
+{{< code lang="javascript" >}}
 // src/app/services/flowbite.service.ts
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
@@ -156,13 +156,13 @@ export class FlowbiteService {
     }
   }
 }
-```
+{{< /code >}}
 
 **Important**: if you are using SSR make sure that this is the only way you're importing Flowbite in your Angular application to prevent the document object not being available on the server side.
 
 After that, you can use this service in your component to start using the Flowbite API and data attributes:
 
-```javascript
+{{< code lang="javascript" >}}
 // src/app/components/some-component/some-component.component.ts
 import { Component, OnInit } from '@angular/core';
 import { FlowbiteService } from '../../services/flowbite.service';
@@ -181,7 +181,7 @@ export class SomeComponent implements OnInit {
     });
   }
 }
-```
+{{< /code >}}
 
 This will prevent the "document is undefined" error that happens after upgrading to `v2.4.1` for SSR applications.
 
@@ -191,7 +191,7 @@ Now that you have installed all of the frameworks and libraries you can start us
 
 Let's first start by copy-pasting one of the default [modal component](https://flowbite.com/docs/components/modal/) examples from the documentation and add it inside the `app.component.html` file:
 
-```html
+{{< code lang="html" >}}
 <!-- Modal toggle -->
 <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
 Toggle modal
@@ -231,7 +231,7 @@ Toggle modal
         </div>
     </div>
 </div>
-```
+{{< /code >}}
 
 Adding this code should create a toggle button which on the click event should show a modal component. The interactivity is enabled via the data attributes interface from Flowbite.
 
@@ -241,7 +241,7 @@ The Flowbite Library is by default powered by the data attributes interface that
 
 Let's add a [dropdown component](https://flowbite.com/docs/components/dropdowns/) from the UI library:
 
-```html
+{{< code lang="html" >}}
 <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
   </svg></button>
@@ -262,7 +262,7 @@ Let's add a [dropdown component](https://flowbite.com/docs/components/dropdowns/
       </li>
     </ul>
 </div>
-```
+{{< /code >}}
 
 This example should also show a button that on the click event will show a dropdown menu that you can easily update via Tailwind CSS and the data attributes API.
 
@@ -272,7 +272,7 @@ Alternatively to the data attributes strategy you can also choose to programmati
 
 For example, here's how you can set up a carousel component directly with JavaScript:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Carousel } from "flowbite";
 import type { CarouselItem, CarouselOptions, CarouselInterface } from "flowbite";
 
@@ -360,11 +360,11 @@ $prevButton.addEventListener('click', () => {
 $nextButton.addEventListener('click', () => {
     carousel.next();
 });
-```
+{{< /code >}}
 
 You also need to have the following HTML markup available inside your codebase and Angular template files:
 
-```html
+{{< code lang="html" >}}
 <div class="relative w-full">
     <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg sm:h-64 xl:h-80 2xl:h-96">
@@ -410,7 +410,7 @@ You also need to have the following HTML markup available inside your codebase a
         </span>
     </button>
 </div>
-```
+{{< /code >}}
 
 In this case the advantage is that you can control the behaviour of the components as you wish being able to override the default settings.
 
@@ -420,13 +420,13 @@ The Flowbite UI components also supports TypeScript and you can import the types
 
 For example, here's how you can import the types for the Carousel component:
 
-```javascript
+{{< code lang="javascript" >}}
 import type { CarouselItem, CarouselOptions, CarouselInterface } from "flowbite";
 
 // ... other code
 
 const carousel: CarouselInterface = new Carousel(items, options);
-```
+{{< /code >}}
 
 You can read more about using [Flowbite and TypeScript](https://flowbite.com/docs/getting-started/typescript/) by following our documentation guide.
 

@@ -27,15 +27,15 @@ Before continuing make sure that you have Tailwind CSS, Flowbite, and Simple Dat
 
 2. Install the `simple-datatables` library using NPM:
 
-```bash
+{{< code lang="bash" >}}
 npm install simple-datatables --save
-```
+{{< /code >}}
 
 Alternatively, you can also include it in your project using CDN:
 
-```html
+{{< code lang="html" >}}
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3"></script>
-```
+{{< /code >}}
 
 Now that you have installed all libraries you can start copy-pasting the datatable components from Flowbite.
 
@@ -1772,20 +1772,20 @@ Learn more about how you can customize the DataTables plugin such as changing th
 
 After installing the DataTables plugin either via NPM or CDN you can initialize by calling the `DataTable` constructor and passing the table selector as the first argument.
 
-```javascript
+{{< code lang="javascript" >}}
 // if you installed via CDN
 const dataTable = new simpleDatatables.DataTable("#default-table");
 
 // if you installed via NPM
 import { DataTable } from "simple-datatables";
 const dataTable = DataTable("#default-table");
-```
+{{< /code >}}
 
 You can pass an object of options as the second argument to customize the table appearance and behavior.
 
-```javascript
+{{< code lang="javascript" >}}
 const dataTable = new simpleDatatables.DataTable("#default-table", options);
-```
+{{< /code >}}
 
 After initializing the DataTable, you can access the instance methods and properties.
 
@@ -1799,7 +1799,7 @@ Check out some of the more commonly used options that you can pass to the DataTa
 
 Use the `data` option to pass data from an array of arrays to the table using JavaScript.
 
-```javascript
+{{< code lang="javascript" >}}
 const customData = {
     "headings": [
         "Name",
@@ -1820,7 +1820,7 @@ const customData = {
 };
 
 const dataTable = new DataTable("#default-table", { data: customData });
-```
+{{< /code >}}
 
 This is a useful feature where instead of a hard coded array you can pass data from an API or a JSON file.
 
@@ -1828,7 +1828,7 @@ This is a useful feature where instead of a hard coded array you can pass data f
 
 Use the following options to customize the appearance of the table such as adding a caption, custom classes, footer, header, updating the HTML rendering template, and enabling vertical scrolling, and more.
 
-```javascript
+{{< code lang="javascript" >}}
 const dataTable = new DataTable("#default-table", {
     caption: "Flowbite is an open-source library",
     classes: {
@@ -1845,7 +1845,7 @@ const dataTable = new DataTable("#default-table", {
     },
     scrollY: "300px", // enable vertical scrolling
 });
-```
+{{< /code >}}
 
 These options are useful if you want to add your own HTML elements inside the dynamically generated table header or footer as we used in the export a file example above.
 
@@ -1853,7 +1853,7 @@ These options are useful if you want to add your own HTML elements inside the dy
 
 Use these options to enable pagination, set the number of rows per page, and customize the appearance.
 
-```javascript
+{{< code lang="javascript" >}}
 const dataTable = new DataTable("#default-table", {
     paging: true, // enable or disable pagination
     perPage: 10, // set the number of rows per page
@@ -1861,7 +1861,7 @@ const dataTable = new DataTable("#default-table", {
     firstLast: true, // enable or disable the first and last buttons
     nextPrev: true, // enable or disable the next and previous buttons
 });
-```
+{{< /code >}}
 
 Pagination is a useful feature when you have a large dataset and you want to split it into multiple pages.
 
@@ -1869,13 +1869,13 @@ Pagination is a useful feature when you have a large dataset and you want to spl
 
 These options can be used to enable searching, set the search placeholder, and customize the appearance.
 
-```javascript
+{{< code lang="javascript" >}}
 const dataTable = new DataTable("#default-table", {
     searchable: true, // enable or disable searching
     sensitivity: "base" // set the search sensitivity (base, accent, case, variant)
     searchQuerySeparator: " ", // set the search query separator
 });
-```
+{{< /code >}}
 
 The searching feature is great when you have a large dataset and you want to search for a specific row.
 
@@ -1883,7 +1883,7 @@ The searching feature is great when you have a large dataset and you want to sea
 
 Use these options to enable sorting, set the default sort column, and customize the sort appearance.
 
-```javascript
+{{< code lang="javascript" >}}
 const dataTable = new DataTable("#default-table", {
     sortable: true, // enable or disable sorting
     locale: "en-US", // set the locale for sorting
@@ -1891,7 +1891,7 @@ const dataTable = new DataTable("#default-table", {
     caseFirst: "false", // set the case first for sorting (upper, lower)
     ignorePunctuation: true // enable or disable punctuation sorting
 });
-```
+{{< /code >}}
 
 The sorting feature is useful when you want to sort the table rows based on a specific column.
 
@@ -1899,7 +1899,7 @@ The sorting feature is useful when you want to sort the table rows based on a sp
 
 Check out some of the common methods that you can use to interact with the DataTable instance.
 
-```javascript
+{{< code lang="javascript" >}}
 // programatically search the table where the "term" variable is the query string
 dataTable.search(term, columns);
 
@@ -1913,7 +1913,7 @@ dataTable.insert({
 
 // updates the DOM of the table
 dataTable.update();
-```
+{{< /code >}}
 
 Here's a full list of the <a href="https://fiduswriter.github.io/simple-datatables/documentation/#methods" target="_blank" rel="nofollow">exposed methods and properties</a> from the simple-datatables repository.
 

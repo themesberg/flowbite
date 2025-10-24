@@ -1153,7 +1153,7 @@ Check out the following JavaScript example to learn how to initialize, set the o
 
 First of all, create a new JavaScript element object for the first parameter of the Drawer object and another options object to set the placement, backdrop settings, and callback functions.
 
-```javascript
+{{< code lang="javascript" >}}
 // set the drawer menu element
 const $targetEl = document.getElementById('drawer-js-example');
 
@@ -1182,11 +1182,11 @@ const instanceOptions = {
   id: 'drawer-js-example',
   override: true
 };
-```
+{{< /code >}}
 
 Initialize the Drawer positioning by creating a new object:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Drawer } from 'flowbite';
 
 /*
@@ -1195,37 +1195,37 @@ import { Drawer } from 'flowbite';
  * instanceOptions (optional)
  */
 const drawer = new Drawer($targetEl, options, instanceOptions);
-```
+{{< /code >}}
 
 Use the `show` and `hide` methods to show and hide the drawer component directly from JavaScript.
 
-```javascript
+{{< code lang="javascript" >}}
 // show the drawer
 drawer.show();
 
 // hide the drawer
 drawer.hide();
-```
+{{< /code >}}
 
 Use the `toggle` method to toggle the visibility of the drawer.
 
-```javascript
+{{< code lang="javascript" >}}
 // toggle the drawer
 drawer.toggle();
-```
+{{< /code >}}
 
 Use the `isVisible` method to check the visibility of the drawer:
 
-```javascript
+{{< code lang="javascript" >}}
 // true or false
 drawer.isVisible();
-```
+{{< /code >}}
 
 ### HTML Markup
 
 Use the following HTML code for the JavaScript example above.
 
-```html
+{{< code lang="html" >}}
 <!-- drawer component -->
 <div id="drawer-js-example" class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-neutral-primary-soft border-e border-default w-80" tabindex="-1" aria-labelledby="drawer-js-example">
     <div class="border-b border-default pb-4 flex items-center">
@@ -1299,7 +1299,7 @@ Use the following HTML code for the JavaScript example above.
       </ul>
    </div>
 </div>
-```
+{{< /code >}}
 
 ### TypeScript
 
@@ -1307,7 +1307,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Drawer } from 'flowbite';
 import type { DrawerOptions, DrawerInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';
@@ -1350,4 +1350,4 @@ const drawer: DrawerInterface = new Drawer($targetEl, options, instanceOptions);
 
 // show the drawer
 drawer.show();
-```
+{{< /code >}}

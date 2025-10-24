@@ -653,7 +653,7 @@ To get started you need to create an array of accordion item objects including a
 
 Additionally, you can also set some options to change the default behaviour of the accordion, customize the styles, and set callback functions.
 
-```javascript
+{{< code lang="javascript" >}}
 const accordionElement = document.getElementById('accordion-example');
 
 // create an array of objects with the id, trigger element (eg. button), and the content element
@@ -702,11 +702,11 @@ const instanceOptions = {
     id: 'accordion-example',
     override: true
 };
-```
+{{< /code >}}
 
 Create a new Accordion object using the options set above as the parameters.
 
-```javascript
+{{< code lang="javascript" >}}
 import { Accordion } from 'flowbite';
 
 /*
@@ -716,11 +716,11 @@ import { Accordion } from 'flowbite';
 * instanceOptions (optional)
 */
 const accordion = new Accordion(accordionElement, accordionItems, options, instanceOptions);
-```
+{{< /code >}}
 
 Now you can access the object methods to programmatically open, close, and toggle the accordion items based on the unique identifier.
 
-```javascript
+{{< code lang="javascript" >}}
 // open accordion item based on id
 accordion.open('accordion-example-heading-2');
 
@@ -729,13 +729,13 @@ accordion.close('accordion-example-heading-2');
 
 // toggle visibility of item based on id
 accordion.toggle('accordion-example-heading-3');
-```
+{{< /code >}}
 
 ### HTML Markup
 
 Use the following HTML markup example for the JavaScript script above.
 
-```html
+{{< code lang="html" >}}
 <div id="accordion-example">
   <h2 id="accordion-example-heading-1">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body border border-b-0 border-default rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" aria-expanded="true" aria-controls="accordion-example-body-1">
@@ -779,7 +779,7 @@ Use the following HTML markup example for the JavaScript script above.
     </div>
   </div>
 </div>
-```
+{{< /code >}}
 
 ### TypeScript
 
@@ -787,7 +787,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Accordion } from "flowbite";
 import type { AccordionOptions, AccordionItem, AccordionInterface } from "flowbite";
 import type { InstanceOptions } from 'flowbite';
@@ -857,4 +857,4 @@ accordion.destroy();
 
 // re-initialize accordion
 accordion.init();
-```
+{{< /code >}}

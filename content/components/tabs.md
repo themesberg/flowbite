@@ -546,7 +546,7 @@ Check out the following example to learn how to initialize and manipulate a Tabs
 
 First of all, create an array of objects that contains the id, trigger element, and content element of each tab, set the active tab based on the id, and optionally set a callback function after a new tab has been shown.
 
-```javascript
+{{< code lang="javascript" >}}
 const tabsElement = document.getElementById('tabs-example');
 
 // create an array of objects with the id, trigger element (eg. button), and the content element
@@ -590,11 +590,11 @@ const instanceOptions = {
   id: 'tabs-example',
   override: true
 };
-```
+{{< /code >}}
 
 Create a new Tabs object based on the parameters we've previously set.
 
-```javascript
+{{< code lang="javascript" >}}
 import { Tabs } from 'flowbite';
 
 /*
@@ -604,11 +604,11 @@ import { Tabs } from 'flowbite';
 * instanceOptions (optional)
 */
 const tabs = new Tabs(tabsElement, tabElements, options, instanceOptions);
-```
+{{< /code >}}
 
 Lastly, you can now use the methods on the Tabs object to show another tab element, get a tab element based on the id, or get the current active tab element.
 
-```javascript
+{{< code lang="javascript" >}}
 // shows another tab element
 tabs.show('dashboard');
 
@@ -617,13 +617,13 @@ tabs.getTab('contacts');
 
 // get the current active tab object
 tabs.getActiveTab();
-```
+{{< /code >}}
 
 ### HTML Markup
 
 You can use this HTML code as an example for the JavaScript code from above.
 
-```html
+{{< code lang="html" >}}
 <div class="mb-4 border-b border-default dark:border-gray-700">
     <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-body dark:text-gray-400" id="tabs-example" role="tablist">
         <li class="me-2" role="presentation">
@@ -738,7 +738,7 @@ You can use this HTML code as an example for the JavaScript code from above.
         </p>
     </div>
 </div>
-```
+{{< /code >}}
 
 ### TypeScript
 
@@ -746,7 +746,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Tabs } from 'flowbite';
 import type { TabsOptions, TabsInterface, TabItem } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';
@@ -805,4 +805,4 @@ const tabs: TabsInterface = new Tabs(tabsElement, tabElements, options, instance
 
 // open tab item based on id
 tabs.show('contacts');
-```
+{{< /code >}}

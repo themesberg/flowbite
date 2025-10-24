@@ -26,9 +26,9 @@ Make sure that you have both [Node.js](https://nodejs.org) and [Python](https://
 
 After that, you'll need to install Flask on your computer by following the official [installation guide](https://flask.palletsprojects.com/en/2.1.x/installation/) or by running the following command in the terminal if you have pip available in your Python environment:
 
-```bash
+{{< code lang="bash" >}}
 python -m pip install Flask
-```
+{{< /code >}}
 
 Now that you have installed all of the required technologies you can now create a new Flask project.
 
@@ -36,14 +36,14 @@ Now that you have installed all of the required technologies you can now create 
 
 1. Run the following command in the terminal to create a new Flask project with the name `flowbite-flask`:
 
-```bash
+{{< code lang="bash" >}}
 mkdir flowbite-flask
 cd flowbite-flask/
-```
+{{< /code >}}
 
 2. Create a new file called `app.py` inside the root of the project folder with the following content:
 
-```bash
+{{< code lang="bash" >}}
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -55,24 +55,24 @@ def index():
 
 if __name__ == '__main__':
 	app.run(debug=True)
-```
+{{< /code >}}
 
 What we do here is that we import the Flask micro framework from Python and also set the app route for a new `index.html` file inside the `templates/` folder that we will create in the next step.
 
 3. Create two new folders called `templates/` and `static/`:
 
-```bash
+{{< code lang="bash" >}}
 flowbite-flask/
    - app.py
    - templates/
    - static/
-```
+{{< /code >}}
 
 This is how your project folder structure should look like.
 
 4. Create a new `index.html` file inside your `templates/` folder and create a basic HTML document structure:
 
-```bash
+{{< code lang="bash" >}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,13 +85,13 @@ This is how your project folder structure should look like.
     <h1>Hello, Flask!</h1>
 </body>
 </html>
-```
+{{< /code >}}
 
 5. Start a local server by running `python app.py` inside your terminal:
 
-```bash
+{{< code lang="bash" >}}
 python app.py
-```
+{{< /code >}}
 
 This should make the project available via the browser by going to `http://localhost:5000/`. 
 
@@ -101,29 +101,29 @@ Now that you have a working Flask project we can proceed by installing Tailwind 
 
 1. Run the following command the install Tailwind CSS as a dev dependency using NPM:
 
-```bash
+{{< code lang="bash" >}}
 npm install tailwindcss @tailwindcss/cli --save-dev
-```
+{{< /code >}}
 
 2. Create a new `static/src/` folder and add a new `input.css` file with the following content:
 
-```css
+{{< code lang="css" >}}
 /* static/src/input.css */
 
 @import "tailwindcss";
-```
+{{< /code >}}
 
 4. Run the following command to watch for changes and compile the Tailwind CSS code:
 
-```bash
+{{< code lang="bash" >}}
 npx @tailwindcss/cli -i ./static/src/input.css -o ./static/dist/output.css --watch
-```
+{{< /code >}}
 
 This will generate a new `output.css` file inside the `static/dist/css/` folder that we will now include in the newly created `index.html` template file.
 
 5. Include `output.css` inside the main `index.html` template:
 
-```html
+{{< code lang="html" >}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -137,7 +137,7 @@ This will generate a new `output.css` file inside the `static/dist/css/` folder 
     <h1 class="text-fg-brand">Hello, Flask!</h1>
 </body>
 </html>
-```
+{{< /code >}}
 
 Notice how the `text-fg-brand` class is now being applied using the configuration that we set up which means that you can start building user interfaces with Tailwind CSS.
 
@@ -147,33 +147,33 @@ Now that you have a working Flask and Tailwind CSS configuration you can also in
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite --save
-```
+{{< /code >}}
 
 2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "flowbite/src/themes/default";
-```
+{{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-```css
+{{< code lang="css" >}}
 @plugin "flowbite/plugin";
-```
+{{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-```css
+{{< code lang="css" >}}
 @source "../../node_modules/flowbite";
-```
+{{< /code >}}
 
 5. Include Flowbite's JavaScript file inside the `index.html` file just before the end of the `<body>` tag using CDN or by including it directly from the `node_modules/` folder:
 
-```html
+{{< code lang="html" >}}
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
-```
+{{< /code >}}
 
 Now that you have Flowbite also configured you can explore all of the components by browsing the sidebar menu on the left side of the documentation.
 
@@ -183,7 +183,7 @@ Let's now take a look how we can quickly build a simple page using the component
 
 Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar component</a> inside the `index.html` file:
 
-```html
+{{< code lang="html" >}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -234,7 +234,7 @@ Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar compone
 </body>
 
 </html>
-```
+{{< /code >}}
 
 As you can see, the navigation bar will render correctly and even the hamburger icon functionality will work by toggling the mobile menu on smaller devices.
 
@@ -242,7 +242,7 @@ Other than the base components from the library you can also check out some of t
 
 Let's add a free [Tailwind CSS hero section](https://flowbite.com/blocks/marketing/hero/) just after the navigation bar:
 
-```html
+{{< code lang="html" >}}
 <section class="bg-neutral-primary">
   <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
         <h1 class="mb-4 mt-8 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl">We invest in the world’s potential</h1>
@@ -258,7 +258,7 @@ Let's add a free [Tailwind CSS hero section](https://flowbite.com/blocks/marketi
         </div>
   </div>
 </section>
-```
+{{< /code >}}
 
 This gives you a pretty good idea on how powerful a Flask, Tailwind CSS and Flowbite technology stack can be for quickly building websites.
 

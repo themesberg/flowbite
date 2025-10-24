@@ -26,32 +26,32 @@ Before getting started make sure that you have [Node.js](https://nodejs.org/en/)
 
 1. Execute the following command in your terminal to create a new SolidJS project using Vite Templates:
 
-```bash
+{{< code lang="bash" >}}
 npx degit solidjs/templates/js flowbite-app
 cd flowbite-app
-```
+{{< /code >}}
 
 This command will create a boilerplate project that sets up a basic project structure and dependency files.
 
 2. Install the project dependencies using NPM:
 
-```bash
+{{< code lang="bash" >}}
 npm install
-```
+{{< /code >}}
 
 3. Execute the following command to create a local development server:
 
-```bash
+{{< code lang="bash" >}}
 npm run dev
-```
+{{< /code >}}
 
 The newly created SolidJS project will now be accessible via the browser on `http://localhost:3000`.
 
 4. Create a production build by running the following command in your terminal or deployment pipeline:
 
-```bash
+{{< code lang="bash" >}}
 npm run build
-```
+{{< /code >}}
 
 You now have a working SolidJS project configuration installed and can now proceed with installing Tailwind CSS and Flowbite to build web UI interfaces even faster.
 
@@ -61,30 +61,30 @@ You now have a working SolidJS project configuration installed and can now proce
 
 1. Install Tailwind CSS using NPM and executing the following command in your terminal:
 
-```bash
+{{< code lang="bash" >}}
 npm install --save-dev tailwindcss @tailwindcss/postcss postcss
-```
+{{< /code >}}
 
 2. Create a new `postcss.config.mjs` configuration file and at the following code:
    
-```javascript
+{{< code lang="javascript" >}}
 // postcss.config.mjs
 export default {
   plugins: {
     "@tailwindcss/postcss": {},
   }
 }
-```
+{{< /code >}}
 
 3. Import the default Tailwind CSS directive inside the `./src/index.css` default CSS file from SolidJS:
 
-```css
+{{< code lang="css" >}}
 @import "tailwindcss";
-```
+{{< /code >}}
 
 4. Restart your local development server by running `npm run dev` and you can now use the utility-first classes inside your SolidJS project by testing it out in your `App.jsx` file:
 
-```javascript
+{{< code lang="javascript" >}}
 function App() {
   return (
     <div class={styles.App}>
@@ -107,7 +107,7 @@ function App() {
 }
 
 export default App;
-```
+{{< /code >}}
 
 You now have both SolidJS and Tailwind CSS successfully installed and configured in your local project and we can now proceed by setting up the UI components from Flowbite.
 
@@ -117,27 +117,27 @@ You now have both SolidJS and Tailwind CSS successfully installed and configured
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite --save
-```
+{{< /code >}}
 
 2. Import the default theme variables from Flowbite inside your main `index.css` CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "flowbite/src/themes/default";
-```
+{{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-```css
+{{< code lang="css" >}}
 @plugin "flowbite/plugin";
-```
+{{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-```css
+{{< code lang="css" >}}
 @source "../../node_modules/flowbite";
-```
+{{< /code >}}
 
 Now that you have installed Flowbite you can start using the UI components from the documentation inside your SolidJS project.
 
@@ -147,7 +147,7 @@ All of the interactive and non-interactive components from Flowbite can now be u
 
 The most important part is that you need to import the `initFlowbite()` function from Flowbite and then call this function using the `onMount` hook method from SolidJS so that the interactive data attributes events can be initialized.
 
-```javascript
+{{< code lang="javascript" >}}
 import logo from './logo.svg';
 import styles from './App.module.css';
 
@@ -199,24 +199,24 @@ function Modal() {
 }
 
 export default App;
-```
+{{< /code >}}
 
 This example adds a button which when clicked it will open a modal component with a title, description, and close button.
 
 Let's now show a [tooltip indicator](https://flowbite.com/docs/components/tooltips/) when hovering over the button to provide extra information:
 
-```html
+{{< code lang="html" >}}
 <button data-tooltip-target="tooltip-default" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default tooltip</button>
 
 <div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
     Tooltip content
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
-```
+{{< /code >}}
 
 Finally, let's add an [accordion component](https://flowbite.com/docs/components/accordion/) inside the modal:
 
-```html
+{{< code lang="html" >}}
 <div id="accordion-collapse" data-accordion="collapse">
   <h2 id="accordion-collapse-heading-1">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
@@ -266,7 +266,7 @@ Finally, let's add an [accordion component](https://flowbite.com/docs/components
     </div>
   </div>
 </div>
-```
+{{< /code >}}
 
 These examples should give you a pretty good idea how you can leverage the UI components from Flowbite together with Tailwind CSS and SolidJS to build performant and reactive web applications.
 

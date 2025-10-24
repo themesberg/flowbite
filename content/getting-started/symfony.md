@@ -26,44 +26,44 @@ Make sure that before you get started you have both [PHP](https://www.php.net/) 
 
 The most straightforward approach for creating a new Symfony project is to use the official [Symfony CLI](https://symfony.com/download) installer which you can easily install on macOS and Linux devices using Homebrew:
 
-```bash
+{{< code lang="bash" >}}
 brew install symfony-cli/tap/symfony-cli
-```
+{{< /code >}}
 
 For devices running on Windows you can also install the Symfony CLI using Scoop:
 
-```bash
+{{< code lang="bash" >}}
 scoop install symfony-cli
-```
+{{< /code >}}
 
 Now that you have the CLI available you can proceed by creating a new project.
 
 1. Create a new Symfony project by running the following command inside your terminal:
 
-```bash
+{{< code lang="bash" >}}
 symfony new --webapp flowbite-app
-```
+{{< /code >}}
 
 This command will create a new folder with a fresh Symfony project installation inside.
 
 2. Change the current working directory to the newly created project folder:
 
-```bash
+{{< code lang="bash" >}}
 cd flowbite-app
-```
+{{< /code >}}
 
 3. Install the recommended Symfony Webpack Encore bundle to enable front-end integration via Composer and remove the default dependencies:
 
-```bash
+{{< code lang="bash" >}}
 composer remove symfony/ux-turbo symfony/asset-mapper symfony/stimulus-bundle
 composer require symfony/webpack-encore-bundle
-```
+{{< /code >}}
 
 4. Run the following command in your terminal to start a local web server:
 
-```bash
+{{< code lang="bash" >}}
 symfony server:start
-```
+{{< /code >}}
 
 This command will make the web application accessible via the browser on `http://localhost:8000`.
 
@@ -77,19 +77,19 @@ Now that you have a working Symfony application on your local computer we can pr
 
 1. Run the following command to require and install Tailwind CSS and PostCSS via NPM:
 
-```bash
+{{< code lang="bash" >}}
 npm install tailwindcss @tailwindcss/postcss postcss postcss-loader --save-dev
-```
+{{< /code >}}
 
 2. Import the base Tailwind directive inside the default `./assets/styles/app.css` file:
 
-```css
+{{< code lang="css" >}}
 @import "tailwindcss";
-```
+{{< /code >}}
 
 3. Enable the PostCSS loader plugin by adding it to the Webpack config file:
 
-```javascript
+{{< code lang="javascript" >}}
 // webpack.config.js
 Encore
     // other plugins
@@ -97,37 +97,37 @@ Encore
     .enablePostCssLoader()
 
     // ... more plugins
-```
+{{< /code >}}
 
 4. Create a new `postcss.config.mjs` file in the root folder and add the following configuration:
 
-```javascript
+{{< code lang="javascript" >}}
 export default {
   plugins: {
     "@tailwindcss/postcss": {},
   },
 };
-```
+{{< /code >}}
 
 5. Run the following command to compile the front-end assets via Webpack:
 
-```bash
+{{< code lang="bash" >}}
 npm run watch
-```
+{{< /code >}}
 
 6. Let's create a new homepage entry file by configuring the Symfony routes file:
 
-```javascript
+{{< code lang="javascript" >}}
 // ./config/routes.yml
 
 index:
     path: /
     controller: App\Controller\DefaultController::index
-```
+{{< /code >}}
 
 7. Create a new `DefaultController` and set up the path for a new Twig template file:
 
-```javascript
+{{< code lang="javascript" >}}
 <?php
 // ./src/Controller/DefaultController.php
 
@@ -145,11 +145,11 @@ class DefaultController extends AbstractController
         return $this->render('index.html.twig', []);
     }
 }
-```
+{{< /code >}}
 
 8. Create a new `index.html.twig` inside the templates folder and add a couple of [header](https://flowbite.com/blocks/marketing/header/) and [hero](https://flowbite.com/blocks/marketing/hero/) sections from the Flowbite Blocks collection:
 
-```html
+{{< code lang="html" >}}
 {% extends 'base.html.twig' %}
 
 {% block body %}
@@ -248,7 +248,7 @@ class DefaultController extends AbstractController
         </div>
     </section>
 {% endblock %}
-```
+{{< /code >}}
 
 A brand new header and hero section should now be visible on the homepage of your Symfony application's local development server supporting Tailwind CSS. Let's now proceed by installing Flowbite to enable interactive UI components.
 
@@ -258,31 +258,31 @@ A brand new header and hero section should now be visible on the homepage of you
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite --save
-```
+{{< /code >}}
 
 2. Import the default theme variables from Flowbite inside your main `app.css` CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "flowbite/src/themes/default";
-```
+{{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-```css
+{{< code lang="css" >}}
 @plugin "flowbite/plugin";
-```
+{{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-```css
+{{< code lang="css" >}}
 @source "../../node_modules/flowbite";
-```
+{{< /code >}}
 
 Inside the `./assets/app.js` file you can import the Flowbite package to enable interactivity of the UI components:
 
-```javascript
+{{< code lang="javascript" >}}
 /*
  * Welcome to your app's main JavaScript file!
  *
@@ -298,7 +298,7 @@ import './bootstrap';
 
 // enable the interactive UI components from Flowbite
 import 'flowbite';
-```
+{{< /code >}}
 
 This will enable all of the interactive and dynamic UI components such as the dropdowns, modals, navbars, and others to work out of the box. Webpack will automatically bundle the final JavaScript file which improves speed and performance.
 
@@ -310,7 +310,7 @@ Flowbite provides custom event listeners for turbo load support if you import th
 
 If you use Symfony UX Turbo, you will need to import a version of Flowbite which supports the `turbo:load` event listeners instead of `load`. To do this **add the lines below** to your `./assets/app.js` file:
 
-```javascript
+{{< code lang="javascript" >}}
 /*
  * Welcome to your app's main JavaScript file!
  *
@@ -326,7 +326,7 @@ import './bootstrap';
 
 // enable the interactive UI components from Flowbite with Turbo
 import 'flowbite/dist/flowbite.turbo.js';
-```
+{{< /code >}}
 
 ## Flowbite components
 
@@ -334,7 +334,7 @@ Now that you have all of the technologies successfully set up in your Symfony pr
 
 Let's start by adding a simple [modal authentication component](https://flowbite.com/docs/components/modal/#form-element) from the Flowbite Library when clicking on the login button from the header:
 
-```html
+{{< code lang="html" >}}
 
 
 <!-- Modal toggle -->
@@ -388,7 +388,7 @@ Let's start by adding a simple [modal authentication component](https://flowbite
         </div>
     </div>
 </div> 
-```
+{{< /code >}}
 
 After setting up the `data-modal-target="{modalId}"` and `data-modal-toggle="{modalId}"` data attributes for the button component and copy-pasting the modal example, clicking on the login button will now show a modal element with a user sign-in form that you can use to authenticate users directly from your homepage.
 

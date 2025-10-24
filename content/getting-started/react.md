@@ -24,9 +24,9 @@ You can easily install or add Flowbite React to an existing project with our new
 
 Use our project creation CLI to scaffold a new application with Flowbite React already configured:
 
-```bash
+{{< code lang="bash" >}}
 npx create-flowbite-react@latest
-```
+{{< /code >}}
 
 This will create a new project with React, Flowbite, and Tailwind CSS (v4) ready to use.
 
@@ -34,9 +34,9 @@ This will create a new project with React, Flowbite, and Tailwind CSS (v4) ready
 
 For existing projects, use the Flowbite React CLI to set up and configure everything automatically:
 
-```bash
+{{< code lang="bash" >}}
 npx flowbite-react@latest init
-```
+{{< /code >}}
 
 This will add Flowbite React and configure Tailwind CSS to an existing React project.
 
@@ -56,17 +56,17 @@ Flowbite React offers an advanced system of customizing your components and temp
 
 For example, here is a simple way you can update a button component:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Button } from "flowbite-react";
 
 function App() {
   return <Button className="bg-red-500 hover:bg-red-600">Custom Button</Button>;
 }
-```
+{{< /code >}}
 
 Additionally, you can also use the `createTheme` helper to create a theme object that you can then pass on to the `<ThemeProvider>` component with which you can style subcomponents too:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Button, createTheme, ThemeProvider } from "flowbite-react";
 
 const customTheme = createTheme({
@@ -91,7 +91,7 @@ function App() {
     </ThemeProvider>
   );
 }
-```
+{{< /code >}}
 
 ## Storybook
 

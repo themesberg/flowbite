@@ -26,16 +26,16 @@ Make sure that you have [Node.js](https://nodejs.org/en/) and [Ruby](https://www
 
 1. Run the following command to install the `rails` gem from Ruby:
 
-```bash
+{{< code lang="bash" >}}
 gem install rails
-```
+{{< /code >}}
 
 2. Create a new Ruby on Rails application if you don't already have one:
 
-```bash
+{{< code lang="bash" >}}
 rails new flowbite-app
 cd flowbite-app
-```
+{{< /code >}}
 
 Now that you have created a new project you can proceed by setting up Tailwind CSS.
 
@@ -45,16 +45,16 @@ Since Tailwind v4, it's really easy to install Tailwind CSS with Rails, because 
 
 1. Install the official `tailwindcss-rails` gems:
 
-```bash
+{{< code lang="bash" >}}
 ./bin/bundle add tailwindcss-ruby
 ./bin/bundle add tailwindcss-rails
-```
+{{< /code >}}
 
 2. Run the install command to set up the Tailwind configuration files:
 
-```bash
+{{< code lang="bash" >}}
 ./bin/rails tailwindcss:install
-```
+{{< /code >}}
 
 Now that Tailwind CSS has been successfully installed you can proceed by installing Flowbite.
 
@@ -62,27 +62,27 @@ Now that Tailwind CSS has been successfully installed you can proceed by install
 
 1. Install Flowbite by running the following command in your terminal:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite --save
-```
+{{< /code >}}
 
 2. Import the default theme variables from Flowbite inside your main `application.css` CSS file:
 
-```css
+{{< code lang="css" >}}
 @import "flowbite/src/themes/default";
-```
+{{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-```css
+{{< code lang="css" >}}
 @plugin "flowbite/plugin";
-```
+{{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-```css
+{{< code lang="css" >}}
 @source "../../../node_modules/flowbite";
-```
+{{< /code >}}
 
 ### Turbo load support
 
@@ -94,15 +94,15 @@ Importmap is the default way of handling JavaScript on Rails 7. In order to supp
 
 1. Add the following line inside your `importmap.rb` file:
 
-```bash
+{{< code lang="bash" >}}
 pin "flowbite", to: "https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.turbo.min.js"
-```
+{{< /code >}}
 
 2. Then you need to import `flowbite` inside your `application.js` file:
 
-```javascript
+{{< code lang="javascript" >}}
 import 'flowbite';
-```
+{{< /code >}}
 
 This will enable the interactive elements like dropdowns, modals, and navbars work by hooking the event listeners and actions to the data attributes whenever a new page is loaded in your application.
 
@@ -110,9 +110,9 @@ This will enable the interactive elements like dropdowns, modals, and navbars wo
 
 If you use ESBuild to Bundle your JavaScript on Rails, you will need to import a version of Flowbite which supports the `turbo:load` event listeners instead of `load`. To do this **add the line below** to your `application.js` file:
 
-```javascript
+{{< code lang="javascript" >}}
 import "flowbite/dist/flowbite.turbo.js";
-```
+{{< /code >}}
 
 ### Standard JS (no turbo)
 
@@ -120,27 +120,27 @@ If you decide not to use turbo load then you can follow these steps:
 
 1. Run this command to pin Flowbite in your `importmap.rb` file:
 
-```bash
+{{< code lang="bash" >}}
 ./bin/importmap pin flowbite
-```
+{{< /code >}}
 
 2. Then you need to include Flowbite inside your `application.js` file:
 
-```javascript
+{{< code lang="javascript" >}}
 import 'flowbite';
-```
+{{< /code >}}
 
 ### Include via CDN
 
 Alternatively to all of the above you can also include the JavaScript via CDN:
 
-```html
+{{< code lang="html" >}}
 // include via CDN for turbo support
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.turbo.min.js"></script>
 
 // include via CDN without turbo support
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
-```
+{{< /code >}}
 
 ### Datepicker
 
@@ -152,24 +152,24 @@ In order to support turbo load from Ruby on Rails 7, you have to include the `da
 
 Include the following JavaScript file to support the datepicker component:
 
-```bash
+{{< code lang="bash" >}}
 pin "flowbite-datepicker", to: "https://cdn.jsdelivr.net/npm/flowbite@2.3.0/dist/datepicker.turbo.min.js"
-```
+{{< /code >}}
 
 Don't forget to also import it inside your `application.js` file:
 
-```javascript
+{{< code lang="javascript" >}}
 import 'flowbite-datepicker';
 import 'flowbite/dist/datepicker.turbo.js';
-```
+{{< /code >}}
 
 ## Building your project
 
 Run the following command to start a local server and build the source files:
 
-```bash
+{{< code lang="bash" >}}
 ./bin/dev
-```
+{{< /code >}}
 
 This will create a local server and you will be able to access the pages on `localhost:3000`.
 
@@ -183,28 +183,28 @@ First of all, you need to delete the default `index.html` file inside the `publi
 2. Create a new `home.html.erb` file inside the `app/views/pages/` directory.
 3. Choose one of the components from Flowbite (ie. a tooltip) and copy-paste it inside the newly created file:
 
-```html
+{{< code lang="html" >}}
 <button data-tooltip-target="tooltip-default" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default tooltip</button>
 <div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
     Tooltip content
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
-```
+{{< /code >}}
 
 4. Create a new controller called `pages_controller.rb` inside the `app/controllers/` directory and add the following code inside of it:
 
-```bash
+{{< code lang="bash" >}}
 class PagesController < ApplicationController
   def home
   end
 end
-```
+{{< /code >}}
 
 5. Set the homepage as the root page inside the `routes.rb` file inside the `config/` directory:
 
-```bash
+{{< code lang="bash" >}}
 root to: 'pages#home'
-```
+{{< /code >}}
 
 If you have run `./bin/dev` to start a local server you should see the changes on `localhost:3000/` and the utility classes from Tailwind CSS should work and the interactive components from Flowbite should also be functional.
 

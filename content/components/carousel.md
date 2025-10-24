@@ -505,7 +505,7 @@ Use the following methods on the Carousel object to programmatically manipulate 
 
 Check out the following example to learn how to programmatically create a new Carousel object by passing the parameters, using the methods, and the callback functions.
 
-```javascript
+{{< code lang="javascript" >}}
 const carouselElement = document.getElementById('carousel-example');
 
 const items = [
@@ -573,48 +573,48 @@ const instanceOptions = {
   id: 'carousel-example',
   override: true
 };
-```
+{{< /code >}}
 
 Create a new carousel object using the options set above.
 
-```javascript
+{{< code lang="javascript" >}}
 import { Carousel } from 'flowbite';
 
 const carousel = new Carousel(carouselElement, items, options, instanceOptions);
-```
+{{< /code >}}
 
 Use the `next()` and `prev()` public methods on the carousel object to jump to the left or right carousel slide item based on the position of the current active item.
 
-```javascript
+{{< code lang="javascript" >}}
 // goes to the next (right) slide
 carousel.next();
 
 // goes to the previous (left) slide
 carousel.prev();
-```
+{{< /code >}}
 
 Use the `slideTo(position)` public method to jump to the carousel slide item with the specified position.
 
-```javascript
+{{< code lang="javascript" >}}
 // jumps to the 3rd position (position starts from 0)
 carousel.slideTo(2);
-```
+{{< /code >}}
 
 Use the `cycle()` method to start an automated cycling where the duration is the milliseconds of time between each slide and the `pause()` method to clear the cycle event.
 
-```javascript
+{{< code lang="javascript" >}}
 // starts or resumes the carousel cycling (automated sliding)
 carousel.cycle();
 
 // pauses the cycling (automated sliding)
 carousel.pause();
-```
+{{< /code >}}
 
 ### HTML Markup
 
 Here is an example of the HTML markup that you can use for the JavaScript example above. Please note that you should use the `hidden` class from Tailwind CSS to hide the carousel items by default.
 
-```html
+{{< code lang="html" >}}
 <div id="carousel-example" class="relative w-full">
     <!-- Carousel wrapper -->
     <div
@@ -740,11 +740,11 @@ Here is an example of the HTML markup that you can use for the JavaScript exampl
         </span>
     </button>
 </div>
-```
+{{< /code >}}
 
 If you want to set trigger the next or previous slide item for the any button, just add some event listeners and call the `next()` and `prev()` methods on the Carousel object.
 
-```javascript
+{{< code lang="javascript" >}}
 const $prevButton = document.getElementById('data-carousel-prev');
 const $nextButton = document.getElementById('data-carousel-next');
 
@@ -755,7 +755,7 @@ $prevButton.addEventListener('click', () => {
 $nextButton.addEventListener('click', () => {
     carousel.next();
 });
-```
+{{< /code >}}
 
 ### TypeScript
 
@@ -763,7 +763,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Carousel } from 'flowbite';
 import type {
     CarouselItem,
@@ -855,4 +855,4 @@ $prevButton.addEventListener('click', () => {
 $nextButton.addEventListener('click', () => {
     carousel.next();
 });
-```
+{{< /code >}}

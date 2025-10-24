@@ -24,9 +24,9 @@ Follow the next steps to learn how to install TypeScript and Tailwind CSS in a l
 
 1. Create a new project and run the following command to create a `package.json` file in the root folder:
 
-```bash
+{{< code lang="bash" >}}
 npm init
-```
+{{< /code >}}
 
 This is where we will add the project dependencies and the script commands.
 
@@ -36,19 +36,19 @@ By following the official [TypeScript guide](https://www.typescriptlang.org/down
 
 2. Run the following command to install and require TypeScript as a dependency in your `package.json` file:
 
-```bash
+{{< code lang="bash" >}}
 npm install --save-dev typescript
-```
+{{< /code >}}
 
 3. Create a new `tsconfig.json` file by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npx tsc --init
-```
+{{< /code >}}
 
 4. Replace the content of the `tsconfig.json` file using the following code:
 
-```javascript
+{{< code lang="javascript" >}}
 {
   "compilerOptions": {
       "lib": ["dom", "es2015"],
@@ -64,7 +64,7 @@ npx tsc --init
   "include": ["src/**/*.ts*"],
   "exclude": ["node_modules", "dist", "lib"]
 }
-```
+{{< /code >}}
 
 Here's a breakdown of what each option key-value pair represents:
 
@@ -84,10 +84,10 @@ After setting up the TypeScript configuration file we can now write some code.
 
 5. Set up the folder structure for your TypeScript files by creating a new `src/` folder and creating an `index.ts` file inside of it with the following code:
 
-```javascript
+{{< code lang="javascript" >}}
 const text: string = 'Hello TypeScript';
 console.log(text);
-```
+{{< /code >}}
 
 This code already uses a type declaration which will help us verify if the compiler works properly.
 
@@ -97,13 +97,13 @@ In order to compile the TypeScript code into JavaScript that is supported by mod
 
 6. Install Webpack and the necessary plugins by executing the following command in your terminal:
 
-```bash
+{{< code lang="bash" >}}
 npm i -D webpack webpack-cli typescript ts-loader
-```
+{{< /code >}}
 
 7. Create a new `webpack.config.js` file and add the following content:
 
-```javascript
+{{< code lang="javascript" >}}
 //webpack.config.js
 const path = require('path');
 
@@ -129,17 +129,17 @@ module.exports = {
     ]
   }
 };
-```
+{{< /code >}}
 
 8. Run the following command to watch for changes and compile the TypeScript source code into browser-compatible JavaScript code:
 
-```bash
+{{< code lang="bash" >}}
 npx webpack --watch
-```
+{{< /code >}}
 
 This will generate an `app-bundle.js` named JavaScript file that you can now include inside your HTML templates. To check out if it works you can create a new `index.html` file and open it inside your browser.
 
-```html
+{{< code lang="html" >}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -154,7 +154,7 @@ This will generate an `app-bundle.js` named JavaScript file that you can now inc
     <script src="./dist/app-bundle.js"></script>
 </body>
 </html>
-```
+{{< /code >}}
 
 ### CommonJS
 
@@ -162,9 +162,9 @@ By default the compiled code will be CJS as specified in the `tsconfig.json` fil
 
 Compile the code by running the following command in your terminal:
 
-```bash
+{{< code lang="bash" >}}
 npx tsc
-```
+{{< /code >}}
 
 This will generate a new `lib/` folder with CJS (CommonJS) compiled JavaScript code that we will later include in our templates.
 
@@ -172,29 +172,29 @@ This will generate a new `lib/` folder with CJS (CommonJS) compiled JavaScript c
 
 If you want to compile for ESM instead of CJS you can use the following command instead:
 
-```bash
+{{< code lang="bash" >}}
 npx tsc -m es6 --outDir lib/esm
-```
+{{< /code >}}
 
 Now that we have successfully configured TypeScript and also compiled the source code we have to install and configure Tailwind CSS.
 
 Run the following command to install and require Tailwind CSS in your `package.json` file:
 
-```bash
+{{< code lang="bash" >}}
 npm install -D tailwindcss
-```
+{{< /code >}}
 
 ## Install Tailwind CSS
 
 9. Create a new `tailwind.config.js` file by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npx tailwindcss init
-```
+{{< /code >}}
 
 10. Based on your source template files make sure you include all of the relevant paths in the `content` area of your Tailwind CSS configuration file:
 
-```javascript
+{{< code lang="javascript" >}}
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -206,27 +206,27 @@ module.exports = {
   },
   plugins: [],
 }
-```
+{{< /code >}}
 
 In our case we will look for all TypeScript files inside the `src/` folder and all of the HTML files inside the project relative to the root.
 
 11. Create a new `input.css` file inside the `src/` folder and import all of the basic Tailwind CSS directives:
 
-```css
+{{< code lang="css" >}}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-```
+{{< /code >}}
 
 12. Compile the code when changes are made by using the following command:
 
-```bash
+{{< code lang="bash" >}}
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
-```
+{{< /code >}}
 
 13. Open the `index.html` file inside the root folder of your project with the following basic setup where we include all of the compiled code including the new `output.css` file:
 
-```html
+{{< code lang="html" >}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -241,7 +241,7 @@ npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
     <script src="./dist/app-bundle.js"></script>
 </body>
 </html>
-```
+{{< /code >}}
 
 Now open the `index.html` file in your browser and you should see the text larger because of the `text-4xl` utility class and also see a "Hello TypeScript" message inside your developer console.
 
@@ -251,13 +251,13 @@ You can start using the open-source and interactive components from Flowbite whi
 
 1. Install and require Flowbite in your `package.json` file by running the following command:
 
-```bash
+{{< code lang="bash" >}}
 npm install flowbite
-```
+{{< /code >}}
 
 2. Require Flowbite as a plugin inside your `tailwind.config.js` file:
 
-```javascript
+{{< code lang="javascript" >}}
 module.exports = {
 
     plugins: [
@@ -265,11 +265,11 @@ module.exports = {
     ]
 
 }
-```
+{{< /code >}}
 
 3. Make sure that the generated utility classes from the library are also included in the final `output.css` file by adding the source code paths inside your `tailwind.config.js` file:
 
-```javascript
+{{< code lang="javascript" >}}
 module.exports = {
 
     content: [
@@ -277,7 +277,7 @@ module.exports = {
     ]
 
 }
-```
+{{< /code >}}
 
 ## Flowbite components
 
@@ -287,7 +287,7 @@ One example would be to use the <a href="{{< ref "components/modal" >}}#javascri
 
 First of all we need to make sure that we have the correct HTML element set up in our templates - we can use this markup and add it inside the `index.html` file:
 
-```html
+{{< code lang="html" >}}
 <button id="button" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Default</button>
 
 <div id="modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -320,11 +320,11 @@ First of all we need to make sure that we have the correct HTML element set up i
         </div>
     </div>
 </div>
-```
+{{< /code >}}
 
 As you can see we added a unique ID for the button element that the parent modal element to be able to set event listeners to them later on. After having this markup put in place we need to open the `index.ts` file and import the Modal class from the Flowbite package and set up the event listeners:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Modal } from 'flowbite'
 
 // select the two elements that we'll work with
@@ -336,14 +336,14 @@ const modal = new Modal($modalElement);
 
 // toggle the visibility of the modal when clicking on the button
 $buttonElement.addEventListener('click', () => modal.toggle());
-```
+{{< /code >}}
 
 Alternatively, you can also call on the available methods of the Modal class such as `show()` or `hide()` to add the logic inside your TypeScript files instead.
 
-```javascript
+{{< code lang="javascript" >}}
 // add your own logic and then show the modal
 modal.show();
-```
+{{< /code >}}
 
 This example will show the modal without having to click the button since the logic has been added in TypeScript directly.
 
@@ -353,36 +353,36 @@ Flowbite supports type declarations for the interactive UI components including 
 
 Additionally to our code above, we will now import some relevant types from the Flowbite package, namely the `ModalOptions` and `ModalInterface`:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Modal } from 'flowbite'
 import type { ModalOptions, ModalInterface } from 'flowbite'
 
 // other code
-```
+{{< /code >}}
 
 Generally speaking, all of the components have an interface definition that you can use whenever you create a new object to make sure that you're using the correct types of parameters and methods.
 
 When creating a new modal you can set the `ModalInterface` as the main type:
 
-```javascript
+{{< code lang="javascript" >}}
 const modal: ModalInterface = new Modal($modalElement, modalOptions);
-```
+{{< /code >}}
 
 Flowbite also supports type definitions for the options object so if you want to set the placement of the modal based on types, here's how you would do that:
 
-```javascript
+{{< code lang="javascript" >}}
 const modalOptions: ModalOptions = {
     placement: 'top-right'
 }
 
 const modal: ModalInterface = new Modal($modalElement, modalOptions);
-```
+{{< /code >}}
 
 Why are these types useful, though? Because if you don't set the correct value for the `placement` key, for example you set `right` instead of `top-right` or `bottom-right` TypeScript will throw an error saying that it is not a correct option.
 
 Here's the full code using the types from Flowbite for the modal definition:
 
-```javascript
+{{< code lang="javascript" >}}
 import { Modal } from 'flowbite'
 import type { ModalOptions, ModalInterface } from 'flowbite'
 
@@ -397,7 +397,7 @@ const modal: ModalInterface = new Modal($modalElement, modalOptions);
 $buttonElement.addEventListener('click', () => modal.toggle());
 
 modal.show();
-```
+{{< /code >}}
 
 Using the types from TypeScript with the Flowbite components will ensure a more scalable and bug-free code down the line.
 

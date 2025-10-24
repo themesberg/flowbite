@@ -30,11 +30,11 @@ Before we can start using Tailwind CSS and Flowbite Svelte, we need to install S
 
 To install SvelteKit, run the following commands:
 
-```bash
+{{< code lang="bash" >}}
 npm create svelte@latest my-app
 cd my-app
 pnpm i
-```
+{{< /code >}}
 
 This will create a new SvelteKit application inside the `my-app` directory.
 
@@ -42,11 +42,11 @@ This will create a new SvelteKit application inside the `my-app` directory.
 
 To install Svelte, run the following commands:
 
-```bash
+{{< code lang="bash" >}}
 npm create vite@latest myapp -- --template svelte
 cd myapp
 pnpm i
-```
+{{< /code >}}
 
 This command will create a new Svelte application using Vite.
 
@@ -54,11 +54,11 @@ This command will create a new Svelte application using Vite.
 
 Next, we need to install Tailwind CSS.
 
-```bash
+{{< code lang="bash" >}}
 cd myapp
 npx svelte-add@latest tailwindcss
 pnpm i
-```
+{{< /code >}}
 
 This command will add and configure Tailwind CSS inside your Svelte project.
 
@@ -68,13 +68,13 @@ Now, we can install Flowbite with Svelte and their dependencies. [Flowbite Svelt
 
 Install the Flowbite packages and dependencies using `pnpm`:
 
-```bash
+{{< code lang="bash" >}}
 pnpm i flowbite flowbite-svelte tailwind-merge @popperjs/core
-```
+{{< /code >}}
 
 We also need to update the `tailwind.config.js` file with the following details:
 
-```js
+{{< code lang="javascript" >}}
 const config = {
   content: [
     "./src/**/*.{html,js,svelte,ts}",
@@ -98,7 +98,7 @@ const config = {
 };
 
 module.exports = config;
-```
+{{< /code >}}
 
 This ensures that the Tailwind CSS compiler will know what dynamic classes have to be added and also configures some custom CSS from Flowbite.
 
@@ -108,7 +108,7 @@ Now that everything is installed, we can start using Flowbite Svelte components 
 
 The navbar component is a great way to display a list of navigation links at the top of your page. Here's an example of how to use it:
 
-```html
+{{< code lang="html" >}}
 <script>
   import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte'
 </script>
@@ -133,7 +133,7 @@ The navbar component is a great way to display a list of navigation links at the
     <NavLi href="/contact">Contact</NavLi>
   </NavUl>
 </Navbar>
-```
+{{< /code >}}
 
 The navbar component has several customization options, such as dropdowns, search bars, CTA buttons, and sticky navbars. For more examples, check out the [navbar component page](https://flowbite-svelte.com/docs/components/navbar).
 
@@ -141,7 +141,7 @@ Alternatively, you can also choose of the [mega menu](https://flowbite-svelte.co
 
 The modal component is perfect for showing interactive dialogs and notifications. Here's an example of how to use it:
 
-```html
+{{< code lang="html" >}}
 <script>
   import { Button, Modal } from 'flowbite-svelte'
   let defaultModal = false;
@@ -160,13 +160,13 @@ The modal component is perfect for showing interactive dialogs and notifications
     <Button color="alternative">Decline</Button>
   </svelte:fragment>
 </Modal>
-```
+{{< /code >}}
 
 The modal component has various customization options, such as different types of modals, buttons, and other interactive elements. For more examples, check out the [modal component page](https://flowbite-svelte.com/docs/components/modal).
 
 The footer component is a useful way to display valuable information to your users, such as sitemap links, a copyright notice, and a logo.
 
-```html
+{{< code lang="html" >}}
 <script>
   import { Footer, FooterCopyright, FooterLinkGroup, FooterLink } from 'flowbite-svelte'
 </script>
@@ -180,7 +180,7 @@ The footer component is a useful way to display valuable information to your use
     <FooterLink href="/">Contact</FooterLink>
   </FooterLinkGroup>
 </Footer>
-```
+{{< /code >}}
 
 The footer component also has several customization options, such as adding logos, social media links, and sitemap links. For more examples, check out the [footer component page](https://flowbite-svelte.com/docs/components/footer).
 

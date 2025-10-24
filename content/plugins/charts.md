@@ -28,15 +28,15 @@ Before continuing make sure that you have Tailwind CSS, Flowbite and ApexCharts 
 
 Install ApexChart via NPM and save it in your `package.json` file:
 
-```bash
+{{< code lang="bash" >}}
 npm install apexcharts@3.46.0 --save
-``` 
+{{< /code >}} 
 
 Alternatively, you can also just include the CDN link:
 
-```html
+{{< code lang="html" >}}
 <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.46.0/dist/apexcharts.min.js"></script>
-```
+{{< /code >}}
 
 Now that you have all the libraries installed you can copy-paste the chart examples below in your code.
 
@@ -2394,24 +2394,24 @@ With the charts from Flowbite and through the API of ApexCharts you can programm
 
 For example, here's how you can initialize a new chart with an options object and call the `render()` function:
 
-```javascript
+{{< code lang="javascript" >}}
 const chart = new ApexCharts(el, options);
 chart.render();
-```
+{{< /code >}}
 
 You can also update the options or data on demand. Here's an example how you can add or remove data:
 
-```javascript
+{{< code lang="javascript" >}}
 const chart = new ApexCharts(el, options);
 
 chart.updateSeries([{
   data: [342, 442, 311, 421, 212]
 }]);
-```
+{{< /code >}}
 
 You can also toggle the visibility of a data series by calling the `toggleSeries()` method:
 
-```javascript
+{{< code lang="javascript" >}}
 const chart = new ApexCharts(el, {
   series: [{
     name: 'Developer Edition'
@@ -2423,7 +2423,7 @@ const chart = new ApexCharts(el, {
 });
 
 chart.toggleSeries('Designer Edition');
-```
+{{< /code >}}
 
 You can read more about all of the methods by checking out the official <a href="https://apexcharts.com/docs/methods/#render" rel="nofollow">ApexCharts documentation</a>.
 

@@ -527,11 +527,12 @@ html {
   @apply scroll-smooth;
 }
 
-#navWrapper::-webkit-scrollbar {
+#navWrapper::-webkit-scrollbar,
+#toc::-webkit-scrollbar {
 	display: none; /* Chrome, Safari and Opera */
 }
 
-#navWrapper {
+#navWrapper, #toc {
 	-ms-overflow-style: none; /* Internet Explorer 10+ */
   	scrollbar-width: none; /* Firefox */
 }

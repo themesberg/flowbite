@@ -139,7 +139,7 @@
 	max-width: 330px;
 	box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);
 	z-index: 100;
-	@apply bg-white dark:bg-gray-800 dark:text-white;
+	@apply bg-neutral-tertiary text-body;
 }
 #carbonads a {
 	color: inherit;
@@ -172,7 +172,7 @@
 	text-align: left;
 }
 #carbonads .carbon-poweredby {
-	@apply bg-gray-100 dark:bg-gray-800;
+	@apply bg-neutral-tertiary;
 	display: block;
 	padding: 6px 8px;
 	text-align: center;
@@ -198,12 +198,15 @@
 }
 
 .DocSearch-Search-Icon {
-	@apply !w-4 !h-4 md:!w-3 md:!h-3 md:!mr-1 !text-transparent;
-  	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><path stroke="%236A7280" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/></svg>');
+	@apply text-body w-3 h-3;
 }
 
-.dark .DocSearch-Search-Icon {
-  	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><path stroke="%239BA3AF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/></svg>');
+.DocSearch-MagnifierLabel .DocSearch-Search-Icon {
+	@apply w-3 h-3;
+}
+
+.DocSearch-Hit-icon {
+	@apply text-body-subtle;
 }
 
 .DocSearch-Button-Keys {
@@ -221,11 +224,6 @@
 .DocSearch-Button .DocSearch-Search-Icon {
 	@apply text-body;
 }
-
-.DocSearch-Hit-icon {
-	@apply hidden;
-}
-
 .DocSearch-Hits mark {
 	@apply text-brand dark:text-white decoration-2 underline-offset-2 decoration-brand dark:decoration-white;
 }
@@ -235,7 +233,7 @@
 }
 
 .DocSearch-Hit-source {
-	@apply pb-1 text-gray-600 bg-white dark:bg-gray-700 dark:text-gray-400;
+	@apply pb-1 text-body bg-neutral-primary-medium;
 }
 
 .DocSearch-Container {
@@ -243,19 +241,19 @@
 }
 
 .DocSearch-Modal {
-	@apply mx-auto mt-[1rem] max-h-[calc(100vh-2rem)] w-full max-w-[calc(100vw-2rem)] overflow-hidden shadow-none rounded-lg lg:mt-[4rem] lg:max-h-none lg:max-w-xl;
+	@apply mx-auto mt-[1rem] max-h-[calc(100vh-2rem)] w-full max-w-[calc(100vw-2rem)] overflow-hidden shadow-none rounded-lg lg:mt-[4rem] lg:max-h-none lg:max-w-xl bg-transparent;
 }
 
 .DocSearch-SearchBar {
-	@apply p-0 border-b border-gray-100 dark:border-gray-600 dark:bg-gray-700;
+	@apply p-0 border-b border-default-medium bg-neutral-primary-medium rounded-t-base;
 }
 
 .DocSearch-Form {
-	@apply shadow-none dark:bg-gray-700;
+	@apply shadow-none bg-neutral-primary-medium;
 }
 
 .DocSearch-Input {
-	@apply text-sm text-gray-500 shadow-none dark:text-white focus:shadow-none focus:ring-0 dark:bg-gray-700;
+	@apply text-sm text-body shadow-none dark:text-white focus:shadow-none focus:ring-0 bg-neutral-primary-medium;
 }
 
 .DocSearch-LoadingIndicator svg, .DocSearch-MagnifierLabel svg {
@@ -267,11 +265,11 @@
 }
 
 .DocSearch-Footer {
-	@apply h-12 border-t border-gray-100 shadow-none dark:bg-gray-700 dark:border-gray-600;
+	@apply h-12 border-t border-default-medium shadow-none bg-neutral-primary-medium rounded-b-base;
 }
 
 .DocSearch-Dropdown {
-	@apply bg-white dark:bg-gray-700;
+	@apply bg-neutral-primary-medium;
 }
 
 .DocSearch-Hit {
@@ -279,7 +277,11 @@
 }
 
 .DocSearch-Hit a {
-	@apply rounded-lg shadow-none bg-gray-50 dark:bg-gray-600 dark:hover:bg-brand;
+	@apply rounded-lg shadow-none bg-neutral-secondary-strong dark:hover:bg-brand;
+}
+
+.DocSearch-Hit-path {
+	@apply text-body-subtle;
 }
 
 .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-Select-Icon,
@@ -288,12 +290,14 @@
 }
 
 .DocSearch-Hit .DocSearch-Hit-action:last-child {
-	@apply w-5 h-5;
-	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m11 9 3 3-3 3' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  @apply w-5 h-5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='m10 16 4-4-4-4'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg ... %3E...%3C/svg%3E");
 }
 
+
 .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-action:last-child {
-	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m11 9 3 3-3 3' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	@apply stroke-body text-body;
 }
 
 .DocSearch-Screen-Icon,
@@ -303,19 +307,19 @@
 }
 
 .DocSearch-Title {
-	@apply mb-1 text-lg font-normal text-gray-600 dark:text-gray-200;
+	@apply mb-1 text-base font-normal text-body;
 }
 
 .DocSearch-Hit-Container {
-	@apply dark:text-gray-300;
+	@apply text-body;
 }
 
 .DocSearch-Logo svg {
-	@apply dark:text-gray-400;
+	@apply text-body;
 }
 
 .DocSearch-Reset {
-	@apply dark:text-gray-300 dark:hover:text-white hover:text-black;
+	@apply text-body hover:text-heading;
 }
 
 .formkit-alert.formkit-alert-success {

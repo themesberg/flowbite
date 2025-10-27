@@ -231,38 +231,40 @@ Use this example to keep the navbar positioned fixed to the top side as you scro
 Use this example to show another subnav below the main navbar element.
 
 {{< example id="navbar-submenu-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true >}}
-<nav class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default">
-    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-        <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
-            <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">Flowbite</span>
-        </a>
-        <div class="flex items-center space-x-6 rtl:space-x-reverse">
-            <a href="tel:5541251234" class="text-sm  text-body hover:underline">(555) 412-1234</a>
-            <a href="#" class="text-sm font-medium text-fg-brand hover:underline">Login</a>
-        </div>
-    </div>
-</nav>
-<nav class="bg-neutral-secondary-soft border-t border-default">
-    <div class="max-w-screen-xl px-4 py-3 mx-auto">
-        <div class="flex items-center">
-            <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
-                <li>
-                    <a href="#" class="text-heading hover:underline" aria-current="page">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="text-heading hover:underline">Company</a>
-                </li>
-                <li>
-                    <a href="#" class="text-heading hover:underline">Team</a>
-                </li>
-                <li>
-                    <a href="#" class="text-heading hover:underline">Features</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<header class="fixed w-full z-20 top-0 start-0">
+  <nav class="bg-neutral-primary">
+      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+          <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo" />
+              <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">Flowbite</span>
+          </a>
+          <div class="flex items-center space-x-6 rtl:space-x-reverse">
+              <a href="tel:5541251234" class="text-sm  text-body hover:underline">(555) 412-1234</a>
+              <a href="#" class="text-sm font-medium text-fg-brand hover:underline">Login</a>
+          </div>
+      </div>
+  </nav>
+  <nav class="bg-neutral-secondary-soft border-y border-default border-default">
+      <div class="max-w-screen-xl px-4 py-3 mx-auto">
+          <div class="flex items-center">
+              <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
+                  <li>
+                      <a href="#" class="text-heading hover:underline" aria-current="page">Home</a>
+                  </li>
+                  <li>
+                      <a href="#" class="text-heading hover:underline">Company</a>
+                  </li>
+                  <li>
+                      <a href="#" class="text-heading hover:underline">Team</a>
+                  </li>
+                  <li>
+                      <a href="#" class="text-heading hover:underline">Features</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+</header>
 {{< /example >}}
 
 ## Navbar with search
@@ -453,7 +455,7 @@ Use this example to create a navigation bar with a user profile or button to tog
   <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       <button type="button" class="flex text-sm bg-neutral-primary rounded-full md:me-0 focus:ring-4 focus:ring-neutral-tertiary" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
         <span class="sr-only">Open user menu</span>
-        <img class="w-7 h-7 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="user photo">
+        <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="user photo">
       </button>
       <!-- Dropdown menu -->
       <div class="z-50 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44" id="user-dropdown">

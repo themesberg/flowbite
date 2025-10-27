@@ -253,6 +253,9 @@
         --color-dark-subtle: var(--color-stone-800);
         --color-dark-backdrop: var(--color-stone-950);
 
+        --diamond-pattern-dark-url: url(/docs/images/patterns/diamond-minimal-dark.svg);
+        --diamond-pattern-light-url: url(/docs/images/patterns/diamond-minimal.svg);
+
         /* shiki variables */
         --color-shiki-fg-brand: white;          /* bright but still readable on dark bg */
         --color-shiki-fg-brand-subtle: white;   /* softer, pastel-like tint */
@@ -379,6 +382,9 @@
     --color-dark-subtle: var(--color-zinc-800);
     --color-dark-backdrop: var(--color-zinc-950);
 
+    --diamond-pattern-dark-url: url(/docs/images/patterns/diamond-enterprise-dark.svg);
+    --diamond-pattern-light-url: url(/docs/images/patterns/diamond-enterprise.svg);
+
     /* shiki variables */
     --color-shiki-fg-brand: #56c0d8;          /* medium-light tint */
     --color-shiki-fg-brand-subtle: #8ad9e7;   /* lighter, softer tint */
@@ -501,6 +507,9 @@
         --color-dark-subtle: var(--color-slate-800);
         --color-dark-backdrop: var(--color-slate-950);
 
+        --diamond-pattern-dark-url: url(/docs/images/patterns/diamond-playful-dark.svg);
+        --diamond-pattern-light-url: url(/docs/images/patterns/diamond-playful.svg);
+
         /* shiki variables */
         --color-shiki-fg-brand: #f06292;          /* vivid but readable on dark bg */
         --color-shiki-fg-brand-subtle: #f48fb1;   /* lighter and friendlier tone */
@@ -622,6 +631,9 @@
         --color-brand-light: var(--color-indigo-600);
         --color-dark-subtle: var(--color-neutral-800);
         --color-dark-backdrop: var(--color-neutral-950);
+
+        --diamond-pattern-dark-url: url(/docs/images/patterns/diamond-mono-dark.svg);
+        --diamond-pattern-light-url: url(/docs/images/patterns/diamond-mono.svg);
 
         /* shiki variables */
         --color-shiki-fg-brand: #9387ff;          /* balanced mid-light tint */

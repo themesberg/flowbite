@@ -1,3 +1,19 @@
+
+:root {
+    --shiki-foreground: #e1e4e8;               /* General editor foreground */
+    --shiki-background: #24292e;               /* Editor background */
+
+    --shiki-token-constant: var(--color-shiki-fg-brand);           /* constants, numbers, enums #79b8ff */
+    --shiki-token-string: var(--color-shiki-fg-brand-subtle);             /* #9ecbff string literals */
+    --shiki-token-comment: #6a737d;            /* comments */
+    --shiki-token-keyword: #f97583;            /* keywords (if, return, etc.) */
+    --shiki-token-parameter: #e1e4e8;          /* function parameters */
+    --shiki-token-function: #b392f0;           /* function & entity names */
+    --shiki-token-string-expression: var(--color-shiki-fg-brand);  /* string interpolation / embedded expressions #79b8ff */
+    --shiki-token-punctuation: #e1e4e8;        /* default text / punctuation */
+    --shiki-token-link: var(--color-shiki-fg-brand);               /* links and URLs #79b8ff */
+}
+
 .yt-video {
     height: 250px;
 }

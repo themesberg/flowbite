@@ -1,10 +1,18 @@
 // css for docs
 import docsearch from '@docsearch/js';
 import { codeToHtml } from 'shiki';
+import { createCssVariablesTheme } from 'shiki/core';
 
 const codeBlockElements = document.getElementsByClassName('shiki-code-block');
 
 console.log(codeBlockElements);
+
+const customShikiTheme = createCssVariablesTheme({
+    name: 'custom-theme',
+    variablePrefix: '--shiki-',
+    variableDefaults: {},
+    fontStyle: true,
+});
 
 // Convert HTMLCollection to Array before using forEach
 Array.from(codeBlockElements).forEach(async (e) => {
@@ -14,7 +22,7 @@ Array.from(codeBlockElements).forEach(async (e) => {
     const language = e.getAttribute('data-language');
     const html = await codeToHtml(code, {
         lang: language,
-        theme: 'github-dark',
+        theme: customShikiTheme,
     });
     e.innerHTML = html;
 });

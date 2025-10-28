@@ -103,17 +103,30 @@ const initiateCopyToClipboard = (element) => {
                 .getAttribute('data-clipboard-content-html');
         }
         copyTextToClipboard(textToCopy);
-        alert.classList.remove('opacity-0', 'hidden');
-        alert.classList.add('opacity-100', 'flex');
         copyText.innerHTML = 'Copied';
-
-        setTimeout(function () {
-            alert.classList.add('opacity-0', 'hidden');
-            alert.classList.remove('opacity-100', 'flex');
-            copyText.innerHTML = 'Copy';
-        }, 3000);
     });
 };
+
+Array.from(document.getElementsByClassName('copy-clipboard-simple')).forEach(
+    (e) => {
+        var copyText = e.getElementsByClassName('copy-text')[0];
+        var copyIcon = e.getElementsByClassName('copy-icon')[0];
+        var copiedIcon = e.getElementsByClassName('copied-icon')[0];
+        var textarea = e.querySelector('textarea[data-clipboard-content]');
+        e.addEventListener('click', () => {
+            var textToCopy = textarea.value;
+            copyTextToClipboard(textToCopy);
+            copyText.innerHTML = 'Copied';
+            copyIcon.classList.add('hidden');
+            copiedIcon.classList.remove('hidden');
+            setTimeout(() => {
+                copyText.innerHTML = 'Copy';
+                copyIcon.classList.remove('hidden');
+                copiedIcon.classList.add('hidden');
+            }, 2000);
+        });
+    }
+);
 
 const initiateToggleCodeTabs = (element) => {
     const toggleHTMLCodeButton = element.querySelector(

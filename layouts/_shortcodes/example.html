@@ -148,7 +148,10 @@
               </ul>
               <div class="flex justify-end">
                 <button {{ if $id }} data-tooltip-target="{{ $id }}-copy-clipboard-tooltip" data-clipboard-content-type="html" data-tooltip-placement="bottom"{{ end }} type="button" data-copy-state="copy" class="flex items-center px-3 py-2 text-xs font-medium text-body bg-neutral-secondary-soft hover:bg-neutral-tertiary hover:text-heading border-l border-default copy-to-clipboard-button">
-                  <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"/></svg>
+                  <svg class="w-4 h-4 me-1.5 copy-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"/></svg>
+                  <svg class="w-4 h-4 me-1.5 copied-icon hidden text-fg-success" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
+                  </svg>
                   <span class="copy-text">Copy</span>
                 </button>
                 {{ if $id }}

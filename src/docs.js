@@ -86,9 +86,9 @@ const copyTextToClipboard = (text) => {
 
 const initiateCopyToClipboard = (element) => {
     var button = element.getElementsByClassName('copy-to-clipboard-button')[0];
-
-    var alert = document.getElementById('copied-code-alert');
     var copyText = button.getElementsByClassName('copy-text')[0];
+    var copyIcon = button.getElementsByClassName('copy-icon')[0];
+    var copiedIcon = button.getElementsByClassName('copied-icon')[0];
     button.addEventListener('click', function () {
         var textToCopy = '';
         if (
@@ -104,6 +104,13 @@ const initiateCopyToClipboard = (element) => {
         }
         copyTextToClipboard(textToCopy);
         copyText.innerHTML = 'Copied';
+        copyIcon.classList.add('hidden');
+        copiedIcon.classList.remove('hidden');
+        setTimeout(() => {
+            copyText.innerHTML = 'Copy';
+            copyIcon.classList.remove('hidden');
+            copiedIcon.classList.add('hidden');
+        }, 2000);
     });
 };
 

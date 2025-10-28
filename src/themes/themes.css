@@ -123,6 +123,9 @@
     --footer-diamond-pattern-dark-url: url(/docs/images/patterns/footer-diamond-dark.svg);
     --footer-diamond-pattern-light-url: url(/docs/images/patterns/footer-diamond.svg);
 
+    --squares-pattern-light-url: url(/docs/images/patterns/squares.svg);
+    --squares-pattern-dark-url: url(/docs/images/patterns/squares-dark.svg);
+
     /* shiki variables */
     --color-shiki-fg-brand: #79b8ff;
     --color-shiki-fg-brand-subtle: #9ecbff;
@@ -256,6 +259,12 @@
         --diamond-pattern-dark-url: url(/docs/images/patterns/diamond-minimal-dark.svg);
         --diamond-pattern-light-url: url(/docs/images/patterns/diamond-minimal.svg);
 
+        --footer-diamond-pattern-dark-url: url(/docs/images/patterns/footer-diamond-minimal-dark.svg);
+        --footer-diamond-pattern-light-url: url(/docs/images/patterns/footer-diamond-minimal.svg);
+
+        --squares-pattern-light-url: url(/docs/images/patterns/squares-minimal.svg);
+        --squares-pattern-dark-url: url(/docs/images/patterns/squares-minimal-dark.svg);
+
         /* shiki variables */
         --color-shiki-fg-brand: white;          /* bright but still readable on dark bg */
         --color-shiki-fg-brand-subtle: white;   /* softer, pastel-like tint */
@@ -385,6 +394,12 @@
     --diamond-pattern-dark-url: url(/docs/images/patterns/diamond-enterprise-dark.svg);
     --diamond-pattern-light-url: url(/docs/images/patterns/diamond-enterprise.svg);
 
+    --footer-diamond-pattern-dark-url: url(/docs/images/patterns/footer-diamond-enterprise-dark.svg);
+    --footer-diamond-pattern-light-url: url(/docs/images/patterns/footer-diamond-enterprise.svg);
+
+    --squares-pattern-light-url: url(/docs/images/patterns/squares-enterprise.svg);
+    --squares-pattern-dark-url: url(/docs/images/patterns/squares-enterprise-dark.svg);
+
     /* shiki variables */
     --color-shiki-fg-brand: #56c0d8;          /* medium-light tint */
     --color-shiki-fg-brand-subtle: #8ad9e7;   /* lighter, softer tint */
@@ -510,6 +525,12 @@
         --diamond-pattern-dark-url: url(/docs/images/patterns/diamond-playful-dark.svg);
         --diamond-pattern-light-url: url(/docs/images/patterns/diamond-playful.svg);
 
+        --footer-diamond-pattern-dark-url: url(/docs/images/patterns/footer-diamond-playful-dark.svg);
+        --footer-diamond-pattern-light-url: url(/docs/images/patterns/footer-diamond-playful.svg);
+
+        --squares-pattern-light-url: url(/docs/images/patterns/squares-playful.svg);
+        --squares-pattern-dark-url: url(/docs/images/patterns/squares-playful-dark.svg);
+
         /* shiki variables */
         --color-shiki-fg-brand: #f06292;          /* vivid but readable on dark bg */
         --color-shiki-fg-brand-subtle: #f48fb1;   /* lighter and friendlier tone */
@@ -634,6 +655,12 @@
 
         --diamond-pattern-dark-url: url(/docs/images/patterns/diamond-mono-dark.svg);
         --diamond-pattern-light-url: url(/docs/images/patterns/diamond-mono.svg);
+
+        --footer-diamond-pattern-dark-url: url(/docs/images/patterns/footer-diamond-mono-dark.svg);
+        --footer-diamond-pattern-light-url: url(/docs/images/patterns/footer-diamond-mono.svg);
+        
+        --squares-pattern-light-url: url(/docs/images/patterns/squares-mono.svg);
+        --squares-pattern-dark-url: url(/docs/images/patterns/squares-mono-dark.svg);
 
         /* shiki variables */
         --color-shiki-fg-brand: #9387ff;          /* balanced mid-light tint */

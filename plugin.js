@@ -278,7 +278,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     width: spacing[4],
                     color: 'var(--color-brand)',
                     'background-color': '#fff',
-                    'border-color': '--color-gray-400',
+                    'border-color': 'var(--color-default)',
                     'border-width': borderWidth['DEFAULT'],
                     '--tw-shadow': '0 0 #0000',
                 },
@@ -638,7 +638,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     },
                 '.datatable-wrapper .datatable-table thead th .datatable-sorter:hover, .datatable-wrapper .datatable-table thead th.datatable-ascending .datatable-sorter, .datatable-wrapper .datatable-table thead th.datatable-descending .datatable-sorter':
                     {
-                        color: 'var(--color-gray-900)',
+                        color: 'var(--color-heading)',
                     },
                 '.datatable-wrapper .datatable-table tbody tr.selected': {
                     backgroundColor: 'var(--color-neutral-secondary)',
@@ -721,7 +721,7 @@ module.exports = plugin.withOptions(function (options = {}) {
                     {
                         backgroundColor:
                             'var(--color-neutral-secondary-medium)',
-                        color: 'var(--color-gray-700)',
+                        color: 'var(--color-body)',
                     },
             });
         }

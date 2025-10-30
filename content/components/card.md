@@ -458,7 +458,7 @@ Use this card example if you want to show a list of data:
    <div class="flow-root">
         <ul role="list" class="divide-y divide-default">
             <li class="py-4 sm:py-4">
-                <div class="flex items-center">
+                <div class="flex items-center gap-2">
                     <div class="shrink-0">
                         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Neil image">
                     </div>
@@ -476,7 +476,7 @@ Use this card example if you want to show a list of data:
                 </div>
             </li>
             <li class="py-4 sm:py-4">
-                <div class="flex items-center ">
+                <div class="flex items-center gap-2">
                     <div class="shrink-0">
                         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image">
                     </div>
@@ -494,7 +494,7 @@ Use this card example if you want to show a list of data:
                 </div>
             </li>
             <li class="py-4 sm:py-4">
-                <div class="flex items-center">
+                <div class="flex items-center gap-2">
                     <div class="shrink-0">
                         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-2.jpg" alt="Michael image">
                     </div>
@@ -512,7 +512,7 @@ Use this card example if you want to show a list of data:
                 </div>
             </li>
             <li class="py-4 sm:py-4">
-                <div class="flex items-center ">
+                <div class="flex items-center gap-2">
                     <div class="shrink-0">
                         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-4.jpg" alt="Lana image">
                     </div>
@@ -530,13 +530,13 @@ Use this card example if you want to show a list of data:
                 </div>
             </li>
             <li class="pt-4 pb-0">
-                <div class="flex items-center">
+                <div class="flex items-center gap-2">
                     <div class="shrink-0">
                         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Thomas image">
                     </div>
                     <div class="flex-1 min-w-0 ms-2">
                         <p class="font-medium text-heading truncate">
-                            Thomes Lean
+                            Thomas Lean
                         </p>
                         <p class="text-sm text-body truncate">
                             email@windster.com

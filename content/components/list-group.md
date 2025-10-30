@@ -101,9 +101,9 @@ Use the following example to create a list of buttons as a menu together with [S
 {{< /example >}}
 
 
-## Features list group (New)
+## Features list group
 
-Use the following example to create a list of buttons as a menu together with [SVG icons](https://flowbite.com/icons/).
+Use this example to show a list of features with icons in a card component.
 
 {{< example class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
@@ -113,27 +113,27 @@ Use the following example to create a list of buttons as a menu together with [S
             <svg class="w-5 h-5 shrink-0 text-fg-brand me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
             <span class="text-body">2 team members</span>
         </li>
-        <li class="flex">
+        <li class="flex items-center">
             <svg class="w-5 h-5 shrink-0 text-fg-brand me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
             <span class="text-body">20GB Cloud storage</span>
         </li>
-        <li class="flex">
+        <li class="flex items-center">
             <svg class="w-5 h-5 shrink-0 text-fg-brand me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
             <span class="text-body">Integration help</span>
         </li>
-        <li class="flex line-through decoration-body">
+        <li class="flex items-center line-through decoration-body">
             <svg class="w-5 h-5 shrink-0 text-fg-brand me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
             <span class="text-body">Sketch Files</span>
         </li>
-        <li class="flex line-through decoration-body">
+        <li class="flex items-center line-through decoration-body">
             <svg class="w-5 h-5 shrink-0 text-fg-brand me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
             <span class="text-body">API Access</span>
         </li>
-        <li class="flex line-through decoration-body">
+        <li class="flex items-center line-through decoration-body">
             <svg class="w-5 h-5 shrink-0 text-fg-brand me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
             <span class="text-body">Complete documentation</span>
         </li>
-        <li class="flex line-through decoration-body">
+        <li class="flex items-center line-through decoration-body">
             <svg class="w-5 h-5 shrink-0 text-fg-brand me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
             <span class="text-body">24×7 phone support</span>
         </li>
@@ -141,9 +141,9 @@ Use the following example to create a list of buttons as a menu together with [S
 </div>
 {{< /example >}}
 
-## Stats list with divider (New)
+## Statistic list with divider
 
-Use the following example to create a list of buttons as a menu together with [SVG icons](https://flowbite.com/icons/).
+This example can be used to show a list of statistical data in a card component.
 
 {{< example class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
@@ -223,9 +223,9 @@ Use the following example to create a list of buttons as a menu together with [S
 </div>
 {{< /example >}}
 
-## Avatar & buttons (New)
+## List with avatars and CTA
 
-Use the following example to create a list of buttons as a menu together with [SVG icons](https://flowbite.com/icons/).
+Use this component to show a list of users with avatars and CTA buttons.
 
 {{< example class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
@@ -234,16 +234,16 @@ Use the following example to create a list of buttons as a menu together with [S
     <div class="flow-root">
         <ul role="list" class="divide-y divide-default">
             <li class="pb-4 sm:pb-4">
-                <div class="flex items-center">
+                <div class="flex items-center gap-2">
                     <div class="shrink-0">
                         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Neil image">
                     </div>
-                    <div class="flex-1 min-w-0 ms-2">
+                    <div class="flex-1 min-w-0">
                         <p class="font-medium text-heading truncate">
                             Neil Sims
                         </p>
                         <p class="text-sm text-body truncate">
-                            email@windster.com
+                            neil@windster.com
                         </p>
                     </div>
                     <div class="inline-flex items-center space-x-1.5">
@@ -259,16 +259,16 @@ Use the following example to create a list of buttons as a menu together with [S
                 </div>
             </li>
             <li class="py-4 sm:py-4">
-                <div class="flex items-center ">
+                <div class="flex items-center gap-2">
                     <div class="shrink-0">
                         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image">
                     </div>
-                    <div class="flex-1 min-w-0 ms-2">
+                    <div class="flex-1 min-w-0">
                         <p class="font-medium text-heading truncate">
                             Bonnie Green
                         </p>
                         <p class="text-sm text-body truncate">
-                            email@windster.com
+                            bonnie@flowbite.com
                         </p>
                     </div>
                     <div class="inline-flex items-center space-x-1.5">
@@ -284,16 +284,16 @@ Use the following example to create a list of buttons as a menu together with [S
                 </div>
             </li>
             <li class="py-4 sm:py-4">
-                <div class="flex items-center">
+                <div class="flex items-center gap-2">
                     <div class="shrink-0">
                         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-2.jpg" alt="Michael image">
                     </div>
-                    <div class="flex-1 min-w-0 ms-2">
+                    <div class="flex-1 min-w-0">
                         <p class="font-medium text-heading truncate">
                             Michael Gough
                         </p>
                         <p class="text-sm text-body truncate">
-                            email@windster.com
+                            michael@themesberg.com
                         </p>
                     </div>
                     <div class="inline-flex items-center space-x-1.5">
@@ -309,16 +309,16 @@ Use the following example to create a list of buttons as a menu together with [S
                 </div>
             </li>
             <li class="py-4 sm:py-4">
-                <div class="flex items-center ">
+                <div class="flex items-center gap-2">
                     <div class="shrink-0">
                         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-4.jpg" alt="Lana image">
                     </div>
-                    <div class="flex-1 min-w-0 ms-2">
+                    <div class="flex-1 min-w-0">
                         <p class="font-medium text-heading truncate">
                             Lana Byrd
                         </p>
                         <p class="text-sm text-body truncate">
-                            email@windster.com
+                            lana@apple.com
                         </p>
                     </div>
                     <div class="inline-flex items-center space-x-1.5">
@@ -334,16 +334,16 @@ Use the following example to create a list of buttons as a menu together with [S
                 </div>
             </li>
             <li class="pt-4 pb-0">
-                <div class="flex items-center">
+                <div class="flex items-center gap-2">
                     <div class="shrink-0">
                         <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Thomas image">
                     </div>
-                    <div class="flex-1 min-w-0 ms-2">
+                    <div class="flex-1 min-w-0">
                         <p class="font-medium text-heading truncate">
-                            Thomes Lean
+                            Thomas Lean
                         </p>
                         <p class="text-sm text-body truncate">
-                            email@windster.com
+                            thomas@google.com
                         </p>
                     </div>
                     <div class="inline-flex items-center space-x-1.5">

@@ -2227,7 +2227,7 @@ Use this example of a table where we show a data set of users and showing a prof
                     <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Jese image">
                     <div class="ps-3">
                         <div class="text-base font-semibold">Thomas Lean</div>
-                        <div class="font-normal text-body">thomes@flowbite.com</div>
+                        <div class="font-normal text-body">thames@flowbite.com</div>
                     </div>
                 </th>
                 <td class="px-6 py-4">
@@ -2548,7 +2548,7 @@ Use this example to show a modal with a form where you can edit table data by cl
                     <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Jese image">
                     <div class="ps-3">
                         <div class="text-base font-semibold">Thomas Lean</div>
-                        <div class="font-normal text-body">thomes@flowbite.com</div>
+                        <div class="font-normal text-body">thomas@flowbite.com</div>
                     </div>
                 </th>
                 <td class="px-6 py-4">

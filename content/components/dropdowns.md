@@ -630,9 +630,9 @@ This example can be used when you want to show a long list of items that won't a
 </div>
 {{< /example >}}
 
-## Dropdown with scrolling & checkboxes (New)
+## Scrollable checkboxes
 
-This example can be used when you want to show a long list of items that won't affect the height of the dropdown menu by enabling a scrolling behaviour.
+Use this example to show multiple dropdown items in a scrollable container with checkboxes.
 
 {{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="380" >}}
 <button id="dropdownUsersAdvancedButton" data-dropdown-toggle="dropdownAdvanced" data-dropdown-placement="bottom" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">

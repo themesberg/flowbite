@@ -253,7 +253,7 @@ Use these examples if you want to use smaller or larger buttons.
 
 ## Outline button sizes
 
-Use these examples if you want to use smaller or larger buttons.
+Use these examples if you want to use smaller or larger buttons with outline style.
 
 {{< example class="space-x-2 space-y-2" github="components/buttons.md" show_dark=true >}}
 <button type="button" class="text-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none">Extra small</button>
@@ -263,9 +263,9 @@ Use these examples if you want to use smaller or larger buttons.
 <button type="button" class="text-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium rounded-base text-base px-6 py-3.5 focus:outline-none">Extra large</button>
 {{< /example >}}
 
-## Button sizes with icon (New)
+## Button sizes with icon
 
-Use these examples if you want to use smaller or larger buttons.
+Use these examples if you want to use smaller or larger buttons with icons.
 
 {{< example class="space-x-2 space-y-2" github="components/buttons.md" show_dark=true >}}
 <button type="button" class="inline-flex items-center  text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none">

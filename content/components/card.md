@@ -85,9 +85,9 @@ You can use the following example of a card element with an image for blog posts
 </div>
 {{< /example >}}
 
-## Card with image alternative (New)
+## Card with description
 
-You can use the following example of a card element with an image for blog posts, user cards, and many more.
+Use this alternative styled card with an image for features, blog posts, and more.
 
 {{< example class="flex justify-center" github="components/card.md" show_dark=true >}}
 

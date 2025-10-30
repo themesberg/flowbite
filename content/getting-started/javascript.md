@@ -140,7 +140,7 @@ All of the examples on the Flowbite Docs already have the data attributes applie
 
 Here's an example of how you can set up the modal behaviour and apply "show" and "hide" actions:
 
-{{< example id="default-modal-example" github="components/modal.md" class="flex justify-center" show_dark=true iframeHeight="600" >}}
+{{< example github="components/modal.md" class="flex justify-center" show_dark=true iframeHeight="600" >}}
 <!-- Modal toggle -->
 <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Toggle modal

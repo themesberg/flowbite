@@ -17,7 +17,7 @@ The pagination component can be used to navigate across a series of content and 
 
 Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
 
-{{< example id="default-pagination-example" class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
+{{< example class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
 
 <nav aria-label="Page navigation example">
   <ul class="flex -space-x-px text-sm">
@@ -77,7 +77,7 @@ Use the following list of pagination items based on two sizes powered by Tailwin
 
 The following pagination component example shows how you can use [SVG icons](https://flowbite.com/icons/) instead of text to show the previous and next pages.
 
-{{< example id="pagination-icons-example" class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
+{{< example class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
 
 <nav aria-label="Page navigation example">
   <ul class="flex -space-x-px text-sm">
@@ -148,7 +148,7 @@ The following pagination component example shows how you can use [SVG icons](htt
 
 Use the following markup to show simple previous and next elements.
 
-{{< example id="pagination-prev-next-example" class="flex flex-col space-y-4 items-center justify-center" github="components/pagination.md" show_dark=true >}}
+{{< example class="flex flex-col space-y-4 items-center justify-center" github="components/pagination.md" show_dark=true >}}
 
 <div class="flex space-x-2">
   <!-- Previous Button -->
@@ -179,7 +179,7 @@ Use the following markup to show simple previous and next elements.
 
 Use the following code to show simple previous and next elements with icons.
 
-{{< example id="pagination-prev-next-icons-example" class="flex flex-col space-y-4 items-center justify-center" github="components/pagination.md" show_dark=true >}}
+{{< example class="flex flex-col space-y-4 items-center justify-center" github="components/pagination.md" show_dark=true >}}
 <div class="flex space-x-2">
   <!-- Previous Button -->
   <a href="#" class="inline-flex items-center text-body bg-neutral-secondary-medium border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
@@ -213,7 +213,7 @@ Use the following code to show simple previous and next elements with icons.
 
 You can use the following markup to show the number of data shown inside a table element and also the previous and next action buttons.
 
-{{< example id="pagination-table-example" class="flex flex-col space-y-4 items-center justify-center" github="components/pagination.md" show_dark=true >}}
+{{< example class="flex flex-col space-y-4 items-center justify-center" github="components/pagination.md" show_dark=true >}}
 
 <div class="flex flex-col items-center">
   <!-- Help text -->
@@ -255,7 +255,7 @@ You can use the following markup to show the number of data shown inside a table
 
 You can use the following code to show the number of data shown inside a table element and also the previous and next action buttons coupled with icons.
 
-{{< example id="pagination-table-icons-example" class="flex flex-col space-y-4 items-center justify-center" github="components/pagination.md" show_dark=true >}}
+{{< example class="flex flex-col space-y-4 items-center justify-center" github="components/pagination.md" show_dark=true >}}
 
 <div class="flex flex-col items-center">
   <!-- Help text -->
@@ -301,7 +301,7 @@ You can use the following code to show the number of data shown inside a table e
 
 Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
 
-{{< example id="default-pagination-example" class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
+{{< example class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
 
 <nav aria-label="Page navigation example" class="flex items-center space-x-4">
   <ul class="flex -space-x-px text-sm">
@@ -344,7 +344,7 @@ Use the following list of pagination items based on two sizes powered by Tailwin
 
 Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
 
-{{< example id="default-pagination-example" class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
+{{< example class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
 
 <nav aria-label="Page navigation example" class="flex items-center space-x-4">
   <ul class="flex -space-x-px text-sm">
@@ -385,7 +385,7 @@ Use the following list of pagination items based on two sizes powered by Tailwin
 
 Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
 
-{{< example id="default-pagination-example" class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
+{{< example class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
 
 <nav aria-label="Page navigation example">
   <form class="mx-auto flex items-center space-x-3">
@@ -404,7 +404,7 @@ Use the following list of pagination items based on two sizes powered by Tailwin
 
 Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
 
-{{< example id="default-pagination-example" class="flex flex-col space-y-6 py-8 items-center" github="components/pagination.md" show_dark=true >}}
+{{< example class="flex flex-col space-y-6 py-8 items-center" github="components/pagination.md" show_dark=true >}}
 
 <nav aria-label="Page navigation example">
   <form class="mx-auto flex items-center space-x-3">
@@ -445,7 +445,7 @@ Use the following list of pagination items based on two sizes powered by Tailwin
 
 Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
 
-{{< example id="default-pagination-example" class="flex flex-col space-y-6 py-8 items-center" github="components/pagination.md" show_dark=true >}}
+{{< example class="flex flex-col space-y-6 py-8 items-center" github="components/pagination.md" show_dark=true >}}
 
 <nav aria-label="Page navigation example">
   <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">

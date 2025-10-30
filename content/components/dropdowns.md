@@ -22,7 +22,7 @@ If you want to show a dropdown menu when clicking on an element make sure that y
 
 The `dropdownId` is the id of the dropdown menu element.
 
-{{< example id="default-dropdown-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="300" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="300" >}}
 <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -53,7 +53,7 @@ Use the `data-dropdown-trigger="{hover|click}"` data attribute options to set wh
 
 There's a 300ms default delay when showing or hiding the dropdown due to UI/UX reasons and how it may affect the interaction with other components on the page. Generally, we recommend using the `click` method.
 
-{{< example id="dropdown-hover-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="300" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="300" >}}
 <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -82,7 +82,7 @@ There's a 300ms default delay when showing or hiding the dropdown due to UI/UX r
 
 You can use the `data-dropdown-delay={milliseconds}` data attribute to set they delay on when to show or hide the dropdown menu when using hover. You may want to use this depending on how the users interact with your interface. In this example we add 500 milliseconds instead of the default 300.
 
-{{< example id="dropdown-delay-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="300" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="300" >}}
 <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" data-dropdown-trigger="hover" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -111,7 +111,7 @@ You can use the `data-dropdown-delay={milliseconds}` data attribute to set they 
 
 You can use the `divide-y divide-gray-100` classes to add separate elements inside the dropdown menu.
 
-{{< example id="dropdown-divider-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="320" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="320" >}}
 <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -140,7 +140,7 @@ You can use the `divide-y divide-gray-100` classes to add separate elements insi
 
 Use this example to show extra information outside of the list of menu items inside the dropdown.
 
-{{< example id="dropdown-header-example" class="flex justify-center " github="components/dropdowns.md" show_dark=true iframeHeight="520" >}}
+{{< example class="flex justify-center " github="components/dropdowns.md" show_dark=true iframeHeight="520" >}}
 <button id="dropdownInformationButton" data-dropdown-toggle="dropdownInformation" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -219,7 +219,7 @@ Use this example to show extra information outside of the list of menu items ins
 
 Use this example to enable multi-level dropdown menus by adding stacked elements inside of each other.
 
-{{< example id="dropdown-multi-level-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="350" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="350" >}}
 <button id="multiLevelDropdownButton" data-dropdown-toggle="multi-dropdown" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -267,7 +267,7 @@ Use this example to enable multi-level dropdown menus by adding stacked elements
 
 Add multiple checkbox elements inside your dropdown menu to enable more advanced input interaction.
 
-{{< example id="dropdown-checkbox-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="290" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="290" >}}
 <button id="dropdownCheckboxButton" data-dropdown-toggle="dropdownDefaultCheckbox" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -301,7 +301,7 @@ Add multiple checkbox elements inside your dropdown menu to enable more advanced
 
 Use this example to update the background color of a menu item when using a list of checkbox elements.
 
-{{< example id="dropdown-checkbox-bg-hover-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="300" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="300" >}}
 <button id="dropdownBgHoverButton" data-dropdown-toggle="dropdownBgHover" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -336,7 +336,7 @@ Use this example to update the background color of a menu item when using a list
 
 Add an extra helper text to each checkbox element inside the dropdown menu list with this example.
 
-{{< example id="dropdown-checkbox-helper-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="380" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="380" >}}
 <button id="dropdownHelperButton" data-dropdown-toggle="dropdownHelper" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -391,7 +391,7 @@ Add an extra helper text to each checkbox element inside the dropdown menu list 
 
 Enable more advanced interaction with your users by adding radio input elements inside the dropdown menu.
 
-{{< example id="dropdown-radio-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="250" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="250" >}}
 <button id="dropdownRadioButton" data-dropdown-toggle="dropdownDefaultRadio" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown radio 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -426,7 +426,7 @@ Enable more advanced interaction with your users by adding radio input elements 
 
 Use this example to update the background color when hovering over a menu item when using radio elements.
 
-{{< example id="dropdown-radio-bg-hover-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="280" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="280" >}}
 <button id="dropdownRadioBgHoverButton" data-dropdown-toggle="dropdownRadioBgHover" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -461,7 +461,7 @@ Use this example to update the background color when hovering over a menu item w
 
 This example can be used to add an extra helper text inside of each radio element from the dropdown menu.
 
-{{< example id="dropdown-radio-helper-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="380" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="380" >}}
 
 <button id="dropdownHelperRadioButton" data-dropdown-toggle="dropdownHelperRadio" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
@@ -518,7 +518,7 @@ This example can be used to add an extra helper text inside of each radio elemen
 
 Show a list of toggle switch elements inside the dropdown menu to enable a yes or no type of choice.
 
-{{< example id="dropdown-toggle-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="280" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="280" >}}
 <button id="dropdownToggleButton" data-dropdown-toggle="dropdownToggle" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -563,7 +563,7 @@ Show a list of toggle switch elements inside the dropdown menu to enable a yes o
 
 This example can be used when you want to show a long list of items that won't affect the height of the dropdown menu by enabling a scrolling behaviour.
 
-{{< example id="dropdown-scroll-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="380" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="380" >}}
 <button id="dropdownUsersButton" data-dropdown-toggle="dropdownUsers" data-dropdown-placement="bottom" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -634,7 +634,7 @@ This example can be used when you want to show a long list of items that won't a
 
 This example can be used when you want to show a long list of items that won't affect the height of the dropdown menu by enabling a scrolling behaviour.
 
-{{< example id="dropdown-scroll-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="380" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="380" >}}
 <button id="dropdownUsersAdvancedButton" data-dropdown-toggle="dropdownAdvanced" data-dropdown-placement="bottom" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -729,7 +729,7 @@ This example can be used when you want to show a long list of items that won't a
 
 Use this example if you want to add a search bar inside the dropdown menu to be able to filter through a long list of menu items with scrolling behaviour.
 
-{{< example id="dropdown-search-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="440" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="440" >}}
 <button id="dropdownUsersSearchButton" data-dropdown-toggle="dropdownSearch" data-dropdown-placement="bottom" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -828,7 +828,7 @@ Use this example if you want to add a search bar inside the dropdown menu to be 
 
 Use the menu icon trigger element on components such as cards as an alternative element to the button.
 
-{{< example id="dropdown-menu-icon-example" class="flex justify-center space-x-4 rtl:space-x-reverse" github="components/dropdowns.md" show_dark=true iframeHeight="320" >}}
+{{< example class="flex justify-center space-x-4 rtl:space-x-reverse" github="components/dropdowns.md" show_dark=true iframeHeight="320" >}}
 <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" class="text-heading bg-neutral-primary box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm p-2 focus:outline-none" type="button">
   <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
 </button>
@@ -878,7 +878,7 @@ Use the menu icon trigger element on components such as cards as an alternative 
 
 Use this example to show a list of notifications inside your application by providing more detailed information such as the user avatar, content and time of notification triggered by a notification bell icon.
 
-{{< example id="dropdown-notification-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="660" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="660" >}}
 
 <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification" class="relative inline-flex items-center text-sm font-medium text-center text-body hover:text-heading focus:outline-none" type="button">
   <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5.365V3m0 2.365a5.338 5.338 0 0 1 5.133 5.368v1.8c0 2.386 1.867 2.982 1.867 4.175 0 .593 0 1.292-.538 1.292H5.538C5 18 5 17.301 5 16.708c0-1.193 1.867-1.789 1.867-4.175v-1.8A5.338 5.338 0 0 1 12 5.365ZM8.733 18c.094.852.306 1.54.944 2.112a3.48 3.48 0 0 0 4.646 0c.638-.572 1.236-1.26 1.33-2.112h-6.92Z"/></svg>
@@ -966,7 +966,7 @@ Use this example to show a list of notifications inside your application by prov
 
 This example can be used to show a list of menu items and options when a user is logged into your application.
 
-{{< example id="dropdown-avatar-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="520" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="520" >}}
 <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" class="flex text-sm bg-dark rounded-full md:me-0 focus:ring-4 focus:ring-neutral-quaternary" type="button">
   <span class="sr-only">Open user menu</span>
   <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="user photo">
@@ -1046,7 +1046,7 @@ This example can be used to show a list of menu items and options when a user is
 
 Use this example to also show the name or email of the user next to the avatar for the dropdown menu.
 
-{{< example id="dropdown-avatar-name-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="520" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="520" >}}
 <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName" class="flex items-center text-sm pe-1 font-medium text-heading rounded-full hover:text-fg-brand md:me-0 focus:ring-4 focus:ring-neutral-tertiary" type="button">
   <span class="sr-only">Open user menu</span>
   <img class="w-8 h-8 me-2 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="user photo">
@@ -1128,7 +1128,7 @@ Use this example to also show the name or email of the user next to the avatar f
 
 You can also use the dropdown element inside a navigation bar and add a second level of navigation hierarchy, but make sure to use a `button` element.
 
-{{< example id="dropdown-navbar-example" bodyClass="!p-0" github="components/dropdowns.md" show_dark=true iframeHeight="380" >}}
+{{< example bodyClass="!p-0" github="components/dropdowns.md" show_dark=true iframeHeight="380" >}}
 
 <nav class="bg-neutral-primary border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2.5">
@@ -1184,7 +1184,7 @@ You can also use the dropdown element inside a navigation bar and add a second l
 
 Use this example to show a date range picker inside a dropdown menu. Use the `data-dropdown-ignore-click-outside-class={class}` option to keep the dropdown menu open when interacting with the datepicker component by setting the element's parent class name.
 
-{{< example id="dropdown-datepicker-example" class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="520" >}}
+{{< example class="flex justify-center" github="components/dropdowns.md" show_dark=true iframeHeight="520" >}}
 <button id="dateRangeButton" data-dropdown-toggle="dateRangeDropdown" data-dropdown-ignore-click-outside-class="datepicker" type="button" class="inline-flex items-center text-fg-brand font-medium hover:underline">
 31 Nov <p class="ms-1"> - 31 Dev </p> 
   <svg class="w-5 h-5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -1215,7 +1215,7 @@ Use this example to show a date range picker inside a dropdown menu. Use the `da
 
 The dropdown menus work with buttons of all sizes including smaller or larger ones.
 
-{{< example id="dropdown-sizes-example" github="components/dropdowns.md" class="space-x-2 space-y-2" show_dark=true iframeHeight="380" >}}
+{{< example github="components/dropdowns.md" class="space-x-2 space-y-2" show_dark=true iframeHeight="380" >}}
 <button id="dropdownSmallButton" data-dropdown-toggle="dropdownSmall" class="inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Small dropdown 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
@@ -1267,7 +1267,7 @@ The dropdown menus work with buttons of all sizes including smaller or larger on
 
 You can also use the `data-dropdown-placement={top|right|bottom|left}` data attribute options to choose the placement of the dropdown menu. By default the positioning is set to the bottom side of the button.
 
-{{< example id="dropdown-placement-example" class="flex flex-wrap space-x-4 justify-center py-48" github="components/dropdowns.md" show_dark=true >}}
+{{< example class="flex flex-wrap space-x-4 justify-center py-48" github="components/dropdowns.md" show_dark=true >}}
 <button id="dropdownTopButton" data-dropdown-toggle="dropdownTop" data-dropdown-placement="top" class="inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown top 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
@@ -1365,7 +1365,7 @@ You can also use the `data-dropdown-placement={top|right|bottom|left}` data attr
 
 You can combine the placement options by using the `top|right|bottom|left-{start|end}` values. For example, `left-end` will position the dropdown on the left bottom, whereas `right-end` will position it on the right bottom side.
 
-{{< example id="dropdown-2x-placement-example" class="flex flex-wrap justify-center space-x-4" github="components/dropdowns.md" iframeHeight="240" show_dark=true >}}
+{{< example class="flex flex-wrap justify-center space-x-4" github="components/dropdowns.md" iframeHeight="240" show_dark=true >}}
 <button id="dropdownLeftEndButton" data-dropdown-toggle="dropdownLeftEnd" data-dropdown-placement="left-end" class="inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   <svg class="w-4 h-4 me-1.5 -ms-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
   Dropdown left end
@@ -1421,7 +1421,7 @@ Use the offset options on the dropdown component to set the distance and skiddin
 
 Use the `data-dropdown-offset-distance={pixels}` data attribute to set the number of pixels you want the dropdown menu to be offset from the trigger element.
 
-{{< example id="dropdown-offset-distance-example" class="flex flex-wrap justify-center" github="components/dropdowns.md" iframeHeight="320" show_dark=true >}}
+{{< example class="flex flex-wrap justify-center" github="components/dropdowns.md" iframeHeight="320" show_dark=true >}}
 <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownDistance" data-dropdown-offset-distance="35" data-dropdown-offset-skidding="0" class="inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
@@ -1450,7 +1450,7 @@ Use the `data-dropdown-offset-distance={pixels}` data attribute to set the numbe
 
 The `data-dropdown-offset-skidding={pixels}` data attribute can be used to move up or down (or left and right) the dropdown menu along and relative to the trigger element.
 
-{{< example id="dropdown-offset-skidding-example" class="flex flex-wrap justify-center" github="components/dropdowns.md" iframeHeight="320" show_dark=true >}}
+{{< example class="flex flex-wrap justify-center" github="components/dropdowns.md" iframeHeight="320" show_dark=true >}}
 <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownSkidding" data-dropdown-offset-distance="10" data-dropdown-offset-skidding="100" data-dropdown-placement="right" class="inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
   Dropdown button 
   <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>

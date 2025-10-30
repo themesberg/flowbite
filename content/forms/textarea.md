@@ -19,7 +19,7 @@ From the examples on this page you will find multiple styles and variants of the
 
 Get started with the default example of a textarea component below.
 
-{{< example id="default-textarea-example" github="forms/textarea.md" show_dark=true >}}
+{{< example github="forms/textarea.md" show_dark=true >}}
 <label for="message" class="block mb-2.5 text-sm font-medium text-heading">Your message</label>
 <textarea id="message" rows="4" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body" placeholder="Write your thoughts here..."></textarea>
 {{< /example >}}
@@ -28,7 +28,7 @@ Get started with the default example of a textarea component below.
 
 If you want to add other actions as buttons alongside your textarea component, such as with a WYSIWYG editor, then you can use the example below.
 
-{{< example id="textarea-wysiwyg-example" github="forms/textarea.md" show_dark=true >}}
+{{< example github="forms/textarea.md" show_dark=true >}}
 <form>
    <div class="w-full mb-4 border border-default-medium rounded-base bg-neutral-secondary-medium shadow-xs">
        <div class="flex items-center justify-between px-3 py-2 border-b border-default-medium">
@@ -96,7 +96,7 @@ If you want to add other actions as buttons alongside your textarea component, s
 
 Most often the textarea component is used as the main text field input element in comment sections. Use this example to also apply a helper text and buttons below the textarea itself.
 
-{{< example id="textarea-comment-example" github="forms/textarea.md" show_dark=true >}}
+{{< example github="forms/textarea.md" show_dark=true >}}
 <form>
    <div class="w-full mb-4 border border-default-medium rounded-base bg-neutral-secondary-medium shadow-xs">
        <div class="px-4 py-2 bg-neutral-secondary-medium rounded-t-base">
@@ -133,7 +133,7 @@ Most often the textarea component is used as the main text field input element i
 
 If you want to build a chatroom component you will usually want to use a textarea element to allow users to write multi-line chunks of text.
 
-{{< example id="textarea-chatroom-example" github="forms/textarea.md" show_dark=true >}}
+{{< example github="forms/textarea.md" show_dark=true >}}
 <form>
     <label for="chat" class="sr-only">Your message</label>
     <div class="flex items-center px-3 py-2 rounded-base bg-neutral-secondary-soft">

@@ -19,7 +19,7 @@ Use the semantic `<kbd>` keyboard input tag to use the default monospace font wh
 
 Here's a list of KBD components that you can use inside any other element.
 
-{{< example id="default-kbd-example" github="components/kbd.md" show_dark=true >}}
+{{< example github="components/kbd.md" show_dark=true >}}
 <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">Shift</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">Ctrl</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">Tab</kbd>
@@ -33,7 +33,7 @@ Here's a list of KBD components that you can use inside any other element.
 
 Use this example by nesting an inline KBD component inside a paragraph.
 
-{{< example id="kbd-text-example" github="components/kbd.md" show_dark=true >}}
+{{< example github="components/kbd.md" show_dark=true >}}
 
 <p class="text-body">
     Please press <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">Ctrl</kbd> + <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">Shift</kbd> + <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">R</kbd> to re-render an MDN page.
@@ -44,7 +44,7 @@ Use this example by nesting an inline KBD component inside a paragraph.
 
 The KBD component can also be used inside table components to denote what type of key can be pressed for certain descriptions.
 
-{{< example id="kbd-table-example" github="components/kbd.md" show_dark=true >}}
+{{< example github="components/kbd.md" show_dark=true >}}
 
 <div class="relative overflow-x-auto">
     <table class="w-full text-sm text-left rtl:text-right text-body">
@@ -120,7 +120,7 @@ The KBD component can also be used inside table components to denote what type o
 
 Use this example to show arrow keys inside the KBD styled element.
 
-{{< example id="kbd-arrow-example" github="components/list-group.md" show_dark=true >}}
+{{< example github="components/list-group.md" show_dark=true >}}
 <kbd class="inline-flex items-center px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">
 <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 10">
 <path d="M9.207 1A2 2 0 0 0 6.38 1L.793 6.586A2 2 0 0 0 2.207 10H13.38a2 2 0 0 0 1.414-3.414L9.207 1Z"/>
@@ -151,7 +151,7 @@ Use this example to show arrow keys inside the KBD styled element.
 
 Use this example if you need to show a key from the latin alphabet
 
-{{< example id="kbd-letter-example" github="components/kbd.md" show_dark=true >}}
+{{< example github="components/kbd.md" show_dark=true >}}
 <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">Q</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">W</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">E</kbd>
@@ -184,7 +184,7 @@ Use this example if you need to show a key from the latin alphabet
 
 Use this example to show a key inside a KBD component from the english numeral system.
 
-{{< example id="kbd-number-example" github="components/kbd.md" show_dark=true >}}
+{{< example github="components/kbd.md" show_dark=true >}}
 <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">1</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">2</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">3</kbd>
@@ -201,7 +201,7 @@ Use this example to show a key inside a KBD component from the english numeral s
 
 This example can be used to denote function keys inside the KBD component.
 
-{{< example id="kbd-function-example" github="components/kbd.md" show_dark=true >}}
+{{< example github="components/kbd.md" show_dark=true >}}
 <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">F1</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">F2</kbd>
 <kbd class="px-2 py-1.5 text-xs font-semibold text-heading bg-neutral-tertiary border border-default-medium rounded-base">F3</kbd>

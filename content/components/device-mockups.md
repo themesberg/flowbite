@@ -21,7 +21,7 @@ You can choose from multiple examples of mockups including phone, tablet, laptop
 
 Use this example to show a standard phone mockup based on Tailwind CSS and add your app screenshot inside of it with dark mode support included.
 
-{{< example id="default-mockup" github="components/device-mockups.md" show_dark=true >}}
+{{< example github="components/device-mockups.md" show_dark=true >}}
 <div class="relative mx-auto border-default bg-base border-[14px] rounded-[2.5rem] h-[600px] w-[300px]">
     <div class="h-[32px] w-[3px] bg-base absolute -start-[17px] top-[72px] rounded-s-lg"></div>
     <div class="h-[46px] w-[3px] bg-base absolute -start-[17px] top-[124px] rounded-s-lg"></div>
@@ -38,7 +38,7 @@ Use this example to show a standard phone mockup based on Tailwind CSS and add y
 
 Use this example to clearly show that the preview of your application is being used on an iPhone with iOS.
 
-{{< example id="iphone-mockup" github="components/device-mockups.md" show_dark=true >}}
+{{< example github="components/device-mockups.md" show_dark=true >}}
 <div class="relative mx-auto border-default bg-base border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
     <div class="w-[148px] h-[18px] bg-base top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
     <div class="h-[46px] w-[3px] bg-base absolute -start-[17px] top-[124px] rounded-s-lg"></div>
@@ -55,7 +55,7 @@ Use this example to clearly show that the preview of your application is being u
 
 Use this alternative phone mockup example if you want to feature previews for android gadgets.
 
-{{< example id="android-mockup" github="components/device-mockups.md" show_dark=true >}}
+{{< example github="components/device-mockups.md" show_dark=true >}}
 <div class="relative mx-auto border-default bg-base border-[14px] rounded-xl h-[600px] w-[300px] shadow-xl">
     <div class="w-[148px] h-[18px] bg-base top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
     <div class="h-[32px] w-[3px] bg-base absolute -start-[17px] top-[72px] rounded-s-lg"></div>
@@ -73,7 +73,7 @@ Use this alternative phone mockup example if you want to feature previews for an
 
 This component can be used to show an application preview inside of a responsive tablet mockup.
 
-{{< example id="tablet-mockup" github="components/device-mockups.md" show_dark=true >}}
+{{< example github="components/device-mockups.md" show_dark=true >}}
 <div class="relative mx-auto border-default bg-base border-[14px] rounded-[2.5rem] h-[454px] max-w-[341px] md:h-[682px] md:max-w-[512px]">
     <div class="h-[32px] w-[3px] bg-base absolute -start-[17px] top-[72px] rounded-s-lg"></div>
     <div class="h-[46px] w-[3px] bg-base absolute -start-[17px] top-[124px] rounded-s-lg"></div>
@@ -90,7 +90,7 @@ This component can be used to show an application preview inside of a responsive
 
 This example can be used to show a screenshot of your application inside a laptop mockup.
 
-{{< example id="laptop-mockup" github="components/device-mockups.md" show_dark=true >}}
+{{< example github="components/device-mockups.md" show_dark=true >}}
 <div class="relative mx-auto border-default bg-base border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
     <div class="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-neutral-primary ">
         <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen.png" class="dark:hidden h-[156px] md:h-[278px] w-full rounded-lg" alt="">
@@ -106,7 +106,7 @@ This example can be used to show a screenshot of your application inside a lapto
 
 Use this example to show a preview of your application inside a desktop device such as an iMac.
 
-{{< example id="desktop-mockup" github="components/device-mockups.md" show_dark=true >}}
+{{< example github="components/device-mockups.md" show_dark=true >}}
 <div class="relative mx-auto border-default bg-base border-[16px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
     <div class="rounded-xl overflow-hidden h-[140px] md:h-[262px]">
         <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/screen-image-imac.png" class="dark:hidden h-[140px] md:h-[262px] w-full rounded-xl" alt="">
@@ -121,7 +121,7 @@ Use this example to show a preview of your application inside a desktop device s
 
 This component can be used to showcase applications built for smartwatches.
 
-{{< example id="smartwatch-mockup" github="components/device-mockups.md" show_dark=true >}}
+{{< example github="components/device-mockups.md" show_dark=true >}}
 <div class="relative mx-auto bg-base rounded-t-[2.5rem] h-[63px] max-w-[133px]"></div>
 <div class="relative mx-auto bg-base border-default border-[10px] rounded-[2.5rem] h-[213px] w-[208px]">
     <div class="h-[41px] w-[6px] bg-base absolute -end-[16px] top-[40px] rounded-e-lg"></div>
@@ -138,7 +138,7 @@ This component can be used to showcase applications built for smartwatches.
 
 You can easily update the color of the mockup by changing the background color with Tailwind CSS.
 
-{{< example id="colors-mockup" github="components/device-mockups.md" show_dark=true >}}
+{{< example github="components/device-mockups.md" show_dark=true >}}
 <div class="relative mx-auto border-default bg-base dark:bg-base border-[14px] rounded-[2.5rem] h-[600px] w-[300px]">
     <div class="h-[32px] w-[3px] bg-base absolute -start-[17px] top-[72px] rounded-s-lg"></div>
     <div class="h-[46px] w-[3px] bg-base absolute -start-[17px] top-[124px] rounded-s-lg"></div>

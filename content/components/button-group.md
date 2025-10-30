@@ -17,7 +17,7 @@ The button group component from Flowbite can be used to stack together multiple 
 
 Use the following code to stack together buttons into a single group.
 
-{{< example id="default-button-group-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 
 <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
   <button type="button" class="text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm px-3 py-2 focus:outline-none">
@@ -36,7 +36,7 @@ Use the following code to stack together buttons into a single group.
 
 Use the following code to stack together buttons into a single group.
 
-{{< example id="default-button-group-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 
 <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
   <button type="button" class="inline-flex items-center text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm px-3 py-2 focus:outline-none">
@@ -54,7 +54,7 @@ Use the following code to stack together buttons into a single group.
 
 Use the following code to stack together buttons into a single group.
 
-{{< example id="default-button-group-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 
 <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
   <button type="button" class="inline-flex items-center text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm px-3 py-2 focus:outline-none" disabled>
@@ -70,7 +70,7 @@ Use the following code to stack together buttons into a single group.
 
 Use the following code to stack together buttons into a single group.
 
-{{< example id="default-button-group-example" class="flex justify-center pt-24" iframeHeight="280" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center pt-24" iframeHeight="280" github="components/button-group.md" show_dark=true >}}
   <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
     <button data-tooltip-target="tooltip-option-1" type="button" class="inline-flex items-center justify-center text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6h8m-8 4h12M6 14h8m-8 4h12"/></svg>
@@ -107,7 +107,7 @@ Use the following code to stack together buttons into a single group.
 
 Use the following code to stack together buttons into a single group.
 
-{{< example id="default-button-group-example" class="flex justify-center" iframeHeight="260" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center" iframeHeight="260" github="components/button-group.md" show_dark=true >}}
 
 <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
   <button type="button" class="inline-flex items-center text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm px-3 py-2 focus:outline-none" disabled>
@@ -141,7 +141,7 @@ Use the following code to stack together buttons into a single group.
 
 Use the following code to stack together buttons into a single group.
 
-{{< example id="default-button-group-example" class="flex justify-center" iframeHeight="260" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center" iframeHeight="260" github="components/button-group.md" show_dark=true >}}
 
 <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
   <button type="button" class="inline-flex items-center text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm px-3 py-2 focus:outline-none" disabled>
@@ -171,7 +171,7 @@ Use the following code to stack together buttons into a single group.
 
 Use the following code to stack together buttons into a single group.
 
-{{< example id="default-button-group-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 
 <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
   <button type="button" class="inline-flex items-center justify-center text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm w-9 h-full focus:outline-none" disabled>
@@ -187,7 +187,7 @@ Use the following code to stack together buttons into a single group.
 
 Use the following code to stack together buttons into a single group.
 
-{{< example id="default-button-group-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/button-group.md" show_dark=true >}}
   <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
     <button type="button" class="inline-flex items-center justify-center text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
@@ -223,7 +223,7 @@ Use the following code to stack together buttons into a single group.
 
 Use the following code to stack together buttons into a single group.
 
-{{< example id="default-button-group-example" class="flex justify-center space-x-4" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center space-x-4" github="components/button-group.md" show_dark=true >}}
 
 <div class="rounded-base shadow-xs w-56 -space-y-px" role="group">
   <button type="button" class="block w-full text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft rounded-t-base font-medium leading-5 text-sm px-3 py-2 focus:outline-none">
@@ -274,7 +274,7 @@ Use the following code to stack together buttons into a single group.
 
 Use the following code to stack together buttons into a single group.
 
-{{< example id="default-button-group-example" class="flex justify-center py-8" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center py-8" github="components/button-group.md" show_dark=true >}}
   <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
     <button data-tooltip-target="tooltip-previous" type="button" class="inline-flex items-center justify-center text-body bg-neutral-primary-soft rounded-s-base box-border border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary leading-5 w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
@@ -297,7 +297,7 @@ Use the following code to stack together buttons into a single group.
 
 Use the following code to stack together buttons into a single group.
 
-{{< example id="default-button-group-example" class="flex justify-center space-x-4" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center space-x-4" github="components/button-group.md" show_dark=true >}}
   <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
     <button type="button" class="inline-flex items-center justify-center text-body bg-neutral-primary-soft rounded-s-base box-border border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary leading-5 w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
@@ -344,7 +344,7 @@ Use the following code to stack together buttons into a single group.
 
 You can also use the button group component as links.
 
-{{< example id="button-group-links-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 
 <div class="inline-flex rounded-base shadow-xs -space-x-px">
   <a href="#" aria-current="page" class="text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:bg-neutral-secondary-medium focus:text-heading focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm px-3 py-2 focus:outline-none">
@@ -363,7 +363,7 @@ You can also use the button group component as links.
 
 You can also use [SVG icons](https://flowbite.com/icons/) inside the grouped buttons.
 
-{{< example id="button-group-icons-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 
 <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
   <button type="button" class="inline-flex items-center text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm px-3 py-2 focus:outline-none">
@@ -386,7 +386,7 @@ You can also use [SVG icons](https://flowbite.com/icons/) inside the grouped but
 
 Group a series of buttons together on a single line or stack them in a vertical column.
 
-{{< example id="button-group-outline-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 
 <div class="inline-flex rounded-base -space-x-px" role="group">
   <button type="button" class="text-heading bg-neutral-primary border border-dark-strong hover:bg-dark hover:text-white focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm px-3 py-2 focus:outline-none">
@@ -405,7 +405,7 @@ Group a series of buttons together on a single line or stack them in a vertical 
 
 Group a series of buttons together on a single line or stack them in a vertical column.
 
-{{< example id="button-group-outline-icon-example" class="flex justify-center" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 
 <div class="inline-flex rounded-base -space-x-px" role="group">
   <button type="button" class="inline-flex items-center text-heading bg-neutral-primary border border-dark-strong hover:bg-dark hover:text-white focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm px-3 py-2 focus:outline-none">

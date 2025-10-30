@@ -17,7 +17,7 @@ The progress bar component can be used as an indicator to show the completion ra
 
 Use the following example of a progress bar element to show a completion rate of 45% by using an inline style and the utility classes from Tailwind CSS.
 
-{{< example id="default-progress-example" github="components/progress.md" show_dark=true >}}
+{{< example github="components/progress.md" show_dark=true >}}
 <div class="w-full bg-neutral-quaternary rounded-full h-2">
   <div class="bg-brand h-2 rounded-full" style="width: 45%"></div>
 </div>
@@ -27,7 +27,7 @@ Use the following example of a progress bar element to show a completion rate of
 
 You can also use different sizes by using various sizing utility classes from Flowbite and Tailwind CSS.
 
-{{< example id="progress-sizes-example" class="space-y-4" github="components/progress.md" show_dark=true >}}
+{{< example class="space-y-4" github="components/progress.md" show_dark=true >}}
 <div class="mb-1 text-sm font-medium text-heading">Small</div>
 <div class="w-full bg-neutral-quaternary rounded-full h-1.5">
   <div class="bg-brand h-1.5 rounded-full" style="width: 45%"></div>
@@ -46,7 +46,7 @@ You can also use different sizes by using various sizing utility classes from Fl
 
 Here is an example of using a progress bar with the label inside the bar.
 
-{{< example id="progress-label-example" github="components/progress.md" show_dark=true >}}
+{{< example github="components/progress.md" show_dark=true >}}
   <div class="w-full bg-neutral-quaternary rounded-full">
     <div class="bg-brand text-xs font-medium text-white text-center p-0.5 leading-none rounded-full h-4 flex items-center justify-center" style="width: 45%"> 45%</div>
   </div>
@@ -56,7 +56,7 @@ Here is an example of using a progress bar with the label inside the bar.
 
 And this is an example of using a progress bar outside the bar.
 
-{{< example id="progress-label-outside-example" github="components/progress.md" show_dark=true >}}
+{{< example github="components/progress.md" show_dark=true >}}
 <div class="flex justify-between mb-1">
   <span class="text-sm font-medium text-body">Flowbite</span>
   <span class="text-sm font-medium text-body">45%</span>
@@ -70,7 +70,7 @@ And this is an example of using a progress bar outside the bar.
 
 You can also apply any color using the `bg-{color}` utility classes from Tailwind CSS and Flowbite.
 
-{{< example id="progress-colors-example" class="space-y-4" github="components/progress.md" show_dark=true >}}
+{{< example class="space-y-4" github="components/progress.md" show_dark=true >}}
 <div class="mb-1 text-sm font-medium text-heading">Dark</div>
 <div class="w-full bg-neutral-quaternary rounded-full h-2">
   <div class="bg-dark h-2 rounded-full" style="width: 45%"></div>

@@ -44,7 +44,7 @@ If you'd like to manually be able to manipulate the datepicker component using J
 
 Use the following example of an input element to create a datepicker component. All you need to do is to add the `datepicker` data attribute to any `input` element.
 
-{{< example id="default-datepicker-example" class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true iframeHeight="500" initDatepicker=true >}}
+{{< example class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true iframeHeight="500" initDatepicker=true >}}
 <div class="relative max-w-sm">
   <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
     <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/></svg>
@@ -57,7 +57,7 @@ Use the following example of an input element to create a datepicker component. 
 
 Use the `inline-datepicker` and `data-date` data attributes to initialize and set the default date for an inline datepicker inside a block element such as a `div`.
 
-{{< example id="datepicker-inline-example" class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true initDatepicker=true >}}
+{{< example class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true initDatepicker=true >}}
 <div id="datepicker-inline" inline-datepicker data-date="02/25/2024"></div>
 {{< /example >}}
 
@@ -65,7 +65,7 @@ Use the `inline-datepicker` and `data-date` data attributes to initialize and se
 
 Use the `date-rangepicker` data attribute and the following markup to initialize two datepickers as a range.
 
-{{< example id="datepicker-range-example" class="flex justify-center " github="components/datepicker.md" show_dark=true iframeHeight="480" initDatepicker=true >}}
+{{< example class="flex justify-center " github="components/datepicker.md" show_dark=true iframeHeight="480" initDatepicker=true >}}
 <div id="date-range-picker" date-rangepicker class="flex items-center">
   <div class="relative">
     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -91,7 +91,7 @@ Learn more about the options that you can use with the Tailwind datepicker to en
 
 Use the `datepicker-autohide` data attribute to make the datepicker disappear right after selecting a date.
 
-{{< example id="datepicker-autohide-example" class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true iframeHeight="480" initDatepicker=true >}}
+{{< example class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true iframeHeight="480" initDatepicker=true >}}
 <div class="relative max-w-sm">
   <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
         <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/></svg>
@@ -109,7 +109,7 @@ By adding the `datepicker-buttons` data attribute you will enable the `today` an
 
 If you want the button to additionally select today's date, add `datepicker-autoselect-today` data attribute.
 
-{{< example id="datepicker-action-example" class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true iframeHeight="530" initDatepicker=true >}}
+{{< example class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true iframeHeight="530" initDatepicker=true >}}
 <div class="relative max-w-sm">
   <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
         <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/></svg>
@@ -122,7 +122,7 @@ If you want the button to additionally select today's date, add `datepicker-auto
 
 If you want to use a custom format such as `mm-dd-yyyy`then you can use the `datepicker-format="{format}"` data attribute to change it.
 
-{{< example id="datepicker-date-format-example" class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true iframeHeight="480" initDatepicker=true >}}
+{{< example class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true iframeHeight="480" initDatepicker=true >}}
 <div class="relative max-w-sm">
   <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
         <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/></svg>
@@ -135,7 +135,7 @@ If you want to use a custom format such as `mm-dd-yyyy`then you can use the `dat
 
 Use the `datepicker-min-date={format}` and `datepicker-max-date={format}` to set the minimum and maximum dates that can be selected inside the datepicker.
 
-{{< example id="datepicker-max-min-example" class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true iframeHeight="480" initDatepicker=true >}}
+{{< example class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true iframeHeight="480" initDatepicker=true >}}
 <div class="relative max-w-sm">
   <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
         <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/></svg>
@@ -148,7 +148,7 @@ Use the `datepicker-min-date={format}` and `datepicker-max-date={format}` to set
 
 You can override the default positioning algorithm by using the `datepicker-orientation="{top|right|bottom|left}"` data attributes. You can even combine right with bottom or left with top.
 
-{{< example id="datepicker-orientation-example" class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true iframeHeight="480" initDatepicker=true >}}
+{{< example class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true iframeHeight="480" initDatepicker=true >}}
 <div class="relative max-w-sm">
   <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
         <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/></svg>
@@ -161,7 +161,7 @@ You can override the default positioning algorithm by using the `datepicker-orie
 
 You can also add a title to the datepicker by using the `datepicker-title="{title}"` data attribute.
 
-{{< example id="datepicker-title-example" class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true iframeHeight="530" initDatepicker=true >}}
+{{< example class="flex justify-center dark:bg-gray-900" github="components/datepicker.md" show_dark=true iframeHeight="530" initDatepicker=true >}}
 <div class="relative max-w-sm">
   <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
         <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/></svg>
@@ -184,7 +184,7 @@ Until then, please refer to this [solution from GitHub](https://github.com/theme
 
 Use the native browser timepicker input field to select a time alongside the datepicker. Check out more examples on the [timepicker](https://flowbite.com/docs/forms/timepicker/) component page from Flowbite.
 
-{{< example id="timepicker-default-example" github="components/timepicker.md" show_dark=true >}}
+{{< example github="components/timepicker.md" show_dark=true >}}
 <form class="max-w-[8rem] mx-auto">
     <label for="time" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select time:</label>
     <div class="relative">

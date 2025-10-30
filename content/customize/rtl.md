@@ -35,7 +35,7 @@ By default, when switching from LTR to RTL the direction, spacing, and positioni
 
 You can also use our RTL button to switch between LTR and RTL when previewing our UI components:
 
-{{< example id="default-navbar-example" bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="300" >}}
+{{< example bodyClass="!p-0" github="components/navbar.md" show_dark=true iframeHeight="300" >}}
 
 <nav class="bg-neutral-primary border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">

@@ -20,7 +20,7 @@ Make sure that you have included the Flowbite JavaScript file inside your projec
 
 Use this example to show a list of links aligned on three columns inside the mega menu dropdown.
 
-{{< example id="default-mega-menu-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="300" >}}
+{{< example bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="300" >}}
 
 <nav class="bg-neutral-primary border-default">
     <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
@@ -132,7 +132,7 @@ Use this example to show a list of links aligned on three columns inside the meg
 
 This example of a mega menu dropdown can be used to also show an icon near the text of the link.
 
-{{< example id="mega-menu-icons-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="300" >}}
+{{< example bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="300" >}}
 
 <nav class="bg-neutral-primary border-default">
     <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
@@ -255,7 +255,7 @@ This example of a mega menu dropdown can be used to also show an icon near the t
 
 Use this example to show a mega menu dropdown that spans the entire width of the document page.
 
-{{< example id="mega-menu-full-width-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="440" >}}
+{{< example bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="440" >}}
 
 <nav class="bg-neutral-primary-soft border-default">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
@@ -361,7 +361,7 @@ Use this example to show a mega menu dropdown that spans the entire width of the
 
 This example can be used to also show a CTA button or link next to the menu items inside the dropdown.
 
-{{< example id="mega-menu-full-width-cta-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="360" >}}
+{{< example bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="360" >}}
 
 <nav class="bg-neutral-primary-soft border-default">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
@@ -460,7 +460,7 @@ This example can be used to also show a CTA button or link next to the menu item
 
 This example can be used to also show a CTA with a backdround image inside the dropdown next to the other menu items and links.
 
-{{< example id="mega-menu-full-width-image-example" bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="360" >}}
+{{< example bodyClass="!p-0" github="components/mega-menu.md" show_dark=true iframeHeight="360" >}}
 
 <nav class="bg-neutral-primary-soft border-default">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">

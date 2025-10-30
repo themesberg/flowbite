@@ -19,7 +19,7 @@ On this page you will find all of the input types based on multiple variants, st
 
 Use this example as a generic form element which includes multiple input fields types such as text, email, password, number, URL, and phone number and use the grid layout to add multiple columns and rows.
 
-{{< example id="default-input-field-example" github="forms/input-field.md" show_dark=true >}}
+{{< example github="forms/input-field.md" show_dark=true >}}
 <form>
     <div class="grid gap-6 mb-6 md:grid-cols-2">
         <div>
@@ -73,7 +73,7 @@ Use this example as a generic form element which includes multiple input fields 
 
 Use the following examples to apply a small, default or large size for the input fields.
 
-{{< example id="input-field-sizes-example" class="space-y-6" github="forms/input-field.md" show_dark=true >}}
+{{< example class="space-y-6" github="forms/input-field.md" show_dark=true >}}
         <div>
             <label for="visitors" class="block mb-2.5 text-sm font-medium text-heading">Small Input</label>
             <input type="text" id="visitors" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-2.5 py-2 shadow-xs placeholder:text-body" placeholder="" required />
@@ -96,7 +96,7 @@ Use the following examples to apply a small, default or large size for the input
 
 Get started with this example if you want to apply the disabled state to an input field.
 
-{{< example id="input-field-disabled-example" class="space-y-6" github="forms/input-field.md" show_dark=true >}}
+{{< example class="space-y-6" github="forms/input-field.md" show_dark=true >}}
 <input type="text" id="disabled-input" aria-label="disabled input" class="bg-neutral-secondary-medium border border-default-medium text-fg-disabled text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" value="Disabled input" disabled>
 <input type="text" id="disabled-input-2" aria-label="disabled input 2" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" value="Disabled readonly input" disabled readonly>
 {{< /example >}}
@@ -105,7 +105,7 @@ Get started with this example if you want to apply the disabled state to an inpu
 
 Use the following example to apply validation styles for success and error messages.
 
-{{< example id="input-field-validation-example" github="forms/input-field.md" show_dark=true >}}
+{{< example github="forms/input-field.md" show_dark=true >}}
 <div class="mb-6">
   <label for="success" class="block mb-2.5 text-sm font-medium text-fg-success-strong">Your name</label>
   <input type="text" id="success" class="bg-success-soft border border-success-subtle text-fg-success-strong text-sm rounded-base focus:ring-success focus:border-success block w-full px-3 py-2.5 shadow-xs placeholder:text-fg-success-strong" placeholder="Success input">
@@ -122,7 +122,7 @@ Use the following example to apply validation styles for success and error messa
 
 This example can be used to add a descriptive icon or additional text inside the input field.
 
-{{< example id="input-field-group-example" class="space-y-6" github="forms/input-field.md" show_dark=true >}}
+{{< example class="space-y-6" github="forms/input-field.md" show_dark=true >}}
 <label for="input-group-1" class="block mb-2.5 text-sm font-medium text-heading">Your Email</label>
 <div class="relative">
   <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -151,7 +151,7 @@ https://
 
 Use this example to show a helper text below the input field for additional explanation and links.
 
-{{< example id="input-field-helper-example" github="forms/input-field.md" show_dark=true >}}
+{{< example github="forms/input-field.md" show_dark=true >}}
 <label for="input-group-1" class="block mb-2.5 text-sm font-medium text-heading">Your Email</label>
 <div class="relative">
   <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -166,7 +166,7 @@ Use this example to show a helper text below the input field for additional expl
 
 Get started with this example where the submit button is positioned inside the input field.
 
-{{< example id="input-field-search-example" github="forms/input-field.md" show_dark=true >}}
+{{< example github="forms/input-field.md" show_dark=true >}}
 <form>   
     <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div class="relative">
@@ -187,7 +187,7 @@ Get started with this example where the submit button is positioned inside the i
 
 Use this example to show a dropdown menu right next to the input field.
 
-{{< example id="input-field-dropdown-example" github="forms/input-field.md" show_dark=true iframeHeight="290" >}}
+{{< example github="forms/input-field.md" show_dark=true iframeHeight="290" >}}
 <form>
     <div class="flex shadow-xs rounded-base -space-x-0.5">
         <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>

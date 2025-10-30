@@ -27,7 +27,7 @@ Don't forget to set the `data-accordion-target="{selector}"` data attribute to t
 
 Use the `data-accordion="collapse"` to collapse every other child element when expanding a single one.
 
-{{< example id="default-accordion-example" github="components/accordion.md" show_dark=true >}}
+{{< example github="components/accordion.md" show_dark=true >}}
 <div id="accordion-collapse" data-accordion="collapse" class="rounded-base border border-default overflow-hidden shadow-xs">
   <h2 id="accordion-collapse-heading-1">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-default hover:text-heading hover:bg-neutral-secondary-medium gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
@@ -77,7 +77,7 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
 
 Use this example of an accordion with space delimitation between the accordion items.
 
-{{< example id="default-accordion-example" github="components/accordion.md" show_dark=true >}}
+{{< example github="components/accordion.md" show_dark=true >}}
 <div id="accordion-card" data-accordion="collapse">
   <h2 id="accordion-card-heading-1">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-base shadow-xs border border-default hover:text-heading hover:bg-neutral-secondary-medium gap-3 [&[aria-expanded='true']]:rounded-b-none [&[aria-expanded='true']]:shadow-none" data-accordion-target="#accordion-card-body-1" aria-expanded="true" aria-controls="accordion-card-body-1">
@@ -127,7 +127,7 @@ Use this example of an accordion with space delimitation between the accordion i
 
 Use the `data-accordion="open"` option to keep previously opened accordion elements unchanged.
 
-{{< example id="accordion-always-open-example" github="components/accordion.md" show_dark=true >}}
+{{< example github="components/accordion.md" show_dark=true >}}
 <div id="accordion-open" data-accordion="open" class="rounded-base border border-default overflow-hidden shadow-xs">
   <h2 id="accordion-open-heading-1">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-default hover:text-heading hover:bg-neutral-secondary-medium gap-3" data-accordion-target="#accordion-open-body-1" aria-expanded="true" aria-controls="accordion-open-body-1">
@@ -179,7 +179,7 @@ Use the `data-active-classes` and `data-inactive-classes` to set the active and 
 
 Here's an example where we apply the blue colors instead of gray:
 
-{{< example id="accordion-color-options-example" github="components/accordion.md" show_dark=true >}}
+{{< example github="components/accordion.md" show_dark=true >}}
 <div id="accordion-color" data-accordion="collapse" class="rounded-base border border-default overflow-hidden shadow-xs">
   <h2 id="accordion-color-heading-1">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-default hover:text-fg-brand hover:bg-brand-softer gap-3" data-accordion-target="#accordion-color-body-1" aria-expanded="true" aria-controls="accordion-color-body-1">
@@ -229,7 +229,7 @@ Here's an example where we apply the blue colors instead of gray:
 
 Use this example to remove the background color and rounded borders from the accordion component.
 
-{{< example id="accordion-flush-example" github="components/accordion.md" show_dark=true >}}
+{{< example github="components/accordion.md" show_dark=true >}}
 <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-neutral-primary text-heading" data-inactive-classes="text-body">
   <h2 id="accordion-flush-heading-1">
     <button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-body border-b border-default gap-3" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
@@ -279,7 +279,7 @@ Use this example to remove the background color and rounded borders from the acc
 
 Use the `data-accordion-icon` data attribute to optionally set an element to rotate 180 degrees when the accordion element is expanded. If the data attribute is not set, then it will not rotate.
 
-{{< example id="accordion-arrow-style-example" github="components/accordion.md" show_dark=true >}}
+{{< example github="components/accordion.md" show_dark=true >}}
 <div id="accordion-arrow" data-accordion="collapse" data-active-classes="bg-neutral-primary text-heading" data-inactive-classes="text-body">
   <h2 id="accordion-arrow-heading-1">
     <button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-body border-b border-default gap-3" data-accordion-target="#accordion-arrow-body-1" aria-expanded="true" aria-controls="accordion-arrow-body-1">
@@ -332,7 +332,7 @@ Accordions can be nested. All of the mentioned options are supported.
 
 To enable nested accordions you need to wrap the nested accordion in an element with the `data-accordion` attribute and don't accidentally initialize an accordion with nested accordions' items (e.g. by using `$accordionBodyEl.querySelectorAll`), when using <a href="#javascript-behaviour">custom JavaScript</a>.
 
-{{< example id="accordion-nesting-example" github="components/accordion.md" show_dark=true >}}
+{{< example github="components/accordion.md" show_dark=true >}}
 
 <div id="accordion-collapse-2" data-accordion="collapse" class="rounded-base border border-default overflow-hidden shadow-xs">
   <h2 id="accordion-collapse-heading-6">

@@ -25,7 +25,7 @@ To initialize a speed dial component you need to wrap the trigger element and th
 
 Furthermore, make sure that the trigger button element has the `data-dial-toggle="{targetElementId}"` where the value is the ID of the target element.
 
-{{< example id="default-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
+{{< example class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 
 <div data-dial-init class="fixed end-6 bottom-6 group">
     <div id="speed-dial-menu-default" class="flex flex-col items-center hidden mb-4 space-y-2">
@@ -73,7 +73,7 @@ Furthermore, make sure that the trigger button element has the `data-dial-toggle
 
 Use this example to make the trigger button's style square instead of a full circle using the `rounded-lg` utility class.
 
-{{< example id="square-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
+{{< example class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 
 <div data-dial-init class="fixed end-6 bottom-6 group">
     <div id="speed-dial-menu-square" class="flex flex-col items-center hidden mb-4 space-y-2">
@@ -121,7 +121,7 @@ Use this example to make the trigger button's style square instead of a full cir
 
 This example can be used to show the descriptive text inside the button instead of a tooltip.
 
-{{< example id="speed-dial-menu-text-inside-button-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
+{{< example class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 
 <div data-dial-init class="fixed bottom-6 end-24 group">
     <div id="speed-dial-menu-text-inside-button" class="flex flex-col items-center hidden mb-4 space-y-2">
@@ -178,7 +178,7 @@ This example can be used to show the descriptive text inside the button instead 
 
 Use this example to show the text of each button outside of the speed dial as an alternative style.
 
-{{< example id="speed-dial-text-outside-button-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
+{{< example class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 
 <div data-dial-init class="fixed end-6 bottom-6 group">
     <div id="speed-dial-menu-text-outside-button" class="flex flex-col items-center hidden mb-4 space-y-2">
@@ -235,7 +235,7 @@ Use this example to show the text of each button outside of the speed dial as an
 
 This example can be used to show a list of menu items instead of buttons when activating the speed dial.
 
-{{< example id="dropdown-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
+{{< example class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 
 <div data-dial-init class="fixed bottom-6 right-24 group">
     <div id="speed-dial-menu-dropdown" class="flex flex-col w-32 justify-end hidden mb-4 space-y-2 bg-neutral-primary-medium border border-default-medium rounded-base shadow-xs">
@@ -312,7 +312,7 @@ This example can be used to show a list of menu items instead of buttons when ac
 
 This example can be used to show an alternative style when showing a list of menu items.
 
-{{< example id="dropdown-alternative-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
+{{< example class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 
 <div data-dial-init class="fixed bottom-6 right-24 group">
     <div id="speed-dial-menu-dropdown-alternative" class="flex flex-col w-44 justify-end hidden mb-4 space-y-2 bg-neutral-primary-medium border border-default-medium rounded-base shadow-xs">
@@ -381,7 +381,7 @@ The positioning of the speed dial component relative to the body element can be 
 
 Use the `top-{*}` and `right-{*}` utility classes to set the position of the speed dial component to the top right side of the document body.
 
-{{< example id="top-right-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
+{{< example class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 
 <div data-dial-init class="fixed top-6 end-6 group">
     <button type="button" data-dial-toggle="speed-dial-menu-top-right" aria-controls="speed-dial-menu-top-right" aria-expanded="false" class="flex items-center justify-center text-white bg-brand rounded-full w-14 h-14 hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium focus:outline-none">
@@ -429,7 +429,7 @@ Use the `top-{*}` and `right-{*}` utility classes to set the position of the spe
 
 Use the `bottom-{*}` and `right-{*}` utility classes to set the position of the speed dial component to the bottom right side of the document body.
 
-{{< example id="bottom-right-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
+{{< example class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 <div data-dial-init class="fixed end-6 bottom-6 group">
     <div id="speed-dial-menu-bottom-right" class="flex flex-col items-center hidden mt-4 space-y-2">
         <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-body hover:text-heading bg-neutral-primary-soft rounded-full border border-default shadow-xs hover:bg-neutral-secondary-medium hover:border-default-medium focus:ring-4 focus:ring-neutral-secondary-soft focus:outline-none">
@@ -476,7 +476,7 @@ Use the `bottom-{*}` and `right-{*}` utility classes to set the position of the 
 
 Use the `bottom-{*}` and `left-{*}` utility classes to set the position of the speed dial component to the bottom left side of the document body.
 
-{{< example id="bottom-left-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
+{{< example class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 <div data-dial-init class="fixed bottom-6 start-6 group">
     <div id="speed-dial-menu-bottom-left" class="flex flex-col items-center hidden mt-4 space-y-2">
         <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-body hover:text-heading bg-neutral-primary-soft rounded-full border border-default shadow-xs hover:bg-neutral-secondary-medium hover:border-default-medium focus:ring-4 focus:ring-neutral-secondary-soft focus:outline-none">
@@ -523,7 +523,7 @@ Use the `bottom-{*}` and `left-{*}` utility classes to set the position of the s
 
 Use the `top-{*}` and `left-{*}` utility classes to set the position of the speed dial component to the top left side of the document body.
 
-{{< example id="top-left-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
+{{< example class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 <div data-dial-init class="fixed top-6 start-6 group">
     <button type="button" data-dial-toggle="speed-dial-menu-top-left" aria-controls="speed-dial-menu-top-left" aria-expanded="false" class="flex items-center justify-center text-white bg-brand rounded-full w-14 h-14 hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium focus:outline-none">
         <svg class="w-5 h-5 transition-transform group-hover:rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
@@ -574,7 +574,7 @@ The alignment of the speed dial menu items and buttons can be set using the flex
 
 The default alignment of the menu items of the speed dial is vertical using the `flex-col` utility class.
 
-{{< example id="vertical-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
+{{< example class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 <div data-dial-init class="fixed end-6 bottom-6 group">
     <div id="speed-dial-menu-vertical" class="flex flex-col items-center hidden mt-4 space-y-2">
         <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-body hover:text-heading bg-neutral-primary-soft rounded-full border border-default shadow-xs hover:bg-neutral-secondary-medium hover:border-default-medium focus:ring-4 focus:ring-neutral-secondary-soft focus:outline-none">
@@ -621,7 +621,7 @@ The default alignment of the menu items of the speed dial is vertical using the 
 
 Horizontally align the speed dial menu items by using the flexbox utility classes from Tailwind CSS.
 
-{{< example id="horizontal-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
+{{< example class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 
 <div data-dial-init class="fixed flex end-6 bottom-6 group">
     <div id="speed-dial-menu-horizontal" class="flex items-center hidden me-4 space-x-2 rtl:space-x-reverse">
@@ -673,7 +673,7 @@ Use the `data-dial-trigger="{click|hover}"` data attributes on the trigger eleme
 
 The default trigger type is hover for each speed dial component.
 
-{{< example id="hover-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
+{{< example class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 <div data-dial-init class="fixed end-6 bottom-6 group">
     <div id="speed-dial-menu-hover" class="flex flex-col items-center hidden mt-4 space-y-2">
         <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-body hover:text-heading bg-neutral-primary-soft rounded-full border border-default shadow-xs hover:bg-neutral-secondary-medium hover:border-default-medium focus:ring-4 focus:ring-neutral-secondary-soft focus:outline-none">
@@ -720,7 +720,7 @@ The default trigger type is hover for each speed dial component.
 
 If you want the speed dial component to activate when clicking instead of hovering over the trigger element then you need to set the `click` value inside of the `data-dial-toggle="click"` data attribute on the trigger element.
 
-{{< example id="click-speed-dial-example" class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
+{{< example class="flex justify-center pt-24 h-80" github="components/speed-dial.md" show_dark=true >}}
 
 <div data-dial-init class="fixed end-6 bottom-6 group">
     <div id="speed-dial-menu-click" class="flex flex-col items-center hidden mb-4 space-y-2">

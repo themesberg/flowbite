@@ -21,7 +21,7 @@ You can also animate the skeleton component by using the `.animate-pulse` utilit
 
 Use this example to show a placeholder when loading text content.
 
-{{< example id="default-skeleton-example" github="components/skeleton.md" show_dark=true >}}
+{{< example github="components/skeleton.md" show_dark=true >}}
 <div role="status" class="max-w-sm animate-pulse">
     <div class="h-2.5 bg-neutral-quaternary rounded-full w-48 mb-4"></div>
     <div class="h-2 bg-neutral-quaternary rounded-full max-w-[360px] mb-2.5"></div>
@@ -38,7 +38,7 @@ Use this example to show a placeholder when loading text content.
 
 This example can be used to show a placeholder when loading an image and text content.
 
-{{< example id="skeleton-image-example" github="components/skeleton.md" show_dark=true >}}
+{{< example github="components/skeleton.md" show_dark=true >}}
 <div role="status" class="space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center">
     <div class="flex items-center justify-center w-full h-48 bg-neutral-quaternary rounded-base sm:w-96">
         <svg class="w-11 h-11 text-fg-disabled" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 16 5-7 6 6.5m6.5 2.5L16 13l-4.286 6M14 10h.01M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/></svg>
@@ -60,7 +60,7 @@ This example can be used to show a placeholder when loading an image and text co
 
 Use this example to show a skeleton placeholder when loading video content.
 
-{{< example id="skeleton-video-example" github="components/skeleton.md" show_dark=true >}}
+{{< example github="components/skeleton.md" show_dark=true >}}
 
 <div role="status" class="flex items-center justify-center h-56 max-w-sm bg-neutral-quaternary rounded-base animate-pulse">
     <svg class="w-11 h-11 text-fg-disabled" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m14-4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1ZM9 12h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Zm5.697 2.395v-.733l1.269-1.219v2.984l-1.268-1.032Z"/></svg>
@@ -72,7 +72,7 @@ Use this example to show a skeleton placeholder when loading video content.
 
 Use this example to show a placeholder when loading longer pagraphs and headings.
 
-{{< example id="skeleton-text-example" github="components/skeleton.md" show_dark=true >}}
+{{< example github="components/skeleton.md" show_dark=true >}}
 <div role="status" class="space-y-2.5 animate-pulse max-w-lg">
     <div class="flex items-center w-full">
         <div class="h-2.5 bg-neutral-quaternary rounded-full w-32"></div>
@@ -112,7 +112,7 @@ Use this example to show a placeholder when loading longer pagraphs and headings
 
 Use this example to show a placeholder when loading content inside a card.
 
-{{< example id="skeleton-card-example" github="components/skeleton.md" show_dark=true >}}
+{{< example github="components/skeleton.md" show_dark=true >}}
 <div role="status" class="max-w-sm p-4 border border-default rounded-base shadow-xs animate-pulse md:p-6">
     <div role="status" class="flex items-center justify-center h-48 max-w-sm bg-neutral-quaternary rounded-base animate-pulse mb-4 sm:mb-6">
         <svg class="w-11 h-11 text-fg-disabled" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m14-4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1ZM9 12h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Zm5.697 2.395v-.733l1.269-1.219v2.984l-1.268-1.032Z"/></svg>
@@ -137,7 +137,7 @@ Use this example to show a placeholder when loading content inside a card.
 
 This example can be used to show a placeholder of skeleton when fetching data for widgets and cards inside an application.
 
-{{< example id="skeleton-chart-example" github="components/skeleton.md" show_dark=true >}}
+{{< example github="components/skeleton.md" show_dark=true >}}
 <div role="status" class="max-w-sm p-4 border border-default rounded-base shadow-xs animate-pulse md:p-6">
     <div class="h-2.5 bg-neutral-quaternary rounded-full w-32 mb-2.5"></div>
     <div class="w-48 h-2 mb-10 bg-neutral-quaternary rounded-full"></div>
@@ -158,7 +158,7 @@ This example can be used to show a placeholder of skeleton when fetching data fo
 
 Use this example to show a placeholder when loading a list of items.
 
-{{< example id="skeleton-list-example" github="components/skeleton.md" show_dark=true >}}
+{{< example github="components/skeleton.md" show_dark=true >}}
 <div role="status" class="max-w-md p-4 border border-default divide-y divide-default rounded-base shadow-xs animate-pulse md:p-6">
     <div class="flex items-center justify-between pb-4">
         <div>
@@ -203,7 +203,7 @@ Use this example to show a placeholder when loading a list of items.
 
 This example can be used to show a skeleton placeholder when loading data for a testimonial section.
 
-{{< example id="skeleton-testimonial-example" github="components/skeleton.md" show_dark=true >}}
+{{< example github="components/skeleton.md" show_dark=true >}}
 <div role="status" class="animate-pulse">
     <div class="h-2.5 bg-default rounded-full max-w-[640px] mb-2.5 mx-auto"></div>
     <div class="h-2.5 mx-auto bg-default rounded-full max-w-[540px]"></div>

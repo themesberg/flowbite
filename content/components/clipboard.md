@@ -24,7 +24,7 @@ Make sure that you add the `data-copy-to-clipboard-target="elementID"` data attr
 
 Use this example to copy the content of an input text field by clicking on a button and update the button text by applying the JavaScript code from the tab below based on the `updateOnCopyCallback()` function callback from the Flowbite JS API.
 
-{{< example id="clipboard-example" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
+{{< example class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
 window.addEventListener('load', function() {
     const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'npm-install');
     const $defaultMessage = document.getElementById('default-message');
@@ -63,7 +63,7 @@ This example can be used to copy the content of an input field by clicking on a 
 
 If you also want to update the text inside the tooltip and the icon, then you need to apply the JavaScript code based on the `updateOnCopyCallback()` function callback from the Flowbite JS API.
 
-{{< example id="clipboard-button-input-example" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
+{{< example class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
 window.addEventListener('load', function () {
     const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'npm-install-copy-button');
     const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-copy-npm-install-copy-button');
@@ -125,7 +125,7 @@ window.addEventListener('load', function () {
 
 Use this example to show a copy button inside the input field with a text label and icon that updates to a success state when the text has been copied. Make sure that you also apply the custom JavaScript code below to enable the success and default message states.
 
-{{< example id="clipboard-button-text-input-example" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
+{{< example class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
 window.addEventListener('load', function () {
     const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'npm-install-copy-text');
 
@@ -178,7 +178,7 @@ window.addEventListener('load', function () {
 
 This example can be used to show a copy to clipboard button inside an input group which has a label positioned inside the input field. The icon inside the button will switch to a success state if you also apply the custom JavaScript code below.
 
-{{< example id="clipboard-button-group-example" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
+{{< example class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
 window.addEventListener('load', function () {
     const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'website-url');
     const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-website-url');
@@ -249,7 +249,7 @@ window.addEventListener('load', function () {
 
 Use this example to copy a shortened URL to the clipboard by clicking on a button with an icon positioned inside the input field and also show a tooltip with a message when the text has been copied.
 
-{{< example id="clipboard-url-shortener-example" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
+{{< example class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="280" javascript=`
 window.addEventListener('load', function() {
     const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'url-shortener');
     const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-url-shortener');
@@ -325,7 +325,7 @@ You need to add an extra `data-copy-to-clipboard-content-type="innerHTML"` data 
 
 You also need to add the `data-copy-to-clipboard-html-entities="true"` option to the trigger element so that the copied text will be decoded from HTML entities to plain text that will work inside your code editor.
 
-{{< example id="clipboard-source-block" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="480" javascript=`
+{{< example class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="480" javascript=`
 window.addEventListener('load', function () {
     const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'code-block');
 
@@ -414,7 +414,7 @@ Use this example to show multiple input field elements that have the copy to cli
 
 Make sure that you also apply the custom JavaScript code with the function callback to enable the success and default message states for each input field and copy button.
 
-{{< example id="clipboard-api-keys" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="580" javascript=`
+{{< example class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="580" javascript=`
 window.addEventListener('load', function() {
     const clipboardAccountID = FlowbiteInstances.getInstance('CopyClipboard', 'account-id');
     const clipboardExternalID = FlowbiteInstances.getInstance('CopyClipboard', 'api-key');
@@ -544,7 +544,7 @@ This example can be used to copy the text content (ie. contact details) inside o
 
 Make sure that you set the `data-copy-to-clipboard-content-type="textContent"` data attribute to the trigger element (ie. the button) to specify the source of the content that is to be copied.
 
-{{< example id="contact-details-clipboard" class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="380" javascript=`
+{{< example class="flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="380" javascript=`
 window.addEventListener('load', function() {
     const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'contact-details');
     const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-contact-details');
@@ -615,7 +615,7 @@ window.addEventListener('load', function() {
 
 Use this example to show an input field where you can copy the URL of the current page and also show a modal with the copied URL when the copy button is clicked.
 
-{{< example id="copy-to-clipboard-modal" class="bg-neutral-primary flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="580" javascript=`
+{{< example class="bg-neutral-primary flex justify-center items-center h-full" github="components/clipboard.md" show_dark=true iframeHeight="580" javascript=`
 window.addEventListener('load', function() {
     const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'course-url');
     const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-course-url');

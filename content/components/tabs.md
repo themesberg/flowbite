@@ -17,7 +17,7 @@ The tabs component can be used either as an extra navigational hierarchy complem
 
 Use the following default tabs component example to show a list of links that the user can navigate from on your website.
 
-{{< example id="default-tabs-example" github="components/tabs.md" show_dark=true >}}
+{{< example github="components/tabs.md" show_dark=true >}}
 
 <ul class="flex flex-wrap text-sm font-medium text-center text-body border-b border-default">
     <li class="me-2">
@@ -42,7 +42,7 @@ Use the following default tabs component example to show a list of links that th
 
 Use this alternative tabs component style with an underline instead of a background when hovering and being active on a certain page.
 
-{{< example id="tabs-underline-example" github="components/tabs.md" show_dark=true >}}
+{{< example github="components/tabs.md" show_dark=true >}}
 
 <div class="text-sm font-medium text-center text-body border-b border-default">
     <ul class="flex flex-wrap -mb-px">
@@ -69,7 +69,7 @@ Use this alternative tabs component style with an underline instead of a backgro
 
 This is an example of the tabs component where you can also use a SVG powered icon to complement the text within the navigational tabs.
 
-{{< example id="tabs-icons-example" github="components/tabs.md" show_dark=true >}}
+{{< example github="components/tabs.md" show_dark=true >}}
 
 <div class="border-b border-default">
     <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-body">
@@ -108,7 +108,7 @@ This is an example of the tabs component where you can also use a SVG powered ic
 
 If you want to use pills as a style for the tabs component you can do so by using this example.
 
-{{< example id="tabs-pill-example" github="components/tabs.md" show_dark=true >}}
+{{< example github="components/tabs.md" show_dark=true >}}
 
 <ul class="flex flex-wrap text-sm font-medium text-center text-body">
     <li class="me-2">
@@ -133,7 +133,7 @@ If you want to use pills as a style for the tabs component you can do so by usin
 
 Use this example to show a vertically aligned set of tabs on the left side of the page.
 
-{{< example id="tabs-vertical-example" github="components/tabs.md" show_dark=true >}}
+{{< example github="components/tabs.md" show_dark=true >}}
 
 <div class="md:flex">
     <ul class="flex-column space-y space-y-4 text-sm font-medium text-body md:me-4 mb-4 md:mb-0">
@@ -182,7 +182,7 @@ Use this example to show a vertically aligned set of tabs on the left side of th
 
 If you want to show the tabs on the full width relative to the parent element you can do so by using the full width tabs component example.
 
-{{< example id="tabs-full-width-example" github="components/tabs.md" show_dark=true >}}
+{{< example github="components/tabs.md" show_dark=true >}}
 
 <div class="sm:hidden">
     <label for="tabs" class="sr-only">Select your country</label>
@@ -213,7 +213,7 @@ If you want to show the tabs on the full width relative to the parent element yo
 
 If you want to show the tabs on the full width relative to the parent element you can do so by using the full width tabs component example.
 
-{{< example id="tabs-full-width-example" github="components/tabs.md" show_dark=true >}}
+{{< example github="components/tabs.md" show_dark=true >}}
 
 <div class="sm:hidden">
     <label for="tabs-icons" class="sr-only">Select your country</label>
@@ -268,7 +268,7 @@ Apply the `role="tabpanel"` data attribute to every tab content element and set 
 
 You can use multiple tab components on a single page but make sure that the id's are different.
 
-{{< example id="tabs-interactive-example" github="components/tabs.md" show_dark=true >}}
+{{< example github="components/tabs.md" show_dark=true >}}
 
 <div class="mb-4 border-b border-default">
     <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
@@ -306,7 +306,7 @@ You can use multiple tab components on a single page but make sure that the id's
 
 Use the `data-tabs-active-classes` and the `data-tabs-inactive-classes` to set the active and inactive tab Tailwind CSS classes. In this example we set the active classes to the purple color instead of blue.
 
-{{< example id="tabs-interactive-active-example" github="components/tabs.md" show_dark=true >}}
+{{< example github="components/tabs.md" show_dark=true >}}
 
 <div class="mb-4 border-b border-default">
     <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-purple hover:text-purple border-purple" data-tabs-inactive-classes="dark:border-transparent text-body hover:text-fg-brand border-default hover:border-brand" role="tablist">

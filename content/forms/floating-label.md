@@ -19,7 +19,7 @@ On this page you will find a three different input field styles including a stan
 
 Get started with the following three styles for the floating label component and use the `label` tag as a visual placeholder using the `peer-placeholder-shown` and `peer-focus` utility classes from Tailwind CSS.
 
-{{< example id="default-floating-label-example" class="grid items-end w-full gap-6 md:grid-cols-3" github="forms/floating-label.md" show_dark=true >}}
+{{< example class="grid items-end w-full gap-6 md:grid-cols-3" github="forms/floating-label.md" show_dark=true >}}
 <div class="relative">
     <input type="text" id="floating_filled" class="block rounded-t-base px-2.5 pb-2.5 pt-5 w-full text-sm text-heading bg-neutral-secondary-medium border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " />
     <label for="floating_filled" class="absolute text-sm text-body duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Floating filled</label>
@@ -38,7 +38,7 @@ Get started with the following three styles for the floating label component and
 
 Get started with the following three styles for the floating label component and use the `label` tag as a visual placeholder using the `peer-placeholder-shown` and `peer-focus` utility classes from Tailwind CSS.
 
-{{< example id="default-floating-label-example" class="grid items-end w-full gap-6 md:grid-cols-3" github="forms/floating-label.md" show_dark=true >}}
+{{< example class="grid items-end w-full gap-6 md:grid-cols-3" github="forms/floating-label.md" show_dark=true >}}
 <div class="relative">
     <input type="text" id="floating_filled" class="block rounded-t-base px-2.5 pb-2.5 pt-5 w-full text-sm text-heading bg-neutral-secondary-medium border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " />
     <label for="floating_filled" class="inline-flex items-center absolute text-sm text-body duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
@@ -66,7 +66,7 @@ Get started with the following three styles for the floating label component and
 
 Apply the `disabled` attribute to the input fields to disallow the user from changing the content.
 
-{{< example id="floating-label-disabled-example" class="grid items-end gap-6 md:grid-cols-3" github="forms/floating-label.md" show_dark=true >}}
+{{< example class="grid items-end gap-6 md:grid-cols-3" github="forms/floating-label.md" show_dark=true >}}
 <div class="relative">
     <input type="text" id="disabled_filled" class="block rounded-t-base px-2.5 pb-2.5 pt-5 w-full text-sm text-heading bg-neutral-secondary-medium border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " disabled />
     <label for="disabled_filled" class="absolute text-sm text-fg-disabled duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Disabled filled</label>
@@ -85,7 +85,7 @@ Apply the `disabled` attribute to the input fields to disallow the user from cha
 
 Use the following examples of input validation for the success and error messages by applying the validation text below the input field and using the green or red color classes from Tailwind CSS.
 
-{{< example id="floating-label-validation-example" github="forms/floating-label.md" show_dark=true >}}
+{{< example github="forms/floating-label.md" show_dark=true >}}
 <!-- Success messages -->
 <div class="grid items-end gap-6 mb-6 md:grid-cols-3">
     <div>
@@ -141,7 +141,7 @@ Use the following examples of input validation for the success and error message
 
 Use the small and default sizes of the floating label input fields from the following example.
 
-{{< example id="floating-label-sizes-example" github="forms/floating-label.md" show_dark=true >}}
+{{< example github="forms/floating-label.md" show_dark=true >}}
 <div class="grid items-end gap-6 mb-6 md:grid-cols-3">
     <div class="relative">
         <input type="text" id="small_filled" class="block rounded-t-base px-2.5 pb-1.5 pt-4 w-full text-sm text-heading bg-neutral-secondary-medium border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " />
@@ -176,7 +176,7 @@ Use the small and default sizes of the floating label input fields from the foll
 
 Add a helper text in addition to the label if you want to show more information below the input field.
 
-{{< example id="floating-label-helper-example" github="forms/floating-label.md" show_dark=true >}}
+{{< example github="forms/floating-label.md" show_dark=true >}}
 <div class="relative">
     <input type="text" id="floating_helper" aria-describedby="floating_helper_text" class="block rounded-t-base px-2.5 pb-2.5 pt-5 w-full text-sm text-heading bg-neutral-secondary-medium border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " />
     <label for="floating_helper" class="absolute text-sm text-body duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Floating helper</label>

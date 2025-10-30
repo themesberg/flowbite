@@ -19,7 +19,7 @@ You will also find more advanced search components on this page including dropdo
 
 Get started with the default example of a search input component including and icon and submit button.
 
-{{< example id="default-search-bar-example" github="forms/search-input.md" show_dark=true >}}
+{{< example github="forms/search-input.md" show_dark=true >}}
 <form class="max-w-md mx-auto">   
     <label for="search" class="block mb-2.5 text-sm font-medium text-heading sr-only ">Search</label>
     <div class="relative">
@@ -40,7 +40,7 @@ Get started with the default example of a search input component including and i
 
 Use this search component with a dropdown to let your users select a category in which they would like the search query to be targeted in.
 
-{{< example id="search-bar-dropdown-example" github="forms/search-input.md" show_dark=true iframeHeight="290" >}}
+{{< example github="forms/search-input.md" show_dark=true iframeHeight="290" >}}
 <form class="max-w-2xl mx-auto">
     <div class="flex shadow-xs rounded-base -space-x-0.5">
         <label for="search-dropdown" class="block mb-2.5 text-sm font-medium text-heading sr-only ">Your Email</label>
@@ -78,7 +78,7 @@ Use this search component with a dropdown to let your users select a category in
 
 Use the simplest form of a search input component with an icon and a search button next to the text field.
 
-{{< example id="search-bar-simple-example" github="forms/search-input.md" show_dark=true >}}
+{{< example github="forms/search-input.md" show_dark=true >}}
 <form class="flex items-center max-w-sm mx-auto space-x-2">   
     <label for="simple-search" class="sr-only">Search</label>
     <div class="relative w-full">
@@ -102,7 +102,7 @@ Use the simplest form of a search input component with an icon and a search butt
 
 Use this example where you can select a country in which you want to search for an address or city.
 
-{{< example id="search-bar-location-example" github="forms/search-input.md" show_dark=true iframeHeight="290" >}}
+{{< example github="forms/search-input.md" show_dark=true iframeHeight="290" >}}
 <form class="max-w-lg mx-auto">
     <div class="flex shadow-xs rounded-base -space-x-0.5">
         <label for="search-dropdown-location" class="block mb-2.5 text-sm font-medium text-heading sr-only ">Choose city</label>
@@ -204,7 +204,7 @@ Use this example where you can select a country in which you want to search for 
 
 Get started with this example if you would like to enable voice search for your website and users.
 
-{{< example id="search-bar-voice-example" github="forms/search-input.md" show_dark=true >}}
+{{< example github="forms/search-input.md" show_dark=true >}}
 <form class="flex items-center max-w-lg mx-auto space-x-2">   
     <label for="voice-search" class="sr-only">Search</label>
     <div class="relative w-full">
@@ -227,7 +227,7 @@ Get started with this example if you would like to enable voice search for your 
 
 Get started with this example if you would like to enable voice search for your website and users.
 
-{{< example id="search-bar-voice-example" github="forms/search-input.md" show_dark=true iframeHeight="290" >}}
+{{< example github="forms/search-input.md" show_dark=true iframeHeight="290" >}}
 
 <form class="max-w-2xl mx-auto">
     <div class="flex shadow-xs rounded-base -space-x-0.5">

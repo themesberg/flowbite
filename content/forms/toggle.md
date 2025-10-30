@@ -17,7 +17,7 @@ The toggle component can be used to receive a simple "yes" or "no" type of answe
 
 Get started with the default toggle component example as a checkbox element to receive a true or false selection from the user.
 
-{{< example id="default-toggle-example" class="flex justify-center" github="forms/toggle.md" show_dark=true >}}
+{{< example class="flex justify-center" github="forms/toggle.md" show_dark=true >}}
 <label class="inline-flex items-center cursor-pointer">
   <input type="checkbox" value="" class="sr-only peer">
   <div class="relative w-9 h-5 bg-neutral-quaternary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
@@ -29,7 +29,7 @@ Get started with the default toggle component example as a checkbox element to r
 
 Apply the `checked` attribute to the toggle component to activate the selection by default.
 
-{{< example id="toggle-checked-example" class="flex justify-center" github="forms/toggle.md" show_dark=true >}}
+{{< example class="flex justify-center" github="forms/toggle.md" show_dark=true >}}
 <label class="inline-flex items-center cursor-pointer">
   <input type="checkbox" value="" class="sr-only peer" checked>
   <div class="relative w-9 h-5 bg-neutral-quaternary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
@@ -41,7 +41,7 @@ Apply the `checked` attribute to the toggle component to activate the selection 
 
 Apply the `disabled` attribute to disallow the users from making any further selections.
 
-{{< example id="toggle-disabled-example" class="flex flex-col flex-wrap items-center" github="forms/toggle.md" show_dark=true >}}
+{{< example class="flex flex-col flex-wrap items-center" github="forms/toggle.md" show_dark=true >}}
 <label class="inline-flex items-center mb-5 cursor-pointer">
   <input type="checkbox" value="" class="sr-only peer" disabled>
   <div class="relative w-9 h-5 bg-neutral-tertiary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
@@ -59,7 +59,7 @@ Apply the `disabled` attribute to disallow the users from making any further sel
 
 Change the color of the toggle component by updating the color classes of `peer-focus` and `peer-checked`.
 
-{{< example id="toggle-colors-example" class="flex inline-flex-wrap justify-center" github="forms/toggle.md" show_dark=true >}}
+{{< example class="flex inline-flex-wrap justify-center" github="forms/toggle.md" show_dark=true >}}
 <label class="inline-flex items-center me-5 cursor-pointer">
   <input type="checkbox" value="" class="sr-only peer" checked>
   <div class="relative w-9 h-5 bg-neutral-quaternary rounded-full peer peer-focus:ring-4 peer-focus:ring-red-300 dark:peer-focus:ring-red-800 dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-red-600 dark:peer-checked:bg-red-600"></div>
@@ -101,7 +101,7 @@ Change the color of the toggle component by updating the color classes of `peer-
 
 Get started with small, default, or large sizes of the toggle component based on your needs.
 
-{{< example id="toggle-sizes-example" class="flex flex-col flex-wrap items-center" github="forms/toggle.md" show_dark=true >}}
+{{< example class="flex flex-col flex-wrap items-center" github="forms/toggle.md" show_dark=true >}}
 <label class="inline-flex items-center mb-5 cursor-pointer">
   <input type="checkbox" value="" class="sr-only peer">
   <div class="relative w-9 h-5 bg-neutral-quaternary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
@@ -120,7 +120,7 @@ Get started with small, default, or large sizes of the toggle component based on
 
 Get started with the default toggle component example as a checkbox element to receive a true or false selection from the user.
 
-{{< example id="default-toggle-example" class="flex justify-center" github="forms/toggle.md" show_dark=true >}}
+{{< example class="flex justify-center" github="forms/toggle.md" show_dark=true >}}
 <label class="inline-flex items-center cursor-pointer">
   <span class="select-none text-sm font-medium text-heading">Monthly</span>
   <input type="checkbox" value="" class="sr-only peer">
@@ -133,7 +133,7 @@ Get started with the default toggle component example as a checkbox element to r
 
 Get started with the default toggle component example as a checkbox element to receive a true or false selection from the user.
 
-{{< example id="default-toggle-example" class="flex justify-center" github="forms/toggle.md" show_dark=true >}}
+{{< example class="flex justify-center" github="forms/toggle.md" show_dark=true >}}
 <label class="inline-flex items-center cursor-pointer">
   <svg class="w-5 h-5 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.5 8.43A4.985 4.985 0 0 1 19 12a4.984 4.984 0 0 1-1.43 3.5M14 6.135v11.73a1 1 0 0 1-1.64.768L8 15H6a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h2l4.36-3.633a1 1 0 0 1 1.64.768Z"/></svg>
   <input type="checkbox" value="" class="sr-only peer">
@@ -146,7 +146,7 @@ Get started with the default toggle component example as a checkbox element to r
 
 Get started with small, default, or large sizes of the toggle component based on your needs.
 
-{{< example id="toggle-sizes-example" class="flex flex-col flex-wrap items-center" github="forms/toggle.md" show_dark=true >}}
+{{< example class="flex flex-col flex-wrap items-center" github="forms/toggle.md" show_dark=true >}}
 <label class="w-80 inline-flex cursor-pointer p-4 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
   <input type="checkbox" value="" class="sr-only peer">
   <div class="shrink-0 relative w-9 h-5 bg-neutral-quaternary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
@@ -161,7 +161,7 @@ Get started with small, default, or large sizes of the toggle component based on
 
 Get started with small, default, or large sizes of the toggle component based on your needs.
 
-{{< example id="toggle-sizes-example" class="flex flex-col flex-wrap items-center" github="forms/toggle.md" show_dark=true >}}
+{{< example class="flex flex-col flex-wrap items-center" github="forms/toggle.md" show_dark=true >}}
 <label class="w-112 inline-flex cursor-pointer p-4 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
   <div class="me-2.5">
     <svg class="h-8 mb-2 text-heading" viewBox="0 0 90 32" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -17,7 +17,7 @@ The spinner component can be used as a loading indicator which comes in multiple
 
 Use the following SVG element with the `animate-spin` animation class to show a loading animation:
 
-{{< example id="default-spinner-example" github="components/spinner.md" show_dark=true >}}
+{{< example github="components/spinner.md" show_dark=true >}}
 <div role="status">
     <svg aria-hidden="true" class="w-8 h-8 text-neutral-tertiary animate-spin fill-brand" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
@@ -34,7 +34,7 @@ You can change the colors of the spinner element using the fill and color utilit
 -   use `fill-{*}` to change the main colors
 -   use `text-{*}` to change the background
 
-{{< example id="spinner-colors-example" github="components/spinner.md" class="flex items-center space-x-2 rtl:space-x-reverse" show_dark=true >}}
+{{< example github="components/spinner.md" class="flex items-center space-x-2 rtl:space-x-reverse" show_dark=true >}}
 <div role="status">
     <svg aria-hidden="true" class="inline w-8 h-8 w-8 h-8 text-neutral-tertiary animate-spin fill-brand" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
@@ -90,7 +90,7 @@ You can change the colors of the spinner element using the fill and color utilit
 
 Change the size of the spinner component using the `h-{*}` and `w-{*}` utility classes from Tailwind CSS:
 
-{{< example id="spinner-sizes-example" github="components/spinner.md" class="flex items-center space-x-2 rtl:space-x-reverse" show_dark=true >}}
+{{< example github="components/spinner.md" class="flex items-center space-x-2 rtl:space-x-reverse" show_dark=true >}}
 
 <div role="status">
     <svg aria-hidden="true" class="inline w-4 h-4 w-8 h-8 text-neutral-tertiary animate-spin fill-brand" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,7 +126,7 @@ Change the size of the spinner component using the `h-{*}` and `w-{*}` utility c
 
 Because the spinner component is an inline HTML element it can easily be aligned on the left, center, or right side using the `text-{left|center|right}` utility classes:
 
-{{< example id="spinner-alignment-example" github="components/spinner.md" show_dark=true >}}
+{{< example github="components/spinner.md" show_dark=true >}}
 
 <div class="text-left rtl:text-right">
     <div role="status">
@@ -161,7 +161,7 @@ Because the spinner component is an inline HTML element it can easily be aligned
 
 Use this animated loading indicator when content inside of a card is still loading.
 
-{{< example id="spinner-card-example" github="components/spinner.md" show_dark=true >}}
+{{< example github="components/spinner.md" show_dark=true >}}
 
 <div class="relative items-center block max-w-sm p-6 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
     <h5 class="mb-2 text-xl font-semibold tracking-tight text-heading opacity-20">Noteworthy technology acquisitions 2021</h5>
@@ -177,7 +177,7 @@ Use this animated loading indicator when content inside of a card is still loadi
 
 Use this animated spinner component inside a list of steppers elements.
 
-{{< example id="spinner-progress-example" github="components/spinner.md" show_dark=true >}}
+{{< example github="components/spinner.md" show_dark=true >}}
 
 <h2 class="mb-4 text-lg font-medium text-heading">Converting your image:</h2>
 <ul class="max-w-md space-y-3 text-body list-inside">
@@ -203,7 +203,7 @@ Use this animated spinner component inside a list of steppers elements.
 
 The spinner component can also be used inside elements such as buttons when submitting form data:
 
-{{< example id="spinner-buttons-example" github="components/spinner.md" show_dark=true >}}
+{{< example github="components/spinner.md" show_dark=true >}}
 
 <button type="button" class="inline-flex items-center text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
     <svg aria-hidden="true" class="w-4 h-4 text-neutral-tertiary animate-spin fill-brand me-2" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -20,7 +20,7 @@ The examples are built with the utility classes from Tailwind CSS and they are f
 
 Use this component to set a phone number inside an input field by setting the `type="tel"` attribute.
 
-{{< example id="default-phone-number-input" github="components/phone-input.md" show_dark=true >}}
+{{< example github="components/phone-input.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
     <label for="phone-input" class="block mb-2.5 text-sm font-medium text-heading">Phone number:</label>
     <div class="relative">
@@ -37,7 +37,7 @@ Use this component to set a phone number inside an input field by setting the `t
 
 This example can be used to select the country code from a dropdown menu and set the phone number inside an input field and use the `pattern` attribute to validate the phone number.
 
-{{< example id="phone-code-number-input" github="components/phone-input.md" show_dark=true iframeHeight="360" >}}
+{{< example github="components/phone-input.md" show_dark=true iframeHeight="360" >}}
 
 <form class="max-w-sm mx-auto">
     <div class="flex items-center -space-x-px shadow-xs rounded-base">
@@ -145,7 +145,7 @@ This example can be used to select the country code from a dropdown menu and set
 
 Set a phone number inside an input field with a floating label inspired by Material UI from Google.
 
-{{< example id="floating-label-phone-example" github="forms/phone-input.md" show_dark=true >}}
+{{< example github="forms/phone-input.md" show_dark=true >}}
 <form class="max-w-xs mx-auto">
     <div class="relative">
         <span class="absolute start-0 bottom-3 text-body">
@@ -161,7 +161,7 @@ Set a phone number inside an input field with a floating label inspired by Mater
 
 Use this example to send a verification code to the user's phone number for authentication.
 
-{{< example id="phone-verification-number-input" github="components/phone-input.md" show_dark=true iframeHeight="360" disable_init_js="true" >}}
+{{< example github="components/phone-input.md" show_dark=true iframeHeight="360" disable_init_js="true" >}}
 <form class="max-w-sm mx-auto">
     <div class="flex items-center -space-x-px shadow-xs rounded-base">
         <button id="dropdown-phone-button-2" data-dropdown-toggle="dropdown-phone-2" type="button" class="inline-flex items-center shrink-0 z-10 text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-s-base text-sm px-4 py-2.5 focus:outline-none">
@@ -271,7 +271,7 @@ Use this example to send a verification code to the user's phone number for auth
 
 Use this example to select one of your saved phone numbers from an application with a copy-paste feature.
 
-{{< example id="phone-select-number-input" github="components/phone-input.md" show_dark=true disable_init_js="true" javascript=`
+{{< example github="components/phone-input.md" show_dark=true disable_init_js="true" javascript=`
 window.addEventListener('load', function() {
     const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'phone-numbers');
     const tooltip = FlowbiteInstances.getInstance('Tooltip', 'tooltip-phone');
@@ -339,7 +339,7 @@ window.addEventListener('load', function() {
 
 Use this example to authenticate users with a login form using a phone number instead of an email address.
 
-{{< example id="phone-auth-number-input" github="components/phone-input.md" show_dark=true iframeHeight="390" disable_init_js="true" >}}
+{{< example github="components/phone-input.md" show_dark=true iframeHeight="390" disable_init_js="true" >}}
 <form class="max-w-sm mx-auto">
     <label for="dropdown-phone-3" class="block mb-2.5 text-sm font-medium text-heading">Phone number</label>
     <div class="flex items-center -space-x-px shadow-xs rounded-base">
@@ -455,7 +455,7 @@ Use this example to authenticate users with a login form using a phone number in
 
 Use this example to verify a phone number via SMS or phone call using a dropdown component.
 
-{{< example id="phone-code-alt-number-input" github="components/phone-input.md" show_dark=true iframeHeight="360" disable_init_js="true" >}}
+{{< example github="components/phone-input.md" show_dark=true iframeHeight="360" disable_init_js="true" >}}
 <form class="max-w-sm mx-auto">
     <div class="flex items-center mt-2 shadow-xs rounded-base">
         <button id="dropdown-phone-button-4" data-dropdown-toggle="dropdown-phone-4" class="inline-flex items-center shrink-0 z-10 text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-s-base text-sm px-4 py-2.5 focus:outline-none" type="button">

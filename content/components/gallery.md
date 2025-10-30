@@ -19,7 +19,7 @@ This component is recommended for usage within marketing UI interfaces and websi
 
 Use this component to show a collection of images inside a gallery with three pictures on a row.
 
-{{< example id="default-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/gallery.md" show_dark=true >}}
 
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
     <div>
@@ -65,7 +65,7 @@ Use this component to show a collection of images inside a gallery with three pi
 
 This example can be used to show the images inside a masonry grid layouts with four columns.
 
-{{< example id="masonry-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/gallery.md" show_dark=true >}}
 
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
     <div class="grid gap-4">
@@ -119,7 +119,7 @@ This example can be used to show the images inside a masonry grid layouts with f
 
 This example can be used to feature the most important image and show a row of five pictures below.
 
-{{< example id="featured-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/gallery.md" show_dark=true >}}
 
 <div class="grid gap-4">
     <div>
@@ -149,7 +149,7 @@ This example can be used to feature the most important image and show a row of f
 
 Use this example to show four larger images with two items on a row.
 
-{{< example id="quad-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/gallery.md" show_dark=true >}}
 
 <div class="grid grid-cols-2 gap-2">
         <div>
@@ -175,7 +175,7 @@ Use this example to show four larger images with two items on a row.
 
 This example uses the [carousel slider](https://flowbite.com/docs/components/carousel/) functionality to show multiple images inside a slider gallery.
 
-{{< example id="slider-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/gallery.md" show_dark=true >}}
 
 <div id="gallery" class="relative w-full" data-carousel="slide">
     <!-- Carousel wrapper -->
@@ -225,7 +225,7 @@ This example uses the [carousel slider](https://flowbite.com/docs/components/car
 
 This example uses an alternative style for the control button for the carousel slider component.
 
-{{< example id="slider-controls-gallery-example" class="flex justify-center" github="components/gallery.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/gallery.md" show_dark=true >}}
 
 <div id="custom-controls-gallery" class="relative w-full" data-carousel="slide">
     <!-- Carousel wrapper -->
@@ -272,7 +272,7 @@ This example uses an alternative style for the control button for the carousel s
 
 Use this example to show a list of tags and filter the images below based on the activately selected tag.
 
-{{< example id="tags-gallery-example" bodyClass="mt-0" github="components/gallery.md" show_dark=true >}}
+{{< example bodyClass="mt-0" github="components/gallery.md" show_dark=true >}}
 
 <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
     <button type="button" class="text-fg-brand border border-brand bg-neutral-primary focus:ring-4 focus:outline-none focus:ring-neutral-tertiary rounded-base text-base font-medium px-5 py-2.5 text-center me-3 mb-3">All categories</button>

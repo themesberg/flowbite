@@ -19,7 +19,7 @@ Check out multiple examples of the bottom navigation component based on various 
 
 Use the default bottom navigation bar example to show a list of menu items as buttons to allow the user to navigate through your website based on a fixed position. You can also use anchor tags instead of buttons.
 
-{{< example id="default-bottom-nav-example" class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true show_dark=true >}}
+{{< example class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true show_dark=true >}}
 
 <div class="fixed bottom-0 left-0 z-50 w-full h-16 bg-neutral-primary-soft border-t border-default">
     <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
@@ -47,7 +47,7 @@ Use the default bottom navigation bar example to show a list of menu items as bu
 
 This example can be used to show a border between the menu items inside the bottom navbar.
 
-{{< example id="border-bottom-nav-example" class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true show_dark=true >}}
+{{< example class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true show_dark=true >}}
 
 <div class="fixed bottom-0 left-0 z-50 w-full h-16 bg-neutral-primary-soft border-t border-default">
     <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
@@ -75,7 +75,7 @@ This example can be used to show a border between the menu items inside the bott
 
 Use this example to show a CTA button in the center of the navigation component to create new items.
 
-{{< example id="cta-button-bottom-nav-example" class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true show_dark=true >}}
+{{< example class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true show_dark=true >}}
 
 <div class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-neutral-primary-soft border border-default rounded-full bottom-4 left-1/2">
     <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
@@ -129,7 +129,7 @@ Use this example to show a CTA button in the center of the navigation component 
 
 This example be used to paginate multiple pages on a single view alongside other menu items.
 
-{{< example id="pagination-bottom-nav-example" class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true show_dark=true >}}
+{{< example class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true show_dark=true >}}
 
 <div class="fixed bottom-0 z-50 w-full h-16 -translate-x-1/2 bg-neutral-primary-soft border-t border-default left-1/2">
     <div class="grid h-full max-w-lg grid-cols-6 mx-auto">
@@ -184,7 +184,7 @@ This example be used to paginate multiple pages on a single view alongside other
 
 ## Button group bottom bar
 
-{{< example id="button-group-bottom-nav-example" class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true show_dark=true >}}
+{{< example class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true show_dark=true >}}
 
 <div class="fixed bottom-0 z-50 w-full -translate-x-1/2 bg-neutral-primary-soft border-t border-default left-1/2">
     <div class="w-full">
@@ -251,7 +251,7 @@ This example can be used to position a bottom navigation bar inside of a card el
 
 You can even use the other bottom navbar examples to exchange the default one presented here.
 
-{{< example id="card-bottom-nav-example" class="flex items-center justify-center p-4" github="components/bottom-navigation.md" show_dark=true >}}
+{{< example class="flex items-center justify-center p-4" github="components/bottom-navigation.md" show_dark=true >}}
  
 <div class="relative w-full max-w-sm overflow-y-scroll bg-neutral-primary-soft border border-default shadow-xs rounded-base h-96">
     <ul>
@@ -324,7 +324,7 @@ You can even use the other bottom navbar examples to exchange the default one pr
 
 Use this component to show a list of options for online video meetings by showing a list of options such as muting the microphone, hiding the camera, adjusting the volume and more.
 
-{{< example id="video-bottom-nav-example" class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true disable_init_js=true show_dark=true >}}
+{{< example class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true disable_init_js=true show_dark=true >}}
 
 <div class="fixed bottom-0 left-0 z-50 grid w-full h-16 grid-cols-1 px-8 bg-neutral-primary-soft border-t border-default md:grid-cols-3">
     <div class="items-center justify-center hidden text-body me-auto md:flex">
@@ -415,7 +415,7 @@ Use this component to show a list of options for online video meetings by showin
 
 Use this component to show control buttons for a video or audio that is playing in the browser to control the volume, navigate between videos, pause or start the video, and more.
 
-{{< example id="audio-bottom-nav-example" class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" disable_init_js=true skeletonPlaceholders=true show_dark=true >}}
+{{< example class="p-0" github="components/bottom-navigation.md" iframeHeight="480" iframeMaxHeight="480" disable_init_js=true skeletonPlaceholders=true show_dark=true >}}
 
 <div class="fixed bottom-0 left-0 z-50 grid w-full h-24 grid-cols-1 px-8 bg-neutral-primary-soft border-t border-default md:grid-cols-3">
     <div class="items-center justify-center hidden me-auto md:flex">

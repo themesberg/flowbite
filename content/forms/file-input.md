@@ -20,7 +20,7 @@ Make sure that you have included Flowbite as a plugin inside your Tailwind CSS p
 
 Get started with a simple file input component to let users upload one single file.
 
-{{< example id="default-file-upload-example" github="forms/file-input.md" show_dark=true >}}
+{{< example github="forms/file-input.md" show_dark=true >}}
 <label class="block mb-2.5 text-sm font-medium text-heading" for="file_input">Upload file</label>
 <input class="cursor-pointer bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" id="file_input" type="file">
 {{< /example >}}
@@ -29,7 +29,7 @@ Get started with a simple file input component to let users upload one single fi
 
 Add a descriptive helper text to inform users the allowed extensions and sizes of the files.
 
-{{< example id="file-upload-helper-example" github="forms/file-input.md" show_dark=true >}}
+{{< example github="forms/file-input.md" show_dark=true >}}
 <label class="block mb-2.5 text-sm font-medium text-heading" for="file_input">Upload file</label>
 <input class="cursor-pointer bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" aria-describedby="file_input_help" id="file_input" type="file">
 <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG, JPG or GIF (MAX. 800x400px).</p>
@@ -39,7 +39,7 @@ Add a descriptive helper text to inform users the allowed extensions and sizes o
 
 Apply the `multiple` attribute to the file input component to allow more files to be uploaded.
 
-{{< example id="file-upload-multiple-example" github="forms/file-input.md" show_dark=true >}}
+{{< example github="forms/file-input.md" show_dark=true >}}
 <label class="block mb-2.5 text-sm font-medium text-heading" for="multiple_files">Upload multiple files</label>
 <input class="cursor-pointer bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" id="multiple_files" type="file" multiple>
 {{< /example >}}
@@ -48,7 +48,7 @@ Apply the `multiple` attribute to the file input component to allow more files t
 
 Choose from the small, default, and large file input sizing options.
 
-{{< example id="file-upload-sizes-example" class="space-y-6" github="forms/file-input.md" show_dark=true >}}
+{{< example class="space-y-6" github="forms/file-input.md" show_dark=true >}}
 <label class="block mb-2.5 text-sm font-medium text-heading" for="small_size">Base file input</label>
 <input class="cursor-pointer bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full shadow-xs placeholder:text-body" id="small_size" type="file">
 
@@ -61,7 +61,7 @@ Choose from the small, default, and large file input sizing options.
 
 The dropzone file input component can be used to upload one or more files by clicking anywhere in the area.
 
-{{< example id="file-upload-dropzone-example" class="space-y-6" github="forms/file-input.md" show_dark=true >}}
+{{< example class="space-y-6" github="forms/file-input.md" show_dark=true >}}
 <div class="flex items-center justify-center w-full">
     <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 bg-neutral-secondary-medium border border-dashed border-default-strong rounded-base cursor-pointer hover:bg-neutral-tertiary-medium">
         <div class="flex flex-col items-center justify-center text-body pt-5 pb-6">
@@ -78,7 +78,7 @@ The dropzone file input component can be used to upload one or more files by cli
 
 The dropzone file input component can be used to upload one or more files by clicking anywhere in the area.
 
-{{< example id="file-upload-dropzone-example" class="space-y-6" github="forms/file-input.md" show_dark=true >}}
+{{< example class="space-y-6" github="forms/file-input.md" show_dark=true >}}
 <div class="flex items-center justify-center w-full">
   <div class="flex flex-col items-center justify-center w-full h-64 bg-neutral-secondary-medium border border-dashed border-default-strong rounded-base">
     <div class="flex flex-col items-center justify-center text-body pt-5 pb-6">

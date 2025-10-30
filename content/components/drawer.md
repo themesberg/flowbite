@@ -32,7 +32,7 @@ For accessibility you should also apply the `aria-controls={id}` attribute to th
 
 You can also avoid the drawer flickering and hide it by default by applying the following classes to the Drawer element: `transition-transform left-0 top-0 -translate-x-full`. This will set the component off-canvas.
 
-{{< example id="default-drawer-example" github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
+{{< example github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
 
 <!-- drawer init and toggle -->
 <div class="text-center">
@@ -69,7 +69,7 @@ You can also avoid the drawer flickering and hide it by default by applying the 
 
 Use this example to show a navigational sidebar inside the drawer component.
 
-{{< example id="drawer-navigation-example" github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
+{{< example github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
 
 <!-- drawer init and show -->
 <div class="text-center">
@@ -157,7 +157,7 @@ Use this example to show a navigational sidebar inside the drawer component.
 
 Use this example to show a contact form inside the drawer component.
 
-{{< example id="drawer-contact-example" github="components/drawer.md" show_dark=true iframeHeight="840" iframeMaxHeight="840" skeletonPlaceholders=true >}}
+{{< example github="components/drawer.md" show_dark=true iframeHeight="840" iframeMaxHeight="840" skeletonPlaceholders=true >}}
 
 <!-- drawer init and show -->
 <div class="text-center">
@@ -210,7 +210,7 @@ Use this example to show a contact form inside the drawer component.
 
 Use this example if you want to add form elements inside the drawer component including datepickers.
 
-{{< example id="drawer-form-example" github="components/drawer.md" show_dark=true iframeHeight="840" iframeMaxHeight="840" skeletonPlaceholders=true >}}
+{{< example github="components/drawer.md" show_dark=true iframeHeight="840" iframeMaxHeight="840" skeletonPlaceholders=true >}}
 
 <!-- drawer init and show -->
 <div class="text-center">
@@ -279,7 +279,7 @@ Use this example where you can position the drawer component on the left side of
 
 To span the full height of the page you'll have to add the `h-screen` class to the drawer component.
 
-{{< example id="drawer-placement-left-example" github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
+{{< example github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
 
 <!-- drawer init and toggle -->
 <div class="text-center">
@@ -318,7 +318,7 @@ Use this example to show the drawer component on the right side of the page.
 
 To span the full height of the page you'll have to add the `h-screen` class to the drawer component.
 
-{{< example id="drawer-placement-right-example" github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
+{{< example github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
 
 <!-- drawer init and toggle -->
 <div class="text-center">
@@ -355,7 +355,7 @@ To span the full height of the page you'll have to add the `h-screen` class to t
 
 Use this example to show the drawer on the top side of the page.
 
-{{< example id="drawer-placement-top-example" github="components/drawer.md" show_dark=true iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true >}}
+{{< example github="components/drawer.md" show_dark=true iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true >}}
 
 <!-- drawer init and toggle -->
 <div class="text-center">
@@ -392,7 +392,7 @@ Use this example to show the drawer on the top side of the page.
 
 Use this example to show the drawer on the bottom side of the page.
 
-{{< example id="drawer-placement-bottom-example" github="components/drawer.md" show_dark=true iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true >}}
+{{< example github="components/drawer.md" show_dark=true iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true >}}
 
 <div class="text-center">
    <button class="overflow-y-auto inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button" data-drawer-target="drawer-bottom-example" data-drawer-show="drawer-bottom-example" data-drawer-placement="bottom" aria-controls="drawer-bottom-example">
@@ -432,7 +432,7 @@ By default, body scrolling is disabled when the drawer is visible, however, you 
 
 This is an example where the body scrolling behaviour is disabled when the drawer is visible.
 
-{{< example id="drawer-disable-body-scrolling-example" github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
+{{< example github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
 
 <!-- drawer init and toggle -->
 <div class="text-center">
@@ -520,7 +520,7 @@ This is an example where the body scrolling behaviour is disabled when the drawe
 
 Get started with this example in order to enable body scrolling even if the drawer component is visible by using the `data-drawer-body-scrolling="false"` data attribute.
 
-{{< example id="drawer-body-scrolling-example" github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
+{{< example github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
 
 <!-- drawer init and toggle -->
 <div class="text-center">
@@ -614,7 +614,7 @@ Use the `data-drawer-backdrop="{true|false}"` data attribute where you can disab
 
 Use this example to enable the backdrop element by default.
 
-{{< example id="drawer-backdrop-example" github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
+{{< example github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
 
 <!-- drawer init and toggle -->
 <div class="text-center">
@@ -702,7 +702,7 @@ Use this example to enable the backdrop element by default.
 
 Use the `data-drawer-backdrop="false"` data attribute to disable the backdrop element when the drawer is shown.
 
-{{< example id="drawer-disabled-backdrop-example" github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
+{{< example github="components/drawer.md" show_dark=true iframeHeight="640" iframeMaxHeight="640" iframeMaxHeight="640" skeletonPlaceholders=true >}}
 
 <!-- drawer init and toggle -->
 <div class="text-center">
@@ -794,7 +794,7 @@ In this example we also use the `data-drawer-toggle="id"` option to toggle the v
 
 Use the `data-drawer-edge-offset="bottom-[*px]"` data attribute where you can apply a class from Tailwind CSS to set the offset. Default value is `bottom-[60px]`.
 
-{{< example id="drawer-swipe-example" github="components/drawer.md" show_dark=true iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true >}}
+{{< example github="components/drawer.md" show_dark=true iframeHeight="480" iframeMaxHeight="480" skeletonPlaceholders=true >}}
 
 <!-- drawer init and toggle -->
 <div class="text-center">

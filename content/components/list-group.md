@@ -17,7 +17,7 @@ The list group component can be used to display a series of elements, buttons or
 
 Here's an example of a list group that you can use right away.
 
-{{< example id="default-list-group-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
 <ul class="w-48 text-sm font-medium text-heading bg-neutral-primary-soft border border-default rounded-base">
     <li class="w-full px-4 py-2 border-b border-default rounded-t-lg">Profile</li>
@@ -31,7 +31,7 @@ Here's an example of a list group that you can use right away.
 
 You can also display a series of links inside the list group element.
 
-{{< example id="list-group-links-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
 <div class="w-48 text-sm font-medium text-heading bg-neutral-primary-soft border border-default rounded-base">
     <a href="#" aria-current="true" class="block w-full px-4 py-2 text-fg-brand bg-brand-softer border-b border-default rounded-t-base cursor-pointer">
@@ -53,7 +53,7 @@ You can also display a series of links inside the list group element.
 
 It is also possible to display a list of button element inside the list group component. The following example includes an active and disabled item as well.
 
-{{< example id="list-group-buttons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
 <div class="w-48 text-sm font-medium text-heading bg-neutral-primary-soft border border-default rounded-base">
     <button aria-current="true" type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right text-fg-brand bg-brand-softer border-b border-default rounded-t-base cursor-pointer focus:outline-none">
@@ -75,7 +75,7 @@ It is also possible to display a list of button element inside the list group co
 
 Use the following example to create a list of buttons as a menu together with [SVG icons](https://flowbite.com/icons/).
 
-{{< example id="list-group-icons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
 <div class="w-48 text-sm font-medium text-heading bg-neutral-primary-soft border border-default rounded-base">
     <a href="#" aria-current="true" class="flex items-center w-full px-4 py-2 text-fg-brand bg-brand-softer border-b border-default rounded-t-base cursor-pointer">
@@ -102,7 +102,7 @@ Use the following example to create a list of buttons as a menu together with [S
 
 Use the following example to create a list of buttons as a menu together with [SVG icons](https://flowbite.com/icons/).
 
-{{< example id="list-group-icons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
 <div class="w-72 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
     <ul role="list" class="space-y-4 p-6">
@@ -142,7 +142,7 @@ Use the following example to create a list of buttons as a menu together with [S
 
 Use the following example to create a list of buttons as a menu together with [SVG icons](https://flowbite.com/icons/).
 
-{{< example id="list-group-icons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
 <div class="w-96 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
     <ul role="list" class="space-y-3 p-6 divide-y divide-default">
@@ -224,7 +224,7 @@ Use the following example to create a list of buttons as a menu together with [S
 
 Use the following example to create a list of buttons as a menu together with [SVG icons](https://flowbite.com/icons/).
 
-{{< example id="list-group-icons-example" class="flex justify-center" github="components/list-group.md" show_dark=true >}}
+{{< example class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
 <div class="w-full max-w-sm p-6 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
     <h5 class="text-xl font-semibold text-heading mb-6">Latest users</h5>

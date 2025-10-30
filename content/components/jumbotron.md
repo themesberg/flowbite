@@ -21,7 +21,7 @@ The jumbotron component from Flowbite is responsive on all devices, natively sup
 
 Use this default example to show a title, description, and two CTA buttons for the jumbotron component.
 
-{{< example id="default-jumbotron-example" bodyClass="p-0" github="components/jumbotron.md" show_dark=true >}}
+{{< example bodyClass="p-0" github="components/jumbotron.md" show_dark=true >}}
 
 <section class="bg-neutral-primary">
     <div class="py-8 px-4 mx-auto max-w-screen-2xl text-center lg:py-16">
@@ -42,7 +42,7 @@ Use this default example to show a title, description, and two CTA buttons for t
 
 Use this jumbotron to apply a background image with a darkening opacity effect to improve readability.
 
-{{< example id="background-jumbotron-example" bodyClass="!p-0" github="components/jumbotron.md" show_dark=true >}}
+{{< example bodyClass="!p-0" github="components/jumbotron.md" show_dark=true >}}
 
 <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-dark bg-blend-multiply">
     <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
@@ -63,7 +63,7 @@ Use this jumbotron to apply a background image with a darkening opacity effect t
 
 This component can be used to feature a video together with a heading title, description, and CTA buttons.
 
-{{< example id="video-jumbotron-example" bodyClass="!p-0" github="components/jumbotron.md" show_dark=true >}}
+{{< example bodyClass="!p-0" github="components/jumbotron.md" show_dark=true >}}
 
 <section class="bg-neutral-primary">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
@@ -89,7 +89,7 @@ This component can be used to feature a video together with a heading title, des
 
 Use this component to show a sign in or register form as the first section of your website.
 
-{{< example id="form-jumbotron-example" bodyClass="!p-0 bg-gray-50 dark:bg-gray-900" github="components/jumbotron.md" show_dark=true >}}
+{{< example bodyClass="!p-0 bg-gray-50 dark:bg-gray-900" github="components/jumbotron.md" show_dark=true >}}
 
 <section class="bg-neutral-primary">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
@@ -132,7 +132,7 @@ Use this component to show a sign in or register form as the first section of yo
 
 Use this component to show a hero pattern with a linear gradient layout as an overlay for added effects.
 
-{{< example id="gradient-jumbotron-example" bodyClass="!p-0" github="components/jumbotron.md" show_dark=true >}}
+{{< example bodyClass="!p-0" github="components/jumbotron.md" show_dark=true >}}
 
 <section class="bg-neutral-primary bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')] dark:bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')]">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative">
@@ -164,7 +164,7 @@ Use this component to show a hero pattern with a linear gradient layout as an ov
 
 This example can be used to show cards with headings, descriptions, and CTA buttons inside a grid layout.
 
-{{< example id="cards-jumbotron-example" bodyClass="!p-0" github="components/jumbotron.md" show_dark=true >}}
+{{< example bodyClass="!p-0" github="components/jumbotron.md" show_dark=true >}}
 
 <section class="bg-neutral-primary">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">

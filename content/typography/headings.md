@@ -19,7 +19,7 @@ At least one unique H1 tag should be available for each page on your website wit
 
 Use this example of a H1 heading in the context of a paragraph and CTA button for landing pages.
 
-{{< example id="default-heading-example" class="text-center py-16" github="typography/headings.md" show_dark=true >}}
+{{< example class="text-center py-16" github="typography/headings.md" show_dark=true >}}
 <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl">We invest in the world’s potential</h1>
 <p class="mb-6 text-lg font-normal text-body lg:text-xl sm:px-16 xl:px-48">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
 <a href="#" class="inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-base px-5 py-3 focus:outline-none">Learn more</a>
@@ -29,7 +29,7 @@ Use this example of a H1 heading in the context of a paragraph and CTA button fo
 
 Use this example of a second-level H2 heading as the main subtitle for each section of your web page.
 
-{{< example id="second-level-heading-example" class="py-16" github="typography/headings.md" show_dark=true >}}
+{{< example class="py-16" github="typography/headings.md" show_dark=true >}}
 <h2 class="text-4xl font-bold">Payments tool for companies</h2>
 <p class="my-4 text-lg text-body">Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.</p>
 <p class="mb-4 text-lg font-normal text-body">Deliver great service experiences fast - without the complexity of traditional ITSM solutions. Accelerate critical development work, eliminate toil, and deploy changes with ease.</p>
@@ -43,7 +43,7 @@ Use this example of a second-level H2 heading as the main subtitle for each sect
 
 Use this example to highlight a certain portion of the heading text with a different color.
 
-{{< example id="highlighted-heading-example" class="py-16" github="typography/headings.md" show_dark=true >}}
+{{< example class="py-16" github="typography/headings.md" show_dark=true >}}
 <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl">Get back to growth with <span class="text-fg-brand">the world's #1</span> CRM.</h1>
 <p class="text-lg font-normal text-body lg:text-xl">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
 {{< /example >}}
@@ -52,7 +52,7 @@ Use this example to highlight a certain portion of the heading text with a diffe
 
 This example can be used to mark one part of the heading text with a solid background for highlighting.
 
-{{< example id="heading-mark-example" class="py-16" github="typography/headings.md" show_dark=true >}}
+{{< example class="py-16" github="typography/headings.md" show_dark=true >}}
 <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl">Regain <mark class="px-2 pb-0.5 text-white bg-brand rounded-base">control</mark> over your days</h1>
 <p class="text-lg font-normal text-body lg:text-xl">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
 {{< /example >}}
@@ -61,7 +61,7 @@ This example can be used to mark one part of the heading text with a solid backg
 
 Use this example to highlight a portion of the heading text by using a gradient style.
 
-{{< example id="heading-gradient-example" class="py-16" github="typography/headings.md" show_dark=true >}}
+{{< example class="py-16" github="typography/headings.md" show_dark=true >}}
 <h1 class="mb-4 text-3xl font-bold text-heading md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Better Data</span> Scalable AI.</h1>
 <p class="text-lg font-normal text-body lg:text-xl">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
 {{< /example >}}
@@ -70,7 +70,7 @@ Use this example to highlight a portion of the heading text by using a gradient 
 
 Get started with this example to underline an important part of the heading component using the offset feature from Tailwind CSS.
 
-{{< example id="heading-underline-example" class="py-16" github="typography/headings.md" show_dark=true >}}
+{{< example class="py-16" github="typography/headings.md" show_dark=true >}}
 <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl">We invest in the <span class="underline underline-offset-3 decoration-8 decoration-brand">world’s potential</span></h1>
 <p class="text-lg font-normal text-body lg:text-xl">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
 {{< /example >}}
@@ -79,7 +79,7 @@ Get started with this example to underline an important part of the heading comp
 
 Get started with this example to position a breadcrumb component above the H1 heading component.
 
-{{< example id="heading-breadcrumb-example" class="py-8" github="typography/headings.md" show_dark=true >}}
+{{< example class="py-8" github="typography/headings.md" show_dark=true >}}
 <nav class="flex mb-2.5" aria-label="Breadcrumb">
   <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
     <li class="inline-flex items-center">
@@ -109,7 +109,7 @@ Get started with this example to position a breadcrumb component above the H1 he
 
 Use this example to show a badge component inside the heading text element as a secondary indicator.
 
-{{< example id="heading-badge-example" github="typography/headings.md" show_dark=true >}}
+{{< example github="typography/headings.md" show_dark=true >}}
 <h1 class="text-heading flex items-center text-5xl font-bold tracking-tight">Flowbite <span class="inline-flex ms-3 px-2 py-1 ring-1 ring-inset ring-brand-subtle text-fg-brand-strong text-sm font-medium rounded bg-brand-softer">PRO</span></h1>
 {{< /example >}}
 
@@ -117,7 +117,7 @@ Use this example to show a badge component inside the heading text element as a 
 
 This example can be used to add a secondary text inside the main heading component.
 
-{{< example id="heading-neutral-secondary-example" github="typography/headings.md" show_dark=true >}}
+{{< example github="typography/headings.md" show_dark=true >}}
 <h1 class="text-5xl font-bold text-heading">Flowbite<small class="ms-2 font-medium text-body">This is secondary text</small></h1>
 {{< /example >}}
 
@@ -129,7 +129,7 @@ The heading component has six levels of importance starting from H1 which has to
 
 Use the H1 tag as the most important text element to indicate the title of your web page.
 
-{{< example id="heading-one-example" github="typography/headings.md" show_dark=true >}}
+{{< example github="typography/headings.md" show_dark=true >}}
 <h1 class="text-5xl font-bold text-heading">Heading 1</h1>
 {{< /example >}}
 
@@ -137,7 +137,7 @@ Use the H1 tag as the most important text element to indicate the title of your 
 
 The H2 tag can be used as subtitles of the page's sections.
 
-{{< example id="heading-two-example" github="typography/headings.md" show_dark=true >}}
+{{< example github="typography/headings.md" show_dark=true >}}
 <h2 class="text-4xl font-bold text-heading">Heading 2</h2>
 {{< /example >}}
 
@@ -145,7 +145,7 @@ The H2 tag can be used as subtitles of the page's sections.
 
 Use the H3 tags inside sections that already have a H2 available.
 
-{{< example id="heading-three-example" github="typography/headings.md" show_dark=true >}}
+{{< example github="typography/headings.md" show_dark=true >}}
 <h3 class="text-3xl font-bold text-heading">Heading 3</h3>
 {{< /example >}}
 
@@ -153,7 +153,7 @@ Use the H3 tags inside sections that already have a H2 available.
 
 The H4 can be generally used after H2 and H3 tags are already present and you need a more in-depth hierarchy.
 
-{{< example id="heading-four-example" github="typography/headings.md" show_dark=true >}}
+{{< example github="typography/headings.md" show_dark=true >}}
 <h4 class="text-2xl font-bold text-heading">Heading 4</h4>
 {{< /example >}}
 
@@ -161,7 +161,7 @@ The H4 can be generally used after H2 and H3 tags are already present and you ne
 
 The H5 tag is most often used in longer articles with other heading already available or in sidebars.
 
-{{< example id="heading-five-example" github="typography/headings.md" show_dark=true >}}
+{{< example github="typography/headings.md" show_dark=true >}}
 <h5 class="text-xl font-bold text-heading">Heading 5</h5>
 {{< /example >}}
 
@@ -169,6 +169,6 @@ The H5 tag is most often used in longer articles with other heading already avai
 
 Using the H6 tag is quite rare because it means that you've already used all heading from H1 to H5, but you can still use it if you have a very complex article with lots of headings.
 
-{{< example id="heading-six-example" github="typography/headings.md" show_dark=true >}}
+{{< example github="typography/headings.md" show_dark=true >}}
 <h6 class="text-lg font-bold text-heading">Heading 6</h6>
 {{< /example >}}

@@ -19,7 +19,7 @@ Get started with multiple variants and styles of these table components built wi
 
 Use the following example of a responsive table component to show multiple rows and columns of text data.
 
-{{< example id="default-table-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
@@ -107,7 +107,7 @@ Accentuate certain elements inside the table such as the rows, columns or data c
 
 Use this example to increase the readability of the data sets by alternating the background color of every second table row.
 
-{{< example id="table-striped-rows-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
@@ -225,7 +225,7 @@ Use this example to increase the readability of the data sets by alternating the
 
 Use this example to increase the readability of the table cells by alternating the background color of every second table column.
 
-{{< example id="table-striped-columns-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
@@ -325,7 +325,7 @@ Use this example to increase the readability of the table cells by alternating t
 
 Use the `hover:{bg-*}` utility class from Tailwind CSS to change the background color of a data row when hovering over the element with the cursor.
 
-{{< example id="table-hover-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
@@ -413,7 +413,7 @@ Use the following examples of table layouts to show the head, foot or caption of
 
 This example can be used to show the head of the table component with sortable icons.
 
-{{< example id="table-head-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
@@ -512,7 +512,7 @@ This example can be used to show the head of the table component with sortable i
 
 Use this example where the `<tfoot>` HTML element can be used in conjunction with the head and caption of the table component.
 
-{{< example id="table-foot-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto">
     <table class="w-full text-sm text-left rtl:text-right text-body">
@@ -579,7 +579,7 @@ Use this example where the `<tfoot>` HTML element can be used in conjunction wit
 
 Improve accessibility by using a caption inside the table as a heading to better describe what the table is about for screen readers.
 
-{{< example id="table-caption-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
@@ -671,7 +671,7 @@ Get started with the following table styles and choose the one that best fits yo
 
 Use this example of a table component without any border between the table cells.
 
-{{< example id="table-borderless-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto">
     <table class="w-full text-sm text-left rtl:text-right text-body">
@@ -743,7 +743,7 @@ Use this example of a table component without any border between the table cells
 
 Use this example to apply a shadow-sm border to the table component.
 
-{{< example id="table-shadow-example" github="components/tables.md" class="pb-4 overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="pb-4 overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
@@ -827,7 +827,7 @@ Use this example to apply a shadow-sm border to the table component.
 
 Use this example where we apply `overflow-x-auto` to enable horizontal scrolling if the content inside the table overflows that maximum width.
 
-{{< example id="table-scroll-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
@@ -1205,7 +1205,7 @@ Use this example where we apply `overflow-x-auto` to enable horizontal scrolling
 
 Use this example to show a search bar that can be used to query through data inside the table component.
 
-{{< example id="table-search-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <div class="p-4">
@@ -1395,7 +1395,7 @@ Use this example to show a search bar that can be used to query through data ins
 
 Use this example with a filter bar to select certain data sets inside the table based on the options that you've selected.
 
-{{< example id="table-filter-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <div class="p-4 flex items-center justify-between">
@@ -1603,7 +1603,7 @@ Use this example with a filter bar to select certain data sets inside the table 
 
 Paginate the table data when using larger data sets based on any given amount of results per page.
 
-{{< example id="table-pagination-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
@@ -1898,7 +1898,7 @@ Paginate the table data when using larger data sets based on any given amount of
 
 Checkboxes can be used inside table data rows to select multiple data sets and apply a bulk action.
 
-{{< example id="table-checkbox-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
@@ -2079,7 +2079,7 @@ Checkboxes can be used inside table data rows to select multiple data sets and a
 
 Use this example of a table where we show a data set of users and showing a profile picture, name, email, online status, and more.
 
-{{< example id="table-users-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 p-4">
@@ -2277,7 +2277,7 @@ Use this example of a table where we show a data set of users and showing a prof
 
 Get started with this example to show a list of products inside the table and show a preview image, product name, quantity selector, price and actions tab.
 
-{{< example id="table-products-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-body">
@@ -2398,7 +2398,7 @@ Get started with this example to show a list of products inside the table and sh
 
 Use this example to show a modal with a form where you can edit table data by clicking on one of the rows.
 
-{{< example id="table-modal-example" github="components/tables.md" class="overflow-hidden" show_dark=true iframeHeight="640" >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true iframeHeight="640" >}}
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <div class="flex items-center justify-between flex-column md:flex-row flex-wrap space-y-4 md:space-y-0 p-4">
         <div>
@@ -2649,7 +2649,7 @@ Use this example to show a modal with a form where you can edit table data by cl
 
 Apply any color to the table element by using the `bg-{color}` and `text-{color}` color class variants from Tailwind CSS.
 
-{{< example id="table-colors-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-fg-brand-subtle">
@@ -2767,7 +2767,7 @@ Apply any color to the table element by using the `bg-{color}` and `text-{color}
 
 Use this example to apply a different color to every second row inside the table.
 
-{{< example id="table-striped-rows-colors-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-fg-brand-subtle">
@@ -2885,7 +2885,7 @@ Use this example to apply a different color to every second row inside the table
 
 Use this example to apply a different color to every second column inside a colored table.
 
-{{< example id="table-striped-columns-colors-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-fg-brand-subtle">
@@ -3003,7 +3003,7 @@ Use this example to apply a different color to every second column inside a colo
 
 Use this example to apply a different color to every second row inside the table with a colored background.
 
-{{< example id="table-striped-colors-hover-example" github="components/tables.md" class="overflow-hidden" show_dark=true >}}
+{{< example github="components/tables.md" class="overflow-hidden" show_dark=true >}}
 
 <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
     <table class="w-full text-sm text-left rtl:text-right text-fg-brand-subtle">

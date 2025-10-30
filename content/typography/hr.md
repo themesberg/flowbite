@@ -17,7 +17,7 @@ The HR component can be used to separate content using a horizontal line by addi
 
 Use this example to separate text content with a `<hr>` horizontal line.
 
-{{< example id="default-hr-example" github="typography/hr.md" show_dark=true >}}
+{{< example github="typography/hr.md" show_dark=true >}}
 <p class="text-body">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
 <hr class="h-px my-8 bg-neutral-quaternary border-0">
 <p class="text-body">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease, with a complete audit trail for every change.</p>
@@ -27,7 +27,7 @@ Use this example to separate text content with a `<hr>` horizontal line.
 
 Use this example to show a shorter version of the horizontal line.
 
-{{< example id="hr-trimmed-example" github="typography/hr.md" show_dark=true >}}
+{{< example github="typography/hr.md" show_dark=true >}}
 <p class="text-body">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
 <hr class="w-48 h-1 mx-auto my-4 bg-neutral-quaternary border-0 rounded-sm md:my-10">
 <p class="text-body">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease, with a complete audit trail for every change.</p>
@@ -37,7 +37,7 @@ Use this example to show a shorter version of the horizontal line.
 
 This example can be used to set a custom [SVG icon](https://flowbite.com/icons/) in the middle of the HR element.
 
-{{< example id="hr-icon-example" class="text-center" github="typography/hr.md" show_dark=true >}}
+{{< example class="text-center" github="typography/hr.md" show_dark=true >}}
 <p class="text-body">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
 <div class="inline-flex items-center justify-center w-full">
     <hr class="w-64 h-1 my-8 bg-neutral-quaternary border-0 rounded-sm">
@@ -52,7 +52,7 @@ This example can be used to set a custom [SVG icon](https://flowbite.com/icons/)
 
 Use this example to add a text in the middle of the HR component.
 
-{{< example id="hr-text-example" class="text-center" github="typography/hr.md" show_dark=true >}}
+{{< example class="text-center" github="typography/hr.md" show_dark=true >}}
 <p class="text-body">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
 <div class="inline-flex items-center justify-center w-full">
     <hr class="w-64 h-px my-8 bg-neutral-quaternary border-0">
@@ -65,7 +65,7 @@ Use this example to add a text in the middle of the HR component.
 
 This example can be used to separate content with a HR tag as a shape instead of a line.
 
-{{< example id="hr-shape-example" github="typography/hr.md" show_dark=true >}}
+{{< example github="typography/hr.md" show_dark=true >}}
 <p class="text-body">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
 <hr class="w-8 h-8 mx-auto my-8 bg-neutral-quaternary border-0 rounded-sm md:my-12">
 <blockquote class="text-xl italic font-semibold text-center text-heading">

@@ -32,9 +32,9 @@ Use the following code to stack together buttons into a single group.
 </div>
 {{< /example >}}
 
-## Button & info (New)
+## Button group info
 
-Use the following code to stack together buttons into a single group.
+Use this example to stack a button with an icon with another informational button.
 
 {{< example class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 
@@ -50,9 +50,9 @@ Use the following code to stack together buttons into a single group.
 {{< /example >}}
 
 
-## Button & icon (New)
+## Button group icon action
 
-Use the following code to stack together buttons into a single group.
+Use this component to show a button with text and another button with an icon.
 
 {{< example class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 
@@ -66,11 +66,11 @@ Use the following code to stack together buttons into a single group.
 </div>
 {{< /example >}}
 
-## Options (New)
+## Button group icons
 
-Use the following code to stack together buttons into a single group.
+Use this example to stack together multiple option buttons into one group.
 
-{{< example class="flex justify-center pt-24" iframeHeight="280" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center items-center h-full" iframeHeight="240" github="components/button-group.md" show_dark=true >}}
   <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
     <button data-tooltip-target="tooltip-option-1" type="button" class="inline-flex items-center justify-center text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6h8m-8 4h12M6 14h8m-8 4h12"/></svg>
@@ -103,9 +103,9 @@ Use the following code to stack together buttons into a single group.
   </div>
 {{< /example >}}
 
-## Three buttons (New)
+## Button group dropdown
 
-Use the following code to stack together buttons into a single group.
+Use this example to show three buttons stacked together where the third one opens a dropdown menu.
 
 {{< example class="flex justify-center" iframeHeight="260" github="components/button-group.md" show_dark=true >}}
 
@@ -137,9 +137,9 @@ Use the following code to stack together buttons into a single group.
 </div>
 {{< /example >}}
 
-## Button with badge (New)
+## Button group badge
 
-Use the following code to stack together buttons into a single group.
+Use this component to add a badge inside of the button group and a dropdown menu.
 
 {{< example class="flex justify-center" iframeHeight="260" github="components/button-group.md" show_dark=true >}}
 
@@ -167,9 +167,9 @@ Use the following code to stack together buttons into a single group.
 </div>
 {{< /example >}}
 
-## Sign in (New)
+## QR code button group
 
-Use the following code to stack together buttons into a single group.
+Use this component to show a QR code button group for authentication or other purposes.
 
 {{< example class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 
@@ -183,11 +183,11 @@ Use the following code to stack together buttons into a single group.
 </div>
 {{< /example >}}
 
-## Pagination (New)
+## Pagination button group
 
-Use the following code to stack together buttons into a single group.
+This example can be used to create pagination components using button groups.
 
-{{< example class="flex justify-center" github="components/button-group.md" show_dark=true >}}
+{{< example class="flex justify-center items-center h-full flex-col gap-8" iframeHeight="240" github="components/button-group.md" show_dark=true >}}
   <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
     <button type="button" class="inline-flex items-center justify-center text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm w-9 h-9 focus:outline-none">
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
@@ -217,11 +217,28 @@ Use the following code to stack together buttons into a single group.
       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
     </button>
   </div>
+
+  <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
+    <button data-tooltip-target="tooltip-previous" type="button" class="inline-flex items-center justify-center text-body bg-neutral-primary-soft rounded-s-base box-border border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary leading-5 w-9 h-9 focus:outline-none">
+      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
+    </button>
+    <div id="tooltip-previous" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+      Previous
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+    <button data-tooltip-target="tooltip-next" type="button" class="inline-flex items-center justify-center text-body bg-neutral-primary-soft rounded-e-base box-border border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary leading-5 w-9 h-9 focus:outline-none">
+      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
+    </button>
+    <div id="tooltip-next" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
+      Next
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+  </div>
 {{< /example >}}
 
-## Vertical (New)
+## Vertical button groups
 
-Use the following code to stack together buttons into a single group.
+Use these examples to stack button groups vertically.
 
 {{< example class="flex justify-center space-x-4" github="components/button-group.md" show_dark=true >}}
 
@@ -270,32 +287,9 @@ Use the following code to stack together buttons into a single group.
   </div>
 {{< /example >}}
 
-## Only icons (New)
+## Button group with colors
 
-Use the following code to stack together buttons into a single group.
-
-{{< example class="flex justify-center py-8" github="components/button-group.md" show_dark=true >}}
-  <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
-    <button data-tooltip-target="tooltip-previous" type="button" class="inline-flex items-center justify-center text-body bg-neutral-primary-soft rounded-s-base box-border border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary leading-5 w-9 h-9 focus:outline-none">
-      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
-    </button>
-    <div id="tooltip-previous" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
-      Previous
-      <div class="tooltip-arrow" data-popper-arrow></div>
-    </div>
-    <button data-tooltip-target="tooltip-next" type="button" class="inline-flex items-center justify-center text-body bg-neutral-primary-soft rounded-e-base box-border border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary leading-5 w-9 h-9 focus:outline-none">
-      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
-    </button>
-    <div id="tooltip-next" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm leading-4 font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip">
-      Next
-      <div class="tooltip-arrow" data-popper-arrow></div>
-    </div>
-  </div>
-{{< /example >}}
-
-## With different colors (New)
-
-Use the following code to stack together buttons into a single group.
+Choose from any colors to style the button group components.
 
 {{< example class="flex justify-center space-x-4" github="components/button-group.md" show_dark=true >}}
   <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
@@ -382,12 +376,11 @@ You can also use [SVG icons](https://flowbite.com/icons/) inside the grouped but
 
 {{< /example >}}
 
-## Outline
+## Button group outline
 
-Group a series of buttons together on a single line or stack them in a vertical column.
+Use these examples as an alternative style with an outline.
 
-{{< example class="flex justify-center" github="components/button-group.md" show_dark=true >}}
-
+{{< example class="flex justify-center items-center flex-col gap-8 h-full" iframeHeight="240" github="components/button-group.md" show_dark=true >}}
 <div class="inline-flex rounded-base -space-x-px" role="group">
   <button type="button" class="text-heading bg-neutral-primary border border-dark-strong hover:bg-dark hover:text-white focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm px-3 py-2 focus:outline-none">
     Profile
@@ -399,13 +392,6 @@ Group a series of buttons together on a single line or stack them in a vertical 
     Downloads
   </button>
 </div>
-{{< /example >}}
-
-## Outlined with icon
-
-Group a series of buttons together on a single line or stack them in a vertical column.
-
-{{< example class="flex justify-center" github="components/button-group.md" show_dark=true >}}
 
 <div class="inline-flex rounded-base -space-x-px" role="group">
   <button type="button" class="inline-flex items-center text-heading bg-neutral-primary border border-dark-strong hover:bg-dark hover:text-white focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm px-3 py-2 focus:outline-none">

@@ -233,7 +233,7 @@ Use a button with dropdown as the current page in a breadcrumb component.
 {{< /example >}}
 
 
-## Breadcrumb with button group
+## Breadcrumb with navigation
 
 Use this example to navigate between pages with a button group component next to the breadcrumbs.
 

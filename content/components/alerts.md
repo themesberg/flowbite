@@ -386,9 +386,9 @@ The following alert components can be used if you wish to disclose more informat
 
 {{< /example >}}
 
-## Advanced small (New)
+## Announcement alerts
 
-Use the following alert elements that are also dismissible.
+Use this alert component to make announcements with a CTA link.
 
 {{< example id="alerts-dismissing-example" github="components/alerts.md" show_dark=true >}}
 <div id="alert-small-1" class="w-auto inline-flex items-center p-1 pe-2 mb-4 text-sm text-fg-brand-strong rounded-full bg-brand-softer border border-brand-subtle" role="alert">

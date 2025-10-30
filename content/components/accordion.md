@@ -73,9 +73,9 @@ Use the `data-accordion="collapse"` to collapse every other child element when e
 </div>
 {{< /example >}}
 
-## Separate cards (New)
+## Separated cards
 
-Use the `data-accordion="collapse"` to collapse every other child element when expanding a single one.
+Use this example of an accordion with space delimitation between the accordion items.
 
 {{< example id="default-accordion-example" github="components/accordion.md" show_dark=true >}}
 <div id="accordion-card" data-accordion="collapse">

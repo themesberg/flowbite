@@ -34,7 +34,7 @@ You can also display a series of links inside the list group element.
 {{< example class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
 <div class="w-48 text-sm font-medium text-heading bg-neutral-primary-soft border border-default rounded-base">
-    <a href="#" aria-current="true" class="block w-full px-4 py-2 text-fg-brand bg-brand-softer border-b border-default rounded-t-base cursor-pointer">
+    <a href="#" aria-current="true" class="block w-full px-4 py-2 text-fg-brand bg-neutral-secondary-medium border-b border-default rounded-t-base cursor-pointer">
         Profile
     </a>
     <a href="#" class="block w-full px-4 py-2 border-b border-default cursor-pointer hover:bg-neutral-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
@@ -56,7 +56,7 @@ It is also possible to display a list of button element inside the list group co
 {{< example class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
 <div class="w-48 text-sm font-medium text-heading bg-neutral-primary-soft border border-default rounded-base">
-    <button aria-current="true" type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right text-fg-brand bg-brand-softer border-b border-default rounded-t-base cursor-pointer focus:outline-none">
+    <button aria-current="true" type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right text-fg-brand bg-neutral-secondary-medium border-b border-default rounded-t-base cursor-pointer focus:outline-none">
         Profile
     </button>
     <button type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right border-b border-default cursor-pointer hover:bg-neutral-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
@@ -65,7 +65,10 @@ It is also possible to display a list of button element inside the list group co
     <button type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right border-b border-default cursor-pointer hover:bg-neutral-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
         Messages
     </button>
-    <button disabled type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right bg-neutral-tertiary rounded-b-base cursor-not-allowed">
+    <button type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right border-b border-default cursor-pointer hover:bg-neutral-secondary-medium hover:text-fg-brand focus:outline-none focus:ring-2 focus:ring-brand focus:text-fg-brand">
+        Options
+    </button>
+    <button disabled type="button" class="w-full px-4 py-2 font-medium text-left rtl:text-right rounded-b-base cursor-not-allowed text-fg-disabled">
         Download
     </button>
 </div>
@@ -78,7 +81,7 @@ Use the following example to create a list of buttons as a menu together with [S
 {{< example class="flex justify-center" github="components/list-group.md" show_dark=true >}}
 
 <div class="w-48 text-sm font-medium text-heading bg-neutral-primary-soft border border-default rounded-base">
-    <a href="#" aria-current="true" class="flex items-center w-full px-4 py-2 text-fg-brand bg-brand-softer border-b border-default rounded-t-base cursor-pointer">
+    <a href="#" aria-current="true" class="flex items-center w-full px-4 py-2 text-fg-brand bg-neutral-secondary-medium border-b border-default rounded-t-base cursor-pointer">
         <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
         Profile
     </a>

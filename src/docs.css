@@ -45,11 +45,11 @@
 }
 
 #TableOfContents > ul > li > a {
-	@apply block pl-2.5 font-medium border-l text-body hover:text-heading border-buffer duration-200 transition-none hover:border-default after:content-['#'] after:text-fg-brand after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-100;
+	@apply block pl-2.5 font-medium border-l text-body hover:text-heading border-transparent duration-200 transition-none hover:border-default after:content-['#'] after:text-fg-brand after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-100;
 }
 
 #TableOfContents > ul > li > ul > li > a {
-	@apply pl-6 border-l border-buffer duration-200 text-body hover:text-heading transition-none hover:border-default after:content-['#'] after:text-fg-brand after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-100;
+	@apply pl-6 border-l border-transparent duration-200 text-body hover:text-heading transition-none hover:border-default after:content-['#'] after:text-fg-brand after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-100;
 }
 
 #TableOfContents > ul > li > ul {

@@ -190,7 +190,7 @@ If you want to show the tabs on the full width relative to the parent element yo
         <option>Profile</option>
         <option>Dashboard</option>
         <option>setting</option>
-        <option>Invoioce</option>
+        <option>Invoice</option>
     </select>
 </div>
 <ul class="hidden text-sm font-medium text-center text-body sm:flex -space-x-px">
@@ -209,9 +209,9 @@ If you want to show the tabs on the full width relative to the parent element yo
 </ul>
 {{< /example >}}
 
-## Full tabs & icons (New)
+## Tabs with icons
 
-If you want to show the tabs on the full width relative to the parent element you can do so by using the full width tabs component example.
+This example can be used to show a list of tabs with icons from our [SVG icons](https://flowbite.com/icons/).
 
 {{< example github="components/tabs.md" show_dark=true >}}
 
@@ -221,7 +221,7 @@ If you want to show the tabs on the full width relative to the parent element yo
         <option>Profile</option>
         <option>Dashboard</option>
         <option>setting</option>
-        <option>Invoioce</option>
+        <option>Invoice</option>
     </select>
 </div>
 <ul class="hidden text-sm font-medium text-center text-body sm:flex -space-x-px">

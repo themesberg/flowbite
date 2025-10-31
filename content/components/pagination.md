@@ -251,7 +251,7 @@ You can use the following markup to show the number of data shown inside a table
 </div>
 {{< /example >}}
 
-## Table data pagination with icons
+## Table pagination with icons
 
 You can use the following code to show the number of data shown inside a table element and also the previous and next action buttons coupled with icons.
 
@@ -297,9 +297,9 @@ You can use the following code to show the number of data shown inside a table e
 </div>
 {{< /example >}}
 
-## Pagination with dropdown (New)
+## Pagination with dropdown
 
-Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
+Use this example of a pagination component with a dropdown to select the number of items per page.
 
 {{< example class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
 
@@ -340,9 +340,9 @@ Use the following list of pagination items based on two sizes powered by Tailwin
 
 {{< /example >}}
 
-## Pagination with input (New)
+## Pagination with input
 
-Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
+Use this pagination component with an input field to navigate through pages directly.
 
 {{< example class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
 
@@ -381,9 +381,9 @@ Use the following list of pagination items based on two sizes powered by Tailwin
 
 {{< /example >}}
 
-## Button & input (New)
+## Input field and button
 
-Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
+This example can be used to introduce the page number inside the input field and navigate by clicking on a button.
 
 {{< example class="flex flex-col space-y-6 items-center" github="components/pagination.md" show_dark=true >}}
 
@@ -400,9 +400,9 @@ Use the following list of pagination items based on two sizes powered by Tailwin
 
 {{< /example >}}
 
-## Select input & buttons (New)
+## Select input and buttons
 
-Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
+This example can be used to select the number of pages and navigate using the left and right arrows.
 
 {{< example class="flex flex-col space-y-6 py-8 items-center" github="components/pagination.md" show_dark=true >}}
 
@@ -441,9 +441,9 @@ Use the following list of pagination items based on two sizes powered by Tailwin
 
 {{< /example >}}
 
-## Button group (New)
+## Single pagination
 
-Use the following list of pagination items based on two sizes powered by Tailwind CSS utility classes to indicate a series of content for your website.
+This example can be used to show an interval of items per page and navigate using the left and right arrows.
 
 {{< example class="flex flex-col space-y-6 py-8 items-center" github="components/pagination.md" show_dark=true >}}
 

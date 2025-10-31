@@ -30,13 +30,13 @@ npm i flowbite-typography
 
 3. Import the `flowbite-typography` plugin inside your main Tailwind CSS file:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="wysiwyg.js" icon="file" >}}
 @plugin "flowbite-typography";
 {{< /code >}}
 
 Alternatively you can do the same but in your `tailwind.config.js` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="wysiwyg.js" icon="file" >}}
 // import the tailwind.config.js file in your main CSS file if using Tailwind CSS v4
 module.exports = {
   theme: {
@@ -653,7 +653,7 @@ window.addEventListener('load', function() {
 
 Notice: there is a <a href="https://github.com/ueberdosis/tiptap/issues/577" target="_blank" rel="nofollow noreferrer">known issue from TipTap</a> when splitting blocks (ie. using enter to create break lines) and using the bullet list item. A quickfix for `v2.6.6` when using CDN is to match the import statements:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="wysiwyg.html" icon="file" >}}
 <script type="importmap">
     {
         "imports": {
@@ -666,7 +666,7 @@ Notice: there is a <a href="https://github.com/ueberdosis/tiptap/issues/577" tar
 
 If you're importing the package with Yarn or NPM then you need to add this in your `package.json` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="wysiwyg.js" icon="file" >}}
 // when using Yarn
 "resolutions": {
     "prosemirror-model": "1.19.3"
@@ -2281,7 +2281,7 @@ Learn more about how you can programmatically use the WYSIWYG editor using Javas
 
 After you have installed Tip Tap via NPM or CDN you can create a new `Editor` object:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="wysiwyg.js" icon="file" >}}
 import { Editor } from '@tiptap/core';
 import StarterKit from '@tiptap/starter-kit';
 
@@ -2294,7 +2294,7 @@ new Editor({
 
 Make sure that you also have an empty `div` element with the appropiate ID:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="wysiwyg.html" icon="file" >}}
 <div id="wysiwyg"></div>
 {{< /code >}}
 
@@ -2304,7 +2304,7 @@ This code will automatically set up the markup needed inside of the WYSIWYG comp
 
 We also recommend adding custom typography classes from the [Flowbite Typography](https://flowbite.com/docs/components/typography/) package so that the content inside of the text editor will be correctly styled:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="wysiwyg.js" icon="file" >}}
 new Editor({
   element: document.getElementById('wysiwyg'),
   extensions: [StarterKit],
@@ -2323,7 +2323,7 @@ Tip Tap is a modular library meaning that if you want to introduce images, video
 
 Here is one example where we add the link extension:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="wysiwyg.js" icon="file" >}}
 import { Editor } from '@tiptap/core';
 import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
@@ -2353,7 +2353,7 @@ Links will now be available inside the WYSIWYG component. Learn more about all o
 
 You can easily call the methods from the `Editor` object to set text styles, links, images, and more. Here is one example where based upon a click event on a button you will be prompted with the URL of the link and it will add it to the currently selected text:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="wysiwyg.js" icon="file" >}}
 // set up custom event listeners for the buttons
 document.getElementById('toggleLinkButton').addEventListener('click', () => {
     const url = window.prompt('Enter image URL:', 'https://flowbite.com');
@@ -2363,7 +2363,7 @@ document.getElementById('toggleLinkButton').addEventListener('click', () => {
 
 And here's another example where you can unset a link:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="wysiwyg.js" icon="file" >}}
 // unset the links based on a button click
 document.getElementById('removeLinkButton').addEventListener('click', () => {
     editor.chain().focus().unsetLink().run()

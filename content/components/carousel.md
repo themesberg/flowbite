@@ -505,7 +505,7 @@ Use the following methods on the Carousel object to programmatically manipulate 
 
 Check out the following example to learn how to programmatically create a new Carousel object by passing the parameters, using the methods, and the callback functions.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="carousel.js" icon="file" >}}
 const carouselElement = document.getElementById('carousel-example');
 
 const items = [
@@ -577,7 +577,7 @@ const instanceOptions = {
 
 Create a new carousel object using the options set above.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="carousel.js" icon="file" >}}
 import { Carousel } from 'flowbite';
 
 const carousel = new Carousel(carouselElement, items, options, instanceOptions);
@@ -585,7 +585,7 @@ const carousel = new Carousel(carouselElement, items, options, instanceOptions);
 
 Use the `next()` and `prev()` public methods on the carousel object to jump to the left or right carousel slide item based on the position of the current active item.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="carousel.js" icon="file" >}}
 // goes to the next (right) slide
 carousel.next();
 
@@ -595,14 +595,14 @@ carousel.prev();
 
 Use the `slideTo(position)` public method to jump to the carousel slide item with the specified position.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="carousel.js" icon="file" >}}
 // jumps to the 3rd position (position starts from 0)
 carousel.slideTo(2);
 {{< /code >}}
 
 Use the `cycle()` method to start an automated cycling where the duration is the milliseconds of time between each slide and the `pause()` method to clear the cycle event.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="carousel.js" icon="file" >}}
 // starts or resumes the carousel cycling (automated sliding)
 carousel.cycle();
 
@@ -614,7 +614,7 @@ carousel.pause();
 
 Here is an example of the HTML markup that you can use for the JavaScript example above. Please note that you should use the `hidden` class from Tailwind CSS to hide the carousel items by default.
 
-{{< code lang="html" >}}
+{{< code lang="html" file="carousel.html" icon="file" >}}
 <div id="carousel-example" class="relative w-full">
     <!-- Carousel wrapper -->
     <div
@@ -744,7 +744,7 @@ Here is an example of the HTML markup that you can use for the JavaScript exampl
 
 If you want to set trigger the next or previous slide item for the any button, just add some event listeners and call the `next()` and `prev()` methods on the Carousel object.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="carousel.js" icon="file" >}}
 const $prevButton = document.getElementById('data-carousel-prev');
 const $nextButton = document.getElementById('data-carousel-next');
 
@@ -763,7 +763,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-{{< code lang="javascript" >}}
+{{< code lang="typescript" file="carousel.ts" icon="file" >}}
 import { Carousel } from 'flowbite';
 import type {
     CarouselItem,

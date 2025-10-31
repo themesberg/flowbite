@@ -1010,7 +1010,7 @@ Three arguments are required for the Speed Dial component, namely the parent ele
 
 Furthermore, you can also pass an object of options to set the trigger type and set the callback functions.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="speed-dial.js" icon="file" >}}
 // parent element wrapping the speed dial
 const $parentEl = document.getElementById('dialParent');
 
@@ -1043,7 +1043,7 @@ const instanceOptions = {
 
 Create a new Speed Dial object based on the options above.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="speed-dial.js" icon="file" >}}
 import { Dial } from 'flowbite';
 
 /*
@@ -1058,7 +1058,7 @@ const dial = new Dial($parentEl, $triggerEl, $targetEl, options, instanceOptions
 
 Use the `show`, `hide`, or `toggle` methods on the Speed Dial object to programmatically show and hide the speed dial component using JavaScript.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="speed-dial.js" icon="file" >}}
 // show the speed dial
 dial.show();
 
@@ -1073,7 +1073,7 @@ dial.toggle();
 
 Use the following HTML code for the JavaScript example above.
 
-{{< code lang="html" >}}
+{{< code lang="html" file="speed-dial.html" icon="file" >}}
 <div id="dialParent" class="group fixed bottom-6 end-6">
     <div
         id="dialContent"
@@ -1223,7 +1223,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-{{< code lang="javascript" >}}
+{{< code lang="typescript" file="speed-dial.ts" icon="file" >}}
 import { Dial } from 'flowbite';
 import type { DialOptions, DialInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';

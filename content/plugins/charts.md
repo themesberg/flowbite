@@ -34,7 +34,7 @@ npm install apexcharts@3.46.0 --save
 
 Alternatively, you can also just include the CDN link:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="charts.html" icon="file" >}}
 <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.46.0/dist/apexcharts.min.js"></script>
 {{< /code >}}
 
@@ -2394,14 +2394,14 @@ With the charts from Flowbite and through the API of ApexCharts you can programm
 
 For example, here's how you can initialize a new chart with an options object and call the `render()` function:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="charts.js" icon="file" >}}
 const chart = new ApexCharts(el, options);
 chart.render();
 {{< /code >}}
 
 You can also update the options or data on demand. Here's an example how you can add or remove data:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="charts.js" icon="file" >}}
 const chart = new ApexCharts(el, options);
 
 chart.updateSeries([{
@@ -2411,7 +2411,7 @@ chart.updateSeries([{
 
 You can also toggle the visibility of a data series by calling the `toggleSeries()` method:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="charts.js" icon="file" >}}
 const chart = new ApexCharts(el, {
   series: [{
     name: 'Developer Edition'

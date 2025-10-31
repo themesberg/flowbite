@@ -21,7 +21,7 @@ You will probably want to be able to add your own colors, fonts, sizings, shadow
 
 Here's an example of a simple configuration where we import plugins, set the source files, customize variables for colors and fonts, and set the dark mode strategy to use class name:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 @import "tailwindcss";
 
 @plugin "flowbite/plugin";
@@ -53,7 +53,7 @@ Using this example is a good starting point for any project created using Flowbi
 
 You can customize colors, fonts, spacings, and other styles using native variables in your main CSS file.
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 /* input.css file */
 @import "tailwindcss";
 
@@ -92,7 +92,7 @@ All of these styles will be propagated to the utility classes provided by Tailwi
 
 You can add custom utilities by using the `@utility` directive in your CSS file.
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 @utility custom-url {
   color: --color-primary-600;
   text-decoration: underline;
@@ -105,7 +105,7 @@ Now you can use the `custom-url` class to add an underline and primary color to 
 
 Use the `@variant` direct in native CSS to target states such as hover, focus, dark mode, and more.
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 .element {
   text-decoration: underline;
 
@@ -119,7 +119,7 @@ Use the `@variant` direct in native CSS to target states such as hover, focus, d
 
 You can import third party plugins using the `@plugin` directive in your CSS file.
 
-{{< code lang="javascript" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 @import "tailwindcss";
 
 @plugin "flowbite/plugin";
@@ -132,7 +132,7 @@ Tailwind CSS automatically detects source files, but ignores a few folders such 
 
 Here's how you can explicictly set the source files in your main CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 @import "tailwindcss";
 
 @source "../node_modules/flowbite";
@@ -144,7 +144,7 @@ This will scan the Flowbite folder inside your installed packages for Tailwind c
 
 Use the `@config` directive to import old `tailwind.config.js` files to copy your options.
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 @import "tailwindcss";
 
 @config "../tailwind.config.js";
@@ -156,13 +156,13 @@ You can use the `prefix` object to set a prefix for all of the classes generated
 
 For example, you can add the `fb-` prefix like so:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 @import "tailwindcss" prefix(fb);
 {{< /code >}}
 
 Doing so it will add the prefix to all of the classes.
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 .fb-text-left {
   text-align: left;
 }

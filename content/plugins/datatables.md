@@ -33,7 +33,7 @@ npm install simple-datatables --save
 
 Alternatively, you can also include it in your project using CDN:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="datatables.html" icon="file" >}}
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3"></script>
 {{< /code >}}
 
@@ -1772,7 +1772,7 @@ Learn more about how you can customize the DataTables plugin such as changing th
 
 After installing the DataTables plugin either via NPM or CDN you can initialize by calling the `DataTable` constructor and passing the table selector as the first argument.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="datatables.js" icon="file" >}}
 // if you installed via CDN
 const dataTable = new simpleDatatables.DataTable("#default-table");
 
@@ -1783,7 +1783,7 @@ const dataTable = DataTable("#default-table");
 
 You can pass an object of options as the second argument to customize the table appearance and behavior.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="datatables.js" icon="file" >}}
 const dataTable = new simpleDatatables.DataTable("#default-table", options);
 {{< /code >}}
 
@@ -1799,7 +1799,7 @@ Check out some of the more commonly used options that you can pass to the DataTa
 
 Use the `data` option to pass data from an array of arrays to the table using JavaScript.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="datatables.js" icon="file" >}}
 const customData = {
     "headings": [
         "Name",
@@ -1828,7 +1828,7 @@ This is a useful feature where instead of a hard coded array you can pass data f
 
 Use the following options to customize the appearance of the table such as adding a caption, custom classes, footer, header, updating the HTML rendering template, and enabling vertical scrolling, and more.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="datatables.js" icon="file" >}}
 const dataTable = new DataTable("#default-table", {
     caption: "Flowbite is an open-source library",
     classes: {
@@ -1853,7 +1853,7 @@ These options are useful if you want to add your own HTML elements inside the dy
 
 Use these options to enable pagination, set the number of rows per page, and customize the appearance.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="datatables.js" icon="file" >}}
 const dataTable = new DataTable("#default-table", {
     paging: true, // enable or disable pagination
     perPage: 10, // set the number of rows per page
@@ -1869,7 +1869,7 @@ Pagination is a useful feature when you have a large dataset and you want to spl
 
 These options can be used to enable searching, set the search placeholder, and customize the appearance.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="datatables.js" icon="file" >}}
 const dataTable = new DataTable("#default-table", {
     searchable: true, // enable or disable searching
     sensitivity: "base" // set the search sensitivity (base, accent, case, variant)
@@ -1883,7 +1883,7 @@ The searching feature is great when you have a large dataset and you want to sea
 
 Use these options to enable sorting, set the default sort column, and customize the sort appearance.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="datatables.js" icon="file" >}}
 const dataTable = new DataTable("#default-table", {
     sortable: true, // enable or disable sorting
     locale: "en-US", // set the locale for sorting
@@ -1899,7 +1899,7 @@ The sorting feature is useful when you want to sort the table rows based on a sp
 
 Check out some of the common methods that you can use to interact with the DataTable instance.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="datatables.js" icon="file" >}}
 // programatically search the table where the "term" variable is the query string
 dataTable.search(term, columns);
 

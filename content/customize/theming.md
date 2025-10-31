@@ -17,7 +17,7 @@ Since the release of Tailwind v4 the theming customization has been moved from t
 
 Here's an example of a modified CSS file that sets a custom set of colors and fonts:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 /* input.css file */
 @import "tailwindcss";
 
@@ -48,7 +48,7 @@ These variables will now create a new color pallette called `primary` that can b
 
 After installing Flowbite, make sure that you also import the Flowbite plugin in your main CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 /* input.css file */
 @import "tailwindcss";
 
@@ -68,7 +68,7 @@ There are many more variable namespaces that you can use to customize the defaul
 
 Updating or adding new colors can be done by using the `--color-{name}` variable namespaces:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 /* input.css file */
 @import "tailwindcss";
 
@@ -95,7 +95,7 @@ This introduces a list of colors attributed to the `primary` variable name, mean
 
 You can add your own fonts by updating the `--font-body` variable in your CSS file.
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 /* input.css file */
 @import "tailwindcss";
 
@@ -115,7 +115,7 @@ Make sure that you apply `antialiased` to the `<body>` tag of your document to e
 
 Use the `spacing-{name}` variable namespace to set spacing values to utility class names used for setting widths, heights, paddings, margins, and more.
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 /* input.css file */
 @import "tailwindcss";
 
@@ -131,7 +131,7 @@ Use the `spacing-{name}` variable namespace to set spacing values to utility cla
 
 You can customize the breakpoints at which the reponsive mobile-first utility classes are being targeted using the `--breakpoint-{size}` variable namespaces in your main CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 /* input.css file */
 @import "tailwindcss";
 

@@ -962,7 +962,7 @@ Check out the following examples to learn how to create a new InputCounter objec
 
 First of all, you need to set the object parameters where the target element is required and the other two are optional.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="number-input.js" icon="file" >}}
 // set the target element of the input field
 const $targetEl = document.getElementById('counter-input-example');
 
@@ -991,7 +991,7 @@ const instanceOptions = {
 
 Next step is to create a new instance of a InputCounter object using the parameters we have set above.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="number-input.js" icon="file" >}}
 import { InputCounter } from 'flowbite';
 
 /*
@@ -1020,7 +1020,7 @@ counterInput.decrement();
 
 Here is an example of the HTML markup that you can use for the JavaScript example above.
 
-{{< code lang="html" >}}
+{{< code lang="html" file="number-input.html" icon="file" >}}
 <form class="max-w-xs mx-auto">
     <label for="counter-input-example" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Choose quantity:</label>
     <div class="relative flex items-center">
@@ -1045,7 +1045,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-{{< code lang="javascript" >}}
+{{< code lang="typescript" file="number-input.ts" icon="file" >}}
 import { InputCounter } from 'flowbite';
 import type { InputCounterOptions, InputCounterInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';

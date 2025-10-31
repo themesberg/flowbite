@@ -23,7 +23,7 @@ Before you start, make sure you have installed the latest version of [Tailwind C
 
 1. Add the `dir` attribute to the `<html>` element in your `index.html` file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
 <html dir="rtl">
 
 <!-- your HTML markup -->
@@ -78,7 +78,7 @@ For example, if you want to add a margin to the left side of an element in LTR m
 
 In RTL mode, you would use `rtl:ml-2` instead.
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
 <div class="ml-2 rtl:ml-0">
   <!-- ... -->
 </div>

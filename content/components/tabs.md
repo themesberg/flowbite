@@ -546,7 +546,7 @@ Check out the following example to learn how to initialize and manipulate a Tabs
 
 First of all, create an array of objects that contains the id, trigger element, and content element of each tab, set the active tab based on the id, and optionally set a callback function after a new tab has been shown.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="tabs.js" icon="file" >}}
 const tabsElement = document.getElementById('tabs-example');
 
 // create an array of objects with the id, trigger element (eg. button), and the content element
@@ -594,7 +594,7 @@ const instanceOptions = {
 
 Create a new Tabs object based on the parameters we've previously set.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="tabs.js" icon="file" >}}
 import { Tabs } from 'flowbite';
 
 /*
@@ -608,7 +608,7 @@ const tabs = new Tabs(tabsElement, tabElements, options, instanceOptions);
 
 Lastly, you can now use the methods on the Tabs object to show another tab element, get a tab element based on the id, or get the current active tab element.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="tabs.js" icon="file" >}}
 // shows another tab element
 tabs.show('dashboard');
 
@@ -623,7 +623,7 @@ tabs.getActiveTab();
 
 You can use this HTML code as an example for the JavaScript code from above.
 
-{{< code lang="html" >}}
+{{< code lang="html" file="tabs.html" icon="file" >}}
 <div class="mb-4 border-b border-default dark:border-gray-700">
     <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-body dark:text-gray-400" id="tabs-example" role="tablist">
         <li class="me-2" role="presentation">
@@ -746,7 +746,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-{{< code lang="javascript" >}}
+{{< code lang="typescript" file="tabs.ts" icon="file" >}}
 import { Tabs } from 'flowbite';
 import type { TabsOptions, TabsInterface, TabItem } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';

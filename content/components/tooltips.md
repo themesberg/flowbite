@@ -391,7 +391,7 @@ First of all, set the target element as the tooltip itself and the trigger eleme
 
 After that you can also set the options object to change the placement and trigger type of the tooltip, alongside with the callback functions.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="tooltip.js" icon="file" >}}
 // set the tooltip content element
 const $targetEl = document.getElementById('tooltipContent');
 
@@ -423,7 +423,7 @@ const instanceOptions = {
 
 Create a new Tooltip object based on the options above.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="tooltip.js" icon="file" >}}
 import { Tooltip } from 'flowbite';
 
 /*
@@ -457,7 +457,7 @@ tooltip.init();
 
 Use the following HTML code for the JavaScript example above.
 
-{{< code lang="html" >}}
+{{< code lang="html" file="tooltip.html" icon="file" >}}
 <button
     id="tooltipButton"
     type="button"
@@ -480,7 +480,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-{{< code lang="javascript" >}}
+{{< code lang="typescript" file="tooltip.ts" icon="file" >}}
 import { Tooltip } from 'flowbite';
 import type { TooltipOptions, TooltipInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';

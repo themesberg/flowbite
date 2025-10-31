@@ -914,7 +914,7 @@ Check out the following example to learn how to initialize and use the methods o
 
 First of all, you need to set the object parameters where the target element is required and the other two are optional.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="navbar.js" icon="file" >}}
 // set the target element that will be collapsed or expanded (eg. navbar menu)
 const $targetEl = document.getElementById('targetEl');
 
@@ -943,7 +943,7 @@ const instanceOptions = {
 
 Next step is to create a new instance of a Collapse object using the parameters we have set above.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="navbar.js" icon="file" >}}
 import { Collapse } from 'flowbite';
 
 /*
@@ -956,7 +956,7 @@ const collapse = new Collapse($targetEl, $triggerEl, options, instanceOptions);
 
 Now you can programmatically expand or collapse the target element using the methods of the Collapse object.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="navbar.js" icon="file" >}}
 // show the target element
 collapse.expand();
 
@@ -971,7 +971,7 @@ collapse.toggle();
 
 Here is an example of the HTML markup that you can use for the JavaScript example above. Please note that you should use the `hidden` class from Tailwind CSS to hide the target element by default.
 
-{{< code lang="html" >}}
+{{< code lang="html" file="navbar.html" icon="file" >}}
 <button type="button" id="triggerEl" aria-expanded="false" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-base text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Trigger collapse</button>
 
 <!-- Target element -->
@@ -1005,7 +1005,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-{{< code lang="javascript" >}}
+{{< code lang="typescript" file="navbar.ts" icon="file" >}}
 import { Collapse } from 'flowbite';
 import type { CollapseOptions, CollapseInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';

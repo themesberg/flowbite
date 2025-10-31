@@ -20,19 +20,19 @@ If you want to use the datepicker component from Flowbite you have to include th
 
 Follow the [quickstart guide]({{< ref "getting-started/quickstart" >}}) and then include the following JavaScript file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 {{< /code >}}
 
 Alternatively you can also use CDN to include the datepicker JavaScript.
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
 {{< /code >}}
 
 Also make sure that you add the source files for Tailwind in your main CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="style.css" icon="file" >}}
 @import "tailwindcss";
 
 @source "../node_modules/flowbite-datepicker";
@@ -479,7 +479,7 @@ Check out the following examples to learn how to use a basic HTML markup togethe
 
 First of all, you need to select the datepicker element (it can be an input field or div for inline datepickers) and set up the options object.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="datepicker.js" icon="file" >}}
 // set the target element of the input field
 const $datepickerEl = document.getElementById('datepicker-custom');
 
@@ -507,7 +507,7 @@ const instanceOptions = {
 
 Next step is to create a new instance of a Datepicker object using the parameters we have set above.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="datepicker.js" icon="file" >}}
 import { Datepicker } from 'flowbite';
 
 /*
@@ -519,7 +519,7 @@ const datepicker = new Datepicker($datepickerEl, options, instanceOptions);
 
 Use the following methods to show and hide the datepicker, set or get the currently selected date and get access to the instance.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="datepicker.js" icon="file" >}}
 // get the currently selected date (undefined if not selected)
 datepicker.getDate();
 
@@ -540,7 +540,7 @@ datepicker.getDatepickerInstance();
 
 Here is an example of the HTML markup that you can use for the JavaScript example above.
 
-{{< code lang="html" >}}
+{{< code lang="html" file="datepicker.html" icon="file" >}}
 <div class="relative max-w-sm">
   <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -557,7 +557,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-{{< code lang="javascript" >}}
+{{< code lang="typescript" file="datepicker.ts" icon="file" >}}
 import { Datepicker } from 'flowbite';
 import type { DatepickerOptions, DatepickerInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';
@@ -624,13 +624,13 @@ npm install flowbite-datepicker --save
 
 After you've installed the NPM library, you will need to import the `Datepicker` module:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="datepicker.js" icon="file" >}}
 import Datepicker from 'flowbite-datepicker';
 {{< /code >}}
 
 Initialize a new element using the `Datepicker` constructor and optionally add your own options based on your needs:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="datepicker.js" icon="file" >}}
 const datepickerEl = document.getElementById('datepickerId');
 new Datepicker(datepickerEl, {
     // options
@@ -639,13 +639,13 @@ new Datepicker(datepickerEl, {
 
 If you want to use the **Tailwind Date Range Picker** you have to import the `DateRangePicker` module:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="datepicker.js" icon="file" >}}
 import DateRangePicker from 'flowbite-datepicker';
 {{< /code >}}
 
 Then in the same fashion you can initialize a date range picker component by using the `DateRangePicker` constructor:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="datepicker.js" icon="file" >}}
 const dateRangePickerEl = document.getElementById('dateRangePickerId');
 new DateRangePicker(dateRangePickerEl, {
     // options
@@ -662,12 +662,12 @@ In order to support turbo load from Ruby on Rails 7, you have to include the `fl
 
 Follow the [quickstart guide]({{< ref "getting-started/rails" >}}) and then include the following JavaScript file:
 
-{{< code lang="bash" >}}
+{{< code lang="ruby" file="Gemfile" icon="file" >}}
 pin "flowbite", to: "https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.turbo.min.js"
 {{< /code >}}
 
 Don't forget to also import it inside your `application.js` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="application.js" icon="file" >}}
 import "flowbite/dist/flowbite.turbo.js";
 {{< /code >}}

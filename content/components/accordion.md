@@ -653,7 +653,7 @@ To get started you need to create an array of accordion item objects including a
 
 Additionally, you can also set some options to change the default behaviour of the accordion, customize the styles, and set callback functions.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="accordion.js" icon="file" >}}
 const accordionElement = document.getElementById('accordion-example');
 
 // create an array of objects with the id, trigger element (eg. button), and the content element
@@ -706,7 +706,7 @@ const instanceOptions = {
 
 Create a new Accordion object using the options set above as the parameters.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="accordion.js" icon="file" >}}
 import { Accordion } from 'flowbite';
 
 /*
@@ -720,7 +720,7 @@ const accordion = new Accordion(accordionElement, accordionItems, options, insta
 
 Now you can access the object methods to programmatically open, close, and toggle the accordion items based on the unique identifier.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="accordion.js" icon="file" >}}
 // open accordion item based on id
 accordion.open('accordion-example-heading-2');
 
@@ -735,7 +735,7 @@ accordion.toggle('accordion-example-heading-3');
 
 Use the following HTML markup example for the JavaScript script above.
 
-{{< code lang="html" >}}
+{{< code lang="html" file="accordion.html" icon="file" >}}
 <div id="accordion-example">
   <h2 id="accordion-example-heading-1">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body border border-b-0 border-default rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" aria-expanded="true" aria-controls="accordion-example-body-1">
@@ -787,7 +787,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-{{< code lang="javascript" >}}
+{{< code lang="typescript" file="accordion.ts" icon="file" >}}
 import { Accordion } from "flowbite";
 import type { AccordionOptions, AccordionItem, AccordionInterface } from "flowbite";
 import type { InstanceOptions } from 'flowbite';

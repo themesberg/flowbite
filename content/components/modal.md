@@ -1111,7 +1111,7 @@ Check out the following JavaScript example to learn how to initialize, set the o
 
 First of all, create a new JavaScript element object for the first parameter of the Modal object and another options object to set the placement, backdrop styles, and callback functions.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="modal.js" icon="file" >}}
 // set the modal menu element
 const $targetEl = document.getElementById('modalEl');
 
@@ -1142,7 +1142,7 @@ const instanceOptions = {
 
 Create a new Modal object based on the options above.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="modal.js" icon="file" >}}
 import { Modal } from 'flowbite';
 
 /*
@@ -1154,7 +1154,7 @@ const modal = new Modal($targetEl, options, instanceOptions);
 
 Use the `show` and `hide` methods to show and hide the modal component directly from JavaScript.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="modal.js" icon="file" >}}
 // show the modal
 modal.show();
 
@@ -1164,14 +1164,14 @@ modal.hide();
 
 Use the `toggle` method to toggle the visibility of the modal.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="modal.js" icon="file" >}}
 // toggle the modal
 modal.toggle();
 {{< /code >}}
 
 Use the `isHidden` or `isVisible` method to check if the modal is visible or not.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="modal.js" icon="file" >}}
 // true if hidden
 modal.isHidden();
 
@@ -1183,7 +1183,7 @@ modal.isVisible();
 
 Use the following HTML code for the JavaScript example above.
 
-{{< code lang="html" >}}
+{{< code lang="html" file="modal.html" icon="file" >}}
 <div
     id="modalEl"
     tabindex="-1"
@@ -1273,7 +1273,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-{{< code lang="javascript" >}}
+{{< code lang="typescript" file="modal.ts" icon="file" >}}
 import { Modal } from 'flowbite';
 import type { ModalOptions, ModalInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';

@@ -899,7 +899,7 @@ Use the following methods from the CopyClipboard component to programmatically w
 
 Check out the following example to learn how to create a new CopyClipboard component via the Flowbite JavaScript API and set up the class, options, and methods to programmatically work with the component.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="clipboard.js" icon="file" >}}
 // set the trigger element such as a button or text field
 const $triggerEl = document.getElementById('copy-clipboard-button');
 
@@ -923,7 +923,7 @@ const instanceOptions = {
 
 Next step is to create a new instance of a CopyClipboard object using the parameters we have set above.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="clipboard.js" icon="file" >}}
 import { CopyClipboard } from 'flowbite';
 
 /*
@@ -937,7 +937,7 @@ const clipboard = new CopyClipboard($triggerEl, $targetEl, options, instanceOpti
 
 Set the event listeners on the button to copy the text from the input field:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="clipboard.js" icon="file" >}}
 $triggerEl.addEventListener('click', () => {
     clipboard.copy();
 });
@@ -945,7 +945,7 @@ $triggerEl.addEventListener('click', () => {
 
 Now you can programmatically call the methods of the CopyClipboard component:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="clipboard.js" icon="file" >}}
 // get the value, inner HTML or text content of the target element
 clipboard.getTargetValue();
 
@@ -963,7 +963,7 @@ clipboard.updateOnCopyCallback(() => {
 
 Here is an example of the HTML markup that you can use for the JavaScript example above.
 
-{{< code lang="html" >}}
+{{< code lang="html" file="clipboard.html" icon="file" >}}
 <div class="grid grid-cols-8 gap-2 w-full max-w-[23rem]">
     <label for="copy-text" class="sr-only">Label</label>
     <input id="copy-text" type="text" class="col-span-6 bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-base focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" value="npm install flowbite" disabled readonly>
@@ -985,7 +985,7 @@ If you're using the <a href="{{< ref "getting-started/typescript" >}}">TypeScrip
 
 Here's an example that applies the types from Flowbite to the code above:
 
-{{< code lang="javascript" >}}
+{{< code lang="typescript" file="clipboard.ts" icon="file" >}}
 import { CopyClipboard } from 'flowbite';
 import type { CopyClipboardOptions, CopyClipboardInterface } from 'flowbite';
 import type { InstanceOptions } from 'flowbite';

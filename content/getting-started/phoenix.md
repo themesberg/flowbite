@@ -211,9 +211,7 @@ You may have to run `mix deps.get` if the command doesn't install Tailwind CSS r
 6. Remove the default CSS styles and import the Tailwind directives inside the `./assets/css/app.css` file:
 
 {{< code lang="css" >}}
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 {{< /code >}}
 
 7. Restart the server using `mix phx.server` and add some Tailwind CSS classes inside the `index.html.heex` file:

@@ -68,6 +68,10 @@
 	@apply overflow-hidden;
 }
 
+#mainContent > h2:first-child {
+	@apply mt-0;
+}
+
 #mainContent > h2 {
 	@apply mt-8 mb-4 text-2xl font-medium text-heading dark:text-white;
 }

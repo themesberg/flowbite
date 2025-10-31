@@ -29,25 +29,25 @@ npm install flowbite
 
 2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" icon="file" file="input.css" >}}
 @import "flowbite/src/themes/default";
 {{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" icon="file" file="input.css" >}}
 @plugin "flowbite/plugin";
 {{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" icon="file" file="input.css" >}}
 @source "../node_modules/flowbite";
 {{< /code >}}
 
 5. Include the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
 
-{{< code lang="html" >}}
+{{< code lang="html" icon="file" file="index.html" >}}
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 {{< /code >}}
 
@@ -61,13 +61,13 @@ The quickest way to get started working with Flowbite is to include the CSS and 
 
 Require the following minified stylesheet inside the `head` tag:
 
-{{< code lang="html" >}}
+{{< code lang="html" icon="file" file="index.html" >}}
 <link href="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.css" rel="stylesheet" />
 {{< /code >}}
 
 And include the following JavaScript file before the end of the `body` element:
 
-{{< code lang="html" >}}
+{{< code lang="html" icon="file" file="index.html" >}}
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
 {{< /code >}}
 
@@ -79,7 +79,7 @@ One of the most popular way of using Flowbite is to include the bundled Javascri
 
 You can directly import the main JavaScript file inside your bundled `app-bundle.js` file like this:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" icon="file" file="app.js" >}}
 import 'flowbite';
 {{< /code >}}
 
@@ -95,7 +95,7 @@ For example, to set up a modal component all you need to do is use `data-modal-t
 
 You can also use the init functions to set up the event listeners yourself. Here's an example how you can do it with Vue or Nuxt:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" icon="file" file="app.js" >}}
 <script setup>
 import { onMounted } from 'vue'
 import { initFlowbite } from 'flowbite'
@@ -121,7 +121,7 @@ Flowbite also offers an API for using the components programmatically and it sup
 
 Here's an example how you can import and create a new Modal component inside JavaScript:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" icon="file" file="app.js" >}}
 import { Modal } from 'flowbite'
 
 const $modalElement = document.querySelector('#modalEl');
@@ -154,7 +154,7 @@ Flowbite supports type declarations for the interactive UI components including 
 
 Additionally to our code above, we will now import some relevant types from the Flowbite package, namely the `ModalOptions` and `ModalInterface`:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" icon="file" file="app.ts" >}}
 import { Modal } from 'flowbite'
 import type { ModalOptions, ModalInterface } from 'flowbite'
 
@@ -175,7 +175,7 @@ npm install tailwindcss @tailwindcss/postcss postcss
 
 2. Add the PostCSS plugin inside the `postcss.config.js` file:
 
-{{< code lang="bash" >}}
+{{< code lang="bash" icon="file" file="postcss.config.js" >}}
 export default {
   plugins: {
     '@tailwindcss/postcss': {},
@@ -185,13 +185,13 @@ export default {
 
 3. Remove the old directives in your main CSS file and import Tailwind:
 
-{{< code lang="bash" >}}
+{{< code lang="css" icon="file" file="input.css" >}}
 @import "tailwindcss";
 {{< /code >}}
 
 4. Use the `@config` directive to import the old configuration file from your project:
 
-{{< code lang="bash" >}}
+{{< code lang="css" icon="file" file="input.css" >}}
 /* add this to copy the configuration settings from your project */
 @config "../tailwind.config.js";
 {{< /code >}}
@@ -216,7 +216,7 @@ Flowbite works with the 2.x version of Tailwind CSS.
 
 Flowbite also works with WindiCSS by including the plugin inside the `windi.config.js` file:
 
-{{< code lang="bash" >}}
+{{< code lang="javascript" icon="file" file="windi.config.js" >}}
 plugins: [
     require('flowbite/plugin-windicss')
 ],

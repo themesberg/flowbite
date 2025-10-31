@@ -39,7 +39,7 @@ We recommend checking out the [content folder](https://github.com/themesberg/flo
 
 You can use the following code examples to implement LLMs in your web application:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app.js" icon="file" >}}
 async function getLLMData() {
     const response = await fetch('https://raw.githubusercontent.com/themesberg/flowbite/refs/heads/main/llms.txt');
     const data = await response.text();

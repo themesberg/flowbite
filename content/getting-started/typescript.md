@@ -48,7 +48,7 @@ npx tsc --init
 
 4. Replace the content of the `tsconfig.json` file using the following code:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" icon="file" file="tsconfig.json" >}}
 {
   "compilerOptions": {
       "lib": ["dom", "es2015"],
@@ -84,7 +84,7 @@ After setting up the TypeScript configuration file we can now write some code.
 
 5. Set up the folder structure for your TypeScript files by creating a new `src/` folder and creating an `index.ts` file inside of it with the following code:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" icon="file" file="index.ts" >}}
 const text: string = 'Hello TypeScript';
 console.log(text);
 {{< /code >}}
@@ -103,7 +103,7 @@ npm i -D webpack webpack-cli typescript ts-loader
 
 7. Create a new `webpack.config.js` file and add the following content:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" icon="file" file="webpack.config.js" >}}
 //webpack.config.js
 const path = require('path');
 
@@ -139,7 +139,7 @@ npx webpack --watch
 
 This will generate an `app-bundle.js` named JavaScript file that you can now include inside your HTML templates. To check out if it works you can create a new `index.html` file and open it inside your browser.
 
-{{< code lang="html" >}}
+{{< code lang="html" icon="file" file="index.html" >}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -186,47 +186,27 @@ npm install -D tailwindcss
 
 ## Install Tailwind CSS
 
-9. Create a new `tailwind.config.js` file by running the following command:
+9. Install the Tailwind CSS packages by running the following command in your terminal:
 
 {{< code lang="bash" >}}
-npx tailwindcss init
+npm install tailwindcss @tailwindcss/cli
 {{< /code >}}
 
-10. Based on your source template files make sure you include all of the relevant paths in the `content` area of your Tailwind CSS configuration file:
+10. Create a new `input.css` file inside the `src/` folder and import all of the basic Tailwind CSS directives:
 
-{{< code lang="javascript" >}}
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/**/*.ts",
-    "./**/*.html"
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+{{< code lang="css" icon="file" file="input.css" >}}
+@import "tailwindcss";
 {{< /code >}}
 
-In our case we will look for all TypeScript files inside the `src/` folder and all of the HTML files inside the project relative to the root.
-
-11. Create a new `input.css` file inside the `src/` folder and import all of the basic Tailwind CSS directives:
-
-{{< code lang="css" >}}
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-{{< /code >}}
-
-12. Compile the code when changes are made by using the following command:
+11. Compile the code when changes are made by using the following command:
 
 {{< code lang="bash" >}}
-npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
 {{< /code >}}
 
-13. Open the `index.html` file inside the root folder of your project with the following basic setup where we include all of the compiled code including the new `output.css` file:
+12. Open the `index.html` file inside the root folder of your project with the following basic setup where we include all of the compiled code including the new `output.css` file:
 
-{{< code lang="html" >}}
+{{< code lang="html" icon="file" file="index.html" >}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -249,34 +229,28 @@ Now open the `index.html` file in your browser and you should see the text large
 
 You can start using the open-source and interactive components from Flowbite which are based on Tailwind CSS and support TypeScript types by following the next steps.
 
-1. Install and require Flowbite in your `package.json` file by running the following command:
+1. Install Flowbite as a dependency using NPM by running the following command:
 
 {{< code lang="bash" >}}
 npm install flowbite
 {{< /code >}}
 
-2. Require Flowbite as a plugin inside your `tailwind.config.js` file:
+2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-{{< code lang="javascript" >}}
-module.exports = {
-
-    plugins: [
-        require('flowbite/plugin')
-    ]
-
-}
+{{< code lang="css" icon="file" file="input.css" >}}
+@import "flowbite/src/themes/default";
 {{< /code >}}
 
-3. Make sure that the generated utility classes from the library are also included in the final `output.css` file by adding the source code paths inside your `tailwind.config.js` file:
+3. Import the Flowbite plugin file in your CSS:
 
-{{< code lang="javascript" >}}
-module.exports = {
+{{< code lang="css" icon="file" file="input.css" >}}
+@plugin "flowbite/plugin";
+{{< /code >}}
 
-    content: [
-        "./node_modules/flowbite/**/*.js"
-    ]
+4. Configure the source files of Flowbite in your CSS:
 
-}
+{{< code lang="css" icon="file" file="input.css" >}}
+@source "../node_modules/flowbite";
 {{< /code >}}
 
 ## Flowbite components
@@ -287,7 +261,7 @@ One example would be to use the <a href="{{< ref "components/modal" >}}#javascri
 
 First of all we need to make sure that we have the correct HTML element set up in our templates - we can use this markup and add it inside the `index.html` file:
 
-{{< code lang="html" >}}
+{{< code lang="html" icon="file" file="index.html" >}}
 <button id="button" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Default</button>
 
 <div id="modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -324,7 +298,7 @@ First of all we need to make sure that we have the correct HTML element set up i
 
 As you can see we added a unique ID for the button element that the parent modal element to be able to set event listeners to them later on. After having this markup put in place we need to open the `index.ts` file and import the Modal class from the Flowbite package and set up the event listeners:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" icon="file" file="index.ts" >}}
 import { Modal } from 'flowbite'
 
 // select the two elements that we'll work with
@@ -340,7 +314,7 @@ $buttonElement.addEventListener('click', () => modal.toggle());
 
 Alternatively, you can also call on the available methods of the Modal class such as `show()` or `hide()` to add the logic inside your TypeScript files instead.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" icon="file" file="index.ts" >}}
 // add your own logic and then show the modal
 modal.show();
 {{< /code >}}
@@ -353,7 +327,7 @@ Flowbite supports type declarations for the interactive UI components including 
 
 Additionally to our code above, we will now import some relevant types from the Flowbite package, namely the `ModalOptions` and `ModalInterface`:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" icon="file" file="index.ts" >}}
 import { Modal } from 'flowbite'
 import type { ModalOptions, ModalInterface } from 'flowbite'
 
@@ -364,13 +338,13 @@ Generally speaking, all of the components have an interface definition that you 
 
 When creating a new modal you can set the `ModalInterface` as the main type:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" icon="file" file="index.ts" >}}
 const modal: ModalInterface = new Modal($modalElement, modalOptions);
 {{< /code >}}
 
 Flowbite also supports type definitions for the options object so if you want to set the placement of the modal based on types, here's how you would do that:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" icon="file" file="index.ts" >}}
 const modalOptions: ModalOptions = {
     placement: 'top-right'
 }
@@ -382,7 +356,7 @@ Why are these types useful, though? Because if you don't set the correct value f
 
 Here's the full code using the types from Flowbite for the modal definition:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" icon="file" file="index.ts" >}}
 import { Modal } from 'flowbite'
 import type { ModalOptions, ModalInterface } from 'flowbite'
 

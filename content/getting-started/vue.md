@@ -39,7 +39,7 @@ npm install tailwindcss @tailwindcss/vite --save
 
 2. Add the Tailwind plugin inside your `vite.config.js` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="vite.config.js" icon="file" >}}
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import tailwindcss from '@tailwindcss/vite'
@@ -73,25 +73,25 @@ npm install flowbite --save
 
 2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @import "flowbite/src/themes/default";
 {{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @plugin "flowbite/plugin";
 {{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @source "../node_modules/flowbite";
 {{< /code >}}
 
 4. Start a local development server by running the following command in your terminal:
 
-{{< code lang="css" >}}
+{{< code lang="bash" >}}
 npm run dev
 {{< /code >}}
 
@@ -104,7 +104,7 @@ Now that you have successfully installed Vue 3, Tailwind CSS and Flowbite you ca
 We can use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Modal component</a> as an example and copy the HTML markup and add it inside our Vue 3 template file:
 
 
-{{< code lang="vue" >}}
+{{< code lang="vue" file="App.vue" icon="file" >}}
 <template>
     <div>
         <div class="flex justify-center p-4">
@@ -113,9 +113,7 @@ We can use the <a href="{{< ref "components/modal" >}}#javascript-behaviour">Mod
 
         <div id="modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
             <div class="relative w-full max-w-2xl max-h-full">
-                <!-- Modal content -->
                 <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
-                    <!-- Modal header -->
                     <div class="flex items-start justify-between p-5 border-b rounded-t dark:border-gray-600">
                         <h3 class="text-xl font-semibold text-gray-900 lg:text-2xl dark:text-white">
                             Terms of Service
@@ -151,7 +149,7 @@ You can by default make the interactive components work by importing the "init" 
 
 Here's an example how you can initialise the components based on data attributes with Vue 3:
 
-{{< code lang="vue" >}}
+{{< code lang="vue" file="App.vue" icon="file" >}}
 <script setup>
 import { onMounted } from 'vue'
 import { initFlowbite } from 'flowbite'
@@ -169,7 +167,7 @@ onMounted(() => {
 
 Alternatively, here's the full list of available functions to use to initialise the components separately:
 
-{{< code lang="vue" >}}
+{{< code lang="vue" file="App.vue" icon="file" >}}
 <script setup>
 import { onMounted } from 'vue'
 import { 
@@ -212,7 +210,7 @@ To start using the interactive components from Flowbite together with Vue 3 and 
 
 Here's an example showing how you can use the Modal component:
 
-{{< code lang="vue" >}}
+{{< code lang="vue" file="App.vue" icon="file" >}}
 <script setup>
 import { onMounted } from 'vue'
 import { initFlowbite } from 'flowbite'
@@ -230,7 +228,7 @@ onMounted(() => {
 
 Alternatively, here's the full list of available functions to use to initialise the components separately:
 
-{{< code lang="vue" >}}
+{{< code lang="vue" file="App.vue" icon="file" >}}
 <script setup>
 import { onMounted } from 'vue'
 import { Modal } from 'flowbite'
@@ -260,12 +258,11 @@ As you can see we have imported the Modal component from the Flowbite package an
 
 Here's the HTML markup that you need to add inside the `<template>` tag:
 
-{{< code lang="vue" >}}
+{{< code lang="vue" file="App.vue" icon="file" >}}
 <template>
   <div class="flex justify-center p-4">
         <button id="button" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Show modal</button>
     </div>
-
     <div id="modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative w-full max-w-2xl max-h-full">
             <!-- Modal content -->

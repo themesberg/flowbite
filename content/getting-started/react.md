@@ -56,7 +56,7 @@ Flowbite React offers an advanced system of customizing your components and temp
 
 For example, here is a simple way you can update a button component:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app.jsx" icon="file" >}}
 import { Button } from "flowbite-react";
 
 function App() {
@@ -66,7 +66,7 @@ function App() {
 
 Additionally, you can also use the `createTheme` helper to create a theme object that you can then pass on to the `<ThemeProvider>` component with which you can style subcomponents too:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app.jsx" icon="file" >}}
 import { Button, createTheme, ThemeProvider } from "flowbite-react";
 
 const customTheme = createTheme({

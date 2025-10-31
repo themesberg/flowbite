@@ -70,7 +70,7 @@ If you want to properly configure dark mode and prevent page flickering before h
 
 Add the following code to the app router:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app/layout.tsx" icon="file" >}}
 // app/layout.tsx
 import { ThemeModeScript } from 'flowbite-react';
 
@@ -88,7 +88,7 @@ export default function RootLayout({ children }) {
 
 And the following code to the page router:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="pages/_document.tsx" icon="file" >}}
 // pages/_document.tsx
 import { ThemeModeScript } from 'flowbite-react';
 
@@ -113,7 +113,7 @@ Congratulations! You have now installed and configured Flowbite React in your Ne
 
 Now that you have successfully installed Flowbite React you can start using the components from the library:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app/page.tsx" icon="file" >}}
 // app/page.tsx
 import { Button } from 'flowbite-react';
 
@@ -130,7 +130,7 @@ Flowbite React offers an advanced system of customizing your components and temp
 
 For example, here is a simple way you can update a button component:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app.tsx" icon="file" >}}
 import { Button } from "flowbite-react";
 
 function App() {
@@ -140,7 +140,7 @@ function App() {
 
 Additionally, you can also use the `createTheme` helper to create a theme object that you can then pass on to the `<ThemeProvider>` component with which you can style subcomponents too:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app.tsx" icon="file" >}}
 import { Button, createTheme, ThemeProvider } from "flowbite-react";
 
 const customTheme = createTheme({

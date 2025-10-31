@@ -57,13 +57,13 @@ Since Laravel 12, the latest version of Tailwind v4 will be installed by default
 
 1. Install Tailwind CSS using NPM:
 
-{{< code lang="javascript" >}}
+{{< code lang="bash" >}}
 npm install tailwindcss @tailwindcss/vite --save-dev
 {{< /code >}}
 
 2. Configure the `vite.config.ts` file by importing the Tailwind plugin:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="vite.config.ts" icon="file" >}}
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
@@ -76,7 +76,7 @@ export default defineConfig({
 
 3. Import the main Tailwind directive inside your `app.css` CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="app.css" icon="file" >}}
 @import "tailwindcss";
 {{< /code >}}
 
@@ -96,25 +96,25 @@ npm install flowbite --save
 
 2. Import the default theme variables from Flowbite inside your main `app.css` CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="app.css" icon="file" >}}
 @import "flowbite/src/themes/default";
 {{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="app.css" icon="file" >}}
 @plugin "flowbite/plugin";
 {{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="app.css" icon="file" >}}
 @source "../../node_modules/flowbite";
 {{< /code >}}
 
 5. Add the Flowbite JS script inside your main `app.blade.php` layout file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="app.blade.php" icon="file" >}}
 <body>
     @yield('content')
 

@@ -107,7 +107,7 @@ npm install tailwindcss @tailwindcss/cli --save-dev
 
 2. Next, create an `input.css` file in the `wwwroot/css/` folder and import the following directive:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @import "tailwindcss";
 {{< /code >}}
 
@@ -119,7 +119,7 @@ npx tailwindcss -i wwwroot/css/input.css -o wwwroot/css/output.css --watch
 
 4. Add the new `output.css` CSS reference to the `index.html` file in the `wwwroot/` folder:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -142,7 +142,7 @@ npx tailwindcss -i wwwroot/css/input.css -o wwwroot/css/output.css --watch
 
 5. Remove all of the other CSS file references from the `index.html` file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -188,19 +188,19 @@ npm install flowbite --save
 
 2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @import "flowbite/src/themes/default";
 {{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @plugin "flowbite/plugin";
 {{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @source "../../node_modules/flowbite";
 {{< /code >}}
 
@@ -212,7 +212,7 @@ To use Flowbite with Blazor WebAssembly (WASM), you will need to setup the [Flow
 
 1. First, you need to create a new `flowbite-interop.js` file inside `wwwroot/` and add the following code:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="flowbite-interop.js" icon="file" >}}
 window.flowbiteInterop = {
     initializeFlowbite: function () {
         return initFlowbite();
@@ -222,7 +222,7 @@ window.flowbiteInterop = {
 
 2. After that, create a new `Services/FlowbiteService.cs` service inside your Blazor project:
 
-{{< code lang="javascript" >}}
+{{< code lang="csharp" file="Services/FlowbiteService.cs" icon="file" >}}
 using Microsoft.JSInterop;
 
 namespace tailwind_4_blazor_starter.Services;
@@ -252,7 +252,7 @@ This creates a reusable service for all of your Blazor WASM pages.
 
 3. Register the newly created service in your `Program.cs` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="csharp" file="Program.cs" icon="file" >}}
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using tailwind_4_blazor_starter;
@@ -274,7 +274,7 @@ await builder.Build().RunAsync();
 
 4. Import the Flowbite Javascript file and the `flowbite-interop.js` file in your `index.html` file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
   <!-- ... -->
   <script src="_framework/blazor.webassembly.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
@@ -284,7 +284,7 @@ await builder.Build().RunAsync();
 
 5. Create a new `FlowbitePage.cs` file inside the `Pages` folder:
 
-{{< code lang="javascript" >}}
+{{< code lang="csharp" file="FlowbitePage.cs" icon="file" >}}
 using Microsoft.AspNetCore.Components;
 using tailwind_4_blazor_starter.Services;
 
@@ -308,7 +308,7 @@ public abstract class FlowbitePage : ComponentBase
 
 6. Use the inheritance directive in your pages to load the Flowbite JS components:
 
-{{< code lang="html" >}}
+{{< code lang="razor" file="Home.razor" icon="file" >}}
 @page "/"
 
 @inherits FlowbitePage
@@ -326,7 +326,7 @@ Now that you have successfully installed Blazor.NET, Tailwind CSS and Flowbite, 
 
 Copy and paste this [dropdown component example](https://flowbite.com/docs/components/dropdowns/) into your `Pages/Home.razor` file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="Home.razor" icon="file" >}}
 @page "/"
 
 <PageTitle>Home</PageTitle>

@@ -72,7 +72,7 @@ In server-side rendered applications like Remix, to avoid page flicker (if `dark
 
 Import and render `ThemeModeScript` in `app/root.tsx` the `<head>` tag:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app/root.tsx" icon="file" >}}
 import { ThemeModeScript } from 'flowbite-react';
 
 export default function Layout() {
@@ -94,7 +94,7 @@ Congratulations! You have now installed and configured Flowbite React within a R
 
 Now that you have successfully installed Flowbite React you can start using the components from the library:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app/routes/_index.tsx" icon="file" >}}
 // app/routes/_index.tsx
 
 import { Button } from 'flowbite-react';
@@ -112,7 +112,7 @@ Flowbite React offers an advanced system of customizing your components and temp
 
 For example, here is a simple way you can update a button component:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app/routes/_index.tsx" icon="file" >}}
 import { Button } from "flowbite-react";
 
 function App() {
@@ -122,7 +122,7 @@ function App() {
 
 Additionally, you can also use the `createTheme` helper to create a theme object that you can then pass on to the `<ThemeProvider>` component with which you can style subcomponents too:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app/routes/_index.tsx" icon="file" >}}
 import { Button, createTheme, ThemeProvider } from "flowbite-react";
 
 const customTheme = createTheme({

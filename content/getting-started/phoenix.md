@@ -156,7 +156,7 @@ If you are installing [Phoenix version 1.7](https://phoenixframework.org/blog/ph
 
 1. Install the Tailwind plugin inside the `mix.exs` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="elixir" file="mix.exs" icon="file" >}}
 defp deps do
 [
     # other dependencies
@@ -167,7 +167,7 @@ end
 
 2. Configure the input and output files inside the `config.exs` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="elixir" file="config.exs" icon="file" >}}
 config :tailwind, version: "3.2.7", default: [
   args: ~w(
     --config=tailwind.config.js
@@ -182,7 +182,7 @@ You can also set the version of Tailwind CSS that you want to download.
 
 3. Integrate the compilation of Tailwind CSS on deployment inside `mix.esx`:
 
-{{< code lang="javascript" >}}
+{{< code lang="elixir" file="mix.exs" icon="file" >}}
 defp aliases do
     [
       # other scripts
@@ -193,7 +193,7 @@ end
 
 4. Inside your `dev.exs` file set up a watcher to compile Tailwind CSS:
 
-{{< code lang="javascript" >}}
+{{< code lang="elixir" file="dev.exs" icon="file" >}}
 watchers: [
     # other watchers
     tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
@@ -210,13 +210,13 @@ You may have to run `mix deps.get` if the command doesn't install Tailwind CSS r
 
 6. Remove the default CSS styles and import the Tailwind directives inside the `./assets/css/app.css` file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="app.css" icon="file" >}}
 @import "tailwindcss";
 {{< /code >}}
 
 7. Restart the server using `mix phx.server` and add some Tailwind CSS classes inside the `index.html.heex` file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html.heex" icon="file" >}}
 <section class="bg-neutral-secondary">
   <h1 class="text-4xl font-medium text-fg-brand"><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
   <p>Peace of mind from prototype to production</p>
@@ -230,6 +230,7 @@ Now that you have installed both Phoenix and Tailwind CSS we can proceed by inst
 ## Install Flowbite
 
 ### ESBuild
+
 [Flowbite](https://flowbite.com) is a free and open-source ecosystem of UI component libraries that use the utility-first classes from Tailwind CSS to leverage building interactive, accessible, and commonly used UI components such as dropdowns, navbars, modals, datepickers that can help you build websites even faster.
 
 1. Create a `package.json` file using `npm init` inside the `./assets/` folder and then install the Flowbite package using NPM:
@@ -238,38 +239,33 @@ Now that you have installed both Phoenix and Tailwind CSS we can proceed by inst
 npm install flowbite
 {{< /code >}}
 
-2. Require the Flowbite plugin inside `tailwind.config.js`:
+2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-{{< code lang="javascript" >}}
-module.exports = {
-
-    plugins: [
-        require('flowbite/plugin')
-    ]
-
-}
+{{< code lang="css" icon="file" file="input.css" >}}
+@import "flowbite/src/themes/default";
 {{< /code >}}
 
-3. Set up the template paths for the Flowbite JS file:
+3. Import the Flowbite plugin file in your CSS:
 
-{{< code lang="javascript" >}}
-module.exports = {
-
-    content: [
-        './node_modules/flowbite/**/*.js'
-    ]
-
-}
+{{< code lang="css" icon="file" file="input.css" >}}
+@plugin "flowbite/plugin";
 {{< /code >}}
 
-4. Finally, import the Flowbite JS package inside the default `./assets/js/app.js` file.
+4. Configure the source files of Flowbite in your CSS:
+
+{{< code lang="css" icon="file" file="input.css" >}}
+@source "../node_modules/flowbite";
+{{< /code >}}
+
+5. Finally, import the Flowbite JS package inside the default `./assets/js/app.js` file.
    
 Because of how Phoenix LiveView works, you will need to import a version of Flowbite which supports the `phx:page-loading-stop` event listeners instead of `load`. 
 
-This will enable the interactive elements like dropdowns, modals, and navbars to work by hooking the event listeners and actions to the data attributes whenever a new LiveView page is loaded, after a `navigate`, `patch` or `redirect`. To do this add the line below to your `app.js` file:
+This will enable the interactive elements like dropdowns, modals, and navbars to work by hooking the event listeners and actions to the data attributes whenever a new LiveView page is loaded, after `navigate`, `patch` or `redirect`.
 
+To do this add the line below to your `app.js` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app.js" icon="file" >}}
 // ...
 
 import "flowbite/dist/flowbite.phoenix.js";
@@ -280,7 +276,7 @@ import "flowbite/dist/flowbite.phoenix.js";
 
 Alternatively to all of the above you can also include the JavaScript via CDN:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
 // include via CDN
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.phoenix.min.js"></script>
 {{< /code >}}
@@ -299,7 +295,7 @@ In this section, you will learn how to set up a landing page using the [Flowbite
 
 1. Go to the `root.html.heex` file and change the default `<header>` tag with a [Flowbite Header](https://flowbite.com/blocks/marketing/header/) component:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="root.html.heex" icon="file" >}}
 <header>
     <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
@@ -347,7 +343,7 @@ If you check out your browser you'll see the component at the top part of your p
 
 2. Let's find a [hero section](https://flowbite.com/blocks/marketing/hero/) from the Flowbite Blocks collection and add it inside the `index.html.heex` file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html.heex" icon="file" >}}
 <section class="bg-white dark:bg-gray-900">
     <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-12">
         <a href="#" class="inline-flex items-center justify-between px-1 py-1 pr-4 text-sm text-gray-600 bg-gray-100 rounded-full mb-7 dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
@@ -407,7 +403,7 @@ Remove the default `container` class from the `app.html.heex` file to enable the
 
 3. Let's add one of the [content sections](https://flowbite.com/blocks/marketing/content/) right after the hero section:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html.heex" icon="file" >}}
 <section class="bg-white dark:bg-gray-900">
     <div class="items-center max-w-screen-xl gap-16 px-4 py-8 mx-auto lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div class="text-gray-500 sm:text-lg dark:text-gray-400">
@@ -425,7 +421,7 @@ Remove the default `container` class from the `app.html.heex` file to enable the
 
 4. Furthermore, we can copy one of the [feature sections](https://flowbite.com/blocks/marketing/feature/) and add it next in the line:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html.heex" icon="file" >}}
 <section class="bg-white dark:bg-gray-900">
   <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-16 lg:px-6">
       <div class="max-w-screen-md mb-8 lg:mb-16">
@@ -482,7 +478,7 @@ Remove the default `container` class from the `app.html.heex` file to enable the
 
 5. Before the end of the page we probably want to add a [CTA section](https://flowbite.com/blocks/marketing/cta/):
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html.heex" icon="file" >}}
 <section class="bg-white dark:bg-gray-900">
     <div class="items-center max-w-screen-xl gap-8 px-4 py-8 mx-auto xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
         <img class="w-full dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg" alt="dashboard image">
@@ -589,13 +585,13 @@ npm install flowbite-datepicker --save
 
 After you've installed the NPM library, you will need to import the `Datepicker` module in your `app.js` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app.js" icon="file" >}}
 import Datepicker from 'flowbite-datepicker/Datepicker';
 {{< /code >}}
 
 Initialize a new element using the `Datepicker` constructor in `app.js` file and optionally add custom options based on your needs:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app.js" icon="file" >}}
 Hooks = {}
 
 Hooks.Datepicker = {
@@ -612,13 +608,14 @@ Hooks.Datepicker = {
 {{< /code >}}
 
 Add hooks to your livesocket:
-{{< code lang="javascript" >}}
+
+{{< code lang="javascript" file="app.js" icon="file" >}}
 let liveSocket = new LiveSocket("/live", Socket, { params: { _csrf_token: csrfToken }, hooks: Hooks })
 {{< /code >}}
 
 Then to your input field add the `Datepicker` `phx-hook` to initialize the datepicker:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html.heex" icon="file" >}}
   <input phx-hook="Datepicker" id="myInput" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
 {{< /code >}}
 

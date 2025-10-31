@@ -86,7 +86,7 @@ touch postcss.config.mjs
 
 Add `@tailwindcss/postcss` to your `postcss.config.mjs` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="postcss.config.mjs" icon="file" >}}
 /** @type {import('postcss-load-config').Config} */
 const config = {
     plugins: {
@@ -98,7 +98,7 @@ export default config;
 
 Update the css file `client/main.css` to include Tailwind CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="client/main.css" icon="file" >}}
 @import 'tailwindcss';
 {{< /code >}}
 
@@ -118,7 +118,7 @@ This command installs Flowbite React and configures it with Tailwind CSS.
 
 Now that you have succesfully installed Flowbite React, Meteor.js and Tailwind CSS you can start using our components such as buttons, dropdowns, modal, navbars, and more:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="imports/ui/App.tsx" icon="file" >}}
 // imports/ui/App.tsx (or .jsx)
 import { Button } from 'flowbite-react';
 import React from 'react';
@@ -138,7 +138,7 @@ Flowbite React offers an advanced system of customizing your components and temp
 
 For example, here is a simple way you can update a button component:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="App.tsx" icon="file" >}}
 import { Button } from "flowbite-react";
 
 function App() {
@@ -148,7 +148,7 @@ function App() {
 
 Additionally, you can also use the `createTheme` helper to create a theme object that you can then pass on to the `<ThemeProvider>` component with which you can style subcomponents too:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="App.tsx" icon="file" >}}
 import { Button, createTheme, ThemeProvider } from "flowbite-react";
 
 const customTheme = createTheme({

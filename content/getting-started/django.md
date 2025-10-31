@@ -43,7 +43,7 @@ cd flowbiteapp/
 
 2. Create a new `templates/` directory inside the project folder and then update the existing `settings.py` file:
 
-{{< code lang="bash" >}}
+{{< code lang="python" file="settings.py" icon="file" >}}
 TEMPLATES = [
     {
         ...
@@ -61,7 +61,7 @@ python -m pip install django-compressor
 
 4. Add `compressor` and `flowbiteapp` (or the name of your app) to the installed apps inside the `settings.py` file:
 
-{{< code lang="bash" >}}
+{{< code lang="python" file="settings.py" icon="file" >}}
 # config/settings.py
 
 INSTALLED_APPS = [
@@ -78,7 +78,7 @@ INSTALLED_APPS = [
 
 5. Configure the `compressor` inside the `settings.py` file:
 
-{{< code lang="bash" >}}
+{{< code lang="python" file="settings.py" icon="file" >}}
 COMPRESS_ROOT = BASE_DIR / 'static'
 
 COMPRESS_ENABLED = True
@@ -98,7 +98,7 @@ Later we will import the Tailwind CSS directives and use it as the source file f
 
 7. Create a new `views.py` file inside `flowbiteapp/` next to `urls.py` and add the following content:
 
-{{< code lang="bash" >}}
+{{< code lang="python" file="views.py" icon="file" >}}
 from django.shortcuts import render
 
 def index(request):
@@ -107,7 +107,7 @@ def index(request):
 
 8. Import the newly created view instance inside the `urls.py` file by adding the following code:
 
-{{< code lang="bash" >}}
+{{< code lang="python" file="urls.py" icon="file" >}}
 from .views import index
 
 urlpatterns = [
@@ -118,7 +118,7 @@ urlpatterns = [
 
 9. Create a new `_base.html` file inside the `templates/` directory:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="_base.html" icon="file" >}}
 <!-- templates/_base.html -->
 
 {% load compress %}
@@ -151,7 +151,7 @@ urlpatterns = [
 
 10. Create an `index.html` file that will be served as the homepage:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
 <!-- templates/index.html -->
 
 {% extends "_base.html" %}
@@ -181,7 +181,7 @@ npm install tailwindcss @tailwindcss/cli --save-dev
 
 2. Import the Tailwind CSS directive inside the `input.css` file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 /* static/src/input.css */
 
 @import "tailwindcss";
@@ -209,25 +209,25 @@ npm install flowbite --save
 
 2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @import "flowbite/src/themes/default";
 {{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @plugin "flowbite/plugin";
 {{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @source "../../node_modules/flowbite";
 {{< /code >}}
 
 5. Include Flowbite's JavaScript file inside the `_base.html` file just before the end of the `<body>` tag using CDN or by including it directly from the `node_modules/` folder:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="_base.html" icon="file" >}}
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
 {{< /code >}}
 
@@ -239,7 +239,7 @@ In this section I'll show you how you can search for and use the interactive com
 
 Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar component</a> inside the `_base.html` file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="_base.html" icon="file" >}}
 <!-- templates/_base.html -->
 
 {% load compress %}
@@ -314,7 +314,7 @@ Let's take a look how can added more content directly to the view templates, not
 
 Check out one of the <a href="{{< ref "components/card" >}}">card components</a> from Flowbite and add it to the `index.html` file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
 <!-- templates/index.html -->
 
 {% extends "_base.html" %}

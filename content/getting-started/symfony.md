@@ -83,13 +83,13 @@ npm install tailwindcss @tailwindcss/postcss postcss postcss-loader --save-dev
 
 2. Import the base Tailwind directive inside the default `./assets/styles/app.css` file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="app.css" icon="file" >}}
 @import "tailwindcss";
 {{< /code >}}
 
 3. Enable the PostCSS loader plugin by adding it to the Webpack config file:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="webpack.config.js" icon="file" >}}
 // webpack.config.js
 Encore
     // other plugins
@@ -101,7 +101,7 @@ Encore
 
 4. Create a new `postcss.config.mjs` file in the root folder and add the following configuration:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="postcss.config.mjs" icon="file" >}}
 export default {
   plugins: {
     "@tailwindcss/postcss": {},
@@ -117,7 +117,7 @@ npm run watch
 
 6. Let's create a new homepage entry file by configuring the Symfony routes file:
 
-{{< code lang="javascript" >}}
+{{< code lang="yaml" file="routes.yml" icon="file" >}}
 // ./config/routes.yml
 
 index:
@@ -127,7 +127,7 @@ index:
 
 7. Create a new `DefaultController` and set up the path for a new Twig template file:
 
-{{< code lang="javascript" >}}
+{{< code lang="php" file="DefaultController.php" icon="file" >}}
 <?php
 // ./src/Controller/DefaultController.php
 
@@ -149,7 +149,7 @@ class DefaultController extends AbstractController
 
 8. Create a new `index.html.twig` inside the templates folder and add a couple of [header](https://flowbite.com/blocks/marketing/header/) and [hero](https://flowbite.com/blocks/marketing/hero/) sections from the Flowbite Blocks collection:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html.twig" icon="file" >}}
 {% extends 'base.html.twig' %}
 
 {% block body %}
@@ -264,25 +264,25 @@ npm install flowbite --save
 
 2. Import the default theme variables from Flowbite inside your main `app.css` CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="app.css" icon="file" >}}
 @import "flowbite/src/themes/default";
 {{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="app.css" icon="file" >}}
 @plugin "flowbite/plugin";
 {{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="app.css" icon="file" >}}
 @source "../../node_modules/flowbite";
 {{< /code >}}
 
 Inside the `./assets/app.js` file you can import the Flowbite package to enable interactivity of the UI components:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app.js" icon="file" >}}
 /*
  * Welcome to your app's main JavaScript file!
  *
@@ -310,7 +310,7 @@ Flowbite provides custom event listeners for turbo load support if you import th
 
 If you use Symfony UX Turbo, you will need to import a version of Flowbite which supports the `turbo:load` event listeners instead of `load`. To do this **add the lines below** to your `./assets/app.js` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app.js" icon="file" >}}
 /*
  * Welcome to your app's main JavaScript file!
  *
@@ -334,9 +334,7 @@ Now that you have all of the technologies successfully set up in your Symfony pr
 
 Let's start by adding a simple [modal authentication component](https://flowbite.com/docs/components/modal/#form-element) from the Flowbite Library when clicking on the login button from the header:
 
-{{< code lang="html" >}}
-
-
+{{< code lang="html" file="index.html.twig" icon="file" >}}
 <!-- Modal toggle -->
 <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
   Toggle modal

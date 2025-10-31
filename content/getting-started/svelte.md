@@ -74,7 +74,7 @@ pnpm i flowbite flowbite-svelte tailwind-merge @popperjs/core
 
 We also need to update the `tailwind.config.js` file with the following details:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="tailwind.config.js" icon="file" >}}
 const config = {
   content: [
     "./src/**/*.{html,js,svelte,ts}",
@@ -108,7 +108,7 @@ Now that everything is installed, we can start using Flowbite Svelte components 
 
 The navbar component is a great way to display a list of navigation links at the top of your page. Here's an example of how to use it:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="Navbar.svelte" icon="file" >}}
 <script>
   import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte'
 </script>
@@ -141,7 +141,7 @@ Alternatively, you can also choose of the [mega menu](https://flowbite-svelte.co
 
 The modal component is perfect for showing interactive dialogs and notifications. Here's an example of how to use it:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="Modal.svelte" icon="file" >}}
 <script>
   import { Button, Modal } from 'flowbite-svelte'
   let defaultModal = false;
@@ -166,7 +166,7 @@ The modal component has various customization options, such as different types o
 
 The footer component is a useful way to display valuable information to your users, such as sitemap links, a copyright notice, and a logo.
 
-{{< code lang="html" >}}
+{{< code lang="html" file="Footer.svelte" icon="file" >}}
 <script>
   import { Footer, FooterCopyright, FooterLinkGroup, FooterLink } from 'flowbite-svelte'
 </script>

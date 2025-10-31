@@ -71,25 +71,25 @@ npm install flowbite --save
 
 2. Import the default theme variables from Flowbite inside your main `global.css` CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="src/global.css" icon="file" >}}
 @import "flowbite/src/themes/default";
 {{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="src/global.css" icon="file" >}}
 @plugin "flowbite/plugin";
 {{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="src/global.css" icon="file" >}}
 @source "../node_modules/flowbite";
 {{< /code >}}
 
 5. Finally, in the `src/root.tsx` file import the Flowbite JavaScript file inside your Qwik project to start using interactive components that require JavaScript such as the navbars, dropdowns, drawers, and more:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="src/root.tsx" icon="file" >}}
 import { component$, useVisibleTask$ } from "@builder.io/qwik";
 import {
   QwikCityProvider,
@@ -147,7 +147,7 @@ By installing and configuring Flowbite in your Qwik project you can now directly
 
 Check out one of the [navbar components](https://flowbite.com/docs/components/navbar/) from Flowbite and add it inside your Qwik project for navigation:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="src/components/Navbar.jsx" icon="file" >}}
 export default header$(() => {
   return (
   <nav class="bg-white border-gray-200 dark:bg-gray-900">
@@ -189,7 +189,7 @@ export default header$(() => {
 
 Another example is the [modal component](https://flowbite.com/docs/components/modal/) which you could use for a seamless authentication experience:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="src/components/Modal.jsx" icon="file" >}}
 export default modal$(() => {
   return (
     <div>
@@ -233,7 +233,7 @@ export default modal$(() => {
 
 Lastly, you can also copy-paste whole [blocks of code](https://flowbite.com/blocks/marketing/hero/) such as hero, footer, header, and feature sections:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="src/components/Hero.jsx" icon="file" >}}
 export default hero$(() => {
   return (
     <section class="bg-white dark:bg-gray-900">

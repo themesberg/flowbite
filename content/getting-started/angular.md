@@ -62,7 +62,7 @@ This command will install all the dependencies of Tailwind CSS available in your
 
 2. Create a `.postcssrc.json` file in the root folder of your project and include the Tailwind PostCSS plugin:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file=".postcssrc.json" icon="file" >}}
 {
   "plugins": {
     "@tailwindcss/postcss": {}
@@ -72,7 +72,7 @@ This command will install all the dependencies of Tailwind CSS available in your
 
 3. Import the core Tailwind directive inside the `styles.css` file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="styles.css" icon="file" >}}
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
@@ -94,25 +94,25 @@ npm install flowbite --save
 
 2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @import "flowbite/src/themes/default";
 {{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @plugin "flowbite/plugin";
 {{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @source "../node_modules/flowbite";
 {{< /code >}}
 
 5. Update the `app.component.ts` file to use the `initFlowbite` function to enable the interactive components via data attributes:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app.component.ts" icon="file" >}}
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
@@ -137,7 +137,7 @@ This will allow you to enable components such as the modals, navigation bars, dr
 
 To enable using Flowbite with SSR (Server-Side Rendering) you need to create a custom service that will handle the dynamic import of Flowbite:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="flowbite.service.ts" icon="file" >}}
 // src/app/services/flowbite.service.ts
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
@@ -162,7 +162,7 @@ export class FlowbiteService {
 
 After that, you can use this service in your component to start using the Flowbite API and data attributes:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="some-component.component.ts" icon="file" >}}
 // src/app/components/some-component/some-component.component.ts
 import { Component, OnInit } from '@angular/core';
 import { FlowbiteService } from '../../services/flowbite.service';
@@ -191,7 +191,7 @@ Now that you have installed all of the frameworks and libraries you can start us
 
 Let's first start by copy-pasting one of the default [modal component](https://flowbite.com/docs/components/modal/) examples from the documentation and add it inside the `app.component.html` file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="app.component.html" icon="file" >}}
 <!-- Modal toggle -->
 <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
 Toggle modal
@@ -241,7 +241,7 @@ The Flowbite Library is by default powered by the data attributes interface that
 
 Let's add a [dropdown component](https://flowbite.com/docs/components/dropdowns/) from the UI library:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="app.component.html" icon="file" >}}
 <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
   </svg></button>
@@ -272,7 +272,7 @@ Alternatively to the data attributes strategy you can also choose to programmati
 
 For example, here's how you can set up a carousel component directly with JavaScript:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app.component.ts" icon="file" >}}
 import { Carousel } from "flowbite";
 import type { CarouselItem, CarouselOptions, CarouselInterface } from "flowbite";
 
@@ -364,7 +364,7 @@ $nextButton.addEventListener('click', () => {
 
 You also need to have the following HTML markup available inside your codebase and Angular template files:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="app.component.html" icon="file" >}}
 <div class="relative w-full">
     <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg sm:h-64 xl:h-80 2xl:h-96">
@@ -420,7 +420,7 @@ The Flowbite UI components also supports TypeScript and you can import the types
 
 For example, here's how you can import the types for the Carousel component:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="app.component.ts" icon="file" >}}
 import type { CarouselItem, CarouselOptions, CarouselInterface } from "flowbite";
 
 // ... other code

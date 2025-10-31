@@ -43,7 +43,7 @@ cd flowbite-flask/
 
 2. Create a new file called `app.py` inside the root of the project folder with the following content:
 
-{{< code lang="bash" >}}
+{{< code lang="python" file="app.py" icon="file" >}}
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -72,7 +72,7 @@ This is how your project folder structure should look like.
 
 4. Create a new `index.html` file inside your `templates/` folder and create a basic HTML document structure:
 
-{{< code lang="bash" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,7 +107,7 @@ npm install tailwindcss @tailwindcss/cli --save-dev
 
 2. Create a new `static/src/` folder and add a new `input.css` file with the following content:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 /* static/src/input.css */
 
 @import "tailwindcss";
@@ -123,7 +123,7 @@ This will generate a new `output.css` file inside the `static/dist/css/` folder 
 
 5. Include `output.css` inside the main `index.html` template:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,25 +153,25 @@ npm install flowbite --save
 
 2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @import "flowbite/src/themes/default";
 {{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @plugin "flowbite/plugin";
 {{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="input.css" icon="file" >}}
 @source "../../node_modules/flowbite";
 {{< /code >}}
 
 5. Include Flowbite's JavaScript file inside the `index.html` file just before the end of the `<body>` tag using CDN or by including it directly from the `node_modules/` folder:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.min.js"></script>
 {{< /code >}}
 
@@ -183,7 +183,7 @@ Let's now take a look how we can quickly build a simple page using the component
 
 Let's start by adding a <a href="{{< ref "components/navbar" >}}">Navbar component</a> inside the `index.html` file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -242,7 +242,7 @@ Other than the base components from the library you can also check out some of t
 
 Let's add a free [Tailwind CSS hero section](https://flowbite.com/blocks/marketing/hero/) just after the navigation bar:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
 <section class="bg-neutral-primary">
   <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
         <h1 class="mb-4 mt-8 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl">We invest in the world’s potential</h1>

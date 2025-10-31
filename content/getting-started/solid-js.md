@@ -67,7 +67,7 @@ npm install --save-dev tailwindcss @tailwindcss/postcss postcss
 
 2. Create a new `postcss.config.mjs` configuration file and at the following code:
    
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="postcss.config.mjs" icon="file" >}}
 // postcss.config.mjs
 export default {
   plugins: {
@@ -78,13 +78,13 @@ export default {
 
 3. Import the default Tailwind CSS directive inside the `./src/index.css` default CSS file from SolidJS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="src/index.css" icon="file" >}}
 @import "tailwindcss";
 {{< /code >}}
 
 4. Restart your local development server by running `npm run dev` and you can now use the utility-first classes inside your SolidJS project by testing it out in your `App.jsx` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="src/App.jsx" icon="file" >}}
 function App() {
   return (
     <div class={styles.App}>
@@ -123,19 +123,19 @@ npm install flowbite --save
 
 2. Import the default theme variables from Flowbite inside your main `index.css` CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="src/index.css" icon="file" >}}
 @import "flowbite/src/themes/default";
 {{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="src/index.css" icon="file" >}}
 @plugin "flowbite/plugin";
 {{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="src/index.css" icon="file" >}}
 @source "../../node_modules/flowbite";
 {{< /code >}}
 
@@ -147,7 +147,7 @@ All of the interactive and non-interactive components from Flowbite can now be u
 
 The most important part is that you need to import the `initFlowbite()` function from Flowbite and then call this function using the `onMount` hook method from SolidJS so that the interactive data attributes events can be initialized.
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="src/components/Modal.jsx" icon="file" >}}
 import logo from './logo.svg';
 import styles from './App.module.css';
 
@@ -205,7 +205,7 @@ This example adds a button which when clicked it will open a modal component wit
 
 Let's now show a [tooltip indicator](https://flowbite.com/docs/components/tooltips/) when hovering over the button to provide extra information:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="src/components/Modal.jsx" icon="file" >}}
 <button data-tooltip-target="tooltip-default" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default tooltip</button>
 
 <div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
@@ -216,7 +216,7 @@ Let's now show a [tooltip indicator](https://flowbite.com/docs/components/toolti
 
 Finally, let's add an [accordion component](https://flowbite.com/docs/components/accordion/) inside the modal:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="src/components/Modal.jsx" icon="file" >}}
 <div id="accordion-collapse" data-accordion="collapse">
   <h2 id="accordion-collapse-heading-1">
     <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">

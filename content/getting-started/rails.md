@@ -68,19 +68,19 @@ npm install flowbite --save
 
 2. Import the default theme variables from Flowbite inside your main `application.css` CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="application.css" icon="file" >}}
 @import "flowbite/src/themes/default";
 {{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="application.css" icon="file" >}}
 @plugin "flowbite/plugin";
 {{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="application.css" icon="file" >}}
 @source "../../../node_modules/flowbite";
 {{< /code >}}
 
@@ -94,13 +94,13 @@ Importmap is the default way of handling JavaScript on Rails 7. In order to supp
 
 1. Add the following line inside your `importmap.rb` file:
 
-{{< code lang="bash" >}}
+{{< code lang="ruby" file="importmap.rb" icon="file" >}}
 pin "flowbite", to: "https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.turbo.min.js"
 {{< /code >}}
 
 2. Then you need to import `flowbite` inside your `application.js` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="application.js" icon="file" >}}
 import 'flowbite';
 {{< /code >}}
 
@@ -110,7 +110,7 @@ This will enable the interactive elements like dropdowns, modals, and navbars wo
 
 If you use ESBuild to Bundle your JavaScript on Rails, you will need to import a version of Flowbite which supports the `turbo:load` event listeners instead of `load`. To do this **add the line below** to your `application.js` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="application.js" icon="file" >}}
 import "flowbite/dist/flowbite.turbo.js";
 {{< /code >}}
 
@@ -126,7 +126,7 @@ If you decide not to use turbo load then you can follow these steps:
 
 2. Then you need to include Flowbite inside your `application.js` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="application.js" icon="file" >}}
 import 'flowbite';
 {{< /code >}}
 
@@ -134,7 +134,7 @@ import 'flowbite';
 
 Alternatively to all of the above you can also include the JavaScript via CDN:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="index.html" icon="file" >}}
 // include via CDN for turbo support
 <script src="https://cdn.jsdelivr.net/npm/flowbite@{{< current_version >}}/dist/flowbite.turbo.min.js"></script>
 
@@ -152,13 +152,13 @@ In order to support turbo load from Ruby on Rails 7, you have to include the `da
 
 Include the following JavaScript file to support the datepicker component:
 
-{{< code lang="bash" >}}
+{{< code lang="ruby" file="importmap.rb" icon="file" >}}
 pin "flowbite-datepicker", to: "https://cdn.jsdelivr.net/npm/flowbite@2.3.0/dist/datepicker.turbo.min.js"
 {{< /code >}}
 
 Don't forget to also import it inside your `application.js` file:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="application.js" icon="file" >}}
 import 'flowbite-datepicker';
 import 'flowbite/dist/datepicker.turbo.js';
 {{< /code >}}
@@ -183,7 +183,7 @@ First of all, you need to delete the default `index.html` file inside the `publi
 2. Create a new `home.html.erb` file inside the `app/views/pages/` directory.
 3. Choose one of the components from Flowbite (ie. a tooltip) and copy-paste it inside the newly created file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="home.html.erb" icon="file" >}}
 <button data-tooltip-target="tooltip-default" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default tooltip</button>
 <div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
     Tooltip content
@@ -193,7 +193,7 @@ First of all, you need to delete the default `index.html` file inside the `publi
 
 4. Create a new controller called `pages_controller.rb` inside the `app/controllers/` directory and add the following code inside of it:
 
-{{< code lang="bash" >}}
+{{< code lang="ruby" file="pages_controller.rb" icon="file" >}}
 class PagesController < ApplicationController
   def home
   end
@@ -202,7 +202,7 @@ end
 
 5. Set the homepage as the root page inside the `routes.rb` file inside the `config/` directory:
 
-{{< code lang="bash" >}}
+{{< code lang="ruby" file="routes.rb" icon="file" >}}
 root to: 'pages#home'
 {{< /code >}}
 

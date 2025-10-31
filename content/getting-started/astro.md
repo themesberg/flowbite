@@ -65,7 +65,7 @@ This command will automatically install Tailwind CSS in the `package.json` file,
 
 2. Import the `global.css` file in your `Layout.astro` file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="Layout.astro" icon="file" >}}
 ---
 import "../styles/global.css";
 ---
@@ -85,19 +85,19 @@ npm install flowbite --save
 
 2. Import the default theme variables from Flowbite inside your main `global.css` CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="global.css" icon="file" >}}
 @import "flowbite/src/themes/default";
 {{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="global.css" icon="file" >}}
 @plugin "flowbite/plugin";
 {{< /code >}}
 
 4. Configure the source files of Flowbite in your `global.css` file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="global.css" icon="file" >}}
 @source "../../node_modules/flowbite";
 {{< /code >}}
 
@@ -111,7 +111,7 @@ To enable the interactive components you need to also include Flowbite's JavaScr
 
 In the `Layout.astro` file add the following script tag just before the end of the `<body>` tag:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="Layout.astro" icon="file" >}}
 <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 {{< /code >}}
 
@@ -125,7 +125,7 @@ Since version 1.6.0 Flowbite also supports type declarations and interfaces in T
 
 For example, here's how you can leverage the Flowbite JS API and Astro by adding the following code inside the script tag:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="some-component.astro" icon="file" >}}
 <Layout>
   <!-- markup source content and elements -->
 </Layout>
@@ -149,7 +149,7 @@ For example, here's how you can leverage the Flowbite JS API and Astro by adding
 
 Make sure that you have the necessary HTML markup for the event listeners and elements described in the example above inside the `<Layout>` tags from Astro:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="some-component.astro" icon="file" >}}
 <Layout>
     <!-- Modal toggle -->
     <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">

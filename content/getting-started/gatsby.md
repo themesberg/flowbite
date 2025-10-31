@@ -76,7 +76,7 @@ In server side rendered applications like Gatsby, if you want to avoid page flic
 
 1. Create `gatsby-ssr.js` file at the root folder of the project:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="gatsby-ssr.js" icon="file" >}}
 // gatsby-ssr.js
 export const onRenderBody = ({ setPreBodyComponents }) => {
     setPreBodyComponents([]);
@@ -85,7 +85,7 @@ export const onRenderBody = ({ setPreBodyComponents }) => {
 
 2. Import `ThemeModeScript` and add it to `setPreBodyComponents` function:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="gatsby-ssr.js" icon="file" >}}
 // gatsby-ssr.js
 import { ThemeModeScript } from 'flowbite-react';
 
@@ -100,7 +100,7 @@ Congratulations! You have successfully installed Flowbite React.
 
 Now that you have Flowbite React installed you can start using the components from the library:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="src/pages/index.tsx" icon="file" >}}
 // src/pages/index.tsx (or .jsx)
 import { Button } from 'flowbite-react';
 
@@ -117,7 +117,7 @@ Flowbite React offers an advanced system of customizing your components and temp
 
 For example, here is a simple way you can update a button component:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="src/pages/index.tsx" icon="file" >}}
 import { Button } from "flowbite-react";
 
 function App() {
@@ -127,7 +127,7 @@ function App() {
 
 Additionally, you can also use the `createTheme` helper to create a theme object that you can then pass on to the `<ThemeProvider>` component with which you can style subcomponents too:
 
-{{< code lang="javascript" >}}
+{{< code lang="javascript" file="src/pages/index.tsx" icon="file" >}}
 import { Button, createTheme, ThemeProvider } from "flowbite-react";
 
 const customTheme = createTheme({

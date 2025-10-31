@@ -41,7 +41,7 @@ This command will create a new scaffolded theme directory that we can extend wit
 
 3. Next, add the theme to the `config.toml` file:
 
-{{< code lang="bash" >}}
+{{< code lang="toml" file="config.toml" icon="file" >}}
 theme = ["flowbite-theme"]
 {{< /code >}}
 
@@ -67,7 +67,7 @@ npm install tailwindcss @tailwindcss/cli --save-dev
 
 2. Inside your `main.css` file from the `flowbite-theme/` directory add the following:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 @import "tailwindcss";
 {{< /code >}}
 
@@ -79,7 +79,7 @@ npx @tailwindcss/cli -i ./assets/css/main.css  -o ./assets/css/output.css --watc
 
 4. Update the `css.html` file from the `flowbite-theme/` directory with the following:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="css.html" icon="file" >}}
 {{- with resources.Get "css/output.css" }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
@@ -93,7 +93,7 @@ npx @tailwindcss/cli -i ./assets/css/main.css  -o ./assets/css/output.css --watc
 
 5. In order to test out Tailwind CSS, add a utility class inside the `single.html` file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="single.html" icon="file" >}}
 {{ define "main" }}
   <h1 class="text-fg-brand">{{ .Title }}</h1>
 
@@ -122,25 +122,25 @@ npm install flowbite --save
 
 2. Import the default theme variables from Flowbite inside your main `main.css` CSS file:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 @import "flowbite/src/themes/default";
 {{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 @plugin "flowbite/plugin";
 {{< /code >}}
 
 4. Configure the source files of Flowbite in your CSS:
 
-{{< code lang="css" >}}
+{{< code lang="css" file="main.css" icon="file" >}}
 @source "../../node_modules/flowbite";
 {{< /code >}}
 
 5. Add the Flowbite JavaScript inside your `js.html` file:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="js.html" icon="file" >}}
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
 {{- with resources.Get "js/main.js" }}
@@ -159,7 +159,7 @@ npm install flowbite --save
 
 6. Let's now test out Flowbite by updating our `menu.html` file from the theme directory:
 
-{{< code lang="html" >}}
+{{< code lang="html" file="menu.html" icon="file" >}}
 {{- /*
 Renders a menu for the given menu ID.
 

@@ -34,9 +34,9 @@ Get started with the following three styles for the floating label component and
 </div>
 {{< /example >}}
 
-## Floating label with icons (New)
+## Floating label with icons
 
-Get started with the following three styles for the floating label component and use the `label` tag as a visual placeholder using the `peer-placeholder-shown` and `peer-focus` utility classes from Tailwind CSS.
+Use these examples of floating label input fields with a descriptive [SVG icon](https://flowbite.com/icons/).
 
 {{< example class="grid items-end w-full gap-6 md:grid-cols-3" github="forms/floating-label.md" show_dark=true >}}
 <div class="relative">

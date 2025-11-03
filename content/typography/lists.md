@@ -307,13 +307,13 @@ This example can be used to show more details for each list item such as the use
 </ul>
 {{< /example >}}
 
-## features list card (New)
+## Features list card
 
-Use this example to create a horizontally aligned list of items.
+Use this example to show a list of features inside a card component.
 
 {{< example github="typography/lists.md" show_dark=true >}}
 
-<div class="w-full max-w-sm p-6 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
+<div class="w-full max-w-sm p-6 bg-neutral-primary-soft border border-default rounded-base shadow-xs mx-auto">
     <h5 class="mb-4 text-xl font-medium text-body">Standard plan</h5>
     <div class="flex items-baseline text-heading">
         <span class="text-5xl font-extrabold tracking-tight">$49</span>

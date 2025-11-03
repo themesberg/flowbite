@@ -20,7 +20,7 @@ Get started with the default example of a select input component to get a single
 {{< example github="forms/select.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
   <label for="countries" class="block mb-2.5 text-sm font-medium text-heading">Select an option</label>
-  <select id="countries" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
+  <select id="countries" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body">
     <option selected>Choose a country</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>
@@ -203,7 +203,7 @@ Use this example if you want to create a multi-level dropdown and select compone
             </ul>
         </div>
       <label for="states" class="sr-only">Choose a state</label>
-      <select id="states" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-s-0 border-default-medium text-heading text-sm rounded-e-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
+      <select id="states" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-s-0 border-default-medium text-heading text-sm rounded-e-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body">
           <option selected>Choose a state</option>
           <option value="CA">California</option>
           <option value="TX">Texas</option>
@@ -232,7 +232,7 @@ Get started with the small, default, and large sizes for the select component fr
     <option value="DE">Germany</option>
   </select>
   <label for="default" class="block mb-2.5 text-sm font-medium text-heading">Default select</label>
-  <select id="default" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body mb-4">
+  <select id="default" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body mb-4">
     <option selected>Choose a country</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>

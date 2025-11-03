@@ -88,9 +88,9 @@ Use this example of a checkbox inside a card element to enable a larger area of 
 </div>
 {{< /example >}}
 
-## Bordered with helper (New)
+## Bordered with description
 
-Use this example of a checkbox inside a card element to enable a larger area of clicking activation.
+Use this checkbox component with a bordered style and a description text.
 
 {{< example class="grid gap-6 md:grid-cols-2" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex space-x-2.5 bg-neutral-primary-soft border border-default rounded-base shadow-xs">
@@ -109,9 +109,9 @@ Use this example of a checkbox inside a card element to enable a larger area of 
 </div>
 {{< /example >}}
 
-## Bordered with right checkbox and icon (New)
+## Bordered with icon
 
-Use this example of a checkbox inside a card element to enable a larger area of clicking activation.
+This example can be used to create a checkbox component with a bordered style, a description text and an icon.
 
 {{< example class="grid gap-6 md:grid-cols-2" github="forms/checkbox.md" show_dark=true >}}
 <div class="flex justify-between space-x-2.5 bg-neutral-primary-soft border border-default rounded-base shadow-xs">

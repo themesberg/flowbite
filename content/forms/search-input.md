@@ -223,9 +223,9 @@ Get started with this example if you would like to enable voice search for your 
 </form>
 {{< /example >}}
 
-## Three buttons (New)
+## Advanced search input
 
-Get started with this example if you would like to enable voice search for your website and users.
+Use this example to show multiple dropdown selection elements next to the search field.
 
 {{< example github="forms/search-input.md" show_dark=true iframeHeight="290" >}}
 

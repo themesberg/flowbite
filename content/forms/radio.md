@@ -272,9 +272,9 @@ Use this example of a more advanced radio component to add more information and 
 
 {{< /example >}}
 
-## Advanced layout with icons (New)
+## Advanced layout with icons
 
-Use this example of a more advanced radio component to add more information and update the style of the whole card instead of just the circled dot.
+Use this example to show an advanced layout of radio button elements with icons.
 
 {{< example class="flex flex-wrap" github="forms/checkbox.md" show_dark=true >}}
 <h3 class="mb-4 text-lg font-medium text-heading">Choose technology:</h3>

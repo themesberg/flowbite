@@ -99,10 +99,9 @@ This example can be used to set a hyperlink on an image inside a card component.
 </div>
 {{< /example >}}
 
+## Card inner link
 
-## Link inside card (New)
-
-This example can be used to set a hyperlink on an image inside a card component.
+Use this example to show a highlighted link inside a card component.
 
 {{< example class="flex justify-center" github="typography/links.md" show_dark=true >}}
 <div class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">

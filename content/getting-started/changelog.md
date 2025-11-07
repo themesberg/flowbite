@@ -15,6 +15,15 @@ nextLink: getting-started/react/
 
 We strive to keep a good accountability of all of the version changes that we make for the Flowbite library.
 
+### v4.0.0
+
+- introduced 5 custom themes (modern, minimal, playful, enterprise, mono)
+- colors are now set via CSS variables as recommended by Tailwind v4
+- removed 50% of HTML classes by moving dark mode to CSS variables
+- added new components for cards, checkboxes, radios, and more
+- improved the design of all components to match the new themes
+- redesigned the documentation layout to be more user-friendly
+
 ### v3.1.2
 
 - create themes folder for setting Tailwind variables

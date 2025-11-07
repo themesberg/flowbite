@@ -750,9 +750,15 @@ window.addEventListener("load", function () {
     return computedStyle.getPropertyValue('--color-brand-medium').trim() || "#1447E6";
   };
 
+  const getNeutralPrimaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-neutral-primary').trim() || "#1447E6";
+  };
+
   const brandColor = getBrandColor();
   const brandSecondaryColor = getBrandSecondaryColor();
   const brandTertiaryColor = getBrandTertiaryColor();
+  const neutralPrimaryColor = getNeutralPrimaryColor();
 
   const getChartOptions = () => {
     return {
@@ -764,7 +770,7 @@ window.addEventListener("load", function () {
         type: "pie",
       },
       stroke: {
-        colors: ["white"],
+        colors: [neutralPrimaryColor],
         lineCap: "",
       },
       plotOptions: {
@@ -1192,24 +1198,30 @@ window.addEventListener("load", function () {
     return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
   };
 
-  const getBrandSecondaryColor = () => {
+  const getWarningColor = () => {
     const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-warning').trim() || "#1447E6";
   };
 
-  const getBrandTertiaryColor = () => {
+  const getSuccessColor = () => {
     const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-medium').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-success').trim() || "#1447E6";
   };
+  const getNeutralSecondaryMediumColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-neutral-secondary-medium').trim() || "#1447E6";
+  };
+  
 
   const brandColor = getBrandColor();
-  const brandSecondaryColor = getBrandSecondaryColor();
-  const brandTertiaryColor = getBrandTertiaryColor();
+  const warningColor = getWarningColor();
+  const successColor = getSuccessColor();
+  const neutralSecondaryMediumColor = getNeutralSecondaryMediumColor();
 
   const getChartOptions = () => {
     return {
       series: [90, 85, 70],
-      colors: [brandColor, brandSecondaryColor, brandTertiaryColor],
+      colors: [brandColor, warningColor, successColor],
       chart: {
         height: "350px",
         width: "100%",
@@ -1221,7 +1233,7 @@ window.addEventListener("load", function () {
       plotOptions: {
         radialBar: {
           track: {
-            background: '#E5E7EB',
+            background: neutralSecondaryMediumColor,
           },
           dataLabels: {
             show: false,
@@ -1242,7 +1254,7 @@ window.addEventListener("load", function () {
           bottom: -20,
         },
       },
-      labels: ["Done", "In progress", "To do"],
+      labels: ["To do", "In progress", "Done"],
       legend: {
         show: true,
         position: "bottom",

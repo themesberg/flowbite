@@ -183,83 +183,102 @@ if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') 
 To create a double line chart check the example below by setting the chart type to `type: "line"` and copy the HTML markup and JS options to automatically style and populate the chart with data:
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
-const options = {
-  chart: {
-    height: "100%",
-    maxWidth: "100%",
-    type: "line",
-    fontFamily: "Inter, sans-serif",
-    dropShadow: {
+window.addEventListener("load", function () {
+  // Get the CSS variable --color-brand and convert it to hex for ApexCharts
+  const getBrandColor = () => {
+    // Get the computed style of the document's root element
+    const computedStyle = getComputedStyle(document.documentElement);
+    console.log(computedStyle)
+    // Get the value of the --color-brand CSS variable
+    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+  };
+
+  const getBrandSecondaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+  };
+
+  const brandColor = getBrandColor();
+  const brandSecondaryColor = getBrandSecondaryColor();
+
+  const options = {
+    chart: {
+      height: "100%",
+      maxWidth: "100%",
+      type: "line",
+      fontFamily: "Inter, sans-serif",
+      dropShadow: {
+        enabled: false,
+      },
+      toolbar: {
+        show: false,
+      },
+    },
+    tooltip: {
+      enabled: true,
+      x: {
+        show: false,
+      },
+    },
+    dataLabels: {
       enabled: false,
     },
-    toolbar: {
-      show: false,
+    stroke: {
+      width: 6,
     },
-  },
-  tooltip: {
-    enabled: true,
-    x: {
-      show: false,
-    },
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  stroke: {
-    width: 6,
-  },
-  grid: {
-    show: true,
-    strokeDashArray: 4,
-    padding: {
-      left: 2,
-      right: 2,
-      top: -26
-    },
-  },
-  series: [
-    {
-      name: "Clicks",
-      data: [6500, 6418, 6456, 6526, 6356, 6456],
-      color: "#1447E6",
-    },
-    {
-      name: "CPC",
-      data: [6456, 6356, 6526, 6332, 6418, 6500],
-      color: "#7E3AF2",
-    },
-  ],
-  legend: {
-    show: false
-  },
-  stroke: {
-    curve: 'smooth'
-  },
-  xaxis: {
-    categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
-    labels: {
+    grid: {
       show: true,
-      style: {
-        fontFamily: "Inter, sans-serif",
-        cssClass: 'text-xs font-normal fill-body'
-      }
+      strokeDashArray: 4,
+      padding: {
+        left: 2,
+        right: 2,
+        top: -26
+      },
     },
-    axisBorder: {
+    series: [
+      {
+        name: "Clicks",
+        data: [6500, 6418, 6456, 6526, 6356, 6456],
+        color: brandColor,
+      },
+      {
+        name: "CPC",
+        data: [6456, 6356, 6526, 6332, 6418, 6500],
+        color: brandSecondaryColor,
+      },
+    ],
+    legend: {
+      show: false
+    },
+    stroke: {
+      curve: 'smooth'
+    },
+    xaxis: {
+      categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
+      labels: {
+        show: true,
+        style: {
+          fontFamily: "Inter, sans-serif",
+          cssClass: 'text-xs font-normal fill-body'
+        }
+      },
+      axisBorder: {
+        show: false,
+      },
+      axisTicks: {
+        show: false,
+      },
+    },
+    yaxis: {
       show: false,
     },
-    axisTicks: {
-      show: false,
-    },
-  },
-  yaxis: {
-    show: false,
-  },
-}
+  }
 
-if (document.getElementById("line-chart") && typeof ApexCharts !== 'undefined') {
-  const chart = new ApexCharts(document.getElementById("line-chart"), options);
-  chart.render();
-}
+  if (document.getElementById("line-chart") && typeof ApexCharts !== 'undefined') {
+    const chart = new ApexCharts(document.getElementById("line-chart"), options);
+    chart.render();
+  }
+});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between mb-4 md:mb-6">
@@ -344,115 +363,134 @@ if (document.getElementById("line-chart") && typeof ApexCharts !== 'undefined') 
 You can represent multiple data entries using columns by setting the `type: "bar"` option and also by updating the `horizontal` key value to `false` in JavaScript to adjust them vertically as columns:
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
-const options = {
-  colors: ["#1447E6", "#FF8A4C"],
-  series: [
-    {
-      name: "Organic",
-      color: "#1447E6",
-      data: [
-        { x: "Mon", y: 231 },
-        { x: "Tue", y: 122 },
-        { x: "Wed", y: 63 },
-        { x: "Thu", y: 421 },
-        { x: "Fri", y: 122 },
-        { x: "Sat", y: 323 },
-        { x: "Sun", y: 111 },
-      ],
-    },
-    {
-      name: "Social media",
-      color: "#FF8A4C",
-      data: [
-        { x: "Mon", y: 232 },
-        { x: "Tue", y: 113 },
-        { x: "Wed", y: 341 },
-        { x: "Thu", y: 224 },
-        { x: "Fri", y: 522 },
-        { x: "Sat", y: 411 },
-        { x: "Sun", y: 243 },
-      ],
-    },
-  ],
-  chart: {
-    type: "bar",
-    height: "320px",
-    fontFamily: "Inter, sans-serif",
-    toolbar: {
-      show: false,
-    },
-  },
-  plotOptions: {
-    bar: {
-      horizontal: false,
-      columnWidth: "70%",
-      borderRadiusApplication: "end",
-      borderRadius: 8,
-    },
-  },
-  tooltip: {
-    shared: true,
-    intersect: false,
-    style: {
+window.addEventListener("load", function () {
+  // Get the CSS variable --color-brand and convert it to hex for ApexCharts
+  const getBrandColor = () => {
+    // Get the computed style of the document's root element
+    const computedStyle = getComputedStyle(document.documentElement);
+    console.log(computedStyle)
+    // Get the value of the --color-brand CSS variable
+    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+  };
+
+  const getBrandSecondaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+  };
+
+  const brandColor = getBrandColor();
+  const brandSecondaryColor = getBrandSecondaryColor();
+
+  const options = {
+    colors: [brandColor, brandSecondaryColor],
+    series: [
+      {
+        name: "Organic",
+        color: brandColor,
+        data: [
+          { x: "Mon", y: 231 },
+          { x: "Tue", y: 122 },
+          { x: "Wed", y: 63 },
+          { x: "Thu", y: 421 },
+          { x: "Fri", y: 122 },
+          { x: "Sat", y: 323 },
+          { x: "Sun", y: 111 },
+        ],
+      },
+      {
+        name: "Social media",
+        color: brandSecondaryColor,
+        data: [
+          { x: "Mon", y: 232 },
+          { x: "Tue", y: 113 },
+          { x: "Wed", y: 341 },
+          { x: "Thu", y: 224 },
+          { x: "Fri", y: 522 },
+          { x: "Sat", y: 411 },
+          { x: "Sun", y: 243 },
+        ],
+      },
+    ],
+    chart: {
+      type: "bar",
+      height: "320px",
       fontFamily: "Inter, sans-serif",
-    },
-  },
-  states: {
-    hover: {
-      filter: {
-        type: "darken",
-        value: 1,
+      toolbar: {
+        show: false,
       },
     },
-  },
-  stroke: {
-    show: true,
-    width: 0,
-    colors: ["transparent"],
-  },
-  grid: {
-    show: false,
-    strokeDashArray: 4,
-    padding: {
-      left: 2,
-      right: 2,
-      top: -14
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: "70%",
+        borderRadiusApplication: "end",
+        borderRadius: 8,
+      },
     },
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  legend: {
-    show: false,
-  },
-  xaxis: {
-    floating: false,
-    labels: {
-      show: true,
+    tooltip: {
+      shared: true,
+      intersect: false,
       style: {
         fontFamily: "Inter, sans-serif",
-        cssClass: 'text-xs font-normal fill-body'
-      }
+      },
     },
-    axisBorder: {
+    states: {
+      hover: {
+        filter: {
+          type: "darken",
+          value: 1,
+        },
+      },
+    },
+    stroke: {
+      show: true,
+      width: 0,
+      colors: ["transparent"],
+    },
+    grid: {
+      show: false,
+      strokeDashArray: 4,
+      padding: {
+        left: 2,
+        right: 2,
+        top: -14
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    legend: {
       show: false,
     },
-    axisTicks: {
+    xaxis: {
+      floating: false,
+      labels: {
+        show: true,
+        style: {
+          fontFamily: "Inter, sans-serif",
+          cssClass: 'text-xs font-normal fill-body'
+        }
+      },
+      axisBorder: {
+        show: false,
+      },
+      axisTicks: {
+        show: false,
+      },
+    },
+    yaxis: {
       show: false,
     },
-  },
-  yaxis: {
-    show: false,
-  },
-  fill: {
-    opacity: 1,
-  },
-}
+    fill: {
+      opacity: 1,
+    },
+  }
 
-if(document.getElementById("column-chart") && typeof ApexCharts !== 'undefined') {
-  const chart = new ApexCharts(document.getElementById("column-chart"), options);
-  chart.render();
-}
+  if(document.getElementById("column-chart") && typeof ApexCharts !== 'undefined') {
+    const chart = new ApexCharts(document.getElementById("column-chart"), options);
+    chart.render();
+  }
+});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between pb-4 mb-4 border-b border-light">
@@ -692,68 +730,93 @@ if(document.getElementById("bar-chart") && typeof ApexCharts !== 'undefined') {
 Create a pie chart with multiple data series by setting the `type: "pie"` chart type option via JavaScript and copy the following HTML markup code and options from below:
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
-const getChartOptions = () => {
-  return {
-    series: [52.8, 26.8, 20.4],
-    colors: ["#1447E6", "#AD46FF", "#FF8A4C"],
-    chart: {
-      height: 420,
-      width: "100%",
-      type: "pie",
-    },
-    stroke: {
-      colors: ["white"],
-      lineCap: "",
-    },
-    plotOptions: {
-      pie: {
-        labels: {
-          show: true,
-        },
-        size: "100%",
-        dataLabels: {
-          offset: -25
-        }
+window.addEventListener("load", function () {
+  // Get the CSS variable --color-brand and convert it to hex for ApexCharts
+  const getBrandColor = () => {
+    // Get the computed style of the document's root element
+    const computedStyle = getComputedStyle(document.documentElement);
+    console.log(computedStyle)
+    // Get the value of the --color-brand CSS variable
+    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+  };
+
+  const getBrandSecondaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+  };
+
+  const getBrandTertiaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-medium').trim() || "#1447E6";
+  };
+
+  const brandColor = getBrandColor();
+  const brandSecondaryColor = getBrandSecondaryColor();
+  const brandTertiaryColor = getBrandTertiaryColor();
+
+  const getChartOptions = () => {
+    return {
+      series: [52.8, 26.8, 20.4],
+      colors: [brandColor, brandSecondaryColor, brandTertiaryColor],
+      chart: {
+        height: 420,
+        width: "100%",
+        type: "pie",
       },
-    },
-    labels: ["Direct", "Organic search", "Referrals"],
-    dataLabels: {
-      enabled: true,
-      style: {
+      stroke: {
+        colors: ["white"],
+        lineCap: "",
+      },
+      plotOptions: {
+        pie: {
+          labels: {
+            show: true,
+          },
+          size: "100%",
+          dataLabels: {
+            offset: -25
+          }
+        },
+      },
+      labels: ["Direct", "Organic search", "Referrals"],
+      dataLabels: {
+        enabled: true,
+        style: {
+          fontFamily: "Inter, sans-serif",
+        },
+      },
+      legend: {
+        position: "bottom",
         fontFamily: "Inter, sans-serif",
       },
-    },
-    legend: {
-      position: "bottom",
-      fontFamily: "Inter, sans-serif",
-    },
-    yaxis: {
-      labels: {
-        formatter: function (value) {
-          return value + "%"
+      yaxis: {
+        labels: {
+          formatter: function (value) {
+            return value + "%"
+          },
         },
       },
-    },
-    xaxis: {
-      labels: {
-        formatter: function (value) {
-          return value  + "%"
+      xaxis: {
+        labels: {
+          formatter: function (value) {
+            return value  + "%"
+          },
+        },
+        axisTicks: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
         },
       },
-      axisTicks: {
-        show: false,
-      },
-      axisBorder: {
-        show: false,
-      },
-    },
+    }
   }
-}
 
-if (document.getElementById("pie-chart") && typeof ApexCharts !== 'undefined') {
-  const chart = new ApexCharts(document.getElementById("pie-chart"), getChartOptions());
-  chart.render();
-}
+  if (document.getElementById("pie-chart") && typeof ApexCharts !== 'undefined') {
+    const chart = new ApexCharts(document.getElementById("pie-chart"), getChartOptions());
+    chart.render();
+  }
+});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
 
@@ -881,125 +944,150 @@ Set the JavaScript API option to `type: "donut"` to create a donut chart and cop
 In this example we also show how you can set event listeners on the UI components from Flowbite to update the data series from the chart by clicking the device checkboxes.
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
-const getChartOptions = () => {
-  return {
-    series: [35.1, 23.5, 2.4, 5.4],
-    colors: ["#00A6F4", "#1447E6", "#AD46FF", "#FF8A4C"],
-    chart: {
-      height: 320,
-      width: "100%",
-      type: "donut",
-    },
-    stroke: {
-      colors: ["transparent"],
-      lineCap: "",
-    },
-    plotOptions: {
-      pie: {
-        donut: {
-          labels: {
-            show: true,
-            name: {
+window.addEventListener("load", function () {
+  // Get the CSS variable --color-brand and convert it to hex for ApexCharts
+  const getBrandColor = () => {
+    // Get the computed style of the document's root element
+    const computedStyle = getComputedStyle(document.documentElement);
+    console.log(computedStyle)
+    // Get the value of the --color-brand CSS variable
+    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+  };
+
+  const getBrandSecondaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+  };
+
+  const getBrandTertiaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-medium').trim() || "#1447E6";
+  };
+
+  const brandColor = getBrandColor();
+  const brandSecondaryColor = getBrandSecondaryColor();
+  const brandTertiaryColor = getBrandTertiaryColor();
+
+  const getChartOptions = () => {
+    return {
+      series: [35.1, 23.5, 2.4, 5.4],
+      colors: [brandColor, brandSecondaryColor, brandTertiaryColor],
+      chart: {
+        height: 320,
+        width: "100%",
+        type: "donut",
+      },
+      stroke: {
+        colors: ["transparent"],
+        lineCap: "",
+      },
+      plotOptions: {
+        pie: {
+          donut: {
+            labels: {
               show: true,
-              fontFamily: "Inter, sans-serif",
-              offsetY: 20,
-            },
-            total: {
-              showAlways: true,
-              show: true,
-              label: "Unique visitors",
-              fontFamily: "Inter, sans-serif",
-              formatter: function (w) {
-                const sum = w.globals.seriesTotals.reduce((a, b) => {
-                  return a + b
-                }, 0)
-                return '$' + sum + 'k'
+              name: {
+                show: true,
+                fontFamily: "Inter, sans-serif",
+                offsetY: 20,
+              },
+              total: {
+                showAlways: true,
+                show: true,
+                label: "Unique visitors",
+                fontFamily: "Inter, sans-serif",
+                formatter: function (w) {
+                  const sum = w.globals.seriesTotals.reduce((a, b) => {
+                    return a + b
+                  }, 0)
+                  return '$' + sum + 'k'
+                },
+              },
+              value: {
+                show: true,
+                fontFamily: "Inter, sans-serif",
+                offsetY: -20,
+                formatter: function (value) {
+                  return value + "k"
+                },
               },
             },
-            value: {
-              show: true,
-              fontFamily: "Inter, sans-serif",
-              offsetY: -20,
-              formatter: function (value) {
-                return value + "k"
-              },
-            },
+            size: "80%",
           },
-          size: "80%",
         },
       },
-    },
-    grid: {
-      padding: {
-        top: -2,
-      },
-    },
-    labels: ["Direct", "Sponsor", "Affiliate", "Email marketing"],
-    dataLabels: {
-      enabled: false,
-    },
-    legend: {
-      position: "bottom",
-      fontFamily: "Inter, sans-serif",
-    },
-    yaxis: {
-      labels: {
-        formatter: function (value) {
-          return value + "k"
+      grid: {
+        padding: {
+          top: -2,
         },
       },
-    },
-    xaxis: {
-      labels: {
-        formatter: function (value) {
-          return value  + "k"
+      labels: ["Direct", "Sponsor", "Affiliate", "Email marketing"],
+      dataLabels: {
+        enabled: false,
+      },
+      legend: {
+        position: "bottom",
+        fontFamily: "Inter, sans-serif",
+      },
+      yaxis: {
+        labels: {
+          formatter: function (value) {
+            return value + "k"
+          },
         },
       },
-      axisTicks: {
-        show: false,
+      xaxis: {
+        labels: {
+          formatter: function (value) {
+            return value  + "k"
+          },
+        },
+        axisTicks: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
       },
-      axisBorder: {
-        show: false,
-      },
-    },
-  }
-}
-
-if (document.getElementById("donut-chart") && typeof ApexCharts !== 'undefined') {
-  const chart = new ApexCharts(document.getElementById("donut-chart"), getChartOptions());
-  chart.render();
-
-  // Get all the checkboxes by their class name
-  const checkboxes = document.querySelectorAll('#devices input[type="checkbox"]');
-
-  // Function to handle the checkbox change event
-  function handleCheckboxChange(event, chart) {
-      const checkbox = event.target;
-      if (checkbox.checked) {
-          switch(checkbox.value) {
-            case 'desktop':
-              chart.updateSeries([15.1, 22.5, 4.4, 8.4]);
-              break;
-            case 'tablet':
-              chart.updateSeries([25.1, 26.5, 1.4, 3.4]);
-              break;
-            case 'mobile':
-              chart.updateSeries([45.1, 27.5, 8.4, 2.4]);
-              break;
-            default:
-              chart.updateSeries([55.1, 28.5, 1.4, 5.4]);
-          }
-
-      } else {
-          chart.updateSeries([35.1, 23.5, 2.4, 5.4]);
-      }
+    }
   }
 
-  // Attach the event listener to each checkbox
-  checkboxes.forEach((checkbox) => {
-      checkbox.addEventListener('change', (event) => handleCheckboxChange(event, chart));
-  });
-}
+  if (document.getElementById("donut-chart") && typeof ApexCharts !== 'undefined') {
+    const chart = new ApexCharts(document.getElementById("donut-chart"), getChartOptions());
+    chart.render();
+
+    // Get all the checkboxes by their class name
+    const checkboxes = document.querySelectorAll('#devices input[type="checkbox"]');
+
+    // Function to handle the checkbox change event
+    function handleCheckboxChange(event, chart) {
+        const checkbox = event.target;
+        if (checkbox.checked) {
+            switch(checkbox.value) {
+              case 'desktop':
+                chart.updateSeries([15.1, 22.5, 4.4, 8.4]);
+                break;
+              case 'tablet':
+                chart.updateSeries([25.1, 26.5, 1.4, 3.4]);
+                break;
+              case 'mobile':
+                chart.updateSeries([45.1, 27.5, 8.4, 2.4]);
+                break;
+              default:
+                chart.updateSeries([55.1, 28.5, 1.4, 5.4]);
+            }
+
+        } else {
+            chart.updateSeries([35.1, 23.5, 2.4, 5.4]);
+        }
+    }
+
+    // Attach the event listener to each checkbox
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', (event) => handleCheckboxChange(event, chart));
+    });
+  }
+});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   
@@ -1094,69 +1182,94 @@ if (document.getElementById("donut-chart") && typeof ApexCharts !== 'undefined')
 To create a radial chart with multiple data entries you need to set the `type: "radialBar"` when initialising a new chart and introduce multiple series and labels to the options and copy the following code:
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-const getChartOptions = () => {
-  return {
-    series: [90, 85, 70],
-    colors: ["#1447E6", "#AD46FF", "#FF8A4C"],
-    chart: {
-      height: "350px",
-      width: "100%",
-      type: "radialBar",
-      sparkline: {
-        enabled: true,
-      },
-    },
-    plotOptions: {
-      radialBar: {
-        track: {
-          background: '#E5E7EB',
+window.addEventListener("load", function () {
+  // Get the CSS variable --color-brand and convert it to hex for ApexCharts
+  const getBrandColor = () => {
+    // Get the computed style of the document's root element
+    const computedStyle = getComputedStyle(document.documentElement);
+    console.log(computedStyle)
+    // Get the value of the --color-brand CSS variable
+    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+  };
+
+  const getBrandSecondaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+  };
+
+  const getBrandTertiaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-medium').trim() || "#1447E6";
+  };
+
+  const brandColor = getBrandColor();
+  const brandSecondaryColor = getBrandSecondaryColor();
+  const brandTertiaryColor = getBrandTertiaryColor();
+
+  const getChartOptions = () => {
+    return {
+      series: [90, 85, 70],
+      colors: [brandColor, brandSecondaryColor, brandTertiaryColor],
+      chart: {
+        height: "350px",
+        width: "100%",
+        type: "radialBar",
+        sparkline: {
+          enabled: true,
         },
-        dataLabels: {
+      },
+      plotOptions: {
+        radialBar: {
+          track: {
+            background: '#E5E7EB',
+          },
+          dataLabels: {
+            show: false,
+          },
+          hollow: {
+            margin: 0,
+            size: "32%",
+          }
+        },
+      },
+      grid: {
+        show: false,
+        strokeDashArray: 4,
+        padding: {
+          left: 2,
+          right: 2,
+          top: -23,
+          bottom: -20,
+        },
+      },
+      labels: ["Done", "In progress", "To do"],
+      legend: {
+        show: true,
+        position: "bottom",
+        fontFamily: "Inter, sans-serif",
+      },
+      tooltip: {
+        enabled: true,
+        x: {
           show: false,
         },
-        hollow: {
-          margin: 0,
-          size: "32%",
-        }
       },
-    },
-    grid: {
-      show: false,
-      strokeDashArray: 4,
-      padding: {
-        left: 2,
-        right: 2,
-        top: -23,
-        bottom: -20,
-      },
-    },
-    labels: ["Done", "In progress", "To do"],
-    legend: {
-      show: true,
-      position: "bottom",
-      fontFamily: "Inter, sans-serif",
-    },
-    tooltip: {
-      enabled: true,
-      x: {
+      yaxis: {
         show: false,
-      },
-    },
-    yaxis: {
-      show: false,
-      labels: {
-        formatter: function (value) {
-          return value + '%';
+        labels: {
+          formatter: function (value) {
+            return value + '%';
+          }
         }
       }
     }
   }
-}
 
-if (document.getElementById("radial-chart") && typeof ApexCharts !== 'undefined') {
-  const chart = new ApexCharts(document.querySelector("#radial-chart"), getChartOptions());
-  chart.render();
-}
+  if (document.getElementById("radial-chart") && typeof ApexCharts !== 'undefined') {
+    const chart = new ApexCharts(document.querySelector("#radial-chart"), getChartOptions());
+    chart.render();
+  }
+});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between mb-4 md:mb-6">
@@ -1270,91 +1383,110 @@ Learn more about how you can customize the charts including the data, labels, le
 You can add multiple data sets by using the `series` object and setting a name, array of data and custom color of choice. In this example we added two data series based on a blue and purple color.
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-const options = {
-// add data series via arrays, learn more here: https://apexcharts.com/docs/series/
-series: [
-  {
-    name: "Developer Edition",
-    data: [1500, 1418, 1456, 1526, 1356, 1256],
-    color: "#1447E6",
+window.addEventListener("load", function () {
+  // Get the CSS variable --color-brand and convert it to hex for ApexCharts
+  const getBrandColor = () => {
+    // Get the computed style of the document's root element
+    const computedStyle = getComputedStyle(document.documentElement);
+    console.log(computedStyle)
+    // Get the value of the --color-brand CSS variable
+    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+  };
+
+  const getBrandSecondaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+  };
+
+  const brandColor = getBrandColor();
+  const brandSecondaryColor = getBrandSecondaryColor();
+
+  const options = {
+  // add data series via arrays, learn more here: https://apexcharts.com/docs/series/
+  series: [
+    {
+      name: "Developer Edition",
+      data: [1500, 1418, 1456, 1526, 1356, 1256],
+      color: brandColor,
+    },
+    {
+      name: "Designer Edition",
+      data: [643, 413, 765, 412, 1423, 1731],
+      color: brandSecondaryColor,
+    },
+  ],
+  chart: {
+    height: "100%",
+    maxWidth: "100%",
+    type: "area",
+    fontFamily: "Inter, sans-serif",
+    dropShadow: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
   },
-  {
-    name: "Designer Edition",
-    data: [643, 413, 765, 412, 1423, 1731],
-    color: "#AD46FF",
+  tooltip: {
+    enabled: true,
+    x: {
+      show: false,
+    },
   },
-],
-chart: {
-  height: "100%",
-  maxWidth: "100%",
-  type: "area",
-  fontFamily: "Inter, sans-serif",
-  dropShadow: {
+  legend: {
+    show: false
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      opacityFrom: 0.55,
+      opacityTo: 0,
+      shade: "#1447E6",
+      gradientToColors: ["#1447E6"],
+    },
+  },
+  dataLabels: {
     enabled: false,
   },
-  toolbar: {
+  stroke: {
+    width: 6,
+  },
+  grid: {
     show: false,
+    strokeDashArray: 4,
+    padding: {
+      left: 2,
+      right: 2,
+      top: 0
+    },
   },
-},
-tooltip: {
-  enabled: true,
-  x: {
+  xaxis: {
+    categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
     show: false,
-  },
-},
-legend: {
-  show: false
-},
-fill: {
-  type: "gradient",
-  gradient: {
-    opacityFrom: 0.55,
-    opacityTo: 0,
-    shade: "#1447E6",
-    gradientToColors: ["#1447E6"],
-  },
-},
-dataLabels: {
-  enabled: false,
-},
-stroke: {
-  width: 6,
-},
-grid: {
-  show: false,
-  strokeDashArray: 4,
-  padding: {
-    left: 2,
-    right: 2,
-    top: 0
-  },
-},
-xaxis: {
-  categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
-  labels: {
-    show: false,
-  },
-  axisBorder: {
-    show: false,
-  },
-  axisTicks: {
-    show: false,
-  },
-},
-yaxis: {
-  show: false,
-  labels: {
-    formatter: function (value) {
-      return '$' + value;
+    labels: {
+      formatter: function (value) {
+        return '$' + value;
+      }
     }
+  },
   }
-},
-}
 
-if (document.getElementById("data-series-chart") && typeof ApexCharts !== 'undefined') {
-const chart = new ApexCharts(document.getElementById("data-series-chart"), options);
-chart.render();
-}
+  if (document.getElementById("data-series-chart") && typeof ApexCharts !== 'undefined') {
+  const chart = new ApexCharts(document.getElementById("data-series-chart"), options);
+  chart.render();
+  }
+});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">
@@ -1409,98 +1541,117 @@ chart.render();
 Show labels for the X and Y axis by enabling the `xaxis: {show: true}` and `yaxis: {show: true}` and customize the appearance of the labels by adding Tailwind CSS utility classes to the `cssClass` object based on the following example:
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-const options = {
-// set the labels option to true to show the labels on the X and Y axis
-xaxis: {
-  show: true,
-  categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
-  labels: {
+window.addEventListener("load", function () {
+  // Get the CSS variable --color-brand and convert it to hex for ApexCharts
+  const getBrandColor = () => {
+    // Get the computed style of the document's root element
+    const computedStyle = getComputedStyle(document.documentElement);
+    console.log(computedStyle)
+    // Get the value of the --color-brand CSS variable
+    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+  };
+
+  const getBrandSecondaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+  };
+
+  const brandColor = getBrandColor();
+  const brandSecondaryColor = getBrandSecondaryColor();
+  
+  const options = {
+  // set the labels option to true to show the labels on the X and Y axis
+  xaxis: {
     show: true,
-    style: {
-      fontFamily: "Inter, sans-serif",
-      cssClass: 'text-xs font-normal fill-body'
-    }
-  },
-  axisBorder: {
-    show: false,
-  },
-  axisTicks: {
-    show: false,
-  },
-},
-yaxis: {
-  show: true,
-  labels: {
-    show: true,
-    style: {
-      fontFamily: "Inter, sans-serif",
-      cssClass: 'text-xs font-normal fill-body'
+    categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
+    labels: {
+      show: true,
+      style: {
+        fontFamily: "Inter, sans-serif",
+        cssClass: 'text-xs font-normal fill-body'
+      }
     },
-    formatter: function (value) {
-      return '$' + value;
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: true,
+    labels: {
+      show: true,
+      style: {
+        fontFamily: "Inter, sans-serif",
+        cssClass: 'text-xs font-normal fill-body'
+      },
+      formatter: function (value) {
+        return '$' + value;
+      }
     }
-  }
-},
-series: [
-  {
-    name: "Developer Edition",
-    data: [150, 141, 145, 152, 135, 125],
-    color: "#1447E6",
   },
-  {
-    name: "Designer Edition",
-    data: [43, 13, 65, 12, 42, 73],
-    color: "#AD46FF",
+  series: [
+    {
+      name: "Developer Edition",
+      data: [150, 141, 145, 152, 135, 125],
+      color: brandColor,
+    },
+    {
+      name: "Designer Edition",
+      data: [43, 13, 65, 12, 42, 73],
+      color: brandSecondaryColor,
+    },
+  ],
+  chart: {
+    sparkline: {
+      enabled: false
+    },
+    height: "100%",
+    width: "100%",
+    type: "area",
+    fontFamily: "Inter, sans-serif",
+    dropShadow: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
   },
-],
-chart: {
-  sparkline: {
-    enabled: false
+  tooltip: {
+    enabled: true,
+    x: {
+      show: false,
+    },
   },
-  height: "100%",
-  width: "100%",
-  type: "area",
-  fontFamily: "Inter, sans-serif",
-  dropShadow: {
+  fill: {
+    type: "gradient",
+    gradient: {
+      opacityFrom: 0.55,
+      opacityTo: 0,
+      shade: brandColor,
+      gradientToColors: [brandColor],
+    },
+  },
+  dataLabels: {
     enabled: false,
   },
-  toolbar: {
+  stroke: {
+    width: 6,
+  },
+  legend: {
+    show: false
+  },
+  grid: {
     show: false,
   },
-},
-tooltip: {
-  enabled: true,
-  x: {
-    show: false,
-  },
-},
-fill: {
-  type: "gradient",
-  gradient: {
-    opacityFrom: 0.55,
-    opacityTo: 0,
-    shade: "#1447E6",
-    gradientToColors: ["#1447E6"],
-  },
-},
-dataLabels: {
-  enabled: false,
-},
-stroke: {
-  width: 6,
-},
-legend: {
-  show: false
-},
-grid: {
-  show: false,
-},
-}
+  }
 
-if (document.getElementById("labels-chart") && typeof ApexCharts !== 'undefined') {
-const chart = new ApexCharts(document.getElementById("labels-chart"), options);
-chart.render();
-}
+  if (document.getElementById("labels-chart") && typeof ApexCharts !== 'undefined') {
+  const chart = new ApexCharts(document.getElementById("labels-chart"), options);
+  chart.render();
+  }
+});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">
@@ -1555,91 +1706,110 @@ chart.render();
 Automatically show the legend indicators of the chart by setting the `legend: { show: true }` value when configuring the options via JavaScript. You can also set position of the legend by using the `position: {x}` option inside the legend object to place it to the top or bottom side of the chart.  
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-const options = {
-// add data series via arrays, learn more here: https://apexcharts.com/docs/series/
-series: [
-  {
-    name: "Developer Edition",
-    data: [1500, 1418, 1456, 1526, 1356, 1256],
-    color: "#1447E6",
+window.addEventListener("load", function () {
+  // Get the CSS variable --color-brand and convert it to hex for ApexCharts
+  const getBrandColor = () => {
+    // Get the computed style of the document's root element
+    const computedStyle = getComputedStyle(document.documentElement);
+    console.log(computedStyle)
+    // Get the value of the --color-brand CSS variable
+    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+  };
+
+  const getBrandSecondaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+  };
+
+  const brandColor = getBrandColor();
+  const brandSecondaryColor = getBrandSecondaryColor();
+
+  const options = {
+  // add data series via arrays, learn more here: https://apexcharts.com/docs/series/
+  series: [
+    {
+      name: "Developer Edition",
+      data: [1500, 1418, 1456, 1526, 1356, 1256],
+      color: brandColor,
+    },
+    {
+      name: "Designer Edition",
+      data: [643, 413, 765, 412, 1423, 1731],
+      color: brandSecondaryColor,
+    },
+  ],
+  chart: {
+    height: "100%",
+    maxWidth: "100%",
+    type: "area",
+    fontFamily: "Inter, sans-serif",
+    dropShadow: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
   },
-  {
-    name: "Designer Edition",
-    data: [643, 413, 765, 412, 1423, 1731],
-    color: "#AD46FF",
+  tooltip: {
+    enabled: true,
+    x: {
+      show: false,
+    },
   },
-],
-chart: {
-  height: "100%",
-  maxWidth: "100%",
-  type: "area",
-  fontFamily: "Inter, sans-serif",
-  dropShadow: {
+  legend: {
+    show: true
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      opacityFrom: 0.55,
+      opacityTo: 0,
+      shade: "#1447E6",
+      gradientToColors: ["#1447E6"],
+    },
+  },
+  dataLabels: {
     enabled: false,
   },
-  toolbar: {
+  stroke: {
+    width: 6,
+  },
+  grid: {
     show: false,
+    strokeDashArray: 4,
+    padding: {
+      left: 2,
+      right: 2,
+      top: -26
+    },
   },
-},
-tooltip: {
-  enabled: true,
-  x: {
+  xaxis: {
+    categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
     show: false,
-  },
-},
-legend: {
-  show: true
-},
-fill: {
-  type: "gradient",
-  gradient: {
-    opacityFrom: 0.55,
-    opacityTo: 0,
-    shade: "#1447E6",
-    gradientToColors: ["#1447E6"],
-  },
-},
-dataLabels: {
-  enabled: false,
-},
-stroke: {
-  width: 6,
-},
-grid: {
-  show: false,
-  strokeDashArray: 4,
-  padding: {
-    left: 2,
-    right: 2,
-    top: -26
-  },
-},
-xaxis: {
-  categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
-  labels: {
-    show: false,
-  },
-  axisBorder: {
-    show: false,
-  },
-  axisTicks: {
-    show: false,
-  },
-},
-yaxis: {
-  show: false,
-  labels: {
-    formatter: function (value) {
-      return '$' + value;
+    labels: {
+      formatter: function (value) {
+        return '$' + value;
+      }
     }
+  },
   }
-},
-}
 
-if (document.getElementById("legend-chart") && typeof ApexCharts !== 'undefined') {
-const chart = new ApexCharts(document.getElementById("legend-chart"), options);
-chart.render();
-}
+  if (document.getElementById("legend-chart") && typeof ApexCharts !== 'undefined') {
+  const chart = new ApexCharts(document.getElementById("legend-chart"), options);
+  chart.render();
+  }
+});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">
@@ -1697,94 +1867,113 @@ Enable the tooltip that is shown when hovering over a data set by setting `{tool
 - `y: {show: true}` will show or hide the Y axis data
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-const options = {
-// set this option to enable the tooltip for the chart, learn more here: https://apexcharts.com/docs/tooltip/
-tooltip: {
-  enabled: true,
-  x: {
-    show: true,
+window.addEventListener("load", function () {
+  // Get the CSS variable --color-brand and convert it to hex for ApexCharts
+  const getBrandColor = () => {
+    // Get the computed style of the document's root element
+    const computedStyle = getComputedStyle(document.documentElement);
+    console.log(computedStyle)
+    // Get the value of the --color-brand CSS variable
+    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+  };
+
+  const getBrandSecondaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+  };
+
+  const brandColor = getBrandColor();
+  const brandSecondaryColor = getBrandSecondaryColor();
+
+  const options = {
+  // set this option to enable the tooltip for the chart, learn more here: https://apexcharts.com/docs/tooltip/
+  tooltip: {
+    enabled: true,
+    x: {
+      show: true,
+    },
+    y: {
+      show: true,
+    },
   },
-  y: {
-    show: true,
+  grid: {
+    show: false,
+    strokeDashArray: 4,
+    padding: {
+      left: 2,
+      right: 2,
+      top: -26
+    },
   },
-},
-grid: {
-  show: false,
-  strokeDashArray: 4,
-  padding: {
-    left: 2,
-    right: 2,
-    top: -26
+  series: [
+    {
+      name: "Developer Edition",
+      data: [1500, 1418, 1456, 1526, 1356, 1256],
+      color: brandColor,
+    },
+    {
+      name: "Designer Edition",
+      data: [643, 413, 765, 412, 1423, 1731],
+      color: brandSecondaryColor,
+    },
+  ],
+  chart: {
+    height: "100%",
+    maxWidth: "100%",
+    type: "area",
+    fontFamily: "Inter, sans-serif",
+    dropShadow: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
   },
-},
-series: [
-  {
-    name: "Developer Edition",
-    data: [1500, 1418, 1456, 1526, 1356, 1256],
-    color: "#1447E6",
+  legend: {
+    show: true
   },
-  {
-    name: "Designer Edition",
-    data: [643, 413, 765, 412, 1423, 1731],
-    color: "#AD46FF",
+  fill: {
+    type: "gradient",
+    gradient: {
+      opacityFrom: 0.55,
+      opacityTo: 0,
+      shade: brandColor,
+      gradientToColors: [brandColor],
+    },
   },
-],
-chart: {
-  height: "100%",
-  maxWidth: "100%",
-  type: "area",
-  fontFamily: "Inter, sans-serif",
-  dropShadow: {
+  dataLabels: {
     enabled: false,
   },
-  toolbar: {
+  stroke: {
+    width: 6,
+  },
+  xaxis: {
+    categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
     show: false,
-  },
-},
-legend: {
-  show: true
-},
-fill: {
-  type: "gradient",
-  gradient: {
-    opacityFrom: 0.55,
-    opacityTo: 0,
-    shade: "#1447E6",
-    gradientToColors: ["#1447E6"],
-  },
-},
-dataLabels: {
-  enabled: false,
-},
-stroke: {
-  width: 6,
-},
-xaxis: {
-  categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
-  labels: {
-    show: false,
-  },
-  axisBorder: {
-    show: false,
-  },
-  axisTicks: {
-    show: false,
-  },
-},
-yaxis: {
-  show: false,
-  labels: {
-    formatter: function (value) {
-      return '$' + value;
+    labels: {
+      formatter: function (value) {
+        return '$' + value;
+      }
     }
+  },
   }
-},
-}
 
-if (document.getElementById("tooltip-chart") && typeof ApexCharts !== 'undefined') {
-const chart = new ApexCharts(document.getElementById("tooltip-chart"), options);
-chart.render();
-}
+  if (document.getElementById("tooltip-chart") && typeof ApexCharts !== 'undefined') {
+  const chart = new ApexCharts(document.getElementById("tooltip-chart"), options);
+  chart.render();
+  }
+});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">
@@ -1839,91 +2028,110 @@ chart.render();
 Add a grid layout of dashed lines to improve the readability of the data entries for the charts by configuring the `{grid: { show: true }}` object and customize the appearance via the `strokeDashArray` object.
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-const options = {
-// set grid lines to improve the readability of the chart, learn more here: https://apexcharts.com/docs/grid/
-grid: {
-  show: true,
-  strokeDashArray: 4,
-  padding: {
-    left: 2,
-    right: 2,
-    top: -26
+window.addEventListener("load", function () {
+  // Get the CSS variable --color-brand and convert it to hex for ApexCharts
+  const getBrandColor = () => {
+    // Get the computed style of the document's root element
+    const computedStyle = getComputedStyle(document.documentElement);
+    console.log(computedStyle)
+    // Get the value of the --color-brand CSS variable
+    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+  };
+
+  const getBrandSecondaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+  };
+
+  const brandColor = getBrandColor();
+  const brandSecondaryColor = getBrandSecondaryColor();
+
+  const options = {
+  // set grid lines to improve the readability of the chart, learn more here: https://apexcharts.com/docs/grid/
+  grid: {
+    show: true,
+    strokeDashArray: 4,
+    padding: {
+      left: 2,
+      right: 2,
+      top: -26
+    },
   },
-},
-series: [
-  {
-    name: "Developer Edition",
-    data: [1500, 1418, 1456, 1526, 1356, 1256],
-    color: "#1447E6",
+  series: [
+    {
+      name: "Developer Edition",
+      data: [1500, 1418, 1456, 1526, 1356, 1256],
+      color: brandColor,
+    },
+    {
+      name: "Designer Edition",
+      data: [643, 413, 765, 412, 1423, 1731],
+      color: brandSecondaryColor,
+    },
+  ],
+  chart: {
+    height: "100%",
+    maxWidth: "100%",
+    type: "area",
+    fontFamily: "Inter, sans-serif",
+    dropShadow: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
   },
-  {
-    name: "Designer Edition",
-    data: [643, 413, 765, 412, 1423, 1731],
-    color: "#AD46FF",
+  tooltip: {
+    enabled: true,
+    x: {
+      show: false,
+    },
   },
-],
-chart: {
-  height: "100%",
-  maxWidth: "100%",
-  type: "area",
-  fontFamily: "Inter, sans-serif",
-  dropShadow: {
+  legend: {
+    show: true
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      opacityFrom: 0.55,
+      opacityTo: 0,
+      shade: brandColor,
+      gradientToColors: [brandColor],
+    },
+  },
+  dataLabels: {
     enabled: false,
   },
-  toolbar: {
+  stroke: {
+    width: 6,
+  },
+  xaxis: {
+    categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
     show: false,
-  },
-},
-tooltip: {
-  enabled: true,
-  x: {
-    show: false,
-  },
-},
-legend: {
-  show: true
-},
-fill: {
-  type: "gradient",
-  gradient: {
-    opacityFrom: 0.55,
-    opacityTo: 0,
-    shade: "#1447E6",
-    gradientToColors: ["#1447E6"],
-  },
-},
-dataLabels: {
-  enabled: false,
-},
-stroke: {
-  width: 6,
-},
-xaxis: {
-  categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
-  labels: {
-    show: false,
-  },
-  axisBorder: {
-    show: false,
-  },
-  axisTicks: {
-    show: false,
-  },
-},
-yaxis: {
-  show: false,
-  labels: {
-    formatter: function (value) {
-      return '$' + value;
+    labels: {
+      formatter: function (value) {
+        return '$' + value;
+      }
     }
+  },
   }
-},
-}
 
-if (document.getElementById("grid-chart") && typeof ApexCharts !== 'undefined') {
-const chart = new ApexCharts(document.getElementById("grid-chart"), options);
-chart.render();
-}
+  if (document.getElementById("grid-chart") && typeof ApexCharts !== 'undefined') {
+  const chart = new ApexCharts(document.getElementById("grid-chart"), options);
+  chart.render();
+  }
+});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">
@@ -1978,95 +2186,114 @@ chart.render();
 Show data points on the chart by enable the `dataLabels: {enabled: true}` object when configuring the options via JavaScript and customize the appearance based on the following example:
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-const options = {
-// enable and customize data labels using the following example, learn more from here: https://apexcharts.com/docs/datalabels/
-dataLabels: {
-  enabled: true,
-  // offsetX: 10,
-  style: {
-    cssClass: 'text-xs text-white font-medium'
-  },
-},
-grid: {
-  show: false,
-  strokeDashArray: 4,
-  padding: {
-    left: 16,
-    right: 16,
-    top: -26
-  },
-},
-series: [
-  {
-    name: "Developer Edition",
-    data: [150, 141, 145, 152, 135, 125],
-    color: "#1447E6",
-  },
-  {
-    name: "Designer Edition",
-    data: [64, 41, 76, 41, 113, 173],
-    color: "#AD46FF",
-  },
-],
-chart: {
-  height: "100%",
-  maxWidth: "100%",
-  type: "area",
-  fontFamily: "Inter, sans-serif",
-  dropShadow: {
-    enabled: false,
-  },
-  toolbar: {
-    show: false,
-  },
-},
-tooltip: {
-  enabled: true,
-  x: {
-    show: false,
-  },
-},
-legend: {
-  show: true
-},
-fill: {
-  type: "gradient",
-  gradient: {
-    opacityFrom: 0.55,
-    opacityTo: 0,
-    shade: "#1447E6",
-    gradientToColors: ["#1447E6"],
-  },
-},
-stroke: {
-  width: 6,
-},
-xaxis: {
-  categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
-  labels: {
-    show: false,
-  },
-  axisBorder: {
-    show: false,
-  },
-  axisTicks: {
-    show: false,
-  },
-},
-yaxis: {
-  show: false,
-  labels: {
-    formatter: function (value) {
-      return '$' + value;
-    }
-  }
-},
-}
+window.addEventListener("load", function () {
+  // Get the CSS variable --color-brand and convert it to hex for ApexCharts
+  const getBrandColor = () => {
+    // Get the computed style of the document's root element
+    const computedStyle = getComputedStyle(document.documentElement);
+    console.log(computedStyle)
+    // Get the value of the --color-brand CSS variable
+    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+  };
 
-if (document.getElementById("data-labels-chart") && typeof ApexCharts !== 'undefined') {
-const chart = new ApexCharts(document.getElementById("data-labels-chart"), options);
-chart.render();
-}
+  const getBrandSecondaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+  };
+
+  const brandColor = getBrandColor();
+  const brandSecondaryColor = getBrandSecondaryColor();
+  
+  const options = {
+  // enable and customize data labels using the following example, learn more from here: https://apexcharts.com/docs/datalabels/
+  dataLabels: {
+    enabled: true,
+    // offsetX: 10,
+    style: {
+      cssClass: 'text-xs text-white font-medium'
+    },
+  },
+  grid: {
+    show: false,
+    strokeDashArray: 4,
+    padding: {
+      left: 16,
+      right: 16,
+      top: -26
+    },
+  },
+  series: [
+    {
+      name: "Developer Edition",
+      data: [150, 141, 145, 152, 135, 125],
+      color: brandColor,
+    },
+    {
+      name: "Designer Edition",
+      data: [64, 41, 76, 41, 113, 173],
+      color: brandSecondaryColor,
+    },
+  ],
+  chart: {
+    height: "100%",
+    maxWidth: "100%",
+    type: "area",
+    fontFamily: "Inter, sans-serif",
+    dropShadow: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
+  },
+  tooltip: {
+    enabled: true,
+    x: {
+      show: false,
+    },
+  },
+  legend: {
+    show: true
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      opacityFrom: 0.55,
+      opacityTo: 0,
+      shade: brandColor,
+      gradientToColors: [brandColor],
+    },
+  },
+  stroke: {
+    width: 6,
+  },
+  xaxis: {
+    categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: false,
+    labels: {
+      formatter: function (value) {
+        return '$' + value;
+      }
+    }
+  },
+  }
+
+  if (document.getElementById("data-labels-chart") && typeof ApexCharts !== 'undefined') {
+  const chart = new ApexCharts(document.getElementById("data-labels-chart"), options);
+  chart.render();
+  }
+});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">
@@ -2121,88 +2348,107 @@ chart.render();
 If you want to format and prefix your data with something such as a currency sign you can do that by using the `formatter` function. For example, here we use the euro ("€") sign instead of the dollar ("$").
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-const options = {
-// set the formatter callback function to format data
-yaxis: {
-  show: false,
-  labels: {
-    formatter: function (value) {
-      return '€' + value;
+window.addEventListener("load", function () {
+  // Get the CSS variable --color-brand and convert it to hex for ApexCharts
+  const getBrandColor = () => {
+    // Get the computed style of the document's root element
+    const computedStyle = getComputedStyle(document.documentElement);
+    console.log(computedStyle)
+    // Get the value of the --color-brand CSS variable
+    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+  };
+
+  const getBrandSecondaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+  };
+
+  const brandColor = getBrandColor();
+  const brandSecondaryColor = getBrandSecondaryColor();
+
+  const options = {
+  // set the formatter callback function to format data
+  yaxis: {
+    show: false,
+    labels: {
+      formatter: function (value) {
+        return '€' + value;
+      }
     }
-  }
-},
-chart: {
-  height: "100%",
-  maxWidth: "100%",
-  type: "area",
-  fontFamily: "Inter, sans-serif",
-  dropShadow: {
+  },
+  chart: {
+    height: "100%",
+    maxWidth: "100%",
+    type: "area",
+    fontFamily: "Inter, sans-serif",
+    dropShadow: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false,
+    },
+  },
+  tooltip: {
+    enabled: true,
+    x: {
+      show: false,
+    },
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      opacityFrom: 0.55,
+      opacityTo: 0,
+      shade: brandColor,
+      gradientToColors: [brandColor],
+    },
+  },
+  dataLabels: {
     enabled: false,
   },
-  toolbar: {
+  stroke: {
+    width: 6,
+  },
+  grid: {
     show: false,
+    strokeDashArray: 4,
+    padding: {
+      left: 2,
+      right: 2,
+      top: -26
+    },
   },
-},
-tooltip: {
-  enabled: true,
-  x: {
-    show: false,
+  series: [
+    {
+      name: "Developer Edition",
+      data: [1500, 1418, 1456, 1526, 1356, 1256],
+      color: brandColor,
+    },
+    {
+      name: "Designer Edition",
+      data: [643, 413, 765, 412, 1423, 1731],
+      color: brandSecondaryColor,
+    },
+  ],
+  xaxis: {
+    categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
   },
-},
-fill: {
-  type: "gradient",
-  gradient: {
-    opacityFrom: 0.55,
-    opacityTo: 0,
-    shade: "#1447E6",
-    gradientToColors: ["#1447E6"],
-  },
-},
-dataLabels: {
-  enabled: false,
-},
-stroke: {
-  width: 6,
-},
-grid: {
-  show: false,
-  strokeDashArray: 4,
-  padding: {
-    left: 2,
-    right: 2,
-    top: -26
-  },
-},
-series: [
-  {
-    name: "Developer Edition",
-    data: [1500, 1418, 1456, 1526, 1356, 1256],
-    color: "#1447E6",
-  },
-  {
-    name: "Designer Edition",
-    data: [643, 413, 765, 412, 1423, 1731],
-    color: "#AD46FF",
-  },
-],
-xaxis: {
-  categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
-  labels: {
-    show: false,
-  },
-  axisBorder: {
-    show: false,
-  },
-  axisTicks: {
-    show: false,
-  },
-},
-}
+  }
 
-if (document.getElementById("main-chart") && typeof ApexCharts !== 'undefined') {
-const chart = new ApexCharts(document.getElementById("main-chart"), options);
-chart.render();
-}
+  if (document.getElementById("main-chart") && typeof ApexCharts !== 'undefined') {
+  const chart = new ApexCharts(document.getElementById("main-chart"), options);
+  chart.render();
+  }
+});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">
@@ -2257,88 +2503,107 @@ chart.render();
 You can set the size (width and height) of the chart by passing the `width: {size}` and `height: {size}` options via JavaScript to the chart object using pixels or percentages:
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-const options = {
-  chart: {
-    // add these lines to update the size of the chart
-    height: 240,
-    width: 240,
-    type: "area",
-    fontFamily: "Inter, sans-serif",
-    dropShadow: {
+window.addEventListener("load", function () {
+  // Get the CSS variable --color-brand and convert it to hex for ApexCharts
+  const getBrandColor = () => {
+    // Get the computed style of the document's root element
+    const computedStyle = getComputedStyle(document.documentElement);
+    console.log(computedStyle)
+    // Get the value of the --color-brand CSS variable
+    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+  };
+
+  const getBrandSecondaryColor = () => {
+    const computedStyle = getComputedStyle(document.documentElement);
+    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+  };
+
+  const brandColor = getBrandColor();
+  const brandSecondaryColor = getBrandSecondaryColor();
+
+  const options = {
+    chart: {
+      // add these lines to update the size of the chart
+      height: 240,
+      width: 240,
+      type: "area",
+      fontFamily: "Inter, sans-serif",
+      dropShadow: {
+        enabled: false,
+      },
+      toolbar: {
+        show: false,
+      },
+    },
+    tooltip: {
+      enabled: true,
+      x: {
+        show: false,
+      },
+    },
+    fill: {
+      type: "gradient",
+      gradient: {
+        opacityFrom: 0.55,
+        opacityTo: 0,
+        shade: brandColor,
+        gradientToColors: [brandColor],
+      },
+    },
+    dataLabels: {
       enabled: false,
     },
-    toolbar: {
+    stroke: {
+      width: 6,
+    },
+    grid: {
       show: false,
+      strokeDashArray: 4,
+      padding: {
+        left: 2,
+        right: 2,
+        top: -26
+      },
     },
-  },
-  tooltip: {
-    enabled: true,
-    x: {
+    series: [
+      {
+        name: "Developer Edition",
+        data: [1500, 1418, 1456, 1526, 1356, 1256],
+        color: brandColor,
+      },
+      {
+        name: "Designer Edition",
+        data: [643, 413, 765, 412, 1423, 1731],
+        color: brandSecondaryColor,
+      },
+    ],
+    xaxis: {
+      categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
+      labels: {
+        show: false,
+      },
+      axisBorder: {
+        show: false,
+      },
+      axisTicks: {
+        show: false,
+      },
+    },
+    yaxis: {
       show: false,
-    },
-  },
-  fill: {
-    type: "gradient",
-    gradient: {
-      opacityFrom: 0.55,
-      opacityTo: 0,
-      shade: "#1447E6",
-      gradientToColors: ["#1447E6"],
-    },
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  stroke: {
-    width: 6,
-  },
-  grid: {
-    show: false,
-    strokeDashArray: 4,
-    padding: {
-      left: 2,
-      right: 2,
-      top: -26
-    },
-  },
-  series: [
-    {
-      name: "Developer Edition",
-      data: [1500, 1418, 1456, 1526, 1356, 1256],
-      color: "#1447E6",
-    },
-    {
-      name: "Designer Edition",
-      data: [643, 413, 765, 412, 1423, 1731],
-      color: "#AD46FF",
-    },
-  ],
-  xaxis: {
-    categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
-    labels: {
-      show: false,
-    },
-    axisBorder: {
-      show: false,
-    },
-    axisTicks: {
-      show: false,
-    },
-  },
-  yaxis: {
-    show: false,
-    labels: {
-      formatter: function (value) {
-        return '$' + value;
+      labels: {
+        formatter: function (value) {
+          return '$' + value;
+        }
       }
-    }
-  },
-}
+    },
+  }
 
-if (document.getElementById("size-chart") && typeof ApexCharts !== 'undefined') {
-  const chart = new ApexCharts(document.getElementById("size-chart"), options);
-  chart.render();
-}
+  if (document.getElementById("size-chart") && typeof ApexCharts !== 'undefined') {
+    const chart = new ApexCharts(document.getElementById("size-chart"), options);
+    chart.render();
+  }
+});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">

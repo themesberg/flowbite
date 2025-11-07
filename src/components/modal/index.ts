@@ -187,7 +187,7 @@ class Modal implements ModalInterface {
     }
 
     show() {
-        if (this.isHidden) {
+        if (this.isHidden()) {
             this._targetEl.classList.add('flex');
             this._targetEl.classList.remove('hidden');
             this._targetEl.setAttribute('aria-modal', 'true');
@@ -210,7 +210,7 @@ class Modal implements ModalInterface {
     }
 
     hide() {
-        if (this.isVisible) {
+        if (this.isVisible()) {
             this._targetEl.classList.add('hidden');
             this._targetEl.classList.remove('flex');
             this._targetEl.setAttribute('aria-hidden', 'true');

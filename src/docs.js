@@ -158,14 +158,8 @@ const initiateToggleCodeTabs = (element) => {
                 'data-clipboard-content-type',
                 'html'
             );
-            toggleHTMLCodeButton.classList.add(
-                '!bg-gray-200',
-                'dark:!bg-gray-700'
-            );
-            toggleJavaScriptCodeButton.classList.remove(
-                '!bg-gray-200',
-                'dark:!bg-gray-700'
-            );
+            toggleHTMLCodeButton.classList.add('!bg-neutral-tertiary');
+            toggleJavaScriptCodeButton.classList.remove('!bg-neutral-tertiary');
             expandCode(element);
         });
 
@@ -176,14 +170,8 @@ const initiateToggleCodeTabs = (element) => {
                 'data-clipboard-content-type',
                 'javascript'
             );
-            toggleHTMLCodeButton.classList.remove(
-                '!bg-gray-200',
-                'dark:!bg-gray-700'
-            );
-            toggleJavaScriptCodeButton.classList.add(
-                '!bg-gray-200',
-                'dark:!bg-gray-700'
-            );
+            toggleHTMLCodeButton.classList.remove('!bg-neutral-tertiary');
+            toggleJavaScriptCodeButton.classList.add('!bg-neutral-tertiary');
             expandCode(element);
         });
     }

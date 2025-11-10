@@ -61,7 +61,7 @@ Now you're ready to use the examples below by copying the HTML markup and the Ja
 
 Use this example of a WYSIWYG text editor to enable basic typography styling and formatting, adding lists, links, images, videos, code blocks, aligning text, blockquotes, setting headers and paragraphs and more.
 
-{{< example class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
 import Highlight from 'https://esm.sh/@tiptap/extension-highlight@2.6.6';
@@ -684,7 +684,7 @@ We recommend later checking the Tip Tap library for a proper update to prevent t
 
 Use this example of a WYSIWYG text editor to enable typography styling, formatting and marking such as underline, bold, italic, strikethrough, code, highlight and also selecting text size, color, font family and more using the utility classes from Tailwind CSS.
 
-{{< example class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
 import Highlight from 'https://esm.sh/@tiptap/extension-highlight@2.6.6';
@@ -1048,7 +1048,7 @@ window.addEventListener('load', function() {
 
 Enable text alignment to the left, center, right, and justify for the content inside of the WYSIWYG component.
 
-{{< example class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
 import Highlight from 'https://esm.sh/@tiptap/extension-highlight@2.6.6';
@@ -1157,7 +1157,7 @@ window.addEventListener('load', function() {
 
 Use this example to create typography elements like bullet lists, ordered lists, blockquotes, horizontal rules, paragraphs, headings, code blocks based on Tailwind CSS utility classees and the Flowbite API.
 
-{{< example class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
 
@@ -1357,7 +1357,7 @@ window.addEventListener('load', function() {
 
 Use this example to add and remove anchor links for the content inside of the WYSIWYG text editor.
 
-{{< example class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
 import Link from 'https://esm.sh/@tiptap/extension-link@2.6.6';
@@ -1433,7 +1433,7 @@ window.addEventListener('load', function() {
 
 Use this example to learn how to add images inside of the WYSIWYG text editor and configure settings such as the image URL, image alt attribute which is important for SEO and accessibility and the image title.
 
-{{< example class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
 import Image from 'https://esm.sh/@tiptap/extension-image@2.6.6';
@@ -1563,7 +1563,7 @@ window.addEventListener('load', function() {
 
 Use this example to embed videos inside the WYSIWYG text editor based on a YouTube URL source and set the width and height of the video by using the Flowbite modal component API.
 
-{{< example class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
 import YouTube from 'https://esm.sh/@tiptap/extension-youtube@2.6.6';
@@ -1692,7 +1692,7 @@ window.addEventListener('load', function() {
 
 Use this example to edit table data inside the WYSIWYG text editor by adding and removing table column, rows, and cells and use other features to navigate through the table data for a convenient editing process.
 
-{{< example class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
 import Table from 'https://esm.sh/@tiptap/extension-table@2.6.6';
@@ -2098,7 +2098,7 @@ window.addEventListener('load', function() {
 
 Use the history functionality from the WYSIWYG text editor component to integrate undo and redo actions.
 
-{{< example class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
 
@@ -2168,7 +2168,7 @@ window.addEventListener('load', function() {
 
 Use the `editor.getJSON()` and the `editor.getHTML()` functions to export the text content inside of the WYSIWYG text editor in JSON or raw HTML format to persist into your database or API structure.
 
-{{< example class="flex justify-center dark:bg-gray-900" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/wysiwyg.md" show_dark=true wysiwyg=true script_module=true  disable_init_js=true javascript=`
 import { Editor } from 'https://esm.sh/@tiptap/core@2.6.6';
 import StarterKit from 'https://esm.sh/@tiptap/starter-kit@2.6.6';
 

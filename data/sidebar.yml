@@ -44,12 +44,13 @@
   slug: customize
   pages:
       - title: Configuration
+      - title: Variables
+        new: true
       - title: Dark Mode
       - title: Theming
       - title: Colors
       - title: Icons
       - title: RTL
-        new: true
       - title: Optimization
 
 - title: Components

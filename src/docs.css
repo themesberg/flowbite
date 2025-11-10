@@ -104,7 +104,7 @@
 #mainContent > p > code,
 #mainContent > ul > li > code,
 #mainContent > ol > li > code {
-	@apply px-2 mx-1 py-1 rounded-base bg-neutral-tertiary-soft font-mono text-sm text-fg-brand break-all;
+	@apply px-2 mx-1 py-1 rounded-base bg-neutral-tertiary-soft font-mono text-sm text-fg-brand break-all inline-block;
 }
 
 #introContent {

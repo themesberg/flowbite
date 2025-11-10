@@ -13,6 +13,8 @@ nextLink: customize/colors/
 
 Since the release of Tailwind v4 the theming customization has been moved from the `tailwind.config.js` file to native CSS theme variables which brings an advantage that allows your project to have a much more natural way of customizing colors, fonts, shadows, spacings, and more.
 
+Check out the new [custom variables]({{< ref "customize/variables" >}}) from the Flowbite design system to make it easier to customize your project.
+
 ## Getting started
 
 Here's an example of a modified CSS file that sets a custom set of colors and fonts:
@@ -25,16 +27,15 @@ Here's an example of a modified CSS file that sets a custom set of colors and fo
 @source "../node_modules/flowbite";
 
 @theme {
-    --color-primary-50: #eff6ff;
-    --color-primary-100: #dbeafe;
-    --color-primary-200: #bfdbfe;
-    --color-primary-300: #93c5fd;
-    --color-primary-400: #60a5fa;
-    --color-primary-500: #3b82f6;
-    --color-primary-600: #2563eb;
-    --color-primary-700: #1d4ed8;
-    --color-primary-800: #1e40af;
-    --color-primary-900: #1e3a8a;
+    --color-fg-brand-subtle: var(--color-blue-200);
+    --color-fg-brand: var(--color-blue-700);
+    --color-fg-brand-strong: var(--color-blue-900);
+
+    --color-brand-softer: var(--color-blue-50);
+    --color-brand-soft: var(--color-blue-100);
+    --color-brand: var(--color-blue-700);
+    --color-brand-medium: var(--color-blue-200);
+    --color-brand-strong: var(--color-blue-800);
     
     --font-sans: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-body: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -42,7 +43,7 @@ Here's an example of a modified CSS file that sets a custom set of colors and fo
 }
 {{< /code >}}
 
-These variables will now create a new color pallette called `primary` that can be used as your main brand color and the fonts that will now use `Inter` by default.
+These variables will now create a new color pallette called `brand` that can be used as your main brand color and the fonts that will now use `Inter` by default.
 
 ## Flowbite Plugin
 
@@ -76,20 +77,19 @@ Updating or adding new colors can be done by using the `--color-{name}` variable
 @source "../node_modules/flowbite";
 
 @theme {
-    --color-primary-50: #eff6ff;
-    --color-primary-100: #dbeafe;
-    --color-primary-200: #bfdbfe;
-    --color-primary-300: #93c5fd;
-    --color-primary-400: #60a5fa;
-    --color-primary-500: #3b82f6;
-    --color-primary-600: #2563eb;
-    --color-primary-700: #1d4ed8;
-    --color-primary-800: #1e40af;
-    --color-primary-900: #1e3a8a;
+    --color-fg-brand-subtle: var(--color-blue-200);
+    --color-fg-brand: var(--color-blue-700);
+    --color-fg-brand-strong: var(--color-blue-900);
+
+    --color-brand-softer: var(--color-blue-50);
+    --color-brand-soft: var(--color-blue-100);
+    --color-brand: var(--color-blue-700);
+    --color-brand-medium: var(--color-blue-200);
+    --color-brand-strong: var(--color-blue-800);
 }
 {{< /code >}}
 
-This introduces a list of colors attributed to the `primary` variable name, meaning that utility class names such as `text-primary-600` or `bg-primary-600` will now show your custom branded color when using Tailwind.
+This introduces a list of colors attributed to the `brand` variable name, meaning that utility class names such as `text-brand` or `bg-brand` will now show your custom branded color when using Tailwind.
 
 ### Fonts
 

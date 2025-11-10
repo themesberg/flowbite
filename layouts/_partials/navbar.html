@@ -1,4 +1,4 @@
-<header class="fixed top-0 z-40 flex-none w-full mx-auto bg-neutral-primary border-b border-light-subtle border-brand">
+<header class="fixed top-0 z-40 flex-none w-full mx-auto bg-neutral-primary border-b border-light-subtle">
   <div
       id='banner'
       tabIndex='-1'
@@ -16,15 +16,15 @@
         </p>
       </div>
   </div>
-  <div class="flex items-center justify-between w-full px-3 py-3 mx-auto max-w-8xl lg:px-4">
+  <div class="flex items-center justify-between w-full px-3 py-3 mx-auto max-w-8xl xl:px-0">
     <div class="flex items-center">
       <div class="flex items-center">
         <button id="toggleSidebarMobile" aria-expanded="true" aria-controls="sidebar" class="p-2 mr-2 text-body rounded-sm cursor-pointer lg:hidden hover:text-heading hover:bg-neutral-secondary focus:ring-2 focus:ring-neutral-quaternary">
           <svg id="toggleSidebarMobileHamburger" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
           <svg id="toggleSidebarMobileClose" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </button>
-        <div class="flex items-center justify-between xl:w-56">
-          <a href="{{ .Site.Params.homepage }}/" class="flex">
+        <div class="flex items-center xl:w-56">
+          <a href="{{ .Site.Params.homepage }}/" class="flex me-3">
             <img src="/docs/images/logo.svg" class="h-7 mr-3 group-data-[theme=modern]/root:block hidden" alt="FlowBite Logo" />
             <img src="/docs/images/logo-minimal.svg" class="h-7 mr-3 group-data-[theme=minimal]/root:block hidden" alt="FlowBite Logo" />
             <img src="/docs/images/logo-enterprise.svg" class="h-7 mr-3 group-data-[theme=enterprise]/root:block hidden" alt="FlowBite Logo" />
@@ -32,6 +32,19 @@
             <img src="/docs/images/logo-mono.svg" class="h-7 mr-3 group-data-[theme=mono]/root:block hidden" alt="FlowBite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white leading-none">Flowbite</span>
           </a>
+          <button id="dropdownFlowbiteVersionButton" data-dropdown-toggle="dropdownFlowbiteVersion" class="inline-flex items-center justify-center text-fg-brand bg-brand-softer box-border border border-transparent hover:bg-brand-soft focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-xs px-2 py-0.5 focus:outline-none" type="button">
+            v4.0
+            <svg class="w-3 h-3 ms-1 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
+          </button>
+
+          <!-- Dropdown menu -->
+          <div id="dropdownFlowbiteVersion" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-28">
+              <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownFlowbiteVersionButton">
+                <li>
+                  <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">v3.1.2</a>
+                </li>
+              </ul>
+          </div>
         </div>
       </div>
       <div id="docsearch" class="hidden md:flex ml-6 xl:ml-[18px]"></div>

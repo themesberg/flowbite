@@ -73,61 +73,110 @@ This is the full list of color variables that are used for text colors:
 }
 {{< /code >}}
 
-These variables will now create a new color pallette called `primary` that can be used as your main brand color and the fonts that will now use `Inter` by default.
+## Background color variables
 
-## Flowbite Plugin
-
-After installing Flowbite, make sure that you also import the Flowbite plugin in your main CSS file:
+Use these variables to set the colors for the background of elements:
 
 {{< code lang="css" file="main.css" icon="file" >}}
-/* input.css file */
-@import "tailwindcss";
-
-@plugin "flowbite/plugin";
-@source "../node_modules/flowbite";
-{{< /code >}}
-
-This will ensure that the pseudo styles for forms, checkboxes, tooltips, charts, and datatables will be applied.
-
-## Theme options
-
-The best way to understand how theming works with Tailwind CSS is for example when you're adding a new color variable this will be available for all text, background, and border related colors. Basically the newly added color will propagate into all of the available utility classes.
-
-There are many more variable namespaces that you can use to customize the default utility classes from Tailwind CSS including for spacing, containers, fonts, sizing, and more.
-
-### Colors
-
-Updating or adding new colors can be done by using the `--color-{name}` variable namespaces:
-
-{{< code lang="css" file="main.css" icon="file" >}}
-/* input.css file */
 @import "tailwindcss";
 
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
 @theme {
-    --color-primary-50: #eff6ff;
-    --color-primary-100: #dbeafe;
-    --color-primary-200: #bfdbfe;
-    --color-primary-300: #93c5fd;
-    --color-primary-400: #60a5fa;
-    --color-primary-500: #3b82f6;
-    --color-primary-600: #2563eb;
-    --color-primary-700: #1d4ed8;
-    --color-primary-800: #1e40af;
-    --color-primary-900: #1e3a8a;
+    /* BACKGROUND COLOR VARIABLES */
+    /* used for neutral colors */
+    --color-neutral-primary-soft: var(--color-white);
+    --color-neutral-primary: var(--color-white);
+    --color-neutral-primary-medium: var(--color-white);
+    --color-neutral-primary-strong: var(--color-white);
+    --color-neutral-secondary-soft: var(--color-gray-50);
+    --color-neutral-secondary: var(--color-gray-50);
+    --color-neutral-secondary-medium: var(--color-gray-50);
+    --color-neutral-secondary-strong: var(--color-gray-50);
+    --color-neutral-secondary-strongest: var(--color-gray-50);
+    --color-neutral-tertiary-soft: var(--color-gray-100);
+    --color-neutral-tertiary: var(--color-gray-100);
+    --color-neutral-tertiary-medium: var(--color-gray-100);
+    --color-neutral-quaternary: var(--color-gray-200);
+    --color-neutral-quaternary-medium: var(--color-gray-200);
+    --color-gray: var(--color-gray-300);
+
+    /* used for brand colors */
+    --color-brand-softer: var(--color-blue-50);
+    --color-brand-soft: var(--color-blue-100);
+    --color-brand: var(--color-blue-700);
+    --color-brand-medium: var(--color-blue-200);
+    --color-brand-strong: var(--color-blue-800);
+
+    /* used for status colors */
+    --color-success-soft: var(--color-emerald-50);
+    --color-success: var(--color-emerald-700);
+    --color-success-medium: var(--color-emerald-100);
+    --color-success-strong: var(--color-emerald-800);
+    --color-danger-soft: var(--color-rose-50);
+    --color-danger: var(--color-rose-700);
+    --color-danger-medium: var(--color-rose-100);
+    --color-danger-strong: var(--color-rose-800);
+    --color-warning-soft: var(--color-orange-50);
+    --color-warning: var(--color-orange-500);
+    --color-warning-medium: var(--color-orange-100);
+    --color-warning-strong: var(--color-orange-700);
+    --color-dark-soft: var(--color-gray-800);
+    --color-dark: var(--color-gray-800);
+    --color-dark-strong: var(--color-gray-900);
+    --color-disabled: var(--color-gray-100);
+    --color-purple: var(--color-purple-500);
+    --color-sky: var(--color-sky-500);
+    --color-teal: var(--color-teal-600);
+    --color-pink: var(--color-pink-600);
+    --color-cyan: var(--color-cyan-500);
+    --color-fuchsia: var(--color-fuchsia-600);
+    --color-indigo: var(--color-indigo-600);
+    --color-orange: var(--color-orange-400);
 }
 {{< /code >}}
 
-This introduces a list of colors attributed to the `primary` variable name, meaning that utility class names such as `text-primary-600` or `bg-primary-600` will now show your custom branded color when using Tailwind.
+## Border color variables
 
-### Fonts
-
-You can add your own fonts by updating the `--font-body` variable in your CSS file.
+Use these variables to set the colors for the border of elements:
 
 {{< code lang="css" file="main.css" icon="file" >}}
-/* input.css file */
+@import "tailwindcss";
+
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+@theme {
+    /* BORDER COLOR VARIABLES */
+    --color-buffer: var(--color-white);
+    --color-buffer-medium: var(--color-white);
+    --color-buffer-strong: var(--color-white);
+    --color-muted: var(--color-gray-50);
+    --color-light-subtle: var(--color-gray-100);
+    --color-light: var(--color-gray-100);
+    --color-light-medium: var(--color-gray-100);
+    --color-default-subtle: var(--color-gray-200);
+    --color-default: var(--color-gray-200);
+    --color-default-medium: var(--color-gray-200);
+    --color-default-strong: var(--color-gray-200);
+
+    /* used for status colors */
+    --color-success-subtle: var(--color-emerald-200);
+    --color-danger-subtle: var(--color-rose-200);
+    --color-warning-subtle: var(--color-orange-200);
+    --color-brand-subtle: var(--color-blue-200);
+    --color-brand-light: var(--color-blue-600);
+    --color-dark-subtle: var(--color-gray-800);
+    --color-dark-backdrop: var(--color-gray-950);
+}
+{{< /code >}}
+
+## Font family variables
+
+Use these variables to set the font families for the text of elements:
+
+{{< code lang="css" file="main.css" icon="file" >}}
 @import "tailwindcss";
 
 @plugin "flowbite/plugin";
@@ -140,44 +189,24 @@ You can add your own fonts by updating the `--font-body` variable in your CSS fi
 }
 {{< /code >}}
 
-Make sure that you apply `antialiased` to the `<body>` tag of your document to enable font smoothing.
+## Border radius variables
 
-### Spacing
-
-Use the `spacing-{name}` variable namespace to set spacing values to utility class names used for setting widths, heights, paddings, margins, and more.
+Use these variables to set the border radius of elements:
 
 {{< code lang="css" file="main.css" icon="file" >}}
-/* input.css file */
 @import "tailwindcss";
 
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
 @theme {
-   --spacing-custom: 10px;
+    /* BORDER RADIUS VARIABLES */
+    --radius-0: 0px;
+    --radius-xxs: 2px;
+    --radius-xs: 4px;
+    --radius-sm: 6px;
+    --radius: 8px;
+    --radius-base: 12px;
+    --radius-lg: 16px;
 }
 {{< /code >}}
-
-### Breakpoints
-
-You can customize the breakpoints at which the reponsive mobile-first utility classes are being targeted using the `--breakpoint-{size}` variable namespaces in your main CSS file:
-
-{{< code lang="css" file="main.css" icon="file" >}}
-/* input.css file */
-@import "tailwindcss";
-
-@plugin "flowbite/plugin";
-@source "../node_modules/flowbite";
-
-@theme {
-  --breakpoint-xs: 30rem;
-  --breakpoint-2xl: 100rem;
-  --breakpoint-3xl: 120rem;
-}
-{{< /code >}}
-
-This will make `p-custom` or `w-custom` have the value of `10px` as explained above.
-
-## Reference
-
-You can read all of the configurable variable namespaces on the <a href="https://tailwindcss.com/docs/theme#theme-variable-namespaces" target="_blank" rel="nofollow">Tailwind CSS docs</a>.

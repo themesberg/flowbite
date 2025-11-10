@@ -3,10 +3,9 @@
     --font-body: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-mono: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace';
 
+    /* TEXT VARIABLES */
     --text-2xs: 0.625rem;
     --spacing-8xl: 90rem;
-    
-    /* Flowbite variables */
     --leading-9: 36px; /* rem pls */
     --leading-7: 28px;
     --leading-8: 32px;
@@ -18,7 +17,7 @@
     --leading-heading-none: 60px;
     --tracking-tight: -0.4px;
 
-    /* radius variables */
+    /* BORDER RADIUS VARIABLES */
     --radius-0: 0px;
     --radius-xxs: 2px;
     --radius-xs: 4px;
@@ -27,31 +26,31 @@
     --radius-base: 12px; 
     --radius-lg: 16px;
 
-    /* border width variables */
+    /* BORDER WIDTH VARIABLES */
     --default-border-width: 1px;
 
     /* TEXT COLORS VARIABLES */
     /* main text color */
-    --color-body: var(--color-stone-600);
-    --color-body-subtle: var(--color-stone-500);
+    --color-body: var(--color-gray-600);
+    --color-body-subtle: var(--color-gray-500);
 
     /* text heading colors */
-    --color-heading: var(--color-stone-900);
+    --color-heading: var(--color-gray-900);
 
     /* used for custom brand colors */
-    --color-fg-brand-subtle: var(--color-stone-200);
-    --color-fg-brand: var(--color-stone-950);
-    --color-fg-brand-strong: var(--color-stone-900);
+    --color-fg-brand-subtle: var(--color-blue-200);
+    --color-fg-brand: var(--color-blue-700);
+    --color-fg-brand-strong: var(--color-blue-900);
 
     /* used for status colors */
-    --color-fg-success: var(--color-green-700);
-    --color-fg-success-strong: var(--color-green-900);
-    --color-fg-danger: var(--color-red-700);
-    --color-fg-danger-strong: var(--color-red-900);
+    --color-fg-success: var(--color-emerald-700);
+    --color-fg-success-strong: var(--color-emerald-900);
+    --color-fg-danger: var(--color-rose-700);
+    --color-fg-danger-strong: var(--color-rose-900);
     --color-fg-warning-subtle: var(--color-orange-600);
     --color-fg-warning: var(--color-orange-900);
     --color-fg-yellow: var(--color-yellow-400);
-    --color-fg-disabled: var(--color-stone-400);
+    --color-fg-disabled: var(--color-gray-400);
     --color-fg-purple: var(--color-purple-600);
     --color-fg-cyan: var(--color-cyan-600);
     --color-fg-indigo: var(--color-indigo-600);
@@ -59,6 +58,7 @@
     --color-fg-lime: var(--color-lime-600);
 
     /* BACKGROUND COLOR VARIABLES */
+    /* used for neutral colors */
     --color-neutral-primary-soft: var(--color-white);
     --color-neutral-primary: var(--color-white);
     --color-neutral-primary-medium: var(--color-white);
@@ -74,11 +74,15 @@
     --color-neutral-quaternary: var(--color-gray-200);
     --color-neutral-quaternary-medium: var(--color-gray-200);
     --color-gray: var(--color-gray-300);
+
+    /* used for brand colors */
     --color-brand-softer: var(--color-blue-50);
     --color-brand-soft: var(--color-blue-100);
     --color-brand: var(--color-blue-700);
     --color-brand-medium: var(--color-blue-200);
     --color-brand-strong: var(--color-blue-800);
+
+    /* used for status colors */
     --color-success-soft: var(--color-emerald-50);
     --color-success: var(--color-emerald-700);
     --color-success-medium: var(--color-emerald-100);
@@ -104,7 +108,7 @@
     --color-indigo: var(--color-indigo-600);
     --color-orange: var(--color-orange-400);
 
-    /* border color variables */
+    /* BORDER COLOR VARIABLES */
     --color-buffer: var(--color-white);
     --color-buffer-medium: var(--color-white);
     --color-buffer-strong: var(--color-white);
@@ -116,6 +120,8 @@
     --color-default: var(--color-gray-200);
     --color-default-medium: var(--color-gray-200);
     --color-default-strong: var(--color-gray-200);
+
+    /* used for status colors */
     --color-success-subtle: var(--color-emerald-200);
     --color-danger-subtle: var(--color-rose-200);
     --color-warning-subtle: var(--color-orange-200);

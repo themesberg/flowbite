@@ -198,7 +198,7 @@
 /* Search */
 
 .DocSearch.DocSearch-Button {
-	@apply p-3 m-0 md:w-52 border-buffer items-center justify-center focus:outline-none focus:ring-4 focus:ring-neutral-tertiary md:justify-between h-[36px] w-[36px] md:bg-neutral-secondary-soft bg-neutral-primary rounded-base border md:border-default md:border-solid shadow-none xl:pl-3 flex hover:bg-neutral-tertiary xl:w-64 hover:shadow-none focus:shadow-none;
+	@apply p-3 m-0 md:w-32 border-buffer items-center justify-center focus:outline-none focus:ring-4 focus:ring-neutral-tertiary md:justify-between h-[36px] w-[36px] md:bg-neutral-secondary-soft bg-neutral-primary rounded-base border md:border-default md:border-solid shadow-none xl:pl-3 flex hover:bg-neutral-tertiary xl:w-64 hover:shadow-none focus:shadow-none;
 }
 
 .DocSearch-Button-Placeholder {
@@ -230,7 +230,7 @@
 }
 
 .DocSearch-Button .DocSearch-Search-Icon {
-	@apply text-body;
+	@apply text-body w-4 h-4;
 }
 .DocSearch-Hits mark {
 	@apply text-fg-brand dark:text-white decoration-2 underline-offset-2 decoration-brand dark:decoration-white;
@@ -245,7 +245,7 @@
 }
 
 .DocSearch-Container {
-	@apply bg-gray-900/50 dark:bg-gray-900/80;
+	@apply bg-dark/50 dark:bg-dark/80;
 }
 
 .DocSearch-Modal {

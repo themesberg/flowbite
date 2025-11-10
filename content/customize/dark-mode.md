@@ -5,8 +5,8 @@ description: Learn how to configure and build a dark mode switcher for Tailwind 
 group: customize
 toc: true
 
-previous: Configuration
-previousLink: customize/configuration/
+previous: Variables
+previousLink: customize/variables/
 next: Theming
 nextLink: customize/theming/
 ---

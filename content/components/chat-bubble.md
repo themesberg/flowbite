@@ -72,7 +72,7 @@ This example can be used to show a voice note message with control buttons and a
          <button class="inline-flex self-center items-center text-body hover:text-heading" type="button">
             <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
          </button>
-         <svg aria-hidden="true" class="w-[145px] md:w-[185px] md:h-[40px] text-brand" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <svg aria-hidden="true" class="w-[145px] md:w-[185px] md:h-[40px] text-fg-brand" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="17" width="3" height="6" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
             <rect x="7" y="15.5" width="3" height="9" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
             <rect x="21" y="6.5" width="3" height="27" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
@@ -465,7 +465,7 @@ This example can be used to show a voice note with the user profile and timestam
                <button class="inline-flex self-center items-center text-body hover:text-heading" type="button">
                   <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
                </button>
-               <svg aria-hidden="true" class="w-[145px] md:w-[185px] md:h-[40px] text-brand" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <svg aria-hidden="true" class="w-[145px] md:w-[185px] md:h-[40px] text-fg-brand" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect y="17" width="3" height="6" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
                   <rect x="7" y="15.5" width="3" height="9" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
                   <rect x="21" y="6.5" width="3" height="27" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
@@ -837,7 +837,7 @@ This example can be used to show a voice note with a transparent background.
                <button class="inline-flex self-center items-center text-body hover:text-heading" type="button">
                   <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
                </button>
-               <svg aria-hidden="true" class="w-[145px] md:w-[185px] md:h-[40px] text-brand" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <svg aria-hidden="true" class="w-[145px] md:w-[185px] md:h-[40px] text-fg-brand" viewBox="0 0 185 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect y="17" width="3" height="6" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
                   <rect x="7" y="15.5" width="3" height="9" rx="1.5" fill="#6B7280" class="dark:fill-white"/>
                   <rect x="21" y="6.5" width="3" height="27" rx="1.5" fill="#6B7280" class="dark:fill-white"/>

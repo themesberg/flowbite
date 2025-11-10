@@ -233,7 +233,7 @@
 	@apply text-body;
 }
 .DocSearch-Hits mark {
-	@apply text-brand dark:text-white decoration-2 underline-offset-2 decoration-brand dark:decoration-white;
+	@apply text-fg-brand dark:text-white decoration-2 underline-offset-2 decoration-brand dark:decoration-white;
 }
 
 .DocSearch-Hit[aria-selected=true] a {

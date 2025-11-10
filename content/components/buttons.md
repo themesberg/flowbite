@@ -232,7 +232,7 @@ Pay with Ethereum
 Use the following button styles to show the colors only for the border of the element.
 
 {{< example class="flex flex-wrap gap-2.5" github="components/buttons.md" show_dark=true >}}
-<button type="button" class="text-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Brand</button>
+<button type="button" class="text-fg-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Brand</button>
 <button type="button" class="text-body bg-neutral-primary border border-default hover:bg-neutral-secondary-soft hover:text-heading focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Gray</button>
 <button type="button" class="text-success bg-neutral-primary border border-success hover:bg-success hover:text-white focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Success</button>
 <button type="button" class="text-danger bg-neutral-primary border border-danger hover:bg-danger hover:text-white focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Danger</button>
@@ -256,11 +256,11 @@ Use these examples if you want to use smaller or larger buttons.
 Use these examples if you want to use smaller or larger buttons with outline style.
 
 {{< example class="space-x-2 space-y-2" github="components/buttons.md" show_dark=true >}}
-<button type="button" class="text-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none">Extra small</button>
-<button type="button" class="text-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium leading-5 rounded-base text-xs px-3 py-2 focus:outline-none">Small</button>
-<button type="button" class="text-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Base</button>
-<button type="button" class="text-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium rounded-base text-base px-5 py-3 focus:outline-none">Large</button>
-<button type="button" class="text-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium rounded-base text-base px-6 py-3.5 focus:outline-none">Extra large</button>
+<button type="button" class="text-fg-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium leading-5 rounded-base text-xs px-3 py-1.5 focus:outline-none">Extra small</button>
+<button type="button" class="text-fg-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium leading-5 rounded-base text-xs px-3 py-2 focus:outline-none">Small</button>
+<button type="button" class="text-fg-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Base</button>
+<button type="button" class="text-fg-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium rounded-base text-base px-5 py-3 focus:outline-none">Large</button>
+<button type="button" class="text-fg-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle font-medium rounded-base text-base px-6 py-3.5 focus:outline-none">Extra large</button>
 {{< /example >}}
 
 ## Button sizes with icon
@@ -326,7 +326,7 @@ This example can be used to show a notification count or helper text inside a bu
 {{< example class="flex" github="components/buttons.md" show_dark=true >}}
 <button type="button" class="inline-flex items-center  text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
 Messages
-<span class="inline-flex items-center justify-center w-4.5 h-4.5 ms-2 text-xs font-medium text-brand-strong bg-brand-soft rounded-full dark:text-fg-brand-subtle">2</span>
+<span class="inline-flex items-center justify-center w-4.5 h-4.5 ms-2 text-xs font-medium text-fg-brand-strong bg-brand-soft rounded-full dark:text-fg-brand-subtle">2</span>
 </button>
 {{< /example >}}
 
@@ -354,19 +354,19 @@ Sometimes you need a button to indicate an action using only an icon.
 <span class="sr-only">Icon description</span>
 </button>
 
-<button type="button" class="inline-flex items-center justify-center  text-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle rounded-base w-8 h-8 focus:outline-none">
+<button type="button" class="inline-flex items-center justify-center  text-fg-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle rounded-base w-8 h-8 focus:outline-none">
 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/>
 </svg>
 <span class="sr-only">Icon description</span>
 </button>
-<button type="button" class="inline-flex items-center justify-center  text-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle rounded-base w-9 h-9 focus:outline-none">
+<button type="button" class="inline-flex items-center justify-center  text-fg-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle rounded-base w-9 h-9 focus:outline-none">
 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/>
 </svg>
 <span class="sr-only">Icon description</span>
 </button>
-<button type="button" class="inline-flex items-center justify-center  text-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle rounded-base w-10 h-10 focus:outline-none">
+<button type="button" class="inline-flex items-center justify-center  text-fg-brand bg-neutral-primary border border-brand hover:bg-brand hover:text-white focus:ring-4 focus:ring-brand-subtle rounded-base w-10 h-10 focus:outline-none">
 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/>
 </svg>

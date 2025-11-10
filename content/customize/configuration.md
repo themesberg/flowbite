@@ -7,8 +7,8 @@ toc: true
 
 previous: HUGO
 previousLink: getting-started/hugo/
-next: Dark mode
-nextLink: customize/dark-mode/
+next: Variables
+nextLink: customize/variables/
 ---
 
 Since the release of Tailwind v4, the configuration file that you've previously used to set options has now been moved to your main CSS file where you can import modules, plugins, set new variables like colors and fonts, set the custom source files, and more.

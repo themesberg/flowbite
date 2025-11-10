@@ -89,7 +89,7 @@ Updating or adding new colors can be done by using the `--color-{name}` variable
 }
 {{< /code >}}
 
-This introduces a list of colors attributed to the `brand` variable name, meaning that utility class names such as `text-brand` or `bg-brand` will now show your custom branded color when using Tailwind.
+This introduces a list of colors attributed to the `brand` variable name, meaning that utility class names such as `text-fg-brand` or `bg-brand` will now show your custom branded color when using Tailwind.
 
 ### Fonts
 

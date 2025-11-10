@@ -595,7 +595,7 @@ window.addEventListener('load', () => {
         el.classList.remove(
             '!border-brand',
             '!after:opacity-100',
-            '!text-brand',
+            '!text-fg-brand',
             'dark:!border-fg-brand',
             'dark:!text-fg-brand'
         );
@@ -609,7 +609,7 @@ window.addEventListener('load', () => {
         el.classList.add(
             '!border-brand',
             '!after:opacity-100',
-            '!text-brand',
+            '!text-fg-brand',
             'dark:!border-fg-brand',
             'dark:!text-fg-brand'
         );

@@ -2,12 +2,13 @@
 layout: docs
 title: Tailwind CSS Variables - Flowbite
 description: Learn how to use the custom variables from Tailwind CSS to theme your project based on the additional theme variables provided by Flowbite
+group: customize
 toc: true
 
-previous: Dark mode
-previousLink: customize/dark-mode/
-next: Colors
-nextLink: customize/colors/
+previous: Configuration
+previousLink: customize/configuration/
+next: Dark mode
+nextLink: customize/dark-mode/
 ---
 
 Since the `v4` release of Flowbite we introduced five new themes: modern, minimal, enterprise, playful, and mono. These themes are available as CSS variables that can be used to customize the default theme of Flowbite with the least amount of color variables.

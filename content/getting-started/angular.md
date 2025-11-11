@@ -94,8 +94,17 @@ npm install flowbite --save
 
 2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-{{< code lang="css" file="input.css" icon="file" >}}
+{{< code lang="css" icon="file" file="input.css" >}}
+/* choose one of the following */
+
 @import "flowbite/src/themes/default";
+
+/*
+@import "flowbite/src/themes/minimal";
+@import "flowbite/src/themes/enterprise";
+@import "flowbite/src/themes/playful";
+@import "flowbite/src/themes/mono";
+*/
 {{< /code >}}
 
 3. Import the Flowbite plugin file in your CSS:

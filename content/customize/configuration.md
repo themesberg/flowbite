@@ -30,16 +30,17 @@ Here's an example of a simple configuration where we import plugins, set the sou
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --color-primary-50: #eff6ff;
-    --color-primary-100: #dbeafe;
-    --color-primary-200: #bfdbfe;
-    --color-primary-300: #93c5fd;
-    --color-primary-400: #60a5fa;
-    --color-primary-500: #3b82f6;
-    --color-primary-600: #2563eb;
-    --color-primary-700: #1d4ed8;
-    --color-primary-800: #1e40af;
-    --color-primary-900: #1e3a8a;
+    /* main text color */
+    --color-body: var(--color-stone-600);
+    --color-body-subtle: var(--color-stone-500);
+
+    /* text heading colors */
+    --color-heading: var(--color-stone-900);
+
+    /* used for custom brand colors */
+    --color-fg-brand-subtle: var(--color-stone-200);
+    --color-fg-brand: var(--color-stone-950);
+    --color-fg-brand-strong: var(--color-stone-900);
     
     --font-sans: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-body: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -61,16 +62,17 @@ You can customize colors, fonts, spacings, and other styles using native variabl
 @source "../node_modules/flowbite";
 
 @theme {
-    --color-primary-50: #eff6ff;
-    --color-primary-100: #dbeafe;
-    --color-primary-200: #bfdbfe;
-    --color-primary-300: #93c5fd;
-    --color-primary-400: #60a5fa;
-    --color-primary-500: #3b82f6;
-    --color-primary-600: #2563eb;
-    --color-primary-700: #1d4ed8;
-    --color-primary-800: #1e40af;
-    --color-primary-900: #1e3a8a;
+    /* main text color */
+    --color-body: var(--color-stone-600);
+    --color-body-subtle: var(--color-stone-500);
+
+    /* text heading colors */
+    --color-heading: var(--color-stone-900);
+
+    /* used for custom brand colors */
+    --color-fg-brand-subtle: var(--color-stone-200);
+    --color-fg-brand: var(--color-stone-950);
+    --color-fg-brand-strong: var(--color-stone-900);
 
     --font-sans: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-body: 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';

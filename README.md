@@ -53,25 +53,40 @@ Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" target="
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
-```bash
+```
 npm install flowbite
 ```
 
-2. Import Flowbite as a plugin inside your main Tailwind CSS file:
+2. Import the default theme variables from Flowbite inside your main `input.css` CSS file:
 
-```javascript
+```
+/* choose one of the following */
+
+@import "flowbite/src/themes/default";
+
+/*
+@import "flowbite/src/themes/minimal";
+@import "flowbite/src/themes/enterprise";
+@import "flowbite/src/themes/playful";
+@import "flowbite/src/themes/mono";
+*/
+```
+
+3. Import the Flowbite plugin file in your CSS:
+
+```
 @plugin "flowbite/plugin";
 ```
 
-3. Make sure that you add the Flowbite JS source files to your CSS file:
+4. Configure the source files of Flowbite in your CSS:
 
-```bash
+```
 @source "../node_modules/flowbite";
 ```
 
-4. Include the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
+5. Include the JavaScript code that powers the interactive elements before the end of your `<body>` tag:
 
-```html
+```
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 ```
 

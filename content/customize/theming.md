@@ -17,6 +17,18 @@ Check out the new [custom variables]({{< ref "customize/variables" >}}) from the
 
 ## Getting started
 
+As we introduced custom themes with Flowbite v4 you can now import either one in your `input.css` file:
+
+{{< code lang="css" icon="file" file="input.css" >}}
+/* choose one of the following */
+
+@import "flowbite/src/themes/default";
+@import "flowbite/src/themes/minimal";
+@import "flowbite/src/themes/enterprise";
+@import "flowbite/src/themes/playful";
+@import "flowbite/src/themes/mono";
+{{< /code >}}
+
 Here's an example of a modified CSS file that sets a custom set of colors and fonts:
 
 {{< code lang="css" file="main.css" icon="file" >}}

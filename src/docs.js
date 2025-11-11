@@ -5,8 +5,6 @@ import { createCssVariablesTheme } from 'shiki/core';
 
 const codeBlockElements = document.getElementsByClassName('shiki-code-block');
 
-console.log(codeBlockElements);
-
 const customShikiTheme = createCssVariablesTheme({
     name: 'custom-theme',
     variablePrefix: '--shiki-',
@@ -18,7 +16,6 @@ const customShikiTheme = createCssVariablesTheme({
 Array.from(codeBlockElements).forEach(async (e) => {
     // Get the text content instead of innerHTML to preserve HTML entities
     const code = e.textContent;
-    console.log(code);
     const language = e.getAttribute('data-language');
     const html = await codeToHtml(code, {
         lang: language,
@@ -411,7 +408,6 @@ const updateiFrameTheme = (iframeEl, themeAttribute) => {
                 'data-theme',
                 themeAttribute
             );
-            // reload
             console.log('Updated iframe theme attribute:', themeAttribute);
             return true;
         }
@@ -697,8 +693,6 @@ const applyCssTheme = (themeName) => {
     setTimeout(() => {
         document.documentElement.classList.remove('theme-transition');
     }, 100);
-
-    console.log('Applied theme:', themeName);
 };
 
 // Load saved CSS theme on page load

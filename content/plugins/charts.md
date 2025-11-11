@@ -50,7 +50,7 @@ window.addEventListener("load", function () {
 const getBrandColor = () => {
   // Get the computed style of the document's root element
   const computedStyle = getComputedStyle(document.documentElement);
-  console.log(computedStyle)
+  
   // Get the value of the --color-brand CSS variable
   return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
 };
@@ -188,7 +188,7 @@ window.addEventListener("load", function () {
   const getBrandColor = () => {
     // Get the computed style of the document's root element
     const computedStyle = getComputedStyle(document.documentElement);
-    console.log(computedStyle)
+    
     // Get the value of the --color-brand CSS variable
     return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
   };
@@ -368,7 +368,7 @@ window.addEventListener("load", function () {
   const getBrandColor = () => {
     // Get the computed style of the document's root element
     const computedStyle = getComputedStyle(document.documentElement);
-    console.log(computedStyle)
+    
     // Get the value of the --color-brand CSS variable
     return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
   };
@@ -735,7 +735,7 @@ window.addEventListener("load", function () {
   const getBrandColor = () => {
     // Get the computed style of the document's root element
     const computedStyle = getComputedStyle(document.documentElement);
-    console.log(computedStyle)
+    
     // Get the value of the --color-brand CSS variable
     return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
   };
@@ -955,7 +955,7 @@ window.addEventListener("load", function () {
   const getBrandColor = () => {
     // Get the computed style of the document's root element
     const computedStyle = getComputedStyle(document.documentElement);
-    console.log(computedStyle)
+    
     // Get the value of the --color-brand CSS variable
     return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
   };
@@ -1193,7 +1193,7 @@ window.addEventListener("load", function () {
   const getBrandColor = () => {
     // Get the computed style of the document's root element
     const computedStyle = getComputedStyle(document.documentElement);
-    console.log(computedStyle)
+    
     // Get the value of the --color-brand CSS variable
     return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
   };
@@ -1400,7 +1400,7 @@ window.addEventListener("load", function () {
   const getBrandColor = () => {
     // Get the computed style of the document's root element
     const computedStyle = getComputedStyle(document.documentElement);
-    console.log(computedStyle)
+    
     // Get the value of the --color-brand CSS variable
     return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
   };
@@ -1558,7 +1558,7 @@ window.addEventListener("load", function () {
   const getBrandColor = () => {
     // Get the computed style of the document's root element
     const computedStyle = getComputedStyle(document.documentElement);
-    console.log(computedStyle)
+    
     // Get the value of the --color-brand CSS variable
     return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
   };
@@ -1723,7 +1723,7 @@ window.addEventListener("load", function () {
   const getBrandColor = () => {
     // Get the computed style of the document's root element
     const computedStyle = getComputedStyle(document.documentElement);
-    console.log(computedStyle)
+    
     // Get the value of the --color-brand CSS variable
     return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
   };
@@ -1884,7 +1884,7 @@ window.addEventListener("load", function () {
   const getBrandColor = () => {
     // Get the computed style of the document's root element
     const computedStyle = getComputedStyle(document.documentElement);
-    console.log(computedStyle)
+    
     // Get the value of the --color-brand CSS variable
     return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
   };
@@ -2045,7 +2045,7 @@ window.addEventListener("load", function () {
   const getBrandColor = () => {
     // Get the computed style of the document's root element
     const computedStyle = getComputedStyle(document.documentElement);
-    console.log(computedStyle)
+    
     // Get the value of the --color-brand CSS variable
     return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
   };
@@ -2203,7 +2203,7 @@ window.addEventListener("load", function () {
   const getBrandColor = () => {
     // Get the computed style of the document's root element
     const computedStyle = getComputedStyle(document.documentElement);
-    console.log(computedStyle)
+    
     // Get the value of the --color-brand CSS variable
     return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
   };
@@ -2365,7 +2365,7 @@ window.addEventListener("load", function () {
   const getBrandColor = () => {
     // Get the computed style of the document's root element
     const computedStyle = getComputedStyle(document.documentElement);
-    console.log(computedStyle)
+    
     // Get the value of the --color-brand CSS variable
     return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
   };
@@ -2520,7 +2520,7 @@ window.addEventListener("load", function () {
   const getBrandColor = () => {
     // Get the computed style of the document's root element
     const computedStyle = getComputedStyle(document.documentElement);
-    console.log(computedStyle)
+    
     // Get the value of the --color-brand CSS variable
     return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
   };

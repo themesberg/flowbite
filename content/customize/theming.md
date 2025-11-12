@@ -22,11 +22,27 @@ As we introduced custom themes with Flowbite v4 you can now import either one in
 {{< code lang="css" icon="file" file="input.css" >}}
 /* choose one of the following */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "flowbite/src/themes/default";
+
+/* MINIMAL THEME
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "flowbite/src/themes/minimal";
+*/
+
+/* ENTERPRISE THEME
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "flowbite/src/themes/enterprise";
+*/
+
+/* PLAYFUL THEME
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
 @import "flowbite/src/themes/playful";
+*/
+
+/* MONO THEME
 @import "flowbite/src/themes/mono";
+*/
 {{< /code >}}
 
 Here's an example of a modified CSS file that sets a custom set of colors and fonts:

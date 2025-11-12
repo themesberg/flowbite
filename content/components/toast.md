@@ -200,7 +200,7 @@ This example can be used to show a notification as a toast component with an ill
 
 {{< example class="flex justify-center" github="components/toast.md" show_dark=true >}}
 
-<div id="toast-illustration" class="w-full space-y-4 max-w-xs p-3 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default" role="alert">
+<div id="toast-illustration" class="w-full space-y-4 max-w-sm p-3 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default" role="alert">
     <div class="flex items-start">
         <img src="/docs/images/illustrations/smartphone-application-features.svg" class="dark:hidden w-24 h-auto max-w-full" alt="Smartphone application features">
         <img src="/docs/images/illustrations/smartphone-application-features-dark.svg" class="hidden w-24 h-auto dark:block" alt="Smartphone application features">

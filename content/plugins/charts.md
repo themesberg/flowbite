@@ -181,102 +181,100 @@ if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') 
 To create a double line chart check the example below by setting the chart type to `type: "line"` and copy the HTML markup and JS options to automatically style and populate the chart with data:
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-window.addEventListener("load", function () {
-  // Get the CSS variable --color-brand and convert it to hex for ApexCharts
-  const getBrandColor = () => {
-    // Get the computed style of the document's root element
-    const computedStyle = getComputedStyle(document.documentElement);
-    
-    // Get the value of the --color-brand CSS variable
-    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
-  };
+// Get the CSS variable --color-brand and convert it to hex for ApexCharts
+const getBrandColor = () => {
+  // Get the computed style of the document's root element
+  const computedStyle = getComputedStyle(document.documentElement);
+  
+  // Get the value of the --color-brand CSS variable
+  return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+};
 
-  const getBrandSecondaryColor = () => {
-    const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
-  };
+const getBrandSecondaryColor = () => {
+  const computedStyle = getComputedStyle(document.documentElement);
+  return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+};
 
-  const brandColor = getBrandColor();
-  const brandSecondaryColor = getBrandSecondaryColor();
+const brandColor = getBrandColor();
+const brandSecondaryColor = getBrandSecondaryColor();
 
-  const options = {
-    chart: {
-      height: "100%",
-      maxWidth: "100%",
-      type: "line",
-      fontFamily: "Inter, sans-serif",
-      dropShadow: {
-        enabled: false,
-      },
-      toolbar: {
-        show: false,
-      },
-    },
-    tooltip: {
-      enabled: true,
-      x: {
-        show: false,
-      },
-    },
-    dataLabels: {
+const options = {
+  chart: {
+    height: "100%",
+    maxWidth: "100%",
+    type: "line",
+    fontFamily: "Inter, sans-serif",
+    dropShadow: {
       enabled: false,
     },
-    stroke: {
-      width: 6,
-    },
-    grid: {
-      show: true,
-      strokeDashArray: 4,
-      padding: {
-        left: 2,
-        right: 2,
-        top: -26
-      },
-    },
-    series: [
-      {
-        name: "Clicks",
-        data: [6500, 6418, 6456, 6526, 6356, 6456],
-        color: brandColor,
-      },
-      {
-        name: "CPC",
-        data: [6456, 6356, 6526, 6332, 6418, 6500],
-        color: brandSecondaryColor,
-      },
-    ],
-    legend: {
-      show: false
-    },
-    stroke: {
-      curve: 'smooth'
-    },
-    xaxis: {
-      categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
-      labels: {
-        show: true,
-        style: {
-          fontFamily: "Inter, sans-serif",
-          cssClass: 'text-xs font-normal fill-body'
-        }
-      },
-      axisBorder: {
-        show: false,
-      },
-      axisTicks: {
-        show: false,
-      },
-    },
-    yaxis: {
+    toolbar: {
       show: false,
     },
-  }
+  },
+  tooltip: {
+    enabled: true,
+    x: {
+      show: false,
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    width: 6,
+  },
+  grid: {
+    show: true,
+    strokeDashArray: 4,
+    padding: {
+      left: 2,
+      right: 2,
+      top: -26
+    },
+  },
+  series: [
+    {
+      name: "Clicks",
+      data: [6500, 6418, 6456, 6526, 6356, 6456],
+      color: brandColor,
+    },
+    {
+      name: "CPC",
+      data: [6456, 6356, 6526, 6332, 6418, 6500],
+      color: brandSecondaryColor,
+    },
+  ],
+  legend: {
+    show: false
+  },
+  stroke: {
+    curve: 'smooth'
+  },
+  xaxis: {
+    categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
+    labels: {
+      show: true,
+      style: {
+        fontFamily: "Inter, sans-serif",
+        cssClass: 'text-xs font-normal fill-body'
+      }
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: false,
+  },
+}
 
-  if (document.getElementById("line-chart") && typeof ApexCharts !== 'undefined') {
-    const chart = new ApexCharts(document.getElementById("line-chart"), options);
-    chart.render();
-  }
-});
+if (document.getElementById("line-chart") && typeof ApexCharts !== 'undefined') {
+  const chart = new ApexCharts(document.getElementById("line-chart"), options);
+  chart.render();
+}
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between mb-4 md:mb-6">
@@ -361,7 +359,6 @@ window.addEventListener("load", function () {
 You can represent multiple data entries using columns by setting the `type: "bar"` option and also by updating the `horizontal` key value to `false` in JavaScript to adjust them vertically as columns:
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -488,7 +485,6 @@ window.addEventListener("load", function () {
     const chart = new ApexCharts(document.getElementById("column-chart"), options);
     chart.render();
   }
-});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between pb-4 mb-4 border-b border-light">
@@ -728,7 +724,6 @@ if(document.getElementById("bar-chart") && typeof ApexCharts !== 'undefined') {
 Create a pie chart with multiple data series by setting the `type: "pie"` chart type option via JavaScript and copy the following HTML markup code and options from below:
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -820,7 +815,6 @@ window.addEventListener("load", function () {
     const chart = new ApexCharts(document.getElementById("pie-chart"), getChartOptions());
     chart.render();
   }
-});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
 
@@ -948,7 +942,6 @@ Set the JavaScript API option to `type: "donut"` to create a donut chart and cop
 In this example we also show how you can set event listeners on the UI components from Flowbite to update the data series from the chart by clicking the device checkboxes.
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -1091,7 +1084,6 @@ window.addEventListener("load", function () {
         checkbox.addEventListener('change', (event) => handleCheckboxChange(event, chart));
     });
   }
-});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   
@@ -1186,7 +1178,6 @@ window.addEventListener("load", function () {
 To create a radial chart with multiple data entries you need to set the `type: "radialBar"` when initialising a new chart and introduce multiple series and labels to the options and copy the following code:
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -1279,7 +1270,6 @@ window.addEventListener("load", function () {
     const chart = new ApexCharts(document.querySelector("#radial-chart"), getChartOptions());
     chart.render();
   }
-});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between mb-4 md:mb-6">
@@ -1393,7 +1383,6 @@ Learn more about how you can customize the charts including the data, labels, le
 You can add multiple data sets by using the `series` object and setting a name, array of data and custom color of choice. In this example we added two data series based on a blue and purple color.
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -1496,7 +1485,6 @@ window.addEventListener("load", function () {
   const chart = new ApexCharts(document.getElementById("data-series-chart"), options);
   chart.render();
   }
-});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">
@@ -1551,7 +1539,6 @@ window.addEventListener("load", function () {
 Show labels for the X and Y axis by enabling the `xaxis: {show: true}` and `yaxis: {show: true}` and customize the appearance of the labels by adding Tailwind CSS utility classes to the `cssClass` object based on the following example:
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -1661,7 +1648,6 @@ window.addEventListener("load", function () {
   const chart = new ApexCharts(document.getElementById("labels-chart"), options);
   chart.render();
   }
-});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">
@@ -1716,7 +1702,6 @@ window.addEventListener("load", function () {
 Automatically show the legend indicators of the chart by setting the `legend: { show: true }` value when configuring the options via JavaScript. You can also set position of the legend by using the `position: {x}` option inside the legend object to place it to the top or bottom side of the chart.  
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -1819,7 +1804,6 @@ window.addEventListener("load", function () {
   const chart = new ApexCharts(document.getElementById("legend-chart"), options);
   chart.render();
   }
-});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">
@@ -1877,7 +1861,6 @@ Enable the tooltip that is shown when hovering over a data set by setting `{tool
 - `y: {show: true}` will show or hide the Y axis data
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -1983,7 +1966,6 @@ window.addEventListener("load", function () {
   const chart = new ApexCharts(document.getElementById("tooltip-chart"), options);
   chart.render();
   }
-});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">
@@ -2038,7 +2020,6 @@ window.addEventListener("load", function () {
 Add a grid layout of dashed lines to improve the readability of the data entries for the charts by configuring the `{grid: { show: true }}` object and customize the appearance via the `strokeDashArray` object.
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -2141,7 +2122,6 @@ window.addEventListener("load", function () {
   const chart = new ApexCharts(document.getElementById("grid-chart"), options);
   chart.render();
   }
-});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">
@@ -2196,7 +2176,6 @@ window.addEventListener("load", function () {
 Show data points on the chart by enable the `dataLabels: {enabled: true}` object when configuring the options via JavaScript and customize the appearance based on the following example:
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -2303,7 +2282,6 @@ window.addEventListener("load", function () {
   const chart = new ApexCharts(document.getElementById("data-labels-chart"), options);
   chart.render();
   }
-});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">
@@ -2358,7 +2336,6 @@ window.addEventListener("load", function () {
 If you want to format and prefix your data with something such as a currency sign you can do that by using the `formatter` function. For example, here we use the euro ("€") sign instead of the dollar ("$").
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -2458,7 +2435,6 @@ window.addEventListener("load", function () {
   const chart = new ApexCharts(document.getElementById("main-chart"), options);
   chart.render();
   }
-});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">
@@ -2513,7 +2489,6 @@ window.addEventListener("load", function () {
 You can set the size (width and height) of the chart by passing the `width: {size}` and `height: {size}` options via JavaScript to the chart object using pixels or percentages:
 
 {{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
-window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -2613,7 +2588,6 @@ window.addEventListener("load", function () {
     const chart = new ApexCharts(document.getElementById("size-chart"), options);
     chart.render();
   }
-});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between">

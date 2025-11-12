@@ -286,7 +286,7 @@ await builder.Build().RunAsync();
 {{< code lang="html" file="index.html" icon="file" >}}
   <!-- ... -->
   <script src="_framework/blazor.webassembly.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.0/dist/flowbite.min.js"></script>
   <script src="js/flowbite-interop.js"></script>
 </body>
 {{< /code >}}

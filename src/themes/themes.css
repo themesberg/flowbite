@@ -130,12 +130,6 @@
     --color-dark-subtle: var(--color-gray-800);
     --color-dark-backdrop: var(--color-gray-950);
 
-    --diamond-pattern-dark-url: url(/docs/images/patterns/diamond-dark.svg);
-    --diamond-pattern-light-url: url(/docs/images/patterns/diamond.svg);
-
-    --footer-diamond-pattern-dark-url: url(/docs/images/patterns/footer-diamond-dark.svg);
-    --footer-diamond-pattern-light-url: url(/docs/images/patterns/footer-diamond.svg);
-
     --squares-pattern-light-url: url(/docs/images/patterns/squares.svg);
     --squares-pattern-dark-url: url(/docs/images/patterns/squares-dark.svg);
 
@@ -269,12 +263,6 @@
         --color-dark-subtle: var(--color-stone-800);
         --color-dark-backdrop: var(--color-stone-950);
 
-        --diamond-pattern-dark-url: url(/docs/images/patterns/diamond-minimal-dark.svg);
-        --diamond-pattern-light-url: url(/docs/images/patterns/diamond-minimal.svg);
-
-        --footer-diamond-pattern-dark-url: url(/docs/images/patterns/footer-diamond-minimal-dark.svg);
-        --footer-diamond-pattern-light-url: url(/docs/images/patterns/footer-diamond-minimal.svg);
-
         --squares-pattern-light-url: url(/docs/images/patterns/squares-minimal.svg);
         --squares-pattern-dark-url: url(/docs/images/patterns/squares-minimal-dark.svg);
 
@@ -404,12 +392,6 @@
     --color-dark-subtle: var(--color-zinc-800);
     --color-dark-backdrop: var(--color-zinc-950);
 
-    --diamond-pattern-dark-url: url(/docs/images/patterns/diamond-enterprise-dark.svg);
-    --diamond-pattern-light-url: url(/docs/images/patterns/diamond-enterprise.svg);
-
-    --footer-diamond-pattern-dark-url: url(/docs/images/patterns/footer-diamond-enterprise-dark.svg);
-    --footer-diamond-pattern-light-url: url(/docs/images/patterns/footer-diamond-enterprise.svg);
-
     --squares-pattern-light-url: url(/docs/images/patterns/squares-enterprise.svg);
     --squares-pattern-dark-url: url(/docs/images/patterns/squares-enterprise-dark.svg);
 
@@ -535,12 +517,6 @@
         --color-dark-subtle: var(--color-slate-800);
         --color-dark-backdrop: var(--color-slate-950);
 
-        --diamond-pattern-dark-url: url(/docs/images/patterns/diamond-playful-dark.svg);
-        --diamond-pattern-light-url: url(/docs/images/patterns/diamond-playful.svg);
-
-        --footer-diamond-pattern-dark-url: url(/docs/images/patterns/footer-diamond-playful-dark.svg);
-        --footer-diamond-pattern-light-url: url(/docs/images/patterns/footer-diamond-playful.svg);
-
         --squares-pattern-light-url: url(/docs/images/patterns/squares-playful.svg);
         --squares-pattern-dark-url: url(/docs/images/patterns/squares-playful-dark.svg);
 
@@ -665,12 +641,6 @@
         --color-brand-light: var(--color-indigo-600);
         --color-dark-subtle: var(--color-neutral-800);
         --color-dark-backdrop: var(--color-neutral-950);
-
-        --diamond-pattern-dark-url: url(/docs/images/patterns/diamond-mono-dark.svg);
-        --diamond-pattern-light-url: url(/docs/images/patterns/diamond-mono.svg);
-
-        --footer-diamond-pattern-dark-url: url(/docs/images/patterns/footer-diamond-mono-dark.svg);
-        --footer-diamond-pattern-light-url: url(/docs/images/patterns/footer-diamond-mono.svg);
         
         --squares-pattern-light-url: url(/docs/images/patterns/squares-mono.svg);
         --squares-pattern-dark-url: url(/docs/images/patterns/squares-mono-dark.svg);

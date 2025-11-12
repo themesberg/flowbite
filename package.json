@@ -1,6 +1,6 @@
 {
-  "name": "flowbite",
-  "version": "3.1.2",
+  "name": "flowbite-test",
+  "version": "4.0.0",
   "description": "The most popular library of interactive components built with Tailwind CSS",
   "keywords": [
     "flowbite",

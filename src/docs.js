@@ -729,9 +729,6 @@ const applyCssTheme = (themeName) => {
     const themeObj = themes.find((t) => t.name === themeName);
     if (!themeObj) return;
 
-    // Add transition class to prevent flash during theme change
-    document.documentElement.classList.add('theme-transition');
-
     // Update main document theme attribute
     document.documentElement.setAttribute('data-theme', themeObj.attribute);
 
@@ -740,11 +737,6 @@ const applyCssTheme = (themeName) => {
 
     // Save the selected theme to localStorage
     localStorage.setItem('css-theme', themeName);
-
-    // Remove transition class after a short delay
-    setTimeout(() => {
-        document.documentElement.classList.remove('theme-transition');
-    }, 100);
 };
 
 // Load saved CSS theme on page load

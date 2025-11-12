@@ -187,12 +187,12 @@ const getBrandColor = () => {
   const computedStyle = getComputedStyle(document.documentElement);
   
   // Get the value of the --color-brand CSS variable
-  return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+  return computedStyle.getPropertyValue('--color-fg-brand').trim() || "#1447E6";
 };
 
 const getBrandSecondaryColor = () => {
   const computedStyle = getComputedStyle(document.documentElement);
-  return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+  return computedStyle.getPropertyValue('--color-fg-brand-subtle').trim() || "#1447E6";
 };
 
 const brandColor = getBrandColor();
@@ -365,12 +365,12 @@ You can represent multiple data entries using columns by setting the `type: "bar
     const computedStyle = getComputedStyle(document.documentElement);
     
     // Get the value of the --color-brand CSS variable
-    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand').trim() || "#1447E6";
   };
 
   const getBrandSecondaryColor = () => {
     const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand-subtle').trim() || "#1447E6";
   };
 
   const brandColor = getBrandColor();
@@ -730,17 +730,17 @@ Create a pie chart with multiple data series by setting the `type: "pie"` chart 
     const computedStyle = getComputedStyle(document.documentElement);
     
     // Get the value of the --color-brand CSS variable
-    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand').trim() || "#1447E6";
   };
 
   const getBrandSecondaryColor = () => {
     const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand-subtle').trim() || "#1447E6";
   };
 
   const getBrandTertiaryColor = () => {
     const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-medium').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand-strong').trim() || "#1447E6";
   };
 
   const getNeutralPrimaryColor = () => {
@@ -948,17 +948,17 @@ In this example we also show how you can set event listeners on the UI component
     const computedStyle = getComputedStyle(document.documentElement);
     
     // Get the value of the --color-brand CSS variable
-    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand').trim() || "#1447E6";
   };
 
   const getBrandSecondaryColor = () => {
     const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand-subtle').trim() || "#1447E6";
   };
 
   const getBrandTertiaryColor = () => {
     const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-medium').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand-strong').trim() || "#1447E6";
   };
 
   const brandColor = getBrandColor();
@@ -1184,7 +1184,7 @@ To create a radial chart with multiple data entries you need to set the `type: "
     const computedStyle = getComputedStyle(document.documentElement);
     
     // Get the value of the --color-brand CSS variable
-    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand').trim() || "#1447E6";
   };
 
   const getWarningColor = () => {
@@ -1389,12 +1389,12 @@ You can add multiple data sets by using the `series` object and setting a name, 
     const computedStyle = getComputedStyle(document.documentElement);
     
     // Get the value of the --color-brand CSS variable
-    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand').trim() || "#1447E6";
   };
 
   const getBrandSecondaryColor = () => {
     const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand-subtle').trim() || "#1447E6";
   };
 
   const brandColor = getBrandColor();
@@ -1545,12 +1545,12 @@ Show labels for the X and Y axis by enabling the `xaxis: {show: true}` and `yaxi
     const computedStyle = getComputedStyle(document.documentElement);
     
     // Get the value of the --color-brand CSS variable
-    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand').trim() || "#1447E6";
   };
 
   const getBrandSecondaryColor = () => {
     const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand-subtle').trim() || "#1447E6";
   };
 
   const brandColor = getBrandColor();
@@ -1708,12 +1708,12 @@ Automatically show the legend indicators of the chart by setting the `legend: { 
     const computedStyle = getComputedStyle(document.documentElement);
     
     // Get the value of the --color-brand CSS variable
-    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand').trim() || "#1447E6";
   };
 
   const getBrandSecondaryColor = () => {
     const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand-subtle').trim() || "#1447E6";
   };
 
   const brandColor = getBrandColor();
@@ -1867,12 +1867,12 @@ Enable the tooltip that is shown when hovering over a data set by setting `{tool
     const computedStyle = getComputedStyle(document.documentElement);
     
     // Get the value of the --color-brand CSS variable
-    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand').trim() || "#1447E6";
   };
 
   const getBrandSecondaryColor = () => {
     const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand-subtle').trim() || "#1447E6";
   };
 
   const brandColor = getBrandColor();
@@ -2026,12 +2026,12 @@ Add a grid layout of dashed lines to improve the readability of the data entries
     const computedStyle = getComputedStyle(document.documentElement);
     
     // Get the value of the --color-brand CSS variable
-    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand').trim() || "#1447E6";
   };
 
   const getBrandSecondaryColor = () => {
     const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand-subtle').trim() || "#1447E6";
   };
 
   const brandColor = getBrandColor();
@@ -2182,12 +2182,12 @@ Show data points on the chart by enable the `dataLabels: {enabled: true}` object
     const computedStyle = getComputedStyle(document.documentElement);
     
     // Get the value of the --color-brand CSS variable
-    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand').trim() || "#1447E6";
   };
 
   const getBrandSecondaryColor = () => {
     const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand-subtle').trim() || "#1447E6";
   };
 
   const brandColor = getBrandColor();
@@ -2342,12 +2342,12 @@ If you want to format and prefix your data with something such as a currency sig
     const computedStyle = getComputedStyle(document.documentElement);
     
     // Get the value of the --color-brand CSS variable
-    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand').trim() || "#1447E6";
   };
 
   const getBrandSecondaryColor = () => {
     const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand-subtle').trim() || "#1447E6";
   };
 
   const brandColor = getBrandColor();
@@ -2495,12 +2495,12 @@ You can set the size (width and height) of the chart by passing the `width: {siz
     const computedStyle = getComputedStyle(document.documentElement);
     
     // Get the value of the --color-brand CSS variable
-    return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand').trim() || "#1447E6";
   };
 
   const getBrandSecondaryColor = () => {
     const computedStyle = getComputedStyle(document.documentElement);
-    return computedStyle.getPropertyValue('--color-brand-subtle').trim() || "#1447E6";
+    return computedStyle.getPropertyValue('--color-fg-brand-subtle').trim() || "#1447E6";
   };
 
   const brandColor = getBrandColor();

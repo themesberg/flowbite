@@ -297,18 +297,28 @@ const initiatePreviewState = (element) => {
 
     if (darkModeButton) {
         darkModeButton.addEventListener('click', function () {
-            var state = darkModeButton.getAttribute('data-toggle-dark');
+            const theme = darkModeButton.getAttribute('data-toggle-dark');
+            const inverseTheme = theme === 'dark' ? 'light' : 'dark';
+            const cssTheme = localStorage.getItem('css-theme');
+            const direction = RTLButton.getAttribute('data-toggle-direction');
 
-            if (state === 'light') {
-                codePreviewWrapper.classList.add('dark');
-                updatePreviewThemeToggleButton(darkModeButton, 'dark');
-                updateiFrameDarkMode(iframeCodeEl, 'dark');
-            }
-            if (state === 'dark') {
-                codePreviewWrapper.classList.remove('dark');
-                updatePreviewThemeToggleButton(darkModeButton, 'light');
-                updateiFrameDarkMode(iframeCodeEl, 'light');
-            }
+            iframeCodeEl.contentWindow.location.reload();
+
+            iframeCodeEl.classList.add('opacity-0');
+            codePreviewWrapper.classList.add(inverseTheme);
+            iframeCodeEl.onload = () => {
+                codePreviewWrapper.classList.remove(theme);
+                updateiFrameHeight(iframeCodeEl);
+                updateiFrameDarkMode(iframeCodeEl, inverseTheme);
+                updateiFrameRTL(iframeCodeEl, direction);
+                updateiFrameTheme(iframeCodeEl, cssTheme);
+                updatePreviewThemeToggleButton(darkModeButton, inverseTheme);
+                setiFrameDataLoaded(iframeCodeEl);
+            };
+
+            setTimeout(() => {
+                iframeCodeEl.classList.remove('opacity-0');
+            }, 500);
         });
     }
 
@@ -326,6 +336,7 @@ const initiatePreviewState = (element) => {
                 updateiFrameDarkMode(iframeCodeEl, theme);
                 updateiFrameRTL(iframeCodeEl, direction);
                 updateiFrameTheme(iframeCodeEl, cssTheme);
+                setiFrameDataLoaded(iframeCodeEl);
             };
             setTimeout(() => {
                 iframeCodeEl.classList.remove('opacity-0');
@@ -347,6 +358,7 @@ const initiatePreviewState = (element) => {
                 updateiFrameDarkMode(iframeCodeEl, theme);
                 updateiFrameRTL(iframeCodeEl, direction);
                 updateiFrameTheme(iframeCodeEl, cssTheme);
+                setiFrameDataLoaded(iframeCodeEl);
             };
             setTimeout(() => {
                 iframeCodeEl.classList.remove('opacity-0');
@@ -367,6 +379,7 @@ const initiatePreviewState = (element) => {
                 updateiFrameDarkMode(iframeCodeEl, theme);
                 updateiFrameRTL(iframeCodeEl, direction);
                 updateiFrameTheme(iframeCodeEl, cssTheme);
+                setiFrameDataLoaded(iframeCodeEl);
             };
             setTimeout(() => {
                 iframeCodeEl.classList.remove('opacity-0');
@@ -385,8 +398,23 @@ const updateiFrameHeight = (iFrame) => {
 
 const updateiFrameCodeElsDarkMode = (theme) => {
     var iframeCodeEls = document.querySelectorAll('.iframe-code');
-    iframeCodeEls.forEach((el) => {
-        updateiFrameDarkMode(el, theme);
+    iframeCodeEls.forEach((iframeCodeEl) => {
+        const cssTheme = localStorage.getItem('css-theme');
+
+        console.log(theme);
+
+        iframeCodeEl.contentWindow.location.reload();
+        iframeCodeEl.classList.add('opacity-0');
+
+        iframeCodeEl.onload = () => {
+            updateiFrameDarkMode(iframeCodeEl, theme);
+            updateiFrameTheme(iframeCodeEl, cssTheme);
+            setiFrameDataLoaded(iframeCodeEl);
+        };
+
+        setTimeout(() => {
+            iframeCodeEl.classList.remove('opacity-0');
+        }, 500);
     });
 };
 
@@ -424,8 +452,21 @@ const updateiFrameTheme = (iframeEl, themeAttribute) => {
  */
 const updateiFrameThemes = (themeAttribute) => {
     const iframeCodeEls = document.querySelectorAll('.iframe-code');
-    iframeCodeEls.forEach((el) => {
-        updateiFrameTheme(el, themeAttribute);
+    const theme = localStorage.getItem('color-theme');
+
+    iframeCodeEls.forEach((iframeCodeEl) => {
+        iframeCodeEl.contentWindow.location.reload();
+        iframeCodeEl.classList.add('opacity-0');
+
+        iframeCodeEl.onload = () => {
+            updateiFrameDarkMode(iframeCodeEl, theme);
+            updateiFrameTheme(iframeCodeEl, themeAttribute);
+            setiFrameDataLoaded(iframeCodeEl);
+        };
+
+        setTimeout(() => {
+            iframeCodeEl.classList.remove('opacity-0');
+        }, 500);
     });
 };
 
@@ -448,7 +489,18 @@ const initializeCodeExamples = (theme) => {
                 updateiFrameTheme(iframe, themeObj.attribute);
             }
         }
+
+        setiFrameDataLoaded(iframe);
     });
+};
+
+const setiFrameDataLoaded = (iframe) => {
+    if (iframe.contentDocument && iframe.contentDocument.documentElement) {
+        iframe.contentDocument.documentElement.setAttribute(
+            'data-loaded',
+            'true'
+        );
+    }
 };
 
 const updateButtonThemeToggleEls = (theme) => {

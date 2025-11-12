@@ -77,7 +77,7 @@ This example can be used to add an indicator inside of a badge component.
 
 {{< example github="components/indicators.md" class="flex items-center justify-center" show_dark=true >}}
 
-<ul role="list" class="max-w-md divide-y divide-base">
+<ul role="list" class="max-w-md divide-y divide-default">
     <li class="py-3 sm:py-4">
         <div class="flex items-center space-x-3 rtl:space-x-reverse">
             <div class="shrink-0">

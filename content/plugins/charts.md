@@ -44,15 +44,14 @@ Now that you have all the libraries installed you can copy-paste the chart examp
 
 Use this example to show a basic area chart by setting the `type: "area"` option in JavaScript:
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
-window.addEventListener("load", function () {
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 // Get the CSS variable --color-brand and convert it to hex for ApexCharts
 const getBrandColor = () => {
   // Get the computed style of the document's root element
   const computedStyle = getComputedStyle(document.documentElement);
   
   // Get the value of the --color-brand CSS variable
-  return computedStyle.getPropertyValue('--color-brand').trim() || "#1447E6";
+  return computedStyle.getPropertyValue('--color-fg-brand').trim() || "#1447E6";
 };
 
 const brandColor = getBrandColor();
@@ -128,7 +127,6 @@ if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') 
   const chart = new ApexCharts(document.getElementById("area-chart"), options);
   chart.render();
 }
-});
 ` >}}
 <div class="max-w-sm w-full bg-neutral-primary-soft border border-default rounded-base shadow-xs p-4 md:p-6">
   <div class="flex justify-between items-start">
@@ -182,7 +180,7 @@ if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') 
 
 To create a double line chart check the example below by setting the chart type to `type: "line"` and copy the HTML markup and JS options to automatically style and populate the chart with data:
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
@@ -362,7 +360,7 @@ window.addEventListener("load", function () {
 
 You can represent multiple data entries using columns by setting the `type: "bar"` option and also by updating the `horizontal` key value to `false` in JavaScript to adjust them vertically as columns:
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
@@ -562,7 +560,7 @@ window.addEventListener("load", function () {
 
 Create a horizontal bar chart with as many data series as you like by setting the `type: "bar"` chart type via JavaScript and copy the example below into your project. You can enable or disable the labels on the X or Y axis by setting `show` to `false` for the `xaxis` and `yaxis` objects of the chart options.
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 const options = {
   series: [
     {
@@ -729,7 +727,7 @@ if(document.getElementById("bar-chart") && typeof ApexCharts !== 'undefined') {
 
 Create a pie chart with multiple data series by setting the `type: "pie"` chart type option via JavaScript and copy the following HTML markup code and options from below:
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
@@ -949,7 +947,7 @@ Set the JavaScript API option to `type: "donut"` to create a donut chart and cop
 
 In this example we also show how you can set event listeners on the UI components from Flowbite to update the data series from the chart by clicking the device checkboxes.
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true reload_on_theme_change=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
 window.addEventListener("load", function () {
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {

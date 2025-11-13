@@ -44,7 +44,7 @@ Now that you have all the libraries installed you can copy-paste the chart examp
 
 Use this example to show a basic area chart by setting the `type: "area"` option in JavaScript:
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true loadJavascriptListener=true disable_init_js=true javascript=`
 // Get the CSS variable --color-brand and convert it to hex for ApexCharts
 const getBrandColor = () => {
   // Get the computed style of the document's root element
@@ -180,7 +180,7 @@ if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') 
 
 To create a double line chart check the example below by setting the chart type to `type: "line"` and copy the HTML markup and JS options to automatically style and populate the chart with data:
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true loadJavascriptListener=true disable_init_js=true javascript=`
 // Get the CSS variable --color-brand and convert it to hex for ApexCharts
 const getBrandColor = () => {
   // Get the computed style of the document's root element
@@ -358,7 +358,7 @@ if (document.getElementById("line-chart") && typeof ApexCharts !== 'undefined') 
 
 You can represent multiple data entries using columns by setting the `type: "bar"` option and also by updating the `horizontal` key value to `false` in JavaScript to adjust them vertically as columns:
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true loadJavascriptListener=true disable_init_js=true javascript=`
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -556,7 +556,7 @@ You can represent multiple data entries using columns by setting the `type: "bar
 
 Create a horizontal bar chart with as many data series as you like by setting the `type: "bar"` chart type via JavaScript and copy the example below into your project. You can enable or disable the labels on the X or Y axis by setting `show` to `false` for the `xaxis` and `yaxis` objects of the chart options.
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true loadJavascriptListener=true disable_init_js=true javascript=`
 const options = {
   series: [
     {
@@ -723,7 +723,7 @@ if(document.getElementById("bar-chart") && typeof ApexCharts !== 'undefined') {
 
 Create a pie chart with multiple data series by setting the `type: "pie"` chart type option via JavaScript and copy the following HTML markup code and options from below:
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true loadJavascriptListener=true disable_init_js=true javascript=`
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -941,7 +941,7 @@ Set the JavaScript API option to `type: "donut"` to create a donut chart and cop
 
 In this example we also show how you can set event listeners on the UI components from Flowbite to update the data series from the chart by clicking the device checkboxes.
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true loadJavascriptListener=true disable_init_js=true javascript=`
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -1177,7 +1177,7 @@ In this example we also show how you can set event listeners on the UI component
 
 To create a radial chart with multiple data entries you need to set the `type: "radialBar"` when initialising a new chart and introduce multiple series and labels to the options and copy the following code:
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true loadJavascriptListener=true disable_init_js=true javascript=`
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -1382,7 +1382,7 @@ Learn more about how you can customize the charts including the data, labels, le
 
 You can add multiple data sets by using the `series` object and setting a name, array of data and custom color of choice. In this example we added two data series based on a blue and purple color.
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true loadJavascriptListener=true disable_init_js=true javascript=`
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -1538,7 +1538,7 @@ You can add multiple data sets by using the `series` object and setting a name, 
 
 Show labels for the X and Y axis by enabling the `xaxis: {show: true}` and `yaxis: {show: true}` and customize the appearance of the labels by adding Tailwind CSS utility classes to the `cssClass` object based on the following example:
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true loadJavascriptListener=true disable_init_js=true javascript=`
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -1701,7 +1701,7 @@ Show labels for the X and Y axis by enabling the `xaxis: {show: true}` and `yaxi
 
 Automatically show the legend indicators of the chart by setting the `legend: { show: true }` value when configuring the options via JavaScript. You can also set position of the legend by using the `position: {x}` option inside the legend object to place it to the top or bottom side of the chart.  
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true loadJavascriptListener=true disable_init_js=true javascript=`
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -1860,7 +1860,7 @@ Enable the tooltip that is shown when hovering over a data set by setting `{tool
 - `x: {show: false}` will show or hide the X axis data
 - `y: {show: true}` will show or hide the Y axis data
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true loadJavascriptListener=true disable_init_js=true javascript=`
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -2019,7 +2019,7 @@ Enable the tooltip that is shown when hovering over a data set by setting `{tool
 
 Add a grid layout of dashed lines to improve the readability of the data entries for the charts by configuring the `{grid: { show: true }}` object and customize the appearance via the `strokeDashArray` object.
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true loadJavascriptListener=true disable_init_js=true javascript=`
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -2175,7 +2175,7 @@ Add a grid layout of dashed lines to improve the readability of the data entries
 
 Show data points on the chart by enable the `dataLabels: {enabled: true}` object when configuring the options via JavaScript and customize the appearance based on the following example:
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true loadJavascriptListener=true disable_init_js=true javascript=`
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -2335,7 +2335,7 @@ Show data points on the chart by enable the `dataLabels: {enabled: true}` object
 
 If you want to format and prefix your data with something such as a currency sign you can do that by using the `formatter` function. For example, here we use the euro ("€") sign instead of the dollar ("$").
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true loadJavascriptListener=true disable_init_js=true javascript=`
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element
@@ -2488,7 +2488,7 @@ If you want to format and prefix your data with something such as a currency sig
 
 You can set the size (width and height) of the chart by passing the `width: {size}` and `height: {size}` options via JavaScript to the chart object using pixels or percentages:
 
-{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true disable_init_js=true javascript=`
+{{< example class="flex justify-center bg-neutral-primary" github="plugins/charts.md" show_dark=true charts=true loadJavascriptListener=true disable_init_js=true javascript=`
   // Get the CSS variable --color-brand and convert it to hex for ApexCharts
   const getBrandColor = () => {
     // Get the computed style of the document's root element

@@ -24,6 +24,8 @@
 {{- $skeletonPlaceholders := .Get "skeletonPlaceholders" | default false -}}
 
 {{ $javascript := .Get "javascript" | default "" | safeJS }}
+{{ $loadJavascriptListener := .Get "loadJavascriptListener" | default false }}
+
 {{- $script_module := .Get "script_module" | default false -}}
 {{- $wysiwyg := .Get "wysiwyg" | default false -}}
 {{ $wysiwyg_json_fix := `{"imports": {"https://esm.sh/v135/prosemirror-model@1.22.3/es2022/prosemirror-model.mjs": "https://esm.sh/v135/prosemirror-model@1.19.3/es2022/prosemirror-model.mjs", "https://esm.sh/v135/prosemirror-model@1.22.1/es2022/prosemirror-model.mjs": "https://esm.sh/v135/prosemirror-model@1.19.3/es2022/prosemirror-model.mjs"}}` }}
@@ -115,6 +117,7 @@
     <div{{ with .Get "id" }} id="{{ . }}"{{ end }} class="flex p-0 bg-neutral-primary border-default code-preview border-x dark:bg-linear-to-t from-0% from-brand/8 to-[8rem] to-primary">
       <div class="w-full bg-cover bg-no-repeat bg-center dark:bg-[image:var(--squares-pattern-dark-url)] bg-[image:var(--squares-pattern-light-url)]">
         <iframe {{ if $id }}title="{{ replace $id "-" " "}}"{{ end }} class="w-full h-0 mx-auto bg-neutral-primary iframe-code" {{ if $iframeMaxHeight }}style='max-height: {{  sub (int $iframeMaxHeight) 40 }}px'{{ end }} srcdoc="<!DOCTYPE html><html lang='en' data-theme='modern'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><link rel='stylesheet' id='theme' href='{{ .Site.BaseURL }}main.css?v=4.0.0'></head><body {{ if $iframeHeight }}style='height: {{  sub (int $iframeHeight) 40 }}px'{{ end }} class='p-5 bg-neutral-primary antialiased {{ if $bodyClass }}{{ $bodyClass }}{{ end }}'><div id='exampleWrapper' class='{{ if $class }}{{ $class }}{{ end }}'>{{- $input | safeHTMLAttr -}}{{ if $skeletonPlaceholders }}{{ $skeletonPlaceholdersMarkup }}{{ end }}</div><script src='{{ .Site.BaseURL }}flowbite.min.js'></script>{{ if $charts }}<script src='https://cdn.jsdelivr.net/npm/apexcharts@3.46.0/dist/apexcharts.min.js'></script>{{ end }}{{ if $datatables }}<script src='https://cdn.jsdelivr.net/npm/simple-datatables@9.0.4'></script>{{ end }}<script>window.onload = function () { const anchorTags = document.querySelectorAll('a'); anchorTags.forEach(function(a){a.addEventListener('click', function(ev){ev.preventDefault();})}); {{ if not $disable_init_js }} const dropdownEl = document.querySelector('[data-dropdown-toggle]'); if (dropdownEl) {dropdownEl.click();} const modalEl = document.querySelector('[data-modal-toggle]'); if(modalEl) {modalEl.click(); } {{ if $initDatepicker }} const datepickerEl = document.querySelector('[datepicker]'); if (datepickerEl) { datepickerEl.focus({preventScroll: true}); } {{ end }} const dateRangePickerEl = document.querySelector('[data-rangepicker] input'); if (dateRangePickerEl) { dateRangePickerEl.focus(); } const drawerEl = document.querySelector('[data-drawer-show]'); if (drawerEl) { drawerEl.click(); } {{ end }} }</script>{{ if $wysiwyg }}<script type='importmap'>{{ $wysiwyg_json_fix | safeHTML }}</script>{{ end }}{{ if $javascript }} <script defer {{ if $script_module }}type='module'{{ end }}>
+  {{ if $loadJavascriptListener }}
   window.addEventListener('load', function() {
     const checkForDataLoaded = function() {
       if (document.documentElement.hasAttribute('data-loaded')) {
@@ -125,6 +128,9 @@
     };
     checkForDataLoaded();
   });
+  {{ else }}
+  {{ $javascript }}
+  {{ end }}
 </script>{{ end }}</body></html>" frameborder="0"></iframe>
         <div class="flex items-center justify-center w-full p-5 bg-neutral-primary" data-component-loader>
           <div role="status">

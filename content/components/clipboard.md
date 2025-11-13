@@ -677,7 +677,7 @@ window.addEventListener('load', function() {
                 <label for="course-url" class="block mb-2.5 text-sm font-medium text-heading">Share the course link below with your friends:</label>
                 <div class="relative mb-4">
                     <input id="course-url" type="text" class="col-span-6 bg-neutral-secondary-medium border border-default-medium text-body text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" value="https://flowbite.com/docs/components/alerts/" disabled readonly>
-                    <button data-copy-to-clipboard-target="course-url" data-tooltip-target="tooltip-course-url" class="absolute end-1.5 top-1/2 -translate-y-1/2 text-body hover:bg-neutral-quaternary hover:text-heading rounded p-2 inline-flex items-center justify-center">
+                    <button data-copy-to-clipboard-target="course-url" data-tooltip-target="tooltip-course-url" class="absolute end-1.5 top-1/2 -translate-y-1/2 text-body bg-neutral-secondary-medium hover:bg-neutral-quaternary hover:text-heading rounded p-2 inline-flex items-center justify-center">
                         <span id="default-icon-course-url">
                             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-6 5h6m-6 4h6M10 3v4h4V3h-4Z"/></svg>
                         </span>

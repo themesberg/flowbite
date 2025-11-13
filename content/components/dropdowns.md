@@ -363,7 +363,7 @@ Add an extra helper text to each checkbox element inside the dropdown menu list 
             <input id="dropdown-checkbox-8" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-neutral-secondary-strong focus:ring-2 focus:ring-brand-soft">
           </div>
           <div class="ms-2 text-sm">
-              <label for="helper-checkbox-2" class="font-medium text-heading select-none">
+              <label for="dropdown-checkbox-8" class="font-medium text-heading select-none">
                 <div class="mb-0.5">Enable 2FA auth</div>
                 <p id="helper-checkbox-text-2" class="text-xs font-normal text-body">Some helpful instruction goes over here.</p>
               </label>
@@ -376,7 +376,7 @@ Add an extra helper text to each checkbox element inside the dropdown menu list 
             <input id="dropdown-checkbox-9" type="checkbox" value="" class="w-4 h-4 border border-default-strong rounded-xs bg-neutral-secondary-strong focus:ring-2 focus:ring-brand-soft">
           </div>
           <div class="ms-2 text-sm">
-              <label for="helper-checkbox-3" class="font-medium text-heading select-none">
+              <label for="dropdown-checkbox-9" class="font-medium text-heading select-none">
                 <div class="mb-0.5">Subscribe newsletter</div>
                 <p id="helper-checkbox-text-3" class="text-xs font-normal text-body">Some helpful instruction goes over here.</p>
               </label>

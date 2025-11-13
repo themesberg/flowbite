@@ -37,7 +37,7 @@ Apply the `multiple` attribute to the select component to allow users to select 
 {{< example github="forms/select.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
   <label for="countries_multiple" class="block mb-2.5 text-sm font-medium text-heading">Select an option</label>
-  <select multiple id="countries_multiple" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
+  <select multiple id="countries_multiple" class="block w-full bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
     <option selected>Choose countries</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>
@@ -54,7 +54,7 @@ Use the size attribute for the select component to specify the number of visible
 {{< example github="forms/select.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
   <label for="years" class="block mb-2.5 text-sm font-medium text-heading">Select an option</label>
-  <select id="years" size="5" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
+  <select id="years" size="5" class="block w-full bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body">
     <option>2016</option>
     <option>2017</option>
     <option>2018</option>
@@ -73,7 +73,7 @@ Apply the `disable` state to the select component to disallow the selection of n
 {{< example github="forms/select.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
   <label for="countries_disabled" class="block mb-2.5 text-sm font-medium text-heading">Select an option</label>
-  <select disabled id="countries_disabled" class="block w-full p-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs text-fg-disabled">
+  <select disabled id="countries_disabled" class="block w-full bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs text-fg-disabled">
     <option selected>Choose a country</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>
@@ -224,7 +224,7 @@ Get started with the small, default, and large sizes for the select component fr
 {{< example github="forms/select.md" show_dark=true >}}
 <form class="max-w-sm mx-auto">
   <label for="small" class="block mb-2.5 text-sm font-medium text-heading">Small select</label>
-  <select id="small" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body mb-4">
+  <select id="small" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body mb-4">
     <option selected>Choose a country</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>
@@ -240,7 +240,7 @@ Get started with the small, default, and large sizes for the select component fr
     <option value="DE">Germany</option>
   </select>
   <label for="large" class="block mb-2.5 text-sm font-medium text-heading">Large select</label>
-  <select id="large" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3.5 py-3 shadow-xs placeholder:text-body mb-4">
+  <select id="large" class="block w-full bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3.5 py-3 shadow-xs placeholder:text-body mb-4">
     <option selected>Choose a country</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>
@@ -248,7 +248,7 @@ Get started with the small, default, and large sizes for the select component fr
     <option value="DE">Germany</option>
   </select>
   <label for="extra-large" class="block mb-2.5 text-sm font-medium text-heading">Extra Large select</label>
-  <select id="extra-large" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-4 py-3.5 shadow-xs placeholder:text-body mb-4">
+  <select id="extra-large" class="block w-full bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-4 py-3.5 shadow-xs placeholder:text-body mb-4">
     <option selected>Choose a country</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>

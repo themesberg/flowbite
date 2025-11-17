@@ -141,7 +141,7 @@ npm install flowbite --save
 5. Add the Flowbite JavaScript inside your `js.html` file:
 
 {{< code lang="html" file="js.html" icon="file" >}}
-<script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.0/dist/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 
 {{- with resources.Get "js/main.js" }}
   {{- if eq hugo.Environment "development" }}

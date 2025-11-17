@@ -155,7 +155,7 @@ This example be used to paginate multiple pages on a single view alongside other
                     <svg class="w-3.5 h-3.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
                     <span class="sr-only">Previous page</span>
                 </button>
-                <span class="shrink-0 mx-1 text-sm font-medium space-x-0.5 rtl:space-x-reverse">1 of 345</span>
+                <span class="shrink-0 mx-1 text-sm font-medium space-x-0.5 rtl:space-x-reverse">1 of 34</span>
                 <button type="button" class="inline-flex items-center justify-center h-8 px-1 w-6 rounded-e-base hover:bg-neutral-tertiary-medium focus:outline-none focus:ring-2 focus:ring-neutral-quaternary">
                     <svg class="w-3.5 h-3.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
                     <span class="sr-only">Next page</span>
@@ -368,7 +368,7 @@ Use this component to show a list of options for online video meetings by showin
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M12 6h.01M12 12h.01M12 18h.01"/></svg>
             <span class="sr-only">Show options</span>
         </button>
-        <div id="moreOptionsDropdown" class="hidden z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44 block">
+        <div id="moreOptionsDropdown" class="hidden z-10 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-48 block">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="moreOptionsDropdownButton">
                 <li>
                     <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Show participants</a>

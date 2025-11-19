@@ -756,6 +756,47 @@ themeSelectorButtons.forEach((button) => {
     });
 });
 
+const modifyQRCodeSVG = (svgString) => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(svgString, 'image/svg+xml');
+    const svg = doc.querySelector('svg');
+
+    if (svg) {
+        svg.classList.add('text-heading');
+        const paths = svg.querySelectorAll('path');
+        paths.forEach((path) => {
+            if (path.hasAttribute('fill')) {
+                path.setAttribute('fill', 'none');
+            }
+            if (path.hasAttribute('stroke')) {
+                path.setAttribute('stroke', 'currentColor');
+            }
+        });
+    }
+
+    return new XMLSerializer().serializeToString(doc);
+};
+
+const updateQRCodeIframeValue = (value) => {
+    const iframeCodeEls = document.querySelectorAll('.iframe-code');
+    iframeCodeEls.forEach((iframeCodeEl) => {
+        if (iframeCodeEl.contentDocument) {
+            const iframeQRCodeEl =
+                iframeCodeEl.contentDocument.getElementById('qrcode');
+            if (iframeQRCodeEl && value) {
+                QRCode.toString(
+                    iframeQRCodeEl,
+                    value,
+                    { errorCorrectionLevel: 'Q' },
+                    function (_err, svg) {
+                        iframeQRCodeEl.innerHTML = modifyQRCodeSVG(svg);
+                    }
+                );
+            }
+        }
+    });
+};
+
 const QRCodeEl = document.getElementById('qrcode');
 const QRCodeValInput = document.getElementById('qr_code_value');
 if (QRCodeEl) {
@@ -765,10 +806,10 @@ if (QRCodeEl) {
         'https://flowbite.com',
         { errorCorrectionLevel: 'Q' },
         function (_err, svg) {
-            console.log(svg);
-            QRCodeEl.innerHTML = svg;
+            QRCodeEl.innerHTML = modifyQRCodeSVG(svg);
         }
     );
+    updateQRCodeIframeValue('https://flowbite.com');
 
     QRCodeValInput.addEventListener('keyup', function () {
         const value = this.value;
@@ -778,10 +819,10 @@ if (QRCodeEl) {
                 value,
                 { errorCorrectionLevel: 'Q' },
                 function (_err, svg) {
-                    console.log(svg);
-                    QRCodeEl.innerHTML = svg;
+                    QRCodeEl.innerHTML = modifyQRCodeSVG(svg);
                 }
             );
+            updateQRCodeIframeValue(value);
         }
     });
 }

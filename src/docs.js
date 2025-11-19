@@ -2,6 +2,7 @@
 import docsearch from '@docsearch/js';
 import { codeToHtml } from 'shiki';
 import { createCssVariablesTheme } from 'shiki/core';
+import QRCode from 'qrcode';
 
 const codeBlockElements = document.getElementsByClassName('shiki-code-block');
 
@@ -754,3 +755,33 @@ themeSelectorButtons.forEach((button) => {
         applyCssTheme(theme);
     });
 });
+
+const QRCodeEl = document.getElementById('qrcode');
+const QRCodeValInput = document.getElementById('qr_code_value');
+if (QRCodeEl) {
+    // default value
+    QRCode.toString(
+        QRCodeEl,
+        'https://flowbite.com',
+        { errorCorrectionLevel: 'Q' },
+        function (_err, svg) {
+            console.log(svg);
+            QRCodeEl.innerHTML = svg;
+        }
+    );
+
+    QRCodeValInput.addEventListener('keyup', function () {
+        const value = this.value;
+        if (value) {
+            QRCode.toString(
+                QRCodeEl,
+                value,
+                { errorCorrectionLevel: 'Q' },
+                function (_err, svg) {
+                    console.log(svg);
+                    QRCodeEl.innerHTML = svg;
+                }
+            );
+        }
+    });
+}

@@ -99,6 +99,8 @@
       - title: Tooltips
       - title: Typography
       - title: Video
+      - title: QR Code
+        new: true
 
 - title: Forms
   slug: forms

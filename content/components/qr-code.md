@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Tailwind CSS QR Code - Flowbite
-description: Use this component to show QR codes that can be scanned with phone cameras and other devices
+description: Use this component to generate and show QR codes based on text or URL that can be scanned with device phone cameras and other devices using the Flowbite library based on Tailwind CSS
 group: components
 toc: true
 
@@ -13,21 +13,85 @@ nextLink: components/avatar/
 
 QR codes are a popular way to encode information such as website links, texts, and other data into a two-dimensional barcode that can be scanned with a phone camera or other devices. The Flowbite component allows you to couple them with other elements such as input fields, tooltips, tab selectors, and more.
 
-Use the following input field to generate a QR code for all the examples below:
+Use this free QR code generator and customize the parameters to see the live preview.
 
-<div class="grid grid-cols-2 gap-8">
-  <div>
-    <label for="qr_code_value" class="block mb-2.5 text-sm font-medium text-heading">QR value:</label>
+<div class="grid grid-cols-2 gap-8 bg-neutral-primary border border-light-subtle rounded-base p-8 my-8">
+  <div class="space-y-4">
+    <h2 class="text-2xl font-semibold text-heading">QR Code Generator</h2>
+    <p class="text-body">Generate QR codes from text or URLs.</p>
+    <label for="qr_code_value" class="block mb-2.5 text-sm font-medium text-heading">Value:</label>
     <input type="text" id="qr_code_value" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="https://flowbite.com" required />
-    <label for="qr_code_color" class="block mb-2.5 text-sm font-medium text-heading">Color:</label>
-    <input type="color" id="qr_code_color" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="https://flowbite.com" required />
-    <label for="qr_code_bg_color" class="block mb-2.5 text-sm font-medium text-heading">Background:</label>
-    <input type="color" id="qr_code_bg_color" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="https://flowbite.com" required />
+    <label for="qr_code_correction" class="block mb-2.5 text-sm font-medium text-heading">Correction level:</label>
+    
+  <div class="inline-flex rounded-base shadow-xs -space-x-px" role="group">
+    <button data-popover-target="popover-qr-l" data-qr-code-level="L" data-qr-code-active="false" type="button" class="inline-flex items-center justify-center text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-s-base text-sm w-9 h-9 focus:outline-none data-[qr-code-active=true]:text-brand">
+      L
+    </button>
+    <div data-popover id="popover-qr-l" role="tooltip" class="absolute z-10 invisible inline-block w-72 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
+        <div class="px-3 py-2 bg-neutral-tertiary border-b border-default rounded-t-base">
+            <h3 class="font-medium text-heading">L (Low) – Recovers 7% of data</h3>
+        </div>
+        <div class="px-3 py-2">
+            <p>Best for simple, high-quality printing where space efficiency is important.</p>
+        </div>
+        <div data-popper-arrow></div>
+    </div>
+    <button data-popover-target="popover-qr-m" data-qr-code-level="M" data-qr-code-active="true" type="button" class="inline-flex items-center justify-center text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 text-sm w-9 h-9 focus:outline-none data-[qr-code-active=true]:text-brand">
+      M
+    </button>
+    <div data-popover id="popover-qr-m" role="tooltip" class="absolute z-10 invisible inline-block w-72 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
+        <div class="px-3 py-2 bg-neutral-tertiary border-b border-default rounded-t-base">
+            <h3 class="font-medium text-heading">M (Medium) – Recovers 15% of data</h3>
+        </div>
+        <div class="px-3 py-2">
+            <p>Most commonly used; good balance of size and robustness.</p>
+        </div>
+        <div data-popper-arrow></div>
+    </div>
+    <button data-popover-target="popover-qr-q" data-qr-code-level="Q" data-qr-code-active="false" type="button" class="inline-flex items-center justify-center text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 text-sm w-9 h-9 focus:outline-none data-[qr-code-active=true]:text-brand">
+      Q
+    </button>
+    <div data-popover id="popover-qr-q" role="tooltip" class="absolute z-10 invisible inline-block w-72 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
+        <div class="px-3 py-2 bg-neutral-tertiary border-b border-default rounded-t-base">
+            <h3 class="font-medium text-heading">Q (Quartile) – Recovers 25% of data</h3>
+        </div>
+        <div class="px-3 py-2">
+            <p>More resilient; useful when the code may get smudged or partially covered.</p>
+        </div>
+        <div data-popper-arrow></div>
+    </div>
+    <button data-popover-target="popover-qr-h" data-qr-code-level="H" data-qr-code-active="false" type="button" class="inline-flex items-center justify-center text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 rounded-e-base text-sm w-9 h-9 focus:outline-none data-[qr-code-active=true]:text-brand">
+      H
+    </button>
+    <div data-popover id="popover-qr-h" role="tooltip" class="absolute z-10 invisible inline-block w-72 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
+        <div class="px-3 py-2 bg-neutral-tertiary border-b border-default rounded-t-base">
+            <h3 class="font-medium text-heading">H (High) – Recovers 30% of data</h3>
+        </div>
+        <div class="px-3 py-2">
+            <p>Highest durability; used when maximum protection is needed (e.g., logos in the center of the code or harsh conditions).</p>
+        </div>
+        <div data-popper-arrow></div>
+    </div>
   </div>
-  <div>
-    <div id="qrcode" class="w-56 h-56"></div>
+  </div>
+  <div class="flex justify-center flex-col">
+    <div class="flex justify-center p-2 bg-neutral-secondary-medium rounded-base mb-4">
+      <div id="qrcode" class="w-56 h-56"></div>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <button type="button" class="text-white inline-flex items-center justify-center gap-2 bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"><svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"/>
+</svg>
+Copy as SVG</button>
+      <button type="button" class="text-body inline-flex items-center justify-center gap-2 bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"><svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"/>
+</svg>
+Save as file</button>
+    </div>
   </div>
 </div>
+
+The component examples below are generated using the data you provided in the generator tool and can be used directly in your website layouts with different use cases such as sharing URLs, contact information, or text messages.
 
 ## Default QR code
 

@@ -777,7 +777,7 @@ const modifyQRCodeSVG = (svgString) => {
     return new XMLSerializer().serializeToString(doc);
 };
 
-const updateQRCodeIframeValue = (value) => {
+const updateQRCodeIframeValue = (value, level = 'M') => {
     const iframeCodeEls = document.querySelectorAll('.iframe-code');
     iframeCodeEls.forEach((iframeCodeEl) => {
         if (iframeCodeEl.contentDocument) {
@@ -787,7 +787,7 @@ const updateQRCodeIframeValue = (value) => {
                 QRCode.toString(
                     iframeQRCodeEl,
                     value,
-                    { errorCorrectionLevel: 'Q' },
+                    { errorCorrectionLevel: level },
                     function (_err, svg) {
                         iframeQRCodeEl.innerHTML = modifyQRCodeSVG(svg);
                     }
@@ -799,30 +799,65 @@ const updateQRCodeIframeValue = (value) => {
 
 const QRCodeEl = document.getElementById('qrcode');
 const QRCodeValInput = document.getElementById('qr_code_value');
+const QRCodeLevelButtons = document.querySelectorAll('[data-qr-code-level]');
+
 if (QRCodeEl) {
     // default value
     QRCode.toString(
         QRCodeEl,
         'https://flowbite.com',
-        { errorCorrectionLevel: 'Q' },
+        { errorCorrectionLevel: 'M' },
         function (_err, svg) {
             QRCodeEl.innerHTML = modifyQRCodeSVG(svg);
         }
     );
-    updateQRCodeIframeValue('https://flowbite.com');
+    updateQRCodeIframeValue('https://flowbite.com', 'M');
 
     QRCodeValInput.addEventListener('keyup', function () {
         const value = this.value;
-        if (value) {
+        const QrCodeLevel = document
+            .querySelector('[data-qr-code-active="true"]')
+            ?.getAttribute('data-qr-code-level');
+        if (value && QrCodeLevel) {
             QRCode.toString(
                 QRCodeEl,
                 value,
-                { errorCorrectionLevel: 'Q' },
+                { errorCorrectionLevel: QrCodeLevel },
                 function (_err, svg) {
                     QRCodeEl.innerHTML = modifyQRCodeSVG(svg);
                 }
             );
-            updateQRCodeIframeValue(value);
+            updateQRCodeIframeValue(value, QrCodeLevel);
         }
+    });
+
+    QRCodeLevelButtons.forEach((button) => {
+        button.addEventListener('click', function () {
+            const level = this.getAttribute('data-qr-code-level');
+            const value = QRCodeValInput.value || 'https://flowbite.com';
+            const isActive =
+                this.getAttribute('data-qr-code-active') === 'true';
+
+            if (isActive) return;
+
+            button.setAttribute('data-qr-code-active', 'true');
+
+            // Deactivate other buttons
+            QRCodeLevelButtons.forEach((btn) => {
+                if (btn !== button) {
+                    btn.setAttribute('data-qr-code-active', 'false');
+                }
+            });
+
+            QRCode.toString(
+                QRCodeEl,
+                value,
+                { errorCorrectionLevel: level },
+                function (_err, svg) {
+                    QRCodeEl.innerHTML = modifyQRCodeSVG(svg);
+                }
+            );
+            updateQRCodeIframeValue(value, level);
+        });
     });
 }

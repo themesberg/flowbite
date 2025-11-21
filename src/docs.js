@@ -800,6 +800,7 @@ const updateQRCodeIframeValue = (value, level = 'M') => {
 const QRCodeEl = document.getElementById('qrcode');
 const QRCodeValInput = document.getElementById('qr_code_value');
 const QRCodeLevelButtons = document.querySelectorAll('[data-qr-code-level]');
+const QRCodeCopySVGButton = document.getElementById('copy-qr-code-button');
 
 if (QRCodeEl) {
     // default value
@@ -859,5 +860,33 @@ if (QRCodeEl) {
             );
             updateQRCodeIframeValue(value, level);
         });
+    });
+
+    QRCodeCopySVGButton.addEventListener('click', function () {
+        const svgContent = QRCodeEl.innerHTML;
+        navigator.clipboard.writeText(svgContent);
+
+        // Show success state
+        const defaultIcon = QRCodeCopySVGButton.querySelector(
+            '#default-copy-qr-code-icon'
+        );
+        const successIcon = QRCodeCopySVGButton.querySelector(
+            '#success-copy-qr-code-icon'
+        );
+        const copyText =
+            QRCodeCopySVGButton.querySelector('#copy-qr-code-text');
+
+        if (defaultIcon && successIcon && copyText) {
+            defaultIcon.classList.add('hidden');
+            successIcon.classList.remove('hidden');
+            copyText.textContent = 'Copied!';
+
+            // Reset after 2 seconds
+            setTimeout(() => {
+                defaultIcon.classList.remove('hidden');
+                successIcon.classList.add('hidden');
+                copyText.textContent = 'Copy as SVG';
+            }, 2000);
+        }
     });
 }

@@ -801,6 +801,7 @@ const QRCodeEl = document.getElementById('qrcode');
 const QRCodeValInput = document.getElementById('qr_code_value');
 const QRCodeLevelButtons = document.querySelectorAll('[data-qr-code-level]');
 const QRCodeCopySVGButton = document.getElementById('copy-qr-code-button');
+const saveQRCodeButton = document.getElementById('save-qr-code-button');
 
 if (QRCodeEl) {
     // default value
@@ -888,5 +889,32 @@ if (QRCodeEl) {
                 copyText.textContent = 'Copy as SVG';
             }, 2000);
         }
+    });
+
+    saveQRCodeButton.addEventListener('click', function () {
+        // TODO: Implement save as file functionality
+        console.log('Save QR code as file clicked');
+
+        // Get the SVG content
+        const svgContent = QRCodeEl.innerHTML;
+
+        // Create a blob from the SVG content
+        const blob = new Blob([svgContent], { type: 'image/svg+xml' });
+
+        // Create a download link
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'qrcode.svg';
+
+        // Trigger the download
+        document.body.appendChild(a);
+        a.click();
+
+        // Clean up
+        setTimeout(() => {
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }, 100);
     });
 }

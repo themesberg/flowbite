@@ -5,10 +5,10 @@ description: Use this component to generate and show QR codes based on text or U
 group: components
 toc: true
 
-previous: Accordion
-previousLink: components/accordion/
-next: Avatar
-nextLink: components/avatar/
+previous: Typography
+previousLink: components/typography/
+next: Video
+nextLink: components/video/
 ---
 
 QR codes are a popular way to encode information such as website links, texts, and other data into a two-dimensional barcode that can be scanned with a phone camera or other devices. The Flowbite component allows you to couple them with other elements such as input fields, tooltips, tab selectors, and more.

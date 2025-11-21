@@ -98,9 +98,9 @@
       - title: Toast
       - title: Tooltips
       - title: Typography
-      - title: Video
       - title: QR Code
         new: true
+      - title: Video
 
 - title: Forms
   slug: forms

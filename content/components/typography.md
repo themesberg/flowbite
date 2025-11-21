@@ -7,8 +7,8 @@ toc: true
 
 previous: Tooltips
 previousLink: components/tooltips/
-next: Video
-nextLink: components/video/
+next: QR Code
+nextLink: components/qr-code/
 ---
 
 Get started with the [Flowbite Typography](https://github.com/themesberg/flowbite-typography) plugin forked from the official [Tailwind CSS Typography](https://tailwindcss.com/docs/typography-plugin) plugin to set a custom `format` class to a wrapper element to apply styles to all inline child elements such as headings, paragraphs, images, lists, and more and apply font sizes, font weights, colors, and spacings.

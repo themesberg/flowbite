@@ -5,8 +5,8 @@ description: Use the video component to configure an embedded video player using
 group: components
 toc: true
 
-previous: Typography
-previousLink: components/typography/
+previous: QR Code
+previousLink: components/qr-code/
 next: Input field
 nextLink: forms/input-field/
 ---
@@ -29,7 +29,7 @@ Use this example to create a native browser video player and apply the `w-full` 
 Use the `autoplay` attribute on the video component to automatically start the video when the page has been loaded.
 
 {{< example github="typography/video.md" show_dark=true >}}
-<video class="w-full rounded-base" autoplay controls>
+<video class="w-full rounded-base" controls>
   <source src="/docs/videos/flowbite.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

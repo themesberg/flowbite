@@ -15,7 +15,7 @@ QR codes are a popular way to encode information such as website links, texts, a
 
 Use this free QR code generator and customize the parameters to see the live preview.
 
-<div class="grid grid-cols-2 gap-8 bg-neutral-primary border border-light-subtle rounded-base p-8 my-8">
+<div class="grid sm:grid-cols-2 gap-8 sm:bg-neutral-primary sm:border border-light-subtle sm:rounded-base sm:p-8 my-8">
   <div class="space-y-4">
     <h2 class="text-2xl font-semibold text-heading">QR Code Generator</h2>
     <p class="text-body">Generate QR codes from text or URLs.</p>

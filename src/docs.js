@@ -777,24 +777,27 @@ const modifyQRCodeSVG = (svgString) => {
     return new XMLSerializer().serializeToString(doc);
 };
 
-const updateQRCodeIframeValue = (value, level = 'M') => {
+const updateQRCodeIframesValue = (value, level = 'M') => {
     const iframeCodeEls = document.querySelectorAll('.iframe-code');
     iframeCodeEls.forEach((iframeCodeEl) => {
         if (iframeCodeEl.contentDocument) {
-            const iframeQRCodeEl =
-                iframeCodeEl.contentDocument.getElementById('qrcode');
-            if (iframeQRCodeEl && value) {
-                QRCode.toString(
-                    iframeQRCodeEl,
-                    value,
-                    { errorCorrectionLevel: level },
-                    function (_err, svg) {
-                        iframeQRCodeEl.innerHTML = modifyQRCodeSVG(svg);
-                    }
-                );
-            }
+            updateQRCodeiFrameValue(iframeCodeEl, value, level);
         }
     });
+};
+
+const updateQRCodeiFrameValue = (iframe, value, level = 'M') => {
+    const iframeQRCodeEl = iframe.contentDocument.getElementById('qrcode');
+    if (iframeQRCodeEl && value) {
+        QRCode.toString(
+            iframeQRCodeEl,
+            value,
+            { errorCorrectionLevel: level },
+            function (_err, svg) {
+                iframeQRCodeEl.innerHTML = modifyQRCodeSVG(svg);
+            }
+        );
+    }
 };
 
 const QRCodeEl = document.getElementById('qrcode');
@@ -813,7 +816,7 @@ if (QRCodeEl) {
             QRCodeEl.innerHTML = modifyQRCodeSVG(svg);
         }
     );
-    updateQRCodeIframeValue('https://flowbite.com', 'M');
+    updateQRCodeIframesValue('https://flowbite.com', 'M');
 
     QRCodeValInput.addEventListener('keyup', function () {
         const value = this.value;
@@ -829,7 +832,7 @@ if (QRCodeEl) {
                     QRCodeEl.innerHTML = modifyQRCodeSVG(svg);
                 }
             );
-            updateQRCodeIframeValue(value, QrCodeLevel);
+            updateQRCodeIframesValue(value, QrCodeLevel);
         }
     });
 
@@ -859,7 +862,7 @@ if (QRCodeEl) {
                     QRCodeEl.innerHTML = modifyQRCodeSVG(svg);
                 }
             );
-            updateQRCodeIframeValue(value, level);
+            updateQRCodeIframesValue(value, level);
         });
     });
 

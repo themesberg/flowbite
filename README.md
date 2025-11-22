@@ -803,7 +803,7 @@ Flowbite is an open source collection of UI components built with the utility cl
   </tr>
 <tr>
     <td width="33.3333%">WYSIWYG Editor</td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">QR Code</td>
     <td width="33.3333%"></td>
   </tr>
   <tr>
@@ -812,7 +812,11 @@ Flowbite is an open source collection of UI components built with the utility cl
             <img alt="Tailwind CSS WYSIWYG Text Editor" src="https://flowbite.s3.amazonaws.com/github/wysiwyg.jpg">
         </a>
     </td>
-    <td width="33.3333%"></td>
+    <td width="33.3333%">
+        <a href="https://flowbite.com/docs/components/qr-code/">
+            <img alt="Tailwind CSS QR Code" src="https://flowbite.s3.us-east-1.amazonaws.com/github/qrcode.jpg">
+        </a>
+    </td>
     <td width="33.3333%"></td>
   </tr>
 </table>

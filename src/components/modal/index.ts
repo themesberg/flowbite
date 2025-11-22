@@ -29,6 +29,8 @@ class Modal implements ModalInterface {
     _keydownEventListener: EventListenerOrEventListenerObject;
     _eventListenerInstances: EventListenerInstance[] = [];
     _initialized: boolean;
+    _lastActiveElement: HTMLElement | null;
+    _focusTrapEventListener: EventListenerOrEventListenerObject;
 
     constructor(
         targetEl: HTMLElement | null = null,
@@ -43,6 +45,7 @@ class Modal implements ModalInterface {
         this._isHidden = true;
         this._backdropEl = null;
         this._initialized = false;
+        this._lastActiveElement = null;
         this.init();
         instances.addInstance(
             'Modal',
@@ -63,6 +66,7 @@ class Modal implements ModalInterface {
 
     destroy() {
         if (this._initialized) {
+            this._removeFocusTrap();
             this.removeAllEventListenerInstances();
             this._destroyBackdropEl();
             this._initialized = false;
@@ -169,9 +173,76 @@ class Modal implements ModalInterface {
                 return ['justify-center', 'items-end'];
             case 'bottom-right':
                 return ['justify-end', 'items-end'];
-
             default:
                 return ['justify-center', 'items-center'];
+        }
+    }
+
+    _getFocusableElements(): HTMLElement[] {
+        if (!this._targetEl) return [];
+
+        const selector =
+            'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+        return Array.from(
+            this._targetEl.querySelectorAll(selector)
+        ) as HTMLElement[];
+    }
+
+    _setupFocusTrap(): void {
+        if (!this._targetEl) return;
+
+        this._lastActiveElement = document.activeElement as HTMLElement;
+
+        const focusableSelector =
+            'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+        const focusableElements = Array.from(
+            this._targetEl.querySelectorAll(focusableSelector)
+        ) as HTMLElement[];
+
+        // If no focusable elements, focus on modal
+        if (focusableElements.length === 0) {
+            this._targetEl.setAttribute('tabindex', '-1');
+            this._targetEl.focus();
+            return;
+        }
+
+        setTimeout(() => {
+            // Focus on 1st focusable element, usually the close button
+            focusableElements[0].focus();
+        }, 50);
+
+        this._focusTrapEventListener = (event: KeyboardEvent) => {
+            if (event.key !== 'Tab') return;
+
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+
+            // Trap focus within the modal
+            if (event.shiftKey && document.activeElement === firstElement) {
+                lastElement.focus();
+                event.preventDefault();
+            } else if (
+                !event.shiftKey &&
+                document.activeElement === lastElement
+            ) {
+                firstElement.focus();
+                event.preventDefault();
+            }
+        };
+
+        document.addEventListener('keydown', this._focusTrapEventListener);
+    }
+
+    _removeFocusTrap(): void {
+        if (this._focusTrapEventListener) {
+            document.removeEventListener(
+                'keydown',
+                this._focusTrapEventListener
+            );
+        }
+
+        if (this._lastActiveElement) {
+            setTimeout(() => this._lastActiveElement?.focus(), 50);
         }
     }
 
@@ -201,6 +272,8 @@ class Modal implements ModalInterface {
                 this._setupModalCloseEventListeners();
             }
 
+            this._setupFocusTrap();
+
             // prevent body scroll
             document.body.classList.add('overflow-hidden');
 
@@ -211,6 +284,7 @@ class Modal implements ModalInterface {
 
     hide() {
         if (this.isVisible) {
+            this._removeFocusTrap();
             this._targetEl.classList.add('hidden');
             this._targetEl.classList.remove('flex');
             this._targetEl.setAttribute('aria-hidden', 'true');

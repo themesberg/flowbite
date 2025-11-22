@@ -3,6 +3,7 @@ import docsearch from '@docsearch/js';
 import { codeToHtml } from 'shiki';
 import { createCssVariablesTheme } from 'shiki/core';
 import QRCode from 'qrcode';
+import { Octokit } from 'octokit';
 
 const codeBlockElements = document.getElementsByClassName('shiki-code-block');
 
@@ -921,3 +922,23 @@ if (QRCodeEl) {
         }, 100);
     });
 }
+
+// get github stars
+
+// GitHub API: https://developer.github.com/v3/repos/#get
+let res = await fetch('https://api.github.com/repos/themesberg/flowbite');
+let json = await res.json();
+
+const formatStarCount = (count) => {
+    if (count >= 1000) {
+        const thousands = count / 1000;
+        return thousands % 1 === 0
+            ? `${thousands}k`
+            : `${thousands.toFixed(1)}k`;
+    }
+    return count.toString();
+};
+
+document.getElementById('github_stars').textContent = formatStarCount(
+    json.stargazers_count
+);

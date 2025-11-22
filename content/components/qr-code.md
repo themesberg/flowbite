@@ -11,11 +11,7 @@ next: Video
 nextLink: components/video/
 ---
 
-QR codes are a popular way to encode information such as website links, texts, and other data into a two-dimensional barcode that can be scanned with a phone camera or other devices. The Flowbite component allows you to couple them with other elements such as input fields, tooltips, tab selectors, and more.
-
-Use this free QR code generator and customize the parameters to see the live preview.
-
-<div class="grid sm:grid-cols-2 gap-8 sm:bg-neutral-primary sm:border border-light-subtle sm:rounded-base sm:p-8 my-8">
+<div class="grid sm:grid-cols-2 gap-8 sm:bg-neutral-primary sm:border border-light-subtle sm:rounded-base sm:p-8 mb-8">
   <div class="space-y-4">
     <h2 class="text-2xl font-semibold text-heading">QR Code Generator</h2>
     <p class="text-body">Generate QR codes from text or URLs.</p>
@@ -95,6 +91,10 @@ Save as file</button>
     </div>
   </div>
 </div>
+
+QR codes are a popular way to encode information such as website links, texts, and other data into a two-dimensional barcode that can be scanned with a phone camera or other devices. The Flowbite component allows you to couple them with other elements such as input fields, tooltips, tab selectors, and more.
+
+Use this free QR code generator and customize the parameters to see the live preview.
 
 The component examples below are generated using the data you provided in the generator tool and can be used directly in your website layouts with different use cases such as sharing URLs, contact information, or text messages.
 

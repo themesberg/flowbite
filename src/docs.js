@@ -2,6 +2,8 @@
 import docsearch from '@docsearch/js';
 import { codeToHtml } from 'shiki';
 import { createCssVariablesTheme } from 'shiki/core';
+import QRCode from 'qrcode';
+import { Octokit } from 'octokit';
 
 const codeBlockElements = document.getElementsByClassName('shiki-code-block');
 
@@ -754,3 +756,189 @@ themeSelectorButtons.forEach((button) => {
         applyCssTheme(theme);
     });
 });
+
+const modifyQRCodeSVG = (svgString) => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(svgString, 'image/svg+xml');
+    const svg = doc.querySelector('svg');
+
+    if (svg) {
+        svg.classList.add('text-heading');
+        const paths = svg.querySelectorAll('path');
+        paths.forEach((path) => {
+            if (path.hasAttribute('fill')) {
+                path.setAttribute('fill', 'none');
+            }
+            if (path.hasAttribute('stroke')) {
+                path.setAttribute('stroke', 'currentColor');
+            }
+        });
+    }
+
+    return new XMLSerializer().serializeToString(doc);
+};
+
+const updateQRCodeIframesValue = (value, level = 'M') => {
+    const iframeCodeEls = document.querySelectorAll('.iframe-code');
+    iframeCodeEls.forEach((iframeCodeEl) => {
+        if (iframeCodeEl.contentDocument) {
+            updateQRCodeiFrameValue(iframeCodeEl, value, level);
+        }
+    });
+};
+
+const updateQRCodeiFrameValue = (iframe, value, level = 'M') => {
+    const iframeQRCodeEl = iframe.contentDocument.getElementById('qrcode');
+    if (iframeQRCodeEl && value) {
+        QRCode.toString(
+            iframeQRCodeEl,
+            value,
+            { errorCorrectionLevel: level },
+            function (_err, svg) {
+                iframeQRCodeEl.innerHTML = modifyQRCodeSVG(svg);
+            }
+        );
+    }
+};
+
+const QRCodeEl = document.getElementById('qrcode');
+const QRCodeValInput = document.getElementById('qr_code_value');
+const QRCodeLevelButtons = document.querySelectorAll('[data-qr-code-level]');
+const QRCodeCopySVGButton = document.getElementById('copy-qr-code-button');
+const saveQRCodeButton = document.getElementById('save-qr-code-button');
+
+if (QRCodeEl) {
+    // default value
+    QRCode.toString(
+        QRCodeEl,
+        'https://flowbite.com',
+        { errorCorrectionLevel: 'M' },
+        function (_err, svg) {
+            QRCodeEl.innerHTML = modifyQRCodeSVG(svg);
+        }
+    );
+    updateQRCodeIframesValue('https://flowbite.com', 'M');
+
+    QRCodeValInput.addEventListener('keyup', function () {
+        const value = this.value;
+        const QrCodeLevel = document
+            .querySelector('[data-qr-code-active="true"]')
+            ?.getAttribute('data-qr-code-level');
+        if (value && QrCodeLevel) {
+            QRCode.toString(
+                QRCodeEl,
+                value,
+                { errorCorrectionLevel: QrCodeLevel },
+                function (_err, svg) {
+                    QRCodeEl.innerHTML = modifyQRCodeSVG(svg);
+                }
+            );
+            updateQRCodeIframesValue(value, QrCodeLevel);
+        }
+    });
+
+    QRCodeLevelButtons.forEach((button) => {
+        button.addEventListener('click', function () {
+            const level = this.getAttribute('data-qr-code-level');
+            const value = QRCodeValInput.value || 'https://flowbite.com';
+            const isActive =
+                this.getAttribute('data-qr-code-active') === 'true';
+
+            if (isActive) return;
+
+            button.setAttribute('data-qr-code-active', 'true');
+
+            // Deactivate other buttons
+            QRCodeLevelButtons.forEach((btn) => {
+                if (btn !== button) {
+                    btn.setAttribute('data-qr-code-active', 'false');
+                }
+            });
+
+            QRCode.toString(
+                QRCodeEl,
+                value,
+                { errorCorrectionLevel: level },
+                function (_err, svg) {
+                    QRCodeEl.innerHTML = modifyQRCodeSVG(svg);
+                }
+            );
+            updateQRCodeIframesValue(value, level);
+        });
+    });
+
+    QRCodeCopySVGButton.addEventListener('click', function () {
+        const svgContent = QRCodeEl.innerHTML;
+        navigator.clipboard.writeText(svgContent);
+
+        // Show success state
+        const defaultIcon = QRCodeCopySVGButton.querySelector(
+            '#default-copy-qr-code-icon'
+        );
+        const successIcon = QRCodeCopySVGButton.querySelector(
+            '#success-copy-qr-code-icon'
+        );
+        const copyText =
+            QRCodeCopySVGButton.querySelector('#copy-qr-code-text');
+
+        if (defaultIcon && successIcon && copyText) {
+            defaultIcon.classList.add('hidden');
+            successIcon.classList.remove('hidden');
+            copyText.textContent = 'Copied!';
+
+            // Reset after 2 seconds
+            setTimeout(() => {
+                defaultIcon.classList.remove('hidden');
+                successIcon.classList.add('hidden');
+                copyText.textContent = 'Copy as SVG';
+            }, 2000);
+        }
+    });
+
+    saveQRCodeButton.addEventListener('click', function () {
+        // TODO: Implement save as file functionality
+        console.log('Save QR code as file clicked');
+
+        // Get the SVG content
+        const svgContent = QRCodeEl.innerHTML;
+
+        // Create a blob from the SVG content
+        const blob = new Blob([svgContent], { type: 'image/svg+xml' });
+
+        // Create a download link
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'qrcode.svg';
+
+        // Trigger the download
+        document.body.appendChild(a);
+        a.click();
+
+        // Clean up
+        setTimeout(() => {
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }, 100);
+    });
+}
+
+// get github stars
+
+// GitHub API: https://developer.github.com/v3/repos/#get
+let res = await fetch('https://api.github.com/repos/themesberg/flowbite');
+let json = await res.json();
+
+const formatStarCount = (count) => {
+    if (count >= 1000) {
+        const thousands = count / 1000;
+        return thousands % 1 === 0
+            ? `${thousands}k`
+            : `${thousands.toFixed(1)}k`;
+    }
+    return count.toString();
+};
+
+document.getElementById('github_stars').textContent = formatStarCount(
+    json.stargazers_count
+);

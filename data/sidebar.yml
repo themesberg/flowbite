@@ -98,6 +98,8 @@
       - title: Toast
       - title: Tooltips
       - title: Typography
+      - title: QR Code
+        new: true
       - title: Video
 
 - title: Forms

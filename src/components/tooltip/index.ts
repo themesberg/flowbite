@@ -133,6 +133,10 @@ class Tooltip implements TooltipInterface {
                         offset: [0, 8],
                     },
                 },
+                {
+                    name: 'eventListeners',
+                    enabled: false
+                },
             ],
         });
     }

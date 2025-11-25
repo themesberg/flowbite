@@ -143,6 +143,10 @@ class Popover implements PopoverInterface {
                         offset: [0, this._options.offset],
                     },
                 },
+                {
+                    name: 'eventListeners',
+                    enabled: false
+                },
             ],
         });
     }

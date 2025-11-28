@@ -39,6 +39,9 @@ const turboStreamLoadEvents = new Events('turbo:after-stream-render', [
 ]);
 turboStreamLoadEvents.init();
 
+const turboRenderEvents = new Events('turbo:render', [initFlowbite]);
+turboRenderEvents.init();
+
 export default {
     Accordion,
     Carousel,

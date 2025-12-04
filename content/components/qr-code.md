@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Tailwind CSS QR Code - Flowbite
+title: Tailwind CSS QR Code Generator - Flowbite
 description: Use this component to generate and show QR codes based on text or URL that can be scanned with device phone cameras and other devices using the Flowbite library based on Tailwind CSS
 group: components
 toc: true
@@ -13,7 +13,6 @@ nextLink: components/video/
 
 <div class="grid sm:grid-cols-2 gap-8 sm:bg-neutral-primary sm:border border-light-subtle sm:rounded-base sm:p-8 mb-8">
   <div class="space-y-4">
-    <h2 class="text-2xl font-semibold text-heading">QR Code Generator</h2>
     <p class="text-body">Generate QR codes from text or URLs.</p>
     <label for="qr_code_value" class="block mb-2.5 text-sm font-medium text-heading">Value:</label>
     <input type="text" id="qr_code_value" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="https://flowbite.com" required />
@@ -75,7 +74,7 @@ nextLink: components/video/
       <div id="qrcode" class="w-56 h-56"></div>
     </div>
     <div class="grid grid-cols-2 gap-4">
-      <button type="button" id="copy-qr-code-button" data-tooltip-target="copy-qr-code" class="text-white inline-flex items-center justify-center gap-2 bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+      <button type="button" id="copy-qr-code-button" class="text-white inline-flex items-center justify-center gap-2 bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
         <svg id="default-copy-qr-code-icon" class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
           <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"/>
         </svg>

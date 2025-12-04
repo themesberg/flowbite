@@ -5,8 +5,9 @@
     - title: Quickstart
     - title: JavaScript
     - title: TypeScript
-    - title: LLM
+    - title: MCP
       new: true
+    - title: LLM
     - title: License
     - title: Changelog
 

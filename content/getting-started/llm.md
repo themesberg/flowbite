@@ -5,8 +5,8 @@ description: Learn how to integrate Flowbite and Tailwind CSS with any LLM inter
 group: getting-started
 toc: true
 
-previous: TypeScript
-previousLink: getting-started/typescript/
+previous: MCP Server
+previousLink: getting-started/mcp/
 next: License
 nextLink: getting-started/license/
 ---

@@ -1,6 +1,7 @@
 {
   "name": "flowbite",
   "version": "4.0.1",
+  "mcpName": "io.github.themesberg/flowbite-mcp",
   "description": "The most popular library of interactive components built with Tailwind CSS",
   "keywords": [
     "flowbite",

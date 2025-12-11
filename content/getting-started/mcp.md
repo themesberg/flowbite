@@ -22,7 +22,6 @@ Additionally, we also developed tools to convert Figma layers to code relevant t
 The easiest way to install the Flowbite MCP is using NPX:
 
 {{< code lang="bash" >}}
-# Run directly with npx (no installation needed)
 npx flowbite-mcp
 {{< /code >}}
 
@@ -99,6 +98,41 @@ To install Flowbite MCP in Claude Desktop you need to configure the `claude_desk
 {{< /code >}}
 
 If you'd like to request a new integration or have any questions, please open an issue on our [GitHub repository](https://github.com/themesberg/flowbite-mcp).
+
+## Flowbite MCP tools
+
+Use the tools from Flowbite MCP to enhance your AI development workflow.
+
+### Convert Figma to code
+
+With Flowbite MCP you can now convert [Figma layers](https://flowbite.com/figma/) to code by prompting any AI provider. 
+
+Currently, we recommend either Gemini 3, GPT 5 or Sonnet 4.5 for the highest quality code conversions and based on the complexity of the designs, you need to follow up with "reparation prompts".
+
+Here's a prompt example that you can use to convert Figma design to code:
+
+{{< code lang="html" file="Chat interface" >}}
+use flowbite mcp to convert this figma <FIGMA_NODE_LINK> to code
+{{< /code >}}
+
+Note: to get the node link from Figma, all you need to do is:
+
+1. Select the Figma layer in your project
+2. Right click and select `Copy/paste as`
+3. Select `Copy link to selection`
+
+We recommend using the offical [Flowbite Design System](https://flowbite.com/figma/) as a solid foundation for your UI generation.
+
+### Generate theme file
+
+Since we released [theming support](https://flowbite.com/docs/customize/theming/) for Flowbite by providing a better way to customize UI using variables we also built a tool in Flowbite MCP to generate a theme file based on a brand color and a general description of the UI that you'd like to use in your project.
+
+Here's a prompt example that you can use:
+
+{{< code lang="html" file="Chat interface" >}}
+use flowbite mcp to generate a theme file using the "#0000FF" brand color
+and create a professional, enterprise, clean looking UI (ie. Jira, Facebook)
+{{< /code >}}
 
 ## Local development
 

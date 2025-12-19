@@ -131,6 +131,7 @@
     "types",
     "plugin.d.ts",
     "plugin.js",
-    "plugin-windicss.js"
+    "plugin-windicss.js",
+    "plugin-utilities.js"
   ]
 }

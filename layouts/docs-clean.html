@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+{{ partial "navbar" }}
+
+<div class="w-full px-4 lg:px-0 mx-auto max-w-8xl border-s border-e border-light-subtle">
+  <div class="lg:flex">
+
+    <div class="fixed inset-0 z-10 hidden bg-dark/50 dark:bg-dark/60" id="sidebarBackdrop"></div>
+
+    <main id="content-wrapper" class="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible mt-32 xl:mt-30">
+      <div class="flex w-full">
+
+        <!-- Main content -->
+        <div class="flex-auto max-w-full min-w-0">
+
+          <div id="mainContent" class="lg:px-8 xl:pb-24 py-8 lg:pb-16">
+            {{ .Content }}
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+</div>
+{{ end }}
+
+{{ define "footer" }}
+{{ range .Page.Params.extra_js -}}
+<script{{ with .async }} async{{ end }} src="{{ .src }}">
+</script>
+  {{- end -}}
+  {{ end }}

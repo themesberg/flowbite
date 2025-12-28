@@ -519,15 +519,18 @@ window.addEventListener('load', () => {
     const currentHref = window.location.href;
     const sidebarItemEls = document.querySelectorAll('[data-sidebar-item]');
     const sidenav = document.getElementById('navWrapper');
-    const sidenavHeight = sidenav.clientHeight;
 
-    sidebarItemEls.forEach((s) => {
-        if (s.href === currentHref) {
-            const itemHeight = s.clientHeight;
-            sidenav.scrollTop =
-                s.offsetTop - sidenavHeight / 2 + itemHeight / 2;
-        }
-    });
+    if (sidenav) {
+        const sidenavHeight = sidenav.clientHeight;
+
+        sidebarItemEls.forEach((s) => {
+            if (s.href === currentHref) {
+                const itemHeight = s.clientHeight;
+                sidenav.scrollTop =
+                    s.offsetTop - sidenavHeight / 2 + itemHeight / 2;
+            }
+        });
+    }
 
     // toggle dark mode
     var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');

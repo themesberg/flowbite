@@ -296,8 +296,7 @@
     --radius-xxs: 1px;
     --radius-xs: 1px;
     --radius-sm: 1px;
-    --radius: 4px;
-    --radius: 4px;
+    --radius: 2px;
     --radius-md: 4px;
     --radius-base: 4px; 
     --radius-lg: 4px;
@@ -421,8 +420,7 @@
         --radius-xxs: 2px;
         --radius-xs: 2px;
         --radius-sm: 10px;
-        --radius: 10px;
-        --radius: 14px;
+        --radius: 12px;
         --radius-md: 14px;
         --radius-base: 20px; 
         --radius-lg: 16px;

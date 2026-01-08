@@ -16,6 +16,17 @@ import Datepicker from './components/datepicker';
 import { initFlowbite } from './components/index';
 import Events from './dom/events';
 
+// Patch Modal to add Turbo-compatible attributes to backdrop
+// This prevents Turbo Morph from removing dynamically created backdrop elements
+const originalCreateBackdrop = Modal.prototype._createBackdrop;
+Modal.prototype._createBackdrop = function () {
+    originalCreateBackdrop.call(this);
+    if (this._backdropEl) {
+        this._backdropEl.setAttribute('data-turbo-permanent', '');
+        this._backdropEl.setAttribute('data-turbo-temporary', '');
+    }
+};
+
 // Since turbo maintainers refuse to add this event, we'll add it ourselves
 // https://discuss.hotwired.dev/t/event-to-know-a-turbo-stream-has-been-rendered/1554/10
 const afterRenderEvent = new Event('turbo:after-stream-render');

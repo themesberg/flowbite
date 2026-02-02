@@ -43,3 +43,44 @@ This command will run a local server on `http://localhost:3000` and will create 
 
 - the main MCP server on the `/mcp` endpoint
 - a collection of widgets built with Flowbite and React used as tools
+
+## Connect with Ngrok
+
+In order to expose the server to AI clients such as ChatGPT, Gemini or Claude we need to host the MCP server.
+
+Install `ngrok` on your computer using Homebrew and run the following command:
+
+{{< code lang="bash" >}}
+ngrok http 3000
+{{< /code >}}
+
+This will host the MCP server on a URL similar to this one:
+
+{{< code lang="bash" >}}
+# this is just an example
+https://3785c5ddc4b6.ngrok-free.app/mcp
+{{< /code >}}
+
+You will now be able to use this URL to create an application for ChatGPT, Claude, Gemini, and for any MCP clients.
+
+## Install on AI providers
+
+### ChatGPT Apps
+
+### Claude Web
+
+### Gemini CLI
+
+### Cursor
+
+### VS Code
+
+### Claude Code
+
+### Mistral AI
+
+### Codex
+
+## Create a widget
+
+## Update theming

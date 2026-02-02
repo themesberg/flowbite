@@ -38,8 +38,8 @@
       - title: Flask
       - title: Blazor
       - title: Hugo
+      - title: MCP UI
         new: true
-      
 
 - title: Customize
   slug: customize

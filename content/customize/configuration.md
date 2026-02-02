@@ -5,8 +5,8 @@ description: Learn how to customize the default Flowbite and Tailwind CSS option
 group: customize
 toc: true
 
-previous: HUGO
-previousLink: getting-started/hugo/
+previous: MCP UI
+previousLink: getting-started/mcp-ui/
 next: Variables
 nextLink: customize/variables/
 ---

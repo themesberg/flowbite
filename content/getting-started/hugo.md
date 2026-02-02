@@ -8,8 +8,8 @@ requires_hugo: true
 
 previous: Blazor
 previousLink: getting-started/blazor/
-next: Configuration
-nextLink: customize/configuration/
+next: MCP UI
+nextLink: getting-started/mcp-ui/
 ---
 
 [HUGO](https://gohugo.io/) is a popular and open-source static site generator framework that makes it easy to organize your files and assets where you can also leverage a taxonomy system, multilingual support, fast assets pipeline, and more. HUGO is used by millions of developers and by websites such as Bootstrap, Litecoin, Smashing Magazine, and even Flowbite.

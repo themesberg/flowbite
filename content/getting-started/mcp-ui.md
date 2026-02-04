@@ -79,18 +79,18 @@ Make sure that you have a paid plan to create an application on ChatGPT.
 4. Go back to the Settings > Connectors page, and click on "Create in the Browser Connectors"
 5. Add a custom connector with the MCP Server URL: `[NGROK_FORWARDING_URL]/mcp`
 6. Click on "Create to add the MCP server as a Connector"
-7. To use your newly created connector in the chat, click + then More and select it.
+7. To use your connector in the chat, click "+"" then "More" and select it.
 
 ### Claude Web
 
 Make sure that you have a paid plan to create an application on Claude.
 
 1. Go to Settings > Connectors
-2. Locate the "Connectors" section
-3. Click "Add custom connector" at the bottom of the section
+2. Find the "Connectors" section
+3. Click on "Add custom connector" at the bottom of the section
 4. Add your connector's remote MCP server URL: [NGROK_FORWARDING_URL]/mcp
-5. Finish configuring your connector and click Add
-6. To enable connectors, use the Search and tools button on the lower left of the chat.
+5. Finish configuring your connector and click "Add"
+6. To enable connectors, use the "Search and tools button" on the lower left of the chat interface.
 
 ### Gemini CLI
 
@@ -145,9 +145,9 @@ claude mcp add --transport http <server-name> "[NGROK_FORWARDING_URL]/mcp"
 1. Open the side panel and expand Intelligence > Connectors
 2. Click "+ Add Connector" on the right side of the page
 3. In the MCP Connectors directory, click the "Custom MCP Connector tab"
-4. Enter a Connector Name and the following Connector Server URL: `[NGROK_FORWARDING_URL]/mcp`
+4. Enter a name for the connector and the following server URL: `[NGROK_FORWARDING_URL]/mcp`
 5. Finish configuring your connector and click "Create"
-6. To use the connector, click the Tools button below the chat input and enable it in the Connectors section.
+6. To use the connector, click the "Tools" button below the chat input and enable it in the "Connectors" section.
 
 ### Codex
 
@@ -159,7 +159,37 @@ codex mcp add <server-name> --url "[NGROK_FORWARDING_URL]/mcp"
 
 ## Create a widget
 
-## Update theming
+## Customize theming
+
+Flowbite allows you to easily customize the appearance of the UI components from the MCP apps by using the [theming options](https://flowbite.com/docs/customize/theming/) based on CSS variables from Tailwind.
+
+Select one of the predefined themes from Flowbite or customize the variables yourself in the `index.css` file:
+
+{{< code lang="css" icon="file" file="index.css" >}}
+/* choose one of the following */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "flowbite/src/themes/default";
+
+/* MINIMAL THEME
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "flowbite/src/themes/minimal";
+*/
+
+/* ENTERPRISE THEME
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "flowbite/src/themes/enterprise";
+*/
+
+/* PLAYFUL THEME
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+@import "flowbite/src/themes/playful";
+*/
+
+/* MONO THEME
+@import "flowbite/src/themes/mono";
+*/
+{{< /code >}}
 
 ## Build for production
 

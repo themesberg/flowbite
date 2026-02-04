@@ -159,6 +159,103 @@ codex mcp add <server-name> --url "[NGROK_FORWARDING_URL]/mcp"
 
 ## Create a widget
 
+Creating a new widget means setting up the server side where we can set up the input data that comes from the AI client (which is the user prompt itself) and the web component which is the front-end widget where we show the output (such as a chart, data table, or just text).
+
+### Server component
+
+If you want to create a new widget yourself, then first create a new file inside the `server/src/widgets` folder and add the following code that creates a basic server side tool which returns a string as output:
+
+{{< code lang="javascript" icon="file" file="widgets/basic-text-server.tsx" >}}
+import { z } from "zod";
+
+// Basic Answer widget configuration
+export const basicTextWidget = {
+  name: "basic-text" as const,
+  metadata: {
+    description: "Basic Text",
+  },
+  toolConfig: {
+    description: "Show a text message based on a question.",
+    inputSchema: {
+      question: z.string().describe("The user's question."),
+    },
+  },
+  handler: async () => {
+    try {
+      const answer = "Hello, world!";
+      return {
+        structuredContent: { answer },
+        content: [],
+        isError: false,
+      };
+    } catch (error) {
+      return {
+        content: [{ type: "text" as const, text: `Error: ${error}` }],
+        isError: true,
+      };
+    }
+  },
+};
+{{< /code >}}
+
+### Web component
+
+Then create the front-end part of the widget inside the `web/src/widgets` folder where you can use React code to create the markup of the widget and use the server data, which in this case is a basic text coming from our server component:
+
+{{< code lang="javascript" icon="file" file="web/src/widgets/basic-text.tsx" >}}
+import "@/index.css";
+
+import { mountWidget } from "skybridge/web";
+import { useToolInfo } from "../helpers";
+
+function BasicTextWidget() {
+  const { input, output } = useToolInfo<"basic-text">();
+  if (!output) {
+    return (
+      <div role="status">
+          <svg aria-hidden="true" className="w-8 h-8 text-neutral-tertiary animate-spin fill-brand" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+              <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+          </svg>
+          <span className="sr-only">Loading...</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="p-4 space-y-2">
+      <p className="text-body"><strong>Question:</strong> {input.question}</p>
+      <p className="text-body"><strong>Answer:</strong> {output.answer}</p>
+    </div>
+  );
+}
+
+export default BasicTextWidget;
+
+mountWidget(<BasicTextWidget />);
+{{< /code >}}
+
+Finally, register the widget in the `server.ts` file:
+
+{{< code lang="javascript" icon="file" file="server.ts" >}}
+import { McpServer } from "skybridge/server";
+import { basicTextWidget } from "./widgets/basic-text-server.js";
+
+const server = new McpServer(
+  {
+    name: "mcp-ui-components",
+    version: "0.0.1",
+  },
+  { capabilities: {} }
+)
+  .registerWidget(
+    basicTextWidget.name,
+    basicTextWidget.metadata,
+    basicTextWidget.toolConfig,
+    basicTextWidget.handler
+  )
+{{< /code >}}
+
 ## Customize theming
 
 Flowbite allows you to easily customize the appearance of the UI components from the MCP apps by using the [theming options](https://flowbite.com/docs/customize/theming/) based on CSS variables from Tailwind.
@@ -191,6 +288,6 @@ Select one of the predefined themes from Flowbite or customize the variables you
 */
 {{< /code >}}
 
-## Build for production
+<!-- ## Build for production
 
-## Host your MCP app
+## Host your MCP app -->

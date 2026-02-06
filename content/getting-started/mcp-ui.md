@@ -17,6 +17,8 @@ In this guide you will learn how to create an MCP app using Flowbite and Skybrid
 
 We decided to use the [Skybridge](https://github.com/alpic-ai/skybridge) framework to build MCP apps and we are using the UI components from [Flowbite](https://flowbite.com/).
 
+<iframe width="100%" class="my-8 rounded-lg shadow-lg yt-video" src="https://www.youtube.com/embed/t9KRwktrZyk?si=eo2EOgOJd0ha1NWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Create new MCP app
 
 The first step is to create a new MCP application and start developing locally:

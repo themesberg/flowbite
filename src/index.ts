@@ -18,20 +18,20 @@ import './types/declarations';
 
 // setup events for data attributes
 const events = new Events('load', [
-    initAccordions,
-    initCollapses,
-    initCarousels,
-    initDismisses,
-    initDropdowns,
-    initModals,
-    initDrawers,
-    initTabs,
-    initTooltips,
-    initPopovers,
-    initDials,
-    initInputCounters,
-    initCopyClipboards,
-    initDatepickers,
+    () => initAccordions(),
+    () => initCollapses(),
+    () => initCarousels(),
+    () => initDismisses(),
+    () => initDropdowns(),
+    () => initModals(),
+    () => initDrawers(),
+    () => initTabs(),
+    () => initTooltips(),
+    () => initPopovers(),
+    () => initDials(),
+    () => initInputCounters(),
+    () => initCopyClipboards(),
+    () => initDatepickers(),
 ]);
 events.init();
 

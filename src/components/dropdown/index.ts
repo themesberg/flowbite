@@ -39,6 +39,7 @@ class Dropdown implements DropdownInterface {
     _hoverShowTargetElHandler: EventListenerOrEventListenerObject;
     _hoverHideHandler: EventListenerOrEventListenerObject;
     _clickHandler: EventListenerOrEventListenerObject;
+    _keydownEventListener: EventListenerOrEventListenerObject;
 
     constructor(
         targetElement: HTMLElement | null = null,
@@ -101,6 +102,8 @@ class Dropdown implements DropdownInterface {
             });
         }
 
+        document.removeEventListener('keydown', this._keydownEventListener);
+
         this._popperInstance.destroy();
         this._initialized = false;
     }
@@ -127,6 +130,16 @@ class Dropdown implements DropdownInterface {
                 this._triggerEl.addEventListener(ev, this._clickHandler);
             });
         }
+
+        this._keydownEventListener = (ev: KeyboardEvent) => {
+            if (ev.key === 'Escape') {
+                if (this.isVisible()) {
+                    this.hide();
+                }
+            }
+        };
+
+        document.addEventListener('keydown', this._keydownEventListener);
 
         this._hoverShowTriggerElHandler = (ev) => {
             if (ev.type === 'click') {

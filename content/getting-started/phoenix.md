@@ -641,6 +641,38 @@ Then to your input field add the `Datepicker` `phx-hook` to initialize the datep
   <input phx-hook="Datepicker" id="myInput" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
 {{< /code >}}
 
+## A note on async components
+When using Phoenix paired with LiveView, you will probably stumble upon the built in component `<.async_result>` (and its other flavors), whose purpose is to render an element (a message, a loading animation) while data is being requested to ultimately load another element (a table, chart, form, etc). Some Flowbite components might partially break if they are rendered async.
+
+This is due to the FlowbiteJS library expecting the presence of the elements in the DOM on first render.
+
+An example of this could be a component that is an accordion or has a context menu (This is not an exhaustive list).
+
+A workaround for this scenario is to make a hook that manually initializes the set of components used.
+
+```javascript
+import { initAccordions } from "flowbite";
+# Hook
+export const Accordion = {
+  mounted() {
+    initAccordions();
+  },
+  updated() {
+    this.mounted();
+  },
+};
+```
+
+Then
+
+```elixir
+<.async_result :let={data} assign={@data}>
+    <:loading>Loading</:loading>
+    <:failed :let={failure}>There was an error loading the data</:failed>
+    <.your_flowbite_component phx-hook="Accordion">
+</.async_result>
+```
+
 ## Phoenix starter project
 
 The awesome open-source community from Flowbite built a [Phoenix starter project](https://github.com/themesberg/tailwind-phoenix-starter) with Tailwind CSS and Flowbite already configured so that you can use build websites even faster with the most popular utility-first CSS framework and the open-source UI components and website sections from Flowbite.

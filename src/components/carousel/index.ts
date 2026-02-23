@@ -350,10 +350,15 @@ export function initCarousels() {
             });
         }
 
+        const indicatorActiveClasses = $carouselEl.getAttribute('data-carousel-indicator-active-classes');
+        const indicatorInactiveClasses = $carouselEl.getAttribute('data-carousel-indicator-inactive-classes');
+
         const carousel = new Carousel($carouselEl as HTMLElement, items, {
             defaultPosition: defaultPosition,
             indicators: {
                 items: indicators,
+                activeClasses: indicatorActiveClasses ? indicatorActiveClasses : Default.indicators.activeClasses,
+                inactiveClasses: indicatorInactiveClasses ? indicatorInactiveClasses : Default.indicators.inactiveClasses,
             },
             interval: interval ? interval : Default.interval,
         } as CarouselOptions);

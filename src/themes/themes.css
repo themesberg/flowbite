@@ -6,15 +6,16 @@
     /* TEXT VARIABLES */
     --text-2xs: 0.625rem;
     --spacing-8xl: 90rem;
-    --leading-9: 36px; /* rem pls */
-    --leading-7: 28px;
-    --leading-8: 32px;
-    --leading-6: 24px;
-    --leading-4: 16px;
+    --leading-9: 2.25rem;
+    --leading-8: 2rem;
+    --leading-7: 1.75rem;
+    --leading-6: 1.5rem;
+    --leading-5: 1.25rem;
+    --leading-4: 1rem;
     --leading-none: 1;
     --leading-5: 20px;
     --tracking-tighter: -0.8px;
-    --leading-heading-none: 60px;
+    --leading-heading-none: 3.75rem;
     --tracking-tight: -0.4px;
 
     /* BORDER RADIUS VARIABLES */

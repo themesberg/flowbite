@@ -120,10 +120,10 @@ class Accordion implements AccordionInterface {
         }
 
         // show active item
-        item.triggerEl.classList.add(...this._options.activeClasses.split(' '));
         item.triggerEl.classList.remove(
             ...this._options.inactiveClasses.split(' ')
         );
+        item.triggerEl.classList.add(...this._options.activeClasses.split(' '));
         item.triggerEl.setAttribute('aria-expanded', 'true');
         item.targetEl.classList.remove('hidden');
         item.active = true;

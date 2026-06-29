@@ -287,11 +287,15 @@ export function initModals() {
         if ($modalEl) {
             const placement = $modalEl.getAttribute('data-modal-placement');
             const backdrop = $modalEl.getAttribute('data-modal-backdrop');
+            const closable = $modalEl.getAttribute('data-modal-closable');
+            const backdropClasses = $modalEl.getAttribute('data-modal-backdropClasses');
             new Modal(
                 $modalEl as HTMLElement,
                 {
                     placement: placement ? placement : Default.placement,
                     backdrop: backdrop ? backdrop : Default.backdrop,
+                    closable: closable ? closable.toLowerCase() == "true" : Default.closable,
+                    backdropClasses: backdropClasses ? backdropClasses : Default.backdropClasses,
                 } as ModalOptions
             );
         } else {

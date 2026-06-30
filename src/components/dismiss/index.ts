@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { DismissOptions } from './types';
-import type { InstanceOptions } from '../../dom/types';
+import type { InstanceOptions, RootElement } from '../../dom/types';
 import { DismissInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -92,24 +92,29 @@ class Dismiss implements DismissInterface {
     }
 }
 
-export function initDismisses() {
-    document.querySelectorAll('[data-dismiss-target]').forEach(($triggerEl) => {
-        const targetId = $triggerEl.getAttribute('data-dismiss-target');
-        const $dismissEl = document.querySelector(targetId);
+export function initDismisses($rootElement: RootElement = document) {
+    $rootElement
+        .querySelectorAll('[data-dismiss-target]')
+        .forEach(initDismissByElement);
+}
 
-        if ($dismissEl) {
-            new Dismiss($dismissEl as HTMLElement, $triggerEl as HTMLElement);
-        } else {
-            console.error(
-                `The dismiss element with id "${targetId}" does not exist. Please check the data-dismiss-target attribute.`
-            );
-        }
-    });
+export function initDismissByElement($triggerEl: Element) {
+    const targetId = $triggerEl.getAttribute('data-dismiss-target');
+    const $dismissEl = document.querySelector(targetId);
+
+    if ($dismissEl) {
+        new Dismiss($dismissEl as HTMLElement, $triggerEl as HTMLElement);
+    } else {
+        console.error(
+            `The dismiss element with id "${targetId}" does not exist. Please check the data-dismiss-target attribute.`
+        );
+    }
 }
 
 if (typeof window !== 'undefined') {
     window.Dismiss = Dismiss;
     window.initDismisses = initDismisses;
+    window.initDismissByElement = initDismissByElement;
 }
 
 export default Dismiss;

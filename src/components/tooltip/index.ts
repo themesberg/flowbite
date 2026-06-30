@@ -5,7 +5,7 @@ import type {
     Instance as PopperInstance,
 } from '@popperjs/core';
 import type { TooltipOptions } from './types';
-import type { InstanceOptions } from '../../dom/types';
+import type { InstanceOptions, RootElement } from '../../dom/types';
 import { TooltipInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -294,36 +294,39 @@ class Tooltip implements TooltipInterface {
     }
 }
 
-export function initTooltips() {
-    document.querySelectorAll('[data-tooltip-target]').forEach(($triggerEl) => {
-        const tooltipId = $triggerEl.getAttribute('data-tooltip-target');
-        const $tooltipEl = document.getElementById(tooltipId);
+export function initTooltips($rootElement: RootElement = document) {
+    $rootElement
+        .querySelectorAll('[data-tooltip-target]')
+        .forEach(initTooltipByElement);
+}
 
-        if ($tooltipEl) {
-            const triggerType = $triggerEl.getAttribute('data-tooltip-trigger');
-            const placement = $triggerEl.getAttribute('data-tooltip-placement');
+export function initTooltipByElement($triggerEl: Element) {
+    const tooltipId = $triggerEl.getAttribute('data-tooltip-target');
+    const $tooltipEl = document.getElementById(tooltipId);
 
-            new Tooltip(
-                $tooltipEl as HTMLElement,
-                $triggerEl as HTMLElement,
-                {
-                    placement: placement ? placement : Default.placement,
-                    triggerType: triggerType
-                        ? triggerType
-                        : Default.triggerType,
-                } as TooltipOptions
-            );
-        } else {
-            console.error(
-                `The tooltip element with id "${tooltipId}" does not exist. Please check the data-tooltip-target attribute.`
-            );
-        }
-    });
+    if ($tooltipEl) {
+        const triggerType = $triggerEl.getAttribute('data-tooltip-trigger');
+        const placement = $triggerEl.getAttribute('data-tooltip-placement');
+
+        new Tooltip(
+            $tooltipEl as HTMLElement,
+            $triggerEl as HTMLElement,
+            {
+                placement: placement ? placement : Default.placement,
+                triggerType: triggerType ? triggerType : Default.triggerType,
+            } as TooltipOptions
+        );
+    } else {
+        console.error(
+            `The tooltip element with id "${tooltipId}" does not exist. Please check the data-tooltip-target attribute.`
+        );
+    }
 }
 
 if (typeof window !== 'undefined') {
     window.Tooltip = Tooltip;
     window.initTooltips = initTooltips;
+    window.initTooltipByElement = initTooltipByElement;
 }
 
 export default Tooltip;

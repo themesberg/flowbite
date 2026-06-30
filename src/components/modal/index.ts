@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { ModalOptions } from './types';
-import type { InstanceOptions, EventListenerInstance } from '../../dom/types';
+import type { InstanceOptions, EventListenerInstance, RootElement } from "../../dom/types";
 import { ModalInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -278,132 +278,145 @@ class Modal implements ModalInterface {
     }
 }
 
-export function initModals() {
+export function initModals(
+    $rootElement: RootElement = document
+) {
     // initiate modal based on data-modal-target
-    document.querySelectorAll('[data-modal-target]').forEach(($triggerEl) => {
-        const modalId = $triggerEl.getAttribute('data-modal-target');
-        const $modalEl = document.getElementById(modalId);
-
-        if ($modalEl) {
-            const placement = $modalEl.getAttribute('data-modal-placement');
-            const backdrop = $modalEl.getAttribute('data-modal-backdrop');
-            new Modal(
-                $modalEl as HTMLElement,
-                {
-                    placement: placement ? placement : Default.placement,
-                    backdrop: backdrop ? backdrop : Default.backdrop,
-                } as ModalOptions
-            );
-        } else {
-            console.error(
-                `Modal with id ${modalId} does not exist. Are you sure that the data-modal-target attribute points to the correct modal id?.`
-            );
-        }
-    });
+    $rootElement
+        .querySelectorAll('[data-modal-target]')
+        .forEach(initModalByElement);
 
     // toggle modal visibility
-    document.querySelectorAll('[data-modal-toggle]').forEach(($triggerEl) => {
-        const modalId = $triggerEl.getAttribute('data-modal-toggle');
-        const $modalEl = document.getElementById(modalId);
-
-        if ($modalEl) {
-            const modal: ModalInterface = instances.getInstance(
-                'Modal',
-                modalId
-            );
-
-            if (modal) {
-                const toggleModal = () => {
-                    modal.toggle();
-                };
-                $triggerEl.addEventListener('click', toggleModal);
-                modal.addEventListenerInstance(
-                    $triggerEl as HTMLElement,
-                    'click',
-                    toggleModal
-                );
-            } else {
-                console.error(
-                    `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`
-                );
-            }
-        } else {
-            console.error(
-                `Modal with id ${modalId} does not exist. Are you sure that the data-modal-toggle attribute points to the correct modal id?`
-            );
-        }
-    });
+    $rootElement
+        .querySelectorAll('[data-modal-toggle]')
+        .forEach(initModalToggleTriggerByElement);
 
     // show modal on click if exists based on id
-    document.querySelectorAll('[data-modal-show]').forEach(($triggerEl) => {
-        const modalId = $triggerEl.getAttribute('data-modal-show');
-        const $modalEl = document.getElementById(modalId);
-
-        if ($modalEl) {
-            const modal: ModalInterface = instances.getInstance(
-                'Modal',
-                modalId
-            );
-
-            if (modal) {
-                const showModal = () => {
-                    modal.show();
-                };
-                $triggerEl.addEventListener('click', showModal);
-                modal.addEventListenerInstance(
-                    $triggerEl as HTMLElement,
-                    'click',
-                    showModal
-                );
-            } else {
-                console.error(
-                    `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`
-                );
-            }
-        } else {
-            console.error(
-                `Modal with id ${modalId} does not exist. Are you sure that the data-modal-show attribute points to the correct modal id?`
-            );
-        }
-    });
+    $rootElement
+        .querySelectorAll('[data-modal-show]')
+        .forEach(initModalShowTriggerByElement);
 
     // hide modal on click if exists based on id
-    document.querySelectorAll('[data-modal-hide]').forEach(($triggerEl) => {
-        const modalId = $triggerEl.getAttribute('data-modal-hide');
-        const $modalEl = document.getElementById(modalId);
-
-        if ($modalEl) {
-            const modal: ModalInterface = instances.getInstance(
-                'Modal',
-                modalId
-            );
-
-            if (modal) {
-                const hideModal = () => {
-                    modal.hide();
-                };
-                $triggerEl.addEventListener('click', hideModal);
-                modal.addEventListenerInstance(
-                    $triggerEl as HTMLElement,
-                    'click',
-                    hideModal
-                );
-            } else {
-                console.error(
-                    `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`
-                );
-            }
-        } else {
-            console.error(
-                `Modal with id ${modalId} does not exist. Are you sure that the data-modal-hide attribute points to the correct modal id?`
-            );
-        }
-    });
+    $rootElement
+        .querySelectorAll('[data-modal-hide]')
+        .forEach(initModalHideTriggerByElement);
 }
 
 if (typeof window !== 'undefined') {
     window.Modal = Modal;
     window.initModals = initModals;
+    window.initModalByElement = initModalByElement;
+    window.initModalToggleTriggerByElement = initModalToggleTriggerByElement;
+    window.initModalShowTriggerByElement = initModalShowTriggerByElement;
+    window.initModalHideTriggerByElement = initModalHideTriggerByElement;
+}
+
+export function initModalByElement($triggerEl: Element) {
+    const modalId = $triggerEl.getAttribute('data-modal-target');
+    const $modalEl = document.getElementById(modalId);
+
+    if ($modalEl) {
+        const placement = $modalEl.getAttribute('data-modal-placement');
+        const backdrop = $modalEl.getAttribute('data-modal-backdrop');
+        new Modal(
+            $modalEl as HTMLElement,
+            {
+                placement: placement ? placement : Default.placement,
+                backdrop: backdrop ? backdrop : Default.backdrop,
+            } as ModalOptions
+        );
+    } else {
+        console.error(
+            `Modal with id ${modalId} does not exist. Are you sure that the data-modal-target attribute points to the correct modal id?.`
+        );
+    }
+}
+
+export function initModalToggleTriggerByElement($triggerEl: Element) {
+    const modalId = $triggerEl.getAttribute('data-modal-toggle');
+    const $modalEl = document.getElementById(modalId);
+
+    if ($modalEl) {
+        const modal: ModalInterface = instances.getInstance('Modal', modalId);
+
+        if (modal) {
+            const toggleModal = () => {
+                modal.toggle();
+            };
+            $triggerEl.addEventListener('click', toggleModal);
+            modal.addEventListenerInstance(
+                $triggerEl as HTMLElement,
+                'click',
+                toggleModal
+            );
+        } else {
+            console.error(
+                `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`
+            );
+        }
+    } else {
+        console.error(
+            `Modal with id ${modalId} does not exist. Are you sure that the data-modal-toggle attribute points to the correct modal id?`
+        );
+    }
+}
+
+export function initModalShowTriggerByElement($triggerEl: Element) {
+    const modalId = $triggerEl.getAttribute('data-modal-show');
+    const $modalEl = document.getElementById(modalId);
+
+    if ($modalEl) {
+        const modal: ModalInterface = instances.getInstance('Modal', modalId);
+
+        if (modal) {
+            const showModal = () => {
+                modal.show();
+            };
+            $triggerEl.addEventListener('click', showModal);
+            modal.addEventListenerInstance(
+                $triggerEl as HTMLElement,
+                'click',
+                showModal
+            );
+        } else {
+            console.error(
+                `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`
+            );
+        }
+    } else {
+        console.error(
+            `Modal with id ${modalId} does not exist. Are you sure that the data-modal-show attribute points to the correct modal id?`
+        );
+    }
+}
+
+export function initModalHideTriggerByElement($triggerEl: Element) {
+    const modalId = $triggerEl.getAttribute('data-modal-hide');
+    const $modalEl = document.getElementById(modalId);
+
+    if ($modalEl) {
+        const modal: ModalInterface = instances.getInstance('Modal', modalId);
+
+        if (modal) {
+            const hideModal = () => {
+                modal.hide();
+            };
+            $triggerEl.addEventListener('click', hideModal);
+            modal.addEventListenerInstance(
+                $triggerEl as HTMLElement,
+                'click',
+                hideModal
+            );
+        } else {
+            console.error(
+                `Modal with id ${modalId} has not been initialized. Please initialize it using the data-modal-target attribute.`
+            );
+        }
+    } else {
+        console.error(
+            `Modal with id ${modalId} does not exist. Are you sure that the data-modal-hide attribute points to the correct modal id?`
+        );
+    }
 }
 
 export default Modal;

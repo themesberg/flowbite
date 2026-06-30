@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { InputCounterOptions } from './types';
-import type { InstanceOptions } from '../../dom/types';
+import type { InstanceOptions, RootElement } from '../../dom/types';
 import { InputCounterInterface } from './interface';
 import instances from '../../dom/instances';
 
@@ -180,50 +180,55 @@ class InputCounter implements InputCounterInterface {
     }
 }
 
-export function initInputCounters() {
-    document.querySelectorAll('[data-input-counter]').forEach(($targetEl) => {
-        const targetId = $targetEl.id;
+export function initInputCounters($rootElement: RootElement = document) {
+    $rootElement
+        .querySelectorAll('[data-input-counter]')
+        .forEach(initInputCounterByElement);
+}
 
-        const $incrementEl = document.querySelector(
-            '[data-input-counter-increment="' + targetId + '"]'
-        );
+export function initInputCounterByElement($targetEl: Element) {
+    const targetId = $targetEl.id;
 
-        const $decrementEl = document.querySelector(
-            '[data-input-counter-decrement="' + targetId + '"]'
-        );
+    const $incrementEl = document.querySelector(
+        '[data-input-counter-increment="' + targetId + '"]'
+    );
 
-        const minValue = $targetEl.getAttribute('data-input-counter-min');
-        const maxValue = $targetEl.getAttribute('data-input-counter-max');
+    const $decrementEl = document.querySelector(
+        '[data-input-counter-decrement="' + targetId + '"]'
+    );
 
-        // check if the target element exists
-        if ($targetEl) {
-            if (
-                !instances.instanceExists(
-                    'InputCounter',
-                    $targetEl.getAttribute('id')
-                )
-            ) {
-                new InputCounter(
-                    $targetEl as HTMLInputElement,
-                    $incrementEl ? ($incrementEl as HTMLElement) : null,
-                    $decrementEl ? ($decrementEl as HTMLElement) : null,
-                    {
-                        minValue: minValue ? parseInt(minValue) : null,
-                        maxValue: maxValue ? parseInt(maxValue) : null,
-                    } as InputCounterOptions
-                );
-            }
-        } else {
-            console.error(
-                `The target element with id "${targetId}" does not exist. Please check the data-input-counter attribute.`
+    const minValue = $targetEl.getAttribute('data-input-counter-min');
+    const maxValue = $targetEl.getAttribute('data-input-counter-max');
+
+    // check if the target element exists
+    if ($targetEl) {
+        if (
+            !instances.instanceExists(
+                'InputCounter',
+                $targetEl.getAttribute('id')
+            )
+        ) {
+            new InputCounter(
+                $targetEl as HTMLInputElement,
+                $incrementEl ? ($incrementEl as HTMLElement) : null,
+                $decrementEl ? ($decrementEl as HTMLElement) : null,
+                {
+                    minValue: minValue ? parseInt(minValue) : null,
+                    maxValue: maxValue ? parseInt(maxValue) : null,
+                } as InputCounterOptions
             );
         }
-    });
+    } else {
+        console.error(
+            `The target element with id "${targetId}" does not exist. Please check the data-input-counter attribute.`
+        );
+    }
 }
 
 if (typeof window !== 'undefined') {
     window.InputCounter = InputCounter;
     window.initInputCounters = initInputCounters;
+    window.initInputCounterByElement = initInputCounterByElement;
 }
 
 export default InputCounter;

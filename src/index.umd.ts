@@ -19,20 +19,20 @@ import './components/index';
 import Events from './dom/events';
 
 const events = new Events('load', [
-    initAccordions,
-    initCollapses,
-    initCarousels,
-    initDismisses,
-    initDropdowns,
-    initModals,
-    initDrawers,
-    initTabs,
-    initTooltips,
-    initPopovers,
-    initDials,
-    initCopyClipboards,
-    initInputCounters,
-    initDatepickers,
+    () => initAccordions(),
+    () => initCollapses(),
+    () => initCarousels(),
+    () => initDismisses(),
+    () => initDropdowns(),
+    () => initModals(),
+    () => initDrawers(),
+    () => initTabs(),
+    () => initTooltips(),
+    () => initPopovers(),
+    () => initDials(),
+    () => initCopyClipboards(),
+    () => initInputCounters(),
+    () => initDatepickers(),
 ]);
 events.init();
 

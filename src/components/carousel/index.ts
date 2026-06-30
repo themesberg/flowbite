@@ -102,6 +102,7 @@ class Carousel implements CarouselInterface {
 
     destroy() {
         if (this._initialized) {
+            this.pause();
             this._initialized = false;
         }
     }

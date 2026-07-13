@@ -20,6 +20,7 @@ The carousel component can be initialized by using the `data-carousel={static|sl
 
 -   `data-carousel="static"` to prevent the carousel sliding by default
 -   `data-carousel="slide"` to infinitely cycle through the items
+-   `data-carousel-interval="6000"` to change the default interval from 3 to 6 seconds when sliding
 
 You can add as many carousel items as you want, but make sure that you add the `data-carousel-item` data attribute to each of them and set a single item to active by applying the `active` value to the data attribute.
 

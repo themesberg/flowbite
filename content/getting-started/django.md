@@ -22,23 +22,44 @@ By following this guide you will learn how to properly set up a Django project w
 
 Follow the next steps to create a new Django project and install Tailwind CSS with Flowbite to get the full benefits of the component library.
 
-Make sure that you have both [Node.js](https://nodejs.org) and [Python](https://www.python.org/) installed on your local machine.
+Make sure that you have both [Node.js](https://nodejs.org) and [Python](https://www.python.org/) installed on your local machine. If you are using `uv` for python package management ensure you have [uv](https://docs.astral.sh/uv/) installed.
 
-After that, you'll need to install Django on your local computer by following the official [installation guide](https://docs.djangoproject.com/en/4.0/intro/install/) or by running the following command in the terminal if you have pip available in your Python environment:
+After that, you'll need to install Django on your local computer by following the official [installation guide](https://docs.djangoproject.com/en/4.0/intro/install/) or by running the following command in the terminal using `pip` or if you are using `uv`:
+
+
+**Using pip:**
 
 {{< code lang="bash" >}}
 python -m pip install Django
+{{< /code >}}
+
+**Using uv:**
+
+{{< code lang="bash" >}}
+uv add django
 {{< /code >}}
 
 Now that you have all the required technologies installed you can start by creating a new Django project.
 
 ## Create a Django project
 
+
 1. Run the following command in the terminal to create a new Django project with the name `flowbiteapp`:
+
+**Using pip:**
 
 {{< code lang="bash" >}}
 django-admin startproject flowbiteapp
 cd flowbiteapp/
+{{< /code >}}
+
+**Using uv:**
+
+{{< code lang="bash" >}}
+uv init flowbiteapp
+cd flowbiteapp
+uv add django
+uv run django-admin startproject flowbiteapp .
 {{< /code >}}
 
 2. Create a new `templates/` directory inside the project folder and then update the existing `settings.py` file:
@@ -53,10 +74,18 @@ TEMPLATES = [
 ]
 {{< /code >}}
 
-3. Installed `django-compressor` by running the following command in your terminal:
+3. Install `django-compressor` by running the following command in your terminal:
+
+**Using pip:**
 
 {{< code lang="bash" >}}
 python -m pip install django-compressor
+{{< /code >}}
+
+**Using uv:**
+
+{{< code lang="bash" >}}
+uv add django-compressor
 {{< /code >}}
 
 4. Add `compressor` and `flowbiteapp` (or the name of your app) to the installed apps inside the `settings.py` file:

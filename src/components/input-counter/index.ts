@@ -197,22 +197,15 @@ export function initInputCounters() {
 
         // check if the target element exists
         if ($targetEl) {
-            if (
-                !instances.instanceExists(
-                    'InputCounter',
-                    $targetEl.getAttribute('id')
-                )
-            ) {
-                new InputCounter(
-                    $targetEl as HTMLInputElement,
-                    $incrementEl ? ($incrementEl as HTMLElement) : null,
-                    $decrementEl ? ($decrementEl as HTMLElement) : null,
-                    {
-                        minValue: minValue ? parseInt(minValue) : null,
-                        maxValue: maxValue ? parseInt(maxValue) : null,
-                    } as InputCounterOptions
-                );
-            }
+            new InputCounter(
+                $targetEl as HTMLInputElement,
+                $incrementEl ? ($incrementEl as HTMLElement) : null,
+                $decrementEl ? ($decrementEl as HTMLElement) : null,
+                {
+                    minValue: minValue ? parseInt(minValue) : null,
+                    maxValue: maxValue ? parseInt(maxValue) : null,
+                } as InputCounterOptions
+            );
         } else {
             console.error(
                 `The target element with id "${targetId}" does not exist. Please check the data-input-counter attribute.`

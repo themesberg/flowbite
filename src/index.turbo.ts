@@ -28,8 +28,11 @@ addEventListener('turbo:before-stream-render', (event: CustomEvent) => {
     };
 });
 
-const turboLoadEvents = new Events('turbo:load', [initFlowbite]);
-turboLoadEvents.init();
+const domContentLoadedEvents = new Events('DOMContentLoaded', [initFlowbite]);
+domContentLoadedEvents.init();
+
+const turboRenderEvents = new Events('turbo:render', [initFlowbite]);
+turboRenderEvents.init();
 
 const turboFrameLoadEvents = new Events('turbo:frame-load', [initFlowbite]);
 turboFrameLoadEvents.init();

@@ -7,8 +7,16 @@ import instances from '../../dom/instances';
 const Default: InputCounterOptions = {
     minValue: null,
     maxValue: null,
-    onIncrement: () => {},
-    onDecrement: () => {},
+    onIncrement: (instance) => {
+        instance._targetEl.dispatchEvent(
+            new Event('input', { bubbles: true })
+        );
+    },
+    onDecrement: (instance) => {
+        instance._targetEl.dispatchEvent(
+            new Event('input', { bubbles: true })
+        );
+    },
 };
 
 const DefaultInstanceOptions: InstanceOptions = {

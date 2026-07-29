@@ -13,6 +13,7 @@ export declare interface DropdownInterface {
     _popperInstance: PopperInstance;
     _initialized: boolean;
     _clickOutsideEventListener: EventListenerOrEventListenerObject;
+    _keydownEventListener: EventListenerOrEventListenerObject;
 
     init(): void;
     _createPopperInstance(): PopperInstance;

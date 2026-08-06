@@ -41,7 +41,11 @@ class Drawer implements DrawerInterface {
             : targetEl.id;
         this._targetEl = targetEl;
         this._options = { ...Default, ...options };
-        this._visible = false;
+
+
+        const smallViewportSize = getComputedStyle(document.body).getPropertyValue('--small-viewport') || '640px';
+        this._visible = !window.matchMedia(`(max-width: ${smallViewportSize})`).matches;
+
         this._initialized = false;
         this.init();
         instances.addInstance(
@@ -55,7 +59,9 @@ class Drawer implements DrawerInterface {
     init() {
         // set initial accessibility attributes
         if (this._targetEl && !this._initialized) {
-            this._targetEl.setAttribute('aria-hidden', 'true');
+            if (this.isHidden()) {
+                this._targetEl.setAttribute('aria-hidden', 'true');
+            }
             this._targetEl.classList.add('transition-transform');
 
             // set base placement classes
